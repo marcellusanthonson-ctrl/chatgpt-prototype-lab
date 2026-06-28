@@ -4,55 +4,31 @@ Repositorio canónico para la memoria externa, versionada y auditable del labora
 
 ## Propósito
 
-Conservar de forma estructurada:
-
-- propuestas;
-- errores y sus causas;
-- decisiones aprobadas;
-- patrones reutilizables;
-- experimentos exitosos y rechazados;
-- estado operativo de proyectos;
-- registros de continuidad entre conversaciones.
+Conservar propuestas, errores, decisiones, patrones reutilizables, experimentos, estados de proyecto y registros de continuidad entre conversaciones.
 
 ## Principios
 
 1. GitHub es la fuente de verdad documental del laboratorio.
-2. `CURRENT_STATE.md` es el punto de entrada para recuperar continuidad.
-3. Las instrucciones críticas permanecen también en el Project de ChatGPT.
+2. `CURRENT_STATE.md` es el punto de entrada de continuidad.
+3. Las reglas críticas también permanecen en las instrucciones del Project.
 4. Una observación no equivale a una decisión aprobada.
-5. El repositorio no autoriza cambios en código de producto.
+5. Este repositorio no autoriza cambios en código de producto.
 6. Codex ejecuta únicamente órdenes explícitas, delimitadas y autorizadas.
-7. No se almacenan secretos, credenciales ni datos personales innecesarios.
+7. No se almacenan secretos ni datos personales innecesarios.
 
-## Inicio rápido de continuidad
-
-Leer, en este orden:
+## Orden de lectura
 
 1. `LAB_CONTRACT.md`
 2. `CURRENT_STATE.md`
 3. `registry/projects.json`
-4. archivo del proyecto activo en `projects/`
-5. decisiones vigentes relacionadas;
-6. errores abiertos;
-7. patrones aplicables;
-8. última sesión relevante.
+4. estado del proyecto activo
+5. decisiones vigentes
+6. errores abiertos
+7. patrones aplicables
+8. última sesión relevante
 
-## Tipos de registro
+## Registros
 
-| Prefijo | Tipo |
-|---|---|
-| `PROP-*` | Propuesta |
-| `ERR-*` | Error |
-| `DEC-*` | Decisión |
-| `PAT-*` | Patrón |
-| `EXP-*` | Experimento |
-| `SES-*` | Sesión |
+`PROP-*`, `ERR-*`, `DEC-*`, `PAT-*`, `EXP-*`, `SES-*`.
 
-## Estados
-
-`observed`, `hypothesis`, `proposed`, `validated`, `approved`, `rejected`, `deprecated`, `superseded`, `resolved`.
-
-## Versión inicial
-
-- Repository schema: `0.1.0`
-- Effective date: `2026-06-28`
+Repository schema: `0.1.0` · Effective date: `2026-06-28`
