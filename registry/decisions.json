@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "updated_at": "2026-06-28",
+  "records": [
+    {
+      "id": "DEC-LAB-001",
+      "title": "Approve the LAB repository structure",
+      "status": "APPROVED",
+      "approval_state": "APPROVED",
+      "project_scope": ["lab"],
+      "canonical_path": "decisions/DEC-LAB-001.json",
+      "updated_at": "2026-06-28"
+    },
+    {
+      "id": "DEC-LAB-002",
+      "title": "Use GitHub as the external laboratory memory",
+      "status": "APPROVED",
+      "approval_state": "APPROVED",
+      "project_scope": ["lab"],
+      "canonical_path": "decisions/DEC-LAB-002.json",
+      "updated_at": "2026-06-28"
+    },
+    {
+      "id": "DEC-LAB-003",
+      "title": "Adopt the fixed continuity read protocol",
+      "status": "APPROVED",
+      "approval_state": "APPROVED",
+      "project_scope": ["lab"],
+      "canonical_path": "decisions/DEC-LAB-003.json",
+      "updated_at": "2026-06-28"
+    },
+    {
+      "id": "DEC-LAB-004",
+      "title": "Git as the structured decision and audit memory",
+      "status": "APPROVED",
+      "approval_state": "APPROVED",
+      "project_scope": ["lab", "mammothskills", "symphonie"],
+      "canonical_path": "decisions/DEC-LAB-004.json",
+      "updated_at": "2026-06-28"
+    }
+  ]
+}

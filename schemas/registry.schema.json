@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lab.local/schemas/registry.schema.json",
+  "title": "LAB structured registry",
+  "type": "object",
+  "required": ["schema_version", "updated_at", "records"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "updated_at": {"type": "string", "format": "date"},
+    "active_project": {"type": "string", "minLength": 1},
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "status", "canonical_path", "updated_at"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "status": {"type": "string", "minLength": 1},
+          "canonical_path": {"type": "string", "minLength": 1},
+          "updated_at": {"type": "string", "format": "date"}
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -16,66 +16,53 @@ live.
 
 - Skills for Claude live in Claude.
 - Skills for Codex live in Codex.
-- Codex may execute repository changes without becoming the target platform of
-  the skill being changed.
+- The technical executor does not determine the target platform.
+- MammothSkills must not write directly into Symphonie.
 
 ## MS-001 objective
 
-Audit and adapt the Claude skills:
+The following three skills are Claude-targeted:
 
 - `intake-brief`
 - `project-scoping`
 - `project-status`
 
-These remain Claude-targeted skills unless a separate, explicitly approved
-adaptation for another platform is created.
+Codex editing a repository does not assign these skills to Codex.
 
-## Verified progress
+## Preserved gate states
 
-- `BASELINES_LOCKED = PASS`
-- `SOURCES_LOCKED = PASS`
-- `SPECS_APPROVED = PASS`
-- immutable baselines and source fingerprints recorded;
-- iterative Claude brief workflow and ChatGPT handoff governance specified;
-- implementation and test planning were previously approved against an
-  incorrect Codex target path.
+```text
+BASELINES_LOCKED = PASS
+SOURCES_LOCKED = PASS
+SPECS_APPROVED = PASS
+TARGET_PLATFORM_CLASSIFICATION = REOPENED
+PREVIOUS_CODEX_EXECUTION_ORDER = REVOKED
+IMPLEMENTATION = NOT_AUTHORIZED
+CODEX = NOT_AUTHORIZED
+RELEASE = NOT_AUTHORIZED
+```
 
 ## Current blocker
 
-The target-platform decision was misclassified. The former architecture using
-`targets/codex/` for the three Claude skills is superseded conceptually and must
-not be implemented.
-
-```text
-TARGET_PLATFORM_CLASSIFICATION = REOPENED
-PREVIOUS_CODEX_EXECUTION_ORDER = REVOKED
-IMPLEMENTATION = NOT AUTHORIZED
-CODEX = NOT AUTHORIZED
-RELEASE = NOT AUTHORIZED
-```
+The former `targets/codex/` classification for these Claude skills is invalid
+and revoked. A target-platform correction requires a separate approved
+decision before any replacement implementation order may exist.
 
 ## Valid work retained
 
-The following remain useful:
-
-- imported immutable baselines;
+- immutable baselines and source fingerprints;
 - source licensing and provenance;
-- fingerprints;
-- approved behavioral specifications;
-- handoff contracts;
+- approved behavioral specifications and handoff contracts;
 - audit gates and test concepts;
-- producer/release/consumer separation.
+- producer, release, runtime, and consumer separation.
 
-## Required correction
+## Authorization
 
-Before implementation, create and approve a superseding decision that:
-
-1. classifies the three MS-001 skills as Claude-targeted;
-2. replaces `targets/codex/` with the correct Claude target paths;
-3. supersedes the previous fileset and execution order;
-4. issues a new bounded implementation order only after remote verification.
+Implementation, Codex execution, and release are not authorized. This LAB
+documentation order does not modify the MammothSkills repository and does not
+create target paths or a replacement implementation order.
 
 ## Next authorized action
 
-Document and approve the target-platform correction. No implementation is
-authorized by this state file.
+Document and approve the target-platform correction under a separate bounded
+order. No implementation is authorized by this state file.

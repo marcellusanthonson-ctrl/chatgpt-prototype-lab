@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "methodology_version": "1.0.0",
+  "active_project": "lab",
+  "project_statuses": {
+    "lab": "active",
+    "mammothskills": "active_with_blocker",
+    "symphonie": "known_and_synced",
+    "carolina-klinik": "known",
+    "clinical-os": "known",
+    "aster-flyt": "referenced"
+  },
+  "decisions_in_force": [
+    "DEC-LAB-001",
+    "DEC-LAB-002",
+    "DEC-LAB-003",
+    "DEC-LAB-004"
+  ],
+  "open_or_contained_errors": [
+    "ERR-LAB-001",
+    "ERR-LAB-002"
+  ],
+  "validated_patterns": [
+    "PAT-LAB-001",
+    "PAT-LAB-002",
+    "PAT-LAB-003",
+    "PAT-LAB-004",
+    "PAT-MA-001"
+  ],
+  "mammothskills_gate_states": {
+    "BASELINES_LOCKED": "PASS",
+    "SOURCES_LOCKED": "PASS",
+    "SPECS_APPROVED": "PASS",
+    "TARGET_PLATFORM_CLASSIFICATION": "REOPENED",
+    "PREVIOUS_CODEX_EXECUTION_ORDER": "REVOKED",
+    "IMPLEMENTATION": "NOT_AUTHORIZED",
+    "CODEX": "NOT_AUTHORIZED",
+    "RELEASE": "NOT_AUTHORIZED"
+  },
+  "symphonie_authorization_states": {
+    "PRODUCT_CHANGE": "NOT_AUTHORIZED",
+    "SKILL_INTEGRATION": "NOT_AUTHORIZED",
+    "CODEX_EXECUTION": "NOT_AUTHORIZED"
+  },
+  "codex_authority_state": "NO"
+}

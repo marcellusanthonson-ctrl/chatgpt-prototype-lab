@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "updated_at": "2026-06-28",
+  "records": [
+    {
+      "id": "ERR-LAB-001",
+      "title": "Executor confused with target platform",
+      "status": "CONTAINED",
+      "lifecycle_state": "CONTAINED",
+      "severity": "HIGH",
+      "project_scope": ["lab", "mammothskills", "symphonie"],
+      "canonical_path": "errors/ERR-LAB-001.md",
+      "updated_at": "2026-06-28"
+    },
+    {
+      "id": "ERR-LAB-002",
+      "title": "Overcomplicated correction after a simple governing rule",
+      "status": "CONTAINED",
+      "lifecycle_state": "CONTAINED",
+      "severity": "MEDIUM",
+      "project_scope": ["lab", "mammothskills"],
+      "canonical_path": "errors/ERR-LAB-002.md",
+      "updated_at": "2026-06-28"
+    },
+    {
+      "id": "ERR-TOOLING-001",
+      "title": "PowerShell and repository-script failures",
+      "status": "CORRECTED",
+      "lifecycle_state": "CORRECTED",
+      "severity": "MEDIUM",
+      "project_scope": ["lab"],
+      "canonical_path": "errors/ERR-TOOLING-001.md",
+      "updated_at": "2026-06-28"
+    }
+  ]
+}

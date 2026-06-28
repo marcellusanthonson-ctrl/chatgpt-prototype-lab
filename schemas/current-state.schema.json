@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lab.local/schemas/current-state.schema.json",
+  "title": "LAB current state",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "document_id",
+    "version",
+    "status",
+    "updated_at",
+    "active_project",
+    "current_phase",
+    "methodology",
+    "authority",
+    "projects",
+    "decisions_in_force",
+    "open_errors",
+    "validated_patterns",
+    "authorization_state",
+    "next_authorized_action",
+    "continuity_read_order"
+  ],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "document_id": {"const": "lab.current-state"},
+    "version": {"type": "string"},
+    "status": {"enum": ["ACTIVE", "BLOCKED", "PAUSED", "ARCHIVED"]},
+    "updated_at": {"type": "string", "format": "date"},
+    "active_project": {"type": "string", "minLength": 1},
+    "current_phase": {"type": "string", "minLength": 1},
+    "methodology": {
+      "type": "object",
+      "required": ["version", "status", "canonical_path"],
+      "properties": {
+        "version": {"type": "string"},
+        "status": {"const": "APPROVED"},
+        "canonical_path": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "authority": {
+      "type": "object",
+      "required": ["sole_approver", "chatgpt", "claude", "codex", "codex_autonomous_authority"],
+      "properties": {
+        "sole_approver": {"type": "string"},
+        "chatgpt": {"type": "string"},
+        "claude": {"type": "string"},
+        "codex": {"type": "string"},
+        "codex_autonomous_authority": {"const": "NO"}
+      },
+      "additionalProperties": false
+    },
+    "projects": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["status", "canonical_path"],
+        "properties": {
+          "status": {"type": "string"},
+          "canonical_path": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "decisions_in_force": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "open_errors": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "validated_patterns": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "authorization_state": {
+      "type": "object",
+      "required": [
+        "lab_documentation",
+        "mammothskills_implementation",
+        "mammothskills_release",
+        "symphonie_integration",
+        "product_changes",
+        "codex_autonomous_authority"
+      ],
+      "properties": {
+        "lab_documentation": {"const": "AUTHORIZED_BY_THIS_ORDER"},
+        "mammothskills_implementation": {"const": "NOT_AUTHORIZED"},
+        "mammothskills_release": {"const": "NOT_AUTHORIZED"},
+        "symphonie_integration": {"const": "NOT_AUTHORIZED"},
+        "product_changes": {"const": "NOT_AUTHORIZED"},
+        "codex_autonomous_authority": {"const": "NO"}
+      },
+      "additionalProperties": false
+    },
+    "next_authorized_action": {"type": "string", "minLength": 1},
+    "continuity_read_order": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+  },
+  "additionalProperties": false
+}

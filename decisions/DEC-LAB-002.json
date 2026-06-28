@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "lab.decision.DEC-LAB-002",
+  "version": "1.0.0",
+  "id": "DEC-LAB-002",
+  "title": "Use GitHub as the external laboratory memory",
+  "project": "LAB",
+  "project_scope": ["lab"],
+  "status": "APPROVED",
+  "effective_date": "2026-06-28",
+  "updated_at": "2026-06-28",
+  "approved_by": "Jonathan Martínez",
+  "approval_evidence": "Legacy decision recorded as approved in the previous CURRENT_STATE.md before this execution.",
+  "legacy_record": true,
+  "evidence": [
+    "README.md at starting commit d2111a8a482ef2a267cf7ae3c0a663b68e1edf03",
+    "LAB_CONTRACT.md",
+    "previous CURRENT_STATE.md at starting commit d2111a8a482ef2a267cf7ae3c0a663b68e1edf03"
+  ],
+  "decision": {
+    "summary": "GitHub is the versioned documentary source of truth for LAB knowledge."
+  },
+  "supersedes": [],
+  "superseded_by": null
+}

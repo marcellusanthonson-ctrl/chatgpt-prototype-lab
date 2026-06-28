@@ -1,11 +1,58 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "1.0.0",
   "updated_at": "2026-06-28",
-  "active_project": null,
-  "projects": [
-    {"id":"carolina-klinik","name":"Carolina Klinik","status":"known","path":"projects/carolina-klinik/PROJECT_STATE.md"},
-    {"id":"clinical-os","name":"Clinical OS","status":"known","path":"projects/clinical-os/PROJECT_STATE.md"},
-    {"id":"symphonie","name":"Symphonie","status":"known","path":"projects/symphonie/PROJECT_STATE.md"},
-    {"id":"aster-flyt","name":"Aster Flyt","status":"referenced","path":"projects/aster-flyt/PROJECT_STATE.md"}
+  "active_project": "lab",
+  "records": [
+    {
+      "id": "lab",
+      "name": "LAB",
+      "status": "active",
+      "canonical_path": "projects/lab/PROJECT_STATE.md",
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "scope": "Governance, cross-project knowledge, authority, continuity, and audit methodology.",
+      "updated_at": "2026-06-28"
+    },
+    {
+      "id": "mammothskills",
+      "name": "MammothSkills",
+      "status": "active_with_blocker",
+      "canonical_path": "projects/mammothskills/PROJECT_STATE.md",
+      "repository": "marcellusanthonson-ctrl/MammothSkills",
+      "scope": "Create, audit, adapt, test, version, and publish skills without serving as their runtime.",
+      "updated_at": "2026-06-28"
+    },
+    {
+      "id": "symphonie",
+      "name": "Symphonie",
+      "status": "known_and_synced",
+      "canonical_path": "projects/symphonie/PROJECT_STATE.md",
+      "repository": "marcellusanthonson-ctrl/symphonie-codex-lab",
+      "scope": "Consume fixed approved releases and coordinate projects.",
+      "updated_at": "2026-06-28"
+    },
+    {
+      "id": "carolina-klinik",
+      "name": "Carolina Klinik",
+      "status": "known",
+      "canonical_path": "projects/carolina-klinik/PROJECT_STATE.md",
+      "scope": "Known clinical experience project; product execution is outside LAB authority.",
+      "updated_at": "2026-06-28"
+    },
+    {
+      "id": "clinical-os",
+      "name": "Clinical OS",
+      "status": "known",
+      "canonical_path": "projects/clinical-os/PROJECT_STATE.md",
+      "scope": "Known clinical system and CRM; product execution is outside LAB authority.",
+      "updated_at": "2026-06-28"
+    },
+    {
+      "id": "aster-flyt",
+      "name": "Aster Flyt",
+      "status": "referenced",
+      "canonical_path": "projects/aster-flyt/PROJECT_STATE.md",
+      "scope": "Referenced project with detailed state pending documentary incorporation.",
+      "updated_at": "2026-06-28"
+    }
   ]
 }

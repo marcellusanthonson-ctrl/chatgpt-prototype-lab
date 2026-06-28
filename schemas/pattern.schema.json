@@ -1,1 +1,25 @@
-{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Laboratory Pattern","type":"object","required":["id","title","status","date","rule"],"properties":{"id":{"type":"string","pattern":"^PAT-[A-Z0-9-]+$"},"title":{"type":"string","minLength":1},"status":{"enum":["observed","hypothesis","validated","approved","deprecated","superseded"]},"date":{"type":"string","format":"date"},"rule":{"type":"string","minLength":1}},"additionalProperties":true}
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lab.local/schemas/pattern.schema.json",
+  "title": "LAB pattern registry record",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "status",
+    "validation_state",
+    "project_scope",
+    "canonical_path",
+    "updated_at"
+  ],
+  "properties": {
+    "id": {"type": "string", "pattern": "^PAT-[A-Z]+-[0-9]{3}$"},
+    "title": {"type": "string", "minLength": 1},
+    "status": {"enum": ["PROPOSED", "VALIDATED", "DEPRECATED", "SUPERSEDED"]},
+    "validation_state": {"enum": ["PROPOSED", "VALIDATED", "DEPRECATED", "SUPERSEDED"]},
+    "project_scope": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "canonical_path": {"type": "string", "minLength": 1},
+    "updated_at": {"type": "string", "format": "date"}
+  },
+  "additionalProperties": false
+}

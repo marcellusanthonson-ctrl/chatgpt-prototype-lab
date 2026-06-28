@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "lab.current-state",
+  "version": "1.0.0",
+  "status": "ACTIVE",
+  "updated_at": "2026-06-28",
+  "active_project": "lab",
+  "current_phase": "METHODOLOGY_FROZEN_V1",
+  "methodology": {
+    "version": "1.0.0",
+    "status": "APPROVED",
+    "canonical_path": "METHODOLOGY.md"
+  },
+  "authority": {
+    "sole_approver": "Jonathan Martínez",
+    "chatgpt": "coordinates, validates, audits, and issues bounded orders",
+    "claude": "performs discovery and definition only when explicitly assigned",
+    "codex": "bounded technical executor only",
+    "codex_autonomous_authority": "NO"
+  },
+  "projects": {
+    "lab": {
+      "status": "active",
+      "canonical_path": "projects/lab/PROJECT_STATE.md"
+    },
+    "mammothskills": {
+      "status": "active_with_blocker",
+      "canonical_path": "projects/mammothskills/PROJECT_STATE.md"
+    },
+    "symphonie": {
+      "status": "known_and_synced",
+      "canonical_path": "projects/symphonie/PROJECT_STATE.md"
+    },
+    "carolina-klinik": {
+      "status": "known",
+      "canonical_path": "projects/carolina-klinik/PROJECT_STATE.md"
+    },
+    "clinical-os": {
+      "status": "known",
+      "canonical_path": "projects/clinical-os/PROJECT_STATE.md"
+    },
+    "aster-flyt": {
+      "status": "referenced",
+      "canonical_path": "projects/aster-flyt/PROJECT_STATE.md"
+    }
+  },
+  "decisions_in_force": [
+    "DEC-LAB-001",
+    "DEC-LAB-002",
+    "DEC-LAB-003",
+    "DEC-LAB-004"
+  ],
+  "open_errors": [
+    "ERR-LAB-001",
+    "ERR-LAB-002"
+  ],
+  "validated_patterns": [
+    "PAT-LAB-001",
+    "PAT-LAB-002",
+    "PAT-LAB-003",
+    "PAT-LAB-004",
+    "PAT-MA-001"
+  ],
+  "authorization_state": {
+    "lab_documentation": "AUTHORIZED_BY_THIS_ORDER",
+    "mammothskills_implementation": "NOT_AUTHORIZED",
+    "mammothskills_release": "NOT_AUTHORIZED",
+    "symphonie_integration": "NOT_AUTHORIZED",
+    "product_changes": "NOT_AUTHORIZED",
+    "codex_autonomous_authority": "NO"
+  },
+  "next_authorized_action": "Complete, validate, commit, and publish only the LAB knowledge-base records listed in the current bounded order.",
+  "continuity_read_order": [
+    "LAB_CONTRACT.md",
+    "METHODOLOGY.md",
+    "CURRENT_STATE.json",
+    "CURRENT_STATE.md",
+    "registry/projects.json",
+    "active project state",
+    "decisions in force",
+    "open errors",
+    "applicable patterns"
+  ]
+}
