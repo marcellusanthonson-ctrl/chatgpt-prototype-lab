@@ -1,0 +1,29 @@
+{
+  "id": "DEC-LAB-004",
+  "title": "Git as the structured decision and audit memory",
+  "project": "LAB",
+  "status": "APPROVED",
+  "effective_date": "2026-06-28",
+  "approved_by": "Jonathan Martínez",
+  "approval_evidence": "Continua. Congela la metodología.",
+  "decision": {
+    "summary": "Freeze LAB methodology v1.0 and use Git as the external, versioned, auditable memory for decisions, project states, errors, evidence, and reusable patterns.",
+    "canonical_document": "METHODOLOGY.md",
+    "rules": [
+      "A commit records a transition but does not create approval by itself.",
+      "JSON is the structured source of truth; Markdown is the human-readable view.",
+      "Incorrect decisions are superseded, not silently deleted.",
+      "Missing authority or evidence causes a fail-closed BLOCKED state.",
+      "One logical transition should be represented by one commit.",
+      "Execution permissions for implementation, commit, push, PR, merge, release, deployment, and consumer integration are separate."
+    ]
+  },
+  "project_boundaries": {
+    "LAB": "governance, continuity, decision memory, errors, and reusable audit patterns",
+    "MammothSkills": "create, audit, adapt, test, version, and publish skills without being their runtime",
+    "Symphonie": "consume fixed skill releases and coordinate project-specific operation"
+  },
+  "non_negotiable_rule": "Skills for Claude live in Claude; skills for Codex live in Codex; the technical executor does not determine the target platform.",
+  "supersedes": [],
+  "superseded_by": null
+}
