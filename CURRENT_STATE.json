@@ -5,11 +5,19 @@
   "status": "ACTIVE",
   "updated_at": "2026-06-28",
   "active_project": "lab",
-  "current_phase": "METHODOLOGY_FROZEN_V1",
+  "current_phase": "KNOWLEDGE_BASE_OPERATIONAL_V1",
   "methodology": {
     "version": "1.0.0",
     "status": "APPROVED",
     "canonical_path": "METHODOLOGY.md"
+  },
+  "bootstrap": {
+    "status": "COMPLETED",
+    "implementation_commit": "5fe7effeb7b9896461b15f2b207fbcffe3897a1f",
+    "validation": "PASS",
+    "remote_publication": "VERIFIED",
+    "execution_order": "CONSUMED",
+    "closed_at": "2026-06-28"
   },
   "authority": {
     "sole_approver": "Jonathan Martínez",
@@ -62,14 +70,14 @@
     "PAT-MA-001"
   ],
   "authorization_state": {
-    "lab_documentation": "AUTHORIZED_BY_THIS_ORDER",
+    "lab_documentation": "NOT_AUTHORIZED",
     "mammothskills_implementation": "NOT_AUTHORIZED",
     "mammothskills_release": "NOT_AUTHORIZED",
     "symphonie_integration": "NOT_AUTHORIZED",
     "product_changes": "NOT_AUTHORIZED",
     "codex_autonomous_authority": "NO"
   },
-  "next_authorized_action": "Complete, validate, commit, and publish only the LAB knowledge-base records listed in the current bounded order.",
+  "next_authorized_action": "NONE_UNTIL_NEW_EXPLICIT_APPROVAL",
   "continuity_read_order": [
     "LAB_CONTRACT.md",
     "METHODOLOGY.md",

@@ -11,20 +11,36 @@ human-readable view.
 ## Active project and phase
 
 - Active project: `lab`
-- Current phase: `METHODOLOGY_FROZEN_V1`
+- Current phase: `KNOWLEDGE_BASE_OPERATIONAL_V1`
 - Methodology: version `1.0.0`, status `APPROVED`
 - Canonical methodology: `METHODOLOGY.md`
 
-LAB is active. The approved methodology is frozen and remains in force until
-an explicitly approved decision supersedes it.
+LAB is active and its knowledge base is operational. The approved methodology
+remains frozen and in force until an explicitly approved decision supersedes
+it.
+
+## Bootstrap closure
+
+```text
+Current phase: KNOWLEDGE_BASE_OPERATIONAL_V1
+Bootstrap: COMPLETED
+Implementation commit: 5fe7effeb7b9896461b15f2b207fbcffe3897a1f
+Validation: PASS
+Remote publication: VERIFIED
+Previous execution order: CONSUMED
+LAB documentation authorization: NOT_AUTHORIZED
+Next authorized action: NONE_UNTIL_NEW_EXPLICIT_APPROVAL
+```
+
+The completed bootstrap was validated, published, and accepted for closure.
+Its bounded execution order is consumed and is not reusable permission.
 
 ## Project state
 
 ### LAB
 
-LAB governs the method and preserves cross-project knowledge. The current
-order authorizes only completion and publication of LAB documentation and
-repository validation.
+LAB governs the method and preserves cross-project knowledge. No current
+authorization exists for additional LAB repository work.
 
 ### MammothSkills
 
@@ -88,7 +104,7 @@ a transition but does not create approval.
 ## Authorization state
 
 ```text
-lab_documentation = AUTHORIZED_BY_THIS_ORDER
+lab_documentation = NOT_AUTHORIZED
 mammothskills_implementation = NOT_AUTHORIZED
 mammothskills_release = NOT_AUTHORIZED
 symphonie_integration = NOT_AUTHORIZED
@@ -96,14 +112,13 @@ product_changes = NOT_AUTHORIZED
 codex_autonomous_authority = NO
 ```
 
-No implementation, release, product change, or consumer integration is
-authorized. The later commit and push record this documentation transition and
-do not authorize any additional work.
+No LAB documentation, implementation, release, product change, or consumer
+integration is authorized. This closure commit records the consumed order and
+does not authorize any additional work.
 
 ## Next authorized action
 
-Complete, validate, commit, and publish only the LAB knowledge-base records
-listed in the current bounded order.
+`NONE_UNTIL_NEW_EXPLICIT_APPROVAL`
 
 ## Continuity read order
 

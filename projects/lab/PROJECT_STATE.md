@@ -11,9 +11,24 @@ errors, evidence, reusable audit patterns, and continuity knowledge.
 
 ## Current phase
 
-`METHODOLOGY_FROZEN_V1`
+`KNOWLEDGE_BASE_OPERATIONAL_V1`
 
 `METHODOLOGY.md` version `1.0.0` is approved and frozen.
+
+## Operational state
+
+```text
+Status: ACTIVE
+Current phase: KNOWLEDGE_BASE_OPERATIONAL_V1
+Bootstrap: COMPLETED
+Knowledge base: OPERATIONAL
+Previous bounded order: CONSUMED
+Current execution authorization: NONE
+```
+
+The bootstrap implementation commit
+`5fe7effeb7b9896461b15f2b207fbcffe3897a1f` was validated and its remote
+publication was verified. The completed order is consumed.
 
 ## Infrastructure
 
@@ -39,11 +54,11 @@ errors, evidence, reusable audit patterns, and continuity knowledge.
 
 ## Authorization
 
-The current bounded order authorizes LAB documentation completion, repository
-validation, one commit, and one direct fast-forward push. It does not authorize
-implementation, release, product change, or consumer integration.
+No current execution authorization exists. The consumed bootstrap order does
+not authorize additional documentation, implementation, release, product
+change, or consumer integration.
 
 ## Next authorized action
 
-Maintain this repository as the cross-project knowledge base under a new
-direct, explicit, bounded order. No product action is authorized by this file.
+A new direct approval and bounded order are required before any additional
+repository work. No product action is authorized by this file.
