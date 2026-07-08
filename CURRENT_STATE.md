@@ -1,9 +1,9 @@
 # LAB Current State
 
 Document-ID: `lab.current-state`
-Version: `1.0.0`
+Version: `1.0.1`
 Status: `ACTIVE`
-Last-Updated: `2026-06-28`
+Last-Updated: `2026-07-07`
 
 `CURRENT_STATE.json` is the structured source of truth. This file is its
 human-readable view.
@@ -28,7 +28,6 @@ Implementation commit: 5fe7effeb7b9896461b15f2b207fbcffe3897a1f
 Validation: PASS
 Remote publication: VERIFIED
 Previous execution order: CONSUMED
-LAB documentation authorization: NOT_AUTHORIZED
 Next authorized action: NONE_UNTIL_NEW_EXPLICIT_APPROVAL
 ```
 
@@ -39,22 +38,49 @@ Its bounded execution order is consumed and is not reusable permission.
 
 ### LAB
 
-LAB governs the method and preserves cross-project knowledge. No current
-authorization exists for additional LAB repository work.
+LAB governs the method and preserves cross-project knowledge. This synchronization
+records a current-state update only; it does not authorize product work,
+consumer integration, releases, or implementation.
 
 ### MammothSkills
 
-MammothSkills is `active_with_blocker` pending target-platform correction. It
-creates, audits, adapts, tests, versions, and publishes skills, but is not a
-skill runtime. The MS-001 skills `intake-brief`, `project-scoping`, and
-`project-status` remain Claude-targeted.
+MammothSkills is `active_pipeline_validated_phase_a`.
+
+It creates, audits, adapts, tests, versions, and publishes skills, but is not a
+skill runtime. Skills for Codex live in Codex, and consumers may only consume
+fixed approved releases through separate explicit integration orders.
+
+Current operational evidence:
 
 ```text
-TARGET_PLATFORM_CLASSIFICATION = REOPENED
-PREVIOUS_CODEX_EXECUTION_ORDER = REVOKED
-IMPLEMENTATION = NOT_AUTHORIZED
-CODEX = NOT_AUTHORIZED
-RELEASE = NOT_AUTHORIZED
+Repository: marcellusanthonson-ctrl/MammothSkills
+Working branch: audit/ms-001
+Current head: 034910e9fec4c0f0b97fe06ee94554bda289a1b6
+Phase A evidence commit: 55f66f4d9020ca93113aef61194141efdc3688cc
+MS-001 state: MS_001_CLASSIFIED_AS_PIPELINE_VALIDATION
+MS-001 purpose: MAMMOTHSKILLS_PIPELINE_VALIDATION
+Codex adaptation: TEST_ARTIFACT
+Runtime validation: DEFERRED_TO_NEXT_SESSION
+Release: NOT_AUTHORIZED
+Consumer integration: NOT_AUTHORIZED
+```
+
+MS-001 proves that MammothSkills can create curated Codex package artifacts,
+manifests, static structure checks, contract cases, and a deferred runtime
+validation plan. It is not a production release and does not authorize
+Symphonie integration.
+
+The three MS-001 skills `intake-brief`, `project-scoping`, and `project-status`
+are not current candidates for operational use in Symphonie. In the current
+conceptual Symphonie flow, these phases belong to the Claude/definition segment.
+For MammothSkills they remain useful as a validation corpus.
+
+```text
+PIPELINE_PHASE_A = VALIDATED
+CLASSIFICATION_GATE = PASS
+RUNTIME_VALIDATION = DEFERRED / OPTIONAL_LAB_TEST
+RELEASE_SYSTEM = NOT_YET_VALIDATED
+CONSUMER_INTEGRATION = NOT_AUTHORIZED
 ```
 
 ### Symphonie
@@ -112,9 +138,9 @@ product_changes = NOT_AUTHORIZED
 codex_autonomous_authority = NO
 ```
 
-No LAB documentation, implementation, release, product change, or consumer
-integration is authorized. This closure commit records the consumed order and
-does not authorize any additional work.
+The current synchronization records the consumed documentation update. No
+additional LAB documentation, implementation, release, product change, or
+consumer integration is authorized by this state.
 
 ## Next authorized action
 
