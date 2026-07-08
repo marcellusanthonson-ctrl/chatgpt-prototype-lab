@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
   "document_id": "lab.current-state",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "status": "ACTIVE",
-  "updated_at": "2026-06-28",
+  "updated_at": "2026-07-07",
   "active_project": "lab",
   "current_phase": "KNOWLEDGE_BASE_OPERATIONAL_V1",
   "methodology": {
@@ -32,8 +32,16 @@
       "canonical_path": "projects/lab/PROJECT_STATE.md"
     },
     "mammothskills": {
-      "status": "active_with_blocker",
-      "canonical_path": "projects/mammothskills/PROJECT_STATE.md"
+      "status": "active_pipeline_validated_phase_a",
+      "canonical_path": "projects/mammothskills/PROJECT_STATE.md",
+      "repository": "marcellusanthonson-ctrl/MammothSkills",
+      "working_branch": "audit/ms-001",
+      "current_head": "034910e9fec4c0f0b97fe06ee94554bda289a1b6",
+      "phase_a_evidence_commit": "55f66f4d9020ca93113aef61194141efdc3688cc",
+      "classification": "MS_001_CLASSIFIED_AS_PIPELINE_VALIDATION",
+      "runtime_validation": "DEFERRED_TO_NEXT_SESSION",
+      "release": "NOT_AUTHORIZED",
+      "consumer_integration": "NOT_AUTHORIZED"
     },
     "symphonie": {
       "status": "known_and_synced",
