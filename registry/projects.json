@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-06-28",
+  "updated_at": "2026-07-07",
   "active_project": "lab",
   "records": [
     {
@@ -15,11 +15,11 @@
     {
       "id": "mammothskills",
       "name": "MammothSkills",
-      "status": "active_with_blocker",
+      "status": "active_pipeline_validated_phase_a",
       "canonical_path": "projects/mammothskills/PROJECT_STATE.md",
       "repository": "marcellusanthonson-ctrl/MammothSkills",
-      "scope": "Create, audit, adapt, test, version, and publish skills without serving as their runtime.",
-      "updated_at": "2026-06-28"
+      "scope": "Create, audit, adapt, test, version, and publish skills without serving as their runtime. MS-001 validates the adaptation pipeline as a test corpus.",
+      "updated_at": "2026-07-07"
     },
     {
       "id": "symphonie",
