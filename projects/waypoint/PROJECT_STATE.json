@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "project.waypoint.state",
+  "version": "0.1.0",
+  "status": "REFERENCED_CONCEPT",
+  "updated_at": "2026-07-11",
+  "project_id": "waypoint",
+  "project_name": "Waypoint",
+  "authority_note": "This record documents product-strategy decisions and evidence for continuity. It does not authorize product implementation, repository changes outside the LAB repository, release, integration, deployment, or code execution.",
+  "source_context": {
+    "origin": "Conversation analysis of Waypoint investor concept and subsequent Claude/Perplexity audits.",
+    "source_artifacts": [
+      "Waypoint investor PDF: tracking de grupo en tiempo real, sin instalacion",
+      "Auditoria critica v1: contradictions and MVP reduction",
+      "Auditoria v2: RISER/Cardo, REVER, Convoy Tracker, Detecht and tourism B2B analysis"
+    ]
+  },
+  "current_thesis": {
+    "summary": "Waypoint should be treated as a B2B-oriented operations platform for guides, agencies, tourism operators and mixed travel groups, not as a motorcycle-first consumer convoy app.",
+    "positioning": "Plan routes on web, execute in mobile app, monitor operations in real time.",
+    "primary_surface": "Web planner and lightweight live operations view for operators.",
+    "field_surface": "Android-first mobile app for guides, drivers, staff or tracked operational units.",
+    "guest_surface": "Web link or QR for tourists/viewers with itinerary, meeting point, help action and optional check-in. Guests are not primary tracked units in the MVP."
+  },
+  "decisions": [
+    {
+      "id": "WAYPOINT-D-001",
+      "title": "Native mobile app required for reliable tracked units",
+      "state": "APPROVED_FOR_STRATEGY",
+      "summary": "Any unit expected to share reliable movement/location during a trip should use the mobile app. Browser/web users should be treated as viewers, planners, admins or low-reliability participants, not as core tracked units.",
+      "rationale": "Mobile browser background geolocation is not reliable enough for the product promise. The previous no-install tracking thesis is superseded."
+    },
+    {
+      "id": "WAYPOINT-D-002",
+      "title": "Web is for planning and operations, not core mobile tracking",
+      "state": "APPROVED_FOR_STRATEGY",
+      "summary": "The web version is valuable for route planning, checkpoint organization, link/QR generation, agency workflow, and monitoring one or more active groups from a larger screen.",
+      "rationale": "This resolves the web-vs-native contradiction and strengthens the B2B agency/tourism use case."
+    },
+    {
+      "id": "WAYPOINT-D-003",
+      "title": "Motorcycle-first positioning is deprioritized",
+      "state": "APPROVED_FOR_STRATEGY",
+      "summary": "Do not use motorcycle clubs as the primary beachhead until RISER/Cardo Ride, REVER, Detecht and Convoy Tracker are tested in the field and clear gaps are verified.",
+      "rationale": "The motorcycle niche already has specialized competitors, including hardware/community incumbents. Motos can remain a secondary or benchmark segment."
+    },
+    {
+      "id": "WAYPOINT-D-004",
+      "title": "Primary validation shifts to guides, agencies and tourism operations",
+      "state": "APPROVED_FOR_STRATEGY",
+      "summary": "Initial validation should focus on guides, small agencies, tourism adventure, mixed vehicle groups and operators who currently depend on WhatsApp, radios and manual protocols.",
+      "rationale": "Existing tour-operator software appears stronger in bookings, payments and itineraries than in live group tracking and operational monitoring."
+    },
+    {
+      "id": "WAYPOINT-D-005",
+      "title": "MVP scope becomes web planner/live view plus Android field app",
+      "state": "APPROVED_FOR_STRATEGY",
+      "summary": "The MVP should be reduced to one minimal web surface with plan/live views, one Android-first field app for guides/staff/tracked units, and a web guest link. iOS, advanced operations, safety automation, audio, traffic, weather, ice, replay and multi-agency dashboards remain out of MVP.",
+      "rationale": "This avoids building three full products before validation. Android-first is aligned with LATAM/Chile market share and field-device reality."
+    },
+    {
+      "id": "WAYPOINT-D-006",
+      "title": "Safety automation and crash detection remain out of commercial MVP",
+      "state": "APPROVED_FOR_STRATEGY",
+      "summary": "The MVP may include manual help/report actions, last known location, stopped/no-signal states and basic operational alerts. Automatic accident detection, sensor fusion and precise road-ice claims remain research/shadow-mode only.",
+      "rationale": "Safety claims create legal and reputational risk without field data, labeled datasets and validation."
+    }
+  ],
+  "mvp_definition": {
+    "web": [
+      "Create route/tour",
+      "Define origin, destination and checkpoints",
+      "Add notes per checkpoint",
+      "Generate QR/link",
+      "View one active trip live",
+      "Show guide/vehicle/staff location",
+      "Show passive state: active, stopped, late, no signal, arrived",
+      "Close trip"
+    ],
+    "android_app": [
+      "Join assigned trip",
+      "Start/end tracking",
+      "Share location with low-power mode",
+      "View route/checkpoints",
+      "Report problem/manual help",
+      "Pause tracking",
+      "Queue state updates when connectivity degrades"
+    ],
+    "guest_web": [
+      "View itinerary and meeting point",
+      "Open navigation externally",
+      "Manual check-in or help action",
+      "Contact guide/operator"
+    ],
+    "explicitly_out_of_scope": [
+      "Motorcycle-first product",
+      "iOS MVP",
+      "Free-form chat",
+      "Push-to-talk/audio",
+      "Automatic crash detection",
+      "Road-ice precision claims",
+      "Advanced weather/traffic",
+      "Replay/history product",
+      "Full multi-agency dashboard",
+      "Tracking every tourist by default"
+    ]
+  },
+  "validation_plan": {
+    "duration": "Two weeks before implementation commitment",
+    "actions": [
+      "Interview 3-5 guides or agencies with concrete pricing in hand",
+      "Validate whether monitoring guides/vehicles/staff is enough without tracking every tourist",
+      "Ask whether they would pay USD 29 per guide or USD 79 per small agency per month",
+      "Document current WhatsApp/radio/manual failures with timestamps from real tours",
+      "Benchmark RISER/Cardo Ride, REVER, Detecht and Convoy Tracker before re-opening motorcycle-first positioning",
+      "Estimate map and location infrastructure cost per active tour"
+    ],
+    "b2b_success_metric": "Guide or agency uses Waypoint-like workflow in three or more tours within 30 days and expresses willingness to pay.",
+    "consumer_metric_deprioritized": "Second trip in 60 days remains useful for B2C, but it is not the primary MVP kill metric."
+  },
+  "commercial_hypothesis": {
+    "pilot": "Free 14-day field pilot",
+    "guide_starter": "USD 29/month per active guide",
+    "agency_basic": "USD 79/month for up to three guides or active groups",
+    "agency_pro_later": "USD 149/month for larger operations after multi-group dashboard exists",
+    "pricing_status": "Hypothesis for interview validation, not approved pricing."
+  },
+  "open_questions": [
+    "Will agencies accept tracking only guides/vehicles/staff instead of every tourist?",
+    "Is one live trip view enough for the first paying pilot?",
+    "What is the real willingness to pay for small agencies in LATAM?",
+    "What map provider keeps cost per tour acceptable?",
+    "Can low-power Android tracking stay reliable for 4-8 hour tours?",
+    "Which legal disclaimer is required for manual help/SOS actions?"
+  ]
+}
