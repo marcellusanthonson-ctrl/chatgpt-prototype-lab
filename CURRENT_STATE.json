@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
   "document_id": "lab.current-state",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "status": "ACTIVE",
-  "updated_at": "2026-07-07",
+  "updated_at": "2026-07-11",
   "active_project": "lab",
   "current_phase": "KNOWLEDGE_BASE_OPERATIONAL_V1",
   "methodology": {
@@ -60,11 +60,25 @@
       "canonical_path": "projects/aster-flyt/PROJECT_STATE.md"
     }
   },
+  "structural_relationships": {
+    "status": "APPROVED_MODEL",
+    "decision": "DEC-LAB-005",
+    "rule": "Independent projects may establish explicit producer-consumer relationships when required by a workflow.",
+    "mammothskills_to_symphonie": {
+      "relationship": "skill producer and canonical source -> workflow consumer",
+      "requirements_and_feedback": "Symphonie may provide phase, agent, input/output, compatibility, and validation requirements to MammothSkills.",
+      "artifact_delivery": "MammothSkills may deliver an identified approved skill artifact or release for direct consumption by Symphonie.",
+      "runtime": "Claude or Codex according to target_platform",
+      "autonomous_consumer_write": "PROHIBITED",
+      "integration_authorization": "SEPARATE"
+    }
+  },
   "decisions_in_force": [
     "DEC-LAB-001",
     "DEC-LAB-002",
     "DEC-LAB-003",
-    "DEC-LAB-004"
+    "DEC-LAB-004",
+    "DEC-LAB-005"
   ],
   "open_errors": [
     "ERR-LAB-001",
