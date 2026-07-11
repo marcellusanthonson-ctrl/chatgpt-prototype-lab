@@ -1,0 +1,58 @@
+{
+  "id": "DEC-LAB-005",
+  "title": "Structural producer-consumer relationships between independent projects",
+  "project": "LAB",
+  "status": "APPROVED",
+  "effective_date": "2026-07-11",
+  "approved_by": "Jonathan Martínez",
+  "approval_evidence": "Documenta esto en tu repositorio.",
+  "decision": {
+    "summary": "LAB, MammothSkills, and Symphonie remain independent projects, but may establish explicit structural relationships when a workflow requires requirements exchange, skill production or adaptation, consumer feedback, validation, and direct consumption of approved artifacts.",
+    "rules": [
+      "Project independence does not prohibit structural relationships.",
+      "Before creating or adapting a skill, MammothSkills must determine intended use, consumer, phase, runtime agent, target platform, input contract, output contract, constraints, and validation criteria.",
+      "A consumer such as Symphonie may provide requirements, examples, compatibility constraints, handoff schemas, and integration feedback to MammothSkills.",
+      "MammothSkills may create new skills or adapt existing skills for Claude or Codex according to the declared target platform and consumer contract.",
+      "Symphonie may consume an approved skill directly from MammothSkills as the canonical source, while the skill itself runs in the declared runtime, Claude or Codex.",
+      "Direct consumption means using an identified MammothSkills artifact or release, not depending on an untracked copy or allowing MammothSkills to write autonomously into the consumer repository.",
+      "Consumer fit and runtime compatibility are separate validations from technical adaptation.",
+      "Consumer feedback may trigger a new MammothSkills revision, but does not itself authorize implementation, release, installation, or integration.",
+      "Every structural relationship must identify consumer, consumer phase, runtime, target platform, inputs, outputs, validation evidence, and consumed version or artifact identifier."
+    ]
+  },
+  "project_roles": {
+    "LAB": "Evaluate viability, feasibility, risks, integrations, and project initiation; preserve validated cross-project knowledge.",
+    "MammothSkills": "Create, adapt, audit, test, repair, version, and publish skills for declared agent platforms and consumer contracts.",
+    "Symphonie": "Operate an eight-phase workflow for creating applications and websites using Claude and Codex, and specify, validate, and consume skills when required by its phases."
+  },
+  "relationship_model": {
+    "requirements_flow": "consumer -> MammothSkills",
+    "artifact_flow": "MammothSkills -> consumer",
+    "feedback_flow": "consumer -> MammothSkills",
+    "runtime_location": "Claude or Codex according to target_platform",
+    "canonical_skill_source": "MammothSkills",
+    "consumer_example": "Symphonie"
+  },
+  "required_skill_intake_fields": [
+    "intended_use",
+    "consumer_project",
+    "consumer_phase",
+    "runtime_agent",
+    "source_platform",
+    "target_platform",
+    "input_contract",
+    "output_contract",
+    "constraints",
+    "validation_criteria"
+  ],
+  "authorization_boundary": {
+    "documentation_only": true,
+    "implementation_authorized": false,
+    "release_authorized": false,
+    "installation_authorized": false,
+    "consumer_integration_authorized": false,
+    "product_change_authorized": false
+  },
+  "supersedes": [],
+  "superseded_by": null
+}
