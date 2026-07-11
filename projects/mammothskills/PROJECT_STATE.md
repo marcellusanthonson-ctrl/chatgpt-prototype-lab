@@ -2,25 +2,75 @@
 
 Project-ID: `mammothskills`
 Status: `ACTIVE_PIPELINE_VALIDATED_PHASE_A`
-Last-Updated: `2026-07-07`
+Last-Updated: `2026-07-11`
 Repository: `marcellusanthonson-ctrl/MammothSkills`
 Working-Branch: `audit/ms-001`
 Current-HEAD: `034910e9fec4c0f0b97fe06ee94554bda289a1b6`
 
 ## Purpose
 
-Create, audit, adapt, test, version, and publish skills. MammothSkills is the
-producer and source of truth for skill artifacts, not the runtime where they
-live.
+Create, audit, adapt, test, repair, version, and publish skills for declared
+agent platforms and consumer contracts. MammothSkills is the producer and
+canonical source of skill artifacts, not the runtime where they live.
 
 ## Platform rule
 
 - Skills for Claude live in Claude.
 - Skills for Codex live in Codex.
 - The technical executor does not determine the target platform.
-- MammothSkills must not write directly into Symphonie or any other consumer.
-- Consumers may use only fixed approved releases through separate explicit
-  integration orders.
+- MammothSkills may create native skills or adapt existing skills for Claude or
+  Codex according to the declared use case.
+- MammothSkills must not autonomously write into a consumer repository.
+
+## Consumer-driven intake
+
+Before creating or adapting a skill, MammothSkills must establish:
+
+```text
+INTENDED_USE
+CONSUMER_PROJECT
+CONSUMER_PHASE
+RUNTIME_AGENT
+SOURCE_PLATFORM
+TARGET_PLATFORM
+INPUT_CONTRACT
+OUTPUT_CONTRACT
+CONSTRAINTS
+VALIDATION_CRITERIA
+```
+
+A consumer may provide phase-specific requirements, examples, schemas,
+compatibility constraints, expected handoffs, and integration feedback.
+
+## Structural relationship with Symphonie
+
+MammothSkills and Symphonie remain independent projects, but may operate through
+an explicit producer-consumer relationship.
+
+```text
+Symphonie -> requirements and feedback -> MammothSkills
+MammothSkills -> identified skill artifact/release -> Symphonie
+Skill runtime -> Claude or Codex according to target_platform
+```
+
+When a skill is intended for Symphonie, MammothSkills may require details about:
+
+- the Symphonie phase where it will be used;
+- whether Claude or Codex will execute it;
+- the inputs available to that phase;
+- the exact output and handoff required by the next phase;
+- consumer-specific quality and compatibility criteria.
+
+Symphonie may consume the resulting approved skill directly from MammothSkills
+as its canonical source. Direct consumption does not mean an untracked copy,
+live dependency on a mutable working tree, or autonomous writes by MammothSkills
+into Symphonie.
+
+The consumed artifact must remain identifiable by version or artifact ID,
+target platform, source commit, checksum when applicable, configuration, and
+validation evidence.
+
+Canonical decision: `DEC-LAB-005`.
 
 ## Current operational state
 
@@ -89,42 +139,27 @@ There is no blocker against using MS-001 as MammothSkills pipeline evidence.
 
 Remaining incomplete capabilities:
 
-- real runtime validation in a fresh Codex session;
+- real runtime validation in a fresh target-agent session;
 - a release/versioning workflow with checksums;
-- installation from a fixed release artifact;
-- a future MS-002 or equivalent skill that is a real operational candidate for
-  Codex use.
+- installation or consumption from a fixed artifact;
+- a future skill with a real operational consumer contract.
 
 The following remain not authorized:
 
 ```text
+MAMMOTHSKILLS_IMPLEMENTATION = NOT_AUTHORIZED
 MAMMOTHSKILLS_RELEASE = NOT_AUTHORIZED
 SYMPHONIE_INTEGRATION = NOT_AUTHORIZED
 PRODUCT_CHANGE = NOT_AUTHORIZED
 CODEX_AUTONOMOUS_AUTHORITY = NO
 ```
 
-## Valid work retained
-
-- immutable baselines and source fingerprints;
-- source licensing and provenance;
-- approved behavioral specifications and handoff contracts;
-- audit gates and test concepts;
-- producer, release, runtime, and consumer separation;
-- MS-001 package/test/classification evidence.
-
 ## Authorization
 
-This state file records the consumed synchronization. It does not authorize new
-implementation, runtime validation, release, merge, product change, or consumer
-integration.
+This state file records the approved structural model only. It does not
+authorize a new skill, adaptation, runtime test, release, installation, product
+change, or consumer integration.
 
 ## Next authorized action
 
 `NONE_UNTIL_NEW_EXPLICIT_APPROVAL`
-
-Recommended future actions, each requiring a separate explicit order:
-
-1. optional runtime validation of MS-001 as lab evidence;
-2. MS-002 with a skill that is a real Codex operational candidate;
-3. release workflow design and checksum validation.
