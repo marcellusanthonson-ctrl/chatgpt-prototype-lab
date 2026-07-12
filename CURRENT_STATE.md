@@ -1,7 +1,7 @@
 # LAB Current State
 
 Document-ID: `lab.current-state`
-Version: `1.0.2`
+Version: `1.0.3`
 Status: `ACTIVE`
 Last-Updated: `2026-07-11`
 
@@ -47,9 +47,24 @@ CONSUMER_INTEGRATION = NOT_AUTHORIZED
 
 ### Symphonie
 
-Symphonie is an eight-phase workflow for creating applications and websites. It
-coordinates work across ChatGPT, Claude, and Codex. Claude performs assigned
-discovery and definition phases; Codex performs bounded technical execution.
+Symphonie is an eight-phase workflow that creates and develops applications and
+websites from beginning to end. It coordinates project-specific work across
+ChatGPT, Claude, and Codex. Skills are instruments used by particular phases;
+they are not the purpose of Symphonie.
+
+Current operational objective:
+
+```text
+Complete the audit and runtime validation of the two historical Codex skill
+candidates, prove their direct design handoff and real design execution in
+Codex, and only then migrate reusable assets and process knowledge to
+MammothSkills under separate authorization.
+```
+
+Historical candidates:
+
+- `symphonie-ux-ui-architect`
+- `symphonie-ui-implementer`
 
 ## Approved structural relationship model
 
@@ -57,7 +72,7 @@ Independent projects may establish explicit structural relationships when a
 workflow requires them. Project independence does not mean absence of
 interaction.
 
-Canonical decision: `DEC-LAB-005`.
+Canonical decisions: `DEC-LAB-005`, `DEC-LAB-006`.
 
 For MammothSkills and Symphonie:
 
@@ -105,6 +120,44 @@ working tree.
 Technical adaptation, runtime compatibility, consumer fit, release, and
 integration remain separate validations and permissions.
 
+## Initial Symphonie Codex skill cycle
+
+The two historical candidates were created or adapted inside
+`symphonie-codex-lab` before MammothSkills existed. Their audit and operational
+validation may be completed there to preserve continuity, fixtures, regression
+evidence, and source history.
+
+The cycle is complete only when:
+
+```text
+SKILL_1_RUNTIME = PASS
+SKILL_2_RUNTIME = PASS
+HANDOFF_COMPATIBILITY = PASS
+CODEX_DISCOVERY_AND_INTERPRETATION = PASS
+REAL_DESIGN_EXECUTION = PASS
+REPEATABILITY = PASS
+```
+
+After closure, reusable skill assets, generic tests, audit methods, adaptation
+methods, and regression techniques may be migrated or extracted into
+MammothSkills under separate authorization. Symphonie retains phase placement,
+input/output contracts, handoff rules, consumer-specific fixtures, installed
+release identity, and integration evidence.
+
+Historical copies must not be silently deleted. After canonical migration they
+must be marked `legacy`, `superseded`, or `evidence-only` as appropriate.
+
+Future flow:
+
+```text
+Symphonie declares phase requirements
+-> MammothSkills creates or adapts
+-> MammothSkills audits, tests, versions, and publishes
+-> Jonathan approves the release
+-> Symphonie consumes a fixed identified release
+-> Symphonie validates consumer fit inside the workflow
+```
+
 ## MS-001
 
 The three MS-001 skills remain a MammothSkills validation corpus:
@@ -135,6 +188,8 @@ A commit records a transition but does not create approval.
 - `DEC-LAB-004`: freeze methodology v1.0 and use Git as structured memory.
 - `DEC-LAB-005`: permit explicit structural producer-consumer relationships
   between independent projects.
+- `DEC-LAB-006`: complete the initial Symphonie Codex skill cycle before
+  canonical migration to MammothSkills.
 
 ## Open or contained errors
 
@@ -148,15 +203,17 @@ A commit records a transition but does not create approval.
 ```text
 lab_documentation = NOT_AUTHORIZED
 mammothskills_implementation = NOT_AUTHORIZED
+mammothskills_migration = NOT_AUTHORIZED
 mammothskills_release = NOT_AUTHORIZED
+symphonie_runtime = NOT_AUTHORIZED
 symphonie_integration = NOT_AUTHORIZED
 product_changes = NOT_AUTHORIZED
 codex_autonomous_authority = NO
 ```
 
-This documentation records the approved structural model. It does not authorize
-a skill creation or adaptation, release, installation, consumer integration,
-product change, or repository modification outside LAB.
+This documentation records the approved structural and sequencing model. It
+does not authorize runtime execution, migration, release, installation,
+consumer integration, product change, or repository modification outside LAB.
 
 ## Next authorized action
 
