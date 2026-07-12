@@ -2,16 +2,12 @@
 
 Project-ID: `symphonie`
 Status: `KNOWN_AND_SYNCED`
-Last-Updated: `2026-07-11`
+Last-Updated: `2026-07-12`
 Repository: `marcellusanthonson-ctrl/symphonie-codex-lab`
 
 ## Role
 
-Symphonie is an eight-phase workflow that creates and develops applications and
-websites from beginning to end. It coordinates project-specific work across
-ChatGPT, Claude, and Codex. Skills are instruments used by particular phases;
-they are not the purpose of Symphonie and Symphonie is not the canonical source
-of reusable skills.
+Symphonie is an eight-phase workflow that creates and develops applications and websites from beginning to end. It coordinates project-specific work across ChatGPT, Claude, and Codex. Skills are instruments used by particular phases; they are not the purpose of Symphonie and Symphonie is not the canonical source of reusable skills.
 
 ## Operating model
 
@@ -22,23 +18,9 @@ of reusable skills.
 
 ## Structural relationship with MammothSkills
 
-Symphonie and MammothSkills remain independent projects, but may establish an
-explicit producer-consumer relationship when a Symphonie phase requires a
-skill.
+Symphonie and MammothSkills remain independent projects, but may establish an explicit producer-consumer relationship when a Symphonie phase requires a skill.
 
-Symphonie may provide MammothSkills with:
-
-- the target phase;
-- the runtime agent, Claude or Codex;
-- the available inputs;
-- the required output structure;
-- compatibility and handoff requirements;
-- examples and failure cases;
-- consumer-specific validation feedback.
-
-MammothSkills may then create or adapt a skill for the declared target platform.
-This includes adapting an existing Claude skill for a Claude-operated Symphonie
-phase, or creating/adapting a skill for a Codex phase.
+Symphonie may provide MammothSkills with phase, runtime-agent, input/output, compatibility, handoff, example, failure-case, and consumer-validation requirements. MammothSkills may then create or adapt a skill for the declared target platform.
 
 ```text
 Symphonie -> requirements and feedback -> MammothSkills
@@ -46,13 +28,7 @@ MammothSkills -> approved skill artifact/release -> Symphonie
 Runtime -> Claude or Codex according to target_platform
 ```
 
-Symphonie may consume the approved skill directly from MammothSkills as the
-canonical skill source. Direct consumption must preserve artifact identity,
-version or artifact ID, target platform, source commit, checksum when
-applicable, configuration, and validation evidence.
-
-Symphonie must not rely on an untracked copy or an unidentified mutable working
-tree. MammothSkills must not autonomously modify the Symphonie repository.
+Direct consumption must preserve artifact identity, target platform, version or artifact ID, source commit, checksum when applicable, configuration, and validation evidence. MammothSkills must not autonomously modify the Symphonie repository.
 
 Canonical decisions: `DEC-LAB-005`, `DEC-LAB-006`.
 
@@ -64,21 +40,14 @@ The MammothSkills corpus currently includes:
 - `project-scoping`;
 - `project-status`.
 
-These are not yet registered as installed operational Symphonie releases. Before
-they can be assigned to Claude-operated Intake, Briefing, Scoping, or status
-phases, their current state must be audited in MammothSkills, validated in the
-Claude runtime, versioned and identified, explicitly approved, and separately
-integrated into Symphonie.
+These are not yet registered as installed operational Symphonie releases. Before assignment to Claude-operated phases, they require audit in MammothSkills, Claude runtime validation, versioned identity, explicit approval, and separate Symphonie integration.
 
 ## Historical Codex skill candidates
 
-The following two Codex skill candidates were created or adapted inside
-`symphonie-codex-lab` before MammothSkills existed:
+The following two Codex skills were created or adapted inside `symphonie-codex-lab` before MammothSkills existed:
 
 - `symphonie-ux-ui-architect`;
 - `symphonie-ui-implementer`.
-
-They cover different Codex-operated phases:
 
 ```text
 Phase 3A: symphonie-ux-ui-architect
@@ -101,65 +70,53 @@ RUNTIME_VALIDATION = PASS
 PROMOTION_GATE = PASS
 ```
 
-This baseline is already closed. Its next useful validation is not another
-isolated regression run, but participation in the real architect-to-implementer
-handoff.
+This baseline is closed and immutable. Its next useful validation is participation in the real architect-to-implementer handoff.
 
 ### `symphonie-ui-implementer 0.1.0-alpha.3`
 
 ```text
-STATUS = TECHNICALLY_VALIDATED_PROMOTION_PENDING
+STATUS = APPROVED_BASELINE_CLOSED_IMMUTABLE
 STATIC_VALIDATION = PASS
 RUNTIME_SUITE = IMP-REG-01 THROUGH IMP-REG-12
 RUNTIME_VALIDATION = PASS
-VALIDATED_LOCAL_HEAD = 73c0448dfb99e04a943a8e75704f14daef2c2631
-RUNTIME_ORDER = SYM-UI-IMPLEMENTER-RUNTIME-009
-RUNTIME_ORDER_STATE = CONSUMED
-PROMOTION = NOT_AUTHORIZED
+BASELINE_HEAD = c2f3159e754d356f23b6855f2aecf1a663209835
+PROMOTION_REVIEW = SYM-UI-IMPLEMENTER-PROMOTION-REVIEW-013
+PROMOTION_RECORD_ORDER = SYM-UI-IMPLEMENTER-PROMOTION-RECORD-014
+PROMOTION_RECORD_COMMIT = 8f319aef3f328d22376fde42b4b0003601ffa670
+HUMAN_APPROVAL = GRANTED
+PROMOTION_GATE = PASS
 RELEASE = NOT_AUTHORIZED
+MIGRATION = NOT_AUTHORIZED
+INTEGRATION = NOT_AUTHORIZED
 ```
 
-The completed runtime order reported:
+Technical validation and human promotion are complete. This baseline is closed and immutable. Any future functional change requires a new version, new validation evidence, and a new explicit human approval.
 
-- `IMP-REG-01` through `IMP-REG-12`: `PASS`;
-- identical HEAD before and after;
-- no tracked repository source changes;
-- no Git configuration change;
-- no commit, push, pull request, MammothSkills write, migration, or integration.
-
-The prepared `IMP-REG-07` fixture contained only its authorized fixture copies
-of `src/components/TicketBoard.tsx` and `src/components/TicketRow.tsx`; these
-were not tracked source changes in the main repository.
-
-Technical validation is complete, but promotion has not been approved. Runtime
-success does not itself create an approved baseline.
+The promotion does not authorize release, installation, migration to MammothSkills, or integration into Symphonie.
 
 ## Immediate operational sequence
 
 The next recommended transition is:
 
 ```text
-1. Consolidate and review promotion evidence for
-   symphonie-ui-implementer 0.1.0-alpha.3
-2. Obtain an explicit approval or rejection from Jonathan Martínez
-3. If approved, record alpha.3 as a closed immutable baseline
-4. Validate architect -> Phase 3A contracts -> implementer handoff
-5. Execute a real design through the chained flow
-6. Repeat the flow to prove reproducibility
+1. Plan architect -> Phase 3A contracts -> implementer handoff validation
+2. Obtain explicit bounded authorization for the handoff validation
+3. Execute and assess the handoff
+4. Execute a real design through the chained flow
+5. Repeat the flow to prove reproducibility
+6. Only then consider migration to MammothSkills under separate authorization
 ```
 
-Each numbered transition requires its own explicit bounded authorization where
-it involves execution, repository writing, promotion, release, migration, or
-integration.
+Each transition requires its own explicit bounded authorization where it involves execution, repository writing, release, migration, or integration.
 
 ## Initial Symphonie Codex skill cycle
 
 The immediate operational objective is to prove that Codex can:
 
-1. discover and interpret both skills;
+1. discover and interpret both approved skills;
 2. execute each skill under its phase contract;
 3. produce the required design artifacts;
-4. hand those artifacts from the architecture phase to the implementation phase;
+4. hand those artifacts from architecture to implementation;
 5. create a real design through the Symphonie workflow;
 6. repeat the flow with reproducible results.
 
@@ -167,7 +124,9 @@ Current completion state:
 
 ```text
 SKILL_1_RUNTIME = PASS
+SKILL_1_PROMOTION = APPROVED_BASELINE_CLOSED_IMMUTABLE
 SKILL_2_RUNTIME = PASS
+SKILL_2_PROMOTION = APPROVED_BASELINE_CLOSED_IMMUTABLE
 HANDOFF_COMPATIBILITY = NOT_YET_VALIDATED
 CODEX_DISCOVERY_AND_INTERPRETATION_AS_CHAIN = NOT_YET_VALIDATED
 REAL_DESIGN_EXECUTION = NOT_YET_VALIDATED
@@ -176,67 +135,35 @@ REPEATABILITY = NOT_YET_VALIDATED
 
 ## Post-validation migration strategy
 
-After the initial Symphonie Codex skill cycle is closed, reusable assets and
-process knowledge may be migrated or extracted into MammothSkills under separate
-authorization.
+After the initial Symphonie Codex skill cycle is closed, reusable assets and process knowledge may be migrated or extracted into MammothSkills under separate authorization.
 
-MammothSkills may receive:
+MammothSkills may receive canonical skill sources, generic schemas, templates, validators, reusable regression cases, audit and adaptation methods, snapshot techniques, report parsing, fail-closed validation patterns, versioning, checksums, changelogs, and source provenance.
 
-- canonical skill sources;
-- generic schemas, templates, and validators;
-- reusable regression cases;
-- audit and adaptation methods;
-- Git and non-Git snapshot techniques;
-- report parsing and fail-closed validation patterns;
-- version, checksum, changelog, and source provenance.
+Symphonie retains phase placement, activation rules, phase-specific contracts, handoff requirements, workflow fixtures, installed release identity, configuration, consumer-fit evidence, and integration evidence.
 
-Symphonie will retain:
-
-- phase placement and activation rules;
-- phase-specific input and output contracts;
-- handoff requirements;
-- workflow-specific fixtures and expected results;
-- installed release identity and configuration;
-- consumer-fit and integration evidence.
-
-Historical copies must not be silently deleted. After canonical migration they
-must be marked `legacy`, `superseded`, or `evidence-only` as appropriate.
-
-Future skill flow:
-
-```text
-Symphonie declares phase requirements
--> MammothSkills creates or adapts
--> MammothSkills audits, tests, versions, and publishes
--> Jonathan approves the release
--> Symphonie consumes a fixed identified release
--> Symphonie validates consumer fit inside the workflow
-```
+Historical copies must not be silently deleted. After canonical migration they must be marked `legacy`, `superseded`, or `evidence-only` as appropriate.
 
 ## Skill relationship
 
 - Skills for Claude live in Claude.
 - Skills for Codex live in Codex.
-- MammothSkills produces and maintains canonical skill artifacts.
+- MammothSkills produces and maintains canonical reusable skill artifacts.
 - Symphonie specifies consumer requirements and validates consumer fit.
 - Consumer feedback may result in a new MammothSkills revision.
-- Technical adaptability, runtime compatibility, promotion, release, and
-  Symphonie consumer fit are separate validations and permissions.
+- Technical adaptability, runtime compatibility, promotion, release, and Symphonie consumer fit are separate validations and permissions.
 
 ## Authorization state
 
 ```text
 PRODUCT_CHANGE = NOT_AUTHORIZED
-SKILL_PROMOTION = NOT_AUTHORIZED
+HANDOFF_EXECUTION = NOT_AUTHORIZED
 SKILL_INTEGRATION = NOT_AUTHORIZED
 CODEX_EXECUTION = NOT_AUTHORIZED
 MAMMOTHSKILLS_MIGRATION = NOT_AUTHORIZED
 MAMMOTHSKILLS_RELEASE = NOT_AUTHORIZED
 ```
 
-This update records validated runtime evidence and the recommended sequence. It
-does not authorize promotion, runtime execution, creation, adaptation, release,
-installation, repository changes outside LAB, migration, or integration.
+This update records the approved immutable implementer baseline and the recommended next transition. It does not authorize handoff execution, runtime, release, installation, repository changes outside LAB, migration, or integration.
 
 ## Next authorized action
 
@@ -244,4 +171,4 @@ installation, repository changes outside LAB, migration, or integration.
 
 Recommended transition:
 
-`REVIEW_AND_EXPLICITLY_APPROVE_OR_REJECT_PROMOTION_OF_SYMPHONIE_UI_IMPLEMENTER_0.1.0_ALPHA.3`
+`PLAN_AND_EXPLICITLY_AUTHORIZE_ARCHITECT_TO_IMPLEMENTER_HANDOFF_VALIDATION`
