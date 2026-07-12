@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "document_id": "lab.current-state",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "status": "ACTIVE",
   "updated_at": "2026-07-11",
   "active_project": "lab",
@@ -47,11 +47,39 @@
       "status": "known_and_synced",
       "canonical_path": "projects/symphonie/PROJECT_STATE.md",
       "purpose": "eight-phase workflow that creates and develops projects from beginning to end",
-      "current_operational_objective": "Complete audit and runtime validation of the two historical Codex skill candidates, prove their direct design handoff and real design execution in Codex, then under separate authorization migrate reusable assets and process knowledge to MammothSkills.",
+      "current_operational_objective": "Complete formal promotion review of symphonie-ui-implementer 0.1.0-alpha.3, then prove direct architect-to-implementer handoff, real design execution, and repeatability before any separately authorized migration to MammothSkills.",
       "historical_codex_skill_candidates": [
         "symphonie-ux-ui-architect",
         "symphonie-ui-implementer"
       ],
+      "codex_skill_cycle": {
+        "symphonie_ux_ui_architect": {
+          "version": "0.1.0-alpha.5",
+          "phase": "3A",
+          "capability": "DOCUMENT_WRITE",
+          "status": "APPROVED_BASELINE_CLOSED_IMMUTABLE",
+          "runtime_validation": "PASS",
+          "promotion_gate": "PASS"
+        },
+        "symphonie_ui_implementer": {
+          "version": "0.1.0-alpha.3",
+          "phase": "4A",
+          "capability": "SOURCE_WRITE",
+          "status": "TECHNICALLY_VALIDATED_PROMOTION_PENDING",
+          "static_validation": "PASS",
+          "runtime_validation": "PASS",
+          "runtime_suite": "IMP-REG-01_THROUGH_IMP-REG-12",
+          "validated_local_head": "73c0448dfb99e04a943a8e75704f14daef2c2631",
+          "runtime_order": "SYM-UI-IMPLEMENTER-RUNTIME-009",
+          "runtime_order_state": "CONSUMED",
+          "promotion": "NOT_AUTHORIZED",
+          "release": "NOT_AUTHORIZED"
+        },
+        "handoff_compatibility": "NOT_YET_VALIDATED",
+        "codex_discovery_and_interpretation": "NOT_YET_VALIDATED_AS_CHAIN",
+        "real_design_execution": "NOT_YET_VALIDATED",
+        "repeatability": "NOT_YET_VALIDATED"
+      },
       "migration_sequence_decision": "DEC-LAB-006"
     },
     "carolina-klinik": {
@@ -116,6 +144,7 @@
     "codex_autonomous_authority": "NO"
   },
   "next_authorized_action": "NONE_UNTIL_NEW_EXPLICIT_APPROVAL",
+  "next_recommended_transition": "REVIEW_AND_EXPLICITLY_APPROVE_OR_REJECT_PROMOTION_OF_SYMPHONIE_UI_IMPLEMENTER_0.1.0_ALPHA.3",
   "continuity_read_order": [
     "LAB_CONTRACT.md",
     "METHODOLOGY.md",
