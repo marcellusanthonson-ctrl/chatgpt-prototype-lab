@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "document_id": "lab.current-state",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "status": "ACTIVE",
   "updated_at": "2026-07-11",
   "active_project": "lab",
@@ -45,7 +45,14 @@
     },
     "symphonie": {
       "status": "known_and_synced",
-      "canonical_path": "projects/symphonie/PROJECT_STATE.md"
+      "canonical_path": "projects/symphonie/PROJECT_STATE.md",
+      "purpose": "eight-phase workflow that creates and develops projects from beginning to end",
+      "current_operational_objective": "Complete audit and runtime validation of the two historical Codex skill candidates, prove their direct design handoff and real design execution in Codex, then under separate authorization migrate reusable assets and process knowledge to MammothSkills.",
+      "historical_codex_skill_candidates": [
+        "symphonie-ux-ui-architect",
+        "symphonie-ui-implementer"
+      ],
+      "migration_sequence_decision": "DEC-LAB-006"
     },
     "carolina-klinik": {
       "status": "known",
@@ -71,6 +78,12 @@
       "runtime": "Claude or Codex according to target_platform",
       "autonomous_consumer_write": "PROHIBITED",
       "integration_authorization": "SEPARATE"
+    },
+    "historical_skill_transition": {
+      "decision": "DEC-LAB-006",
+      "rule": "Complete the two historical Symphonie Codex skill audits and operational handoff proof in symphonie-codex-lab before separately authorized canonical migration to MammothSkills.",
+      "future_source": "MammothSkills",
+      "consumer": "Symphonie"
     }
   },
   "decisions_in_force": [
@@ -78,7 +91,8 @@
     "DEC-LAB-002",
     "DEC-LAB-003",
     "DEC-LAB-004",
-    "DEC-LAB-005"
+    "DEC-LAB-005",
+    "DEC-LAB-006"
   ],
   "open_errors": [
     "ERR-LAB-001",
@@ -94,7 +108,9 @@
   "authorization_state": {
     "lab_documentation": "NOT_AUTHORIZED",
     "mammothskills_implementation": "NOT_AUTHORIZED",
+    "mammothskills_migration": "NOT_AUTHORIZED",
     "mammothskills_release": "NOT_AUTHORIZED",
+    "symphonie_runtime": "NOT_AUTHORIZED",
     "symphonie_integration": "NOT_AUTHORIZED",
     "product_changes": "NOT_AUTHORIZED",
     "codex_autonomous_authority": "NO"
