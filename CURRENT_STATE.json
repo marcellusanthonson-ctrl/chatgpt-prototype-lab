@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
   "document_id": "lab.current-state",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "status": "ACTIVE",
-  "updated_at": "2026-07-11",
+  "updated_at": "2026-07-12",
   "active_project": "lab",
   "current_phase": "KNOWLEDGE_BASE_OPERATIONAL_V1",
   "methodology": {
@@ -47,7 +47,7 @@
       "status": "known_and_synced",
       "canonical_path": "projects/symphonie/PROJECT_STATE.md",
       "purpose": "eight-phase workflow that creates and develops projects from beginning to end",
-      "current_operational_objective": "Complete formal promotion review of symphonie-ui-implementer 0.1.0-alpha.3, then prove direct architect-to-implementer handoff, real design execution, and repeatability before any separately authorized migration to MammothSkills.",
+      "current_operational_objective": "Plan and explicitly authorize architect-to-implementer handoff validation, then prove real design execution and repeatability before any separately authorized migration to MammothSkills.",
       "historical_codex_skill_candidates": [
         "symphonie-ux-ui-architect",
         "symphonie-ui-implementer"
@@ -65,15 +65,21 @@
           "version": "0.1.0-alpha.3",
           "phase": "4A",
           "capability": "SOURCE_WRITE",
-          "status": "TECHNICALLY_VALIDATED_PROMOTION_PENDING",
+          "status": "APPROVED_BASELINE_CLOSED_IMMUTABLE",
           "static_validation": "PASS",
           "runtime_validation": "PASS",
           "runtime_suite": "IMP-REG-01_THROUGH_IMP-REG-12",
-          "validated_local_head": "73c0448dfb99e04a943a8e75704f14daef2c2631",
+          "baseline_head": "c2f3159e754d356f23b6855f2aecf1a663209835",
+          "promotion_review": "SYM-UI-IMPLEMENTER-PROMOTION-REVIEW-013",
+          "promotion_record_order": "SYM-UI-IMPLEMENTER-PROMOTION-RECORD-014",
+          "promotion_record_commit": "8f319aef3f328d22376fde42b4b0003601ffa670",
+          "human_approval": "GRANTED",
+          "promotion_gate": "PASS",
           "runtime_order": "SYM-UI-IMPLEMENTER-RUNTIME-009",
           "runtime_order_state": "CONSUMED",
-          "promotion": "NOT_AUTHORIZED",
-          "release": "NOT_AUTHORIZED"
+          "release": "NOT_AUTHORIZED",
+          "migration": "NOT_AUTHORIZED",
+          "integration": "NOT_AUTHORIZED"
         },
         "handoff_compatibility": "NOT_YET_VALIDATED",
         "codex_discovery_and_interpretation": "NOT_YET_VALIDATED_AS_CHAIN",
@@ -144,7 +150,7 @@
     "codex_autonomous_authority": "NO"
   },
   "next_authorized_action": "NONE_UNTIL_NEW_EXPLICIT_APPROVAL",
-  "next_recommended_transition": "REVIEW_AND_EXPLICITLY_APPROVE_OR_REJECT_PROMOTION_OF_SYMPHONIE_UI_IMPLEMENTER_0.1.0_ALPHA.3",
+  "next_recommended_transition": "PLAN_AND_EXPLICITLY_AUTHORIZE_ARCHITECT_TO_IMPLEMENTER_HANDOFF_VALIDATION",
   "continuity_read_order": [
     "LAB_CONTRACT.md",
     "METHODOLOGY.md",
