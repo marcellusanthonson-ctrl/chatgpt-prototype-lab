@@ -1,0 +1,53 @@
+{
+  "id": "DEC-LAB-006",
+  "title": "Close the initial Symphonie Codex skill cycle before canonical migration to MammothSkills",
+  "project": "LAB",
+  "status": "APPROVED",
+  "effective_date": "2026-07-11",
+  "approved_by": "Jonathan Martínez",
+  "approval_evidence": "Documenta en el repositorio que primero se probará el flujo de Symphonie con las dos skills históricas funcionando en Codex y luego se migrarán y consolidarán en MammothSkills.",
+  "decision": {
+    "summary": "The two historical Codex skill candidates currently isolated in symphonie-codex-lab will complete their audit, runtime validation, and operational handoff testing inside Symphonie before being migrated and canonicalized in MammothSkills. The completed audit and adaptation process may then be extracted to improve the MammothSkills production pipeline.",
+    "rules": [
+      "Symphonie remains an eight-phase workflow that creates and develops projects from beginning to end; the two isolated skills are instruments for two Codex-operated phases, not the purpose of Symphonie.",
+      "symphonie-ux-ui-architect and symphonie-ui-implementer are historical candidates created or adapted before MammothSkills existed.",
+      "Their current audit and runtime validation may be completed in symphonie-codex-lab to preserve continuity, fixtures, regression evidence, and source history.",
+      "The immediate operational objective is to prove that Codex can interpret both skills, produce design artifacts, hand those artifacts between the two phases, and create a design through the Symphonie workflow.",
+      "Approval requires individual runtime validation of both skills, handoff compatibility, Codex discovery and interpretation, real design execution, and repeatability evidence.",
+      "After this cycle closes, the reusable skill artifacts, generic tests, audit methods, adaptation methods, regression techniques, and validation patterns may be migrated or extracted into MammothSkills.",
+      "MammothSkills will become the canonical producer and source of future approved or adapted skills consumed by Symphonie.",
+      "Symphonie will retain phase placement, input and output contracts, handoff rules, consumer-specific fixtures, installed release identity, and integration evidence.",
+      "Historical copies in symphonie-codex-lab must not be silently deleted; after canonical migration they should be marked legacy, superseded, or evidence-only as appropriate.",
+      "This decision documents sequencing and architecture only; it does not authorize runtime execution, repository modifications outside LAB, migration, release, installation, or consumer integration."
+    ]
+  },
+  "initial_operational_sequence": [
+    "Complete symphonie-ui-implementer runtime regression validation from its immutable candidate commit.",
+    "Reconstruct and close the exact audit and runtime state of symphonie-ux-ui-architect.",
+    "Run a controlled end-to-end design exercise from architecture artifacts to implementation in Codex.",
+    "Validate the direct handoff between the two phases without manual reinterpretation.",
+    "Repeat the flow to establish reproducibility.",
+    "Classify reusable versus Symphonie-specific assets.",
+    "Under separate authorization, migrate and canonicalize reusable skill assets and process knowledge in MammothSkills.",
+    "Under separate authorization, replace isolated copies with fixed approved MammothSkills release references in Symphonie."
+  ],
+  "success_criteria": {
+    "skill_1_runtime": "PASS",
+    "skill_2_runtime": "PASS",
+    "handoff_compatibility": "PASS",
+    "codex_skill_discovery_and_interpretation": "PASS",
+    "real_design_execution": "PASS",
+    "repeatability": "PASS"
+  },
+  "authorization_boundary": {
+    "documentation_only": true,
+    "codex_runtime_authorized": false,
+    "symphonie_repository_change_authorized": false,
+    "mammothskills_migration_authorized": false,
+    "mammothskills_release_authorized": false,
+    "consumer_integration_authorized": false,
+    "product_change_authorized": false
+  },
+  "supersedes": [],
+  "superseded_by": null
+}
