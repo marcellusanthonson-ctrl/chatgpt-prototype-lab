@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-07-11",
+  "updated_at": "2026-07-13",
   "records": [
     {
       "id": "DEC-LAB-001",
@@ -55,6 +55,24 @@
       "project_scope": ["lab", "mammothskills", "symphonie"],
       "canonical_path": "decisions/DEC-LAB-006.json",
       "updated_at": "2026-07-11"
+    },
+    {
+      "id": "DEC-LAB-007",
+      "title": "Register Waypoint as a referenced app concept",
+      "status": "APPROVED",
+      "approval_state": "APPROVED",
+      "project_scope": ["lab", "waypoint"],
+      "canonical_path": "decisions/DEC-LAB-007.json",
+      "updated_at": "2026-07-13"
+    },
+    {
+      "id": "DEC-LAB-008",
+      "title": "Canonicalize the continuity read order with structured state first",
+      "status": "APPROVED",
+      "approval_state": "APPROVED",
+      "project_scope": ["lab"],
+      "canonical_path": "decisions/DEC-LAB-008.json",
+      "updated_at": "2026-07-13"
     }
   ]
 }
