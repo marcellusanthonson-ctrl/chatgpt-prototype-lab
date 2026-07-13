@@ -1,0 +1,31 @@
+{
+  "id": "DEC-LAB-007",
+  "title": "Register Waypoint as a referenced app concept",
+  "project": "LAB",
+  "status": "APPROVED",
+  "effective_date": "2026-07-13",
+  "approved_by": "Jonathan Martínez",
+  "approval_evidence": "Waypoint es una app, aun no se desarrolla. Solo hay discusiones sobre el enfoque. Apruebo DEC-LAB-007 y DEC-LAB-008.",
+  "decision": {
+    "summary": "Register Waypoint in the LAB project registry as a referenced app concept whose current material records strategic discussion only. Waypoint has not entered development and this registration creates no product-execution authority.",
+    "rules": [
+      "Waypoint is an application concept under discussion, not a developed or operational product.",
+      "Its existing project-state files are continuity records for product framing, MVP hypotheses, risks, and validation questions.",
+      "The project registry status is referenced, using the existing controlled registry vocabulary.",
+      "The internal document status REFERENCED_CONCEPT may remain descriptive inside the Waypoint state record and does not extend the registry status vocabulary.",
+      "Statements marked APPROVED_FOR_STRATEGY represent approved discussion direction only; they do not authorize implementation, coding, repository creation, research execution, commercial validation, release, integration, deployment, or product change.",
+      "Any development, validation activity, repository write outside LAB, or product execution requires a separate explicit bounded authorization."
+    ]
+  },
+  "authorization_boundary": {
+    "documentation_only": true,
+    "waypoint_development_authorized": false,
+    "waypoint_research_execution_authorized": false,
+    "product_repository_change_authorized": false,
+    "release_authorized": false,
+    "integration_authorized": false,
+    "deployment_authorized": false
+  },
+  "supersedes": [],
+  "superseded_by": null
+}
