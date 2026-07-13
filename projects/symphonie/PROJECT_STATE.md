@@ -70,7 +70,7 @@ RUNTIME_VALIDATION = PASS
 PROMOTION_GATE = PASS
 ```
 
-This baseline is closed and immutable. Its next useful validation is participation in the real architect-to-implementer handoff.
+This baseline is closed and immutable.
 
 ### `symphonie-ui-implementer 0.1.0-alpha.3`
 
@@ -94,31 +94,67 @@ Technical validation and human promotion are complete. This baseline is closed a
 
 The promotion does not authorize release, installation, migration to MammothSkills, or integration into Symphonie.
 
+## Validated synthetic architect-to-implementer handoff
+
+Project: `handoff-controlled-017`
+
+```text
+RESULT = PASS_WITH_FINDINGS
+HANDOFF_COMPATIBILITY = PASS
+CODEX_DISCOVERY_AND_INTERPRETATION_AS_CHAIN = PASS
+REAL_DESIGN_EXECUTION = NOT_YET_VALIDATED
+REPEATABILITY = NOT_YET_VALIDATED
+CLOSED_AT = 2026-07-12
+```
+
+Orders included in the validated chain:
+
+- `SYM-ARCH-IMPLEMENTER-HANDOFF-017`
+- `SYM-ARCH-IMPLEMENTER-HANDOFF-018`
+- `SYM-ARCH-IMPLEMENTER-HANDOFF-019`
+- `SYM-ARCH-IMPLEMENTER-HANDOFF-RUNTIME-020`
+- `SYM-ARCH-IMPLEMENTER-HANDOFF-MANUAL-VALIDATION-021`
+
+The chain validated:
+
+1. discovery and interpretation of both approved Codex skills;
+2. Phase 3A generation of the canonical design contracts;
+3. preservation of the human `DESIGN_DIRECTION_APPROVED` gate;
+4. Phase 4A consumption of the four canonical JSON contracts;
+5. bounded application-source generation;
+6. successful TypeScript and Vite build;
+7. real browser rendering;
+8. console, six-viewport responsive, keyboard, focus, accessibility-basic, action-preservation, Phase 3A conformance, and boundary validation.
+
+Historical blockers and corrections remain part of the evidence:
+
+- The first build was blocked because the synthetic fixture lacked Vite CSS Module declarations.
+- A separately authorized `src/vite-env.d.ts` correction resolved the build blocker.
+- Automated browser validation was blocked because the Playwright Chromium executable was absent and browser installation was prohibited.
+- Manual-assisted validation completed the remaining evidence and closed the synthetic handoff as `PASS_WITH_FINDINGS`.
+
+Non-blocking findings:
+
+- missing `favicon.ico` caused a local `404`;
+- approved fixture labels `Prepared, not executed` and `Not yet executed` became semantically stale after the experiment was completed.
+
+The synthetic result does not establish real-design execution, reproducibility, production readiness, release, migration, or integration.
+
 ## Immediate operational sequence
 
 The next recommended transition is:
 
 ```text
-1. Plan architect -> Phase 3A contracts -> implementer handoff validation
-2. Obtain explicit bounded authorization for the handoff validation
-3. Execute and assess the handoff
-4. Execute a real design through the chained flow
-5. Repeat the flow to prove reproducibility
-6. Only then consider migration to MammothSkills under separate authorization
+1. Plan a real-design execution through the validated chained flow
+2. Obtain explicit bounded authorization for the real-design test
+3. Execute and assess the real design
+4. Repeat the flow to prove reproducibility
+5. Only then consider migration to MammothSkills under separate authorization
 ```
 
 Each transition requires its own explicit bounded authorization where it involves execution, repository writing, release, migration, or integration.
 
 ## Initial Symphonie Codex skill cycle
-
-The immediate operational objective is to prove that Codex can:
-
-1. discover and interpret both approved skills;
-2. execute each skill under its phase contract;
-3. produce the required design artifacts;
-4. hand those artifacts from architecture to implementation;
-5. create a real design through the Symphonie workflow;
-6. repeat the flow with reproducible results.
 
 Current completion state:
 
@@ -127,8 +163,8 @@ SKILL_1_RUNTIME = PASS
 SKILL_1_PROMOTION = APPROVED_BASELINE_CLOSED_IMMUTABLE
 SKILL_2_RUNTIME = PASS
 SKILL_2_PROMOTION = APPROVED_BASELINE_CLOSED_IMMUTABLE
-HANDOFF_COMPATIBILITY = NOT_YET_VALIDATED
-CODEX_DISCOVERY_AND_INTERPRETATION_AS_CHAIN = NOT_YET_VALIDATED
+HANDOFF_COMPATIBILITY = PASS
+CODEX_DISCOVERY_AND_INTERPRETATION_AS_CHAIN = PASS
 REAL_DESIGN_EXECUTION = NOT_YET_VALIDATED
 REPEATABILITY = NOT_YET_VALIDATED
 ```
@@ -156,14 +192,15 @@ Historical copies must not be silently deleted. After canonical migration they m
 
 ```text
 PRODUCT_CHANGE = NOT_AUTHORIZED
-HANDOFF_EXECUTION = NOT_AUTHORIZED
+REAL_DESIGN_EXECUTION = NOT_AUTHORIZED
+REPEATABILITY_TEST = NOT_AUTHORIZED
 SKILL_INTEGRATION = NOT_AUTHORIZED
 CODEX_EXECUTION = NOT_AUTHORIZED
 MAMMOTHSKILLS_MIGRATION = NOT_AUTHORIZED
 MAMMOTHSKILLS_RELEASE = NOT_AUTHORIZED
 ```
 
-This update records the approved immutable implementer baseline and the recommended next transition. It does not authorize handoff execution, runtime, release, installation, repository changes outside LAB, migration, or integration.
+This update records the completed synthetic handoff validation. It does not authorize real-design execution, repeatability testing, release, installation, repository changes outside LAB, migration, or integration.
 
 ## Next authorized action
 
@@ -171,4 +208,4 @@ This update records the approved immutable implementer baseline and the recommen
 
 Recommended transition:
 
-`PLAN_AND_EXPLICITLY_AUTHORIZE_ARCHITECT_TO_IMPLEMENTER_HANDOFF_VALIDATION`
+`PLAN_AND_EXPLICITLY_AUTHORIZE_REAL_DESIGN_EXECUTION_THROUGH_VALIDATED_HANDOFF`
