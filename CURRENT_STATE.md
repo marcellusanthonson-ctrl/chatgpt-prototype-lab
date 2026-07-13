@@ -1,9 +1,9 @@
 # LAB Current State
 
 Document-ID: `lab.current-state`
-Version: `1.0.6`
+Version: `1.0.7`
 Status: `ACTIVE`
-Last-Updated: `2026-07-12`
+Last-Updated: `2026-07-13`
 
 `CURRENT_STATE.json` is the structured source of truth. This file is its human-readable view.
 
@@ -55,6 +55,10 @@ Plan and explicitly authorize a real-design execution through the validated
 architect-to-implementer chain, then repeat the flow before any separately
 authorized migration to MammothSkills.
 ```
+
+### Waypoint
+
+Waypoint is a referenced application concept under strategic discussion. It has not entered development. Its records preserve framing, MVP hypotheses, risks, and validation questions only; they do not authorize implementation, research execution, product repository changes, release, integration, or deployment. Canonical decision: `DEC-LAB-007`.
 
 ## Current Symphonie Codex skill state
 
@@ -196,6 +200,8 @@ A commit records a transition but does not create approval.
 - `DEC-LAB-004`: freeze methodology v1.0 and use Git as structured memory.
 - `DEC-LAB-005`: permit explicit structural producer-consumer relationships between independent projects.
 - `DEC-LAB-006`: complete the initial Symphonie Codex skill cycle before canonical migration to MammothSkills.
+- `DEC-LAB-007`: register Waypoint as a referenced app concept without development authority.
+- `DEC-LAB-008`: read structured current state before its human-readable view.
 
 ## Open or contained errors
 
@@ -225,7 +231,7 @@ product_changes = NOT_AUTHORIZED
 codex_autonomous_authority = NO
 ```
 
-This documentation records the completed synthetic handoff validation. It does not authorize real-design execution, repeatability testing, runtime, release, installation, migration, integration, product change, or repository modification outside LAB.
+This documentation records the completed synthetic handoff validation and the approved Waypoint/continuity classifications. It does not authorize Waypoint development, real-design execution, repeatability testing, runtime, release, installation, migration, integration, product change, or repository modification outside LAB.
 
 ## Next authorized action
 
