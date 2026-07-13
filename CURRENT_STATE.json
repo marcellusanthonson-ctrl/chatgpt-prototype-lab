@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
   "document_id": "lab.current-state",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "status": "ACTIVE",
-  "updated_at": "2026-07-12",
+  "updated_at": "2026-07-13",
   "active_project": "lab",
   "current_phase": "KNOWLEDGE_BASE_OPERATIONAL_V1",
   "methodology": {
@@ -126,6 +126,11 @@
     "aster-flyt": {
       "status": "referenced",
       "canonical_path": "projects/aster-flyt/PROJECT_STATE.md"
+    },
+    "waypoint": {
+      "status": "referenced",
+      "canonical_path": "projects/waypoint/PROJECT_STATE.md",
+      "description": "Application concept under strategic discussion; no development or product execution is authorized."
     }
   },
   "structural_relationships": {
@@ -153,7 +158,9 @@
     "DEC-LAB-003",
     "DEC-LAB-004",
     "DEC-LAB-005",
-    "DEC-LAB-006"
+    "DEC-LAB-006",
+    "DEC-LAB-007",
+    "DEC-LAB-008"
   ],
   "open_errors": [
     "ERR-LAB-001",
