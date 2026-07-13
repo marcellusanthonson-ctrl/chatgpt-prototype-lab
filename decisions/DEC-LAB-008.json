@@ -1,0 +1,41 @@
+{
+  "id": "DEC-LAB-008",
+  "title": "Canonicalize the continuity read order with structured state first",
+  "project": "LAB",
+  "status": "APPROVED",
+  "effective_date": "2026-07-13",
+  "approved_by": "Jonathan Martínez",
+  "approval_evidence": "Apruebo DEC-LAB-007 y DEC-LAB-008. Autorizo aplicar, validar, hacer commit y push en main, limitado al fileset definido.",
+  "decision": {
+    "summary": "The canonical continuity protocol must read CURRENT_STATE.json before CURRENT_STATE.md so that structured state is consulted before its human-readable view.",
+    "rules": [
+      "The mandatory read order is LAB_CONTRACT.md, METHODOLOGY.md, CURRENT_STATE.json, CURRENT_STATE.md, registry/projects.json, active project state, decisions in force, open errors, and applicable patterns.",
+      "CURRENT_STATE.json remains the structured source of truth.",
+      "CURRENT_STATE.md remains the human-readable view and must stay materially consistent with the JSON state.",
+      "LAB_CONTRACT.md, METHODOLOGY.md, README.md, CURRENT_STATE.json, and CURRENT_STATE.md must not prescribe contradictory continuity orders.",
+      "This decision corrects documentary inconsistency only and does not authorize product execution, runtime work, migration, release, integration, deployment, or changes outside the LAB repository."
+    ]
+  },
+  "canonical_read_order": [
+    "LAB_CONTRACT.md",
+    "METHODOLOGY.md",
+    "CURRENT_STATE.json",
+    "CURRENT_STATE.md",
+    "registry/projects.json",
+    "active project state",
+    "decisions in force",
+    "open errors",
+    "applicable patterns"
+  ],
+  "authorization_boundary": {
+    "documentation_only": true,
+    "product_change_authorized": false,
+    "runtime_authorized": false,
+    "migration_authorized": false,
+    "release_authorized": false,
+    "integration_authorized": false,
+    "deployment_authorized": false
+  },
+  "supersedes": [],
+  "superseded_by": null
+}
