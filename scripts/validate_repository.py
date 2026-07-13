@@ -14,7 +14,7 @@ TEXT_SUFFIXES = {".md", ".json", ".py"}
 DECISION_STATES = {"DRAFT", "PROPOSED", "UNDER_REVIEW", "APPROVED", "REJECTED", "SUPERSEDED", "WITHDRAWN"}
 ERROR_STATES = {"OPEN", "CONTAINED", "CORRECTED", "VERIFIED", "CLOSED"}
 PATTERN_STATES = {"PROPOSED", "VALIDATED", "DEPRECATED", "SUPERSEDED"}
-PROJECT_STATES = {"active", "active_with_blocker", "known", "known_and_synced", "referenced", "paused", "archived"}
+PROJECT_STATES = {"active", "active_with_blocker", "active_pipeline_validated_phase_a", "known", "known_and_synced", "referenced", "paused", "archived"}
 SCHEMA_NAMES = ["current-state", "decision", "error", "project-state", "pattern", "registry"]
 failures: list[str] = []
 
@@ -198,10 +198,10 @@ def validate_markdown_and_boundaries(state: dict) -> None:
             fail(f"CURRENT_STATE.md: missing canonical state token: {token}")
     mammoth = (ROOT / "projects/mammothskills/PROJECT_STATE.md").read_text(encoding="utf-8")
     symphonie = (ROOT / "projects/symphonie/PROJECT_STATE.md").read_text(encoding="utf-8")
-    if "not the runtime where they\nlive" not in mammoth:
+    if re.search(r"not the runtime where they\s+live", mammoth) is None:
         fail("MammothSkills must be explicitly described as not being the runtime")
     for skill in ["intake-brief", "project-scoping", "project-status"]:
-        if skill not in mammoth or "three skills are Claude-targeted" not in mammoth:
+        if skill not in mammoth or "SOURCE_PLATFORM = Claude" not in mammoth:
             fail(f"MammothSkills target classification missing for {skill}")
     if "not the canonical source of reusable skills" not in symphonie:
         fail("Symphonie must not be the canonical reusable-skill source")
