@@ -8,7 +8,7 @@
     "id": {"type": "string", "minLength": 1},
     "name": {"type": "string", "minLength": 1},
     "status": {
-      "enum": ["active", "active_with_blocker", "known", "known_and_synced", "referenced", "paused", "archived"]
+      "enum": ["active", "active_with_blocker", "active_pipeline_validated_phase_a", "known", "known_and_synced", "referenced", "paused", "archived"]
     },
     "canonical_path": {"type": "string", "minLength": 1},
     "repository": {"type": "string", "minLength": 1},
