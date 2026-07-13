@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-07-07",
+  "updated_at": "2026-07-13",
   "active_project": "lab",
   "records": [
     {
@@ -53,6 +53,14 @@
       "canonical_path": "projects/aster-flyt/PROJECT_STATE.md",
       "scope": "Referenced project with detailed state pending documentary incorporation.",
       "updated_at": "2026-06-28"
+    },
+    {
+      "id": "waypoint",
+      "name": "Waypoint",
+      "status": "referenced",
+      "canonical_path": "projects/waypoint/PROJECT_STATE.md",
+      "scope": "Referenced application concept under strategic discussion; no development, product execution, release, integration, or deployment is authorized.",
+      "updated_at": "2026-07-13"
     }
   ]
 }
