@@ -1,7 +1,7 @@
 # LAB Current State
 
 Document-ID: `lab.current-state`
-Version: `1.0.5`
+Version: `1.0.6`
 Status: `ACTIVE`
 Last-Updated: `2026-07-12`
 
@@ -51,8 +51,8 @@ Symphonie is an eight-phase workflow that creates and develops applications and 
 Current operational objective:
 
 ```text
-Plan and explicitly authorize architect-to-implementer handoff validation,
-then prove real design execution and repeatability before any separately
+Plan and explicitly authorize a real-design execution through the validated
+architect-to-implementer chain, then repeat the flow before any separately
 authorized migration to MammothSkills.
 ```
 
@@ -97,28 +97,65 @@ The implementer baseline is approved, closed, and immutable. Any future function
 
 ## Initial Symphonie Codex skill cycle
 
-The two historical candidates were created or adapted inside `symphonie-codex-lab` before MammothSkills existed. Their isolated audit and runtime validation are complete there to preserve continuity, fixtures, regression evidence, and source history.
+The two historical candidates were created or adapted inside `symphonie-codex-lab` before MammothSkills existed. Their isolated audit and runtime validation remain preserved there.
 
 ```text
 SKILL_1_RUNTIME = PASS
 SKILL_1_PROMOTION = APPROVED_BASELINE_CLOSED_IMMUTABLE
 SKILL_2_RUNTIME = PASS
 SKILL_2_PROMOTION = APPROVED_BASELINE_CLOSED_IMMUTABLE
-HANDOFF_COMPATIBILITY = NOT_YET_VALIDATED
-CODEX_DISCOVERY_AND_INTERPRETATION_AS_CHAIN = NOT_YET_VALIDATED
+HANDOFF_COMPATIBILITY = PASS
+CODEX_DISCOVERY_AND_INTERPRETATION_AS_CHAIN = PASS
 REAL_DESIGN_EXECUTION = NOT_YET_VALIDATED
 REPEATABILITY = NOT_YET_VALIDATED
 ```
 
-The correct remaining sequence is:
+## Validated synthetic handoff
+
+Project: `handoff-controlled-017`
+
+Terminal result:
 
 ```text
-1. Plan architect -> Phase 3A contracts -> implementer handoff validation
-2. Obtain explicit bounded authorization for that validation
-3. Execute and assess the handoff
-4. Execute a real design implementation
-5. Repeat the flow to validate reproducibility
-6. Only then consider migration to MammothSkills under separate authorization
+RESULT = PASS_WITH_FINDINGS
+VALIDATED_CHAIN = architect -> human gate -> implementer -> build -> manual browser validation
+CLOSED_AT = 2026-07-12
+```
+
+Orders recorded:
+
+- `SYM-ARCH-IMPLEMENTER-HANDOFF-017`
+- `SYM-ARCH-IMPLEMENTER-HANDOFF-018`
+- `SYM-ARCH-IMPLEMENTER-HANDOFF-019`
+- `SYM-ARCH-IMPLEMENTER-HANDOFF-RUNTIME-020`
+- `SYM-ARCH-IMPLEMENTER-HANDOFF-MANUAL-VALIDATION-021`
+
+The validated sequence established that Codex could discover and interpret both approved skills as a chain, produce the Phase 3A contracts, preserve the human approval gate, consume the canonical JSON contracts in Phase 4A, produce bounded source changes, build successfully, render in a browser, preserve unresolved actions, and pass the required responsive, keyboard, focus, accessibility-basic, Phase 3A conformance, and boundary checks.
+
+The complete history remains material:
+
+1. Phase 3A produced the approved `Evidence rail` design contracts.
+2. Phase 4A consumed the four canonical JSON contracts and changed only the authorized application files.
+3. The first build attempt was blocked because the synthetic fixture lacked Vite CSS Module declarations.
+4. A separately authorized `src/vite-env.d.ts` correction resolved that build blocker.
+5. Automated browser validation was blocked because the Playwright Chromium executable was unavailable and installation was prohibited.
+6. Manual-assisted validation completed the remaining browser evidence and closed the synthetic handoff as `PASS_WITH_FINDINGS`.
+
+Non-blocking findings:
+
+- `favicon.ico` returned a local `404` without affecting the fixture.
+- Contract-faithful `Prepared, not executed` and `Not yet executed` labels became semantically stale after experiment completion.
+
+This validation is synthetic. It does not establish real-design execution, repeatability, production readiness, release, migration, or integration.
+
+## Remaining sequence
+
+```text
+1. Plan a real-design execution through the validated chained flow
+2. Obtain explicit bounded authorization
+3. Execute and assess the real design
+4. Repeat the flow to prove reproducibility
+5. Only then consider migration to MammothSkills under separate authorization
 ```
 
 ## Approved structural relationship model
@@ -180,7 +217,7 @@ product_changes = NOT_AUTHORIZED
 codex_autonomous_authority = NO
 ```
 
-This documentation records the approved implementer baseline and the next recommended sequence. It does not authorize handoff execution, runtime, release, installation, migration, integration, product change, or repository modification outside LAB.
+This documentation records the completed synthetic handoff validation. It does not authorize real-design execution, repeatability testing, runtime, release, installation, migration, integration, product change, or repository modification outside LAB.
 
 ## Next authorized action
 
@@ -188,7 +225,7 @@ This documentation records the approved implementer baseline and the next recomm
 
 Recommended transition:
 
-`PLAN_AND_EXPLICITLY_AUTHORIZE_ARCHITECT_TO_IMPLEMENTER_HANDOFF_VALIDATION`
+`PLAN_AND_EXPLICITLY_AUTHORIZE_REAL_DESIGN_EXECUTION_THROUGH_VALIDATED_HANDOFF`
 
 ## Continuity read order
 
