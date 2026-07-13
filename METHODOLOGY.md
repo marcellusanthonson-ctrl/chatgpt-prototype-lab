@@ -150,12 +150,13 @@ relying on conversational memory. Read in this order:
 
 1. `LAB_CONTRACT.md`
 2. `METHODOLOGY.md`
-3. `CURRENT_STATE.md`
-4. `registry/projects.json`
-5. active project state
-6. decisions in force
-7. open errors
-8. applicable patterns
+3. `CURRENT_STATE.json`
+4. `CURRENT_STATE.md`
+5. `registry/projects.json`
+6. active project state
+7. decisions in force
+8. open errors
+9. applicable patterns
 
 This methodology remains in force until an explicitly approved decision
-supersedes it.
+supersedes it. The corrected continuity order is governed by `DEC-LAB-008`.
