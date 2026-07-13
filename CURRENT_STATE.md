@@ -204,6 +204,14 @@ A commit records a transition but does not create approval.
 
 `ERR-TOOLING-001` is `CORRECTED`, not verified or closed.
 
+## Validated patterns
+
+- `PAT-LAB-001`: Record events, not full transcripts.
+- `PAT-LAB-002`: Separate observation, hypothesis, validation, approval, and resolution.
+- `PAT-LAB-003`: Reconstruct context using a fixed reading order.
+- `PAT-LAB-004`: Bounded evidence-first audit.
+- `PAT-MA-001`: Codex executes without autonomous authority.
+
 ## Authorization state
 
 ```text
