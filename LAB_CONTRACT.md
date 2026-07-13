@@ -45,7 +45,7 @@ No guardar contraseñas, tokens, claves API, credenciales, datos sensibles innec
 
 ## 9. Continuidad
 
-Cada conversación nueva debe reconstruir el estado leyendo el protocolo definido en `CURRENT_STATE.md`.
+Cada conversación nueva debe reconstruir el estado siguiendo el protocolo canónico definido en `CURRENT_STATE.json` y reflejado en `CURRENT_STATE.md`. El estado estructurado debe leerse antes de su vista Markdown, conforme a `DEC-LAB-008`.
 
 ## 10. Mantenimiento
 
