@@ -2,7 +2,7 @@
 
 Project-ID: `symphonie`
 Status: `KNOWN_AND_SYNCED`
-Last-Updated: `2026-07-12`
+Last-Updated: `2026-07-14`
 Repository: `marcellusanthonson-ctrl/symphonie-codex-lab`
 
 ## Role
@@ -142,18 +142,39 @@ The synthetic result does not establish real-design execution, reproducibility, 
 
 ## Canonical minimal handoff knowledge
 
-The LAB canonically records three verified, generic knowledge documents from `SYM-MINIMAL-KNOWLEDGE-EXTRACTION-006`:
+The LAB now records three verified, generic knowledge documents:
 
 - `knowledge/contracts/phase3-minimum-assertions.json`;
 - `knowledge/contracts/action-preservation.json`;
 - `knowledge/regressions/imp-reg-11.json`.
 
 ```text
-MINIMAL_HANDOFF_KNOWLEDGE = CANONICALIZED
+SOURCE_AUDIT = SYM-LOCAL-EVIDENCE-AUDIT-005 / PASS_WITH_FINDINGS / CONSUMED
+SOURCE_EXTRACTION = SYM-MINIMAL-KNOWLEDGE-EXTRACTION-006 / PASS / CONSUMED
+CANONICALIZATION = SYM-LAB-CANONICALIZATION-007 / PASS / CONSUMED
+PUBLICATION = SYM-LAB-PUSH-008 / PASS / CONSUMED
+PUBLICATION_COMMIT = c478c5a4e290a10305e64c9ff8bf6eff4ead772a
+MINIMAL_HANDOFF_KNOWLEDGE = CANONICALIZED_AND_PUBLISHED
 VALIDATION = PASS
 ```
 
-These documents preserve structured Phase 3A exit assertions, action-preservation rules, and an authorization-order regression guard. They do not validate real-design execution or repeatability, and do not authorize release, migration, integration, runtime, or product changes.
+The documents add:
+
+1. minimum, verifiable Phase 3A exit assertions for semantic order, declared responsive width, visible keyboard focus, text-labelled status, and reduced motion;
+2. an action-preservation contract that prevents deletion, invention, or simulation of unauthorized behavior during the Phase 3A to Phase 4A handoff;
+3. an `IMP_REG_11` fail-closed guard requiring authorization contradictions to be detected before any observable write or effect.
+
+Operational boundary:
+
+```text
+CANONICAL_KNOWLEDGE = YES
+AUTOMATIC_ENFORCEMENT = NOT_IMPLEMENTED
+SKILL_MODIFICATION = NOT_PERFORMED
+SYMPHONIE_RUNTIME_INTEGRATION = NOT_AUTHORIZED
+PRODUCT_CHANGE = NOT_PERFORMED
+```
+
+The local audit also established that the exported UI implementer variant was superseded and that `SYMPHONIE_RECOVERY_QUARANTINE` remained unverified; neither was incorporated.
 
 ## Immediate operational sequence
 
@@ -161,10 +182,11 @@ The next recommended transition is:
 
 ```text
 1. Plan a real-design execution through the validated chained flow
-2. Obtain explicit bounded authorization for the real-design test
-3. Execute and assess the real design
-4. Repeat the flow to prove reproducibility
-5. Only then consider migration to MammothSkills under separate authorization
+2. Apply the canonical minimal handoff knowledge as explicit test criteria
+3. Obtain explicit bounded authorization for the real-design test
+4. Execute and assess the real design
+5. Repeat the flow to prove reproducibility
+6. Only then consider migration to MammothSkills under separate authorization
 ```
 
 Each transition requires its own explicit bounded authorization where it involves execution, repository writing, release, migration, or integration.
@@ -215,7 +237,7 @@ MAMMOTHSKILLS_MIGRATION = NOT_AUTHORIZED
 MAMMOTHSKILLS_RELEASE = NOT_AUTHORIZED
 ```
 
-This update records the completed synthetic handoff validation. It does not authorize real-design execution, repeatability testing, release, installation, repository changes outside LAB, migration, or integration.
+This update records the completed audit, extraction, canonicalization, and publication of minimal Symphonie handoff knowledge. It does not authorize real-design execution, repeatability testing, release, installation, repository changes outside LAB, migration, runtime integration, or product changes.
 
 ## Next authorized action
 
@@ -223,4 +245,4 @@ This update records the completed synthetic handoff validation. It does not auth
 
 Recommended transition:
 
-`PLAN_AND_EXPLICITLY_AUTHORIZE_REAL_DESIGN_EXECUTION_THROUGH_VALIDATED_HANDOFF`
+`PLAN_AND_EXPLICITLY_AUTHORIZE_REAL_DESIGN_EXECUTION_THROUGH_VALIDATED_HANDOFF_USING_CANONICAL_MINIMAL_KNOWLEDGE`
