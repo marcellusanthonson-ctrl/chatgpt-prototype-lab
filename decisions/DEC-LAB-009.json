@@ -1,0 +1,65 @@
+{
+  "id": "DEC-LAB-009",
+  "title": "Approve Symphonie UX/UI Architect Alpha.6 with recorded historical evidence limitation",
+  "project": "LAB",
+  "status": "APPROVED",
+  "effective_date": "2026-07-14",
+  "approved_by": "Jonathan Martínez",
+  "approval_evidence": "A. APPROVE_ALPHA6_WITH_RECORDED_EVIDENCE_LIMITATION. Documenta en el repo las pruebas necesarias.",
+  "decision": {
+    "summary": "Approve symphonie-ux-ui-architect 0.1.0-alpha.6 as the approved Phase 3A architect baseline while explicitly accepting the incomplete retained historical evidence for REG-02 through REG-07.",
+    "approved_artifact": {
+      "repository": "marcellusanthonson-ctrl/symphonie-codex-lab",
+      "branch": "feature/design-migration-handoff-alpha6",
+      "version": "0.1.0-alpha.6",
+      "implementation_commit": "22d63a901ec30221e7e8e7e944203eb2239598bd",
+      "runtime_evidence_commit": "385f85b85560d8f5a12512c9f36e2bdd140f1d7b",
+      "capability": "DOCUMENT_WRITE",
+      "phase": "3A"
+    },
+    "direct_evidence": {
+      "static_validation": "PASS",
+      "reg_08_migration_path": "PASS",
+      "reg_09_fail_closed": "PASS",
+      "reg_09_reason": "MIGRATION_TARGET_UNCONFIRMED",
+      "unauthorized_writes": 0,
+      "normal_eight_output_flow_preserved": true
+    },
+    "accepted_limitation": {
+      "status": "RECORDED_NON_BLOCKING_PROMOTION_LIMITATION",
+      "full_historical_regression_pack": "NOT_REVALIDATED_IN_ALPHA6_EXECUTION",
+      "missing_retained_actual_evidence": [
+        "REG-02",
+        "REG-03",
+        "REG-04",
+        "REG-05",
+        "REG-06",
+        "REG-07"
+      ],
+      "interpretation": "The evidence gap does not invalidate the direct Alpha.6 REG-08 and REG-09 results and does not block baseline approval. It prevents any claim that the entire historical pack was revalidated in the same execution."
+    },
+    "rules": [
+      "Alpha.6 becomes the approved Phase 3A architect baseline for future separately authorized use.",
+      "Alpha.5 remains a closed immutable historical baseline and must not be modified or silently deleted.",
+      "The conditional migration-handoff.json extension is used only when an authorized instruction activates an applicable migration or fidelity condition.",
+      "The evidence limitation for REG-02 through REG-07 must remain visible until separately verified or formally closed.",
+      "Promotion approval does not authorize merge, release, installation, Symphonie integration, real-design execution, repeatability testing, MammothSkills migration, deployment, or product changes.",
+      "Any future historical-evidence execution must use the bounded plan recorded in projects/symphonie/reports/ALPHA6_HISTORICAL_EVIDENCE_TEST_PLAN.md."
+    ]
+  },
+  "authorization_boundary": {
+    "baseline_promotion_approved": true,
+    "lab_documentation_authorized_for_this_transition": true,
+    "symphonie_repository_change_authorized": false,
+    "merge_authorized": false,
+    "release_authorized": false,
+    "installation_authorized": false,
+    "consumer_integration_authorized": false,
+    "real_design_execution_authorized": false,
+    "repeatability_test_authorized": false,
+    "mammothskills_migration_authorized": false,
+    "product_change_authorized": false
+  },
+  "supersedes": [],
+  "superseded_by": null
+}
