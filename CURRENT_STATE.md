@@ -1,7 +1,7 @@
 # LAB Current State
 
 Document-ID: `lab.current-state`
-Version: `1.0.8`
+Version: `1.0.9`
 Status: `ACTIVE`
 Last-Updated: `2026-07-14`
 
@@ -80,7 +80,7 @@ They add three reusable controls to the next Symphonie handoff:
 2. an action-preservation contract for the Phase 3A to Phase 4A boundary;
 3. a fail-closed authorization regression guard before any observable effect.
 
-This is canonical knowledge only. Automatic enforcement has not been implemented, the approved skills remain unchanged, and no Symphonie runtime or product integration is authorized.
+Alpha.6 now applies part of this knowledge conditionally to technology-migration handoffs. It does not constitute Symphonie runtime integration.
 
 ### Waypoint
 
@@ -89,6 +89,8 @@ Waypoint is a referenced application concept under strategic discussion. It has 
 ## Current Symphonie Codex skill state
 
 ### `symphonie-ux-ui-architect`
+
+#### Approved baseline
 
 ```text
 VERSION = 0.1.0-alpha.5
@@ -100,7 +102,33 @@ RUNTIME_VALIDATION = PASS
 PROMOTION_GATE = PASS
 ```
 
-This skill defines and writes the approved Phase 3A design documents. It does not write application source code.
+This baseline remains closed and immutable.
+
+#### Technology-migration handoff candidate
+
+```text
+VERSION = 0.1.0-alpha.6
+STATUS = PUBLISHED_CANDIDATE_WITH_RUNTIME_PASS_AND_HISTORICAL_EVIDENCE_FINDING
+BRANCH = feature/design-migration-handoff-alpha6
+IMPLEMENTATION_COMMIT = 22d63a901ec30221e7e8e7e944203eb2239598bd
+RUNTIME_EVIDENCE_COMMIT = 385f85b85560d8f5a12512c9f36e2bdd140f1d7b
+PUBLICATION_ORDER = SYM-DESIGN-MIGRATION-PUSH-012
+REG-08 = PASS
+REG-09 = BLOCKED_AS_EXPECTED
+REG-09_REASON = MIGRATION_TARGET_UNCONFIRMED
+NORMAL_EIGHT_OUTPUT_FLOW = PRESERVED
+CONDITIONAL_OUTPUT = .project/phase-3/migration-handoff.json
+FULL_HISTORICAL_REGRESSION_PACK = INCOMPLETE_EVIDENCE_REG_02_THROUGH_REG_07
+PROMOTION = NOT_AUTHORIZED
+MERGE = NOT_AUTHORIZED
+RELEASE = NOT_AUTHORIZED
+SYMPHONIE_INTEGRATION = NOT_AUTHORIZED
+MAMMOTHSKILLS_MIGRATION = NOT_AUTHORIZED
+```
+
+Alpha.6 adds a conditional, schema-validated handoff for technology migration. It captures source-of-truth precedence, visual formulas, sensitive fidelity zones, granular typography exceptions, SSR and hydration risks, navigation behavior, asset provenance and hashes, visual acceptance criteria, and reference images. Projects without an activated migration condition retain the original eight Phase 3A outputs.
+
+The runtime evidence establishes the new positive and fail-closed paths. The remaining finding belongs to missing historical `actual/` evidence for REG-02 through REG-07 and does not invalidate REG-08 or REG-09. Alpha.6 remains a candidate and has not been promoted or integrated.
 
 ### `symphonie-ui-implementer`
 
@@ -130,8 +158,9 @@ The implementer baseline is approved, closed, and immutable. Any future function
 The two historical candidates were created or adapted inside `symphonie-codex-lab` before MammothSkills existed. Their isolated audit and runtime validation remain preserved there.
 
 ```text
-SKILL_1_RUNTIME = PASS
-SKILL_1_PROMOTION = APPROVED_BASELINE_CLOSED_IMMUTABLE
+SKILL_1_BASELINE_RUNTIME = PASS
+SKILL_1_BASELINE_PROMOTION = APPROVED_BASELINE_CLOSED_IMMUTABLE
+SKILL_1_ALPHA6_CANDIDATE = PUBLISHED_WITH_RUNTIME_PASS_AND_FINDING
 SKILL_2_RUNTIME = PASS
 SKILL_2_PROMOTION = APPROVED_BASELINE_CLOSED_IMMUTABLE
 HANDOFF_COMPATIBILITY = PASS
@@ -181,12 +210,13 @@ This validation is synthetic. It does not establish real-design execution, repea
 ## Remaining sequence
 
 ```text
-1. Plan a real-design execution through the validated chained flow
-2. Apply the three canonical minimal handoff knowledge documents
-3. Obtain explicit bounded authorization
-4. Execute and assess the real design
-5. Repeat the flow to prove reproducibility
-6. Only then consider migration to MammothSkills under separate authorization
+1. Review Alpha.6 for promotion or retain Alpha.5 as the approved baseline
+2. Plan a real-design execution through the validated chained flow
+3. Apply the canonical minimal handoff knowledge and Alpha.6 migration contract only when authorized
+4. Obtain explicit bounded authorization
+5. Execute and assess the real design
+6. Repeat the flow to prove reproducibility
+7. Only then consider migration to MammothSkills under separate authorization
 ```
 
 ## Approved structural relationship model
@@ -258,7 +288,7 @@ product_changes = NOT_AUTHORIZED
 codex_autonomous_authority = NO
 ```
 
-This documentation records the completed local evidence audit, minimal knowledge extraction, canonicalization, and publication of three Symphonie handoff controls. It does not authorize real-design execution, repeatability testing, runtime, release, installation, migration, integration, product change, or repository modification outside LAB.
+This documentation records Alpha.6 as a published candidate with successful migration-handoff runtime evidence and a historical evidence finding. It does not authorize promotion, merge, release, installation, migration to MammothSkills, Symphonie integration, real-design execution, repeatability testing, or product changes.
 
 ## Next authorized action
 
@@ -266,7 +296,7 @@ This documentation records the completed local evidence audit, minimal knowledge
 
 Recommended transition:
 
-`PLAN_AND_EXPLICITLY_AUTHORIZE_REAL_DESIGN_EXECUTION_THROUGH_VALIDATED_HANDOFF_USING_CANONICAL_MINIMAL_KNOWLEDGE`
+`REVIEW_ALPHA6_FOR_PROMOTION_OR_PLAN_REAL_DESIGN_EXECUTION_WITHOUT_INTEGRATION`
 
 ## Continuity read order
 

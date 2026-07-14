@@ -72,6 +72,45 @@ PROMOTION_GATE = PASS
 
 This baseline is closed and immutable.
 
+### `symphonie-ux-ui-architect 0.1.0-alpha.6`
+
+```text
+STATUS = PUBLISHED_CANDIDATE_WITH_RUNTIME_PASS_AND_HISTORICAL_EVIDENCE_FINDING
+BRANCH = feature/design-migration-handoff-alpha6
+IMPLEMENTATION_COMMIT = 22d63a901ec30221e7e8e7e944203eb2239598bd
+RUNTIME_EVIDENCE_COMMIT = 385f85b85560d8f5a12512c9f36e2bdd140f1d7b
+PUBLICATION_ORDER = SYM-DESIGN-MIGRATION-PUSH-012
+PUBLICATION_VALIDATION = PASS
+REG-08 = PASS
+REG-09 = BLOCKED_AS_EXPECTED
+REG-09_REASON = MIGRATION_TARGET_UNCONFIRMED
+NORMAL_EIGHT_OUTPUT_FLOW = PRESERVED
+CONDITIONAL_OUTPUT = .project/phase-3/migration-handoff.json
+FULL_HISTORICAL_REGRESSION_PACK = INCOMPLETE_EVIDENCE_REG_02_THROUGH_REG_07
+PROMOTION = NOT_AUTHORIZED
+MERGE = NOT_AUTHORIZED
+RELEASE = NOT_AUTHORIZED
+SYMPHONIE_INTEGRATION = NOT_AUTHORIZED
+MAMMOTHSKILLS_MIGRATION = NOT_AUTHORIZED
+```
+
+Alpha.6 adds a conditional, schema-validated technology-migration handoff. It is activated only when the current bounded order declares a migration or an approved migration-sensitive condition. It records:
+
+- source and target technology;
+- source-of-truth precedence and immutable inputs;
+- dynamic visual formulas and recalculation triggers;
+- sensitive fidelity zones and prohibited adjustments;
+- granular typography exceptions;
+- SSR, hydration, client-boundary, observer, CSS lifecycle, and font-loading risks;
+- navigation behavior;
+- asset provenance, target location, and SHA-256;
+- observable visual acceptance criteria;
+- required reference images.
+
+REG-08 validated the active migration path and all nine Phase 3A outputs. REG-09 validated fail-closed blocking before Phase 3A writes when the target router was unconfirmed. The complete historical verifier still reports missing `actual/` evidence for REG-02 through REG-07; REG-08 and REG-09 are not among the failures. This finding prevents a claim that the entire historical pack was re-executed, but it does not invalidate the Alpha.6 cases.
+
+Alpha.6 is not approved, promoted, merged, released, installed, integrated into Symphonie, or migrated to MammothSkills.
+
 ### `symphonie-ui-implementer 0.1.0-alpha.3`
 
 ```text
@@ -142,7 +181,7 @@ The synthetic result does not establish real-design execution, reproducibility, 
 
 ## Canonical minimal handoff knowledge
 
-The LAB now records three verified, generic knowledge documents:
+The LAB records three verified, generic knowledge documents:
 
 - `knowledge/contracts/phase3-minimum-assertions.json`;
 - `knowledge/contracts/action-preservation.json`;
@@ -168,8 +207,8 @@ Operational boundary:
 
 ```text
 CANONICAL_KNOWLEDGE = YES
-AUTOMATIC_ENFORCEMENT = NOT_IMPLEMENTED
-SKILL_MODIFICATION = NOT_PERFORMED
+AUTOMATIC_ENFORCEMENT = PARTIAL_IN_ALPHA6_MIGRATION_HANDOFF_ONLY
+APPROVED_BASELINE_MODIFICATION = NO
 SYMPHONIE_RUNTIME_INTEGRATION = NOT_AUTHORIZED
 PRODUCT_CHANGE = NOT_PERFORMED
 ```
@@ -181,23 +220,26 @@ The local audit also established that the exported UI implementer variant was su
 The next recommended transition is:
 
 ```text
-1. Plan a real-design execution through the validated chained flow
-2. Apply the canonical minimal handoff knowledge as explicit test criteria
-3. Obtain explicit bounded authorization for the real-design test
-4. Execute and assess the real design
-5. Repeat the flow to prove reproducibility
-6. Only then consider migration to MammothSkills under separate authorization
+1. Review Alpha.6 for promotion or retain Alpha.5 as the approved baseline
+2. Plan a real-design execution through the validated chained flow
+3. Apply the canonical minimal handoff knowledge
+4. Use Alpha.6 migration-handoff only after separate promotion and integration authorization
+5. Obtain explicit bounded authorization for the real-design test
+6. Execute and assess the real design
+7. Repeat the flow to prove reproducibility
+8. Only then consider migration to MammothSkills under separate authorization
 ```
 
-Each transition requires its own explicit bounded authorization where it involves execution, repository writing, release, migration, or integration.
+Each transition requires its own explicit bounded authorization where it involves execution, repository writing, promotion, release, migration, or integration.
 
 ## Initial Symphonie Codex skill cycle
 
 Current completion state:
 
 ```text
-SKILL_1_RUNTIME = PASS
-SKILL_1_PROMOTION = APPROVED_BASELINE_CLOSED_IMMUTABLE
+SKILL_1_BASELINE_RUNTIME = PASS
+SKILL_1_BASELINE_PROMOTION = APPROVED_BASELINE_CLOSED_IMMUTABLE
+SKILL_1_ALPHA6_CANDIDATE = PUBLISHED_WITH_RUNTIME_PASS_AND_FINDING
 SKILL_2_RUNTIME = PASS
 SKILL_2_PROMOTION = APPROVED_BASELINE_CLOSED_IMMUTABLE
 HANDOFF_COMPATIBILITY = PASS
@@ -231,13 +273,15 @@ Historical copies must not be silently deleted. After canonical migration they m
 PRODUCT_CHANGE = NOT_AUTHORIZED
 REAL_DESIGN_EXECUTION = NOT_AUTHORIZED
 REPEATABILITY_TEST = NOT_AUTHORIZED
+SKILL_PROMOTION = NOT_AUTHORIZED
+SKILL_MERGE = NOT_AUTHORIZED
 SKILL_INTEGRATION = NOT_AUTHORIZED
 CODEX_EXECUTION = NOT_AUTHORIZED
 MAMMOTHSKILLS_MIGRATION = NOT_AUTHORIZED
 MAMMOTHSKILLS_RELEASE = NOT_AUTHORIZED
 ```
 
-This update records the completed audit, extraction, canonicalization, and publication of minimal Symphonie handoff knowledge. It does not authorize real-design execution, repeatability testing, release, installation, repository changes outside LAB, migration, runtime integration, or product changes.
+This update records Alpha.6 as a published candidate with successful migration-handoff runtime evidence and a historical evidence finding. It does not authorize promotion, merge, real-design execution, repeatability testing, release, installation, repository changes outside LAB, migration to MammothSkills, runtime integration, or product changes.
 
 ## Next authorized action
 
@@ -245,4 +289,4 @@ This update records the completed audit, extraction, canonicalization, and publi
 
 Recommended transition:
 
-`PLAN_AND_EXPLICITLY_AUTHORIZE_REAL_DESIGN_EXECUTION_THROUGH_VALIDATED_HANDOFF_USING_CANONICAL_MINIMAL_KNOWLEDGE`
+`REVIEW_ALPHA6_FOR_PROMOTION_OR_PLAN_REAL_DESIGN_EXECUTION_WITHOUT_INTEGRATION`

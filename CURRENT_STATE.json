@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "document_id": "lab.current-state",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "status": "ACTIVE",
   "updated_at": "2026-07-14",
   "active_project": "lab",
@@ -54,12 +54,34 @@
       ],
       "codex_skill_cycle": {
         "symphonie_ux_ui_architect": {
-          "version": "0.1.0-alpha.5",
-          "phase": "3A",
-          "capability": "DOCUMENT_WRITE",
-          "status": "APPROVED_BASELINE_CLOSED_IMMUTABLE",
-          "runtime_validation": "PASS",
-          "promotion_gate": "PASS"
+          "approved_baseline": {
+            "version": "0.1.0-alpha.5",
+            "phase": "3A",
+            "capability": "DOCUMENT_WRITE",
+            "status": "APPROVED_BASELINE_CLOSED_IMMUTABLE",
+            "runtime_validation": "PASS",
+            "promotion_gate": "PASS"
+          },
+          "technology_migration_handoff_candidate": {
+            "version": "0.1.0-alpha.6",
+            "status": "PUBLISHED_CANDIDATE_WITH_RUNTIME_PASS_AND_HISTORICAL_EVIDENCE_FINDING",
+            "branch": "feature/design-migration-handoff-alpha6",
+            "implementation_commit": "22d63a901ec30221e7e8e7e944203eb2239598bd",
+            "runtime_evidence_commit": "385f85b85560d8f5a12512c9f36e2bdd140f1d7b",
+            "publication_order": "SYM-DESIGN-MIGRATION-PUSH-012",
+            "publication_validation": "PASS",
+            "reg_08": "PASS",
+            "reg_09": "BLOCKED_AS_EXPECTED",
+            "reg_09_reason": "MIGRATION_TARGET_UNCONFIRMED",
+            "historical_regression_pack": "INCOMPLETE_EVIDENCE_REG_02_THROUGH_REG_07",
+            "conditional_output": ".project/phase-3/migration-handoff.json",
+            "normal_eight_output_flow_preserved": true,
+            "promotion": "NOT_AUTHORIZED",
+            "merge": "NOT_AUTHORIZED",
+            "release": "NOT_AUTHORIZED",
+            "symphonie_integration": "NOT_AUTHORIZED",
+            "mammothskills_migration": "NOT_AUTHORIZED"
+          }
         },
         "symphonie_ui_implementer": {
           "version": "0.1.0-alpha.3",
@@ -140,8 +162,8 @@
           "action-preservation contract for the Phase 3A to Phase 4A handoff",
           "fail-closed authorization regression guard before observable effects"
         ],
-        "automatic_enforcement": "NOT_IMPLEMENTED",
-        "skill_modification": "NOT_PERFORMED",
+        "automatic_enforcement": "PARTIAL_IN_ALPHA6_MIGRATION_HANDOFF_ONLY",
+        "skill_modification": "ALPHA6_CANDIDATE_ONLY",
         "runtime_integration": "NOT_AUTHORIZED",
         "product_change": "NOT_PERFORMED"
       }
@@ -215,7 +237,7 @@
     "codex_autonomous_authority": "NO"
   },
   "next_authorized_action": "NONE_UNTIL_NEW_EXPLICIT_APPROVAL",
-  "next_recommended_transition": "PLAN_AND_EXPLICITLY_AUTHORIZE_REAL_DESIGN_EXECUTION_THROUGH_VALIDATED_HANDOFF_USING_CANONICAL_MINIMAL_KNOWLEDGE",
+  "next_recommended_transition": "REVIEW_ALPHA6_FOR_PROMOTION_OR_PLAN_REAL_DESIGN_EXECUTION_WITHOUT_INTEGRATION",
   "continuity_read_order": [
     "LAB_CONTRACT.md",
     "METHODOLOGY.md",
