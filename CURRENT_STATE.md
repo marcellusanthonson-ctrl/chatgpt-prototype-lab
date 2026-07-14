@@ -1,9 +1,9 @@
 # LAB Current State
 
 Document-ID: `lab.current-state`
-Version: `1.0.7`
+Version: `1.0.8`
 Status: `ACTIVE`
-Last-Updated: `2026-07-13`
+Last-Updated: `2026-07-14`
 
 `CURRENT_STATE.json` is the structured source of truth. This file is its human-readable view.
 
@@ -59,8 +59,12 @@ authorized migration to MammothSkills.
 ### Canonical minimal handoff knowledge
 
 ```text
-STATUS = CANONICALIZED
-SOURCE_ORDER = SYM-MINIMAL-KNOWLEDGE-EXTRACTION-006
+STATUS = CANONICALIZED_AND_PUBLISHED
+SOURCE_AUDIT = SYM-LOCAL-EVIDENCE-AUDIT-005 / PASS_WITH_FINDINGS / CONSUMED
+SOURCE_EXTRACTION = SYM-MINIMAL-KNOWLEDGE-EXTRACTION-006 / PASS / CONSUMED
+CANONICALIZATION = SYM-LAB-CANONICALIZATION-007 / PASS / CONSUMED
+PUBLICATION = SYM-LAB-PUSH-008 / PASS / CONSUMED
+PUBLICATION_COMMIT = c478c5a4e290a10305e64c9ff8bf6eff4ead772a
 VALIDATION = PASS
 ```
 
@@ -70,7 +74,13 @@ The structured canonical artifacts are:
 - `projects/symphonie/knowledge/contracts/action-preservation.json`
 - `projects/symphonie/knowledge/regressions/imp-reg-11.json`
 
-They provide generic Phase 3A exit assertions, action-preservation rules, and an authorization-order regression guard. They do not alter real-design execution, repeatability, release, migration, integration, or runtime authorization.
+They add three reusable controls to the next Symphonie handoff:
+
+1. verifiable minimum Phase 3A exit assertions;
+2. an action-preservation contract for the Phase 3A to Phase 4A boundary;
+3. a fail-closed authorization regression guard before any observable effect.
+
+This is canonical knowledge only. Automatic enforcement has not been implemented, the approved skills remain unchanged, and no Symphonie runtime or product integration is authorized.
 
 ### Waypoint
 
@@ -172,10 +182,11 @@ This validation is synthetic. It does not establish real-design execution, repea
 
 ```text
 1. Plan a real-design execution through the validated chained flow
-2. Obtain explicit bounded authorization
-3. Execute and assess the real design
-4. Repeat the flow to prove reproducibility
-5. Only then consider migration to MammothSkills under separate authorization
+2. Apply the three canonical minimal handoff knowledge documents
+3. Obtain explicit bounded authorization
+4. Execute and assess the real design
+5. Repeat the flow to prove reproducibility
+6. Only then consider migration to MammothSkills under separate authorization
 ```
 
 ## Approved structural relationship model
@@ -247,7 +258,7 @@ product_changes = NOT_AUTHORIZED
 codex_autonomous_authority = NO
 ```
 
-This documentation records the completed synthetic handoff validation and the approved Waypoint/continuity classifications. It does not authorize Waypoint development, real-design execution, repeatability testing, runtime, release, installation, migration, integration, product change, or repository modification outside LAB.
+This documentation records the completed local evidence audit, minimal knowledge extraction, canonicalization, and publication of three Symphonie handoff controls. It does not authorize real-design execution, repeatability testing, runtime, release, installation, migration, integration, product change, or repository modification outside LAB.
 
 ## Next authorized action
 
@@ -255,7 +266,7 @@ This documentation records the completed synthetic handoff validation and the ap
 
 Recommended transition:
 
-`PLAN_AND_EXPLICITLY_AUTHORIZE_REAL_DESIGN_EXECUTION_THROUGH_VALIDATED_HANDOFF`
+`PLAN_AND_EXPLICITLY_AUTHORIZE_REAL_DESIGN_EXECUTION_THROUGH_VALIDATED_HANDOFF_USING_CANONICAL_MINIMAL_KNOWLEDGE`
 
 ## Continuity read order
 
