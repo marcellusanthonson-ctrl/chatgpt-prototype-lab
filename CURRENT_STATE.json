@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
   "document_id": "lab.current-state",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "status": "ACTIVE",
-  "updated_at": "2026-07-13",
+  "updated_at": "2026-07-14",
   "active_project": "lab",
   "current_phase": "KNOWLEDGE_BASE_OPERATIONAL_V1",
   "methodology": {
@@ -115,14 +115,35 @@
       },
       "migration_sequence_decision": "DEC-LAB-006",
       "minimal_handoff_knowledge": {
-        "status": "CANONICALIZED",
+        "status": "CANONICALIZED_AND_PUBLISHED",
+        "canonicalization_order": "SYM-LAB-CANONICALIZATION-007",
+        "publication_order": "SYM-LAB-PUSH-008",
+        "publication_commit": "c478c5a4e290a10305e64c9ff8bf6eff4ead772a",
+        "source_audit": {
+          "order": "SYM-LOCAL-EVIDENCE-AUDIT-005",
+          "result": "PASS_WITH_FINDINGS",
+          "authorization_state": "CONSUMED"
+        },
+        "source_extraction": {
+          "order": "SYM-MINIMAL-KNOWLEDGE-EXTRACTION-006",
+          "result": "PASS",
+          "authorization_state": "CONSUMED"
+        },
         "artifacts": [
           "projects/symphonie/knowledge/contracts/phase3-minimum-assertions.json",
           "projects/symphonie/knowledge/contracts/action-preservation.json",
           "projects/symphonie/knowledge/regressions/imp-reg-11.json"
         ],
-        "source_order": "SYM-MINIMAL-KNOWLEDGE-EXTRACTION-006",
-        "validation": "PASS"
+        "validation": "PASS",
+        "contribution": [
+          "verifiable minimum Phase 3A exit assertions",
+          "action-preservation contract for the Phase 3A to Phase 4A handoff",
+          "fail-closed authorization regression guard before observable effects"
+        ],
+        "automatic_enforcement": "NOT_IMPLEMENTED",
+        "skill_modification": "NOT_PERFORMED",
+        "runtime_integration": "NOT_AUTHORIZED",
+        "product_change": "NOT_PERFORMED"
       }
     },
     "carolina-klinik": {
@@ -194,7 +215,7 @@
     "codex_autonomous_authority": "NO"
   },
   "next_authorized_action": "NONE_UNTIL_NEW_EXPLICIT_APPROVAL",
-  "next_recommended_transition": "PLAN_AND_EXPLICITLY_AUTHORIZE_REAL_DESIGN_EXECUTION_THROUGH_VALIDATED_HANDOFF",
+  "next_recommended_transition": "PLAN_AND_EXPLICITLY_AUTHORIZE_REAL_DESIGN_EXECUTION_THROUGH_VALIDATED_HANDOFF_USING_CANONICAL_MINIMAL_KNOWLEDGE",
   "continuity_read_order": [
     "LAB_CONTRACT.md",
     "METHODOLOGY.md",
