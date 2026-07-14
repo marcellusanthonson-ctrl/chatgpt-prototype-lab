@@ -7,7 +7,7 @@ Repository: `marcellusanthonson-ctrl/symphonie-codex-lab`
 
 ## Role
 
-Symphonie is an eight-phase workflow that creates and develops applications and websites from beginning to end. It coordinates project-specific work across ChatGPT, Claude, and Codex. Skills are instruments used by particular phases; they are not the purpose of Symphonie and Symphonie is not the canonical source of reusable skills.
+Symphonie is an eight-phase workflow that creates and develops applications and websites from beginning to end. It coordinates project-specific work across ChatGPT, Claude, and Codex. Skills are instruments used by particular phases; Symphonie is not the canonical producer of reusable skills.
 
 ## Operating model
 
@@ -18,120 +18,88 @@ Symphonie is an eight-phase workflow that creates and develops applications and 
 
 ## Structural relationship with MammothSkills
 
-Symphonie and MammothSkills remain independent projects, but may establish an explicit producer-consumer relationship when a Symphonie phase requires a skill.
-
-Symphonie may provide MammothSkills with phase, runtime-agent, input/output, compatibility, handoff, example, failure-case, and consumer-validation requirements. MammothSkills may then create or adapt a skill for the declared target platform.
-
-```text
-Symphonie -> requirements and feedback -> MammothSkills
-MammothSkills -> approved skill artifact/release -> Symphonie
-Runtime -> Claude or Codex according to target_platform
-```
-
-Direct consumption must preserve artifact identity, target platform, version or artifact ID, source commit, checksum when applicable, configuration, and validation evidence. MammothSkills must not autonomously modify the Symphonie repository.
+Symphonie and MammothSkills remain independent projects. Symphonie may provide requirements and consumer feedback; MammothSkills may later provide identified approved skill artifacts or releases. Release, installation, migration, consumer fit, runtime compatibility, and integration remain separate validations and permissions.
 
 Canonical decisions: `DEC-LAB-005`, `DEC-LAB-006`.
 
-## Claude-operated early phases
-
-The MammothSkills corpus currently includes:
-
-- `intake-brief`;
-- `project-scoping`;
-- `project-status`.
-
-These are not yet registered as installed operational Symphonie releases. Before assignment to Claude-operated phases, they require audit in MammothSkills, Claude runtime validation, versioned identity, explicit approval, and separate Symphonie integration.
-
-## Historical Codex skill candidates
-
-The following two Codex skills were created or adapted inside `symphonie-codex-lab` before MammothSkills existed:
-
-- `symphonie-ux-ui-architect`;
-- `symphonie-ui-implementer`.
+## Current Phase 3A architect baseline
 
 ```text
-Phase 3A: symphonie-ux-ui-architect
-Capability: DOCUMENT_WRITE
-Purpose: define and write approved design contracts
-
-Phase 4A: symphonie-ui-implementer
-Capability: SOURCE_WRITE
-Purpose: convert approved Phase 3A contracts into authorized UI source code
-```
-
-## Current skill validation state
-
-### `symphonie-ux-ui-architect 0.1.0-alpha.5`
-
-```text
-STATUS = APPROVED_BASELINE_CLOSED_IMMUTABLE
-STATIC_VALIDATION = PASS
-RUNTIME_VALIDATION = PASS
-PROMOTION_GATE = PASS
-```
-
-This baseline is closed and immutable.
-
-### `symphonie-ux-ui-architect 0.1.0-alpha.6`
-
-```text
-STATUS = PUBLISHED_CANDIDATE_WITH_RUNTIME_PASS_AND_HISTORICAL_EVIDENCE_FINDING
+SKILL = symphonie-ux-ui-architect
+VERSION = 0.1.0-alpha.6
+PHASE = 3A
+CAPABILITY = DOCUMENT_WRITE
+STATUS = APPROVED_BASELINE_WITH_RECORDED_HISTORICAL_EVIDENCE_LIMITATION
 BRANCH = feature/design-migration-handoff-alpha6
 IMPLEMENTATION_COMMIT = 22d63a901ec30221e7e8e7e944203eb2239598bd
 RUNTIME_EVIDENCE_COMMIT = 385f85b85560d8f5a12512c9f36e2bdd140f1d7b
-PUBLICATION_ORDER = SYM-DESIGN-MIGRATION-PUSH-012
-PUBLICATION_VALIDATION = PASS
+APPROVAL_DECISION = DEC-LAB-009
+APPROVED_BY = Jonathan Martínez
+APPROVED_AT = 2026-07-14
+```
+
+Direct evidence:
+
+```text
+STATIC_VALIDATION = PASS
 REG-08 = PASS
 REG-09 = BLOCKED_AS_EXPECTED
 REG-09_REASON = MIGRATION_TARGET_UNCONFIRMED
+UNAUTHORIZED_WRITES = ZERO
 NORMAL_EIGHT_OUTPUT_FLOW = PRESERVED
-CONDITIONAL_OUTPUT = .project/phase-3/migration-handoff.json
-FULL_HISTORICAL_REGRESSION_PACK = INCOMPLETE_EVIDENCE_REG_02_THROUGH_REG_07
-PROMOTION = NOT_AUTHORIZED
-MERGE = NOT_AUTHORIZED
-RELEASE = NOT_AUTHORIZED
-SYMPHONIE_INTEGRATION = NOT_AUTHORIZED
-MAMMOTHSKILLS_MIGRATION = NOT_AUTHORIZED
 ```
 
-Alpha.6 adds a conditional, schema-validated technology-migration handoff. It is activated only when the current bounded order declares a migration or an approved migration-sensitive condition. It records:
+Alpha.6 conditionally adds `.project/phase-3/migration-handoff.json` when an authorized instruction declares a migration or another applicable fidelity condition. It preserves source identity, formulas, sensitive fidelity zones, runtime risks, navigation, asset provenance, observable acceptance criteria, and reference images.
 
-- source and target technology;
-- source-of-truth precedence and immutable inputs;
-- dynamic visual formulas and recalculation triggers;
-- sensitive fidelity zones and prohibited adjustments;
-- granular typography exceptions;
-- SSR, hydration, client-boundary, observer, CSS lifecycle, and font-loading risks;
-- navigation behavior;
-- asset provenance, target location, and SHA-256;
-- observable visual acceptance criteria;
-- required reference images.
-
-REG-08 validated the active migration path and all nine Phase 3A outputs. REG-09 validated fail-closed blocking before Phase 3A writes when the target router was unconfirmed. The complete historical verifier still reports missing `actual/` evidence for REG-02 through REG-07; REG-08 and REG-09 are not among the failures. This finding prevents a claim that the entire historical pack was re-executed, but it does not invalidate the Alpha.6 cases.
-
-Alpha.6 is not approved, promoted, merged, released, installed, integrated into Symphonie, or migrated to MammothSkills.
-
-### `symphonie-ui-implementer 0.1.0-alpha.3`
+### Accepted historical evidence limitation
 
 ```text
-STATUS = APPROVED_BASELINE_CLOSED_IMMUTABLE
-STATIC_VALIDATION = PASS
-RUNTIME_SUITE = IMP-REG-01 THROUGH IMP-REG-12
-RUNTIME_VALIDATION = PASS
-BASELINE_HEAD = c2f3159e754d356f23b6855f2aecf1a663209835
-PROMOTION_REVIEW = SYM-UI-IMPLEMENTER-PROMOTION-REVIEW-013
-PROMOTION_RECORD_ORDER = SYM-UI-IMPLEMENTER-PROMOTION-RECORD-014
-PROMOTION_RECORD_COMMIT = 8f319aef3f328d22376fde42b4b0003601ffa670
-HUMAN_APPROVAL = GRANTED
-PROMOTION_GATE = PASS
-RELEASE = NOT_AUTHORIZED
-MIGRATION = NOT_AUTHORIZED
-INTEGRATION = NOT_AUTHORIZED
+FULL_HISTORICAL_REGRESSION_PACK = NOT_REVALIDATED_IN_ALPHA6_EXECUTION
+MISSING_RETAINED_ACTUAL_EVIDENCE = REG-02 THROUGH REG-07
+LIMITATION = ACCEPTED_NON_BLOCKING_FOR_PROMOTION
 ```
 
-Technical validation and human promotion are complete. This baseline is closed and immutable. Any future functional change requires a new version, new validation evidence, and a new explicit human approval.
+The limitation does not invalidate REG-08 or REG-09 and does not block baseline approval. It prevents claiming that the complete historical pack was revalidated during the Alpha.6 run.
 
-The promotion does not authorize release, installation, migration to MammothSkills, or integration into Symphonie.
+Required future tests are recorded in:
+
+`projects/symphonie/reports/ALPHA6_HISTORICAL_EVIDENCE_TEST_PLAN.md`
+
+The future evidence plan covers:
+
+1. `REG-02`: block source-code paths and preserve the DOCUMENT_WRITE boundary;
+2. `REG-03`: block an unconfirmed target stack;
+3. `REG-04`: complete a valid Next.js Phase 3A documentation task and stop before implementation;
+4. `REG-05`: preserve undefined button behavior without inventing routes or endpoints;
+5. `REG-06`: reject generic visual direction and justify a product-specific direction;
+6. `REG-07`: preserve an existing design system without creating unauthorized parallel tokens.
+
+The plan is `PLANNED_NOT_AUTHORIZED`.
+
+## Historical Phase 3A baseline
+
+```text
+VERSION = 0.1.0-alpha.5
+STATUS = HISTORICAL_APPROVED_BASELINE_CLOSED_IMMUTABLE
+```
+
+Alpha.5 remains preserved as immutable historical evidence.
+
+## Current Phase 4A implementer baseline
+
+```text
+SKILL = symphonie-ui-implementer
+VERSION = 0.1.0-alpha.3
+PHASE = 4A
+CAPABILITY = SOURCE_WRITE
+STATUS = APPROVED_BASELINE_CLOSED_IMMUTABLE
+STATIC_VALIDATION = PASS
+RUNTIME_VALIDATION = PASS
+RUNTIME_SUITE = IMP-REG-01 THROUGH IMP-REG-12
+BASELINE_HEAD = c2f3159e754d356f23b6855f2aecf1a663209835
+```
+
+Its approval does not authorize release, installation, migration, or integration.
 
 ## Validated synthetic architect-to-implementer handoff
 
@@ -141,152 +109,58 @@ Project: `handoff-controlled-017`
 RESULT = PASS_WITH_FINDINGS
 HANDOFF_COMPATIBILITY = PASS
 CODEX_DISCOVERY_AND_INTERPRETATION_AS_CHAIN = PASS
+VALIDATED_CHAIN = architect -> human gate -> implementer -> build -> manual browser validation
 REAL_DESIGN_EXECUTION = NOT_YET_VALIDATED
 REPEATABILITY = NOT_YET_VALIDATED
-CLOSED_AT = 2026-07-12
 ```
 
-Orders included in the validated chain:
+The synthetic exercise validated Phase 3A contract generation, preservation of the human design gate, Phase 4A consumption of canonical JSON contracts, bounded application-source changes, successful build, browser rendering, responsive behavior, keyboard and focus behavior, accessibility basics, action preservation, and boundary checks.
 
-- `SYM-ARCH-IMPLEMENTER-HANDOFF-017`
-- `SYM-ARCH-IMPLEMENTER-HANDOFF-018`
-- `SYM-ARCH-IMPLEMENTER-HANDOFF-019`
-- `SYM-ARCH-IMPLEMENTER-HANDOFF-RUNTIME-020`
-- `SYM-ARCH-IMPLEMENTER-HANDOFF-MANUAL-VALIDATION-021`
-
-The chain validated:
-
-1. discovery and interpretation of both approved Codex skills;
-2. Phase 3A generation of the canonical design contracts;
-3. preservation of the human `DESIGN_DIRECTION_APPROVED` gate;
-4. Phase 4A consumption of the four canonical JSON contracts;
-5. bounded application-source generation;
-6. successful TypeScript and Vite build;
-7. real browser rendering;
-8. console, six-viewport responsive, keyboard, focus, accessibility-basic, action-preservation, Phase 3A conformance, and boundary validation.
-
-Historical blockers and corrections remain part of the evidence:
-
-- The first build was blocked because the synthetic fixture lacked Vite CSS Module declarations.
-- A separately authorized `src/vite-env.d.ts` correction resolved the build blocker.
-- Automated browser validation was blocked because the Playwright Chromium executable was absent and browser installation was prohibited.
-- Manual-assisted validation completed the remaining evidence and closed the synthetic handoff as `PASS_WITH_FINDINGS`.
-
-Non-blocking findings:
-
-- missing `favicon.ico` caused a local `404`;
-- approved fixture labels `Prepared, not executed` and `Not yet executed` became semantically stale after the experiment was completed.
-
-The synthetic result does not establish real-design execution, reproducibility, production readiness, release, migration, or integration.
+It does not establish execution on a real design, reproducibility, production readiness, release, migration, or integration.
 
 ## Canonical minimal handoff knowledge
 
-The LAB records three verified, generic knowledge documents:
+The LAB records three verified generic controls:
 
 - `knowledge/contracts/phase3-minimum-assertions.json`;
 - `knowledge/contracts/action-preservation.json`;
 - `knowledge/regressions/imp-reg-11.json`.
 
-```text
-SOURCE_AUDIT = SYM-LOCAL-EVIDENCE-AUDIT-005 / PASS_WITH_FINDINGS / CONSUMED
-SOURCE_EXTRACTION = SYM-MINIMAL-KNOWLEDGE-EXTRACTION-006 / PASS / CONSUMED
-CANONICALIZATION = SYM-LAB-CANONICALIZATION-007 / PASS / CONSUMED
-PUBLICATION = SYM-LAB-PUSH-008 / PASS / CONSUMED
-PUBLICATION_COMMIT = c478c5a4e290a10305e64c9ff8bf6eff4ead772a
-MINIMAL_HANDOFF_KNOWLEDGE = CANONICALIZED_AND_PUBLISHED
-VALIDATION = PASS
-```
+They provide minimum Phase 3A exit assertions, UI-action preservation, and fail-closed authorization checks before observable effects.
 
-The documents add:
-
-1. minimum, verifiable Phase 3A exit assertions for semantic order, declared responsive width, visible keyboard focus, text-labelled status, and reduced motion;
-2. an action-preservation contract that prevents deletion, invention, or simulation of unauthorized behavior during the Phase 3A to Phase 4A handoff;
-3. an `IMP_REG_11` fail-closed guard requiring authorization contradictions to be detected before any observable write or effect.
-
-Operational boundary:
+## Current operational sequence
 
 ```text
-CANONICAL_KNOWLEDGE = YES
-AUTOMATIC_ENFORCEMENT = PARTIAL_IN_ALPHA6_MIGRATION_HANDOFF_ONLY
-APPROVED_BASELINE_MODIFICATION = NO
-SYMPHONIE_RUNTIME_INTEGRATION = NOT_AUTHORIZED
-PRODUCT_CHANGE = NOT_PERFORMED
+1. Alpha.6 promotion is approved and recorded under DEC-LAB-009.
+2. Historical REG-02 through REG-07 evidence closure may be executed later under a separate bounded authorization.
+3. Plan a real-design execution through the approved architect-to-implementer chain.
+4. Obtain explicit bounded authorization for each runtime and repository-writing phase.
+5. Execute and assess the real design without integration or release.
+6. Repeat the flow before claiming reproducibility.
+7. Only then consider migration or extraction into MammothSkills under separate authorization.
 ```
-
-The local audit also established that the exported UI implementer variant was superseded and that `SYMPHONIE_RECOVERY_QUARANTINE` remained unverified; neither was incorporated.
-
-## Immediate operational sequence
-
-The next recommended transition is:
-
-```text
-1. Review Alpha.6 for promotion or retain Alpha.5 as the approved baseline
-2. Plan a real-design execution through the validated chained flow
-3. Apply the canonical minimal handoff knowledge
-4. Use Alpha.6 migration-handoff only after separate promotion and integration authorization
-5. Obtain explicit bounded authorization for the real-design test
-6. Execute and assess the real design
-7. Repeat the flow to prove reproducibility
-8. Only then consider migration to MammothSkills under separate authorization
-```
-
-Each transition requires its own explicit bounded authorization where it involves execution, repository writing, promotion, release, migration, or integration.
-
-## Initial Symphonie Codex skill cycle
-
-Current completion state:
-
-```text
-SKILL_1_BASELINE_RUNTIME = PASS
-SKILL_1_BASELINE_PROMOTION = APPROVED_BASELINE_CLOSED_IMMUTABLE
-SKILL_1_ALPHA6_CANDIDATE = PUBLISHED_WITH_RUNTIME_PASS_AND_FINDING
-SKILL_2_RUNTIME = PASS
-SKILL_2_PROMOTION = APPROVED_BASELINE_CLOSED_IMMUTABLE
-HANDOFF_COMPATIBILITY = PASS
-CODEX_DISCOVERY_AND_INTERPRETATION_AS_CHAIN = PASS
-REAL_DESIGN_EXECUTION = NOT_YET_VALIDATED
-REPEATABILITY = NOT_YET_VALIDATED
-```
-
-## Post-validation migration strategy
-
-After the initial Symphonie Codex skill cycle is closed, reusable assets and process knowledge may be migrated or extracted into MammothSkills under separate authorization.
-
-MammothSkills may receive canonical skill sources, generic schemas, templates, validators, reusable regression cases, audit and adaptation methods, snapshot techniques, report parsing, fail-closed validation patterns, versioning, checksums, changelogs, and source provenance.
-
-Symphonie retains phase placement, activation rules, phase-specific contracts, handoff requirements, workflow fixtures, installed release identity, configuration, consumer-fit evidence, and integration evidence.
-
-Historical copies must not be silently deleted. After canonical migration they must be marked `legacy`, `superseded`, or `evidence-only` as appropriate.
-
-## Skill relationship
-
-- Skills for Claude live in Claude.
-- Skills for Codex live in Codex.
-- MammothSkills produces and maintains canonical reusable skill artifacts.
-- Symphonie specifies consumer requirements and validates consumer fit.
-- Consumer feedback may result in a new MammothSkills revision.
-- Technical adaptability, runtime compatibility, promotion, release, and Symphonie consumer fit are separate validations and permissions.
 
 ## Authorization state
 
 ```text
+ALPHA6_BASELINE_PROMOTION = APPROVED_RECORDED_AUTHORIZATION_CONSUMED
+HISTORICAL_EVIDENCE_EXECUTION = NOT_AUTHORIZED
 PRODUCT_CHANGE = NOT_AUTHORIZED
 REAL_DESIGN_EXECUTION = NOT_AUTHORIZED
 REPEATABILITY_TEST = NOT_AUTHORIZED
-SKILL_PROMOTION = NOT_AUTHORIZED
 SKILL_MERGE = NOT_AUTHORIZED
+SKILL_RELEASE = NOT_AUTHORIZED
+SKILL_INSTALLATION = NOT_AUTHORIZED
 SKILL_INTEGRATION = NOT_AUTHORIZED
 CODEX_EXECUTION = NOT_AUTHORIZED
 MAMMOTHSKILLS_MIGRATION = NOT_AUTHORIZED
 MAMMOTHSKILLS_RELEASE = NOT_AUTHORIZED
 ```
 
-This update records Alpha.6 as a published candidate with successful migration-handoff runtime evidence and a historical evidence finding. It does not authorize promotion, merge, real-design execution, repeatability testing, release, installation, repository changes outside LAB, migration to MammothSkills, runtime integration, or product changes.
-
-## Next authorized action
+## Next action
 
 `NONE_UNTIL_NEW_EXPLICIT_APPROVAL`
 
 Recommended transition:
 
-`REVIEW_ALPHA6_FOR_PROMOTION_OR_PLAN_REAL_DESIGN_EXECUTION_WITHOUT_INTEGRATION`
+`PLAN_REAL_DESIGN_EXECUTION_OR_SEPARATELY_AUTHORIZE_HISTORICAL_EVIDENCE_CLOSURE_WITHOUT_INTEGRATION`
