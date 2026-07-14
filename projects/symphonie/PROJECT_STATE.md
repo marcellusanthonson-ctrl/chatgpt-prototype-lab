@@ -140,6 +140,21 @@ Non-blocking findings:
 
 The synthetic result does not establish real-design execution, reproducibility, production readiness, release, migration, or integration.
 
+## Canonical minimal handoff knowledge
+
+The LAB canonically records three verified, generic knowledge documents from `SYM-MINIMAL-KNOWLEDGE-EXTRACTION-006`:
+
+- `knowledge/contracts/phase3-minimum-assertions.json`;
+- `knowledge/contracts/action-preservation.json`;
+- `knowledge/regressions/imp-reg-11.json`.
+
+```text
+MINIMAL_HANDOFF_KNOWLEDGE = CANONICALIZED
+VALIDATION = PASS
+```
+
+These documents preserve structured Phase 3A exit assertions, action-preservation rules, and an authorization-order regression guard. They do not validate real-design execution or repeatability, and do not authorize release, migration, integration, runtime, or product changes.
+
 ## Immediate operational sequence
 
 The next recommended transition is:

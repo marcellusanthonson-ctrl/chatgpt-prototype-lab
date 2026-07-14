@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "symphonie.regression.imp-reg-11",
+  "purpose": "Evitar efectos de escritura cuando una instrucción activa contiene una contradicción de autorización.",
+  "failure_mode": "La implementación realiza escrituras antes de evaluar una contradicción que debería bloquear el trabajo.",
+  "trigger": "Una instrucción prohíbe una operación o efecto y otra cláusula solicita ese mismo efecto sin autorización explícita compatible.",
+  "root_cause": "El control de autorización se ejecuta como verificación posterior en vez de como precondición sin efectos antes de cualquier escritura.",
+  "preventive_guard": "Inspeccionar las autorizaciones y contradicciones materiales antes de leer entradas de implementación, crear archivos, modificar fuentes o intentar operaciones con efectos; bloquear de forma fail-closed si existe ambigüedad.",
+  "validation_assertion": "Para un caso bloqueado por contradicción de autorización, la comparación antes/después debe demostrar que no se crearon, modificaron ni eliminaron archivos dentro del fileset protegido y que no apareció el efecto prohibido.",
+  "applicability_limits": "Aplica a cualquier flujo con límites de autorización y efectos observables. No certifica una ejecución real ni prescribe una herramienta de comparación concreta.",
+  "historical_details_omitted": true,
+  "source_provenance": {"source_path":"symphonie-codex-lab/ROOT_CAUSE_REPORT_IMP_REG_11.md","source_sha256":"bb335ae032c45838ac57548aca2bb3bf0833f51584e8ef7442b1f0b0bbd91f66","evidence_level":"PRIMARY","verification_state":"VERIFIED"}
+}

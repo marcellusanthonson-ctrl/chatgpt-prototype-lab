@@ -113,7 +113,17 @@
           "repeatability": "NOT_VALIDATED"
         }
       },
-      "migration_sequence_decision": "DEC-LAB-006"
+      "migration_sequence_decision": "DEC-LAB-006",
+      "minimal_handoff_knowledge": {
+        "status": "CANONICALIZED",
+        "artifacts": [
+          "projects/symphonie/knowledge/contracts/phase3-minimum-assertions.json",
+          "projects/symphonie/knowledge/contracts/action-preservation.json",
+          "projects/symphonie/knowledge/regressions/imp-reg-11.json"
+        ],
+        "source_order": "SYM-MINIMAL-KNOWLEDGE-EXTRACTION-006",
+        "validation": "PASS"
+      }
     },
     "carolina-klinik": {
       "status": "known",

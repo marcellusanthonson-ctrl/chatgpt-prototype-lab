@@ -56,6 +56,22 @@ architect-to-implementer chain, then repeat the flow before any separately
 authorized migration to MammothSkills.
 ```
 
+### Canonical minimal handoff knowledge
+
+```text
+STATUS = CANONICALIZED
+SOURCE_ORDER = SYM-MINIMAL-KNOWLEDGE-EXTRACTION-006
+VALIDATION = PASS
+```
+
+The structured canonical artifacts are:
+
+- `projects/symphonie/knowledge/contracts/phase3-minimum-assertions.json`
+- `projects/symphonie/knowledge/contracts/action-preservation.json`
+- `projects/symphonie/knowledge/regressions/imp-reg-11.json`
+
+They provide generic Phase 3A exit assertions, action-preservation rules, and an authorization-order regression guard. They do not alter real-design execution, repeatability, release, migration, integration, or runtime authorization.
+
 ### Waypoint
 
 Waypoint is a referenced application concept under strategic discussion. It has not entered development. Its records preserve framing, MVP hypotheses, risks, and validation questions only; they do not authorize implementation, research execution, product repository changes, release, integration, or deployment. Canonical decision: `DEC-LAB-007`.

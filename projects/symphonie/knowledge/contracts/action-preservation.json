@@ -1,0 +1,9 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "symphonie.handoff.action-preservation",
+  "purpose": "Preservar el significado, autorización y accesibilidad de cada acción definida durante el handoff de Phase 3A a Phase 4A.",
+  "required_fields": ["action_id","action_label","current_state","authorized_behavior","prohibited_behavior","semantic_element","accessibility_requirement","future_authorization_required"],
+  "rules": ["No eliminar una acción definida por el contrato de diseño sin una decisión autorizada que actualice ese contrato.","No inventar navegación, persistencia, solicitudes, servicios, analítica ni otra funcionalidad que el contrato no autorice.","No representar una acción como completada, disponible o exitosa si ese estado no está autorizado ni respaldado por comportamiento real.","Preservar semántica, nombre accesible, operabilidad por teclado y foco visible según el contrato aprobado.","Declarar por acción el comportamiento actualmente autorizado y las conductas explícitamente prohibidas.","Declarar si hace falta una autorización futura antes de implementar comportamiento adicional.","Detener la implementación de la acción si alguno de los campos requeridos es ambiguo, contradictorio o ausente."],
+  "validation_assertions": ["Cada acción del diseño tiene un registro completo con todos los campos requeridos.","La implementación no añade comportamiento fuera de authorized_behavior.","La representación semántica depende del contrato aprobado y de la accesibilidad; una acción pendiente no exige por sí sola un botón habilitado.","Toda acción que requiera autorización futura permanece sin comportamiento adicional hasta recibirla."],
+  "source_provenance": {"source_path":"symphonie-handoff-017-workspace/.project/phase-3/UI_ACTION_CONTRACT.json","source_sha256":"eb4d4f176a7bd949d05055062f4c956890f17392dfcc0a7508bc486eb13eda38","evidence_level":"PRIMARY","verification_state":"VERIFIED"}
+}
