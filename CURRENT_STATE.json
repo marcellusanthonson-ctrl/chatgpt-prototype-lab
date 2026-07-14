@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "document_id": "lab.current-state",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "status": "ACTIVE",
   "updated_at": "2026-07-14",
   "active_project": "lab",
@@ -54,29 +54,34 @@
       ],
       "codex_skill_cycle": {
         "symphonie_ux_ui_architect": {
-          "approved_baseline": {
+          "historical_baseline_alpha5": {
             "version": "0.1.0-alpha.5",
             "phase": "3A",
             "capability": "DOCUMENT_WRITE",
-            "status": "APPROVED_BASELINE_CLOSED_IMMUTABLE",
+            "status": "HISTORICAL_APPROVED_BASELINE_CLOSED_IMMUTABLE",
             "runtime_validation": "PASS",
             "promotion_gate": "PASS"
           },
-          "technology_migration_handoff_candidate": {
+          "approved_baseline": {
             "version": "0.1.0-alpha.6",
-            "status": "PUBLISHED_CANDIDATE_WITH_RUNTIME_PASS_AND_HISTORICAL_EVIDENCE_FINDING",
+            "phase": "3A",
+            "capability": "DOCUMENT_WRITE",
+            "status": "APPROVED_BASELINE_WITH_RECORDED_HISTORICAL_EVIDENCE_LIMITATION",
             "branch": "feature/design-migration-handoff-alpha6",
             "implementation_commit": "22d63a901ec30221e7e8e7e944203eb2239598bd",
             "runtime_evidence_commit": "385f85b85560d8f5a12512c9f36e2bdd140f1d7b",
-            "publication_order": "SYM-DESIGN-MIGRATION-PUSH-012",
-            "publication_validation": "PASS",
+            "approval_decision": "DEC-LAB-009",
+            "approved_by": "Jonathan Martínez",
+            "approved_at": "2026-07-14",
+            "direct_validation": "PASS",
             "reg_08": "PASS",
             "reg_09": "BLOCKED_AS_EXPECTED",
             "reg_09_reason": "MIGRATION_TARGET_UNCONFIRMED",
-            "historical_regression_pack": "INCOMPLETE_EVIDENCE_REG_02_THROUGH_REG_07",
+            "historical_regression_pack": "INCOMPLETE_EVIDENCE_REG_02_THROUGH_REG_07_ACCEPTED_NON_BLOCKING",
+            "historical_evidence_plan": "projects/symphonie/reports/ALPHA6_HISTORICAL_EVIDENCE_TEST_PLAN.md",
             "conditional_output": ".project/phase-3/migration-handoff.json",
             "normal_eight_output_flow_preserved": true,
-            "promotion": "NOT_AUTHORIZED",
+            "promotion_record": "APPROVED_AND_RECORDED",
             "merge": "NOT_AUTHORIZED",
             "release": "NOT_AUTHORIZED",
             "symphonie_integration": "NOT_AUTHORIZED",
@@ -136,6 +141,7 @@
         }
       },
       "migration_sequence_decision": "DEC-LAB-006",
+      "alpha6_promotion_decision": "DEC-LAB-009",
       "minimal_handoff_knowledge": {
         "status": "CANONICALIZED_AND_PUBLISHED",
         "canonicalization_order": "SYM-LAB-CANONICALIZATION-007",
@@ -163,7 +169,7 @@
           "fail-closed authorization regression guard before observable effects"
         ],
         "automatic_enforcement": "PARTIAL_IN_ALPHA6_MIGRATION_HANDOFF_ONLY",
-        "skill_modification": "ALPHA6_CANDIDATE_ONLY",
+        "skill_modification": "ALPHA6_APPROVED_BASELINE",
         "runtime_integration": "NOT_AUTHORIZED",
         "product_change": "NOT_PERFORMED"
       }
@@ -213,7 +219,8 @@
     "DEC-LAB-005",
     "DEC-LAB-006",
     "DEC-LAB-007",
-    "DEC-LAB-008"
+    "DEC-LAB-008",
+    "DEC-LAB-009"
   ],
   "open_errors": [
     "ERR-LAB-001",
@@ -228,6 +235,10 @@
   ],
   "authorization_state": {
     "lab_documentation": "NOT_AUTHORIZED",
+    "alpha6_baseline_promotion": "APPROVED_RECORDED_AUTHORIZATION_CONSUMED",
+    "historical_evidence_execution": "NOT_AUTHORIZED",
+    "real_design_execution": "NOT_AUTHORIZED",
+    "repeatability_test": "NOT_AUTHORIZED",
     "mammothskills_implementation": "NOT_AUTHORIZED",
     "mammothskills_migration": "NOT_AUTHORIZED",
     "mammothskills_release": "NOT_AUTHORIZED",
@@ -237,7 +248,7 @@
     "codex_autonomous_authority": "NO"
   },
   "next_authorized_action": "NONE_UNTIL_NEW_EXPLICIT_APPROVAL",
-  "next_recommended_transition": "REVIEW_ALPHA6_FOR_PROMOTION_OR_PLAN_REAL_DESIGN_EXECUTION_WITHOUT_INTEGRATION",
+  "next_recommended_transition": "PLAN_REAL_DESIGN_EXECUTION_OR_SEPARATELY_AUTHORIZE_HISTORICAL_EVIDENCE_CLOSURE_WITHOUT_INTEGRATION",
   "continuity_read_order": [
     "LAB_CONTRACT.md",
     "METHODOLOGY.md",
