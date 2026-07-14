@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-07-13",
+  "updated_at": "2026-07-14",
   "records": [
     {
       "id": "DEC-LAB-001",
@@ -73,6 +73,15 @@
       "project_scope": ["lab"],
       "canonical_path": "decisions/DEC-LAB-008.json",
       "updated_at": "2026-07-13"
+    },
+    {
+      "id": "DEC-LAB-009",
+      "title": "Approve Symphonie UX/UI Architect Alpha.6 with recorded historical evidence limitation",
+      "status": "APPROVED",
+      "approval_state": "APPROVED_WITH_RECORDED_EVIDENCE_LIMITATION",
+      "project_scope": ["lab", "symphonie"],
+      "canonical_path": "decisions/DEC-LAB-009.json",
+      "updated_at": "2026-07-14"
     }
   ]
 }
