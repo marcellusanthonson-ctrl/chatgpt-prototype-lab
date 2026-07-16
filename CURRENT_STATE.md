@@ -1,9 +1,9 @@
 # LAB Current State
 
 Document-ID: `lab.current-state`
-Version: `1.0.10`
+Version: `1.0.11`
 Status: `ACTIVE`
-Last-Updated: `2026-07-14`
+Last-Updated: `2026-07-16`
 
 `CURRENT_STATE.json` is the structured source of truth. This file is its human-readable view.
 
@@ -27,12 +27,45 @@ LAB remains the documentary and governance layer. It does not authorize product 
 
 Symphonie remains `KNOWN_AND_SYNCED` and coordinates an eight-phase workflow for creating applications and websites.
 
+### Dedicated repository architecture
+
+`DEC-LAB-010` approves the architecture for a future private canonical repository:
+
+```text
+REPOSITORY = marcellusanthonson-ctrl/symphonie
+VISIBILITY = PRIVATE
+CANONICAL_BRANCH = main
+ARCHITECTURE_STATUS = APPROVED
+REPOSITORY_CREATION = NOT_AUTHORIZED
+BOOTSTRAP = NOT_AUTHORIZED
+RUNTIME = NOT_AUTHORIZED
+INTEGRATION = NOT_AUTHORIZED
+MIGRATION = NOT_AUTHORIZED
+```
+
+The repository has not been created by this transition. `chatgpt-prototype-lab` remains the governance source of truth, MammothSkills remains the canonical producer of reusable skills, and `symphonie-codex-lab` remains historical experimental evidence until a separately approved terminal classification.
+
+### Phase 0 experimental baseline
+
+`DEC-LAB-011` approves:
+
+```text
+VERSION = 0.1.0
+MODEL = 0A_CAPTURE -> 0B_ANALYZE_AND_CLASSIFY -> 0C_HUMAN_DECISION
+STATUS = APPROVED_EXPERIMENTAL_BASELINE
+STABLE_CONTRACT = NO
+RUNTIME_VALIDATED = NO
+REAL_CLIENT_USE = NOT_AUTHORIZED
+```
+
+Phase 0 remains documentary and experimental. It does not authorize runtime, Discovery, quotation, implementation, integration, or processing of real client data.
+
 Current operational objective:
 
 ```text
-Plan and explicitly authorize a real-design execution through the validated
-architect-to-implementer chain, then repeat the flow before any separately
-authorized migration to MammothSkills.
+Separately authorize creation of the empty private Symphonie repository,
+then separately authorize the documentary bootstrap. Real-design execution
+and historical-evidence closure remain independent future transitions.
 ```
 
 ## Phase 3A architect baseline
@@ -151,8 +184,9 @@ They provide minimum Phase 3A assertions, UI-action preservation, and fail-close
 
 ## Decisions in force
 
-- `DEC-LAB-001` through `DEC-LAB-008` remain approved.
-- `DEC-LAB-009` approves Alpha.6 as the current Phase 3A baseline with the recorded REG-02–07 evidence limitation.
+- `DEC-LAB-001` through `DEC-LAB-009` remain approved.
+- `DEC-LAB-010` approves the dedicated Symphonie repository architecture without authorizing repository creation.
+- `DEC-LAB-011` approves Phase 0 v0.1 as an experimental baseline without authorizing runtime or real-client use.
 
 ## Errors and patterns
 
@@ -174,7 +208,12 @@ Validated patterns:
 
 ```text
 ALPHA6_BASELINE_PROMOTION = APPROVED_RECORDED_AUTHORIZATION_CONSUMED
+DEC_LAB_010_011_DOCUMENTATION = APPROVED_RECORDED_AUTHORIZATION_CONSUMED
 LAB_DOCUMENTATION = NOT_AUTHORIZED
+SYMPHONIE_REPOSITORY_CREATION = NOT_AUTHORIZED
+SYMPHONIE_BOOTSTRAP = NOT_AUTHORIZED
+PHASE_0_RUNTIME = NOT_AUTHORIZED
+PHASE_0_REAL_CLIENT_USE = NOT_AUTHORIZED
 HISTORICAL_EVIDENCE_EXECUTION = NOT_AUTHORIZED
 REAL_DESIGN_EXECUTION = NOT_AUTHORIZED
 REPEATABILITY_TEST = NOT_AUTHORIZED
@@ -187,12 +226,12 @@ PRODUCT_CHANGES = NOT_AUTHORIZED
 CODEX_AUTONOMOUS_AUTHORITY = NO
 ```
 
-Promotion approval is separate from merge, release, installation, integration, migration, runtime execution, and product changes.
+Approval of repository architecture and Phase 0 is separate from repository creation, bootstrap, runtime, integration, migration, release, deployment, and product changes.
 
 ## Next action
 
 ```text
 NEXT_AUTHORIZED_ACTION = NONE_UNTIL_NEW_EXPLICIT_APPROVAL
 NEXT_RECOMMENDED_TRANSITION =
-PLAN_REAL_DESIGN_EXECUTION_OR_SEPARATELY_AUTHORIZE_HISTORICAL_EVIDENCE_CLOSURE_WITHOUT_INTEGRATION
+SEPARATELY_AUTHORIZE_EMPTY_PRIVATE_SYMPHONIE_REPOSITORY_CREATION_THEN_BOOTSTRAP
 ```

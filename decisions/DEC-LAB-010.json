@@ -1,0 +1,88 @@
+{
+  "id": "DEC-LAB-010",
+  "title": "Create a dedicated canonical repository for the Symphonie workflow",
+  "project": "LAB",
+  "status": "APPROVED",
+  "effective_date": "2026-07-16",
+  "approved_by": "Jonathan Martínez",
+  "approval_evidence": "Apruebo DEC-LAB-010 y DEC-LAB-011 exactamente como fueron formuladas, autorizando su registro documental en chatgpt-prototype-lab, pero sin autorizar todavía la creación del repositorio Symphonie, su bootstrap, runtime, integración, migración ni ejecución.",
+  "decision": {
+    "summary": "Create marcellusanthonson-ctrl/symphonie as the private canonical repository for the Symphonie workflow, while retaining chatgpt-prototype-lab as the governance source of truth, MammothSkills as the canonical skill producer, and symphonie-codex-lab as historical experimental evidence.",
+    "repository": {
+      "full_name": "marcellusanthonson-ctrl/symphonie",
+      "visibility": "PRIVATE",
+      "canonical_branch": "main",
+      "initial_status": "DOCUMENTARY_BOOTSTRAP_ONLY"
+    },
+    "responsibilities": {
+      "chatgpt-prototype-lab": [
+        "cross-project governance",
+        "authority",
+        "approved decisions",
+        "errors",
+        "validated patterns",
+        "project registry",
+        "continuity"
+      ],
+      "symphonie": [
+        "canonical workflow definition",
+        "phase contracts",
+        "gates and transitions",
+        "schemas",
+        "consumer-side integration records",
+        "installed skill release identities and compatibility evidence"
+      ],
+      "MammothSkills": [
+        "skill creation",
+        "adaptation",
+        "audit",
+        "testing",
+        "versioning",
+        "release publication"
+      ],
+      "symphonie-codex-lab": [
+        "historical Codex skill evidence",
+        "runtime harnesses",
+        "regression packs",
+        "synthetic handoff evidence",
+        "temporary historical experimentation"
+      ]
+    },
+    "governance_precedence": [
+      "approved LAB governance and decisions",
+      "approved Symphonie contracts",
+      "local Symphonie state and records",
+      "runtime evidence",
+      "model inference"
+    ],
+    "local_governance_rule": "governance files inside Symphonie mirror or bind to LAB authority; they do not create independent approval authority",
+    "state_rule": {
+      "structured_source_of_truth": "CURRENT_STATE.json",
+      "human_readable_view": "CURRENT_STATE.md",
+      "markdown_must_not_override_json": true
+    },
+    "historical_repository_transition": {
+      "repository": "marcellusanthonson-ctrl/symphonie-codex-lab",
+      "must_not_be_deleted_or_silently_transformed": true,
+      "future_terminal_classification": "LEGACY_EVIDENCE_OR_EQUIVALENT",
+      "conditions_before_terminal_classification": [
+        "real-design execution completed",
+        "repeatability criteria explicitly defined and satisfied",
+        "historical assets classified",
+        "any migration separately authorized and completed",
+        "final archival classification explicitly approved"
+      ]
+    }
+  },
+  "authorization_boundary": {
+    "repository_creation_authorized": false,
+    "bootstrap_authorized": false,
+    "runtime_authorized": false,
+    "integration_authorized": false,
+    "migration_authorized": false,
+    "release_authorized": false,
+    "product_change_authorized": false
+  },
+  "supersedes": [],
+  "superseded_by": null
+}

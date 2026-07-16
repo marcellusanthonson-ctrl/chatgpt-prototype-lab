@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-07-14",
+  "updated_at": "2026-07-16",
   "records": [
     {
       "id": "DEC-LAB-001",
@@ -82,6 +82,24 @@
       "project_scope": ["lab", "symphonie"],
       "canonical_path": "decisions/DEC-LAB-009.json",
       "updated_at": "2026-07-14"
+    },
+    {
+      "id": "DEC-LAB-010",
+      "title": "Create a dedicated canonical repository for the Symphonie workflow",
+      "status": "APPROVED",
+      "approval_state": "APPROVED",
+      "project_scope": ["lab", "symphonie"],
+      "canonical_path": "decisions/DEC-LAB-010.json",
+      "updated_at": "2026-07-16"
+    },
+    {
+      "id": "DEC-LAB-011",
+      "title": "Approve the Symphonie Phase 0 model as an experimental baseline v0.1",
+      "status": "APPROVED_EXPERIMENTAL_BASELINE",
+      "approval_state": "APPROVED_EXPERIMENTAL_BASELINE",
+      "project_scope": ["lab", "symphonie"],
+      "canonical_path": "decisions/DEC-LAB-011.json",
+      "updated_at": "2026-07-16"
     }
   ]
 }

@@ -1,0 +1,197 @@
+{
+  "id": "DEC-LAB-011",
+  "title": "Approve the Symphonie Phase 0 model as an experimental baseline v0.1",
+  "project": "LAB",
+  "status": "APPROVED_EXPERIMENTAL_BASELINE",
+  "effective_date": "2026-07-16",
+  "approved_by": "Jonathan Martínez",
+  "approval_evidence": "Apruebo DEC-LAB-010 y DEC-LAB-011 exactamente como fueron formuladas, autorizando su registro documental en chatgpt-prototype-lab, pero sin autorizar todavía la creación del repositorio Symphonie, su bootstrap, runtime, integración, migración ni ejecución.",
+  "decision": {
+    "summary": "Approve the 0A Capture -> 0B Analyze and Classify -> 0C Human Decision model as the experimental Phase 0 baseline for Symphonie.",
+    "baseline": {
+      "version": "0.1.0",
+      "status_after_approval": "APPROVED_EXPERIMENTAL_BASELINE",
+      "stable_contract": false,
+      "runtime_validated": false,
+      "real_client_use_authorized": false
+    },
+    "phase_model": {
+      "0A": {
+        "name": "CAPTURE",
+        "responsibilities": [
+          "record client declarations",
+          "inventory supplied documents",
+          "identify participants and provenance",
+          "apply privacy classification",
+          "record source conflicts",
+          "avoid viability interpretation",
+          "avoid progression approval"
+        ],
+        "outputs": [
+          "client-intake-submission.json",
+          "source-register.json",
+          "privacy-screening.json"
+        ],
+        "gate": "CAPTURE_SUFFICIENT_FOR_ANALYSIS",
+        "allowed_results": [
+          "PASS",
+          "NEEDS_CLARIFICATION",
+          "BLOCKED_PRIVACY",
+          "BLOCKED_SOURCE_CONFLICT"
+        ]
+      },
+      "0B": {
+        "name": "ANALYZE_AND_CLASSIFY",
+        "assignable_agent": "Claude under an explicit bounded order",
+        "responsibilities": [
+          "reconstruct the declared problem and current process from already supplied sources",
+          "separate evidence classes",
+          "identify gaps and contradictions",
+          "identify actors, constraints and risks",
+          "assess readiness for Discovery",
+          "recommend without approving"
+        ],
+        "evidence_classes": [
+          "CLIENT_DECLARED",
+          "DOCUMENT_EXTRACTED",
+          "INFERRED",
+          "UNKNOWN",
+          "CONTRADICTORY"
+        ],
+        "outputs": [
+          "intake-analysis.json",
+          "follow-up-question-set.json",
+          "quotation-readiness-assessment.json",
+          "intake-decision-recommendation.json"
+        ],
+        "allowed_results": [
+          "READY_FOR_HUMAN_DECISION",
+          "NEEDS_CLIENT_CONFIRMATION",
+          "DISCOVERY_REQUIRED",
+          "BLOCKED_CRITICAL_CONTRADICTION",
+          "OUT_OF_SCOPE"
+        ],
+        "prohibitions": [
+          "assume software is required",
+          "select a technology stack",
+          "design a solution",
+          "produce code",
+          "produce a quotation",
+          "estimate price or effort",
+          "convert hypotheses into facts",
+          "import unrelated project context",
+          "issue unsupported legal, tax, medical, financial or regulatory conclusions"
+        ]
+      },
+      "0C": {
+        "name": "HUMAN_DECISION",
+        "exclusive_approver": "Jonathan Martínez",
+        "agent_approval_authority": "NONE",
+        "allowed_decisions": [
+          "APPROVE_DISCOVERY",
+          "RETURN_FOR_CLARIFICATION",
+          "REJECT_OR_ARCHIVE",
+          "REFER_TO_QUALIFIED_REVIEW",
+          "CLASSIFY_AS_NON_SOFTWARE_INTERVENTION"
+        ],
+        "output": "phase-0-decision-record.json",
+        "required_record_fields": [
+          "decision",
+          "approver",
+          "date",
+          "evidence reviewed",
+          "conditions",
+          "authorized scope",
+          "expressly unauthorized actions"
+        ]
+      }
+    },
+    "intake_discovery_boundary": {
+      "intake": "analyzes declarations and sources already supplied and determines whether there is a sufficient signal for further investigation",
+      "discovery": "creates new evidence through direct-user interaction, observation, research and hypothesis validation",
+      "intake_must_not_claim_problem_validation": true,
+      "intake_must_not_justify_quotation": true
+    },
+    "quotation_readiness_boundary": {
+      "purpose": "determine whether sufficient evidence exists to consider a future quotation process",
+      "must_not_include": [
+        "price",
+        "hours",
+        "solution architecture",
+        "technology selection",
+        "commercial proposal"
+      ]
+    },
+    "privacy": {
+      "classes": {
+        "PUBLIC": {
+          "capture": "ALLOWED",
+          "model_processing": "ALLOWED",
+          "persistence": "ALLOWED"
+        },
+        "INTERNAL": {
+          "capture": "ALLOWED",
+          "model_processing": "ALLOWED_UNDER_BOUNDED_ORDER",
+          "persistence": "STRUCTURED_SUMMARY_PREFERRED"
+        },
+        "CONFIDENTIAL": {
+          "capture": "ALLOWED_ONLY_WITH_EXPLICIT_SCOPE",
+          "model_processing": "EXPLICIT_AUTHORIZATION_REQUIRED",
+          "persistence": "MINIMIZED"
+        },
+        "SENSITIVE_RESTRICTED": {
+          "capture": "REGISTER_PRESENCE_WITHOUT_UNNECESSARY_CONTENT",
+          "model_processing": "BLOCKED_BY_DEFAULT",
+          "persistence": "PROHIBITED_UNLESS_SPECIFICALLY_AUTHORIZED"
+        }
+      },
+      "default_data_mode": "SYNTHETIC_OR_ANONYMIZED",
+      "stop_on_out_of_scope_sensitive_data": true
+    },
+    "source_precedence": [
+      "human authorization and approved governance",
+      "approved contracts",
+      "identified primary documents",
+      "direct client confirmation",
+      "intermediary declarations",
+      "model inference"
+    ],
+    "conflict_rule": "a material conflict between a primary document and direct client confirmation must be classified as CONTRADICTORY and must not be silently resolved by hierarchy",
+    "state_transitions": [
+      "0A.PASS -> 0B",
+      "0A.NEEDS_CLARIFICATION -> 0A",
+      "0A.BLOCKED_* -> STOP",
+      "0B.READY_FOR_HUMAN_DECISION -> 0C",
+      "0B.NEEDS_CLIENT_CONFIRMATION -> 0A",
+      "0B.DISCOVERY_REQUIRED -> 0C",
+      "0B.BLOCKED_* -> STOP_OR_0C_REVIEW",
+      "0C.* -> TERMINAL_DECISION_OR_NEW_EXPLICIT_ORDER"
+    ],
+    "approval_semantics": {
+      "silence_is_approval": false,
+      "continuation_is_approval": false,
+      "technical_success_is_approval": false,
+      "commit_is_approval": false
+    }
+  },
+  "validation_required_before_stable_status": [
+    "validate all Phase 0 JSON schemas",
+    "complete a synthetic 0A to 0B to 0C dry run",
+    "complete a source-conflict negative test",
+    "complete a privacy negative test",
+    "validate return from 0B to 0A",
+    "validate controlled transition to Discovery",
+    "complete a second execution demonstrating repeatability"
+  ],
+  "authorization_boundary": {
+    "runtime_authorized": false,
+    "real_client_use_authorized": false,
+    "discovery_authorized": false,
+    "quotation_authorized": false,
+    "implementation_authorized": false,
+    "repository_write_authorized": false,
+    "integration_authorized": false
+  },
+  "supersedes": [],
+  "superseded_by": null
+}

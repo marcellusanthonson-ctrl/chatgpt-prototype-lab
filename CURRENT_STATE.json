@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
   "document_id": "lab.current-state",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "status": "ACTIVE",
-  "updated_at": "2026-07-14",
+  "updated_at": "2026-07-16",
   "active_project": "lab",
   "current_phase": "KNOWLEDGE_BASE_OPERATIONAL_V1",
   "methodology": {
@@ -47,7 +47,34 @@
       "status": "known_and_synced",
       "canonical_path": "projects/symphonie/PROJECT_STATE.md",
       "purpose": "eight-phase workflow that creates and develops projects from beginning to end",
-      "current_operational_objective": "Plan and explicitly authorize a real-design execution through the validated architect-to-implementer chain, then repeat the flow before any separately authorized migration to MammothSkills.",
+      "current_operational_objective": "Separately authorize creation of the empty private Symphonie repository, then separately authorize the documentary bootstrap. Real-design execution and historical-evidence closure remain independent future transitions.",
+      "dedicated_repository_architecture": {
+        "decision": "DEC-LAB-010",
+        "repository": "marcellusanthonson-ctrl/symphonie",
+        "visibility": "PRIVATE",
+        "canonical_branch": "main",
+        "status": "APPROVED_NOT_CREATED",
+        "repository_creation": "NOT_AUTHORIZED",
+        "bootstrap": "NOT_AUTHORIZED",
+        "runtime": "NOT_AUTHORIZED",
+        "integration": "NOT_AUTHORIZED",
+        "migration": "NOT_AUTHORIZED",
+        "historical_repository": "marcellusanthonson-ctrl/symphonie-codex-lab",
+        "historical_repository_terminal_classification": "NOT_YET_AUTHORIZED"
+      },
+      "phase_0_experimental_baseline": {
+        "decision": "DEC-LAB-011",
+        "version": "0.1.0",
+        "model": "0A_CAPTURE -> 0B_ANALYZE_AND_CLASSIFY -> 0C_HUMAN_DECISION",
+        "status": "APPROVED_EXPERIMENTAL_BASELINE",
+        "stable_contract": false,
+        "runtime_validated": false,
+        "real_client_use_authorized": false,
+        "runtime": "NOT_AUTHORIZED",
+        "discovery": "NOT_AUTHORIZED",
+        "quotation": "NOT_AUTHORIZED",
+        "implementation": "NOT_AUTHORIZED"
+      },
       "historical_codex_skill_candidates": [
         "symphonie-ux-ui-architect",
         "symphonie-ui-implementer"
@@ -142,6 +169,8 @@
       },
       "migration_sequence_decision": "DEC-LAB-006",
       "alpha6_promotion_decision": "DEC-LAB-009",
+      "repository_architecture_decision": "DEC-LAB-010",
+      "phase_0_baseline_decision": "DEC-LAB-011",
       "minimal_handoff_knowledge": {
         "status": "CANONICALIZED_AND_PUBLISHED",
         "canonicalization_order": "SYM-LAB-CANONICALIZATION-007",
@@ -195,7 +224,7 @@
   "structural_relationships": {
     "status": "APPROVED_MODEL",
     "decision": "DEC-LAB-005",
-    "rule": "Independent projects may establish explicit producer-consumer relationships when required by a workflow.",
+    "rule": "Independent projects may establish explicit structural relationships when required by a workflow.",
     "mammothskills_to_symphonie": {
       "relationship": "skill producer and canonical source -> workflow consumer",
       "requirements_and_feedback": "Symphonie may provide phase, agent, input/output, compatibility, and validation requirements to MammothSkills.",
@@ -209,6 +238,13 @@
       "rule": "Complete the two historical Symphonie Codex skill audits and operational handoff proof in symphonie-codex-lab before separately authorized canonical migration to MammothSkills.",
       "future_source": "MammothSkills",
       "consumer": "Symphonie"
+    },
+    "dedicated_symphonie_repository": {
+      "decision": "DEC-LAB-010",
+      "status": "ARCHITECTURE_APPROVED_REPOSITORY_NOT_CREATED",
+      "governance_source": "chatgpt-prototype-lab",
+      "workflow_repository": "marcellusanthonson-ctrl/symphonie",
+      "historical_evidence_repository": "marcellusanthonson-ctrl/symphonie-codex-lab"
     }
   },
   "decisions_in_force": [
@@ -220,7 +256,9 @@
     "DEC-LAB-006",
     "DEC-LAB-007",
     "DEC-LAB-008",
-    "DEC-LAB-009"
+    "DEC-LAB-009",
+    "DEC-LAB-010",
+    "DEC-LAB-011"
   ],
   "open_errors": [
     "ERR-LAB-001",
@@ -235,7 +273,12 @@
   ],
   "authorization_state": {
     "lab_documentation": "NOT_AUTHORIZED",
+    "dec_lab_010_011_documentation": "APPROVED_RECORDED_AUTHORIZATION_CONSUMED",
     "alpha6_baseline_promotion": "APPROVED_RECORDED_AUTHORIZATION_CONSUMED",
+    "symphonie_repository_creation": "NOT_AUTHORIZED",
+    "symphonie_bootstrap": "NOT_AUTHORIZED",
+    "phase_0_runtime": "NOT_AUTHORIZED",
+    "phase_0_real_client_use": "NOT_AUTHORIZED",
     "historical_evidence_execution": "NOT_AUTHORIZED",
     "real_design_execution": "NOT_AUTHORIZED",
     "repeatability_test": "NOT_AUTHORIZED",
@@ -248,7 +291,7 @@
     "codex_autonomous_authority": "NO"
   },
   "next_authorized_action": "NONE_UNTIL_NEW_EXPLICIT_APPROVAL",
-  "next_recommended_transition": "PLAN_REAL_DESIGN_EXECUTION_OR_SEPARATELY_AUTHORIZE_HISTORICAL_EVIDENCE_CLOSURE_WITHOUT_INTEGRATION",
+  "next_recommended_transition": "SEPARATELY_AUTHORIZE_EMPTY_PRIVATE_SYMPHONIE_REPOSITORY_CREATION_THEN_BOOTSTRAP",
   "continuity_read_order": [
     "LAB_CONTRACT.md",
     "METHODOLOGY.md",

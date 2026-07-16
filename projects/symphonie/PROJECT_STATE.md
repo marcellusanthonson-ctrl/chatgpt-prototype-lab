@@ -2,7 +2,7 @@
 
 Project-ID: `symphonie`
 Status: `KNOWN_AND_SYNCED`
-Last-Updated: `2026-07-14`
+Last-Updated: `2026-07-16`
 Repository: `marcellusanthonson-ctrl/symphonie-codex-lab`
 
 ## Role
@@ -21,6 +21,86 @@ Symphonie is an eight-phase workflow that creates and develops applications and 
 Symphonie and MammothSkills remain independent projects. Symphonie may provide requirements and consumer feedback; MammothSkills may later provide identified approved skill artifacts or releases. Release, installation, migration, consumer fit, runtime compatibility, and integration remain separate validations and permissions.
 
 Canonical decisions: `DEC-LAB-005`, `DEC-LAB-006`.
+
+## Dedicated repository architecture
+
+`DEC-LAB-010` approves the architecture for a dedicated private canonical workflow repository:
+
+```text
+TARGET_REPOSITORY = marcellusanthonson-ctrl/symphonie
+VISIBILITY = PRIVATE
+CANONICAL_BRANCH = main
+ARCHITECTURE = APPROVED
+REPOSITORY_CREATED = NO
+REPOSITORY_CREATION = NOT_AUTHORIZED
+BOOTSTRAP = NOT_AUTHORIZED
+```
+
+Until a separate creation order is completed and later registered, this project record continues to identify `marcellusanthonson-ctrl/symphonie-codex-lab` as the existing repository holding historical Symphonie Codex evidence. The historical repository must not be deleted or silently transformed.
+
+Responsibility separation:
+
+```text
+chatgpt-prototype-lab = governance, decisions, errors, patterns, registry, continuity
+future symphonie repository = canonical workflow, phase contracts, gates, schemas, identified integrations
+MammothSkills = reusable skill production, adaptation, audit, versioning, releases
+symphonie-codex-lab = historical Codex skill evidence and temporary laboratory
+```
+
+Local governance files in the future Symphonie repository will bind to or mirror LAB authority; they will not create independent approval authority. `CURRENT_STATE.json` will be the structured local source of truth and `CURRENT_STATE.md` its human-readable view.
+
+## Phase 0 experimental baseline
+
+`DEC-LAB-011` approves Phase 0 v0.1 as an experimental baseline:
+
+```text
+MODEL = 0A_CAPTURE -> 0B_ANALYZE_AND_CLASSIFY -> 0C_HUMAN_DECISION
+STATUS = APPROVED_EXPERIMENTAL_BASELINE
+STABLE_CONTRACT = NO
+RUNTIME_VALIDATED = NO
+REAL_CLIENT_USE = NOT_AUTHORIZED
+```
+
+### 0A — Capture
+
+Records declarations, supplied documents, participants, provenance, privacy classification, and source conflicts. It does not interpret viability or approve progression.
+
+Expected outputs:
+
+- `client-intake-submission.json`
+- `source-register.json`
+- `privacy-screening.json`
+
+### 0B — Analyze and classify
+
+May be assigned to Claude only under an explicit bounded order. It analyzes already supplied sources, separates `CLIENT_DECLARED`, `DOCUMENT_EXTRACTED`, `INFERRED`, `UNKNOWN`, and `CONTRADICTORY`, identifies gaps and risks, and recommends without approving.
+
+Expected outputs:
+
+- `intake-analysis.json`
+- `follow-up-question-set.json`
+- `quotation-readiness-assessment.json`
+- `intake-decision-recommendation.json`
+
+It must not assume software, select a stack, design a solution, produce code or a quotation, estimate price or effort, import unrelated context, or issue unsupported professional conclusions.
+
+### 0C — Human decision
+
+Jonathan Martínez is the exclusive approver. Agents have no approval authority.
+
+Allowed decisions:
+
+- `APPROVE_DISCOVERY`
+- `RETURN_FOR_CLARIFICATION`
+- `REJECT_OR_ARCHIVE`
+- `REFER_TO_QUALIFIED_REVIEW`
+- `CLASSIFY_AS_NON_SOFTWARE_INTERVENTION`
+
+Expected output: `phase-0-decision-record.json`.
+
+Intake analyzes declarations and sources already supplied. Discovery creates new evidence through direct-user interaction, observation, research, and hypothesis validation. Intake cannot claim that the problem is validated or justify a quotation.
+
+Privacy defaults to synthetic or anonymized data. `SENSITIVE_RESTRICTED` processing is blocked by default. Runtime, real-client data, Discovery, quotation, implementation, and integration remain not authorized.
 
 ## Current Phase 3A architect baseline
 
@@ -65,16 +145,7 @@ Required future tests are recorded in:
 
 `projects/symphonie/reports/ALPHA6_HISTORICAL_EVIDENCE_TEST_PLAN.md`
 
-The future evidence plan covers:
-
-1. `REG-02`: block source-code paths and preserve the DOCUMENT_WRITE boundary;
-2. `REG-03`: block an unconfirmed target stack;
-3. `REG-04`: complete a valid Next.js Phase 3A documentation task and stop before implementation;
-4. `REG-05`: preserve undefined button behavior without inventing routes or endpoints;
-5. `REG-06`: reject generic visual direction and justify a product-specific direction;
-6. `REG-07`: preserve an existing design system without creating unauthorized parallel tokens.
-
-The plan is `PLANNED_NOT_AUTHORIZED`.
+The future evidence plan is `PLANNED_NOT_AUTHORIZED`.
 
 ## Historical Phase 3A baseline
 
@@ -131,19 +202,23 @@ They provide minimum Phase 3A exit assertions, UI-action preservation, and fail-
 ## Current operational sequence
 
 ```text
-1. Alpha.6 promotion is approved and recorded under DEC-LAB-009.
-2. Historical REG-02 through REG-07 evidence closure may be executed later under a separate bounded authorization.
-3. Plan a real-design execution through the approved architect-to-implementer chain.
-4. Obtain explicit bounded authorization for each runtime and repository-writing phase.
-5. Execute and assess the real design without integration or release.
-6. Repeat the flow before claiming reproducibility.
-7. Only then consider migration or extraction into MammothSkills under separate authorization.
+1. DEC-LAB-010 approves the dedicated repository architecture, but creation remains not authorized.
+2. DEC-LAB-011 approves Phase 0 v0.1 as an experimental baseline, but runtime remains not authorized.
+3. Obtain a separate bounded authorization to create the empty private repository.
+4. Verify repository identity and state.
+5. Obtain a separate bounded authorization for the documentary bootstrap.
+6. Validate schemas and execute only separately authorized synthetic tests.
+7. Continue real-design, repeatability, historical-evidence, and migration work only through independent authorizations.
 ```
 
 ## Authorization state
 
 ```text
-ALPHA6_BASELINE_PROMOTION = APPROVED_RECORDED_AUTHORIZATION_CONSUMED
+DEC_LAB_010_011_DOCUMENTATION = APPROVED_RECORDED_AUTHORIZATION_CONSUMED
+SYMPHONIE_REPOSITORY_CREATION = NOT_AUTHORIZED
+SYMPHONIE_BOOTSTRAP = NOT_AUTHORIZED
+PHASE_0_RUNTIME = NOT_AUTHORIZED
+PHASE_0_REAL_CLIENT_USE = NOT_AUTHORIZED
 HISTORICAL_EVIDENCE_EXECUTION = NOT_AUTHORIZED
 PRODUCT_CHANGE = NOT_AUTHORIZED
 REAL_DESIGN_EXECUTION = NOT_AUTHORIZED
@@ -163,4 +238,4 @@ MAMMOTHSKILLS_RELEASE = NOT_AUTHORIZED
 
 Recommended transition:
 
-`PLAN_REAL_DESIGN_EXECUTION_OR_SEPARATELY_AUTHORIZE_HISTORICAL_EVIDENCE_CLOSURE_WITHOUT_INTEGRATION`
+`SEPARATELY_AUTHORIZE_EMPTY_PRIVATE_SYMPHONIE_REPOSITORY_CREATION_THEN_BOOTSTRAP`
