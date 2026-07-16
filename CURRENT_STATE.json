@@ -47,23 +47,26 @@
       "status": "known_and_synced",
       "canonical_path": "projects/symphonie/PROJECT_STATE.md",
       "purpose": "eight-phase workflow that creates and develops projects from beginning to end",
-      "current_operational_objective": "Registrar la arquitectura documental de memoria gobernada y autorizar separadamente el bootstrap documental de 25 archivos. La ejecución de diseño real y el cierre de evidencia histórica siguen siendo transiciones futuras independientes.",
+      "current_operational_objective": "Reconciliar el LAB con el baseline documental remoto verificado de Symphonie y, bajo una autorización futura separada, planificar la validación estática del contrato experimental de Phase 0 sin runtime.",
       "dedicated_repository_architecture": {
         "decision": "DEC-LAB-010",
         "repository": "marcellusanthonson-ctrl/symphonie",
         "visibility": "PRIVATE",
         "canonical_branch": "main",
-        "status": "CREATED_VERIFIED_EMPTY",
+        "status": "DOCUMENTARY_BASELINE_RECONCILED_VERIFIED",
         "repository_creation": "COMPLETED_VERIFIED_AUTHORIZATION_CONSUMED",
-        "bootstrap": "NOT_AUTHORIZED",
-        "repository_size": 0,
-        "head": "UNBORN",
+        "bootstrap": "COMPLETED_VERIFIED_AUTHORIZATION_CONSUMED",
+        "repository_size": null,
+        "head": "0b456f6d7a95b4111fe2576725a1fa2cd3f7735e",
         "canonical_language": "ESPAÑOL",
         "runtime": "NOT_AUTHORIZED",
         "integration": "NOT_AUTHORIZED",
         "migration": "NOT_AUTHORIZED",
         "historical_repository": "marcellusanthonson-ctrl/symphonie-codex-lab",
-        "historical_repository_terminal_classification": "NOT_YET_AUTHORIZED"
+        "historical_repository_terminal_classification": "NOT_YET_AUTHORIZED",
+        "fileset": 25,
+        "repair_005": "CONSUMED_COMPLETED_VERIFIED",
+        "reconciliation_006": "CONSUMED_COMPLETED_VERIFIED"
       },
       "governed_project_memory": {
         "decision": "DEC-LAB-012",
@@ -95,7 +98,13 @@
         "runtime": "NOT_AUTHORIZED",
         "discovery": "NOT_AUTHORIZED",
         "quotation": "NOT_AUTHORIZED",
-        "implementation": "NOT_AUTHORIZED"
+        "implementation": "NOT_AUTHORIZED",
+        "repository_alignment": {
+          "status": "ALIGNED_TO_DEC_LAB_011",
+          "repository": "marcellusanthonson-ctrl/symphonie",
+          "head": "0b456f6d7a95b4111fe2576725a1fa2cd3f7735e",
+          "order": "SYM-DOCUMENTARY-STATE-AND-PHASE0-RECONCILIATION-006"
+        }
       },
       "historical_codex_skill_candidates": [
         "symphonie-ux-ui-architect",
@@ -264,10 +273,12 @@
     },
     "dedicated_symphonie_repository": {
       "decision": "DEC-LAB-010",
-      "status": "REPOSITORY_CREATED_VERIFIED_EMPTY_BOOTSTRAP_NOT_AUTHORIZED",
+      "status": "DOCUMENTARY_BASELINE_RECONCILED_VERIFIED",
       "governance_source": "chatgpt-prototype-lab",
       "workflow_repository": "marcellusanthonson-ctrl/symphonie",
-      "historical_evidence_repository": "marcellusanthonson-ctrl/symphonie-codex-lab"
+      "historical_evidence_repository": "marcellusanthonson-ctrl/symphonie-codex-lab",
+      "canonical_head": "0b456f6d7a95b4111fe2576725a1fa2cd3f7735e",
+      "fileset": 25
     }
   },
   "decisions_in_force": [
@@ -301,7 +312,7 @@
     "dec_lab_010_011_documentation": "APPROVED_RECORDED_AUTHORIZATION_CONSUMED",
     "alpha6_baseline_promotion": "APPROVED_RECORDED_AUTHORIZATION_CONSUMED",
     "symphonie_repository_creation": "COMPLETED_VERIFIED_AUTHORIZATION_CONSUMED",
-    "symphonie_bootstrap": "NOT_AUTHORIZED",
+    "symphonie_bootstrap": "COMPLETED_VERIFIED_AUTHORIZATION_CONSUMED",
     "phase_0_runtime": "NOT_AUTHORIZED",
     "phase_0_real_client_use": "NOT_AUTHORIZED",
     "historical_evidence_execution": "NOT_AUTHORIZED",
@@ -318,10 +329,12 @@
     "rag_automatic_repository_access": "NOT_AUTHORIZED",
     "rag_real_project_data": "NOT_AUTHORIZED",
     "product_changes": "NOT_AUTHORIZED",
-    "codex_autonomous_authority": "NO"
+    "codex_autonomous_authority": "NO",
+    "symphonie_documentary_repair_005": "CONSUMED_COMPLETED_VERIFIED",
+    "symphonie_phase0_reconciliation_006": "CONSUMED_COMPLETED_VERIFIED"
   },
   "next_authorized_action": "NONE_UNTIL_NEW_EXPLICIT_APPROVAL",
-  "next_recommended_transition": "SEPARATELY_AUTHORIZE_SYMPHONIE_DOCUMENTARY_BOOTSTRAP_25_FILES",
+  "next_recommended_transition": "SEPARATELY_AUTHORIZE_PHASE_0_STATIC_CONTRACT_VALIDATION_PLAN_WITHOUT_RUNTIME",
   "continuity_read_order": [
     "LAB_CONTRACT.md",
     "METHODOLOGY.md",

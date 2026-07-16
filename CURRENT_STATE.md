@@ -29,25 +29,28 @@ Symphonie remains `KNOWN_AND_SYNCED` and coordinates an eight-phase workflow for
 
 ### Dedicated repository architecture
 
-`DEC-LAB-010` aprobó la arquitectura y `DEC-LAB-012` registra el repositorio canónico privado creado y verificado:
+`DEC-LAB-010` aprobó la arquitectura, `DEC-LAB-012` registró el repositorio privado y las órdenes posteriores completaron y reconciliaron su baseline documental:
 
 ```text
 REPOSITORY = marcellusanthonson-ctrl/symphonie
 VISIBILITY = PRIVATE
 CANONICAL_BRANCH = main
-CREATION = COMPLETED_AND_VERIFIED
-CONTENT = EMPTY
-HEAD = UNBORN
+CONTENT = DOCUMENTARY_BASELINE_25_FILES
+HEAD = 0b456f6d7a95b4111fe2576725a1fa2cd3f7735e
 ARCHITECTURE_STATUS = APPROVED
 REPOSITORY_CREATION = COMPLETED_VERIFIED_AUTHORIZATION_CONSUMED
-BOOTSTRAP = NOT_AUTHORIZED
+BOOTSTRAP_003 = CONSUMED
+CORRECTION_004 = CONSUMED_WITH_FAILED_RESULT
+REPAIR_005 = CONSUMED_COMPLETED_VERIFIED
+RECONCILIATION_006 = CONSUMED_COMPLETED_VERIFIED
+PHASE_0_ALIGNMENT = ALIGNED_TO_DEC_LAB_011
 RUNTIME = NOT_AUTHORIZED
 INTEGRATION = NOT_AUTHORIZED
 MIGRATION = NOT_AUTHORIZED
 CANONICAL_LANGUAGE = ESPAÑOL
 ```
 
-`chatgpt-prototype-lab` permanece como fuente de gobierno, MammothSkills como productor canónico de skills reutilizables y `symphonie-codex-lab` como evidencia histórica experimental hasta una clasificación terminal aprobada separadamente. El bootstrap documental continúa sin autorización.
+`chatgpt-prototype-lab` permanece como fuente de gobierno, MammothSkills como productor canónico de skills reutilizables y `symphonie-codex-lab` como evidencia histórica experimental hasta una clasificación terminal aprobada separadamente. El bootstrap documental de Symphonie está completado y sus autorizaciones están consumidas.
 
 ### Memoria gobernada de proyectos
 
@@ -61,7 +64,7 @@ La matriz de acceso de la Fase 0 es:
 0C = MEMORIA_OPCIONAL_CON_DECISION_HUMANA
 ```
 
-El fileset conceptual de 25 archivos está aprobado conceptualmente, pero su bootstrap requiere una autorización separada. Runtime, ingesta, embeddings, acceso automático a repositorios y datos de proyectos reales continúan `NOT_AUTHORIZED`.
+El fileset documental de 25 archivos está publicado y reconciliado. Esto no autoriza corpus, runtime, ingesta, embeddings, acceso automático a repositorios ni datos de proyectos reales; todos continúan `NOT_AUTHORIZED`.
 
 ### Phase 0 experimental baseline
 
@@ -81,9 +84,9 @@ Phase 0 remains documentary and experimental. It does not authorize runtime, Dis
 Objetivo operacional actual:
 
 ```text
-Registrar la arquitectura documental de memoria gobernada y autorizar
-separadamente el bootstrap documental de 25 archivos. La ejecución de diseño
-real y el cierre de evidencia histórica siguen siendo transiciones futuras independientes.
+El baseline documental de 25 archivos está reconciliado. La próxima transición
+recomendada es planificar una validación estática del contrato experimental de
+Phase 0, sin runtime y bajo una autorización separada.
 ```
 
 ## Phase 3A architect baseline
@@ -231,7 +234,9 @@ DEC_LAB_010_011_DOCUMENTATION = APPROVED_RECORDED_AUTHORIZATION_CONSUMED
 DEC_LAB_012_DOCUMENTATION = APPROVED_RECORDED_AUTHORIZATION_CONSUMED
 LAB_DOCUMENTATION = NOT_AUTHORIZED
 SYMPHONIE_REPOSITORY_CREATION = COMPLETED_VERIFIED_AUTHORIZATION_CONSUMED
-SYMPHONIE_BOOTSTRAP = NOT_AUTHORIZED
+SYMPHONIE_BOOTSTRAP = COMPLETED_VERIFIED_AUTHORIZATION_CONSUMED
+SYMPHONIE_DOCUMENTARY_REPAIR_005 = CONSUMED_COMPLETED_VERIFIED
+SYMPHONIE_PHASE0_RECONCILIATION_006 = CONSUMED_COMPLETED_VERIFIED
 PHASE_0_RUNTIME = NOT_AUTHORIZED
 PHASE_0_REAL_CLIENT_USE = NOT_AUTHORIZED
 HISTORICAL_EVIDENCE_EXECUTION = NOT_AUTHORIZED
@@ -258,5 +263,5 @@ Approval of repository architecture and Phase 0 is separate from repository crea
 ```text
 NEXT_AUTHORIZED_ACTION = NONE_UNTIL_NEW_EXPLICIT_APPROVAL
 NEXT_RECOMMENDED_TRANSITION =
-SEPARATELY_AUTHORIZE_SYMPHONIE_DOCUMENTARY_BOOTSTRAP_25_FILES
+SEPARATELY_AUTHORIZE_PHASE_0_STATIC_CONTRACT_VALIDATION_PLAN_WITHOUT_RUNTIME
 ```

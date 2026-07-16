@@ -24,7 +24,7 @@ Canonical decisions: `DEC-LAB-005`, `DEC-LAB-006`.
 
 ## Dedicated repository architecture
 
-`DEC-LAB-010` aprobó la arquitectura y `DEC-LAB-012` registra el repositorio canónico privado creado y verificado:
+`DEC-LAB-010` aprobó la arquitectura, `DEC-LAB-012` registró el repositorio privado y las órdenes documentales posteriores completaron y reconciliaron el baseline:
 
 ```text
 TARGET_REPOSITORY = marcellusanthonson-ctrl/symphonie
@@ -33,10 +33,15 @@ CANONICAL_BRANCH = main
 ARCHITECTURE = APPROVED
 REPOSITORY_CREATED = YES
 CREATION_VERIFIED = YES
-REPOSITORY_EMPTY = YES
-HEAD = UNBORN
+REPOSITORY_EMPTY = NO
+FILESET = 25
+HEAD = 0b456f6d7a95b4111fe2576725a1fa2cd3f7735e
 REPOSITORY_CREATION = COMPLETED_VERIFIED_AUTHORIZATION_CONSUMED
-BOOTSTRAP = NOT_AUTHORIZED
+BOOTSTRAP_003 = CONSUMED
+CORRECTION_004 = CONSUMED_WITH_FAILED_RESULT
+REPAIR_005 = CONSUMED_COMPLETED_VERIFIED
+RECONCILIATION_006 = CONSUMED_COMPLETED_VERIFIED
+PHASE_0_ALIGNMENT = ALIGNED_TO_DEC_LAB_011
 CANONICAL_LANGUAGE = ESPAÑOL
 ```
 
@@ -57,7 +62,7 @@ Los archivos de gobierno locales en el repositorio Symphonie se vincularán o re
 
 `DEC-LAB-012` aprueba la arquitectura documental `CONTEXTO_NO_AUTORIZACION`: memoria curada, no espejo de repositorios. La `UNIDAD_DE_CONOCIMIENTO` es la unidad mínima; Git versionado es el registry canónico y el índice es derivado y reconstruible. Los filtros de privacidad se aplican antes de similitud y las contradicciones no se resuelven por ranking.
 
-El fileset conceptual de 25 archivos no está autorizado para escritura. El roadmap documental comprende `RAG_0_ARQUITECTURA_DOCUMENTAL`, `RAG_1_CORPUS_SEMILLA_CURADO_MANUAL`, `RAG_2_RECUPERACION_NO_VECTORIAL`, `RAG_3_EVALUACION_SINTETICA`, `RAG_4_PILOTO_VECTORIAL_LOCAL`, `RAG_5_SELECCION_TECNOLOGICA`, `RAG_6_AMPLIACION_AUTORIZADA_DE_FUENTES`, `RAG_7_PILOTO_CONTROLADO_CON_PROYECTOS_REALES` y `RAG_8_DECISION_DE_ESTABILIDAD`; no afirma runtime ni ingesta implementados.
+El fileset documental de 25 archivos está publicado y reconciliado. Sus autorizaciones de escritura están consumidas. El roadmap documental comprende `RAG_0_ARQUITECTURA_DOCUMENTAL`, `RAG_1_CORPUS_SEMILLA_CURADO_MANUAL`, `RAG_2_RECUPERACION_NO_VECTORIAL`, `RAG_3_EVALUACION_SINTETICA`, `RAG_4_PILOTO_VECTORIAL_LOCAL`, `RAG_5_SELECCION_TECNOLOGICA`, `RAG_6_AMPLIACION_AUTORIZADA_DE_FUENTES`, `RAG_7_PILOTO_CONTROLADO_CON_PROYECTOS_REALES` y `RAG_8_DECISION_DE_ESTABILIDAD`; no afirma runtime ni ingesta implementados.
 
 | Fase | Acceso a memoria |
 | --- | --- |
@@ -223,8 +228,9 @@ They provide minimum Phase 3A exit assertions, UI-action preservation, and fail-
 1. DEC-LAB-010 aprobó la arquitectura del repositorio dedicado.
 2. DEC-LAB-011 aprobó Phase 0 v0.1 como baseline experimental sin runtime.
 3. DEC-LAB-012 registra el repositorio privado creado, verificado y vacío, además de la arquitectura de memoria gobernada.
-4. Obtener autorización separada para el bootstrap documental de 25 archivos.
-5. Continuar runtime, ingesta, embeddings, acceso automático, datos reales, diseño real, repetibilidad, evidencia histórica y migración solo mediante autorizaciones independientes.
+4. Bootstrap-003, Repair-005 y Reconciliation-006 están consumidas; el HEAD canónico es `0b456f6d7a95b4111fe2576725a1fa2cd3f7735e`.
+5. La siguiente transición recomendada es una planificación estática del contrato de Phase 0, sin runtime.
+6. Runtime, ingesta, embeddings, acceso automático, datos reales, diseño real, repetibilidad, evidencia histórica y migración requieren autorizaciones independientes.
 ```
 
 ## Authorization state
@@ -233,7 +239,9 @@ They provide minimum Phase 3A exit assertions, UI-action preservation, and fail-
 DEC_LAB_010_011_DOCUMENTATION = APPROVED_RECORDED_AUTHORIZATION_CONSUMED
 DEC_LAB_012_DOCUMENTATION = APPROVED_RECORDED_AUTHORIZATION_CONSUMED
 SYMPHONIE_REPOSITORY_CREATION = COMPLETED_VERIFIED_AUTHORIZATION_CONSUMED
-SYMPHONIE_BOOTSTRAP = NOT_AUTHORIZED
+SYMPHONIE_BOOTSTRAP = COMPLETED_VERIFIED_AUTHORIZATION_CONSUMED
+SYMPHONIE_DOCUMENTARY_REPAIR_005 = CONSUMED_COMPLETED_VERIFIED
+SYMPHONIE_PHASE0_RECONCILIATION_006 = CONSUMED_COMPLETED_VERIFIED
 PHASE_0_RUNTIME = NOT_AUTHORIZED
 PHASE_0_REAL_CLIENT_USE = NOT_AUTHORIZED
 HISTORICAL_EVIDENCE_EXECUTION = NOT_AUTHORIZED
@@ -260,4 +268,4 @@ MAMMOTHSKILLS_RELEASE = NOT_AUTHORIZED
 
 Recommended transition:
 
-`SEPARATELY_AUTHORIZE_SYMPHONIE_DOCUMENTARY_BOOTSTRAP_25_FILES`
+`SEPARATELY_AUTHORIZE_PHASE_0_STATIC_CONTRACT_VALIDATION_PLAN_WITHOUT_RUNTIME`
