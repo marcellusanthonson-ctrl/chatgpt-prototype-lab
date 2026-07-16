@@ -3,7 +3,7 @@
 Project-ID: `symphonie`
 Status: `KNOWN_AND_SYNCED`
 Last-Updated: `2026-07-16`
-Repository: `marcellusanthonson-ctrl/symphonie-codex-lab`
+Repository: `marcellusanthonson-ctrl/symphonie`
 
 ## Role
 
@@ -24,19 +24,23 @@ Canonical decisions: `DEC-LAB-005`, `DEC-LAB-006`.
 
 ## Dedicated repository architecture
 
-`DEC-LAB-010` approves the architecture for a dedicated private canonical workflow repository:
+`DEC-LAB-010` aprobó la arquitectura y `DEC-LAB-012` registra el repositorio canónico privado creado y verificado:
 
 ```text
 TARGET_REPOSITORY = marcellusanthonson-ctrl/symphonie
 VISIBILITY = PRIVATE
 CANONICAL_BRANCH = main
 ARCHITECTURE = APPROVED
-REPOSITORY_CREATED = NO
-REPOSITORY_CREATION = NOT_AUTHORIZED
+REPOSITORY_CREATED = YES
+CREATION_VERIFIED = YES
+REPOSITORY_EMPTY = YES
+HEAD = UNBORN
+REPOSITORY_CREATION = COMPLETED_VERIFIED_AUTHORIZATION_CONSUMED
 BOOTSTRAP = NOT_AUTHORIZED
+CANONICAL_LANGUAGE = ESPAÑOL
 ```
 
-Until a separate creation order is completed and later registered, this project record continues to identify `marcellusanthonson-ctrl/symphonie-codex-lab` as the existing repository holding historical Symphonie Codex evidence. The historical repository must not be deleted or silently transformed.
+`marcellusanthonson-ctrl/symphonie-codex-lab` se conserva como repositorio de evidencia histórica de Symphonie Codex y no debe eliminarse ni transformarse silenciosamente.
 
 Responsibility separation:
 
@@ -47,7 +51,21 @@ MammothSkills = reusable skill production, adaptation, audit, versioning, releas
 symphonie-codex-lab = historical Codex skill evidence and temporary laboratory
 ```
 
-Local governance files in the future Symphonie repository will bind to or mirror LAB authority; they will not create independent approval authority. `CURRENT_STATE.json` will be the structured local source of truth and `CURRENT_STATE.md` its human-readable view.
+Los archivos de gobierno locales en el repositorio Symphonie se vincularán o reflejarán la autoridad del LAB; no crearán autoridad de aprobación independiente. `CURRENT_STATE.json` será la fuente estructurada local y `CURRENT_STATE.md` su vista legible.
+
+## Arquitectura de memoria gobernada
+
+`DEC-LAB-012` aprueba la arquitectura documental `CONTEXTO_NO_AUTORIZACION`: memoria curada, no espejo de repositorios. La `UNIDAD_DE_CONOCIMIENTO` es la unidad mínima; Git versionado es el registry canónico y el índice es derivado y reconstruible. Los filtros de privacidad se aplican antes de similitud y las contradicciones no se resuelven por ranking.
+
+El fileset conceptual de 25 archivos no está autorizado para escritura. El roadmap documental comprende `RAG_0_ARQUITECTURA_DOCUMENTAL`, `RAG_1_CORPUS_SEMILLA_CURADO_MANUAL`, `RAG_2_RECUPERACION_NO_VECTORIAL`, `RAG_3_EVALUACION_SINTETICA`, `RAG_4_PILOTO_VECTORIAL_LOCAL`, `RAG_5_SELECCION_TECNOLOGICA`, `RAG_6_AMPLIACION_AUTORIZADA_DE_FUENTES`, `RAG_7_PILOTO_CONTROLADO_CON_PROYECTOS_REALES` y `RAG_8_DECISION_DE_ESTABILIDAD`; no afirma runtime ni ingesta implementados.
+
+| Fase | Acceso a memoria |
+| --- | --- |
+| 0A | Prohibido |
+| 0B | Opcional restringido |
+| 0C | Opcional, con autoridad humana |
+
+Runtime, ingesta, embeddings, acceso automático a repositorios, integración, migración, cambios de producto y datos de proyectos reales continúan no autorizados.
 
 ## Phase 0 experimental baseline
 
@@ -202,20 +220,19 @@ They provide minimum Phase 3A exit assertions, UI-action preservation, and fail-
 ## Current operational sequence
 
 ```text
-1. DEC-LAB-010 approves the dedicated repository architecture, but creation remains not authorized.
-2. DEC-LAB-011 approves Phase 0 v0.1 as an experimental baseline, but runtime remains not authorized.
-3. Obtain a separate bounded authorization to create the empty private repository.
-4. Verify repository identity and state.
-5. Obtain a separate bounded authorization for the documentary bootstrap.
-6. Validate schemas and execute only separately authorized synthetic tests.
-7. Continue real-design, repeatability, historical-evidence, and migration work only through independent authorizations.
+1. DEC-LAB-010 aprobó la arquitectura del repositorio dedicado.
+2. DEC-LAB-011 aprobó Phase 0 v0.1 como baseline experimental sin runtime.
+3. DEC-LAB-012 registra el repositorio privado creado, verificado y vacío, además de la arquitectura de memoria gobernada.
+4. Obtener autorización separada para el bootstrap documental de 25 archivos.
+5. Continuar runtime, ingesta, embeddings, acceso automático, datos reales, diseño real, repetibilidad, evidencia histórica y migración solo mediante autorizaciones independientes.
 ```
 
 ## Authorization state
 
 ```text
 DEC_LAB_010_011_DOCUMENTATION = APPROVED_RECORDED_AUTHORIZATION_CONSUMED
-SYMPHONIE_REPOSITORY_CREATION = NOT_AUTHORIZED
+DEC_LAB_012_DOCUMENTATION = APPROVED_RECORDED_AUTHORIZATION_CONSUMED
+SYMPHONIE_REPOSITORY_CREATION = COMPLETED_VERIFIED_AUTHORIZATION_CONSUMED
 SYMPHONIE_BOOTSTRAP = NOT_AUTHORIZED
 PHASE_0_RUNTIME = NOT_AUTHORIZED
 PHASE_0_REAL_CLIENT_USE = NOT_AUTHORIZED
@@ -227,6 +244,11 @@ SKILL_MERGE = NOT_AUTHORIZED
 SKILL_RELEASE = NOT_AUTHORIZED
 SKILL_INSTALLATION = NOT_AUTHORIZED
 SKILL_INTEGRATION = NOT_AUTHORIZED
+RAG_RUNTIME = NOT_AUTHORIZED
+RAG_INGESTION = NOT_AUTHORIZED
+RAG_EMBEDDINGS = NOT_AUTHORIZED
+RAG_AUTOMATIC_REPOSITORY_ACCESS = NOT_AUTHORIZED
+RAG_REAL_PROJECT_DATA = NOT_AUTHORIZED
 CODEX_EXECUTION = NOT_AUTHORIZED
 MAMMOTHSKILLS_MIGRATION = NOT_AUTHORIZED
 MAMMOTHSKILLS_RELEASE = NOT_AUTHORIZED
@@ -238,4 +260,4 @@ MAMMOTHSKILLS_RELEASE = NOT_AUTHORIZED
 
 Recommended transition:
 
-`SEPARATELY_AUTHORIZE_EMPTY_PRIVATE_SYMPHONIE_REPOSITORY_CREATION_THEN_BOOTSTRAP`
+`SEPARATELY_AUTHORIZE_SYMPHONIE_DOCUMENTARY_BOOTSTRAP_25_FILES`

@@ -1,7 +1,7 @@
 # LAB Current State
 
 Document-ID: `lab.current-state`
-Version: `1.0.11`
+Version: `1.0.12`
 Status: `ACTIVE`
 Last-Updated: `2026-07-16`
 
@@ -29,21 +29,39 @@ Symphonie remains `KNOWN_AND_SYNCED` and coordinates an eight-phase workflow for
 
 ### Dedicated repository architecture
 
-`DEC-LAB-010` approves the architecture for a future private canonical repository:
+`DEC-LAB-010` aprobó la arquitectura y `DEC-LAB-012` registra el repositorio canónico privado creado y verificado:
 
 ```text
 REPOSITORY = marcellusanthonson-ctrl/symphonie
 VISIBILITY = PRIVATE
 CANONICAL_BRANCH = main
+CREATION = COMPLETED_AND_VERIFIED
+CONTENT = EMPTY
+HEAD = UNBORN
 ARCHITECTURE_STATUS = APPROVED
-REPOSITORY_CREATION = NOT_AUTHORIZED
+REPOSITORY_CREATION = COMPLETED_VERIFIED_AUTHORIZATION_CONSUMED
 BOOTSTRAP = NOT_AUTHORIZED
 RUNTIME = NOT_AUTHORIZED
 INTEGRATION = NOT_AUTHORIZED
 MIGRATION = NOT_AUTHORIZED
+CANONICAL_LANGUAGE = ESPAÑOL
 ```
 
-The repository has not been created by this transition. `chatgpt-prototype-lab` remains the governance source of truth, MammothSkills remains the canonical producer of reusable skills, and `symphonie-codex-lab` remains historical experimental evidence until a separately approved terminal classification.
+`chatgpt-prototype-lab` permanece como fuente de gobierno, MammothSkills como productor canónico de skills reutilizables y `symphonie-codex-lab` como evidencia histórica experimental hasta una clasificación terminal aprobada separadamente. El bootstrap documental continúa sin autorización.
+
+### Memoria gobernada de proyectos
+
+`DEC-LAB-012` aprueba una arquitectura documental, no un runtime: la memoria es curada y no un espejo de repositorios. La unidad mínima es la `UNIDAD_DE_CONOCIMIENTO`; Git versionado es el registry canónico y cualquier índice es derivado, reconstruible y no canónico. El contexto no concede autorización y las contradicciones permanecen visibles, sin resolverse por ranking.
+
+La matriz de acceso de la Fase 0 es:
+
+```text
+0A = MEMORIA_PROHIBIDA
+0B = MEMORIA_OPCIONAL_RESTRINGIDA
+0C = MEMORIA_OPCIONAL_CON_DECISION_HUMANA
+```
+
+El fileset conceptual de 25 archivos está aprobado conceptualmente, pero su bootstrap requiere una autorización separada. Runtime, ingesta, embeddings, acceso automático a repositorios y datos de proyectos reales continúan `NOT_AUTHORIZED`.
 
 ### Phase 0 experimental baseline
 
@@ -60,12 +78,12 @@ REAL_CLIENT_USE = NOT_AUTHORIZED
 
 Phase 0 remains documentary and experimental. It does not authorize runtime, Discovery, quotation, implementation, integration, or processing of real client data.
 
-Current operational objective:
+Objetivo operacional actual:
 
 ```text
-Separately authorize creation of the empty private Symphonie repository,
-then separately authorize the documentary bootstrap. Real-design execution
-and historical-evidence closure remain independent future transitions.
+Registrar la arquitectura documental de memoria gobernada y autorizar
+separadamente el bootstrap documental de 25 archivos. La ejecución de diseño
+real y el cierre de evidencia histórica siguen siendo transiciones futuras independientes.
 ```
 
 ## Phase 3A architect baseline
@@ -185,8 +203,9 @@ They provide minimum Phase 3A assertions, UI-action preservation, and fail-close
 ## Decisions in force
 
 - `DEC-LAB-001` through `DEC-LAB-009` remain approved.
-- `DEC-LAB-010` approves the dedicated Symphonie repository architecture without authorizing repository creation.
-- `DEC-LAB-011` approves Phase 0 v0.1 as an experimental baseline without authorizing runtime or real-client use.
+- `DEC-LAB-010` aprueba la arquitectura del repositorio dedicado.
+- `DEC-LAB-011` aprueba Phase 0 v0.1 como baseline experimental sin autorizar runtime ni uso con clientes reales.
+- `DEC-LAB-012` registra el repositorio Symphonie creado, verificado y vacío, su idioma canónico español y la arquitectura documental de memoria gobernada.
 
 ## Errors and patterns
 
@@ -209,8 +228,9 @@ Validated patterns:
 ```text
 ALPHA6_BASELINE_PROMOTION = APPROVED_RECORDED_AUTHORIZATION_CONSUMED
 DEC_LAB_010_011_DOCUMENTATION = APPROVED_RECORDED_AUTHORIZATION_CONSUMED
+DEC_LAB_012_DOCUMENTATION = APPROVED_RECORDED_AUTHORIZATION_CONSUMED
 LAB_DOCUMENTATION = NOT_AUTHORIZED
-SYMPHONIE_REPOSITORY_CREATION = NOT_AUTHORIZED
+SYMPHONIE_REPOSITORY_CREATION = COMPLETED_VERIFIED_AUTHORIZATION_CONSUMED
 SYMPHONIE_BOOTSTRAP = NOT_AUTHORIZED
 PHASE_0_RUNTIME = NOT_AUTHORIZED
 PHASE_0_REAL_CLIENT_USE = NOT_AUTHORIZED
@@ -221,6 +241,11 @@ MERGE = NOT_AUTHORIZED
 RELEASE = NOT_AUTHORIZED
 SYMPHONIE_RUNTIME = NOT_AUTHORIZED
 SYMPHONIE_INTEGRATION = NOT_AUTHORIZED
+RAG_RUNTIME = NOT_AUTHORIZED
+RAG_INGESTION = NOT_AUTHORIZED
+RAG_EMBEDDINGS = NOT_AUTHORIZED
+RAG_AUTOMATIC_REPOSITORY_ACCESS = NOT_AUTHORIZED
+RAG_REAL_PROJECT_DATA = NOT_AUTHORIZED
 MAMMOTHSKILLS_MIGRATION = NOT_AUTHORIZED
 PRODUCT_CHANGES = NOT_AUTHORIZED
 CODEX_AUTONOMOUS_AUTHORITY = NO
@@ -233,5 +258,5 @@ Approval of repository architecture and Phase 0 is separate from repository crea
 ```text
 NEXT_AUTHORIZED_ACTION = NONE_UNTIL_NEW_EXPLICIT_APPROVAL
 NEXT_RECOMMENDED_TRANSITION =
-SEPARATELY_AUTHORIZE_EMPTY_PRIVATE_SYMPHONIE_REPOSITORY_CREATION_THEN_BOOTSTRAP
+SEPARATELY_AUTHORIZE_SYMPHONIE_DOCUMENTARY_BOOTSTRAP_25_FILES
 ```

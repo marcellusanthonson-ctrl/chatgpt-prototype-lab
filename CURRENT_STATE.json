@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "document_id": "lab.current-state",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "status": "ACTIVE",
   "updated_at": "2026-07-16",
   "active_project": "lab",
@@ -47,20 +47,42 @@
       "status": "known_and_synced",
       "canonical_path": "projects/symphonie/PROJECT_STATE.md",
       "purpose": "eight-phase workflow that creates and develops projects from beginning to end",
-      "current_operational_objective": "Separately authorize creation of the empty private Symphonie repository, then separately authorize the documentary bootstrap. Real-design execution and historical-evidence closure remain independent future transitions.",
+      "current_operational_objective": "Registrar la arquitectura documental de memoria gobernada y autorizar separadamente el bootstrap documental de 25 archivos. La ejecución de diseño real y el cierre de evidencia histórica siguen siendo transiciones futuras independientes.",
       "dedicated_repository_architecture": {
         "decision": "DEC-LAB-010",
         "repository": "marcellusanthonson-ctrl/symphonie",
         "visibility": "PRIVATE",
         "canonical_branch": "main",
-        "status": "APPROVED_NOT_CREATED",
-        "repository_creation": "NOT_AUTHORIZED",
+        "status": "CREATED_VERIFIED_EMPTY",
+        "repository_creation": "COMPLETED_VERIFIED_AUTHORIZATION_CONSUMED",
         "bootstrap": "NOT_AUTHORIZED",
+        "repository_size": 0,
+        "head": "UNBORN",
+        "canonical_language": "ESPAÑOL",
         "runtime": "NOT_AUTHORIZED",
         "integration": "NOT_AUTHORIZED",
         "migration": "NOT_AUTHORIZED",
         "historical_repository": "marcellusanthonson-ctrl/symphonie-codex-lab",
         "historical_repository_terminal_classification": "NOT_YET_AUTHORIZED"
+      },
+      "governed_project_memory": {
+        "decision": "DEC-LAB-012",
+        "status": "APPROVED_DOCUMENTARY_ARCHITECTURE",
+        "principle": "CONTEXTO_NO_AUTORIZACION",
+        "model": "MEMORIA_CURADA_NO_ESPEJO_DE_REPOSITORIOS",
+        "canonical_unit": "UNIDAD_DE_CONOCIMIENTO",
+        "canonical_registry": "VERSIONED_GIT",
+        "index": "DERIVED_REBUILDABLE_NON_CANONICAL",
+        "bootstrap_fileset": 25,
+        "phase_0a_memory_access": "PROHIBITED",
+        "phase_0b_memory_access": "OPTIONAL_RESTRICTED",
+        "phase_0c_memory_access": "OPTIONAL_HUMAN_DECISION",
+        "runtime": "NOT_AUTHORIZED",
+        "ingestion": "NOT_AUTHORIZED",
+        "embeddings": "NOT_AUTHORIZED",
+        "automatic_repository_access": "NOT_AUTHORIZED",
+        "vector_store": "NOT_SELECTED",
+        "real_project_data": "NOT_AUTHORIZED"
       },
       "phase_0_experimental_baseline": {
         "decision": "DEC-LAB-011",
@@ -170,6 +192,7 @@
       "migration_sequence_decision": "DEC-LAB-006",
       "alpha6_promotion_decision": "DEC-LAB-009",
       "repository_architecture_decision": "DEC-LAB-010",
+      "governed_memory_decision": "DEC-LAB-012",
       "phase_0_baseline_decision": "DEC-LAB-011",
       "minimal_handoff_knowledge": {
         "status": "CANONICALIZED_AND_PUBLISHED",
@@ -241,7 +264,7 @@
     },
     "dedicated_symphonie_repository": {
       "decision": "DEC-LAB-010",
-      "status": "ARCHITECTURE_APPROVED_REPOSITORY_NOT_CREATED",
+      "status": "REPOSITORY_CREATED_VERIFIED_EMPTY_BOOTSTRAP_NOT_AUTHORIZED",
       "governance_source": "chatgpt-prototype-lab",
       "workflow_repository": "marcellusanthonson-ctrl/symphonie",
       "historical_evidence_repository": "marcellusanthonson-ctrl/symphonie-codex-lab"
@@ -258,7 +281,8 @@
     "DEC-LAB-008",
     "DEC-LAB-009",
     "DEC-LAB-010",
-    "DEC-LAB-011"
+    "DEC-LAB-011",
+    "DEC-LAB-012"
   ],
   "open_errors": [
     "ERR-LAB-001",
@@ -273,9 +297,10 @@
   ],
   "authorization_state": {
     "lab_documentation": "NOT_AUTHORIZED",
+    "dec_lab_012_documentation": "APPROVED_RECORDED_AUTHORIZATION_CONSUMED",
     "dec_lab_010_011_documentation": "APPROVED_RECORDED_AUTHORIZATION_CONSUMED",
     "alpha6_baseline_promotion": "APPROVED_RECORDED_AUTHORIZATION_CONSUMED",
-    "symphonie_repository_creation": "NOT_AUTHORIZED",
+    "symphonie_repository_creation": "COMPLETED_VERIFIED_AUTHORIZATION_CONSUMED",
     "symphonie_bootstrap": "NOT_AUTHORIZED",
     "phase_0_runtime": "NOT_AUTHORIZED",
     "phase_0_real_client_use": "NOT_AUTHORIZED",
@@ -287,11 +312,16 @@
     "mammothskills_release": "NOT_AUTHORIZED",
     "symphonie_runtime": "NOT_AUTHORIZED",
     "symphonie_integration": "NOT_AUTHORIZED",
+    "rag_runtime": "NOT_AUTHORIZED",
+    "rag_ingestion": "NOT_AUTHORIZED",
+    "rag_embeddings": "NOT_AUTHORIZED",
+    "rag_automatic_repository_access": "NOT_AUTHORIZED",
+    "rag_real_project_data": "NOT_AUTHORIZED",
     "product_changes": "NOT_AUTHORIZED",
     "codex_autonomous_authority": "NO"
   },
   "next_authorized_action": "NONE_UNTIL_NEW_EXPLICIT_APPROVAL",
-  "next_recommended_transition": "SEPARATELY_AUTHORIZE_EMPTY_PRIVATE_SYMPHONIE_REPOSITORY_CREATION_THEN_BOOTSTRAP",
+  "next_recommended_transition": "SEPARATELY_AUTHORIZE_SYMPHONIE_DOCUMENTARY_BOOTSTRAP_25_FILES",
   "continuity_read_order": [
     "LAB_CONTRACT.md",
     "METHODOLOGY.md",

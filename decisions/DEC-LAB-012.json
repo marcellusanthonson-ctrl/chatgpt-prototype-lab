@@ -1,0 +1,138 @@
+{
+  "id": "DEC-LAB-012",
+  "titulo": "Consolidar el repositorio Symphonie, su idioma canónico y la arquitectura documental de memoria gobernada",
+  "proyecto": "LAB",
+  "estado": "APPROVED",
+  "fecha_efectiva": "2026-07-16",
+  "approved_by": "Jonathan Martínez",
+  "approval_evidence": "Apruebo DEC-LAB-012 exactamente como fue formulada y autorizo su registro documental limitado en chatgpt-prototype-lab, sin autorizar todavía el bootstrap de Symphonie, runtime, ingesta, embeddings, acceso automático a repositorios, integración, migración ni uso de datos de proyectos reales.",
+  "decision": {
+    "resumen": "Reconocer la creación verificada del repositorio privado marcellusanthonson-ctrl/symphonie, establecer el español como idioma canónico de su documentación y aprobar conceptualmente una arquitectura de memoria gobernada de proyectos basada en unidades de conocimiento curadas y recuperación trazable.",
+    "repositorio_symphonie": {
+      "nombre_completo": "marcellusanthonson-ctrl/symphonie",
+      "visibilidad": "PRIVATE",
+      "rama_canonica": "main",
+      "estado_creacion": "CREADO_Y_VERIFICADO",
+      "estado_contenido": "VACIO",
+      "head": "UNBORN",
+      "tamano": 0,
+      "bootstrap": "NO_AUTORIZADO"
+    },
+    "idioma": {
+      "idioma_canonico_documental": "español",
+      "contenido_humano": "ESPAÑOL",
+      "identificadores_nuevos": "ESPAÑOL_TECNICO_SIN_TILDES_NI_ENE",
+      "excepciones": [
+        "nombres propios",
+        "siglas y estándares técnicos",
+        "palabras reservadas de JSON Schema",
+        "nombres contractuales previamente aprobados",
+        "CURRENT_STATE.json",
+        "CURRENT_STATE.md",
+        "README.md",
+        "ROADMAP.md"
+      ]
+    },
+    "memoria_gobernada": {
+      "estado": "ARQUITECTURA_DOCUMENTAL_APROBADA",
+      "principio": "CONTEXTO_NO_AUTORIZACION",
+      "modelo": "MEMORIA_CURADA_NO_ESPEJO_DE_REPOSITORIOS",
+      "unidad_minima": "UNIDAD_DE_CONOCIMIENTO",
+      "registro_canonico": "GIT_VERSIONADO",
+      "indice": "DERIVADO_RECONSTRUIBLE_NO_CANONICO",
+      "direccion_de_escritura": "SOLO_LECTURA_RESPECTO_AL_ESTADO_CANONICO",
+      "contradicciones": "VISIBLES_NO_RESUELTAS_POR_RANKING",
+      "respuesta_vacia": "VALIDA",
+      "ingesta_inicial": "MANUAL_Y_SEPARADAMENTE_AUTORIZADA"
+    },
+    "tipos_conocimiento_iniciales": [
+      "DECISION",
+      "PATRON",
+      "ANTI_PATRON",
+      "RESTRICCION",
+      "CLAUSULA_CONTRACTUAL",
+      "RESUMEN_PROYECTO",
+      "REGISTRO_CONTRADICCION"
+    ],
+    "reglas_fase_0": {
+      "fase_0a": {
+        "acceso_memoria": "PROHIBIDO",
+        "razon": "Evitar contaminación de la captura original"
+      },
+      "fase_0b": {
+        "acceso_memoria": "OPCIONAL_RESTRINGIDO",
+        "permitido": [
+          "controles de proceso",
+          "restricciones de dominio",
+          "errores conocidos de intake",
+          "patrones de contradicción"
+        ],
+        "prohibido": [
+          "soluciones históricas",
+          "selección de stack",
+          "arquitectura de implementación",
+          "cotizaciones",
+          "estimaciones de esfuerzo"
+        ]
+      },
+      "fase_0c": {
+        "acceso_memoria": "OPCIONAL",
+        "autoridad": "JONATHAN_MARTINEZ"
+      }
+    },
+    "privacidad": {
+      "publico": "ELEGIBLE_SUJETO_A_AUTORIZACION_DE_INGESTA",
+      "interno": "ELEGIBLE_SUJETO_A_AUTORIZACION_DE_INGESTA",
+      "confidencial": "EMBEDDINGS_PROHIBIDOS_POR_DEFECTO",
+      "sensible_restringido": "NO_INGESTAR_NO_EMBEDER",
+      "filtros_privacidad": "OBLIGATORIOS_ANTES_DE_SIMILITUD",
+      "aislamiento_cliente": "OBLIGATORIO",
+      "generalizacion": "SOLO_CURADA_DESIDENTIFICADA_Y_APROBADA"
+    },
+    "diferenciacion_obligatoria": {
+      "tipo_conocimiento": "QUE_CLASE_DE_CONTENIDO_ES",
+      "estado_epistemico": "QUE_GRADO_DE_EVIDENCIA_POSEE",
+      "estado_aprobacion": "QUE_AUTORIDAD_DOCUMENTAL_POSEE",
+      "aplicabilidad": "COMO_PUEDE_USARSE_EN_EL_PROYECTO_ACTUAL"
+    },
+    "fileset_bootstrap_recomendado": {
+      "cantidad": 25,
+      "estado": "APROBADO_CONCEPTUALMENTE_NO_AUTORIZADO_PARA_ESCRITURA"
+    },
+    "roadmap_memoria": [
+      "RAG_0_ARQUITECTURA_DOCUMENTAL",
+      "RAG_1_CORPUS_SEMILLA_CURADO_MANUAL",
+      "RAG_2_RECUPERACION_NO_VECTORIAL",
+      "RAG_3_EVALUACION_SINTETICA",
+      "RAG_4_PILOTO_VECTORIAL_LOCAL",
+      "RAG_5_SELECCION_TECNOLOGICA",
+      "RAG_6_AMPLIACION_AUTORIZADA_DE_FUENTES",
+      "RAG_7_PILOTO_CONTROLADO_CON_PROYECTOS_REALES",
+      "RAG_8_DECISION_DE_ESTABILIDAD"
+    ]
+  },
+  "authorization_boundary": {
+    "lab_documentation": false,
+    "bootstrap_symphonie": false,
+    "commit_symphonie": false,
+    "push_symphonie": false,
+    "runtime": false,
+    "ingestion": false,
+    "automatic_repository_access": false,
+    "embedding_generation": false,
+    "vector_index": false,
+    "provider_selection": false,
+    "real_project_data": false,
+    "integration": false,
+    "migration": false,
+    "release": false
+  },
+  "related_decisions": [
+    "DEC-LAB-005",
+    "DEC-LAB-006",
+    "DEC-LAB-010",
+    "DEC-LAB-011"
+  ],
+  "supersedes": [],
+  "superseded_by": null
+}
