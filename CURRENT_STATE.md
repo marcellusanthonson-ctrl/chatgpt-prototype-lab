@@ -2,8 +2,8 @@
 
 La fuente estructurada es CURRENT_STATE.json.
 
-- Versión: 2.3.0.
-- Fase: CHATGPT_PROJECT_SOURCES_CANONICALIZED.
+- Versión: 2.3.1.
+- Fase: AUTHORIZATION_REGISTRY_RECONCILED.
 - Aprobador: Jonathan Martínez.
 - Runtime, integración y cambios de producto: no autorizados.
 - HEAD propio: verificar main en vivo; no almacenarlo como estado vigente.
@@ -20,6 +20,10 @@ PROJECT_STATE.json usa VERIFY_LIVE_AT_USE y conserva verified_parent_head como e
 ## Fuentes del proyecto ChatGPT
 
 Las reglas operativas del proyecto viven en `project-sources/chatgpt/` y se inician desde `START_HERE.md`. Los archivos adjuntos dejan de ser fuentes mantenibles y solo pueden usarse como punteros de bootstrap.
+
+## Registro de autorizaciones
+
+Las cinco transiciones consumidas 013–017 tienen registros `AUTH-*` canónicos. Cada registro declara `state_key`, permitiendo validar correspondencia exacta con `CURRENT_STATE.json`.
 
 ## Siguiente transición
 

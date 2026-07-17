@@ -248,6 +248,29 @@ def validate_current_state(registries: dict[str, Any]) -> dict[str, Any]:
     for key, expected in SAFE_AUTH.items():
         if state.get("authorization_state", {}).get(key) != expected:
             fail(f"CURRENT_STATE.json: unsafe authorization {key}")
+    authorization_state = state.get("authorization_state", {})
+    transition_keys = {
+        key for key, value in authorization_state.items()
+        if key not in SAFE_AUTH and isinstance(value, str) and value.startswith("CONSUMED_")
+    }
+    authorization_records = registries["authorizations"].get("records", [])
+    registered_keys: list[str] = []
+    for record in authorization_records:
+        state_key = record.get("state_key")
+        if not state_key:
+            fail(f"{record.get('id')}: authorization state_key missing")
+            continue
+        registered_keys.append(state_key)
+        if state_key not in transition_keys:
+            fail(f"{record.get('id')}: state_key not consumed in CURRENT_STATE.json")
+        if not str(record.get("status", "")).startswith("CONSUMED_"):
+            fail(f"{record.get('id')}: registry status is not consumed")
+    duplicates = sorted(key for key, count in Counter(registered_keys).items() if count > 1)
+    if duplicates:
+        fail("authorization state_key duplicated: " + ", ".join(duplicates))
+    missing = sorted(transition_keys - set(registered_keys))
+    if missing:
+        fail("consumed authorization transitions unregistered: " + ", ".join(missing))
     return state
 
 def validate_decisions(registries: dict[str, Any]) -> None:

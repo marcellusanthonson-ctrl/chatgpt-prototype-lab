@@ -34,3 +34,5 @@ Debe presentar contexto reconstruido, HEAD verificados, estado, decisiones, auto
 ## Proyecto ChatGPT
 
 La introducción del proyecto ChatGPT referencia `project-sources/chatgpt/START_HERE.md`. Las reglas operativas se leen desde el repositorio; no se duplican como archivos adjuntos. Cualquier adjunto de bootstrap solo puede declarar repositorio, rama y entrypoint.
+
+Al reconstruir continuidad, toda transición consumida declarada en `CURRENT_STATE.json` debe resolverse a un registro canónico en `registry/authorizations.json` mediante `state_key`.

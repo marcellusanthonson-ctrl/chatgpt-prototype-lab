@@ -27,6 +27,10 @@ El HEAD vigente se resuelve desde main al iniciar cada conversación.
 
 El punto de entrada canónico es `project-sources/chatgpt/START_HERE.md`. Las siete fuentes operativas se versionan en el LAB; las copias adjuntas no son fuente de verdad y solo pueden señalar este entrypoint.
 
+## Registro de autorizaciones
+
+Las transiciones consumidas 013–017 están reconciliadas con `registry/authorizations.json`. El validador exige una correspondencia uno-a-uno mediante `state_key`.
+
 ## Test de instrucciones
 
 LAB-CHATGPT-INSTRUCTIONS-TEST-001 se ejecutó con Terra 5.6 y razonamiento ligero.
