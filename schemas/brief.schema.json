@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lab.local/schemas/brief.schema.json",
+  "title": "brief",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "brief_id",
+    "project_id",
+    "status",
+    "objective",
+    "repositories",
+    "authority",
+    "scope",
+    "required_outputs",
+    "acceptance_checks",
+    "stop_conditions",
+    "response_contract"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "brief_id": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "DRAFT",
+        "READY",
+        "CONSUMED",
+        "STALE",
+        "ARCHIVED"
+      ]
+    },
+    "objective": {
+      "type": "string"
+    },
+    "repositories": {
+      "type": "array",
+      "minItems": 1
+    },
+    "authority": {
+      "type": "object"
+    },
+    "scope": {
+      "type": "object"
+    },
+    "required_outputs": {
+      "type": "array"
+    },
+    "acceptance_checks": {
+      "type": "array"
+    },
+    "stop_conditions": {
+      "type": "array"
+    },
+    "response_contract": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

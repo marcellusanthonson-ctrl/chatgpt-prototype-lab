@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://lab.local/schemas/current-state.schema.json",
-  "title": "LAB current state",
+  "title": "current-state",
   "type": "object",
   "required": [
     "schema_version",
@@ -22,72 +22,81 @@
     "continuity_read_order"
   ],
   "properties": {
-    "schema_version": {"type": "string"},
-    "document_id": {"const": "lab.current-state"},
-    "version": {"type": "string"},
-    "status": {"enum": ["ACTIVE", "BLOCKED", "PAUSED", "ARCHIVED"]},
-    "updated_at": {"type": "string", "format": "date"},
-    "active_project": {"type": "string", "minLength": 1},
-    "current_phase": {"type": "string", "minLength": 1},
+    "schema_version": {
+      "const": "2.0.0"
+    },
+    "document_id": {
+      "const": "lab.current-state"
+    },
+    "version": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "string"
+    },
+    "active_project": {
+      "type": "string"
+    },
+    "current_phase": {
+      "type": "string"
+    },
     "methodology": {
-      "type": "object",
-      "required": ["version", "status", "canonical_path"],
-      "properties": {
-        "version": {"type": "string"},
-        "status": {"const": "APPROVED"},
-        "canonical_path": {"type": "string"}
-      },
-      "additionalProperties": false
+      "type": "object"
     },
     "authority": {
-      "type": "object",
-      "required": ["sole_approver", "chatgpt", "claude", "codex", "codex_autonomous_authority"],
-      "properties": {
-        "sole_approver": {"type": "string"},
-        "chatgpt": {"type": "string"},
-        "claude": {"type": "string"},
-        "codex": {"type": "string"},
-        "codex_autonomous_authority": {"const": "NO"}
-      },
-      "additionalProperties": false
+      "type": "object"
     },
     "projects": {
-      "type": "object",
-      "additionalProperties": {
-        "type": "object",
-        "required": ["status", "canonical_path"],
-        "properties": {
-          "status": {"type": "string"},
-          "canonical_path": {"type": "string"}
-        },
-        "additionalProperties": false
+      "type": "object"
+    },
+    "decisions_in_force": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "open_errors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "validated_patterns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "authorization_state": {
+      "type": "object"
+    },
+    "next_authorized_action": {
+      "type": "string"
+    },
+    "continuity_read_order": {
+      "type": "array",
+      "items": {
+        "type": "string"
       }
     },
-    "decisions_in_force": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
-    "open_errors": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
-    "validated_patterns": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
-    "authorization_state": {
-      "type": "object",
-      "required": [
-        "lab_documentation",
-        "mammothskills_implementation",
-        "mammothskills_release",
-        "symphonie_integration",
-        "product_changes",
-        "codex_autonomous_authority"
-      ],
-      "properties": {
-        "lab_documentation": {"const": "AUTHORIZED_BY_THIS_ORDER"},
-        "mammothskills_implementation": {"const": "NOT_AUTHORIZED"},
-        "mammothskills_release": {"const": "NOT_AUTHORIZED"},
-        "symphonie_integration": {"const": "NOT_AUTHORIZED"},
-        "product_changes": {"const": "NOT_AUTHORIZED"},
-        "codex_autonomous_authority": {"const": "NO"}
-      },
-      "additionalProperties": false
+    "contract": {
+      "type": "object"
     },
-    "next_authorized_action": {"type": "string", "minLength": 1},
-    "continuity_read_order": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+    "canonical_model": {
+      "type": "object"
+    },
+    "verified_external_heads": {
+      "type": "object"
+    },
+    "next_recommended_transition": {
+      "type": "string"
+    }
   },
   "additionalProperties": false
 }

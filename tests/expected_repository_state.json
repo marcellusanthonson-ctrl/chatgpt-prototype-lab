@@ -1,18 +1,8 @@
 {
-  "schema_version": "1.0.0",
-  "methodology_version": "1.0.0",
+  "schema_version": "2.0.0",
+  "methodology_version": "2.0",
   "active_project": "lab",
-  "current_phase": "KNOWLEDGE_BASE_OPERATIONAL_V1",
-  "bootstrap": {
-    "status": "COMPLETED",
-    "implementation_commit": "5fe7effeb7b9896461b15f2b207fbcffe3897a1f",
-    "validation": "PASS",
-    "remote_publication": "VERIFIED",
-    "execution_order": "CONSUMED",
-    "closed_at": "2026-06-28"
-  },
-  "lab_documentation": "NOT_AUTHORIZED",
-  "next_authorized_action": "NONE_UNTIL_NEW_EXPLICIT_APPROVAL",
+  "current_phase": "LAB_GOVERNANCE_HARDENING_COMPLETED",
   "project_statuses": {
     "lab": "active",
     "mammothskills": "active_pipeline_validated_phase_a",
@@ -30,54 +20,51 @@
     "DEC-LAB-005",
     "DEC-LAB-006",
     "DEC-LAB-007",
-    "DEC-LAB-008"
+    "DEC-LAB-008",
+    "DEC-LAB-009",
+    "DEC-LAB-010",
+    "DEC-LAB-011",
+    "DEC-LAB-012",
+    "DEC-LAB-013"
   ],
-  "open_or_contained_errors": [
-    "ERR-LAB-001",
-    "ERR-LAB-002"
+  "open_errors": [
+    "ERR-LAB-005"
   ],
   "validated_patterns": [
     "PAT-LAB-001",
     "PAT-LAB-002",
     "PAT-LAB-003",
     "PAT-LAB-004",
-    "PAT-MA-001"
+    "PAT-MA-001",
+    "PAT-LAB-005",
+    "PAT-LAB-006"
   ],
-  "mammothskills_gate_states": {
-    "PIPELINE_PHASE_A": "VALIDATED",
-    "CLASSIFICATION_GATE": "PASS",
-    "RUNTIME_VALIDATION": "DEFERRED_TO_NEXT_SESSION",
-    "RELEASE_SYSTEM": "NOT_YET_VALIDATED",
-    "CONSUMER_INTEGRATION": "NOT_AUTHORIZED",
-    "CODEX_ADAPTATION": "TEST_ARTIFACT",
-    "SYMPHONIE_OPERATIONAL_USE": "NOT_APPLICABLE_NOW",
-    "SYMPHONIE_INTEGRATION": "NOT_AUTHORIZED",
-    "RELEASE": "NOT_AUTHORIZED",
-    "MAMMOTHSKILLS_IMPLEMENTATION": "NOT_AUTHORIZED",
-    "MAMMOTHSKILLS_RELEASE": "NOT_AUTHORIZED",
-    "PRODUCT_CHANGE": "NOT_AUTHORIZED",
-    "CODEX_AUTONOMOUS_AUTHORITY": "NO"
+  "registry_counts": {
+    "projects": 7,
+    "decisions": 13,
+    "errors": 6,
+    "patterns": 7,
+    "ideas": 5,
+    "integrations": 4,
+    "experiments": 5,
+    "authorizations": 1,
+    "evidence": 7,
+    "unincorporated": 0,
+    "proposals": 2,
+    "sessions": 1
   },
-  "symphonie_authorization_states": {
-    "STATUS": "APPROVED_BASELINE_CLOSED_IMMUTABLE",
-    "STATIC_VALIDATION": "PASS",
-    "RUNTIME_VALIDATION": "PASS",
-    "PROMOTION_GATE": "PASS",
-    "HUMAN_APPROVAL": "GRANTED",
-    "RELEASE": "NOT_AUTHORIZED",
-    "MIGRATION": "NOT_AUTHORIZED",
-    "INTEGRATION": "NOT_AUTHORIZED",
-    "RESULT": "PASS_WITH_FINDINGS",
-    "HANDOFF_COMPATIBILITY": "PASS",
-    "CODEX_DISCOVERY_AND_INTERPRETATION_AS_CHAIN": "PASS",
-    "REAL_DESIGN_EXECUTION": "NOT_AUTHORIZED",
-    "REPEATABILITY": "NOT_YET_VALIDATED",
-    "PRODUCT_CHANGE": "NOT_AUTHORIZED",
-    "REPEATABILITY_TEST": "NOT_AUTHORIZED",
-    "SKILL_INTEGRATION": "NOT_AUTHORIZED",
-    "CODEX_EXECUTION": "NOT_AUTHORIZED",
-    "MAMMOTHSKILLS_MIGRATION": "NOT_AUTHORIZED",
-    "MAMMOTHSKILLS_RELEASE": "NOT_AUTHORIZED"
+  "symphonie": {
+    "head": "884aac3bad37641fc09a20254ebd40e8da3b93c7",
+    "fileset": 44,
+    "total_phases": 8
   },
-  "codex_authority_state": "NO"
+  "authorization_state": {
+    "governance_v2_013": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "commit_authorized": false,
+    "push_authorized": false,
+    "runtime_authorized": false,
+    "integration_authorized": false,
+    "product_changes_authorized": false,
+    "codex_autonomous_authority": "NO"
+  }
 }

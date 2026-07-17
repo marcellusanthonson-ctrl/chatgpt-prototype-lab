@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "brief_id": "BRIEF-SYM-CURRENT",
+  "project_id": "symphonie",
+  "status": "READY",
+  "updated_at": "2026-07-16",
+  "objective": "Continue Symphonie from canonical repositories without inferring authority",
+  "repositories": [
+    {
+      "role": "GOVERNANCE",
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "head_policy": "VERIFY_LIVE_AT_USE",
+      "verified_parent_head": "5e9c38a8ae68183a196709afa54aa1c7c2a8c4d4"
+    },
+    {
+      "role": "WORKFLOW",
+      "repository": "marcellusanthonson-ctrl/symphonie",
+      "branch": "main",
+      "verified_head": "884aac3bad37641fc09a20254ebd40e8da3b93c7"
+    }
+  ],
+  "authority": {
+    "approver": "Jonathan Martínez",
+    "authorization_ref": null,
+    "commit": false,
+    "push": false
+  },
+  "scope": {
+    "allowed_actions": [
+      "READ",
+      "ANALYZE",
+      "PROPOSE"
+    ],
+    "forbidden_actions": [
+      "RUNTIME",
+      "INTEGRATION",
+      "REAL_DATA",
+      "PRODUCT_CHANGE"
+    ]
+  },
+  "current_state_refs": [
+    "CURRENT_STATE.json",
+    "projects/symphonie/PROJECT_STATE.json",
+    "marcellusanthonson-ctrl/symphonie:CURRENT_STATE.json"
+  ],
+  "required_outputs": [
+    "VERIFIED_STATE",
+    "DECISIONS",
+    "AUTHORIZATIONS",
+    "PENDING",
+    "ONE_NEXT_ACTION"
+  ],
+  "acceptance_checks": [
+    "HEADS_VERIFIED",
+    "FACT_PROPOSAL_DECISION_AUTHORIZATION_SEPARATED",
+    "NO_UNAUTHORIZED_EXECUTION"
+  ],
+  "stop_conditions": [
+    "MISSING_MATERIAL_AUTHORITY",
+    "CANONICAL_CONTRADICTION",
+    "IRREVERSIBLE_SCOPE_EXPANSION"
+  ],
+  "response_contract": {
+    "include": [
+      "result",
+      "deltas",
+      "validation",
+      "blockers",
+      "next_action"
+    ],
+    "exclude": [
+      "generic_summary",
+      "repeated_context",
+      "unrequested_tutorial"
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "lab",
+  "updated_at": "2026-07-16",
+  "records": [
+    {
+      "id": "IDEA-LAB-001",
+      "title": "Operación de modelos continua, precisa y orientada a delta",
+      "status": "PROMOTED",
+      "decision_ref": "DEC-LAB-013",
+      "source_refs": [
+        "docs/MODEL_OPERATING_RULES.md"
+      ]
+    },
+    {
+      "id": "IDEA-LAB-002",
+      "title": "Detección de evidencia no incorporada al cerrar sesiones",
+      "status": "PROMOTED",
+      "decision_ref": "DEC-LAB-013",
+      "source_refs": [
+        "LAB_CONTRACT.md",
+        "registry/unincorporated.json"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "mammothskills",
+  "name": "MammothSkills",
+  "status": "active_pipeline_validated_phase_a",
+  "updated_at": "2026-07-16",
+  "canonical_repository": "marcellusanthonson-ctrl/MammothSkills",
+  "canonical_branch": "main",
+  "verified_head": null,
+  "authority": {
+    "sole_approver": "Jonathan Martínez",
+    "autonomous_model_authority": false
+  },
+  "summary": "Productor y auditor de skills reutilizables; no es runtime.",
+  "content_completeness": "REFERENTIAL_BASELINE_NEEDS_DETAILED_EXTRACTION",
+  "source_refs": [
+    "projects/mammothskills/PROJECT_STATE.md",
+    "registry/projects.json"
+  ],
+  "governance_paths": {
+    "roadmap": "projects/mammothskills/ROADMAP.json",
+    "pending": "projects/mammothskills/PENDING.json",
+    "decisions": "projects/mammothskills/decisions/index.json",
+    "ideas": "projects/mammothskills/ideas/index.json",
+    "integrations": "projects/mammothskills/integrations/index.json"
+  },
+  "metadata": {}
+}

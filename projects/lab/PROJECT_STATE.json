@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "lab",
+  "name": "LAB",
+  "status": "active",
+  "updated_at": "2026-07-16",
+  "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "canonical_branch": "main",
+  "verified_head": "5e9c38a8ae68183a196709afa54aa1c7c2a8c4d4",
+  "authority": {
+    "sole_approver": "Jonathan Martínez",
+    "autonomous_model_authority": false
+  },
+  "summary": "Gobierno, autoridad, continuidad y auditoría entre proyectos.",
+  "content_completeness": "STRUCTURED_V2_BASELINE",
+  "source_refs": [
+    "projects/lab/PROJECT_STATE.md",
+    "registry/projects.json"
+  ],
+  "governance_paths": {
+    "roadmap": "projects/lab/ROADMAP.json",
+    "pending": "projects/lab/PENDING.json",
+    "decisions": "projects/lab/decisions/index.json",
+    "ideas": "projects/lab/ideas/index.json",
+    "integrations": "projects/lab/integrations/index.json"
+  },
+  "metadata": {}
+}

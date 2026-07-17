@@ -1,6 +1,40 @@
 {
-  "schema_version": "0.1.0",
-  "updated_at": "2026-06-28",
-  "counts": {"proposals": 2, "errors": 2, "decisions": 3, "patterns": 4, "experiments": 0, "sessions": 1},
-  "latest": {"proposal": "PROP-LAB-002", "error": "ERR-LAB-002", "decision": "DEC-LAB-003", "pattern": "PAT-MA-001", "session": "SES-2026-06-28-001"}
+  "schema_version": "1.0.0",
+  "updated_at": "2026-07-16",
+  "counts": {
+    "projects": 7,
+    "decisions": 13,
+    "errors": 6,
+    "patterns": 7,
+    "ideas": 5,
+    "integrations": 4,
+    "experiments": 5,
+    "authorizations": 1,
+    "evidence": 7,
+    "unincorporated": 0,
+    "proposals": 2,
+    "sessions": 1
+  },
+  "registries": {
+    "projects": "registry/projects.json",
+    "decisions": "registry/decisions.json",
+    "errors": "registry/errors.json",
+    "patterns": "registry/patterns.json",
+    "ideas": "registry/ideas.json",
+    "integrations": "registry/integrations.json",
+    "experiments": "registry/experiments.json",
+    "authorizations": "registry/authorizations.json",
+    "evidence": "registry/evidence.json",
+    "unincorporated": "registry/unincorporated.json",
+    "proposals": "registry/proposals.json",
+    "sessions": "registry/sessions.json"
+  },
+  "latest": {
+    "decision": "DEC-LAB-013",
+    "error": "ERR-LAB-005",
+    "pattern": "PAT-LAB-006",
+    "authorization": "AUTH-LAB-GOVERNANCE-V2-013",
+    "proposal": "PROP-LAB-002",
+    "session": "SES-2026-06-28-001"
+  }
 }

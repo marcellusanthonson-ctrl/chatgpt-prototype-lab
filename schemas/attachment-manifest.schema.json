@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lab.local/schemas/attachment-manifest.schema.json",
+  "title": "attachment-manifest",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project_id",
+    "generated_at",
+    "status",
+    "required",
+    "optional",
+    "do_not_attach",
+    "missing_evidence"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "CURRENT",
+        "STALE",
+        "ARCHIVED"
+      ]
+    },
+    "required": {
+      "type": "array",
+      "minItems": 1
+    },
+    "optional": {
+      "type": "array"
+    },
+    "do_not_attach": {
+      "type": "array"
+    },
+    "missing_evidence": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": true
+}

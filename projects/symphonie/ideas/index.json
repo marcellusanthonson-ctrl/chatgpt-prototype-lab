@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "symphonie",
+  "updated_at": "2026-07-16",
+  "records": [
+    {
+      "id": "IDEA-SYM-001",
+      "title": "Memoria gobernada con índice RAG derivado y reconstruible",
+      "status": "ASSESSED",
+      "decision_ref": "DEC-LAB-012",
+      "authorization": "NOT_AUTHORIZED",
+      "source_refs": [
+        "projects/symphonie/PROJECT_STATE.md",
+        "marcellusanthonson-ctrl/symphonie:CURRENT_STATE.json"
+      ]
+    },
+    {
+      "id": "IDEA-SYM-002",
+      "title": "Validación proporcional de skills por riesgo",
+      "status": "ASSESSED_PENDING_FORMAL_DECISION_ID",
+      "authorization": "NOT_AUTHORIZED",
+      "source_refs": [
+        "projects/symphonie/reports/SYMPHONIE_SESSION_REPORT_2026-07-15_INTAKE_AND_RISK_TIER_1.md",
+        "marcellusanthonson-ctrl/symphonie:registro/metodos-validacion.json"
+      ]
+    },
+    {
+      "id": "IDEA-SYM-003",
+      "title": "Brief JSON como handoff prioritario para Claude y Codex",
+      "status": "PROMOTED",
+      "decision_ref": "DEC-LAB-013",
+      "authorization": "DOCUMENTARY_IMPLEMENTATION_ONLY",
+      "source_refs": [
+        "schemas/brief.schema.json",
+        "docs/MODEL_OPERATING_RULES.md"
+      ]
+    }
+  ]
+}

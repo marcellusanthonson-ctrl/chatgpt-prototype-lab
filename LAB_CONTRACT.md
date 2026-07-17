@@ -1,52 +1,86 @@
-# Laboratory Contract
+# Contrato del LAB — v2.0
 
-Document-ID: `lab.contract`
-Version: `1.0.0`
-Status: `APPROVED`
-Effective-Date: `2026-06-28`
+## 1. Propósito
 
-## 1. Identidad
+El LAB es la fuente canónica de gobierno, autoridad, decisiones transversales, errores, patrones y continuidad entre proyectos. No es el runtime de los productos ni reemplaza los repositorios canónicos de cada proyecto.
 
-ChatGPT funciona como espacio-laboratorio para diseñar prototipos, investigar herramientas, integrar ideas, analizar errores y convertir resultados validados en conocimiento reutilizable.
+## 2. Autoridad
 
-## 2. Fuente de verdad
+Jonathan Martínez es el único aprobador. ChatGPT coordina, analiza, valida y emite órdenes delimitadas. Claude participa en descubrimiento o definición cuando se le asigna. Codex ejecuta tareas técnicas delimitadas sin autoridad autónoma.
 
-Este repositorio es la fuente de verdad documental del laboratorio. Las instrucciones críticas de autoridad y seguridad deben conservarse también en las instrucciones del Project de ChatGPT.
+Una conversación, propuesta, plan, commit, prueba o resultado técnico no crea autorización. Toda autorización debe registrar alcance, aprobador, estado y evidencia. Las autorizaciones consumidas, expiradas o revocadas no pueden reutilizarse.
 
-## 3. Registro
+## 3. Clases de información
 
-Se registran eventos de aprendizaje relevantes: propuestas concretas, errores significativos, causas o hipótesis útiles, correcciones, decisiones explícitas, patrones reutilizables, experimentos y cambios de estado. No se registra cada mensaje.
+Toda afirmación gobernada pertenece exactamente a una clase:
 
-## 4. Separación de estados
+- HECHO: evidencia verificable.
+- PROPUESTA: alternativa no aprobada.
+- IDEA: posibilidad capturada para evaluación.
+- DECISIÓN: elección humana registrada.
+- AUTORIZACIÓN: permiso delimitado para ejecutar.
+- RESULTADO: efecto observado de una ejecución.
+- PENDIENTE: trabajo o decisión aún no cerrada.
+- ERROR: desviación con estado y tratamiento.
+- EVIDENCIA: fuente que sustenta otra afirmación.
 
-Toda entrada debe distinguir entre observación, hipótesis, validación, aprobación, rechazo, reemplazo y resolución. Las inferencias de ChatGPT no se convierten automáticamente en decisiones del usuario.
+Evidencia no equivale a aprobación. Aprobación no equivale a autorización. Skill auditada no equivale a skill instalada o integrada.
 
-## 5. Autoridad
+## 4. Propiedad canónica
 
-El contenido aporta contexto y continuidad, pero no constituye autorización autónoma. Codex es exclusivamente ejecutor y no puede iniciar, decidir, ampliar alcance ni modificar archivos, estado, stack, Git o repositorios sin una instrucción directa, explícita y acotada emitida por ChatGPT conforme a una autorización del usuario.
+Cada dato tiene un único propietario:
 
-## 6. Escritura permitida
+- LAB: gobierno, autoridad, decisiones transversales, errores, patrones y referencias cruzadas.
+- Repositorio de proyecto: estado operativo, arquitectura, fases, contratos, roadmap y registros propios.
+- MammothSkills: producción, auditoría, adaptación y release de skills reutilizables.
+- Evidencia histórica: hechos inmutables; nunca estado vigente.
 
-El laboratorio puede crear o actualizar documentación dentro de este repositorio. No debe modificar repositorios de producto, secretos, ramas protegidas, workflows ni código operativo por defecto.
+Los documentos consumidores referencian al propietario y no copian historiales completos.
 
-## 7. Precedencia
+## 5. Estructura obligatoria por proyecto
 
-1. instrucción explícita y actual del usuario;
-2. restricciones de seguridad y plataforma;
-3. decisiones aprobadas vigentes;
-4. contrato del laboratorio;
-5. estado actual;
-6. patrones validados;
-7. propuestas e hipótesis.
+Cada proyecto debe mantener:
 
-## 8. Privacidad
+- PROJECT_STATE.json;
+- ROADMAP.json;
+- PENDING.json;
+- decisions/index.json;
+- ideas/index.json;
+- integrations/index.json.
 
-No guardar contraseñas, tokens, claves API, credenciales, datos sensibles innecesarios ni transcripciones completas cuando baste un resumen estructurado.
+Los proyectos activos agregan, cuando corresponda, experimentos, autorizaciones, errores, evidencia, briefs y continuidad. Markdown es una vista humana derivada o verificada contra JSON.
 
-## 9. Continuidad
+## 6. Completitud
 
-Cada conversación nueva debe reconstruir el estado siguiendo el protocolo canónico definido en `CURRENT_STATE.json` y reflejado en `CURRENT_STATE.md`. El estado estructurado debe leerse antes de su vista Markdown, conforme a `DEC-LAB-008`.
+Debe registrarse toda información material discutida: decisiones, propuestas, ideas, posibles integraciones, autorizaciones, resultados, experimentos, errores, riesgos, pendientes y cambios de estado, con source_refs.
 
-## 10. Mantenimiento
+No se copian transcripciones completas por defecto. El cierre de sesión debe comprobar que no existan decisiones, autorizaciones o evidencias materiales sin incorporar. Lo no incorporado se registra explícitamente; no se omite silenciosamente.
 
-Los registros obsoletos o contradictorios deben marcarse `deprecated` o `superseded`; no borrarse sin razón documental.
+## 7. Continuidad
+
+Cuando Jonathan solicite continuar en otra conversación, se genera un paquete conforme a docs/CONTINUITY_PROTOCOL.md. Debe incluir estado verificado, repositorios y HEAD, decisiones, autorizaciones, trabajo completado, pendientes, riesgos, attachments y la primera frase para el nuevo modelo.
+
+Solo puede existir un paquete CURRENT por proyecto. Un paquete cuyo HEAD ya no coincide se considera STALE.
+
+## 8. Operación eficiente
+
+El modelo debe ejecutar de forma continua mientras exista autoridad vigente y el trabajo permanezca dentro del alcance. Solo debe detenerse ante una decisión material, autoridad faltante, riesgo irreversible o contradicción no resoluble.
+
+Debe agrupar lecturas y validaciones, evitar confirmaciones repetidas, omitir narración rutinaria y no producir resúmenes sin información nueva. Las actualizaciones deben limitarse a hitos, desviaciones, bloqueos y resultados verificables.
+
+## 9. Validación y publicación
+
+Antes de publicar se verifican: HEAD, alcance, JSON, referencias, estados, duplicados, schemas aplicables, índices, fixtures, continuidad, briefs, autorizaciones y archivos modificados. Después de publicar se verifica el remoto.
+
+Un validador que no ejecuta sus contratos no puede declarar PASS. Las divergencias se registran y no se corrigen fuera del alcance autorizado.
+
+## 10. Precedencia
+
+1. Instrucción explícita vigente de Jonathan Martínez.
+2. Decisión aprobada aplicable.
+3. Este contrato.
+4. METHODOLOGY.md.
+5. Estado estructurado canónico.
+6. Vistas Markdown y reportes históricos.
+
+Este contrato reemplaza la versión 1.0 mediante DEC-LAB-013.

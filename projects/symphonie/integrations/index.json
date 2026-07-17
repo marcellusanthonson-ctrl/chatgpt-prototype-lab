@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "symphonie",
+  "updated_at": "2026-07-16",
+  "records": [
+    {
+      "id": "INT-SYM-001",
+      "title": "Índice RAG derivado para memoria gobernada",
+      "status": "CANDIDATE",
+      "producer": "VERSIONED_GIT_KNOWLEDGE",
+      "consumer": "SYMPHONIE",
+      "authorization": "NOT_AUTHORIZED",
+      "source_refs": [
+        "DEC-LAB-012",
+        "marcellusanthonson-ctrl/symphonie:registro/integraciones.json"
+      ]
+    },
+    {
+      "id": "INT-SYM-002",
+      "title": "Consumo de releases de MammothSkills",
+      "status": "CANDIDATE",
+      "producer": "MammothSkills",
+      "consumer": "Symphonie",
+      "authorization": "NOT_AUTHORIZED",
+      "source_refs": [
+        "DEC-LAB-005",
+        "DEC-LAB-006"
+      ]
+    },
+    {
+      "id": "INT-SYM-003",
+      "title": "Uso declarado de interview-script",
+      "status": "EVALUATED",
+      "producer": "Owl-Listener/designer-skills",
+      "consumer": "Symphonie Phase 0/1",
+      "authorization": "NOT_AUTHORIZED_FOR_INTEGRATION",
+      "source_refs": [
+        "marcellusanthonson-ctrl/symphonie:registro/skills.json"
+      ]
+    },
+    {
+      "id": "INT-SYM-004",
+      "title": "Acceso automático a repositorios para memoria",
+      "status": "IDEA",
+      "producer": "REPOSITORIES",
+      "consumer": "SYMPHONIE_MEMORY",
+      "authorization": "NOT_AUTHORIZED",
+      "source_refs": [
+        "DEC-LAB-012"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ERR-LAB-003",
+  "title": "Canonical state duplicated across multiple LAB documents",
+  "project_scope": [
+    "lab",
+    "symphonie"
+  ],
+  "severity": "HIGH",
+  "status": "CONTAINED",
+  "lifecycle_state": "CONTAINED",
+  "canonical_path": "errors/ERR-LAB-003.json",
+  "updated_at": "2026-07-16",
+  "cause": "Manual snapshot replication without canonical ownership controls",
+  "impact": "Canonical state duplicated across multiple LAB documents",
+  "correction": "Contract v2, reference-only state and semantic validator",
+  "prevention_refs": [
+    "LAB_CONTRACT.md",
+    "docs/ERRORS_TO_AVOID.md",
+    "scripts/validate_repository.py"
+  ]
+}

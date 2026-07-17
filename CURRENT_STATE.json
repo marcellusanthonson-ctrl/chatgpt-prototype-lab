@@ -1,306 +1,69 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "2.0.0",
   "document_id": "lab.current-state",
-  "version": "1.0.14",
-  "status": "ACTIVE",
+  "version": "2.0.0",
+  "status": "GOVERNANCE_V2_CANONICAL_BASELINE",
   "updated_at": "2026-07-16",
   "active_project": "lab",
-  "current_phase": "KNOWLEDGE_BASE_OPERATIONAL_V1",
+  "current_phase": "LAB_GOVERNANCE_HARDENING_COMPLETED",
   "methodology": {
-    "version": "1.0.0",
-    "status": "APPROVED",
-    "canonical_path": "METHODOLOGY.md"
+    "version": "2.0",
+    "path": "METHODOLOGY.md"
   },
-  "bootstrap": {
-    "status": "COMPLETED",
-    "implementation_commit": "5fe7effeb7b9896461b15f2b207fbcffe3897a1f",
-    "validation": "PASS",
-    "remote_publication": "VERIFIED",
-    "execution_order": "CONSUMED",
-    "closed_at": "2026-06-28"
+  "contract": {
+    "version": "2.0",
+    "path": "LAB_CONTRACT.md",
+    "decision": "DEC-LAB-013"
   },
   "authority": {
     "sole_approver": "Jonathan Martínez",
-    "chatgpt": "coordinates, validates, audits, and issues bounded orders",
-    "claude": "performs discovery and definition only when explicitly assigned",
-    "codex": "bounded technical executor only",
+    "chatgpt": "COORDINATE_VALIDATE_AUDIT_ORDER",
+    "claude": "DISCOVERY_OR_DEFINITION_WHEN_ASSIGNED",
+    "codex": "BOUNDED_EXECUTOR_ONLY",
     "codex_autonomous_authority": "NO"
+  },
+  "canonical_model": {
+    "ownership": "docs/CANONICAL_OWNERSHIP.md",
+    "model_rules": "docs/MODEL_OPERATING_RULES.md",
+    "errors_to_avoid": "docs/ERRORS_TO_AVOID.md",
+    "continuity": "docs/CONTINUITY_PROTOCOL.md",
+    "brief_schema": "schemas/brief.schema.json"
   },
   "projects": {
     "lab": {
       "status": "active",
-      "canonical_path": "projects/lab/PROJECT_STATE.md"
+      "canonical_path": "projects/lab/PROJECT_STATE.md",
+      "structured_state_path": "projects/lab/PROJECT_STATE.json"
     },
     "mammothskills": {
       "status": "active_pipeline_validated_phase_a",
       "canonical_path": "projects/mammothskills/PROJECT_STATE.md",
-      "repository": "marcellusanthonson-ctrl/MammothSkills",
-      "working_branch": "audit/ms-001",
-      "current_head": "034910e9fec4c0f0b97fe06ee94554bda289a1b6",
-      "phase_a_evidence_commit": "55f66f4d9020ca93113aef61194141efdc3688cc",
-      "classification": "MS_001_CLASSIFIED_AS_PIPELINE_VALIDATION",
-      "runtime_validation": "DEFERRED_TO_NEXT_SESSION",
-      "release": "NOT_AUTHORIZED",
-      "consumer_integration": "NOT_AUTHORIZED"
+      "structured_state_path": "projects/mammothskills/PROJECT_STATE.json"
     },
     "symphonie": {
       "status": "known_and_synced",
       "canonical_path": "projects/symphonie/PROJECT_STATE.md",
-      "purpose": "eight-phase workflow that creates and develops projects from beginning to end",
-      "current_operational_objective": "Conservar sincronizado el LAB con la baseline documental canónica de ocho fases de Symphonie; revisar después la estructura del LAB antes de autorizar trabajo adicional.",
-      "dedicated_repository_architecture": {
-        "decision": "DEC-LAB-010",
-        "repository": "marcellusanthonson-ctrl/symphonie",
-        "visibility": "PRIVATE",
-        "canonical_branch": "main",
-        "status": "EIGHT_PHASE_DOCUMENTARY_BASELINE_CANONICALIZED_VERIFIED",
-        "repository_creation": "COMPLETED_VERIFIED_AUTHORIZATION_CONSUMED",
-        "bootstrap": "COMPLETED_VERIFIED_AUTHORIZATION_CONSUMED",
-        "repository_size": null,
-        "head": "30dfe887b7fa60be367cb73826c5560ad26f9b92",
-        "canonical_language": "ESPAÑOL",
-        "runtime": "NOT_AUTHORIZED",
-        "integration": "NOT_AUTHORIZED",
-        "migration": "NOT_AUTHORIZED",
-        "historical_repository": "marcellusanthonson-ctrl/symphonie-codex-lab",
-        "historical_repository_terminal_classification": "NOT_YET_AUTHORIZED",
-        "fileset": 40,
-        "repair_005": "CONSUMED_COMPLETED_VERIFIED",
-        "reconciliation_006": "CONSUMED_COMPLETED_VERIFIED",
-        "canonicalization_007": "CONSUMED_COMPLETED_VERIFIED"
-      },
-      "governed_project_memory": {
-        "decision": "DEC-LAB-012",
-        "status": "APPROVED_DOCUMENTARY_ARCHITECTURE",
-        "principle": "CONTEXTO_NO_AUTORIZACION",
-        "model": "MEMORIA_CURADA_NO_ESPEJO_DE_REPOSITORIOS",
-        "canonical_unit": "UNIDAD_DE_CONOCIMIENTO",
-        "canonical_registry": "VERSIONED_GIT",
-        "index": "DERIVED_REBUILDABLE_NON_CANONICAL",
-        "bootstrap_fileset": 25,
-        "phase_0a_memory_access": "PROHIBITED",
-        "phase_0b_memory_access": "OPTIONAL_RESTRICTED",
-        "phase_0c_memory_access": "OPTIONAL_HUMAN_DECISION",
-        "runtime": "NOT_AUTHORIZED",
-        "ingestion": "NOT_AUTHORIZED",
-        "embeddings": "NOT_AUTHORIZED",
-        "automatic_repository_access": "NOT_AUTHORIZED",
-        "vector_store": "NOT_SELECTED",
-        "real_project_data": "NOT_AUTHORIZED"
-      },
-      "phase_0_experimental_baseline": {
-        "decision": "DEC-LAB-011",
-        "version": "0.1.0",
-        "model": "0A_CAPTURE -> 0B_ANALYZE_AND_CLASSIFY -> 0C_HUMAN_DECISION",
-        "status": "APPROVED_EXPERIMENTAL_BASELINE",
-        "stable_contract": false,
-        "runtime_validated": false,
-        "real_client_use_authorized": false,
-        "runtime": "NOT_AUTHORIZED",
-        "discovery": "NOT_AUTHORIZED",
-        "quotation": "NOT_AUTHORIZED",
-        "implementation": "NOT_AUTHORIZED",
-        "repository_alignment": {
-          "status": "ALIGNED_TO_DEC_LAB_011",
-          "repository": "marcellusanthonson-ctrl/symphonie",
-          "head": "30dfe887b7fa60be367cb73826c5560ad26f9b92",
-          "order": "SYM-DOCUMENTARY-STATE-AND-PHASE0-RECONCILIATION-006"
-        }
-      },
-      "historical_codex_skill_candidates": [
-        "symphonie-ux-ui-architect",
-        "symphonie-ui-implementer"
-      ],
-      "codex_skill_cycle": {
-        "symphonie_ux_ui_architect": {
-          "historical_baseline_alpha5": {
-            "version": "0.1.0-alpha.5",
-            "phase": "3A",
-            "capability": "DOCUMENT_WRITE",
-            "status": "HISTORICAL_APPROVED_BASELINE_CLOSED_IMMUTABLE",
-            "runtime_validation": "PASS",
-            "promotion_gate": "PASS"
-          },
-          "approved_baseline": {
-            "version": "0.1.0-alpha.6",
-            "phase": "3A",
-            "capability": "DOCUMENT_WRITE",
-            "status": "APPROVED_BASELINE_WITH_RECORDED_HISTORICAL_EVIDENCE_LIMITATION",
-            "branch": "feature/design-migration-handoff-alpha6",
-            "implementation_commit": "22d63a901ec30221e7e8e7e944203eb2239598bd",
-            "runtime_evidence_commit": "385f85b85560d8f5a12512c9f36e2bdd140f1d7b",
-            "approval_decision": "DEC-LAB-009",
-            "approved_by": "Jonathan Martínez",
-            "approved_at": "2026-07-14",
-            "direct_validation": "PASS",
-            "reg_08": "PASS",
-            "reg_09": "BLOCKED_AS_EXPECTED",
-            "reg_09_reason": "MIGRATION_TARGET_UNCONFIRMED",
-            "historical_regression_pack": "INCOMPLETE_EVIDENCE_REG_02_THROUGH_REG_07_ACCEPTED_NON_BLOCKING",
-            "historical_evidence_plan": "projects/symphonie/reports/ALPHA6_HISTORICAL_EVIDENCE_TEST_PLAN.md",
-            "conditional_output": ".project/phase-3/migration-handoff.json",
-            "normal_eight_output_flow_preserved": true,
-            "promotion_record": "APPROVED_AND_RECORDED",
-            "merge": "NOT_AUTHORIZED",
-            "release": "NOT_AUTHORIZED",
-            "symphonie_integration": "NOT_AUTHORIZED",
-            "mammothskills_migration": "NOT_AUTHORIZED"
-          }
-        },
-        "symphonie_ui_implementer": {
-          "version": "0.1.0-alpha.3",
-          "phase": "4A",
-          "capability": "SOURCE_WRITE",
-          "status": "APPROVED_BASELINE_CLOSED_IMMUTABLE",
-          "static_validation": "PASS",
-          "runtime_validation": "PASS",
-          "runtime_suite": "IMP-REG-01_THROUGH_IMP-REG-12",
-          "baseline_head": "c2f3159e754d356f23b6855f2aecf1a663209835",
-          "promotion_review": "SYM-UI-IMPLEMENTER-PROMOTION-REVIEW-013",
-          "promotion_record_order": "SYM-UI-IMPLEMENTER-PROMOTION-RECORD-014",
-          "promotion_record_commit": "8f319aef3f328d22376fde42b4b0003601ffa670",
-          "human_approval": "GRANTED",
-          "promotion_gate": "PASS",
-          "runtime_order": "SYM-UI-IMPLEMENTER-RUNTIME-009",
-          "runtime_order_state": "CONSUMED",
-          "release": "NOT_AUTHORIZED",
-          "migration": "NOT_AUTHORIZED",
-          "integration": "NOT_AUTHORIZED"
-        },
-        "handoff_compatibility": "PASS",
-        "codex_discovery_and_interpretation": "PASS_AS_CHAIN",
-        "real_design_execution": "NOT_YET_VALIDATED",
-        "repeatability": "NOT_YET_VALIDATED",
-        "synthetic_handoff_validation": {
-          "project": "handoff-controlled-017",
-          "result": "PASS_WITH_FINDINGS",
-          "closed_at": "2026-07-12",
-          "orders": [
-            "SYM-ARCH-IMPLEMENTER-HANDOFF-017",
-            "SYM-ARCH-IMPLEMENTER-HANDOFF-018",
-            "SYM-ARCH-IMPLEMENTER-HANDOFF-019",
-            "SYM-ARCH-IMPLEMENTER-HANDOFF-RUNTIME-020",
-            "SYM-ARCH-IMPLEMENTER-HANDOFF-MANUAL-VALIDATION-021"
-          ],
-          "validated_chain": "architect -> human gate -> implementer -> build -> manual browser validation",
-          "history": [
-            "Phase 3A produced the approved Evidence rail design contracts.",
-            "Phase 4A consumed the canonical JSON contracts and changed only the authorized application source files.",
-            "The first build attempt was blocked by missing Vite CSS Module declarations.",
-            "A separately authorized src/vite-env.d.ts correction resolved the build blocker.",
-            "Automated browser validation was blocked because the Playwright Chromium executable was unavailable and installation was forbidden.",
-            "Manual-assisted validation completed console, responsive, keyboard, action-preservation, Phase 3A conformance, and boundary checks."
-          ],
-          "findings": [
-            "favicon.ico returned a non-blocking local 404.",
-            "Contract-faithful Prepared, not executed and Not yet executed labels are semantically stale after experiment completion."
-          ],
-          "real_design_execution": "NOT_VALIDATED",
-          "repeatability": "NOT_VALIDATED"
-        }
-      },
-      "migration_sequence_decision": "DEC-LAB-006",
-      "alpha6_promotion_decision": "DEC-LAB-009",
-      "repository_architecture_decision": "DEC-LAB-010",
-      "governed_memory_decision": "DEC-LAB-012",
-      "phase_0_baseline_decision": "DEC-LAB-011",
-      "minimal_handoff_knowledge": {
-        "status": "CANONICALIZED_AND_PUBLISHED",
-        "canonicalization_order": "SYM-LAB-CANONICALIZATION-007",
-        "publication_order": "SYM-LAB-PUSH-008",
-        "publication_commit": "c478c5a4e290a10305e64c9ff8bf6eff4ead772a",
-        "source_audit": {
-          "order": "SYM-LOCAL-EVIDENCE-AUDIT-005",
-          "result": "PASS_WITH_FINDINGS",
-          "authorization_state": "CONSUMED"
-        },
-        "source_extraction": {
-          "order": "SYM-MINIMAL-KNOWLEDGE-EXTRACTION-006",
-          "result": "PASS",
-          "authorization_state": "CONSUMED"
-        },
-        "artifacts": [
-          "projects/symphonie/knowledge/contracts/phase3-minimum-assertions.json",
-          "projects/symphonie/knowledge/contracts/action-preservation.json",
-          "projects/symphonie/knowledge/regressions/imp-reg-11.json"
-        ],
-        "validation": "PASS",
-        "contribution": [
-          "verifiable minimum Phase 3A exit assertions",
-          "action-preservation contract for the Phase 3A to Phase 4A handoff",
-          "fail-closed authorization regression guard before observable effects"
-        ],
-        "automatic_enforcement": "PARTIAL_IN_ALPHA6_MIGRATION_HANDOFF_ONLY",
-        "skill_modification": "ALPHA6_APPROVED_BASELINE",
-        "runtime_integration": "NOT_AUTHORIZED",
-        "product_change": "NOT_PERFORMED"
-      },
-      "eight_phase_documentary_baseline": {
-        "status": "CANONICALIZED_VERIFIED",
-        "repository": "marcellusanthonson-ctrl/symphonie",
-        "head": "30dfe887b7fa60be367cb73826c5560ad26f9b92",
-        "fileset": 40,
-        "canonical_map": "fases/MAPA_CANONICO_DE_FASES.md",
-        "gate_registry": "registro/gates.json",
-        "phase_maturity": {
-          "PHASE_0": "APPROVED_EXPERIMENTAL_BASELINE_NOT_RUNTIME_VALIDATED",
-          "PHASE_1": "DEFINED_NOT_TESTED",
-          "PHASE_2": "DEFINED_NOT_TESTED",
-          "PHASE_3": "PARTIALLY_VALIDATED_WITH_FINDINGS",
-          "PHASE_4": "PARTIALLY_RUNTIME_VALIDATED",
-          "PHASE_5": "DEFINED_NOT_TESTED",
-          "PHASE_6": "DEFINED_NOT_TESTED",
-          "PHASE_7": "DEFINED_NOT_TESTED"
-        },
-        "end_to_end_validated": false,
-        "runtime_authorized": false,
-        "integration_authorized": false
-      }
+      "structured_state_path": "projects/symphonie/PROJECT_STATE.json"
     },
     "carolina-klinik": {
       "status": "known",
-      "canonical_path": "projects/carolina-klinik/PROJECT_STATE.md"
+      "canonical_path": "projects/carolina-klinik/PROJECT_STATE.md",
+      "structured_state_path": "projects/carolina-klinik/PROJECT_STATE.json"
     },
     "clinical-os": {
       "status": "known",
-      "canonical_path": "projects/clinical-os/PROJECT_STATE.md"
+      "canonical_path": "projects/clinical-os/PROJECT_STATE.md",
+      "structured_state_path": "projects/clinical-os/PROJECT_STATE.json"
     },
     "aster-flyt": {
       "status": "referenced",
-      "canonical_path": "projects/aster-flyt/PROJECT_STATE.md"
+      "canonical_path": "projects/aster-flyt/PROJECT_STATE.md",
+      "structured_state_path": "projects/aster-flyt/PROJECT_STATE.json"
     },
     "waypoint": {
       "status": "referenced",
       "canonical_path": "projects/waypoint/PROJECT_STATE.md",
-      "description": "Application concept under strategic discussion; no development or product execution is authorized."
-    }
-  },
-  "structural_relationships": {
-    "status": "APPROVED_MODEL",
-    "decision": "DEC-LAB-005",
-    "rule": "Independent projects may establish explicit structural relationships when required by a workflow.",
-    "mammothskills_to_symphonie": {
-      "relationship": "skill producer and canonical source -> workflow consumer",
-      "requirements_and_feedback": "Symphonie may provide phase, agent, input/output, compatibility, and validation requirements to MammothSkills.",
-      "artifact_delivery": "MammothSkills may deliver an identified approved skill artifact or release for direct consumption by Symphonie.",
-      "runtime": "Claude or Codex according to target_platform",
-      "autonomous_consumer_write": "PROHIBITED",
-      "integration_authorization": "SEPARATE"
-    },
-    "historical_skill_transition": {
-      "decision": "DEC-LAB-006",
-      "rule": "Complete the two historical Symphonie Codex skill audits and operational handoff proof in symphonie-codex-lab before separately authorized canonical migration to MammothSkills.",
-      "future_source": "MammothSkills",
-      "consumer": "Symphonie"
-    },
-    "dedicated_symphonie_repository": {
-      "decision": "DEC-LAB-010",
-      "status": "EIGHT_PHASE_DOCUMENTARY_BASELINE_CANONICALIZED_VERIFIED",
-      "governance_source": "chatgpt-prototype-lab",
-      "workflow_repository": "marcellusanthonson-ctrl/symphonie",
-      "historical_evidence_repository": "marcellusanthonson-ctrl/symphonie-codex-lab",
-      "canonical_head": "30dfe887b7fa60be367cb73826c5560ad26f9b92",
-      "fileset": 40
+      "structured_state_path": "projects/waypoint/PROJECT_STATE.json"
     }
   },
   "decisions_in_force": [
@@ -315,60 +78,47 @@
     "DEC-LAB-009",
     "DEC-LAB-010",
     "DEC-LAB-011",
-    "DEC-LAB-012"
+    "DEC-LAB-012",
+    "DEC-LAB-013"
   ],
   "open_errors": [
-    "ERR-LAB-001",
-    "ERR-LAB-002"
+    "ERR-LAB-005"
   ],
   "validated_patterns": [
     "PAT-LAB-001",
     "PAT-LAB-002",
     "PAT-LAB-003",
     "PAT-LAB-004",
-    "PAT-MA-001"
+    "PAT-MA-001",
+    "PAT-LAB-005",
+    "PAT-LAB-006"
   ],
   "authorization_state": {
-    "lab_documentation": "NOT_AUTHORIZED",
-    "dec_lab_012_documentation": "APPROVED_RECORDED_AUTHORIZATION_CONSUMED",
-    "dec_lab_010_011_documentation": "APPROVED_RECORDED_AUTHORIZATION_CONSUMED",
-    "alpha6_baseline_promotion": "APPROVED_RECORDED_AUTHORIZATION_CONSUMED",
-    "symphonie_repository_creation": "COMPLETED_VERIFIED_AUTHORIZATION_CONSUMED",
-    "symphonie_bootstrap": "COMPLETED_VERIFIED_AUTHORIZATION_CONSUMED",
-    "phase_0_runtime": "NOT_AUTHORIZED",
-    "phase_0_real_client_use": "NOT_AUTHORIZED",
-    "historical_evidence_execution": "NOT_AUTHORIZED",
-    "real_design_execution": "NOT_AUTHORIZED",
-    "repeatability_test": "NOT_AUTHORIZED",
-    "mammothskills_implementation": "NOT_AUTHORIZED",
-    "mammothskills_migration": "NOT_AUTHORIZED",
-    "mammothskills_release": "NOT_AUTHORIZED",
-    "symphonie_runtime": "NOT_AUTHORIZED",
-    "symphonie_integration": "NOT_AUTHORIZED",
-    "rag_runtime": "NOT_AUTHORIZED",
-    "rag_ingestion": "NOT_AUTHORIZED",
-    "rag_embeddings": "NOT_AUTHORIZED",
-    "rag_automatic_repository_access": "NOT_AUTHORIZED",
-    "rag_real_project_data": "NOT_AUTHORIZED",
-    "product_changes": "NOT_AUTHORIZED",
-    "codex_autonomous_authority": "NO",
-    "symphonie_documentary_repair_005": "CONSUMED_COMPLETED_VERIFIED",
-    "symphonie_phase0_reconciliation_006": "CONSUMED_COMPLETED_VERIFIED",
-    "symphonie_eight_phase_canonicalization_007": "CONSUMED_COMPLETED_VERIFIED",
-    "lab_symphonie_state_reconciliation_008": "CONSUMED_COMPLETED_VERIFIED",
-    "symphonie_final_head_sync_010": "CONSUMED_COMPLETED_VERIFIED"
+    "governance_v2_013": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "commit_authorized": false,
+    "push_authorized": false,
+    "runtime_authorized": false,
+    "integration_authorized": false,
+    "product_changes_authorized": false,
+    "codex_autonomous_authority": "NO"
+  },
+  "verified_external_heads": {
+    "symphonie": "884aac3bad37641fc09a20254ebd40e8da3b93c7",
+    "lab_base_before_transition": "5e9c38a8ae68183a196709afa54aa1c7c2a8c4d4"
   },
   "next_authorized_action": "NONE_UNTIL_NEW_EXPLICIT_APPROVAL",
-  "next_recommended_transition": "REVIEW_LAB_REPOSITORY_STRUCTURE_THEN_PRIORITIZE_UNTESTED_PHASE_CONTRACT_SCHEMAS",
+  "next_recommended_transition": "REGISTER_RISK_PROPORTIONAL_VALIDATION_DECISION_ID",
   "continuity_read_order": [
     "LAB_CONTRACT.md",
     "METHODOLOGY.md",
     "CURRENT_STATE.json",
-    "CURRENT_STATE.md",
+    "registry/index.json",
     "registry/projects.json",
-    "active project state",
-    "decisions in force",
+    "projects/{active_project}/PROJECT_STATE.json",
+    "project decisions",
+    "project authorizations",
     "open errors",
-    "applicable patterns"
+    "applicable evidence",
+    "current continuity package"
   ]
 }

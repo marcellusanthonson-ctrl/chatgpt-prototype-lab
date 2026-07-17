@@ -1,0 +1,134 @@
+{
+  "protocol_version": "1.0.0",
+  "project_id": "symphonie",
+  "generated_at": "2026-07-16",
+  "status": "CURRENT",
+  "repositories": [
+    {
+      "role": "GOVERNANCE",
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "head_policy": "VERIFY_LIVE_AT_USE",
+      "verified_parent_head": "5e9c38a8ae68183a196709afa54aa1c7c2a8c4d4"
+    },
+    {
+      "role": "WORKFLOW",
+      "repository": "marcellusanthonson-ctrl/symphonie",
+      "branch": "main",
+      "verified_head": "884aac3bad37641fc09a20254ebd40e8da3b93c7"
+    },
+    {
+      "role": "SKILL_PRODUCER",
+      "repository": "marcellusanthonson-ctrl/MammothSkills",
+      "branch": "audit/ms-001",
+      "verified_head": null
+    }
+  ],
+  "reading_order": [
+    "marcellusanthonson-ctrl/chatgpt-prototype-lab:LAB_CONTRACT.md",
+    "marcellusanthonson-ctrl/chatgpt-prototype-lab:METHODOLOGY.md",
+    "marcellusanthonson-ctrl/chatgpt-prototype-lab:CURRENT_STATE.json",
+    "marcellusanthonson-ctrl/chatgpt-prototype-lab:projects/symphonie/PROJECT_STATE.json",
+    "marcellusanthonson-ctrl/symphonie:CURRENT_STATE.json",
+    "marcellusanthonson-ctrl/symphonie:registro/fases.json",
+    "marcellusanthonson-ctrl/symphonie:registro/experimentos.json",
+    "marcellusanthonson-ctrl/symphonie:registro/skills.json",
+    "marcellusanthonson-ctrl/symphonie:registro/metodos-validacion.json"
+  ],
+  "current_state": {
+    "symphonie_version": "0.3.0",
+    "fileset": 44,
+    "total_phases": 8,
+    "runtime_authorized": false,
+    "integration_authorized": false
+  },
+  "facts": [
+    "Dedicated Symphonie repository is canonical",
+    "Eight phases are documented",
+    "Experiments and skill evidence are registered",
+    "Full workflow is not validated"
+  ],
+  "approved_decisions": [
+    "DEC-LAB-004",
+    "DEC-LAB-005",
+    "DEC-LAB-006",
+    "DEC-LAB-009",
+    "DEC-LAB-010",
+    "DEC-LAB-011",
+    "DEC-LAB-012",
+    "DEC-LAB-013"
+  ],
+  "proposals": [
+    "Register a formal LAB decision ID for risk-proportional skill validation"
+  ],
+  "ideas": [
+    "IDEA-SYM-001",
+    "IDEA-SYM-002",
+    "IDEA-SYM-003"
+  ],
+  "possible_integrations": [
+    "INT-SYM-001",
+    "INT-SYM-002",
+    "INT-SYM-003",
+    "INT-SYM-004"
+  ],
+  "authorizations": {
+    "active": [],
+    "consumed": [
+      "SYM-REPOSITORY-BOOTSTRAP-003",
+      "SYM-DOCUMENTARY-CONFORMITY-CORRECTION-004",
+      "SYM-DOCUMENTARY-BASELINE-REPAIR-005",
+      "SYM-CANONICAL-EVIDENCE-REGISTRY-011"
+    ],
+    "expired": []
+  },
+  "completed_work": [
+    "Dedicated repository bootstrap",
+    "Eight-phase documentary baseline",
+    "Experiment and skill evidence registry",
+    "LAB governance v2 candidate"
+  ],
+  "pending_work": [
+    "Formal risk-method decision ID",
+    "Schemas and validation for untested phases",
+    "End-to-end validation requires separate authorization"
+  ],
+  "open_errors": [
+    "ERR-LAB-005"
+  ],
+  "known_risks": [
+    "STALE_CROSS_REPOSITORY_SNAPSHOTS",
+    "EVIDENCE_MISTAKEN_FOR_INTEGRATION"
+  ],
+  "experiments": [
+    "SYM-P0B-DRY-RUN-001",
+    "SYM-EXT-INTERVIEW-TIER1-001",
+    "SYM-P3A-REG08-001",
+    "SYM-P3A-REG09-001",
+    "SYM-HANDOFF-3A-4A-017"
+  ],
+  "skills": [
+    "interview-script",
+    "intake-brief",
+    "project-scoping",
+    "project-status",
+    "symphonie-ux-ui-architect",
+    "symphonie-ui-implementer"
+  ],
+  "roadmap_ref": "projects/symphonie/ROADMAP.json",
+  "attachments_ref": "projects/symphonie/continuity/ATTACHMENT_MANIFEST.json",
+  "next_recommended_action": {
+    "action": "Register the missing LAB decision for the risk-proportional validation principle",
+    "authorization_required": true
+  },
+  "prohibited_actions": [
+    "RUNTIME",
+    "INTEGRATION",
+    "REAL_DATA",
+    "INGESTION",
+    "EMBEDDINGS",
+    "VECTOR_INDEX",
+    "PRODUCT_CHANGE"
+  ],
+  "first_message": "Continúa el proyecto Symphonie desde sus repositorios canónicos. Antes de responder o ejecutar, lee los archivos adjuntos en el orden indicado por ATTACHMENT_MANIFEST.json, verifica los HEAD remotos declarados y reconstruye el estado desde CURRENT_CONTINUITY.json. Distingue hechos, propuestas, decisiones, autorizaciones, resultados y pendientes. No infieras autoridad ni ejecutes fuera del alcance explícitamente aprobado."
+}

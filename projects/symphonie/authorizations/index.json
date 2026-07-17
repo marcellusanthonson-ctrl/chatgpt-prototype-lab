@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "symphonie",
+  "updated_at": "2026-07-16",
+  "records": [
+    {
+      "id": "SYM-REPOSITORY-BOOTSTRAP-003",
+      "status": "CONSUMED",
+      "source_refs": [
+        "projects/symphonie/PROJECT_STATE.md"
+      ]
+    },
+    {
+      "id": "SYM-DOCUMENTARY-CONFORMITY-CORRECTION-004",
+      "status": "CONSUMED_WITH_FAILED_RESULT",
+      "source_refs": [
+        "projects/symphonie/PROJECT_STATE.md"
+      ]
+    },
+    {
+      "id": "SYM-DOCUMENTARY-BASELINE-REPAIR-005",
+      "status": "CONSUMED_COMPLETED_VERIFIED",
+      "source_refs": [
+        "projects/symphonie/PROJECT_STATE.md"
+      ]
+    },
+    {
+      "id": "SYM-CANONICAL-EVIDENCE-REGISTRY-011",
+      "status": "CONSUMED_COMPLETED_VERIFIED",
+      "source_refs": [
+        "marcellusanthonson-ctrl/symphonie@884aac3bad37641fc09a20254ebd40e8da3b93c7"
+      ]
+    }
+  ]
+}

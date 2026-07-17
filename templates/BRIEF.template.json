@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "brief_id": "BRIEF-PROJECT-TASK",
+  "project_id": "project-id",
+  "status": "DRAFT",
+  "objective": "",
+  "repositories": [],
+  "authority": {
+    "approver": "Jonathan Martínez",
+    "authorization_ref": null,
+    "commit": false,
+    "push": false
+  },
+  "scope": {
+    "allowed_paths": [],
+    "forbidden_actions": []
+  },
+  "current_state_refs": [],
+  "required_outputs": [],
+  "acceptance_checks": [],
+  "stop_conditions": [],
+  "response_contract": {
+    "include": [
+      "result",
+      "deltas",
+      "validation",
+      "blockers"
+    ],
+    "exclude": [
+      "generic_summary",
+      "repeated_context"
+    ]
+  }
+}

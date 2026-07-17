@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "updated_at": "2026-07-16",
   "active_project": "lab",
   "records": [
@@ -8,62 +8,69 @@
       "name": "LAB",
       "status": "active",
       "canonical_path": "projects/lab/PROJECT_STATE.md",
+      "structured_state_path": "projects/lab/PROJECT_STATE.json",
       "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
-      "scope": "Governance, cross-project knowledge, authority, continuity, and audit methodology.",
-      "updated_at": "2026-06-28"
+      "scope": "Gobierno, autoridad, continuidad y auditoría entre proyectos.",
+      "updated_at": "2026-07-16"
     },
     {
       "id": "mammothskills",
       "name": "MammothSkills",
       "status": "active_pipeline_validated_phase_a",
       "canonical_path": "projects/mammothskills/PROJECT_STATE.md",
+      "structured_state_path": "projects/mammothskills/PROJECT_STATE.json",
       "repository": "marcellusanthonson-ctrl/MammothSkills",
-      "scope": "Create, audit, adapt, test, version, and publish skills without serving as their runtime. MS-001 validates the adaptation pipeline as a test corpus.",
-      "updated_at": "2026-07-07"
+      "scope": "Productor y auditor de skills reutilizables; no es runtime.",
+      "updated_at": "2026-07-16"
     },
     {
       "id": "symphonie",
       "name": "Symphonie",
-      "status": "known_and_synced_eight_phase_baseline",
+      "status": "known_and_synced",
       "canonical_path": "projects/symphonie/PROJECT_STATE.md",
+      "structured_state_path": "projects/symphonie/PROJECT_STATE.json",
       "repository": "marcellusanthonson-ctrl/symphonie",
-      "scope": "Canonical eight-phase workflow, phase contracts, gates, typed handoffs, schemas, governed-memory architecture, and consumer-side integration records.",
+      "scope": "Workflow canónico de ocho fases y memoria gobernada.",
       "updated_at": "2026-07-16",
-      "canonical_head": "30dfe887b7fa60be367cb73826c5560ad26f9b92",
-      "fileset": 40,
-      "documentary_maturity": "EIGHT_PHASE_DOCUMENTARY_BASELINE_CANONICALIZED"
+      "canonical_head": "884aac3bad37641fc09a20254ebd40e8da3b93c7",
+      "fileset": 44,
+      "documentary_maturity": "EIGHT_PHASE_BASELINE_WITH_CANONICAL_EXPERIMENT_AND_SKILL_EVIDENCE"
     },
     {
       "id": "carolina-klinik",
       "name": "Carolina Klinik",
       "status": "known",
       "canonical_path": "projects/carolina-klinik/PROJECT_STATE.md",
-      "scope": "Known clinical experience project; product execution is outside LAB authority.",
-      "updated_at": "2026-06-28"
+      "structured_state_path": "projects/carolina-klinik/PROJECT_STATE.json",
+      "scope": "Proyecto de experiencia clínica conocido; producto fuera de autoridad del LAB.",
+      "updated_at": "2026-07-16"
     },
     {
       "id": "clinical-os",
       "name": "Clinical OS",
       "status": "known",
       "canonical_path": "projects/clinical-os/PROJECT_STATE.md",
-      "scope": "Known clinical system and CRM; product execution is outside LAB authority.",
-      "updated_at": "2026-06-28"
+      "structured_state_path": "projects/clinical-os/PROJECT_STATE.json",
+      "scope": "Sistema clínico y CRM conocido; producto fuera de autoridad del LAB.",
+      "updated_at": "2026-07-16"
     },
     {
       "id": "aster-flyt",
       "name": "Aster Flyt",
       "status": "referenced",
       "canonical_path": "projects/aster-flyt/PROJECT_STATE.md",
-      "scope": "Referenced project with detailed state pending documentary incorporation.",
-      "updated_at": "2026-06-28"
+      "structured_state_path": "projects/aster-flyt/PROJECT_STATE.json",
+      "scope": "Proyecto referenciado con incorporación documental detallada pendiente.",
+      "updated_at": "2026-07-16"
     },
     {
       "id": "waypoint",
       "name": "Waypoint",
       "status": "referenced",
       "canonical_path": "projects/waypoint/PROJECT_STATE.md",
-      "scope": "Referenced application concept under strategic discussion; no development, product execution, release, integration, or deployment is authorized.",
-      "updated_at": "2026-07-13"
+      "structured_state_path": "projects/waypoint/PROJECT_STATE.json",
+      "scope": "Concepto de aplicación estratégica; desarrollo no autorizado.",
+      "updated_at": "2026-07-16"
     }
   ]
 }

@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ERR-LAB-004",
+  "title": "Validator could declare confidence without validating schema instances",
+  "project_scope": [
+    "lab"
+  ],
+  "severity": "CRITICAL",
+  "status": "CORRECTED",
+  "lifecycle_state": "CORRECTED",
+  "canonical_path": "errors/ERR-LAB-004.json",
+  "updated_at": "2026-07-16",
+  "cause": "Schema metadata was checked but instances were not evaluated",
+  "impact": "Validator could declare confidence without validating schema instances",
+  "correction": "Contract v2, reference-only state and semantic validator",
+  "prevention_refs": [
+    "LAB_CONTRACT.md",
+    "docs/ERRORS_TO_AVOID.md",
+    "scripts/validate_repository.py"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "symphonie",
+  "name": "Symphonie",
+  "status": "known_and_synced",
+  "updated_at": "2026-07-16",
+  "canonical_repository": "marcellusanthonson-ctrl/symphonie",
+  "canonical_branch": "main",
+  "verified_head": "884aac3bad37641fc09a20254ebd40e8da3b93c7",
+  "authority": {
+    "sole_approver": "Jonathan Martínez",
+    "autonomous_model_authority": false
+  },
+  "summary": "Workflow canónico de ocho fases y memoria gobernada.",
+  "content_completeness": "STRUCTURED_V2_BASELINE_WITH_EVIDENCE",
+  "source_refs": [
+    "projects/symphonie/PROJECT_STATE.md",
+    "registry/projects.json"
+  ],
+  "governance_paths": {
+    "roadmap": "projects/symphonie/ROADMAP.json",
+    "pending": "projects/symphonie/PENDING.json",
+    "decisions": "projects/symphonie/decisions/index.json",
+    "ideas": "projects/symphonie/ideas/index.json",
+    "integrations": "projects/symphonie/integrations/index.json"
+  },
+  "metadata": {
+    "fileset": 44,
+    "total_phases": 8,
+    "phase_maturity": {
+      "PHASE_0": "EXPERIMENTAL_NOT_RUNTIME_VALIDATED",
+      "PHASE_1": "DEFINED_WITH_CANDIDATES_NOT_TESTED",
+      "PHASE_2": "DEFINED_WITH_CANDIDATE_NOT_TESTED",
+      "PHASE_3": "PARTIALLY_VALIDATED_WITH_FINDINGS",
+      "PHASE_4": "PARTIALLY_RUNTIME_VALIDATED",
+      "PHASE_5": "DEFINED_NOT_TESTED",
+      "PHASE_6": "DEFINED_NOT_TESTED",
+      "PHASE_7": "DEFINED_NOT_TESTED"
+    },
+    "canonical_registries": [
+      "registro/fases.json",
+      "registro/experimentos.json",
+      "registro/skills.json",
+      "registro/metodos-validacion.json"
+    ]
+  }
+}

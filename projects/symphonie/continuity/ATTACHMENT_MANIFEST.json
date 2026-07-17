@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "symphonie",
+  "generated_at": "2026-07-16",
+  "status": "CURRENT",
+  "required": [
+    {
+      "order": 1,
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "path": "LAB_CONTRACT.md",
+      "purpose": "Contrato de autoridad y operación",
+      "canonical": true,
+      "required_to_answer": true
+    },
+    {
+      "order": 2,
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "path": "METHODOLOGY.md",
+      "purpose": "Método y orden de reconstrucción",
+      "canonical": true,
+      "required_to_answer": true
+    },
+    {
+      "order": 3,
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "path": "CURRENT_STATE.json",
+      "purpose": "Estado estructurado del LAB",
+      "canonical": true,
+      "required_to_answer": true
+    },
+    {
+      "order": 4,
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "path": "projects/symphonie/PROJECT_STATE.json",
+      "purpose": "Estado referencial gobernado del proyecto",
+      "canonical": true,
+      "required_to_answer": true
+    },
+    {
+      "order": 5,
+      "repository": "marcellusanthonson-ctrl/symphonie",
+      "path": "CURRENT_STATE.json",
+      "purpose": "Estado operativo canónico de Symphonie",
+      "canonical": true,
+      "required_to_answer": true
+    },
+    {
+      "order": 6,
+      "repository": "marcellusanthonson-ctrl/symphonie",
+      "path": "registro/fases.json",
+      "purpose": "Ocho fases y madurez",
+      "canonical": true,
+      "required_to_answer": true
+    },
+    {
+      "order": 7,
+      "repository": "marcellusanthonson-ctrl/symphonie",
+      "path": "registro/experimentos.json",
+      "purpose": "Experimentos",
+      "canonical": true,
+      "required_to_answer": true
+    },
+    {
+      "order": 8,
+      "repository": "marcellusanthonson-ctrl/symphonie",
+      "path": "registro/skills.json",
+      "purpose": "Skills y evidencia",
+      "canonical": true,
+      "required_to_answer": true
+    },
+    {
+      "order": 9,
+      "repository": "marcellusanthonson-ctrl/symphonie",
+      "path": "registro/metodos-validacion.json",
+      "purpose": "Método proporcional y gap de decisión",
+      "canonical": true,
+      "required_to_answer": true
+    }
+  ],
+  "optional": [
+    "projects/symphonie/evidence/index.json"
+  ],
+  "do_not_attach": [
+    "FULL_TRANSCRIPTS_WITHOUT_MATERIAL_EVIDENCE"
+  ],
+  "missing_evidence": []
+}

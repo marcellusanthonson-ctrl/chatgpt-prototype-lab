@@ -1,4 +1,4 @@
-# Symphonie Continuity Protocol — Phase 0 and Claude Skills
+> Estado: ARCHIVED_HISTORICAL_EVIDENCE. No usar como continuidad vigente.\n> Paquete vigente: projects/symphonie/continuity/CURRENT_CONTINUITY.json.\n\n# Symphonie Continuity Protocol — Phase 0 and Claude Skills
 
 Document-ID: `symphonie.continuity.phase0-claude-skills`
 Revision: `0.1`

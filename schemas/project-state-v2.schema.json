@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lab.local/schemas/project-state-v2.schema.json",
+  "title": "project-state-v2",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project_id",
+    "name",
+    "status",
+    "updated_at",
+    "authority",
+    "summary",
+    "content_completeness",
+    "source_refs",
+    "governance_paths"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "string"
+    },
+    "authority": {
+      "type": "object"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "content_completeness": {
+      "type": "string"
+    },
+    "source_refs": {
+      "type": "array"
+    },
+    "governance_paths": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

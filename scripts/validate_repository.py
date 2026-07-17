@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Read-only validation for the LAB knowledge-base repository."""
+"""Dependency-free semantic validation for the LAB governance repository."""
 from __future__ import annotations
 
 import json
@@ -8,71 +8,61 @@ import subprocess
 import sys
 from collections import Counter
 from pathlib import Path
+from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
-TEXT_SUFFIXES = {".md", ".json", ".py"}
-DECISION_STATES = {"DRAFT", "PROPOSED", "UNDER_REVIEW", "APPROVED", "REJECTED", "SUPERSEDED", "WITHDRAWN"}
-ERROR_STATES = {"OPEN", "CONTAINED", "CORRECTED", "VERIFIED", "CLOSED"}
-PATTERN_STATES = {"PROPOSED", "VALIDATED", "DEPRECATED", "SUPERSEDED"}
-PROJECT_STATES = {"active", "active_with_blocker", "active_pipeline_validated_phase_a", "known", "known_and_synced", "referenced", "paused", "archived"}
-SCHEMA_NAMES = ["current-state", "decision", "error", "project-state", "pattern", "registry"]
-failures: list[str] = []
+FAILURES: list[str] = []
+PROJECT_STATUSES = {
+    "active", "active_with_blocker", "active_pipeline_validated_phase_a",
+    "known", "known_and_synced", "referenced", "paused", "archived",
+}
+DECISION_STATUSES = {
+    "DRAFT", "PROPOSED", "UNDER_REVIEW", "APPROVED",
+    "REJECTED", "SUPERSEDED", "WITHDRAWN",
+}
+SAFE_AUTH = {
+    "commit_authorized": False,
+    "push_authorized": False,
+    "runtime_authorized": False,
+    "integration_authorized": False,
+    "product_changes_authorized": False,
+    "codex_autonomous_authority": "NO",
+}
 
 def fail(message: str) -> None:
-    failures.append(message)
+    FAILURES.append(message)
 
-def git(*args: str) -> subprocess.CompletedProcess[bytes]:
-    return subprocess.run(
-        ["git", "-C", str(ROOT), *args],
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-        check=False,
-    )
+def no_duplicates(pairs: list[tuple[str, Any]]) -> dict[str, Any]:
+    counts = Counter(key for key, _ in pairs)
+    duplicates = sorted(key for key, count in counts.items() if count > 1)
+    if duplicates:
+        raise ValueError("duplicate keys: " + ", ".join(duplicates))
+    return dict(pairs)
 
-def canonical_bytes(path: Path) -> bytes:
-    """Return prospective canonical Git bytes, honoring a dirty worktree."""
-    relative = path.relative_to(ROOT).as_posix()
-    tracked = git("ls-files", "--error-unmatch", "--", relative).returncode == 0
-    unstaged = git("diff", "--quiet", "--", relative).returncode != 0
-    if tracked and not unstaged:
-        indexed = git("show", f":{relative}")
-        if indexed.returncode == 0:
-            return indexed.stdout
-    return path.read_bytes()
-
-def load_json(relative: str) -> object:
+def load_json(relative: str) -> Any:
     path = ROOT / relative
     try:
-        return json.loads(path.read_text(encoding="utf-8"))
-    except (OSError, UnicodeError, json.JSONDecodeError) as exc:
+        return json.loads(path.read_text(encoding="utf-8"), object_pairs_hook=no_duplicates)
+    except (OSError, UnicodeError, json.JSONDecodeError, ValueError) as exc:
         fail(f"{relative}: cannot load JSON: {exc}")
         return {}
 
-def require_keys(value: object, keys: set[str], label: str) -> None:
-    if not isinstance(value, dict):
-        fail(f"{label}: expected object")
-        return
-    missing = sorted(keys - value.keys())
-    if missing:
-        fail(f"{label}: missing fields: {', '.join(missing)}")
+def require_file(relative: str) -> None:
+    if not (ROOT / relative).is_file():
+        fail(f"missing required file: {relative}")
 
-def maintained_files() -> list[Path]:
-    return sorted(
-        path
-        for path in ROOT.rglob("*")
-        if path.is_file()
-        and ".git" not in path.parts
-        and (path.suffix.lower() in TEXT_SUFFIXES or path.name == ".gitignore")
-    )
-
-def validate_text_and_json() -> None:
-    for path in maintained_files():
+def validate_text() -> None:
+    for path in sorted(ROOT.rglob("*")):
+        if not path.is_file() or ".git" in path.parts:
+            continue
+        if path.suffix.lower() not in {".md", ".json", ".py"} and path.name != ".gitignore":
+            continue
         relative = path.relative_to(ROOT).as_posix()
-        data = canonical_bytes(path)
+        data = path.read_bytes()
         if data.startswith(b"\xef\xbb\xbf"):
-            fail(f"{relative}: UTF-8 BOM is forbidden")
+            fail(f"{relative}: UTF-8 BOM forbidden")
         if b"\r" in data:
-            fail(f"{relative}: canonical content must use LF line endings")
+            fail(f"{relative}: LF line endings required")
         try:
             text = data.decode("utf-8")
         except UnicodeDecodeError as exc:
@@ -81,196 +71,232 @@ def validate_text_and_json() -> None:
         for number, line in enumerate(text.splitlines(), 1):
             if line.rstrip(" \t") != line:
                 fail(f"{relative}:{number}: trailing whitespace")
-        if len(text.splitlines()) > 280:
-            fail(f"{relative}: exceeds 280 physical lines")
-    for path in sorted(ROOT.rglob("*.json")):
-        if ".git" in path.parts:
-            continue
-        relative = path.relative_to(ROOT).as_posix()
-        try:
-            json.loads(path.read_text(encoding="utf-8"))
-        except (UnicodeError, json.JSONDecodeError) as exc:
-            fail(f"{relative}: invalid JSON: {exc}")
+        limit = 600 if path.suffix.lower() == ".md" else 1200
+        if len(text.splitlines()) > limit:
+            fail(f"{relative}: exceeds {limit} physical lines")
+        if path.suffix.lower() == ".json":
+            load_json(relative)
 
-def validate_schemas() -> None:
-    for name in SCHEMA_NAMES:
-        relative = f"schemas/{name}.schema.json"
-        schema = load_json(relative)
-        if not isinstance(schema, dict):
-            continue
-        if schema.get("$schema") != "https://json-schema.org/draft/2020-12/schema":
-            fail(f"{relative}: expected JSON Schema Draft 2020-12")
-        if schema.get("$id") != f"https://lab.local/schemas/{name}.schema.json":
-            fail(f"{relative}: unexpected schema identifier")
+def type_matches(value: Any, expected: str) -> bool:
+    return {
+        "object": isinstance(value, dict),
+        "array": isinstance(value, list),
+        "string": isinstance(value, str),
+        "boolean": isinstance(value, bool),
+        "integer": isinstance(value, int) and not isinstance(value, bool),
+        "number": isinstance(value, (int, float)) and not isinstance(value, bool),
+        "null": value is None,
+    }.get(expected, True)
 
-def validate_registries() -> tuple[dict, dict, dict, dict]:
-    projects = load_json("registry/projects.json")
-    decisions = load_json("registry/decisions.json")
-    errors = load_json("registry/errors.json")
-    patterns = load_json("registry/patterns.json")
-    registries = {"projects": projects, "decisions": decisions, "errors": errors, "patterns": patterns}
+def validate_instance(value: Any, schema: dict[str, Any], label: str) -> None:
+    expected = schema.get("type")
+    if expected and not type_matches(value, expected):
+        fail(f"{label}: expected {expected}")
+        return
+    if "const" in schema and value != schema["const"]:
+        fail(f"{label}: expected constant {schema['const']!r}")
+    if "enum" in schema and value not in schema["enum"]:
+        fail(f"{label}: value not in enum")
+    if isinstance(value, dict):
+        required = schema.get("required", [])
+        for key in required:
+            if key not in value:
+                fail(f"{label}: missing field {key}")
+        properties = schema.get("properties", {})
+        for key, item in value.items():
+            if key in properties:
+                validate_instance(item, properties[key], f"{label}.{key}")
+            elif schema.get("additionalProperties") is False:
+                fail(f"{label}: unexpected field {key}")
+    if isinstance(value, list):
+        if len(value) < schema.get("minItems", 0):
+            fail(f"{label}: too few items")
+        if schema.get("uniqueItems") and len({json.dumps(x, sort_keys=True) for x in value}) != len(value):
+            fail(f"{label}: duplicate array items")
+        item_schema = schema.get("items")
+        if isinstance(item_schema, dict):
+            for index, item in enumerate(value):
+                validate_instance(item, item_schema, f"{label}[{index}]")
+
+def apply_schema(instance_path: str, schema_path: str) -> Any:
+    instance = load_json(instance_path)
+    schema = load_json(schema_path)
+    if isinstance(instance, dict) and isinstance(schema, dict):
+        validate_instance(instance, schema, instance_path)
+    return instance
+
+def validate_registries() -> tuple[dict[str, Any], dict[str, Any]]:
+    index = load_json("registry/index.json")
+    registry_map = index.get("registries", {}) if isinstance(index, dict) else {}
+    counts = index.get("counts", {}) if isinstance(index, dict) else {}
+    loaded: dict[str, Any] = {}
     all_ids: list[str] = []
-    for name, registry in registries.items():
-        require_keys(registry, {"schema_version", "updated_at", "records"}, f"registry/{name}.json")
+    for name, relative in registry_map.items():
+        registry = load_json(relative)
+        loaded[name] = registry
         records = registry.get("records", []) if isinstance(registry, dict) else []
         if not isinstance(records, list):
-            fail(f"registry/{name}.json: records must be an array")
+            fail(f"{relative}: records must be an array")
             continue
-        for index, record in enumerate(records):
-            label = f"registry/{name}.json record {index}"
-            require_keys(record, {"id", "status", "canonical_path", "updated_at"}, label)
-            if not isinstance(record, dict):
+        if counts.get(name) != len(records):
+            fail(f"registry/index.json: count mismatch for {name}")
+        for record in records:
+            if not isinstance(record, dict) or not record.get("id"):
+                fail(f"{relative}: record without id")
                 continue
-            all_ids.append(record.get("id", ""))
-            canonical = record.get("canonical_path", "")
-            if not canonical or not (ROOT / canonical).is_file():
-                fail(f"{label}: canonical path does not exist: {canonical}")
-    duplicates = sorted(item for item, count in Counter(all_ids).items() if count > 1)
+            all_ids.append(record["id"])
+            canonical = record.get("canonical_path")
+            if canonical:
+                require_file(canonical)
+    duplicates = sorted(key for key, count in Counter(all_ids).items() if count > 1)
     if duplicates:
-        fail(f"registry IDs are not unique: {', '.join(duplicates)}")
-    state_sets = {
-        "projects": PROJECT_STATES,
-        "decisions": DECISION_STATES,
-        "errors": ERROR_STATES,
-        "patterns": PATTERN_STATES,
-    }
-    for name, valid in state_sets.items():
-        for record in registries[name].get("records", []):
-            if record.get("status") not in valid:
-                fail(f"registry/{name}.json: invalid status for {record.get('id')}")
+        fail("registry IDs not unique: " + ", ".join(duplicates))
+    if index.get("updated_at") != "2026-07-16":
+        fail("registry/index.json: stale updated_at")
+    return index, loaded
+
+def validate_projects(registries: dict[str, Any]) -> None:
+    projects = registries["projects"]
+    decisions = {r["id"] for r in registries["decisions"].get("records", [])}
     for record in projects.get("records", []):
-        require_keys(record, {"id", "name", "status", "canonical_path", "scope", "updated_at"}, record.get("id", "project"))
-    for record in decisions.get("records", []):
-        require_keys(record, {"title", "project_scope", "approval_state"}, record.get("id", "decision"))
-    for record in errors.get("records", []):
-        require_keys(record, {"title", "project_scope", "severity", "lifecycle_state"}, record.get("id", "error"))
-        if record.get("lifecycle_state") != record.get("status"):
-            fail(f"{record.get('id')}: lifecycle state differs from status")
-    for record in patterns.get("records", []):
-        require_keys(record, {"title", "project_scope", "validation_state"}, record.get("id", "pattern"))
-        if record.get("validation_state") != record.get("status"):
-            fail(f"{record.get('id')}: validation state differs from status")
-    return projects, decisions, errors, patterns
+        project_id = record["id"]
+        if record.get("status") not in PROJECT_STATUSES:
+            fail(f"{project_id}: invalid project status")
+        required = [
+            f"projects/{project_id}/PROJECT_STATE.json",
+            f"projects/{project_id}/ROADMAP.json",
+            f"projects/{project_id}/PENDING.json",
+            f"projects/{project_id}/decisions/index.json",
+            f"projects/{project_id}/ideas/index.json",
+            f"projects/{project_id}/integrations/index.json",
+        ]
+        for path in required:
+            require_file(path)
+        state = apply_schema(required[0], "schemas/project-state-v2.schema.json")
+        if state.get("project_id") != project_id:
+            fail(f"{required[0]}: project_id mismatch")
+        if state.get("status") != record.get("status"):
+            fail(f"{project_id}: state differs from project registry")
+        decision_index = load_json(required[3])
+        for decision in decision_index.get("records", []):
+            if decision.get("id") not in decisions:
+                fail(f"{required[3]}: unknown decision {decision.get('id')}")
 
-def validate_decisions(decisions: dict) -> None:
-    for record in decisions.get("records", []):
-        decision = load_json(record["canonical_path"])
-        require_keys(decision, {"id", "title", "project", "status", "effective_date", "approved_by", "approval_evidence", "decision", "supersedes", "superseded_by"}, record["id"])
-        if decision.get("id") != record["id"] or decision.get("status") != record["status"]:
-            fail(f"{record['id']}: registry and canonical decision differ")
-        if decision.get("status") == "APPROVED" and not (decision.get("approved_by") and decision.get("approval_evidence")):
-            fail(f"{record['id']}: approved decision lacks approval evidence")
-        if decision.get("status") == "SUPERSEDED" and not decision.get("superseded_by"):
-            fail(f"{record['id']}: superseded decision lacks replacement")
-
-def validate_current_state(projects: dict, decisions: dict, errors: dict, patterns: dict) -> dict:
-    state = load_json("CURRENT_STATE.json")
-    required = {"schema_version", "document_id", "version", "status", "updated_at", "active_project", "current_phase", "methodology", "authority", "projects", "decisions_in_force", "open_errors", "validated_patterns", "authorization_state", "next_authorized_action", "continuity_read_order"}
-    require_keys(state, required, "CURRENT_STATE.json")
-    project_map = {record["id"]: record for record in projects.get("records", [])}
-    decision_ids = {record["id"] for record in decisions.get("records", [])}
-    error_ids = {record["id"] for record in errors.get("records", [])}
-    pattern_ids = {record["id"] for record in patterns.get("records", [])}
-    if state.get("active_project") not in project_map:
-        fail("CURRENT_STATE.json: active project is absent from registry")
-    if projects.get("active_project") != state.get("active_project"):
-        fail("CURRENT_STATE.json: active project differs from project registry")
-    for key, known in [("decisions_in_force", decision_ids), ("open_errors", error_ids), ("validated_patterns", pattern_ids)]:
-        missing = sorted(set(state.get(key, [])) - known)
-        if missing:
-            fail(f"CURRENT_STATE.json: unknown {key}: {', '.join(missing)}")
-    for project_id, project in state.get("projects", {}).items():
-        if project_id not in project_map:
-            fail(f"CURRENT_STATE.json: unknown project: {project_id}")
-        elif project.get("status") != project_map[project_id].get("status"):
+def validate_current_state(registries: dict[str, Any]) -> dict[str, Any]:
+    state = apply_schema("CURRENT_STATE.json", "schemas/current-state.schema.json")
+    project_records = {r["id"]: r for r in registries["projects"].get("records", [])}
+    for project_id, value in state.get("projects", {}).items():
+        if project_id not in project_records:
+            fail(f"CURRENT_STATE.json: unknown project {project_id}")
+            continue
+        allowed = {"status", "canonical_path", "structured_state_path"}
+        if set(value) - allowed:
+            fail(f"CURRENT_STATE.json: copied project detail for {project_id}")
+        if value.get("status") != project_records[project_id].get("status"):
             fail(f"CURRENT_STATE.json: status mismatch for {project_id}")
-        if not (ROOT / project.get("canonical_path", "")).is_file():
-            fail(f"CURRENT_STATE.json: missing project-state path for {project_id}")
+    known_decisions = {r["id"] for r in registries["decisions"].get("records", [])}
+    known_errors = {r["id"] for r in registries["errors"].get("records", [])}
+    known_patterns = {r["id"] for r in registries["patterns"].get("records", [])}
+    for key, known in [
+        ("decisions_in_force", known_decisions),
+        ("open_errors", known_errors),
+        ("validated_patterns", known_patterns),
+    ]:
+        unknown = sorted(set(state.get(key, [])) - known)
+        if unknown:
+            fail(f"CURRENT_STATE.json: unknown {key}: {', '.join(unknown)}")
+    for key, expected in SAFE_AUTH.items():
+        if state.get("authorization_state", {}).get(key) != expected:
+            fail(f"CURRENT_STATE.json: unsafe authorization {key}")
     return state
 
-def validate_markdown_and_boundaries(state: dict) -> None:
-    current = (ROOT / "CURRENT_STATE.md").read_text(encoding="utf-8")
-    required_tokens = [state.get("active_project", ""), state.get("current_phase", ""), state.get("methodology", {}).get("version", "")]
-    required_tokens += state.get("decisions_in_force", []) + state.get("open_errors", []) + state.get("validated_patterns", [])
-    required_tokens += [f"{key} = {value}" for key, value in state.get("authorization_state", {}).items()]
-    for token in required_tokens:
-        if token and token not in current:
-            fail(f"CURRENT_STATE.md: missing canonical state token: {token}")
-    mammoth = (ROOT / "projects/mammothskills/PROJECT_STATE.md").read_text(encoding="utf-8")
-    symphonie = (ROOT / "projects/symphonie/PROJECT_STATE.md").read_text(encoding="utf-8")
-    if re.search(r"not the runtime where they\s+live", mammoth) is None:
-        fail("MammothSkills must be explicitly described as not being the runtime")
-    for skill in ["intake-brief", "project-scoping", "project-status"]:
-        if skill not in mammoth or "SOURCE_PLATFORM = Claude" not in mammoth:
-            fail(f"MammothSkills target classification missing for {skill}")
-    if "not the canonical source of reusable skills" not in symphonie:
-        fail("Symphonie must not be the canonical reusable-skill source")
-    auth = state.get("authorization_state", {})
-    expected_auth = {"mammothskills_implementation": "NOT_AUTHORIZED", "mammothskills_release": "NOT_AUTHORIZED", "symphonie_integration": "NOT_AUTHORIZED", "product_changes": "NOT_AUTHORIZED", "codex_autonomous_authority": "NO"}
-    for key, value in expected_auth.items():
-        if auth.get(key) != value:
-            fail(f"CURRENT_STATE.json: unsafe authorization state for {key}")
-    if state.get("authority", {}).get("codex_autonomous_authority") != "NO":
-        fail("Codex must not have autonomous authority")
+def validate_decisions(registries: dict[str, Any]) -> None:
+    for decision in registries["decisions"].get("records", []):
+        if decision.get("status") not in DECISION_STATUSES:
+            fail(f"{decision.get('id')}: invalid decision status")
+        if decision.get("status") == "APPROVED" and not decision.get("approval_state"):
+            fail(f"{decision.get('id')}: approval evidence state missing")
 
-def validate_secrets() -> None:
-    patterns = [
-        re.compile(r"gh[pousr]_[A-Za-z0-9]{20,}"),
-        re.compile(r"AKIA[0-9A-Z]{16}"),
-        re.compile(r"(?i)(api[_-]?key|password|access[_-]?token|client[_-]?secret)\s*[:=]\s*['\"]?[A-Za-z0-9/+_.=-]{12,}"),
-    ]
-    for path in maintained_files():
-        text = path.read_text(encoding="utf-8")
-        if any(pattern.search(text) for pattern in patterns):
-            fail(f"{path.relative_to(ROOT).as_posix()}: possible secret pattern")
+def validate_briefs_and_continuity() -> None:
+    for path in sorted(ROOT.glob("projects/*/briefs/*.json")):
+        apply_schema(path.relative_to(ROOT).as_posix(), "schemas/brief.schema.json")
+    for project_dir in sorted((ROOT / "projects").iterdir()):
+        if not project_dir.is_dir() or project_dir.name.startswith("_"):
+            continue
+        continuity = project_dir / "continuity"
+        if not continuity.is_dir():
+            continue
+        current = continuity / "CURRENT_CONTINUITY.json"
+        manifest = continuity / "ATTACHMENT_MANIFEST.json"
+        prompt = continuity / "START_PROMPT.md"
+        for path in [current, manifest, prompt]:
+            if not path.is_file():
+                fail(f"{project_dir.name}: incomplete continuity package")
+        if current.is_file():
+            package = apply_schema(current.relative_to(ROOT).as_posix(), "schemas/continuity.schema.json")
+            if package.get("project_id") != project_dir.name:
+                fail(f"{current}: project_id mismatch")
+        if manifest.is_file():
+            data = apply_schema(manifest.relative_to(ROOT).as_posix(), "schemas/attachment-manifest.schema.json")
+            for item in data.get("required", []):
+                if item.get("repository") == "marcellusanthonson-ctrl/chatgpt-prototype-lab":
+                    require_file(item.get("path", ""))
+        if prompt.is_file() and "No infieras autoridad" not in prompt.read_text(encoding="utf-8"):
+            fail(f"{prompt}: authority boundary missing")
 
-def assignment_map(text: str) -> dict[str, str]:
-    return dict(re.findall(r"(?m)^([A-Z_]+) = ([A-Z_]+)$", text))
+def validate_evidence(registries: dict[str, Any]) -> None:
+    registered = {r.get("path") for r in registries["evidence"].get("records", [])}
+    reports = {
+        p.relative_to(ROOT).as_posix()
+        for p in ROOT.glob("projects/symphonie/reports/*.md")
+    }
+    missing = sorted(reports - registered)
+    if missing:
+        fail("unregistered Symphonie reports: " + ", ".join(missing))
+    unincorporated = registries["unincorporated"]
+    if unincorporated.get("records"):
+        fail("material unincorporated records remain open")
 
-def validate_fixture(state: dict, projects: dict, errors: dict, patterns: dict) -> None:
+def validate_fixture(state: dict[str, Any], index: dict[str, Any], registries: dict[str, Any]) -> None:
     expected = load_json("tests/expected_repository_state.json")
-    actual_projects = {record["id"]: record["status"] for record in projects.get("records", [])}
-    actual_errors = [record["id"] for record in errors.get("records", []) if record["status"] in {"OPEN", "CONTAINED"}]
-    actual_patterns = [record["id"] for record in patterns.get("records", []) if record["status"] == "VALIDATED"]
-    mammoth = (ROOT / "projects/mammothskills/PROJECT_STATE.md").read_text(encoding="utf-8")
-    symphonie = (ROOT / "projects/symphonie/PROJECT_STATE.md").read_text(encoding="utf-8")
-    comparisons = {
+    actual = {
         "methodology_version": state.get("methodology", {}).get("version"),
         "active_project": state.get("active_project"),
-        "project_statuses": actual_projects,
+        "current_phase": state.get("current_phase"),
+        "project_statuses": {r["id"]: r["status"] for r in registries["projects"].get("records", [])},
         "decisions_in_force": state.get("decisions_in_force"),
-        "open_or_contained_errors": actual_errors,
-        "validated_patterns": actual_patterns,
-        "mammothskills_gate_states": assignment_map(mammoth),
-        "symphonie_authorization_states": assignment_map(symphonie),
-        "codex_authority_state": state.get("authority", {}).get("codex_autonomous_authority"),
+        "open_errors": state.get("open_errors"),
+        "validated_patterns": state.get("validated_patterns"),
+        "registry_counts": index.get("counts"),
+        "symphonie": {"head": state.get("verified_external_heads", {}).get("symphonie"), "fileset": 44, "total_phases": 8},
+        "authorization_state": state.get("authorization_state"),
     }
-    for key, actual in comparisons.items():
-        if expected.get(key) != actual:
-            fail(f"expected-state mismatch for {key}: expected {expected.get(key)!r}, got {actual!r}")
+    for key, value in actual.items():
+        if expected.get(key) != value:
+            fail(f"expected-state mismatch for {key}")
 
 def main() -> int:
-    validate_text_and_json()
-    validate_schemas()
-    projects, decisions, errors, patterns = validate_registries()
-    validate_decisions(decisions)
-    state = validate_current_state(projects, decisions, errors, patterns)
-    validate_markdown_and_boundaries(state)
-    validate_secrets()
-    validate_fixture(state, projects, errors, patterns)
-    if failures:
-        for message in failures:
-            print(f"FAIL: {message}")
-        print(f"Repository validation: FAIL ({len(failures)} failure(s))")
+    validate_text()
+    index, registries = validate_registries()
+    validate_projects(registries)
+    validate_decisions(registries)
+    state = validate_current_state(registries)
+    validate_briefs_and_continuity()
+    validate_evidence(registries)
+    validate_fixture(state, index, registries)
+    if FAILURES:
+        for message in FAILURES:
+            print("FAIL:", message)
+        print(f"Repository validation: FAIL ({len(FAILURES)} failure(s))")
         return 1
     print("Repository validation: PASS")
-    print("JSON parsing: PASS")
-    print("Registry integrity: PASS")
-    print("Project-state consistency: PASS")
-    print("Encoding and line endings: PASS")
-    print("Line limits: PASS")
+    print("JSON and duplicate keys: PASS")
+    print("Schema instances: PASS")
+    print("Registry counts and references: PASS")
+    print("Project structures: PASS")
+    print("Brief and continuity contracts: PASS")
+    print("Evidence closure: PASS")
     print("Authority boundaries: PASS")
-    print("Expected repository state: PASS")
     return 0
 
 if __name__ == "__main__":

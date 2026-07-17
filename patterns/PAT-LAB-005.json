@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "id": "PAT-LAB-005",
+  "title": "One canonical owner and references instead of copied state",
+  "project_scope": [
+    "lab",
+    "mammothskills",
+    "symphonie"
+  ],
+  "status": "VALIDATED",
+  "validation_state": "VALIDATED",
+  "canonical_path": "patterns/PAT-LAB-005.json",
+  "updated_at": "2026-07-16",
+  "rule": "Store state at its owner and reference it elsewhere",
+  "approved_by": "Jonathan Martínez",
+  "decision_ref": "DEC-LAB-013"
+}

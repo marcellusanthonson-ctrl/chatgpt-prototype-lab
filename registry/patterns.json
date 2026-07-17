@@ -1,13 +1,17 @@
 {
-  "schema_version": "1.0.0",
-  "updated_at": "2026-06-28",
+  "schema_version": "1.1.0",
+  "updated_at": "2026-07-16",
   "records": [
     {
       "id": "PAT-LAB-001",
       "title": "Record events, not full transcripts",
       "status": "VALIDATED",
       "validation_state": "VALIDATED",
-      "project_scope": ["lab", "mammothskills", "symphonie"],
+      "project_scope": [
+        "lab",
+        "mammothskills",
+        "symphonie"
+      ],
       "canonical_path": "patterns/PAT-LAB-001.md",
       "updated_at": "2026-06-28"
     },
@@ -16,7 +20,11 @@
       "title": "Separate observation, hypothesis, validation, approval, and resolution",
       "status": "VALIDATED",
       "validation_state": "VALIDATED",
-      "project_scope": ["lab", "mammothskills", "symphonie"],
+      "project_scope": [
+        "lab",
+        "mammothskills",
+        "symphonie"
+      ],
       "canonical_path": "patterns/PAT-LAB-002.md",
       "updated_at": "2026-06-28"
     },
@@ -25,7 +33,11 @@
       "title": "Reconstruct context using a fixed reading order",
       "status": "VALIDATED",
       "validation_state": "VALIDATED",
-      "project_scope": ["lab", "mammothskills", "symphonie"],
+      "project_scope": [
+        "lab",
+        "mammothskills",
+        "symphonie"
+      ],
       "canonical_path": "patterns/PAT-LAB-003.md",
       "updated_at": "2026-06-28"
     },
@@ -34,7 +46,11 @@
       "title": "Bounded evidence-first audit",
       "status": "VALIDATED",
       "validation_state": "VALIDATED",
-      "project_scope": ["lab", "mammothskills", "symphonie"],
+      "project_scope": [
+        "lab",
+        "mammothskills",
+        "symphonie"
+      ],
       "canonical_path": "patterns/PAT-LAB-004.md",
       "updated_at": "2026-06-28"
     },
@@ -43,9 +59,43 @@
       "title": "Codex executes without autonomous authority",
       "status": "VALIDATED",
       "validation_state": "VALIDATED",
-      "project_scope": ["lab", "mammothskills", "symphonie"],
+      "project_scope": [
+        "lab",
+        "mammothskills",
+        "symphonie"
+      ],
       "canonical_path": "patterns/PAT-MA-001.md",
       "updated_at": "2026-06-28"
+    },
+    {
+      "id": "PAT-LAB-005",
+      "title": "One canonical owner and references instead of copied state",
+      "project_scope": [
+        "lab",
+        "mammothskills",
+        "symphonie"
+      ],
+      "status": "VALIDATED",
+      "validation_state": "VALIDATED",
+      "canonical_path": "patterns/PAT-LAB-005.json",
+      "updated_at": "2026-07-16"
+    },
+    {
+      "id": "PAT-LAB-006",
+      "title": "JSON-first bounded briefs and continuity packages",
+      "project_scope": [
+        "lab",
+        "mammothskills",
+        "symphonie",
+        "carolina-klinik",
+        "clinical-os",
+        "aster-flyt",
+        "waypoint"
+      ],
+      "status": "VALIDATED",
+      "validation_state": "VALIDATED",
+      "canonical_path": "patterns/PAT-LAB-006.json",
+      "updated_at": "2026-07-16"
     }
   ]
 }

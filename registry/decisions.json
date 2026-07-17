@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "updated_at": "2026-07-16",
   "records": [
     {
@@ -7,7 +7,9 @@
       "title": "Approve the LAB repository structure",
       "status": "APPROVED",
       "approval_state": "APPROVED",
-      "project_scope": ["lab"],
+      "project_scope": [
+        "lab"
+      ],
       "canonical_path": "decisions/DEC-LAB-001.json",
       "updated_at": "2026-06-28"
     },
@@ -16,7 +18,9 @@
       "title": "Use GitHub as the external laboratory memory",
       "status": "APPROVED",
       "approval_state": "APPROVED",
-      "project_scope": ["lab"],
+      "project_scope": [
+        "lab"
+      ],
       "canonical_path": "decisions/DEC-LAB-002.json",
       "updated_at": "2026-06-28"
     },
@@ -25,7 +29,9 @@
       "title": "Adopt the fixed continuity read protocol",
       "status": "APPROVED",
       "approval_state": "APPROVED",
-      "project_scope": ["lab"],
+      "project_scope": [
+        "lab"
+      ],
       "canonical_path": "decisions/DEC-LAB-003.json",
       "updated_at": "2026-06-28"
     },
@@ -34,7 +40,11 @@
       "title": "Git as the structured decision and audit memory",
       "status": "APPROVED",
       "approval_state": "APPROVED",
-      "project_scope": ["lab", "mammothskills", "symphonie"],
+      "project_scope": [
+        "lab",
+        "mammothskills",
+        "symphonie"
+      ],
       "canonical_path": "decisions/DEC-LAB-004.json",
       "updated_at": "2026-06-28"
     },
@@ -43,7 +53,11 @@
       "title": "Structural producer-consumer relationships between independent projects",
       "status": "APPROVED",
       "approval_state": "APPROVED",
-      "project_scope": ["lab", "mammothskills", "symphonie"],
+      "project_scope": [
+        "lab",
+        "mammothskills",
+        "symphonie"
+      ],
       "canonical_path": "decisions/DEC-LAB-005.json",
       "updated_at": "2026-07-11"
     },
@@ -52,7 +66,11 @@
       "title": "Close the initial Symphonie Codex skill cycle before canonical migration to MammothSkills",
       "status": "APPROVED",
       "approval_state": "APPROVED",
-      "project_scope": ["lab", "mammothskills", "symphonie"],
+      "project_scope": [
+        "lab",
+        "mammothskills",
+        "symphonie"
+      ],
       "canonical_path": "decisions/DEC-LAB-006.json",
       "updated_at": "2026-07-11"
     },
@@ -61,7 +79,10 @@
       "title": "Register Waypoint as a referenced app concept",
       "status": "APPROVED",
       "approval_state": "APPROVED",
-      "project_scope": ["lab", "waypoint"],
+      "project_scope": [
+        "lab",
+        "waypoint"
+      ],
       "canonical_path": "decisions/DEC-LAB-007.json",
       "updated_at": "2026-07-13"
     },
@@ -70,7 +91,9 @@
       "title": "Canonicalize the continuity read order with structured state first",
       "status": "APPROVED",
       "approval_state": "APPROVED",
-      "project_scope": ["lab"],
+      "project_scope": [
+        "lab"
+      ],
       "canonical_path": "decisions/DEC-LAB-008.json",
       "updated_at": "2026-07-13"
     },
@@ -79,7 +102,10 @@
       "title": "Approve Symphonie UX/UI Architect Alpha.6 with recorded historical evidence limitation",
       "status": "APPROVED",
       "approval_state": "APPROVED_WITH_RECORDED_EVIDENCE_LIMITATION",
-      "project_scope": ["lab", "symphonie"],
+      "project_scope": [
+        "lab",
+        "symphonie"
+      ],
       "canonical_path": "decisions/DEC-LAB-009.json",
       "updated_at": "2026-07-14"
     },
@@ -88,16 +114,22 @@
       "title": "Create a dedicated canonical repository for the Symphonie workflow",
       "status": "APPROVED",
       "approval_state": "APPROVED",
-      "project_scope": ["lab", "symphonie"],
+      "project_scope": [
+        "lab",
+        "symphonie"
+      ],
       "canonical_path": "decisions/DEC-LAB-010.json",
       "updated_at": "2026-07-16"
     },
     {
       "id": "DEC-LAB-011",
       "title": "Approve the Symphonie Phase 0 model as an experimental baseline v0.1",
-      "status": "APPROVED_EXPERIMENTAL_BASELINE",
+      "status": "APPROVED",
       "approval_state": "APPROVED_EXPERIMENTAL_BASELINE",
-      "project_scope": ["lab", "symphonie"],
+      "project_scope": [
+        "lab",
+        "symphonie"
+      ],
       "canonical_path": "decisions/DEC-LAB-011.json",
       "updated_at": "2026-07-16"
     },
@@ -106,9 +138,42 @@
       "title": "Consolidar el repositorio Symphonie, su idioma canónico y la arquitectura documental de memoria gobernada",
       "status": "APPROVED",
       "approval_state": "APPROVED",
-      "project_scope": ["lab", "symphonie"],
+      "project_scope": [
+        "lab",
+        "symphonie"
+      ],
       "canonical_path": "decisions/DEC-LAB-012.json",
       "updated_at": "2026-07-16"
+    },
+    {
+      "id": "DEC-LAB-013",
+      "title": "Endurecer el gobierno del LAB con contrato v2 y continuidad estructurada",
+      "project_scope": [
+        "lab",
+        "symphonie",
+        "mammothskills",
+        "carolina-klinik",
+        "clinical-os",
+        "aster-flyt",
+        "waypoint"
+      ],
+      "status": "APPROVED",
+      "approval_state": "APPROVED",
+      "canonical_path": "decisions/DEC-LAB-013.json",
+      "updated_at": "2026-07-16",
+      "approved_by": "Jonathan Martínez",
+      "consequences": [
+        "CONTRACT_V2",
+        "PROJECT_LOCAL_REGISTRIES",
+        "JSON_BRIEFS",
+        "STANDARD_CONTINUITY",
+        "SEMANTIC_VALIDATION"
+      ],
+      "non_authorizations": [
+        "RUNTIME",
+        "INTEGRATION",
+        "PRODUCT_CHANGE"
+      ]
     }
   ]
 }
