@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "document_id": "lab.current-state",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "status": "ACTIVE",
   "updated_at": "2026-07-16",
   "active_project": "lab",
@@ -57,7 +57,7 @@
         "repository_creation": "COMPLETED_VERIFIED_AUTHORIZATION_CONSUMED",
         "bootstrap": "COMPLETED_VERIFIED_AUTHORIZATION_CONSUMED",
         "repository_size": null,
-        "head": "8692a539bc339ea7b4258d78b3ce9f5f5635f407",
+        "head": "30dfe887b7fa60be367cb73826c5560ad26f9b92",
         "canonical_language": "ESPAÑOL",
         "runtime": "NOT_AUTHORIZED",
         "integration": "NOT_AUTHORIZED",
@@ -103,7 +103,7 @@
         "repository_alignment": {
           "status": "ALIGNED_TO_DEC_LAB_011",
           "repository": "marcellusanthonson-ctrl/symphonie",
-          "head": "8692a539bc339ea7b4258d78b3ce9f5f5635f407",
+          "head": "30dfe887b7fa60be367cb73826c5560ad26f9b92",
           "order": "SYM-DOCUMENTARY-STATE-AND-PHASE0-RECONCILIATION-006"
         }
       },
@@ -238,7 +238,7 @@
       "eight_phase_documentary_baseline": {
         "status": "CANONICALIZED_VERIFIED",
         "repository": "marcellusanthonson-ctrl/symphonie",
-        "head": "8692a539bc339ea7b4258d78b3ce9f5f5635f407",
+        "head": "30dfe887b7fa60be367cb73826c5560ad26f9b92",
         "fileset": 40,
         "canonical_map": "fases/MAPA_CANONICO_DE_FASES.md",
         "gate_registry": "registro/gates.json",
@@ -299,7 +299,7 @@
       "governance_source": "chatgpt-prototype-lab",
       "workflow_repository": "marcellusanthonson-ctrl/symphonie",
       "historical_evidence_repository": "marcellusanthonson-ctrl/symphonie-codex-lab",
-      "canonical_head": "8692a539bc339ea7b4258d78b3ce9f5f5635f407",
+      "canonical_head": "30dfe887b7fa60be367cb73826c5560ad26f9b92",
       "fileset": 40
     }
   },
@@ -355,7 +355,8 @@
     "symphonie_documentary_repair_005": "CONSUMED_COMPLETED_VERIFIED",
     "symphonie_phase0_reconciliation_006": "CONSUMED_COMPLETED_VERIFIED",
     "symphonie_eight_phase_canonicalization_007": "CONSUMED_COMPLETED_VERIFIED",
-    "lab_symphonie_state_reconciliation_008": "CONSUMED_COMPLETED_VERIFIED"
+    "lab_symphonie_state_reconciliation_008": "CONSUMED_COMPLETED_VERIFIED",
+    "symphonie_final_head_sync_010": "CONSUMED_COMPLETED_VERIFIED"
   },
   "next_authorized_action": "NONE_UNTIL_NEW_EXPLICIT_APPROVAL",
   "next_recommended_transition": "REVIEW_LAB_REPOSITORY_STRUCTURE_THEN_PRIORITIZE_UNTESTED_PHASE_CONTRACT_SCHEMAS",
