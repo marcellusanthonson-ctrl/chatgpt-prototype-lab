@@ -23,6 +23,10 @@ El LAB no almacena su propio HEAD como estado vigente, porque cada commit volver
 
 El HEAD vigente se resuelve desde main al iniciar cada conversación.
 
+## Fuentes de ChatGPT
+
+El punto de entrada canónico es `project-sources/chatgpt/START_HERE.md`. Las siete fuentes operativas se versionan en el LAB; las copias adjuntas no son fuente de verdad y solo pueden señalar este entrypoint.
+
 ## Test de instrucciones
 
 LAB-CHATGPT-INSTRUCTIONS-TEST-001 se ejecutó con Terra 5.6 y razonamiento ligero.

@@ -22,7 +22,8 @@
     "decisions": "projects/lab/decisions/index.json",
     "ideas": "projects/lab/ideas/index.json",
     "integrations": "projects/lab/integrations/index.json",
-    "reassessments": "projects/lab/reassessments/index.json"
+    "reassessments": "projects/lab/reassessments/index.json",
+    "chatgpt_project_sources": "project-sources/chatgpt/START_HERE.md"
   },
   "metadata": {
     "last_instruction_test": {
@@ -34,9 +35,14 @@
         "CLAIM_1_SHOULD_BE_REVERSED_NOT_MODIFIED",
         "SELF_REFERENTIAL_LAB_HEAD_DETECTED"
       ]
+    },
+    "chatgpt_source_architecture": {
+      "status": "CANONICAL_IN_REPOSITORY",
+      "entrypoint": "project-sources/chatgpt/START_HERE.md",
+      "attached_files_role": "BOOTSTRAP_POINTER_ONLY"
     }
   },
   "head_policy": "VERIFY_LIVE_AT_USE",
-  "verified_parent_head": "1111756d2e8a2be5d9bdc554d05906776cdc256b",
+  "verified_parent_head": "985f5faacda3c137c625a121902511ff8703c360",
   "self_head_is_canonical_state": false
 }

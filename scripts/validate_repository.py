@@ -77,6 +77,36 @@ def validate_text() -> None:
         if path.suffix.lower() == ".json":
             load_json(relative)
 
+def validate_chatgpt_project_sources() -> None:
+    base = "project-sources/chatgpt"
+    required = [
+        "START_HERE.md",
+        "01_SOURCE_MANIFEST.md",
+        "02_GOVERNANCE_AUTHORITY_AND_TRUTH.md",
+        "03_STARTUP_AND_CANONICAL_SOURCES.md",
+        "04_EXECUTION_EFFICIENCY_AND_BRIEFS.md",
+        "05_EPISTEMIC_INDEPENDENCE.md",
+        "06_CONTINUITY_PROTOCOL.md",
+        "07_ERRORS_AND_RESPONSE_CONTRACT.md",
+        "CHATGPT_PROJECT_INTRODUCTION.txt",
+    ]
+    for name in required:
+        require_file(f"{base}/{name}")
+    start = ROOT / base / "START_HERE.md"
+    manifest = ROOT / base / "01_SOURCE_MANIFEST.md"
+    independence = ROOT / base / "05_EPISTEMIC_INDEPENDENCE.md"
+    errors = ROOT / base / "07_ERRORS_AND_RESPONSE_CONTRACT.md"
+    if start.is_file() and "VERIFY_LIVE_AT_USE" not in start.read_text(encoding="utf-8"):
+        fail(f"{base}/START_HERE.md: live HEAD policy missing")
+    if manifest.is_file() and "archivos adjuntos" not in manifest.read_text(encoding="utf-8"):
+        fail(f"{base}/01_SOURCE_MANIFEST.md: attachment replacement missing")
+    if independence.is_file():
+        text = independence.read_text(encoding="utf-8")
+        if "núcleo exacto" not in text or "REVERSED" not in text:
+            fail(f"{base}/05_EPISTEMIC_INDEPENDENCE.md: exact claim classification missing")
+    if errors.is_file() and "HEAD propio" not in errors.read_text(encoding="utf-8"):
+        fail(f"{base}/07_ERRORS_AND_RESPONSE_CONTRACT.md: self-HEAD error missing")
+
 def type_matches(value: Any, expected: str) -> bool:
     return {
         "object": isinstance(value, dict),
@@ -312,6 +342,7 @@ def validate_fixture(state: dict[str, Any], index: dict[str, Any], registries: d
 
 def main() -> int:
     validate_text()
+    validate_chatgpt_project_sources()
     index, registries = validate_registries()
     validate_projects(registries)
     validate_decisions(registries)

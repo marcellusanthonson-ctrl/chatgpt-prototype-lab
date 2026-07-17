@@ -14,7 +14,8 @@
     "unincorporated": 0,
     "proposals": 2,
     "sessions": 1,
-    "reassessments": 1
+    "reassessments": 1,
+    "source_packages": 1
   },
   "registries": {
     "projects": "registry/projects.json",
@@ -29,7 +30,8 @@
     "unincorporated": "registry/unincorporated.json",
     "proposals": "registry/proposals.json",
     "sessions": "registry/sessions.json",
-    "reassessments": "registry/reassessments.json"
+    "reassessments": "registry/reassessments.json",
+    "source_packages": "registry/source-packages.json"
   },
   "latest": {
     "decision": "DEC-LAB-015",
@@ -38,6 +40,7 @@
     "authorization": "AUTH-LAB-RISK-METHOD-015",
     "proposal": "PROP-LAB-002",
     "session": "SES-2026-06-28-001",
-    "reassessment": "REA-LAB-001"
+    "reassessment": "REA-LAB-001",
+    "source_package": "SRC-PKG-CHATGPT-001"
   }
 }

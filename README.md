@@ -12,6 +12,8 @@ Leer:
 4. registry/index.json.
 5. PROJECT_STATE.json del proyecto activo.
 
+Para el proyecto ChatGPT, comenzar en `project-sources/chatgpt/START_HERE.md`. La introducción configurable solo debe apuntar al repositorio, rama y entrypoint.
+
 ## Modelo v2
 
 Cada proyecto mantiene estado, roadmap, pendientes y registros dedicados de decisiones, ideas e integraciones. Los proyectos activos pueden agregar experimentos, autorizaciones, errores, evidencia, briefs y continuidad.

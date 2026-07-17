@@ -2,8 +2,8 @@
 
 La fuente estructurada es CURRENT_STATE.json.
 
-- Versión: 2.2.1.
-- Fase: LAB_SELF_HEAD_POLICY_CORRECTED.
+- Versión: 2.3.0.
+- Fase: CHATGPT_PROJECT_SOURCES_CANONICALIZED.
 - Aprobador: Jonathan Martínez.
 - Runtime, integración y cambios de producto: no autorizados.
 - HEAD propio: verificar main en vivo; no almacenarlo como estado vigente.
@@ -16,6 +16,10 @@ ERR-LAB-006 registra dos findings del test con Terra 5.6 y razonamiento ligero:
 - un claim cuyo núcleo es falso debe clasificarse REVERSED, no MODIFIED.
 
 PROJECT_STATE.json usa VERIFY_LIVE_AT_USE y conserva verified_parent_head como evidencia de la baseline anterior.
+
+## Fuentes del proyecto ChatGPT
+
+Las reglas operativas del proyecto viven en `project-sources/chatgpt/` y se inician desde `START_HERE.md`. Los archivos adjuntos dejan de ser fuentes mantenibles y solo pueden usarse como punteros de bootstrap.
 
 ## Siguiente transición
 

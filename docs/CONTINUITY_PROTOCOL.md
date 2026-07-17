@@ -30,3 +30,7 @@ Todo elemento material debe incluir source_refs. Las transcripciones completas s
 ## Primera respuesta del nuevo modelo
 
 Debe presentar contexto reconstruido, HEAD verificados, estado, decisiones, autorizaciones, pendientes, divergencias y una siguiente acción. No debe ejecutar hasta identificar una autorización vigente.
+
+## Proyecto ChatGPT
+
+La introducción del proyecto ChatGPT referencia `project-sources/chatgpt/START_HERE.md`. Las reglas operativas se leen desde el repositorio; no se duplican como archivos adjuntos. Cualquier adjunto de bootstrap solo puede declarar repositorio, rama y entrypoint.

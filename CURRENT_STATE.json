@@ -1,11 +1,11 @@
 {
-  "schema_version": "2.2.1",
+  "schema_version": "2.3.0",
   "document_id": "lab.current-state",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "status": "GOVERNANCE_V2_CANONICAL_BASELINE",
   "updated_at": "2026-07-17",
   "active_project": "lab",
-  "current_phase": "LAB_SELF_HEAD_POLICY_CORRECTED",
+  "current_phase": "CHATGPT_PROJECT_SOURCES_CANONICALIZED",
   "methodology": {
     "version": "2.1",
     "path": "METHODOLOGY.md"
@@ -31,7 +31,8 @@
     "errors_to_avoid": "docs/ERRORS_TO_AVOID.md",
     "continuity": "docs/CONTINUITY_PROTOCOL.md",
     "brief_schema": "schemas/brief.schema.json",
-    "epistemic_independence": "docs/EPISTEMIC_INDEPENDENCE_AND_DECISION_REASSESSMENT.md"
+    "epistemic_independence": "docs/EPISTEMIC_INDEPENDENCE_AND_DECISION_REASSESSMENT.md",
+    "chatgpt_project_sources": "project-sources/chatgpt/START_HERE.md"
   },
   "projects": {
     "lab": {
@@ -108,7 +109,8 @@
     "codex_autonomous_authority": "NO",
     "epistemic_independence_014": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "risk_method_015": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "self_head_correction_016": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+    "self_head_correction_016": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "chatgpt_sources_migration_017": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
   },
   "verified_external_heads": {
     "symphonie": "05f2ec517e1005a51d3b5576d02b0322ca754dcc",
