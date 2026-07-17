@@ -2,25 +2,23 @@
 
 La fuente estructurada es CURRENT_STATE.json.
 
-- Versión: 2.1.0.
-- Estado: GOVERNANCE_V2_CANONICAL_BASELINE.
-- Fase documental: LAB_EPISTEMIC_INDEPENDENCE_HARDENING_COMPLETED.
-- Aprobador normativo y ejecutivo: Jonathan Martínez.
-- Verdad factual: gobernada por evidencia, no por autoridad.
-- Contrato: LAB_CONTRACT.md v2.1, ampliado por DEC-LAB-014.
-- Runtime, integración y cambios de producto: no autorizados.
+- Versión: 2.2.0.
+- Fase: RISK_PROPORTIONAL_VALIDATION_BASELINE_APPROVED.
+- Aprobador: Jonathan Martínez.
+- Symphonie verificado: 05f2ec517e1005a51d3b5576d02b0322ca754dcc.
+- Runtime, instalación, integración y producto: no autorizados.
 - Autorización de esta transición: consumida al publicarse y verificarse.
 
-## Independencia analítica
+## DEC-LAB-015
 
-El agente debe evaluar auditorías, órdenes y documentos como inputs. Puede confirmar, modificar, revertir o declarar evidencia insuficiente. Debe discrepar cuando una premisa no esté sustentada y corregirse cuando la evidencia lo justifique.
+RISK_PROPORTIONAL_SKILL_VALIDATION está aprobado como baseline experimental con guardrails. REA-LAB-001 determinó MODIFIED: la evidencia sostiene Tier 1 experimental para bajo riesgo, pero no estabilidad general.
 
-Esta independencia no concede autoridad autónoma de ejecución.
+La promoción a estable exige al menos tres skills distintas, clases de capacidad diferentes, repetibilidad, cero findings altos abiertos y una nueva decisión explícita.
 
-## Pendiente
+## Cierres
 
-ERR-LAB-005 permanece abierto: el principio de validación proporcional de skills requiere una decisión LAB formal.
+ERR-LAB-005 y PEND-SYM-001 están cerrados. No quedan errores abiertos registrados.
 
 ## Siguiente transición
 
-No hay acción autorizada. La recomendación única sigue siendo registrar esa decisión mediante una aprobación separada.
+No existe acción autorizada. La recomendación única es definir los schemas canónicos pendientes de Symphonie para las fases 1, 2, 5, 6 y 7.

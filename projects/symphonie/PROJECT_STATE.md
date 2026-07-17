@@ -6,7 +6,7 @@ La fuente estructurada del LAB es PROJECT_STATE.json. El estado operativo perten
 
 - Repositorio: marcellusanthonson-ctrl/symphonie.
 - Rama: main.
-- HEAD: 884aac3bad37641fc09a20254ebd40e8da3b93c7.
+- HEAD: 05f2ec517e1005a51d3b5576d02b0322ca754dcc.
 - Versión documental: 0.3.0.
 - Fileset: 44.
 - Fases: 8.
@@ -32,6 +32,6 @@ Fase 0 tiene baseline experimental sin validación completa de runtime. Fases 1 
 
 ## Pendiente principal
 
-El principio de validación proporcional de skills está documentado, pero todavía carece de un identificador formal de decisión del LAB. No debe inventarse ni inferirse.
+DEC-LAB-015 aprobó el método proporcional como baseline experimental con guardrails. Su repetibilidad sigue pendiente con al menos tres skills distintas.
 
 No existe una siguiente acción autorizada.

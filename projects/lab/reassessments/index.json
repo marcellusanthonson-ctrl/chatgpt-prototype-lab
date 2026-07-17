@@ -2,6 +2,13 @@
   "schema_version": "1.0.0",
   "project_id": "lab",
   "updated_at": "2026-07-16",
-  "status": "NO_REASSESSMENTS_RECORDED",
-  "records": []
+  "status": "ONE_ADJUDICATED_REASSESSMENT",
+  "records": [
+    {
+      "id": "REA-LAB-001",
+      "status": "ADJUDICATED",
+      "canonical_path": "projects/lab/reassessments/REA-LAB-001.json",
+      "decision_ref": "DEC-LAB-015"
+    }
+  ]
 }

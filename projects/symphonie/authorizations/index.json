@@ -30,6 +30,20 @@
       "source_refs": [
         "marcellusanthonson-ctrl/symphonie@884aac3bad37641fc09a20254ebd40e8da3b93c7"
       ]
+    },
+    {
+      "id": "SYM-RISK-VALIDATION-METHOD-015",
+      "status": "CONSUMED_COMPLETED_VERIFIED",
+      "source_refs": [
+        "DEC-LAB-015",
+        "marcellusanthonson-ctrl/symphonie@05f2ec517e1005a51d3b5576d02b0322ca754dcc"
+      ],
+      "non_authorizations": [
+        "RUNTIME",
+        "INSTALLATION",
+        "INTEGRATION",
+        "PRODUCT_CHANGE"
+      ]
     }
   ]
 }

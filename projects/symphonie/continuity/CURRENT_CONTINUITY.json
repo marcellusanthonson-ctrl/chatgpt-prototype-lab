@@ -15,7 +15,7 @@
       "role": "WORKFLOW",
       "repository": "marcellusanthonson-ctrl/symphonie",
       "branch": "main",
-      "verified_head": "884aac3bad37641fc09a20254ebd40e8da3b93c7"
+      "verified_head": "05f2ec517e1005a51d3b5576d02b0322ca754dcc"
     },
     {
       "role": "SKILL_PRODUCER",
@@ -36,11 +36,16 @@
     "marcellusanthonson-ctrl/symphonie:registro/metodos-validacion.json"
   ],
   "current_state": {
-    "symphonie_version": "0.3.0",
+    "symphonie_version": "0.3.1",
     "fileset": 44,
     "total_phases": 8,
     "runtime_authorized": false,
-    "integration_authorized": false
+    "integration_authorized": false,
+    "validation_method": {
+      "status": "APPROVED_EXPERIMENTAL_BASELINE_WITH_GUARDRAILS",
+      "decision_ref": "DEC-LAB-015",
+      "repeatability": "PENDING_THREE_DISTINCT_SKILLS"
+    }
   },
   "facts": [
     "Dedicated Symphonie repository is canonical",
@@ -57,11 +62,10 @@
     "DEC-LAB-011",
     "DEC-LAB-012",
     "DEC-LAB-013",
-    "DEC-LAB-014"
+    "DEC-LAB-014",
+    "DEC-LAB-015"
   ],
-  "proposals": [
-    "Register a formal LAB decision ID for risk-proportional skill validation"
-  ],
+  "proposals": [],
   "ideas": [
     "IDEA-SYM-001",
     "IDEA-SYM-002",
@@ -88,16 +92,15 @@
     "Eight-phase documentary baseline",
     "Experiment and skill evidence registry",
     "LAB governance v2 candidate",
-    "LAB epistemic independence and objective reassessment contract"
+    "LAB epistemic independence and objective reassessment contract",
+    "DEC-LAB-015 experimental risk-proportional validation baseline"
   ],
   "pending_work": [
-    "Formal risk-method decision ID",
+    "Validate risk-method repeatability with at least three distinct skills; not authorized",
     "Schemas and validation for untested phases",
     "End-to-end validation requires separate authorization"
   ],
-  "open_errors": [
-    "ERR-LAB-005"
-  ],
+  "open_errors": [],
   "known_risks": [
     "STALE_CROSS_REPOSITORY_SNAPSHOTS",
     "EVIDENCE_MISTAKEN_FOR_INTEGRATION"
@@ -120,7 +123,7 @@
   "roadmap_ref": "projects/symphonie/ROADMAP.json",
   "attachments_ref": "projects/symphonie/continuity/ATTACHMENT_MANIFEST.json",
   "next_recommended_action": {
-    "action": "Register the missing LAB decision for the risk-proportional validation principle",
+    "action": "Define canonical schemas for Symphonie phases 1, 2, 5, 6 and 7",
     "authorization_required": true
   },
   "prohibited_actions": [

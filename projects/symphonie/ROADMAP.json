@@ -7,15 +7,22 @@
     {
       "order": 1,
       "item": "Formalizar decisión LAB del método proporcional",
-      "status": "PENDING"
+      "status": "COMPLETED",
+      "decision_ref": "DEC-LAB-015"
     },
     {
       "order": 2,
+      "item": "Validar repetibilidad del método proporcional con al menos tres skills distintas",
+      "status": "PENDING_NOT_AUTHORIZED",
+      "decision_ref": "DEC-LAB-015"
+    },
+    {
+      "order": 3,
       "item": "Completar schemas y pruebas de fases aún no validadas",
       "status": "PENDING_NOT_AUTHORIZED"
     },
     {
-      "order": 3,
+      "order": 4,
       "item": "Evaluar integraciones candidatas por separado",
       "status": "PENDING_NOT_AUTHORIZED"
     }

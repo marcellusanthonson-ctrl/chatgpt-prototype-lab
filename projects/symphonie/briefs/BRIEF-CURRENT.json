@@ -17,7 +17,7 @@
       "role": "WORKFLOW",
       "repository": "marcellusanthonson-ctrl/symphonie",
       "branch": "main",
-      "verified_head": "884aac3bad37641fc09a20254ebd40e8da3b93c7"
+      "verified_head": "05f2ec517e1005a51d3b5576d02b0322ca754dcc"
     }
   ],
   "authority": {
@@ -42,7 +42,8 @@
   "current_state_refs": [
     "CURRENT_STATE.json",
     "projects/symphonie/PROJECT_STATE.json",
-    "marcellusanthonson-ctrl/symphonie:CURRENT_STATE.json"
+    "marcellusanthonson-ctrl/symphonie:CURRENT_STATE.json",
+    "decisions/DEC-LAB-015.json"
   ],
   "required_outputs": [
     "VERIFIED_STATE",

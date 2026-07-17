@@ -8,16 +8,21 @@
     "mammothskills"
   ],
   "severity": "MEDIUM",
-  "status": "OPEN",
-  "lifecycle_state": "OPEN",
+  "status": "CLOSED",
+  "lifecycle_state": "CLOSED",
   "canonical_path": "errors/ERR-LAB-005.json",
   "updated_at": "2026-07-16",
   "cause": "Approval evidence exists but no canonical DEC-LAB identifier was registered",
   "impact": "Risk-proportional skill validation principle lacks a registered LAB decision ID",
-  "correction": "Create a separately approved LAB decision; do not infer its identifier",
+  "correction": "DEC-LAB-015 approved the method as an experimental baseline with guardrails after REA-LAB-001.",
   "prevention_refs": [
     "LAB_CONTRACT.md",
     "docs/ERRORS_TO_AVOID.md",
     "scripts/validate_repository.py"
+  ],
+  "resolution_refs": [
+    "DEC-LAB-015",
+    "REA-LAB-001",
+    "marcellusanthonson-ctrl/symphonie@05f2ec517e1005a51d3b5576d02b0322ca754dcc"
   ]
 }

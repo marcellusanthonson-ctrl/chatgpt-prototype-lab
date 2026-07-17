@@ -1,11 +1,11 @@
 {
-  "schema_version": "2.1.0",
+  "schema_version": "2.2.0",
   "document_id": "lab.current-state",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "status": "GOVERNANCE_V2_CANONICAL_BASELINE",
   "updated_at": "2026-07-16",
   "active_project": "lab",
-  "current_phase": "LAB_EPISTEMIC_INDEPENDENCE_HARDENING_COMPLETED",
+  "current_phase": "RISK_PROPORTIONAL_VALIDATION_BASELINE_APPROVED",
   "methodology": {
     "version": "2.1",
     "path": "METHODOLOGY.md"
@@ -84,11 +84,10 @@
     "DEC-LAB-011",
     "DEC-LAB-012",
     "DEC-LAB-013",
-    "DEC-LAB-014"
+    "DEC-LAB-014",
+    "DEC-LAB-015"
   ],
-  "open_errors": [
-    "ERR-LAB-005"
-  ],
+  "open_errors": [],
   "validated_patterns": [
     "PAT-LAB-001",
     "PAT-LAB-002",
@@ -107,14 +106,15 @@
     "integration_authorized": false,
     "product_changes_authorized": false,
     "codex_autonomous_authority": "NO",
-    "epistemic_independence_014": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+    "epistemic_independence_014": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "risk_method_015": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
   },
   "verified_external_heads": {
-    "symphonie": "884aac3bad37641fc09a20254ebd40e8da3b93c7",
+    "symphonie": "05f2ec517e1005a51d3b5576d02b0322ca754dcc",
     "lab_base_before_transition": "5e9c38a8ae68183a196709afa54aa1c7c2a8c4d4"
   },
   "next_authorized_action": "NONE_UNTIL_NEW_EXPLICIT_APPROVAL",
-  "next_recommended_transition": "REGISTER_RISK_PROPORTIONAL_VALIDATION_DECISION_ID",
+  "next_recommended_transition": "DEFINE_SYMPHONIE_PHASE_1_2_5_6_7_SCHEMAS",
   "continuity_read_order": [
     "LAB_CONTRACT.md",
     "METHODOLOGY.md",

@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "reassessment_id": "REA-LAB-001",
+  "project_id": "lab",
+  "status": "ADJUDICATED",
+  "decision_domain": "MIXED",
+  "subject": "Risk-proportional validation method for external skills",
+  "previous_position": {
+    "statement": "Approve the proposed Tier 1 to Tier 3 method as recorded from the session",
+    "decision_refs": [],
+    "evidence_refs": [
+      "projects/symphonie/reports/SYMPHONIE_SESSION_REPORT_2026-07-15_INTAKE_AND_RISK_TIER_1.md"
+    ]
+  },
+  "trigger": {
+    "type": "PROPOSED_DECISION_REVIEW",
+    "source_refs": [
+      "ERR-LAB-005",
+      "projects/symphonie/PENDING.json"
+    ],
+    "claims_are_not_accepted_as_verdict": true
+  },
+  "claims_under_review": [
+    {
+      "claim": "One isolated low-risk skill test is sufficient to support experimental Tier 1 admission",
+      "verification_method": "Compare runtime report, side effects and declared-use boundary",
+      "result": "SUPPORTED_WITH_LIMITS"
+    },
+    {
+      "claim": "The evidence supports a generally stable three-tier methodology",
+      "verification_method": "Evaluate diversity and repeatability of available experiments",
+      "result": "NOT_SUPPORTED"
+    },
+    {
+      "claim": "Guardrails can preserve speed without converting evidence into integration authority",
+      "verification_method": "Review tier triggers and non-authorizations",
+      "result": "SUPPORTED"
+    }
+  ],
+  "evidence_supporting_change": [
+    {
+      "source_ref": "projects/symphonie/reports/SYMPHONIE_SESSION_REPORT_2026-07-15_INTAKE_AND_RISK_TIER_1.md",
+      "finding": "First run PASS_WITH_FINDINGS; bounded correction PASS; no workspace write or publication"
+    },
+    {
+      "source_ref": "marcellusanthonson-ctrl/symphonie:registro/experimentos.json",
+      "finding": "Pinned source, isolated runtime and declared-use evidence exist"
+    }
+  ],
+  "evidence_against_change": [
+    {
+      "source_ref": "marcellusanthonson-ctrl/symphonie:registro/skills.json",
+      "finding": "Only one external documentary skill has Tier 1 runtime evidence"
+    },
+    {
+      "source_ref": "marcellusanthonson-ctrl/symphonie:registro/metodos-validacion.json",
+      "finding": "Tier 2 and Tier 3 lack cross-skill repeatability evidence"
+    }
+  ],
+  "verification": {
+    "source_authenticity": "PASS",
+    "scope_match": "PARTIAL",
+    "baseline_validity": "PASS",
+    "reproducibility": "NOT_ESTABLISHED",
+    "counterevidence_reviewed": true,
+    "alternative_explanations_reviewed": true
+  },
+  "technical_determination": "MODIFIED",
+  "reasoning_summary": "Evidence supports an experimental, declared-use and low-risk method with conservative escalation; it does not support stable generalization across tiers.",
+  "confidence": "HIGH",
+  "consequences": [
+    "Approve experimental baseline only",
+    "Add mandatory guardrails",
+    "Require three distinct skills before stability",
+    "Preserve separate release and integration approval"
+  ],
+  "recommended_action": {
+    "action": "Approve DEC-LAB-015 with experimental status and guardrails",
+    "authorization_required": true
+  },
+  "approval_state": "APPROVED"
+}

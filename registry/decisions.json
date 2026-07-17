@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.2.0",
+  "schema_version": "1.3.0",
   "updated_at": "2026-07-16",
   "records": [
     {
@@ -190,6 +190,20 @@
       "status": "APPROVED",
       "approval_state": "APPROVED",
       "canonical_path": "decisions/DEC-LAB-014.json",
+      "updated_at": "2026-07-16",
+      "approved_by": "Jonathan Martínez"
+    },
+    {
+      "id": "DEC-LAB-015",
+      "title": "Aprobar la validación proporcional de skills como baseline experimental con guardrails",
+      "project_scope": [
+        "lab",
+        "mammothskills",
+        "symphonie"
+      ],
+      "status": "APPROVED",
+      "approval_state": "APPROVED_EXPERIMENTAL_BASELINE_WITH_GUARDRAILS",
+      "canonical_path": "decisions/DEC-LAB-015.json",
       "updated_at": "2026-07-16",
       "approved_by": "Jonathan Martínez"
     }

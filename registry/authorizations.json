@@ -25,6 +25,23 @@
       "push_authorized": false,
       "runtime_authorized": false,
       "integration_authorized": false
+    },
+    {
+      "id": "AUTH-LAB-RISK-METHOD-015",
+      "project_id": "lab",
+      "status": "CONSUMED_ON_VERIFIED_PUBLICATION",
+      "approved_by": "Jonathan Martínez",
+      "scope": "DOCUMENTATION_ONLY_CROSS_REPOSITORY",
+      "canonical_path": "decisions/DEC-LAB-015.json",
+      "updated_at": "2026-07-16",
+      "commit_authorized": false,
+      "push_authorized": false,
+      "runtime_authorized": false,
+      "integration_authorized": false,
+      "repositories": [
+        "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+        "marcellusanthonson-ctrl/symphonie"
+      ]
     }
   ]
 }

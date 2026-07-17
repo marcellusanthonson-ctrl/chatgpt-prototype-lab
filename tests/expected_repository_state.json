@@ -1,8 +1,8 @@
 {
-  "schema_version": "2.0.0",
+  "schema_version": "2.2.0",
   "methodology_version": "2.1",
   "active_project": "lab",
-  "current_phase": "LAB_EPISTEMIC_INDEPENDENCE_HARDENING_COMPLETED",
+  "current_phase": "RISK_PROPORTIONAL_VALIDATION_BASELINE_APPROVED",
   "project_statuses": {
     "lab": "active",
     "mammothskills": "active_pipeline_validated_phase_a",
@@ -26,11 +26,10 @@
     "DEC-LAB-011",
     "DEC-LAB-012",
     "DEC-LAB-013",
-    "DEC-LAB-014"
+    "DEC-LAB-014",
+    "DEC-LAB-015"
   ],
-  "open_errors": [
-    "ERR-LAB-005"
-  ],
+  "open_errors": [],
   "validated_patterns": [
     "PAT-LAB-001",
     "PAT-LAB-002",
@@ -43,21 +42,21 @@
   ],
   "registry_counts": {
     "projects": 7,
-    "decisions": 14,
+    "decisions": 15,
     "errors": 6,
     "patterns": 8,
     "ideas": 5,
     "integrations": 4,
     "experiments": 5,
-    "authorizations": 2,
+    "authorizations": 3,
     "evidence": 7,
     "unincorporated": 0,
     "proposals": 2,
     "sessions": 1,
-    "reassessments": 0
+    "reassessments": 1
   },
   "symphonie": {
-    "head": "884aac3bad37641fc09a20254ebd40e8da3b93c7",
+    "head": "05f2ec517e1005a51d3b5576d02b0322ca754dcc",
     "fileset": 44,
     "total_phases": 8
   },
@@ -69,6 +68,7 @@
     "integration_authorized": false,
     "product_changes_authorized": false,
     "codex_autonomous_authority": "NO",
-    "epistemic_independence_014": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+    "epistemic_independence_014": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "risk_method_015": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
   }
 }

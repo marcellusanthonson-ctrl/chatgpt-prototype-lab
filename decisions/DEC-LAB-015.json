@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "id": "DEC-LAB-015",
+  "title": "Aprobar la validación proporcional de skills como baseline experimental con guardrails",
+  "status": "APPROVED",
+  "approval_state": "APPROVED_EXPERIMENTAL_BASELINE_WITH_GUARDRAILS",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-16",
+  "scope": [
+    "lab",
+    "mammothskills",
+    "symphonie"
+  ],
+  "technical_reassessment_ref": "REA-LAB-001",
+  "decision": {
+    "method_id": "RISK_PROPORTIONAL_SKILL_VALIDATION",
+    "status": "APPROVED_EXPERIMENTAL_BASELINE_WITH_GUARDRAILS",
+    "stability": "EXPERIMENTAL",
+    "formula": "AUDIT_DEPTH = CAPABILITY_RISK × CONSEQUENCE × REUSE_SCOPE",
+    "tier_1": "LOCAL_ISOLATED_DOCUMENTARY_SYNTHETIC_OR_ANONYMIZED_ONLY",
+    "uncertainty_rule": "ESCALATE_TO_HIGHER_TIER",
+    "tier_3_triggers": [
+      "REPOSITORY_WRITE",
+      "COMMAND_EXECUTION",
+      "NETWORK",
+      "CREDENTIALS",
+      "REAL_DATA",
+      "HIGH_IMPACT_DECISION",
+      "BROAD_REUSE"
+    ],
+    "correction_rule": "RETAIN_ORIGINAL_RESULT_AND_REPEAT_FULL_CONTROLS",
+    "promotion_to_stable": {
+      "minimum_distinct_skills": 3,
+      "distinct_capability_classes": true,
+      "repeatability_required": true,
+      "high_severity_findings_allowed": 0,
+      "new_explicit_decision_required": true
+    }
+  },
+  "evidence_scope": "One low-risk documentary skill supports experimental Tier 1; it does not establish general stability",
+  "non_authorizations": [
+    "RELEASE",
+    "INSTALLATION",
+    "INTEGRATION",
+    "REAL_DATA",
+    "RUNTIME_PHASE_EXECUTION",
+    "PRODUCT_CHANGE"
+  ],
+  "consequences": [
+    "CLOSE_ERR_LAB_005",
+    "CLOSE_PEND_SYM_001",
+    "REGISTER_DECISION_IN_SYMPHONIE",
+    "KEEP_REPEATABILITY_PENDING"
+  ],
+  "source_refs": [
+    "projects/symphonie/reports/SYMPHONIE_SESSION_REPORT_2026-07-15_INTAKE_AND_RISK_TIER_1.md",
+    "marcellusanthonson-ctrl/symphonie:registro/metodos-validacion.json",
+    "marcellusanthonson-ctrl/symphonie:registro/experimentos.json",
+    "marcellusanthonson-ctrl/symphonie:registro/skills.json"
+  ]
+}
