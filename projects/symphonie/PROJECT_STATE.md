@@ -34,13 +34,15 @@ ARCHITECTURE = APPROVED
 REPOSITORY_CREATED = YES
 CREATION_VERIFIED = YES
 REPOSITORY_EMPTY = NO
-FILESET = 25
-HEAD = 0b456f6d7a95b4111fe2576725a1fa2cd3f7735e
+FILESET = 40
+HEAD = 8692a539bc339ea7b4258d78b3ce9f5f5635f407
 REPOSITORY_CREATION = COMPLETED_VERIFIED_AUTHORIZATION_CONSUMED
 BOOTSTRAP_003 = CONSUMED
 CORRECTION_004 = CONSUMED_WITH_FAILED_RESULT
 REPAIR_005 = CONSUMED_COMPLETED_VERIFIED
 RECONCILIATION_006 = CONSUMED_COMPLETED_VERIFIED
+EIGHT_PHASE_CANONICALIZATION_007 = CONSUMED_COMPLETED_VERIFIED
+LAB_STATE_RECONCILIATION_008 = CONSUMED_COMPLETED_VERIFIED
 PHASE_0_ALIGNMENT = ALIGNED_TO_DEC_LAB_011
 CANONICAL_LANGUAGE = ESPAÑOL
 ```
@@ -51,7 +53,7 @@ Responsibility separation:
 
 ```text
 chatgpt-prototype-lab = governance, decisions, errors, patterns, registry, continuity
-future symphonie repository = canonical workflow, phase contracts, gates, schemas, identified integrations
+symphonie repository = canonical workflow, phase contracts, gates, schemas, identified integrations
 MammothSkills = reusable skill production, adaptation, audit, versioning, releases
 symphonie-codex-lab = historical Codex skill evidence and temporary laboratory
 ```
@@ -62,7 +64,7 @@ Los archivos de gobierno locales en el repositorio Symphonie se vincularán o re
 
 `DEC-LAB-012` aprueba la arquitectura documental `CONTEXTO_NO_AUTORIZACION`: memoria curada, no espejo de repositorios. La `UNIDAD_DE_CONOCIMIENTO` es la unidad mínima; Git versionado es el registry canónico y el índice es derivado y reconstruible. Los filtros de privacidad se aplican antes de similitud y las contradicciones no se resuelven por ranking.
 
-El fileset documental de 25 archivos está publicado y reconciliado. Sus autorizaciones de escritura están consumidas. El roadmap documental comprende `RAG_0_ARQUITECTURA_DOCUMENTAL`, `RAG_1_CORPUS_SEMILLA_CURADO_MANUAL`, `RAG_2_RECUPERACION_NO_VECTORIAL`, `RAG_3_EVALUACION_SINTETICA`, `RAG_4_PILOTO_VECTORIAL_LOCAL`, `RAG_5_SELECCION_TECNOLOGICA`, `RAG_6_AMPLIACION_AUTORIZADA_DE_FUENTES`, `RAG_7_PILOTO_CONTROLADO_CON_PROYECTOS_REALES` y `RAG_8_DECISION_DE_ESTABILIDAD`; no afirma runtime ni ingesta implementados.
+El fileset documental de 40 archivos está publicado y reconciliado. Incluye el mapa de ocho fases, contratos para Phase 0–7, registro de gates y modelos transversales de fase, gate, artefacto, handoff y autoridad. Sus autorizaciones de escritura están consumidas. El roadmap documental comprende `RAG_0_ARQUITECTURA_DOCUMENTAL`, `RAG_1_CORPUS_SEMILLA_CURADO_MANUAL`, `RAG_2_RECUPERACION_NO_VECTORIAL`, `RAG_3_EVALUACION_SINTETICA`, `RAG_4_PILOTO_VECTORIAL_LOCAL`, `RAG_5_SELECCION_TECNOLOGICA`, `RAG_6_AMPLIACION_AUTORIZADA_DE_FUENTES`, `RAG_7_PILOTO_CONTROLADO_CON_PROYECTOS_REALES` y `RAG_8_DECISION_DE_ESTABILIDAD`; no afirma runtime ni ingesta implementados.
 
 | Fase | Acceso a memoria |
 | --- | --- |
@@ -71,6 +73,23 @@ El fileset documental de 25 archivos está publicado y reconciliado. Sus autoriz
 | 0C | Opcional, con autoridad humana |
 
 Runtime, ingesta, embeddings, acceso automático a repositorios, integración, migración, cambios de producto y datos de proyectos reales continúan no autorizados.
+
+## Baseline documental canónica de ocho fases
+
+```text
+PHASE_0 = APPROVED_EXPERIMENTAL_BASELINE_NOT_RUNTIME_VALIDATED
+PHASE_1 = DEFINED_NOT_TESTED
+PHASE_2 = DEFINED_NOT_TESTED
+PHASE_3 = PARTIALLY_VALIDATED_WITH_FINDINGS
+PHASE_4 = PARTIALLY_RUNTIME_VALIDATED
+PHASE_5 = DEFINED_NOT_TESTED
+PHASE_6 = DEFINED_NOT_TESTED
+PHASE_7 = DEFINED_NOT_TESTED
+FULL_WORKFLOW_0_TO_7 = NOT_VALIDATED
+RUNTIME = NOT_AUTHORIZED
+```
+
+Los contratos canónicos distinguen definición, prueba, aprobación y autorización. Phase 3A y Phase 4A conservan evidencia concreta; no se extrapola esa evidencia a la fase completa. Las fases 1, 2, 5, 6 y 7 permanecen definidas pero no probadas.
 
 ## Phase 0 experimental baseline
 
@@ -227,10 +246,11 @@ They provide minimum Phase 3A exit assertions, UI-action preservation, and fail-
 ```text
 1. DEC-LAB-010 aprobó la arquitectura del repositorio dedicado.
 2. DEC-LAB-011 aprobó Phase 0 v0.1 como baseline experimental sin runtime.
-3. DEC-LAB-012 registra el repositorio privado creado, verificado y vacío, además de la arquitectura de memoria gobernada.
-4. Bootstrap-003, Repair-005 y Reconciliation-006 están consumidas; el HEAD canónico es `0b456f6d7a95b4111fe2576725a1fa2cd3f7735e`.
-5. La siguiente transición recomendada es una planificación estática del contrato de Phase 0, sin runtime.
-6. Runtime, ingesta, embeddings, acceso automático, datos reales, diseño real, repetibilidad, evidencia histórica y migración requieren autorizaciones independientes.
+3. DEC-LAB-012 registró el repositorio privado y la arquitectura de memoria gobernada.
+4. Bootstrap-003, Repair-005, Reconciliation-006 y Canonicalization-007 están consumidas; el HEAD canónico es `8692a539bc339ea7b4258d78b3ce9f5f5635f407`.
+5. El LAB fue reconciliado con la baseline documental de ocho fases mediante State-Reconciliation-008.
+6. La siguiente transición recomendada es revisar la estructura del LAB y priorizar schemas de las fases aún no probadas.
+7. Runtime, ingesta, embeddings, acceso automático, datos reales, diseño real, repetibilidad, evidencia histórica y migración requieren autorizaciones independientes.
 ```
 
 ## Authorization state
@@ -242,6 +262,8 @@ SYMPHONIE_REPOSITORY_CREATION = COMPLETED_VERIFIED_AUTHORIZATION_CONSUMED
 SYMPHONIE_BOOTSTRAP = COMPLETED_VERIFIED_AUTHORIZATION_CONSUMED
 SYMPHONIE_DOCUMENTARY_REPAIR_005 = CONSUMED_COMPLETED_VERIFIED
 SYMPHONIE_PHASE0_RECONCILIATION_006 = CONSUMED_COMPLETED_VERIFIED
+SYMPHONIE_EIGHT_PHASE_CANONICALIZATION_007 = CONSUMED_COMPLETED_VERIFIED
+LAB_SYMPHONIE_STATE_RECONCILIATION_008 = CONSUMED_COMPLETED_VERIFIED
 PHASE_0_RUNTIME = NOT_AUTHORIZED
 PHASE_0_REAL_CLIENT_USE = NOT_AUTHORIZED
 HISTORICAL_EVIDENCE_EXECUTION = NOT_AUTHORIZED
@@ -268,4 +290,4 @@ MAMMOTHSKILLS_RELEASE = NOT_AUTHORIZED
 
 Recommended transition:
 
-`SEPARATELY_AUTHORIZE_PHASE_0_STATIC_CONTRACT_VALIDATION_PLAN_WITHOUT_RUNTIME`
+`REVIEW_LAB_REPOSITORY_STRUCTURE_THEN_PRIORITIZE_UNTESTED_PHASE_CONTRACT_SCHEMAS`

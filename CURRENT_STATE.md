@@ -1,7 +1,7 @@
 # LAB Current State
 
 Document-ID: `lab.current-state`
-Version: `1.0.12`
+Version: `1.0.13`
 Status: `ACTIVE`
 Last-Updated: `2026-07-16`
 
@@ -35,14 +35,16 @@ Symphonie remains `KNOWN_AND_SYNCED` and coordinates an eight-phase workflow for
 REPOSITORY = marcellusanthonson-ctrl/symphonie
 VISIBILITY = PRIVATE
 CANONICAL_BRANCH = main
-CONTENT = DOCUMENTARY_BASELINE_25_FILES
-HEAD = 0b456f6d7a95b4111fe2576725a1fa2cd3f7735e
+CONTENT = EIGHT_PHASE_DOCUMENTARY_BASELINE_40_FILES
+HEAD = 8692a539bc339ea7b4258d78b3ce9f5f5635f407
 ARCHITECTURE_STATUS = APPROVED
 REPOSITORY_CREATION = COMPLETED_VERIFIED_AUTHORIZATION_CONSUMED
 BOOTSTRAP_003 = CONSUMED
 CORRECTION_004 = CONSUMED_WITH_FAILED_RESULT
 REPAIR_005 = CONSUMED_COMPLETED_VERIFIED
 RECONCILIATION_006 = CONSUMED_COMPLETED_VERIFIED
+EIGHT_PHASE_CANONICALIZATION_007 = CONSUMED_COMPLETED_VERIFIED
+LAB_STATE_RECONCILIATION_008 = CONSUMED_COMPLETED_VERIFIED
 PHASE_0_ALIGNMENT = ALIGNED_TO_DEC_LAB_011
 RUNTIME = NOT_AUTHORIZED
 INTEGRATION = NOT_AUTHORIZED
@@ -50,7 +52,23 @@ MIGRATION = NOT_AUTHORIZED
 CANONICAL_LANGUAGE = ESPAÑOL
 ```
 
-`chatgpt-prototype-lab` permanece como fuente de gobierno, MammothSkills como productor canónico de skills reutilizables y `symphonie-codex-lab` como evidencia histórica experimental hasta una clasificación terminal aprobada separadamente. El bootstrap documental de Symphonie está completado y sus autorizaciones están consumidas.
+`chatgpt-prototype-lab` permanece como fuente de gobierno, MammothSkills como productor canónico de skills reutilizables y `symphonie-codex-lab` como evidencia histórica experimental hasta una clasificación terminal aprobada separadamente. El baseline documental de ocho fases de Symphonie está publicado y verificado; sus autorizaciones de escritura están consumidas.
+
+### Baseline canónica de ocho fases
+
+```text
+PHASE_0 = APPROVED_EXPERIMENTAL_BASELINE_NOT_RUNTIME_VALIDATED
+PHASE_1 = DEFINED_NOT_TESTED
+PHASE_2 = DEFINED_NOT_TESTED
+PHASE_3 = PARTIALLY_VALIDATED_WITH_FINDINGS
+PHASE_4 = PARTIALLY_RUNTIME_VALIDATED
+PHASE_5 = DEFINED_NOT_TESTED
+PHASE_6 = DEFINED_NOT_TESTED
+PHASE_7 = DEFINED_NOT_TESTED
+END_TO_END_0_TO_7 = NOT_VALIDATED
+```
+
+Symphonie contiene el mapa canónico, contratos de las ocho fases, registro de gates y modelos transversales de estado, artefacto y handoff. Esto no autoriza ejecutar ninguna fase.
 
 ### Memoria gobernada de proyectos
 
@@ -208,7 +226,7 @@ They provide minimum Phase 3A assertions, UI-action preservation, and fail-close
 - `DEC-LAB-001` through `DEC-LAB-009` remain approved.
 - `DEC-LAB-010` aprueba la arquitectura del repositorio dedicado.
 - `DEC-LAB-011` aprueba Phase 0 v0.1 como baseline experimental sin autorizar runtime ni uso con clientes reales.
-- `DEC-LAB-012` registra el repositorio Symphonie creado, verificado y vacío, su idioma canónico español y la arquitectura documental de memoria gobernada.
+- `DEC-LAB-012` registró inicialmente el repositorio Symphonie creado y su arquitectura documental de memoria gobernada; el estado remoto posterior prevalece y hoy contiene 40 archivos canónicos.
 
 ## Errors and patterns
 
@@ -237,6 +255,8 @@ SYMPHONIE_REPOSITORY_CREATION = COMPLETED_VERIFIED_AUTHORIZATION_CONSUMED
 SYMPHONIE_BOOTSTRAP = COMPLETED_VERIFIED_AUTHORIZATION_CONSUMED
 SYMPHONIE_DOCUMENTARY_REPAIR_005 = CONSUMED_COMPLETED_VERIFIED
 SYMPHONIE_PHASE0_RECONCILIATION_006 = CONSUMED_COMPLETED_VERIFIED
+SYMPHONIE_EIGHT_PHASE_CANONICALIZATION_007 = CONSUMED_COMPLETED_VERIFIED
+LAB_SYMPHONIE_STATE_RECONCILIATION_008 = CONSUMED_COMPLETED_VERIFIED
 PHASE_0_RUNTIME = NOT_AUTHORIZED
 PHASE_0_REAL_CLIENT_USE = NOT_AUTHORIZED
 HISTORICAL_EVIDENCE_EXECUTION = NOT_AUTHORIZED
@@ -263,5 +283,5 @@ Approval of repository architecture and Phase 0 is separate from repository crea
 ```text
 NEXT_AUTHORIZED_ACTION = NONE_UNTIL_NEW_EXPLICIT_APPROVAL
 NEXT_RECOMMENDED_TRANSITION =
-SEPARATELY_AUTHORIZE_PHASE_0_STATIC_CONTRACT_VALIDATION_PLAN_WITHOUT_RUNTIME
+REVIEW_LAB_REPOSITORY_STRUCTURE_THEN_PRIORITIZE_UNTESTED_PHASE_CONTRACT_SCHEMAS
 ```
