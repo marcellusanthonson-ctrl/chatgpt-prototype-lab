@@ -14,3 +14,6 @@ Reglas:
 - Los snapshots declaran fecha, HEAD y estado CURRENT, STALE o ARCHIVED.
 - La evidencia conserva procedencia y limitaciones.
 - Las discrepancias se registran; no se resuelven por inferencia.
+
+- Un repositorio no registra su propio HEAD como estado vigente dentro del mismo commit. Usa head_policy = VERIFY_LIVE_AT_USE y, cuando sea útil, verified_parent_head como evidencia histórica.
+- MODIFIED se usa solo cuando el núcleo del claim conserva una parte sustentada. Si el núcleo es falso, el dictamen es REVERSED aunque exista un hecho periférico relacionado.

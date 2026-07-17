@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1.0",
-  "updated_at": "2026-07-16",
+  "updated_at": "2026-07-17",
   "records": [
     {
       "id": "ERR-LAB-001",
@@ -80,6 +80,18 @@
       "canonical_path": "errors/ERR-LAB-005.json",
       "updated_at": "2026-07-16",
       "resolution_ref": "DEC-LAB-015"
+    },
+    {
+      "id": "ERR-LAB-006",
+      "title": "Self-referential LAB HEAD and imprecise claim determination",
+      "project_scope": [
+        "lab"
+      ],
+      "severity": "HIGH",
+      "status": "CORRECTED",
+      "lifecycle_state": "CORRECTED",
+      "canonical_path": "errors/ERR-LAB-006.json",
+      "updated_at": "2026-07-17"
     }
   ]
 }

@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ERR-LAB-006",
+  "title": "Self-referential LAB HEAD and imprecise claim determination",
+  "project_scope": [
+    "lab"
+  ],
+  "severity": "HIGH",
+  "status": "CORRECTED",
+  "lifecycle_state": "CORRECTED",
+  "updated_at": "2026-07-17",
+  "observed_in": {
+    "test_id": "LAB-CHATGPT-INSTRUCTIONS-TEST-001",
+    "model": "Terra 5.6",
+    "reasoning_effort": "LIGHT",
+    "result": "PASS_WITH_FINDINGS"
+  },
+  "cause": [
+    "PROJECT_STATE_JSON_STORED_OWN_HEAD_AS_CURRENT",
+    "DETERMINATION_RULE_DID_NOT_EXPLICITLY_PRIORITIZE_CORE_CLAIM"
+  ],
+  "impact": [
+    "FALSE_DIVERGENCE_AFTER_EVERY_LAB_COMMIT",
+    "MODIFIED_USED_WHERE_CORE_AUTHORIZATION_CLAIM_WAS_FALSE"
+  ],
+  "correction": [
+    "REPLACE_VERIFIED_HEAD_WITH_VERIFY_LIVE_AT_USE_POLICY",
+    "ADD_CORE_CLAIM_CLASSIFICATION_RULE",
+    "ADD_VALIDATOR_GUARD"
+  ],
+  "prevention_refs": [
+    "projects/lab/PROJECT_STATE.json",
+    "docs/CANONICAL_OWNERSHIP.md",
+    "scripts/validate_repository.py"
+  ],
+  "authorization_effect": "NONE"
+}

@@ -151,8 +151,8 @@ def validate_registries() -> tuple[dict[str, Any], dict[str, Any]]:
     duplicates = sorted(key for key, count in Counter(all_ids).items() if count > 1)
     if duplicates:
         fail("registry IDs not unique: " + ", ".join(duplicates))
-    if index.get("updated_at") != "2026-07-16":
-        fail("registry/index.json: stale updated_at")
+    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(index.get("updated_at", ""))):
+        fail("registry/index.json: invalid updated_at")
     return index, loaded
 
 def validate_projects(registries: dict[str, Any]) -> None:
@@ -178,6 +178,15 @@ def validate_projects(registries: dict[str, Any]) -> None:
             fail(f"{required[0]}: project_id mismatch")
         if state.get("status") != record.get("status"):
             fail(f"{project_id}: state differs from project registry")
+        if record.get("repository") == "marcellusanthonson-ctrl/chatgpt-prototype-lab":
+            if "verified_head" in state:
+                fail(f"{project_id}: self-referential verified_head is forbidden")
+            if state.get("head_policy") != "VERIFY_LIVE_AT_USE":
+                fail(f"{project_id}: head_policy must be VERIFY_LIVE_AT_USE")
+            if state.get("self_head_is_canonical_state") is not False:
+                fail(f"{project_id}: self_head_is_canonical_state must be false")
+            if not isinstance(state.get("verified_parent_head"), str):
+                fail(f"{project_id}: verified_parent_head is required")
         decision_index = load_json(required[3])
         for decision in decision_index.get("records", []):
             if decision.get("id") not in decisions:

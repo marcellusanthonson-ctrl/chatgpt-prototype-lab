@@ -3,10 +3,9 @@
   "project_id": "lab",
   "name": "LAB",
   "status": "active",
-  "updated_at": "2026-07-16",
+  "updated_at": "2026-07-17",
   "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "canonical_branch": "main",
-  "verified_head": "5e9c38a8ae68183a196709afa54aa1c7c2a8c4d4",
   "authority": {
     "sole_approver": "Jonathan Martínez",
     "autonomous_model_authority": false
@@ -25,5 +24,19 @@
     "integrations": "projects/lab/integrations/index.json",
     "reassessments": "projects/lab/reassessments/index.json"
   },
-  "metadata": {}
+  "metadata": {
+    "last_instruction_test": {
+      "test_id": "LAB-CHATGPT-INSTRUCTIONS-TEST-001",
+      "model": "Terra 5.6",
+      "reasoning_effort": "LIGHT",
+      "result": "PASS_WITH_FINDINGS",
+      "findings": [
+        "CLAIM_1_SHOULD_BE_REVERSED_NOT_MODIFIED",
+        "SELF_REFERENTIAL_LAB_HEAD_DETECTED"
+      ]
+    }
+  },
+  "head_policy": "VERIFY_LIVE_AT_USE",
+  "verified_parent_head": "1111756d2e8a2be5d9bdc554d05906776cdc256b",
+  "self_head_is_canonical_state": false
 }

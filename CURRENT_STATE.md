@@ -2,23 +2,21 @@
 
 La fuente estructurada es CURRENT_STATE.json.
 
-- Versión: 2.2.0.
-- Fase: RISK_PROPORTIONAL_VALIDATION_BASELINE_APPROVED.
+- Versión: 2.2.1.
+- Fase: LAB_SELF_HEAD_POLICY_CORRECTED.
 - Aprobador: Jonathan Martínez.
-- Symphonie verificado: 05f2ec517e1005a51d3b5576d02b0322ca754dcc.
-- Runtime, instalación, integración y producto: no autorizados.
-- Autorización de esta transición: consumida al publicarse y verificarse.
+- Runtime, integración y cambios de producto: no autorizados.
+- HEAD propio: verificar main en vivo; no almacenarlo como estado vigente.
 
-## DEC-LAB-015
+## Corrección
 
-RISK_PROPORTIONAL_SKILL_VALIDATION está aprobado como baseline experimental con guardrails. REA-LAB-001 determinó MODIFIED: la evidencia sostiene Tier 1 experimental para bajo riesgo, pero no estabilidad general.
+ERR-LAB-006 registra dos findings del test con Terra 5.6 y razonamiento ligero:
 
-La promoción a estable exige al menos tres skills distintas, clases de capacidad diferentes, repetibilidad, cero findings altos abiertos y una nueva decisión explícita.
+- el HEAD propio del LAB no puede mantenerse dentro de su mismo commit;
+- un claim cuyo núcleo es falso debe clasificarse REVERSED, no MODIFIED.
 
-## Cierres
-
-ERR-LAB-005 y PEND-SYM-001 están cerrados. No quedan errores abiertos registrados.
+PROJECT_STATE.json usa VERIFY_LIVE_AT_USE y conserva verified_parent_head como evidencia de la baseline anterior.
 
 ## Siguiente transición
 
-No existe acción autorizada. La recomendación única es definir los schemas canónicos pendientes de Symphonie para las fases 1, 2, 5, 6 y 7.
+No existe acción autorizada. La recomendación continúa siendo definir los schemas pendientes de Symphonie para las fases 1, 2, 5, 6 y 7.
