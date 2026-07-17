@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0.0",
+  "reassessment_id": "REA-PROJECT-000",
+  "project_id": "project-id",
+  "status": "DRAFT",
+  "decision_domain": "FACTUAL",
+  "subject": "",
+  "previous_position": {
+    "statement": "",
+    "decision_refs": [],
+    "evidence_refs": []
+  },
+  "trigger": {
+    "type": "AUDIT",
+    "source_refs": [],
+    "claims_are_not_accepted_as_verdict": true
+  },
+  "claims_under_review": [
+    {
+      "claim": "",
+      "verification_method": "",
+      "result": "NOT_TESTED"
+    }
+  ],
+  "evidence_supporting_change": [],
+  "evidence_against_change": [],
+  "verification": {
+    "source_authenticity": "UNKNOWN",
+    "scope_match": "UNKNOWN",
+    "baseline_validity": "UNKNOWN",
+    "reproducibility": "NOT_TESTED",
+    "counterevidence_reviewed": false,
+    "alternative_explanations_reviewed": false
+  },
+  "technical_determination": "INSUFFICIENT_EVIDENCE",
+  "reasoning_summary": "",
+  "confidence": "LOW",
+  "consequences": [],
+  "recommended_action": {
+    "action": "",
+    "authorization_required": false
+  },
+  "approval_state": "NOT_REQUIRED"
+}

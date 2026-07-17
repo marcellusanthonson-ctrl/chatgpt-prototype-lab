@@ -1,19 +1,22 @@
 {
-  "schema_version": "2.0.0",
+  "schema_version": "2.1.0",
   "document_id": "lab.current-state",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "status": "GOVERNANCE_V2_CANONICAL_BASELINE",
   "updated_at": "2026-07-16",
   "active_project": "lab",
-  "current_phase": "LAB_GOVERNANCE_HARDENING_COMPLETED",
+  "current_phase": "LAB_EPISTEMIC_INDEPENDENCE_HARDENING_COMPLETED",
   "methodology": {
-    "version": "2.0",
+    "version": "2.1",
     "path": "METHODOLOGY.md"
   },
   "contract": {
-    "version": "2.0",
+    "version": "2.1",
     "path": "LAB_CONTRACT.md",
-    "decision": "DEC-LAB-013"
+    "amended_by": [
+      "DEC-LAB-013",
+      "DEC-LAB-014"
+    ]
   },
   "authority": {
     "sole_approver": "Jonathan Martínez",
@@ -27,7 +30,8 @@
     "model_rules": "docs/MODEL_OPERATING_RULES.md",
     "errors_to_avoid": "docs/ERRORS_TO_AVOID.md",
     "continuity": "docs/CONTINUITY_PROTOCOL.md",
-    "brief_schema": "schemas/brief.schema.json"
+    "brief_schema": "schemas/brief.schema.json",
+    "epistemic_independence": "docs/EPISTEMIC_INDEPENDENCE_AND_DECISION_REASSESSMENT.md"
   },
   "projects": {
     "lab": {
@@ -79,7 +83,8 @@
     "DEC-LAB-010",
     "DEC-LAB-011",
     "DEC-LAB-012",
-    "DEC-LAB-013"
+    "DEC-LAB-013",
+    "DEC-LAB-014"
   ],
   "open_errors": [
     "ERR-LAB-005"
@@ -91,7 +96,8 @@
     "PAT-LAB-004",
     "PAT-MA-001",
     "PAT-LAB-005",
-    "PAT-LAB-006"
+    "PAT-LAB-006",
+    "PAT-LAB-007"
   ],
   "authorization_state": {
     "governance_v2_013": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
@@ -100,7 +106,8 @@
     "runtime_authorized": false,
     "integration_authorized": false,
     "product_changes_authorized": false,
-    "codex_autonomous_authority": "NO"
+    "codex_autonomous_authority": "NO",
+    "epistemic_independence_014": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
   },
   "verified_external_heads": {
     "symphonie": "884aac3bad37641fc09a20254ebd40e8da3b93c7",

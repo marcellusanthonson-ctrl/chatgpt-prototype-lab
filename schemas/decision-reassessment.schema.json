@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lab.local/schemas/decision-reassessment.schema.json",
+  "title": "decision-reassessment",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "reassessment_id",
+    "project_id",
+    "status",
+    "decision_domain",
+    "subject",
+    "previous_position",
+    "trigger",
+    "claims_under_review",
+    "evidence_supporting_change",
+    "evidence_against_change",
+    "verification",
+    "technical_determination",
+    "reasoning_summary",
+    "confidence",
+    "consequences",
+    "recommended_action",
+    "approval_state"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "reassessment_id": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "DRAFT",
+        "UNDER_REVIEW",
+        "ADJUDICATED",
+        "SUPERSEDED"
+      ]
+    },
+    "decision_domain": {
+      "enum": [
+        "FACTUAL",
+        "NORMATIVE",
+        "EXECUTION",
+        "MIXED"
+      ]
+    },
+    "subject": {
+      "type": "string"
+    },
+    "previous_position": {
+      "type": "object"
+    },
+    "trigger": {
+      "type": "object"
+    },
+    "claims_under_review": {
+      "type": "array",
+      "minItems": 1
+    },
+    "evidence_supporting_change": {
+      "type": "array"
+    },
+    "evidence_against_change": {
+      "type": "array"
+    },
+    "verification": {
+      "type": "object"
+    },
+    "technical_determination": {
+      "enum": [
+        "CONFIRMED",
+        "MODIFIED",
+        "REVERSED",
+        "INSUFFICIENT_EVIDENCE"
+      ]
+    },
+    "reasoning_summary": {
+      "type": "string"
+    },
+    "confidence": {
+      "enum": [
+        "HIGH",
+        "MEDIUM",
+        "LOW"
+      ]
+    },
+    "consequences": {
+      "type": "array"
+    },
+    "recommended_action": {
+      "type": "object"
+    },
+    "approval_state": {
+      "enum": [
+        "NOT_REQUIRED",
+        "PENDING",
+        "APPROVED",
+        "REJECTED"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

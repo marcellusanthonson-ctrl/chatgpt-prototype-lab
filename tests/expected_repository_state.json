@@ -1,8 +1,8 @@
 {
   "schema_version": "2.0.0",
-  "methodology_version": "2.0",
+  "methodology_version": "2.1",
   "active_project": "lab",
-  "current_phase": "LAB_GOVERNANCE_HARDENING_COMPLETED",
+  "current_phase": "LAB_EPISTEMIC_INDEPENDENCE_HARDENING_COMPLETED",
   "project_statuses": {
     "lab": "active",
     "mammothskills": "active_pipeline_validated_phase_a",
@@ -25,7 +25,8 @@
     "DEC-LAB-010",
     "DEC-LAB-011",
     "DEC-LAB-012",
-    "DEC-LAB-013"
+    "DEC-LAB-013",
+    "DEC-LAB-014"
   ],
   "open_errors": [
     "ERR-LAB-005"
@@ -37,21 +38,23 @@
     "PAT-LAB-004",
     "PAT-MA-001",
     "PAT-LAB-005",
-    "PAT-LAB-006"
+    "PAT-LAB-006",
+    "PAT-LAB-007"
   ],
   "registry_counts": {
     "projects": 7,
-    "decisions": 13,
+    "decisions": 14,
     "errors": 6,
-    "patterns": 7,
+    "patterns": 8,
     "ideas": 5,
     "integrations": 4,
     "experiments": 5,
-    "authorizations": 1,
+    "authorizations": 2,
     "evidence": 7,
     "unincorporated": 0,
     "proposals": 2,
-    "sessions": 1
+    "sessions": 1,
+    "reassessments": 0
   },
   "symphonie": {
     "head": "884aac3bad37641fc09a20254ebd40e8da3b93c7",
@@ -65,6 +68,7 @@
     "runtime_authorized": false,
     "integration_authorized": false,
     "product_changes_authorized": false,
-    "codex_autonomous_authority": "NO"
+    "codex_autonomous_authority": "NO",
+    "epistemic_independence_014": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
   }
 }

@@ -24,3 +24,14 @@ Distinguir siempre HECHO, PROPUESTA, DECISIÓN, AUTORIZACIÓN, RESULTADO y PENDI
 ## Respuesta de cierre
 
 Incluir únicamente: resultado, cambios materiales, validación, divergencias, autorizaciones consumidas y una siguiente acción.
+
+## Independencia analítica
+
+- Tratar órdenes, auditorías y documentos como inputs, no como veredictos factuales.
+- No adoptar la conclusión sugerida antes de evaluar claims y evidencia contraria.
+- No preservar una posición previa por consistencia aparente.
+- Separar análisis técnico, recomendación, decisión humana y autorización.
+- Expresar desacuerdo cuando la premisa no esté sustentada.
+- Cambiar la conclusión cuando la evidencia supere el estándar aplicable.
+- Declarar INSUFFICIENT_EVIDENCE cuando corresponda.
+- No usar lenguaje de aprobación para ocultar desacuerdo técnico.

@@ -3,17 +3,18 @@
   "updated_at": "2026-07-16",
   "counts": {
     "projects": 7,
-    "decisions": 13,
+    "decisions": 14,
     "errors": 6,
-    "patterns": 7,
+    "patterns": 8,
     "ideas": 5,
     "integrations": 4,
     "experiments": 5,
-    "authorizations": 1,
+    "authorizations": 2,
     "evidence": 7,
     "unincorporated": 0,
     "proposals": 2,
-    "sessions": 1
+    "sessions": 1,
+    "reassessments": 0
   },
   "registries": {
     "projects": "registry/projects.json",
@@ -27,13 +28,14 @@
     "evidence": "registry/evidence.json",
     "unincorporated": "registry/unincorporated.json",
     "proposals": "registry/proposals.json",
-    "sessions": "registry/sessions.json"
+    "sessions": "registry/sessions.json",
+    "reassessments": "registry/reassessments.json"
   },
   "latest": {
-    "decision": "DEC-LAB-013",
+    "decision": "DEC-LAB-014",
     "error": "ERR-LAB-005",
-    "pattern": "PAT-LAB-006",
-    "authorization": "AUTH-LAB-GOVERNANCE-V2-013",
+    "pattern": "PAT-LAB-007",
+    "authorization": "AUTH-LAB-EPISTEMIC-INDEPENDENCE-014",
     "proposal": "PROP-LAB-002",
     "session": "SES-2026-06-28-001"
   }

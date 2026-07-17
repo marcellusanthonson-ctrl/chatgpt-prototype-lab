@@ -1,4 +1,4 @@
-# Metodología del LAB — v2.0
+# Metodología del LAB — v2.1
 
 ## 1. Objetivo
 
@@ -81,3 +81,20 @@ El protocolo estándar está en docs/CONTINUITY_PROTOCOL.md. CURRENT_CONTINUITY.
 ## 11. Fail closed
 
 Detenerse ante autoridad ausente, repositorio ambiguo, datos sensibles no autorizados, destino irreversible, contradicción canónica o expansión material del alcance. Una pregunta no bloqueante no detiene la ejecución.
+
+## 12. Reevaluación objetiva
+
+Cuando una decisión o conclusión sea cuestionada:
+
+1. Identificar si la materia es factual, normativa, ejecutiva o mixta.
+2. Preservar la posición anterior y su evidencia.
+3. Descomponer la auditoría en claims verificables.
+4. Confirmar procedencia, baseline y correspondencia de alcance.
+5. Buscar evidencia favorable y contraria.
+6. Reproducir el hallazgo cuando esté autorizado y sea necesario.
+7. Evaluar explicaciones alternativas y limitaciones.
+8. Emitir CONFIRMED, MODIFIED, REVERSED o INSUFFICIENT_EVIDENCE.
+9. Separar dictamen técnico, recomendación y decisión humana.
+10. Solicitar autorización solo si corresponde ejecutar una consecuencia.
+
+Ni la identidad del auditor ni la autoridad del solicitante sustituyen la calidad de la evidencia. La urgencia modifica prioridad, no el estándar de verdad.

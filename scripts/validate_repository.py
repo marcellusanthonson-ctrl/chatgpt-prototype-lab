@@ -169,6 +169,7 @@ def validate_projects(registries: dict[str, Any]) -> None:
             f"projects/{project_id}/decisions/index.json",
             f"projects/{project_id}/ideas/index.json",
             f"projects/{project_id}/integrations/index.json",
+            f"projects/{project_id}/reassessments/index.json",
         ]
         for path in required:
             require_file(path)
@@ -244,6 +245,31 @@ def validate_briefs_and_continuity() -> None:
         if prompt.is_file() and "No infieras autoridad" not in prompt.read_text(encoding="utf-8"):
             fail(f"{prompt}: authority boundary missing")
 
+def validate_reassessments(registries: dict[str, Any]) -> None:
+    global_records = registries["reassessments"].get("records", [])
+    seen: set[str] = set()
+    for project_dir in sorted((ROOT / "projects").iterdir()):
+        if not project_dir.is_dir() or project_dir.name.startswith("_"):
+            continue
+        index_path = project_dir / "reassessments" / "index.json"
+        if not index_path.is_file():
+            fail(f"{project_dir.name}: missing reassessment index")
+            continue
+        index = load_json(index_path.relative_to(ROOT).as_posix())
+        for record in index.get("records", []):
+            relative = record.get("canonical_path", "")
+            if not relative:
+                fail(f"{index_path}: reassessment without canonical_path")
+                continue
+            document = apply_schema(relative, "schemas/decision-reassessment.schema.json")
+            if document.get("project_id") != project_dir.name:
+                fail(f"{relative}: project_id mismatch")
+            if document.get("reassessment_id") in seen:
+                fail(f"{relative}: duplicate reassessment ID")
+            seen.add(document.get("reassessment_id"))
+    if len(global_records) != len(seen):
+        fail("global reassessment registry differs from project records")
+
 def validate_evidence(registries: dict[str, Any]) -> None:
     registered = {r.get("path") for r in registries["evidence"].get("records", [])}
     reports = {
@@ -282,6 +308,7 @@ def main() -> int:
     validate_decisions(registries)
     state = validate_current_state(registries)
     validate_briefs_and_continuity()
+    validate_reassessments(registries)
     validate_evidence(registries)
     validate_fixture(state, index, registries)
     if FAILURES:
@@ -294,7 +321,7 @@ def main() -> int:
     print("Schema instances: PASS")
     print("Registry counts and references: PASS")
     print("Project structures: PASS")
-    print("Brief and continuity contracts: PASS")
+    print("Brief, continuity and reassessment contracts: PASS")
     print("Evidence closure: PASS")
     print("Authority boundaries: PASS")
     return 0

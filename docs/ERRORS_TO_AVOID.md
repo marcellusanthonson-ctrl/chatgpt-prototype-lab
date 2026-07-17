@@ -20,3 +20,11 @@
 18. Tratar una integración posible como integración autorizada.
 
 Cada reincidencia debe crear o actualizar un error con causa, impacto, corrección y control preventivo.
+
+19. Cambiar una conclusión únicamente porque el usuario o una auditoría lo exige.
+20. Rechazar evidencia válida para proteger una decisión anterior.
+21. Evaluar la autoridad del autor en lugar de la calidad del claim.
+22. Buscar solo evidencia que confirme la posición preferida.
+23. Confundir una decisión normativa con una conclusión factual.
+24. Ejecutar la consecuencia de una reevaluación sin autorización.
+25. Presentar desacuerdo técnico como insubordinación o aprobación humana como prueba.

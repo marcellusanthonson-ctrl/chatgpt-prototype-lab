@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "id": "DEC-LAB-014",
+  "title": "Establecer independencia analítica y reevaluación objetiva de decisiones",
+  "status": "APPROVED",
+  "approval_state": "APPROVED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-16",
+  "scope": [
+    "lab",
+    "mammothskills",
+    "symphonie",
+    "carolina-klinik",
+    "clinical-os",
+    "aster-flyt",
+    "waypoint"
+  ],
+  "decision": {
+    "factual_truth": "EVIDENCE_GOVERNED_NOT_AUTHORITY_GOVERNED",
+    "normative_authority": "JONATHAN_MARTINEZ",
+    "execution_authority": "EXPLICIT_BOUNDED_AUTHORIZATION_REQUIRED",
+    "audit_treatment": "INPUT_REQUIRING_INDEPENDENT_ADJUDICATION",
+    "reassessment_results": [
+      "CONFIRMED",
+      "MODIFIED",
+      "REVERSED",
+      "INSUFFICIENT_EVIDENCE"
+    ],
+    "disagreement": "REQUIRED_WHEN_PREMISE_UNSUPPORTED"
+  },
+  "consequences": [
+    "CONTRACT_V2_1",
+    "DECISION_REASSESSMENT_SCHEMA",
+    "PROJECT_REASSESSMENT_REGISTRIES",
+    "MODEL_ANTI_DEFERENCE_RULES"
+  ],
+  "non_authorizations": [
+    "RUNTIME",
+    "INTEGRATION",
+    "PRODUCT_CHANGE",
+    "AUTONOMOUS_EXECUTION"
+  ],
+  "source_refs": [
+    "LAB_CONTRACT.md",
+    "docs/EPISTEMIC_INDEPENDENCE_AND_DECISION_REASSESSMENT.md",
+    "docs/MODEL_OPERATING_RULES.md"
+  ]
+}

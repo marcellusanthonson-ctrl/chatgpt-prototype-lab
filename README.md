@@ -20,7 +20,7 @@ JSON es canónico. Markdown es una vista humana. La propiedad de cada dato está
 
 ## Operación de modelos
 
-docs/MODEL_OPERATING_RULES.md exige ejecución continua dentro del alcance, preguntas solo ante bloqueos materiales y respuestas orientadas a deltas. docs/ERRORS_TO_AVOID.md registra fallas que no deben repetirse.
+docs/MODEL_OPERATING_RULES.md exige ejecución continua dentro del alcance, preguntas solo ante bloqueos materiales, independencia analítica y respuestas orientadas a deltas. docs/ERRORS_TO_AVOID.md registra fallas que no deben repetirse.
 
 ## Continuidad
 
@@ -34,7 +34,7 @@ Ejecutar:
 python scripts/validate_repository.py
 ```
 
-La validación comprueba JSON, claves duplicadas, registros, estados, referencias, estructura por proyecto, briefs, continuidad, propiedad canónica e índices.
+La validación comprueba JSON, claves duplicadas, registros, estados, referencias, estructura por proyecto, briefs, continuidad, reevaluaciones, propiedad canónica e índices.
 
 ## Límites
 
