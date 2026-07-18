@@ -107,7 +107,9 @@ def validate_chatgpt_project_sources() -> None:
     if errors.is_file() and "HEAD propio" not in errors.read_text(encoding="utf-8"):
         fail(f"{base}/07_ERRORS_AND_RESPONSE_CONTRACT.md: self-HEAD error missing")
 
-def type_matches(value: Any, expected: str) -> bool:
+def type_matches(value: Any, expected: Any) -> bool:
+    if isinstance(expected, list):
+        return any(type_matches(value, item) for item in expected)
     return {
         "object": isinstance(value, dict),
         "array": isinstance(value, list),
@@ -274,11 +276,35 @@ def validate_current_state(registries: dict[str, Any]) -> dict[str, Any]:
     return state
 
 def validate_decisions(registries: dict[str, Any]) -> None:
-    for decision in registries["decisions"].get("records", []):
-        if decision.get("status") not in DECISION_STATUSES:
-            fail(f"{decision.get('id')}: invalid decision status")
-        if decision.get("status") == "APPROVED" and not decision.get("approval_state"):
-            fail(f"{decision.get('id')}: approval evidence state missing")
+    for record in registries["decisions"].get("records", []):
+        decision_id = record.get("id")
+        if record.get("status") not in DECISION_STATUSES:
+            fail(f"{decision_id}: invalid decision status")
+        if record.get("status") == "APPROVED" and not record.get("approval_state"):
+            fail(f"{decision_id}: approval evidence state missing")
+        canonical_path = record.get("canonical_path", "")
+        if not canonical_path:
+            fail(f"{decision_id}: canonical decision path missing")
+            continue
+        decision = apply_schema(canonical_path, "schemas/decision.schema.json")
+        if decision.get("id") != decision_id:
+            fail(f"{canonical_path}: decision ID differs from registry")
+        decision_status = decision.get("status")
+        normalized_status = (
+            "APPROVED"
+            if isinstance(decision_status, str) and decision_status.startswith("APPROVED_")
+            else decision_status
+        )
+        if normalized_status != record.get("status"):
+            fail(f"{canonical_path}: decision status differs from registry")
+        if "project_scope" in decision:
+            if decision.get("project_scope") != record.get("project_scope"):
+                fail(f"{canonical_path}: project_scope differs from registry")
+        if normalized_status == "APPROVED":
+            if decision.get("approved_by") != "Jonathan Martínez":
+                fail(f"{canonical_path}: approved decision lacks sole approver")
+            if not decision.get("approval_evidence"):
+                fail(f"{canonical_path}: approved decision lacks approval evidence")
 
 def validate_briefs_and_continuity() -> None:
     for path in sorted(ROOT.glob("projects/*/briefs/*.json")):
@@ -347,6 +373,10 @@ def validate_evidence(registries: dict[str, Any]) -> None:
 
 def validate_fixture(state: dict[str, Any], index: dict[str, Any], registries: dict[str, Any]) -> None:
     expected = load_json("tests/expected_repository_state.json")
+    symphonie = next(
+        (record for record in registries["projects"].get("records", []) if record.get("id") == "symphonie"),
+        {},
+    )
     actual = {
         "methodology_version": state.get("methodology", {}).get("version"),
         "active_project": state.get("active_project"),
@@ -356,7 +386,11 @@ def validate_fixture(state: dict[str, Any], index: dict[str, Any], registries: d
         "open_errors": state.get("open_errors"),
         "validated_patterns": state.get("validated_patterns"),
         "registry_counts": index.get("counts"),
-        "symphonie": {"head": state.get("verified_external_heads", {}).get("symphonie"), "fileset": 44, "total_phases": 8},
+        "symphonie": {
+            "head": state.get("verified_external_heads", {}).get("symphonie"),
+            "fileset": symphonie.get("fileset"),
+            "total_phases": 8,
+        },
         "authorization_state": state.get("authorization_state"),
     }
     for key, value in actual.items():
