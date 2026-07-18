@@ -158,6 +158,31 @@
       "product_changes_authorized": false,
       "deployment_authorized": false,
       "release_authorized": false
+    },
+    {
+      "id": "AUTHORIZATION_LAB_TRANSVERSAL_RAG_CONTRACT_022",
+      "state_key": "transversal_rag_contract_022",
+      "project_id": "lab",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "approved_by": "Jonathan Martínez",
+      "scope": "DOCUMENTATION_AND_VALIDATION_ONLY",
+      "canonical_path": "architecture/rag/FEDERATION_CONTRACT.json",
+      "updated_at": "2026-07-18",
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "expected_parent_head": "311340b6173ca91e98eac3cf9a92d7d123a30e1a",
+      "commit_authorized": false,
+      "push_authorized": false,
+      "runtime_authorized": false,
+      "integration_authorized": false,
+      "embedding_generation_authorized": false,
+      "vector_storage_authorized": false,
+      "nodejs_pipeline_authorized": false,
+      "tool_calling_implementation_authorized": false,
+      "real_data_ingestion_authorized": false,
+      "product_changes_authorized": false,
+      "deployment_authorized": false,
+      "release_authorized": false
     }
   ]
 }

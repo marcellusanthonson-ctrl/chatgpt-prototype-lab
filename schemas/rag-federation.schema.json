@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lab.local/schemas/rag-federation.schema.json",
+  "title": "Transversal RAG federation contract",
+  "type": "object",
+  "required": ["schema_version", "id", "version", "status", "scope", "updated_at", "canonical_source", "namespaces", "chunk_metadata", "authority_rules", "retrieval_pipeline", "index_contract", "conflict_contract", "write_boundary", "security", "failure_modes", "non_goals", "execution_claims", "authorization"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "id": {"const": "RAG-FEDERATION-CONTRACT-001"},
+    "version": {"const": "1.0.0"},
+    "status": {"const": "DOCUMENTED_NOT_IMPLEMENTED"},
+    "scope": {"const": "DOCUMENTATION_AND_VALIDATION_ONLY"},
+    "updated_at": {"type": "string"},
+    "canonical_source": {
+      "type": "object",
+      "required": ["repository", "branch", "path", "sole_approver"],
+      "properties": {
+        "repository": {"const": "marcellusanthonson-ctrl/chatgpt-prototype-lab"},
+        "branch": {"const": "main"},
+        "path": {"const": "architecture/rag/FEDERATION_CONTRACT.json"},
+        "sole_approver": {"const": "Jonathan Martínez"}
+      },
+      "additionalProperties": false
+    },
+    "namespaces": {
+      "type": "array", "minItems": 3, "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["id", "repository_scope", "canonical_owner", "authority_classes", "allowed_content", "forbidden_overrides", "isolation_key"],
+        "properties": {
+          "id": {"enum": ["LAB", "SYMPHONIE", "PROJECT"]},
+          "repository_scope": {"type": "string"},
+          "canonical_owner": {"type": "string"},
+          "authority_classes": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+          "allowed_content": {"type": "array", "minItems": 2, "uniqueItems": true, "items": {"type": "string"}},
+          "forbidden_overrides": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+          "isolation_key": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "chunk_metadata": {
+      "type": "object",
+      "required": ["required_fields", "field_contracts", "chunk_id_formula"],
+      "properties": {
+        "required_fields": {"type": "array", "minItems": 11, "maxItems": 11, "uniqueItems": true, "items": {"type": "string"}},
+        "field_contracts": {
+          "type": "array", "minItems": 11, "maxItems": 11,
+          "items": {
+            "type": "object",
+            "required": ["name", "type", "source", "mutable", "description"],
+            "properties": {
+              "name": {"type": "string"}, "type": {"type": "string"},
+              "source": {"enum": ["CANONICAL_DOCUMENT", "GIT", "INDEXER_DERIVED"]},
+              "mutable": {"type": "boolean"}, "description": {"type": "string"}
+            },
+            "additionalProperties": false
+          }
+        },
+        "chunk_id_formula": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "authority_rules": {"type": "array", "minItems": 6, "maxItems": 6, "uniqueItems": true, "items": {"type": "string"}},
+    "retrieval_pipeline": {
+      "type": "object",
+      "required": ["authority_precedes_similarity", "stages", "result_contract"],
+      "properties": {
+        "authority_precedes_similarity": {"const": true},
+        "stages": {"type": "array", "minItems": 8, "items": {"type": "object", "required": ["order", "id", "outcome"], "properties": {"order": {"type": "integer"}, "id": {"type": "string"}, "outcome": {"type": "string"}}, "additionalProperties": false}},
+        "result_contract": {"type": "object", "required": ["citations_required", "commit_pin_required", "conflict_state_required"], "properties": {"citations_required": {"const": true}, "commit_pin_required": {"const": true}, "conflict_state_required": {"const": true}}, "additionalProperties": false}
+      },
+      "additionalProperties": false
+    },
+    "index_contract": {
+      "type": "object",
+      "required": ["role", "rules", "trigger", "affected_namespace_only", "stale_removal", "commit_pin"],
+      "properties": {
+        "role": {"const": "DERIVED_READ_ONLY_CACHE"},
+        "rules": {"type": "array", "minItems": 8, "maxItems": 8, "uniqueItems": true, "items": {"type": "string"}},
+        "trigger": {"const": "VERIFIED_CANONICAL_PUSH"},
+        "affected_namespace_only": {"const": true},
+        "stale_removal": {"const": "DELETE_CHUNKS_ABSENT_FROM_NEW_CANONICAL_MANIFEST"},
+        "commit_pin": {"const": "EXACT_SOURCE_COMMIT_SHA"}
+      },
+      "additionalProperties": false
+    },
+    "conflict_contract": {
+      "type": "object",
+      "required": ["automatic_merge", "states", "on_confirmed_conflict", "resolution_authority", "resolution_evidence"],
+      "properties": {
+        "automatic_merge": {"const": false},
+        "states": {"type": "array", "minItems": 5, "uniqueItems": true, "items": {"type": "string"}},
+        "on_confirmed_conflict": {"const": "STOP_CONCLUSION_AND_RETURN_SOURCES"},
+        "resolution_authority": {"const": "CANONICAL_OWNER_WITH_EXPLICIT_APPROVAL"},
+        "resolution_evidence": {"const": "NEW_CANONICAL_COMMIT"}
+      },
+      "additionalProperties": false
+    },
+    "write_boundary": {
+      "type": "object",
+      "required": ["rules", "model_direct_commit", "model_direct_push", "steps"],
+      "properties": {
+        "rules": {"type": "array", "minItems": 7, "maxItems": 7, "uniqueItems": true, "items": {"type": "string"}},
+        "model_direct_commit": {"const": false},
+        "model_direct_push": {"const": false},
+        "steps": {"type": "array", "minItems": 7, "items": {"type": "object", "required": ["order", "id", "gate"], "properties": {"order": {"type": "integer"}, "id": {"type": "string"}, "gate": {"type": "string"}}, "additionalProperties": false}}
+      },
+      "additionalProperties": false
+    },
+    "security": {
+      "type": "object",
+      "required": ["cross_project_retrieval_default", "acl_before_retrieval", "secrets_indexed", "real_data_ingestion_authorized", "controls"],
+      "properties": {
+        "cross_project_retrieval_default": {"const": false},
+        "acl_before_retrieval": {"const": true},
+        "secrets_indexed": {"const": false},
+        "real_data_ingestion_authorized": {"const": false},
+        "controls": {"type": "array", "minItems": 5, "uniqueItems": true, "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "failure_modes": {"type": "array", "minItems": 7, "items": {"type": "object", "required": ["id", "condition", "required_response", "safe_state"], "properties": {"id": {"type": "string"}, "condition": {"type": "string"}, "required_response": {"type": "string"}, "safe_state": {"type": "string"}}, "additionalProperties": false}},
+    "non_goals": {"type": "array", "minItems": 8, "uniqueItems": true, "items": {"type": "string"}},
+    "execution_claims": {
+      "type": "object",
+      "required": ["runtime_implemented", "integration_implemented", "embeddings_generated", "vector_store_created", "tool_calling_implemented", "production_validated"],
+      "properties": {
+        "runtime_implemented": {"const": false}, "integration_implemented": {"const": false},
+        "embeddings_generated": {"const": false}, "vector_store_created": {"const": false},
+        "tool_calling_implemented": {"const": false}, "production_validated": {"const": false}
+      },
+      "additionalProperties": false
+    },
+    "authorization": {"const": "AUTHORIZATION_LAB_TRANSVERSAL_RAG_CONTRACT_022"}
+  },
+  "additionalProperties": false
+}

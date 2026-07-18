@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0.0",
+  "id": "RAG-FEDERATION-CONTRACT-001",
+  "version": "1.0.0",
+  "status": "DOCUMENTED_NOT_IMPLEMENTED",
+  "scope": "DOCUMENTATION_AND_VALIDATION_ONLY",
+  "updated_at": "2026-07-18",
+  "canonical_source": {
+    "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "branch": "main",
+    "path": "architecture/rag/FEDERATION_CONTRACT.json",
+    "sole_approver": "Jonathan Martínez"
+  },
+  "namespaces": [
+    {
+      "id": "LAB",
+      "repository_scope": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "canonical_owner": "LAB",
+      "authority_classes": ["GLOBAL_GOVERNANCE", "REUSABLE_KNOWLEDGE", "VALIDATED_EVIDENCE", "CANONICAL_DECISION"],
+      "allowed_content": ["governance", "methodology", "decisions", "foundation_library", "patterns", "evidence"],
+      "forbidden_overrides": ["project_runtime_state", "product_specific_fact", "symphonie_phase_contract"],
+      "isolation_key": "namespace:LAB"
+    },
+    {
+      "id": "SYMPHONIE",
+      "repository_scope": "marcellusanthonson-ctrl/symphonie",
+      "canonical_owner": "SYMPHONIE",
+      "authority_classes": ["ORCHESTRATION_CONTRACT", "PHASE_SCHEMA", "GATE_POLICY", "SKILL_CONTRACT"],
+      "allowed_content": ["phase_contracts", "schemas", "gates", "orchestration_rules", "approved_skill_interfaces"],
+      "forbidden_overrides": ["lab_global_governance", "lab_validated_evidence", "project_product_state"],
+      "isolation_key": "namespace:SYMPHONIE"
+    },
+    {
+      "id": "PROJECT",
+      "repository_scope": "explicitly_authorized_product_repository",
+      "canonical_owner": "PROJECT_REPOSITORY",
+      "authority_classes": ["PROJECT_BRIEF", "PROJECT_DECISION", "PROJECT_STATE", "PROJECT_EVIDENCE"],
+      "allowed_content": ["approved_brief", "product_state", "project_decisions", "project_evidence", "approved_delta"],
+      "forbidden_overrides": ["lab_global_governance", "symphonie_orchestration_contract", "other_project_data"],
+      "isolation_key": "namespace:PROJECT:{project_id}:{repository}"
+    }
+  ],
+  "chunk_metadata": {
+    "required_fields": ["repository", "path", "document_id", "commit_sha", "content_sha256", "schema_version", "canonical_owner", "authority_class", "project_scope", "document_status", "indexed_at"],
+    "field_contracts": [
+      {"name": "repository", "type": "owner/name", "source": "GIT", "mutable": false, "description": "Repositorio canónico que contiene el documento"},
+      {"name": "path", "type": "repository_relative_path", "source": "GIT", "mutable": false, "description": "Ruta exacta dentro del commit"},
+      {"name": "document_id", "type": "stable_string", "source": "CANONICAL_DOCUMENT", "mutable": false, "description": "Identificador estable independiente del chunk"},
+      {"name": "commit_sha", "type": "git_sha40", "source": "GIT", "mutable": false, "description": "Commit exacto del contenido indexado"},
+      {"name": "content_sha256", "type": "sha256_hex", "source": "INDEXER_DERIVED", "mutable": false, "description": "Hash del contenido normalizado del chunk"},
+      {"name": "schema_version", "type": "version_string", "source": "CANONICAL_DOCUMENT", "mutable": false, "description": "Versión del contrato aplicable"},
+      {"name": "canonical_owner", "type": "authority_owner", "source": "CANONICAL_DOCUMENT", "mutable": false, "description": "Repositorio o dominio que resuelve cambios"},
+      {"name": "authority_class", "type": "controlled_enum", "source": "CANONICAL_DOCUMENT", "mutable": false, "description": "Clase usada antes del ranking semántico"},
+      {"name": "project_scope", "type": "global_or_project_id", "source": "CANONICAL_DOCUMENT", "mutable": false, "description": "Ámbito que impide contaminación entre proyectos"},
+      {"name": "document_status", "type": "controlled_status", "source": "CANONICAL_DOCUMENT", "mutable": false, "description": "Estado canónico como aprobado, draft o superseded"},
+      {"name": "indexed_at", "type": "utc_timestamp", "source": "INDEXER_DERIVED", "mutable": true, "description": "Momento de generación del caché, sin autoridad canónica"}
+    ],
+    "chunk_id_formula": "sha256(repository + newline + path + newline + document_id + newline + ordinal + newline + content_sha256)"
+  },
+  "authority_rules": [
+    "AUTHORITY_BEFORE_SEMANTIC_SIMILARITY",
+    "CANONICAL_OWNER_RESOLVES_SCOPE",
+    "EXACT_COMMIT_TRACEABILITY",
+    "NO_AUTOMATIC_CONFLICT_MERGE",
+    "CONFLICT_REQUIRES_EXPLICIT_RESOLUTION",
+    "PROJECT_DATA_CANNOT_OVERRIDE_GLOBAL_GOVERNANCE"
+  ],
+  "retrieval_pipeline": {
+    "authority_precedes_similarity": true,
+    "stages": [
+      {"order": 1, "id": "RESOLVE_TASK_SCOPE", "outcome": "Tarea, proyecto y clases de autoridad requeridas"},
+      {"order": 2, "id": "SELECT_AUTHORIZED_NAMESPACES", "outcome": "Namespaces permitidos por tarea y ACL"},
+      {"order": 3, "id": "VERIFY_ACTIVE_COMMITS", "outcome": "HEADs o commits aprobados y verificables"},
+      {"order": 4, "id": "FILTER_BY_AUTHORITY_AND_STATUS", "outcome": "Solo propietarios, ámbitos y estados aplicables"},
+      {"order": 5, "id": "RETRIEVE_WITHIN_NAMESPACE", "outcome": "Candidatos semánticos dentro de cada namespace"},
+      {"order": 6, "id": "RANK_AUTHORITY_THEN_RELEVANCE", "outcome": "Autoridad preservada y similitud usada solo entre candidatos válidos"},
+      {"order": 7, "id": "DETECT_CROSS_SOURCE_CONFLICTS", "outcome": "Estado explícito de compatibilidad o conflicto"},
+      {"order": 8, "id": "RETURN_CITED_CONTEXT", "outcome": "Contexto con repository, path, commit y document_id"}
+    ],
+    "result_contract": {"citations_required": true, "commit_pin_required": true, "conflict_state_required": true}
+  },
+  "index_contract": {
+    "role": "DERIVED_READ_ONLY_CACHE",
+    "rules": [
+      "INDEX_IS_DERIVED_READ_ONLY_CACHE",
+      "REPOSITORY_IS_SOURCE_OF_TRUTH",
+      "REBUILD_ON_CANONICAL_PUSH",
+      "REBUILD_ONLY_AFFECTED_NAMESPACE",
+      "REMOVE_STALE_CHUNKS",
+      "PIN_ACTIVE_COMMIT",
+      "DETERMINISTIC_CHUNK_IDENTIFIERS",
+      "NO_DIRECT_MODEL_WRITES"
+    ],
+    "trigger": "VERIFIED_CANONICAL_PUSH",
+    "affected_namespace_only": true,
+    "stale_removal": "DELETE_CHUNKS_ABSENT_FROM_NEW_CANONICAL_MANIFEST",
+    "commit_pin": "EXACT_SOURCE_COMMIT_SHA"
+  },
+  "conflict_contract": {
+    "automatic_merge": false,
+    "states": ["NONE", "SUSPECTED", "CONFIRMED", "RESOLUTION_REQUIRED", "RESOLVED"],
+    "on_confirmed_conflict": "STOP_CONCLUSION_AND_RETURN_SOURCES",
+    "resolution_authority": "CANONICAL_OWNER_WITH_EXPLICIT_APPROVAL",
+    "resolution_evidence": "NEW_CANONICAL_COMMIT"
+  },
+  "write_boundary": {
+    "rules": [
+      "MODEL_MAY_PROPOSE_STRUCTURED_CHANGE",
+      "PROPOSAL_TARGETS_CANONICAL_OWNER",
+      "VALIDATOR_RUNS_BEFORE_COMMIT",
+      "VALIDATION_FAILURE_RETURNS_TO_MODEL",
+      "COMMIT_REQUIRES_ACTIVE_AUTHORIZATION",
+      "NO_AUTONOMOUS_AUTHORITY",
+      "INDEX_REBUILDS_ONLY_AFTER_CANONICAL_COMMIT"
+    ],
+    "model_direct_commit": false,
+    "model_direct_push": false,
+    "steps": [
+      {"order": 1, "id": "EMIT_TYPED_PROPOSAL", "gate": "Schema-valid proposal only"},
+      {"order": 2, "id": "RESOLVE_CANONICAL_OWNER", "gate": "Exactly one target repository"},
+      {"order": 3, "id": "MATERIALIZE_TEMPORARY_CHANGE", "gate": "No canonical mutation"},
+      {"order": 4, "id": "RUN_REPOSITORY_VALIDATOR", "gate": "All repository checks pass"},
+      {"order": 5, "id": "CHECK_ACTIVE_AUTHORIZATION", "gate": "Approver, HEAD, paths and actions match"},
+      {"order": 6, "id": "COMMIT_CANONICAL_CHANGE", "gate": "Bounded executor only"},
+      {"order": 7, "id": "REBUILD_DERIVED_NAMESPACE", "gate": "Verified canonical commit exists"}
+    ]
+  },
+  "security": {
+    "cross_project_retrieval_default": false,
+    "acl_before_retrieval": true,
+    "secrets_indexed": false,
+    "real_data_ingestion_authorized": false,
+    "controls": ["NAMESPACE_ALLOWLIST", "PROJECT_SCOPE_FILTER", "AUTHORITY_CLASS_FILTER", "SECRET_EXCLUSION", "COMMIT_ALLOWLIST", "CITATION_REQUIRED", "DENY_BY_DEFAULT"]
+  },
+  "failure_modes": [
+    {"id": "RAG-HEAD-MISMATCH", "condition": "Índice apunta a commit distinto del activo", "required_response": "Excluir namespace y solicitar reconstrucción", "safe_state": "NO_CONTEXT_FROM_STALE_NAMESPACE"},
+    {"id": "RAG-MISSING-METADATA", "condition": "Chunk carece de campo obligatorio", "required_response": "Rechazar chunk", "safe_state": "CHUNK_NOT_RETRIEVABLE"},
+    {"id": "RAG-UNKNOWN-OWNER", "condition": "No puede resolverse propietario canónico", "required_response": "Detener propuesta y exponer ambigüedad", "safe_state": "NO_WRITE_TARGET"},
+    {"id": "RAG-CANONICAL-CONFLICT", "condition": "Fuentes aplicables se contradicen", "required_response": "Detener conclusión y devolver ambas citas", "safe_state": "RESOLUTION_REQUIRED"},
+    {"id": "RAG-ACL-DENIED", "condition": "Tarea no permite namespace o proyecto", "required_response": "Excluir contenido sin revelar existencia", "safe_state": "DENIED"},
+    {"id": "RAG-VALIDATION-FAILED", "condition": "Propuesta no cumple repositorio", "required_response": "No escribir y devolver errores tipados al modelo", "safe_state": "PROPOSAL_REJECTED"},
+    {"id": "RAG-AUTHORIZATION-MISSING", "condition": "No existe autorización activa y delimitada", "required_response": "No hacer commit ni push", "safe_state": "AWAITING_EXPLICIT_APPROVAL"},
+    {"id": "RAG-INDEX-UNAVAILABLE", "condition": "Caché derivado no responde", "required_response": "Fallar explícitamente o leer fuente canónica autorizada", "safe_state": "NO_UNCITED_INFERENCE"}
+  ],
+  "non_goals": ["RUNTIME_IMPLEMENTATION", "EMBEDDING_GENERATION", "VECTOR_STORE_SELECTION", "NODEJS_PIPELINE", "API_ROUTE", "TOOL_CALLING_RUNTIME", "REAL_DATA_INGESTION", "SYMPHONIE_MODIFICATION", "PRODUCT_REPOSITORY_MODIFICATION", "DEPLOYMENT", "RELEASE"],
+  "execution_claims": {"runtime_implemented": false, "integration_implemented": false, "embeddings_generated": false, "vector_store_created": false, "tool_calling_implemented": false, "production_validated": false},
+  "authorization": "AUTHORIZATION_LAB_TRANSVERSAL_RAG_CONTRACT_022"
+}

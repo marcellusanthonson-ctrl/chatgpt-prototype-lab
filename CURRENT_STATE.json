@@ -1,11 +1,11 @@
 {
   "schema_version": "2.5.0",
   "document_id": "lab.current-state",
-  "version": "2.5.2",
+  "version": "2.5.3",
   "status": "GOVERNANCE_V2_CANONICAL_BASELINE",
   "updated_at": "2026-07-18",
   "active_project": "lab",
-  "current_phase": "FOUNDATION_EVIDENCE_PROTOCOLS_DEFINED_NOT_EXECUTED",
+  "current_phase": "TRANSVERSAL_RAG_CONTRACT_DOCUMENTED_NOT_IMPLEMENTED",
   "methodology": {
     "version": "2.1",
     "path": "METHODOLOGY.md"
@@ -32,7 +32,8 @@
     "continuity": "docs/CONTINUITY_PROTOCOL.md",
     "brief_schema": "schemas/brief.schema.json",
     "epistemic_independence": "docs/EPISTEMIC_INDEPENDENCE_AND_DECISION_REASSESSMENT.md",
-    "chatgpt_project_sources": "project-sources/chatgpt/START_HERE.md"
+    "chatgpt_project_sources": "project-sources/chatgpt/START_HERE.md",
+    "rag_federation_contract": "architecture/rag/FEDERATION_CONTRACT.json"
   },
   "projects": {
     "lab": {
@@ -114,14 +115,16 @@
     "symphonie_phase_schemas_018": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "foundation_library_019": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "foundation_evidence_protocol_020": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "continuity_metadata_021": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+    "continuity_metadata_021": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "transversal_rag_contract_022": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
   },
   "verified_external_heads": {
     "symphonie": "9de9dcf5c58583cd46bece41a0e772e3671801ff",
     "lab_base_before_transition": "7f1a7e101f42a981ad68e7602318b07bc62970b3",
     "lab_base_before_foundation_library": "4367b736c22d92937ec8ad1174bd9c9610baa313",
     "lab_base_before_foundation_evidence": "2e4608d7adc69ddf507a013f8da6cf513a0754ba",
-    "lab_base_before_continuity_metadata": "321be8d6d7d56ed8b62e8dc96aadbf865a2e80a2"
+    "lab_base_before_continuity_metadata": "321be8d6d7d56ed8b62e8dc96aadbf865a2e80a2",
+    "lab_base_before_rag_contract": "311340b6173ca91e98eac3cf9a92d7d123a30e1a"
   },
   "next_authorized_action": "NONE_UNTIL_NEW_EXPLICIT_APPROVAL",
   "next_recommended_transition": "SELECT_SINGLE_FOUNDATION_PILOT_FOR_EXECUTION_AUTHORIZATION",

@@ -2,8 +2,8 @@
 
 La fuente estructurada es CURRENT_STATE.json.
 
-- Versión: 2.5.2.
-- Fase: FOUNDATION_EVIDENCE_PROTOCOLS_DEFINED_NOT_EXECUTED.
+- Versión: 2.5.3.
+- Fase: TRANSVERSAL_RAG_CONTRACT_DOCUMENTED_NOT_IMPLEMENTED.
 - Aprobador: Jonathan Martínez.
 - Runtime, integración y cambios de producto: no autorizados.
 - HEAD propio: verificar main en vivo; no almacenarlo como estado vigente.
@@ -54,6 +54,12 @@ Todos los documentos están marcados `EVIDENCE_PROTOCOL_DEFINED_NOT_EXECUTED`. N
 ## Continuidad 021
 
 `AUTHORIZATION_LAB_CONTINUITY_METADATA_021` reconcilia la referencia de Foundation Library con su versión canónica 1.1.0 y exige que la fecha del registro de autorizaciones nunca sea anterior a la de sus registros. La fase y la transición recomendada no cambian.
+
+## RAG transversal 022
+
+`architecture/rag/FEDERATION_CONTRACT.json` define un servicio lógico federado sobre namespaces aislados LAB, Symphonie y PROJECT. La autoridad y el estado canónico se resuelven antes de la similitud semántica; cada resultado requiere trazabilidad a repositorio, ruta y commit.
+
+El índice se define exclusivamente como caché derivado de solo lectura. Tool Calling puede emitir propuestas tipadas, pero validación y autorización activa son obligatorias antes de cualquier commit. El contrato está `DOCUMENTED_NOT_IMPLEMENTED`: no existen embeddings, almacenamiento vectorial, Node.js, API ni integración operativa.
 
 ## Siguiente transición
 

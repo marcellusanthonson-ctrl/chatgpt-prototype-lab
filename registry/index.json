@@ -9,14 +9,15 @@
     "ideas": 5,
     "integrations": 4,
     "experiments": 5,
-    "authorizations": 9,
+    "authorizations": 10,
     "evidence": 7,
     "unincorporated": 0,
     "proposals": 2,
     "sessions": 1,
     "reassessments": 1,
     "source_packages": 1,
-    "foundation_library": 14
+    "foundation_library": 14,
+    "rag_contracts": 6
   },
   "registries": {
     "projects": "registry/projects.json",
@@ -33,18 +34,20 @@
     "sessions": "registry/sessions.json",
     "reassessments": "registry/reassessments.json",
     "source_packages": "registry/source-packages.json",
-    "foundation_library": "registry/foundation-library.json"
+    "foundation_library": "registry/foundation-library.json",
+    "rag_contracts": "registry/rag-contracts.json"
   },
   "latest": {
     "decision": "DEC-LAB-015",
     "error": "ERR-LAB-006",
     "pattern": "PAT-LAB-007",
-    "authorization": "AUTHORIZATION_LAB_CONTINUITY_METADATA_021",
+    "authorization": "AUTHORIZATION_LAB_TRANSVERSAL_RAG_CONTRACT_022",
     "proposal": "PROP-LAB-002",
     "session": "SES-2026-06-28-001",
     "reassessment": "REA-LAB-001",
     "source_package": "SRC-PKG-CHATGPT-001",
     "foundation_library": "lab.foundation-library",
-    "foundation_evidence": "EVIDENCE_PROTOCOL_DEFINED_NOT_EXECUTED"
+    "foundation_evidence": "EVIDENCE_PROTOCOL_DEFINED_NOT_EXECUTED",
+    "rag_contract": "RAG-FEDERATION-CONTRACT-001"
   }
 }

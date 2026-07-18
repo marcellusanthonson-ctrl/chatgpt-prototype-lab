@@ -71,6 +71,32 @@ REQUIRED_PAYMENT_EVIDENCE = {
     "IDEMPOTENT_PAYMENT_INTENT", "CLIENT_CONFIGURATION_ISOLATION",
     "CREDENTIAL_REFERENCE_ISOLATION", "REFUND_TRACEABILITY",
 }
+REQUIRED_RAG_NAMESPACES = ["LAB", "SYMPHONIE", "PROJECT"]
+REQUIRED_RAG_METADATA = [
+    "repository", "path", "document_id", "commit_sha", "content_sha256",
+    "schema_version", "canonical_owner", "authority_class", "project_scope",
+    "document_status", "indexed_at",
+]
+REQUIRED_RAG_AUTHORITY_RULES = {
+    "AUTHORITY_BEFORE_SEMANTIC_SIMILARITY",
+    "CANONICAL_OWNER_RESOLVES_SCOPE",
+    "EXACT_COMMIT_TRACEABILITY",
+    "NO_AUTOMATIC_CONFLICT_MERGE",
+    "CONFLICT_REQUIRES_EXPLICIT_RESOLUTION",
+    "PROJECT_DATA_CANNOT_OVERRIDE_GLOBAL_GOVERNANCE",
+}
+REQUIRED_RAG_INDEX_RULES = {
+    "INDEX_IS_DERIVED_READ_ONLY_CACHE", "REPOSITORY_IS_SOURCE_OF_TRUTH",
+    "REBUILD_ON_CANONICAL_PUSH", "REBUILD_ONLY_AFFECTED_NAMESPACE",
+    "REMOVE_STALE_CHUNKS", "PIN_ACTIVE_COMMIT",
+    "DETERMINISTIC_CHUNK_IDENTIFIERS", "NO_DIRECT_MODEL_WRITES",
+}
+REQUIRED_RAG_WRITE_RULES = {
+    "MODEL_MAY_PROPOSE_STRUCTURED_CHANGE", "PROPOSAL_TARGETS_CANONICAL_OWNER",
+    "VALIDATOR_RUNS_BEFORE_COMMIT", "VALIDATION_FAILURE_RETURNS_TO_MODEL",
+    "COMMIT_REQUIRES_ACTIVE_AUTHORIZATION", "NO_AUTONOMOUS_AUTHORITY",
+    "INDEX_REBUILDS_ONLY_AFTER_CANONICAL_COMMIT",
+}
 
 def fail(message: str) -> None:
     FAILURES.append(message)
@@ -602,6 +628,101 @@ def validate_foundation_evidence(registries: dict[str, Any]) -> None:
         missing = sorted(set(subjects) - seen_subjects)
         fail("foundation evidence: subjects without protocol: " + ", ".join(missing))
 
+def validate_rag_contracts(registries: dict[str, Any]) -> None:
+    expected_paths = {
+        "architecture/rag/FEDERATION_CONTRACT.json",
+        "architecture/rag/CANONICAL_OWNERSHIP.md",
+        "architecture/rag/RETRIEVAL_AND_RANKING.md",
+        "architecture/rag/INDEX_LIFECYCLE.md",
+        "architecture/rag/WRITE_BOUNDARY.md",
+        "architecture/rag/FAILURE_MODES.md",
+    }
+    registry = registries.get("rag_contracts", {})
+    records = registry.get("records", [])
+    actual_paths = {record.get("canonical_path") for record in records}
+    if actual_paths != expected_paths:
+        fail("registry/rag-contracts.json: canonical contract set mismatch")
+    for record in records:
+        if record.get("status") != "DOCUMENTED_NOT_IMPLEMENTED":
+            fail(f"{record.get('id')}: RAG contract has executable status")
+        relative = record.get("canonical_path", "")
+        if relative.endswith(".md"):
+            path = ROOT / relative
+            if path.is_file():
+                text = path.read_text(encoding="utf-8")
+                if record.get("id") not in text:
+                    fail(f"{relative}: canonical ID missing")
+                if "DOCUMENTED_NOT_IMPLEMENTED" not in text:
+                    fail(f"{relative}: non-implementation status missing")
+    contract = apply_schema(
+        "architecture/rag/FEDERATION_CONTRACT.json",
+        "schemas/rag-federation.schema.json",
+    )
+    namespaces = contract.get("namespaces", [])
+    namespace_ids = [item.get("id") for item in namespaces]
+    if namespace_ids != REQUIRED_RAG_NAMESPACES:
+        fail("RAG federation: namespace order or membership mismatch")
+    if len({item.get("isolation_key") for item in namespaces}) != 3:
+        fail("RAG federation: namespace isolation keys must be unique")
+    project = next((item for item in namespaces if item.get("id") == "PROJECT"), {})
+    if "lab_global_governance" not in project.get("forbidden_overrides", []):
+        fail("RAG federation: project may override LAB governance")
+    if "symphonie_orchestration_contract" not in project.get("forbidden_overrides", []):
+        fail("RAG federation: project may override Symphonie contract")
+    metadata = contract.get("chunk_metadata", {})
+    if metadata.get("required_fields") != REQUIRED_RAG_METADATA:
+        fail("RAG federation: required chunk metadata mismatch")
+    field_contracts = metadata.get("field_contracts", [])
+    field_names = [item.get("name") for item in field_contracts]
+    if field_names != REQUIRED_RAG_METADATA:
+        fail("RAG federation: metadata field contracts mismatch")
+    mutable_fields = {item.get("name") for item in field_contracts if item.get("mutable")}
+    if mutable_fields != {"indexed_at"}:
+        fail("RAG federation: only indexed_at may be mutable cache metadata")
+    if set(contract.get("authority_rules", [])) != REQUIRED_RAG_AUTHORITY_RULES:
+        fail("RAG federation: authority rules mismatch")
+    retrieval = contract.get("retrieval_pipeline", {})
+    if retrieval.get("authority_precedes_similarity") is not True:
+        fail("RAG federation: semantic similarity precedes authority")
+    stages = retrieval.get("stages", [])
+    expected_stage_ids = [
+        "RESOLVE_TASK_SCOPE", "SELECT_AUTHORIZED_NAMESPACES",
+        "VERIFY_ACTIVE_COMMITS", "FILTER_BY_AUTHORITY_AND_STATUS",
+        "RETRIEVE_WITHIN_NAMESPACE", "RANK_AUTHORITY_THEN_RELEVANCE",
+        "DETECT_CROSS_SOURCE_CONFLICTS", "RETURN_CITED_CONTEXT",
+    ]
+    if [item.get("order") for item in stages] != list(range(1, 9)):
+        fail("RAG federation: retrieval stage order invalid")
+    if [item.get("id") for item in stages] != expected_stage_ids:
+        fail("RAG federation: retrieval stages mismatch")
+    index = contract.get("index_contract", {})
+    if set(index.get("rules", [])) != REQUIRED_RAG_INDEX_RULES:
+        fail("RAG federation: index rules mismatch")
+    if index.get("role") != "DERIVED_READ_ONLY_CACHE":
+        fail("RAG federation: index is not a derived read-only cache")
+    conflicts = contract.get("conflict_contract", {})
+    if conflicts.get("automatic_merge") is not False:
+        fail("RAG federation: automatic conflict merge enabled")
+    if conflicts.get("on_confirmed_conflict") != "STOP_CONCLUSION_AND_RETURN_SOURCES":
+        fail("RAG federation: confirmed conflict does not stop conclusion")
+    boundary = contract.get("write_boundary", {})
+    if set(boundary.get("rules", [])) != REQUIRED_RAG_WRITE_RULES:
+        fail("RAG federation: write boundary rules mismatch")
+    if boundary.get("model_direct_commit") is not False or boundary.get("model_direct_push") is not False:
+        fail("RAG federation: model has direct Git authority")
+    write_steps = boundary.get("steps", [])
+    if [item.get("order") for item in write_steps] != list(range(1, 8)):
+        fail("RAG federation: write boundary order invalid")
+    security = contract.get("security", {})
+    if security.get("cross_project_retrieval_default") is not False:
+        fail("RAG federation: cross-project retrieval is enabled by default")
+    if security.get("secrets_indexed") is not False:
+        fail("RAG federation: secret indexing enabled")
+    if security.get("real_data_ingestion_authorized") is not False:
+        fail("RAG federation: real-data ingestion authorized")
+    if any(contract.get("execution_claims", {}).values()):
+        fail("RAG federation: documentary contract makes implementation claim")
+
 def validate_briefs_and_continuity() -> None:
     for path in sorted(ROOT.glob("projects/*/briefs/*.json")):
         apply_schema(path.relative_to(ROOT).as_posix(), "schemas/brief.schema.json")
@@ -702,6 +823,7 @@ def main() -> int:
     state = validate_current_state(registries)
     validate_foundation_library(registries)
     validate_foundation_evidence(registries)
+    validate_rag_contracts(registries)
     validate_briefs_and_continuity()
     validate_reassessments(registries)
     validate_evidence(registries)
@@ -720,6 +842,7 @@ def main() -> int:
     print("Evidence closure: PASS")
     print("Authority boundaries: PASS")
     print("Foundation evidence protocols: PASS")
+    print("Transversal RAG contracts: PASS")
     return 0
 
 if __name__ == "__main__":
