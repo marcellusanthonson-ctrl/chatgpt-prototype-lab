@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-07-17",
+  "updated_at": "2026-07-18",
   "records": [
     {
       "id": "AUTH-LAB-GOVERNANCE-V2-013",
@@ -133,6 +133,27 @@
       "integration_authorized": false,
       "browser_execution_authorized": false,
       "automated_ui_execution_authorized": false,
+      "rag_authorized": false,
+      "product_changes_authorized": false,
+      "deployment_authorized": false,
+      "release_authorized": false
+    },
+    {
+      "id": "AUTHORIZATION_LAB_CONTINUITY_METADATA_021",
+      "state_key": "continuity_metadata_021",
+      "project_id": "lab",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "approved_by": "Jonathan Martínez",
+      "scope": "DOCUMENTATION_AND_VALIDATION_ONLY",
+      "canonical_path": "ROADMAP.md",
+      "updated_at": "2026-07-18",
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "expected_parent_head": "321be8d6d7d56ed8b62e8dc96aadbf865a2e80a2",
+      "commit_authorized": false,
+      "push_authorized": false,
+      "runtime_authorized": false,
+      "integration_authorized": false,
       "rag_authorized": false,
       "product_changes_authorized": false,
       "deployment_authorized": false,

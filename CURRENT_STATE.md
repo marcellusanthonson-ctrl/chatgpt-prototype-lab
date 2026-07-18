@@ -2,7 +2,7 @@
 
 La fuente estructurada es CURRENT_STATE.json.
 
-- Versión: 2.5.1.
+- Versión: 2.5.2.
 - Fase: FOUNDATION_EVIDENCE_PROTOCOLS_DEFINED_NOT_EXECUTED.
 - Aprobador: Jonathan Martínez.
 - Runtime, integración y cambios de producto: no autorizados.
@@ -50,6 +50,10 @@ Todos los documentos están marcados `EVIDENCE_PROTOCOL_DEFINED_NOT_EXECUTED`. N
 ## Autorización 020
 
 `AUTHORIZATION_LAB_FOUNDATION_EVIDENCE_PROTOCOL_020` quedó consumida por publicación verificable. Ninguna autorización de ejecución fue habilitada.
+
+## Continuidad 021
+
+`AUTHORIZATION_LAB_CONTINUITY_METADATA_021` reconcilia la referencia de Foundation Library con su versión canónica 1.1.0 y exige que la fecha del registro de autorizaciones nunca sea anterior a la de sus registros. La fase y la transición recomendada no cambian.
 
 ## Siguiente transición
 

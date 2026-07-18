@@ -2,7 +2,7 @@
 
 ## Estado canónico
 
-La Foundation Library 1.0.0 está documentada y validada bajo `AUTHORIZATION_LAB_FOUNDATION_LIBRARY_019`. Sus catorce protocolos de evidencia están definidos bajo `AUTHORIZATION_LAB_FOUNDATION_EVIDENCE_PROTOCOL_020` y permanecen `EVIDENCE_PROTOCOL_DEFINED_NOT_EXECUTED`. Este estado no acredita implementación ni funcionamiento.
+La Foundation Library 1.1.0 está documentada y validada bajo `AUTHORIZATION_LAB_FOUNDATION_LIBRARY_019`. Sus catorce protocolos de evidencia están definidos bajo `AUTHORIZATION_LAB_FOUNDATION_EVIDENCE_PROTOCOL_020` y permanecen `EVIDENCE_PROTOCOL_DEFINED_NOT_EXECUTED`. Este estado no acredita implementación ni funcionamiento.
 
 ## Próximas transiciones recomendadas
 

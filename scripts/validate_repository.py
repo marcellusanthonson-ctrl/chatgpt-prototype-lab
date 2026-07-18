@@ -260,6 +260,19 @@ def validate_registries() -> tuple[dict[str, Any], dict[str, Any]]:
         fail("registry IDs not unique: " + ", ".join(duplicates))
     if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(index.get("updated_at", ""))):
         fail("registry/index.json: invalid updated_at")
+    authorizations = loaded.get("authorizations", {})
+    authorization_updated = str(authorizations.get("updated_at", ""))
+    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", authorization_updated):
+        fail("registry/authorizations.json: invalid updated_at")
+    authorization_dates: list[str] = []
+    for record in authorizations.get("records", []):
+        record_date = str(record.get("updated_at", ""))
+        if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", record_date):
+            fail(f"{record.get('id')}: invalid authorization updated_at")
+        else:
+            authorization_dates.append(record_date)
+    if authorization_dates and authorization_updated < max(authorization_dates):
+        fail("registry/authorizations.json: updated_at precedes a record")
     return index, loaded
 
 def validate_projects(registries: dict[str, Any]) -> None:
