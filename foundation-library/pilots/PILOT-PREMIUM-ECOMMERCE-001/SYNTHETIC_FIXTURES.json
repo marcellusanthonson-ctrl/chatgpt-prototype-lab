@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0.0",
+  "id": "FIXTURES-PILOT-PREMIUM-ECOMMERCE-001",
+  "pilot_id": "PILOT-PREMIUM-ECOMMERCE-001",
+  "status": "DEFINED_NOT_EXECUTED",
+  "policy": {"synthetic_only": true, "real_client_data": false, "real_product_data": false, "real_payment_data": false, "placeholder_prefix": "SYNTHETIC_"},
+  "fixtures": [
+    {"id": "SYNTHETIC_FIXTURE_PRODUCT_CATALOG", "fixture_type": "PRODUCT_CATALOG", "payload": {"product_ids": ["SYNTHETIC_TV_A01", "SYNTHETIC_TV_B02", "SYNTHETIC_TV_C03"], "sort": "FEATURED"}, "expected_state": "Three distinct product cards with stable actions", "synthetic": true},
+    {"id": "SYNTHETIC_FIXTURE_PRODUCT_DETAIL", "fixture_type": "PRODUCT_DETAIL", "payload": {"product_id": "SYNTHETIC_TV_A01", "gallery_items": 8, "spec_groups": 4}, "expected_state": "Gallery, summary, specifications and configuration action", "synthetic": true},
+    {"id": "SYNTHETIC_FIXTURE_LONG_PRODUCT_NAME", "fixture_type": "LONG_PRODUCT_NAME", "payload": {"name": "SYNTHETIC Terra Volta Meridian Expedition Dual-Motor Limited Studio Configuration", "characters": 83}, "expected_state": "Name wraps without covering price or actions", "synthetic": true},
+    {"id": "SYNTHETIC_FIXTURE_MULTIPLE_VARIANTS", "fixture_type": "MULTIPLE_VARIANTS", "payload": {"product_id": "SYNTHETIC_TV_B02", "variants": ["SYNTHETIC_CLAY", "SYNTHETIC_MOSS", "SYNTHETIC_GRAPHITE", "SYNTHETIC_SAND"]}, "expected_state": "Variant name, availability and selection announced", "synthetic": true},
+    {"id": "SYNTHETIC_FIXTURE_AVAILABLE_STOCK", "fixture_type": "AVAILABLE_STOCK", "payload": {"product_id": "SYNTHETIC_TV_A01", "availability": "AVAILABLE"}, "expected_state": "Configuration action enabled with textual availability", "synthetic": true},
+    {"id": "SYNTHETIC_FIXTURE_UNAVAILABLE_STOCK", "fixture_type": "UNAVAILABLE_STOCK", "payload": {"product_id": "SYNTHETIC_TV_C03", "availability": "UNAVAILABLE"}, "expected_state": "Primary purchase action disabled and alternative explained", "synthetic": true},
+    {"id": "SYNTHETIC_FIXTURE_EMPTY_CART", "fixture_type": "EMPTY_CART", "payload": {"items": []}, "expected_state": "Empty explanation and return-to-catalog action", "synthetic": true},
+    {"id": "SYNTHETIC_FIXTURE_LOADING_CART", "fixture_type": "LOADING_CART", "payload": {"request_state": "LOADING"}, "expected_state": "Existing context preserved and duplicate actions prevented", "synthetic": true},
+    {"id": "SYNTHETIC_FIXTURE_CART_ERROR", "fixture_type": "CART_ERROR", "payload": {"request_state": "ERROR", "error_code": "SYNTHETIC_CART_CONFLICT"}, "expected_state": "Safe message, retained selection and retry action", "synthetic": true},
+    {"id": "SYNTHETIC_FIXTURE_CART_SUCCESS", "fixture_type": "CART_SUCCESS", "payload": {"request_state": "SUCCESS", "item_id": "SYNTHETIC_TV_A01_CLAY"}, "expected_state": "Single success announcement and cart summary", "synthetic": true},
+    {"id": "SYNTHETIC_FIXTURE_LOCALIZED_CONTENT", "fixture_type": "LOCALIZED_CONTENT", "payload": {"locale": "es-CL-synthetic", "expansion_percent": 40}, "expected_state": "Expanded labels reflow without truncation", "synthetic": true},
+    {"id": "SYNTHETIC_FIXTURE_MISSING_OPTIONAL_CONTENT", "fixture_type": "MISSING_OPTIONAL_CONTENT", "payload": {"missing": ["secondary_description", "material_macro", "optional_badge"]}, "expected_state": "Layout closes gaps and preserves hierarchy", "synthetic": true}
+  ],
+  "execution_claims": {"fixtures_executed": false, "results_recorded": false}
+}

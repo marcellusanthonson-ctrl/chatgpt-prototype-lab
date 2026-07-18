@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import hashlib
 import re
 import subprocess
 import sys
@@ -96,6 +97,21 @@ REQUIRED_RAG_WRITE_RULES = {
     "VALIDATOR_RUNS_BEFORE_COMMIT", "VALIDATION_FAILURE_RETURNS_TO_MODEL",
     "COMMIT_REQUIRES_ACTIVE_AUTHORIZATION", "NO_AUTONOMOUS_AUTHORITY",
     "INDEX_REBUILDS_ONLY_AFTER_CANONICAL_COMMIT",
+}
+REQUIRED_PILOT_DELTA_AREAS = {
+    "TYPOGRAPHY", "EARTH_TONE_COLOR_PALETTE", "EDITORIAL_COMPOSITION",
+    "PRODUCT_PHOTOGRAPHY_DIRECTION", "COMPONENT_DENSITY", "CONTENT_VOICE",
+}
+REQUIRED_PILOT_IMMUTABLES = {
+    "SEMANTIC_ORDER", "WCAG_2_2_AA", "RESPONSIVE_RANGE_CONTINUITY",
+    "KEYBOARD_OPERABILITY", "FOCUS_VISIBILITY", "SCREEN_READER_SEMANTICS",
+    "INTERACTION_STATE_COMPLETENESS", "PURCHASE_FLOW_RECOVERABILITY",
+    "NO_HORIZONTAL_PAGE_OVERFLOW",
+}
+REQUIRED_PILOT_FIXTURES = {
+    "PRODUCT_CATALOG", "PRODUCT_DETAIL", "LONG_PRODUCT_NAME", "MULTIPLE_VARIANTS",
+    "AVAILABLE_STOCK", "UNAVAILABLE_STOCK", "EMPTY_CART", "LOADING_CART",
+    "CART_ERROR", "CART_SUCCESS", "LOCALIZED_CONTENT", "MISSING_OPTIONAL_CONTENT",
 }
 
 def fail(message: str) -> None:
@@ -723,6 +739,126 @@ def validate_rag_contracts(registries: dict[str, Any]) -> None:
     if any(contract.get("execution_claims", {}).values()):
         fail("RAG federation: documentary contract makes implementation claim")
 
+def validate_foundation_pilots(registries: dict[str, Any]) -> None:
+    pilot_path = "foundation-library/pilots/PILOT-PREMIUM-ECOMMERCE-001/PILOT.json"
+    pilot = apply_schema(pilot_path, "schemas/foundation-pilot.schema.json")
+    registry = registries.get("foundation_pilots", {})
+    records = registry.get("records", [])
+    if len(records) != 1 or records[0].get("id") != pilot.get("id"):
+        fail("registry/foundation-pilots.json: canonical pilot mismatch")
+    if records and records[0].get("canonical_path") != pilot_path:
+        fail("registry/foundation-pilots.json: pilot path mismatch")
+    if records and records[0].get("status") != "DEFINED_NOT_EXECUTED":
+        fail("registry/foundation-pilots.json: pilot has executable status")
+    if pilot.get("executor", {}).get("id") != "CODEX":
+        fail(f"{pilot_path}: executor must be CODEX")
+    if pilot.get("executor", {}).get("autonomous_authority") is not False:
+        fail(f"{pilot_path}: Codex has autonomous authority")
+    if set(pilot.get("required_delta_areas", [])) != REQUIRED_PILOT_DELTA_AREAS:
+        fail(f"{pilot_path}: required delta areas mismatch")
+    if set(pilot.get("immutable_requirements", [])) != REQUIRED_PILOT_IMMUTABLES:
+        fail(f"{pilot_path}: immutable requirements mismatch")
+    if set(pilot.get("required_fixture_types", [])) != REQUIRED_PILOT_FIXTURES:
+        fail(f"{pilot_path}: fixture requirements mismatch")
+    if pilot.get("responsive_widths_px") != REQUIRED_RESPONSIVE_WIDTHS:
+        fail(f"{pilot_path}: responsive widths mismatch")
+    for pin_name in ["archetype_pin", "evidence_pin"]:
+        pin = pilot.get(pin_name, {})
+        relative = pin.get("path", "")
+        path = ROOT / relative
+        if not path.is_file():
+            fail(f"{pilot_path}: missing pinned {pin_name}")
+            continue
+        actual_hash = hashlib.sha256(path.read_bytes()).hexdigest()
+        if pin.get("content_sha256") != actual_hash:
+            fail(f"{pilot_path}: {pin_name} content hash mismatch")
+        if pin.get("lab_commit_sha") != "d3af193f33a08f5714f9e8bdb1dfca5f1c4e4b52":
+            fail(f"{pilot_path}: {pin_name} commit pin mismatch")
+    documents = pilot.get("documents", {})
+    for relative in documents.values():
+        require_file(relative)
+    delta_path = documents.get("design_delta", "")
+    delta = load_json(delta_path)
+    if delta.get("pilot_id") != pilot.get("id") or delta.get("status") != "DEFINED_NOT_EXECUTED":
+        fail(f"{delta_path}: pilot identity or status mismatch")
+    areas = delta.get("areas", [])
+    area_ids = [area.get("id") for area in areas]
+    if set(area_ids) != REQUIRED_PILOT_DELTA_AREAS or len(area_ids) != len(set(area_ids)):
+        fail(f"{delta_path}: delta area coverage mismatch")
+    if set(delta.get("immutable_requirements_preserved", [])) != REQUIRED_PILOT_IMMUTABLES:
+        fail(f"{delta_path}: immutable preservation mismatch")
+    color_area = next((area for area in areas if area.get("id") == "EARTH_TONE_COLOR_PALETTE"), {})
+    for check in color_area.get("contrast_checks", []):
+        calculated = contrast_ratio(check.get("foreground", ""), check.get("background", ""))
+        minimum = 4.5 if check.get("usage") == "NORMAL_TEXT" else 3.0
+        if calculated is None or calculated < minimum:
+            fail(f"{delta_path}: calculated pilot contrast below threshold")
+        elif abs(calculated - check.get("ratio", 0)) > 0.02:
+            fail(f"{delta_path}: declared pilot contrast differs from calculation")
+    if any(delta.get("execution_claims", {}).values()):
+        fail(f"{delta_path}: delta makes execution claim")
+    fixtures_path = documents.get("synthetic_fixtures", "")
+    fixtures_doc = load_json(fixtures_path)
+    fixtures = fixtures_doc.get("fixtures", [])
+    fixture_types = [item.get("fixture_type") for item in fixtures]
+    fixture_ids = [item.get("id") for item in fixtures]
+    if set(fixture_types) != REQUIRED_PILOT_FIXTURES or len(fixture_types) != len(set(fixture_types)):
+        fail(f"{fixtures_path}: fixture type coverage mismatch")
+    if len(fixture_ids) != len(set(fixture_ids)):
+        fail(f"{fixtures_path}: fixture IDs duplicated")
+    for fixture in fixtures:
+        if not str(fixture.get("id", "")).startswith("SYNTHETIC_FIXTURE_"):
+            fail(f"{fixtures_path}: non-synthetic fixture ID")
+        if fixture.get("synthetic") is not True:
+            fail(f"{fixtures_path}: fixture not marked synthetic")
+    policy = fixtures_doc.get("policy", {})
+    for key in ["real_client_data", "real_product_data", "real_payment_data"]:
+        if policy.get(key) is not False:
+            fail(f"{fixtures_path}: unsafe fixture policy {key}")
+    if any(fixtures_doc.get("execution_claims", {}).values()):
+        fail(f"{fixtures_path}: fixtures make execution claim")
+    matrix_path = documents.get("acceptance_matrix", "")
+    matrix_doc = load_json(matrix_path)
+    expected_requirements = (
+        {f"IMMUTABLE_{item}" for item in REQUIRED_PILOT_IMMUTABLES}
+        | {f"DELTA_{item}" for item in REQUIRED_PILOT_DELTA_AREAS}
+        | {f"RESPONSIVE_WIDTH_{width}" for width in REQUIRED_RESPONSIVE_WIDTHS}
+    )
+    if set(matrix_doc.get("requirements_covered", [])) != expected_requirements:
+        fail(f"{matrix_path}: acceptance requirement coverage mismatch")
+    matrix = matrix_doc.get("matrix", [])
+    requirements = [item.get("requirement") for item in matrix]
+    if set(requirements) != expected_requirements or len(requirements) != len(set(requirements)):
+        fail(f"{matrix_path}: acceptance matrix rows mismatch")
+    known_fixture_ids = set(fixture_ids)
+    evidence = load_json(pilot.get("evidence_pin", {}).get("path", ""))
+    known_evidence_cases = {case.get("id") for case in evidence.get("cases", [])}
+    for row in matrix:
+        if not row.get("measurement") or not row.get("pass_condition") or not row.get("fail_condition"):
+            fail(f"{matrix_path}: incomplete oracle for {row.get('id')}")
+        if set(row.get("fixture_refs", [])) - known_fixture_ids:
+            fail(f"{matrix_path}: unknown fixture reference for {row.get('id')}")
+        if row.get("evidence_case") not in known_evidence_cases:
+            fail(f"{matrix_path}: unknown evidence case for {row.get('id')}")
+    if matrix_doc.get("responsive_widths_px") != REQUIRED_RESPONSIVE_WIDTHS:
+        fail(f"{matrix_path}: responsive matrix widths mismatch")
+    if matrix_doc.get("result_policy", {}).get("default") != "NOT_EXECUTED":
+        fail(f"{matrix_path}: unexecuted result default changed")
+    if any(matrix_doc.get("execution_claims", {}).values()):
+        fail(f"{matrix_path}: acceptance matrix makes execution claim")
+    brief_path = documents.get("brief", "")
+    if (ROOT / brief_path).is_file():
+        brief = (ROOT / brief_path).read_text(encoding="utf-8")
+        if "completamente ficticia" not in brief or "No se implementa checkout" not in brief:
+            fail(f"{brief_path}: synthetic or payment boundary missing")
+    preconditions_path = documents.get("execution_preconditions", "")
+    if (ROOT / preconditions_path).is_file():
+        preconditions = (ROOT / preconditions_path).read_text(encoding="utf-8")
+        if "autorización posterior" not in preconditions or "fixtures sintéticas" not in preconditions:
+            fail(f"{preconditions_path}: execution authority boundary missing")
+    if any(pilot.get("execution_claims", {}).values()):
+        fail(f"{pilot_path}: unexecuted pilot makes execution claim")
+
 def validate_briefs_and_continuity() -> None:
     for path in sorted(ROOT.glob("projects/*/briefs/*.json")):
         apply_schema(path.relative_to(ROOT).as_posix(), "schemas/brief.schema.json")
@@ -824,6 +960,7 @@ def main() -> int:
     validate_foundation_library(registries)
     validate_foundation_evidence(registries)
     validate_rag_contracts(registries)
+    validate_foundation_pilots(registries)
     validate_briefs_and_continuity()
     validate_reassessments(registries)
     validate_evidence(registries)
@@ -843,6 +980,7 @@ def main() -> int:
     print("Authority boundaries: PASS")
     print("Foundation evidence protocols: PASS")
     print("Transversal RAG contracts: PASS")
+    print("Foundation pilot definition: PASS")
     return 0
 
 if __name__ == "__main__":

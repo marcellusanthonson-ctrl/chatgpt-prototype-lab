@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "id": "DELTA-PILOT-PREMIUM-ECOMMERCE-001",
+  "pilot_id": "PILOT-PREMIUM-ECOMMERCE-001",
+  "status": "DEFINED_NOT_EXECUTED",
+  "base_archetype": "ARCH-PREMIUM-ECOMMERCE",
+  "areas": [
+    {
+      "id": "TYPOGRAPHY",
+      "base": "Cormorant Garamond + Inter + IBM Plex Mono",
+      "change": "Fraunces para display, Manrope para cuerpo e IBM Plex Mono para especificaciones",
+      "rationale": "Aumentar carácter mecánico-editorial conservando legibilidad y jerarquía",
+      "tokens": {"display_stack": ["Fraunces", "Georgia", "serif"], "body_stack": ["Manrope", "Arial", "sans-serif"], "mono_stack": ["IBM Plex Mono", "Consolas", "monospace"]},
+      "constraints": ["Mantener escala de siete niveles", "No reducir body bajo 16 px", "Revalidar reflujo y carga de fuente"]
+    },
+    {
+      "id": "EARTH_TONE_COLOR_PALETTE",
+      "base": "Sand, ink and bronze",
+      "change": "Sistema Terra Volta de hueso, tinta, arcilla, musgo y cobre apagado",
+      "rationale": "Transmitir materialidad natural sin perder precisión industrial",
+      "tokens": {"ink": "#181512", "text_muted": "#574D43", "background": "#F4EFE6", "surface": "#FFFCF7", "primary_clay": "#8A3F26", "secondary_moss": "#4A5D3F", "error": "#A12622", "success": "#2F6B45"},
+      "contrast_checks": [{"foreground": "#181512", "background": "#F4EFE6", "ratio": 15.88, "usage": "NORMAL_TEXT"}, {"foreground": "#574D43", "background": "#F4EFE6", "ratio": 7.2, "usage": "NORMAL_TEXT"}, {"foreground": "#FFFCF7", "background": "#8A3F26", "ratio": 7.28, "usage": "UI_COMPONENT"}, {"foreground": "#FFFCF7", "background": "#4A5D3F", "ratio": 7.01, "usage": "UI_COMPONENT"}, {"foreground": "#FFFCF7", "background": "#A12622", "ratio": 7.29, "usage": "NORMAL_TEXT"}, {"foreground": "#FFFCF7", "background": "#2F6B45", "ratio": 6.2, "usage": "NORMAL_TEXT"}],
+      "constraints": ["Normal text 4.5:1 minimum", "Large text and UI 3:1 minimum", "State never depends only on color"]
+    },
+    {
+      "id": "EDITORIAL_COMPOSITION",
+      "base": "Immersive product blocks",
+      "change": "Hero asimétrico, fichas con ritmo de revista y especificaciones alineadas a grilla técnica",
+      "rationale": "Diferenciar exhibición de producto sin alterar el orden semántico",
+      "tokens": {"hero_media_columns_expanded": 7, "hero_content_columns_expanded": 5, "detail_measure_ch": 62, "section_spacing_px": [64, 96, 128]},
+      "constraints": ["DOM follows reading order", "Price precedes primary action", "Compact mode remains single-column"]
+    },
+    {
+      "id": "PRODUCT_PHOTOGRAPHY_DIRECTION",
+      "base": "High-value immersive imagery",
+      "change": "Fondos minerales neutros, vistas lateral y tres cuartos, macro de materiales y sombras largas controladas",
+      "rationale": "Crear una firma visual consistente y compatible con recortes responsivos",
+      "tokens": {"aspect_ratios": ["4:3", "3:2", "1:1"], "required_views": ["SIDE", "THREE_QUARTER", "MATERIAL_MACRO", "CONTROL_DETAIL"], "people_allowed": false},
+      "constraints": ["Synthetic placeholders only", "Reserved media dimensions", "Informative alt text", "No text baked into images"]
+    },
+    {
+      "id": "COMPONENT_DENSITY",
+      "base": "Expansive premium controls",
+      "change": "Densidad editorial media con especificaciones compactas y acciones táctiles amplias",
+      "rationale": "Equilibrar lujo visual con comparación técnica",
+      "tokens": {"control_heights_px": [44, 48, 56], "card_gap_px": [16, 24, 32], "spec_row_min_height_px": 40, "pointer_target_min_px": 44},
+      "constraints": ["No control below 44 px target", "Technical data keeps row labels", "Density cannot hide actions"]
+    },
+    {
+      "id": "CONTENT_VOICE",
+      "base": "Premium product presentation",
+      "change": "Frases cortas, especificaciones verificables y tono sobrio sin superlativos vacíos",
+      "rationale": "Mantener confianza y reducir ruido cognitivo",
+      "tokens": {"headline_max_words": 8, "summary_max_words": 36, "cta_primary": "Configurar modelo", "cta_secondary": "Ver especificaciones"},
+      "constraints": ["No unverified sustainability claims", "No artificial urgency", "Availability stated explicitly", "Errors explain recovery"]
+    }
+  ],
+  "immutable_requirements_preserved": ["SEMANTIC_ORDER", "WCAG_2_2_AA", "RESPONSIVE_RANGE_CONTINUITY", "KEYBOARD_OPERABILITY", "FOCUS_VISIBILITY", "SCREEN_READER_SEMANTICS", "INTERACTION_STATE_COMPLETENESS", "PURCHASE_FLOW_RECOVERABILITY", "NO_HORIZONTAL_PAGE_OVERFLOW"],
+  "execution_claims": {"visual_validated": false, "runtime_executed": false}
+}

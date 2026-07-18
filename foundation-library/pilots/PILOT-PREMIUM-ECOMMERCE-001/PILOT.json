@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "id": "PILOT-PREMIUM-ECOMMERCE-001",
+  "status": "DEFINED_NOT_EXECUTED",
+  "scope": "DOCUMENTATION_AND_VALIDATION_ONLY",
+  "executor": {"id": "CODEX", "role": "BOUNDED_EXECUTOR_ONLY", "autonomous_authority": false},
+  "selected_pilot": "PREMIUM_ECOMMERCE",
+  "synthetic_concept": "PREMIUM_ELECTRIC_MOTORCYCLE_SHOWCASE",
+  "archetype_pin": {
+    "id": "ARCH-PREMIUM-ECOMMERCE",
+    "path": "foundation-library/design-archetypes/premium-ecommerce.json",
+    "lab_commit_sha": "d3af193f33a08f5714f9e8bdb1dfca5f1c4e4b52",
+    "content_sha256": "6e9e35cb608dc852e44ed4dc1e854af2d25bfa761545876e5a72183383951885"
+  },
+  "evidence_pin": {
+    "id": "EVIDENCE-ARCH-PREMIUM-ECOMMERCE",
+    "path": "foundation-library/evidence/design-archetypes/premium-ecommerce.evidence.json",
+    "lab_commit_sha": "d3af193f33a08f5714f9e8bdb1dfca5f1c4e4b52",
+    "content_sha256": "1343f488bccb19ad4c60a116cd38f2fabaf6b4fc331c29490d9a97b66af814dc"
+  },
+  "documents": {
+    "brief": "foundation-library/pilots/PILOT-PREMIUM-ECOMMERCE-001/BRIEF.md",
+    "design_delta": "foundation-library/pilots/PILOT-PREMIUM-ECOMMERCE-001/DESIGN_DELTA.json",
+    "synthetic_fixtures": "foundation-library/pilots/PILOT-PREMIUM-ECOMMERCE-001/SYNTHETIC_FIXTURES.json",
+    "acceptance_matrix": "foundation-library/pilots/PILOT-PREMIUM-ECOMMERCE-001/ACCEPTANCE_MATRIX.json",
+    "execution_preconditions": "foundation-library/pilots/PILOT-PREMIUM-ECOMMERCE-001/EXECUTION_PRECONDITIONS.md"
+  },
+  "brief_summary": {
+    "synthetic_brand": "Terra Volta",
+    "offer": "Motocicletas eléctricas premium de edición limitada",
+    "audience": "Personas sintéticas interesadas en diseño industrial, movilidad eléctrica y productos de alto valor",
+    "primary_goal": "Explorar modelos, comprender diferencias y preparar una configuración sin realizar pagos",
+    "pages": ["HOME", "CATALOG", "PRODUCT_DETAIL", "CONFIGURATOR", "CART_STATE_DEMO"],
+    "real_client": false
+  },
+  "required_delta_areas": ["TYPOGRAPHY", "EARTH_TONE_COLOR_PALETTE", "EDITORIAL_COMPOSITION", "PRODUCT_PHOTOGRAPHY_DIRECTION", "COMPONENT_DENSITY", "CONTENT_VOICE"],
+  "immutable_requirements": ["SEMANTIC_ORDER", "WCAG_2_2_AA", "RESPONSIVE_RANGE_CONTINUITY", "KEYBOARD_OPERABILITY", "FOCUS_VISIBILITY", "SCREEN_READER_SEMANTICS", "INTERACTION_STATE_COMPLETENESS", "PURCHASE_FLOW_RECOVERABILITY", "NO_HORIZONTAL_PAGE_OVERFLOW"],
+  "required_fixture_types": ["PRODUCT_CATALOG", "PRODUCT_DETAIL", "LONG_PRODUCT_NAME", "MULTIPLE_VARIANTS", "AVAILABLE_STOCK", "UNAVAILABLE_STOCK", "EMPTY_CART", "LOADING_CART", "CART_ERROR", "CART_SUCCESS", "LOCALIZED_CONTENT", "MISSING_OPTIONAL_CONTENT"],
+  "responsive_widths_px": [320, 639, 640, 1023, 1024, 1439, 1440, 1920],
+  "execution_preconditions": ["NEW_EXPLICIT_EXECUTION_AUTHORIZATION", "PINNED_LAB_HEAD", "ISOLATED_NON_PRODUCT_REPOSITORY", "SYNTHETIC_DATA_ONLY", "NO_CREDENTIALS", "NO_PAYMENT_PROVIDER", "CODE_SCOPE_EXPLICIT", "BROWSER_SCOPE_EXPLICIT", "RESULT_EVIDENCE_PATHS_EXPLICIT", "ROLLBACK_OR_DISPOSAL_DEFINED"],
+  "execution_claims": {"visual_validated": false, "runtime_executed": false, "browser_executed": false, "application_created": false, "backend_implemented": false, "production_validated": false},
+  "authorization": "AUTHORIZATION_LAB_FOUNDATION_PILOT_DEFINITION_023"
+}

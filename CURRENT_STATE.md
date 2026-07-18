@@ -2,8 +2,8 @@
 
 La fuente estructurada es CURRENT_STATE.json.
 
-- Versión: 2.5.3.
-- Fase: TRANSVERSAL_RAG_CONTRACT_DOCUMENTED_NOT_IMPLEMENTED.
+- Versión: 2.5.4.
+- Fase: FOUNDATION_PILOT_DEFINED_NOT_EXECUTED.
 - Aprobador: Jonathan Martínez.
 - Runtime, integración y cambios de producto: no autorizados.
 - HEAD propio: verificar main en vivo; no almacenarlo como estado vigente.
@@ -60,6 +60,12 @@ Todos los documentos están marcados `EVIDENCE_PROTOCOL_DEFINED_NOT_EXECUTED`. N
 `architecture/rag/FEDERATION_CONTRACT.json` define un servicio lógico federado sobre namespaces aislados LAB, Symphonie y PROJECT. La autoridad y el estado canónico se resuelven antes de la similitud semántica; cada resultado requiere trazabilidad a repositorio, ruta y commit.
 
 El índice se define exclusivamente como caché derivado de solo lectura. Tool Calling puede emitir propuestas tipadas, pero validación y autorización activa son obligatorias antes de cualquier commit. El contrato está `DOCUMENTED_NOT_IMPLEMENTED`: no existen embeddings, almacenamiento vectorial, Node.js, API ni integración operativa.
+
+## Piloto Premium E-commerce 023
+
+`PILOT-PREMIUM-ECOMMERCE-001` selecciona el arquetipo `PREMIUM_ECOMMERCE` para el concepto completamente sintético Terra Volta. Codex figura como `BOUNDED_EXECUTOR_ONLY` y no recibe autoridad autónoma.
+
+El brief, delta, fixtures y matriz de aceptación están definidos y fijan el arquetipo y su protocolo por commit y hash. El piloto permanece `DEFINED_NOT_EXECUTED`: no existe interfaz, aplicación, navegador, backend ni validación visual.
 
 ## Siguiente transición
 

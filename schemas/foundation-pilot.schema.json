@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lab.local/schemas/foundation-pilot.schema.json",
+  "title": "Foundation Library pilot definition",
+  "type": "object",
+  "required": ["schema_version", "id", "status", "scope", "executor", "selected_pilot", "synthetic_concept", "archetype_pin", "evidence_pin", "documents", "brief_summary", "required_delta_areas", "immutable_requirements", "required_fixture_types", "responsive_widths_px", "execution_preconditions", "execution_claims", "authorization"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "id": {"const": "PILOT-PREMIUM-ECOMMERCE-001"},
+    "status": {"const": "DEFINED_NOT_EXECUTED"},
+    "scope": {"const": "DOCUMENTATION_AND_VALIDATION_ONLY"},
+    "executor": {
+      "type": "object",
+      "required": ["id", "role", "autonomous_authority"],
+      "properties": {
+        "id": {"const": "CODEX"},
+        "role": {"const": "BOUNDED_EXECUTOR_ONLY"},
+        "autonomous_authority": {"const": false}
+      },
+      "additionalProperties": false
+    },
+    "selected_pilot": {"const": "PREMIUM_ECOMMERCE"},
+    "synthetic_concept": {"const": "PREMIUM_ELECTRIC_MOTORCYCLE_SHOWCASE"},
+    "archetype_pin": {
+      "type": "object",
+      "required": ["id", "path", "lab_commit_sha", "content_sha256"],
+      "properties": {
+        "id": {"const": "ARCH-PREMIUM-ECOMMERCE"},
+        "path": {"const": "foundation-library/design-archetypes/premium-ecommerce.json"},
+        "lab_commit_sha": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "content_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      },
+      "additionalProperties": false
+    },
+    "evidence_pin": {
+      "type": "object",
+      "required": ["id", "path", "lab_commit_sha", "content_sha256"],
+      "properties": {
+        "id": {"const": "EVIDENCE-ARCH-PREMIUM-ECOMMERCE"},
+        "path": {"const": "foundation-library/evidence/design-archetypes/premium-ecommerce.evidence.json"},
+        "lab_commit_sha": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "content_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      },
+      "additionalProperties": false
+    },
+    "documents": {
+      "type": "object",
+      "required": ["brief", "design_delta", "synthetic_fixtures", "acceptance_matrix", "execution_preconditions"],
+      "properties": {
+        "brief": {"const": "foundation-library/pilots/PILOT-PREMIUM-ECOMMERCE-001/BRIEF.md"},
+        "design_delta": {"const": "foundation-library/pilots/PILOT-PREMIUM-ECOMMERCE-001/DESIGN_DELTA.json"},
+        "synthetic_fixtures": {"const": "foundation-library/pilots/PILOT-PREMIUM-ECOMMERCE-001/SYNTHETIC_FIXTURES.json"},
+        "acceptance_matrix": {"const": "foundation-library/pilots/PILOT-PREMIUM-ECOMMERCE-001/ACCEPTANCE_MATRIX.json"},
+        "execution_preconditions": {"const": "foundation-library/pilots/PILOT-PREMIUM-ECOMMERCE-001/EXECUTION_PRECONDITIONS.md"}
+      },
+      "additionalProperties": false
+    },
+    "brief_summary": {
+      "type": "object",
+      "required": ["synthetic_brand", "offer", "audience", "primary_goal", "pages", "real_client"],
+      "properties": {
+        "synthetic_brand": {"type": "string"}, "offer": {"type": "string"},
+        "audience": {"type": "string"}, "primary_goal": {"type": "string"},
+        "pages": {"type": "array", "minItems": 4, "uniqueItems": true, "items": {"type": "string"}},
+        "real_client": {"const": false}
+      },
+      "additionalProperties": false
+    },
+    "required_delta_areas": {"type": "array", "minItems": 6, "maxItems": 6, "uniqueItems": true, "items": {"type": "string"}},
+    "immutable_requirements": {"type": "array", "minItems": 9, "maxItems": 9, "uniqueItems": true, "items": {"type": "string"}},
+    "required_fixture_types": {"type": "array", "minItems": 12, "maxItems": 12, "uniqueItems": true, "items": {"type": "string"}},
+    "responsive_widths_px": {"type": "array", "minItems": 8, "maxItems": 8, "uniqueItems": true, "items": {"type": "integer"}},
+    "execution_preconditions": {"type": "array", "minItems": 8, "uniqueItems": true, "items": {"type": "string"}},
+    "execution_claims": {
+      "type": "object",
+      "required": ["visual_validated", "runtime_executed", "browser_executed", "application_created", "backend_implemented", "production_validated"],
+      "properties": {
+        "visual_validated": {"const": false}, "runtime_executed": {"const": false},
+        "browser_executed": {"const": false}, "application_created": {"const": false},
+        "backend_implemented": {"const": false}, "production_validated": {"const": false}
+      },
+      "additionalProperties": false
+    },
+    "authorization": {"const": "AUTHORIZATION_LAB_FOUNDATION_PILOT_DEFINITION_023"}
+  },
+  "additionalProperties": false
+}

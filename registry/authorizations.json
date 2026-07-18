@@ -183,6 +183,33 @@
       "product_changes_authorized": false,
       "deployment_authorized": false,
       "release_authorized": false
+    },
+    {
+      "id": "AUTHORIZATION_LAB_FOUNDATION_PILOT_DEFINITION_023",
+      "state_key": "foundation_pilot_definition_023",
+      "project_id": "lab",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "approved_by": "Jonathan Martínez",
+      "scope": "DOCUMENTATION_AND_VALIDATION_ONLY",
+      "canonical_path": "foundation-library/pilots/PILOT-PREMIUM-ECOMMERCE-001/PILOT.json",
+      "updated_at": "2026-07-18",
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "expected_parent_head": "d3af193f33a08f5714f9e8bdb1dfca5f1c4e4b52",
+      "selected_pilot": "PREMIUM_ECOMMERCE",
+      "executor": "CODEX",
+      "commit_authorized": false,
+      "push_authorized": false,
+      "runtime_authorized": false,
+      "browser_execution_authorized": false,
+      "application_code_authorized": false,
+      "backend_authorized": false,
+      "payment_authorized": false,
+      "rag_implementation_authorized": false,
+      "real_data_authorized": false,
+      "product_changes_authorized": false,
+      "deployment_authorized": false,
+      "release_authorized": false
     }
   ]
 }
