@@ -1,11 +1,11 @@
 {
-  "schema_version": "2.3.1",
+  "schema_version": "2.4.0",
   "document_id": "lab.current-state",
-  "version": "2.3.1",
+  "version": "2.4.0",
   "status": "GOVERNANCE_V2_CANONICAL_BASELINE",
   "updated_at": "2026-07-17",
   "active_project": "lab",
-  "current_phase": "AUTHORIZATION_REGISTRY_RECONCILED",
+  "current_phase": "SYMPHONIE_SCHEMAS_AND_DECISION_CONTRACT_RECONCILED",
   "methodology": {
     "version": "2.1",
     "path": "METHODOLOGY.md"
@@ -110,14 +110,15 @@
     "epistemic_independence_014": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "risk_method_015": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "self_head_correction_016": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "chatgpt_sources_migration_017": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+    "chatgpt_sources_migration_017": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "symphonie_phase_schemas_018": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
   },
   "verified_external_heads": {
-    "symphonie": "05f2ec517e1005a51d3b5576d02b0322ca754dcc",
-    "lab_base_before_transition": "5e9c38a8ae68183a196709afa54aa1c7c2a8c4d4"
+    "symphonie": "9de9dcf5c58583cd46bece41a0e772e3671801ff",
+    "lab_base_before_transition": "7f1a7e101f42a981ad68e7602318b07bc62970b3"
   },
   "next_authorized_action": "NONE_UNTIL_NEW_EXPLICIT_APPROVAL",
-  "next_recommended_transition": "DEFINE_SYMPHONIE_PHASE_1_2_5_6_7_SCHEMAS",
+  "next_recommended_transition": "DEFINE_FOUNDATION_LIBRARY_DOCUMENTARY_CONTRACT",
   "continuity_read_order": [
     "LAB_CONTRACT.md",
     "METHODOLOGY.md",
