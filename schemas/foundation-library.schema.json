@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lab.local/schemas/foundation-library.schema.json",
+  "title": "Foundation Library registry",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "library_id",
+    "version",
+    "status",
+    "scope",
+    "updated_at",
+    "governance",
+    "schemas",
+    "required_design_archetypes",
+    "required_backend_domains",
+    "records",
+    "quality_gates",
+    "authorization"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "library_id": {"const": "lab.foundation-library"},
+    "version": {"type": "string"},
+    "status": {"enum": ["DOCUMENTED_AND_VALIDATED"]},
+    "scope": {"const": "DOCUMENTATION_AND_VALIDATION_ONLY"},
+    "updated_at": {"type": "string"},
+    "governance": {
+      "type": "object",
+      "required": ["canonical_repository", "branch", "sole_approver", "source_of_truth", "runtime_authorized", "integration_authorized", "product_changes_authorized"],
+      "properties": {
+        "canonical_repository": {"const": "marcellusanthonson-ctrl/chatgpt-prototype-lab"},
+        "branch": {"const": "main"},
+        "sole_approver": {"const": "Jonathan Martínez"},
+        "source_of_truth": {"const": "REPOSITORY_FILES"},
+        "runtime_authorized": {"const": false},
+        "integration_authorized": {"const": false},
+        "product_changes_authorized": {"const": false}
+      },
+      "additionalProperties": false
+    },
+    "schemas": {
+      "type": "object",
+      "required": ["design_archetype", "backend_pattern"],
+      "properties": {
+        "design_archetype": {"const": "schemas/design-archetype.schema.json"},
+        "backend_pattern": {"const": "schemas/backend-pattern.schema.json"}
+      },
+      "additionalProperties": false
+    },
+    "required_design_archetypes": {"type": "array", "minItems": 5, "uniqueItems": true, "items": {"type": "string"}},
+    "required_backend_domains": {"type": "array", "minItems": 9, "uniqueItems": true, "items": {"type": "string"}},
+    "records": {
+      "type": "array",
+      "minItems": 14,
+      "items": {
+        "type": "object",
+        "required": ["id", "kind", "canonical_path", "status"],
+        "properties": {
+          "id": {"type": "string"},
+          "kind": {"enum": ["DESIGN_ARCHETYPE", "BACKEND_PATTERN"]},
+          "archetype": {"type": "string"},
+          "domain": {"type": "string"},
+          "canonical_path": {"type": "string"},
+          "status": {"const": "DOCUMENTED_AND_VALIDATED"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "quality_gates": {"type": "array", "minItems": 5, "uniqueItems": true, "items": {"type": "string"}},
+    "authorization": {
+      "type": "object",
+      "required": ["id", "status", "approved_by"],
+      "properties": {
+        "id": {"const": "AUTHORIZATION_LAB_FOUNDATION_LIBRARY_019"},
+        "status": {"const": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"},
+        "approved_by": {"const": "Jonathan Martínez"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lab.local/schemas/design-archetype.schema.json",
+  "title": "Canonical design archetype",
+  "type": "object",
+  "required": ["schema_version", "id", "kind", "archetype", "name", "purpose", "immutable_base", "typography", "color", "spacing_grid", "responsive", "component_tokens", "interaction_states", "accessibility", "customization"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "id": {"type": "string"},
+    "kind": {"const": "DESIGN_ARCHETYPE"},
+    "archetype": {"enum": ["PREMIUM_ECOMMERCE", "HIGH_DENSITY_DASHBOARD", "SERVICES_AND_DIRECTORIES", "SECURE_TRANSACTIONAL_FLOW", "BIDIRECTIONAL_MARKETPLACE"]},
+    "name": {"type": "string"},
+    "purpose": {"type": "string"},
+    "immutable_base": {"type": "array", "minItems": 4, "uniqueItems": true, "items": {"type": "string"}},
+    "typography": {
+      "type": "object",
+      "required": ["font_roles", "scale"],
+      "properties": {
+        "font_roles": {"type": "array", "minItems": 3, "items": {"type": "object", "required": ["role", "stack", "category"], "properties": {"role": {"enum": ["DISPLAY", "BODY", "MONO"]}, "stack": {"type": "array", "minItems": 2, "items": {"type": "string"}}, "category": {"enum": ["SANS_SERIF", "SERIF", "MONOSPACE"]}}, "additionalProperties": false}},
+        "scale": {"type": "array", "minItems": 7, "items": {"type": "object", "required": ["token", "size_px", "line_height", "weight", "letter_spacing_em"], "properties": {"token": {"type": "string"}, "size_px": {"type": "integer"}, "line_height": {"type": "number"}, "weight": {"type": "integer"}, "letter_spacing_em": {"type": "number"}}, "additionalProperties": false}}
+      },
+      "additionalProperties": false
+    },
+    "color": {
+      "type": "object",
+      "required": ["primitives", "semantic", "contrast_checks"],
+      "properties": {
+        "primitives": {"type": "array", "minItems": 8, "items": {"type": "object", "required": ["token", "value"], "properties": {"token": {"type": "string"}, "value": {"type": "string"}}, "additionalProperties": false}},
+        "semantic": {"type": "array", "minItems": 8, "items": {"type": "object", "required": ["role", "primitive"], "properties": {"role": {"type": "string"}, "primitive": {"type": "string"}}, "additionalProperties": false}},
+        "contrast_checks": {"type": "array", "minItems": 4, "items": {"type": "object", "required": ["foreground", "background", "ratio", "usage"], "properties": {"foreground": {"type": "string"}, "background": {"type": "string"}, "ratio": {"type": "number"}, "usage": {"enum": ["NORMAL_TEXT", "LARGE_TEXT", "UI_COMPONENT"]}}, "additionalProperties": false}}
+      },
+      "additionalProperties": false
+    },
+    "spacing_grid": {
+      "type": "object",
+      "required": ["base_unit_px", "scale_px", "container_max_px", "content_measure_ch"],
+      "properties": {
+        "base_unit_px": {"enum": [4, 8]},
+        "scale_px": {"type": "array", "minItems": 8, "uniqueItems": true, "items": {"type": "integer"}},
+        "container_max_px": {"type": "integer"},
+        "content_measure_ch": {"type": "integer"}
+      },
+      "additionalProperties": false
+    },
+    "responsive": {
+      "type": "object",
+      "required": ["strategy", "modes", "invariants"],
+      "properties": {
+        "strategy": {"const": "CONTENT_DRIVEN_MOBILE_FIRST"},
+        "modes": {"type": "array", "minItems": 4, "items": {"type": "object", "required": ["id", "min_width_px", "max_width_px", "columns", "gutter_px", "margin_px"], "properties": {"id": {"enum": ["COMPACT", "STANDARD", "EXPANDED", "WIDE"]}, "min_width_px": {"type": "integer"}, "max_width_px": {"type": ["integer", "null"]}, "columns": {"type": "integer"}, "gutter_px": {"type": "integer"}, "margin_px": {"type": "integer"}}, "additionalProperties": false}},
+        "invariants": {"type": "array", "minItems": 6, "items": {"type": "object", "required": ["id", "assertion", "measurement", "pass_condition"], "properties": {"id": {"type": "string"}, "assertion": {"type": "string"}, "measurement": {"type": "string"}, "pass_condition": {"type": "string"}}, "additionalProperties": false}}
+      },
+      "additionalProperties": false
+    },
+    "component_tokens": {"type": "object", "required": ["radius_px", "border_width_px", "elevation", "control_heights_px", "transition_ms", "focus_ring_px"], "properties": {"radius_px": {"type": "array", "minItems": 3, "items": {"type": "integer"}}, "border_width_px": {"type": "integer"}, "elevation": {"type": "array", "minItems": 3, "items": {"type": "string"}}, "control_heights_px": {"type": "array", "minItems": 3, "items": {"type": "integer"}}, "transition_ms": {"type": "array", "minItems": 2, "items": {"type": "integer"}}, "focus_ring_px": {"type": "integer"}}, "additionalProperties": false},
+    "interaction_states": {"type": "array", "minItems": 6, "uniqueItems": true, "items": {"enum": ["DEFAULT", "HOVER", "FOCUS_VISIBLE", "ACTIVE", "DISABLED", "LOADING", "ERROR", "SUCCESS", "EMPTY"]}},
+    "accessibility": {"type": "object", "required": ["target", "normal_text_contrast_min", "large_text_contrast_min", "ui_contrast_min", "pointer_target_min_px", "keyboard", "screen_reader", "motion"], "properties": {"target": {"const": "WCAG_2_2_AA"}, "normal_text_contrast_min": {"type": "number"}, "large_text_contrast_min": {"type": "number"}, "ui_contrast_min": {"type": "number"}, "pointer_target_min_px": {"type": "integer"}, "keyboard": {"type": "array", "minItems": 3, "items": {"type": "string"}}, "screen_reader": {"type": "array", "minItems": 3, "items": {"type": "string"}}, "motion": {"type": "array", "minItems": 2, "items": {"type": "string"}}}, "additionalProperties": false},
+    "customization": {"type": "object", "required": ["allowed_deltas", "immutable_constraints", "application_order"], "properties": {"allowed_deltas": {"type": "array", "minItems": 4, "uniqueItems": true, "items": {"type": "string"}}, "immutable_constraints": {"type": "array", "minItems": 4, "uniqueItems": true, "items": {"type": "string"}}, "application_order": {"type": "array", "minItems": 4, "items": {"type": "string"}}}, "additionalProperties": false}
+  },
+  "additionalProperties": false
+}

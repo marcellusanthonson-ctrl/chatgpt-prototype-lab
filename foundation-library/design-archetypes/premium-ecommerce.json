@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ARCH-PREMIUM-ECOMMERCE",
+  "kind": "DESIGN_ARCHETYPE",
+  "archetype": "PREMIUM_ECOMMERCE",
+  "name": "E-commerce premium",
+  "purpose": "Exhibición inmersiva y compra comprensible de productos de alto valor sin sacrificar rendimiento ni accesibilidad.",
+  "immutable_base": ["Jerarquía producto-acción inequívoca", "Contenido crítico disponible sin interacción", "Compra recuperable y estados explícitos", "Imágenes con reserva de espacio y alternativa textual"],
+  "typography": {
+    "font_roles": [
+      {"role": "DISPLAY", "stack": ["Cormorant Garamond", "Georgia", "serif"], "category": "SERIF"},
+      {"role": "BODY", "stack": ["Inter", "Arial", "sans-serif"], "category": "SANS_SERIF"},
+      {"role": "MONO", "stack": ["IBM Plex Mono", "Consolas", "monospace"], "category": "MONOSPACE"}
+    ],
+    "scale": [
+      {"token": "display", "size_px": 64, "line_height": 1.05, "weight": 600, "letter_spacing_em": -0.03},
+      {"token": "h1", "size_px": 48, "line_height": 1.1, "weight": 600, "letter_spacing_em": -0.02},
+      {"token": "h2", "size_px": 36, "line_height": 1.15, "weight": 600, "letter_spacing_em": -0.015},
+      {"token": "h3", "size_px": 28, "line_height": 1.2, "weight": 600, "letter_spacing_em": -0.01},
+      {"token": "body-lg", "size_px": 18, "line_height": 1.6, "weight": 400, "letter_spacing_em": 0},
+      {"token": "body", "size_px": 16, "line_height": 1.55, "weight": 400, "letter_spacing_em": 0},
+      {"token": "label", "size_px": 14, "line_height": 1.4, "weight": 600, "letter_spacing_em": 0.02}
+    ]
+  },
+  "color": {
+    "primitives": [{"token": "ink-950", "value": "#1D1A17"}, {"token": "ink-700", "value": "#514A43"}, {"token": "sand-50", "value": "#F7F3ED"}, {"token": "white", "value": "#FFFFFF"}, {"token": "bronze-700", "value": "#79502B"}, {"token": "bronze-500", "value": "#A97543"}, {"token": "red-700", "value": "#A32929"}, {"token": "green-800", "value": "#286140"}],
+    "semantic": [{"role": "BACKGROUND", "primitive": "sand-50"}, {"role": "SURFACE", "primitive": "white"}, {"role": "TEXT", "primitive": "ink-950"}, {"role": "TEXT_MUTED", "primitive": "ink-700"}, {"role": "PRIMARY", "primitive": "ink-950"}, {"role": "ACCENT", "primitive": "bronze-700"}, {"role": "ERROR", "primitive": "red-700"}, {"role": "SUCCESS", "primitive": "green-800"}],
+    "contrast_checks": [{"foreground": "ink-950", "background": "sand-50", "ratio": 15.67, "usage": "NORMAL_TEXT"}, {"foreground": "ink-700", "background": "white", "ratio": 8.71, "usage": "NORMAL_TEXT"}, {"foreground": "white", "background": "ink-950", "ratio": 17.32, "usage": "UI_COMPONENT"}, {"foreground": "white", "background": "bronze-700", "ratio": 7.01, "usage": "LARGE_TEXT"}]
+  },
+  "spacing_grid": {"base_unit_px": 8, "scale_px": [4, 8, 12, 16, 24, 32, 48, 64, 96, 128], "container_max_px": 1440, "content_measure_ch": 68},
+  "responsive": {
+    "strategy": "CONTENT_DRIVEN_MOBILE_FIRST",
+    "modes": [{"id": "COMPACT", "min_width_px": 0, "max_width_px": 639, "columns": 4, "gutter_px": 16, "margin_px": 16}, {"id": "STANDARD", "min_width_px": 640, "max_width_px": 1023, "columns": 8, "gutter_px": 20, "margin_px": 24}, {"id": "EXPANDED", "min_width_px": 1024, "max_width_px": 1439, "columns": 12, "gutter_px": 24, "margin_px": 32}, {"id": "WIDE", "min_width_px": 1440, "max_width_px": null, "columns": 12, "gutter_px": 32, "margin_px": 48}],
+    "invariants": [{"id": "RESP-001", "assertion": "No existe desplazamiento horizontal a nivel de página", "measurement": "Ancho de scroll frente a viewport entre 320 y 1920 px", "pass_condition": "scrollWidth es menor o igual que clientWidth"}, {"id": "RESP-002", "assertion": "La acción primaria permanece visible después de la información de precio", "measurement": "Orden visual y DOM", "pass_condition": "Precio precede a acción y ambos son alcanzables sin solaparse"}, {"id": "RESP-003", "assertion": "La galería conserva proporción y reserva espacial", "measurement": "Cambio acumulado de layout", "pass_condition": "CLS documental objetivo menor o igual a 0.1"}, {"id": "RESP-004", "assertion": "El texto reflota con zoom", "measurement": "Viewport equivalente a 320 CSS px con zoom 200 %", "pass_condition": "Sin pérdida de contenido o funcionalidad"}, {"id": "RESP-005", "assertion": "Las tarjetas toleran nombres largos", "measurement": "Texto al 200 % y cadena de 80 caracteres", "pass_condition": "Sin recorte de precio ni acción"}, {"id": "RESP-006", "assertion": "Los rangos no dejan huecos", "measurement": "Límites 639, 640, 1023, 1024, 1439 y 1440 px", "pass_condition": "Cada ancho resuelve exactamente un modo"}]
+  },
+  "component_tokens": {"radius_px": [0, 4, 12, 999], "border_width_px": 1, "elevation": ["none", "0 4px 16px rgba(29,26,23,0.10)", "0 16px 48px rgba(29,26,23,0.16)"], "control_heights_px": [44, 48, 56], "transition_ms": [120, 200, 320], "focus_ring_px": 3},
+  "interaction_states": ["DEFAULT", "HOVER", "FOCUS_VISIBLE", "ACTIVE", "DISABLED", "LOADING", "ERROR", "SUCCESS", "EMPTY"],
+  "accessibility": {"target": "WCAG_2_2_AA", "normal_text_contrast_min": 4.5, "large_text_contrast_min": 3, "ui_contrast_min": 3, "pointer_target_min_px": 44, "keyboard": ["Orden de foco coincide con lectura", "Galería operable con flechas y controles visibles", "Sin trampas de teclado"], "screen_reader": ["Variantes anuncian nombre, disponibilidad y precio", "Imágenes informativas tienen alternativa", "Actualizaciones de carrito usan región de estado"], "motion": ["Respeta prefers-reduced-motion", "Ninguna transición es necesaria para comprender estado"]},
+  "customization": {"allowed_deltas": ["Familias tipográficas equivalentes", "Paleta de marca con contraste revalidado", "Densidad de galería", "Forma de radios y elevación", "Composición editorial"], "immutable_constraints": ["Orden semántico", "Estados completos", "Contraste mínimo", "Modos responsivos continuos", "Compra recuperable"], "application_order": ["Clasificar delta", "Sustituir tokens", "Recalcular contraste", "Verificar invariantes", "Documentar excepciones"]}
+}

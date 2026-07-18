@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lab.local/schemas/backend-pattern.schema.json",
+  "title": "Canonical backend pattern",
+  "type": "object",
+  "required": ["schema_version", "id", "kind", "domain", "name", "purpose", "provider_neutral", "configuration_contract", "secret_boundary", "interfaces", "invariants", "state_machine", "failure_modes", "idempotency", "audit", "security", "test_contract", "forbidden"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "id": {"type": "string"},
+    "kind": {"const": "BACKEND_PATTERN"},
+    "domain": {"enum": ["AUTHENTICATION_AND_AUTHORIZATION", "PAYMENT_ORCHESTRATION", "WEBHOOK_PROCESSING", "IDEMPOTENCY_AND_RETRIES", "AUDIT_LOGGING", "DATA_VALIDATION", "ERROR_HANDLING", "TRANSACTIONAL_STATE", "PROVIDER_CONFIGURATION"]},
+    "name": {"type": "string"},
+    "purpose": {"type": "string"},
+    "provider_neutral": {"const": true},
+    "configuration_contract": {"type": "object", "required": ["client_replaceable", "environment_managed", "validation_rules"], "properties": {"client_replaceable": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}}, "environment_managed": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}}, "validation_rules": {"type": "array", "minItems": 2, "items": {"type": "string"}}}, "additionalProperties": false},
+    "secret_boundary": {"type": "object", "required": ["repository_values_allowed", "reference_only", "rules"], "properties": {"repository_values_allowed": {"const": false}, "reference_only": {"const": true}, "rules": {"type": "array", "minItems": 3, "items": {"type": "string"}}}, "additionalProperties": false},
+    "interfaces": {"type": "object", "required": ["inputs", "outputs"], "properties": {"inputs": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["name", "type", "required", "classification"], "properties": {"name": {"type": "string"}, "type": {"type": "string"}, "required": {"type": "boolean"}, "classification": {"enum": ["PUBLIC", "INTERNAL", "PERSONAL", "SENSITIVE_REFERENCE"]}}, "additionalProperties": false}}, "outputs": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["name", "type", "classification"], "properties": {"name": {"type": "string"}, "type": {"type": "string"}, "classification": {"enum": ["PUBLIC", "INTERNAL", "PERSONAL", "SENSITIVE_REFERENCE"]}}, "additionalProperties": false}}}, "additionalProperties": false},
+    "invariants": {"type": "array", "minItems": 4, "uniqueItems": true, "items": {"type": "string"}},
+    "state_machine": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["from", "event", "to", "guard"], "properties": {"from": {"type": "string"}, "event": {"type": "string"}, "to": {"type": "string"}, "guard": {"type": "string"}}, "additionalProperties": false}},
+    "failure_modes": {"type": "array", "minItems": 3, "items": {"type": "object", "required": ["code", "condition", "response", "retryable"], "properties": {"code": {"type": "string"}, "condition": {"type": "string"}, "response": {"type": "string"}, "retryable": {"type": "boolean"}}, "additionalProperties": false}},
+    "idempotency": {"type": "object", "required": ["required", "key_scope", "duplicate_behavior"], "properties": {"required": {"type": "boolean"}, "key_scope": {"type": "string"}, "duplicate_behavior": {"type": "string"}}, "additionalProperties": false},
+    "audit": {"type": "object", "required": ["events", "required_fields", "redacted_fields"], "properties": {"events": {"type": "array", "minItems": 2, "items": {"type": "string"}}, "required_fields": {"type": "array", "minItems": 4, "items": {"type": "string"}}, "redacted_fields": {"type": "array", "minItems": 1, "items": {"type": "string"}}}, "additionalProperties": false},
+    "security": {"type": "object", "required": ["trust_boundary", "authorization_rule", "data_minimization", "threat_controls"], "properties": {"trust_boundary": {"type": "string"}, "authorization_rule": {"type": "string"}, "data_minimization": {"type": "string"}, "threat_controls": {"type": "array", "minItems": 3, "items": {"type": "string"}}}, "additionalProperties": false},
+    "test_contract": {"type": "array", "minItems": 5, "items": {"type": "object", "required": ["id", "given", "when", "then"], "properties": {"id": {"type": "string"}, "given": {"type": "string"}, "when": {"type": "string"}, "then": {"type": "string"}}, "additionalProperties": false}},
+    "forbidden": {"type": "array", "minItems": 4, "uniqueItems": true, "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}

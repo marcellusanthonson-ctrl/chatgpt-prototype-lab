@@ -9,13 +9,14 @@
     "ideas": 5,
     "integrations": 4,
     "experiments": 5,
-    "authorizations": 6,
+    "authorizations": 7,
     "evidence": 7,
     "unincorporated": 0,
     "proposals": 2,
     "sessions": 1,
     "reassessments": 1,
-    "source_packages": 1
+    "source_packages": 1,
+    "foundation_library": 14
   },
   "registries": {
     "projects": "registry/projects.json",
@@ -31,16 +32,18 @@
     "proposals": "registry/proposals.json",
     "sessions": "registry/sessions.json",
     "reassessments": "registry/reassessments.json",
-    "source_packages": "registry/source-packages.json"
+    "source_packages": "registry/source-packages.json",
+    "foundation_library": "registry/foundation-library.json"
   },
   "latest": {
     "decision": "DEC-LAB-015",
     "error": "ERR-LAB-006",
     "pattern": "PAT-LAB-007",
-    "authorization": "AUTH-SYMPHONIE-PHASE-SCHEMAS-018",
+    "authorization": "AUTHORIZATION_LAB_FOUNDATION_LIBRARY_019",
     "proposal": "PROP-LAB-002",
     "session": "SES-2026-06-28-001",
     "reassessment": "REA-LAB-001",
-    "source_package": "SRC-PKG-CHATGPT-001"
+    "source_package": "SRC-PKG-CHATGPT-001",
+    "foundation_library": "lab.foundation-library"
   }
 }

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "library_id": "lab.foundation-library",
+  "version": "1.0.0",
+  "status": "DOCUMENTED_AND_VALIDATED",
+  "scope": "DOCUMENTATION_AND_VALIDATION_ONLY",
+  "updated_at": "2026-07-17",
+  "governance": {
+    "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "branch": "main",
+    "sole_approver": "Jonathan Martínez",
+    "source_of_truth": "REPOSITORY_FILES",
+    "runtime_authorized": false,
+    "integration_authorized": false,
+    "product_changes_authorized": false
+  },
+  "schemas": {
+    "design_archetype": "schemas/design-archetype.schema.json",
+    "backend_pattern": "schemas/backend-pattern.schema.json"
+  },
+  "required_design_archetypes": [
+    "PREMIUM_ECOMMERCE",
+    "HIGH_DENSITY_DASHBOARD",
+    "SERVICES_AND_DIRECTORIES",
+    "SECURE_TRANSACTIONAL_FLOW",
+    "BIDIRECTIONAL_MARKETPLACE"
+  ],
+  "required_backend_domains": [
+    "AUTHENTICATION_AND_AUTHORIZATION",
+    "PAYMENT_ORCHESTRATION",
+    "WEBHOOK_PROCESSING",
+    "IDEMPOTENCY_AND_RETRIES",
+    "AUDIT_LOGGING",
+    "DATA_VALIDATION",
+    "ERROR_HANDLING",
+    "TRANSACTIONAL_STATE",
+    "PROVIDER_CONFIGURATION"
+  ],
+  "records": [
+    {"id": "ARCH-PREMIUM-ECOMMERCE", "kind": "DESIGN_ARCHETYPE", "archetype": "PREMIUM_ECOMMERCE", "canonical_path": "foundation-library/design-archetypes/premium-ecommerce.json", "status": "DOCUMENTED_AND_VALIDATED"},
+    {"id": "ARCH-HIGH-DENSITY-DASHBOARD", "kind": "DESIGN_ARCHETYPE", "archetype": "HIGH_DENSITY_DASHBOARD", "canonical_path": "foundation-library/design-archetypes/high-density-dashboard.json", "status": "DOCUMENTED_AND_VALIDATED"},
+    {"id": "ARCH-SERVICES-DIRECTORIES", "kind": "DESIGN_ARCHETYPE", "archetype": "SERVICES_AND_DIRECTORIES", "canonical_path": "foundation-library/design-archetypes/services-directories.json", "status": "DOCUMENTED_AND_VALIDATED"},
+    {"id": "ARCH-SECURE-TRANSACTIONAL-FLOW", "kind": "DESIGN_ARCHETYPE", "archetype": "SECURE_TRANSACTIONAL_FLOW", "canonical_path": "foundation-library/design-archetypes/secure-transactional-flow.json", "status": "DOCUMENTED_AND_VALIDATED"},
+    {"id": "ARCH-BIDIRECTIONAL-MARKETPLACE", "kind": "DESIGN_ARCHETYPE", "archetype": "BIDIRECTIONAL_MARKETPLACE", "canonical_path": "foundation-library/design-archetypes/bidirectional-marketplace.json", "status": "DOCUMENTED_AND_VALIDATED"},
+    {"id": "BACKEND-AUTHENTICATION-AUTHORIZATION", "kind": "BACKEND_PATTERN", "domain": "AUTHENTICATION_AND_AUTHORIZATION", "canonical_path": "foundation-library/backend-patterns/authentication-authorization.json", "status": "DOCUMENTED_AND_VALIDATED"},
+    {"id": "BACKEND-PAYMENT-ORCHESTRATION", "kind": "BACKEND_PATTERN", "domain": "PAYMENT_ORCHESTRATION", "canonical_path": "foundation-library/backend-patterns/payment-orchestration.json", "status": "DOCUMENTED_AND_VALIDATED"},
+    {"id": "BACKEND-WEBHOOK-PROCESSING", "kind": "BACKEND_PATTERN", "domain": "WEBHOOK_PROCESSING", "canonical_path": "foundation-library/backend-patterns/webhook-processing.json", "status": "DOCUMENTED_AND_VALIDATED"},
+    {"id": "BACKEND-IDEMPOTENCY-RETRIES", "kind": "BACKEND_PATTERN", "domain": "IDEMPOTENCY_AND_RETRIES", "canonical_path": "foundation-library/backend-patterns/idempotency-retries.json", "status": "DOCUMENTED_AND_VALIDATED"},
+    {"id": "BACKEND-AUDIT-LOGGING", "kind": "BACKEND_PATTERN", "domain": "AUDIT_LOGGING", "canonical_path": "foundation-library/backend-patterns/audit-logging.json", "status": "DOCUMENTED_AND_VALIDATED"},
+    {"id": "BACKEND-DATA-VALIDATION", "kind": "BACKEND_PATTERN", "domain": "DATA_VALIDATION", "canonical_path": "foundation-library/backend-patterns/data-validation.json", "status": "DOCUMENTED_AND_VALIDATED"},
+    {"id": "BACKEND-ERROR-HANDLING", "kind": "BACKEND_PATTERN", "domain": "ERROR_HANDLING", "canonical_path": "foundation-library/backend-patterns/error-handling.json", "status": "DOCUMENTED_AND_VALIDATED"},
+    {"id": "BACKEND-TRANSACTIONAL-STATE", "kind": "BACKEND_PATTERN", "domain": "TRANSACTIONAL_STATE", "canonical_path": "foundation-library/backend-patterns/transactional-state.json", "status": "DOCUMENTED_AND_VALIDATED"},
+    {"id": "BACKEND-PROVIDER-CONFIGURATION", "kind": "BACKEND_PATTERN", "domain": "PROVIDER_CONFIGURATION", "canonical_path": "foundation-library/backend-patterns/provider-configuration.json", "status": "DOCUMENTED_AND_VALIDATED"}
+  ],
+  "quality_gates": [
+    "SCHEMA_CONFORMANCE",
+    "RESPONSIVE_RANGE_CONTINUITY",
+    "ACCESSIBILITY_THRESHOLDS",
+    "INTERACTION_STATE_COMPLETENESS",
+    "BACKEND_DOMAIN_COMPLETENESS",
+    "PAYMENT_PROVIDER_NEUTRALITY",
+    "SECRET_AND_REGULATED_DATA_BOUNDARY",
+    "TEST_CONTRACT_COMPLETENESS"
+  ],
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_FOUNDATION_LIBRARY_019",
+    "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "approved_by": "Jonathan Martínez"
+  }
+}
