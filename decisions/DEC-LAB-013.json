@@ -2,12 +2,8 @@
   "schema_version": "1.0.0",
   "id": "DEC-LAB-013",
   "title": "Endurecer el gobierno del LAB con contrato v2 y continuidad estructurada",
-  "status": "APPROVED",
-  "approval_state": "APPROVED",
-  "approved_by": "Jonathan Martínez",
-  "approved_at": "2026-07-16",
-  "approval_evidence": "Explicit COMMIT_AUTHORIZATION and PUSH_AUTHORIZATION with bounded EXPECTED_RESULT in canonical conversation",
-  "scope": [
+  "project": "lab",
+  "project_scope": [
     "lab",
     "symphonie",
     "mammothskills",
@@ -16,6 +12,13 @@
     "aster-flyt",
     "waypoint"
   ],
+  "status": "APPROVED",
+  "effective_date": "2026-07-16",
+  "updated_at": "2026-07-16",
+  "approval_state": "APPROVED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-16",
+  "approval_evidence": "Explicit COMMIT_AUTHORIZATION and PUSH_AUTHORIZATION with bounded EXPECTED_RESULT in canonical conversation",
   "decision": {
     "contract": "LAB_CONTRACT_V2",
     "project_structure": "PROJECT_LOCAL_TYPED_REGISTRIES",
@@ -34,5 +37,7 @@
     "LAB_CONTRACT.md",
     "docs/CONTINUITY_PROTOCOL.md",
     "docs/MODEL_OPERATING_RULES.md"
-  ]
+  ],
+  "supersedes": [],
+  "superseded_by": null
 }
