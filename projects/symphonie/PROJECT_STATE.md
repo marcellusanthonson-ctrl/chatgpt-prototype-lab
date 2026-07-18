@@ -6,15 +6,15 @@ La fuente estructurada del LAB es PROJECT_STATE.json. El estado operativo perten
 
 - Repositorio: marcellusanthonson-ctrl/symphonie.
 - Rama: main.
-- HEAD: 05f2ec517e1005a51d3b5576d02b0322ca754dcc.
-- Versión documental: 0.3.0.
-- Fileset: 44.
+- HEAD: 9de9dcf5c58583cd46bece41a0e772e3671801ff.
+- Versión documental: 0.4.0.
+- Fileset: 49.
 - Fases: 8.
 - Runtime e integración: no autorizados.
 
 ## Madurez
 
-Fase 0 tiene baseline experimental sin validación completa de runtime. Fases 1 y 2 poseen candidatos auditados, pero no están probadas como fases completas. Fases 3 y 4 tienen evidencia parcial. Fases 5, 6 y 7 están definidas y no probadas.
+Fase 0 tiene baseline experimental sin validación completa de runtime. Fases 1, 2, 5, 6 y 7 poseen schemas canónicos de paquete, pero no están probadas como fases completas. Fases 3 y 4 conservan evidencia parcial.
 
 ## Registros del LAB
 
@@ -32,6 +32,6 @@ Fase 0 tiene baseline experimental sin validación completa de runtime. Fases 1 
 
 ## Pendiente principal
 
-DEC-LAB-015 aprobó el método proporcional como baseline experimental con guardrails. Su repetibilidad sigue pendiente con al menos tres skills distintas.
+Los schemas de las fases 1, 2, 5, 6 y 7 fueron publicados y verificados en el HEAD indicado. DEC-LAB-015 mantiene el método proporcional como baseline experimental; su repetibilidad sigue pendiente con al menos tres skills distintas.
 
 No existe una siguiente acción autorizada.
