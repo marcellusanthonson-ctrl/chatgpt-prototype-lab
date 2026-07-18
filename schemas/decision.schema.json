@@ -1,7 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://lab.local/schemas/decision.schema.json",
-  "title": "LAB decision record",
+  "title": "Canonical LAB decision record",
+  "description": "Unified envelope for canonical decision instances. Domain-specific decision payloads remain under decision and additional governed fields.",
   "type": "object",
   "required": [
     "id",
@@ -16,18 +17,25 @@
     "superseded_by"
   ],
   "properties": {
+    "schema_version": {"type": "string"},
+    "document_id": {"type": "string"},
+    "version": {"type": "string"},
     "id": {"type": "string", "pattern": "^DEC-[A-Z]+-[0-9]{3}$"},
     "title": {"type": "string", "minLength": 1},
     "project": {"type": "string", "minLength": 1},
     "project_scope": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
     "status": {
-      "enum": ["DRAFT", "PROPOSED", "UNDER_REVIEW", "APPROVED", "REJECTED", "SUPERSEDED", "WITHDRAWN"]
+      "enum": ["DRAFT", "PROPOSED", "UNDER_REVIEW", "APPROVED", "APPROVED_EXPERIMENTAL_BASELINE", "REJECTED", "SUPERSEDED", "WITHDRAWN"]
     },
+    "approval_state": {"type": "string", "minLength": 1},
     "effective_date": {"type": "string", "format": "date"},
     "updated_at": {"type": "string", "format": "date"},
+    "approved_at": {"type": "string", "format": "date"},
     "approved_by": {"type": ["string", "null"]},
     "approval_evidence": {"type": ["string", "null"]},
     "evidence": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "source_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "non_authorizations": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
     "decision": {"type": "object"},
     "supersedes": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
     "superseded_by": {"type": ["string", "null"]}
