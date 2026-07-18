@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "project_id": "symphonie",
-  "updated_at": "2026-07-16",
+  "updated_at": "2026-07-17",
   "records": [
     {
       "id": "PEND-SYM-001",
@@ -19,9 +19,13 @@
     {
       "id": "PEND-SYM-002",
       "title": "Definir schemas canónicos de fases 1, 2, 5, 6 y 7",
-      "status": "OPEN",
+      "status": "CLOSED",
       "source_refs": [
         "marcellusanthonson-ctrl/symphonie:CURRENT_STATE.json"
+      ],
+      "resolution_refs": [
+        "marcellusanthonson-ctrl/symphonie@9de9dcf5c58583cd46bece41a0e772e3671801ff",
+        "AUTH-SYMPHONIE-PHASE-SCHEMAS-018"
       ]
     },
     {
