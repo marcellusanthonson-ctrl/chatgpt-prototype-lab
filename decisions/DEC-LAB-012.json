@@ -1,9 +1,13 @@
 {
   "id": "DEC-LAB-012",
-  "titulo": "Consolidar el repositorio Symphonie, su idioma canónico y la arquitectura documental de memoria gobernada",
-  "proyecto": "LAB",
-  "estado": "APPROVED",
-  "fecha_efectiva": "2026-07-16",
+  "title": "Consolidar el repositorio Symphonie, su idioma canónico y la arquitectura documental de memoria gobernada",
+  "project": "lab",
+  "project_scope": [
+    "lab",
+    "symphonie"
+  ],
+  "status": "APPROVED",
+  "effective_date": "2026-07-16",
   "approved_by": "Jonathan Martínez",
   "approval_evidence": "Apruebo DEC-LAB-012 exactamente como fue formulada y autorizo su registro documental limitado en chatgpt-prototype-lab, sin autorizar todavía el bootstrap de Symphonie, runtime, ingesta, embeddings, acceso automático a repositorios, integración, migración ni uso de datos de proyectos reales.",
   "decision": {
