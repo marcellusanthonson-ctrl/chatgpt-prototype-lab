@@ -2,8 +2,8 @@
 
 La fuente estructurada es CURRENT_STATE.json.
 
-- Versión: 2.3.1.
-- Fase: AUTHORIZATION_REGISTRY_RECONCILED.
+- Versión: 2.4.0.
+- Fase: SYMPHONIE_SCHEMAS_AND_DECISION_CONTRACT_RECONCILED.
 - Aprobador: Jonathan Martínez.
 - Runtime, integración y cambios de producto: no autorizados.
 - HEAD propio: verificar main en vivo; no almacenarlo como estado vigente.
@@ -23,8 +23,12 @@ Las reglas operativas del proyecto viven en `project-sources/chatgpt/` y se inic
 
 ## Registro de autorizaciones
 
-Las cinco transiciones consumidas 013–017 tienen registros `AUTH-*` canónicos. Cada registro declara `state_key`, permitiendo validar correspondencia exacta con `CURRENT_STATE.json`.
+Las cinco transiciones del LAB 013–017 y la autorización documental de schemas de Symphonie tienen registros `AUTH-*` canónicos. Cada registro declara `state_key`, permitiendo validar correspondencia exacta con `CURRENT_STATE.json`.
+
+## Symphonie y decisiones
+
+El LAB referencia el HEAD verificado `9de9dcf5c58583cd46bece41a0e772e3671801ff` de Symphonie, con 49 archivos y schemas canónicos para las fases 1, 2, 5, 6 y 7. Las decisiones `DEC-LAB-012` a `DEC-LAB-015` usan la envolvente canónica y el validador aplica `schemas/decision.schema.json` a todas las instancias registradas.
 
 ## Siguiente transición
 
-No existe acción autorizada. La recomendación continúa siendo definir los schemas pendientes de Symphonie para las fases 1, 2, 5, 6 y 7.
+No existe acción autorizada. La siguiente recomendación es definir documentalmente el contrato de Foundation Library antes de considerar runtime o integración.
