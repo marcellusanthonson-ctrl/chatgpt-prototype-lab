@@ -2,15 +2,19 @@
   "schema_version": "1.0.0",
   "id": "DEC-LAB-015",
   "title": "Aprobar la validación proporcional de skills como baseline experimental con guardrails",
-  "status": "APPROVED",
-  "approval_state": "APPROVED_EXPERIMENTAL_BASELINE_WITH_GUARDRAILS",
-  "approved_by": "Jonathan Martínez",
-  "approved_at": "2026-07-16",
-  "scope": [
+  "project": "lab",
+  "project_scope": [
     "lab",
     "mammothskills",
     "symphonie"
   ],
+  "status": "APPROVED",
+  "effective_date": "2026-07-16",
+  "updated_at": "2026-07-16",
+  "approval_state": "APPROVED_EXPERIMENTAL_BASELINE_WITH_GUARDRAILS",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-16",
+  "approval_evidence": "Explicit approval by Jonathan Martínez recorded for DEC-LAB-015 on 2026-07-16",
   "technical_reassessment_ref": "REA-LAB-001",
   "decision": {
     "method_id": "RISK_PROPORTIONAL_SKILL_VALIDATION",
@@ -57,5 +61,7 @@
     "marcellusanthonson-ctrl/symphonie:registro/metodos-validacion.json",
     "marcellusanthonson-ctrl/symphonie:registro/experimentos.json",
     "marcellusanthonson-ctrl/symphonie:registro/skills.json"
-  ]
+  ],
+  "supersedes": [],
+  "superseded_by": null
 }
