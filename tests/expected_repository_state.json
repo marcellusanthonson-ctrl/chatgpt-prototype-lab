@@ -1,8 +1,8 @@
 {
-  "schema_version": "2.3.1",
+  "schema_version": "2.4.0",
   "methodology_version": "2.1",
   "active_project": "lab",
-  "current_phase": "AUTHORIZATION_REGISTRY_RECONCILED",
+  "current_phase": "SYMPHONIE_SCHEMAS_AND_DECISION_CONTRACT_RECONCILED",
   "project_statuses": {
     "lab": "active",
     "mammothskills": "active_pipeline_validated_phase_a",
@@ -48,7 +48,7 @@
     "ideas": 5,
     "integrations": 4,
     "experiments": 5,
-    "authorizations": 5,
+    "authorizations": 6,
     "evidence": 7,
     "unincorporated": 0,
     "proposals": 2,
@@ -57,8 +57,8 @@
     "source_packages": 1
   },
   "symphonie": {
-    "head": "05f2ec517e1005a51d3b5576d02b0322ca754dcc",
-    "fileset": 44,
+    "head": "9de9dcf5c58583cd46bece41a0e772e3671801ff",
+    "fileset": 49,
     "total_phases": 8
   },
   "authorization_state": {
@@ -72,6 +72,7 @@
     "epistemic_independence_014": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "risk_method_015": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "self_head_correction_016": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "chatgpt_sources_migration_017": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+    "chatgpt_sources_migration_017": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "symphonie_phase_schemas_018": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
   }
 }
