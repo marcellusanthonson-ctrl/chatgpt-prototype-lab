@@ -1,11 +1,11 @@
 {
   "schema_version": "2.5.0",
   "document_id": "lab.current-state",
-  "version": "2.5.0",
+  "version": "2.5.1",
   "status": "GOVERNANCE_V2_CANONICAL_BASELINE",
-  "updated_at": "2026-07-17",
+  "updated_at": "2026-07-18",
   "active_project": "lab",
-  "current_phase": "FOUNDATION_LIBRARY_DOCUMENTED_AND_VALIDATED",
+  "current_phase": "FOUNDATION_EVIDENCE_PROTOCOLS_DEFINED_NOT_EXECUTED",
   "methodology": {
     "version": "2.1",
     "path": "METHODOLOGY.md"
@@ -112,15 +112,17 @@
     "self_head_correction_016": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "chatgpt_sources_migration_017": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "symphonie_phase_schemas_018": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "foundation_library_019": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+    "foundation_library_019": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "foundation_evidence_protocol_020": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
   },
   "verified_external_heads": {
     "symphonie": "9de9dcf5c58583cd46bece41a0e772e3671801ff",
     "lab_base_before_transition": "7f1a7e101f42a981ad68e7602318b07bc62970b3",
-    "lab_base_before_foundation_library": "4367b736c22d92937ec8ad1174bd9c9610baa313"
+    "lab_base_before_foundation_library": "4367b736c22d92937ec8ad1174bd9c9610baa313",
+    "lab_base_before_foundation_evidence": "2e4608d7adc69ddf507a013f8da6cf513a0754ba"
   },
   "next_authorized_action": "NONE_UNTIL_NEW_EXPLICIT_APPROVAL",
-  "next_recommended_transition": "DEFINE_FOUNDATION_LIBRARY_SYNTHETIC_EVIDENCE_PROTOCOL",
+  "next_recommended_transition": "SELECT_SINGLE_FOUNDATION_PILOT_FOR_EXECUTION_AUTHORIZATION",
   "continuity_read_order": [
     "LAB_CONTRACT.md",
     "METHODOLOGY.md",

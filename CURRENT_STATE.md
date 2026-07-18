@@ -2,8 +2,8 @@
 
 La fuente estructurada es CURRENT_STATE.json.
 
-- Versión: 2.5.0.
-- Fase: FOUNDATION_LIBRARY_DOCUMENTED_AND_VALIDATED.
+- Versión: 2.5.1.
+- Fase: FOUNDATION_EVIDENCE_PROTOCOLS_DEFINED_NOT_EXECUTED.
 - Aprobador: Jonathan Martínez.
 - Runtime, integración y cambios de producto: no autorizados.
 - HEAD propio: verificar main en vivo; no almacenarlo como estado vigente.
@@ -39,6 +39,18 @@ El contrato de pagos es neutral al proveedor. Separa configuración sustituible 
 
 `AUTHORIZATION_LAB_FOUNDATION_LIBRARY_019` quedó consumida por publicación verificable. Runtime, integración, RAG, producto, despliegue y release permanecen sin autorización.
 
+## Protocolos de evidencia
+
+`foundation-library/evidence/` contiene cinco matrices de arquetipos y nueve matrices backend. Los protocolos definen entradas sintéticas, procedimientos, mediciones, condiciones de aprobación, condiciones de fallo y evidencia futura a capturar.
+
+Los protocolos de diseño cubren 320, 639, 640, 1023, 1024, 1439, 1440 y 1920 px, además de zoom, reflujo, teclado, foco, lector de pantalla, contraste, movimiento y estados. El protocolo de pagos añade doce fronteras específicas sobre cálculo en servidor, captura alojada, webhooks, duplicados, aislamiento y trazabilidad.
+
+Todos los documentos están marcados `EVIDENCE_PROTOCOL_DEFINED_NOT_EXECUTED`. No constituyen evidencia de funcionamiento.
+
+## Autorización 020
+
+`AUTHORIZATION_LAB_FOUNDATION_EVIDENCE_PROTOCOL_020` quedó consumida por publicación verificable. Ninguna autorización de ejecución fue habilitada.
+
 ## Siguiente transición
 
-No existe acción autorizada. La siguiente recomendación es definir un protocolo documental de evidencia sintética para evaluar la Foundation Library antes de cualquier implementación.
+No existe acción autorizada. La siguiente recomendación es seleccionar un único arquetipo o patrón como piloto y delimitar por separado su futura autorización de ejecución.

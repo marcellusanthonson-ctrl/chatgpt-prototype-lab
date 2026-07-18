@@ -2,14 +2,15 @@
 
 ## Estado canónico
 
-La Foundation Library 1.0.0 está documentada y validada bajo `AUTHORIZATION_LAB_FOUNDATION_LIBRARY_019`. Incluye cinco arquetipos de diseño y nueve contratos backend. Este estado no acredita implementación ni funcionamiento en producción.
+La Foundation Library 1.0.0 está documentada y validada bajo `AUTHORIZATION_LAB_FOUNDATION_LIBRARY_019`. Sus catorce protocolos de evidencia están definidos bajo `AUTHORIZATION_LAB_FOUNDATION_EVIDENCE_PROTOCOL_020` y permanecen `EVIDENCE_PROTOCOL_DEFINED_NOT_EXECUTED`. Este estado no acredita implementación ni funcionamiento.
 
 ## Próximas transiciones recomendadas
 
-1. Definir un protocolo documental de evidencia sintética para comprobar cada arquetipo y patrón sin datos reales.
-2. Seleccionar un arquetipo y documentar un delta de proyecto con criterios de aceptación medibles.
-3. Definir el contrato de transformación entre arquetipo, delta y especificación de diseño.
-4. Evaluar por separado cualquier skill complementaria antes de autorizar su creación o instalación.
-5. Autorizar runtime o integración únicamente para un piloto aislado, reversible y sin credenciales reales.
+1. Seleccionar un único arquetipo o patrón para un piloto aislado.
+2. Documentar su delta de proyecto y fixture sintética concreta.
+3. Autorizar por separado la ejecución de las pruebas del piloto, sin datos ni credenciales reales.
+4. Registrar resultados como evidencia, diferenciando aprobado, fallido y no ejecutado.
+5. Evaluar por separado cualquier skill complementaria antes de autorizar su creación o instalación.
+6. Considerar integración solo después de que el piloto cumpla todos sus oráculos.
 
 Cada transición requiere una autorización nueva, explícita, vigente y delimitada de Jonathan Martínez.

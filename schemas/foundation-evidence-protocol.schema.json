@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lab.local/schemas/foundation-evidence-protocol.schema.json",
+  "title": "Foundation Library evidence protocol",
+  "type": "object",
+  "required": ["schema_version", "id", "kind", "protocol_type", "subject", "status", "scope", "synthetic_fixture_policy", "required_categories", "responsive_widths_px", "cases", "execution_claims", "authorization"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "id": {"type": "string"},
+    "kind": {"const": "FOUNDATION_EVIDENCE_PROTOCOL"},
+    "protocol_type": {"enum": ["DESIGN_ARCHETYPE", "BACKEND_PATTERN"]},
+    "subject": {
+      "type": "object",
+      "required": ["id", "category", "canonical_path"],
+      "properties": {
+        "id": {"type": "string"},
+        "category": {"type": "string"},
+        "canonical_path": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "status": {"const": "EVIDENCE_PROTOCOL_DEFINED_NOT_EXECUTED"},
+    "scope": {"const": "DOCUMENTATION_AND_VALIDATION_ONLY"},
+    "synthetic_fixture_policy": {
+      "type": "object",
+      "required": ["real_data_allowed", "personal_data_allowed", "payment_data_allowed", "secrets_allowed", "deterministic", "placeholder_prefix"],
+      "properties": {
+        "real_data_allowed": {"const": false},
+        "personal_data_allowed": {"const": false},
+        "payment_data_allowed": {"const": false},
+        "secrets_allowed": {"const": false},
+        "deterministic": {"const": true},
+        "placeholder_prefix": {"const": "SYNTHETIC_"}
+      },
+      "additionalProperties": false
+    },
+    "required_categories": {"type": "array", "minItems": 9, "uniqueItems": true, "items": {"type": "string"}},
+    "responsive_widths_px": {"type": "array", "uniqueItems": true, "items": {"type": "integer"}},
+    "cases": {
+      "type": "array",
+      "minItems": 9,
+      "items": {
+        "type": "object",
+        "required": ["id", "category", "objective", "synthetic_input", "preconditions", "procedure", "oracle", "expected_result", "evidence_to_capture", "automation_status"],
+        "properties": {
+          "id": {"type": "string"},
+          "category": {"type": "string"},
+          "objective": {"type": "string"},
+          "synthetic_input": {"type": "object"},
+          "preconditions": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "procedure": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "oracle": {
+            "type": "object",
+            "required": ["measurement", "pass_condition", "fail_condition"],
+            "properties": {
+              "measurement": {"type": "string"},
+              "pass_condition": {"type": "string"},
+              "fail_condition": {"type": "string"}
+            },
+            "additionalProperties": false
+          },
+          "expected_result": {"type": "string"},
+          "evidence_to_capture": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "automation_status": {"const": "NOT_IMPLEMENTED"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "execution_claims": {
+      "type": "object",
+      "required": ["runtime_validated", "integration_validated", "production_validated"],
+      "properties": {
+        "runtime_validated": {"const": false},
+        "integration_validated": {"const": false},
+        "production_validated": {"const": false}
+      },
+      "additionalProperties": false
+    },
+    "authorization": {"const": "AUTHORIZATION_LAB_FOUNDATION_EVIDENCE_PROTOCOL_020"}
+  },
+  "additionalProperties": false
+}

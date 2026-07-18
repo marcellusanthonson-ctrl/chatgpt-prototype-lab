@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0.0",
   "library_id": "lab.foundation-library",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "status": "DOCUMENTED_AND_VALIDATED",
   "scope": "DOCUMENTATION_AND_VALIDATION_ONLY",
-  "updated_at": "2026-07-17",
+  "updated_at": "2026-07-18",
   "governance": {
     "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
     "branch": "main",
@@ -60,7 +60,8 @@
     "BACKEND_DOMAIN_COMPLETENESS",
     "PAYMENT_PROVIDER_NEUTRALITY",
     "SECRET_AND_REGULATED_DATA_BOUNDARY",
-    "TEST_CONTRACT_COMPLETENESS"
+    "TEST_CONTRACT_COMPLETENESS",
+    "EVIDENCE_PROTOCOL_DEFINED_NOT_EXECUTED"
   ],
   "authorization": {
     "id": "AUTHORIZATION_LAB_FOUNDATION_LIBRARY_019",

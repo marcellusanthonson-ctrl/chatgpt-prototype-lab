@@ -114,6 +114,29 @@
       "product_changes_authorized": false,
       "deployment_authorized": false,
       "release_authorized": false
+    },
+    {
+      "id": "AUTHORIZATION_LAB_FOUNDATION_EVIDENCE_PROTOCOL_020",
+      "state_key": "foundation_evidence_protocol_020",
+      "project_id": "lab",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "approved_by": "Jonathan Martínez",
+      "scope": "DOCUMENTATION_AND_VALIDATION_ONLY",
+      "canonical_path": "foundation-library/evidence/README.md",
+      "updated_at": "2026-07-18",
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "expected_parent_head": "2e4608d7adc69ddf507a013f8da6cf513a0754ba",
+      "commit_authorized": false,
+      "push_authorized": false,
+      "runtime_authorized": false,
+      "integration_authorized": false,
+      "browser_execution_authorized": false,
+      "automated_ui_execution_authorized": false,
+      "rag_authorized": false,
+      "product_changes_authorized": false,
+      "deployment_authorized": false,
+      "release_authorized": false
     }
   ]
 }

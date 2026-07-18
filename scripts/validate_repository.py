@@ -50,6 +50,27 @@ REQUIRED_INTERACTION_STATES = {
     "DEFAULT", "HOVER", "FOCUS_VISIBLE", "ACTIVE", "DISABLED",
     "LOADING", "ERROR", "SUCCESS", "EMPTY",
 }
+REQUIRED_DESIGN_EVIDENCE = {
+    "RESPONSIVE_BOUNDARY_MATRIX", "CONTENT_STRESS_MATRIX", "ZOOM_AND_REFLOW",
+    "KEYBOARD_AND_FOCUS", "SCREEN_READER_CONTRACT", "CONTRAST_RECALCULATION",
+    "REDUCED_MOTION", "INTERACTION_STATE_COMPLETENESS",
+    "EMPTY_LOADING_ERROR_SUCCESS_STATES",
+}
+REQUIRED_RESPONSIVE_WIDTHS = [320, 639, 640, 1023, 1024, 1439, 1440, 1920]
+REQUIRED_BACKEND_EVIDENCE = {
+    "HAPPY_PATH", "VALIDATION_FAILURES", "AUTHORIZATION_FAILURES",
+    "IDEMPOTENCY_AND_DUPLICATES", "RETRY_EXHAUSTION",
+    "CONCURRENT_STATE_CHANGES", "AUDIT_REDACTION",
+    "CLIENT_ENVIRONMENT_ISOLATION", "SECRET_BOUNDARY",
+    "RECOVERY_AND_COMPENSATION",
+}
+REQUIRED_PAYMENT_EVIDENCE = {
+    "SERVER_CALCULATED_AMOUNT", "CURRENCY_CONSISTENCY", "HOSTED_PAYMENT_CAPTURE",
+    "NO_CARD_DATA_HANDLING", "AUTHENTICATED_WEBHOOK", "DUPLICATE_WEBHOOK",
+    "OUT_OF_ORDER_EVENT", "BROWSER_RETURN_NOT_AUTHORITATIVE",
+    "IDEMPOTENT_PAYMENT_INTENT", "CLIENT_CONFIGURATION_ISOLATION",
+    "CREDENTIAL_REFERENCE_ISOLATION", "REFUND_TRACEABILITY",
+}
 
 def fail(message: str) -> None:
     FAILURES.append(message)
@@ -492,6 +513,82 @@ def validate_foundation_library(registries: dict[str, Any]) -> None:
     if seen_domains != REQUIRED_BACKEND_DOMAINS:
         fail("foundation library: backend pattern instances incomplete")
 
+def validate_foundation_evidence(registries: dict[str, Any]) -> None:
+    require_file("foundation-library/evidence/README.md")
+    design_paths = sorted(ROOT.glob("foundation-library/evidence/design-archetypes/*.evidence.json"))
+    backend_paths = sorted(ROOT.glob("foundation-library/evidence/backend-patterns/*.evidence.json"))
+    if len(design_paths) != 5:
+        fail("foundation evidence: exactly five design protocols required")
+    if len(backend_paths) != 9:
+        fail("foundation evidence: exactly nine backend protocols required")
+    library = registries.get("foundation_library", {})
+    subjects = {record.get("id"): record for record in library.get("records", [])}
+    seen_subjects: set[str] = set()
+    seen_protocol_ids: set[str] = set()
+    for path in design_paths + backend_paths:
+        relative = path.relative_to(ROOT).as_posix()
+        protocol = apply_schema(relative, "schemas/foundation-evidence-protocol.schema.json")
+        protocol_id = protocol.get("id")
+        if protocol_id in seen_protocol_ids:
+            fail(f"{relative}: duplicate protocol ID")
+        seen_protocol_ids.add(protocol_id)
+        subject = protocol.get("subject", {})
+        subject_id = subject.get("id")
+        if subject_id in seen_subjects:
+            fail(f"{relative}: duplicate evidence subject")
+        seen_subjects.add(subject_id)
+        record = subjects.get(subject_id)
+        if not record:
+            fail(f"{relative}: evidence subject not registered")
+            continue
+        if subject.get("canonical_path") != record.get("canonical_path"):
+            fail(f"{relative}: subject canonical path mismatch")
+        expected_type = record.get("kind")
+        if protocol.get("protocol_type") != expected_type:
+            fail(f"{relative}: protocol type differs from subject kind")
+        category_field = "archetype" if expected_type == "DESIGN_ARCHETYPE" else "domain"
+        if subject.get("category") != record.get(category_field):
+            fail(f"{relative}: subject category mismatch")
+        required = set(protocol.get("required_categories", []))
+        case_categories = [case.get("category") for case in protocol.get("cases", [])]
+        if set(case_categories) != required:
+            fail(f"{relative}: case coverage differs from required categories")
+        if len(case_categories) != len(set(case_categories)):
+            fail(f"{relative}: each evidence category must have exactly one case")
+        case_ids = [case.get("id") for case in protocol.get("cases", [])]
+        if len(case_ids) != len(set(case_ids)):
+            fail(f"{relative}: evidence case IDs duplicated")
+        claims = protocol.get("execution_claims", {})
+        if any(claims.values()):
+            fail(f"{relative}: unexecuted protocol makes execution claim")
+        fixture_policy = protocol.get("synthetic_fixture_policy", {})
+        for key in ["real_data_allowed", "personal_data_allowed", "payment_data_allowed", "secrets_allowed"]:
+            if fixture_policy.get(key) is not False:
+                fail(f"{relative}: unsafe synthetic fixture policy {key}")
+        if expected_type == "DESIGN_ARCHETYPE":
+            if required != REQUIRED_DESIGN_EVIDENCE:
+                fail(f"{relative}: design evidence categories incomplete")
+            if protocol.get("responsive_widths_px") != REQUIRED_RESPONSIVE_WIDTHS:
+                fail(f"{relative}: responsive evidence widths mismatch")
+            responsive_case = next(
+                (case for case in protocol.get("cases", [])
+                 if case.get("category") == "RESPONSIVE_BOUNDARY_MATRIX"),
+                {},
+            )
+            if responsive_case.get("synthetic_input", {}).get("widths_px") != REQUIRED_RESPONSIVE_WIDTHS:
+                fail(f"{relative}: responsive case does not exercise every required width")
+        else:
+            expected = set(REQUIRED_BACKEND_EVIDENCE)
+            if record.get("domain") == "PAYMENT_ORCHESTRATION":
+                expected |= REQUIRED_PAYMENT_EVIDENCE
+            if required != expected:
+                fail(f"{relative}: backend evidence categories incomplete")
+            if protocol.get("responsive_widths_px") != []:
+                fail(f"{relative}: backend protocol must not declare responsive widths")
+    if seen_subjects != set(subjects):
+        missing = sorted(set(subjects) - seen_subjects)
+        fail("foundation evidence: subjects without protocol: " + ", ".join(missing))
+
 def validate_briefs_and_continuity() -> None:
     for path in sorted(ROOT.glob("projects/*/briefs/*.json")):
         apply_schema(path.relative_to(ROOT).as_posix(), "schemas/brief.schema.json")
@@ -591,6 +688,7 @@ def main() -> int:
     validate_decisions(registries)
     state = validate_current_state(registries)
     validate_foundation_library(registries)
+    validate_foundation_evidence(registries)
     validate_briefs_and_continuity()
     validate_reassessments(registries)
     validate_evidence(registries)
@@ -608,6 +706,7 @@ def main() -> int:
     print("Brief, continuity and reassessment contracts: PASS")
     print("Evidence closure: PASS")
     print("Authority boundaries: PASS")
+    print("Foundation evidence protocols: PASS")
     return 0
 
 if __name__ == "__main__":
