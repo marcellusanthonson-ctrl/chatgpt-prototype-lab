@@ -2,11 +2,8 @@
   "schema_version": "1.0.0",
   "id": "DEC-LAB-014",
   "title": "Establecer independencia analítica y reevaluación objetiva de decisiones",
-  "status": "APPROVED",
-  "approval_state": "APPROVED",
-  "approved_by": "Jonathan Martínez",
-  "approved_at": "2026-07-16",
-  "scope": [
+  "project": "lab",
+  "project_scope": [
     "lab",
     "mammothskills",
     "symphonie",
@@ -15,6 +12,13 @@
     "aster-flyt",
     "waypoint"
   ],
+  "status": "APPROVED",
+  "effective_date": "2026-07-16",
+  "updated_at": "2026-07-16",
+  "approval_state": "APPROVED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-16",
+  "approval_evidence": "Explicit approval by Jonathan Martínez recorded for DEC-LAB-014 on 2026-07-16",
   "decision": {
     "factual_truth": "EVIDENCE_GOVERNED_NOT_AUTHORITY_GOVERNED",
     "normative_authority": "JONATHAN_MARTINEZ",
@@ -44,5 +48,7 @@
     "LAB_CONTRACT.md",
     "docs/EPISTEMIC_INDEPENDENCE_AND_DECISION_REASSESSMENT.md",
     "docs/MODEL_OPERATING_RULES.md"
-  ]
+  ],
+  "supersedes": [],
+  "superseded_by": null
 }
