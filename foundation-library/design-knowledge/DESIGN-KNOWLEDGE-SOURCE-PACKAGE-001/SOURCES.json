@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "package_id": "DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001",
+  "version": "1.0.0",
+  "status": "DOCUMENTED_AND_VALIDATED_NOT_INTEGRATED",
+  "created_at": "2026-07-19",
+  "scope": "DOCUMENTATION_AND_VALIDATION_ONLY",
+  "objective": "Strengthen design judgment, taste, human-centered reasoning, usability review, and visual discipline through governed source-derived principles.",
+  "canonical_target": {
+    "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "branch": "main",
+    "path": "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001"
+  },
+  "authority": {
+    "authorization_id": "AUTHORIZATION_LAB_DESIGN_KNOWLEDGE_PUBLICATION_024",
+    "approved_by": "Jonathan Martínez",
+    "commit_authorized": true,
+    "push_authorized": true,
+    "runtime_authorized": false,
+    "rag_authorized": false,
+    "integration_authorized": false,
+    "product_changes_authorized": false
+  },
+  "sources": [
+    {
+      "source_id": "SRC-DESIGN-001",
+      "title": "The Design of Everyday Things",
+      "author": "Don Norman",
+      "edition": "Revised and Expanded Edition",
+      "year": 2013,
+      "isbn": ["978-0-465-05065-9", "978-0-465-00394-5"],
+      "role": "FOUNDATIONAL_HUMAN_CENTERED_DESIGN_SOURCE",
+      "strength": "Psychology of interaction, signifiers, mapping, feedback, error, human-centered design.",
+      "status": "APPROVED_AS_REFERENCE",
+      "redistribution": "PROHIBITED_UNLESS_RIGHTS_VERIFIED"
+    },
+    {
+      "source_id": "SRC-DESIGN-002",
+      "title": "Don't Make Me Think, Revisited",
+      "author": "Steve Krug",
+      "edition": "Third Edition",
+      "year": 2014,
+      "isbn": ["978-0-321-96551-6", "0-321-96551-5"],
+      "role": "PRACTICAL_USABILITY_HEURISTIC_SOURCE",
+      "strength": "Scanning, navigation, cognitive economy, content reduction, lightweight usability testing.",
+      "status": "APPROVED_AS_REFERENCE",
+      "redistribution": "PROHIBITED_UNLESS_RIGHTS_VERIFIED"
+    },
+    {
+      "source_id": "SRC-DESIGN-003",
+      "title": "Eyetracking Web Usability",
+      "author": "Jakob Nielsen and Kara Pernice",
+      "edition": "First Edition",
+      "year": 2010,
+      "isbn": ["978-0-321-49836-6", "0-321-49836-4"],
+      "role": "EMPIRICAL_VISUAL_ATTENTION_SOURCE_WITH_TEMPORAL_LIMITS",
+      "strength": "Visual attention, scanning, task-dependent gaze, research methodology.",
+      "status": "APPROVED_AS_CONDITIONAL_REFERENCE",
+      "redistribution": "PROHIBITED_UNLESS_RIGHTS_VERIFIED"
+    },
+    {
+      "source_id": "SRC-DESIGN-004",
+      "title": "Dieter Rams: As Little Design as Possible",
+      "author": "Sophie Lovell",
+      "edition": "First Edition",
+      "year": 2011,
+      "isbn": ["978-0-7148-4918-8", "0-7148-4918-9"],
+      "role": "DESIGN_PHILOSOPHY_AND_VISUAL_REFERENCE",
+      "strength": "Restraint, coherence, longevity, product-family consistency, visual discipline.",
+      "status": "APPROVED_AS_CONDITIONAL_REFERENCE",
+      "redistribution": "PROHIBITED_UNLESS_RIGHTS_VERIFIED"
+    }
+  ],
+  "copyright_boundary": {
+    "store_full_text": false,
+    "store_pdf": false,
+    "store_long_quotes": false,
+    "allowed": ["bibliographic metadata", "original paraphrases", "short citations where justified", "derived principles", "tests", "limitations", "page references"],
+    "provenance_status": "RIGHTS_NOT_VERIFIED_FOR_REDISTRIBUTION"
+  }
+}
