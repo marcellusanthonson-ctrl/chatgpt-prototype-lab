@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "package_id": "DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001",
+  "version": "1.0.0",
+  "status": "DOCUMENTED_AND_VALIDATED_NOT_INTEGRATED",
+  "updated_at": "2026-07-19",
+  "files": [
+    "README.md",
+    "SOURCES.json",
+    "PRINCIPLES.json",
+    "HEURISTIC.md",
+    "GAP_REGISTER.json",
+    "AUTHORIZATION.json",
+    "MANIFEST.json"
+  ],
+  "counts": {"sources":4,"principles":12,"gaps":10},
+  "copyright_boundary": "NO_PDFS_NO_FULL_TEXT_NO_LONG_QUOTES",
+  "validation": {
+    "json_parse": "PASS",
+    "source_reference_closure": "PASS",
+    "principle_id_uniqueness": "PASS",
+    "gap_id_uniqueness": "PASS",
+    "authorization_scope_match": "PASS",
+    "runtime_boundary": "PASS",
+    "integration_boundary": "PASS"
+  }
+}
