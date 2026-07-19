@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "package_id": "DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001",
+  "status": "OPEN",
+  "gaps": [
+    {"id":"GAP-DK-001","domain":"ACCESSIBILITY","priority":"CRITICAL","needed":"WCAG 2.2, accessible component patterns, cognitive accessibility, and assistive technology testing."},
+    {"id":"GAP-DK-002","domain":"RESPONSIVE_AND_MOBILE","priority":"HIGH","needed":"Modern responsive systems, touch ergonomics, mobile navigation, viewport and input diversity."},
+    {"id":"GAP-DK-003","domain":"DESIGN_SYSTEMS","priority":"HIGH","needed":"Tokens, component governance, variants, contribution models, versioning, and adoption."},
+    {"id":"GAP-DK-004","domain":"AI_INTERFACES","priority":"HIGH","needed":"Conversational UX, uncertainty, provenance, human oversight, agent state, and tool transparency."},
+    {"id":"GAP-DK-005","domain":"CONTENT_DESIGN","priority":"HIGH","needed":"Plain language, microcopy, localization, inclusive content, and error writing."},
+    {"id":"GAP-DK-006","domain":"MOTION","priority":"MEDIUM","needed":"Functional motion, reduced-motion support, continuity, timing, and performance."},
+    {"id":"GAP-DK-007","domain":"ETHICS_AND_SAFETY","priority":"HIGH","needed":"Consent, dark-pattern prevention, privacy, vulnerable users, and high-stakes design."},
+    {"id":"GAP-DK-008","domain":"RESEARCH_OPERATIONS","priority":"MEDIUM","needed":"Mixed methods, longitudinal research, analytics interpretation, experimentation, and research repositories."},
+    {"id":"GAP-DK-009","domain":"CROSS_CULTURAL_DESIGN","priority":"MEDIUM","needed":"Internationalization, localization, cultural conventions, language expansion, and bidirectionality."},
+    {"id":"GAP-DK-010","domain":"VISUAL_CRAFT","priority":"HIGH","needed":"Typography, grids, color systems, art direction, editorial composition, and contemporary image direction."}
+  ]
+}
