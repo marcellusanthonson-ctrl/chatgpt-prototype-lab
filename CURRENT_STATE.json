@@ -1,23 +1,13 @@
 {
   "schema_version": "2.5.0",
   "document_id": "lab.current-state",
-  "version": "2.5.4",
+  "version": "2.5.5",
   "status": "GOVERNANCE_V2_CANONICAL_BASELINE",
-  "updated_at": "2026-07-18",
+  "updated_at": "2026-07-19",
   "active_project": "lab",
-  "current_phase": "FOUNDATION_PILOT_DEFINED_NOT_EXECUTED",
-  "methodology": {
-    "version": "2.1",
-    "path": "METHODOLOGY.md"
-  },
-  "contract": {
-    "version": "2.1",
-    "path": "LAB_CONTRACT.md",
-    "amended_by": [
-      "DEC-LAB-013",
-      "DEC-LAB-014"
-    ]
-  },
+  "current_phase": "DESIGN_KNOWLEDGE_PACKAGE_DOCUMENTED_AND_VALIDATED_NOT_INTEGRATED",
+  "methodology": {"version":"2.1","path":"METHODOLOGY.md"},
+  "contract": {"version":"2.1","path":"LAB_CONTRACT.md","amended_by":["DEC-LAB-013","DEC-LAB-014"]},
   "authority": {
     "sole_approver": "Jonathan Martínez",
     "chatgpt": "COORDINATE_VALIDATE_AUDIT_ORDER",
@@ -34,114 +24,52 @@
     "epistemic_independence": "docs/EPISTEMIC_INDEPENDENCE_AND_DECISION_REASSESSMENT.md",
     "chatgpt_project_sources": "project-sources/chatgpt/START_HERE.md",
     "rag_federation_contract": "architecture/rag/FEDERATION_CONTRACT.json",
-    "selected_foundation_pilot": "foundation-library/pilots/PILOT-PREMIUM-ECOMMERCE-001/PILOT.json"
+    "selected_foundation_pilot": "foundation-library/pilots/PILOT-PREMIUM-ECOMMERCE-001/PILOT.json",
+    "design_knowledge_package": "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/MANIFEST.json"
   },
   "projects": {
-    "lab": {
-      "status": "active",
-      "canonical_path": "projects/lab/PROJECT_STATE.md",
-      "structured_state_path": "projects/lab/PROJECT_STATE.json"
-    },
-    "mammothskills": {
-      "status": "active_pipeline_validated_phase_a",
-      "canonical_path": "projects/mammothskills/PROJECT_STATE.md",
-      "structured_state_path": "projects/mammothskills/PROJECT_STATE.json"
-    },
-    "symphonie": {
-      "status": "known_and_synced",
-      "canonical_path": "projects/symphonie/PROJECT_STATE.md",
-      "structured_state_path": "projects/symphonie/PROJECT_STATE.json"
-    },
-    "carolina-klinik": {
-      "status": "known",
-      "canonical_path": "projects/carolina-klinik/PROJECT_STATE.md",
-      "structured_state_path": "projects/carolina-klinik/PROJECT_STATE.json"
-    },
-    "clinical-os": {
-      "status": "known",
-      "canonical_path": "projects/clinical-os/PROJECT_STATE.md",
-      "structured_state_path": "projects/clinical-os/PROJECT_STATE.json"
-    },
-    "aster-flyt": {
-      "status": "referenced",
-      "canonical_path": "projects/aster-flyt/PROJECT_STATE.md",
-      "structured_state_path": "projects/aster-flyt/PROJECT_STATE.json"
-    },
-    "waypoint": {
-      "status": "referenced",
-      "canonical_path": "projects/waypoint/PROJECT_STATE.md",
-      "structured_state_path": "projects/waypoint/PROJECT_STATE.json"
-    }
+    "lab": {"status":"active","canonical_path":"projects/lab/PROJECT_STATE.md","structured_state_path":"projects/lab/PROJECT_STATE.json"},
+    "mammothskills": {"status":"active_pipeline_validated_phase_a","canonical_path":"projects/mammothskills/PROJECT_STATE.md","structured_state_path":"projects/mammothskills/PROJECT_STATE.json"},
+    "symphonie": {"status":"known_and_synced","canonical_path":"projects/symphonie/PROJECT_STATE.md","structured_state_path":"projects/symphonie/PROJECT_STATE.json"},
+    "carolina-klinik": {"status":"known","canonical_path":"projects/carolina-klinik/PROJECT_STATE.md","structured_state_path":"projects/carolina-klinik/PROJECT_STATE.json"},
+    "clinical-os": {"status":"known","canonical_path":"projects/clinical-os/PROJECT_STATE.md","structured_state_path":"projects/clinical-os/PROJECT_STATE.json"},
+    "aster-flyt": {"status":"referenced","canonical_path":"projects/aster-flyt/PROJECT_STATE.md","structured_state_path":"projects/aster-flyt/PROJECT_STATE.json"},
+    "waypoint": {"status":"referenced","canonical_path":"projects/waypoint/PROJECT_STATE.md","structured_state_path":"projects/waypoint/PROJECT_STATE.json"}
   },
-  "decisions_in_force": [
-    "DEC-LAB-001",
-    "DEC-LAB-002",
-    "DEC-LAB-003",
-    "DEC-LAB-004",
-    "DEC-LAB-005",
-    "DEC-LAB-006",
-    "DEC-LAB-007",
-    "DEC-LAB-008",
-    "DEC-LAB-009",
-    "DEC-LAB-010",
-    "DEC-LAB-011",
-    "DEC-LAB-012",
-    "DEC-LAB-013",
-    "DEC-LAB-014",
-    "DEC-LAB-015"
-  ],
+  "decisions_in_force": ["DEC-LAB-001","DEC-LAB-002","DEC-LAB-003","DEC-LAB-004","DEC-LAB-005","DEC-LAB-006","DEC-LAB-007","DEC-LAB-008","DEC-LAB-009","DEC-LAB-010","DEC-LAB-011","DEC-LAB-012","DEC-LAB-013","DEC-LAB-014","DEC-LAB-015"],
   "open_errors": [],
-  "validated_patterns": [
-    "PAT-LAB-001",
-    "PAT-LAB-002",
-    "PAT-LAB-003",
-    "PAT-LAB-004",
-    "PAT-MA-001",
-    "PAT-LAB-005",
-    "PAT-LAB-006",
-    "PAT-LAB-007"
-  ],
+  "validated_patterns": ["PAT-LAB-001","PAT-LAB-002","PAT-LAB-003","PAT-LAB-004","PAT-MA-001","PAT-LAB-005","PAT-LAB-006","PAT-LAB-007"],
   "authorization_state": {
-    "governance_v2_013": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "commit_authorized": false,
-    "push_authorized": false,
-    "runtime_authorized": false,
-    "integration_authorized": false,
-    "product_changes_authorized": false,
-    "codex_autonomous_authority": "NO",
-    "epistemic_independence_014": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "risk_method_015": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "self_head_correction_016": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "chatgpt_sources_migration_017": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "symphonie_phase_schemas_018": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "foundation_library_019": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "foundation_evidence_protocol_020": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "continuity_metadata_021": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "transversal_rag_contract_022": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "foundation_pilot_definition_023": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+    "governance_v2_013":"CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "commit_authorized":false,
+    "push_authorized":false,
+    "runtime_authorized":false,
+    "integration_authorized":false,
+    "product_changes_authorized":false,
+    "codex_autonomous_authority":"NO",
+    "epistemic_independence_014":"CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "risk_method_015":"CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "self_head_correction_016":"CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "chatgpt_sources_migration_017":"CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "symphonie_phase_schemas_018":"CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "foundation_library_019":"CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "foundation_evidence_protocol_020":"CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "continuity_metadata_021":"CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "transversal_rag_contract_022":"CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "foundation_pilot_definition_023":"CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "design_knowledge_publication_024":"CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
   },
   "verified_external_heads": {
-    "symphonie": "9de9dcf5c58583cd46bece41a0e772e3671801ff",
-    "lab_base_before_transition": "7f1a7e101f42a981ad68e7602318b07bc62970b3",
-    "lab_base_before_foundation_library": "4367b736c22d92937ec8ad1174bd9c9610baa313",
-    "lab_base_before_foundation_evidence": "2e4608d7adc69ddf507a013f8da6cf513a0754ba",
-    "lab_base_before_continuity_metadata": "321be8d6d7d56ed8b62e8dc96aadbf865a2e80a2",
-    "lab_base_before_rag_contract": "311340b6173ca91e98eac3cf9a92d7d123a30e1a",
-    "lab_base_before_pilot_definition": "d3af193f33a08f5714f9e8bdb1dfca5f1c4e4b52"
+    "symphonie":"9de9dcf5c58583cd46bece41a0e772e3671801ff",
+    "lab_base_before_transition":"7f1a7e101f42a981ad68e7602318b07bc62970b3",
+    "lab_base_before_foundation_library":"4367b736c22d92937ec8ad1174bd9c9610baa313",
+    "lab_base_before_foundation_evidence":"2e4608d7adc69ddf507a013f8da6cf513a0754ba",
+    "lab_base_before_continuity_metadata":"321be8d6d7d56ed8b62e8dc96aadbf865a2e80a2",
+    "lab_base_before_rag_contract":"311340b6173ca91e98eac3cf9a92d7d123a30e1a",
+    "lab_base_before_pilot_definition":"d3af193f33a08f5714f9e8bdb1dfca5f1c4e4b52",
+    "lab_base_before_design_knowledge_publication":"31a7de8cc45018afba015fa938e891d8ac4453de"
   },
   "next_authorized_action": "NONE_UNTIL_NEW_EXPLICIT_APPROVAL",
-  "next_recommended_transition": "AUTHORIZE_ISOLATED_PREMIUM_ECOMMERCE_PILOT_EXECUTION",
-  "continuity_read_order": [
-    "LAB_CONTRACT.md",
-    "METHODOLOGY.md",
-    "CURRENT_STATE.json",
-    "registry/index.json",
-    "registry/projects.json",
-    "projects/{active_project}/PROJECT_STATE.json",
-    "project decisions",
-    "project authorizations",
-    "open errors",
-    "applicable evidence",
-    "current continuity package"
-  ]
+  "next_recommended_transition": "FILL_DESIGN_KNOWLEDGE_GAPS_WITH_GOVERNED_SOURCES",
+  "continuity_read_order": ["LAB_CONTRACT.md","METHODOLOGY.md","CURRENT_STATE.json","registry/index.json","registry/projects.json","projects/{active_project}/PROJECT_STATE.json","project decisions","project authorizations","open errors","applicable evidence","current continuity package"]
 }
