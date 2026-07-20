@@ -1,69 +1,14 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-07-16",
+  "updated_at": "2026-07-20",
   "records": [
-    {
-      "id": "EVD-SYM-001",
-      "path": "projects/symphonie/reports/SYMPHONIE_INTAKE_DRY_RUN_001.md",
-      "kind": "EXPERIMENT_REPORT",
-      "project_id": "symphonie",
-      "status": "REGISTERED",
-      "canonical_path": "projects/symphonie/evidence/index.json",
-      "updated_at": "2026-07-16"
-    },
-    {
-      "id": "EVD-SYM-002",
-      "path": "projects/symphonie/reports/SYMPHONIE_SESSION_REPORT_2026-07-15_INTAKE_AND_RISK_TIER_1.md",
-      "kind": "SESSION_REPORT",
-      "project_id": "symphonie",
-      "status": "REGISTERED",
-      "canonical_path": "projects/symphonie/evidence/index.json",
-      "updated_at": "2026-07-16"
-    },
-    {
-      "id": "EVD-SYM-003",
-      "path": "projects/symphonie/reports/SYMPHONIE_DESIGN_MIGRATION_INTEGRATION_REPORT.md",
-      "kind": "INTEGRATION_REPORT",
-      "project_id": "symphonie",
-      "status": "REGISTERED",
-      "canonical_path": "projects/symphonie/evidence/index.json",
-      "updated_at": "2026-07-16"
-    },
-    {
-      "id": "EVD-SYM-004",
-      "path": "projects/symphonie/reports/ALPHA6_HISTORICAL_EVIDENCE_TEST_PLAN.md",
-      "kind": "TEST_PLAN",
-      "project_id": "symphonie",
-      "status": "REGISTERED",
-      "canonical_path": "projects/symphonie/evidence/index.json",
-      "updated_at": "2026-07-16"
-    },
-    {
-      "id": "EVD-SYM-005",
-      "path": "projects/symphonie/knowledge/contracts/action-preservation.json",
-      "kind": "KNOWLEDGE_CONTRACT",
-      "project_id": "symphonie",
-      "status": "REGISTERED",
-      "canonical_path": "projects/symphonie/evidence/index.json",
-      "updated_at": "2026-07-16"
-    },
-    {
-      "id": "EVD-SYM-006",
-      "path": "projects/symphonie/knowledge/contracts/phase3-minimum-assertions.json",
-      "kind": "KNOWLEDGE_CONTRACT",
-      "project_id": "symphonie",
-      "status": "REGISTERED",
-      "canonical_path": "projects/symphonie/evidence/index.json",
-      "updated_at": "2026-07-16"
-    },
-    {
-      "id": "EVD-SYM-007",
-      "path": "projects/symphonie/knowledge/regressions/imp-reg-11.json",
-      "kind": "REGRESSION_EVIDENCE",
-      "project_id": "symphonie",
-      "status": "REGISTERED",
-      "canonical_path": "projects/symphonie/evidence/index.json",
-      "updated_at": "2026-07-16"
-    }
+    {"id":"EVD-SYM-001","path":"projects/symphonie/reports/SYMPHONIE_INTAKE_DRY_RUN_001.md","kind":"EXPERIMENT_REPORT","project_id":"symphonie","status":"REGISTERED","canonical_path":"projects/symphonie/evidence/index.json","updated_at":"2026-07-16"},
+    {"id":"EVD-SYM-002","path":"projects/symphonie/reports/SYMPHONIE_SESSION_REPORT_2026-07-15_INTAKE_AND_RISK_TIER_1.md","kind":"SESSION_REPORT","project_id":"symphonie","status":"REGISTERED","canonical_path":"projects/symphonie/evidence/index.json","updated_at":"2026-07-16"},
+    {"id":"EVD-SYM-003","path":"projects/symphonie/reports/SYMPHONIE_DESIGN_MIGRATION_INTEGRATION_REPORT.md","kind":"INTEGRATION_REPORT","project_id":"symphonie","status":"REGISTERED","canonical_path":"projects/symphonie/evidence/index.json","updated_at":"2026-07-16"},
+    {"id":"EVD-SYM-004","path":"projects/symphonie/reports/ALPHA6_HISTORICAL_EVIDENCE_TEST_PLAN.md","kind":"TEST_PLAN","project_id":"symphonie","status":"REGISTERED","canonical_path":"projects/symphonie/evidence/index.json","updated_at":"2026-07-16"},
+    {"id":"EVD-SYM-005","path":"projects/symphonie/knowledge/contracts/action-preservation.json","kind":"KNOWLEDGE_CONTRACT","project_id":"symphonie","status":"REGISTERED","canonical_path":"projects/symphonie/evidence/index.json","updated_at":"2026-07-16"},
+    {"id":"EVD-SYM-006","path":"projects/symphonie/knowledge/contracts/phase3-minimum-assertions.json","kind":"KNOWLEDGE_CONTRACT","project_id":"symphonie","status":"REGISTERED","canonical_path":"projects/symphonie/evidence/index.json","updated_at":"2026-07-16"},
+    {"id":"EVD-SYM-007","path":"projects/symphonie/knowledge/regressions/imp-reg-11.json","kind":"REGRESSION_EVIDENCE","project_id":"symphonie","status":"REGISTERED","canonical_path":"projects/symphonie/evidence/index.json","updated_at":"2026-07-16"},
+    {"id":"EVD-LAB-DK-001","path":"foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/EVIDENCE_EU_AI_ACT_PHASE_3D.md","kind":"GOVERNED_DESIGN_KNOWLEDGE_EVIDENCE","project_id":"lab","status":"DOCUMENTED_AND_VALIDATED","canonical_path":"foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/MANIFEST.json","authorization_id":"AUTHORIZATION_LAB_DESIGN_KNOWLEDGE_EU_AI_ACT_025","updated_at":"2026-07-20"}
   ]
 }
