@@ -11,7 +11,7 @@
     "autonomous_model_authority": false
   },
   "summary": "Gobierno, autoridad, continuidad, auditoría y biblioteca documental gobernada entre proyectos.",
-  "content_completeness": "STRUCTURED_V2_BASELINE_WITH_DESIGN_KNOWLEDGE_REVIEW_AND_PHASE4_NEXT",
+  "content_completeness": "STRUCTURED_V2_WITH_CONTEXTUAL_VISUAL_PROFILE_AND_MONOLITHIC_CALIBRATION_PROTOCOL",
   "source_refs": [
     "projects/lab/PROJECT_STATE.md",
     "registry/projects.json",
@@ -45,8 +45,8 @@
     },
     "authorization_registry": {
       "status": "RECONCILED",
-      "registered_consumed_transitions": 8,
-      "latest": "AUTHORIZATION_LAB_DESIGN_RESEARCH_REVIEW_AND_PHASE4_NEXT_042",
+      "registered_consumed_transitions": 9,
+      "latest": "AUTHORIZATION_SYMPHONIE_VISUAL_CALIBRATION_RECONCILIATION",
       "correspondence_policy": "STATE_KEY_REQUIRED"
     },
     "design_knowledge": {
@@ -66,11 +66,35 @@
     "research_review_042": {
       "verdict": "MODIFIED",
       "directly_incorporable": false,
-      "high_value_candidates": ["SUSAN_KARE_FUNCTIONAL_ICONOGRAPHY","NIELSEN_SEVERITY_AND_PRIORITIZATION"],
-      "conditional_candidates": ["JOBS_IVE_FOCUS_SYNTHESIS","GLEB_KUZNETSOV_MOTION_REFERENCE","MIZKO_DESIGN_SYSTEMS_DISCOVERY"],
-      "low_incremental_value": ["RAMS_DUPLICATIVE","NORMAN_DUPLICATIVE","KRUG_DUPLICATIVE","RAN_SEGALL_GENERIC"],
-      "candidate_principles": ["ICONOGRAPHY_IS_A_FUNCTIONAL_LANGUAGE","USABILITY_FINDINGS_REQUIRE_SEVERITY","FOCUS_REQUIRES_EXPLICIT_EXCLUSION","MINIMALISM_MUST_NOT_REMOVE_OPERATIONAL_INFORMATION"],
+      "high_value_candidates": [
+        "SUSAN_KARE_FUNCTIONAL_ICONOGRAPHY",
+        "NIELSEN_SEVERITY_AND_PRIORITIZATION"
+      ],
+      "conditional_candidates": [
+        "JOBS_IVE_FOCUS_SYNTHESIS",
+        "GLEB_KUZNETSOV_MOTION_REFERENCE",
+        "MIZKO_DESIGN_SYSTEMS_DISCOVERY"
+      ],
+      "low_incremental_value": [
+        "RAMS_DUPLICATIVE",
+        "NORMAN_DUPLICATIVE",
+        "KRUG_DUPLICATIVE",
+        "RAN_SEGALL_GENERIC"
+      ],
+      "candidate_principles": [
+        "ICONOGRAPHY_IS_A_FUNCTIONAL_LANGUAGE",
+        "USABILITY_FINDINGS_REQUIRE_SEVERITY",
+        "FOCUS_REQUIRES_EXPLICIT_EXCLUSION",
+        "MINIMALISM_MUST_NOT_REMOVE_OPERATIONAL_INFORMATION"
+      ],
       "candidate_principles_status": "NOT_APPROVED"
+    },
+    "visual_calibration_reconciliation": {
+      "status": "DOCUMENTED_NOT_IMPLEMENTED",
+      "profile_version": "1.1.0",
+      "protocol_version": "1.1.0",
+      "pilot_rejection_head": "0105d90ad105360dd95169220c6bf444375aa9ec",
+      "next_transition": "MONOLITHIC_VISUAL_CALIBRATION_REQUIRES_SEPARATE_AUTHORIZATION"
     }
   },
   "head_policy": "VERIFY_LIVE_AT_USE",

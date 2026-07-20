@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_SYMPHONIE_VISUAL_CALIBRATION_RECONCILIATION",
+  "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-20",
+  "scope": [
+    "PILOT_REJECTION_RECORD",
+    "LAB_CONTEXTUAL_PROFILE_AND_MONOLITHIC_PROTOCOL",
+    "SYMPHONIE_PHASE3_CONTRACT_RECONCILIATION",
+    "CAPABILITY_POST_ALPHA7_UPDATE",
+    "STATE_REGISTRY_ROADMAP_RECONCILIATION"
+  ],
+  "expected_parent_heads": {
+    "chatgpt-prototype-lab": "807599e72aa87aeb96e63ddcc572f53d74d4ef95",
+    "symphonie": "ccdc7856daa820386d30a354734e4b35c2092405",
+    "symphonie-codex-lab": "01d84f0a89ae57e6495dd7b7004e7f721b4ce806",
+    "symphonie-premium-ecommerce-pilot": "845ee928367b1a01bf59cff681bdab6b55686345"
+  },
+  "pilot_result_head": "0105d90ad105360dd95169220c6bf444375aa9ec",
+  "prohibitions": [
+    "APPLICATION_SOURCE_CHANGE",
+    "ALPHA7_PROTOTYPE_CHANGE",
+    "VISUAL_REVIEW_MONOLITHIC_HTML_GENERATION",
+    "DEPENDENCY_INSTALLATION",
+    "BROWSER_EXECUTION",
+    "RUNTIME",
+    "RAG",
+    "REAL_DATA",
+    "INTEGRATION",
+    "DEPLOYMENT",
+    "RELEASE"
+  ],
+  "consumption_rule": "Consumed when all authorized repository publications are remotely verified. This record does not create follow-on authority.",
+  "authority_effect": "BOUNDED_EXECUTION_ONLY"
+}

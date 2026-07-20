@@ -52,9 +52,13 @@
         "Historical versus current applicability separation",
         "Tests, anti-patterns, limitations and accessibility boundaries"
       ],
-      "gap_relations": ["GAP-DK-010"],
+      "gap_relations": [
+        "GAP-DK-010"
+      ],
       "promotion_status": "NOT_APPROVED",
-      "source_refs": ["foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/EVIDENCE_UI_UX_REFERENTS_RESEARCH_REVIEW.md"]
+      "source_refs": [
+        "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/EVIDENCE_UI_UX_REFERENTS_RESEARCH_REVIEW.md"
+      ]
     },
     {
       "id": "PEND-LAB-004",
@@ -69,9 +73,13 @@
         "Preserve distinction between heuristic review and representative user testing",
         "Map result to Symphonie risk-proportional validation gates"
       ],
-      "gap_relations": ["GAP-DK-008"],
+      "gap_relations": [
+        "GAP-DK-008"
+      ],
       "promotion_status": "NOT_APPROVED",
-      "source_refs": ["foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/EVIDENCE_UI_UX_REFERENTS_RESEARCH_REVIEW.md"]
+      "source_refs": [
+        "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/EVIDENCE_UI_UX_REFERENTS_RESEARCH_REVIEW.md"
+      ]
     },
     {
       "id": "PEND-LAB-005",
@@ -87,7 +95,9 @@
       ],
       "decision_rule": "Reassess uniqueness and evidence only after primary-source normalization; extend existing DKP records instead of creating duplicates where appropriate.",
       "approval_status": "NOT_APPROVED",
-      "source_refs": ["foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/EVIDENCE_UI_UX_REFERENTS_RESEARCH_REVIEW.md"]
+      "source_refs": [
+        "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/EVIDENCE_UI_UX_REFERENTS_RESEARCH_REVIEW.md"
+      ]
     },
     {
       "id": "PEND-LAB-006",
@@ -104,9 +114,13 @@
         "Platform compatibility",
         "Observed usability outcomes"
       ],
-      "gap_relations": ["GAP-DK-006"],
+      "gap_relations": [
+        "GAP-DK-006"
+      ],
       "normative_effect": "NONE",
-      "source_refs": ["foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/EVIDENCE_UI_UX_REFERENTS_RESEARCH_REVIEW.md"]
+      "source_refs": [
+        "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/EVIDENCE_UI_UX_REFERENTS_RESEARCH_REVIEW.md"
+      ]
     },
     {
       "id": "PEND-LAB-007",
@@ -115,9 +129,13 @@
       "subject": "Mizko / Michael Wong",
       "priority": "LOW",
       "reason": "Current evidence is dominated by portfolios, testimonials, courses and promotional material.",
-      "gap_relations": ["GAP-DK-003"],
+      "gap_relations": [
+        "GAP-DK-003"
+      ],
       "source_promotion_status": "NOT_APPROVED",
-      "source_refs": ["foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/EVIDENCE_UI_UX_REFERENTS_RESEARCH_REVIEW.md"]
+      "source_refs": [
+        "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/EVIDENCE_UI_UX_REFERENTS_RESEARCH_REVIEW.md"
+      ]
     },
     {
       "id": "PEND-LAB-008",
@@ -126,7 +144,22 @@
       "subject": "Direct Rams to Apple / Jony Ive influence claims",
       "priority": "LOW",
       "rule": "Treat as historical context only unless normalized primary evidence supports specific causal claims.",
-      "source_refs": ["foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/EVIDENCE_UI_UX_REFERENTS_RESEARCH_REVIEW.md"]
+      "source_refs": [
+        "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/EVIDENCE_UI_UX_REFERENTS_RESEARCH_REVIEW.md"
+      ]
+    },
+    {
+      "id": "PEND-LAB-009",
+      "status": "NEXT_SYMPHONIE_VISUAL_TRANSITION_NOT_AUTHORIZED",
+      "type": "MONOLITHIC_VISUAL_CALIBRATION",
+      "subject": "Generate one VISUAL_REVIEW_MONOLITHIC.html for the premium motorcycle pilot",
+      "priority": "HIGH",
+      "required_gate": "VISUAL_CALIBRATION_APPROVED",
+      "authorization_required": true,
+      "source_refs": [
+        "foundation-library/visual-protocols/high-fidelity-visual-protocol.json",
+        "symphonie-premium-ecommerce-pilot@0105d90ad105360dd95169220c6bf444375aa9ec:.project/phase-3/human-visual-decision.json"
+      ]
     }
   ]
 }

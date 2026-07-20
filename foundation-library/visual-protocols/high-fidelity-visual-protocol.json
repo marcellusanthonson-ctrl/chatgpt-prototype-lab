@@ -1,32 +1,210 @@
 {
   "schema_version": "1.0.0",
   "document_id": "high-fidelity-visual-protocol.authorization-041",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "status": "DOCUMENTED_NOT_IMPLEMENTED",
-  "purpose": "Define the human-governed visual review sequence before a final Phase 3 implementation contract can exist.",
+  "purpose": "Calibrate product-contextual visual direction through one offline monolithic HTML artifact and an early human gate before multipage expansion or extensive technical validation.",
   "stages": [
-    {"sequence": 1, "id": "REFERENCE_QUALIFICATION", "human_gate": false},
-    {"sequence": 2, "id": "PREFERENCE_APPLICABILITY", "human_gate": false},
-    {"sequence": 3, "id": "MINIMUM_THREE_VISUAL_DIRECTIONS", "human_gate": false},
-    {"sequence": 4, "id": "HUMAN_DIRECTION_SHORTLIST", "human_gate": true},
-    {"sequence": 5, "id": "HIGH_FIDELITY_HTML_PROTOTYPES", "human_gate": false},
-    {"sequence": 6, "id": "REPRESENTATIVE_ROUTE_COVERAGE", "human_gate": false},
-    {"sequence": 7, "id": "RESPONSIVE_VISUAL_REVIEW", "human_gate": false},
-    {"sequence": 8, "id": "INTERACTION_STATE_REVIEW", "human_gate": false},
-    {"sequence": 9, "id": "VISUAL_DELTA_REVISION", "human_gate": false},
-    {"sequence": 10, "id": "HIGH_FIDELITY_VISUAL_BASELINE_APPROVED", "human_gate": true},
-    {"sequence": 11, "id": "FINAL_PHASE3_CONTRACT_GENERATION", "human_gate": true}
+    {
+      "sequence": 1,
+      "id": "RESOLVE_PRODUCT_CONTEXT",
+      "human_gate": false
+    },
+    {
+      "sequence": 2,
+      "id": "QUALIFY_APPLICABLE_REFERENCES",
+      "human_gate": false
+    },
+    {
+      "sequence": 3,
+      "id": "RESOLVE_CONTEXTUAL_PREFERENCE_SIGNALS",
+      "human_gate": false
+    },
+    {
+      "sequence": 4,
+      "id": "GENERATE_MONOLITHIC_VISUAL_CALIBRATION",
+      "human_gate": false
+    },
+    {
+      "sequence": 5,
+      "id": "VISUAL_CALIBRATION_APPROVED",
+      "human_gate": true
+    },
+    {
+      "sequence": 6,
+      "id": "EXPAND_APPROVED_DIRECTION_TO_ROUTES_AND_STATES",
+      "human_gate": false
+    },
+    {
+      "sequence": 7,
+      "id": "RESPONSIVE_ACCESSIBILITY_AND_INTERACTION_VALIDATION",
+      "human_gate": false
+    },
+    {
+      "sequence": 8,
+      "id": "HIGH_FIDELITY_VISUAL_BASELINE_APPROVED",
+      "human_gate": true
+    },
+    {
+      "sequence": 9,
+      "id": "FINAL_PHASE3_CONTRACT_GENERATION",
+      "human_gate": true
+    }
   ],
-  "visual_direction_contract": {"minimum_materially_distinct_directions": 3, "selection_authority": "JONATHAN_MARTINEZ_EXPLICIT_SELECTION"},
-  "html_prototype_contract": {"required_before_final_phase3_contract": true, "is_product_implementation": false, "application_code_authorized": false},
+  "visual_direction_contract": {
+    "minimum_directions_before_first_calibration": 1,
+    "multiple_directions_may_share_internal_tabs": true,
+    "material_distinction_required_when_multiple": true,
+    "model_ranking_or_approval": "PROHIBITED",
+    "selection_authority": "JONATHAN_MARTINEZ_EXPLICIT_SELECTION"
+  },
+  "html_prototype_contract": {
+    "required_before_final_phase3_contract": true,
+    "first_review_artifact": "VISUAL_REVIEW_MONOLITHIC.html",
+    "is_product_implementation": false,
+    "application_code_authorized": false,
+    "first_gate_requires_server": false
+  },
   "review_contract": {
     "approver": "JONATHAN_MARTINEZ",
     "model_self_approval": "PROHIBITED",
-    "areas": ["TYPOGRAPHIC_HIERARCHY", "COLOR_AND_CONTRAST", "COMPOSITIONAL_BALANCE", "ACTIVE_NEGATIVE_SPACE", "PRODUCT_OR_PURPOSE_PROMINENCE", "IMAGE_AND_RENDER_QUALITY", "MATERIAL_COHERENCE", "CONTROL_AFFORDANCE", "STATE_COMPLETENESS", "CONTENT_STRESS", "ZOOM_AND_REFLOW", "MOTION_AND_REDUCED_MOTION"]
+    "areas": [
+      "TYPOGRAPHIC_HIERARCHY",
+      "COLOR_AND_CONTRAST",
+      "COMPOSITIONAL_BALANCE",
+      "ACTIVE_NEGATIVE_SPACE",
+      "PRODUCT_OR_PURPOSE_PROMINENCE",
+      "IMAGE_AND_RENDER_QUALITY",
+      "MATERIAL_COHERENCE",
+      "CONTROL_AFFORDANCE",
+      "STATE_COMPLETENESS",
+      "CONTENT_STRESS",
+      "ZOOM_AND_REFLOW",
+      "MOTION_AND_REDUCED_MOTION"
+    ]
   },
-  "baseline_gate": {"id": "HIGH_FIDELITY_VISUAL_BASELINE_APPROVED", "requires_explicit_human_approval": true, "approver": "JONATHAN_MARTINEZ", "model_self_approval": "PROHIBITED", "final_phase3_contract_allowed": false},
-  "responsive_review": {"widths_px": [320, 640, 1024, 1440, 1920], "areas": ["TYPOGRAPHIC_HIERARCHY", "COLOR_AND_CONTRAST", "COMPOSITIONAL_BALANCE", "ACTIVE_NEGATIVE_SPACE", "PRODUCT_OR_PURPOSE_PROMINENCE", "IMAGE_AND_RENDER_QUALITY", "MATERIAL_COHERENCE", "CONTROL_AFFORDANCE", "STATE_COMPLETENESS", "CONTENT_STRESS", "ZOOM_AND_REFLOW", "MOTION_AND_REDUCED_MOTION"]},
-  "revision_contract": {"visual_delta_required": true, "human_re_review_required": true},
-  "reference_boundary": {"references_are_evidence_not_authorization": true, "copy_reference_images": "PROHIBITED", "claim_reference_ownership": "PROHIBITED"},
-  "authority_boundary": {"runtime": "NOT_AUTHORIZED", "application_code": "NOT_AUTHORIZED", "product_changes": "NOT_AUTHORIZED", "release": "NOT_AUTHORIZED"}
+  "baseline_gate": {
+    "id": "HIGH_FIDELITY_VISUAL_BASELINE_APPROVED",
+    "requires_explicit_human_approval": true,
+    "approver": "JONATHAN_MARTINEZ",
+    "model_self_approval": "PROHIBITED",
+    "final_phase3_contract_allowed": false
+  },
+  "responsive_review": {
+    "widths_px": [
+      320,
+      640,
+      1024,
+      1440,
+      1920
+    ],
+    "areas": [
+      "TYPOGRAPHIC_HIERARCHY",
+      "COLOR_AND_CONTRAST",
+      "COMPOSITIONAL_BALANCE",
+      "ACTIVE_NEGATIVE_SPACE",
+      "PRODUCT_OR_PURPOSE_PROMINENCE",
+      "IMAGE_AND_RENDER_QUALITY",
+      "MATERIAL_COHERENCE",
+      "CONTROL_AFFORDANCE",
+      "STATE_COMPLETENESS",
+      "CONTENT_STRESS",
+      "ZOOM_AND_REFLOW",
+      "MOTION_AND_REDUCED_MOTION"
+    ]
+  },
+  "revision_contract": {
+    "visual_delta_required": true,
+    "human_re_review_required": true
+  },
+  "reference_boundary": {
+    "references_are_evidence_not_authorization": true,
+    "copy_reference_images": "PROHIBITED",
+    "claim_reference_ownership": "PROHIBITED"
+  },
+  "authority_boundary": {
+    "runtime": "NOT_AUTHORIZED",
+    "application_code": "NOT_AUTHORIZED",
+    "product_changes": "NOT_AUTHORIZED",
+    "release": "NOT_AUTHORIZED",
+    "html_generation": "NOT_AUTHORIZED_BY_RECONCILIATION",
+    "browser_execution": "NOT_AUTHORIZED_BY_RECONCILIATION"
+  },
+  "updated_at": "2026-07-20",
+  "monolithic_calibration_contract": {
+    "artifact_name": "VISUAL_REVIEW_MONOLITHIC.html",
+    "single_file": true,
+    "inline_css_required": true,
+    "inline_javascript_required": true,
+    "images_inline_or_data_uri": true,
+    "external_fonts": "PROHIBITED_UNLESS_EMBEDDED",
+    "cdn": "PROHIBITED",
+    "network_calls": "PROHIBITED",
+    "npm": "PROHIBITED",
+    "build": "PROHIBITED",
+    "server": "PROHIBITED",
+    "framework": "PROHIBITED",
+    "file_protocol_open_required": true,
+    "codex_preview_open_required": true,
+    "application_code_authorized": false,
+    "minimum_review_surface": [
+      "NAVIGATION",
+      "REPRESENTATIVE_HERO",
+      "PRIMARY_PRODUCT_OR_PURPOSE",
+      "CATALOG_OR_COMPARISON_BLOCK",
+      "PRIMARY_AND_SECONDARY_CTA",
+      "TYPOGRAPHY",
+      "PALETTE",
+      "MATERIALITY",
+      "REPRESENTATIVE_CONTROLS",
+      "ONE_OR_TWO_INTERACTION_STATES"
+    ],
+    "allowed_internal_controls": [
+      "DIRECTION_SELECTOR",
+      "SCENE_SELECTOR",
+      "STATE_SELECTOR",
+      "CONTEXTUAL_THEME_TOGGLE",
+      "WIDTH_PRESETS",
+      "RATIONALE_PANEL",
+      "ANNOTATION_VISIBILITY"
+    ],
+    "role": "DESIGN_EVIDENCE_NOT_PRODUCT_IMPLEMENTATION"
+  },
+  "visual_calibration_gate": {
+    "id": "VISUAL_CALIBRATION_APPROVED",
+    "requires_explicit_human_approval": true,
+    "approver": "JONATHAN_MARTINEZ",
+    "model_self_approval": "PROHIBITED",
+    "allowed_states": [
+      "PENDING_HUMAN_REVIEW",
+      "APPROVED",
+      "APPROVED_WITH_EXPLICIT_DELTA",
+      "REQUEST_HYBRID",
+      "REQUEST_REVISION",
+      "REJECTED"
+    ],
+    "silence_is_approval": false,
+    "multipage_expansion_allowed_before_gate": false,
+    "extensive_browser_matrix_allowed_before_gate": false
+  },
+  "pre_delivery_checks": [
+    "OPENS_WITH_FILE_PROTOCOL",
+    "NO_EXTERNAL_OR_BROKEN_RESOURCES",
+    "NO_VISIBLE_JAVASCRIPT_ERRORS",
+    "ESSENTIAL_INTERNAL_CONTROLS_WORK",
+    "NO_CONCATENATED_OR_LAB_INTERNAL_TEXT",
+    "COHERENT_PRIMARY_DESKTOP_COMPOSITION",
+    "NO_DATA_WRITE_OR_PERSISTENCE",
+    "NOT_PRESENTED_AS_FINISHED_APPLICATION"
+  ],
+  "deferred_until_visual_calibration_approval": [
+    "MULTIPAGE_ROUTE_EXPANSION",
+    "EXTENSIVE_ROUTE_WIDTH_MATRIX",
+    "NEXTJS_IMPLEMENTATION",
+    "COMPONENT_REFACTOR",
+    "FULL_PLAYWRIGHT_SUITE",
+    "PRODUCTION_OPTIMIZATION",
+    "DEPLOYMENT",
+    "RELEASE"
+  ]
 }

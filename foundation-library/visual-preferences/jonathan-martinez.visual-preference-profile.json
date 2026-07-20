@@ -1,48 +1,183 @@
 {
   "schema_version": "1.0.0",
   "document_id": "visual-preference-profile.jonathan-martinez",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "status": "DOCUMENTED_NOT_IMPLEMENTED",
   "subject": "Jonathan Martinez",
   "source_evidence": [
-    {"id": "AUTH-041", "source_type": "USER_AUTHORIZATION", "provenance": "AUTHORIZATION_LAB_VISUAL_PREFERENCE_AND_HIFI_PROTOCOL_041", "authority": "CONSTRAINT_EVIDENCE"}
+    {
+      "id": "AUTH-041",
+      "source_type": "USER_AUTHORIZATION",
+      "provenance": "AUTHORIZATION_LAB_VISUAL_PREFERENCE_AND_HIFI_PROTOCOL_041",
+      "authority": "CONSTRAINT_EVIDENCE"
+    },
+    {
+      "id": "HUMAN-VISUAL-REJECTION-2026-07-20",
+      "source_type": "HUMAN_DECISION",
+      "provenance": "symphonie-premium-ecommerce-pilot@0105d90ad105360dd95169220c6bf444375aa9ec:.project/phase-3/human-visual-decision.json",
+      "authority": "CONTEXT_AND_REJECTION_EVIDENCE"
+    }
   ],
-  "scope_boundary": {"personal_profile_not_global_governance": true, "project_direction_requires_selection": true},
+  "scope_boundary": {
+    "personal_profile_not_global_governance": true,
+    "project_direction_requires_selection": true,
+    "preferences_are_product_contextual": true,
+    "universal_palette_or_typography": false,
+    "product_context_must_be_resolved_before_direction": true
+  },
   "dimensions": {
-    "typography": {"classification": "CONTEXTUAL", "guidance": "Script type may be used only as a controlled accent; no global typography selection is authorized."},
-    "color": {"classification": "CONTEXTUAL", "guidance": "An accent family may use controlled gradients when a project direction explicitly selects them."},
-    "composition": {"classification": "FIRM", "guidance": "Minimalism must remain intentional and high information density needs perceptual control."},
-    "imagery_and_render": {"classification": "INSUFFICIENT", "guidance": "No source imagery or rendering preferences were supplied; references require qualification and provenance."},
-    "materiality": {"classification": "CONTEXTUAL", "guidance": "Glassmorphism is controlled and localized, never a default surface treatment."},
-    "controls": {"classification": "CONTEXTUAL", "guidance": "Control affordance must be reviewed before direction approval; no component system is selected."},
-    "information_density": {"classification": "FIRM", "guidance": "Dense information is acceptable only when hierarchy, contrast, grouping, and negative space remain perceptually controlled."},
-    "motion": {"classification": "CONTEXTUAL", "guidance": "Motion is subject to interaction-state and reduced-motion review; no aesthetic motion preference is inferred."},
-    "accessibility_boundaries": {"classification": "FIRM", "guidance": "Contrast, reflow, zoom, state completeness, and reduced motion are mandatory review boundaries."}
+    "typography": {
+      "classification": "CONTEXTUAL",
+      "guidance": "Script type may be used only as a controlled accent; no global typography selection is authorized."
+    },
+    "color": {
+      "classification": "CONTEXTUAL",
+      "guidance": "An accent family may use controlled gradients when a project direction explicitly selects them."
+    },
+    "composition": {
+      "classification": "FIRM",
+      "guidance": "Minimalism must remain intentional and high information density needs perceptual control."
+    },
+    "imagery_and_render": {
+      "classification": "INSUFFICIENT",
+      "guidance": "No source imagery or rendering preferences were supplied; references require qualification and provenance."
+    },
+    "materiality": {
+      "classification": "CONTEXTUAL",
+      "guidance": "Glassmorphism is controlled and localized, never a default surface treatment."
+    },
+    "controls": {
+      "classification": "CONTEXTUAL",
+      "guidance": "Control affordance must be reviewed before direction approval; no component system is selected."
+    },
+    "information_density": {
+      "classification": "FIRM",
+      "guidance": "Dense information is acceptable only when hierarchy, contrast, grouping, and negative space remain perceptually controlled."
+    },
+    "motion": {
+      "classification": "CONTEXTUAL",
+      "guidance": "Motion is subject to interaction-state and reduced-motion review; no aesthetic motion preference is inferred."
+    },
+    "accessibility_boundaries": {
+      "classification": "FIRM",
+      "guidance": "Contrast, reflow, zoom, state completeness, and reduced motion are mandatory review boundaries."
+    }
   },
   "signals": {
     "preferred": [
-      {"id": "PREF-001", "statement": "Intentional minimalism and perceptually controlled information density are explicit constraints.", "evidence_id": "AUTH-041"}
+      {
+        "id": "PREF-001",
+        "statement": "Intentional minimalism and perceptually controlled information density are explicit constraints.",
+        "evidence_id": "AUTH-041"
+      }
     ],
     "contextual": [
-      {"id": "CTX-001", "statement": "Localized glassmorphism, script accents, controlled gradients, and product heroes depend on selected project direction.", "evidence_id": "AUTH-041"}
+      {
+        "id": "CTX-001",
+        "statement": "Localized glassmorphism, script accents, controlled gradients, and product heroes depend on selected project direction.",
+        "evidence_id": "AUTH-041"
+      }
     ],
     "insufficient": [
-      {"id": "INS-001", "statement": "No reference images, brand palette, type family, or global component direction was supplied.", "evidence_id": "AUTH-041"}
+      {
+        "id": "INS-001",
+        "statement": "No reference images, brand palette, type family, or global component direction was supplied.",
+        "evidence_id": "AUTH-041"
+      }
     ],
     "rejected": [
-      {"id": "REJ-001", "statement": "Personal preference must not define global Symphonie identity or a fixed archetype aesthetic.", "evidence_id": "AUTH-041"},
-      {"id": "REJ-002", "statement": "Reference images may not be copied into the repository or claimed as owned.", "evidence_id": "AUTH-041"}
+      {
+        "id": "REJ-001",
+        "statement": "Personal preference must not define global Symphonie identity or a fixed archetype aesthetic.",
+        "evidence_id": "AUTH-041"
+      },
+      {
+        "id": "REJ-002",
+        "statement": "Reference images may not be copied into the repository or claimed as owned.",
+        "evidence_id": "AUTH-041"
+      },
+      {
+        "id": "REJ-003",
+        "statement": "The Alpha.7 directions VD-01, VD-02, and VD-03 are rejected as visual baselines for the motorcycle pilot because their interface treatment lacked professionalism, finish, and product-context fidelity.",
+        "evidence_id": "HUMAN-VISUAL-REJECTION-2026-07-20"
+      }
     ]
   },
   "reconciliations": [
-    {"id": "REC-001", "rule": "Glassmorphism is controlled and localized."},
-    {"id": "REC-002", "rule": "Script type is accent only."},
-    {"id": "REC-003", "rule": "High information density requires perceptual control."},
-    {"id": "REC-004", "rule": "Accent family may include controlled gradients."},
-    {"id": "REC-005", "rule": "Minimalism must remain intentional."},
-    {"id": "REC-006", "rule": "Product hero is contextual."},
-    {"id": "REC-007", "rule": "Personal preference does not define global Symphonie identity."}
+    {
+      "id": "REC-001",
+      "rule": "Glassmorphism is controlled and localized."
+    },
+    {
+      "id": "REC-002",
+      "rule": "Script type is accent only."
+    },
+    {
+      "id": "REC-003",
+      "rule": "High information density requires perceptual control."
+    },
+    {
+      "id": "REC-004",
+      "rule": "Accent family may include controlled gradients."
+    },
+    {
+      "id": "REC-005",
+      "rule": "Minimalism must remain intentional."
+    },
+    {
+      "id": "REC-006",
+      "rule": "Product hero is contextual."
+    },
+    {
+      "id": "REC-007",
+      "rule": "Personal preference does not define global Symphonie identity."
+    }
   ],
-  "reference_provenance": {"references_are_evidence_not_authorization": true, "copy_reference_images": "PROHIBITED", "claim_reference_ownership": "PROHIBITED"},
-  "authorization_boundary": {"application_code": "NOT_AUTHORIZED", "html_generation": "NOT_AUTHORIZED", "css_generation": "NOT_AUTHORIZED", "javascript_generation": "NOT_AUTHORIZED", "runtime": "NOT_AUTHORIZED", "product_changes": "NOT_AUTHORIZED", "deployment": "NOT_AUTHORIZED", "release": "NOT_AUTHORIZED"}
+  "reference_provenance": {
+    "references_are_evidence_not_authorization": true,
+    "copy_reference_images": "PROHIBITED",
+    "claim_reference_ownership": "PROHIBITED"
+  },
+  "authorization_boundary": {
+    "application_code": "NOT_AUTHORIZED",
+    "html_generation": "NOT_AUTHORIZED",
+    "css_generation": "NOT_AUTHORIZED",
+    "javascript_generation": "NOT_AUTHORIZED",
+    "runtime": "NOT_AUTHORIZED",
+    "product_changes": "NOT_AUTHORIZED",
+    "deployment": "NOT_AUTHORIZED",
+    "release": "NOT_AUTHORIZED",
+    "monolithic_html_generation": "NOT_AUTHORIZED_BY_RECONCILIATION"
+  },
+  "updated_at": "2026-07-20",
+  "preference_model": {
+    "invariant_quality": [
+      "PROFESSIONAL_AND_DELIBERATE_FINISH",
+      "IMMEDIATE_HIERARCHY",
+      "CONSISTENT_COMPOSITION_TYPE_SPACING_AND_STATES",
+      "CLEAR_PRODUCT_OR_PURPOSE_PROMINENCE",
+      "FINISHED_AND_COMPREHENSIBLE_CONTROLS",
+      "NO_VISIBLE_ERRORS_OR_CONCATENATED_TEXT",
+      "INTENTIONAL_NEGATIVE_SPACE",
+      "MATERIALLY_DISTINCT_PROPOSALS",
+      "DECLARED_DIRECTION_MATCHES_OUTPUT",
+      "ACCESSIBILITY_WITHOUT_AESTHETIC_DEGRADATION",
+      "NO_GENERIC_TEMPLATE_APPEARANCE"
+    ],
+    "contextual_variables": [
+      "TYPOGRAPHIC_CHARACTER",
+      "PALETTE_AND_CONTRAST",
+      "LIGHT_DARK_OR_HYBRID_MODE",
+      "DENSITY",
+      "MATERIALITY",
+      "GLASSMORPHISM_LEVEL",
+      "PHOTOGRAPHY_RENDER_OR_ILLUSTRATION",
+      "COMPOSITIONAL_POSTURE",
+      "MOTION",
+      "RADII_BORDERS_SHADOWS_AND_ELEVATION",
+      "EMOTIONAL_TONE",
+      "APPLICABLE_AND_EXCLUDED_REFERENCES"
+    ],
+    "application_rule": "Resolve the product context and applicable evidence before choosing any contextual variable. The profile guides qualification and incompatibility detection; it never selects a universal style."
+  }
 }
