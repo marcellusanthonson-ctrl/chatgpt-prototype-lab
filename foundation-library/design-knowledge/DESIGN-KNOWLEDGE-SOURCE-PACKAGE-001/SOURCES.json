@@ -1,18 +1,19 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "package_id": "DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "status": "DOCUMENTED_AND_VALIDATED_NOT_INTEGRATED",
   "created_at": "2026-07-19",
+  "updated_at": "2026-07-20",
   "scope": "DOCUMENTATION_AND_VALIDATION_ONLY",
-  "objective": "Strengthen design judgment, taste, human-centered reasoning, usability review, and visual discipline through governed source-derived principles.",
+  "objective": "Strengthen design judgment, human-centered reasoning, usability, AI-interface risk reasoning, cognitive accessibility guidance, and legal-design boundary discipline through governed sources.",
   "canonical_target": {
     "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
     "branch": "main",
     "path": "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001"
   },
   "authority": {
-    "authorization_id": "AUTHORIZATION_LAB_DESIGN_KNOWLEDGE_PUBLICATION_024",
+    "authorization_id": "AUTHORIZATION_LAB_DESIGN_KNOWLEDGE_EU_AI_ACT_025",
     "approved_by": "Jonathan Martínez",
     "commit_authorized": true,
     "push_authorized": true,
@@ -22,60 +23,21 @@
     "product_changes_authorized": false
   },
   "sources": [
-    {
-      "source_id": "SRC-DESIGN-001",
-      "title": "The Design of Everyday Things",
-      "author": "Don Norman",
-      "edition": "Revised and Expanded Edition",
-      "year": 2013,
-      "isbn": ["978-0-465-05065-9", "978-0-465-00394-5"],
-      "role": "FOUNDATIONAL_HUMAN_CENTERED_DESIGN_SOURCE",
-      "strength": "Psychology of interaction, signifiers, mapping, feedback, error, human-centered design.",
-      "status": "APPROVED_AS_REFERENCE",
-      "redistribution": "PROHIBITED_UNLESS_RIGHTS_VERIFIED"
-    },
-    {
-      "source_id": "SRC-DESIGN-002",
-      "title": "Don't Make Me Think, Revisited",
-      "author": "Steve Krug",
-      "edition": "Third Edition",
-      "year": 2014,
-      "isbn": ["978-0-321-96551-6", "0-321-96551-5"],
-      "role": "PRACTICAL_USABILITY_HEURISTIC_SOURCE",
-      "strength": "Scanning, navigation, cognitive economy, content reduction, lightweight usability testing.",
-      "status": "APPROVED_AS_REFERENCE",
-      "redistribution": "PROHIBITED_UNLESS_RIGHTS_VERIFIED"
-    },
-    {
-      "source_id": "SRC-DESIGN-003",
-      "title": "Eyetracking Web Usability",
-      "author": "Jakob Nielsen and Kara Pernice",
-      "edition": "First Edition",
-      "year": 2010,
-      "isbn": ["978-0-321-49836-6", "0-321-49836-4"],
-      "role": "EMPIRICAL_VISUAL_ATTENTION_SOURCE_WITH_TEMPORAL_LIMITS",
-      "strength": "Visual attention, scanning, task-dependent gaze, research methodology.",
-      "status": "APPROVED_AS_CONDITIONAL_REFERENCE",
-      "redistribution": "PROHIBITED_UNLESS_RIGHTS_VERIFIED"
-    },
-    {
-      "source_id": "SRC-DESIGN-004",
-      "title": "Dieter Rams: As Little Design as Possible",
-      "author": "Sophie Lovell",
-      "edition": "First Edition",
-      "year": 2011,
-      "isbn": ["978-0-7148-4918-8", "0-7148-4918-9"],
-      "role": "DESIGN_PHILOSOPHY_AND_VISUAL_REFERENCE",
-      "strength": "Restraint, coherence, longevity, product-family consistency, visual discipline.",
-      "status": "APPROVED_AS_CONDITIONAL_REFERENCE",
-      "redistribution": "PROHIBITED_UNLESS_RIGHTS_VERIFIED"
-    }
+    {"source_id":"SRC-DESIGN-001","title":"The Design of Everyday Things","author_or_institution":"Don Norman","year":2013,"role":"FOUNDATIONAL_HUMAN_CENTERED_DESIGN_SOURCE","status":"APPROVED_AS_REFERENCE","verify_live_at_use":false,"limitations":["Protected book; no full text stored."],"redistribution":"PROHIBITED_UNLESS_RIGHTS_VERIFIED"},
+    {"source_id":"SRC-DESIGN-002","title":"Don't Make Me Think, Revisited","author_or_institution":"Steve Krug","year":2014,"role":"PRACTICAL_USABILITY_HEURISTIC_SOURCE","status":"APPROVED_AS_REFERENCE","verify_live_at_use":false,"limitations":["Protected book; no full text stored."],"redistribution":"PROHIBITED_UNLESS_RIGHTS_VERIFIED"},
+    {"source_id":"SRC-DESIGN-003","title":"Eyetracking Web Usability","author_or_institution":"Jakob Nielsen and Kara Pernice","year":2010,"role":"EMPIRICAL_VISUAL_ATTENTION_SOURCE_WITH_TEMPORAL_LIMITS","status":"APPROVED_AS_CONDITIONAL_REFERENCE","verify_live_at_use":false,"limitations":["Attention is not comprehension; age and context limit generalization."],"redistribution":"PROHIBITED_UNLESS_RIGHTS_VERIFIED"},
+    {"source_id":"SRC-DESIGN-004","title":"Dieter Rams: As Little Design as Possible","author_or_institution":"Sophie Lovell","year":2011,"role":"DESIGN_PHILOSOPHY_AND_VISUAL_REFERENCE","status":"APPROVED_AS_CONDITIONAL_REFERENCE","verify_live_at_use":false,"limitations":["Philosophy and visual reference, not a universal standard."],"redistribution":"PROHIBITED_UNLESS_RIGHTS_VERIFIED"},
+    {"source_id":"SRC-AI-001","title":"Artificial Intelligence Risk Management Framework (AI RMF 1.0)","author_or_institution":"National Institute of Standards and Technology","year":2023,"identifier":"NIST AI 100-1","doi":"10.6028/NIST.AI.100-1","canonical_url":"https://doi.org/10.6028/NIST.AI.100-1","role":"GOVERNMENT_RISK_MANAGEMENT_FRAMEWORK","status":"APPROVED_AS_GOVERNED_REFERENCE","verify_live_at_use":true,"supports":["Voluntary AI risk-management structure and governance vocabulary."],"does_not_support":["Binding legal obligations","Specific interface layouts","Universal numerical confidence scores"],"limitations":["Voluntary framework; implementation remains context-dependent."]},
+    {"source_id":"SRC-AI-002","title":"Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile","author_or_institution":"National Institute of Standards and Technology","year":2024,"identifier":"NIST AI 600-1","doi":"10.6028/NIST.AI.600-1","canonical_url":"https://doi.org/10.6028/NIST.AI.600-1","role":"GOVERNMENT_GENERATIVE_AI_RISK_PROFILE","status":"APPROVED_AS_GOVERNED_REFERENCE","verify_live_at_use":true,"supports":["Generative-AI risk identification and risk-treatment considerations."],"does_not_support":["Binding legal obligations","Universal per-output confidence score requirement"],"limitations":["Profile complements AI RMF 1.0; not a product specification."]},
+    {"source_id":"SRC-ACCESS-001","title":"Making Content Usable for People with Cognitive and Learning Disabilities","author_or_institution":"W3C Cognitive and Learning Disabilities Accessibility Task Force","year":2021,"canonical_url":"https://www.w3.org/TR/coga-usable/","role":"OFFICIAL_W3C_WORKING_GROUP_NOTE_AND_SUPPLEMENTAL_GUIDANCE","status":"APPROVED_AS_CONDITIONAL_GUIDANCE","verify_live_at_use":true,"supports":["Cognitive accessibility patterns and supplemental guidance."],"does_not_support":["Normative WCAG conformance criteria","Universal user thresholds"],"limitations":["Informative guidance; validate with representative users."]},
+    {"source_id":"SRC-ACCESS-002","title":"Cognitive Accessibility Roadmap and Gap Analysis","author_or_institution":"W3C Cognitive and Learning Disabilities Accessibility Task Force","year":2018,"canonical_url":"https://www.w3.org/TR/coga-gap-analysis/","role":"OFFICIAL_W3C_WORKING_DRAFT_HISTORICAL_GAP_ANALYSIS","status":"APPROVED_AS_METADATA_AND_FOUNDATIONAL_CONTEXT","verify_live_at_use":true,"supports":["Historical gap framing and research context."],"does_not_support":["Normative conformance requirements"],"limitations":["Working Draft; preserve as historical/foundational context, not current standard."]},
+    {"source_id":"SRC-LAW-001","title":"Regulation (EU) 2024/1689 laying down harmonised rules on artificial intelligence","author_or_institution":["European Parliament","Council of the European Union"],"year":2024,"celex":"32024R1689","eli":"http://data.europa.eu/eli/reg/2024/1689/oj","canonical_url":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689","role":"PRIMARY_EU_LAW_WITH_CORRIGENDA_AND_PENDING_AMENDMENT_TRACKING","status":"APPROVED_AS_PRIMARY_LEGAL_REFERENCE","verify_live_at_use":true,"articles_verified":[13,14,15,50,113],"corrigenda":["32024R1689R(01)","32024R1689R(02)","32024R1689R(03)","32024R1689R(04)"],"pending_legislative_procedures":[{"procedure":"2025/0359(COD)","final_text":"PE 30 2026 REV 1","signed_date":"2026-07-08","status":"ADOPTED_NOT_YET_PUBLISHED","legal_effect":"NONE_UNTIL_PUBLICATION_AND_ENTRY_INTO_FORCE"}],"supports":["Transparency instructions for deployers of high-risk systems","Proportionate human oversight","Accuracy, robustness and cybersecurity requirements","Contextual AI interaction and synthetic-content disclosure","Staged application dates"],"does_not_support":["Universal numerical confidence score for final users","Accuracy metric on every output","Universal confirmation before every action","Equivalence of Articles 13 and 50","Early application of unpublished Omnibus changes"],"limitations":["Legal status and pending amendments require live verification before use."]}
   ],
   "copyright_boundary": {
     "store_full_text": false,
     "store_pdf": false,
     "store_long_quotes": false,
-    "allowed": ["bibliographic metadata", "original paraphrases", "short citations where justified", "derived principles", "tests", "limitations", "page references"],
-    "provenance_status": "RIGHTS_NOT_VERIFIED_FOR_REDISTRIBUTION"
+    "allowed": ["bibliographic metadata","official identifiers and canonical links","original paraphrases","short justified citations","derived principles","tests","limitations","claim classifications"],
+    "provenance_status": "GOVERNED_METADATA_AND_ORIGINAL_SYNTHESIS_ONLY"
   }
 }
