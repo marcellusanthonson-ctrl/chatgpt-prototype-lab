@@ -1,23 +1,12 @@
 {
   "schema_version": "1.0.0",
   "library_id": "lab.foundation-library",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "status": "DOCUMENTED_AND_VALIDATED",
   "scope": "DOCUMENTATION_AND_VALIDATION_ONLY",
-  "updated_at": "2026-07-19",
-  "governance": {
-    "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
-    "branch": "main",
-    "sole_approver": "Jonathan Martínez",
-    "source_of_truth": "REPOSITORY_FILES",
-    "runtime_authorized": false,
-    "integration_authorized": false,
-    "product_changes_authorized": false
-  },
-  "schemas": {
-    "design_archetype": "schemas/design-archetype.schema.json",
-    "backend_pattern": "schemas/backend-pattern.schema.json"
-  },
+  "updated_at": "2026-07-20",
+  "governance": {"canonical_repository":"marcellusanthonson-ctrl/chatgpt-prototype-lab","branch":"main","sole_approver":"Jonathan Martínez","source_of_truth":"REPOSITORY_FILES","runtime_authorized":false,"integration_authorized":false,"product_changes_authorized":false},
+  "schemas": {"design_archetype":"schemas/design-archetype.schema.json","backend_pattern":"schemas/backend-pattern.schema.json"},
   "required_design_archetypes": ["PREMIUM_ECOMMERCE","HIGH_DENSITY_DASHBOARD","SERVICES_AND_DIRECTORIES","SECURE_TRANSACTIONAL_FLOW","BIDIRECTIONAL_MARKETPLACE"],
   "required_backend_domains": ["AUTHENTICATION_AND_AUTHORIZATION","PAYMENT_ORCHESTRATION","WEBHOOK_PROCESSING","IDEMPOTENCY_AND_RETRIES","AUDIT_LOGGING","DATA_VALIDATION","ERROR_HANDLING","TRANSACTIONAL_STATE","PROVIDER_CONFIGURATION"],
   "records": [
@@ -35,11 +24,12 @@
     {"id":"BACKEND-ERROR-HANDLING","kind":"BACKEND_PATTERN","domain":"ERROR_HANDLING","canonical_path":"foundation-library/backend-patterns/error-handling.json","status":"DOCUMENTED_AND_VALIDATED"},
     {"id":"BACKEND-TRANSACTIONAL-STATE","kind":"BACKEND_PATTERN","domain":"TRANSACTIONAL_STATE","canonical_path":"foundation-library/backend-patterns/transactional-state.json","status":"DOCUMENTED_AND_VALIDATED"},
     {"id":"BACKEND-PROVIDER-CONFIGURATION","kind":"BACKEND_PATTERN","domain":"PROVIDER_CONFIGURATION","canonical_path":"foundation-library/backend-patterns/provider-configuration.json","status":"DOCUMENTED_AND_VALIDATED"},
-    {"id":"DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001","kind":"DESIGN_KNOWLEDGE_SOURCE_PACKAGE","canonical_path":"foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/MANIFEST.json","status":"DOCUMENTED_AND_VALIDATED_NOT_INTEGRATED","source_count":4,"principle_count":12,"gap_count":10}
+    {"id":"DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001","kind":"DESIGN_KNOWLEDGE_SOURCE_PACKAGE","canonical_path":"foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/MANIFEST.json","status":"DOCUMENTED_AND_VALIDATED_NOT_INTEGRATED","version":"1.1.0","source_count":9,"principle_count":18,"gap_count":10,"evidence_count":1}
   ],
-  "quality_gates": ["SCHEMA_CONFORMANCE","RESPONSIVE_RANGE_CONTINUITY","ACCESSIBILITY_THRESHOLDS","INTERACTION_STATE_COMPLETENESS","BACKEND_DOMAIN_COMPLETENESS","PAYMENT_PROVIDER_NEUTRALITY","SECRET_AND_REGULATED_DATA_BOUNDARY","TEST_CONTRACT_COMPLETENESS","EVIDENCE_PROTOCOL_DEFINED_NOT_EXECUTED","DESIGN_KNOWLEDGE_SOURCE_TRACEABILITY","COPYRIGHT_BOUNDARY","PRINCIPLE_REFERENCE_CLOSURE"],
+  "quality_gates": ["SCHEMA_CONFORMANCE","RESPONSIVE_RANGE_CONTINUITY","ACCESSIBILITY_THRESHOLDS","INTERACTION_STATE_COMPLETENESS","BACKEND_DOMAIN_COMPLETENESS","PAYMENT_PROVIDER_NEUTRALITY","SECRET_AND_REGULATED_DATA_BOUNDARY","TEST_CONTRACT_COMPLETENESS","EVIDENCE_PROTOCOL_DEFINED_NOT_EXECUTED","DESIGN_KNOWLEDGE_SOURCE_TRACEABILITY","COPYRIGHT_BOUNDARY","PRINCIPLE_REFERENCE_CLOSURE","LEGAL_DESIGN_BOUNDARY","CLAIM_CLASSIFICATION","VERIFY_LIVE_AT_USE"],
   "authorizations": [
     {"id":"AUTHORIZATION_LAB_FOUNDATION_LIBRARY_019","status":"CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION","approved_by":"Jonathan Martínez"},
-    {"id":"AUTHORIZATION_LAB_DESIGN_KNOWLEDGE_PUBLICATION_024","status":"CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION","approved_by":"Jonathan Martínez"}
+    {"id":"AUTHORIZATION_LAB_DESIGN_KNOWLEDGE_PUBLICATION_024","status":"CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION","approved_by":"Jonathan Martínez"},
+    {"id":"AUTHORIZATION_LAB_DESIGN_KNOWLEDGE_EU_AI_ACT_025","status":"CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION","approved_by":"Jonathan Martínez"}
   ]
 }

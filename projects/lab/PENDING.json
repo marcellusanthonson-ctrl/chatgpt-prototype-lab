@@ -1,6 +1,22 @@
 {
   "schema_version": "1.0.0",
   "project_id": "lab",
-  "updated_at": "2026-07-16",
-  "records": []
+  "updated_at": "2026-07-20",
+  "records": [
+    {
+      "id": "PEND-LAB-001",
+      "status": "OPEN_WATCH",
+      "type": "VERIFY_LIVE_AT_USE",
+      "subject": "Digital Omnibus on AI publication and entry into force",
+      "procedure": "2025/0359(COD)",
+      "baseline_status": "ADOPTED_NOT_YET_PUBLISHED",
+      "signed_date": "2026-07-08",
+      "trigger": "Official Journal publication, final act number, CELEX, ELI or entry-into-force date becomes available",
+      "effect_until_trigger": "NONE",
+      "source_refs": [
+        "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/SOURCES.json",
+        "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/EVIDENCE_EU_AI_ACT_PHASE_3D.md"
+      ]
+    }
+  ]
 }

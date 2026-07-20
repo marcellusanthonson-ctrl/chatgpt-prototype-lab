@@ -1,19 +1,11 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "package_id": "DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "status": "DOCUMENTED_AND_VALIDATED_NOT_INTEGRATED",
-  "updated_at": "2026-07-19",
-  "files": [
-    "README.md",
-    "SOURCES.json",
-    "PRINCIPLES.json",
-    "HEURISTIC.md",
-    "GAP_REGISTER.json",
-    "AUTHORIZATION.json",
-    "MANIFEST.json"
-  ],
-  "counts": {"sources":4,"principles":12,"gaps":10},
+  "updated_at": "2026-07-20",
+  "files": ["README.md","SOURCES.json","PRINCIPLES.json","HEURISTIC.md","GAP_REGISTER.json","AUTHORIZATION.json","EVIDENCE_EU_AI_ACT_PHASE_3D.md","MANIFEST.json"],
+  "counts": {"sources":9,"principles":18,"gaps":10,"evidence_records":1,"corrigenda":4,"pending_legislative_procedures":1},
   "copyright_boundary": "NO_PDFS_NO_FULL_TEXT_NO_LONG_QUOTES",
   "validation": {
     "json_parse": "PASS",
@@ -21,6 +13,9 @@
     "principle_id_uniqueness": "PASS",
     "gap_id_uniqueness": "PASS",
     "authorization_scope_match": "PASS",
+    "claim_classification": "PASS",
+    "corrigenda_inventory": "PASS",
+    "legal_design_boundary": "PASS",
     "runtime_boundary": "PASS",
     "integration_boundary": "PASS"
   }
