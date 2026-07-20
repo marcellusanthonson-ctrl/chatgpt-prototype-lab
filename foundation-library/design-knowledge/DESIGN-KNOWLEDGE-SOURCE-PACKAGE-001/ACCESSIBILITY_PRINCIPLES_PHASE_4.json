@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "phase": "PHASE_4_ACCESSIBILITY_NORMATIVE_AND_ASSISTIVE_TECHNOLOGY_RESEARCH",
+  "status": "DOCUMENTED_AND_VALIDATED_NOT_INTEGRATED",
+  "updated_at": "2026-07-20",
+  "principles": [
+    {
+      "id": "DKP-019",
+      "name": "NORMATIVE_AND_INFORMATIVE_GUIDANCE_MUST_BE_SEPARATED",
+      "statement": "Conformance requirements must be derived from normative WCAG or WAI-ARIA text; Understanding documents, APG, ACT rules and educational guidance may explain or operationalize requirements but must not be presented as additional normative obligations.",
+      "source_refs": ["SRC-ACCESS-003", "SRC-ACCESS-004", "SRC-ACCESS-005", "SRC-ACCESS-006", "SRC-ACCESS-009"],
+      "tests": ["Every accessibility requirement records source class", "No informative recommendation is labeled mandatory unless another authority makes it so"],
+      "anti_patterns": ["Treating APG examples as law", "Treating advisory techniques as required for WCAG conformance"]
+    },
+    {
+      "id": "DKP-020",
+      "name": "AUTOMATION_CANNOT_ESTABLISH_ACCESSIBILITY_ALONE",
+      "statement": "Automated tools may detect selected failures and support repeatability, but accessibility and conformance require knowledgeable human evaluation and, where appropriate, user evaluation.",
+      "source_refs": ["SRC-ACCESS-007", "SRC-ACCESS-008", "SRC-ACCESS-009", "SRC-ACCESS-011"],
+      "tests": ["Test plan distinguishes automated, semi-automated and manual checks", "Report states uncovered criteria and human-judgment dependencies"],
+      "anti_patterns": ["Declaring WCAG conformance from a zero-error scanner report", "Treating tool coverage as criterion coverage"]
+    },
+    {
+      "id": "DKP-021",
+      "name": "NATIVE_SEMANTICS_BEFORE_ARIA",
+      "statement": "Use native HTML semantics and behavior when they satisfy the requirement; introduce ARIA only when necessary and implement the associated state, property and keyboard contracts completely.",
+      "source_refs": ["SRC-ACCESS-005", "SRC-ACCESS-006"],
+      "tests": ["Native element alternatives considered", "Role, name, state, value and keyboard behavior verified"],
+      "anti_patterns": ["Clickable div with role button but no keyboard support", "ARIA used to mask invalid interaction architecture"]
+    },
+    {
+      "id": "DKP-022",
+      "name": "KEYBOARD_ACCESS_IS_A_BEHAVIORAL_CONTRACT",
+      "statement": "Every interactive function must be operable through a coherent keyboard model with visible focus, predictable movement, escape and recovery behavior appropriate to the component.",
+      "source_refs": ["SRC-ACCESS-003", "SRC-ACCESS-006", "SRC-ACCESS-010"],
+      "tests": ["Complete task flow without pointer", "Focus order and focus visibility", "No keyboard trap", "Composite widget keys match documented pattern"],
+      "anti_patterns": ["Tab reaches controls but actions require drag", "Focus moved without user context"]
+    },
+    {
+      "id": "DKP-023",
+      "name": "ACCESSIBLE_NAME_ROLE_STATE_AND_VALUE_MUST_MATCH_REAL_BEHAVIOR",
+      "statement": "The accessibility tree must expose a name, role, state and value that accurately represent the visible control and update when the control changes.",
+      "source_refs": ["SRC-ACCESS-003", "SRC-ACCESS-005", "SRC-ACCESS-006"],
+      "tests": ["Screen-reader announcement matches visible label and state", "Dynamic changes update exposed state without redundant noise"],
+      "anti_patterns": ["Visual toggle announced as generic button", "Stale aria-expanded or aria-checked value"]
+    },
+    {
+      "id": "DKP-024",
+      "name": "REFLOW_ZOOM_AND_TEXT_RESIZING_ARE_LAYOUT_REQUIREMENTS",
+      "statement": "Content and controls must remain readable, operable and logically ordered under required zoom, reflow and text-spacing conditions without loss of information or functionality.",
+      "source_refs": ["SRC-ACCESS-003", "SRC-ACCESS-004", "SRC-ACCESS-010"],
+      "tests": ["200 percent text resize", "400 percent zoom and reflow at applicable viewport", "Text spacing override", "No two-dimensional scrolling except permitted content"],
+      "anti_patterns": ["Fixed-height cards clip enlarged text", "Zoom reveals inaccessible off-canvas controls"]
+    },
+    {
+      "id": "DKP-025",
+      "name": "POINTER_INTERACTION_REQUIRES_NON_DRAG_AND_TARGET_ALTERNATIVES",
+      "statement": "Pointer interactions must account for limited dexterity by providing non-drag alternatives where required, adequate target sizing and cancellation or recovery from accidental activation.",
+      "source_refs": ["SRC-ACCESS-003", "SRC-ACCESS-004", "SRC-ACCESS-010"],
+      "tests": ["Dragging Movement alternative", "Target Size Minimum", "Pointer cancellation", "Touch and switch-like operation considered"],
+      "anti_patterns": ["Sorting available only by drag", "Tiny adjacent icon-only controls without spacing"]
+    },
+    {
+      "id": "DKP-026",
+      "name": "ERRORS_REQUIRE_IDENTIFICATION_GUIDANCE_AND_RECOVERY",
+      "statement": "Errors must be identifiable without relying only on color, associated with the affected input, explained in actionable language and recoverable without unnecessary data loss.",
+      "source_refs": ["SRC-ACCESS-003", "SRC-ACCESS-004", "SRC-ACCESS-010"],
+      "tests": ["Error announced and visibly linked", "Correction guidance is specific", "Previously valid data preserved", "High-impact submissions include review or reversal as applicable"],
+      "anti_patterns": ["Red border only", "Generic invalid input message", "Form reset after one error"]
+    },
+    {
+      "id": "DKP-027",
+      "name": "ACCESSIBILITY_TESTING_REQUIRES_A_RECORDED_ENVIRONMENT",
+      "statement": "Assistive-technology results are valid only within a recorded matrix of operating system, browser, assistive technology, versions, settings, input mode, task and expected outcome.",
+      "source_refs": ["SRC-ACCESS-007", "SRC-ACCESS-008", "SRC-ACCESS-009"],
+      "tests": ["Environment metadata complete", "Expected result defined before execution", "Failure reproducible", "Known support limitations recorded"],
+      "anti_patterns": ["Pass based on an unnamed screen reader", "Generalizing one browser and AT pairing to all users"]
+    },
+    {
+      "id": "DKP-028",
+      "name": "CONFORMANCE_AND_USABILITY_ARE_COMPLEMENTARY_NOT_EQUIVALENT",
+      "statement": "Standards evaluation determines whether specified requirements are met; evaluation with disabled users reveals real-world usability and unmet needs. Neither result substitutes for the other.",
+      "source_refs": ["SRC-ACCESS-003", "SRC-ACCESS-008", "SRC-ACCESS-010", "SRC-ACCESS-011"],
+      "tests": ["Report separates criterion failures from usability findings", "User findings do not become universal claims without scope", "Conformance claim does not imply absence of barriers"],
+      "anti_patterns": ["One successful user session proves conformance", "WCAG AA claim treated as proof of excellent experience"]
+    }
+  ],
+  "authority_effect": "NONE",
+  "integration_effect": "NONE"
+}

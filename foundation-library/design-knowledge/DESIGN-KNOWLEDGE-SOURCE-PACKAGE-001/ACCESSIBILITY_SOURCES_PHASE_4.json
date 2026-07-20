@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0.0",
+  "phase": "PHASE_4_ACCESSIBILITY_NORMATIVE_AND_ASSISTIVE_TECHNOLOGY_RESEARCH",
+  "status": "DOCUMENTED_AND_VALIDATED_NOT_INTEGRATED",
+  "updated_at": "2026-07-20",
+  "sources": [
+    {
+      "source_id": "SRC-ACCESS-003",
+      "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+      "institution": "W3C Accessibility Guidelines Working Group",
+      "canonical_url": "https://www.w3.org/TR/WCAG22/",
+      "source_class": "W3C_RECOMMENDATION_NORMATIVE",
+      "status": "APPROVED_AS_PRIMARY_NORMATIVE_REFERENCE",
+      "verify_live_at_use": true,
+      "supports": ["Normative success criteria and conformance requirements for WCAG 2.2"],
+      "does_not_support": ["Claim that WCAG covers every disability need", "Claim that automated tools alone establish conformance"],
+      "limitations": ["Technology-specific implementation guidance is outside the normative core", "Conformance still depends on scope, accessibility support and complete evaluation"]
+    },
+    {
+      "source_id": "SRC-ACCESS-004",
+      "title": "Understanding WCAG 2.2",
+      "institution": "W3C Accessibility Guidelines Working Group",
+      "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/",
+      "source_class": "W3C_INFORMATIVE_GUIDANCE",
+      "status": "APPROVED_AS_OFFICIAL_INFORMATIVE_REFERENCE",
+      "verify_live_at_use": true,
+      "supports": ["Intent, benefits, examples, sufficient techniques, advisory techniques and failures"],
+      "does_not_support": ["Additional normative requirements beyond WCAG 2.2"],
+      "limitations": ["Informative and updateable; not part of the normative standard"]
+    },
+    {
+      "source_id": "SRC-ACCESS-005",
+      "title": "Accessible Rich Internet Applications (WAI-ARIA) 1.2",
+      "institution": "W3C Accessible Rich Internet Applications Working Group",
+      "canonical_url": "https://www.w3.org/TR/wai-aria-1.2/",
+      "source_class": "W3C_RECOMMENDATION_NORMATIVE",
+      "status": "APPROVED_AS_PRIMARY_NORMATIVE_REFERENCE",
+      "verify_live_at_use": true,
+      "supports": ["Roles, states, properties and accessibility semantics for rich web applications"],
+      "does_not_support": ["Replacing native HTML without need", "Automatic keyboard interaction or usability"],
+      "limitations": ["Incorrect ARIA can reduce accessibility", "Semantic exposure does not guarantee usable behavior"]
+    },
+    {
+      "source_id": "SRC-ACCESS-006",
+      "title": "ARIA Authoring Practices Guide",
+      "institution": "W3C ARIA Authoring Practices Task Force",
+      "canonical_url": "https://www.w3.org/WAI/ARIA/apg/",
+      "source_class": "W3C_INFORMATIVE_PATTERN_GUIDANCE",
+      "status": "APPROVED_AS_OFFICIAL_CONDITIONAL_GUIDANCE",
+      "verify_live_at_use": true,
+      "supports": ["Common widget semantics, keyboard interaction models, names, descriptions and landmark practices"],
+      "does_not_support": ["Normative conformance by itself", "Complete UI design system", "Guarantee that every example is production-ready for every stack"],
+      "limitations": ["APG explicitly is not a normative standard", "Deviation requires expert validation"]
+    },
+    {
+      "source_id": "SRC-ACCESS-007",
+      "title": "Evaluating Web Accessibility Overview",
+      "institution": "W3C Web Accessibility Initiative",
+      "canonical_url": "https://www.w3.org/WAI/test-evaluate/",
+      "source_class": "W3C_EVALUATION_GUIDANCE",
+      "status": "APPROVED_AS_OFFICIAL_EVALUATION_REFERENCE",
+      "verify_live_at_use": true,
+      "supports": ["Early and continuous evaluation", "Combination of tools and knowledgeable human review"],
+      "does_not_support": ["Tool-only accessibility determination"],
+      "limitations": ["Overview resource; detailed methods remain in linked documents"]
+    },
+    {
+      "source_id": "SRC-ACCESS-008",
+      "title": "Website Accessibility Conformance Evaluation Methodology (WCAG-EM)",
+      "institution": "W3C Web Accessibility Initiative",
+      "canonical_url": "https://www.w3.org/WAI/test-evaluate/conformance/wcag-em/",
+      "source_class": "W3C_WORKING_GROUP_NOTE_EVALUATION_METHODOLOGY",
+      "status": "APPROVED_AS_OFFICIAL_CONDITIONAL_METHODOLOGY",
+      "verify_live_at_use": true,
+      "supports": ["Scope definition, site exploration, representative sampling, evaluation and reporting"],
+      "does_not_support": ["Additional WCAG requirements", "Universal applicability of draft WCAG-EM 2.0 as final standard"],
+      "limitations": ["WCAG-EM 1.0 is a Working Group Note", "WCAG-EM 2.0 remains draft as of the research date"]
+    },
+    {
+      "source_id": "SRC-ACCESS-009",
+      "title": "Accessibility Conformance Testing (ACT) Rules",
+      "institution": "W3C Accessibility Guidelines Working Group",
+      "canonical_url": "https://www.w3.org/WAI/standards-guidelines/act/rules/",
+      "source_class": "W3C_INFORMATIVE_TEST_RULES",
+      "status": "APPROVED_AS_OFFICIAL_CONDITIONAL_TEST_REFERENCE",
+      "verify_live_at_use": true,
+      "supports": ["Transparent automated, semi-automated and manual test rules", "Harmonized interpretation of selected requirements"],
+      "does_not_support": ["Complete coverage of WCAG", "Normative requirement to use ACT rules"],
+      "limitations": ["ACT rules are informative", "Approved, proposed and deprecated statuses must be distinguished"]
+    },
+    {
+      "source_id": "SRC-ACCESS-010",
+      "title": "How People with Disabilities Use the Web",
+      "institution": "W3C Web Accessibility Initiative",
+      "canonical_url": "https://www.w3.org/WAI/people-use-web/",
+      "source_class": "W3C_HUMAN_CONTEXT_GUIDANCE",
+      "status": "APPROVED_AS_OFFICIAL_CONTEXT_REFERENCE",
+      "verify_live_at_use": true,
+      "supports": ["Diverse auditory, cognitive, physical, speech and visual needs", "Assistive technologies, temporary and situational limitations"],
+      "does_not_support": ["Exhaustive disability taxonomy", "Substitution for involvement of disabled users"],
+      "limitations": ["Examples are intentionally non-exhaustive", "Functional needs vary between individuals and contexts"]
+    },
+    {
+      "source_id": "SRC-ACCESS-011",
+      "title": "Involving Users in Evaluating Web Accessibility",
+      "institution": "W3C Web Accessibility Initiative",
+      "canonical_url": "https://www.w3.org/WAI/test-evaluate/involving-users/",
+      "source_class": "W3C_USER_EVALUATION_GUIDANCE",
+      "status": "APPROVED_AS_OFFICIAL_CONDITIONAL_GUIDANCE",
+      "verify_live_at_use": true,
+      "supports": ["Combining standards evaluation with disabled-user involvement", "Interpreting real-world barriers and solutions"],
+      "does_not_support": ["Replacing standards-based evaluation with a small usability sample"],
+      "limitations": ["User evaluation and conformance evaluation answer different questions"]
+    }
+  ],
+  "source_boundaries": {
+    "normative": ["SRC-ACCESS-003", "SRC-ACCESS-005"],
+    "official_informative": ["SRC-ACCESS-004", "SRC-ACCESS-006", "SRC-ACCESS-007", "SRC-ACCESS-008", "SRC-ACCESS-009", "SRC-ACCESS-010", "SRC-ACCESS-011"],
+    "copyright": "METADATA_LINKS_AND_ORIGINAL_SYNTHESIS_ONLY",
+    "runtime_effect": "NONE",
+    "integration_effect": "NONE"
+  }
+}

@@ -1,18 +1,35 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.2.0",
   "package_id": "DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001",
-  "status": "OPEN_WITH_PARTIAL_COVERAGE",
+  "status": "OPEN_WITH_FOUNDATIONAL_ACCESSIBILITY_COVERAGE",
   "updated_at": "2026-07-20",
   "gaps": [
-    {"id":"GAP-DK-001","domain":"ACCESSIBILITY","priority":"CRITICAL","status":"PARTIALLY_COVERED","covered_by":["SRC-ACCESS-001","SRC-ACCESS-002"],"remaining":"WCAG 2.2 normative coverage, accessible component patterns, assistive-technology testing, and broader disability coverage."},
+    {
+      "id": "GAP-DK-001",
+      "domain": "ACCESSIBILITY",
+      "priority": "CRITICAL",
+      "status": "FOUNDATIONAL_COVERAGE_DOCUMENTED_NOT_OPERATIONALLY_VALIDATED",
+      "covered_by": ["SRC-ACCESS-001", "SRC-ACCESS-002", "SRC-ACCESS-003", "SRC-ACCESS-004", "SRC-ACCESS-005", "SRC-ACCESS-006", "SRC-ACCESS-007", "SRC-ACCESS-008", "SRC-ACCESS-009", "SRC-ACCESS-010", "SRC-ACCESS-011"],
+      "evidence": "EVD-LAB-DK-003",
+      "protocol": "ATP-WEB-001",
+      "remaining": [
+        "Execute the protocol against representative products",
+        "Define supported browser and assistive-technology matrices by product",
+        "Create separate native mobile and desktop accessibility protocols",
+        "Define procurement and third-party component evidence requirements",
+        "Add localization and bidirectional accessibility testing",
+        "Add sector-specific evidence for high-stakes products",
+        "Decide whether and how principles enter Symphonie under separate authorization"
+      ]
+    },
     {"id":"GAP-DK-002","domain":"RESPONSIVE_AND_MOBILE","priority":"HIGH","status":"OPEN","remaining":"Modern responsive systems, touch ergonomics, mobile navigation, viewport and input diversity."},
     {"id":"GAP-DK-003","domain":"DESIGN_SYSTEMS","priority":"HIGH","status":"OPEN","remaining":"Tokens, component governance, variants, contribution models, versioning, and adoption."},
     {"id":"GAP-DK-004","domain":"AI_INTERFACES","priority":"HIGH","status":"PARTIALLY_COVERED","covered_by":["SRC-AI-001","SRC-AI-002","SRC-LAW-001"],"remaining":"Empirical conversational UX, agent state, provenance interaction patterns, calibration studies, and tool transparency."},
     {"id":"GAP-DK-005","domain":"CONTENT_DESIGN","priority":"HIGH","status":"OPEN","remaining":"Plain language, microcopy, localization, inclusive content, and error writing."},
     {"id":"GAP-DK-006","domain":"MOTION","priority":"MEDIUM","status":"OPEN","remaining":"Functional motion, reduced-motion support, continuity, timing, and performance."},
     {"id":"GAP-DK-007","domain":"ETHICS_AND_SAFETY","priority":"HIGH","status":"PARTIALLY_COVERED","covered_by":["SRC-AI-001","SRC-AI-002","SRC-LAW-001"],"remaining":"Privacy, consent, dark-pattern prevention, vulnerable users, sector-specific high-stakes evidence, and ethics beyond legal minimums."},
-    {"id":"GAP-DK-008","domain":"RESEARCH_OPERATIONS","priority":"MEDIUM","status":"OPEN","remaining":"Mixed methods, longitudinal research, analytics interpretation, experimentation, and research repositories."},
-    {"id":"GAP-DK-009","domain":"CROSS_CULTURAL_DESIGN","priority":"MEDIUM","status":"OPEN","remaining":"Internationalization, localization, cultural conventions, language expansion, and bidirectionality."},
+    {"id":"GAP-DK-008","domain":"RESEARCH_OPERATIONS","priority":"MEDIUM","status":"PARTIALLY_COVERED","covered_by":["SRC-ACCESS-007","SRC-ACCESS-008","SRC-ACCESS-009","SRC-ACCESS-011"],"remaining":"Mixed methods beyond accessibility, longitudinal research, analytics interpretation, experimentation, and research repositories."},
+    {"id":"GAP-DK-009","domain":"CROSS_CULTURAL_DESIGN","priority":"MEDIUM","status":"OPEN","remaining":"Internationalization, localization, cultural conventions, language expansion, bidirectionality and accessibility interactions."},
     {"id":"GAP-DK-010","domain":"VISUAL_CRAFT","priority":"HIGH","status":"OPEN","remaining":"Typography, grids, color systems, art direction, editorial composition, and contemporary image direction."}
   ]
 }
