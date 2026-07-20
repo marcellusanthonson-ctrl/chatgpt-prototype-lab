@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "ATP-WEB-001",
+  "title": "Assistive Technology and Accessibility Test Protocol",
+  "status": "DOCUMENTED_NOT_EXECUTED",
+  "updated_at": "2026-07-20",
+  "scope": "Web interfaces and web applications; extension to native apps requires a separate protocol.",
+  "authority_effect": "NONE",
+  "conformance_effect": "NO_CONFORMANCE_CLAIM_WITHOUT_EXECUTION_AND_COMPLETE_EVIDENCE",
+  "test_layers": [
+    {
+      "order": 1,
+      "layer": "STRUCTURAL_AND_STATIC_AUTOMATION",
+      "purpose": "Detect selected machine-testable failures early.",
+      "examples": ["document language", "duplicate identifiers where relevant", "missing accessible names", "selected contrast calculations", "invalid ARIA relationships"],
+      "boundary": "A pass does not establish accessibility or WCAG conformance."
+    },
+    {
+      "order": 2,
+      "layer": "MANUAL_WITHOUT_ASSISTIVE_TECHNOLOGY",
+      "purpose": "Evaluate visual, keyboard, zoom, reflow, timing, motion, media and error behavior requiring human judgment.",
+      "examples": ["keyboard-only task completion", "focus visibility and order", "200 percent text resize", "400 percent zoom and reflow", "text spacing", "drag alternatives", "target sizing", "error recovery", "reduced motion"]
+    },
+    {
+      "order": 3,
+      "layer": "ACCESSIBILITY_TREE_AND_PLATFORM_INSPECTION",
+      "purpose": "Verify exposed role, name, state, value, relationships and live updates.",
+      "examples": ["accessibility tree inspection", "computed accessible name", "state synchronization", "landmark structure", "heading structure"]
+    },
+    {
+      "order": 4,
+      "layer": "ASSISTIVE_TECHNOLOGY_TASK_TESTING",
+      "purpose": "Verify real operation in selected supported browser and assistive-technology combinations.",
+      "examples": ["screen reader browse and forms modes", "keyboard and switch-like navigation", "zoom and magnification", "voice input label matching"]
+    },
+    {
+      "order": 5,
+      "layer": "DISABLED_USER_EVALUATION",
+      "purpose": "Identify real-world barriers, comprehension problems and workflow friction not reducible to criterion checks.",
+      "boundary": "User evaluation complements but does not replace standards-based conformance evaluation."
+    }
+  ],
+  "minimum_environment_record": [
+    "test_id",
+    "date",
+    "tester",
+    "product_build_or_commit",
+    "operating_system_and_version",
+    "browser_and_version",
+    "assistive_technology_and_version",
+    "relevant_settings",
+    "input_method",
+    "viewport_and_zoom",
+    "language",
+    "task",
+    "preconditions",
+    "expected_result",
+    "observed_result",
+    "result_status",
+    "wcag_or_pattern_refs",
+    "evidence_reference",
+    "known_limitations"
+  ],
+  "baseline_task_families": [
+    {
+      "id": "AT-TASK-001",
+      "name": "Orientation and structure",
+      "checks": ["page title", "language", "landmarks", "headings", "regions", "skip or bypass mechanism", "reading order"]
+    },
+    {
+      "id": "AT-TASK-002",
+      "name": "Navigation and focus",
+      "checks": ["keyboard-only completion", "focus order", "visible focus", "focus persistence", "modal containment and return", "no keyboard trap"]
+    },
+    {
+      "id": "AT-TASK-003",
+      "name": "Controls and component semantics",
+      "checks": ["name", "role", "state", "value", "keyboard interaction", "disabled and expanded states", "instructions"]
+    },
+    {
+      "id": "AT-TASK-004",
+      "name": "Forms and errors",
+      "checks": ["labels", "instructions", "required state", "autocomplete purpose where applicable", "error identification", "error association", "suggestion", "review and recovery"]
+    },
+    {
+      "id": "AT-TASK-005",
+      "name": "Dynamic updates",
+      "checks": ["status messages", "loading", "async completion", "validation changes", "notifications", "announcement timing", "noise and repetition"]
+    },
+    {
+      "id": "AT-TASK-006",
+      "name": "Visual adaptation",
+      "checks": ["text resize", "zoom", "reflow", "text spacing", "contrast", "non-color cues", "orientation", "magnification path"]
+    },
+    {
+      "id": "AT-TASK-007",
+      "name": "Pointer and alternative input",
+      "checks": ["target size", "drag alternative", "pointer cancellation", "gesture alternative", "voice-label match", "touch operation"]
+    },
+    {
+      "id": "AT-TASK-008",
+      "name": "Media and motion",
+      "checks": ["captions", "transcript or media alternative as applicable", "audio description as applicable", "pause stop hide", "flashing", "reduced motion"]
+    },
+    {
+      "id": "AT-TASK-009",
+      "name": "Authentication and high-impact actions",
+      "checks": ["accessible authentication", "no unnecessary cognitive-function test", "review", "confirmation when required by risk", "reversal or correction", "session timing"]
+    }
+  ],
+  "result_statuses": ["PASS", "FAIL", "NOT_APPLICABLE", "NOT_TESTED", "BLOCKED", "INCONCLUSIVE", "KNOWN_SUPPORT_LIMITATION"],
+  "claim_rules": [
+    "Do not claim WCAG conformance from automated results alone.",
+    "Do not claim universal assistive-technology support from one environment.",
+    "Do not convert APG guidance into normative WCAG requirements.",
+    "Do not claim absence of barriers because no issue was observed.",
+    "Record scope, sampling, versions, exceptions and non-tested areas in every report.",
+    "A conformance claim requires all applicable success criteria at the claimed level, complete scope and satisfaction of WCAG conformance requirements."
+  ],
+  "execution_authorized": false,
+  "product_test_evidence": []
+}
