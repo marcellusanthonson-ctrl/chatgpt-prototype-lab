@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "high-fidelity-visual-protocol.authorization-041",
+  "version": "1.0.0",
+  "status": "DOCUMENTED_NOT_IMPLEMENTED",
+  "purpose": "Define the human-governed visual review sequence before a final Phase 3 implementation contract can exist.",
+  "stages": [
+    {"sequence": 1, "id": "REFERENCE_QUALIFICATION", "human_gate": false},
+    {"sequence": 2, "id": "PREFERENCE_APPLICABILITY", "human_gate": false},
+    {"sequence": 3, "id": "MINIMUM_THREE_VISUAL_DIRECTIONS", "human_gate": false},
+    {"sequence": 4, "id": "HUMAN_DIRECTION_SHORTLIST", "human_gate": true},
+    {"sequence": 5, "id": "HIGH_FIDELITY_HTML_PROTOTYPES", "human_gate": false},
+    {"sequence": 6, "id": "REPRESENTATIVE_ROUTE_COVERAGE", "human_gate": false},
+    {"sequence": 7, "id": "RESPONSIVE_VISUAL_REVIEW", "human_gate": false},
+    {"sequence": 8, "id": "INTERACTION_STATE_REVIEW", "human_gate": false},
+    {"sequence": 9, "id": "VISUAL_DELTA_REVISION", "human_gate": false},
+    {"sequence": 10, "id": "HIGH_FIDELITY_VISUAL_BASELINE_APPROVED", "human_gate": true},
+    {"sequence": 11, "id": "FINAL_PHASE3_CONTRACT_GENERATION", "human_gate": true}
+  ],
+  "visual_direction_contract": {"minimum_materially_distinct_directions": 3, "selection_authority": "JONATHAN_MARTINEZ_EXPLICIT_SELECTION"},
+  "html_prototype_contract": {"required_before_final_phase3_contract": true, "is_product_implementation": false, "application_code_authorized": false},
+  "review_contract": {
+    "approver": "JONATHAN_MARTINEZ",
+    "model_self_approval": "PROHIBITED",
+    "areas": ["TYPOGRAPHIC_HIERARCHY", "COLOR_AND_CONTRAST", "COMPOSITIONAL_BALANCE", "ACTIVE_NEGATIVE_SPACE", "PRODUCT_OR_PURPOSE_PROMINENCE", "IMAGE_AND_RENDER_QUALITY", "MATERIAL_COHERENCE", "CONTROL_AFFORDANCE", "STATE_COMPLETENESS", "CONTENT_STRESS", "ZOOM_AND_REFLOW", "MOTION_AND_REDUCED_MOTION"]
+  },
+  "baseline_gate": {"id": "HIGH_FIDELITY_VISUAL_BASELINE_APPROVED", "requires_explicit_human_approval": true, "approver": "JONATHAN_MARTINEZ", "model_self_approval": "PROHIBITED", "final_phase3_contract_allowed": false},
+  "responsive_review": {"widths_px": [320, 640, 1024, 1440, 1920], "areas": ["TYPOGRAPHIC_HIERARCHY", "COLOR_AND_CONTRAST", "COMPOSITIONAL_BALANCE", "ACTIVE_NEGATIVE_SPACE", "PRODUCT_OR_PURPOSE_PROMINENCE", "IMAGE_AND_RENDER_QUALITY", "MATERIAL_COHERENCE", "CONTROL_AFFORDANCE", "STATE_COMPLETENESS", "CONTENT_STRESS", "ZOOM_AND_REFLOW", "MOTION_AND_REDUCED_MOTION"]},
+  "revision_contract": {"visual_delta_required": true, "human_re_review_required": true},
+  "reference_boundary": {"references_are_evidence_not_authorization": true, "copy_reference_images": "PROHIBITED", "claim_reference_ownership": "PROHIBITED"},
+  "authority_boundary": {"runtime": "NOT_AUTHORIZED", "application_code": "NOT_AUTHORIZED", "product_changes": "NOT_AUTHORIZED", "release": "NOT_AUTHORIZED"}
+}

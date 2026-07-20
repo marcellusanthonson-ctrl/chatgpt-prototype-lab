@@ -70,3 +70,12 @@ El brief, delta, fixtures y matriz de aceptación están definidos y fijan el ar
 ## Siguiente transición
 
 No existe acción autorizada. La siguiente recomendación es seleccionar un único arquetipo o patrón como piloto y delimitar por separado su futura autorización de ejecución.
+
+## Preferencia visual y protocolo 041
+
+`AUTHORIZATION_LAB_VISUAL_PREFERENCE_AND_HIFI_PROTOCOL_041` quedó consumida
+solo para documentación y validación. El perfil personal de Jonathan Martinez
+es evidencia separada de la gobernanza global y el protocolo exige tres
+direcciones visuales, revisión humana y el gate
+`HIGH_FIDELITY_VISUAL_BASELINE_APPROVED`. No autoriza HTML, CSS, JavaScript,
+runtime, RAG, cambios de producto, despliegue ni release.

@@ -9,14 +9,15 @@
     "ideas": 5,
     "integrations": 4,
     "experiments": 5,
-    "authorizations": 13,
+    "authorizations": 14,
     "evidence": 8,
     "unincorporated": 0,
     "proposals": 2,
     "sessions": 1,
     "reassessments": 1,
     "source_packages": 2,
-    "foundation_library": 15,
+    "foundation_library": 17,
+    "visual_preferences": 1,
     "rag_contracts": 6,
     "foundation_pilots": 1,
     "design_knowledge_sources": 9,
@@ -41,13 +42,14 @@
     "foundation_library":"registry/foundation-library.json",
     "rag_contracts":"registry/rag-contracts.json",
     "foundation_pilots":"registry/foundation-pilots.json",
+    "visual_preferences":"registry/visual-preferences.json",
     "design_knowledge_package":"foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/MANIFEST.json"
   },
   "latest": {
     "decision":"DEC-LAB-015",
     "error":"ERR-LAB-006",
     "pattern":"PAT-LAB-007",
-    "authorization":"AUTHORIZATION_LAB_DESIGN_KNOWLEDGE_EU_AI_ACT_025",
+    "authorization":"AUTHORIZATION_LAB_VISUAL_PREFERENCE_AND_HIFI_PROTOCOL_041",
     "evidence":"EVD-LAB-DK-001",
     "proposal":"PROP-LAB-002",
     "session":"SES-2026-06-28-001",
@@ -57,6 +59,8 @@
     "foundation_evidence":"EVIDENCE_PROTOCOL_DEFINED_NOT_EXECUTED",
     "rag_contract":"RAG-FEDERATION-CONTRACT-001",
     "foundation_pilot":"PILOT-PREMIUM-ECOMMERCE-001",
-    "design_knowledge_package":"DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001"
+    "design_knowledge_package":"DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001",
+    "visual_preference":"VPP-JM-001",
+    "high_fidelity_visual_protocol":"HFP-041-001"
   }
 }

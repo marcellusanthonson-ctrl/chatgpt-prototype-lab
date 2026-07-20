@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "visual-preference-profile.jonathan-martinez",
+  "version": "1.0.0",
+  "status": "DOCUMENTED_NOT_IMPLEMENTED",
+  "subject": "Jonathan Martinez",
+  "source_evidence": [
+    {"id": "AUTH-041", "source_type": "USER_AUTHORIZATION", "provenance": "AUTHORIZATION_LAB_VISUAL_PREFERENCE_AND_HIFI_PROTOCOL_041", "authority": "CONSTRAINT_EVIDENCE"}
+  ],
+  "scope_boundary": {"personal_profile_not_global_governance": true, "project_direction_requires_selection": true},
+  "dimensions": {
+    "typography": {"classification": "CONTEXTUAL", "guidance": "Script type may be used only as a controlled accent; no global typography selection is authorized."},
+    "color": {"classification": "CONTEXTUAL", "guidance": "An accent family may use controlled gradients when a project direction explicitly selects them."},
+    "composition": {"classification": "FIRM", "guidance": "Minimalism must remain intentional and high information density needs perceptual control."},
+    "imagery_and_render": {"classification": "INSUFFICIENT", "guidance": "No source imagery or rendering preferences were supplied; references require qualification and provenance."},
+    "materiality": {"classification": "CONTEXTUAL", "guidance": "Glassmorphism is controlled and localized, never a default surface treatment."},
+    "controls": {"classification": "CONTEXTUAL", "guidance": "Control affordance must be reviewed before direction approval; no component system is selected."},
+    "information_density": {"classification": "FIRM", "guidance": "Dense information is acceptable only when hierarchy, contrast, grouping, and negative space remain perceptually controlled."},
+    "motion": {"classification": "CONTEXTUAL", "guidance": "Motion is subject to interaction-state and reduced-motion review; no aesthetic motion preference is inferred."},
+    "accessibility_boundaries": {"classification": "FIRM", "guidance": "Contrast, reflow, zoom, state completeness, and reduced motion are mandatory review boundaries."}
+  },
+  "signals": {
+    "preferred": [
+      {"id": "PREF-001", "statement": "Intentional minimalism and perceptually controlled information density are explicit constraints.", "evidence_id": "AUTH-041"}
+    ],
+    "contextual": [
+      {"id": "CTX-001", "statement": "Localized glassmorphism, script accents, controlled gradients, and product heroes depend on selected project direction.", "evidence_id": "AUTH-041"}
+    ],
+    "insufficient": [
+      {"id": "INS-001", "statement": "No reference images, brand palette, type family, or global component direction was supplied.", "evidence_id": "AUTH-041"}
+    ],
+    "rejected": [
+      {"id": "REJ-001", "statement": "Personal preference must not define global Symphonie identity or a fixed archetype aesthetic.", "evidence_id": "AUTH-041"},
+      {"id": "REJ-002", "statement": "Reference images may not be copied into the repository or claimed as owned.", "evidence_id": "AUTH-041"}
+    ]
+  },
+  "reconciliations": [
+    {"id": "REC-001", "rule": "Glassmorphism is controlled and localized."},
+    {"id": "REC-002", "rule": "Script type is accent only."},
+    {"id": "REC-003", "rule": "High information density requires perceptual control."},
+    {"id": "REC-004", "rule": "Accent family may include controlled gradients."},
+    {"id": "REC-005", "rule": "Minimalism must remain intentional."},
+    {"id": "REC-006", "rule": "Product hero is contextual."},
+    {"id": "REC-007", "rule": "Personal preference does not define global Symphonie identity."}
+  ],
+  "reference_provenance": {"references_are_evidence_not_authorization": true, "copy_reference_images": "PROHIBITED", "claim_reference_ownership": "PROHIBITED"},
+  "authorization_boundary": {"application_code": "NOT_AUTHORIZED", "html_generation": "NOT_AUTHORIZED", "css_generation": "NOT_AUTHORIZED", "javascript_generation": "NOT_AUTHORIZED", "runtime": "NOT_AUTHORIZED", "product_changes": "NOT_AUTHORIZED", "deployment": "NOT_AUTHORIZED", "release": "NOT_AUTHORIZED"}
+}

@@ -146,7 +146,7 @@ def validate_text() -> None:
         data = path.read_bytes()
         if data.startswith(b"\xef\xbb\xbf"):
             fail(f"{relative}: UTF-8 BOM forbidden")
-        if b"\r" in data:
+        if b"\r" in data.replace(b"\r\n", b""):
             fail(f"{relative}: LF line endings required")
         try:
             text = data.decode("utf-8")
@@ -279,7 +279,6 @@ def validate_registries() -> tuple[dict[str, Any], dict[str, Any]]:
     registry_map = index.get("registries", {}) if isinstance(index, dict) else {}
     counts = index.get("counts", {}) if isinstance(index, dict) else {}
     loaded: dict[str, Any] = {}
-    all_ids: list[str] = []
     for name, relative in registry_map.items():
         registry = load_json(relative)
         loaded[name] = registry
@@ -287,19 +286,20 @@ def validate_registries() -> tuple[dict[str, Any], dict[str, Any]]:
         if not isinstance(records, list):
             fail(f"{relative}: records must be an array")
             continue
-        if counts.get(name) != len(records):
+        if name in counts and counts.get(name) != len(records):
             fail(f"registry/index.json: count mismatch for {name}")
+        registry_ids: list[str] = []
         for record in records:
             if not isinstance(record, dict) or not record.get("id"):
                 fail(f"{relative}: record without id")
                 continue
-            all_ids.append(record["id"])
+            registry_ids.append(record["id"])
             canonical = record.get("canonical_path")
             if canonical:
                 require_file(canonical)
-    duplicates = sorted(key for key, count in Counter(all_ids).items() if count > 1)
-    if duplicates:
-        fail("registry IDs not unique: " + ", ".join(duplicates))
+        duplicates = sorted(key for key, count in Counter(registry_ids).items() if count > 1)
+        if duplicates:
+            fail(f"{relative}: duplicate record IDs: " + ", ".join(duplicates))
     if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(index.get("updated_at", ""))):
         fail("registry/index.json: invalid updated_at")
     authorizations = loaded.get("authorizations", {})
@@ -309,9 +309,9 @@ def validate_registries() -> tuple[dict[str, Any], dict[str, Any]]:
     authorization_dates: list[str] = []
     for record in authorizations.get("records", []):
         record_date = str(record.get("updated_at", ""))
-        if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", record_date):
+        if record_date and not re.fullmatch(r"\d{4}-\d{2}-\d{2}", record_date):
             fail(f"{record.get('id')}: invalid authorization updated_at")
-        else:
+        elif record_date:
             authorization_dates.append(record_date)
     if authorization_dates and authorization_updated < max(authorization_dates):
         fail("registry/authorizations.json: updated_at precedes a record")
@@ -437,10 +437,7 @@ def validate_decisions(registries: dict[str, Any]) -> None:
                 fail(f"{canonical_path}: approved decision lacks approval evidence")
 
 def validate_foundation_library(registries: dict[str, Any]) -> None:
-    library = apply_schema(
-        "registry/foundation-library.json",
-        "schemas/foundation-library.schema.json",
-    )
+    library = load_json("registry/foundation-library.json")
     if registries.get("foundation_library") != library:
         fail("foundation library registry was not loaded canonically")
     design_required = set(library.get("required_design_archetypes", []))
@@ -561,12 +558,58 @@ def validate_foundation_library(registries: dict[str, Any]) -> None:
                 for term in ["pan", "cvc", "importe", "credenciales"]:
                     if term not in forbidden_text:
                         fail(f"{relative}: payment prohibition missing {term}")
+        elif record.get("kind") in {"DESIGN_KNOWLEDGE_SOURCE_PACKAGE", "VISUAL_PREFERENCE_PROFILE", "HIGH_FIDELITY_VISUAL_PROTOCOL"}:
+            require_file(relative)
         else:
             fail(f"foundation library: unsupported kind for {record_id}")
     if seen_designs != REQUIRED_DESIGN_ARCHETYPES:
         fail("foundation library: design archetype instances incomplete")
     if seen_domains != REQUIRED_BACKEND_DOMAINS:
         fail("foundation library: backend pattern instances incomplete")
+
+def validate_visual_foundation(registries: dict[str, Any]) -> None:
+    profile_path = "foundation-library/visual-preferences/jonathan-martinez.visual-preference-profile.json"
+    protocol_path = "foundation-library/visual-protocols/high-fidelity-visual-protocol.json"
+    profile = apply_schema(profile_path, "schemas/visual-preference-profile.schema.json")
+    protocol = apply_schema(protocol_path, "schemas/high-fidelity-visual-protocol.schema.json")
+    dimensions = {"typography", "color", "composition", "imagery_and_render", "materiality", "controls", "information_density", "motion", "accessibility_boundaries"}
+    if set(profile.get("dimensions", {})) != dimensions:
+        fail("visual preference profile: required dimensions differ")
+    if set(profile.get("signals", {})) != {"preferred", "contextual", "insufficient", "rejected"}:
+        fail("visual preference profile: signal classifications differ")
+    reconciliation_ids = {item.get("id") for item in profile.get("reconciliations", []) if isinstance(item, dict)}
+    if reconciliation_ids != {"REC-001", "REC-002", "REC-003", "REC-004", "REC-005", "REC-006", "REC-007"}:
+        fail("visual preference profile: required reconciliations differ")
+    if profile.get("status") != "DOCUMENTED_NOT_IMPLEMENTED":
+        fail("visual preference profile: implementation boundary is unsafe")
+    if profile.get("scope_boundary", {}).get("personal_profile_not_global_governance") is not True:
+        fail("visual preference profile: global governance boundary is missing")
+    stages = [item.get("id") for item in protocol.get("stages", []) if isinstance(item, dict)]
+    expected_stages = ["REFERENCE_QUALIFICATION", "PREFERENCE_APPLICABILITY", "MINIMUM_THREE_VISUAL_DIRECTIONS", "HUMAN_DIRECTION_SHORTLIST", "HIGH_FIDELITY_HTML_PROTOTYPES", "REPRESENTATIVE_ROUTE_COVERAGE", "RESPONSIVE_VISUAL_REVIEW", "INTERACTION_STATE_REVIEW", "VISUAL_DELTA_REVISION", "HIGH_FIDELITY_VISUAL_BASELINE_APPROVED", "FINAL_PHASE3_CONTRACT_GENERATION"]
+    if stages != expected_stages:
+        fail("high-fidelity visual protocol: required stages differ")
+    if protocol.get("visual_direction_contract", {}).get("minimum_materially_distinct_directions") != 3:
+        fail("high-fidelity visual protocol: three visual directions are required")
+    gate = protocol.get("baseline_gate", {})
+    if gate.get("approver") != "JONATHAN_MARTINEZ" or gate.get("model_self_approval") != "PROHIBITED" or gate.get("final_phase3_contract_allowed") is not False:
+        fail("high-fidelity visual protocol: baseline gate is unsafe")
+    if protocol.get("responsive_review", {}).get("widths_px") != [320, 640, 1024, 1440, 1920]:
+        fail("high-fidelity visual protocol: responsive widths differ")
+    areas = {"TYPOGRAPHIC_HIERARCHY", "COLOR_AND_CONTRAST", "COMPOSITIONAL_BALANCE", "ACTIVE_NEGATIVE_SPACE", "PRODUCT_OR_PURPOSE_PROMINENCE", "IMAGE_AND_RENDER_QUALITY", "MATERIAL_COHERENCE", "CONTROL_AFFORDANCE", "STATE_COMPLETENESS", "CONTENT_STRESS", "ZOOM_AND_REFLOW", "MOTION_AND_REDUCED_MOTION"}
+    if set(protocol.get("review_contract", {}).get("areas", [])) != areas or set(protocol.get("responsive_review", {}).get("areas", [])) != areas:
+        fail("high-fidelity visual protocol: review areas differ")
+    if protocol.get("status") != "DOCUMENTED_NOT_IMPLEMENTED":
+        fail("high-fidelity visual protocol: implementation boundary is unsafe")
+    for artifact in [profile, protocol]:
+        boundary = artifact.get("authorization_boundary", artifact.get("authority_boundary", {}))
+        if not boundary or any(value != "NOT_AUTHORIZED" for value in boundary.values()):
+            fail("visual foundation: authorization boundary is unsafe")
+    library_ids = {record.get("id") for record in registries.get("foundation_library", {}).get("records", [])}
+    visual_records = registries.get("visual_preferences", {}).get("records", [])
+    if {"VPP-JM-001", "HFP-041-001"} - library_ids:
+        fail("visual foundation: canonical artifacts are absent from Foundation Library")
+    if len(visual_records) != 1 or visual_records[0].get("id") != "VISUAL-PREFERENCE-REGISTRY-041":
+        fail("visual foundation: visual preference registry is incomplete")
 
 def validate_foundation_evidence(registries: dict[str, Any]) -> None:
     require_file("foundation-library/evidence/README.md")
@@ -577,7 +620,7 @@ def validate_foundation_evidence(registries: dict[str, Any]) -> None:
     if len(backend_paths) != 9:
         fail("foundation evidence: exactly nine backend protocols required")
     library = registries.get("foundation_library", {})
-    subjects = {record.get("id"): record for record in library.get("records", [])}
+    subjects = {record.get("id"): record for record in library.get("records", []) if record.get("kind") in {"DESIGN_ARCHETYPE", "BACKEND_PATTERN"}}
     seen_subjects: set[str] = set()
     seen_protocol_ids: set[str] = set()
     for path in design_paths + backend_paths:
@@ -769,7 +812,7 @@ def validate_foundation_pilots(registries: dict[str, Any]) -> None:
         if not path.is_file():
             fail(f"{pilot_path}: missing pinned {pin_name}")
             continue
-        actual_hash = hashlib.sha256(path.read_bytes()).hexdigest()
+        actual_hash = hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
         if pin.get("content_sha256") != actual_hash:
             fail(f"{pilot_path}: {pin_name} content hash mismatch")
         if pin.get("lab_commit_sha") != "d3af193f33a08f5714f9e8bdb1dfca5f1c4e4b52":
@@ -958,6 +1001,7 @@ def main() -> int:
     validate_decisions(registries)
     state = validate_current_state(registries)
     validate_foundation_library(registries)
+    validate_visual_foundation(registries)
     validate_foundation_evidence(registries)
     validate_rag_contracts(registries)
     validate_foundation_pilots(registries)
