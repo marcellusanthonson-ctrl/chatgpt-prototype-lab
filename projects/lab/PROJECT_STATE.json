@@ -6,98 +6,79 @@
   "updated_at": "2026-07-20",
   "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "canonical_branch": "main",
-  "authority": {
-    "sole_approver": "Jonathan Martínez",
-    "autonomous_model_authority": false
-  },
+  "authority": {"sole_approver":"Jonathan Martínez","autonomous_model_authority":false},
   "summary": "Gobierno, autoridad, continuidad, auditoría y biblioteca documental gobernada entre proyectos.",
-  "content_completeness": "STRUCTURED_V2_WITH_CONTEXTUAL_VISUAL_PROFILE_AND_MONOLITHIC_CALIBRATION_PROTOCOL",
+  "content_completeness": "STRUCTURED_V2_WITH_CONTEXTUAL_VISUAL_PROFILE_AND_ACCESSIBILITY_FOUNDATION_1_2",
   "source_refs": [
     "projects/lab/PROJECT_STATE.md",
     "registry/projects.json",
     "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/MANIFEST.json",
-    "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/EVIDENCE_UI_UX_REFERENTS_RESEARCH_REVIEW.md"
+    "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/EVIDENCE_UI_UX_REFERENTS_RESEARCH_REVIEW.md",
+    "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/EVIDENCE_ACCESSIBILITY_PHASE_4.md"
   ],
   "governance_paths": {
-    "roadmap": "projects/lab/ROADMAP.json",
-    "pending": "projects/lab/PENDING.json",
-    "decisions": "projects/lab/decisions/index.json",
-    "ideas": "projects/lab/ideas/index.json",
-    "integrations": "projects/lab/integrations/index.json",
-    "reassessments": "projects/lab/reassessments/index.json",
-    "chatgpt_project_sources": "project-sources/chatgpt/START_HERE.md"
+    "roadmap":"projects/lab/ROADMAP.json",
+    "pending":"projects/lab/PENDING.json",
+    "decisions":"projects/lab/decisions/index.json",
+    "ideas":"projects/lab/ideas/index.json",
+    "integrations":"projects/lab/integrations/index.json",
+    "reassessments":"projects/lab/reassessments/index.json",
+    "chatgpt_project_sources":"project-sources/chatgpt/START_HERE.md"
   },
   "metadata": {
     "last_instruction_test": {
-      "test_id": "LAB-CHATGPT-INSTRUCTIONS-TEST-001",
-      "model": "Terra 5.6",
-      "reasoning_effort": "LIGHT",
-      "result": "PASS_WITH_FINDINGS",
-      "findings": [
-        "CLAIM_1_SHOULD_BE_REVERSED_NOT_MODIFIED",
-        "SELF_REFERENTIAL_LAB_HEAD_DETECTED"
-      ]
+      "test_id":"LAB-CHATGPT-INSTRUCTIONS-TEST-001",
+      "model":"Terra 5.6",
+      "reasoning_effort":"LIGHT",
+      "result":"PASS_WITH_FINDINGS",
+      "findings":["CLAIM_1_SHOULD_BE_REVERSED_NOT_MODIFIED","SELF_REFERENTIAL_LAB_HEAD_DETECTED"]
     },
-    "chatgpt_source_architecture": {
-      "status": "CANONICAL_IN_REPOSITORY",
-      "entrypoint": "project-sources/chatgpt/START_HERE.md",
-      "attached_files_role": "BOOTSTRAP_POINTER_ONLY"
-    },
-    "authorization_registry": {
-      "status": "RECONCILED",
-      "registered_consumed_transitions": 9,
-      "latest": "AUTHORIZATION_SYMPHONIE_VISUAL_CALIBRATION_RECONCILIATION",
-      "correspondence_policy": "STATE_KEY_REQUIRED"
-    },
+    "chatgpt_source_architecture": {"status":"CANONICAL_IN_REPOSITORY","entrypoint":"project-sources/chatgpt/START_HERE.md","attached_files_role":"BOOTSTRAP_POINTER_ONLY"},
+    "authorization_registry": {"status":"RECONCILED_WITH_PHASE_4_AUTHORIZATION_FILE","registered_consumed_transitions":10,"latest":"AUTHORIZATION_LAB_PHASE_4_ACCESSIBILITY_RESEARCH_044","correspondence_policy":"STATE_KEY_REQUIRED"},
     "design_knowledge": {
-      "package_id": "DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001",
-      "version": "1.1.0",
-      "status": "DOCUMENTED_AND_VALIDATED_NOT_INTEGRATED",
-      "sources": 9,
-      "principles": 18,
-      "gaps": 10,
-      "evidence_records": 2,
-      "candidate_principles_not_approved": 4,
-      "latest_evidence": "EVD-LAB-DK-002",
-      "pending_live_watch": "2025/0359(COD)",
-      "next_research_transition": "PHASE_4_ACCESSIBILITY_NORMATIVE_AND_ASSISTIVE_TECHNOLOGY_RESEARCH",
-      "phase_4_status": "NOT_STARTED_REQUIRES_SEPARATE_EXPLICIT_AUTHORIZATION"
+      "package_id":"DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001",
+      "version":"1.2.0",
+      "status":"DOCUMENTED_AND_VALIDATED_NOT_INTEGRATED",
+      "sources":18,
+      "principles":28,
+      "gaps":10,
+      "evidence_records":3,
+      "test_protocols":1,
+      "candidate_principles_not_approved":4,
+      "latest_evidence":"EVD-LAB-DK-003",
+      "pending_live_watch":"2025/0359(COD)",
+      "phase_4_status":"FOUNDATIONAL_RESEARCH_DOCUMENTED_NOT_OPERATIONALLY_VALIDATED",
+      "accessibility_protocol":"ATP-WEB-001"
     },
     "research_review_042": {
-      "verdict": "MODIFIED",
-      "directly_incorporable": false,
-      "high_value_candidates": [
-        "SUSAN_KARE_FUNCTIONAL_ICONOGRAPHY",
-        "NIELSEN_SEVERITY_AND_PRIORITIZATION"
-      ],
-      "conditional_candidates": [
-        "JOBS_IVE_FOCUS_SYNTHESIS",
-        "GLEB_KUZNETSOV_MOTION_REFERENCE",
-        "MIZKO_DESIGN_SYSTEMS_DISCOVERY"
-      ],
-      "low_incremental_value": [
-        "RAMS_DUPLICATIVE",
-        "NORMAN_DUPLICATIVE",
-        "KRUG_DUPLICATIVE",
-        "RAN_SEGALL_GENERIC"
-      ],
-      "candidate_principles": [
-        "ICONOGRAPHY_IS_A_FUNCTIONAL_LANGUAGE",
-        "USABILITY_FINDINGS_REQUIRE_SEVERITY",
-        "FOCUS_REQUIRES_EXPLICIT_EXCLUSION",
-        "MINIMALISM_MUST_NOT_REMOVE_OPERATIONAL_INFORMATION"
-      ],
-      "candidate_principles_status": "NOT_APPROVED"
+      "verdict":"MODIFIED",
+      "directly_incorporable":false,
+      "high_value_candidates":["SUSAN_KARE_FUNCTIONAL_ICONOGRAPHY","NIELSEN_SEVERITY_AND_PRIORITIZATION"],
+      "conditional_candidates":["JOBS_IVE_FOCUS_SYNTHESIS","GLEB_KUZNETSOV_MOTION_REFERENCE","MIZKO_DESIGN_SYSTEMS_DISCOVERY"],
+      "low_incremental_value":["RAMS_DUPLICATIVE","NORMAN_DUPLICATIVE","KRUG_DUPLICATIVE","RAN_SEGALL_GENERIC"],
+      "candidate_principles":["ICONOGRAPHY_IS_A_FUNCTIONAL_LANGUAGE","USABILITY_FINDINGS_REQUIRE_SEVERITY","FOCUS_REQUIRES_EXPLICIT_EXCLUSION","MINIMALISM_MUST_NOT_REMOVE_OPERATIONAL_INFORMATION"],
+      "candidate_principles_status":"NOT_APPROVED"
     },
     "visual_calibration_reconciliation": {
-      "status": "DOCUMENTED_NOT_IMPLEMENTED",
-      "profile_version": "1.1.0",
-      "protocol_version": "1.1.0",
-      "pilot_rejection_head": "0105d90ad105360dd95169220c6bf444375aa9ec",
-      "next_transition": "MONOLITHIC_VISUAL_CALIBRATION_REQUIRES_SEPARATE_AUTHORIZATION"
+      "status":"DOCUMENTED_NOT_IMPLEMENTED",
+      "profile_version":"1.1.0",
+      "protocol_version":"1.1.0",
+      "pilot_rejection_head":"0105d90ad105360dd95169220c6bf444375aa9ec",
+      "next_transition":"MONOLITHIC_VISUAL_CALIBRATION_REQUIRES_SEPARATE_AUTHORIZATION"
+    },
+    "phase_4_accessibility": {
+      "status":"DOCUMENTED_AND_VALIDATED_NOT_INTEGRATED",
+      "authorization":"AUTHORIZATION_LAB_PHASE_4_ACCESSIBILITY_RESEARCH_044",
+      "evidence":"EVD-LAB-DK-003",
+      "source_file":"ACCESSIBILITY_SOURCES_PHASE_4.json",
+      "principle_file":"ACCESSIBILITY_PRINCIPLES_PHASE_4.json",
+      "test_protocol":"ASSISTIVE_TECHNOLOGY_TEST_PROTOCOL.json",
+      "product_tests_executed":false,
+      "conformance_claims_created":false,
+      "symphonie_modified":false
     }
   },
   "head_policy": "VERIFY_LIVE_AT_USE",
-  "verified_parent_head": "f0a6ba30a283b9568b6b5acff37be0274274c86f",
+  "verified_parent_head": "3453d2c4b5d5b7fabf71cd7753bf99b0a9a63e2b",
   "self_head_is_canonical_state": false
 }
