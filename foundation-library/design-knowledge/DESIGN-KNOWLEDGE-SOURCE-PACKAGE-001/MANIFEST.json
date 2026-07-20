@@ -1,11 +1,38 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.2.0",
   "package_id": "DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "status": "DOCUMENTED_AND_VALIDATED_NOT_INTEGRATED",
   "updated_at": "2026-07-20",
-  "files": ["README.md","SOURCES.json","PRINCIPLES.json","HEURISTIC.md","GAP_REGISTER.json","AUTHORIZATION.json","EVIDENCE_EU_AI_ACT_PHASE_3D.md","EVIDENCE_UI_UX_REFERENTS_RESEARCH_REVIEW.md","MANIFEST.json"],
-  "counts": {"sources":9,"principles":18,"gaps":10,"evidence_records":2,"corrigenda":4,"pending_legislative_procedures":1,"candidate_principles_not_approved":4},
+  "files": [
+    "README.md",
+    "SOURCES.json",
+    "PRINCIPLES.json",
+    "HEURISTIC.md",
+    "GAP_REGISTER.json",
+    "AUTHORIZATION.json",
+    "EVIDENCE_EU_AI_ACT_PHASE_3D.md",
+    "EVIDENCE_UI_UX_REFERENTS_RESEARCH_REVIEW.md",
+    "ACCESSIBILITY_SOURCES_PHASE_4.json",
+    "ACCESSIBILITY_PRINCIPLES_PHASE_4.json",
+    "ASSISTIVE_TECHNOLOGY_TEST_PROTOCOL.json",
+    "EVIDENCE_ACCESSIBILITY_PHASE_4.md",
+    "MANIFEST.json"
+  ],
+  "counts": {
+    "base_sources": 9,
+    "phase_4_accessibility_sources": 9,
+    "total_sources": 18,
+    "base_principles": 18,
+    "phase_4_accessibility_principles": 10,
+    "total_principles": 28,
+    "gaps": 10,
+    "evidence_records": 3,
+    "test_protocols": 1,
+    "corrigenda": 4,
+    "pending_legislative_procedures": 1,
+    "candidate_principles_not_approved": 4
+  },
   "copyright_boundary": "NO_PDFS_NO_FULL_TEXT_NO_LONG_QUOTES",
   "validation": {
     "json_parse": "PASS",
@@ -19,7 +46,12 @@
     "candidate_not_promotion_boundary": "PASS",
     "primary_secondary_source_separation": "PASS",
     "copyright_and_unauthorized_copy_exclusion": "PASS",
+    "normative_informative_accessibility_separation": "PASS",
+    "assistive_technology_protocol_completeness": "PASS",
+    "automation_limit_boundary": "PASS",
+    "conformance_claim_boundary": "PASS",
     "runtime_boundary": "PASS",
-    "integration_boundary": "PASS"
+    "integration_boundary": "PASS",
+    "symphonie_structure_boundary": "PASS"
   }
 }
