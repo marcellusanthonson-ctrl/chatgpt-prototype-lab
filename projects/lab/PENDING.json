@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "project_id": "lab",
   "updated_at": "2026-07-20",
   "records": [
@@ -17,6 +17,116 @@
         "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/SOURCES.json",
         "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/EVIDENCE_EU_AI_ACT_PHASE_3D.md"
       ]
+    },
+    {
+      "id": "PEND-LAB-002",
+      "status": "NEXT_RESEARCH_TRANSITION",
+      "type": "GOVERNED_RESEARCH",
+      "subject": "PHASE_4_ACCESSIBILITY_NORMATIVE_AND_ASSISTIVE_TECHNOLOGY_RESEARCH",
+      "priority": "CRITICAL",
+      "gap_id": "GAP-DK-001",
+      "scope": [
+        "WCAG 2.2 normative coverage",
+        "accessible component patterns",
+        "assistive-technology testing",
+        "broader disability coverage",
+        "clear separation between normative conformance and supplemental cognitive-accessibility guidance"
+      ],
+      "status_boundary": "NOT_STARTED_NOT_AUTHORIZED_FOR_EXECUTION_BY_AUTHORIZATION_042",
+      "source_refs": [
+        "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/GAP_REGISTER.json",
+        "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/EVIDENCE_UI_UX_REFERENTS_RESEARCH_REVIEW.md"
+      ]
+    },
+    {
+      "id": "PEND-LAB-003",
+      "status": "QUEUED_AFTER_PHASE_4",
+      "type": "SOURCE_NORMALIZATION",
+      "subject": "Susan Kare functional iconography",
+      "priority": "HIGH",
+      "candidate_principle": "ICONOGRAPHY_IS_A_FUNCTIONAL_LANGUAGE",
+      "requirements": [
+        "Primary Stanford interviews",
+        "Susan Kare original published work",
+        "Bibliographic closure",
+        "Historical versus current applicability separation",
+        "Tests, anti-patterns, limitations and accessibility boundaries"
+      ],
+      "gap_relations": ["GAP-DK-010"],
+      "promotion_status": "NOT_APPROVED",
+      "source_refs": ["foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/EVIDENCE_UI_UX_REFERENTS_RESEARCH_REVIEW.md"]
+    },
+    {
+      "id": "PEND-LAB-004",
+      "status": "QUEUED_AFTER_PHASE_4",
+      "type": "SOURCE_NORMALIZATION",
+      "subject": "Jakob Nielsen severity and prioritization",
+      "priority": "HIGH",
+      "candidate_principle": "USABILITY_FINDINGS_REQUIRE_SEVERITY",
+      "requirements": [
+        "Nielsen Norman Group and original publications only",
+        "Verify severity dimensions and method boundaries",
+        "Preserve distinction between heuristic review and representative user testing",
+        "Map result to Symphonie risk-proportional validation gates"
+      ],
+      "gap_relations": ["GAP-DK-008"],
+      "promotion_status": "NOT_APPROVED",
+      "source_refs": ["foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/EVIDENCE_UI_UX_REFERENTS_RESEARCH_REVIEW.md"]
+    },
+    {
+      "id": "PEND-LAB-005",
+      "status": "CANDIDATE_REASSESSMENT",
+      "type": "PRINCIPLE_REVIEW",
+      "subject": "Candidate principles from UI/UX referents research",
+      "priority": "MEDIUM",
+      "candidates": [
+        "ICONOGRAPHY_IS_A_FUNCTIONAL_LANGUAGE",
+        "USABILITY_FINDINGS_REQUIRE_SEVERITY",
+        "FOCUS_REQUIRES_EXPLICIT_EXCLUSION",
+        "MINIMALISM_MUST_NOT_REMOVE_OPERATIONAL_INFORMATION"
+      ],
+      "decision_rule": "Reassess uniqueness and evidence only after primary-source normalization; extend existing DKP records instead of creating duplicates where appropriate.",
+      "approval_status": "NOT_APPROVED",
+      "source_refs": ["foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/EVIDENCE_UI_UX_REFERENTS_RESEARCH_REVIEW.md"]
+    },
+    {
+      "id": "PEND-LAB-006",
+      "status": "VISUAL_REFERENCE_CANDIDATE",
+      "type": "MOTION_RESEARCH_LEAD",
+      "subject": "Gleb Kuznetsov microinteraction observations",
+      "priority": "MEDIUM",
+      "evidence_level": "PORTFOLIO_OR_CASE_OBSERVATION",
+      "required_before_promotion": [
+        "Functional motion evidence",
+        "Reduced-motion behavior",
+        "Accessibility impact",
+        "Performance impact",
+        "Platform compatibility",
+        "Observed usability outcomes"
+      ],
+      "gap_relations": ["GAP-DK-006"],
+      "normative_effect": "NONE",
+      "source_refs": ["foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/EVIDENCE_UI_UX_REFERENTS_RESEARCH_REVIEW.md"]
+    },
+    {
+      "id": "PEND-LAB-007",
+      "status": "DISCOVERY_LEAD_ONLY",
+      "type": "DESIGN_SYSTEMS_RESEARCH_LEAD",
+      "subject": "Mizko / Michael Wong",
+      "priority": "LOW",
+      "reason": "Current evidence is dominated by portfolios, testimonials, courses and promotional material.",
+      "gap_relations": ["GAP-DK-003"],
+      "source_promotion_status": "NOT_APPROVED",
+      "source_refs": ["foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/EVIDENCE_UI_UX_REFERENTS_RESEARCH_REVIEW.md"]
+    },
+    {
+      "id": "PEND-LAB-008",
+      "status": "EXCLUDED_UNTIL_PRIMARY_EVIDENCE",
+      "type": "HISTORICAL_CAUSALITY_CLAIM",
+      "subject": "Direct Rams to Apple / Jony Ive influence claims",
+      "priority": "LOW",
+      "rule": "Treat as historical context only unless normalized primary evidence supports specific causal claims.",
+      "source_refs": ["foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/EVIDENCE_UI_UX_REFERENTS_RESEARCH_REVIEW.md"]
     }
   ]
 }
