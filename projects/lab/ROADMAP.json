@@ -1,13 +1,37 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "project_id": "lab",
-  "updated_at": "2026-07-16",
+  "updated_at": "2026-07-20",
   "authority_effect": "NONE",
   "records": [
     {
       "order": 1,
       "item": "Mantener gobierno v2 y validación",
-      "status": "PENDING"
+      "status": "ONGOING"
+    },
+    {
+      "order": 2,
+      "item": "PHASE_4_ACCESSIBILITY_NORMATIVE_AND_ASSISTIVE_TECHNOLOGY_RESEARCH",
+      "status": "NEXT_RECOMMENDED_TRANSITION_NOT_STARTED",
+      "priority": "CRITICAL",
+      "gap_id": "GAP-DK-001",
+      "scope": [
+        "WCAG 2.2 normative coverage",
+        "accessible component patterns",
+        "assistive-technology testing",
+        "broader disability coverage",
+        "normative versus supplemental guidance separation"
+      ]
+    },
+    {
+      "order": 3,
+      "item": "Normalize Susan Kare and Jakob Nielsen primary-source candidates",
+      "status": "QUEUED_AFTER_PHASE_4"
+    },
+    {
+      "order": 4,
+      "item": "Reassess candidate principles and lower-confidence contemporary references",
+      "status": "QUEUED_AFTER_SOURCE_NORMALIZATION"
     }
   ]
 }

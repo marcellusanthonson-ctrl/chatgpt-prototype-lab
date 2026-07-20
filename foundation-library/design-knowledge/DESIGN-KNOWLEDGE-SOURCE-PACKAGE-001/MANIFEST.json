@@ -4,8 +4,8 @@
   "version": "1.1.0",
   "status": "DOCUMENTED_AND_VALIDATED_NOT_INTEGRATED",
   "updated_at": "2026-07-20",
-  "files": ["README.md","SOURCES.json","PRINCIPLES.json","HEURISTIC.md","GAP_REGISTER.json","AUTHORIZATION.json","EVIDENCE_EU_AI_ACT_PHASE_3D.md","MANIFEST.json"],
-  "counts": {"sources":9,"principles":18,"gaps":10,"evidence_records":1,"corrigenda":4,"pending_legislative_procedures":1},
+  "files": ["README.md","SOURCES.json","PRINCIPLES.json","HEURISTIC.md","GAP_REGISTER.json","AUTHORIZATION.json","EVIDENCE_EU_AI_ACT_PHASE_3D.md","EVIDENCE_UI_UX_REFERENTS_RESEARCH_REVIEW.md","MANIFEST.json"],
+  "counts": {"sources":9,"principles":18,"gaps":10,"evidence_records":2,"corrigenda":4,"pending_legislative_procedures":1,"candidate_principles_not_approved":4},
   "copyright_boundary": "NO_PDFS_NO_FULL_TEXT_NO_LONG_QUOTES",
   "validation": {
     "json_parse": "PASS",
@@ -16,6 +16,9 @@
     "claim_classification": "PASS",
     "corrigenda_inventory": "PASS",
     "legal_design_boundary": "PASS",
+    "candidate_not_promotion_boundary": "PASS",
+    "primary_secondary_source_separation": "PASS",
+    "copyright_and_unauthorized_copy_exclusion": "PASS",
     "runtime_boundary": "PASS",
     "integration_boundary": "PASS"
   }
