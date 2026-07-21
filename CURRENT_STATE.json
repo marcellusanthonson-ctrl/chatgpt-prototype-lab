@@ -1,11 +1,11 @@
 {
   "schema_version": "2.5.0",
   "document_id": "lab.current-state",
-  "version": "2.5.12",
+  "version": "2.5.13",
   "status": "GOVERNANCE_V2_CANONICAL_BASELINE",
   "updated_at": "2026-07-21",
   "active_project": "lab",
-  "current_phase": "CONTEXTUAL_VISUAL_CALIBRATION_EVIDENCE_ACCUMULATION",
+  "current_phase": "EXTERNAL_AUDIT_RECONCILED_MONOLITHIC_AUTHORIZATION_PENDING",
   "methodology": {
     "version": "2.1",
     "path": "METHODOLOGY.md"
@@ -40,7 +40,9 @@
     "visual_preference_profile": "foundation-library/visual-preferences/jonathan-martinez.visual-preference-profile.json",
     "high_fidelity_visual_protocol": "foundation-library/visual-protocols/high-fidelity-visual-protocol.json",
     "visual_preference_benchmark": "foundation-library/visual-preferences/benchmarks/visual-preference-benchmark.manifest.json",
-    "contextual_visual_calibration_evidence": "foundation-library/visual-preferences/evidence/EVD-LAB-VIS-001.json"
+    "contextual_visual_calibration_evidence": "foundation-library/visual-preferences/evidence/EVD-LAB-VIS-001.json",
+    "external_audit_evidence": "projects/lab/evidence/EVD-LAB-AUD-001.json",
+    "external_audit_reassessment": "projects/lab/reassessments/REA-LAB-002.json"
   },
   "projects": {
     "lab": {
@@ -133,7 +135,8 @@
     "symphonie_visual_calibration_reconciliation": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "phase_4_accessibility_research_044": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "symphonie_visual_preference_accessibility_code_benchmark": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "aera_one_contextual_visual_evidence_045": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+    "aera_one_contextual_visual_evidence_045": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "external_audit_reconciliation_046": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
   },
   "verified_external_heads": {
     "symphonie": "b492852c0d76ff7cd44ca266dc8950c94638d568",
@@ -149,7 +152,7 @@
     "lab_base_before_symphonie_knowledge_architecture_proposal": "4abb81d1f47fe78074c98a2abc17c67a20a22e73",
     "symphonie_premium_ecommerce_pilot_rejection_record": "0105d90ad105360dd95169220c6bf444375aa9ec",
     "lab_base_before_phase_4_accessibility_research": "3453d2c4b5d5b7fabf71cd7753bf99b0a9a63e2b",
-    "symphonie_codex_lab": "2753260395a24067df1da0b0f0bc34d28ab027d3",
+    "symphonie_codex_lab": "81389f31f2655afd5e7fc9d825c1aac6bb6cd759",
     "symphonie_premium_ecommerce_pilot": "0105d90ad105360dd95169220c6bf444375aa9ec",
     "lab_base_before_visual_preference_benchmark": "b585b5941f6085ce844716740b59f5687c7ebdad"
   },
@@ -170,5 +173,27 @@
     "open errors",
     "applicable evidence",
     "current continuity package"
-  ]
+  ],
+  "latest_reconciliation": {
+    "authorization_id": "AUTHORIZATION_LAB_EXTERNAL_AUDIT_RECONCILIATION_046",
+    "external_audit_status": "REGISTERED_AS_EVIDENCE_WITH_MATERIAL_CORRECTIONS",
+    "reassessment_id": "REA-LAB-002",
+    "classifications": {
+      "S1": "MODIFIED",
+      "S5": "MODIFIED",
+      "S7": "REVERSED",
+      "S9": "MODIFIED"
+    },
+    "monolithic_sequence": [
+      "SEPARATE_EXPLICIT_MONOLITHIC_GENERATION_AUTHORIZATION",
+      "GENERATE_VISUAL_REVIEW_MONOLITHIC",
+      "HUMAN_REVIEW_BY_JONATHAN_MARTINEZ",
+      "VISUAL_CALIBRATION_APPROVED_OR_OTHER_ALLOWED_HUMAN_DECISION"
+    ],
+    "benchmark_status": "PROPOSED_NOT_APPROVED",
+    "capability_version": "0.1.0-alpha.9",
+    "capability_contract_test": "PASS",
+    "capability_result_head": "81389f31f2655afd5e7fc9d825c1aac6bb6cd759",
+    "authority_effect": "NONE_AFTER_CONSUMPTION"
+  }
 }
