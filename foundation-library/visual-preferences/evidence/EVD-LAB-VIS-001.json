@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-VIS-001",
+  "title": "AERA One V3 corrected contextual visual calibration",
+  "project_id": "lab",
+  "evidence_class": "HUMAN_CONTEXTUAL_VISUAL_CALIBRATION",
+  "status": "ACCEPTED_AS_PROVISIONAL_CALIBRATION_EVIDENCE_WITH_OPEN_IMPROVEMENTS",
+  "recorded_at": "2026-07-21",
+  "subject": "Jonathan Martínez",
+  "product_context": {
+    "archetype": "PREMIUM_HOME_AUDIO_ECOMMERCE",
+    "concept": "AERA One",
+    "locale": "Chile",
+    "artifact_role": "MONOLITHIC_OFFLINE_CONTEXTUAL_CALIBRATION_NOT_PRODUCT_IMPLEMENTATION"
+  },
+  "artifact": {
+    "filename": "AERA_ONE_ACOUSTIC_EDITORIAL_V3_CORRECTED.html",
+    "repository_copy_status": "IDENTIFIED_BY_HASH_NOT_PROMOTED_AS_PRODUCT_OR_BASELINE",
+    "byte_size": 995298,
+    "sha256": "3ed69d26f0deae77989876df4126d2879ade4221182334f503669e5b74396012",
+    "format": "SINGLE_FILE_HTML_WITH_INLINE_CSS_JAVASCRIPT_AND_EMBEDDED_IMAGE"
+  },
+  "human_conclusion": {
+    "exact_summary": "OK, creo que este es el diseño más consistente y sin errores. Sin embargo, aún hay cosas que mejorar. Por el momento podemos dejarlo como evidencia.",
+    "final_design_approved": false,
+    "canonical_baseline_approved": false,
+    "further_tests_expected": true
+  },
+  "confirmed_signals": [
+    "CLEAN_COMPOSITION",
+    "PRECISE_SYMMETRY_AND_SPACING",
+    "DEFINED_ICONOGRAPHY",
+    "WARM_EDITORIAL_PREMIUM_CHARACTER",
+    "CONTROLLED_DEPTH_AND_MOTION",
+    "SUBSTANTIVE_FOOTER",
+    "REALISTIC_COMPLETE_COMMERCE_CONTEXT",
+    "FINISHED_SEMANTIC_CONTROLS",
+    "RESPONSIVE_CONTAINMENT_WITHOUT_TEXT_COLLISIONS"
+  ],
+  "corrections_required_during_iteration": [
+    "EXPAND_FOOTER",
+    "ADD_CONTROLLED_DEPTH_AND_DYNAMISM",
+    "CORRECT_HERO_LINE_HEIGHT_COLLISION",
+    "CONTAIN_LOWER_TITLES_PARAGRAPHS_AND_CALLOUTS",
+    "REMOVE_FALSE_BUTTON_SEMANTICS_FROM_TECHNICAL_CAPTION",
+    "USE_ICON_ONLY_SOCIAL_LINKS_WITH_ACCESSIBLE_NAMES",
+    "CORRECT_PHONE_PATTERN_CONSOLE_ERROR"
+  ],
+  "rejected_direction": {
+    "candidate": "AERA_ONE_IMMERSIVE_ACOUSTIC_V4",
+    "status": "REJECTED_AS_PRODUCT_SPECIFIC_VISUAL_DIRECTION",
+    "reason": "Judged inferior to V3 and more generic.",
+    "do_not_infer": "Dark interfaces are not universally rejected."
+  },
+  "open_improvements": [
+    "UNSPECIFIED_REFINEMENTS_REMAIN",
+    "CONTINUE_REALISTIC_FOCUSED_MONOLITHIC_CONTEXTUAL_TESTS",
+    "DO_NOT_FREEZE_STYLE_OR_BASELINE"
+  ],
+  "technical_observations": {
+    "reported_preflight_result": "PASS_FOR_HUMAN_REVIEW",
+    "widths_px": [
+      390,
+      640,
+      699,
+      768,
+      1024,
+      1440,
+      1920
+    ],
+    "offline": true,
+    "external_network_requests": false,
+    "own_javascript_errors": false,
+    "horizontal_overflow": false,
+    "conformance_claim": false
+  },
+  "authority_boundary": {
+    "preference_evidence_only": true,
+    "product_direction_effect": "NONE_UNTIL_EXPLICIT_SELECTION",
+    "visual_baseline_effect": "NONE",
+    "global_identity_effect": "NONE",
+    "implementation_authority": "NONE"
+  },
+  "source_refs": [
+    "HUMAN_REVIEW_CONVERSATION_2026-07-21_AERA_ONE",
+    "foundation-library/visual-preferences/jonathan-martinez.visual-preference-profile.json",
+    "foundation-library/visual-protocols/high-fidelity-visual-protocol.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_AERA_ONE_CONTEXTUAL_VISUAL_EVIDENCE_045.json"
+  ]
+}
