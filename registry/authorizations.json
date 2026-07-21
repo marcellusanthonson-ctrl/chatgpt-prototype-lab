@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-07-20",
+  "updated_at": "2026-07-21",
   "records": [
     {
       "id": "AUTH-LAB-GOVERNANCE-V2-013",
@@ -401,6 +401,27 @@
       "wcag_claim_authorized": false,
       "runtime_authorized": false,
       "rag_authorized": false,
+      "deployment_authorized": false,
+      "release_authorized": false
+    },
+    {
+      "id": "AUTHORIZATION_LAB_AERA_ONE_CONTEXTUAL_VISUAL_EVIDENCE_045",
+      "state_key": "aera_one_contextual_visual_evidence_045",
+      "project_id": "lab",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "approved_by": "Jonathan Martínez",
+      "scope": "DOCUMENTATION_AND_VALIDATION_ONLY",
+      "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_AERA_ONE_CONTEXTUAL_VISUAL_EVIDENCE_045.json",
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "expected_parent_head": "93d9ace8cf0ac609b7c2a1efde695259dd75212c",
+      "commit_authorized": true,
+      "push_authorized": true,
+      "source_file_update_authorized": true,
+      "artifact_code_promotion_authorized": false,
+      "product_changes_authorized": false,
+      "runtime_authorized": false,
+      "integration_authorized": false,
       "deployment_authorized": false,
       "release_authorized": false
     }
