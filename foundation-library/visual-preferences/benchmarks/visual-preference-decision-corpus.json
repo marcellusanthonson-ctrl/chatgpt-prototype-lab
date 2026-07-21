@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "JM-VISUAL-PREFERENCE-DECISIONS-001",
+  "version": "1.0.0",
+  "status": "PROPOSED_NOT_APPROVED",
+  "subject": "Jonathan Martínez",
+  "records": [
+    {"case_id":"PREF-CASE-001","dimension":"IMMEDIATE_HIERARCHY","positive":"PREFERRED","negative":"REJECTED","context":"CROSS_PRODUCT"},
+    {"case_id":"PREF-CASE-002","dimension":"DOMINANT_PRODUCT_HERO","positive":"PREFERRED","negative":"REJECTED","context":"PHYSICAL_PRODUCT"},
+    {"case_id":"PREF-CASE-003","dimension":"INTENTIONAL_MINIMALISM","positive":"PREFERRED","negative":"REJECTED","context":"CROSS_PRODUCT"},
+    {"case_id":"PREF-CASE-004","dimension":"FOCUSED_ACCENT","positive":"ACCEPTABLE_CONTEXTUALLY","negative":"REJECTED","context":"PRODUCT_DEPENDENT"},
+    {"case_id":"PREF-CASE-005","dimension":"SPECIFIC_EDITORIAL_COMPOSITION","positive":"PREFERRED","negative":"REJECTED","context":"PRODUCT_DEPENDENT"},
+    {"case_id":"PREF-CASE-006","dimension":"LOCALIZED_MATERIALITY","positive":"ACCEPTABLE_CONTEXTUALLY","negative":"REJECTED","context":"PRODUCT_DEPENDENT"},
+    {"case_id":"PREF-CASE-007","dimension":"FINISHED_CONTROLS","positive":"PREFERRED","negative":"REJECTED","context":"INTERACTIVE_PRODUCT"},
+    {"case_id":"PREF-CASE-008","dimension":"INTEGRATED_VISIBLE_FOCUS","positive":"PREFERRED","negative":"REJECTED","context":"INTERACTIVE_PRODUCT"},
+    {"case_id":"PREF-CASE-009","dimension":"COMPLETE_VISUAL_STATES","positive":"PREFERRED","negative":"REJECTED","context":"INTERACTIVE_PRODUCT"},
+    {"case_id":"PREF-CASE-010","dimension":"ZOOM_REFLOW_RESILIENCE","positive":"PREFERRED","negative":"REJECTED","context":"RESPONSIVE_PRODUCT"}
+  ],
+  "approval": {"state":"PENDING_HUMAN_REVIEW","approved_by":null,"approved_at":null},
+  "rule": "Records are interpretation evidence, not automatic aesthetic selection."
+}
