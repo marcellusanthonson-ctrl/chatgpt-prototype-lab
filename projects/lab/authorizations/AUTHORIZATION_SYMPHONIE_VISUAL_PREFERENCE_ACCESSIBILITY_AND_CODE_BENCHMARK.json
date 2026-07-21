@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_SYMPHONIE_VISUAL_PREFERENCE_ACCESSIBILITY_AND_CODE_BENCHMARK",
+  "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-20",
+  "scope": "CROSS_REPOSITORY_VISUAL_PREFERENCE_ACCESSIBILITY_AND_CODE_BENCHMARK",
+  "expected_parent_heads": {
+    "chatgpt-prototype-lab": "b585b5941f6085ce844716740b59f5687c7ebdad",
+    "symphonie": "b492852c0d76ff7cd44ca266dc8950c94638d568",
+    "symphonie-codex-lab": "2753260395a24067df1da0b0f0bc34d28ab027d3",
+    "symphonie-premium-ecommerce-pilot": "0105d90ad105360dd95169220c6bf444375aa9ec"
+  },
+  "authorized": {
+    "commit": true,
+    "push": true,
+    "source_file_update": true,
+    "capability_package_update": true,
+    "benchmark_html_generation": true,
+    "offline_browser_validation": "BENCHMARK_ONLY"
+  },
+  "forbidden": {
+    "pilot_application": true,
+    "visual_review_monolithic": true,
+    "alpha7_prototype_mutation": true,
+    "new_ecommerce_directions": true,
+    "dependency_installation": true,
+    "network_runtime": true,
+    "assistive_technology_execution": true,
+    "wcag_conformance_claim": true,
+    "runtime_rag_real_data": true,
+    "deployment_release": true
+  },
+  "benchmark": {
+    "id": "JM-VISUAL-PREFERENCE-BENCHMARK-001",
+    "status": "PROPOSED_NOT_APPROVED",
+    "human_approval_required": true
+  },
+  "next_authorized_action": "NONE"
+}
