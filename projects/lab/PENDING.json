@@ -20,7 +20,7 @@
     },
     {
       "id": "PEND-LAB-002",
-      "status": "NEXT_RESEARCH_TRANSITION",
+      "status": "COMPLETED",
       "type": "GOVERNED_RESEARCH",
       "subject": "PHASE_4_ACCESSIBILITY_NORMATIVE_AND_ASSISTIVE_TECHNOLOGY_RESEARCH",
       "priority": "CRITICAL",
@@ -32,7 +32,7 @@
         "broader disability coverage",
         "clear separation between normative conformance and supplemental cognitive-accessibility guidance"
       ],
-      "status_boundary": "NOT_STARTED_NOT_AUTHORIZED_FOR_EXECUTION_BY_AUTHORIZATION_042",
+      "status_boundary": "COMPLETED_BY_AUTHORIZATION_044",
       "source_refs": [
         "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/GAP_REGISTER.json",
         "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/EVIDENCE_UI_UX_REFERENTS_RESEARCH_REVIEW.md"
@@ -150,7 +150,7 @@
     },
     {
       "id": "PEND-LAB-009",
-      "status": "NEXT_SYMPHONIE_VISUAL_TRANSITION_NOT_AUTHORIZED",
+      "status": "DEFERRED_AFTER_BENCHMARK_HUMAN_REVIEW",
       "type": "MONOLITHIC_VISUAL_CALIBRATION",
       "subject": "Generate one VISUAL_REVIEW_MONOLITHIC.html for the premium motorcycle pilot",
       "priority": "HIGH",
@@ -159,6 +159,21 @@
       "source_refs": [
         "foundation-library/visual-protocols/high-fidelity-visual-protocol.json",
         "symphonie-premium-ecommerce-pilot@0105d90ad105360dd95169220c6bf444375aa9ec:.project/phase-3/human-visual-decision.json"
+      ],
+      "prerequisite": "JM_VISUAL_PREFERENCE_BENCHMARK_HUMAN_DECISION"
+    },
+    {
+      "id": "PEND-LAB-010",
+      "status": "PENDING_HUMAN_REVIEW",
+      "type": "VISUAL_PREFERENCE_CODE_BENCHMARK",
+      "subject": "Review JM-VISUAL-PREFERENCE-BENCHMARK-001",
+      "priority": "HIGH",
+      "benchmark_status": "PROPOSED_NOT_APPROVED",
+      "automatic_approval": false,
+      "authorization_required_for_followup": true,
+      "source_refs": [
+        "foundation-library/visual-preferences/benchmarks/visual-preference-benchmark.manifest.json",
+        "foundation-library/visual-preferences/jonathan-martinez.visual-preference-profile.json"
       ]
     }
   ]
