@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1.0",
   "project_id": "lab",
-  "updated_at": "2026-07-20",
+  "updated_at": "2026-07-21",
   "records": [
     {
       "id": "PEND-LAB-001",
@@ -150,17 +150,27 @@
     },
     {
       "id": "PEND-LAB-009",
-      "status": "DEFERRED_AFTER_BENCHMARK_HUMAN_REVIEW",
+      "status": "AWAITING_SEPARATE_MONOLITHIC_GENERATION_AUTHORIZATION",
       "type": "MONOLITHIC_VISUAL_CALIBRATION",
       "subject": "Generate one VISUAL_REVIEW_MONOLITHIC.html for the premium motorcycle pilot",
       "priority": "HIGH",
-      "required_gate": "VISUAL_CALIBRATION_APPROVED",
       "authorization_required": true,
+      "generation_sequence": [
+        "SEPARATE_EXPLICIT_MONOLITHIC_GENERATION_AUTHORIZATION",
+        "GENERATE_VISUAL_REVIEW_MONOLITHIC",
+        "HUMAN_REVIEW_BY_JONATHAN_MARTINEZ",
+        "VISUAL_CALIBRATION_APPROVED_OR_OTHER_ALLOWED_HUMAN_DECISION"
+      ],
+      "required_gate_for_post_calibration_expansion": "VISUAL_CALIBRATION_APPROVED",
+      "benchmark_decision_is_generation_prerequisite": false,
+      "benchmark_status": "PROPOSED_NOT_APPROVED",
+      "current_authority": "NONE",
       "source_refs": [
         "foundation-library/visual-protocols/high-fidelity-visual-protocol.json",
+        "projects/lab/reassessments/REA-LAB-002.json",
+        "projects/lab/authorizations/AUTHORIZATION_LAB_EXTERNAL_AUDIT_RECONCILIATION_046.json",
         "symphonie-premium-ecommerce-pilot@0105d90ad105360dd95169220c6bf444375aa9ec:.project/phase-3/human-visual-decision.json"
-      ],
-      "prerequisite": "JM_VISUAL_PREFERENCE_BENCHMARK_HUMAN_DECISION"
+      ]
     },
     {
       "id": "PEND-LAB-010",
