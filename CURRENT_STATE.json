@@ -1,11 +1,11 @@
 {
   "schema_version": "2.5.0",
   "document_id": "lab.current-state",
-  "version": "2.5.11",
+  "version": "2.5.12",
   "status": "GOVERNANCE_V2_CANONICAL_BASELINE",
-  "updated_at": "2026-07-20",
+  "updated_at": "2026-07-21",
   "active_project": "lab",
-  "current_phase": "VISUAL_PREFERENCE_BENCHMARK_PROPOSED_NOT_APPROVED",
+  "current_phase": "CONTEXTUAL_VISUAL_CALIBRATION_EVIDENCE_ACCUMULATION",
   "methodology": {
     "version": "2.1",
     "path": "METHODOLOGY.md"
@@ -39,7 +39,8 @@
     "assistive_technology_test_protocol": "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/ASSISTIVE_TECHNOLOGY_TEST_PROTOCOL.json",
     "visual_preference_profile": "foundation-library/visual-preferences/jonathan-martinez.visual-preference-profile.json",
     "high_fidelity_visual_protocol": "foundation-library/visual-protocols/high-fidelity-visual-protocol.json",
-    "visual_preference_benchmark": "foundation-library/visual-preferences/benchmarks/visual-preference-benchmark.manifest.json"
+    "visual_preference_benchmark": "foundation-library/visual-preferences/benchmarks/visual-preference-benchmark.manifest.json",
+    "contextual_visual_calibration_evidence": "foundation-library/visual-preferences/evidence/EVD-LAB-VIS-001.json"
   },
   "projects": {
     "lab": {
@@ -131,7 +132,8 @@
     "symphonie_knowledge_architecture_proposal_043": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "symphonie_visual_calibration_reconciliation": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "phase_4_accessibility_research_044": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "symphonie_visual_preference_accessibility_code_benchmark": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+    "symphonie_visual_preference_accessibility_code_benchmark": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "aera_one_contextual_visual_evidence_045": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
   },
   "verified_external_heads": {
     "symphonie": "b492852c0d76ff7cd44ca266dc8950c94638d568",
@@ -155,7 +157,7 @@
     "PHASE_4_ACCESSIBILITY_NORMATIVE_AND_ASSISTIVE_TECHNOLOGY_RESEARCH"
   ],
   "next_authorized_action": "NONE_UNTIL_NEW_EXPLICIT_APPROVAL",
-  "next_recommended_transition": "HUMAN_REVIEW_OF_PROPOSED_VISUAL_PREFERENCE_BENCHMARK",
+  "next_recommended_transition": "CONTINUE_REALISTIC_CONTEXTUAL_MONOLITHIC_VISUAL_TESTS",
   "continuity_read_order": [
     "LAB_CONTRACT.md",
     "METHODOLOGY.md",
