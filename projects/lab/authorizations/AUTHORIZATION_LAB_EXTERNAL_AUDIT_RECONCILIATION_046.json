@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_EXTERNAL_AUDIT_RECONCILIATION_046",
+  "state_key": "external_audit_reconciliation_046",
+  "project_id": "lab",
+  "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+  "approved_by": "Jonathan Martínez",
+  "granted_at": "2026-07-21",
+  "source_instruction": "AUTHORIZATION_LAB_EXTERNAL_AUDIT_RECONCILIATION_046",
+  "scope": "CROSS_REPOSITORY_EXTERNAL_AUDIT_DOCUMENTATION_AND_CAPABILITY_VERSION_RECONCILIATION",
+  "repositories": [
+    "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "marcellusanthonson-ctrl/symphonie-codex-lab"
+  ],
+  "branch": "main",
+  "expected_parent_heads": {
+    "chatgpt-prototype-lab": "eb5e3fe3e9bd7b824dce8274eec5ea8b3fb098f4",
+    "symphonie-codex-lab": "159119c3330afb351eec19620fecb44a40ea127f"
+  },
+  "result_heads": {
+    "symphonie-codex-lab": "81389f31f2655afd5e7fc9d825c1aac6bb6cd759"
+  },
+  "capability_commits": [
+    "fd8b1d83835cde4a4bad1ff3c96b1913af273938",
+    "81389f31f2655afd5e7fc9d825c1aac6bb6cd759"
+  ],
+  "contract_test": {
+    "command": "node tools/test-phase3-contract.cjs",
+    "result": "PASS",
+    "schemas_parsed": 11,
+    "profiles_covered": [
+      "present",
+      "absent"
+    ],
+    "source_hash_manifest": "PASS"
+  },
+  "commit_authorized": true,
+  "push_authorized": true,
+  "source_file_update_authorized": true,
+  "capability_package_update_authorized": true,
+  "contract_test_execution_authorized": true,
+  "monolithic_generation_authorized": false,
+  "benchmark_approval_authorized": false,
+  "benchmark_substantive_change_authorized": false,
+  "symphonie_repository_change_authorized": false,
+  "pilot_repository_change_authorized": false,
+  "product_changes_authorized": false,
+  "runtime_authorized": false,
+  "integration_authorized": false,
+  "rag_authorized": false,
+  "deployment_authorized": false,
+  "release_authorized": false,
+  "wcag_claim_authorized": false,
+  "capability_approval_authorized": false
+}
