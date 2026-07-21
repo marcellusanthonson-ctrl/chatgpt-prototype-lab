@@ -4,12 +4,15 @@
   "records": [
     {
       "id": "VISUAL-PREFERENCE-REGISTRY-041",
-      "status": "DOCUMENTED_NOT_IMPLEMENTED",
+      "status": "DOCUMENTED_WITH_PROPOSED_CODE_BENCHMARK",
       "canonical_path": "foundation-library/visual-preferences/jonathan-martinez.visual-preference-profile.json",
       "subject": "Jonathan Martinez",
       "updated_at": "2026-07-20",
-      "version": "1.1.0",
-      "model": "PRODUCT_CONTEXTUAL_WITH_QUALITY_INVARIANTS"
+      "version": "1.2.0",
+      "model": "PRODUCT_CONTEXTUAL_WITH_QUALITY_INVARIANTS",
+      "benchmark_id": "JM-VISUAL-PREFERENCE-BENCHMARK-001",
+      "benchmark_status": "PROPOSED_NOT_APPROVED",
+      "benchmark_manifest": "foundation-library/visual-preferences/benchmarks/visual-preference-benchmark.manifest.json"
     }
   ]
 }
