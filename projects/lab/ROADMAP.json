@@ -12,7 +12,7 @@
     {
       "order": 2,
       "item": "PHASE_4_ACCESSIBILITY_NORMATIVE_AND_ASSISTIVE_TECHNOLOGY_RESEARCH",
-      "status": "NEXT_RECOMMENDED_TRANSITION_NOT_STARTED",
+      "status": "COMPLETED",
       "priority": "CRITICAL",
       "gap_id": "GAP-DK-001",
       "scope": [
@@ -36,9 +36,15 @@
     {
       "order": 5,
       "item": "SYMPHONIE_PREMIUM_ECOMMERCE_MONOLITHIC_VISUAL_CALIBRATION",
-      "status": "NEXT_PROJECT_TRANSITION_NOT_AUTHORIZED",
-      "prerequisite": "CANONICAL_RECONCILIATION_COMPLETED",
+      "status": "DEFERRED_UNTIL_BENCHMARK_HUMAN_DECISION",
+      "prerequisite": "JM_VISUAL_PREFERENCE_BENCHMARK_HUMAN_DECISION",
       "required_gate": "VISUAL_CALIBRATION_APPROVED"
+    },
+    {
+      "order": 6,
+      "item": "HUMAN_REVIEW_JM_VISUAL_PREFERENCE_BENCHMARK_001",
+      "status": "PENDING_HUMAN_REVIEW",
+      "effect_on_visual_calibration_gate": "NONE_UNTIL_EXPLICIT_DECISION"
     }
   ]
 }

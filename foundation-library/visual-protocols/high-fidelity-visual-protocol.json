@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
   "document_id": "high-fidelity-visual-protocol.authorization-041",
-  "version": "1.1.0",
-  "status": "DOCUMENTED_NOT_IMPLEMENTED",
-  "purpose": "Calibrate product-contextual visual direction through one offline monolithic HTML artifact and an early human gate before multipage expansion or extensive technical validation.",
+  "version": "1.2.0",
+  "status": "DOCUMENTED_WITH_PROPOSED_PREFERENCE_BENCHMARK",
+  "purpose": "Calibrate product-contextual visual direction using a governed preference benchmark, visual-accessibility preflight, one offline monolithic review artifact and explicit human gates.",
   "stages": [
     {
       "sequence": 1,
@@ -22,31 +22,41 @@
     },
     {
       "sequence": 4,
-      "id": "GENERATE_MONOLITHIC_VISUAL_CALIBRATION",
+      "id": "INTERPRET_PROPOSED_CODE_BENCHMARK_WITHOUT_AUTO_SELECTION",
       "human_gate": false
     },
     {
       "sequence": 5,
-      "id": "VISUAL_CALIBRATION_APPROVED",
-      "human_gate": true
+      "id": "VISUAL_ACCESSIBILITY_PREFLIGHT",
+      "human_gate": false
     },
     {
       "sequence": 6,
-      "id": "EXPAND_APPROVED_DIRECTION_TO_ROUTES_AND_STATES",
+      "id": "GENERATE_MONOLITHIC_VISUAL_CALIBRATION",
       "human_gate": false
     },
     {
       "sequence": 7,
+      "id": "VISUAL_CALIBRATION_APPROVED",
+      "human_gate": true
+    },
+    {
+      "sequence": 8,
+      "id": "EXPAND_APPROVED_DIRECTION_TO_ROUTES_AND_STATES",
+      "human_gate": false
+    },
+    {
+      "sequence": 9,
       "id": "RESPONSIVE_ACCESSIBILITY_AND_INTERACTION_VALIDATION",
       "human_gate": false
     },
     {
-      "sequence": 8,
+      "sequence": 10,
       "id": "HIGH_FIDELITY_VISUAL_BASELINE_APPROVED",
       "human_gate": true
     },
     {
-      "sequence": 9,
+      "sequence": 11,
       "id": "FINAL_PHASE3_CONTRACT_GENERATION",
       "human_gate": true
     }
@@ -127,8 +137,10 @@
     "application_code": "NOT_AUTHORIZED",
     "product_changes": "NOT_AUTHORIZED",
     "release": "NOT_AUTHORIZED",
-    "html_generation": "NOT_AUTHORIZED_BY_RECONCILIATION",
-    "browser_execution": "NOT_AUTHORIZED_BY_RECONCILIATION"
+    "html_generation": "VISUAL_REVIEW_MONOLITHIC_REMAINS_NOT_AUTHORIZED",
+    "browser_execution": "NOT_AUTHORIZED_BY_RECONCILIATION",
+    "benchmark_html_generation": "AUTHORIZED_AND_CONSUMED",
+    "offline_browser_validation": "AUTHORIZED_FOR_PREFERENCE_BENCHMARK_ONLY"
   },
   "updated_at": "2026-07-20",
   "monolithic_calibration_contract": {
@@ -206,5 +218,40 @@
     "PRODUCTION_OPTIMIZATION",
     "DEPLOYMENT",
     "RELEASE"
-  ]
+  ],
+  "preference_benchmark_contract": {
+    "artifact_name": "JONATHAN_MARTINEZ_VISUAL_PREFERENCE_BENCHMARK.html",
+    "benchmark_id": "JM-VISUAL-PREFERENCE-BENCHMARK-001",
+    "status": "PROPOSED_NOT_APPROVED",
+    "role": "INTERPRETATION_EVIDENCE_NOT_PRODUCT_DIRECTION",
+    "single_file": true,
+    "offline": true,
+    "external_assets": "PROHIBITED",
+    "reference_images_copied": false,
+    "automatic_style_selection": "PROHIBITED",
+    "global_identity_effect": "NONE",
+    "human_approval_required": true,
+    "grants_visual_calibration_approval": false
+  },
+  "visual_accessibility_preflight": {
+    "role": "VISUAL_RESILIENCE_AND_INCOMPATIBILITY_DETECTION",
+    "areas": [
+      "CONTRAST",
+      "NON_COLOR_SIGNALS",
+      "SCALABLE_TYPOGRAPHY",
+      "ZOOM_AND_REFLOW",
+      "INTEGRATED_VISIBLE_FOCUS",
+      "TARGETS_AND_AFFORDANCES",
+      "STATE_COMPLETENESS",
+      "IDENTIFIABLE_ERRORS",
+      "TRANSPARENCY_AND_GRADIENT_LEGIBILITY",
+      "REDUCED_MOTION",
+      "HIERARCHY_PRESERVATION"
+    ],
+    "may_reject_incompatible_direction": true,
+    "may_select_aesthetic": false,
+    "may_grant_visual_approval": false,
+    "may_claim_wcag_conformance": false,
+    "assistive_technology_execution": "DEFERRED_AND_SEPARATELY_AUTHORIZED"
+  }
 }

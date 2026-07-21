@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
   "document_id": "visual-preference-profile.jonathan-martinez",
-  "version": "1.1.0",
-  "status": "DOCUMENTED_NOT_IMPLEMENTED",
+  "version": "1.2.0",
+  "status": "DOCUMENTED_WITH_PROPOSED_CODE_BENCHMARK",
   "subject": "Jonathan Martinez",
   "source_evidence": [
     {
@@ -16,6 +16,15 @@
       "source_type": "HUMAN_DECISION",
       "provenance": "symphonie-premium-ecommerce-pilot@0105d90ad105360dd95169220c6bf444375aa9ec:.project/phase-3/human-visual-decision.json",
       "authority": "CONTEXT_AND_REJECTION_EVIDENCE"
+    },
+    {
+      "id": "JM-DRIVE-VISUAL-REFERENCES-2026-07-20",
+      "source_type": "HUMAN_SUPPLIED_REFERENCE_COLLECTION",
+      "provenance": "https://drive.google.com/drive/folders/16aEDFSd_SGKaFrI_U9D3Ju8KUAVQJKJl",
+      "authority": "PREFERENCE_EVIDENCE_ONLY",
+      "copy_into_repository": "PROHIBITED",
+      "ownership_claim": "PROHIBITED",
+      "analysis_scope": "Observed logos, editorial compositions, product renders, industrial controls, automotive interfaces and mobile UI references."
     }
   ],
   "scope_boundary": {
@@ -27,8 +36,8 @@
   },
   "dimensions": {
     "typography": {
-      "classification": "CONTEXTUAL",
-      "guidance": "Script type may be used only as a controlled accent; no global typography selection is authorized."
+      "classification": "CONTEXTUAL_WITH_EVIDENCE",
+      "guidance": "Modern sans-serif typography and controlled contrast of scale and weight are recurrent; no universal family is selected and script remains accent-only when contextually justified."
     },
     "color": {
       "classification": "CONTEXTUAL",
@@ -39,8 +48,8 @@
       "guidance": "Minimalism must remain intentional and high information density needs perceptual control."
     },
     "imagery_and_render": {
-      "classification": "INSUFFICIENT",
-      "guidance": "No source imagery or rendering preferences were supplied; references require qualification and provenance."
+      "classification": "CONTEXTUAL_WITH_EVIDENCE",
+      "guidance": "Premium product photography or synthetic rendering, clear subject separation and materially credible presentation are recurrent when a physical product is central."
     },
     "materiality": {
       "classification": "CONTEXTUAL",
@@ -69,6 +78,21 @@
         "id": "PREF-001",
         "statement": "Intentional minimalism and perceptually controlled information density are explicit constraints.",
         "evidence_id": "AUTH-041"
+      },
+      {
+        "id": "PREF-002",
+        "statement": "Immediate hierarchy and one dominant product or purpose are recurrent preference signals.",
+        "evidence_id": "JM-DRIVE-VISUAL-REFERENCES-2026-07-20"
+      },
+      {
+        "id": "PREF-003",
+        "statement": "Specific editorial or geometric composition is preferred over generic template appearance.",
+        "evidence_id": "JM-DRIVE-VISUAL-REFERENCES-2026-07-20"
+      },
+      {
+        "id": "PREF-004",
+        "statement": "Finished, comprehensible controls and complete visual states are preferred.",
+        "evidence_id": "JM-DRIVE-VISUAL-REFERENCES-2026-07-20"
       }
     ],
     "contextual": [
@@ -76,13 +100,23 @@
         "id": "CTX-001",
         "statement": "Localized glassmorphism, script accents, controlled gradients, and product heroes depend on selected project direction.",
         "evidence_id": "AUTH-041"
+      },
+      {
+        "id": "CTX-002",
+        "statement": "A neutral base with focused saturated accent is recurrent but palette remains product-dependent.",
+        "evidence_id": "JM-DRIVE-VISUAL-REFERENCES-2026-07-20"
+      },
+      {
+        "id": "CTX-003",
+        "statement": "Industrial or technical precision applies when supported by product context.",
+        "evidence_id": "JM-DRIVE-VISUAL-REFERENCES-2026-07-20"
       }
     ],
     "insufficient": [
       {
-        "id": "INS-001",
-        "statement": "No reference images, brand palette, type family, or global component direction was supplied.",
-        "evidence_id": "AUTH-041"
+        "id": "INS-002",
+        "statement": "No universal font family, palette, icon system, material treatment or cross-product archetype is approved.",
+        "evidence_id": "JM-DRIVE-VISUAL-REFERENCES-2026-07-20"
       }
     ],
     "rejected": [
@@ -136,7 +170,8 @@
   "reference_provenance": {
     "references_are_evidence_not_authorization": true,
     "copy_reference_images": "PROHIBITED",
-    "claim_reference_ownership": "PROHIBITED"
+    "claim_reference_ownership": "PROHIBITED",
+    "external_collection_recording": "URL_AND_DERIVED_DESCRIPTIONS_ONLY"
   },
   "authorization_boundary": {
     "application_code": "NOT_AUTHORIZED",
@@ -147,7 +182,9 @@
     "product_changes": "NOT_AUTHORIZED",
     "deployment": "NOT_AUTHORIZED",
     "release": "NOT_AUTHORIZED",
-    "monolithic_html_generation": "NOT_AUTHORIZED_BY_RECONCILIATION"
+    "monolithic_html_generation": "NOT_AUTHORIZED_BY_RECONCILIATION",
+    "benchmark_html_generation": "AUTHORIZED_AND_CONSUMED_BY_AUTHORIZATION_SYMPHONIE_VISUAL_PREFERENCE_ACCESSIBILITY_AND_CODE_BENCHMARK",
+    "offline_browser_validation": "AUTHORIZED_FOR_BENCHMARK_ONLY"
   },
   "updated_at": "2026-07-20",
   "preference_model": {
@@ -178,6 +215,58 @@
       "EMOTIONAL_TONE",
       "APPLICABLE_AND_EXCLUDED_REFERENCES"
     ],
-    "application_rule": "Resolve the product context and applicable evidence before choosing any contextual variable. The profile guides qualification and incompatibility detection; it never selects a universal style."
+    "application_rule": "Resolve the product context and applicable evidence before choosing any contextual variable. The profile guides qualification and incompatibility detection; it never selects a universal style.",
+    "preferred_patterns": [
+      "IMMEDIATE_HIERARCHY",
+      "DOMINANT_PRODUCT_OR_PURPOSE",
+      "SPECIFIC_EDITORIAL_GEOMETRIC_COMPOSITION",
+      "INTENTIONAL_MINIMALISM",
+      "NEUTRAL_BASE_WITH_FOCUSED_ACCENT",
+      "CONTROLLED_TYPE_SCALE_AND_WEIGHT_CONTRAST",
+      "CONTEXTUAL_MODERN_SANS_SERIF",
+      "PREMIUM_PRODUCT_RENDER_OR_PHOTOGRAPHY",
+      "CONTEXTUAL_INDUSTRIAL_TECHNICAL_PRECISION",
+      "FINISHED_COMPREHENSIBLE_CONTROLS",
+      "NO_GENERIC_TEMPLATE_APPEARANCE"
+    ],
+    "incompatibilities": [
+      "WEAK_OR_AMBIGUOUS_HIERARCHY",
+      "DECORATIVE_COLOR_NOISE",
+      "EMPTY_MINIMALISM",
+      "GENERIC_TEMPLATE_COMPOSITION",
+      "EXCESSIVE_UNREADABLE_MATERIALITY",
+      "INCOMPLETE_CONTROLS_OR_STATES",
+      "FOCUS_AS_LATE_REPAIR",
+      "FRAGILE_ZOOM_OR_REFLOW"
+    ]
+  },
+  "visual_accessibility_preflight": {
+    "role": "AESTHETIC_RESILIENCE_AND_INCOMPATIBILITY_DETECTION_NOT_CONFORMANCE",
+    "checks": [
+      "CONTRAST",
+      "NON_COLOR_SIGNAL",
+      "SCALABLE_TYPOGRAPHY",
+      "ZOOM_AND_REFLOW",
+      "INTEGRATED_VISIBLE_FOCUS",
+      "TARGETS_AND_AFFORDANCES",
+      "COMPLETE_VISUAL_STATES",
+      "IDENTIFIABLE_ERRORS",
+      "TRANSPARENCY_AND_GRADIENT_LEGIBILITY",
+      "REDUCED_MOTION",
+      "HIERARCHY_PRESERVATION"
+    ],
+    "grants_visual_approval": false,
+    "grants_wcag_conformance": false,
+    "operational_testing_effect": "NONE"
+  },
+  "code_benchmark": {
+    "id": "JM-VISUAL-PREFERENCE-BENCHMARK-001",
+    "version": "1.0.0",
+    "status": "PROPOSED_NOT_APPROVED",
+    "entrypoint": "benchmarks/JONATHAN_MARTINEZ_VISUAL_PREFERENCE_BENCHMARK.html",
+    "manifest": "benchmarks/visual-preference-benchmark.manifest.json",
+    "decision_corpus": "benchmarks/visual-preference-decision-corpus.json",
+    "human_approval_required": true,
+    "global_identity_effect": "NONE"
   }
 }

@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "benchmark_id": "JM-VISUAL-PREFERENCE-BENCHMARK-001",
+  "version": "1.0.0",
+  "status": "PROPOSED_NOT_APPROVED",
+  "subject": "Jonathan Martínez",
+  "entrypoint": "JONATHAN_MARTINEZ_VISUAL_PREFERENCE_BENCHMARK.html",
+  "single_file_runtime": true,
+  "network": "PROHIBITED",
+  "external_assets": [],
+  "external_reference_images_copied": false,
+  "contexts": ["PRODUCT_PHYSICAL", "DIGITAL_SERVICE", "EDITORIAL"],
+  "case_ids": ["PREF-CASE-001","PREF-CASE-002","PREF-CASE-003","PREF-CASE-004","PREF-CASE-005","PREF-CASE-006","PREF-CASE-007","PREF-CASE-008","PREF-CASE-009","PREF-CASE-010"],
+  "decision_states": ["PREFERRED","ACCEPTABLE_CONTEXTUALLY","REJECTED","INCONCLUSIVE"],
+  "human_approval_required": true,
+  "grants_visual_calibration_approval": false,
+  "global_identity_effect": "NONE"
+}
