@@ -424,6 +424,37 @@
       "integration_authorized": false,
       "deployment_authorized": false,
       "release_authorized": false
+    },
+    {
+      "id": "AUTHORIZATION_LAB_EXTERNAL_AUDIT_RECONCILIATION_046",
+      "state_key": "external_audit_reconciliation_046",
+      "project_id": "lab",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "approved_by": "Jonathan Martínez",
+      "scope": "CROSS_REPOSITORY_EXTERNAL_AUDIT_DOCUMENTATION_AND_CAPABILITY_VERSION_RECONCILIATION",
+      "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_EXTERNAL_AUDIT_RECONCILIATION_046.json",
+      "repository": "MULTIPLE",
+      "branch": "main",
+      "expected_parent_heads": {
+        "chatgpt-prototype-lab": "eb5e3fe3e9bd7b824dce8274eec5ea8b3fb098f4",
+        "symphonie-codex-lab": "159119c3330afb351eec19620fecb44a40ea127f"
+      },
+      "result_heads": {
+        "symphonie-codex-lab": "81389f31f2655afd5e7fc9d825c1aac6bb6cd759"
+      },
+      "commit_authorized": true,
+      "push_authorized": true,
+      "source_file_update_authorized": true,
+      "capability_package_update_authorized": true,
+      "contract_test_execution_authorized": true,
+      "monolithic_generation_authorized": false,
+      "benchmark_approval_authorized": false,
+      "product_changes_authorized": false,
+      "runtime_authorized": false,
+      "integration_authorized": false,
+      "rag_authorized": false,
+      "deployment_authorized": false,
+      "release_authorized": false
     }
   ]
 }
