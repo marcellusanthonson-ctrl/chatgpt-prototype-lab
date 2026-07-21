@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-AUD-001",
+  "title": "Claude external audit of visual calibration strategy and capability consistency",
+  "project_id": "lab",
+  "evidence_class": "EXTERNAL_MODEL_AUDIT",
+  "status": "REGISTERED_AS_EXTERNAL_EVIDENCE_WITH_MATERIAL_CORRECTIONS",
+  "recorded_at": "2026-07-21",
+  "auditor": "Claude",
+  "audit_verdict": "MODIFY",
+  "audited_baseline": {
+    "lab_head": "93d9ace8cf0ac609b7c2a1efde695259dd75212c",
+    "capability_access_at_audit": "UNAVAILABLE_TO_AUDITOR",
+    "later_live_parent_for_reconciliation": "eb5e3fe3e9bd7b824dce8274eec5ea8b3fb098f4"
+  },
+  "material_findings": [
+    "PEND_LAB_009_AND_ROADMAP_CONTAINED_A_CIRCULAR_PRECONDITION",
+    "PROFILE_AND_CORPUS_HAVE_DISTINCT_ROLES_BUT_PROFILE_IS_DERIVED_SYNTHESIS",
+    "PREFERENCE_EXPECTATION_BIAS_REQUIRES_METHOD_CONTROLS_WITHOUT_REPLACING_HUMAN_TASTE_AUTHORITY",
+    "PREFERENCE_QUALITY_CONFORMITY_AND_COST_SHOULD_BE_EVALUATED_SEPARATELY",
+    "SUFFICIENCY_CLAIM_WAS_NOT_SUPPORTED",
+    "QUANTITATIVE_THRESHOLDS_WERE_MEASURABLE_BUT_PROPORTIONALITY_WAS_NOT_ESTABLISHED",
+    "CAPABILITY_REPOSITORY_REQUIRED_AUTHENTICATED_FOLLOWUP"
+  ],
+  "limitations": [
+    "AUDIT_BASELINE_PREDATES_AERA_CONTEXTUAL_EVIDENCE",
+    "AUDITOR_DID_NOT_VERIFY_PRIVATE_CAPABILITY_REPOSITORY",
+    "AUDIT_IS_EVIDENCE_NOT_APPROVAL_OR_AUTHORIZATION"
+  ],
+  "later_authenticated_verification": {
+    "capability_parent_head": "159119c3330afb351eec19620fecb44a40ea127f",
+    "divergence": "SKILL_MD_ALPHA_8_WHILE_MANIFEST_VALIDATOR_AND_TEST_REQUIRED_ALPHA_9",
+    "independently_reproduced": true
+  },
+  "authority_boundary": {
+    "creates_approval": false,
+    "creates_authorization": false,
+    "benchmark_effect": "NONE",
+    "capability_approval_effect": "NONE",
+    "integration_effect": "NONE"
+  },
+  "source_refs": [
+    "CLAUDE_EXTERNAL_AUDIT_CONVERSATION_2026-07-21",
+    "projects/lab/reassessments/REA-LAB-002.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_EXTERNAL_AUDIT_RECONCILIATION_046.json"
+  ]
+}
