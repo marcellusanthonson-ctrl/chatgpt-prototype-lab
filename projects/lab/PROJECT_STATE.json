@@ -3,7 +3,7 @@
   "project_id": "lab",
   "name": "LAB",
   "status": "active",
-  "updated_at": "2026-07-20",
+  "updated_at": "2026-07-21",
   "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "canonical_branch": "main",
   "authority": {
@@ -11,14 +11,15 @@
     "autonomous_model_authority": false
   },
   "summary": "Gobierno, autoridad, continuidad, auditoría y biblioteca documental gobernada entre proyectos.",
-  "content_completeness": "STRUCTURED_V2_WITH_CONTEXTUAL_VISUAL_PROFILE_ACCESSIBILITY_PREFLIGHT_AND_PROPOSED_CODE_BENCHMARK",
+  "content_completeness": "STRUCTURED_V2_WITH_CONTEXTUAL_VISUAL_PROFILE_ACCESSIBILITY_PREFLIGHT_PROPOSED_CODE_BENCHMARK_AND_AERA_CONTEXTUAL_EVIDENCE",
   "source_refs": [
     "projects/lab/PROJECT_STATE.md",
     "registry/projects.json",
     "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/MANIFEST.json",
     "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/EVIDENCE_UI_UX_REFERENTS_RESEARCH_REVIEW.md",
     "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/EVIDENCE_ACCESSIBILITY_PHASE_4.md",
-    "foundation-library/visual-preferences/benchmarks/visual-preference-benchmark.manifest.json"
+    "foundation-library/visual-preferences/benchmarks/visual-preference-benchmark.manifest.json",
+    "foundation-library/visual-preferences/evidence/EVD-LAB-VIS-001.json"
   ],
   "governance_paths": {
     "roadmap": "projects/lab/ROADMAP.json",
@@ -100,7 +101,11 @@
       "benchmark_status": "PROPOSED_NOT_APPROVED",
       "pilot_rejection_head": "0105d90ad105360dd95169220c6bf444375aa9ec",
       "visual_review_monolithic_generated": false,
-      "next_transition": "HUMAN_BENCHMARK_REVIEW_REQUIRES_EXPLICIT_DECISION"
+      "next_transition": "CONTINUE_REALISTIC_CONTEXTUAL_MONOLITHIC_VISUAL_TESTS",
+      "contextual_evidence_status": "ACCUMULATING",
+      "latest_contextual_evidence": "EVD-LAB-VIS-001",
+      "aera_one_v3_corrected": "ACCEPTED_AS_PROVISIONAL_CALIBRATION_EVIDENCE_WITH_OPEN_IMPROVEMENTS",
+      "aera_one_v4": "REJECTED_AS_PRODUCT_SPECIFIC_DIRECTION"
     },
     "phase_4_accessibility": {
       "status": "DOCUMENTED_AND_VALIDATED_NOT_INTEGRATED",
