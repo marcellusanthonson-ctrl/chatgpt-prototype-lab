@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0.0",
+  "reassessment_id": "REA-LAB-002",
+  "project_id": "lab",
+  "status": "ADJUDICATED",
+  "decision_domain": "MIXED",
+  "subject": "Independent reassessment of Claude external audit claims S1, S5, S7 and S9",
+  "previous_position": {
+    "statement": "Claude issued MODIFY with material corrections against the pre-AERA LAB baseline.",
+    "decision_refs": [],
+    "evidence_refs": [
+      "CLAUDE_EXTERNAL_AUDIT_CONVERSATION_2026-07-21"
+    ]
+  },
+  "trigger": {
+    "type": "EXTERNAL_AUDIT_RECONCILIATION",
+    "source_refs": [
+      "projects/lab/evidence/EVD-LAB-AUD-001.json",
+      "projects/lab/authorizations/AUTHORIZATION_LAB_EXTERNAL_AUDIT_RECONCILIATION_046.json"
+    ],
+    "claims_are_not_accepted_as_verdict": true
+  },
+  "claims_under_review": [
+    {
+      "claim_id": "S1",
+      "claim": "The preference profile and evidence corpus are distinct and the profile is sufficient as an independent authority layer.",
+      "verification_method": "Compare derivation, ownership and authority roles.",
+      "result": "MODIFIED",
+      "reason": "The roles are distinct, but the profile is a synthesis derived from evidence and has no independent approval authority."
+    },
+    {
+      "claim_id": "S5",
+      "claim": "Preference-expectation bias is adequately mitigated by adding a second evaluator.",
+      "verification_method": "Separate professional-finish assessment from the sole human preference authority.",
+      "result": "MODIFIED",
+      "reason": "Bias risk is real; a second evaluator may assess finish, while Jonathan Martínez remains the sole judge of aesthetic preference."
+    },
+    {
+      "claim_id": "S7",
+      "claim": "The present evidence is sufficient for the strategy claim under review.",
+      "verification_method": "Test the exact sufficiency proposition against demonstrated gaps.",
+      "result": "REVERSED",
+      "reason": "The exact sufficiency claim is false; the identified gaps demonstrate that the present evidence is not sufficient."
+    },
+    {
+      "claim_id": "S9",
+      "claim": "The proposed quantitative thresholds are proportionate.",
+      "verification_method": "Separate measurability from demonstrated proportionality.",
+      "result": "MODIFIED",
+      "reason": "The thresholds are measurable provisional targets, but their proportionality has not yet been established."
+    }
+  ],
+  "evidence_supporting_change": [
+    {
+      "source_ref": "foundation-library/visual-preferences/jonathan-martinez.visual-preference-profile.json",
+      "finding": "Profile is a governed synthesis of contextual evidence, not a separate approval authority."
+    },
+    {
+      "source_ref": "foundation-library/visual-preferences/evidence/EVD-LAB-VIS-001.json",
+      "finding": "AERA evidence confirms product-contextual preference and human-only judgment."
+    },
+    {
+      "source_ref": "projects/lab/PENDING.json@eb5e3fe3e9bd7b824dce8274eec5ea8b3fb098f4",
+      "finding": "PEND-LAB-009 placed the human gate before generation of the artifact needed for that review."
+    },
+    {
+      "source_ref": "symphonie-codex-lab@159119c3330afb351eec19620fecb44a40ea127f:packages/symphonie-ux-ui-architect/SKILL.md",
+      "finding": "SKILL.md declared alpha.8 while package contracts required alpha.9."
+    }
+  ],
+  "evidence_against_change": [
+    {
+      "source_ref": "foundation-library/visual-protocols/high-fidelity-visual-protocol.json",
+      "finding": "The canonical protocol already ordered generation before VISUAL_CALIBRATION_APPROVED."
+    },
+    {
+      "source_ref": "foundation-library/visual-preferences/benchmarks/visual-preference-benchmark.manifest.json",
+      "finding": "Benchmark already preserved PROPOSED_NOT_APPROVED and no global identity effect."
+    }
+  ],
+  "verification": {
+    "source_authenticity": "PASS",
+    "scope_match": "PASS_WITH_BASELINE_LIMITATION",
+    "baseline_validity": "HISTORICAL_NOT_CURRENT",
+    "reproducibility": "PASS",
+    "counterevidence_reviewed": true,
+    "alternative_explanations_reviewed": true
+  },
+  "technical_determination": "MODIFIED",
+  "reasoning_summary": "Claude identified material defects, but its baseline and repository-access limitations require correction. Independent verification supports S1, S5 and S9 with restrictions and reverses S7 because the exact sufficiency claim is false.",
+  "confidence": "HIGH",
+  "consequences": [
+    "Register the audit as evidence without approval effect.",
+    "Remove the PEND-LAB-009 and ROADMAP circularity.",
+    "Preserve the benchmark as PROPOSED_NOT_APPROVED.",
+    "Align SKILL.md to alpha.9 and regenerate hashes.",
+    "Do not generate the pilot monolithic artifact or approve the capability."
+  ],
+  "recommended_action": {
+    "action": "Require a separate explicit authorization before generating the pilot monolithic calibration artifact.",
+    "authorization_required": true
+  },
+  "approval_state": "NOT_REQUIRED"
+}
