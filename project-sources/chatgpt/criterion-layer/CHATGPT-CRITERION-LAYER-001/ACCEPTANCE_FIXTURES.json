@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0.0",
+  "fixture_set_id": "CHATGPT-CRITERION-FIXTURES-001",
+  "version": "1.0.0",
+  "status": "VALIDATED",
+  "policy": {
+    "synthetic": true,
+    "real_client_data": false,
+    "real_product_data": false,
+    "external_network_required": false
+  },
+  "fixtures": [
+    {
+      "id": "CRIT-FIX-001",
+      "task_family": "TASK_SIMPLE_ARITHMETIC",
+      "signals": [
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "expected_modules": [],
+      "forbidden_modules": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY",
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ],
+      "oracle": "No criterion contamination."
+    },
+    {
+      "id": "CRIT-FIX-002",
+      "task_family": "TASK_UI",
+      "signals": [
+        "TASK_UI",
+        "TASK_DESIGN_BRIEF"
+      ],
+      "expected_modules": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY"
+      ],
+      "forbidden_modules": [
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ],
+      "oracle": "Design and accessibility apply; no personal style is inferred."
+    },
+    {
+      "id": "CRIT-FIX-003",
+      "task_family": "TASK_AUDIT",
+      "signals": [
+        "TASK_AUDIT",
+        "CLAIM_FACTUAL"
+      ],
+      "expected_modules": [
+        "EVIDENCE_AND_CLAIMS"
+      ],
+      "forbidden_modules": [
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ],
+      "oracle": "Claims are evidence-governed."
+    },
+    {
+      "id": "CRIT-FIX-004",
+      "task_family": "TASK_TECHNICAL_REVIEW",
+      "signals": [
+        "TASK_TECHNICAL_REVIEW",
+        "CLAIM_LEGAL_OR_STANDARD"
+      ],
+      "expected_modules": [
+        "EVIDENCE_AND_CLAIMS"
+      ],
+      "forbidden_modules": [
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ],
+      "oracle": "Source class and live verification are required."
+    },
+    {
+      "id": "CRIT-FIX-005",
+      "task_family": "TASK_VISUAL_DESIGN",
+      "signals": [
+        "TASK_VISUAL_DESIGN",
+        "TASK_VISUAL_DIRECTION",
+        "TASK_UI",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ],
+      "expected_modules": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY",
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ],
+      "forbidden_modules": [],
+      "oracle": "Preference is contextual and accessibility does not select aesthetics."
+    },
+    {
+      "id": "CRIT-FIX-006",
+      "task_family": "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE",
+      "signals": [
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ],
+      "expected_modules": [],
+      "forbidden_modules": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY",
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ],
+      "oracle": "Unrelated writing remains uncontaminated."
+    },
+    {
+      "id": "CRIT-FIX-007",
+      "task_family": "TASK_HTML",
+      "signals": [
+        "TASK_HTML",
+        "TASK_WEB_INTERFACE",
+        "CLAIM_VALIDATION"
+      ],
+      "expected_modules": [
+        "EVIDENCE_AND_CLAIMS",
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY"
+      ],
+      "forbidden_modules": [],
+      "oracle": "Static validation claims remain bounded."
+    },
+    {
+      "id": "CRIT-FIX-008",
+      "task_family": "TASK_ACCESSIBILITY_CLAIM",
+      "signals": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_WEB_INTERFACE"
+      ],
+      "expected_modules": [
+        "EVIDENCE_AND_CLAIMS",
+        "WEB_ACCESSIBILITY"
+      ],
+      "forbidden_modules": [],
+      "oracle": "Without full evidence the result must include AT_NOT_RUN and WCAG_CONFORMANCE_NOT_ESTABLISHED."
+    },
+    {
+      "id": "CRIT-FIX-009",
+      "task_family": "TASK_RESPONSIVE",
+      "signals": [
+        "TASK_RESPONSIVE",
+        "TASK_UI"
+      ],
+      "expected_modules": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY"
+      ],
+      "forbidden_modules": [],
+      "oracle": "Zoom, reflow, text resizing and keyboard boundaries enter acceptance criteria."
+    },
+    {
+      "id": "CRIT-FIX-010",
+      "task_family": "TASK_VISUAL_DIRECTION",
+      "signals": [
+        "TASK_VISUAL_DIRECTION",
+        "PROJECT_SYMPHONIE"
+      ],
+      "expected_modules": [
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ],
+      "forbidden_modules": [],
+      "oracle": "Symphonie visual direction may consult contextual preference without creating global identity."
+    }
+  ],
+  "uniqueness_rule": "FIXTURE_IDS_AND_SIGNAL_SETS_MUST_BE_UNIQUE",
+  "authority_effect": "NONE"
+}

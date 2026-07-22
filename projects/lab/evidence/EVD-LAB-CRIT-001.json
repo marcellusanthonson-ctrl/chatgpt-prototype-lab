@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-CRIT-001",
+  "project_id": "lab",
+  "kind": "CHATGPT_CRITERION_LAYER_INTEGRATION_VALIDATION",
+  "status": "PASS_WITH_DECLARED_MODEL_SURFACE_LIMITATION",
+  "updated_at": "2026-07-21",
+  "baseline": {
+    "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "branch": "main",
+    "parent_head": "af9b50ab419de5e33bad89b2bed3b42ed94c7a11"
+  },
+  "executed_checks": {
+    "json_parse": "PASS",
+    "duplicate_keys": "PASS",
+    "manifest_reference_closure": "PASS",
+    "selector_module_identity": "PASS",
+    "fixture_id_uniqueness": "PASS",
+    "fixture_activation_oracles": "PASS",
+    "unrelated_task_non_contamination": "PASS",
+    "basis_class_separation": "PASS",
+    "wcag_claim_boundary": "PASS",
+    "static_manual_at_separation": "PASS",
+    "authority_boundary": "PASS",
+    "rag_runtime_product_boundary": "PASS"
+  },
+  "controlled_response_evaluation": {
+    "requested_model": "Terra 5.6",
+    "requested_reasoning": "LIGHT",
+    "status": "NOT_EXECUTED_MODEL_SURFACE_UNAVAILABLE",
+    "effect": "Does not invalidate deterministic contract integration; prevents any claim that Terra behavior was empirically validated in this execution.",
+    "reproducible_fixture_ref": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/ACCEPTANCE_FIXTURES.json",
+    "next_test_requires": "A callable Terra 5.6 LIGHT surface under a separate execution context; no repository mutation is required to run the fixtures."
+  },
+  "result_claims": {
+    "criterion_layer_documented": true,
+    "criterion_layer_in_mandatory_source_order": true,
+    "selector_deterministically_validated": true,
+    "terra_behavior_validated": false,
+    "model_weights_modified": false,
+    "rag_implemented": false,
+    "wcag_conformance_established": false
+  },
+  "source_refs": [
+    "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MANIFEST.json",
+    "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/ACCEPTANCE_FIXTURES.json",
+    "scripts/validate_criterion_layer.py"
+  ],
+  "authority_effect": "NONE"
+}

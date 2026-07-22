@@ -3,14 +3,14 @@
   "updated_at": "2026-07-21",
   "counts": {
     "projects": 7,
-    "decisions": 15,
+    "decisions": 16,
     "errors": 7,
     "patterns": 8,
     "ideas": 5,
-    "integrations": 4,
+    "integrations": 5,
     "experiments": 5,
-    "authorizations": 21,
-    "evidence": 12,
+    "authorizations": 22,
+    "evidence": 13,
     "unincorporated": 0,
     "proposals": 3,
     "sessions": 1,
@@ -47,11 +47,11 @@
     "design_knowledge_package": "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/MANIFEST.json"
   },
   "latest": {
-    "decision": "DEC-LAB-015",
+    "decision": "DEC-LAB-016",
     "error": "ERR-LAB-006",
     "pattern": "PAT-LAB-007",
-    "authorization": "AUTHORIZATION_LAB_EXTERNAL_AUDIT_RECONCILIATION_046",
-    "evidence": "EVD-LAB-AUD-001",
+    "authorization": "AUTHORIZATION_LAB_CHATGPT_CRITERION_LAYER_20260721",
+    "evidence": "EVD-LAB-CRIT-001",
     "proposal": "PROP-LAB-003",
     "session": "SES-2026-06-28-001",
     "reassessment": "REA-LAB-002",
@@ -64,6 +64,8 @@
     "accessibility_test_protocol": "ATP-WEB-001",
     "visual_preference": "VPP-JM-001@1.2.0",
     "high_fidelity_visual_protocol": "HFP-041-001@1.2.0",
-    "visual_preference_benchmark": "JM-VISUAL-PREFERENCE-BENCHMARK-001@1.0.0"
+    "visual_preference_benchmark": "JM-VISUAL-PREFERENCE-BENCHMARK-001@1.0.0",
+    "integration": "INT-LAB-001",
+    "chatgpt_criterion_layer": "CHATGPT-CRITERION-LAYER-001@1.0.0"
   }
 }

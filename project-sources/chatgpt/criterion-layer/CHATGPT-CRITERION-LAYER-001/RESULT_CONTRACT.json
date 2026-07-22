@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "contract_id": "CHATGPT-CRITERION-RESULT-CONTRACT-001",
+  "version": "1.0.0",
+  "status": "INTEGRATED_DOCUMENTARY",
+  "required_trace_when_any_module_active": [
+    "activated_modules",
+    "applicable_source_refs",
+    "basis_classes",
+    "claim_limits"
+  ],
+  "basis_classes": [
+    "GOVERNANCE_RULE",
+    "NORMATIVE_STANDARD",
+    "OFFICIAL_GUIDANCE",
+    "PROFESSIONAL_HEURISTIC",
+    "OBSERVED_EVIDENCE",
+    "CONTEXTUAL_HUMAN_PREFERENCE",
+    "INFERENCE"
+  ],
+  "accessibility_result_states": {
+    "static": "STATIC_PASS|STATIC_FAIL|STATIC_NOT_RUN",
+    "manual": "MANUAL_PASS|MANUAL_FAIL|MANUAL_NOT_RUN",
+    "accessibility_tree": "ACCESSIBILITY_TREE_PASS|ACCESSIBILITY_TREE_FAIL|ACCESSIBILITY_TREE_NOT_RUN",
+    "assistive_technology": "AT_PASS_SCOPED|AT_FAIL_SCOPED|AT_NOT_RUN",
+    "conformance": "WCAG_CONFORMANCE_ESTABLISHED_WITH_COMPLETE_SCOPE|WCAG_CONFORMANCE_NOT_ESTABLISHED"
+  },
+  "mandatory_boundaries": [
+    "STATIC_PASS_DOES_NOT_IMPLY_ACCESSIBILITY",
+    "AUTOMATION_DOES_NOT_ESTABLISH_WCAG_CONFORMANCE",
+    "AT_RESULT_IS_SCOPED_TO_RECORDED_ENVIRONMENT",
+    "USER_EVALUATION_AND_CONFORMANCE_ARE_COMPLEMENTARY_NOT_EQUIVALENT",
+    "PREFERENCE_IS_NOT_STANDARD",
+    "HEURISTIC_IS_NOT_EVIDENCE",
+    "EVIDENCE_IS_NOT_AUTHORIZATION"
+  ],
+  "recommendation_rule": "Recommend one direction when requested, state material uncertainty, and identify the smallest missing evidence that could change the conclusion.",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE"
+}

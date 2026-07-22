@@ -52,6 +52,21 @@
       "item": "HUMAN_REVIEW_JM_VISUAL_PREFERENCE_BENCHMARK_001",
       "status": "PENDING_HUMAN_REVIEW",
       "effect_on_visual_calibration_gate": "NONE_UNTIL_EXPLICIT_DECISION"
+    },
+    {
+      "order": 7,
+      "item": "CHATGPT_CRITERION_LAYER_001",
+      "status": "COMPLETED_DOCUMENTARY_INTEGRATION",
+      "integration_id": "INT-LAB-001",
+      "scope": [
+        "selective module activation",
+        "evidence and claim boundaries",
+        "design criterion",
+        "web accessibility",
+        "contextual visual preference"
+      ],
+      "limitation": "TERRA_5_6_LIGHT_EMPIRICAL_EVALUATION_NOT_EXECUTED_MODEL_SURFACE_UNAVAILABLE",
+      "authority_effect": "NONE"
     }
   ]
 }

@@ -96,6 +96,19 @@
     },
     "next_recommended_transition": {
       "type": "string"
+    },
+    "completed_research_transitions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "latest_reconciliation": {
+      "type": "object"
+    },
+    "latest_integration": {
+      "type": "object"
     }
   },
   "additionalProperties": false

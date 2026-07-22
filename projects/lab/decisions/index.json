@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "project_id": "lab",
-  "updated_at": "2026-07-16",
+  "updated_at": "2026-07-21",
   "records": [
     {
       "id": "DEC-LAB-001",
@@ -92,6 +92,12 @@
       "status": "APPROVED",
       "canonical_path": "decisions/DEC-LAB-015.json",
       "title": "Aprobar la validación proporcional de skills como baseline experimental con guardrails"
+    },
+    {
+      "id": "DEC-LAB-016",
+      "status": "APPROVED",
+      "canonical_path": "decisions/DEC-LAB-016.json",
+      "title": "Aprobar una capa selectiva de criterio para ChatGPT dentro del LAB"
     }
   ]
 }

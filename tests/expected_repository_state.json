@@ -2,7 +2,7 @@
   "schema_version": "2.5.0",
   "methodology_version": "2.1",
   "active_project": "lab",
-  "current_phase": "DESIGN_KNOWLEDGE_AI_COGNITIVE_ACCESSIBILITY_AND_EU_AI_ACT_DOCUMENTED_VALIDATED_NOT_INTEGRATED",
+  "current_phase": "CHATGPT_CRITERION_LAYER_INTEGRATED_DOCUMENTARY_SELECTIVE",
   "project_statuses": {
     "lab": "active",
     "mammothskills": "active_pipeline_validated_phase_a",
@@ -27,7 +27,8 @@
     "DEC-LAB-012",
     "DEC-LAB-013",
     "DEC-LAB-014",
-    "DEC-LAB-015"
+    "DEC-LAB-015",
+    "DEC-LAB-016"
   ],
   "open_errors": [],
   "validated_patterns": [
@@ -42,29 +43,30 @@
   ],
   "registry_counts": {
     "projects": 7,
-    "decisions": 15,
+    "decisions": 16,
     "errors": 7,
     "patterns": 8,
     "ideas": 5,
-    "integrations": 4,
+    "integrations": 5,
     "experiments": 5,
-    "authorizations": 14,
-    "evidence": 8,
+    "authorizations": 22,
+    "evidence": 13,
     "unincorporated": 0,
-    "proposals": 2,
+    "proposals": 3,
     "sessions": 1,
-    "reassessments": 1,
+    "reassessments": 2,
     "source_packages": 2,
     "foundation_library": 17,
+    "visual_preferences": 1,
     "rag_contracts": 6,
     "foundation_pilots": 1,
-    "visual_preferences": 1,
-    "design_knowledge_sources": 9,
-    "design_knowledge_principles": 18,
-    "design_knowledge_gaps": 10
+    "design_knowledge_sources": 18,
+    "design_knowledge_principles": 28,
+    "design_knowledge_gaps": 10,
+    "accessibility_test_protocols": 1
   },
   "symphonie": {
-    "head": "9de9dcf5c58583cd46bece41a0e772e3671801ff",
+    "head": "b492852c0d76ff7cd44ca266dc8950c94638d568",
     "fileset": 49,
     "total_phases": 8
   },
@@ -88,6 +90,14 @@
     "foundation_pilot_definition_023": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "design_knowledge_publication_024": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "design_knowledge_eu_ai_act_025": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "visual_preference_hifi_protocol_041": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+    "visual_preference_hifi_protocol_041": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "design_research_review_phase4_next_042": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "symphonie_knowledge_architecture_proposal_043": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "symphonie_visual_calibration_reconciliation": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "phase_4_accessibility_research_044": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "symphonie_visual_preference_accessibility_code_benchmark": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "aera_one_contextual_visual_evidence_045": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "external_audit_reconciliation_046": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "chatgpt_criterion_layer_20260721": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
   }
 }

@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0",
+  "selector_id": "CHATGPT-CRITERION-SELECTOR-001",
+  "version": "1.0.0",
+  "status": "INTEGRATED_DOCUMENTARY",
+  "input_contract": {
+    "required": [
+      "task_family",
+      "requested_output"
+    ],
+    "optional": [
+      "project_id",
+      "artifact_type",
+      "claim_types",
+      "interaction_surface",
+      "human_preference_owner",
+      "risk_signals"
+    ]
+  },
+  "modules": [
+    {
+      "id": "EVIDENCE_AND_CLAIMS",
+      "activate_any": [
+        "TASK_ANALYSIS",
+        "TASK_AUDIT",
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_STATUS_REPORT",
+        "CLAIM_FACTUAL",
+        "CLAIM_LEGAL_OR_STANDARD",
+        "CLAIM_ACCESSIBILITY",
+        "CLAIM_VALIDATION"
+      ],
+      "source_refs": [
+        "LAB_CONTRACT.md#3-clases-de-informacion",
+        "project-sources/chatgpt/05_EPISTEMIC_INDEPENDENCE.md",
+        "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/PRINCIPLES.json#DKP-013",
+        "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/PRINCIPLES.json#DKP-016",
+        "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/PRINCIPLES.json#DKP-018"
+      ]
+    },
+    {
+      "id": "DESIGN_CRITERION",
+      "activate_any": [
+        "TASK_UI",
+        "TASK_UX",
+        "TASK_VISUAL_DESIGN",
+        "TASK_HTML",
+        "TASK_WEB_INTERFACE",
+        "TASK_DESIGN_BRIEF",
+        "TASK_PROTOTYPE",
+        "TASK_COMPONENT_REVIEW"
+      ],
+      "source_refs": [
+        "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/PRINCIPLES.json#DKP-001..DKP-012",
+        "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/HEURISTIC.md"
+      ]
+    },
+    {
+      "id": "WEB_ACCESSIBILITY",
+      "activate_any": [
+        "TASK_UI",
+        "TASK_UX",
+        "TASK_HTML",
+        "TASK_WEB_INTERFACE",
+        "TASK_FORM",
+        "TASK_INTERACTIVE_CONTROL",
+        "TASK_RESPONSIVE",
+        "TASK_MOTION",
+        "CLAIM_ACCESSIBILITY"
+      ],
+      "source_refs": [
+        "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/ACCESSIBILITY_PRINCIPLES_PHASE_4.json#DKP-019..DKP-028",
+        "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/ASSISTIVE_TECHNOLOGY_TEST_PROTOCOL.json#ATP-WEB-001"
+      ]
+    },
+    {
+      "id": "CONTEXTUAL_VISUAL_PREFERENCE",
+      "activate_all": [
+        "TASK_VISUAL_DIRECTION",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ],
+      "activate_alternative_all": [
+        "TASK_VISUAL_DIRECTION",
+        "PROJECT_SYMPHONIE"
+      ],
+      "source_refs": [
+        "foundation-library/visual-preferences/jonathan-martinez.visual-preference-profile.json",
+        "foundation-library/visual-protocols/high-fidelity-visual-protocol.json"
+      ]
+    }
+  ],
+  "composition_rules": [
+    "EVALUATE_ALL_MODULES_IN_DECLARED_ORDER",
+    "ACTIVATE_A_MODULE_ONLY_WHEN_ITS_SIGNAL_RULE_MATCHES",
+    "EVIDENCE_AND_CLAIMS_PRECEDES_RECOMMENDATION",
+    "WEB_ACCESSIBILITY_CONSTRAINS_INTERFACE_OUTPUT_WITHOUT_SELECTING_AN_AESTHETIC",
+    "CONTEXTUAL_VISUAL_PREFERENCE_NEVER_BECOMES_A_UNIVERSAL_STYLE",
+    "NO_MATCH_RETURNS_EMPTY_MODULE_SET"
+  ],
+  "exclusions": [
+    {
+      "when_any": [
+        "TASK_CASUAL_CONVERSATION",
+        "TASK_TRANSLATION_ONLY",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE",
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "exclude": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY",
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ]
+    }
+  ],
+  "authority_effect": "NONE"
+}

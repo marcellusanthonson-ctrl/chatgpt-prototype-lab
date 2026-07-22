@@ -1,11 +1,11 @@
 {
   "schema_version": "2.5.0",
   "document_id": "lab.current-state",
-  "version": "2.5.13",
+  "version": "2.5.14",
   "status": "GOVERNANCE_V2_CANONICAL_BASELINE",
   "updated_at": "2026-07-21",
   "active_project": "lab",
-  "current_phase": "EXTERNAL_AUDIT_RECONCILED_MONOLITHIC_AUTHORIZATION_PENDING",
+  "current_phase": "CHATGPT_CRITERION_LAYER_INTEGRATED_DOCUMENTARY_SELECTIVE",
   "methodology": {
     "version": "2.1",
     "path": "METHODOLOGY.md"
@@ -42,7 +42,8 @@
     "visual_preference_benchmark": "foundation-library/visual-preferences/benchmarks/visual-preference-benchmark.manifest.json",
     "contextual_visual_calibration_evidence": "foundation-library/visual-preferences/evidence/EVD-LAB-VIS-001.json",
     "external_audit_evidence": "projects/lab/evidence/EVD-LAB-AUD-001.json",
-    "external_audit_reassessment": "projects/lab/reassessments/REA-LAB-002.json"
+    "external_audit_reassessment": "projects/lab/reassessments/REA-LAB-002.json",
+    "chatgpt_criterion_layer": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MANIFEST.json"
   },
   "projects": {
     "lab": {
@@ -96,7 +97,8 @@
     "DEC-LAB-012",
     "DEC-LAB-013",
     "DEC-LAB-014",
-    "DEC-LAB-015"
+    "DEC-LAB-015",
+    "DEC-LAB-016"
   ],
   "open_errors": [],
   "validated_patterns": [
@@ -136,7 +138,8 @@
     "phase_4_accessibility_research_044": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "symphonie_visual_preference_accessibility_code_benchmark": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "aera_one_contextual_visual_evidence_045": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "external_audit_reconciliation_046": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+    "external_audit_reconciliation_046": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "chatgpt_criterion_layer_20260721": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
   },
   "verified_external_heads": {
     "symphonie": "b492852c0d76ff7cd44ca266dc8950c94638d568",
@@ -160,7 +163,7 @@
     "PHASE_4_ACCESSIBILITY_NORMATIVE_AND_ASSISTIVE_TECHNOLOGY_RESEARCH"
   ],
   "next_authorized_action": "NONE_UNTIL_NEW_EXPLICIT_APPROVAL",
-  "next_recommended_transition": "CONTINUE_REALISTIC_CONTEXTUAL_MONOLITHIC_VISUAL_TESTS",
+  "next_recommended_transition": "OBSERVE_AND_EVALUATE_CRITERION_LAYER_IN_LIVE_CHATGPT_RESPONSES",
   "continuity_read_order": [
     "LAB_CONTRACT.md",
     "METHODOLOGY.md",
@@ -194,6 +197,14 @@
     "capability_version": "0.1.0-alpha.9",
     "capability_contract_test": "PASS",
     "capability_result_head": "81389f31f2655afd5e7fc9d825c1aac6bb6cd759",
+    "authority_effect": "NONE_AFTER_CONSUMPTION"
+  },
+  "latest_integration": {
+    "integration_id": "INT-LAB-001",
+    "layer_id": "CHATGPT-CRITERION-LAYER-001",
+    "status": "INTEGRATED_DOCUMENTARY_SELECTIVE",
+    "selector_validation": "PASS",
+    "terra_5_6_light_evaluation": "NOT_EXECUTED_MODEL_SURFACE_UNAVAILABLE",
     "authority_effect": "NONE_AFTER_CONSUMPTION"
   }
 }

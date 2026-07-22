@@ -1,6 +1,6 @@
 {
   "schema_version": "1.3.0",
-  "updated_at": "2026-07-16",
+  "updated_at": "2026-07-21",
   "records": [
     {
       "id": "DEC-LAB-001",
@@ -206,6 +206,36 @@
       "canonical_path": "decisions/DEC-LAB-015.json",
       "updated_at": "2026-07-16",
       "approved_by": "Jonathan Martínez"
+    },
+    {
+      "id": "DEC-LAB-016",
+      "title": "Aprobar una capa selectiva de criterio para ChatGPT dentro del LAB",
+      "project_scope": [
+        "lab"
+      ],
+      "status": "APPROVED",
+      "approval_state": "APPROVED",
+      "canonical_path": "decisions/DEC-LAB-016.json",
+      "updated_at": "2026-07-21",
+      "approved_by": "Jonathan Martínez",
+      "consequences": [
+        "ADD_CHATGPT_CRITERION_SOURCE_TO_MANDATORY_READ_ORDER",
+        "REGISTER_INT_LAB_001",
+        "REQUIRE_CONTEXTUAL_MODULE_SELECTION",
+        "REQUIRE_ACCESSIBILITY_CLAIM_BOUNDARIES"
+      ],
+      "non_authorizations": [
+        "SYMPHONIE_CHANGE",
+        "PRODUCT_CHANGE",
+        "RUNTIME",
+        "RAG",
+        "EMBEDDINGS",
+        "VECTOR_DATABASE",
+        "SKILL_INSTALLATION",
+        "ASSISTIVE_TECHNOLOGY_EXECUTION",
+        "WCAG_CONFORMANCE_CLAIM",
+        "AUTONOMOUS_EXECUTION"
+      ]
     }
   ]
 }

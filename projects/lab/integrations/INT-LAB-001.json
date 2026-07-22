@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "integration_id": "INT-LAB-001",
+  "project_id": "lab",
+  "title": "Integración documental selectiva de criterio para ChatGPT",
+  "status": "INTEGRATED",
+  "producer": {
+    "id": "LAB_CANONICAL_KNOWLEDGE",
+    "sources": [
+      "DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001@1.2.0",
+      "ATP-WEB-001",
+      "VPP-JM-001@1.2.0",
+      "LAB_CONTRACT.md",
+      "METHODOLOGY.md"
+    ]
+  },
+  "consumer": {
+    "id": "CHATGPT_PROJECT",
+    "entrypoint": "project-sources/chatgpt/START_HERE.md",
+    "source": "project-sources/chatgpt/08_CRITERION_LAYER.md"
+  },
+  "artifact": {
+    "id": "CHATGPT-CRITERION-LAYER-001",
+    "version": "1.0.0",
+    "manifest": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MANIFEST.json"
+  },
+  "selection": "DETERMINISTIC_CONTEXTUAL_MODULE_SELECTION",
+  "rollback": {
+    "method": "Remove 08 from the source manifest, remove INT-LAB-001 and restore the prior structured state under a new explicit authorization.",
+    "automatic": false
+  },
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "rag_effect": "NONE",
+  "updated_at": "2026-07-21",
+  "authorization_ref": "AUTHORIZATION_LAB_CHATGPT_CRITERION_LAYER_20260721",
+  "decision_ref": "DEC-LAB-016",
+  "evidence_ref": "EVD-LAB-CRIT-001"
+}

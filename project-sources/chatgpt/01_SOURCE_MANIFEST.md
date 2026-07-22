@@ -29,6 +29,7 @@ Si existe contradicción, se informa y prevalece la fuente canónica de mayor pr
 4. `05_EPISTEMIC_INDEPENDENCE.md`
 5. `06_CONTINUITY_PROTOCOL.md`
 6. `07_ERRORS_AND_RESPONSE_CONTRACT.md`
+7. `08_CRITERION_LAYER.md`
 
 ## Exclusiones
 

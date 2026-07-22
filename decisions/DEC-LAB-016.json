@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "id": "DEC-LAB-016",
+  "title": "Aprobar una capa selectiva de criterio para ChatGPT dentro del LAB",
+  "project": "lab",
+  "project_scope": [
+    "lab"
+  ],
+  "status": "APPROVED",
+  "effective_date": "2026-07-21",
+  "updated_at": "2026-07-21",
+  "approval_state": "APPROVED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-21",
+  "approval_evidence": "Aprobación explícita de AUTHORIZATION_LAB_CHATGPT_CRITERION_LAYER_20260721 por Jonathan Martínez el 2026-07-21.",
+  "decision": {
+    "layer_id": "CHATGPT-CRITERION-LAYER-001",
+    "consumer": "CHATGPT_PROJECT_WITHIN_LAB",
+    "integration_mode": "SELECTIVE_DOCUMENTARY_CRITERION_CONSUMER",
+    "selection": "DETERMINISTIC_BY_TASK_SIGNALS",
+    "source_ownership": "REFERENCE_CANONICAL_SOURCES_WITHOUT_DUPLICATION",
+    "module_classes": [
+      "EVIDENCE_AND_CLAIMS",
+      "DESIGN_CRITERION",
+      "WEB_ACCESSIBILITY",
+      "CONTEXTUAL_VISUAL_PREFERENCE"
+    ],
+    "preference_scope": "CONTEXTUAL_NOT_UNIVERSAL",
+    "claim_boundary": "STATIC_MANUAL_AT_AND_CONFORMANCE_RESULTS_MUST_REMAIN_SEPARATE",
+    "authority_effect": "NONE",
+    "runtime_effect": "NONE",
+    "rag_effect": "NONE"
+  },
+  "consequences": [
+    "ADD_CHATGPT_CRITERION_SOURCE_TO_MANDATORY_READ_ORDER",
+    "REGISTER_INT_LAB_001",
+    "REQUIRE_CONTEXTUAL_MODULE_SELECTION",
+    "REQUIRE_ACCESSIBILITY_CLAIM_BOUNDARIES"
+  ],
+  "non_authorizations": [
+    "SYMPHONIE_CHANGE",
+    "PRODUCT_CHANGE",
+    "RUNTIME",
+    "RAG",
+    "EMBEDDINGS",
+    "VECTOR_DATABASE",
+    "SKILL_INSTALLATION",
+    "ASSISTIVE_TECHNOLOGY_EXECUTION",
+    "WCAG_CONFORMANCE_CLAIM",
+    "AUTONOMOUS_EXECUTION"
+  ],
+  "source_refs": [
+    "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MANIFEST.json",
+    "project-sources/chatgpt/08_CRITERION_LAYER.md",
+    "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/MANIFEST.json",
+    "foundation-library/visual-preferences/jonathan-martinez.visual-preference-profile.json"
+  ],
+  "supersedes": [],
+  "superseded_by": null
+}

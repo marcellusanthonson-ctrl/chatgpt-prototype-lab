@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "layer_id": "CHATGPT-CRITERION-LAYER-001",
+  "version": "1.0.0",
+  "status": "INTEGRATED_DOCUMENTARY_SELECTIVE",
+  "updated_at": "2026-07-21",
+  "files": [
+    "CONTRACT.json",
+    "MODULE_SELECTOR.json",
+    "RESULT_CONTRACT.json",
+    "ACCEPTANCE_FIXTURES.json",
+    "VALIDATION_EVIDENCE.json",
+    "MANIFEST.json"
+  ],
+  "canonical_paths": {
+    "contract": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/CONTRACT.json",
+    "selector": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json",
+    "result_contract": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/RESULT_CONTRACT.json",
+    "fixtures": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/ACCEPTANCE_FIXTURES.json",
+    "validation": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/VALIDATION_EVIDENCE.json"
+  },
+  "sources": {
+    "design_package": "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/MANIFEST.json",
+    "accessibility_protocol": "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/ASSISTIVE_TECHNOLOGY_TEST_PROTOCOL.json",
+    "visual_profile": "foundation-library/visual-preferences/jonathan-martinez.visual-preference-profile.json",
+    "visual_protocol": "foundation-library/visual-protocols/high-fidelity-visual-protocol.json"
+  },
+  "counts": {
+    "modules": 4,
+    "referenced_principles": 25,
+    "fixtures": 10
+  },
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "rag_effect": "NONE"
+}

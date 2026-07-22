@@ -1,20 +1,17 @@
 # Roadmap del LAB
 
-## Estado canónico
+La fuente estructurada es `projects/lab/ROADMAP.json`.
 
-La Foundation Library 1.1.0 está documentada y validada bajo `AUTHORIZATION_LAB_FOUNDATION_LIBRARY_019`. Sus catorce protocolos de evidencia están definidos bajo `AUTHORIZATION_LAB_FOUNDATION_EVIDENCE_PROTOCOL_020` y permanecen `EVIDENCE_PROTOCOL_DEFINED_NOT_EXECUTED`. Este estado no acredita implementación ni funcionamiento.
+## Estado
 
-El contrato RAG transversal está documentado bajo `AUTHORIZATION_LAB_TRANSVERSAL_RAG_CONTRACT_022`. LAB, Symphonie y PROJECT mantienen namespaces aislados; el índice es un derivado de lectura y toda escritura futura debe volver al repositorio propietario. Su estado es `DOCUMENTED_NOT_IMPLEMENTED`.
+La Foundation Library, sus protocolos de evidencia, el contrato RAG transversal y el piloto premium permanecen gobernados por sus estados canónicos. Los protocolos documentados no constituyen evidencia de ejecución.
 
-`PILOT-PREMIUM-ECOMMERCE-001` está seleccionado y definido para el concepto sintético Terra Volta bajo `AUTHORIZATION_LAB_FOUNDATION_PILOT_DEFINITION_023`. Codex será el ejecutor delimitado de una futura autorización. El piloto sigue `DEFINED_NOT_EXECUTED`.
+## Transición completada
 
-## Próximas transiciones recomendadas
+`CHATGPT-CRITERION-LAYER-001@1.0.0` quedó integrada documentalmente para el proyecto ChatGPT mediante `DEC-LAB-016` e `INT-LAB-001`.
 
-1. Autorizar por separado la construcción y prueba de `PILOT-PREMIUM-ECOMMERCE-001` en un repositorio aislado.
-2. Ejecutar exclusivamente con fixtures sintéticas, sin datos ni credenciales reales.
-3. Registrar resultados como evidencia, diferenciando aprobado, fallido y no ejecutado.
-4. Corregir fallos hasta satisfacer los oráculos dentro del alcance autorizado.
-5. Evaluar por separado cualquier skill complementaria antes de autorizar su creación o instalación.
-6. Considerar backend o integración solo después de que el piloto visual cumpla todos sus oráculos.
+La capa activa selectivamente evidencia y claims, criterio de diseño, accesibilidad web y preferencia visual contextual. No modifica el modelo, no implementa RAG y no cambia Symphonie ni productos.
 
-Cada transición requiere una autorización nueva, explícita, vigente y delimitada de Jonathan Martínez.
+## Próxima transición recomendada
+
+Observar la capa en respuestas reales y ejecutar sus fixtures con Terra 5.6 LIGHT cuando exista una superficie invocable. Esta evaluación no requiere modificar el repositorio, pero cualquier cambio posterior sí requiere una autorización nueva.

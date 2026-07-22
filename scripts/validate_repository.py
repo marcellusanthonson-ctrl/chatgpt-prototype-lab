@@ -173,6 +173,7 @@ def validate_chatgpt_project_sources() -> None:
         "05_EPISTEMIC_INDEPENDENCE.md",
         "06_CONTINUITY_PROTOCOL.md",
         "07_ERRORS_AND_RESPONSE_CONTRACT.md",
+        "08_CRITERION_LAYER.md",
         "CHATGPT_PROJECT_INTRODUCTION.txt",
     ]
     for name in required:
@@ -902,6 +903,66 @@ def validate_foundation_pilots(registries: dict[str, Any]) -> None:
     if any(pilot.get("execution_claims", {}).values()):
         fail(f"{pilot_path}: unexecuted pilot makes execution claim")
 
+
+def validate_chatgpt_criterion_layer() -> None:
+    base = "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001"
+    required = [
+        "MANIFEST.json", "CONTRACT.json", "MODULE_SELECTOR.json",
+        "RESULT_CONTRACT.json", "ACCEPTANCE_FIXTURES.json", "VALIDATION_EVIDENCE.json",
+    ]
+    for name in required:
+        require_file(f"{base}/{name}")
+    manifest = load_json(f"{base}/MANIFEST.json")
+    contract = load_json(f"{base}/CONTRACT.json")
+    selector = load_json(f"{base}/MODULE_SELECTOR.json")
+    result = load_json(f"{base}/RESULT_CONTRACT.json")
+    fixtures = load_json(f"{base}/ACCEPTANCE_FIXTURES.json")
+    validation = load_json(f"{base}/VALIDATION_EVIDENCE.json")
+    expected_modules = [
+        "EVIDENCE_AND_CLAIMS", "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY", "CONTEXTUAL_VISUAL_PREFERENCE",
+    ]
+    if contract.get("layer_id") != "CHATGPT-CRITERION-LAYER-001":
+        fail("criterion layer: identity mismatch")
+    if contract.get("modules") != expected_modules:
+        fail("criterion layer: module order or membership mismatch")
+    if [item.get("id") for item in selector.get("modules", [])] != expected_modules:
+        fail("criterion layer: selector modules mismatch")
+    if any(contract.get("limits", {}).get(key) for key in [
+        "runtime", "rag", "embeddings", "vector_database", "symphonie_integration",
+        "product_change", "assistive_technology_execution", "wcag_conformance_by_default",
+        "autonomous_authority",
+    ]):
+        fail("criterion layer: forbidden execution or authority effect")
+    boundaries = set(result.get("mandatory_boundaries", []))
+    for boundary in [
+        "STATIC_PASS_DOES_NOT_IMPLY_ACCESSIBILITY",
+        "AUTOMATION_DOES_NOT_ESTABLISH_WCAG_CONFORMANCE",
+        "PREFERENCE_IS_NOT_STANDARD",
+        "HEURISTIC_IS_NOT_EVIDENCE",
+        "EVIDENCE_IS_NOT_AUTHORIZATION",
+    ]:
+        if boundary not in boundaries:
+            fail(f"criterion layer: missing boundary {boundary}")
+    fixture_records = fixtures.get("fixtures", [])
+    fixture_ids = [item.get("id") for item in fixture_records]
+    if len(fixture_ids) != len(set(fixture_ids)) or len(fixture_ids) != 10:
+        fail("criterion layer: fixture IDs duplicated or count mismatch")
+    known = set(expected_modules)
+    for fixture in fixture_records:
+        expected = set(fixture.get("expected_modules", []))
+        forbidden = set(fixture.get("forbidden_modules", []))
+        if (expected | forbidden) - known:
+            fail(f"criterion layer: unknown module in {fixture.get('id')}")
+        if expected & forbidden:
+            fail(f"criterion layer: contradictory oracle in {fixture.get('id')}")
+    claims = validation.get("result_claims", {})
+    if claims.get("selector_deterministically_validated") is not True:
+        fail("criterion layer: selector validation claim missing")
+    if claims.get("terra_behavior_validated") is not False:
+        fail("criterion layer: unsupported Terra validation claim")
+
+
 def validate_briefs_and_continuity() -> None:
     for path in sorted(ROOT.glob("projects/*/briefs/*.json")):
         apply_schema(path.relative_to(ROOT).as_posix(), "schemas/brief.schema.json")
@@ -996,6 +1057,7 @@ def validate_fixture(state: dict[str, Any], index: dict[str, Any], registries: d
 def main() -> int:
     validate_text()
     validate_chatgpt_project_sources()
+    validate_chatgpt_criterion_layer()
     index, registries = validate_registries()
     validate_projects(registries)
     validate_decisions(registries)

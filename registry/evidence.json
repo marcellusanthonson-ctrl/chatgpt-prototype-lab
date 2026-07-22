@@ -115,6 +115,17 @@
       "canonical_path": "projects/lab/evidence/EVD-LAB-AUD-001.json",
       "authorization_id": "AUTHORIZATION_LAB_EXTERNAL_AUDIT_RECONCILIATION_046",
       "updated_at": "2026-07-21"
+    },
+    {
+      "id": "EVD-LAB-CRIT-001",
+      "path": "projects/lab/evidence/EVD-LAB-CRIT-001.json",
+      "kind": "CHATGPT_CRITERION_LAYER_INTEGRATION_VALIDATION",
+      "project_id": "lab",
+      "status": "PASS_WITH_DECLARED_MODEL_SURFACE_LIMITATION",
+      "canonical_path": "projects/lab/evidence/EVD-LAB-CRIT-001.json",
+      "authorization_id": "AUTHORIZATION_LAB_CHATGPT_CRITERION_LAYER_20260721",
+      "integration_id": "INT-LAB-001",
+      "updated_at": "2026-07-21"
     }
   ]
 }

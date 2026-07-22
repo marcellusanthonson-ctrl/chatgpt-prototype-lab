@@ -1,46 +1,32 @@
 # LAB — vista de estado
 
-La fuente estructurada es PROJECT_STATE.json. El estado global vigente pertenece a CURRENT_STATE.json.
+La fuente estructurada es `PROJECT_STATE.json`; el estado global pertenece a `CURRENT_STATE.json`.
 
 ## Identidad
 
-- Project-ID: lab.
-- Estado: active.
-- Contrato: LAB_CONTRACT.md v2.1.
+- Project-ID: `lab`.
+- Estado: `active`.
+- Contrato: `LAB_CONTRACT.md` v2.1.
+- HEAD: `VERIFY_LIVE_AT_USE`.
 - Autoridad autónoma del modelo: no.
 
-## Función
+## Capa de criterio para ChatGPT
 
-Gobernar autoridad, decisiones, reevaluaciones, errores, patrones, briefs y continuidad. El LAB no es runtime de producto.
+`CHATGPT-CRITERION-LAYER-001@1.0.0` está integrada como consumidor documental selectivo mediante `INT-LAB-001`. El orden obligatorio incorpora `project-sources/chatgpt/08_CRITERION_LAYER.md`.
 
-## Política de HEAD propio
+Sus cuatro módulos son:
 
-El LAB no almacena su propio HEAD como estado vigente, porque cada commit volvería obsoleto el valor.
+1. evidencia y claims;
+2. criterio de diseño;
+3. accesibilidad web;
+4. preferencia visual contextual.
 
-- head_policy: VERIFY_LIVE_AT_USE.
-- verified_parent_head: baseline anterior a la transición.
-- self_head_is_canonical_state: false.
+El selector evita cargar módulos no aplicables y mantiene separadas heurística, estándar, evidencia, inferencia y preferencia humana.
 
-El HEAD vigente se resuelve desde main al iniciar cada conversación.
+## Validación y límites
 
-## Fuentes de ChatGPT
+Contrato, referencias, fixtures, no contaminación y fronteras de claims: `PASS`.
 
-El punto de entrada canónico es `project-sources/chatgpt/START_HERE.md`. Las siete fuentes operativas se versionan en el LAB; las copias adjuntas no son fuente de verdad y solo pueden señalar este entrypoint.
+Terra 5.6 LIGHT: `NOT_EXECUTED_MODEL_SURFACE_UNAVAILABLE`. Esto queda registrado sin convertirlo en PASS.
 
-## Registro de autorizaciones
-
-Las transiciones consumidas 013–017 están reconciliadas con `registry/authorizations.json`. El validador exige una correspondencia uno-a-uno mediante `state_key`.
-
-## Test de instrucciones
-
-LAB-CHATGPT-INSTRUCTIONS-TEST-001 se ejecutó con Terra 5.6 y razonamiento ligero.
-
-Resultado: PASS_WITH_FINDINGS.
-
-- Verificó GitHub, separó autoridad y evidencia y respetó solo lectura.
-- La afirmación falsa sobre integración debía clasificarse REVERSED, no MODIFIED.
-- Detectó el HEAD autorreferencial obsoleto del LAB.
-
-## Autorización
-
-No existe autorización activa reutilizable. Runtime, integración y producto permanecen no autorizados.
+No existe autorización activa reutilizable. Runtime, RAG, cambios de producto, integración de Symphonie, ejecución AT y claims WCAG permanecen no autorizados.
