@@ -2,16 +2,16 @@
 
 La fuente estructurada es `CURRENT_STATE.json`.
 
-- Versión: 2.5.15.
-- Fase: `MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_INTEGRATED_BROWSER_VALIDATION_BLOCKED`.
+- Versión: 2.5.16.
+- Fase: `MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_TECHNICAL_PASS_AWAITING_HUMAN_BASELINE_REVIEW`.
 - HEAD propio: `VERIFY_LIVE_AT_USE`.
 - Autorización activa reutilizable: ninguna.
 
 ## Base visual mínima impecable
 
-`MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001@1.0.0` está integrada mediante `DEC-LAB-017` e `INT-LAB-002`. Antes de aplicar dirección estética, una interfaz debe superar integridad estructural, geometría responsive, terminación de componentes, estados e interacción.
+`MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001@1.0.1` está integrada mediante `DEC-LAB-017` e `INT-LAB-002`. Antes de aplicar dirección estética, una interfaz debe superar integridad estructural, geometría responsive, terminación de componentes, estados e interacción.
 
-La fixture neutral `MINIMUM_IMPECCABLE_BASE_001.html` pasó la validación estática. La matriz de navegador no pudo ejecutarse: Playwright local no dispone de Chromium y el navegador administrado bloquea superficies locales y `data:`. Su estado honesto es `BLOCKED_WITH_DOCUMENTED_DEFECTS`; no existe claim de PASS técnico.
+La fixture neutral `MINIMUM_IMPECCABLE_BASE_001.html` pasó la validación estática y la matriz canónica de navegador después de corregir la especificidad que ocultaba el botón de menú móvil. El barrido cubrió 103 anchuras entre 320 y 1920 px, geometría, navegación, diálogo, foco, formulario, estrés de contenido, consola y frontera offline. Su estado es `TECHNICAL_FOUNDATION_PASS_AWAITING_HUMAN_BASELINE_REVIEW`.
 
 ## Autocorrección
 
@@ -23,4 +23,4 @@ No se modificaron Symphonie, el piloto o Capability. No se creó V03, no se ejec
 
 ## Siguiente transición
 
-Ejecutar `scripts/validate_minimum_impeccable_browser.cjs` en una superficie con Chromium local invocable. La revisión humana queda después del PASS técnico.
+Realizar la revisión humana de baseline de `MINIMUM_IMPECCABLE_BASE_001.html`. El PASS técnico no constituye aprobación visual ni conformidad WCAG.
