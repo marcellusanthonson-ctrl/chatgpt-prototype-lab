@@ -337,7 +337,7 @@
     @media (max-width: 54rem) {
       .nav { grid-template-columns: auto 1fr auto; }
       .menu-button { display: inline-flex; justify-self: end; }
-      .nav > .button { display: none; }
+      .nav > .button:not(.menu-button) { display: none; }
       .nav__links {
         grid-column: 1 / -1;
         display: none;
