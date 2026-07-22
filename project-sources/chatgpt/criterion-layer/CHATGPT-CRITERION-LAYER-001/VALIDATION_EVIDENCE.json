@@ -28,7 +28,7 @@
     "structural_reconstruction_rule": "PASS",
     "technical_human_wcag_claim_separation": "PASS",
     "neutral_fixture_static_validation": "PASS",
-    "neutral_fixture_browser_validation": "NOT_EXECUTED_ENVIRONMENT_UNAVAILABLE"
+    "neutral_fixture_browser_validation": "PASS_103_WIDTHS_AND_INTERACTION_MATRIX"
   },
   "controlled_response_evaluation": {
     "requested_model": "Terra 5.6",
@@ -48,7 +48,7 @@
     "wcag_conformance_established": false,
     "minimum_visual_foundation_integrated": true,
     "human_visual_approval_established": false,
-    "technical_foundation_passed": false
+    "technical_foundation_passed": true
   },
   "source_refs": [
     "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MANIFEST.json",
