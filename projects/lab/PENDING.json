@@ -207,10 +207,16 @@
       "id": "PEND-LAB-012",
       "status": "READY_FOR_HUMAN_REVIEW",
       "type": "HUMAN_BASELINE_REVIEW",
-      "subject": "Review the candidate baseline capture package for MINIMUM_IMPECCABLE_BASE_001.html",
+      "subject": "Review the corrected footer candidate baseline capture package for MINIMUM_IMPECCABLE_BASE_001.html",
       "priority": "HIGH",
-      "artifact_sha256": "9fb45676ad0ec1a0a7396583e18bfb78277828595ddd54c9a9c74c80a5f12efe",
+      "artifact_sha256": "20f38c901d7787d1528e7520c2d46840622e43d8b5daabb1f3d5887af6ff8143",
       "capture_count": 103,
+      "authorization_id": "AUTHORIZATION_LAB_HUMAN_BASELINE_FOOTER_CORRECTION_055",
+      "previous_candidate": {
+        "authorization_id": "AUTHORIZATION_LAB_HUMAN_BASELINE_CAPTURE_PACKAGE_054",
+        "artifact_sha256": "9fb45676ad0ec1a0a7396583e18bfb78277828595ddd54c9a9c74c80a5f12efe",
+        "status": "INVALIDATED_BY_CONFIRMED_HUMAN_FOOTER_ALIGNMENT_DEFECT"
+      },
       "automatic_approval": false,
       "allowed_human_outcomes": [
         "ACCEPT_AS_NEUTRAL_TECHNICAL_BASELINE",
@@ -221,7 +227,7 @@
       "wcag_conformance_effect": "NONE",
       "source_refs": [
         "projects/lab/evidence/EVD-LAB-MIVF-001.json",
-        "projects/lab/authorizations/AUTHORIZATION_LAB_HUMAN_BASELINE_CAPTURE_PACKAGE_054.json"
+        "projects/lab/authorizations/AUTHORIZATION_LAB_HUMAN_BASELINE_FOOTER_CORRECTION_055.json"
       ]
     }
   ]

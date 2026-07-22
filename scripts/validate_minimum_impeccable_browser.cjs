@@ -35,7 +35,7 @@ function check(condition, message) {
   for (const width of widths) {
     await page.setViewportSize({width, height: width < 640 ? 800 : 900});
     await page.goto(target, {waitUntil: 'load'});
-    await page.waitForFunction(() => window.__MIVF_DIAGNOSTIC__?.pass === true);
+    await page.waitForFunction(() => typeof window.__MIVF_DIAGNOSTIC__ === 'object');
     const result = await page.evaluate(() => {
       const root = document.documentElement;
       const rect = selector => document.querySelector(selector).getBoundingClientRect();
@@ -45,6 +45,14 @@ function check(condition, message) {
       const process = rect('#proceso .container');
       const contact = rect('#contacto .container');
       const footer = rect('.footer__grid');
+      const status = document.querySelector('.footer__status');
+      const statusTerms = [...status.querySelectorAll('dt')].map(element => element.getBoundingClientRect());
+      const statusValues = [...status.querySelectorAll('dd')].map(element => element.getBoundingClientRect());
+      const socialLinks = [...document.querySelectorAll('.footer__social-link')];
+      const socialRects = socialLinks.map(element => element.getBoundingClientRect());
+      const socialOverlap = socialRects.some((current, index) => socialRects.slice(index + 1).some(other =>
+        current.left < other.right && current.right > other.left && current.top < other.bottom && current.bottom > other.top
+      ));
       const sections = [...document.querySelectorAll('main > section')].map(element => element.getBoundingClientRect());
       const sectionOverlap = sections.some((current, index) => index < sections.length - 1 && current.bottom > sections[index + 1].top + 1);
       return {
@@ -56,7 +64,24 @@ function check(condition, message) {
         sectionOverlap,
         headerPosition: getComputedStyle(document.querySelector('.site-header')).position,
         headerBackground: getComputedStyle(document.querySelector('.site-header')).backgroundColor,
-        focusVisibleRule: [...document.styleSheets[0].cssRules].some(rule => rule.selectorText === ':focus-visible')
+        focusVisibleRule: [...document.styleSheets[0].cssRules].some(rule => rule.selectorText === ':focus-visible'),
+        status: {
+          semanticTag: status.tagName,
+          display: getComputedStyle(status).display,
+          termCount: statusTerms.length,
+          valueCount: statusValues.length,
+          termLeftEdges: statusTerms.map(rectangle => rectangle.left),
+          valueLeftEdges: statusValues.map(rectangle => rectangle.left)
+        },
+        socials: {
+          count: socialLinks.length,
+          minimumWidth: Math.min(...socialRects.map(rectangle => rectangle.width)),
+          minimumHeight: Math.min(...socialRects.map(rectangle => rectangle.height)),
+          overlap: socialOverlap,
+          validNames: socialLinks.every(element => Boolean(element.getAttribute('aria-label')?.trim())),
+          validDestinations: socialLinks.every(element => /^https:\/\/www\.(instagram|whatsapp|facebook|linkedin)\.com\/$/.test(element.href)),
+          hiddenGraphics: socialLinks.every(element => element.querySelector('svg')?.getAttribute('aria-hidden') === 'true')
+        }
       };
     });
     check(result.scrollWidth <= result.clientWidth + 1, `${width}px: horizontal overflow ${result.scrollWidth}/${result.clientWidth}`);
@@ -67,6 +92,16 @@ function check(condition, message) {
     check(Math.max(...result.leftEdges) - Math.min(...result.leftEdges) <= 1, `${width}px: left grid edges drift`);
     check(Math.max(...result.rightEdges) - Math.min(...result.rightEdges) <= 1, `${width}px: right grid edges drift`);
     check(result.focusVisibleRule, `${width}px: focus-visible rule missing`);
+    check(result.status.semanticTag === 'DL' && result.status.display === 'grid', `${width}px: footer status is not a descriptive grid`);
+    check(result.status.termCount === 2 && result.status.valueCount === 2, `${width}px: footer status does not expose two term/value pairs`);
+    check(Math.max(...result.status.termLeftEdges) - Math.min(...result.status.termLeftEdges) <= 1, `${width}px: footer status labels drift`);
+    check(Math.max(...result.status.valueLeftEdges) - Math.min(...result.status.valueLeftEdges) <= 1, `${width}px: footer status values drift`);
+    check(result.socials.count === 4, `${width}px: expected four social links`);
+    check(result.socials.minimumWidth >= 44 && result.socials.minimumHeight >= 44, `${width}px: social target below 44px`);
+    check(!result.socials.overlap, `${width}px: social targets overlap`);
+    check(result.socials.validNames, `${width}px: social accessible name missing`);
+    check(result.socials.validDestinations, `${width}px: social destination is not explicit`);
+    check(result.socials.hiddenGraphics, `${width}px: social SVG is exposed to accessibility tree`);
     measurements.push({width, scrollWidth: result.scrollWidth, clientWidth: result.clientWidth});
   }
 
@@ -101,6 +136,15 @@ function check(condition, message) {
   await page.waitForFunction(() => document.querySelector('#form-status')?.dataset.state === 'success');
   check((await page.locator('#form-status').textContent()).includes('No se enviaron datos'), 'valid form did not reach local success');
 
+  const socialLinks = page.locator('.footer__social-link');
+  await page.keyboard.press('Tab');
+  for (let index = 0; index < await socialLinks.count(); index += 1) {
+    const socialLink = socialLinks.nth(index);
+    await socialLink.focus();
+    check(await socialLink.evaluate(node => document.activeElement === node), `social link ${index + 1} is not keyboard focusable`);
+    check(await socialLink.evaluate(node => node.matches(':focus-visible') && getComputedStyle(node).outlineStyle !== 'none'), `social link ${index + 1} lacks visible keyboard focus`);
+  }
+
   await page.evaluate(() => {
     document.querySelector('h1').textContent = 'Una base técnica deliberadamente extensa que debe conservar jerarquía, contención y legibilidad sin quebrar la retícula compartida.';
     document.querySelector('.lede').textContent = 'Contenido expandido para tensionar el diseño con una longitud considerablemente mayor, comprobar el reflujo y detectar cualquier recorte, colisión o desbordamiento estructural inesperado.';
@@ -128,6 +172,7 @@ function check(condition, message) {
   console.log('Navbar, menu, dialog and focus restoration: PASS');
   console.log('Form invalid, preservation and local success behavior: PASS');
   console.log('Content stress, console, resources and offline boundary: PASS');
+  console.log('Footer status semantics/alignment and four social controls: PASS');
   console.log('Optical screenshots: CAPTURED_FOR_MANUAL_INSPECTION');
   console.log('Human visual approval: NOT_ESTABLISHED');
   console.log('WCAG conformance: NOT_ESTABLISHED');

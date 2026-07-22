@@ -9,12 +9,13 @@
     "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
     "branch": "main",
     "initial_parent_head": "07b5d07dc44806c5bf77dbb39b057e6c9635d0d0",
-    "correction_parent_head": "2d6d21703b34b0c8ecc1cbb09029c62d63c69302"
+    "correction_parent_head": "2d6d21703b34b0c8ecc1cbb09029c62d63c69302",
+    "footer_correction_parent_head": "7ac13f0cfebf60b920aaf4ed7365671ef0e97879"
   },
   "artifact": {
     "path": "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MINIMUM_IMPECCABLE_BASE_001.html",
     "role": "NEUTRAL_TECHNICAL_FIXTURE_NOT_PRODUCT_OR_VISUAL_DIRECTION",
-    "sha256": "9fb45676ad0ec1a0a7396583e18bfb78277828595ddd54c9a9c74c80a5f12efe",
+    "sha256": "20f38c901d7787d1528e7520c2d46840622e43d8b5daabb1f3d5887af6ff8143",
     "offline": true,
     "external_assets": false
   },
@@ -34,8 +35,10 @@
     "interactive_navigation_dialog_and_focus": "PASS",
     "interactive_form_behavior": "PASS",
     "content_stress": "PASS",
+    "footer_status_semantics_and_alignment": "PASS_103_WIDTHS",
+    "social_footer_controls": "PASS_FOUR_NAMED_EXPLICIT_DESTINATIONS_MINIMUM_44PX_TARGETS_KEYBOARD_FOCUS",
     "console_page_errors_and_external_requests": "PASS",
-    "optical_technical_review": "PASS_CORRECTED_MOBILE_AND_DESKTOP_CAPTURES_INSPECTED"
+    "optical_technical_review": "PASS_CORRECTED_103_CAPTURE_SET_AND_CRITICAL_WIDTHS_INSPECTED"
   },
   "browser_attempts": [
     {
@@ -55,6 +58,12 @@
       "status": "EXECUTED_PASS_AFTER_AUTHORIZED_FIX",
       "reason": "CALLABLE_LOCAL_CHROMIUM_AVAILABLE_OUTSIDE_REPOSITORY_DEPENDENCIES",
       "effect": "BROWSER_MATRIX_AND_TECHNICAL_FOUNDATION_PASS_CLAIM_SUPPORTED"
+    },
+    {
+      "surface": "LOCAL_PLAYWRIGHT_1_61_1_WITH_EPHEMERAL_CHROMIUM_143_0_7499_0",
+      "status": "EXECUTED_PASS_AFTER_AUTHORIZED_FOOTER_RECONSTRUCTION",
+      "reason": "CALLABLE_LOCAL_CHROMIUM_AVAILABLE_OUTSIDE_REPOSITORY_DEPENDENCIES",
+      "effect": "UPDATED_BROWSER_MATRIX_CAPTURE_PACKAGE_AND_TECHNICAL_FOUNDATION_PASS_CLAIM_SUPPORTED"
     }
   ],
   "preexisting_repository_divergences": [
@@ -93,6 +102,28 @@
       "correction": "Changed the hiding selector to .nav > .button:not(.menu-button).",
       "revalidation": "PASS_COMPLETE_CANONICAL_BROWSER_MATRIX",
       "final_state": "RESOLVED"
+    },
+    {
+      "id": "MIVF-DEFECT-002",
+      "domain": "FOOTER_SEMANTICS_ALIGNMENT_AND_COMPONENT_FINISH",
+      "severity": "BLOCKER",
+      "observable_symptom": "During human review of the 054 candidate captures, WCAG did not align with the technical status field across rendered widths.",
+      "root_cause": "Status labels and values were stored as undifferentiated list-item strings, so wrapping and label length controlled alignment instead of a shared label/value grid.",
+      "scope_authority": "Authorized by AUTHORIZATION_LAB_HUMAN_BASELINE_FOOTER_CORRECTION_055.",
+      "correction": "Reconstructed Status as section plus dl/dt/dd and a two-column descriptive grid; added the authorized four-link self-contained social footer component.",
+      "revalidation": "PASS_STATIC_16_CASE_MATRIX_103_WIDTH_BROWSER_INTERACTION_CAPTURE_MOTION_AND_OPTICAL_REVIEW",
+      "final_state": "RESOLVED"
+    },
+    {
+      "id": "MIVF-DEFECT-003",
+      "domain": "RESPONSIVE_FOOTER_GRID",
+      "severity": "BLOCKER_CAUGHT_BEFORE_PUBLICATION",
+      "observable_symptom": "The first footer reconstruction overflowed at 624 through 704 px and 880 through 896 px.",
+      "root_cause": "Intermediate 2fr/1fr column allocations made the Status column narrower than its intrinsic label/value minimum.",
+      "scope_authority": "Corrected inside the active AUTHORIZATION_LAB_HUMAN_BASELINE_FOOTER_CORRECTION_055 self-correction cycle.",
+      "correction": "Rebuilt the intermediate footer as a full-width brand row followed by three equal minmax(0,1fr) columns through 70rem, preserving the single-column mobile pattern.",
+      "revalidation": "PASS_COMPLETE_103_WIDTH_CANONICAL_BROWSER_MATRIX",
+      "final_state": "RESOLVED_BEFORE_DELIVERY"
     }
   ],
   "result_claims": {
@@ -107,9 +138,9 @@
     "product_readiness_established": false
   },
   "candidate_baseline_capture_package": {
-    "authorization_id": "AUTHORIZATION_LAB_HUMAN_BASELINE_CAPTURE_PACKAGE_054",
-    "origin_parent_head": "85dbbd9014cce3f59aad267ac02a7b0fb87f407c",
-    "artifact_sha256": "9fb45676ad0ec1a0a7396583e18bfb78277828595ddd54c9a9c74c80a5f12efe",
+    "authorization_id": "AUTHORIZATION_LAB_HUMAN_BASELINE_FOOTER_CORRECTION_055",
+    "origin_parent_head": "7ac13f0cfebf60b920aaf4ed7365671ef0e97879",
+    "artifact_sha256": "20f38c901d7787d1528e7520c2d46840622e43d8b5daabb1f3d5887af6ff8143",
     "status": "CANDIDATE_BASELINE_CAPTURE_READY_FOR_HUMAN_REVIEW",
     "viewport_configurations": 103,
     "width_range": "320_TO_1920_PX_MAXIMUM_STEP_16",
@@ -123,6 +154,14 @@
     "multibrowser_coverage": "NOT_ESTABLISHED",
     "fail_safe": "ANY_CONFIRMED_DEFECT_INVALIDATES_PACKAGE_AND_REQUIRES_COMPLETE_REVALIDATION"
   },
+  "superseded_candidate_packages": [
+    {
+      "authorization_id": "AUTHORIZATION_LAB_HUMAN_BASELINE_CAPTURE_PACKAGE_054",
+      "artifact_sha256": "9fb45676ad0ec1a0a7396583e18bfb78277828595ddd54c9a9c74c80a5f12efe",
+      "final_state": "INVALIDATED_BY_CONFIRMED_HUMAN_FOOTER_ALIGNMENT_DEFECT",
+      "evidence_preserved": true
+    }
+  ],
   "source_refs": [
     "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MANIFEST.json",
     "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/VALIDATION_MATRIX.json",
@@ -132,5 +171,6 @@
   ],
   "correction_authorization_ref": "AUTHORIZATION_LAB_MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_CORRECTION_053",
   "capture_authorization_ref": "AUTHORIZATION_LAB_HUMAN_BASELINE_CAPTURE_PACKAGE_054",
+  "footer_correction_authorization_ref": "AUTHORIZATION_LAB_HUMAN_BASELINE_FOOTER_CORRECTION_055",
   "authority_effect": "NONE"
 }

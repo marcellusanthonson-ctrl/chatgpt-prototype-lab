@@ -648,10 +648,20 @@ def validate_minimum_impeccable_visual_foundation() -> None:
     if responsive.get("continuous_sweep") != {"from_px": 320, "to_px": 1920, "maximum_step_px": 16}:
         fail("minimum visual foundation: continuous responsive sweep differs")
     case_ids = [case.get("id") for case in matrix.get("cases", [])]
-    if len(case_ids) != len(set(case_ids)) or len(case_ids) != 14:
+    if len(case_ids) != len(set(case_ids)) or len(case_ids) != 16:
         fail("minimum visual foundation: validation matrix IDs duplicated or incomplete")
     html = (ROOT / base / "MINIMUM_IMPECCABLE_BASE_001.html").read_text(encoding="utf-8").lower()
-    for token in ["http://", "https://", "@import", "fetch(", "xmlhttprequest", "overflow-x:hidden", "overflow-x: hidden"]:
+    allowed_social_destinations = {
+        "https://www.instagram.com/",
+        "https://www.whatsapp.com/",
+        "https://www.facebook.com/",
+        "https://www.linkedin.com/",
+    }
+    external_urls = re.findall(r"https?://[^\"']+", html)
+    external_anchor_urls = re.findall(r"<a\b[^>]*\bhref=[\"'](https?://[^\"']+)[\"']", html)
+    if set(external_urls) != allowed_social_destinations or set(external_anchor_urls) != allowed_social_destinations or len(external_urls) != 4:
+        fail("minimum visual foundation: external URLs differ from the four explicit social-link destinations")
+    for token in ["@import", "fetch(", "xmlhttprequest", "overflow-x:hidden", "overflow-x: hidden"]:
         if token in html:
             fail(f"minimum visual foundation: forbidden HTML token {token}")
 

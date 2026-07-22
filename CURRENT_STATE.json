@@ -1,7 +1,7 @@
 {
   "schema_version": "2.5.0",
   "document_id": "lab.current-state",
-  "version": "2.5.17",
+  "version": "2.5.18",
   "status": "GOVERNANCE_V2_CANONICAL_BASELINE",
   "updated_at": "2026-07-22",
   "active_project": "lab",
@@ -144,7 +144,8 @@
     "chatgpt_criterion_layer_20260721": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "minimum_impeccable_visual_foundation_052_revision_2": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "minimum_impeccable_visual_foundation_correction_053": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "human_baseline_capture_package_054": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+    "human_baseline_capture_package_054": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "human_baseline_footer_correction_055": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
   },
   "verified_external_heads": {
     "symphonie": "b492852c0d76ff7cd44ca266dc8950c94638d568",
@@ -207,19 +208,21 @@
   "latest_integration": {
     "integration_id": "INT-LAB-002",
     "layer_id": "CHATGPT-CRITERION-LAYER-001@1.1.0",
-    "standard_id": "MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001@1.0.1",
+    "standard_id": "MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001@1.0.2",
     "status": "TECHNICAL_FOUNDATION_PASS_AWAITING_HUMAN_BASELINE_REVIEW",
     "static_validation": "PASS",
-    "browser_validation": "PASS_103_WIDTHS_GEOMETRY_INTERACTION_CONTENT_STRESS_AND_OFFLINE_BOUNDARY",
+    "browser_validation": "PASS_103_WIDTHS_GEOMETRY_INTERACTION_CONTENT_STRESS_OFFLINE_FOOTER_STATUS_AND_SOCIAL_CONTROLS",
     "human_visual_approval": "NOT_ESTABLISHED",
     "wcag_conformance": "NOT_ESTABLISHED",
     "candidate_baseline_capture": {
-      "authorization_id": "AUTHORIZATION_LAB_HUMAN_BASELINE_CAPTURE_PACKAGE_054",
-      "artifact_sha256": "9fb45676ad0ec1a0a7396583e18bfb78277828595ddd54c9a9c74c80a5f12efe",
+      "authorization_id": "AUTHORIZATION_LAB_HUMAN_BASELINE_FOOTER_CORRECTION_055",
+      "artifact_sha256": "20f38c901d7787d1528e7520c2d46840622e43d8b5daabb1f3d5887af6ff8143",
       "status": "CANDIDATE_BASELINE_CAPTURE_READY_FOR_HUMAN_REVIEW",
       "viewport_configurations": 103,
       "binary_repository_inclusion": false,
-      "human_visual_approval": "NOT_ESTABLISHED"
+      "human_visual_approval": "NOT_ESTABLISHED",
+      "supersedes_candidate_authorization_id": "AUTHORIZATION_LAB_HUMAN_BASELINE_CAPTURE_PACKAGE_054",
+      "superseded_artifact_sha256": "9fb45676ad0ec1a0a7396583e18bfb78277828595ddd54c9a9c74c80a5f12efe"
     },
     "authority_effect": "NONE_AFTER_CONSUMPTION"
   }

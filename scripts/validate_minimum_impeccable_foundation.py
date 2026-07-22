@@ -48,11 +48,11 @@ def main() -> int:
     assert "DATA_LOSS_ON_VALIDATION" in forms["blocking_defects"]
     assert responsive["continuous_sweep"] == {"from_px": 320, "to_px": 1920, "maximum_step_px": 16}
     case_ids = [case["id"] for case in matrix["cases"]]
-    assert len(case_ids) == len(set(case_ids)) == 14
+    assert len(case_ids) == len(set(case_ids)) == 16
 
     html = (BASE / "MINIMUM_IMPECCABLE_BASE_001.html").read_text(encoding="utf-8")
     lowered = html.lower()
-    for forbidden in ["http://", "https://", "@import", "fetch(", "xmlhttprequest", "overflow-x:hidden", "overflow-x: hidden"]:
+    for forbidden in ["@import", "fetch(", "xmlhttprequest", "overflow-x:hidden", "overflow-x: hidden"]:
         assert forbidden not in lowered, f"HTML contains forbidden token: {forbidden}"
     assert "<style>" in lowered and "<script>" in lowered
     assert "<header" in lowered and "<main" in lowered and "<footer" in lowered and "<dialog" in lowered
@@ -60,6 +60,22 @@ def main() -> int:
     assert 'id="main"' in lowered and 'class="skip-link"' in lowered
     assert 'novalidate' in lowered and 'role="status"' in lowered
     assert "window.__MIVF_DIAGNOSTIC__" in html
+    assert '<section class="footer__group" aria-labelledby="footer-status-title">' in html
+    assert '<dl class="footer__status">' in html
+    assert len(re.findall(r"<dt>", html)) == len(re.findall(r"<dd>", html)) == 2
+    assert 'aria-label="Estado"' not in html, "Status content must not be exposed as navigation"
+    assert len(re.findall(r'class="footer__social-link"', html)) == 4
+    for platform in ["instagram.com", "whatsapp.com", "facebook.com", "linkedin.com"]:
+        assert f'href="https://www.{platform}/"' in html
+    assert len(re.findall(r'class="footer__social-link"[^>]+aria-label="[^"]+"', html)) == 4
+    assert len(re.findall(r'class="footer__social-link"[^>]+rel="noopener noreferrer"', html)) == 4
+    external_urls = re.findall(r'https?://[^"\']+', lowered)
+    assert set(external_urls) == {
+        "https://www.instagram.com/",
+        "https://www.whatsapp.com/",
+        "https://www.facebook.com/",
+        "https://www.linkedin.com/",
+    } and len(external_urls) == 4
     assert not re.search(r"<img\b", lowered), "Neutral fixture must not contain product photography"
     assert not re.search(r"<link\b[^>]*rel=[\"']stylesheet", lowered), "Remote or linked stylesheets are forbidden"
     print("Minimum impeccable foundation JSON and duplicate keys: PASS")

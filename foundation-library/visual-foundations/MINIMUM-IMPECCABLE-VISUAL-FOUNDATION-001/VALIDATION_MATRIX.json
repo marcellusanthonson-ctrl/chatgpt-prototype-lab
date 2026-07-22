@@ -16,7 +16,9 @@
     {"id":"MIVF-011","method":"CONTENT_STRESS","subject":"expanded text","oracle":"long content remains readable and contained"},
     {"id":"MIVF-012","method":"BROWSER","subject":"console resources stability","oracle":"no page errors, request failures, external requests or unexplained layout shifts"},
     {"id":"MIVF-013","method":"ACCESSIBILITY_STATIC_MANUAL","subject":"semantics reduced motion","oracle":"semantic regions, names, states and reduced-motion treatment are present"},
-    {"id":"MIVF-014","method":"CLAIM_BOUNDARY","subject":"result classification","oracle":"technical pass does not claim visual approval, product readiness or WCAG conformance"}
+    {"id":"MIVF-014","method":"CLAIM_BOUNDARY","subject":"result classification","oracle":"technical pass does not claim visual approval, product readiness or WCAG conformance"},
+    {"id":"MIVF-015","method":"STATIC_AND_BROWSER_GEOMETRY","subject":"footer status semantics and alignment","oracle":"status uses dl semantics and both labels and values share stable columns, including wrapped values"},
+    {"id":"MIVF-016","method":"STATIC_BROWSER_AND_KEYBOARD","subject":"social footer controls","oracle":"four named self-contained social links have explicit destinations, hidden SVGs, visible focus and minimum 44px targets"}
   ],
   "required_evidence": [
     "STATIC_VALIDATOR_OUTPUT",

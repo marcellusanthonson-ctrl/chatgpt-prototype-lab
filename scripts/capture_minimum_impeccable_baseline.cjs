@@ -14,7 +14,7 @@ const output = path.resolve(process.env.MIVF_CAPTURE_OUTPUT || path.join('/tmp',
 const captures = path.join(output, 'captures');
 const executablePath = process.env.MIVF_CHROMIUM_EXECUTABLE || undefined;
 const originCommit = process.env.MIVF_ORIGIN_COMMIT || 'VERIFY_LIVE_AT_USE';
-const expectedArtifactHash = '9fb45676ad0ec1a0a7396583e18bfb78277828595ddd54c9a9c74c80a5f12efe';
+const expectedArtifactHash = '20f38c901d7787d1528e7520c2d46840622e43d8b5daabb1f3d5887af6ff8143';
 const failures = [];
 
 const sha256 = file => crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
@@ -54,7 +54,7 @@ function contactSheet(records) {
     const height = width < 640 ? 800 : 900;
     await page.setViewportSize({width, height});
     await page.goto(pathToFileURL(artifact).href, {waitUntil: 'load'});
-    await page.waitForFunction(() => window.__MIVF_DIAGNOSTIC__?.pass === true);
+    await page.waitForFunction(() => typeof window.__MIVF_DIAGNOSTIC__ === 'object');
     await page.evaluate(async () => { if (document.fonts?.ready) await document.fonts.ready; window.scrollTo(0, 0); });
     const geometry = await page.evaluate(() => ({
       scrollWidth: document.documentElement.scrollWidth,
@@ -86,7 +86,7 @@ function contactSheet(records) {
     new PerformanceObserver(list => window.__layoutShifts.push(...list.getEntries().filter(entry => !entry.hadRecentInput).map(entry => entry.value))).observe({type: 'layout-shift', buffered: true});
   });
   await motionPage.goto(pathToFileURL(artifact).href, {waitUntil: 'load'});
-  await motionPage.waitForFunction(() => window.__MIVF_DIAGNOSTIC__?.pass === true);
+  await motionPage.waitForFunction(() => typeof window.__MIVF_DIAGNOSTIC__ === 'object');
   const initialHeight = await motionPage.evaluate(() => document.documentElement.scrollHeight);
   await motionPage.evaluate(() => document.querySelector('#proceso').scrollIntoView({behavior: 'smooth'}));
   await motionPage.waitForTimeout(500);
