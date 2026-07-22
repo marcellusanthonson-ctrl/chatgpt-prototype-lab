@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "matrix_id": "MIVF-VALIDATION-MATRIX-001",
-  "status": "STATIC_EXECUTED_BROWSER_NOT_EXECUTED_ENVIRONMENT_UNAVAILABLE",
+  "status": "STATIC_AND_BROWSER_EXECUTED_PASS_AWAITING_HUMAN_BASELINE_REVIEW",
   "cases": [
     {"id":"MIVF-001","method":"STATIC","subject":"offline self containment","oracle":"no external assets, CDN, imports or network APIs"},
     {"id":"MIVF-002","method":"STATIC_AND_BROWSER","subject":"master grid","oracle":"header, hero, sections, form and footer share inline container edges"},
