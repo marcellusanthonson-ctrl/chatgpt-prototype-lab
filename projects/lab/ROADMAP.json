@@ -75,14 +75,15 @@
       "decision": "DEC-LAB-017",
       "integration": "INT-LAB-002",
       "fixture": "MINIMUM_IMPECCABLE_BASE_001.html",
-      "result": "BLOCKED_WITH_DOCUMENTED_DEFECTS",
+      "result": "TECHNICAL_FOUNDATION_PASS_AWAITING_HUMAN_BASELINE_REVIEW",
       "authority_effect": "NONE"
     },
     {
       "order": 9,
       "item": "EXECUTE_MINIMUM_IMPECCABLE_BASE_001_BROWSER_MATRIX",
-      "status": "BLOCKED_BROWSER_SURFACE_UNAVAILABLE",
-      "effect": "HUMAN_BASELINE_REVIEW_REMAINS_PREMATURE_UNTIL_TECHNICAL_BROWSER_GATE_PASSES"
+      "status": "COMPLETED_PASS",
+      "effect": "HUMAN_BASELINE_REVIEW_IS_NOW_THE_NEXT_GATE",
+      "correction_authorization": "AUTHORIZATION_LAB_MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_CORRECTION_053"
     }
   ]
 }
