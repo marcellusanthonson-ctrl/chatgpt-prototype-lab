@@ -28,6 +28,19 @@ Una consulta no aplicable no carga módulos de diseño, accesibilidad ni prefere
 5. Aplicar restricciones y criterio.
 6. Limitar el resultado conforme a `RESULT_CONTRACT.json`.
 
+## Base visual mínima y autocorrección
+
+Cuando `DESIGN_CRITERION` produce o revisa un artefacto de interfaz renderizado, aplicar antes de la dirección estética `MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001`.
+
+1. Abrir y recorrer el render real; leer HTML y CSS no basta.
+2. Inspeccionar, medir, interactuar y tensionar contenido y anchuras.
+3. Detectar cualquier desviación observable de propietario, contenedor, grilla, jerarquía, estado, función o intención, aunque no figure en una lista cerrada.
+4. Diagnosticar la causa raíz y corregir todo defecto comprendido en el alcance vigente.
+5. Reconstruir el componente cuando la causa sea estructural; no ocultar síntomas con overflow, clipping, offsets, márgenes negativos o decoración.
+6. Revalidar la superficie completa afectada.
+
+Una generación exitosa no es un PASS. Queda prohibido entregar `PASS_WITH_KNOWN_VISUAL_DEFECTS`. Los únicos cierres admitidos son `TECHNICAL_FOUNDATION_PASS_AWAITING_HUMAN_BASELINE_REVIEW` o `BLOCKED_WITH_DOCUMENTED_DEFECTS`.
+
 ## Accesibilidad y validación
 
 - `STATIC_PASS` no acredita accesibilidad.

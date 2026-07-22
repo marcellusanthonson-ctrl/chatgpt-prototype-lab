@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "id": "DEC-LAB-017",
+  "title": "Exigir una base visual mínima impecable y autocorrección antes de la exploración estética",
+  "project": "lab",
+  "project_scope": ["lab"],
+  "status": "APPROVED",
+  "effective_date": "2026-07-22",
+  "updated_at": "2026-07-22",
+  "approval_state": "APPROVED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-22",
+  "approval_evidence": "Aprobación explícita de AUTHORIZATION_LAB_MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_052, revisión 2, por Jonathan Martínez el 2026-07-22.",
+  "decision": {
+    "standard_id": "MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001",
+    "rule": "No visual direction may advance while the base fails structural, geometric, functional or component integrity.",
+    "required_cycle": "RENDER_INSPECT_MEASURE_INTERACT_STRESS_DIAGNOSE_CORRECT_OR_RECONSTRUCT_REVALIDATE",
+    "known_correctable_defect_delivery": "PROHIBITED",
+    "structural_defect_treatment": "RECONSTRUCT_AFFECTED_COMPONENT_NOT_PATCH_ACCUMULATION",
+    "human_visual_authority": "JONATHAN_MARTINEZ",
+    "authority_effect": "NONE_BEYOND_AUTHORIZED_TECHNICAL_CORRECTION_SCOPE"
+  },
+  "consequences": [
+    "ADD_GATE_0_STRUCTURAL_INTEGRITY_BEFORE_VISUAL_DIRECTION",
+    "INTEGRATE_MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_001",
+    "REQUIRE_RENDERED_BROWSER_INSPECTION_FOR_VISUAL_ARTIFACTS",
+    "REQUIRE_AGENT_SELF_CORRECTION_WITH_ROOT_CAUSE",
+    "PROHIBIT_PASS_WITH_KNOWN_VISUAL_DEFECTS",
+    "PRESERVE_HUMAN_VISUAL_APPROVAL_GATE"
+  ],
+  "non_authorizations": [
+    "SYMPHONIE_CHANGE",
+    "PILOT_CHANGE",
+    "CAPABILITY_CHANGE",
+    "VISUAL_REVIEW_MONOLITHIC_03",
+    "PROPOSAL_051_EXECUTION",
+    "PRODUCT_VISUAL_DIRECTION_SELECTION",
+    "IMAGE_GENERATION",
+    "RUNTIME",
+    "RAG",
+    "BACKEND",
+    "DEPLOYMENT",
+    "WCAG_CONFORMANCE_CLAIM"
+  ],
+  "source_refs": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_052.json",
+    "projects/lab/evidence/EVD-LAB-VIS-002.json",
+    "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MANIFEST.json"
+  ],
+  "supersedes": [],
+  "superseded_by": null
+}

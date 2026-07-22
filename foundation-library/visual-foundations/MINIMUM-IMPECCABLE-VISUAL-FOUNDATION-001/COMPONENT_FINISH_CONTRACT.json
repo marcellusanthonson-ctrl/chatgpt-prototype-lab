@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "contract_id": "MIVF-COMPONENT-FINISH-001",
+  "gate": "GATE_2_COMPONENT_AND_STATE_COMPLETENESS",
+  "components": {
+    "icons": [
+      "consistent_viewbox_and_optical_size",
+      "uniform_stroke_or_fill_language",
+      "no_clipping_or_deformation",
+      "meaning_matches_action",
+      "aligned_to_control_and_baseline"
+    ],
+    "buttons_and_controls": [
+      "symmetric_internal_spacing",
+      "centered_text_and_icon",
+      "visible_area_matches_hitbox",
+      "coherent_border_radius_and_edge_finish",
+      "no_layout_shift_between_states",
+      "default_hover_focus_active_pressed_selected_disabled_loading_error_success_states_as_applicable"
+    ],
+    "typography": [
+      "stable_baselines",
+      "intentional_line_length_and_line_height",
+      "no_unintended_clip_overflow_or_truncation",
+      "no_avoidable_widows_or_orphans_in_prominent_copy",
+      "hierarchy_matches_semantics",
+      "long_content_remains_contained"
+    ],
+    "navbar": [
+      "independent_surface_band",
+      "logo_links_and_actions_share_alignment",
+      "stable_height",
+      "mobile_menu_keyboard_operable",
+      "sticky_behavior_does_not_overlap_content"
+    ],
+    "hero": [
+      "balanced_declared_grid",
+      "legible_text_surface",
+      "media_or_graphic_contained",
+      "primary_action_connected_to_message",
+      "height_resilient_to_content_and_viewport"
+    ],
+    "footer": [
+      "shares_master_grid",
+      "clear_transition_from_preceding_content",
+      "complete_link_groups",
+      "balanced_lower_termination",
+      "no_floating_or_colliding_columns"
+    ]
+  },
+  "blocking_rule": "Any visibly unfinished, misaligned, clipped, ambiguous or state-incomplete component blocks delivery."
+}

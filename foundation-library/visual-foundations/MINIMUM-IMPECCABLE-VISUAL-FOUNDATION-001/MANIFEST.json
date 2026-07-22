@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "foundation_id": "MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001",
+  "version": "1.0.0",
+  "status": "BLOCKED_WITH_DOCUMENTED_DEFECTS",
+  "updated_at": "2026-07-22",
+  "role": "NEUTRAL_TECHNICAL_QUALITY_FIXTURE_NOT_VISUAL_DIRECTION",
+  "files": [
+    "STANDARD.json",
+    "STRUCTURAL_GEOMETRY_CONTRACT.json",
+    "COMPONENT_FINISH_CONTRACT.json",
+    "LAYOUT_INTENT_MAP_CONTRACT.json",
+    "FORM_BEHAVIOR_CONTRACT.json",
+    "RESPONSIVE_RESILIENCE_CONTRACT.json",
+    "SELF_CORRECTION_CONTRACT.json",
+    "VALIDATION_MATRIX.json",
+    "MINIMUM_IMPECCABLE_BASE_001.html"
+  ],
+  "gates": [
+    "GATE_0_STRUCTURAL_INTEGRITY",
+    "GATE_1_RESPONSIVE_GEOMETRY",
+    "GATE_2_COMPONENT_AND_STATE_COMPLETENESS",
+    "GATE_3_VISUAL_DIRECTION_APPLICATION",
+    "GATE_4_ACCESSIBILITY_AND_INTERACTION",
+    "GATE_5_HUMAN_VISUAL_REVIEW"
+  ],
+  "terminal_states": [
+    "TECHNICAL_FOUNDATION_PASS_AWAITING_HUMAN_BASELINE_REVIEW",
+    "BLOCKED_WITH_DOCUMENTED_DEFECTS"
+  ],
+  "authorization_ref": "AUTHORIZATION_LAB_MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_052",
+  "decision_ref": "DEC-LAB-017",
+  "integration_ref": "INT-LAB-002",
+  "evidence_refs": [
+    "EVD-LAB-VIS-002",
+    "EVD-LAB-MIVF-001"
+  ],
+  "authority_effect": "NONE",
+  "product_effect": "NONE",
+  "visual_approval_effect": "NONE",
+  "wcag_conformance_effect": "NONE"
+}

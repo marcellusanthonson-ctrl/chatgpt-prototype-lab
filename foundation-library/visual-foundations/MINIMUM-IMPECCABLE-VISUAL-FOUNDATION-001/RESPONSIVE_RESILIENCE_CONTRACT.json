@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "contract_id": "MIVF-RESPONSIVE-RESILIENCE-001",
+  "gate": "GATE_1_RESPONSIVE_GEOMETRY",
+  "widths_px": [320, 360, 390, 640, 768, 1024, 1280, 1440, 1920],
+  "continuous_sweep": {"from_px":320,"to_px":1920,"maximum_step_px":16},
+  "height_cases_px": [568, 667, 800, 900],
+  "orientations": ["portrait","landscape"],
+  "zoom_and_reflow": ["200_percent_zoom","400_percent_reflow_equivalent","text_spacing_override"],
+  "environmental_cases": [
+    "safe_area_insets",
+    "virtual_keyboard_reduced_viewport",
+    "browser_chrome_height_change",
+    "scrollbar_presence",
+    "reduced_motion"
+  ],
+  "content_stress": [
+    "long_navigation_label",
+    "two_x_heading_length",
+    "three_x_body_copy",
+    "large_numbers",
+    "empty_optional_content",
+    "missing_media_fallback",
+    "translated_text_expansion"
+  ],
+  "pass_rule": "No tested point may introduce collision, clipping, structural overflow, unreadable order, unreachable control or unexplained layout jump."
+}

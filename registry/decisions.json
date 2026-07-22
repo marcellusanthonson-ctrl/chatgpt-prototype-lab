@@ -1,6 +1,6 @@
 {
   "schema_version": "1.3.0",
-  "updated_at": "2026-07-21",
+  "updated_at": "2026-07-22",
   "records": [
     {
       "id": "DEC-LAB-001",
@@ -235,6 +235,32 @@
         "ASSISTIVE_TECHNOLOGY_EXECUTION",
         "WCAG_CONFORMANCE_CLAIM",
         "AUTONOMOUS_EXECUTION"
+      ]
+    },
+    {
+      "id": "DEC-LAB-017",
+      "title": "Exigir una base visual mínima impecable y autocorrección antes de la exploración estética",
+      "project_scope": ["lab"],
+      "status": "APPROVED",
+      "approval_state": "APPROVED",
+      "canonical_path": "decisions/DEC-LAB-017.json",
+      "updated_at": "2026-07-22",
+      "approved_by": "Jonathan Martínez",
+      "consequences": [
+        "ADD_GATE_0_STRUCTURAL_INTEGRITY_BEFORE_VISUAL_DIRECTION",
+        "INTEGRATE_MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_001",
+        "REQUIRE_AGENT_SELF_CORRECTION_WITH_ROOT_CAUSE",
+        "PROHIBIT_PASS_WITH_KNOWN_VISUAL_DEFECTS"
+      ],
+      "non_authorizations": [
+        "SYMPHONIE_CHANGE",
+        "PILOT_CHANGE",
+        "CAPABILITY_CHANGE",
+        "VISUAL_DIRECTION_SELECTION",
+        "RUNTIME",
+        "RAG",
+        "DEPLOYMENT",
+        "WCAG_CONFORMANCE_CLAIM"
       ]
     }
   ]

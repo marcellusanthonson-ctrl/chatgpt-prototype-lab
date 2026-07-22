@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-MIVF-001",
+  "project_id": "lab",
+  "kind": "MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_VALIDATION",
+  "status": "BLOCKED_WITH_DOCUMENTED_DEFECTS",
+  "updated_at": "2026-07-22",
+  "baseline": {
+    "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "branch": "main",
+    "parent_head": "07b5d07dc44806c5bf77dbb39b057e6c9635d0d0"
+  },
+  "artifact": {
+    "path": "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MINIMUM_IMPECCABLE_BASE_001.html",
+    "role": "NEUTRAL_TECHNICAL_FIXTURE_NOT_PRODUCT_OR_VISUAL_DIRECTION",
+    "offline": true,
+    "external_assets": false
+  },
+  "executed_checks": {
+    "json_parse": "PASS",
+    "duplicate_keys": "PASS",
+    "contract_reference_closure": "PASS",
+    "static_html_self_containment": "PASS",
+    "static_semantic_preflight": "PASS",
+    "form_contract_static_preflight": "PASS",
+    "reduced_motion_static_preflight": "PASS",
+    "criterion_layer_fixture_oracles": "PASS",
+    "repository_validation": "FAIL_PREEXISTING_PILOT_PIN_HASH_DRIFT_OUTSIDE_AUTHORIZED_SCOPE",
+    "browser_render": "NOT_EXECUTED_ENVIRONMENT_UNAVAILABLE",
+    "continuous_width_sweep": "NOT_EXECUTED_ENVIRONMENT_UNAVAILABLE",
+    "dom_geometry": "NOT_EXECUTED_ENVIRONMENT_UNAVAILABLE",
+    "interactive_form_behavior": "NOT_EXECUTED_ENVIRONMENT_UNAVAILABLE",
+    "optical_close_up_review": "NOT_EXECUTED_ENVIRONMENT_UNAVAILABLE"
+  },
+  "browser_attempts": [
+    {
+      "surface": "LOCAL_PLAYWRIGHT_1_61_1",
+      "status": "NOT_EXECUTED",
+      "reason": "CHROMIUM_EXECUTABLE_NOT_INSTALLED",
+      "effect": "NO_BROWSER_PASS_CLAIM"
+    },
+    {
+      "surface": "MANAGED_CLOUD_BROWSER",
+      "status": "NOT_EXECUTED",
+      "reason": "LOCALHOST_AND_DATA_URLS_BLOCKED_BY_BROWSER_SECURITY_POLICY",
+      "effect": "NO_BROWSER_PASS_CLAIM_AND_NO_POLICY_WORKAROUND_ATTEMPTED"
+    }
+  ],
+  "preexisting_repository_divergences": [
+    {
+      "id": "PREEXISTING-PILOT-PIN-001",
+      "path": "foundation-library/pilots/PILOT-PREMIUM-ECOMMERCE-001/PILOT.json",
+      "finding": "archetype_pin content_sha256 does not match the referenced file at the declared historical commit",
+      "treatment": "NOT_CORRECTED_BECAUSE_AUTHORIZATION_052_EXPLICITLY_PROHIBITS_PILOT_CHANGES"
+    },
+    {
+      "id": "PREEXISTING-PILOT-PIN-002",
+      "path": "foundation-library/pilots/PILOT-PREMIUM-ECOMMERCE-001/PILOT.json",
+      "finding": "evidence_pin content_sha256 does not match the referenced file at the declared historical commit",
+      "treatment": "NOT_CORRECTED_BECAUSE_AUTHORIZATION_052_EXPLICITLY_PROHIBITS_PILOT_CHANGES"
+    }
+  ],
+  "defect_log": [
+    {
+      "id": "MIVF-BLOCK-001",
+      "domain": "VALIDATION_INFRASTRUCTURE",
+      "severity": "BLOCKER",
+      "observable_symptom": "The rendered fixture cannot be opened in an authorized callable browser surface in this execution environment.",
+      "root_cause": "Local Playwright lacks Chromium; managed browser policy rejects local and data URLs.",
+      "scope_authority": "Installation or policy circumvention is not available or permitted in this execution.",
+      "correction": "Execute the committed browser validator on a surface with a callable local Chromium installation.",
+      "revalidation": "NOT_EXECUTED",
+      "final_state": "OPEN_BLOCKER"
+    }
+  ],
+  "result_claims": {
+    "standard_documented": true,
+    "criterion_layer_amended": true,
+    "neutral_fixture_created": true,
+    "static_validation_passed": true,
+    "browser_validation_passed": false,
+    "technical_foundation_passed": false,
+    "human_visual_approval_established": false,
+    "wcag_conformance_established": false,
+    "product_readiness_established": false
+  },
+  "source_refs": [
+    "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MANIFEST.json",
+    "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/VALIDATION_MATRIX.json",
+    "scripts/validate_minimum_impeccable_foundation.py",
+    "scripts/validate_minimum_impeccable_browser.cjs"
+  ],
+  "authority_effect": "NONE"
+}

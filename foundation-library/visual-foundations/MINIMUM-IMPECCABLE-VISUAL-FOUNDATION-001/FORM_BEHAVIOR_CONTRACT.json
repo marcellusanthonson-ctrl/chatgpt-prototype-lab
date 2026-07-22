@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "contract_id": "MIVF-FORM-BEHAVIOR-001",
+  "requirements": [
+    "visible_persistent_labels",
+    "programmatic_label_control_association",
+    "appropriate_input_types_and_autocomplete_tokens",
+    "keyboard_and_mobile_keyboard_compatibility",
+    "paste_allowed",
+    "required_and_format_validation",
+    "field_level_error_identification",
+    "error_summary_or_status_when_material",
+    "focus_moves_only_when_it_improves_recovery",
+    "entered_data_preserved_after_validation_failure",
+    "loading_state_prevents_duplicate_submission",
+    "success_and_failure_are_perceivable_without_color_only",
+    "local_fixture_performs_no_network_request",
+    "reset_or retry_behavior_is_explicit"
+  ],
+  "fixture_scenarios": [
+    "empty_required_submission",
+    "invalid_email",
+    "valid_submission",
+    "double_submit_attempt",
+    "keyboard_only_completion",
+    "long_text_input",
+    "data_preservation_after_error"
+  ],
+  "blocking_defects": [
+    "UNLABELED_CONTROL",
+    "INVISIBLE_OR_COLOR_ONLY_ERROR",
+    "DATA_LOSS_ON_VALIDATION",
+    "DOUBLE_SUBMISSION",
+    "KEYBOARD_TRAP",
+    "UNANNOUNCED_RESULT",
+    "NETWORK_REQUEST_FROM_NEUTRAL_FIXTURE"
+  ]
+}

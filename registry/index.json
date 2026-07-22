@@ -1,22 +1,22 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-07-21",
+  "updated_at": "2026-07-22",
   "counts": {
     "projects": 7,
-    "decisions": 16,
+    "decisions": 17,
     "errors": 7,
     "patterns": 8,
     "ideas": 5,
-    "integrations": 5,
+    "integrations": 6,
     "experiments": 5,
-    "authorizations": 22,
-    "evidence": 13,
+    "authorizations": 23,
+    "evidence": 15,
     "unincorporated": 0,
     "proposals": 3,
     "sessions": 1,
     "reassessments": 2,
     "source_packages": 2,
-    "foundation_library": 17,
+    "foundation_library": 18,
     "visual_preferences": 1,
     "rag_contracts": 6,
     "foundation_pilots": 1,
@@ -47,11 +47,11 @@
     "design_knowledge_package": "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/MANIFEST.json"
   },
   "latest": {
-    "decision": "DEC-LAB-016",
+    "decision": "DEC-LAB-017",
     "error": "ERR-LAB-006",
     "pattern": "PAT-LAB-007",
-    "authorization": "AUTHORIZATION_LAB_CHATGPT_CRITERION_LAYER_20260721",
-    "evidence": "EVD-LAB-CRIT-001",
+    "authorization": "AUTHORIZATION_LAB_MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_052",
+    "evidence": "EVD-LAB-MIVF-001",
     "proposal": "PROP-LAB-003",
     "session": "SES-2026-06-28-001",
     "reassessment": "REA-LAB-002",
@@ -65,7 +65,8 @@
     "visual_preference": "VPP-JM-001@1.2.0",
     "high_fidelity_visual_protocol": "HFP-041-001@1.2.0",
     "visual_preference_benchmark": "JM-VISUAL-PREFERENCE-BENCHMARK-001@1.0.0",
-    "integration": "INT-LAB-001",
-    "chatgpt_criterion_layer": "CHATGPT-CRITERION-LAYER-001@1.0.0"
+    "integration": "INT-LAB-002",
+    "chatgpt_criterion_layer": "CHATGPT-CRITERION-LAYER-001@1.1.0",
+    "minimum_impeccable_visual_foundation": "MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001@1.0.0"
   }
 }

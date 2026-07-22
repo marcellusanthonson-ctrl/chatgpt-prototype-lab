@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0.0",
   "layer_id": "CHATGPT-CRITERION-LAYER-001",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "status": "INTEGRATED_DOCUMENTARY_SELECTIVE",
   "updated_at": "2026-07-21",
-  "purpose": "Apply governed design, evidence, accessibility and contextual preference criteria before producing applicable ChatGPT responses inside the LAB project.",
+  "purpose": "Apply governed design, evidence, accessibility, contextual preference and minimum technical visual-foundation criteria before producing applicable ChatGPT responses inside the LAB project.",
   "consumer": "CHATGPT_PROJECT",
   "entrypoint": "project-sources/chatgpt/START_HERE.md",
   "selector_ref": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json",
@@ -44,14 +44,20 @@
     "DKP-028"
   ],
   "protocol_refs": [
-    "ATP-WEB-001"
+    "ATP-WEB-001",
+    "MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001"
   ],
+  "minimum_visual_foundation_ref": "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MANIFEST.json",
   "canonical_source_policy": "REFERENCE_ONLY_NO_DUPLICATION",
   "application_sequence": [
     "CLASSIFY_TASK_AND_CLAIMS",
     "SELECT_MODULES",
     "RESOLVE_CANONICAL_SOURCES",
     "APPLY_CONSTRAINTS_AND_HEURISTICS",
+    "WHEN_RENDERED_INTERFACE_ARTIFACT_APPLIES_RUN_STRUCTURAL_GATE",
+    "RENDER_INSPECT_MEASURE_INTERACT_AND_STRESS",
+    "DIAGNOSE_AND_CORRECT_OR_RECONSTRUCT_IN_SCOPE_DEFECTS",
+    "REVALIDATE_COMPLETE_AFFECTED_SURFACE",
     "BOUND_RESULT_CLAIMS",
     "PRODUCE_RESPONSE"
   ],
@@ -66,6 +72,15 @@
     "assistive_technology_execution": false,
     "wcag_conformance_by_default": false,
     "autonomous_authority": false
+  },
+  "self_correction": {
+    "known_correctable_defect_blocks_delivery": true,
+    "successful_generation_is_not_pass": true,
+    "rendered_result_inspection_required": true,
+    "root_cause_required": true,
+    "structural_defect_requires_reconstruction": true,
+    "pass_with_known_visual_defects": false,
+    "correction_scope": "ONLY_WITHIN_CURRENT_EXPLICIT_AUTHORIZATION_OR_USER_REQUEST"
   },
   "authorization_ref": "AUTHORIZATION_LAB_CHATGPT_CRITERION_LAYER_20260721",
   "decision_ref": "DEC-LAB-016",

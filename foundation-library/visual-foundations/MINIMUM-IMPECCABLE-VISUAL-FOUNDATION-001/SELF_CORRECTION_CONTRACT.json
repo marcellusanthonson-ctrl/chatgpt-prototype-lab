@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "contract_id": "MIVF-SELF-CORRECTION-001",
+  "obligation": "A generated artifact is not complete merely because it satisfies the brief literally or renders successfully. The agent must inspect the rendered result, detect observable defects, diagnose root cause, correct every in-scope defect and revalidate the complete affected surface.",
+  "cycle": [
+    "RENDER",
+    "INSPECT",
+    "MEASURE",
+    "INTERACT",
+    "STRESS",
+    "CLASSIFY_DEFECTS",
+    "DIAGNOSE_ROOT_CAUSE",
+    "CORRECT_OR_RECONSTRUCT",
+    "REVALIDATE_COMPLETE_SURFACE"
+  ],
+  "defect_record_fields": [
+    "id",
+    "domain",
+    "severity",
+    "observable_symptom",
+    "root_cause",
+    "scope_authority",
+    "correction",
+    "revalidation",
+    "final_state"
+  ],
+  "severity": {
+    "BLOCKER":"Prevents use, hides content, breaks geometry, causes data loss or invalidates the declared foundation.",
+    "MAJOR":"Materially degrades hierarchy, component finish, interaction, responsive behavior or accessibility.",
+    "MINOR":"Observable imperfection that does not block function but violates the impeccable finish requirement."
+  },
+  "reconstruction_rule": "If root cause is structural, rebuild the affected component or region instead of accumulating local offsets, negative margins, clipping or decoration.",
+  "autonomy_boundary": {
+    "correct_in_scope_technical_defects": true,
+    "reject_and_rebuild_own_defective_result": true,
+    "change_objective_or_brand": false,
+    "override_human_visual_decision": false,
+    "expand_repository_or_scope": false,
+    "claim_visual_approval": false
+  },
+  "allowed_terminal_states": [
+    "TECHNICAL_FOUNDATION_PASS_AWAITING_HUMAN_BASELINE_REVIEW",
+    "BLOCKED_WITH_DOCUMENTED_DEFECTS"
+  ],
+  "forbidden_terminal_state": "PASS_WITH_KNOWN_VISUAL_DEFECTS"
+}

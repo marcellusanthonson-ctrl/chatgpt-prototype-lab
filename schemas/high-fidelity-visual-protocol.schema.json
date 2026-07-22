@@ -1,20 +1,118 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://lab.local/schemas/high-fidelity-visual-protocol.schema.json",
-  "title": "LAB high-fidelity visual protocol",
+  "title": "Governed high-fidelity visual protocol",
   "type": "object",
-  "required": ["schema_version", "document_id", "version", "status", "purpose", "stages", "visual_direction_contract", "html_prototype_contract", "review_contract", "baseline_gate", "responsive_review", "revision_contract", "reference_boundary", "authority_boundary"],
+  "required": [
+    "schema_version",
+    "document_id",
+    "version",
+    "status",
+    "purpose",
+    "stages",
+    "technical_foundation_gate",
+    "visual_direction_contract",
+    "html_prototype_contract",
+    "review_contract",
+    "baseline_gate",
+    "responsive_review",
+    "revision_contract",
+    "reference_boundary",
+    "authority_boundary"
+  ],
   "properties": {
-    "schema_version": {"const": "1.0.0"}, "document_id": {"pattern": "^high-fidelity-visual-protocol\\.[a-z0-9-]+$"}, "version": {"type": "string"}, "status": {"const": "DOCUMENTED_NOT_IMPLEMENTED"}, "purpose": {"type": "string"},
-    "stages": {"type": "array", "minItems": 11, "items": {"type": "object", "required": ["sequence", "id", "human_gate"], "properties": {"sequence": {"type": "integer", "minimum": 1}, "id": {"type": "string"}, "human_gate": {"type": "boolean"}}, "additionalProperties": false}},
-    "visual_direction_contract": {"type": "object", "required": ["minimum_materially_distinct_directions", "selection_authority"], "properties": {"minimum_materially_distinct_directions": {"const": 3}, "selection_authority": {"const": "JONATHAN_MARTINEZ_EXPLICIT_SELECTION"}}, "additionalProperties": false},
-    "html_prototype_contract": {"type": "object", "required": ["required_before_final_phase3_contract", "is_product_implementation", "application_code_authorized"], "properties": {"required_before_final_phase3_contract": {"const": true}, "is_product_implementation": {"const": false}, "application_code_authorized": {"const": false}}, "additionalProperties": false},
-    "review_contract": {"type": "object", "required": ["approver", "model_self_approval", "areas"], "properties": {"approver": {"const": "JONATHAN_MARTINEZ"}, "model_self_approval": {"const": "PROHIBITED"}, "areas": {"type": "array", "minItems": 12, "items": {"type": "string"}}}, "additionalProperties": false},
-    "baseline_gate": {"type": "object", "required": ["id", "requires_explicit_human_approval", "approver", "model_self_approval", "final_phase3_contract_allowed"], "properties": {"id": {"const": "HIGH_FIDELITY_VISUAL_BASELINE_APPROVED"}, "requires_explicit_human_approval": {"const": true}, "approver": {"const": "JONATHAN_MARTINEZ"}, "model_self_approval": {"const": "PROHIBITED"}, "final_phase3_contract_allowed": {"const": false}}, "additionalProperties": false},
-    "responsive_review": {"type": "object", "required": ["widths_px", "areas"], "properties": {"widths_px": {"const": [320, 640, 1024, 1440, 1920]}, "areas": {"type": "array", "minItems": 12, "items": {"type": "string"}}}, "additionalProperties": false},
-    "revision_contract": {"type": "object", "required": ["visual_delta_required", "human_re_review_required"], "properties": {"visual_delta_required": {"const": true}, "human_re_review_required": {"const": true}}, "additionalProperties": false},
-    "reference_boundary": {"type": "object", "required": ["references_are_evidence_not_authorization", "copy_reference_images", "claim_reference_ownership"], "properties": {"references_are_evidence_not_authorization": {"const": true}, "copy_reference_images": {"const": "PROHIBITED"}, "claim_reference_ownership": {"const": "PROHIBITED"}}, "additionalProperties": false},
-    "authority_boundary": {"type": "object", "required": ["runtime", "application_code", "product_changes", "release"], "properties": {"runtime": {"const": "NOT_AUTHORIZED"}, "application_code": {"const": "NOT_AUTHORIZED"}, "product_changes": {"const": "NOT_AUTHORIZED"}, "release": {"const": "NOT_AUTHORIZED"}}, "additionalProperties": false}
+    "schema_version": {"const": "1.0.0"},
+    "document_id": {"const": "high-fidelity-visual-protocol.authorization-041"},
+    "version": {"const": "1.3.0"},
+    "status": {"const": "DOCUMENTED_WITH_MINIMUM_TECHNICAL_FOUNDATION_AND_PROPOSED_PREFERENCE_BENCHMARK"},
+    "purpose": {"type": "string", "minLength": 1},
+    "stages": {
+      "type": "array",
+      "minItems": 12,
+      "items": {
+        "type": "object",
+        "required": ["sequence", "id", "human_gate"],
+        "properties": {
+          "sequence": {"type": "integer", "minimum": 1},
+          "id": {"type": "string", "minLength": 1},
+          "human_gate": {"type": "boolean"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "technical_foundation_gate": {
+      "type": "object",
+      "required": ["id", "required_before_visual_direction_application", "manifest", "required_cycle", "blocking_conditions", "pass_state", "failure_state", "pass_with_known_defects"],
+      "properties": {
+        "id": {"const": "MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001"},
+        "required_before_visual_direction_application": {"const": true},
+        "manifest": {"type": "string"},
+        "required_cycle": {"type": "array", "minItems": 8, "items": {"type": "string"}},
+        "blocking_conditions": {"type": "array", "minItems": 8, "items": {"type": "string"}, "uniqueItems": true},
+        "pass_state": {"const": "TECHNICAL_FOUNDATION_PASS_AWAITING_HUMAN_BASELINE_REVIEW"},
+        "failure_state": {"const": "BLOCKED_WITH_DOCUMENTED_DEFECTS"},
+        "pass_with_known_defects": {"const": "PROHIBITED"}
+      },
+      "additionalProperties": false
+    },
+    "visual_direction_contract": {"type": "object"},
+    "html_prototype_contract": {"type": "object"},
+    "review_contract": {"type": "object"},
+    "baseline_gate": {
+      "type": "object",
+      "required": ["id", "requires_explicit_human_approval", "approver", "model_self_approval", "final_phase3_contract_allowed"],
+      "properties": {
+        "id": {"const": "HIGH_FIDELITY_VISUAL_BASELINE_APPROVED"},
+        "requires_explicit_human_approval": {"const": true},
+        "approver": {"const": "JONATHAN_MARTINEZ"},
+        "model_self_approval": {"const": "PROHIBITED"},
+        "final_phase3_contract_allowed": {"const": false}
+      },
+      "additionalProperties": false
+    },
+    "responsive_review": {
+      "type": "object",
+      "required": ["widths_px", "continuous_width_sweep", "areas"],
+      "properties": {
+        "widths_px": {"const": [320, 640, 1024, 1440, 1920]},
+        "continuous_width_sweep": {
+          "type": "object",
+          "required": ["from_px", "to_px", "maximum_step_px"],
+          "properties": {
+            "from_px": {"const": 320},
+            "to_px": {"const": 1920},
+            "maximum_step_px": {"maximum": 16}
+          },
+          "additionalProperties": false
+        },
+        "areas": {"type": "array", "minItems": 17, "items": {"type": "string"}, "uniqueItems": true}
+      },
+      "additionalProperties": false
+    },
+    "revision_contract": {"type": "object"},
+    "reference_boundary": {"type": "object"},
+    "authority_boundary": {
+      "type": "object",
+      "required": ["runtime", "application_code", "product_changes", "release"],
+      "properties": {
+        "runtime": {"const": "NOT_AUTHORIZED"},
+        "application_code": {"const": "NOT_AUTHORIZED"},
+        "product_changes": {"const": "NOT_AUTHORIZED"},
+        "release": {"const": "NOT_AUTHORIZED"},
+        "html_generation": {"type": "string"},
+        "browser_execution": {"type": "string"},
+        "benchmark_html_generation": {"type": "string"},
+        "offline_browser_validation": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "updated_at": {"type": "string", "format": "date"},
+    "monolithic_calibration_contract": {"type": "object"},
+    "visual_calibration_gate": {"type": "object"},
+    "pre_delivery_checks": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "deferred_until_visual_calibration_approval": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "preference_benchmark_contract": {"type": "object"},
+    "visual_accessibility_preflight": {"type": "object"}
   },
   "additionalProperties": false
 }

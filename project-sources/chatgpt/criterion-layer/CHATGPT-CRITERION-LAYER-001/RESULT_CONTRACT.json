@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "contract_id": "CHATGPT-CRITERION-RESULT-CONTRACT-001",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "status": "INTEGRATED_DOCUMENTARY",
   "required_trace_when_any_module_active": [
     "activated_modules",
@@ -32,8 +32,18 @@
     "USER_EVALUATION_AND_CONFORMANCE_ARE_COMPLEMENTARY_NOT_EQUIVALENT",
     "PREFERENCE_IS_NOT_STANDARD",
     "HEURISTIC_IS_NOT_EVIDENCE",
-    "EVIDENCE_IS_NOT_AUTHORIZATION"
+    "EVIDENCE_IS_NOT_AUTHORIZATION",
+    "SUCCESSFUL_GENERATION_IS_NOT_TECHNICAL_PASS",
+    "KNOWN_CORRECTABLE_DEFECT_BLOCKS_DELIVERY",
+    "TECHNICAL_FOUNDATION_PASS_IS_NOT_HUMAN_VISUAL_APPROVAL",
+    "STRUCTURAL_DEFECT_REQUIRES_RECONSTRUCTION_NOT_PATCH_ACCUMULATION"
   ],
+  "visual_artifact_result_states": [
+    "SELF_CORRECTION_IN_PROGRESS",
+    "TECHNICAL_FOUNDATION_PASS_AWAITING_HUMAN_BASELINE_REVIEW",
+    "BLOCKED_WITH_DOCUMENTED_DEFECTS"
+  ],
+  "forbidden_visual_artifact_state": "PASS_WITH_KNOWN_VISUAL_DEFECTS",
   "recommendation_rule": "Recommend one direction when requested, state material uncertainty, and identify the smallest missing evidence that could change the conclusion.",
   "authority_effect": "NONE",
   "runtime_effect": "NONE"

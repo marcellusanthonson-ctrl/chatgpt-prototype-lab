@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0.0",
-  "evidence_id": "EVD-LAB-CRIT-001",
+  "evidence_id": "EVD-LAB-MIVF-001",
   "project_id": "lab",
-  "kind": "CHATGPT_CRITERION_LAYER_INTEGRATION_VALIDATION",
+  "kind": "CHATGPT_CRITERION_LAYER_MINIMUM_VISUAL_FOUNDATION_AMENDMENT_VALIDATION",
   "status": "PASS_WITH_DECLARED_MODEL_SURFACE_LIMITATION",
-  "updated_at": "2026-07-21",
+  "updated_at": "2026-07-22",
   "baseline": {
     "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
     "branch": "main",
-    "parent_head": "af9b50ab419de5e33bad89b2bed3b42ed94c7a11"
+    "parent_head": "07b5d07dc44806c5bf77dbb39b057e6c9635d0d0"
   },
   "executed_checks": {
     "json_parse": "PASS",
@@ -22,7 +22,13 @@
     "wcag_claim_boundary": "PASS",
     "static_manual_at_separation": "PASS",
     "authority_boundary": "PASS",
-    "rag_runtime_product_boundary": "PASS"
+    "rag_runtime_product_boundary": "PASS",
+    "minimum_visual_foundation_reference_closure": "PASS",
+    "known_defect_delivery_prohibition": "PASS",
+    "structural_reconstruction_rule": "PASS",
+    "technical_human_wcag_claim_separation": "PASS",
+    "neutral_fixture_static_validation": "PASS",
+    "neutral_fixture_browser_validation": "NOT_EXECUTED_ENVIRONMENT_UNAVAILABLE"
   },
   "controlled_response_evaluation": {
     "requested_model": "Terra 5.6",
@@ -39,7 +45,10 @@
     "terra_behavior_validated": false,
     "model_weights_modified": false,
     "rag_implemented": false,
-    "wcag_conformance_established": false
+    "wcag_conformance_established": false,
+    "minimum_visual_foundation_integrated": true,
+    "human_visual_approval_established": false,
+    "technical_foundation_passed": false
   },
   "source_refs": [
     "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MANIFEST.json",

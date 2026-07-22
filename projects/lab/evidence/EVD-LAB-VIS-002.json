@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-VIS-002",
+  "title": "Human rejection and technical defect findings for VISUAL_REVIEW_MONOLITHIC_02.html",
+  "project_id": "lab",
+  "kind": "HUMAN_VISUAL_REVIEW_WITH_TECHNICAL_DEFECT_FINDINGS",
+  "status": "REJECTED_AS_TECHNICAL_FOUNDATION",
+  "recorded_at": "2026-07-22",
+  "subject": "Jonathan Martínez",
+  "artifact": {
+    "filename": "VISUAL_REVIEW_MONOLITHIC_02.html",
+    "repository_copy_status": "NOT_COPIED_TO_LAB",
+    "sha256": "2bc25a416e5d2efabe172b31c4e0571b44a7c50a0b5850ac9c4c57c52da7a078",
+    "successor_v03_created": false
+  },
+  "human_findings": [
+    "NAVBAR_OVER_IMAGE",
+    "BACKGROUND_MISMATCH",
+    "LINES_WITH_POOR_TERMINATION_OR_UNINTENDED_EXTENSION",
+    "INCOHERENT_ORGANIZATION",
+    "IMPERFECT_ICONS",
+    "UNFINISHED_BUTTONS",
+    "MISPOSITIONED_TEXT",
+    "ELEMENTS_OUTSIDE_GRID",
+    "UNINTENDED_BEHIND_LAYER_OVERLAP",
+    "SPACING_PROBLEMS",
+    "MISALIGNED_NAVBAR",
+    "FOOTER_DEFECTS",
+    "HERO_DEFECTS",
+    "FORM_BEHAVIOR_DEFECTS"
+  ],
+  "technical_interpretation": {
+    "classification": "STRUCTURAL_FOUNDATION_FAILURE_NOT_MERE_STYLING_PREFERENCE",
+    "root_gap": "VISUAL_EXPLORATION_PROCEEDED_WITHOUT_A_BINARY_PRE_STYLE_STRUCTURAL_GATE",
+    "recommended_treatment": "CREATE_NEUTRAL_TECHNICAL_FOUNDATION_AND_REQUIRE_SELF_CORRECTION",
+    "continue_proposal_051": false
+  },
+  "claim_limits": {
+    "artifact_source_reinspected_in_this_execution": false,
+    "findings_provenance": "HUMAN_REVIEW_AND_PRIOR_RECORDED_TECHNICAL_INSPECTION_IN_PROJECT_CONVERSATION",
+    "visual_preference_universalized": false,
+    "wcag_conformance_effect": "NONE"
+  },
+  "source_refs": [
+    "HUMAN_REVIEW_CONVERSATION_2026-07-22_VISUAL_REVIEW_MONOLITHIC_02",
+    "decisions/DEC-LAB-017.json"
+  ],
+  "authority_effect": "NONE"
+}

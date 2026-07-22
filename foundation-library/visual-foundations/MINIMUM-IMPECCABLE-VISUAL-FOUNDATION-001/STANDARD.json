@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "standard_id": "MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001",
+  "version": "1.0.0",
+  "status": "INTEGRATED_DOCUMENTARY_WITH_STATIC_VALIDATION_BROWSER_BLOCKED",
+  "purpose": "Prevent visual exploration from advancing on a technically defective structural base and require bounded agent self-correction before delivery.",
+  "applicability": [
+    "UI",
+    "UX",
+    "HTML",
+    "WEB_INTERFACE",
+    "PROTOTYPE",
+    "COMPONENT",
+    "FORM",
+    "VISUAL_CALIBRATION_ARTIFACT"
+  ],
+  "open_defect_rule": "The enumerated defect taxonomy is not exhaustive. Any observable mismatch with ownership, containment, grid, hierarchy, state, function or declared intent is a defect candidate and must be classified.",
+  "non_negotiable_outcomes": [
+    "ZERO_ACCIDENTAL_OVERLAPS",
+    "ZERO_UNOWNED_OR_RESIDUAL_LINES",
+    "ZERO_STRUCTURAL_HORIZONTAL_OVERFLOW",
+    "ZERO_KNOWN_CORRECTABLE_DEFECTS_AT_DELIVERY",
+    "COMMON_GRID_ALIGNMENT",
+    "COHERENT_SURFACE_ROLES",
+    "COMPLETE_COMPONENT_STATES",
+    "RENDERED_RESULT_INSPECTED",
+    "ROOT_CAUSE_CORRECTION_REVALIDATED"
+  ],
+  "defect_domains": [
+    "ICONOGRAPHY_AND_ASSETS",
+    "BUTTONS_AND_CONTROLS",
+    "TYPOGRAPHY_AND_CONTENT",
+    "GRID_ALIGNMENT_AND_SPACING",
+    "SURFACES_BACKGROUNDS_LINES_AND_DIVIDERS",
+    "LAYERS_Z_INDEX_AND_OVERLAYS",
+    "NAVBAR",
+    "HERO",
+    "SECTIONS_CARDS_AND_DATA_BLOCKS",
+    "FORMS_AND_BEHAVIOR",
+    "FOOTER",
+    "INTERACTION_STATES",
+    "RESPONSIVE_ZOOM_REFLOW_AND_ORIENTATION",
+    "EXTREME_CONTENT",
+    "VISUAL_STABILITY_LOADING_AND_RESOURCES",
+    "MOTION_AND_REDUCED_MOTION"
+  ],
+  "validation_modes": [
+    "STATIC_SOURCE_INSPECTION",
+    "RENDERED_BROWSER_INSPECTION",
+    "DOM_GEOMETRY_MEASUREMENT",
+    "INTERACTION_EXERCISE",
+    "CONTENT_STRESS",
+    "CONTINUOUS_WIDTH_SWEEP",
+    "OPTICAL_CLOSE_UP_REVIEW",
+    "CONSOLE_AND_RESOURCE_REVIEW",
+    "KEYBOARD_FOCUS_REVIEW"
+  ],
+  "prohibited_shortcuts": [
+    "HIDE_DEFECT_WITH_OVERFLOW",
+    "MASK_DEFECT_WITH_CLIPPING",
+    "ACCUMULATE_NEGATIVE_MARGIN_PATCHES",
+    "ACCUMULATE_UNEXPLAINED_OFFSETS",
+    "USE_DECORATION_TO_CONCEAL_STRUCTURE",
+    "DECLARE_PASS_FROM_SUCCESSFUL_GENERATION_ONLY",
+    "PRESERVE_KNOWN_DEFECT_TO_AVOID_RECONSTRUCTION",
+    "TRANSFER_PRIMARY_DETECTION_OF_EVIDENT_ERRORS_TO_USER"
+  ],
+  "claim_boundary": {
+    "technical_fixture_pass": "Evidence for the tested fixture and environments only.",
+    "human_visual_approval": false,
+    "wcag_conformance": false,
+    "product_readiness": false,
+    "universal_aesthetic_template": false
+  },
+  "source_refs": [
+    "decisions/DEC-LAB-017.json",
+    "projects/lab/evidence/EVD-LAB-VIS-002.json",
+    "project-sources/chatgpt/08_CRITERION_LAYER.md",
+    "foundation-library/visual-protocols/high-fidelity-visual-protocol.json"
+  ]
+}

@@ -3,7 +3,7 @@
   "project_id": "lab",
   "name": "LAB",
   "status": "active",
-  "updated_at": "2026-07-21",
+  "updated_at": "2026-07-22",
   "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "canonical_branch": "main",
   "authority": {
@@ -11,7 +11,7 @@
     "autonomous_model_authority": false
   },
   "summary": "Gobierno, autoridad, continuidad, auditoría y biblioteca documental gobernada entre proyectos.",
-  "content_completeness": "STRUCTURED_V2_WITH_SELECTIVE_CHATGPT_CRITERION_LAYER_AND_GOVERNED_CLAIM_BOUNDARIES",
+  "content_completeness": "STRUCTURED_V2_WITH_SELECTIVE_CRITERION_LAYER_MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_AND_SELF_CORRECTION",
   "source_refs": [
     "projects/lab/PROJECT_STATE.md",
     "registry/projects.json",
@@ -27,7 +27,13 @@
     "decisions/DEC-LAB-016.json",
     "projects/lab/authorizations/AUTHORIZATION_LAB_CHATGPT_CRITERION_LAYER_20260721.json",
     "projects/lab/integrations/INT-LAB-001.json",
-    "projects/lab/evidence/EVD-LAB-CRIT-001.json"
+    "projects/lab/evidence/EVD-LAB-CRIT-001.json",
+    "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MANIFEST.json",
+    "decisions/DEC-LAB-017.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_052.json",
+    "projects/lab/evidence/EVD-LAB-VIS-002.json",
+    "projects/lab/evidence/EVD-LAB-MIVF-001.json",
+    "projects/lab/integrations/INT-LAB-002.json"
   ],
   "governance_paths": {
     "roadmap": "projects/lab/ROADMAP.json",
@@ -56,8 +62,8 @@
     },
     "authorization_registry": {
       "status": "RECONCILED_WITH_EXTERNAL_AUDIT_AUTHORIZATION_046",
-      "registered_consumed_transitions": 12,
-      "latest": "AUTHORIZATION_LAB_EXTERNAL_AUDIT_RECONCILIATION_046",
+      "registered_consumed_transitions": 23,
+      "latest": "AUTHORIZATION_LAB_MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_052",
       "correspondence_policy": "STATE_KEY_REQUIRED"
     },
     "design_knowledge": {
@@ -154,19 +160,33 @@
     },
     "chatgpt_criterion_layer": {
       "id": "CHATGPT-CRITERION-LAYER-001",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "status": "INTEGRATED_DOCUMENTARY_SELECTIVE",
       "integration_id": "INT-LAB-001",
       "modules": 4,
-      "fixtures": 10,
+      "fixtures": 13,
       "selector_validation": "PASS",
       "terra_5_6_light_evaluation": "NOT_EXECUTED_MODEL_SURFACE_UNAVAILABLE",
       "runtime": false,
       "rag": false,
       "wcag_conformance": false
+    },
+    "minimum_impeccable_visual_foundation": {
+      "id": "MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001",
+      "version": "1.0.0",
+      "status": "BLOCKED_WITH_DOCUMENTED_DEFECTS",
+      "decision": "DEC-LAB-017",
+      "integration": "INT-LAB-002",
+      "neutral_fixture": "MINIMUM_IMPECCABLE_BASE_001.html",
+      "static_validation": "PASS",
+      "browser_validation": "NOT_EXECUTED_ENVIRONMENT_UNAVAILABLE",
+      "known_correctable_defects": "NOT_ESTABLISHED_WITHOUT_RENDERED_BROWSER_INSPECTION",
+      "human_visual_approval": false,
+      "wcag_conformance": false,
+      "product_effect": "NONE"
     }
   },
   "head_policy": "VERIFY_LIVE_AT_USE",
-  "verified_parent_head": "af9b50ab419de5e33bad89b2bed3b42ed94c7a11",
+  "verified_parent_head": "07b5d07dc44806c5bf77dbb39b057e6c9635d0d0",
   "self_head_is_canonical_state": false
 }

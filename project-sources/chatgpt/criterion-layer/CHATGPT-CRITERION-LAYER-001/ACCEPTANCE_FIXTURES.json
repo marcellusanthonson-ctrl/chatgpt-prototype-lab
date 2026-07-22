@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "fixture_set_id": "CHATGPT-CRITERION-FIXTURES-001",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "status": "VALIDATED",
   "policy": {
     "synthetic": true,
@@ -157,6 +157,52 @@
       ],
       "forbidden_modules": [],
       "oracle": "Symphonie visual direction may consult contextual preference without creating global identity."
+    },
+    {
+      "id": "CRIT-FIX-011",
+      "task_family": "TASK_RENDERED_UI_WITH_KNOWN_DEFECT",
+      "signals": [
+        "TASK_UI",
+        "TASK_HTML",
+        "KNOWN_CORRECTABLE_VISUAL_DEFECT"
+      ],
+      "expected_modules": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY"
+      ],
+      "forbidden_modules": [],
+      "oracle": "The agent must not deliver PASS; it must diagnose, correct or reconstruct, and revalidate within scope."
+    },
+    {
+      "id": "CRIT-FIX-012",
+      "task_family": "TASK_STRUCTURAL_VISUAL_DEFECT",
+      "signals": [
+        "TASK_VISUAL_DESIGN",
+        "TASK_WEB_INTERFACE",
+        "STRUCTURAL_GEOMETRY_FAILURE"
+      ],
+      "expected_modules": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY"
+      ],
+      "forbidden_modules": [],
+      "oracle": "Structural root cause requires component reconstruction rather than accumulated offsets, clipping or decoration."
+    },
+    {
+      "id": "CRIT-FIX-013",
+      "task_family": "TASK_TECHNICAL_FOUNDATION_PASS",
+      "signals": [
+        "TASK_HTML",
+        "TASK_WEB_INTERFACE",
+        "CLAIM_VALIDATION"
+      ],
+      "expected_modules": [
+        "EVIDENCE_AND_CLAIMS",
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY"
+      ],
+      "forbidden_modules": [],
+      "oracle": "A technical foundation pass remains awaiting human visual review and does not establish WCAG conformance or product readiness."
     }
   ],
   "uniqueness_rule": "FIXTURE_IDS_AND_SIGNAL_SETS_MUST_BE_UNIQUE",

@@ -1,32 +1,20 @@
-# LAB — vista de estado
+# Estado del proyecto LAB
 
-La fuente estructurada es `PROJECT_STATE.json`; el estado global pertenece a `CURRENT_STATE.json`.
+La fuente estructurada es `PROJECT_STATE.json`.
 
-## Identidad
+El LAB mantiene gobierno v2, la capa selectiva `CHATGPT-CRITERION-LAYER-001@1.1.0` y el estándar `MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001@1.0.0`.
 
-- Project-ID: `lab`.
-- Estado: `active`.
-- Contrato: `LAB_CONTRACT.md` v2.1.
-- HEAD: `VERIFY_LIVE_AT_USE`.
-- Autoridad autónoma del modelo: no.
+## Resultado 052 revisión 2
 
-## Capa de criterio para ChatGPT
+- Decisión: `DEC-LAB-017`.
+- Integración: `INT-LAB-002`.
+- Evidencia humana de V02: `EVD-LAB-VIS-002`.
+- Validación técnica: `EVD-LAB-MIVF-001`.
+- Fixture: `MINIMUM_IMPECCABLE_BASE_001.html`.
+- Estado: `BLOCKED_WITH_DOCUMENTED_DEFECTS`.
 
-`CHATGPT-CRITERION-LAYER-001@1.0.0` está integrada como consumidor documental selectivo mediante `INT-LAB-001`. El orden obligatorio incorpora `project-sources/chatgpt/08_CRITERION_LAYER.md`.
+La base define integridad geométrica, acabado de componentes, mapa de intención, comportamiento de formularios, resiliencia responsive y autocorrección. El agente debe detectar defectos observables, diagnosticar su causa, corregir o reconstruir dentro del alcance y volver a validar.
 
-Sus cuatro módulos son:
+La validación estática pasa. La validación renderizada permanece `NOT_EXECUTED_ENVIRONMENT_UNAVAILABLE`; no se declaró PASS técnico, aprobación humana ni conformidad WCAG.
 
-1. evidencia y claims;
-2. criterio de diseño;
-3. accesibilidad web;
-4. preferencia visual contextual.
-
-El selector evita cargar módulos no aplicables y mantiene separadas heurística, estándar, evidencia, inferencia y preferencia humana.
-
-## Validación y límites
-
-Contrato, referencias, fixtures, no contaminación y fronteras de claims: `PASS`.
-
-Terra 5.6 LIGHT: `NOT_EXECUTED_MODEL_SURFACE_UNAVAILABLE`. Esto queda registrado sin convertirlo en PASS.
-
-No existe autorización activa reutilizable. Runtime, RAG, cambios de producto, integración de Symphonie, ejecución AT y claims WCAG permanecen no autorizados.
+No existe autorización activa reutilizable. El HEAD propio se verifica en vivo y nunca se almacena como estado canónico vigente.

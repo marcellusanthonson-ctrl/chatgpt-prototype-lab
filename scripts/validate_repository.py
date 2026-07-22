@@ -559,7 +559,7 @@ def validate_foundation_library(registries: dict[str, Any]) -> None:
                 for term in ["pan", "cvc", "importe", "credenciales"]:
                     if term not in forbidden_text:
                         fail(f"{relative}: payment prohibition missing {term}")
-        elif record.get("kind") in {"DESIGN_KNOWLEDGE_SOURCE_PACKAGE", "VISUAL_PREFERENCE_PROFILE", "HIGH_FIDELITY_VISUAL_PROTOCOL"}:
+        elif record.get("kind") in {"DESIGN_KNOWLEDGE_SOURCE_PACKAGE", "VISUAL_PREFERENCE_PROFILE", "HIGH_FIDELITY_VISUAL_PROTOCOL", "MINIMUM_VISUAL_FOUNDATION"}:
             require_file(relative)
         else:
             fail(f"foundation library: unsupported kind for {record_id}")
@@ -581,36 +581,79 @@ def validate_visual_foundation(registries: dict[str, Any]) -> None:
     reconciliation_ids = {item.get("id") for item in profile.get("reconciliations", []) if isinstance(item, dict)}
     if reconciliation_ids != {"REC-001", "REC-002", "REC-003", "REC-004", "REC-005", "REC-006", "REC-007"}:
         fail("visual preference profile: required reconciliations differ")
-    if profile.get("status") != "DOCUMENTED_NOT_IMPLEMENTED":
+    if profile.get("status") != "DOCUMENTED_WITH_PROPOSED_CODE_BENCHMARK":
         fail("visual preference profile: implementation boundary is unsafe")
     if profile.get("scope_boundary", {}).get("personal_profile_not_global_governance") is not True:
         fail("visual preference profile: global governance boundary is missing")
     stages = [item.get("id") for item in protocol.get("stages", []) if isinstance(item, dict)]
-    expected_stages = ["REFERENCE_QUALIFICATION", "PREFERENCE_APPLICABILITY", "MINIMUM_THREE_VISUAL_DIRECTIONS", "HUMAN_DIRECTION_SHORTLIST", "HIGH_FIDELITY_HTML_PROTOTYPES", "REPRESENTATIVE_ROUTE_COVERAGE", "RESPONSIVE_VISUAL_REVIEW", "INTERACTION_STATE_REVIEW", "VISUAL_DELTA_REVISION", "HIGH_FIDELITY_VISUAL_BASELINE_APPROVED", "FINAL_PHASE3_CONTRACT_GENERATION"]
+    expected_stages = ["MINIMUM_IMPECCABLE_TECHNICAL_FOUNDATION_GATE", "RESOLVE_PRODUCT_CONTEXT", "QUALIFY_APPLICABLE_REFERENCES", "RESOLVE_CONTEXTUAL_PREFERENCE_SIGNALS", "INTERPRET_PROPOSED_CODE_BENCHMARK_WITHOUT_AUTO_SELECTION", "VISUAL_ACCESSIBILITY_PREFLIGHT", "GENERATE_MONOLITHIC_VISUAL_CALIBRATION", "VISUAL_CALIBRATION_APPROVED", "EXPAND_APPROVED_DIRECTION_TO_ROUTES_AND_STATES", "RESPONSIVE_ACCESSIBILITY_AND_INTERACTION_VALIDATION", "HIGH_FIDELITY_VISUAL_BASELINE_APPROVED", "FINAL_PHASE3_CONTRACT_GENERATION"]
     if stages != expected_stages:
         fail("high-fidelity visual protocol: required stages differ")
-    if protocol.get("visual_direction_contract", {}).get("minimum_materially_distinct_directions") != 3:
-        fail("high-fidelity visual protocol: three visual directions are required")
+    direction = protocol.get("visual_direction_contract", {})
+    if direction.get("minimum_directions_before_first_calibration") != 1 or direction.get("selection_authority") != "JONATHAN_MARTINEZ_EXPLICIT_SELECTION":
+        fail("high-fidelity visual protocol: reconciled direction and human selection rules differ")
+    technical_gate = protocol.get("technical_foundation_gate", {})
+    if technical_gate.get("id") != "MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001" or technical_gate.get("required_before_visual_direction_application") is not True or technical_gate.get("pass_with_known_defects") != "PROHIBITED":
+        fail("high-fidelity visual protocol: minimum technical foundation gate is unsafe")
     gate = protocol.get("baseline_gate", {})
     if gate.get("approver") != "JONATHAN_MARTINEZ" or gate.get("model_self_approval") != "PROHIBITED" or gate.get("final_phase3_contract_allowed") is not False:
         fail("high-fidelity visual protocol: baseline gate is unsafe")
     if protocol.get("responsive_review", {}).get("widths_px") != [320, 640, 1024, 1440, 1920]:
         fail("high-fidelity visual protocol: responsive widths differ")
-    areas = {"TYPOGRAPHIC_HIERARCHY", "COLOR_AND_CONTRAST", "COMPOSITIONAL_BALANCE", "ACTIVE_NEGATIVE_SPACE", "PRODUCT_OR_PURPOSE_PROMINENCE", "IMAGE_AND_RENDER_QUALITY", "MATERIAL_COHERENCE", "CONTROL_AFFORDANCE", "STATE_COMPLETENESS", "CONTENT_STRESS", "ZOOM_AND_REFLOW", "MOTION_AND_REDUCED_MOTION"}
+    areas = {"TYPOGRAPHIC_HIERARCHY", "COLOR_AND_CONTRAST", "COMPOSITIONAL_BALANCE", "ACTIVE_NEGATIVE_SPACE", "PRODUCT_OR_PURPOSE_PROMINENCE", "IMAGE_AND_RENDER_QUALITY", "MATERIAL_COHERENCE", "CONTROL_AFFORDANCE", "STATE_COMPLETENESS", "CONTENT_STRESS", "ZOOM_AND_REFLOW", "MOTION_AND_REDUCED_MOTION", "STRUCTURAL_GEOMETRY", "COMPONENT_FINISH", "GRID_ALIGNMENT_AND_SPACING", "LAYERS_AND_OVERLAYS", "FORM_BEHAVIOR"}
     if set(protocol.get("review_contract", {}).get("areas", [])) != areas or set(protocol.get("responsive_review", {}).get("areas", [])) != areas:
         fail("high-fidelity visual protocol: review areas differ")
-    if protocol.get("status") != "DOCUMENTED_NOT_IMPLEMENTED":
+    if protocol.get("status") != "DOCUMENTED_WITH_MINIMUM_TECHNICAL_FOUNDATION_AND_PROPOSED_PREFERENCE_BENCHMARK":
         fail("high-fidelity visual protocol: implementation boundary is unsafe")
-    for artifact in [profile, protocol]:
-        boundary = artifact.get("authorization_boundary", artifact.get("authority_boundary", {}))
-        if not boundary or any(value != "NOT_AUTHORIZED" for value in boundary.values()):
-            fail("visual foundation: authorization boundary is unsafe")
+    profile_boundary = profile.get("authorization_boundary", {})
+    for key in ["application_code", "html_generation", "css_generation", "javascript_generation", "runtime", "product_changes", "deployment", "release"]:
+        if profile_boundary.get(key) != "NOT_AUTHORIZED":
+            fail("visual preference profile: core authorization boundary is unsafe")
+    protocol_boundary = protocol.get("authority_boundary", {})
+    for key in ["runtime", "application_code", "product_changes", "release"]:
+        if protocol_boundary.get(key) != "NOT_AUTHORIZED":
+            fail("high-fidelity visual protocol: core authority boundary is unsafe")
     library_ids = {record.get("id") for record in registries.get("foundation_library", {}).get("records", [])}
     visual_records = registries.get("visual_preferences", {}).get("records", [])
-    if {"VPP-JM-001", "HFP-041-001"} - library_ids:
+    if {"VPP-JM-001", "HFP-041-001", "MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001"} - library_ids:
         fail("visual foundation: canonical artifacts are absent from Foundation Library")
     if len(visual_records) != 1 or visual_records[0].get("id") != "VISUAL-PREFERENCE-REGISTRY-041":
         fail("visual foundation: visual preference registry is incomplete")
+
+
+def validate_minimum_impeccable_visual_foundation() -> None:
+    base = "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001"
+    names = [
+        "MANIFEST.json", "STANDARD.json", "STRUCTURAL_GEOMETRY_CONTRACT.json",
+        "COMPONENT_FINISH_CONTRACT.json", "LAYOUT_INTENT_MAP_CONTRACT.json",
+        "FORM_BEHAVIOR_CONTRACT.json", "RESPONSIVE_RESILIENCE_CONTRACT.json",
+        "SELF_CORRECTION_CONTRACT.json", "VALIDATION_MATRIX.json",
+        "MINIMUM_IMPECCABLE_BASE_001.html",
+    ]
+    for name in names:
+        require_file(f"{base}/{name}")
+    manifest = load_json(f"{base}/MANIFEST.json")
+    standard = load_json(f"{base}/STANDARD.json")
+    correction = load_json(f"{base}/SELF_CORRECTION_CONTRACT.json")
+    responsive = load_json(f"{base}/RESPONSIVE_RESILIENCE_CONTRACT.json")
+    matrix = load_json(f"{base}/VALIDATION_MATRIX.json")
+    if manifest.get("foundation_id") != standard.get("standard_id"):
+        fail("minimum visual foundation: identity mismatch")
+    if manifest.get("status") not in correction.get("allowed_terminal_states", []):
+        fail("minimum visual foundation: invalid terminal state")
+    if correction.get("forbidden_terminal_state") != "PASS_WITH_KNOWN_VISUAL_DEFECTS":
+        fail("minimum visual foundation: known-defect delivery is not prohibited")
+    if correction.get("autonomy_boundary", {}).get("override_human_visual_decision") is not False:
+        fail("minimum visual foundation: human visual authority boundary missing")
+    if responsive.get("continuous_sweep") != {"from_px": 320, "to_px": 1920, "maximum_step_px": 16}:
+        fail("minimum visual foundation: continuous responsive sweep differs")
+    case_ids = [case.get("id") for case in matrix.get("cases", [])]
+    if len(case_ids) != len(set(case_ids)) or len(case_ids) != 14:
+        fail("minimum visual foundation: validation matrix IDs duplicated or incomplete")
+    html = (ROOT / base / "MINIMUM_IMPECCABLE_BASE_001.html").read_text(encoding="utf-8").lower()
+    for token in ["http://", "https://", "@import", "fetch(", "xmlhttprequest", "overflow-x:hidden", "overflow-x: hidden"]:
+        if token in html:
+            fail(f"minimum visual foundation: forbidden HTML token {token}")
 
 def validate_foundation_evidence(registries: dict[str, Any]) -> None:
     require_file("foundation-library/evidence/README.md")
@@ -946,7 +989,7 @@ def validate_chatgpt_criterion_layer() -> None:
             fail(f"criterion layer: missing boundary {boundary}")
     fixture_records = fixtures.get("fixtures", [])
     fixture_ids = [item.get("id") for item in fixture_records]
-    if len(fixture_ids) != len(set(fixture_ids)) or len(fixture_ids) != 10:
+    if len(fixture_ids) != len(set(fixture_ids)) or len(fixture_ids) != manifest.get("counts", {}).get("fixtures"):
         fail("criterion layer: fixture IDs duplicated or count mismatch")
     known = set(expected_modules)
     for fixture in fixture_records:
@@ -961,6 +1004,11 @@ def validate_chatgpt_criterion_layer() -> None:
         fail("criterion layer: selector validation claim missing")
     if claims.get("terra_behavior_validated") is not False:
         fail("criterion layer: unsupported Terra validation claim")
+    self_correction = contract.get("self_correction", {})
+    if self_correction.get("known_correctable_defect_blocks_delivery") is not True or self_correction.get("structural_defect_requires_reconstruction") is not True or self_correction.get("pass_with_known_visual_defects") is not False:
+        fail("criterion layer: minimum visual self-correction boundary missing")
+    if result.get("forbidden_visual_artifact_state") != "PASS_WITH_KNOWN_VISUAL_DEFECTS":
+        fail("criterion layer: known-defect result state not prohibited")
 
 
 def validate_briefs_and_continuity() -> None:
@@ -1064,6 +1112,7 @@ def main() -> int:
     state = validate_current_state(registries)
     validate_foundation_library(registries)
     validate_visual_foundation(registries)
+    validate_minimum_impeccable_visual_foundation()
     validate_foundation_evidence(registries)
     validate_rag_contracts(registries)
     validate_foundation_pilots(registries)
@@ -1085,6 +1134,7 @@ def main() -> int:
     print("Evidence closure: PASS")
     print("Authority boundaries: PASS")
     print("Foundation evidence protocols: PASS")
+    print("Minimum impeccable visual foundation: PASS")
     print("Transversal RAG contracts: PASS")
     print("Foundation pilot definition: PASS")
     return 0

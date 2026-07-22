@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1.0",
   "project_id": "lab",
-  "updated_at": "2026-07-21",
+  "updated_at": "2026-07-22",
   "records": [
     {
       "id": "PEND-LAB-001",
@@ -184,6 +184,21 @@
       "source_refs": [
         "foundation-library/visual-preferences/benchmarks/visual-preference-benchmark.manifest.json",
         "foundation-library/visual-preferences/jonathan-martinez.visual-preference-profile.json"
+      ]
+    },
+    {
+      "id": "PEND-LAB-011",
+      "status": "BLOCKED_BROWSER_SURFACE_UNAVAILABLE",
+      "type": "TECHNICAL_FOUNDATION_BROWSER_VALIDATION",
+      "subject": "Execute the complete browser matrix for MINIMUM_IMPECCABLE_BASE_001.html on a callable local browser surface",
+      "priority": "HIGH",
+      "automatic_approval": false,
+      "blocker": "LOCAL_PLAYWRIGHT_HAS_NO_CHROMIUM_EXECUTABLE_AND_MANAGED_BROWSER_BLOCKS_LOCAL_AND_DATA_URLS_BY_POLICY",
+      "product_direction_effect": "NONE",
+      "wcag_conformance_effect": "NONE",
+      "source_refs": [
+        "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MANIFEST.json",
+        "projects/lab/evidence/EVD-LAB-MIVF-001.json"
       ]
     }
   ]

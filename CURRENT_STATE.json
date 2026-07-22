@@ -1,11 +1,11 @@
 {
   "schema_version": "2.5.0",
   "document_id": "lab.current-state",
-  "version": "2.5.14",
+  "version": "2.5.15",
   "status": "GOVERNANCE_V2_CANONICAL_BASELINE",
-  "updated_at": "2026-07-21",
+  "updated_at": "2026-07-22",
   "active_project": "lab",
-  "current_phase": "CHATGPT_CRITERION_LAYER_INTEGRATED_DOCUMENTARY_SELECTIVE",
+  "current_phase": "MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_INTEGRATED_BROWSER_VALIDATION_BLOCKED",
   "methodology": {
     "version": "2.1",
     "path": "METHODOLOGY.md"
@@ -43,7 +43,8 @@
     "contextual_visual_calibration_evidence": "foundation-library/visual-preferences/evidence/EVD-LAB-VIS-001.json",
     "external_audit_evidence": "projects/lab/evidence/EVD-LAB-AUD-001.json",
     "external_audit_reassessment": "projects/lab/reassessments/REA-LAB-002.json",
-    "chatgpt_criterion_layer": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MANIFEST.json"
+    "chatgpt_criterion_layer": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MANIFEST.json",
+    "minimum_impeccable_visual_foundation": "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MANIFEST.json"
   },
   "projects": {
     "lab": {
@@ -98,7 +99,8 @@
     "DEC-LAB-013",
     "DEC-LAB-014",
     "DEC-LAB-015",
-    "DEC-LAB-016"
+    "DEC-LAB-016",
+    "DEC-LAB-017"
   ],
   "open_errors": [],
   "validated_patterns": [
@@ -139,7 +141,8 @@
     "symphonie_visual_preference_accessibility_code_benchmark": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "aera_one_contextual_visual_evidence_045": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "external_audit_reconciliation_046": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "chatgpt_criterion_layer_20260721": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+    "chatgpt_criterion_layer_20260721": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "minimum_impeccable_visual_foundation_052_revision_2": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
   },
   "verified_external_heads": {
     "symphonie": "b492852c0d76ff7cd44ca266dc8950c94638d568",
@@ -163,7 +166,7 @@
     "PHASE_4_ACCESSIBILITY_NORMATIVE_AND_ASSISTIVE_TECHNOLOGY_RESEARCH"
   ],
   "next_authorized_action": "NONE_UNTIL_NEW_EXPLICIT_APPROVAL",
-  "next_recommended_transition": "OBSERVE_AND_EVALUATE_CRITERION_LAYER_IN_LIVE_CHATGPT_RESPONSES",
+  "next_recommended_transition": "EXECUTE_MINIMUM_IMPECCABLE_BASE_001_BROWSER_MATRIX_ON_CALLABLE_LOCAL_BROWSER_SURFACE",
   "continuity_read_order": [
     "LAB_CONTRACT.md",
     "METHODOLOGY.md",
@@ -200,11 +203,14 @@
     "authority_effect": "NONE_AFTER_CONSUMPTION"
   },
   "latest_integration": {
-    "integration_id": "INT-LAB-001",
-    "layer_id": "CHATGPT-CRITERION-LAYER-001",
-    "status": "INTEGRATED_DOCUMENTARY_SELECTIVE",
-    "selector_validation": "PASS",
-    "terra_5_6_light_evaluation": "NOT_EXECUTED_MODEL_SURFACE_UNAVAILABLE",
+    "integration_id": "INT-LAB-002",
+    "layer_id": "CHATGPT-CRITERION-LAYER-001@1.1.0",
+    "standard_id": "MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001@1.0.0",
+    "status": "BLOCKED_WITH_DOCUMENTED_DEFECTS",
+    "static_validation": "PASS",
+    "browser_validation": "NOT_EXECUTED_ENVIRONMENT_UNAVAILABLE",
+    "human_visual_approval": "NOT_ESTABLISHED",
+    "wcag_conformance": "NOT_ESTABLISHED",
     "authority_effect": "NONE_AFTER_CONSUMPTION"
   }
 }

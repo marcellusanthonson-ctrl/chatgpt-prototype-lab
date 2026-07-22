@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "contract_id": "MIVF-STRUCTURAL-GEOMETRY-001",
+  "gate": "GATE_0_STRUCTURAL_INTEGRITY",
+  "requirements": {
+    "master_grid": "One declared container and gutter system aligns navigation, hero, sections, form and footer.",
+    "containment": "Every visible element remains within its declared owner unless an allowlisted overlay declares owner, anchor and bounds.",
+    "lines": "Every line or divider belongs to one component and terminates at that component boundary.",
+    "surfaces": "Each background has a semantic role: base, elevated, inverse or media.",
+    "positioning": "Absolute positioning is limited to contained overlays and never used for primary document flow.",
+    "stacking": "Z-index uses declared layers only and must not create hidden interactive content.",
+    "overflow": "Horizontal overflow is measured and corrected at the originating element; global clipping is prohibited.",
+    "spacing": "A 4px base scale and 8px macro rhythm govern gaps, padding and section intervals.",
+    "optical_alignment": "Geometric measurement is supplemented by optical review for icons, text baselines and control centering."
+  },
+  "overlap_allowlist_schema": [
+    "owner",
+    "overlay",
+    "anchor",
+    "bounds",
+    "input_behavior",
+    "responsive_behavior",
+    "reason"
+  ],
+  "blocking_defects": [
+    "ACCIDENTAL_OVERLAP",
+    "CLIPPED_CONTENT",
+    "RESIDUAL_LINE",
+    "UNOWNED_DIVIDER",
+    "STRUCTURAL_OVERFLOW",
+    "GRID_DRIFT",
+    "UNDECLARED_STACKING_CONTEXT",
+    "BACKGROUND_ROLE_MISMATCH",
+    "PRIMARY_FLOW_ABSOLUTE_POSITIONING"
+  ],
+  "pass_rule": "All blocking defects equal zero in the tested matrix and every allowlisted overlap remains contained."
+}

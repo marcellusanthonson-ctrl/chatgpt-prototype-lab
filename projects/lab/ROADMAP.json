@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1.0",
   "project_id": "lab",
-  "updated_at": "2026-07-21",
+  "updated_at": "2026-07-22",
   "authority_effect": "NONE",
   "records": [
     {
@@ -67,6 +67,22 @@
       ],
       "limitation": "TERRA_5_6_LIGHT_EMPIRICAL_EVALUATION_NOT_EXECUTED_MODEL_SURFACE_UNAVAILABLE",
       "authority_effect": "NONE"
+    },
+    {
+      "order": 8,
+      "item": "MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_001",
+      "status": "COMPLETED_TECHNICAL_INTEGRATION",
+      "decision": "DEC-LAB-017",
+      "integration": "INT-LAB-002",
+      "fixture": "MINIMUM_IMPECCABLE_BASE_001.html",
+      "result": "BLOCKED_WITH_DOCUMENTED_DEFECTS",
+      "authority_effect": "NONE"
+    },
+    {
+      "order": 9,
+      "item": "EXECUTE_MINIMUM_IMPECCABLE_BASE_001_BROWSER_MATRIX",
+      "status": "BLOCKED_BROWSER_SURFACE_UNAVAILABLE",
+      "effect": "HUMAN_BASELINE_REVIEW_REMAINS_PREMATURE_UNTIL_TECHNICAL_BROWSER_GATE_PASSES"
     }
   ]
 }

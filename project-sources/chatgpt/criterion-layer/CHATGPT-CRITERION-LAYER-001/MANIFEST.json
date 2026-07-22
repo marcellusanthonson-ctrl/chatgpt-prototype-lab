@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "layer_id": "CHATGPT-CRITERION-LAYER-001",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "status": "INTEGRATED_DOCUMENTARY_SELECTIVE",
   "updated_at": "2026-07-21",
   "files": [
@@ -23,12 +23,13 @@
     "design_package": "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/MANIFEST.json",
     "accessibility_protocol": "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/ASSISTIVE_TECHNOLOGY_TEST_PROTOCOL.json",
     "visual_profile": "foundation-library/visual-preferences/jonathan-martinez.visual-preference-profile.json",
-    "visual_protocol": "foundation-library/visual-protocols/high-fidelity-visual-protocol.json"
+    "visual_protocol": "foundation-library/visual-protocols/high-fidelity-visual-protocol.json",
+    "minimum_impeccable_visual_foundation": "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MANIFEST.json"
   },
   "counts": {
     "modules": 4,
     "referenced_principles": 25,
-    "fixtures": 10
+    "fixtures": 13
   },
   "authority_effect": "NONE",
   "runtime_effect": "NONE",

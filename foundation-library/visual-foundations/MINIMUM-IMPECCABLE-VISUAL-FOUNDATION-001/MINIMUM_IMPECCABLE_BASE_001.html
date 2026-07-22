@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Base visual técnica neutral 001</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --surface-base: #f7f7f5;
+      --surface-elevated: #ffffff;
+      --surface-subtle: #eeefec;
+      --surface-inverse: #1f2423;
+      --text-primary: #1f2423;
+      --text-secondary: #515a57;
+      --text-inverse: #f7f7f5;
+      --border: #c9ceca;
+      --border-strong: #7c8783;
+      --accent: #1d5f50;
+      --accent-strong: #123f36;
+      --error: #a3262f;
+      --success: #236743;
+      --focus: #005fcc;
+      --space-1: .25rem;
+      --space-2: .5rem;
+      --space-3: .75rem;
+      --space-4: 1rem;
+      --space-5: 1.5rem;
+      --space-6: 2rem;
+      --space-7: 3rem;
+      --space-8: 4rem;
+      --radius-sm: .5rem;
+      --radius-md: .875rem;
+      --container: 75rem;
+      --gutter: clamp(1rem, 4vw, 3rem);
+      --shadow: 0 .75rem 2rem rgba(21, 30, 27, .08);
+      --layer-content: 1;
+      --layer-nav: 10;
+      --layer-dialog: 20;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+      font-synthesis: none;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-width: 20rem;
+      background: var(--surface-base);
+      color: var(--text-primary);
+      font-size: 1rem;
+      text-rendering: optimizeLegibility;
+    }
+    body:has(dialog[open]) { overflow: hidden; }
+    img, svg { display: block; max-width: 100%; }
+    button, input, textarea { font: inherit; }
+    button, a, input, textarea { -webkit-tap-highlight-color: transparent; }
+    a { color: inherit; text-underline-offset: .2em; }
+    p, h1, h2, h3 { margin-block-start: 0; }
+    p { color: var(--text-secondary); }
+
+    :focus-visible {
+      outline: .1875rem solid var(--focus);
+      outline-offset: .1875rem;
+    }
+    .skip-link {
+      position: fixed;
+      inset: var(--space-3) auto auto var(--space-3);
+      z-index: var(--layer-dialog);
+      padding: var(--space-3) var(--space-4);
+      border-radius: var(--radius-sm);
+      background: var(--surface-inverse);
+      color: var(--text-inverse);
+      transform: translateY(-180%);
+    }
+    .skip-link:focus { transform: translateY(0); }
+
+    .container {
+      width: min(100% - (2 * var(--gutter)), var(--container));
+      margin-inline: auto;
+    }
+    .section { padding-block: clamp(3.5rem, 8vw, 6.5rem); }
+    .section--bordered { border-block-start: 1px solid var(--border); }
+    .eyebrow {
+      margin-block-end: var(--space-3);
+      color: var(--accent-strong);
+      font-size: .75rem;
+      font-weight: 750;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .lede { max-width: 42rem; font-size: clamp(1.05rem, 1.8vw, 1.25rem); }
+
+    .site-header {
+      position: sticky;
+      inset-block-start: 0;
+      z-index: var(--layer-nav);
+      min-height: 4.5rem;
+      border-block-end: 1px solid var(--border);
+      background: rgba(247, 247, 245, .96);
+      backdrop-filter: blur(.75rem);
+    }
+    .nav {
+      min-height: 4.5rem;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: var(--space-5);
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-3);
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .brand__mark {
+      width: 2rem;
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-sm);
+      background: var(--surface-elevated);
+    }
+    .brand__mark svg { width: 1rem; height: 1rem; }
+    .nav__links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: clamp(var(--space-4), 2.5vw, var(--space-6));
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .nav__links a {
+      display: inline-flex;
+      min-height: 2.75rem;
+      align-items: center;
+      font-weight: 650;
+      text-decoration: none;
+    }
+    .nav__links a:hover { text-decoration: underline; }
+
+    .button {
+      min-height: 2.75rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-2);
+      padding: .6875rem 1rem;
+      border: 1px solid transparent;
+      border-radius: var(--radius-sm);
+      background: var(--accent);
+      color: #fff;
+      font-weight: 750;
+      line-height: 1.25;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .button:hover { background: var(--accent-strong); }
+    .button:active { transform: translateY(1px); }
+    .button[disabled], .button[aria-disabled="true"] { opacity: .58; cursor: not-allowed; transform: none; }
+    .button--secondary {
+      border-color: var(--border-strong);
+      background: var(--surface-elevated);
+      color: var(--text-primary);
+    }
+    .button--secondary:hover { background: var(--surface-subtle); }
+    .button svg { flex: 0 0 auto; width: 1.125rem; height: 1.125rem; }
+    .menu-button { display: none; }
+
+    .hero { padding-block: clamp(4rem, 10vw, 8rem); }
+    .hero__grid {
+      display: grid;
+      grid-template-columns: minmax(0, 7fr) minmax(18rem, 5fr);
+      align-items: center;
+      gap: clamp(var(--space-6), 7vw, 6rem);
+    }
+    h1 {
+      max-width: 12ch;
+      margin-block-end: var(--space-5);
+      font-size: clamp(2.5rem, 6vw, 5.75rem);
+      font-weight: 760;
+      letter-spacing: -.055em;
+      line-height: .98;
+      text-wrap: balance;
+    }
+    h2 {
+      max-width: 20ch;
+      margin-block-end: var(--space-4);
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      letter-spacing: -.04em;
+      line-height: 1.05;
+      text-wrap: balance;
+    }
+    h3 { margin-block-end: var(--space-3); font-size: 1.125rem; line-height: 1.25; }
+    .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-block-start: var(--space-6); }
+    .hero__panel {
+      min-height: 26rem;
+      display: grid;
+      align-content: space-between;
+      gap: var(--space-6);
+      padding: clamp(var(--space-5), 4vw, var(--space-7));
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface-elevated);
+      box-shadow: var(--shadow);
+    }
+    .hero__diagram {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      align-items: end;
+      gap: var(--space-3);
+      min-height: 10rem;
+      padding-block-end: var(--space-4);
+      border-block-end: 1px solid var(--border);
+    }
+    .hero__bar { min-height: var(--bar-height); border-radius: var(--radius-sm) var(--radius-sm) 0 0; background: var(--accent); }
+    .hero__meta { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+    .hero__meta strong { display: block; margin-block-end: var(--space-1); font-size: 1.5rem; }
+    .hero__meta span { color: var(--text-secondary); font-size: .875rem; }
+
+    .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-4); margin-block-start: var(--space-7); }
+    .card {
+      min-width: 0;
+      padding: var(--space-5);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface-elevated);
+    }
+    .card__icon {
+      width: 2.75rem;
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+      margin-block-end: var(--space-5);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      color: var(--accent-strong);
+    }
+    .card__icon svg { width: 1.5rem; height: 1.5rem; }
+    .card p { margin-block-end: 0; }
+
+    .process { background: var(--surface-subtle); }
+    .process__grid { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: clamp(var(--space-6), 8vw, 7rem); }
+    .steps { display: grid; gap: var(--space-4); }
+    .step {
+      display: grid;
+      grid-template-columns: 2.5rem minmax(0, 1fr);
+      gap: var(--space-4);
+      padding-block-end: var(--space-4);
+      border-block-end: 1px solid var(--border);
+    }
+    .step:last-child { padding-block-end: 0; border-block-end: 0; }
+    .step__number { font-variant-numeric: tabular-nums; font-weight: 800; color: var(--accent-strong); }
+    .step p { margin-block-end: 0; }
+
+    .contact__grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(var(--space-6), 8vw, 7rem); align-items: start; }
+    .form {
+      display: grid;
+      gap: var(--space-5);
+      padding: clamp(var(--space-5), 4vw, var(--space-7));
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface-elevated);
+      box-shadow: var(--shadow);
+    }
+    .form__row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+    .field { min-width: 0; }
+    .field label { display: block; margin-block-end: var(--space-2); font-weight: 700; }
+    .field input, .field textarea {
+      width: 100%;
+      min-height: 2.875rem;
+      padding: .75rem .875rem;
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-sm);
+      background: var(--surface-elevated);
+      color: var(--text-primary);
+    }
+    .field textarea { min-height: 8rem; resize: vertical; }
+    .field input:hover, .field textarea:hover { border-color: var(--text-primary); }
+    .field [aria-invalid="true"] { border-color: var(--error); box-shadow: 0 0 0 1px var(--error); }
+    .field__hint, .field__error { margin-block: var(--space-2) 0; font-size: .875rem; }
+    .field__error { color: var(--error); font-weight: 650; }
+    .form__status { min-height: 1.5rem; margin: 0; font-weight: 700; }
+    .form__status[data-state="success"] { color: var(--success); }
+    .form__status[data-state="error"] { color: var(--error); }
+
+    .site-footer { border-block-start: 1px solid #3f4845; background: var(--surface-inverse); color: var(--text-inverse); }
+    .footer__grid { display: grid; grid-template-columns: 2fr repeat(3, 1fr); gap: clamp(var(--space-5), 5vw, var(--space-7)); padding-block: var(--space-7); }
+    .footer__brand p { max-width: 28rem; color: #cbd1ce; }
+    .footer__group h2 { margin-block-end: var(--space-3); font-size: .875rem; letter-spacing: .06em; text-transform: uppercase; }
+    .footer__group ul { display: grid; gap: var(--space-2); margin: 0; padding: 0; list-style: none; }
+    .footer__group a { color: #dfe3e1; }
+    .footer__legal {
+      display: flex;
+      justify-content: space-between;
+      gap: var(--space-4);
+      padding-block: var(--space-4);
+      border-block-start: 1px solid #3f4845;
+      color: #cbd1ce;
+      font-size: .875rem;
+    }
+
+    dialog {
+      width: min(34rem, calc(100% - (2 * var(--gutter))));
+      padding: 0;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface-elevated);
+      color: var(--text-primary);
+      box-shadow: 0 1.5rem 5rem rgba(0, 0, 0, .2);
+    }
+    dialog::backdrop { background: rgba(19, 24, 22, .58); }
+    .dialog__body { padding: var(--space-6); }
+    .dialog__actions { display: flex; justify-content: flex-end; gap: var(--space-3); margin-block-start: var(--space-5); }
+
+    .diagnostic {
+      position: fixed;
+      inset: auto var(--space-3) var(--space-3) auto;
+      z-index: var(--layer-nav);
+      max-width: min(28rem, calc(100% - (2 * var(--space-3))));
+      padding: var(--space-2) var(--space-3);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-sm);
+      background: var(--surface-elevated);
+      color: var(--text-secondary);
+      box-shadow: var(--shadow);
+      font-size: .75rem;
+    }
+    .diagnostic[data-state="fail"] { border-color: var(--error); color: var(--error); }
+
+    @media (max-width: 54rem) {
+      .nav { grid-template-columns: auto 1fr auto; }
+      .menu-button { display: inline-flex; justify-self: end; }
+      .nav > .button { display: none; }
+      .nav__links {
+        grid-column: 1 / -1;
+        display: none;
+        justify-content: start;
+        align-items: stretch;
+        gap: 0;
+        padding-block: var(--space-2) var(--space-4);
+        border-block-start: 1px solid var(--border);
+      }
+      .nav__links[data-open="true"] { display: grid; }
+      .nav__links a { min-height: 3rem; }
+      .hero__grid, .process__grid, .contact__grid { grid-template-columns: 1fr; }
+      .hero__panel { min-height: 22rem; }
+      .cards { grid-template-columns: 1fr 1fr; }
+      .footer__grid { grid-template-columns: 2fr 1fr 1fr; }
+      .footer__brand { grid-column: 1 / -1; }
+    }
+
+    @media (max-width: 38rem) {
+      :root { --gutter: 1rem; }
+      .section { padding-block: 3.5rem; }
+      .hero { padding-block: 3.5rem; }
+      .hero__grid { gap: var(--space-7); }
+      .hero__actions, .hero__actions .button { width: 100%; }
+      .cards, .form__row, .footer__grid { grid-template-columns: 1fr; }
+      .hero__meta { grid-template-columns: 1fr; }
+      .footer__brand { grid-column: auto; }
+      .footer__legal { flex-direction: column; }
+      .diagnostic { position: static; max-width: none; margin: var(--space-3); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+      .button:active { transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido principal</a>
+
+  <header class="site-header" data-region="NAV">
+    <nav class="nav container" aria-label="Navegación principal">
+      <a class="brand" href="#top" aria-label="Base 001, inicio">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 7h14M5 12h9M5 17h14"/>
+          </svg>
+        </span>
+        <span>Base 001</span>
+      </a>
+      <ul class="nav__links" id="primary-links" data-open="false">
+        <li><a href="#principios">Principios</a></li>
+        <li><a href="#proceso">Proceso</a></li>
+        <li><a href="#contacto">Formulario</a></li>
+      </ul>
+      <button class="button button--secondary menu-button" type="button" aria-expanded="false" aria-controls="primary-links">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <span>Menú</span>
+      </button>
+      <button class="button" type="button" data-open-dialog>
+        Revisar base
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero" id="top" data-region="HERO">
+      <div class="hero__grid container">
+        <div>
+          <p class="eyebrow">Fixture técnica neutral</p>
+          <h1>Una base limpia antes de diseñar.</h1>
+          <p class="lede">Esta superficie demuestra estructura, componentes y comportamiento sin imponer una identidad visual de producto.</p>
+          <div class="hero__actions">
+            <a class="button" href="#principios">Ver la estructura</a>
+            <button class="button button--secondary" type="button" data-open-dialog>Conocer los límites</button>
+          </div>
+        </div>
+        <aside class="hero__panel" aria-label="Resumen geométrico">
+          <div>
+            <p class="eyebrow">Retícula compartida</p>
+            <h2 style="font-size:clamp(1.75rem,3vw,2.5rem)">Geometría verificable</h2>
+          </div>
+          <div class="hero__diagram" aria-label="Cuatro barras ordenadas de menor a mayor">
+            <span class="hero__bar" style="--bar-height:35%"></span>
+            <span class="hero__bar" style="--bar-height:55%"></span>
+            <span class="hero__bar" style="--bar-height:72%"></span>
+            <span class="hero__bar" style="--bar-height:100%"></span>
+          </div>
+          <div class="hero__meta">
+            <div><strong>0</strong><span>solapamientos permitidos fuera de la allowlist</span></div>
+            <div><strong>1</strong><span>retícula maestra para toda la página</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section--bordered" id="principios" data-region="SECTIONS">
+      <div class="container">
+        <p class="eyebrow">Construcción mínima</p>
+        <h2>Componentes completos, no decorados a medias.</h2>
+        <p class="lede">Cada bloque declara propietario, límites, superficie, alineación, estados y comportamiento responsive.</p>
+        <div class="cards">
+          <article class="card">
+            <div class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 4v16M4 9h16"/></svg></div>
+            <h3>Retícula</h3>
+            <p>Un mismo contenedor alinea navegación, hero, contenido, formulario y footer.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 8 4.5L12 12 4 7.5 12 3Z"/><path d="m4 12 8 4.5 8-4.5M4 16.5l8 4.5 8-4.5"/></svg></div>
+            <h3>Capas</h3>
+            <p>Las superposiciones son excepciones declaradas; ningún control queda oculto detrás de otro elemento.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <h3>Terminación</h3>
+            <p>Iconos, botones, líneas, texto y estados se inspeccionan en el render real antes de entregar.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process" id="proceso" data-region="SECTIONS">
+      <div class="process__grid container">
+        <div>
+          <p class="eyebrow">Autocorrección</p>
+          <h2>Detectar no basta: hay que corregir.</h2>
+          <p class="lede">Un defecto estructural exige reconstrucción del componente afectado, no una suma de parches locales.</p>
+        </div>
+        <div class="steps">
+          <article class="step"><span class="step__number">01</span><div><h3>Inspeccionar y medir</h3><p>Abrir el artefacto, recorrerlo, ampliar detalles y comparar su geometría con la intención declarada.</p></div></article>
+          <article class="step"><span class="step__number">02</span><div><h3>Interactuar y tensionar</h3><p>Ejercitar controles, teclado, formularios, contenido largo y anchuras intermedias.</p></div></article>
+          <article class="step"><span class="step__number">03</span><div><h3>Diagnosticar la causa</h3><p>Clasificar el defecto y localizar la regla, componente o dependencia que lo origina.</p></div></article>
+          <article class="step"><span class="step__number">04</span><div><h3>Corregir y revalidar</h3><p>Aplicar la reparación dentro del alcance y repetir la matriz sobre toda la superficie afectada.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--bordered" id="contacto" data-region="FORM">
+      <div class="contact__grid container">
+        <div>
+          <p class="eyebrow">Comportamiento verificable</p>
+          <h2>Un formulario debe funcionar en todos sus estados.</h2>
+          <p class="lede">La fixture valida errores, conservación de datos, foco, éxito local y prevención del doble envío. No realiza solicitudes de red.</p>
+        </div>
+        <form class="form" id="example-form" novalidate>
+          <div class="form__row">
+            <div class="field">
+              <label for="name">Nombre</label>
+              <input id="name" name="name" autocomplete="name" required aria-describedby="name-error">
+              <p class="field__error" id="name-error" hidden>Ingresa tu nombre.</p>
+            </div>
+            <div class="field">
+              <label for="email">Correo</label>
+              <input id="email" name="email" type="email" inputmode="email" autocomplete="email" required aria-describedby="email-error">
+              <p class="field__error" id="email-error" hidden>Ingresa un correo válido.</p>
+            </div>
+          </div>
+          <div class="field">
+            <label for="message">Observación</label>
+            <textarea id="message" name="message" minlength="12" maxlength="600" required aria-describedby="message-hint message-error"></textarea>
+            <p class="field__hint" id="message-hint">Entre 12 y 600 caracteres.</p>
+            <p class="field__error" id="message-error" hidden>Escribe al menos 12 caracteres.</p>
+          </div>
+          <div>
+            <button class="button" type="submit">Validar localmente</button>
+          </div>
+          <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" data-region="FOOTER">
+    <div class="footer__grid container">
+      <div class="footer__brand">
+        <h2 style="font-size:1.25rem;max-width:none">Base 001</h2>
+        <p>Fixture documental para integridad estructural. No constituye una dirección visual, producto terminado ni baseline humana aprobada.</p>
+      </div>
+      <nav class="footer__group" aria-label="Fundación"><h2>Fundación</h2><ul><li><a href="#principios">Principios</a></li><li><a href="#proceso">Proceso</a></li></ul></nav>
+      <nav class="footer__group" aria-label="Pruebas"><h2>Pruebas</h2><ul><li><a href="#contacto">Formulario</a></li><li><button class="button button--secondary" type="button" data-open-dialog>Límites</button></li></ul></nav>
+      <nav class="footer__group" aria-label="Estado"><h2>Estado</h2><ul><li>Técnico: pendiente de revisión humana</li><li>WCAG: no establecido</li></ul></nav>
+    </div>
+    <div class="footer__legal container"><span>MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001</span><span>Sin recursos externos</span></div>
+  </footer>
+
+  <dialog id="limits-dialog" aria-labelledby="dialog-title">
+    <div class="dialog__body">
+      <p class="eyebrow">Límite de claims</p>
+      <h2 id="dialog-title" style="font-size:clamp(1.75rem,4vw,2.5rem)">Una fixture técnica no se aprueba a sí misma.</h2>
+      <p>Las pruebas automáticas pueden sustentar integridad técnica en los entornos registrados. No sustituyen revisión humana, tecnologías de asistencia ni una evaluación completa de conformidad.</p>
+      <div class="dialog__actions">
+        <button class="button" type="button" data-close-dialog>Entendido</button>
+      </div>
+    </div>
+  </dialog>
+
+  <output class="diagnostic" id="geometry-status" data-state="pending" aria-live="polite">Diagnóstico geométrico pendiente</output>
+
+  <script>
+    (() => {
+      'use strict';
+      const menuButton = document.querySelector('.menu-button');
+      const menu = document.getElementById('primary-links');
+      const dialog = document.getElementById('limits-dialog');
+      const openers = [...document.querySelectorAll('[data-open-dialog]')];
+      const closeDialog = dialog.querySelector('[data-close-dialog]');
+      const form = document.getElementById('example-form');
+      const status = document.getElementById('form-status');
+      const geometryStatus = document.getElementById('geometry-status');
+      let dialogOpener = null;
+      let submitting = false;
+
+      menuButton.addEventListener('click', () => {
+        const open = menuButton.getAttribute('aria-expanded') !== 'true';
+        menuButton.setAttribute('aria-expanded', String(open));
+        menu.dataset.open = String(open);
+      });
+      menu.addEventListener('click', event => {
+        if (event.target.closest('a') && matchMedia('(max-width: 54rem)').matches) {
+          menuButton.setAttribute('aria-expanded', 'false');
+          menu.dataset.open = 'false';
+        }
+      });
+      matchMedia('(min-width: 54.0625rem)').addEventListener('change', event => {
+        if (event.matches) {
+          menuButton.setAttribute('aria-expanded', 'false');
+          menu.dataset.open = 'false';
+        }
+      });
+
+      openers.forEach(button => button.addEventListener('click', () => {
+        dialogOpener = button;
+        dialog.showModal();
+      }));
+      closeDialog.addEventListener('click', () => dialog.close());
+      dialog.addEventListener('click', event => {
+        if (event.target === dialog) dialog.close();
+      });
+      dialog.addEventListener('close', () => dialogOpener?.focus());
+
+      const fields = [
+        {input: form.elements.name, error: document.getElementById('name-error')},
+        {input: form.elements.email, error: document.getElementById('email-error')},
+        {input: form.elements.message, error: document.getElementById('message-error')}
+      ];
+      function validateField(record) {
+        const valid = record.input.checkValidity();
+        record.input.setAttribute('aria-invalid', String(!valid));
+        record.error.hidden = valid;
+        return valid;
+      }
+      fields.forEach(record => record.input.addEventListener('input', () => {
+        if (record.input.getAttribute('aria-invalid') === 'true') validateField(record);
+        status.textContent = '';
+        status.dataset.state = '';
+      }));
+      form.addEventListener('submit', event => {
+        event.preventDefault();
+        if (submitting) return;
+        const validity = fields.map(validateField);
+        const firstInvalid = fields.find((_, index) => !validity[index]);
+        if (firstInvalid) {
+          status.textContent = 'Revisa los campos indicados. Tus datos se conservaron.';
+          status.dataset.state = 'error';
+          firstInvalid.input.focus();
+          return;
+        }
+        submitting = true;
+        const submitButton = form.querySelector('[type="submit"]');
+        submitButton.disabled = true;
+        submitButton.textContent = 'Validando…';
+        requestAnimationFrame(() => {
+          status.textContent = 'Validación local completada. No se enviaron datos.';
+          status.dataset.state = 'success';
+          submitButton.disabled = false;
+          submitButton.textContent = 'Validar localmente';
+          submitting = false;
+        });
+      });
+
+      function rectanglesOverlap(a, b) {
+        const tolerance = 1;
+        return a.left < b.right - tolerance && a.right > b.left + tolerance && a.top < b.bottom - tolerance && a.bottom > b.top + tolerance;
+      }
+      function runGeometryDiagnostic() {
+        const failures = [];
+        const root = document.documentElement;
+        if (root.scrollWidth > root.clientWidth + 1) failures.push('overflow horizontal');
+        const header = document.querySelector('.site-header').getBoundingClientRect();
+        const hero = document.querySelector('.hero').getBoundingClientRect();
+        if (header.bottom > hero.top + 1 && getComputedStyle(document.querySelector('.site-header')).position !== 'sticky') failures.push('navbar fuera de franja');
+        const regions = [...document.querySelectorAll('main > section')].map(element => ({element, rect: element.getBoundingClientRect()}));
+        for (let index = 0; index < regions.length - 1; index += 1) {
+          if (regions[index].rect.bottom > regions[index + 1].rect.top + 1) failures.push('secciones superpuestas');
+        }
+        const cards = [...document.querySelectorAll('.card')];
+        for (let a = 0; a < cards.length; a += 1) {
+          for (let b = a + 1; b < cards.length; b += 1) {
+            if (rectanglesOverlap(cards[a].getBoundingClientRect(), cards[b].getBoundingClientRect())) failures.push('cards superpuestas');
+          }
+        }
+        geometryStatus.dataset.state = failures.length ? 'fail' : 'pass';
+        geometryStatus.textContent = failures.length ? `Diagnóstico: ${[...new Set(failures)].join(', ')}` : 'Diagnóstico geométrico local: sin fallos detectados';
+        window.__MIVF_DIAGNOSTIC__ = {pass: failures.length === 0, failures, width: innerWidth, scrollWidth: root.scrollWidth, clientWidth: root.clientWidth};
+      }
+      let resizeFrame = 0;
+      addEventListener('resize', () => {
+        cancelAnimationFrame(resizeFrame);
+        resizeFrame = requestAnimationFrame(runGeometryDiagnostic);
+      });
+      addEventListener('load', runGeometryDiagnostic, {once: true});
+    })();
+  </script>
+</body>
+</html>

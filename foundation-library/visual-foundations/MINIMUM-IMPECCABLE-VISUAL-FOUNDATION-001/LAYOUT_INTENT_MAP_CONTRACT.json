@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0.0",
+  "contract_id": "MIVF-LAYOUT-INTENT-MAP-001",
+  "required_fields_per_region": [
+    "id",
+    "owner",
+    "container",
+    "grid_columns",
+    "alignment",
+    "spatial_bounds",
+    "surface_role",
+    "stacking_layer",
+    "allowed_overlays",
+    "responsive_behavior"
+  ],
+  "fixture_map": [
+    {"id":"NAV","owner":"site-header","container":"master-grid","grid_columns":"full","alignment":"shared-inline-edges","spatial_bounds":"own-band","surface_role":"base","stacking_layer":"navigation","allowed_overlays":["mobile-menu-within-header"],"responsive_behavior":"inline-links-to-disclosure"},
+    {"id":"HERO","owner":"main","container":"master-grid","grid_columns":"7-plus-5","alignment":"shared-inline-edges","spatial_bounds":"normal-flow","surface_role":"base","stacking_layer":"content","allowed_overlays":[],"responsive_behavior":"two-columns-to-one"},
+    {"id":"SECTIONS","owner":"main","container":"master-grid","grid_columns":"12","alignment":"shared-inline-edges","spatial_bounds":"normal-flow","surface_role":"base-or-elevated","stacking_layer":"content","allowed_overlays":[],"responsive_behavior":"multi-column-to-one"},
+    {"id":"FORM","owner":"contact-section","container":"master-grid","grid_columns":"5-plus-7","alignment":"shared-inline-edges","spatial_bounds":"normal-flow","surface_role":"elevated","stacking_layer":"content","allowed_overlays":[],"responsive_behavior":"two-columns-to-one"},
+    {"id":"FOOTER","owner":"site-footer","container":"master-grid","grid_columns":"12","alignment":"shared-inline-edges","spatial_bounds":"own-band","surface_role":"inverse","stacking_layer":"content","allowed_overlays":[],"responsive_behavior":"four-columns-to-one"}
+  ],
+  "deviation_rule": "Any runtime region whose geometry differs materially from its declared map must be diagnosed before visual styling proceeds."
+}

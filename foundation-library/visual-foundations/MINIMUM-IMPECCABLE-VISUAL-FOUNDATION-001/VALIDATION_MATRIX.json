@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "matrix_id": "MIVF-VALIDATION-MATRIX-001",
+  "status": "STATIC_EXECUTED_BROWSER_NOT_EXECUTED_ENVIRONMENT_UNAVAILABLE",
+  "cases": [
+    {"id":"MIVF-001","method":"STATIC","subject":"offline self containment","oracle":"no external assets, CDN, imports or network APIs"},
+    {"id":"MIVF-002","method":"STATIC_AND_BROWSER","subject":"master grid","oracle":"header, hero, sections, form and footer share inline container edges"},
+    {"id":"MIVF-003","method":"BROWSER_GEOMETRY","subject":"overflow","oracle":"document scrollWidth never exceeds clientWidth"},
+    {"id":"MIVF-004","method":"BROWSER_GEOMETRY","subject":"overlap","oracle":"no non-allowlisted region intersections"},
+    {"id":"MIVF-005","method":"OPTICAL_AND_STATIC","subject":"icons buttons lines","oracle":"no clipped SVG, unfinished edges, unowned lines or asymmetric controls"},
+    {"id":"MIVF-006","method":"KEYBOARD","subject":"focus order and visibility","oracle":"all interactive elements reachable in logical order with visible focus"},
+    {"id":"MIVF-007","method":"INTERACTION","subject":"navigation and dialog","oracle":"menu and dialog states open, close and restore focus correctly"},
+    {"id":"MIVF-008","method":"INTERACTION","subject":"form invalid","oracle":"errors identify fields, preserve input and prevent submission"},
+    {"id":"MIVF-009","method":"INTERACTION","subject":"form valid","oracle":"single local success state without network or duplicate submission"},
+    {"id":"MIVF-010","method":"RESPONSIVE_SWEEP","subject":"continuous width","oracle":"320 through 1920 px have no collision, clipping or structural overflow"},
+    {"id":"MIVF-011","method":"CONTENT_STRESS","subject":"expanded text","oracle":"long content remains readable and contained"},
+    {"id":"MIVF-012","method":"BROWSER","subject":"console resources stability","oracle":"no page errors, request failures, external requests or unexplained layout shifts"},
+    {"id":"MIVF-013","method":"ACCESSIBILITY_STATIC_MANUAL","subject":"semantics reduced motion","oracle":"semantic regions, names, states and reduced-motion treatment are present"},
+    {"id":"MIVF-014","method":"CLAIM_BOUNDARY","subject":"result classification","oracle":"technical pass does not claim visual approval, product readiness or WCAG conformance"}
+  ],
+  "required_evidence": [
+    "STATIC_VALIDATOR_OUTPUT",
+    "BROWSER_MATRIX_OUTPUT",
+    "GEOMETRY_MEASUREMENTS",
+    "INTERACTION_RESULTS",
+    "DEFECT_AND_CORRECTION_LOG",
+    "DECLARED_LIMITATIONS"
+  ]
+}

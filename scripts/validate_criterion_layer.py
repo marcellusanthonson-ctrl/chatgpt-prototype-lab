@@ -40,6 +40,11 @@ def main() -> int:
     assert "STATIC_PASS_DOES_NOT_IMPLY_ACCESSIBILITY" in result["mandatory_boundaries"]
     assert "AT_NOT_RUN" in result["accessibility_result_states"]["assistive_technology"]
     assert "WCAG_CONFORMANCE_NOT_ESTABLISHED" in result["accessibility_result_states"]["conformance"]
+    assert contract["self_correction"]["known_correctable_defect_blocks_delivery"] is True
+    assert contract["self_correction"]["structural_defect_requires_reconstruction"] is True
+    assert contract["self_correction"]["pass_with_known_visual_defects"] is False
+    assert result["forbidden_visual_artifact_state"] == "PASS_WITH_KNOWN_VISUAL_DEFECTS"
+    assert "TECHNICAL_FOUNDATION_PASS_AWAITING_HUMAN_BASELINE_REVIEW" in result["visual_artifact_result_states"]
     ids = [item["id"] for item in fixtures["fixtures"]]
     assert len(ids) == len(set(ids)) == manifest["counts"]["fixtures"]
     known = set(EXPECTED_MODULES)
