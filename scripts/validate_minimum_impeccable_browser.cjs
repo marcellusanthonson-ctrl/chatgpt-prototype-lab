@@ -14,7 +14,10 @@ function check(condition, message) {
 }
 
 (async () => {
-  const browser = await chromium.launch({headless: true});
+  const browser = await chromium.launch({
+    headless: true,
+    executablePath: process.env.MIVF_CHROMIUM_EXECUTABLE || undefined
+  });
   const context = await browser.newContext({reducedMotion: 'reduce'});
   const page = await context.newPage();
   const consoleErrors = [];

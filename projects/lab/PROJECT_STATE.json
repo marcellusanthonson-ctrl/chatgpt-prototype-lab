@@ -32,6 +32,7 @@
     "decisions/DEC-LAB-017.json",
     "projects/lab/authorizations/AUTHORIZATION_LAB_MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_052.json",
     "projects/lab/authorizations/AUTHORIZATION_LAB_MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_CORRECTION_053.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_HUMAN_BASELINE_CAPTURE_PACKAGE_054.json",
     "projects/lab/evidence/EVD-LAB-VIS-002.json",
     "projects/lab/evidence/EVD-LAB-MIVF-001.json",
     "projects/lab/integrations/INT-LAB-002.json"
@@ -63,8 +64,8 @@
     },
     "authorization_registry": {
       "status": "RECONCILED_WITH_EXTERNAL_AUDIT_AUTHORIZATION_046",
-      "registered_consumed_transitions": 24,
-      "latest": "AUTHORIZATION_LAB_MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_CORRECTION_053",
+      "registered_consumed_transitions": 25,
+      "latest": "AUTHORIZATION_LAB_HUMAN_BASELINE_CAPTURE_PACKAGE_054",
       "correspondence_policy": "STATE_KEY_REQUIRED"
     },
     "design_knowledge": {
@@ -185,6 +186,16 @@
       "human_visual_approval": false,
       "wcag_conformance": false,
       "product_effect": "NONE"
+    },
+    "human_baseline_capture_package": {
+      "authorization": "AUTHORIZATION_LAB_HUMAN_BASELINE_CAPTURE_PACKAGE_054",
+      "artifact_sha256": "9fb45676ad0ec1a0a7396583e18bfb78277828595ddd54c9a9c74c80a5f12efe",
+      "status": "CANDIDATE_BASELINE_CAPTURE_READY_FOR_HUMAN_REVIEW",
+      "capture_count": 103,
+      "motion_smoke": "PASS",
+      "technical_optical_review": "PASS_NO_CONFIRMED_DEFECTS",
+      "human_visual_approval": false,
+      "binary_repository_inclusion": false
     }
   },
   "head_policy": "VERIFY_LIVE_AT_USE",

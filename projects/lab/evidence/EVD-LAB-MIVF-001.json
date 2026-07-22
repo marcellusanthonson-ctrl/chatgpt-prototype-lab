@@ -14,6 +14,7 @@
   "artifact": {
     "path": "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MINIMUM_IMPECCABLE_BASE_001.html",
     "role": "NEUTRAL_TECHNICAL_FIXTURE_NOT_PRODUCT_OR_VISUAL_DIRECTION",
+    "sha256": "9fb45676ad0ec1a0a7396583e18bfb78277828595ddd54c9a9c74c80a5f12efe",
     "offline": true,
     "external_assets": false
   },
@@ -105,12 +106,31 @@
     "wcag_conformance_established": false,
     "product_readiness_established": false
   },
+  "candidate_baseline_capture_package": {
+    "authorization_id": "AUTHORIZATION_LAB_HUMAN_BASELINE_CAPTURE_PACKAGE_054",
+    "origin_parent_head": "85dbbd9014cce3f59aad267ac02a7b0fb87f407c",
+    "artifact_sha256": "9fb45676ad0ec1a0a7396583e18bfb78277828595ddd54c9a9c74c80a5f12efe",
+    "status": "CANDIDATE_BASELINE_CAPTURE_READY_FOR_HUMAN_REVIEW",
+    "viewport_configurations": 103,
+    "width_range": "320_TO_1920_PX_MAXIMUM_STEP_16",
+    "capture_mode": "REDUCED_MOTION_DPR_1_LIGHT_SCHEME_FULL_PAGE",
+    "motion_smoke": "PASS_NO_PREFERENCE_NO_LAYOUT_SHIFT",
+    "technical_optical_review": "PASS_NO_CONFIRMED_DEFECTS",
+    "binary_repository_inclusion": false,
+    "manifest_and_report_repository_inclusion": false,
+    "human_visual_approval": "NOT_ESTABLISHED",
+    "wcag_conformance": "NOT_ESTABLISHED",
+    "multibrowser_coverage": "NOT_ESTABLISHED",
+    "fail_safe": "ANY_CONFIRMED_DEFECT_INVALIDATES_PACKAGE_AND_REQUIRES_COMPLETE_REVALIDATION"
+  },
   "source_refs": [
     "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MANIFEST.json",
     "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/VALIDATION_MATRIX.json",
     "scripts/validate_minimum_impeccable_foundation.py",
-    "scripts/validate_minimum_impeccable_browser.cjs"
+    "scripts/validate_minimum_impeccable_browser.cjs",
+    "scripts/capture_minimum_impeccable_baseline.cjs"
   ],
   "correction_authorization_ref": "AUTHORIZATION_LAB_MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_CORRECTION_053",
+  "capture_authorization_ref": "AUTHORIZATION_LAB_HUMAN_BASELINE_CAPTURE_PACKAGE_054",
   "authority_effect": "NONE"
 }

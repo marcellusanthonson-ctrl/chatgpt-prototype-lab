@@ -17,4 +17,6 @@ La base define integridad geométrica, acabado de componentes, mapa de intenció
 
 La validación estática y la matriz renderizada pasan después de corregir el selector que ocultaba el menú móvil. La matriz cubrió 103 anchuras, geometría, navegación, diálogo, foco, formularios, estrés de contenido, consola y frontera offline. No se declaró aprobación visual humana ni conformidad WCAG.
 
+La autorización `054` fijó el SHA-256 `9fb45676ad0ec1a0a7396583e18bfb78277828595ddd54c9a9c74c80a5f12efe`, generó fuera del repositorio el paquete determinista de 103 capturas, completó la revisión óptica técnica y el smoke test de movimiento sin defectos confirmados. El paquete es candidato para revisión humana; las imágenes no forman parte del LAB.
+
 No existe autorización activa reutilizable. El HEAD propio se verifica en vivo y nunca se almacena como estado canónico vigente.

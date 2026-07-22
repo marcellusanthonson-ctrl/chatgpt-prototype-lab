@@ -202,6 +202,27 @@
         "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MANIFEST.json",
         "projects/lab/evidence/EVD-LAB-MIVF-001.json"
       ]
+    },
+    {
+      "id": "PEND-LAB-012",
+      "status": "READY_FOR_HUMAN_REVIEW",
+      "type": "HUMAN_BASELINE_REVIEW",
+      "subject": "Review the candidate baseline capture package for MINIMUM_IMPECCABLE_BASE_001.html",
+      "priority": "HIGH",
+      "artifact_sha256": "9fb45676ad0ec1a0a7396583e18bfb78277828595ddd54c9a9c74c80a5f12efe",
+      "capture_count": 103,
+      "automatic_approval": false,
+      "allowed_human_outcomes": [
+        "ACCEPT_AS_NEUTRAL_TECHNICAL_BASELINE",
+        "REJECT_WITH_DOCUMENTED_DEFECTS"
+      ],
+      "fail_safe": "ANY_CONFIRMED_DEFECT_INVALIDATES_PACKAGE_AND_REQUIRES_COMPLETE_REVALIDATION",
+      "product_direction_effect": "NONE",
+      "wcag_conformance_effect": "NONE",
+      "source_refs": [
+        "projects/lab/evidence/EVD-LAB-MIVF-001.json",
+        "projects/lab/authorizations/AUTHORIZATION_LAB_HUMAN_BASELINE_CAPTURE_PACKAGE_054.json"
+      ]
     }
   ]
 }
