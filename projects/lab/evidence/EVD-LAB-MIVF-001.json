@@ -3,12 +3,13 @@
   "evidence_id": "EVD-LAB-MIVF-001",
   "project_id": "lab",
   "kind": "MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_VALIDATION",
-  "status": "BLOCKED_WITH_DOCUMENTED_DEFECTS",
+  "status": "TECHNICAL_FOUNDATION_PASS_AWAITING_HUMAN_BASELINE_REVIEW",
   "updated_at": "2026-07-22",
   "baseline": {
     "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
     "branch": "main",
-    "parent_head": "07b5d07dc44806c5bf77dbb39b057e6c9635d0d0"
+    "initial_parent_head": "07b5d07dc44806c5bf77dbb39b057e6c9635d0d0",
+    "correction_parent_head": "2d6d21703b34b0c8ecc1cbb09029c62d63c69302"
   },
   "artifact": {
     "path": "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MINIMUM_IMPECCABLE_BASE_001.html",
@@ -26,11 +27,14 @@
     "reduced_motion_static_preflight": "PASS",
     "criterion_layer_fixture_oracles": "PASS",
     "repository_validation": "FAIL_PREEXISTING_PILOT_PIN_HASH_DRIFT_OUTSIDE_AUTHORIZED_SCOPE",
-    "browser_render": "NOT_EXECUTED_ENVIRONMENT_UNAVAILABLE",
-    "continuous_width_sweep": "NOT_EXECUTED_ENVIRONMENT_UNAVAILABLE",
-    "dom_geometry": "NOT_EXECUTED_ENVIRONMENT_UNAVAILABLE",
-    "interactive_form_behavior": "NOT_EXECUTED_ENVIRONMENT_UNAVAILABLE",
-    "optical_close_up_review": "NOT_EXECUTED_ENVIRONMENT_UNAVAILABLE"
+    "browser_render": "PASS",
+    "continuous_width_sweep": "PASS_103_WIDTHS_320_TO_1920_MAXIMUM_STEP_16",
+    "dom_geometry": "PASS",
+    "interactive_navigation_dialog_and_focus": "PASS",
+    "interactive_form_behavior": "PASS",
+    "content_stress": "PASS",
+    "console_page_errors_and_external_requests": "PASS",
+    "optical_technical_review": "PASS_CORRECTED_MOBILE_AND_DESKTOP_CAPTURES_INSPECTED"
   },
   "browser_attempts": [
     {
@@ -44,6 +48,12 @@
       "status": "NOT_EXECUTED",
       "reason": "LOCALHOST_AND_DATA_URLS_BLOCKED_BY_BROWSER_SECURITY_POLICY",
       "effect": "NO_BROWSER_PASS_CLAIM_AND_NO_POLICY_WORKAROUND_ATTEMPTED"
+    },
+    {
+      "surface": "LOCAL_PLAYWRIGHT_1_61_1_WITH_EPHEMERAL_CHROMIUM_149_0_7827_0",
+      "status": "EXECUTED_PASS_AFTER_AUTHORIZED_FIX",
+      "reason": "CALLABLE_LOCAL_CHROMIUM_AVAILABLE_OUTSIDE_REPOSITORY_DEPENDENCIES",
+      "effect": "BROWSER_MATRIX_AND_TECHNICAL_FOUNDATION_PASS_CLAIM_SUPPORTED"
     }
   ],
   "preexisting_repository_divergences": [
@@ -67,10 +77,21 @@
       "severity": "BLOCKER",
       "observable_symptom": "The rendered fixture cannot be opened in an authorized callable browser surface in this execution environment.",
       "root_cause": "Local Playwright lacks Chromium; managed browser policy rejects local and data URLs.",
-      "scope_authority": "Installation or policy circumvention is not available or permitted in this execution.",
-      "correction": "Execute the committed browser validator on a surface with a callable local Chromium installation.",
-      "revalidation": "NOT_EXECUTED",
-      "final_state": "OPEN_BLOCKER"
+      "scope_authority": "The follow-up execution provided an ephemeral callable Chromium without changing repository dependencies or security policy.",
+      "correction": "Executed the committed browser validator with the local ephemeral Chromium surface.",
+      "revalidation": "PASS",
+      "final_state": "RESOLVED"
+    },
+    {
+      "id": "MIVF-DEFECT-001",
+      "domain": "RESPONSIVE_NAVIGATION_COMPONENT_FINISH",
+      "severity": "BLOCKER",
+      "observable_symptom": "At 390px the mobile menu button existed in the DOM but remained display:none and could not be operated.",
+      "root_cause": "Inside the mobile breakpoint, .nav > .button had greater specificity than .menu-button and hid the direct-child menu control.",
+      "scope_authority": "Authorized by AUTHORIZATION_LAB_MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_CORRECTION_053.",
+      "correction": "Changed the hiding selector to .nav > .button:not(.menu-button).",
+      "revalidation": "PASS_COMPLETE_CANONICAL_BROWSER_MATRIX",
+      "final_state": "RESOLVED"
     }
   ],
   "result_claims": {
@@ -78,8 +99,8 @@
     "criterion_layer_amended": true,
     "neutral_fixture_created": true,
     "static_validation_passed": true,
-    "browser_validation_passed": false,
-    "technical_foundation_passed": false,
+    "browser_validation_passed": true,
+    "technical_foundation_passed": true,
     "human_visual_approval_established": false,
     "wcag_conformance_established": false,
     "product_readiness_established": false
@@ -90,5 +111,6 @@
     "scripts/validate_minimum_impeccable_foundation.py",
     "scripts/validate_minimum_impeccable_browser.cjs"
   ],
+  "correction_authorization_ref": "AUTHORIZATION_LAB_MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_CORRECTION_053",
   "authority_effect": "NONE"
 }
