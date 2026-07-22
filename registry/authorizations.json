@@ -501,6 +501,28 @@
       "product_changes_authorized": false,
       "deployment_authorized": false,
       "wcag_claim_authorized": false
+    },
+    {
+      "id": "AUTHORIZATION_LAB_MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_CORRECTION_053",
+      "state_key": "minimum_impeccable_visual_foundation_correction_053",
+      "project_id": "lab",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "approved_by": "Jonathan Martínez",
+      "scope": "MIVF_MOBILE_MENU_SELECTOR_CORRECTION_BROWSER_REVALIDATION_AND_STATE_RECONCILIATION",
+      "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_CORRECTION_053.json",
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "expected_parent_head": "2d6d21703b34b0c8ecc1cbb09029c62d63c69302",
+      "updated_at": "2026-07-22",
+      "commit_authorized": true,
+      "push_authorized": true,
+      "source_file_update_authorized": true,
+      "browser_revalidation_authorized": true,
+      "runtime_authorized": false,
+      "rag_authorized": false,
+      "product_changes_authorized": false,
+      "deployment_authorized": false,
+      "wcag_claim_authorized": false
     }
   ]
 }
