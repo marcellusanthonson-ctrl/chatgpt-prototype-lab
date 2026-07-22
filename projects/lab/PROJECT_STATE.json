@@ -31,6 +31,7 @@
     "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MANIFEST.json",
     "decisions/DEC-LAB-017.json",
     "projects/lab/authorizations/AUTHORIZATION_LAB_MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_052.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_CORRECTION_053.json",
     "projects/lab/evidence/EVD-LAB-VIS-002.json",
     "projects/lab/evidence/EVD-LAB-MIVF-001.json",
     "projects/lab/integrations/INT-LAB-002.json"
@@ -62,8 +63,8 @@
     },
     "authorization_registry": {
       "status": "RECONCILED_WITH_EXTERNAL_AUDIT_AUTHORIZATION_046",
-      "registered_consumed_transitions": 23,
-      "latest": "AUTHORIZATION_LAB_MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_052",
+      "registered_consumed_transitions": 24,
+      "latest": "AUTHORIZATION_LAB_MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_CORRECTION_053",
       "correspondence_policy": "STATE_KEY_REQUIRED"
     },
     "design_knowledge": {
@@ -173,14 +174,14 @@
     },
     "minimum_impeccable_visual_foundation": {
       "id": "MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001",
-      "version": "1.0.0",
-      "status": "BLOCKED_WITH_DOCUMENTED_DEFECTS",
+      "version": "1.0.1",
+      "status": "TECHNICAL_FOUNDATION_PASS_AWAITING_HUMAN_BASELINE_REVIEW",
       "decision": "DEC-LAB-017",
       "integration": "INT-LAB-002",
       "neutral_fixture": "MINIMUM_IMPECCABLE_BASE_001.html",
       "static_validation": "PASS",
-      "browser_validation": "NOT_EXECUTED_ENVIRONMENT_UNAVAILABLE",
-      "known_correctable_defects": "NOT_ESTABLISHED_WITHOUT_RENDERED_BROWSER_INSPECTION",
+      "browser_validation": "PASS_103_WIDTHS_GEOMETRY_INTERACTION_CONTENT_STRESS_AND_OFFLINE_BOUNDARY",
+      "known_correctable_defects": "ZERO_AFTER_AUTHORIZED_MOBILE_MENU_SELECTOR_CORRECTION_AND_COMPLETE_REVALIDATION",
       "human_visual_approval": false,
       "wcag_conformance": false,
       "product_effect": "NONE"
