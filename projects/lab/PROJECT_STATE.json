@@ -43,6 +43,10 @@
     "decisions/DEC-LAB-019.json",
     "projects/lab/authorizations/AUTHORIZATION_LAB_WHATSAPP_SELECTED_ASSET_FOOTER_INTEGRATION_060.json",
     "projects/lab/evidence/EVD-LAB-ICON-003.json",
+    "decisions/DEC-LAB-020.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_ASSET_FIRST_ICON_STRATEGY_HUMAN_APPROVAL_CLOSURE_061.json",
+    "projects/lab/evidence/EVD-LAB-ICON-004.json",
+    "patterns/PAT-LAB-008.json",
     "projects/lab/evidence/EVD-LAB-VIS-002.json",
     "projects/lab/evidence/EVD-LAB-MIVF-001.json",
     "projects/lab/evidence/EVD-LAB-ICON-001.json",
@@ -76,8 +80,8 @@
     },
     "authorization_registry": {
       "status": "RECONCILED_WITH_EXTERNAL_AUDIT_AUTHORIZATION_046",
-      "registered_consumed_transitions": 30,
-      "latest": "AUTHORIZATION_LAB_WHATSAPP_SELECTED_ASSET_FOOTER_INTEGRATION_060",
+      "registered_consumed_transitions": 31,
+      "latest": "AUTHORIZATION_LAB_ASSET_FIRST_ICON_STRATEGY_HUMAN_APPROVAL_CLOSURE_061",
       "correspondence_policy": "STATE_KEY_REQUIRED"
     },
     "design_knowledge": {
@@ -188,8 +192,8 @@
     "minimum_impeccable_visual_foundation": {
       "id": "MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001",
       "version": "1.1.1",
-      "status": "SELECTED_ASSET_INTEGRATED_AWAITING_HUMAN_FOOTER_REVIEW",
-      "decision": "DEC-LAB-019",
+      "status": "HUMAN_BASELINE_APPROVED",
+      "decision": "DEC-LAB-020",
       "integration": "INT-LAB-002",
       "neutral_fixture": "MINIMUM_IMPECCABLE_BASE_001.html",
       "static_validation": "PASS",
@@ -200,11 +204,11 @@
       "whatsapp_render_model": "FILL_BOOTSTRAP_ICONS_1_13_1_EXACT_GEOMETRY",
       "whatsapp_selected_asset": "BOOTSTRAP_ICONS_1_13_1",
       "whatsapp_asset_integration": "PUBLISHED",
-      "whatsapp_human_review": "OPEN_INTEGRATED_FOOTER_REVIEW_PENDING",
+      "whatsapp_human_review": "APPROVED",
       "brand_icon_strategy": "ASSET_FIRST_FOR_BRAND_ASSOCIATED_VISUALS",
       "repository_validation_unblock": "PREEXISTING_NON_SEMANTIC_VALIDATION_BLOCKER_CORRECTED_BY_AUTHORIZATION_057",
       "absolute_sharpness_automated": false,
-      "human_visual_approval": "APPROVED_EXCEPT_BRAND_ASSOCIATED_ICONOGRAPHY",
+      "human_visual_approval": "APPROVED",
       "wcag_conformance": false,
       "product_effect": "NONE"
     },
@@ -225,13 +229,14 @@
     "asset_first_brand_icon_library": {
       "id": "LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001",
       "version": "1.1.0",
-      "status": "SELECTED_ASSET_INTEGRATED_AWAITING_HUMAN_FOOTER_REVIEW",
+      "status": "HUMAN_CONTEXTUALLY_APPROVED_STRATEGY_SUCCESS",
       "principle": "ASSET_FIRST_FOR_BRAND_ASSOCIATED_VISUALS",
       "candidate_count": 3,
       "review_html": "foundation-library/brand-icons/LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001/REVIEW.html",
       "non_brand_baseline_human_review": "APPROVED",
-      "brand_associated_iconography_human_review": "OPEN",
-      "only_visual_pending": "HUMAN_REVIEW_OF_INTEGRATED_FOOTER",
+      "brand_associated_iconography_human_review": "APPROVED_FOR_CURRENT_FOUNDATION_CONTEXT",
+      "only_visual_pending": "NONE",
+      "open_visual_pending_items": 0,
       "authorization_058": "SUPERSEDED_BEFORE_PUBLICATION_BY_ASSET_FIRST_ICON_STRATEGY",
       "authorization_059": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
       "human_icon_selection": true,
@@ -247,11 +252,15 @@
       "whatsapp_asset_integration": "PUBLISHED",
       "authorization_060": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
       "focused_browser_validation": "NOT_EXECUTED_AUTOMATION_SURFACE_UNAVAILABLE",
-      "manual_human_footer_review": "PENDING",
-      "fixture_sha256": "d7b4539ca1957f6e9a8648be797da604ebaa5b9fcd175cb381f9deef2917245e"
+      "manual_human_footer_review": "APPROVED",
+      "fixture_sha256": "d7b4539ca1957f6e9a8648be797da604ebaa5b9fcd175cb381f9deef2917245e",
+      "asset_first_for_brand_associated_visuals_result": "SUCCESS",
+      "closure_result": "CLOSED_BY_HUMAN_APPROVAL_OF_BOOTSTRAP_WHATSAPP_FOOTER_INTEGRATION",
+      "reusable_pattern": "PAT-LAB-008",
+      "authorization_061": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
     }
   },
   "head_policy": "VERIFY_LIVE_AT_USE",
-  "verified_parent_head": "914118c4f7f1374f207977c20929abfec12b8080",
+  "verified_parent_head": "53417d5b98f83f1c6b7ef1e00da845fa8b1198d6",
   "self_head_is_canonical_state": false
 }

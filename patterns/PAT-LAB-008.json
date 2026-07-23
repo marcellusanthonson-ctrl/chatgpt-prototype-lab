@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "id": "PAT-LAB-008",
+  "title": "Asset-first brand-associated visual selection and integration",
+  "project_scope": ["lab"],
+  "status": "VALIDATED",
+  "validation_state": "VALIDATED_BY_SUCCESSFUL_HUMAN_CONTEXTUAL_APPROVAL",
+  "canonical_path": "patterns/PAT-LAB-008.json",
+  "updated_at": "2026-07-23",
+  "pattern": "ASSET_FIRST_BRAND_ASSOCIATED_VISUAL_SELECTION_AND_INTEGRATION",
+  "pipeline": [
+    "NEED_IDENTIFICATION",
+    "VERIFIED_CANDIDATE_ACQUISITION",
+    "PROVENANCE_AND_LICENSE_REGISTRATION",
+    "STATIC_SECURITY_VALIDATION",
+    "CONTEXTUAL_COMPARISON",
+    "HUMAN_SELECTION",
+    "IMMUTABLE_GEOMETRY_INTEGRATION",
+    "FOCUSED_VALIDATION",
+    "HUMAN_CONTEXTUAL_APPROVAL"
+  ],
+  "invariants": [
+    "SEPARATE_FILE_LICENSE_FROM_TRADEMARK_USAGE_APPROVAL",
+    "NO_AUTOMATIC_SELECTION",
+    "NO_MODEL_REDRAW_OR_GEOMETRY_APPROXIMATION",
+    "PRESERVE_SOURCE_ASSET_HASH_AND_PROVENANCE",
+    "REQUIRE_CONTEXTUAL_HUMAN_APPROVAL_AFTER_INTEGRATION",
+    "DO_NOT_INFER_WCAG_CONFORMANCE_OR_GENERAL_BRAND_APPROVAL"
+  ],
+  "validation_case": {
+    "foundation": "MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001@1.1.1",
+    "asset": "BOOTSTRAP_ICONS_1_13_1",
+    "result": "SUCCESS",
+    "human_contextual_approval": "APPROVED"
+  },
+  "approved_by": "Jonathan Martínez",
+  "decision_ref": "DEC-LAB-020",
+  "evidence_ref": "EVD-LAB-ICON-004"
+}

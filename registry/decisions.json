@@ -312,6 +312,28 @@
         "RAG",
         "WCAG_CONFORMANCE_CLAIM"
       ]
+    },
+    {
+      "id": "DEC-LAB-020",
+      "title": "Aprobar visualmente el icono Bootstrap de WhatsApp y cerrar la estrategia asset-first",
+      "project_scope": ["lab"],
+      "status": "APPROVED",
+      "approval_state": "APPROVED",
+      "canonical_path": "decisions/DEC-LAB-020.json",
+      "updated_at": "2026-07-23",
+      "approved_by": "Jonathan Martínez",
+      "consequences": [
+        "APPROVE_CURRENT_FOUNDATION_HUMAN_BASELINE",
+        "CLOSE_BRAND_ASSOCIATED_SOCIAL_ICON_PENDING",
+        "VALIDATE_PAT_LAB_008_ASSET_FIRST_PIPELINE"
+      ],
+      "non_authorizations": [
+        "GENERAL_BRAND_USAGE_APPROVAL",
+        "WCAG_CONFORMANCE_CLAIM",
+        "PRODUCT_CHANGE",
+        "RUNTIME",
+        "EXTERNAL_PROJECT_CHANGE"
+      ]
     }
   ]
 }

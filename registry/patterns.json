@@ -1,6 +1,6 @@
 {
   "schema_version": "1.2.0",
-  "updated_at": "2026-07-16",
+  "updated_at": "2026-07-23",
   "records": [
     {
       "id": "PAT-LAB-001",
@@ -113,6 +113,15 @@
       "validation_state": "VALIDATED",
       "canonical_path": "patterns/PAT-LAB-007.json",
       "updated_at": "2026-07-16"
+    },
+    {
+      "id": "PAT-LAB-008",
+      "title": "Asset-first brand-associated visual selection and integration",
+      "project_scope": ["lab"],
+      "status": "VALIDATED",
+      "validation_state": "VALIDATED_BY_SUCCESSFUL_HUMAN_CONTEXTUAL_APPROVAL",
+      "canonical_path": "patterns/PAT-LAB-008.json",
+      "updated_at": "2026-07-23"
     }
   ]
 }

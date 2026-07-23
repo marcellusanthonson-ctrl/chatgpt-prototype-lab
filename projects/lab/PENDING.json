@@ -243,11 +243,11 @@
     },
     {
       "id": "PEND-LAB-013",
-      "status": "PENDING_MANUAL_HUMAN_FOOTER_REVIEW_AND_BRAND_USAGE_APPROVAL",
-      "type": "HUMAN_REVIEW_OF_INTEGRATED_FOOTER",
-      "subject": "HUMAN_REVIEW_OF_INTEGRATED_FOOTER",
+      "status": "CLOSED_BY_HUMAN_APPROVAL_OF_BOOTSTRAP_WHATSAPP_FOOTER_INTEGRATION",
+      "type": "BRAND_ASSOCIATED_SOCIAL_ICON_ASSET_SELECTION_AND_INTEGRATION",
+      "subject": "BRAND_ASSOCIATED_SOCIAL_ICON_ASSET_SELECTION_AND_INTEGRATION",
       "priority": "HIGH",
-      "only_open_baseline_visual_pending": true,
+      "only_open_baseline_visual_pending": false,
       "library_id": "LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001",
       "candidate_count": 3,
       "human_icon_selection": true,
@@ -257,10 +257,15 @@
       "brand_usage_approval": "PENDING_HUMAN_BRAND_USAGE_APPROVAL",
       "integration_status": "PUBLISHED",
       "focused_browser_validation": "NOT_EXECUTED_AUTOMATION_SURFACE_UNAVAILABLE",
+      "whatsapp_footer_human_visual_review": "APPROVED",
+      "brand_associated_iconography_human_review": "APPROVED_FOR_CURRENT_FOUNDATION_CONTEXT",
+      "minimum_impeccable_visual_foundation_human_baseline": "APPROVED",
+      "asset_first_for_brand_associated_visuals_result": "SUCCESS",
+      "closure_result": "CLOSED_BY_HUMAN_APPROVAL_OF_BOOTSTRAP_WHATSAPP_FOOTER_INTEGRATION",
       "required_sequence": [
-        "MANUAL_HUMAN_REVIEW_OF_INTEGRATED_FOOTER",
-        "RECORD_APPROVED_REJECTED_REVERT_TO_SECONDARY_OR_REQUEST_ADJUSTMENT",
-        "KEEP_BRAND_USAGE_APPROVAL_SEPARATE"
+        "COMPLETED_MANUAL_HUMAN_REVIEW_OF_INTEGRATED_FOOTER",
+        "RECORDED_APPROVED",
+        "BRAND_USAGE_APPROVAL_REMAINS_SEPARATE"
       ],
       "automatic_selection": false,
       "product_effect": "NONE",
@@ -275,7 +280,11 @@
         "projects/lab/evidence/EVD-LAB-ICON-003.json",
         "decisions/DEC-LAB-018.json",
         "decisions/DEC-LAB-019.json",
-        "projects/lab/authorizations/AUTHORIZATION_LAB_WHATSAPP_SELECTED_ASSET_FOOTER_INTEGRATION_060.json"
+        "projects/lab/authorizations/AUTHORIZATION_LAB_WHATSAPP_SELECTED_ASSET_FOOTER_INTEGRATION_060.json",
+        "projects/lab/authorizations/AUTHORIZATION_LAB_ASSET_FIRST_ICON_STRATEGY_HUMAN_APPROVAL_CLOSURE_061.json",
+        "projects/lab/evidence/EVD-LAB-ICON-004.json",
+        "decisions/DEC-LAB-020.json",
+        "patterns/PAT-LAB-008.json"
       ]
     }
   ]

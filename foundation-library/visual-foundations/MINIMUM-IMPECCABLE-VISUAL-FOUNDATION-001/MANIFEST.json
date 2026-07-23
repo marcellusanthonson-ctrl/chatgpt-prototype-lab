@@ -36,6 +36,7 @@
   "footer_correction_authorization_ref": "AUTHORIZATION_LAB_HUMAN_BASELINE_FOOTER_CORRECTION_055",
   "functional_iconography_authorization_ref": "AUTHORIZATION_LAB_FUNCTIONAL_ICONOGRAPHY_RECONCILIATION_056",
   "selected_asset_integration_authorization_ref": "AUTHORIZATION_LAB_WHATSAPP_SELECTED_ASSET_FOOTER_INTEGRATION_060",
+  "human_approval_closure_authorization_ref": "AUTHORIZATION_LAB_ASSET_FIRST_ICON_STRATEGY_HUMAN_APPROVAL_CLOSURE_061",
   "superseded_candidate_artifact_sha256": "9fb45676ad0ec1a0a7396583e18bfb78277828595ddd54c9a9c74c80a5f12efe",
   "artifact_sha256": "d7b4539ca1957f6e9a8648be797da604ebaa5b9fcd175cb381f9deef2917245e",
   "candidate_baseline_capture_status": "SELECTED_ASSET_INTEGRATED_AWAITING_HUMAN_FOOTER_REVIEW",
@@ -45,10 +46,18 @@
     "EVD-LAB-VIS-002",
     "EVD-LAB-MIVF-001",
     "EVD-LAB-ICON-001",
-    "EVD-LAB-ICON-003"
+    "EVD-LAB-ICON-003",
+    "EVD-LAB-ICON-004"
   ],
+  "whatsapp_footer_human_visual_review": "APPROVED",
+  "brand_associated_iconography_human_review": "APPROVED_FOR_CURRENT_FOUNDATION_CONTEXT",
+  "human_baseline": "APPROVED",
+  "open_visual_pending_items": 0,
+  "focused_browser_validation": "NOT_EXECUTED_AUTOMATION_SURFACE_UNAVAILABLE",
+  "static_validation": "PASS",
+  "brand_usage_approval": "PENDING_HUMAN_BRAND_USAGE_APPROVAL",
   "authority_effect": "NONE",
   "product_effect": "NONE",
-  "visual_approval_effect": "NONE",
+  "visual_approval_effect": "APPROVED_FOR_CURRENT_FOUNDATION_CONTEXT",
   "wcag_conformance_effect": "NONE"
 }

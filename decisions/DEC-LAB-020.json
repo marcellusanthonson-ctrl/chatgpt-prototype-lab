@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "id": "DEC-LAB-020",
+  "title": "Aprobar visualmente el icono Bootstrap de WhatsApp y cerrar la estrategia asset-first",
+  "project": "lab",
+  "project_scope": ["lab"],
+  "status": "APPROVED",
+  "effective_date": "2026-07-23",
+  "updated_at": "2026-07-23",
+  "approval_state": "APPROVED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-23",
+  "approval_evidence": "Declaración humana explícita de Jonathan Martínez registrada por AUTHORIZATION_LAB_ASSET_FIRST_ICON_STRATEGY_HUMAN_APPROVAL_CLOSURE_061.",
+  "human_source_text": "Apruebo visualmente la integración de Bootstrap Icons v1.13.1\ncomo icono de WhatsApp en el footer de\nMINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001.\n— Jonathan Martínez",
+  "decision": {
+    "whatsapp_footer_human_visual_review": "APPROVED",
+    "brand_associated_iconography_human_review": "APPROVED_FOR_CURRENT_FOUNDATION_CONTEXT",
+    "minimum_impeccable_visual_foundation_human_baseline": "APPROVED",
+    "asset_first_for_brand_associated_visuals_result": "SUCCESS",
+    "closed_pending": "BRAND_ASSOCIATED_SOCIAL_ICON_ASSET_SELECTION_AND_INTEGRATION",
+    "closure_result": "CLOSED_BY_HUMAN_APPROVAL_OF_BOOTSTRAP_WHATSAPP_FOOTER_INTEGRATION",
+    "reusable_pattern": "ASSET_FIRST_BRAND_ASSOCIATED_VISUAL_SELECTION_AND_INTEGRATION"
+  },
+  "preserved_boundaries": {
+    "focused_browser_validation": "NOT_EXECUTED_AUTOMATION_SURFACE_UNAVAILABLE",
+    "static_validation": "PASS",
+    "wcag_conformance": "NOT_ESTABLISHED",
+    "brand_usage_approval": "PENDING_HUMAN_BRAND_USAGE_APPROVAL",
+    "runtime_effect": "NONE",
+    "product_effect": "NONE",
+    "external_project_effect": "NONE"
+  },
+  "non_authorizations": [
+    "GENERAL_BRAND_USAGE_APPROVAL",
+    "OFFICIAL_WHATSAPP_OR_META_APPROVAL",
+    "WCAG_CONFORMANCE_CLAIM",
+    "PRODUCT_CHANGE",
+    "RUNTIME",
+    "RAG",
+    "EXTERNAL_PROJECT_CHANGE"
+  ],
+  "source_refs": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_ASSET_FIRST_ICON_STRATEGY_HUMAN_APPROVAL_CLOSURE_061.json",
+    "projects/lab/evidence/EVD-LAB-ICON-004.json",
+    "patterns/PAT-LAB-008.json"
+  ],
+  "supersedes": [],
+  "superseded_by": null
+}

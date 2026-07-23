@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-ICON-004",
+  "project_id": "lab",
+  "kind": "HUMAN_VISUAL_APPROVAL_AND_ASSET_FIRST_STRATEGY_CLOSURE",
+  "status": "APPROVED_CURRENT_FOUNDATION_CONTEXT_CLOSED",
+  "recorded_at": "2026-07-23",
+  "authorization_id": "AUTHORIZATION_LAB_ASSET_FIRST_ICON_STRATEGY_HUMAN_APPROVAL_CLOSURE_061",
+  "decision_id": "DEC-LAB-020",
+  "parent_head": "53417d5b98f83f1c6b7ef1e00da845fa8b1198d6",
+  "human_approval": {
+    "approved_by": "Jonathan Martínez",
+    "source_text": "Apruebo visualmente la integración de Bootstrap Icons v1.13.1\ncomo icono de WhatsApp en el footer de\nMINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001.\n— Jonathan Martínez",
+    "whatsapp_footer_human_visual_review": "APPROVED",
+    "brand_associated_iconography_human_review": "APPROVED_FOR_CURRENT_FOUNDATION_CONTEXT",
+    "minimum_impeccable_visual_foundation_human_baseline": "APPROVED"
+  },
+  "strategy_closure": {
+    "principle": "ASSET_FIRST_FOR_BRAND_ASSOCIATED_VISUALS",
+    "result": "SUCCESS",
+    "closed_pending": "BRAND_ASSOCIATED_SOCIAL_ICON_ASSET_SELECTION_AND_INTEGRATION",
+    "closure_result": "CLOSED_BY_HUMAN_APPROVAL_OF_BOOTSTRAP_WHATSAPP_FOOTER_INTEGRATION",
+    "selected_asset": "BOOTSTRAP_ICONS_1_13_1",
+    "reusable_pattern": "PAT-LAB-008"
+  },
+  "preserved_validation": {
+    "focused_browser_validation": "NOT_EXECUTED_AUTOMATION_SURFACE_UNAVAILABLE",
+    "static_validation": "PASS",
+    "fixture_sha256_lf": "d7b4539ca1957f6e9a8648be797da604ebaa5b9fcd175cb381f9deef2917245e",
+    "html_changed_by_061": false,
+    "svg_changed_by_061": false,
+    "browser_tests_executed_by_061": false,
+    "matrix_206_executed_by_061": false
+  },
+  "claim_boundaries": {
+    "wcag_conformance": "NOT_ESTABLISHED",
+    "brand_usage_approval": "PENDING_HUMAN_BRAND_USAGE_APPROVAL",
+    "runtime_effect": "NONE",
+    "product_effect": "NONE",
+    "external_project_effect": "NONE",
+    "human_approval_scope": "CURRENT_FOUNDATION_CONTEXT_ONLY"
+  },
+  "source_refs": [
+    "decisions/DEC-LAB-020.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_ASSET_FIRST_ICON_STRATEGY_HUMAN_APPROVAL_CLOSURE_061.json",
+    "projects/lab/evidence/EVD-LAB-ICON-003.json",
+    "patterns/PAT-LAB-008.json"
+  ]
+}

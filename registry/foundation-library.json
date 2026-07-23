@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "library_id": "lab.foundation-library",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "status": "DOCUMENTED_AND_VALIDATED",
   "scope": "DOCUMENTATION_AND_VALIDATION_ONLY",
   "updated_at": "2026-07-23",
@@ -171,7 +171,9 @@
       "status": "SELECTED_ASSET_INTEGRATED_AWAITING_HUMAN_FOOTER_REVIEW",
       "version": "1.1.1",
       "fixture": "MINIMUM_IMPECCABLE_BASE_001.html",
-      "precedes_gate": "VISUAL_CALIBRATION_APPROVED"
+      "precedes_gate": "VISUAL_CALIBRATION_APPROVED",
+      "human_baseline": "APPROVED",
+      "open_visual_pending_items": 0
     },
     {
       "id": "LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001",
@@ -180,7 +182,9 @@
       "status": "SELECTED_ASSET_INTEGRATED_AWAITING_HUMAN_FOOTER_REVIEW",
       "version": "1.1.0",
       "candidate_count": 3,
-      "integration_status": "PUBLISHED"
+      "integration_status": "PUBLISHED",
+      "human_contextual_approval": "APPROVED",
+      "strategy_result": "SUCCESS"
     }
   ],
   "quality_gates": [
@@ -250,6 +254,11 @@
     },
     {
       "id": "AUTHORIZATION_LAB_WHATSAPP_SELECTED_ASSET_FOOTER_INTEGRATION_060",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "approved_by": "Jonathan Martínez"
+    },
+    {
+      "id": "AUTHORIZATION_LAB_ASSET_FIRST_ICON_STRATEGY_HUMAN_APPROVAL_CLOSURE_061",
       "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
       "approved_by": "Jonathan Martínez"
     }

@@ -2,8 +2,8 @@
 
 La fuente estructurada es `CURRENT_STATE.json`.
 
-- Versión: 2.5.22.
-- Fase: `SELECTED_ASSET_INTEGRATED_AWAITING_HUMAN_FOOTER_REVIEW`.
+- Versión: 2.5.23.
+- Fase: `MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_HUMAN_BASELINE_APPROVED`.
 - HEAD propio: `VERIFY_LIVE_AT_USE`.
 - Autorización activa reutilizable: ninguna.
 
@@ -19,7 +19,9 @@ La revisión humana del baseline quedó `APPROVED_EXCEPT_BRAND_ASSOCIATED_ICONOG
 
 La autorización `058` quedó `SUPERSEDED_BEFORE_PUBLICATION_BY_ASSET_FIRST_ICON_STRATEGY`, sin commit, push ni consumo. La autorización `059` adoptó `ASSET_FIRST_FOR_BRAND_ASSOCIATED_VISUALS` y creó `LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001`.
 
-La autorización `060` registra la selección humana: Bootstrap Icons 1.13.1 como principal, Font Awesome Free 7.2.0 como alternativa y Tabler Icons 3.44.0 como rechazado. La geometría exacta de Bootstrap fue integrada únicamente en el SVG interno de WhatsApp; la fundación queda en `1.1.1` con SHA-256 `d7b4539ca1957f6e9a8648be797da604ebaa5b9fcd175cb381f9deef2917245e`. La validación estática pasa; la automatización focalizada no estaba disponible y la revisión humana manual del footer permanece pendiente. No se establece aprobación de marca, aprobación visual final ni conformidad WCAG.
+La autorización `060` registra la selección humana: Bootstrap Icons 1.13.1 como principal, Font Awesome Free 7.2.0 como alternativa y Tabler Icons 3.44.0 como rechazado. La geometría exacta de Bootstrap fue integrada únicamente en el SVG interno de WhatsApp; la fundación queda en `1.1.1` con SHA-256 `d7b4539ca1957f6e9a8648be797da604ebaa5b9fcd175cb381f9deef2917245e`. La validación estática pasa y la automatización focalizada permanece `NOT_EXECUTED_AUTOMATION_SURFACE_UNAVAILABLE`.
+
+La autorización `061` registra la aprobación visual humana del footer. `BRAND_ASSOCIATED_ICONOGRAPHY_HUMAN_REVIEW` queda `APPROVED_FOR_CURRENT_FOUNDATION_CONTEXT`, el baseline humano de la fundación queda `APPROVED` y la estrategia asset-first concluye `SUCCESS`. No quedan pendientes visuales abiertos. La aprobación contextual no establece conformidad WCAG ni aprobación jurídica general de marca.
 
 ## Autocorrección
 
@@ -31,4 +33,4 @@ No se modificaron Symphonie, el piloto o Capability. No se creó V03, no se ejec
 
 ## Siguiente transición
 
-Jonathan debe revisar manualmente el footer integrado y decidir `APPROVED`, `REJECTED`, `REVERT_TO_SECONDARY_ALTERNATIVE` o `REQUEST_ADJUSTMENT`. La aprobación marcaria permanece separada y pendiente.
+No existe una siguiente transición visual pendiente para este baseline. Cualquier uso productivo o externo de la marca requiere aprobación jurídica separada.
