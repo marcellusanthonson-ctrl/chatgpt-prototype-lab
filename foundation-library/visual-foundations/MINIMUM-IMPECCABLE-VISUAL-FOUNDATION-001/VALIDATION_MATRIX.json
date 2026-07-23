@@ -18,7 +18,9 @@
     {"id":"MIVF-013","method":"ACCESSIBILITY_STATIC_MANUAL","subject":"semantics reduced motion","oracle":"semantic regions, names, states and reduced-motion treatment are present"},
     {"id":"MIVF-014","method":"CLAIM_BOUNDARY","subject":"result classification","oracle":"technical pass does not claim visual approval, product readiness or WCAG conformance"},
     {"id":"MIVF-015","method":"STATIC_AND_BROWSER_GEOMETRY","subject":"footer status semantics and alignment","oracle":"status uses dl semantics and both labels and values share stable columns, including wrapped values"},
-    {"id":"MIVF-016","method":"STATIC_BROWSER_AND_KEYBOARD","subject":"social footer controls","oracle":"four named self-contained social links have explicit destinations, hidden SVGs, visible focus and minimum 44px targets"}
+    {"id":"MIVF-016","method":"STATIC_BROWSER_AND_KEYBOARD","subject":"social footer controls","oracle":"four named self-contained social links have explicit destinations, hidden SVGs, visible focus and minimum 44px targets"},
+    {"id":"MIVF-017","method":"STATIC_CONTRACT","subject":"functional iconography metadata and geometry","oracle":"every social glyph declares a valid category, render model, integer nominal size and optical box with square normalized inline SVG geometry"},
+    {"id":"MIVF-018","method":"BROWSER_GEOMETRY_INTERACTION_AND_PIXEL_ALIGNMENT","subject":"functional iconography set equivalence","oracle":"DPR 1 and 2 preserve integer CSS sizes, centered optical boxes and stable geometry across normal hover focus and active states without claiming absolute sharpness"}
   ],
   "required_evidence": [
     "STATIC_VALIDATOR_OUTPUT",

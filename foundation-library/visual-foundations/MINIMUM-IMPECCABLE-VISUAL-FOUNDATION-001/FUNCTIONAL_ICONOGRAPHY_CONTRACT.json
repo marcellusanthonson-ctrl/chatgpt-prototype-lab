@@ -1,0 +1,135 @@
+{
+  "schema_version": "1.0.0",
+  "contract_id": "MIVF-FUNCTIONAL-ICONOGRAPHY-001",
+  "version": "1.0.0",
+  "foundation_version": "1.1.0",
+  "status": "TECHNICAL_FOUNDATION_PASS_AWAITING_HUMAN_BASELINE_REVIEW",
+  "purpose": "Define a neutral, reusable technical language for crisp, scalable, accessible and responsive functional and social iconography without selecting a brand identity.",
+  "categories": {
+    "FUNCTIONAL_INTERFACE_ICON": {
+      "role": "Communicates an interface action, state, navigation target or system concept.",
+      "preferred_format": "INLINE_SVG",
+      "brand_geometry_required": false
+    },
+    "SOCIAL_OR_BRAND_ASSOCIATED_ICON": {
+      "role": "Supports a control whose destination is a named social or brand-associated service.",
+      "preferred_format": "INLINE_SVG",
+      "official_brand_geometry_required": false,
+      "recognition_rule": "The control name and destination carry the exact service identity; a neutral associated glyph may communicate the function without reproducing an official logo."
+    },
+    "ILLUSTRATIVE_ICON": {
+      "role": "Supports explanation, storytelling or a larger visual composition rather than a direct action.",
+      "preferred_format": "INLINE_SVG_OR_LOCAL_VECTOR_ASSET",
+      "functional_control_rules_apply": false
+    },
+    "PHOTOGRAPHIC_OR_DECORATIVE_ASSET": {
+      "role": "Provides photographic, textured or decorative content rather than an interface glyph.",
+      "preferred_format": "LOCAL_OPTIMIZED_ASSET_WHEN_AUTHORIZED",
+      "functional_control_rules_apply": false
+    }
+  },
+  "governed_categories": [
+    "FUNCTIONAL_INTERFACE_ICON",
+    "SOCIAL_OR_BRAND_ASSOCIATED_ICON"
+  ],
+  "metadata_contract": {
+    "placement": "SVG_ELEMENT",
+    "required_attributes": [
+      "data-icon-category",
+      "data-icon-render",
+      "data-icon-size",
+      "data-icon-box"
+    ],
+    "integer_attributes": [
+      "data-icon-size",
+      "data-icon-box"
+    ]
+  },
+  "geometry": {
+    "inline_svg_preferred": true,
+    "square_viewbox_required": true,
+    "normalized_geometry_required": true,
+    "integer_css_width_and_height_required": true,
+    "nominal_size_declared": true,
+    "optical_box_declared": true,
+    "minimum_internal_margin_ratio": 0.083333,
+    "explicit_centering_required": true,
+    "flex_shrink": 0,
+    "base_transform_allowed": false,
+    "fractional_resting_scale_allowed": false,
+    "filter_on_glyph_allowed": false
+  },
+  "render_models": {
+    "allowed": [
+      "STROKE",
+      "FILL",
+      "HYBRID"
+    ],
+    "STROKE": {
+      "current_color_required": true,
+      "linecap_required": true,
+      "linejoin_required": true,
+      "optical_weight_rule": "Use a coherent stroke weight adjusted for the nominal size; do not preserve a mathematically uniform but visibly weak weight."
+    },
+    "FILL": {
+      "current_color_required": true,
+      "linecap_required": false,
+      "linejoin_required": false,
+      "optical_weight_rule": "Preserve counters and minimum internal gaps at the declared nominal size."
+    },
+    "HYBRID": {
+      "current_color_required": true,
+      "linecap_required": true,
+      "linejoin_required": true,
+      "optical_weight_rule": "Balance filled and stroked primitives so neither dominates the set at the declared nominal size."
+    }
+  },
+  "state_behavior": {
+    "hover_and_focus_primary_owner": "CONTROL_CONTAINER",
+    "glyph_filter_allowed": false,
+    "glyph_base_transform_allowed": false,
+    "fractional_resting_scale_allowed": false,
+    "active_perceptual_deformation_allowed": false,
+    "layout_shift_between_states_allowed": false,
+    "reduced_motion_required": true
+  },
+  "accessibility": {
+    "accessible_name_owner": "CONTROL",
+    "decorative_svg_aria_hidden": true,
+    "minimum_touch_surface_css_px": 44,
+    "name_must_match_destination": true
+  },
+  "offline_and_dependencies": {
+    "external_icon_dependency_allowed": false,
+    "external_svg_use_allowed": false,
+    "network_required_for_rendering": false,
+    "offline_equivalence_required": true
+  },
+  "set_equivalence": {
+    "identical_control_boxes": true,
+    "explicit_optical_box_comparison": true,
+    "common_alignment_center": true,
+    "render_model_may_differ": true,
+    "absolute_sharpness_automation_claim_allowed": false,
+    "automation_result_classification": "OPTICAL_GEOMETRY_AND_PIXEL_ALIGNMENT_PASS"
+  },
+  "verification_sizes_css_px": {
+    "glyphs": [16, 18, 20, 24],
+    "containers": [36, 40, 44],
+    "fixture_nominal_glyph": 22,
+    "fixture_container": 44,
+    "device_scale_factors": [1, 2]
+  },
+  "claim_boundaries": {
+    "human_visual_approval": false,
+    "wcag_conformance": false,
+    "benchmark_approval": false,
+    "product_effect": "NONE",
+    "runtime_effect": "NONE",
+    "rag_effect": "NONE"
+  },
+  "source_refs": [
+    "projects/lab/evidence/EVD-LAB-ICON-001.json",
+    "decisions/DEC-LAB-017.json"
+  ]
+}

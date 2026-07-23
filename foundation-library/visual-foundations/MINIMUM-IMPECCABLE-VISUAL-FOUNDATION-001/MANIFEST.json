@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "foundation_id": "MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "status": "TECHNICAL_FOUNDATION_PASS_AWAITING_HUMAN_BASELINE_REVIEW",
   "updated_at": "2026-07-22",
   "role": "NEUTRAL_TECHNICAL_QUALITY_FIXTURE_NOT_VISUAL_DIRECTION",
@@ -9,6 +9,7 @@
     "STANDARD.json",
     "STRUCTURAL_GEOMETRY_CONTRACT.json",
     "COMPONENT_FINISH_CONTRACT.json",
+    "FUNCTIONAL_ICONOGRAPHY_CONTRACT.json",
     "LAYOUT_INTENT_MAP_CONTRACT.json",
     "FORM_BEHAVIOR_CONTRACT.json",
     "RESPONSIVE_RESILIENCE_CONTRACT.json",
@@ -32,14 +33,16 @@
   "correction_authorization_ref": "AUTHORIZATION_LAB_MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_CORRECTION_053",
   "capture_authorization_ref": "AUTHORIZATION_LAB_HUMAN_BASELINE_CAPTURE_PACKAGE_054",
   "footer_correction_authorization_ref": "AUTHORIZATION_LAB_HUMAN_BASELINE_FOOTER_CORRECTION_055",
+  "functional_iconography_authorization_ref": "AUTHORIZATION_LAB_FUNCTIONAL_ICONOGRAPHY_RECONCILIATION_056",
   "superseded_candidate_artifact_sha256": "9fb45676ad0ec1a0a7396583e18bfb78277828595ddd54c9a9c74c80a5f12efe",
-  "artifact_sha256": "20f38c901d7787d1528e7520c2d46840622e43d8b5daabb1f3d5887af6ff8143",
-  "candidate_baseline_capture_status": "READY_FOR_HUMAN_REVIEW_NOT_APPROVED",
+  "artifact_sha256": "13cab2709775e9c2923b85c2557988c57ce57987dac0fcb1aedc0e347660b405",
+  "candidate_baseline_capture_status": "FUNCTIONAL_ICONOGRAPHY_CANDIDATE_REGENERATED_AWAITING_HUMAN_REVIEW",
   "decision_ref": "DEC-LAB-017",
   "integration_ref": "INT-LAB-002",
   "evidence_refs": [
     "EVD-LAB-VIS-002",
-    "EVD-LAB-MIVF-001"
+    "EVD-LAB-MIVF-001",
+    "EVD-LAB-ICON-001"
   ],
   "authority_effect": "NONE",
   "product_effect": "NONE",

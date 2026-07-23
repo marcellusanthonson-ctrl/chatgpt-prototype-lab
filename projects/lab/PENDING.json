@@ -207,15 +207,18 @@
       "id": "PEND-LAB-012",
       "status": "READY_FOR_HUMAN_REVIEW",
       "type": "HUMAN_BASELINE_REVIEW",
-      "subject": "Review the corrected footer candidate baseline capture package for MINIMUM_IMPECCABLE_BASE_001.html",
+      "subject": "Review the functional-iconography-reconciled candidate capture package for MINIMUM_IMPECCABLE_BASE_001.html",
       "priority": "HIGH",
-      "artifact_sha256": "20f38c901d7787d1528e7520c2d46840622e43d8b5daabb1f3d5887af6ff8143",
-      "capture_count": 103,
-      "authorization_id": "AUTHORIZATION_LAB_HUMAN_BASELINE_FOOTER_CORRECTION_055",
+      "artifact_sha256": "13cab2709775e9c2923b85c2557988c57ce57987dac0fcb1aedc0e347660b405",
+      "geometry_configuration_count": 206,
+      "capture_count": 16,
+      "device_scale_factors": [1, 2],
+      "authorization_id": "AUTHORIZATION_LAB_FUNCTIONAL_ICONOGRAPHY_RECONCILIATION_056",
+      "repository_validation_unblock_authorization_id": "AUTHORIZATION_LAB_TRAILING_WHITESPACE_UNBLOCK_057",
       "previous_candidate": {
-        "authorization_id": "AUTHORIZATION_LAB_HUMAN_BASELINE_CAPTURE_PACKAGE_054",
-        "artifact_sha256": "9fb45676ad0ec1a0a7396583e18bfb78277828595ddd54c9a9c74c80a5f12efe",
-        "status": "INVALIDATED_BY_CONFIRMED_HUMAN_FOOTER_ALIGNMENT_DEFECT"
+        "authorization_id": "AUTHORIZATION_LAB_HUMAN_BASELINE_FOOTER_CORRECTION_055",
+        "artifact_sha256": "20f38c901d7787d1528e7520c2d46840622e43d8b5daabb1f3d5887af6ff8143",
+        "status": "SUPERSEDED_BY_AUTHORIZED_FUNCTIONAL_ICONOGRAPHY_RECONCILIATION"
       },
       "automatic_approval": false,
       "allowed_human_outcomes": [
@@ -227,7 +230,9 @@
       "wcag_conformance_effect": "NONE",
       "source_refs": [
         "projects/lab/evidence/EVD-LAB-MIVF-001.json",
-        "projects/lab/authorizations/AUTHORIZATION_LAB_HUMAN_BASELINE_FOOTER_CORRECTION_055.json"
+        "projects/lab/evidence/EVD-LAB-ICON-001.json",
+        "projects/lab/authorizations/AUTHORIZATION_LAB_FUNCTIONAL_ICONOGRAPHY_RECONCILIATION_056.json",
+        "projects/lab/authorizations/AUTHORIZATION_LAB_TRAILING_WHITESPACE_UNBLOCK_057.json"
       ]
     }
   ]

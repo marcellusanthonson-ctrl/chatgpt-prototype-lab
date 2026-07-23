@@ -34,8 +34,12 @@
     "projects/lab/authorizations/AUTHORIZATION_LAB_MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_CORRECTION_053.json",
     "projects/lab/authorizations/AUTHORIZATION_LAB_HUMAN_BASELINE_CAPTURE_PACKAGE_054.json",
     "projects/lab/authorizations/AUTHORIZATION_LAB_HUMAN_BASELINE_FOOTER_CORRECTION_055.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_FUNCTIONAL_ICONOGRAPHY_RECONCILIATION_056.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_TRAILING_WHITESPACE_UNBLOCK_057.json",
     "projects/lab/evidence/EVD-LAB-VIS-002.json",
     "projects/lab/evidence/EVD-LAB-MIVF-001.json",
+    "projects/lab/evidence/EVD-LAB-ICON-001.json",
+    "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/FUNCTIONAL_ICONOGRAPHY_CONTRACT.json",
     "projects/lab/integrations/INT-LAB-002.json"
   ],
   "governance_paths": {
@@ -65,8 +69,8 @@
     },
     "authorization_registry": {
       "status": "RECONCILED_WITH_EXTERNAL_AUDIT_AUTHORIZATION_046",
-      "registered_consumed_transitions": 26,
-      "latest": "AUTHORIZATION_LAB_HUMAN_BASELINE_FOOTER_CORRECTION_055",
+      "registered_consumed_transitions": 28,
+      "latest": "AUTHORIZATION_LAB_TRAILING_WHITESPACE_UNBLOCK_057",
       "correspondence_policy": "STATE_KEY_REQUIRED"
     },
     "design_knowledge": {
@@ -176,32 +180,39 @@
     },
     "minimum_impeccable_visual_foundation": {
       "id": "MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001",
-      "version": "1.0.2",
+      "version": "1.1.0",
       "status": "TECHNICAL_FOUNDATION_PASS_AWAITING_HUMAN_BASELINE_REVIEW",
       "decision": "DEC-LAB-017",
       "integration": "INT-LAB-002",
       "neutral_fixture": "MINIMUM_IMPECCABLE_BASE_001.html",
       "static_validation": "PASS",
-      "browser_validation": "PASS_103_WIDTHS_GEOMETRY_INTERACTION_CONTENT_STRESS_OFFLINE_FOOTER_STATUS_AND_SOCIAL_CONTROLS",
-      "known_correctable_defects": "ZERO_AFTER_AUTHORIZED_MENU_AND_FOOTER_RECONSTRUCTIONS_WITH_COMPLETE_REVALIDATION",
+      "browser_validation": "OPTICAL_GEOMETRY_AND_PIXEL_ALIGNMENT_PASS_103_WIDTHS_DPR_1_AND_2_OFFLINE_INTERACTION_ZOOM_REFLOW",
+      "known_correctable_defects": "ZERO_AFTER_AUTHORIZED_MENU_FOOTER_AND_FUNCTIONAL_ICONOGRAPHY_RECONSTRUCTIONS_WITH_COMPLETE_REVALIDATION",
+      "functional_iconography_contract": "MIVF-FUNCTIONAL-ICONOGRAPHY-001@1.0.0",
+      "social_controls": 4,
+      "whatsapp_render_model": "HYBRID_NEUTRAL_CONVERSATION_GLYPH",
+      "repository_validation_unblock": "PREEXISTING_NON_SEMANTIC_VALIDATION_BLOCKER_CORRECTED_BY_AUTHORIZATION_057",
+      "absolute_sharpness_automated": false,
       "human_visual_approval": false,
       "wcag_conformance": false,
       "product_effect": "NONE"
     },
     "human_baseline_capture_package": {
-      "authorization": "AUTHORIZATION_LAB_HUMAN_BASELINE_FOOTER_CORRECTION_055",
-      "artifact_sha256": "20f38c901d7787d1528e7520c2d46840622e43d8b5daabb1f3d5887af6ff8143",
-      "status": "CANDIDATE_BASELINE_CAPTURE_READY_FOR_HUMAN_REVIEW",
-      "capture_count": 103,
-      "motion_smoke": "PASS",
+      "authorization": "AUTHORIZATION_LAB_FUNCTIONAL_ICONOGRAPHY_RECONCILIATION_056",
+      "artifact_sha256": "13cab2709775e9c2923b85c2557988c57ce57987dac0fcb1aedc0e347660b405",
+      "status": "FUNCTIONAL_ICONOGRAPHY_CANDIDATE_CAPTURE_READY_FOR_HUMAN_REVIEW",
+      "geometry_configuration_count": 206,
+      "capture_count": 16,
+      "device_scale_factors": [1, 2],
+      "motion_smoke": "PASS_REDUCED_MOTION_BROWSER_MATRIX",
       "technical_optical_review": "PASS_NO_CONFIRMED_DEFECTS",
       "human_visual_approval": false,
       "binary_repository_inclusion": false,
-      "superseded_candidate_authorization": "AUTHORIZATION_LAB_HUMAN_BASELINE_CAPTURE_PACKAGE_054",
-      "superseded_artifact_sha256": "9fb45676ad0ec1a0a7396583e18bfb78277828595ddd54c9a9c74c80a5f12efe"
+      "superseded_candidate_authorization": "AUTHORIZATION_LAB_HUMAN_BASELINE_FOOTER_CORRECTION_055",
+      "superseded_artifact_sha256": "20f38c901d7787d1528e7520c2d46840622e43d8b5daabb1f3d5887af6ff8143"
     }
   },
   "head_policy": "VERIFY_LIVE_AT_USE",
-  "verified_parent_head": "07b5d07dc44806c5bf77dbb39b057e6c9635d0d0",
+  "verified_parent_head": "ba0b040715d9f5e26fb8bd9e0a1d951a5b49fb53",
   "self_head_is_canonical_state": false
 }

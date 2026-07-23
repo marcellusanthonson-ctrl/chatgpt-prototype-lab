@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "standard_id": "MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "status": "TECHNICAL_FOUNDATION_PASS_AWAITING_HUMAN_BASELINE_REVIEW",
   "purpose": "Prevent visual exploration from advancing on a technically defective structural base and require bounded agent self-correction before delivery.",
   "applicability": [
@@ -23,6 +23,7 @@
     "COMMON_GRID_ALIGNMENT",
     "COHERENT_SURFACE_ROLES",
     "COMPLETE_COMPONENT_STATES",
+    "FUNCTIONAL_ICONOGRAPHY_CONTRACT_ENFORCED",
     "RENDERED_RESULT_INSPECTED",
     "ROOT_CAUSE_CORRECTION_REVALIDATED"
   ],
@@ -69,6 +70,7 @@
     "technical_fixture_pass": "Evidence for the tested fixture and environments only.",
     "human_visual_approval": false,
     "wcag_conformance": false,
+    "benchmark_approval": false,
     "product_readiness": false,
     "universal_aesthetic_template": false
   },
@@ -76,6 +78,7 @@
     "decisions/DEC-LAB-017.json",
     "projects/lab/evidence/EVD-LAB-VIS-002.json",
     "project-sources/chatgpt/08_CRITERION_LAYER.md",
-    "foundation-library/visual-protocols/high-fidelity-visual-protocol.json"
+    "foundation-library/visual-protocols/high-fidelity-visual-protocol.json",
+    "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/FUNCTIONAL_ICONOGRAPHY_CONTRACT.json"
   ]
 }

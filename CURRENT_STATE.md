@@ -2,16 +2,18 @@
 
 La fuente estructurada es `CURRENT_STATE.json`.
 
-- Versión: 2.5.18.
+- Versión: 2.5.20.
 - Fase: `MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_TECHNICAL_PASS_AWAITING_HUMAN_BASELINE_REVIEW`.
 - HEAD propio: `VERIFY_LIVE_AT_USE`.
 - Autorización activa reutilizable: ninguna.
 
 ## Base visual mínima impecable
 
-`MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001@1.0.2` está integrada mediante `DEC-LAB-017` e `INT-LAB-002`. Antes de aplicar dirección estética, una interfaz debe superar integridad estructural, geometría responsive, terminación de componentes, estados e interacción.
+`MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001@1.1.0` está integrada mediante `DEC-LAB-017` e `INT-LAB-002`. Antes de aplicar dirección estética, una interfaz debe superar integridad estructural, geometría responsive, terminación de componentes, estados, interacción e iconografía funcional.
 
-La revisión humana del paquete `054` detectó desalineación estructural entre los valores Técnico y WCAG del footer. La autorización `055` invalidó ese candidato, reconstruyó Estado como lista descriptiva en una retícula común e incorporó cuatro controles sociales autocontenidos. La fixture corregida, SHA-256 `20f38c901d7787d1528e7520c2d46840622e43d8b5daabb1f3d5887af6ff8143`, pasó validación estática, 103 anchuras entre 320 y 1920 px, geometría, navegación, diálogo, foco, formulario, estrés de contenido, footer, consola, frontera offline, captura óptica y smoke de movimiento. Su estado continúa siendo `TECHNICAL_FOUNDATION_PASS_AWAITING_HUMAN_BASELINE_REVIEW`.
+La autorización `056` reconcilió la iconografía funcional del footer bajo un contrato explícito: categorías semánticas, caja nominal y óptica, tamaño entero, centrado, peso, modelo de render, estados propiedad del contenedor y equivalencia del conjunto. El control WhatsApp fue reconstruido como glifo original neutral, sin copiar geometría ni activos externos. La fixture candidata, SHA-256 `13cab2709775e9c2923b85c2557988c57ce57987dac0fcb1aedc0e347660b405`, pasó validación estática, 206 configuraciones de geometría (103 anchuras por DPR 1 y 2), estados interactivos y 16 capturas críticas. Su estado continúa siendo `TECHNICAL_FOUNDATION_PASS_AWAITING_HUMAN_BASELINE_REVIEW`; esto no establece nitidez perceptual ni aprobación visual humana.
+
+La autorización `057` eliminó exclusivamente dos terminaciones de línea preexistentes que bloqueaban el validador canónico. La corrección es no semántica y no modifica contenido, evidencia ni resultado visual gobernado.
 
 ## Autocorrección
 

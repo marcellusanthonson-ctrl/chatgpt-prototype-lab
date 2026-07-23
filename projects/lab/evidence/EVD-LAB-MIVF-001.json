@@ -10,12 +10,13 @@
     "branch": "main",
     "initial_parent_head": "07b5d07dc44806c5bf77dbb39b057e6c9635d0d0",
     "correction_parent_head": "2d6d21703b34b0c8ecc1cbb09029c62d63c69302",
-    "footer_correction_parent_head": "7ac13f0cfebf60b920aaf4ed7365671ef0e97879"
+    "footer_correction_parent_head": "7ac13f0cfebf60b920aaf4ed7365671ef0e97879",
+    "functional_iconography_parent_head": "ba0b040715d9f5e26fb8bd9e0a1d951a5b49fb53"
   },
   "artifact": {
     "path": "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MINIMUM_IMPECCABLE_BASE_001.html",
     "role": "NEUTRAL_TECHNICAL_FIXTURE_NOT_PRODUCT_OR_VISUAL_DIRECTION",
-    "sha256": "20f38c901d7787d1528e7520c2d46840622e43d8b5daabb1f3d5887af6ff8143",
+    "sha256": "13cab2709775e9c2923b85c2557988c57ce57987dac0fcb1aedc0e347660b405",
     "offline": true,
     "external_assets": false
   },
@@ -30,15 +31,19 @@
     "criterion_layer_fixture_oracles": "PASS",
     "repository_validation": "FAIL_PREEXISTING_PILOT_PIN_HASH_DRIFT_OUTSIDE_AUTHORIZED_SCOPE",
     "browser_render": "PASS",
-    "continuous_width_sweep": "PASS_103_WIDTHS_320_TO_1920_MAXIMUM_STEP_16",
+    "continuous_width_sweep": "PASS_206_CONFIGURATIONS_103_WIDTHS_320_TO_1920_MAXIMUM_STEP_16_AT_DPR_1_AND_2",
     "dom_geometry": "PASS",
     "interactive_navigation_dialog_and_focus": "PASS",
     "interactive_form_behavior": "PASS",
     "content_stress": "PASS",
-    "footer_status_semantics_and_alignment": "PASS_103_WIDTHS",
-    "social_footer_controls": "PASS_FOUR_NAMED_EXPLICIT_DESTINATIONS_MINIMUM_44PX_TARGETS_KEYBOARD_FOCUS",
+    "footer_status_semantics_and_alignment": "PASS_103_WIDTHS_AT_DPR_1_AND_2",
+    "social_footer_controls": "PASS_FOUR_NAMED_EXPLICIT_DESTINATIONS_44PX_TARGETS_22PX_CENTERED_GLYPHS_KEYBOARD_FOCUS_AND_STATE_STABILITY",
+    "functional_iconography_contract": "PASS_CLASSIFICATION_RENDER_MODEL_METADATA_GEOMETRY_AND_CLAIM_BOUNDARIES",
+    "offline_operation": "PASS_FILE_URL_WITH_NETWORK_EMULATED_OFFLINE_AND_ZERO_UNEXPECTED_REQUESTS",
+    "zoom_and_reflow": "PASS_1X_2X_4X_EQUIVALENT_LAYOUT_VIEWPORTS",
+    "device_scale_factor": "PASS_DPR_1_AND_2",
     "console_page_errors_and_external_requests": "PASS",
-    "optical_technical_review": "PASS_CORRECTED_103_CAPTURE_SET_AND_CRITICAL_WIDTHS_INSPECTED"
+    "optical_technical_review": "OPTICAL_GEOMETRY_AND_PIXEL_ALIGNMENT_PASS_16_CRITICAL_SCREENSHOTS_INSPECTED_WITHOUT_ABSOLUTE_SHARPNESS_CLAIM"
   },
   "browser_attempts": [
     {
@@ -64,6 +69,12 @@
       "status": "EXECUTED_PASS_AFTER_AUTHORIZED_FOOTER_RECONSTRUCTION",
       "reason": "CALLABLE_LOCAL_CHROMIUM_AVAILABLE_OUTSIDE_REPOSITORY_DEPENDENCIES",
       "effect": "UPDATED_BROWSER_MATRIX_CAPTURE_PACKAGE_AND_TECHNICAL_FOUNDATION_PASS_CLAIM_SUPPORTED"
+    },
+    {
+      "surface": "LOCAL_EDGE_125_CDP_NATIVE_NODE_DRIVER",
+      "status": "EXECUTED_PASS_AFTER_AUTHORIZED_FUNCTIONAL_ICONOGRAPHY_RECONCILIATION",
+      "reason": "The repository Playwright dependency was unavailable and dependency installation was prohibited; the existing local browser was controlled through the Chrome DevTools Protocol using Node standard-library capabilities.",
+      "effect": "206_CONFIGURATION_DPR_1_AND_2_OFFLINE_BROWSER_MATRIX_AND_CAPTURE_COMPARISON_SUPPORTED_WITHOUT_NEW_DEPENDENCIES"
     }
   ],
   "preexisting_repository_divergences": [
@@ -124,6 +135,17 @@
       "correction": "Rebuilt the intermediate footer as a full-width brand row followed by three equal minmax(0,1fr) columns through 70rem, preserving the single-column mobile pattern.",
       "revalidation": "PASS_COMPLETE_103_WIDTH_CANONICAL_BROWSER_MATRIX",
       "final_state": "RESOLVED_BEFORE_DELIVERY"
+    },
+    {
+      "id": "MIVF-DEFECT-004",
+      "domain": "ICONOGRAPHY_AND_ASSETS",
+      "severity": "MAJOR",
+      "observable_symptom": "The WhatsApp-associated footer glyph used a thin, complex two-path phone geometry without a reusable classification, render-model or optical-box contract.",
+      "root_cause": "The footer social set predated an explicit functional iconography contract and treated SVG presence as sufficient evidence of optical coherence.",
+      "scope_authority": "Authorized by AUTHORIZATION_LAB_FUNCTIONAL_ICONOGRAPHY_RECONCILIATION_056.",
+      "correction": "Created MIVF-FUNCTIONAL-ICONOGRAPHY-001 and reconstructed the WhatsApp-associated glyph as an original neutral HYBRID conversation bubble with three filled dots, preserving the destination and accessible name.",
+      "revalidation": "PASS_STATIC_18_CASE_MATRIX_206_BROWSER_CONFIGURATIONS_16_COMPARATIVE_SCREENSHOTS_AND_MANUAL_CRITICAL_CAPTURE_INSPECTION",
+      "final_state": "RESOLVED"
     }
   ],
   "result_claims": {
@@ -133,20 +155,24 @@
     "static_validation_passed": true,
     "browser_validation_passed": true,
     "technical_foundation_passed": true,
+    "functional_iconography_contract_documented": true,
+    "optical_geometry_and_pixel_alignment_passed": true,
+    "absolute_sharpness_established_by_automation": false,
     "human_visual_approval_established": false,
     "wcag_conformance_established": false,
     "product_readiness_established": false
   },
   "candidate_baseline_capture_package": {
-    "authorization_id": "AUTHORIZATION_LAB_HUMAN_BASELINE_FOOTER_CORRECTION_055",
-    "origin_parent_head": "7ac13f0cfebf60b920aaf4ed7365671ef0e97879",
-    "artifact_sha256": "20f38c901d7787d1528e7520c2d46840622e43d8b5daabb1f3d5887af6ff8143",
-    "status": "CANDIDATE_BASELINE_CAPTURE_READY_FOR_HUMAN_REVIEW",
-    "viewport_configurations": 103,
+    "authorization_id": "AUTHORIZATION_LAB_FUNCTIONAL_ICONOGRAPHY_RECONCILIATION_056",
+    "origin_parent_head": "ba0b040715d9f5e26fb8bd9e0a1d951a5b49fb53",
+    "artifact_sha256": "13cab2709775e9c2923b85c2557988c57ce57987dac0fcb1aedc0e347660b405",
+    "status": "FUNCTIONAL_ICONOGRAPHY_CANDIDATE_CAPTURE_READY_FOR_HUMAN_REVIEW",
+    "viewport_configurations": 206,
+    "screenshot_configurations": 16,
     "width_range": "320_TO_1920_PX_MAXIMUM_STEP_16",
-    "capture_mode": "REDUCED_MOTION_DPR_1_LIGHT_SCHEME_FULL_PAGE",
-    "motion_smoke": "PASS_NO_PREFERENCE_NO_LAYOUT_SHIFT",
-    "technical_optical_review": "PASS_NO_CONFIRMED_DEFECTS",
+    "capture_mode": "REDUCED_MOTION_DPR_1_AND_2_LIGHT_SCHEME_CRITICAL_FULL_PAGE_SCREENSHOTS_AND_COMPLETE_GEOMETRY",
+    "motion_smoke": "PASS_REDUCED_MOTION_BROWSER_MATRIX",
+    "technical_optical_review": "OPTICAL_GEOMETRY_AND_PIXEL_ALIGNMENT_PASS_WITHOUT_ABSOLUTE_SHARPNESS_CLAIM",
     "binary_repository_inclusion": false,
     "manifest_and_report_repository_inclusion": false,
     "human_visual_approval": "NOT_ESTABLISHED",
@@ -155,6 +181,12 @@
     "fail_safe": "ANY_CONFIRMED_DEFECT_INVALIDATES_PACKAGE_AND_REQUIRES_COMPLETE_REVALIDATION"
   },
   "superseded_candidate_packages": [
+    {
+      "authorization_id": "AUTHORIZATION_LAB_HUMAN_BASELINE_FOOTER_CORRECTION_055",
+      "artifact_sha256": "20f38c901d7787d1528e7520c2d46840622e43d8b5daabb1f3d5887af6ff8143",
+      "final_state": "SUPERSEDED_BY_AUTHORIZED_FUNCTIONAL_ICONOGRAPHY_RECONCILIATION",
+      "evidence_preserved": true
+    },
     {
       "authorization_id": "AUTHORIZATION_LAB_HUMAN_BASELINE_CAPTURE_PACKAGE_054",
       "artifact_sha256": "9fb45676ad0ec1a0a7396583e18bfb78277828595ddd54c9a9c74c80a5f12efe",
@@ -165,12 +197,18 @@
   "source_refs": [
     "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MANIFEST.json",
     "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/VALIDATION_MATRIX.json",
+    "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/FUNCTIONAL_ICONOGRAPHY_CONTRACT.json",
+    "projects/lab/evidence/EVD-LAB-ICON-001.json",
     "scripts/validate_minimum_impeccable_foundation.py",
     "scripts/validate_minimum_impeccable_browser.cjs",
-    "scripts/capture_minimum_impeccable_baseline.cjs"
+    "scripts/capture_minimum_impeccable_baseline.cjs",
+    "scripts/mivf_browser_driver.cjs"
   ],
   "correction_authorization_ref": "AUTHORIZATION_LAB_MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_CORRECTION_053",
   "capture_authorization_ref": "AUTHORIZATION_LAB_HUMAN_BASELINE_CAPTURE_PACKAGE_054",
   "footer_correction_authorization_ref": "AUTHORIZATION_LAB_HUMAN_BASELINE_FOOTER_CORRECTION_055",
+  "functional_iconography_authorization_ref": "AUTHORIZATION_LAB_FUNCTIONAL_ICONOGRAPHY_RECONCILIATION_056",
+  "repository_validation_unblock_authorization_ref": "AUTHORIZATION_LAB_TRAILING_WHITESPACE_UNBLOCK_057",
+  "repository_validation_unblock_classification": "PREEXISTING_NON_SEMANTIC_VALIDATION_BLOCKER_CORRECTED",
   "authority_effect": "NONE"
 }

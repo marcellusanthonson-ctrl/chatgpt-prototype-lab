@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_TRAILING_WHITESPACE_UNBLOCK_057",
+  "state_key": "trailing_whitespace_unblock_057",
+  "project_id": "lab",
+  "initial_status": "GRANTED_IN_PROGRESS",
+  "pre_publication_status": "GRANTED_IN_PROGRESS",
+  "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+  "approved_by": "Jonathan Martínez",
+  "granted_at": "2026-07-22",
+  "consumed_at": "2026-07-22",
+  "related_authorization_id": "AUTHORIZATION_LAB_FUNCTIONAL_ICONOGRAPHY_RECONCILIATION_056",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "ba0b040715d9f5e26fb8bd9e0a1d951a5b49fb53",
+  "expected_source_blob": "755fae20dd45ee85016ba2ad329e65f14dd0d920",
+  "scope": "PREEXISTING_NON_SEMANTIC_VALIDATION_BLOCKER_CORRECTED",
+  "allowed_paths": [
+    "foundation-library/visual-preferences/evidence/EVD-LAB-VIS-001.md",
+    "projects/lab/**",
+    "registry/**",
+    "CURRENT_STATE.json",
+    "CURRENT_STATE.md",
+    "tests/expected_repository_state.json"
+  ],
+  "exact_correction": {
+    "file": "foundation-library/visual-preferences/evidence/EVD-LAB-VIS-001.md",
+    "lines": [
+      "Reviewed artifact: `AERA_ONE_ACOUSTIC_EDITORIAL_V3_CORRECTED.html`",
+      "SHA-256: `3ed69d26f0deae77989876df4126d2879ade4221182334f503669e5b74396012`"
+    ],
+    "removed_from_each_line": "TWO_TRAILING_ASCII_SPACES",
+    "semantic_change": false,
+    "visual_evidence_change": false,
+    "content_change": false
+  },
+  "authorized_actions": [
+    "REMOVE_EXACTLY_TWO_TRAILING_ASCII_SPACES_FROM_EACH_OF_TWO_FIXED_LINES",
+    "REPEAT_COMPLETE_AUTHORIZATION_056_VALIDATION_MATRIX",
+    "REGISTER_COMBINED_AUTHORIZATION_STATE",
+    "SHARE_SINGLE_COMMIT_WITH_AUTHORIZATION_056",
+    "PUSH_DIRECTLY_TO_MAIN",
+    "VERIFY_REMOTE_PUBLICATION"
+  ],
+  "prohibitions": [
+    "CHANGE_VISIBLE_TEXT",
+    "CHANGE_EVIDENCE_SHA256",
+    "CHANGE_STATUS_TITLE_CONCLUSION_OR_LINE_ORDER",
+    "REFORMAT_COMPLETE_FILE",
+    "CHANGE_ANY_OTHER_FILE_OUTSIDE_COMBINED_056_057_SCOPE",
+    "FORCE_PUSH",
+    "HUMAN_VISUAL_APPROVAL_CLAIM",
+    "WCAG_CONFORMANCE_CLAIM",
+    "PRODUCT_RUNTIME_RAG_OR_DEPLOYMENT_EFFECT"
+  ],
+  "required_revalidation": [
+    "REPOSITORY_COMPLETE_VALIDATION",
+    "FOUNDATION_STATIC_VALIDATION",
+    "CRITERION_LAYER_VALIDATION",
+    "FOUNDATION_BROWSER_VALIDATION",
+    "JSON_DUPLICATE_KEYS_SCHEMAS_REFERENCES_REGISTRIES_AND_INDEXES",
+    "OFFLINE_KEYBOARD_FOCUS_VISIBLE_REDUCED_MOTION_ZOOM_REFLOW_DPR_1_AND_2",
+    "SOCIAL_SET_BEFORE_AFTER_COMPARISON",
+    "CAPTURE_PACKAGE",
+    "ARTIFACT_SHA256",
+    "GIT_DIFF_CHECK",
+    "COMPLETE_CHANGED_FILE_REVIEW"
+  ],
+  "stop_conditions": [
+    "AUTHORIZATION_057_BASE_MISMATCH",
+    "ADDITIONAL_OUT_OF_SCOPE_FILE_REQUIRED",
+    "REMOTE_CHANGED_BEFORE_COMMIT",
+    "REMOTE_CHANGED_DURING_EXECUTION",
+    "MANDATORY_VALIDATION_FAILURE"
+  ],
+  "commit_authorized": true,
+  "push_authorized": true,
+  "shared_commit_required": true,
+  "reusable_permission_after_consumption": false,
+  "consumption_rule": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+}

@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-ICON-001",
+  "project_id": "lab",
+  "kind": "READ_ONLY_COMPARATIVE_FUNCTIONAL_ICONOGRAPHY_AUDIT",
+  "status": "REGISTERED_AS_NON_AUTHORITATIVE_TECHNICAL_REFERENCE",
+  "recorded_at": "2026-07-22",
+  "source_repository": "marcellusanthonson-ctrl/carolina-md-next-landing",
+  "source_branch": "main",
+  "audited_head": "52654da574952148f96d051e439bff1cbc7b4b9d",
+  "access": {
+    "mode": "AUTHENTICATED_READ_ONLY_GITHUB_INSPECTION",
+    "repository_visibility": "PRIVATE",
+    "source_modified": false,
+    "files_copied": false,
+    "assets_copied": false,
+    "svg_geometry_copied": false
+  },
+  "files_inspected": [
+    "components/landing/_landingMarkup.ts",
+    "public/landing/carolina_md_approved_patch.css",
+    "components/landing/LandingPage.tsx",
+    "hooks/landing/useCarolinaLandingInteractions.ts"
+  ],
+  "patterns_confirmed": [
+    "INLINE_SVG_FOR_SMALL_FUNCTIONAL_ICONS",
+    "SQUARE_NORMALIZED_VIEWBOX",
+    "INTEGER_DECLARED_DIMENSIONS",
+    "CURRENT_COLOR",
+    "FLEX_OR_GRID_CENTERING",
+    "FLEX_SHRINK_ZERO",
+    "COHERENT_LINECAP_AND_LINEJOIN",
+    "OPTICAL_WEIGHT_ADJUSTED_BY_NOMINAL_SIZE",
+    "LOCAL_STYLE_CONTROL",
+    "NO_REQUIRED_EXTERNAL_ICONOGRAPHY_DEPENDENCY",
+    "FUNCTIONAL_AND_ILLUSTRATIVE_ASSET_ROLES_ARE_DISTINCT"
+  ],
+  "whatsapp_finding": {
+    "inline_whatsapp_associated_geometry_observed": true,
+    "observed_context": "CLINICAL_JOURNEY_OR_ROADMAP",
+    "productive_footer_implementation_confirmed": false,
+    "statement": "The audited HEAD did not confirm a specific productive WhatsApp implementation in the footer."
+  },
+  "evidence_limits": [
+    "The comparison is limited to the four inspected files at the pinned commit.",
+    "Observed implementation patterns do not establish universal quality, accessibility or brand requirements.",
+    "No visual sharpness claim is made from source inspection alone.",
+    "No Carolina Klinik code, SVG path, mark, logo or asset is incorporated into the LAB fixture."
+  ],
+  "prohibitions": [
+    "COPY_SOURCE_CODE",
+    "COPY_SVG_GEOMETRY",
+    "COPY_BRAND_MARKS_OR_ASSETS",
+    "MODIFY_SOURCE_REPOSITORY"
+  ],
+  "authority_effect": "NONE",
+  "product_effect": "NONE",
+  "runtime_effect": "NONE",
+  "rag_effect": "NONE",
+  "source_refs": [
+    "AUTHORIZATION_LAB_FUNCTIONAL_ICONOGRAPHY_RECONCILIATION_056",
+    "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/FUNCTIONAL_ICONOGRAPHY_CONTRACT.json"
+  ]
+}

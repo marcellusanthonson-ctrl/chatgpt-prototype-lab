@@ -625,7 +625,7 @@ def validate_minimum_impeccable_visual_foundation() -> None:
     base = "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001"
     names = [
         "MANIFEST.json", "STANDARD.json", "STRUCTURAL_GEOMETRY_CONTRACT.json",
-        "COMPONENT_FINISH_CONTRACT.json", "LAYOUT_INTENT_MAP_CONTRACT.json",
+        "COMPONENT_FINISH_CONTRACT.json", "FUNCTIONAL_ICONOGRAPHY_CONTRACT.json", "LAYOUT_INTENT_MAP_CONTRACT.json",
         "FORM_BEHAVIOR_CONTRACT.json", "RESPONSIVE_RESILIENCE_CONTRACT.json",
         "SELF_CORRECTION_CONTRACT.json", "VALIDATION_MATRIX.json",
         "MINIMUM_IMPECCABLE_BASE_001.html",
@@ -634,11 +634,18 @@ def validate_minimum_impeccable_visual_foundation() -> None:
         require_file(f"{base}/{name}")
     manifest = load_json(f"{base}/MANIFEST.json")
     standard = load_json(f"{base}/STANDARD.json")
+    iconography = load_json(f"{base}/FUNCTIONAL_ICONOGRAPHY_CONTRACT.json")
     correction = load_json(f"{base}/SELF_CORRECTION_CONTRACT.json")
     responsive = load_json(f"{base}/RESPONSIVE_RESILIENCE_CONTRACT.json")
     matrix = load_json(f"{base}/VALIDATION_MATRIX.json")
     if manifest.get("foundation_id") != standard.get("standard_id"):
         fail("minimum visual foundation: identity mismatch")
+    if manifest.get("version") != "1.1.0" or standard.get("version") != "1.1.0" or iconography.get("foundation_version") != "1.1.0":
+        fail("minimum visual foundation: functional iconography version mismatch")
+    if iconography.get("render_models", {}).get("allowed") != ["STROKE", "FILL", "HYBRID"]:
+        fail("minimum visual foundation: functional iconography render models differ")
+    if set(iconography.get("categories", {})) != {"FUNCTIONAL_INTERFACE_ICON", "SOCIAL_OR_BRAND_ASSOCIATED_ICON", "ILLUSTRATIVE_ICON", "PHOTOGRAPHIC_OR_DECORATIVE_ASSET"}:
+        fail("minimum visual foundation: functional iconography categories differ")
     if manifest.get("status") not in correction.get("allowed_terminal_states", []):
         fail("minimum visual foundation: invalid terminal state")
     if correction.get("forbidden_terminal_state") != "PASS_WITH_KNOWN_VISUAL_DEFECTS":
@@ -648,7 +655,7 @@ def validate_minimum_impeccable_visual_foundation() -> None:
     if responsive.get("continuous_sweep") != {"from_px": 320, "to_px": 1920, "maximum_step_px": 16}:
         fail("minimum visual foundation: continuous responsive sweep differs")
     case_ids = [case.get("id") for case in matrix.get("cases", [])]
-    if len(case_ids) != len(set(case_ids)) or len(case_ids) != 16:
+    if len(case_ids) != len(set(case_ids)) or len(case_ids) != 18:
         fail("minimum visual foundation: validation matrix IDs duplicated or incomplete")
     html = (ROOT / base / "MINIMUM_IMPECCABLE_BASE_001.html").read_text(encoding="utf-8").lower()
     allowed_social_destinations = {
