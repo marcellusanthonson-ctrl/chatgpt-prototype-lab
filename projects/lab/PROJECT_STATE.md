@@ -2,7 +2,7 @@
 
 La fuente estructurada es `PROJECT_STATE.json`.
 
-El LAB mantiene gobierno v2, la capa selectiva `CHATGPT-CRITERION-LAYER-001@1.1.0` y el estándar `MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001@1.1.0`.
+El LAB mantiene gobierno v2, la capa selectiva `CHATGPT-CRITERION-LAYER-001@1.1.0` y el estándar `MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001@1.1.1`.
 
 ## Resultado 052 revisión 2
 
@@ -27,6 +27,8 @@ La autorización `057` desbloqueó la validación completa mediante la eliminaci
 
 La revisión humana posterior aprobó el baseline excepto la iconografía asociada a marcas. El baseline no marcario y todas sus pruebas anteriores quedan aprobados y cerrados; `BRAND_ASSOCIATED_SOCIAL_ICON_ASSET_SELECTION_AND_INTEGRATION` es el único pendiente visual del baseline.
 
-La corrección geométrica `058` fue detenida y quedó `SUPERSEDED_BEFORE_PUBLICATION_BY_ASSET_FIRST_ICON_STRATEGY`, sin publicación ni consumo. `DEC-LAB-018` y la autorización `059` adoptan `ASSET_FIRST_FOR_BRAND_ASSOCIATED_VISUALS`. La biblioteca `LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001` conserva tres candidatos WhatsApp de Bootstrap Icons, Font Awesome Free y Tabler Icons con referencias inmutables, hashes, notices, licencias de archivo y límites marcarios. `REVIEW.html` permite comparación offline; selección humana, aprobación marcaria e integración permanecen abiertas y separadas.
+La corrección geométrica `058` fue detenida y quedó `SUPERSEDED_BEFORE_PUBLICATION_BY_ASSET_FIRST_ICON_STRATEGY`, sin publicación ni consumo. `DEC-LAB-018` y la autorización `059` adoptaron `ASSET_FIRST_FOR_BRAND_ASSOCIATED_VISUALS`. La biblioteca `LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001` conserva tres candidatos WhatsApp con referencias inmutables, hashes, licencias y límites marcarios.
+
+`DEC-LAB-019` y la autorización `060` registran Bootstrap Icons 1.13.1 como selección principal, Font Awesome Free 7.2.0 como alternativa secundaria y Tabler Icons 3.44.0 como rechazado. El único cambio visual es la geometría Bootstrap exacta dentro del SVG de WhatsApp. La fundación 1.1.1 conserva control 44 px, SVG 22 px, URL, nombre accesible, estados, `currentColor`, funcionamiento offline y los otros tres iconos. La validación focalizada estática pasa; el navegador automatizado no estaba disponible y la revisión humana manual del footer permanece pendiente. No se declara aprobación marcaria, aprobación visual final ni conformidad WCAG.
 
 No existe autorización activa reutilizable. El HEAD propio se verifica en vivo y nunca se almacena como estado canónico vigente.

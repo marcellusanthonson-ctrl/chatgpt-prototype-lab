@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "DEC-LAB-019",
+  "title": "Seleccionar Bootstrap Icons para el control WhatsApp del footer gobernado",
+  "project": "lab",
+  "project_scope": ["lab"],
+  "status": "APPROVED",
+  "effective_date": "2026-07-23",
+  "updated_at": "2026-07-23",
+  "approval_state": "APPROVED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-23",
+  "approval_evidence": "Selección humana explícita contenida en AUTHORIZATION_LAB_WHATSAPP_SELECTED_ASSET_FOOTER_INTEGRATION_060.",
+  "decision": {
+    "whatsapp_primary_selected_asset": "BOOTSTRAP_ICONS_1_13_1",
+    "whatsapp_secondary_alternative": "FONT_AWESOME_FREE_7_2_0",
+    "whatsapp_rejected_candidate": "TABLER_ICONS_3_44_0",
+    "selected_asset_sha256": "86ed6b7d9090fd1616604a9546defbc301546794a09c7dfa90c317e3ed09727e",
+    "integration_scope": "MINIMUM_IMPECCABLE_BASE_001_WHATSAPP_INTERNAL_SVG_GLYPH_ONLY",
+    "post_integration_gate": "HUMAN_REVIEW_OF_INTEGRATED_FOOTER"
+  },
+  "consequences": [
+    "INTEGRATE_EXACT_BOOTSTRAP_SVG_GEOMETRY_IN_GOVERNED_FOUNDATION_FIXTURE",
+    "PRESERVE_FONT_AWESOME_AS_SECONDARY_EVIDENCE",
+    "PRESERVE_TABLER_AS_REJECTED_EVIDENCE",
+    "KEEP_BRAND_ASSOCIATED_ICONOGRAPHY_HUMAN_REVIEW_OPEN",
+    "REQUIRE_MANUAL_HUMAN_FOOTER_REVIEW_WHEN_BROWSER_AUTOMATION_IS_UNAVAILABLE"
+  ],
+  "non_authorizations": [
+    "FINAL_HUMAN_VISUAL_APPROVAL",
+    "BRAND_USAGE_APPROVAL",
+    "OFFICIAL_WHATSAPP_OR_META_APPROVAL",
+    "PRODUCT_INTEGRATION",
+    "RUNTIME",
+    "RAG",
+    "EXTERNAL_PROJECT_CHANGE",
+    "WCAG_CONFORMANCE_CLAIM"
+  ],
+  "source_refs": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_WHATSAPP_SELECTED_ASSET_FOOTER_INTEGRATION_060.json",
+    "foundation-library/brand-icons/LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001/CANDIDATES.json",
+    "projects/lab/evidence/EVD-LAB-ICON-003.json"
+  ],
+  "supersedes": [],
+  "superseded_by": null
+}

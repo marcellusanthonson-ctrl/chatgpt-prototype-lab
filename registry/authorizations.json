@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-07-22",
+  "updated_at": "2026-07-23",
   "records": [
     {
       "id": "AUTH-LAB-GOVERNANCE-V2-013",
@@ -643,6 +643,29 @@
       "rag_authorized": false,
       "integration_authorized": false,
       "deployment_authorized": false,
+      "wcag_claim_authorized": false
+    },
+    {
+      "id": "AUTHORIZATION_LAB_WHATSAPP_SELECTED_ASSET_FOOTER_INTEGRATION_060",
+      "state_key": "whatsapp_selected_asset_footer_integration_060",
+      "project_id": "lab",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "approved_by": "Jonathan Martínez",
+      "scope": "HUMAN_SELECTED_BRAND_ASSET_FOCUSED_FOOTER_INTEGRATION",
+      "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_WHATSAPP_SELECTED_ASSET_FOOTER_INTEGRATION_060.json",
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "expected_parent_head": "914118c4f7f1374f207977c20929abfec12b8080",
+      "updated_at": "2026-07-23",
+      "commit_authorized": true,
+      "push_authorized": true,
+      "source_file_update_authorized": true,
+      "selected_asset_integration_authorized": true,
+      "product_integration_authorized": false,
+      "runtime_authorized": false,
+      "rag_authorized": false,
+      "external_asset_acquisition_authorized": false,
+      "brand_usage_approval_authorized": false,
       "wcag_claim_authorized": false
     }
   ]

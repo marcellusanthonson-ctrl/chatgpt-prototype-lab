@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-07-22",
+  "updated_at": "2026-07-23",
   "records": [
     {
       "id": "EVD-SYM-001",
@@ -150,7 +150,8 @@
       "capture_authorization_id": "AUTHORIZATION_LAB_HUMAN_BASELINE_CAPTURE_PACKAGE_054",
       "footer_correction_authorization_id": "AUTHORIZATION_LAB_HUMAN_BASELINE_FOOTER_CORRECTION_055",
       "functional_iconography_authorization_id": "AUTHORIZATION_LAB_FUNCTIONAL_ICONOGRAPHY_RECONCILIATION_056",
-      "updated_at": "2026-07-22"
+      "selected_asset_integration_authorization_id": "AUTHORIZATION_LAB_WHATSAPP_SELECTED_ASSET_FOOTER_INTEGRATION_060",
+      "updated_at": "2026-07-23"
     },
     {
       "id": "EVD-LAB-ICON-001",
@@ -173,6 +174,17 @@
       "authorization_id": "AUTHORIZATION_LAB_ASSET_FIRST_ICON_CANDIDATE_LIBRARY_059",
       "decision_id": "DEC-LAB-018",
       "updated_at": "2026-07-22"
+    },
+    {
+      "id": "EVD-LAB-ICON-003",
+      "path": "projects/lab/evidence/EVD-LAB-ICON-003.json",
+      "kind": "HUMAN_SELECTED_BRAND_ICON_FOCUSED_FOUNDATION_INTEGRATION_VALIDATION",
+      "project_id": "lab",
+      "status": "STATIC_PASS_BROWSER_AUTOMATION_UNAVAILABLE_AWAITING_HUMAN_FOOTER_REVIEW",
+      "canonical_path": "projects/lab/evidence/EVD-LAB-ICON-003.json",
+      "authorization_id": "AUTHORIZATION_LAB_WHATSAPP_SELECTED_ASSET_FOOTER_INTEGRATION_060",
+      "decision_id": "DEC-LAB-019",
+      "updated_at": "2026-07-23"
     }
   ]
 }

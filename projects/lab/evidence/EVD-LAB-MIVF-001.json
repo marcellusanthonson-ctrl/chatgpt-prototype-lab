@@ -4,7 +4,7 @@
   "project_id": "lab",
   "kind": "MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_VALIDATION",
   "status": "NON_BRAND_BASELINE_HUMAN_APPROVED_BRAND_ICONOGRAPHY_OPEN",
-  "updated_at": "2026-07-22",
+  "updated_at": "2026-07-23",
   "baseline": {
     "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
     "branch": "main",
@@ -16,7 +16,7 @@
   "artifact": {
     "path": "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MINIMUM_IMPECCABLE_BASE_001.html",
     "role": "NEUTRAL_TECHNICAL_FIXTURE_NOT_PRODUCT_OR_VISUAL_DIRECTION",
-    "sha256": "13cab2709775e9c2923b85c2557988c57ce57987dac0fcb1aedc0e347660b405",
+    "sha256": "d7b4539ca1957f6e9a8648be797da604ebaa5b9fcd175cb381f9deef2917245e",
     "offline": true,
     "external_assets": false
   },
@@ -207,11 +207,27 @@
     "brand_usage_approval": false,
     "wcag_conformance": "NOT_ESTABLISHED"
   },
+  "selected_asset_integration_060": {
+    "authorization_id": "AUTHORIZATION_LAB_WHATSAPP_SELECTED_ASSET_FOOTER_INTEGRATION_060",
+    "decision_id": "DEC-LAB-019",
+    "selected_asset": "BOOTSTRAP_ICONS_1_13_1",
+    "selected_asset_sha256": "86ed6b7d9090fd1616604a9546defbc301546794a09c7dfa90c317e3ed09727e",
+    "foundation_version": "1.1.1",
+    "artifact_sha256": "d7b4539ca1957f6e9a8648be797da604ebaa5b9fcd175cb381f9deef2917245e",
+    "static_validation": "PASS",
+    "focused_browser_validation": "NOT_EXECUTED_AUTOMATION_SURFACE_UNAVAILABLE",
+    "manual_human_footer_review": "PENDING",
+    "brand_associated_iconography_human_review": "OPEN",
+    "brand_usage_approval": "PENDING_HUMAN_BRAND_USAGE_APPROVAL",
+    "wcag_conformance": "NOT_ESTABLISHED"
+  },
   "source_refs": [
     "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MANIFEST.json",
     "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/VALIDATION_MATRIX.json",
     "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/FUNCTIONAL_ICONOGRAPHY_CONTRACT.json",
     "projects/lab/evidence/EVD-LAB-ICON-001.json",
+    "projects/lab/evidence/EVD-LAB-ICON-003.json",
+    "scripts/validate_whatsapp_selected_asset_footer_integration.py",
     "scripts/validate_minimum_impeccable_foundation.py",
     "scripts/validate_minimum_impeccable_browser.cjs",
     "scripts/capture_minimum_impeccable_baseline.cjs",
@@ -223,6 +239,7 @@
   "functional_iconography_authorization_ref": "AUTHORIZATION_LAB_FUNCTIONAL_ICONOGRAPHY_RECONCILIATION_056",
   "repository_validation_unblock_authorization_ref": "AUTHORIZATION_LAB_TRAILING_WHITESPACE_UNBLOCK_057",
   "asset_first_icon_candidate_library_authorization_ref": "AUTHORIZATION_LAB_ASSET_FIRST_ICON_CANDIDATE_LIBRARY_059",
+  "selected_asset_footer_integration_authorization_ref": "AUTHORIZATION_LAB_WHATSAPP_SELECTED_ASSET_FOOTER_INTEGRATION_060",
   "authorization_058_operational_closure": "SUPERSEDED_BEFORE_PUBLICATION_BY_ASSET_FIRST_ICON_STRATEGY",
   "repository_validation_unblock_classification": "PREEXISTING_NON_SEMANTIC_VALIDATION_BLOCKER_CORRECTED",
   "authority_effect": "NONE"

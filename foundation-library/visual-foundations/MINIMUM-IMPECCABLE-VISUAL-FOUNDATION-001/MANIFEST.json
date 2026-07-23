@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
   "foundation_id": "MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001",
-  "version": "1.1.0",
-  "status": "TECHNICAL_FOUNDATION_PASS_AWAITING_HUMAN_BASELINE_REVIEW",
-  "updated_at": "2026-07-22",
+  "version": "1.1.1",
+  "status": "SELECTED_ASSET_INTEGRATED_AWAITING_HUMAN_FOOTER_REVIEW",
+  "updated_at": "2026-07-23",
   "role": "NEUTRAL_TECHNICAL_QUALITY_FIXTURE_NOT_VISUAL_DIRECTION",
   "files": [
     "STANDARD.json",
@@ -27,6 +27,7 @@
   ],
   "terminal_states": [
     "TECHNICAL_FOUNDATION_PASS_AWAITING_HUMAN_BASELINE_REVIEW",
+    "SELECTED_ASSET_INTEGRATED_AWAITING_HUMAN_FOOTER_REVIEW",
     "BLOCKED_WITH_DOCUMENTED_DEFECTS"
   ],
   "authorization_ref": "AUTHORIZATION_LAB_MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_052",
@@ -34,15 +35,17 @@
   "capture_authorization_ref": "AUTHORIZATION_LAB_HUMAN_BASELINE_CAPTURE_PACKAGE_054",
   "footer_correction_authorization_ref": "AUTHORIZATION_LAB_HUMAN_BASELINE_FOOTER_CORRECTION_055",
   "functional_iconography_authorization_ref": "AUTHORIZATION_LAB_FUNCTIONAL_ICONOGRAPHY_RECONCILIATION_056",
+  "selected_asset_integration_authorization_ref": "AUTHORIZATION_LAB_WHATSAPP_SELECTED_ASSET_FOOTER_INTEGRATION_060",
   "superseded_candidate_artifact_sha256": "9fb45676ad0ec1a0a7396583e18bfb78277828595ddd54c9a9c74c80a5f12efe",
-  "artifact_sha256": "13cab2709775e9c2923b85c2557988c57ce57987dac0fcb1aedc0e347660b405",
-  "candidate_baseline_capture_status": "FUNCTIONAL_ICONOGRAPHY_CANDIDATE_REGENERATED_AWAITING_HUMAN_REVIEW",
-  "decision_ref": "DEC-LAB-017",
+  "artifact_sha256": "d7b4539ca1957f6e9a8648be797da604ebaa5b9fcd175cb381f9deef2917245e",
+  "candidate_baseline_capture_status": "SELECTED_ASSET_INTEGRATED_AWAITING_HUMAN_FOOTER_REVIEW",
+  "decision_ref": "DEC-LAB-019",
   "integration_ref": "INT-LAB-002",
   "evidence_refs": [
     "EVD-LAB-VIS-002",
     "EVD-LAB-MIVF-001",
-    "EVD-LAB-ICON-001"
+    "EVD-LAB-ICON-001",
+    "EVD-LAB-ICON-003"
   ],
   "authority_effect": "NONE",
   "product_effect": "NONE",

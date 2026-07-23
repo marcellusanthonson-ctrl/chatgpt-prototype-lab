@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1.0",
   "project_id": "lab",
-  "updated_at": "2026-07-22",
+  "updated_at": "2026-07-23",
   "records": [
     {
       "id": "PEND-LAB-001",
@@ -243,33 +243,39 @@
     },
     {
       "id": "PEND-LAB-013",
-      "status": "PENDING_HUMAN_SELECTION_AND_BRAND_USAGE_APPROVAL",
-      "type": "BRAND_ASSOCIATED_SOCIAL_ICON_ASSET_SELECTION_AND_INTEGRATION",
-      "subject": "BRAND_ASSOCIATED_SOCIAL_ICON_ASSET_SELECTION_AND_INTEGRATION",
+      "status": "PENDING_MANUAL_HUMAN_FOOTER_REVIEW_AND_BRAND_USAGE_APPROVAL",
+      "type": "HUMAN_REVIEW_OF_INTEGRATED_FOOTER",
+      "subject": "HUMAN_REVIEW_OF_INTEGRATED_FOOTER",
       "priority": "HIGH",
       "only_open_baseline_visual_pending": true,
       "library_id": "LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001",
       "candidate_count": 3,
-      "human_icon_selection": false,
-      "brand_usage_approval": false,
-      "integration_status": "NOT_INTEGRATED",
+      "human_icon_selection": true,
+      "selected_asset": "BOOTSTRAP_ICONS_1_13_1",
+      "secondary_asset": "FONT_AWESOME_FREE_7_2_0",
+      "rejected_asset": "TABLER_ICONS_3_44_0",
+      "brand_usage_approval": "PENDING_HUMAN_BRAND_USAGE_APPROVAL",
+      "integration_status": "PUBLISHED",
+      "focused_browser_validation": "NOT_EXECUTED_AUTOMATION_SURFACE_UNAVAILABLE",
       "required_sequence": [
-        "HUMAN_COMPARE_REVIEW_HTML",
-        "HUMAN_SELECT_OR_REJECT_CANDIDATE",
-        "CONFIRM_BRAND_USAGE_APPROVAL",
-        "SEPARATE_EXPLICIT_INTEGRATION_AUTHORIZATION"
+        "MANUAL_HUMAN_REVIEW_OF_INTEGRATED_FOOTER",
+        "RECORD_APPROVED_REJECTED_REVERT_TO_SECONDARY_OR_REQUEST_ADJUSTMENT",
+        "KEEP_BRAND_USAGE_APPROVAL_SEPARATE"
       ],
       "automatic_selection": false,
       "product_effect": "NONE",
       "runtime_effect": "NONE",
       "rag_effect": "NONE",
-      "integration_effect": "NONE",
+      "integration_effect": "FOCUSED_SELECTED_ASSET_INTEGRATION",
       "wcag_conformance": "NOT_ESTABLISHED",
       "source_refs": [
         "foundation-library/brand-icons/LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001/MANIFEST.json",
         "foundation-library/brand-icons/LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001/REVIEW.html",
         "projects/lab/evidence/EVD-LAB-ICON-002.json",
-        "decisions/DEC-LAB-018.json"
+        "projects/lab/evidence/EVD-LAB-ICON-003.json",
+        "decisions/DEC-LAB-018.json",
+        "decisions/DEC-LAB-019.json",
+        "projects/lab/authorizations/AUTHORIZATION_LAB_WHATSAPP_SELECTED_ASSET_FOOTER_INTEGRATION_060.json"
       ]
     }
   ]

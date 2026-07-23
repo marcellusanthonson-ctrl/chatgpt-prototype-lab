@@ -1,6 +1,6 @@
 {
   "schema_version": "1.3.0",
-  "updated_at": "2026-07-22",
+  "updated_at": "2026-07-23",
   "records": [
     {
       "id": "DEC-LAB-001",
@@ -270,13 +270,14 @@
       "status": "APPROVED",
       "approval_state": "APPROVED",
       "canonical_path": "decisions/DEC-LAB-018.json",
-      "updated_at": "2026-07-22",
+      "updated_at": "2026-07-23",
       "approved_by": "Jonathan Martínez",
       "consequences": [
         "CREATE_LOCAL_ICON_ASSET_CANDIDATE_LIBRARY",
         "REQUIRE_IMMUTABLE_SOURCE_REFERENCE_AND_SHA256",
         "REQUIRE_FILE_COPYRIGHT_AND_TRADEMARK_STATUS_SEPARATION",
-        "PROHIBIT_AUTOMATIC_CANDIDATE_SELECTION_OR_INTEGRATION"
+        "PROHIBIT_AUTOMATIC_CANDIDATE_SELECTION_OR_INTEGRATION",
+        "REQUIRE_BRAND_USAGE_APPROVAL_BEFORE_PRODUCT_OR_EXTERNAL_USE"
       ],
       "non_authorizations": [
         "CANDIDATE_INTEGRATION",
@@ -286,6 +287,29 @@
         "RUNTIME",
         "RAG",
         "DEPLOYMENT",
+        "WCAG_CONFORMANCE_CLAIM"
+      ]
+    },
+    {
+      "id": "DEC-LAB-019",
+      "title": "Seleccionar Bootstrap Icons para el control WhatsApp del footer gobernado",
+      "project_scope": ["lab"],
+      "status": "APPROVED",
+      "approval_state": "APPROVED",
+      "canonical_path": "decisions/DEC-LAB-019.json",
+      "updated_at": "2026-07-23",
+      "approved_by": "Jonathan Martínez",
+      "consequences": [
+        "INTEGRATE_EXACT_BOOTSTRAP_SVG_GEOMETRY_IN_GOVERNED_FOUNDATION_FIXTURE",
+        "PRESERVE_SECONDARY_AND_REJECTED_CANDIDATES_AS_EVIDENCE",
+        "KEEP_HUMAN_FOOTER_REVIEW_OPEN"
+      ],
+      "non_authorizations": [
+        "FINAL_HUMAN_VISUAL_APPROVAL",
+        "BRAND_USAGE_APPROVAL",
+        "PRODUCT_INTEGRATION",
+        "RUNTIME",
+        "RAG",
         "WCAG_CONFORMANCE_CLAIM"
       ]
     }

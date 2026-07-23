@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-ICON-003",
+  "project_id": "lab",
+  "kind": "HUMAN_SELECTED_BRAND_ICON_FOCUSED_FOUNDATION_INTEGRATION_VALIDATION",
+  "status": "STATIC_PASS_BROWSER_AUTOMATION_UNAVAILABLE_AWAITING_HUMAN_FOOTER_REVIEW",
+  "recorded_at": "2026-07-23",
+  "authorization_id": "AUTHORIZATION_LAB_WHATSAPP_SELECTED_ASSET_FOOTER_INTEGRATION_060",
+  "decision_id": "DEC-LAB-019",
+  "parent_head": "914118c4f7f1374f207977c20929abfec12b8080",
+  "selection": {
+    "primary": "BOOTSTRAP_ICONS_1_13_1",
+    "secondary": "FONT_AWESOME_FREE_7_2_0",
+    "rejected": "TABLER_ICONS_3_44_0",
+    "selected_by": "Jonathan Martínez",
+    "human_selection_recorded": true
+  },
+  "selected_asset": {
+    "candidate_id": "WHATSAPP-CANDIDATE-BOOTSTRAP-ICONS-001",
+    "local_path": "foundation-library/brand-icons/LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001/assets/bootstrap-icons-v1.13.1-whatsapp.svg",
+    "registered_local_sha256": "86ed6b7d9090fd1616604a9546defbc301546794a09c7dfa90c317e3ed09727e",
+    "verified_local_sha256": "86ed6b7d9090fd1616604a9546defbc301546794a09c7dfa90c317e3ed09727e",
+    "sha256_validation": "PASS",
+    "license": "MIT",
+    "attribution_preserved": true,
+    "geometry_modified": false
+  },
+  "integration": {
+    "target": "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MINIMUM_IMPECCABLE_BASE_001.html",
+    "foundation_version": "1.1.1",
+    "fixture_sha256_lf": "d7b4539ca1957f6e9a8648be797da604ebaa5b9fcd175cb381f9deef2917245e",
+    "exact_change": "WHATSAPP_INTERNAL_INLINE_SVG_VIEWBOX_RENDER_MODEL_AND_PATH_ONLY",
+    "geometry_equality": "PASS_EXACT_VIEWBOX_AND_PATH_D_EQUALITY",
+    "control_css_px": 44,
+    "svg_css_px": 22,
+    "current_color": true,
+    "offline": true,
+    "other_social_icon_markup": "PASS_EXACT_HASH_EQUALITY",
+    "integration_result": "PUBLISHED"
+  },
+  "static_validation": {
+    "selected_asset_sha256": "PASS",
+    "candidate_states": "PASS",
+    "integrated_geometry": "PASS",
+    "neutral_glyph_removed": "PASS",
+    "dimensions": "PASS",
+    "url_and_accessible_name": "PASS",
+    "keyboard_and_interaction_contract": "PASS",
+    "other_social_icons": "PASS",
+    "svg_security": "PASS",
+    "offline_resource_boundary": "PASS",
+    "repository_validation": "PASS",
+    "git_diff_check": "PASS"
+  },
+  "focused_browser_validation": {
+    "status": "NOT_EXECUTED_AUTOMATION_SURFACE_UNAVAILABLE",
+    "surface": "VERCEL_AGENT_BROWSER_CLI",
+    "finding": "AGENT_BROWSER_COMMAND_NOT_AVAILABLE",
+    "captures_generated": [],
+    "browser_pass_claimed": false,
+    "dependencies_installed": false,
+    "drivers_modified": false,
+    "infrastructure_investigated": false,
+    "manual_human_footer_review": "PENDING"
+  },
+  "claim_boundaries": {
+    "brand_associated_iconography_human_review": "OPEN",
+    "brand_usage_approval": "PENDING_HUMAN_BRAND_USAGE_APPROVAL",
+    "human_visual_approval": "NOT_ESTABLISHED",
+    "wcag_conformance": "NOT_ESTABLISHED",
+    "product_effect": "NONE",
+    "runtime_effect": "NONE",
+    "rag_effect": "NONE",
+    "external_project_effect": "NONE",
+    "foundation_fixture_integration_effect": "FOCUSED_SELECTED_ASSET_INTEGRATION"
+  },
+  "source_refs": [
+    "decisions/DEC-LAB-019.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_WHATSAPP_SELECTED_ASSET_FOOTER_INTEGRATION_060.json",
+    "foundation-library/brand-icons/LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001/CANDIDATES.json",
+    "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MANIFEST.json",
+    "scripts/validate_whatsapp_selected_asset_footer_integration.py"
+  ]
+}

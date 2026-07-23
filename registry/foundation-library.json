@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0.0",
   "library_id": "lab.foundation-library",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "status": "DOCUMENTED_AND_VALIDATED",
   "scope": "DOCUMENTATION_AND_VALIDATION_ONLY",
-  "updated_at": "2026-07-22",
+  "updated_at": "2026-07-23",
   "governance": {
     "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
     "branch": "main",
@@ -168,8 +168,8 @@
       "id": "MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001",
       "kind": "MINIMUM_VISUAL_FOUNDATION",
       "canonical_path": "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MANIFEST.json",
-      "status": "TECHNICAL_FOUNDATION_PASS_AWAITING_HUMAN_BASELINE_REVIEW",
-      "version": "1.1.0",
+      "status": "SELECTED_ASSET_INTEGRATED_AWAITING_HUMAN_FOOTER_REVIEW",
+      "version": "1.1.1",
       "fixture": "MINIMUM_IMPECCABLE_BASE_001.html",
       "precedes_gate": "VISUAL_CALIBRATION_APPROVED"
     },
@@ -177,10 +177,10 @@
       "id": "LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001",
       "kind": "LOCAL_BRAND_ICON_ASSET_CANDIDATE_LIBRARY",
       "canonical_path": "foundation-library/brand-icons/LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001/MANIFEST.json",
-      "status": "READY_FOR_HUMAN_REVIEW",
-      "version": "1.0.0",
+      "status": "SELECTED_ASSET_INTEGRATED_AWAITING_HUMAN_FOOTER_REVIEW",
+      "version": "1.1.0",
       "candidate_count": 3,
-      "integration_status": "NOT_INTEGRATED"
+      "integration_status": "PUBLISHED"
     }
   ],
   "quality_gates": [
@@ -245,6 +245,11 @@
     },
     {
       "id": "AUTHORIZATION_LAB_ASSET_FIRST_ICON_CANDIDATE_LIBRARY_059",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "approved_by": "Jonathan Martínez"
+    },
+    {
+      "id": "AUTHORIZATION_LAB_WHATSAPP_SELECTED_ASSET_FOOTER_INTEGRATION_060",
       "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
       "approved_by": "Jonathan Martínez"
     }

@@ -84,7 +84,7 @@ def main() -> int:
     matrix = load("VALIDATION_MATRIX.json")
 
     assert manifest["foundation_id"] == standard["standard_id"] == "MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001"
-    assert manifest["version"] == standard["version"] == iconography["foundation_version"] == "1.1.0"
+    assert manifest["version"] == standard["version"] == iconography["foundation_version"] == "1.1.1"
     assert "FUNCTIONAL_ICONOGRAPHY_CONTRACT.json" in manifest["files"]
     assert manifest["status"] in correction["allowed_terminal_states"]
     assert correction["forbidden_terminal_state"] == "PASS_WITH_KNOWN_VISUAL_DEFECTS"
@@ -181,6 +181,16 @@ def main() -> int:
             assert any(node.attrs.get("fill") == "currentColor" for node in descendants)
     assert declared_boxes == {44} and declared_sizes == {22}, "Social controls must share identical declared boxes and nominal sizes"
 
+    whatsapp_link = next(link for link in social_links if link.attrs.get("href") == "https://www.whatsapp.com/")
+    whatsapp_svg = list(whatsapp_link.descendants("svg"))[0]
+    whatsapp_paths = list(whatsapp_svg.descendants("path"))
+    assert whatsapp_svg.attrs.get("viewbox") == "0 0 16 16"
+    assert whatsapp_svg.attrs.get("fill") == "currentColor"
+    assert whatsapp_svg.attrs.get("data-icon-render") == "FILL"
+    assert len(whatsapp_paths) == 1
+    assert whatsapp_paths[0].attrs.get("d", "").startswith("M13.601 2.326")
+    assert not list(whatsapp_svg.descendants("circle"))
+
     css = re.search(r"<style>(.*?)</style>", html, re.S | re.I).group(1)
     link_rule = re.search(r"\.footer__social-link\s*\{([^}]*)\}", css, re.S).group(1)
     svg_rule = re.search(r"\.footer__social-link svg\s*\{([^}]*)\}", css, re.S).group(1)
@@ -197,6 +207,7 @@ def main() -> int:
     print("Minimum impeccable foundation JSON and duplicate keys: PASS")
     print("Functional iconography contract and classification: PASS")
     print("Social inline SVG geometry, metadata and state rules: PASS")
+    print("Selected Bootstrap WhatsApp geometry and neutral glyph removal: PASS")
     print("Neutral monolithic HTML self-containment and URL allowlist: PASS")
     print("Static semantics, touch surface and reduced-motion preflight: PASS")
     print("Human visual approval: NOT_ESTABLISHED")

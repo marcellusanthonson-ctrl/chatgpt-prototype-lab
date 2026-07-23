@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1.0",
   "project_id": "lab",
-  "updated_at": "2026-07-22",
+  "updated_at": "2026-07-23",
   "authority_effect": "NONE",
   "records": [
     {
@@ -133,6 +133,20 @@
       "non_brand_baseline_human_review": "APPROVED",
       "brand_associated_iconography_human_review": "OPEN",
       "next_gate": "HUMAN_BRAND_ICON_ASSET_SELECTION_AND_BRAND_USAGE_APPROVAL"
+    },
+    {
+      "order": 15,
+      "item": "INTEGRATE_HUMAN_SELECTED_BOOTSTRAP_WHATSAPP_ASSET_IN_FOOTER",
+      "status": "COMPLETED_STATIC_PASS_AWAITING_MANUAL_HUMAN_FOOTER_REVIEW",
+      "authorization": "AUTHORIZATION_LAB_WHATSAPP_SELECTED_ASSET_FOOTER_INTEGRATION_060",
+      "decision": "DEC-LAB-019",
+      "selected_asset": "BOOTSTRAP_ICONS_1_13_1",
+      "foundation_version": "1.1.1",
+      "fixture_sha256": "d7b4539ca1957f6e9a8648be797da604ebaa5b9fcd175cb381f9deef2917245e",
+      "focused_browser_validation": "NOT_EXECUTED_AUTOMATION_SURFACE_UNAVAILABLE",
+      "brand_associated_iconography_human_review": "OPEN",
+      "brand_usage_approval": "PENDING_HUMAN_BRAND_USAGE_APPROVAL",
+      "next_gate": "MANUAL_HUMAN_REVIEW_OF_INTEGRATED_FOOTER"
     }
   ]
 }

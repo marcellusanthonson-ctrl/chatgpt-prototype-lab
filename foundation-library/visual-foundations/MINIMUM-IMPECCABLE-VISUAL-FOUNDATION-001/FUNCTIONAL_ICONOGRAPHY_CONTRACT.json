@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
   "contract_id": "MIVF-FUNCTIONAL-ICONOGRAPHY-001",
-  "version": "1.0.0",
-  "foundation_version": "1.1.0",
-  "status": "TECHNICAL_FOUNDATION_PASS_AWAITING_HUMAN_BASELINE_REVIEW",
+  "version": "1.0.1",
+  "foundation_version": "1.1.1",
+  "status": "SELECTED_ASSET_INTEGRATED_AWAITING_HUMAN_FOOTER_REVIEW",
   "purpose": "Define a neutral, reusable technical language for crisp, scalable, accessible and responsive functional and social iconography without selecting a brand identity.",
   "categories": {
     "FUNCTIONAL_INTERFACE_ICON": {
@@ -15,7 +15,7 @@
       "role": "Supports a control whose destination is a named social or brand-associated service.",
       "preferred_format": "INLINE_SVG",
       "official_brand_geometry_required": false,
-      "recognition_rule": "The control name and destination carry the exact service identity; a neutral associated glyph may communicate the function without reproducing an official logo."
+      "recognition_rule": "Use a governed local asset only after explicit human selection; technical integration does not establish brand usage approval."
     },
     "ILLUSTRATIVE_ICON": {
       "role": "Supports explanation, storytelling or a larger visual composition rather than a direct action.",
@@ -130,6 +130,7 @@
   },
   "source_refs": [
     "projects/lab/evidence/EVD-LAB-ICON-001.json",
-    "decisions/DEC-LAB-017.json"
+    "projects/lab/evidence/EVD-LAB-ICON-003.json",
+    "decisions/DEC-LAB-019.json"
   ]
 }

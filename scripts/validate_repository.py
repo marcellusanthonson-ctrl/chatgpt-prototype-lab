@@ -565,12 +565,18 @@ def validate_foundation_library(registries: dict[str, Any]) -> None:
             document = load_json(relative)
             if document.get("library_id") != record_id:
                 fail(f"{relative}: local brand icon library identity mismatch")
-            if document.get("status") != "READY_FOR_HUMAN_REVIEW":
+            if document.get("status") != "SELECTED_ASSET_INTEGRATED_AWAITING_HUMAN_FOOTER_REVIEW":
                 fail(f"{relative}: local brand icon library status differs")
             if document.get("candidate_count") != 3:
                 fail(f"{relative}: local brand icon candidate count differs")
-            if document.get("integration_status") != "NOT_INTEGRATED":
-                fail(f"{relative}: local brand icon candidate was integrated")
+            if document.get("integration_status") != "PUBLISHED":
+                fail(f"{relative}: local brand icon integration publication state differs")
+            if document.get("human_icon_selection") is not True:
+                fail(f"{relative}: local brand icon human selection is not recorded")
+            if document.get("selected_candidate_id") != "WHATSAPP-CANDIDATE-BOOTSTRAP-ICONS-001":
+                fail(f"{relative}: local brand icon selected candidate differs")
+            if document.get("brand_usage_approval") is not False:
+                fail(f"{relative}: local brand icon brand approval boundary differs")
         else:
             fail(f"foundation library: unsupported kind for {record_id}")
     if seen_designs != REQUIRED_DESIGN_ARCHETYPES:
@@ -650,7 +656,7 @@ def validate_minimum_impeccable_visual_foundation() -> None:
     matrix = load_json(f"{base}/VALIDATION_MATRIX.json")
     if manifest.get("foundation_id") != standard.get("standard_id"):
         fail("minimum visual foundation: identity mismatch")
-    if manifest.get("version") != "1.1.0" or standard.get("version") != "1.1.0" or iconography.get("foundation_version") != "1.1.0":
+    if manifest.get("version") != "1.1.1" or standard.get("version") != "1.1.1" or iconography.get("foundation_version") != "1.1.1":
         fail("minimum visual foundation: functional iconography version mismatch")
     if iconography.get("render_models", {}).get("allowed") != ["STROKE", "FILL", "HYBRID"]:
         fail("minimum visual foundation: functional iconography render models differ")

@@ -13,7 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / "foundation-library/brand-icons/LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001"
 FIXTURE = ROOT / "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MINIMUM_IMPECCABLE_BASE_001.html"
-EXPECTED_FIXTURE_SHA256_LF = "13cab2709775e9c2923b85c2557988c57ce57987dac0fcb1aedc0e347660b405"
+EXPECTED_FIXTURE_SHA256_LF = "d7b4539ca1957f6e9a8648be797da604ebaa5b9fcd175cb381f9deef2917245e"
 EXPECTED_IDS = {
     "WHATSAPP-CANDIDATE-BOOTSTRAP-ICONS-001",
     "WHATSAPP-CANDIDATE-FONT-AWESOME-001",
@@ -74,19 +74,19 @@ def main() -> int:
     notices = (BASE / "THIRD_PARTY_NOTICES.md").read_text(encoding="utf-8")
 
     assert manifest["library_id"] == candidates["library_id"] == "LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001"
-    assert manifest["status"] == "READY_FOR_HUMAN_REVIEW"
+    assert manifest["status"] == "SELECTED_ASSET_INTEGRATED_AWAITING_HUMAN_FOOTER_REVIEW"
     assert manifest["principle"] == "ASSET_FIRST_FOR_BRAND_ASSOCIATED_VISUALS"
     assert manifest["candidate_count"] == len(candidates["records"]) == 3
-    assert manifest["human_icon_selection"] is False
+    assert manifest["human_icon_selection"] is True
     assert manifest["brand_usage_approval"] is False
-    assert manifest["integration_status"] == "NOT_INTEGRATED"
-    assert manifest["fixture_modified"] is False
+    assert manifest["integration_status"] == "PUBLISHED"
+    assert manifest["fixture_modified"] is True
     assert manifest["product_effect"] == manifest["runtime_effect"] == manifest["rag_effect"] == manifest["integration_effect"] == "NONE"
     assert manifest["wcag_conformance"] == "NOT_ESTABLISHED"
 
     records = {record["candidate_id"]: record for record in candidates["records"]}
     assert set(records) == EXPECTED_IDS
-    assert candidates["selection_policy"] == "HUMAN_SELECTION_REQUIRED_NO_AUTOMATIC_RANKING"
+    assert candidates["selection_policy"] == "HUMAN_SELECTION_RECORDED_NO_AUTOMATIC_SUBSTITUTION"
     legal_records = {record["candidate_id"]: record for record in legal["records"]}
     assert set(legal_records) == EXPECTED_IDS
 
@@ -117,8 +117,6 @@ def main() -> int:
         else:
             assert record["sha256"] == source_hash
         assert record["technical_validation"] == "PASS"
-        assert record["human_status"] == "PENDING"
-        assert record["integration_status"] == "NOT_INTEGRATED"
         assert legal_records[candidate_id]["integration_legally_cleared"] is False
 
         root = ET.fromstring(asset.read_text(encoding="utf-8"))
@@ -154,6 +152,19 @@ def main() -> int:
     assert "prefers-reduced-motion" in review_text
     assert "ninguna selección automática" in review_text.lower()
 
+    bootstrap = records["WHATSAPP-CANDIDATE-BOOTSTRAP-ICONS-001"]
+    font_awesome = records["WHATSAPP-CANDIDATE-FONT-AWESOME-001"]
+    tabler = records["WHATSAPP-CANDIDATE-TABLER-ICONS-001"]
+    assert (bootstrap["human_review"], bootstrap["selection_rank"], bootstrap["integration_status"]) == (
+        "SELECTED", "PRIMARY", "AUTHORIZED_FOR_FOCUSED_FOUNDATION_INTEGRATION",
+    )
+    assert (font_awesome["human_review"], font_awesome["selection_rank"], font_awesome["integration_status"]) == (
+        "ACCEPTED_AS_SECONDARY_ALTERNATIVE", "SECONDARY", "NOT_INTEGRATED",
+    )
+    assert (tabler["human_review"], tabler["selection_rank"], tabler["integration_status"]) == (
+        "REJECTED", "NONE", "NOT_INTEGRATED",
+    )
+
     manifest_files = set(manifest["files"])
     expected_files = {
         str(path.relative_to(BASE)).replace("\\", "/")
@@ -171,9 +182,9 @@ def main() -> int:
     print("Copyright notices and trademark boundaries: PASS")
     print("REVIEW.html sizes, containers, themes and states: PASS")
     print("REVIEW.html offline local-resource boundary: PASS")
-    print("MINIMUM_IMPECCABLE_BASE_001.html unchanged: PASS")
-    print("Human icon selection: PENDING")
-    print("Brand usage approval: PENDING")
+    print("MINIMUM_IMPECCABLE_BASE_001.html selected asset hash: PASS")
+    print("Human icon selection: SELECTED_BOOTSTRAP_ICONS_1_13_1")
+    print("Brand usage approval: PENDING_HUMAN_BRAND_USAGE_APPROVAL")
     print("WCAG conformance: NOT_ESTABLISHED")
     return 0
 

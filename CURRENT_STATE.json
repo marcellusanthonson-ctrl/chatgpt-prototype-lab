@@ -1,11 +1,11 @@
 {
   "schema_version": "2.5.0",
   "document_id": "lab.current-state",
-  "version": "2.5.21",
+  "version": "2.5.22",
   "status": "GOVERNANCE_V2_CANONICAL_BASELINE",
-  "updated_at": "2026-07-22",
+  "updated_at": "2026-07-23",
   "active_project": "lab",
-  "current_phase": "ASSET_FIRST_BRAND_ICON_LIBRARY_READY_FOR_HUMAN_REVIEW",
+  "current_phase": "SELECTED_ASSET_INTEGRATED_AWAITING_HUMAN_FOOTER_REVIEW",
   "methodology": {
     "version": "2.1",
     "path": "METHODOLOGY.md"
@@ -101,7 +101,8 @@
     "DEC-LAB-015",
     "DEC-LAB-016",
     "DEC-LAB-017",
-    "DEC-LAB-018"
+    "DEC-LAB-018",
+    "DEC-LAB-019"
   ],
   "open_errors": [],
   "validated_patterns": [
@@ -149,7 +150,8 @@
     "human_baseline_footer_correction_055": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "functional_iconography_reconciliation_056": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "trailing_whitespace_unblock_057": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "asset_first_icon_candidate_library_059": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+    "asset_first_icon_candidate_library_059": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "whatsapp_selected_asset_footer_integration_060": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
   },
   "verified_external_heads": {
     "symphonie": "b492852c0d76ff7cd44ca266dc8950c94638d568",
@@ -173,7 +175,7 @@
     "PHASE_4_ACCESSIBILITY_NORMATIVE_AND_ASSISTIVE_TECHNOLOGY_RESEARCH"
   ],
   "next_authorized_action": "NONE_UNTIL_NEW_EXPLICIT_APPROVAL",
-  "next_recommended_transition": "HUMAN_SELECT_BRAND_ASSOCIATED_SOCIAL_ICON_ASSET_WITH_SEPARATE_AUTHORIZATION",
+  "next_recommended_transition": "MANUAL_HUMAN_REVIEW_OF_INTEGRATED_FOOTER",
   "continuity_read_order": [
     "LAB_CONTRACT.md",
     "METHODOLOGY.md",
@@ -212,10 +214,10 @@
   "latest_integration": {
     "integration_id": "INT-LAB-002",
     "layer_id": "CHATGPT-CRITERION-LAYER-001@1.1.0",
-    "standard_id": "MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001@1.1.0",
-    "status": "TECHNICAL_FOUNDATION_PASS_AWAITING_HUMAN_BASELINE_REVIEW",
+    "standard_id": "MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001@1.1.1",
+    "status": "SELECTED_ASSET_INTEGRATED_AWAITING_HUMAN_FOOTER_REVIEW",
     "static_validation": "PASS",
-    "browser_validation": "OPTICAL_GEOMETRY_AND_PIXEL_ALIGNMENT_PASS_103_WIDTHS_DPR_1_AND_2_OFFLINE_INTERACTION_ZOOM_REFLOW",
+    "browser_validation": "NOT_EXECUTED_AUTOMATION_SURFACE_UNAVAILABLE",
     "human_visual_approval": "APPROVED_EXCEPT_BRAND_ASSOCIATED_ICONOGRAPHY",
     "wcag_conformance": "NOT_ESTABLISHED",
     "candidate_baseline_capture": {
@@ -231,11 +233,11 @@
       "superseded_artifact_sha256": "20f38c901d7787d1528e7520c2d46840622e43d8b5daabb1f3d5887af6ff8143"
     },
     "functional_iconography": {
-      "contract": "MIVF-FUNCTIONAL-ICONOGRAPHY-001@1.0.0",
+      "contract": "MIVF-FUNCTIONAL-ICONOGRAPHY-001@1.0.1",
       "comparative_evidence": "EVD-LAB-ICON-001",
       "social_controls": 4,
-      "whatsapp_render_model": "HYBRID_NEUTRAL_CONVERSATION_GLYPH",
-      "automation_classification": "OPTICAL_GEOMETRY_AND_PIXEL_ALIGNMENT_PASS",
+      "whatsapp_render_model": "FILL_BOOTSTRAP_ICONS_1_13_1_EXACT_GEOMETRY",
+      "automation_classification": "NOT_EXECUTED_AUTOMATION_SURFACE_UNAVAILABLE",
       "absolute_sharpness": "NOT_ESTABLISHED_BY_AUTOMATION",
       "benchmark_approval": "NOT_ESTABLISHED"
     },
@@ -244,17 +246,24 @@
       "non_brand_baseline": "APPROVED",
       "previous_tests": "PRESERVED_APPROVED_AND_CLOSED",
       "brand_associated_iconography": "OPEN",
-      "only_visual_pending": "BRAND_ASSOCIATED_SOCIAL_ICON_ASSET_SELECTION_AND_INTEGRATION"
+      "only_visual_pending": "HUMAN_REVIEW_OF_INTEGRATED_FOOTER"
     },
     "asset_first_brand_icon_library": {
-      "id": "LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001@1.0.0",
-      "status": "READY_FOR_HUMAN_REVIEW",
+      "id": "LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001@1.1.0",
+      "status": "SELECTED_ASSET_INTEGRATED_AWAITING_HUMAN_FOOTER_REVIEW",
       "candidates": 3,
-      "human_icon_selection": false,
-      "brand_usage_approval": false,
-      "integration_effect": "NONE",
+      "human_icon_selection": true,
+      "selected_asset": "BOOTSTRAP_ICONS_1_13_1",
+      "whatsapp_asset_integration": "PUBLISHED",
+      "secondary_asset": "FONT_AWESOME_FREE_7_2_0",
+      "rejected_asset": "TABLER_ICONS_3_44_0",
+      "brand_usage_approval": "PENDING_HUMAN_BRAND_USAGE_APPROVAL",
+      "integration_effect": "FOCUSED_SELECTED_ASSET_INTEGRATION",
       "authorization_058": "SUPERSEDED_BEFORE_PUBLICATION_BY_ASSET_FIRST_ICON_STRATEGY",
-      "authorization_059": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+      "authorization_059": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "authorization_060": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "fixture_sha256": "d7b4539ca1957f6e9a8648be797da604ebaa5b9fcd175cb381f9deef2917245e",
+      "manual_human_footer_review": "PENDING"
     },
     "authority_effect": "NONE_AFTER_CONSUMPTION"
   }

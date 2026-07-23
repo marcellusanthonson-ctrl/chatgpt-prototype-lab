@@ -2,8 +2,8 @@
 
 La fuente estructurada es `CURRENT_STATE.json`.
 
-- Versión: 2.5.21.
-- Fase: `ASSET_FIRST_BRAND_ICON_LIBRARY_READY_FOR_HUMAN_REVIEW`.
+- Versión: 2.5.22.
+- Fase: `SELECTED_ASSET_INTEGRATED_AWAITING_HUMAN_FOOTER_REVIEW`.
 - HEAD propio: `VERIFY_LIVE_AT_USE`.
 - Autorización activa reutilizable: ninguna.
 
@@ -17,7 +17,9 @@ La autorización `057` eliminó exclusivamente dos terminaciones de línea preex
 
 La revisión humana del baseline quedó `APPROVED_EXCEPT_BRAND_ASSOCIATED_ICONOGRAPHY`: las pruebas previas y todo el baseline no marcario permanecen aprobados y cerrados. El único pendiente visual es `BRAND_ASSOCIATED_SOCIAL_ICON_ASSET_SELECTION_AND_INTEGRATION`.
 
-La autorización `058` quedó `SUPERSEDED_BEFORE_PUBLICATION_BY_ASSET_FIRST_ICON_STRATEGY`, sin commit, push ni consumo. La autorización `059` adopta `ASSET_FIRST_FOR_BRAND_ASSOCIATED_VISUALS` y crea `LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001`: tres candidatos WhatsApp locales, versionados y comparables, cada uno con fuente, commit, hash, licencia de archivo, límite marcario y estado humano `PENDING`. Ningún candidato fue seleccionado o integrado.
+La autorización `058` quedó `SUPERSEDED_BEFORE_PUBLICATION_BY_ASSET_FIRST_ICON_STRATEGY`, sin commit, push ni consumo. La autorización `059` adoptó `ASSET_FIRST_FOR_BRAND_ASSOCIATED_VISUALS` y creó `LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001`.
+
+La autorización `060` registra la selección humana: Bootstrap Icons 1.13.1 como principal, Font Awesome Free 7.2.0 como alternativa y Tabler Icons 3.44.0 como rechazado. La geometría exacta de Bootstrap fue integrada únicamente en el SVG interno de WhatsApp; la fundación queda en `1.1.1` con SHA-256 `d7b4539ca1957f6e9a8648be797da604ebaa5b9fcd175cb381f9deef2917245e`. La validación estática pasa; la automatización focalizada no estaba disponible y la revisión humana manual del footer permanece pendiente. No se establece aprobación de marca, aprobación visual final ni conformidad WCAG.
 
 ## Autocorrección
 
@@ -29,4 +31,4 @@ No se modificaron Symphonie, el piloto o Capability. No se creó V03, no se ejec
 
 ## Siguiente transición
 
-Comparar `foundation-library/brand-icons/LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001/REVIEW.html` y emitir una decisión humana explícita de selección o rechazo, junto con aprobación de uso marcario, antes de cualquier autorización de integración. La aprobación parcial no constituye conformidad WCAG.
+Jonathan debe revisar manualmente el footer integrado y decidir `APPROVED`, `REJECTED`, `REVERT_TO_SECONDARY_ALTERNATIVE` o `REQUEST_ADJUSTMENT`. La aprobación marcaria permanece separada y pendiente.

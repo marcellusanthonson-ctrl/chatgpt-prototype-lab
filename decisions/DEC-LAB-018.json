@@ -6,7 +6,7 @@
   "project_scope": ["lab"],
   "status": "APPROVED",
   "effective_date": "2026-07-22",
-  "updated_at": "2026-07-22",
+  "updated_at": "2026-07-23",
   "approval_state": "APPROVED",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-07-22",
@@ -16,7 +16,7 @@
     "rule": "Brand-associated visuals must begin with locally versioned, source-verifiable assets whose file licensing and trademark status are separately recorded.",
     "geometry_policy": "NO_MODEL_REDRAW_REINTERPRETATION_NEUTRALIZATION_OR_APPROXIMATION_AS_FINAL_BRAND_GEOMETRY",
     "selection_authority": "JONATHAN_MARTINEZ_EXPLICIT_HUMAN_DECISION",
-    "integration_gate": "SEPARATE_EXPLICIT_AUTHORIZATION_AFTER_HUMAN_SELECTION_AND_BRAND_USAGE_APPROVAL",
+    "integration_gate": "SEPARATE_EXPLICIT_AUTHORIZATION_AFTER_HUMAN_SELECTION; BRAND_USAGE_APPROVAL_REQUIRED_BEFORE_PRODUCT_OR_EXTERNAL_USE",
     "copyright_trademark_separation": "REQUIRED"
   },
   "consequences": [
@@ -41,6 +41,8 @@
     "foundation-library/brand-icons/LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001/MANIFEST.json",
     "projects/lab/evidence/EVD-LAB-ICON-002.json"
   ],
+  "amended_by": "DEC-LAB-019",
+  "amendment_scope": "ALLOW_FOCUSED_LAB_FOUNDATION_TECHNICAL_EVALUATION_WHILE_RETAINING_BRAND_USAGE_APPROVAL_GATE_FOR_PRODUCT_OR_EXTERNAL_USE",
   "supersedes": [],
   "superseded_by": null
 }
