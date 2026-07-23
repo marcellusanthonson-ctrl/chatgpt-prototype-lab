@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_VERIFIED_CONTEXT_BOOTSTRAP_AUDIT_RECONCILIATION_063",
+  "state_key": "verified_context_bootstrap_audit_reconciliation_063",
+  "project_id": "lab",
+  "initial_status": "GRANTED",
+  "pre_publication_status": "GRANTED_IN_PROGRESS",
+  "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+  "approved_by": "Jonathan Martínez",
+  "granted_at": "2026-07-23",
+  "consumed_at": "2026-07-23",
+  "source_instruction": "AUTHORIZATION_LAB_VERIFIED_CONTEXT_BOOTSTRAP_AUDIT_RECONCILIATION_063",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "b951aee9ec2f61dfa1bad2df2a18facb2c5471f8",
+  "scope": "DOCUMENTARY_EXTERNAL_AUDIT_EVIDENCE_REPRODUCTION_AND_INDEPENDENT_REASSESSMENT",
+  "authorized_paths": [
+    "projects/lab/evidence/",
+    "projects/lab/reassessments/",
+    "projects/lab/authorizations/",
+    "projects/lab/continuity/",
+    "registry/evidence.json",
+    "registry/reassessments.json",
+    "registry/authorizations.json",
+    "registry/index.json",
+    "CURRENT_STATE.json",
+    "projects/lab/PROJECT_STATE.json",
+    "projects/lab/PENDING.json",
+    "tests/expected_repository_state.json"
+  ],
+  "authorized_actions": [
+    "REGISTER_EXTERNAL_AUDIT_V2_AND_DECLARED_SUPERSESSION_RELATION",
+    "RECORD_V1_ABSENCE_WITHOUT_RECONSTRUCTION",
+    "REPRODUCE_READ_ONLY_MEASUREMENTS",
+    "ADJUDICATE_THIRTEEN_REQUIRED_CLAIMS",
+    "COMPARE_SEVEN_NON_APPROVED_ALTERNATIVES",
+    "RECOMMEND_ONE_READ_ONLY_FOLLOW_UP_TRANSITION",
+    "SYNCHRONIZE_DERIVED_VALIDATION_FIXTURE",
+    "CREATE_ONE_DOCUMENTARY_COMMIT_PUSH_MAIN_AND_VERIFY_REMOTE"
+  ],
+  "prohibitions": [
+    "IMPLEMENT_RESOLVER_RAG_EMBEDDINGS_VECTOR_STORE_NODE_PIPELINE_OR_CLI",
+    "GENERATE_BOOTSTRAP_CONTEXT_OR_BOOTSTRAP_PAYLOAD",
+    "MODIFY_SCHEMA_ARCHITECTURE_RAG_CONTRACT_CONTINUITY_PROTOCOL_OR_OWNERSHIP",
+    "CREATE_DEC_LAB_021_OR_ANY_ARCHITECTURAL_DECISION",
+    "MODIFY_RUNTIME_INTEGRATION_PRODUCT_EXTERNAL_REPOSITORY_SYMPHONIE_OR_MAMMOTHSKILLS",
+    "SELECT_TECHNOLOGY_RUN_BROWSER_AUTOMATION_INGEST_REAL_DATA_DEPLOY_OR_RELEASE",
+    "DECLARE_WCAG_CONFORMANCE"
+  ],
+  "amendments": [
+    {
+      "amendment_id": "AUTHORIZATION_LAB_VERIFIED_CONTEXT_BOOTSTRAP_AUDIT_RECONCILIATION_063_AMENDMENT_01",
+      "approved_by": "Jonathan Martínez",
+      "approved_at": "2026-07-23",
+      "scope": "MINIMAL_DERIVED_VALIDATION_FIXTURE_SYNCHRONIZATION_ONLY",
+      "authorized_path_addition": "tests/expected_repository_state.json",
+      "authorized_values": {
+        "registry_counts.authorizations": 33,
+        "registry_counts.evidence": 20,
+        "registry_counts.reassessments": 3,
+        "authorization_state.verified_context_bootstrap_audit_reconciliation_063": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+      },
+      "validator_modification_authorized": false,
+      "consumption_rule": "CONSUMED_JOINTLY_WITH_AUTHORIZATION_063_ON_VERIFIED_REMOTE_PUBLICATION",
+      "reusable_permission_after_consumption": false
+    }
+  ],
+  "external_source": {
+    "name": "AUDIT-CLAUDE-VCBR-002.md",
+    "size_bytes": 29257,
+    "sha256": "40469672ed9a94063992119dcf3e59280869e6fa9e606ab49e60ed94cec541b0",
+    "version": 2,
+    "declared_supersedes": "AUDIT-CLAUDE-VCBR-001",
+    "v1_available": false
+  },
+  "commit_authorized": true,
+  "push_authorized": true,
+  "runtime_authorized": false,
+  "integration_authorized": false,
+  "rag_implementation_authorized": false,
+  "resolver_implementation_authorized": false,
+  "schema_change_authorized": false,
+  "product_changes_authorized": false,
+  "external_repository_changes_authorized": false,
+  "codex_autonomous_authority": "NO",
+  "next_authorized_action": "NONE_AFTER_CONSUMPTION",
+  "consumption_rule": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+  "reusable_permission_after_consumption": false
+}

@@ -1,0 +1,626 @@
+{
+  "schema_version": "1.0.0",
+  "reassessment_id": "REA-LAB-003",
+  "project_id": "lab",
+  "status": "ADJUDICATED",
+  "decision_domain": "MIXED",
+  "subject": "Independent claim-by-claim reassessment of the verified context bootstrap resolver external audit v2",
+  "previous_position": {
+    "statement": "AUDIT-CLAUDE-VCBR-002 reports a real and growing rehydration cost, recommends schema hygiene before implementation, and characterizes the described resolver as mostly duplicative of the documented RAG federation contract.",
+    "authority_effect": "NONE",
+    "evidence_refs": [
+      "projects/lab/evidence/EVD-LAB-AUD-002.json"
+    ]
+  },
+  "trigger": {
+    "type": "AUTHORIZED_EXTERNAL_AUDIT_RECONCILIATION",
+    "authorization_ref": "AUTHORIZATION_LAB_VERIFIED_CONTEXT_BOOTSTRAP_AUDIT_RECONCILIATION_063",
+    "amendment_ref": "AUTHORIZATION_LAB_VERIFIED_CONTEXT_BOOTSTRAP_AUDIT_RECONCILIATION_063_AMENDMENT_01",
+    "source_refs": [
+      "projects/lab/evidence/EVD-LAB-AUD-002.json",
+      "architecture/rag/FEDERATION_CONTRACT.json",
+      "docs/CONTINUITY_PROTOCOL.md",
+      "schemas/brief.schema.json"
+    ],
+    "claims_are_not_accepted_by_identity_repetition_or_authority": true
+  },
+  "claims_under_review": [
+    {
+      "claim_id": "COST_OF_REHYDRATION",
+      "original_claim": "Canonical rehydration has a material context cost of approximately 26,200 tokens.",
+      "claim_class": "MIXED",
+      "source_and_provenance": "AUDIT-CLAUDE-VCBR-002.md plus canonical read order at parent b951aee9ec2f61dfa1bad2df2a18facb2c5471f8.",
+      "baseline": "Fourteen-file minimal canonical state route.",
+      "method": "Exact working-tree and Git blob byte counts; local tokenizer availability check; bytes/4 kept separate.",
+      "verified_observations": [
+        "105284 working-tree bytes",
+        "103273 Git blob bytes",
+        "26321 bytes/4 heuristic units",
+        "no local tokenizer available"
+      ],
+      "favorable_evidence": [
+        "The independently measured heuristic is close to the audit magnitude.",
+        "The route is large enough to create material context pressure."
+      ],
+      "contrary_evidence": [
+        "No real token count was executed.",
+        "The full task-required corpus is larger than the minimal route and conditional loading can make actual cost smaller."
+      ],
+      "reproducibility": "PASS_FOR_BYTES_TOKENIZER_NOT_EXECUTED",
+      "limitations": [
+        "Line endings change working-tree versus Git blob bytes.",
+        "Token magnitude and model context impact are not established by bytes alone."
+      ],
+      "uncertainty": "MEDIUM",
+      "consequences": "Use exact bytes as the baseline and do not present 26321 as a real token count.",
+      "determination": "MODIFIED"
+    },
+    {
+      "claim_id": "APPEND_ONLY_HISTORY_GROWTH",
+      "original_claim": "Append-only authorization and state history causes continuing documentary growth.",
+      "claim_class": "FACTUAL",
+      "source_and_provenance": "CURRENT_STATE.json, registry/authorizations.json and Git history.",
+      "baseline": "Parent b951aee9 with 32 authorization records and 32 consumed transitions.",
+      "method": "Count records and state keys; classify transition and standing-flag lifecycles; measure repository history.",
+      "verified_observations": [
+        "32 authorization records are all consumed and retained.",
+        "32 consumed transitions remain in CURRENT_STATE.authorization_state.",
+        "The 14-file route grew across the measured history."
+      ],
+      "favorable_evidence": [
+        "Every new consumed authorization adds a registry record and a state transition.",
+        "The canonical validator requires one-to-one state_key preservation."
+      ],
+      "contrary_evidence": [
+        "The observed growth period is an intensive construction phase.",
+        "Future authorization frequency is unknown."
+      ],
+      "reproducibility": "PASS",
+      "limitations": [
+        "Growth rate is not stationary.",
+        "Append-only retention does not prove a future context-window failure date."
+      ],
+      "uncertainty": "LOW_FOR_MECHANISM_MEDIUM_FOR_RATE",
+      "consequences": "Treat growth mechanism as real while avoiding unsupported linear break-date claims.",
+      "determination": "CONFIRMED"
+    },
+    {
+      "claim_id": "AUTHORIZATION_REGISTRY_OVERHEAD",
+      "original_claim": "The authorization registry is a disproportionate component of canonical rehydration.",
+      "claim_class": "FACTUAL",
+      "source_and_provenance": "registry/authorizations.json and the measured 14-file route.",
+      "baseline": "Parent b951aee9 working tree.",
+      "method": "Exact byte count and share calculation.",
+      "verified_observations": [
+        "registry/authorizations.json is 32319 bytes.",
+        "It is 30.697 percent of the 105284-byte minimal route.",
+        "All 32 records are consumed."
+      ],
+      "favorable_evidence": [
+        "It is the largest single measured source."
+      ],
+      "contrary_evidence": [
+        "The registry is conditionally applicable under the canonical reading order rather than always necessary for every question.",
+        "Its retained history is required by current state_key integrity."
+      ],
+      "reproducibility": "PASS",
+      "limitations": [
+        "Byte share is not equivalent to latency or answer-quality impact."
+      ],
+      "uncertainty": "LOW",
+      "consequences": "Any optimization must preserve state_key traceability and measure selection errors, not only byte reduction.",
+      "determination": "CONFIRMED"
+    },
+    {
+      "claim_id": "AUTHORIZATION_STATE_TYPE_CONFLATION",
+      "original_claim": "CURRENT_STATE.authorization_state conflates consumed transitions with standing permission flags.",
+      "claim_class": "FACTUAL",
+      "source_and_provenance": "CURRENT_STATE.json, docs/CONTINUITY_PROTOCOL.md and scripts/validate_repository.py.",
+      "baseline": "38 authorization_state entries at parent b951aee9.",
+      "method": "Resolve keys against registry state_key values and classify remaining entries by lifecycle and validator semantics.",
+      "verified_observations": [
+        "32 entries are consumed transitions resolved by state_key.",
+        "6 entries are fixed standing safety flags.",
+        "There are zero registry orphans and zero unregistered consumed transitions."
+      ],
+      "favorable_evidence": [
+        "The two groups have different value types and lifecycle semantics."
+      ],
+      "contrary_evidence": [
+        "The current schema intentionally permits an unconstrained object.",
+        "The validator explicitly recognizes this mixed representation and it currently passes."
+      ],
+      "reproducibility": "PASS",
+      "limitations": [
+        "Calling the representation a schema defect is normative; factual conflation is independently observable."
+      ],
+      "uncertainty": "LOW",
+      "consequences": "A future separation would require coordinated schema, validator, fixture and continuity review and is not authorized here.",
+      "determination": "CONFIRMED"
+    },
+    {
+      "claim_id": "BOOTSTRAP_CONTEXT_NON_CONFORMANCE",
+      "original_claim": "The proposed BOOTSTRAP_CONTEXT.md selected-content artifact is non-conforming with the ChatGPT continuity rule.",
+      "claim_class": "MIXED",
+      "source_and_provenance": "Audit v2 description of proposal section 8.10 contrasted with docs/CONTINUITY_PROTOCOL.md.",
+      "baseline": "Canonical rule that any ChatGPT bootstrap attachment may declare only repository, branch and entrypoint.",
+      "method": "Compare the behavior explicitly attributed by audit v2 with the canonical rule.",
+      "verified_observations": [
+        "The pointer-only bootstrap rule is explicit.",
+        "Audit v2 describes section 8.10 as a selected-content bootstrap artifact.",
+        "No exact proposal source was available."
+      ],
+      "favorable_evidence": [
+        "Selected canonical content in a bootstrap attachment would violate the pointer-only rule."
+      ],
+      "contrary_evidence": [
+        "The exact proposal text and artifact contract could not be inspected.",
+        "An ephemeral technical reference manifest outside the bootstrap attachment role is not clearly adjudicated by the rule."
+      ],
+      "reproducibility": "PARTIAL_PROPOSAL_SOURCE_UNAVAILABLE",
+      "limitations": [
+        "Specific proposal non-conformance cannot be fully reproduced without the proposal."
+      ],
+      "uncertainty": "MEDIUM",
+      "consequences": "Do not generate BOOTSTRAP_CONTEXT.md and classify alternative-manifest compatibility as insufficient until a complete source is available.",
+      "determination": "MODIFIED"
+    },
+    {
+      "claim_id": "RAG_CONTRACT_DUPLICATION",
+      "original_claim": "The described resolver substantially duplicates RAG-FEDERATION-CONTRACT-001.",
+      "claim_class": "MIXED",
+      "source_and_provenance": "Audit v2 component mapping and architecture/rag/FEDERATION_CONTRACT.json.",
+      "baseline": "Eight-stage documented-not-implemented RAG retrieval pipeline.",
+      "method": "Compare audit-described resolver components with scope, namespace, commit, authority, conflict, citation and cache stages.",
+      "verified_observations": [
+        "The audit-described components map to all eight RAG stages.",
+        "The RAG contract already contains controls absent from the audit-described proposal.",
+        "The exact resolver proposal was unavailable."
+      ],
+      "favorable_evidence": [
+        "Remote-head verification maps to VERIFY_ACTIVE_COMMITS.",
+        "Authority/state filtering maps to FILTER_BY_AUTHORITY_AND_STATUS.",
+        "Contradiction detection and cited context map directly to stages 7 and 8."
+      ],
+      "contrary_evidence": [
+        "Token budget planning is not present in the RAG contract.",
+        "A resolver utility could implement rather than duplicate the governing contract.",
+        "Exact component boundaries are not independently inspectable."
+      ],
+      "reproducibility": "PARTIAL_HIGH_CANONICAL_LOW_PROPOSAL",
+      "limitations": [
+        "Substantial overlap is verified; complete isomorphism is not."
+      ],
+      "uncertainty": "MEDIUM",
+      "consequences": "Do not establish a parallel governing architecture; require any future implementation proposal to declare which RAG stages it implements.",
+      "determination": "MODIFIED"
+    },
+    {
+      "claim_id": "HEAD_INVALIDATION_GRANULARITY",
+      "original_claim": "Resolver invalidation on any remote HEAD change is too coarse and duplicates a better canonical namespace-scoped rule.",
+      "claim_class": "MIXED",
+      "source_and_provenance": "Audit v2 description and RAG index_contract.",
+      "baseline": "REBUILD_ONLY_AFFECTED_NAMESPACE, REMOVE_STALE_CHUNKS and PIN_ACTIVE_COMMIT.",
+      "method": "Verify canonical invalidation controls and compare them with behavior attributed to the resolver.",
+      "verified_observations": [
+        "Affected-namespace-only rebuild is canonical.",
+        "Stale removal and exact commit pinning are canonical.",
+        "The exact resolver invalidation algorithm was unavailable."
+      ],
+      "favorable_evidence": [
+        "A global invalidation would be strictly coarser than the documented contract."
+      ],
+      "contrary_evidence": [
+        "Audit v2 is the only available source for the resolver behavior.",
+        "No implementation measurements exist for invalidation cost or correctness."
+      ],
+      "reproducibility": "PARTIAL",
+      "limitations": [
+        "The canonical alternative is verified; the challenged algorithm is not independently reproduced."
+      ],
+      "uncertainty": "MEDIUM",
+      "consequences": "Keep namespace-scoped invalidation as the governing requirement for any future experiment.",
+      "determination": "MODIFIED"
+    },
+    {
+      "claim_id": "DETERMINISTIC_RESOLUTION_REQUIREMENT",
+      "original_claim": "Authority, project, state and active-commit resolution must be deterministic before semantic retrieval.",
+      "claim_class": "NORMATIVE",
+      "source_and_provenance": "START_HERE.md, METHODOLOGY.md and RAG-FEDERATION-CONTRACT-001.",
+      "baseline": "Current canonical startup and retrieval rules.",
+      "method": "Inspect mandatory read order and RAG retrieval_pipeline ordering.",
+      "verified_observations": [
+        "authority_precedes_similarity is true.",
+        "Stages 1 through 4 resolve scope, namespaces, commits and authority/status before retrieval.",
+        "Only stages 5 and 6 require semantic behavior."
+      ],
+      "favorable_evidence": [
+        "The rule preserves canonical authority and project isolation."
+      ],
+      "contrary_evidence": [
+        "Determinism alone does not prove selection completeness or lower total context cost."
+      ],
+      "reproducibility": "PASS",
+      "limitations": [
+        "The contract is documented but not implemented."
+      ],
+      "uncertainty": "LOW",
+      "consequences": "Any future experiment must treat deterministic authority gates as invariants.",
+      "determination": "CONFIRMED"
+    },
+    {
+      "claim_id": "TOKEN_THRESHOLD_VALIDITY",
+      "original_claim": "A token-reduction threshold is sufficient to select an implementation alternative.",
+      "claim_class": "NORMATIVE",
+      "source_and_provenance": "Audit v2 threshold discussion and authorization 063 comparison requirements.",
+      "baseline": "No locally executed token count and no discriminating fixture experiment.",
+      "method": "Check tokenizer availability and availability of precision, false-positive, false-negative and omitted-evidence measurements.",
+      "verified_observations": [
+        "No real token count was executed.",
+        "Selection precision, false positives and false negatives were not measured.",
+        "No alternative was implemented."
+      ],
+      "favorable_evidence": [
+        "Absolute and percentage reduction are useful metrics."
+      ],
+      "contrary_evidence": [
+        "A percentage alone cannot establish authority preservation, completeness, maintenance or failure safety."
+      ],
+      "reproducibility": "NOT_APPLICABLE_WITHOUT_EXPERIMENT",
+      "limitations": [
+        "No statistical sample or acceptance threshold calibration exists."
+      ],
+      "uncertainty": "HIGH",
+      "consequences": "Do not approve an implementation from token reduction alone.",
+      "determination": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "claim_id": "SCHEMA_HYGIENE_ALTERNATIVE",
+      "original_claim": "Schema hygiene can safely remove roughly one third of the common rehydration cost without new components.",
+      "claim_class": "MIXED",
+      "source_and_provenance": "Audit v2 alternative F-prime plus independent byte and consumer inventory.",
+      "baseline": "105284-byte route with a 32319-byte authorization registry.",
+      "method": "Project omission of the authorization registry when no active authorizations exist and inventory affected consumers.",
+      "verified_observations": [
+        "Theoretical omission is 32319 working-tree bytes or 30.697 percent.",
+        "Residual route would be 72965 working-tree bytes.",
+        "Current schemas, validator, fixture and continuity semantics would require coordinated change."
+      ],
+      "favorable_evidence": [
+        "The projected byte reduction is material.",
+        "The registry can remain canonical rather than be archived."
+      ],
+      "contrary_evidence": [
+        "No active_authorizations field exists.",
+        "No consumer behavior or omission safety was tested.",
+        "Schema change and migration are explicitly unauthorized."
+      ],
+      "reproducibility": "PASS_FOR_PROJECTION_NOT_EXECUTED_FOR_BEHAVIOR",
+      "limitations": [
+        "Projected byte savings are not measured token savings.",
+        "Selection precision and omitted contrary evidence remain unknown."
+      ],
+      "uncertainty": "MEDIUM",
+      "consequences": "Retain as a candidate for a separately authorized experiment, not an approved implementation.",
+      "determination": "MODIFIED"
+    },
+    {
+      "claim_id": "BRIEF_SCHEMA_TOKEN_BUDGET_DUPLICATION",
+      "original_claim": "schemas/brief.schema.json already implements token budget planning.",
+      "claim_class": "FACTUAL",
+      "source_and_provenance": "Audit v2 self-correction contrasted directly with schemas/brief.schema.json.",
+      "baseline": "brief schema at parent b951aee9.",
+      "method": "Inspect required fields and all property definitions.",
+      "verified_observations": [
+        "The schema has no token budget field.",
+        "The schema has no context limit, priority order or omission log.",
+        "scope is an unrestricted object."
+      ],
+      "favorable_evidence": [],
+      "contrary_evidence": [
+        "All inspected schema content contradicts the duplication claim."
+      ],
+      "reproducibility": "PASS",
+      "limitations": [],
+      "uncertainty": "LOW",
+      "consequences": "Preserve the audit v2 correction; token budget planning is not duplicated by the brief schema.",
+      "determination": "REVERSED"
+    },
+    {
+      "claim_id": "RESOLVER_AS_NEW_ARCHITECTURE",
+      "original_claim": "VERIFIED_CONTEXT_BOOTSTRAP_RESOLVER should be treated as a new governing architecture.",
+      "claim_class": "MIXED",
+      "source_and_provenance": "Audit-described resolver and canonical RAG federation contract.",
+      "baseline": "Existing documented retrieval-governance architecture.",
+      "method": "Separate governing contract from possible implementation utilities.",
+      "verified_observations": [
+        "Most described responsibilities already have a canonical RAG stage or control.",
+        "A future resolver would create new implementation surface.",
+        "The complete proposal is unavailable."
+      ],
+      "favorable_evidence": [
+        "A resolver package, CLI or manifest vocabulary would be a new component if built."
+      ],
+      "contrary_evidence": [
+        "Its described governing semantics are largely pre-existing.",
+        "Creating a parallel authority model would conflict with canonical ownership."
+      ],
+      "reproducibility": "PARTIAL",
+      "limitations": [
+        "Exact non-overlapping responsibilities cannot be enumerated without the proposal."
+      ],
+      "uncertainty": "MEDIUM",
+      "consequences": "Do not approve it as an independent architecture.",
+      "determination": "MODIFIED"
+    },
+    {
+      "claim_id": "RESOLVER_AS_PARTIAL_RAG_CONTRACT_IMPLEMENTATION",
+      "original_claim": "The described deterministic resolver is better classified as a partial implementation of RAG-FEDERATION-CONTRACT-001 with semantic stages disabled.",
+      "claim_class": "MIXED",
+      "source_and_provenance": "Audit v2 mapping and canonical eight-stage RAG pipeline.",
+      "baseline": "Stages 1-4 and 7-8 deterministic; stages 5-6 semantic.",
+      "method": "Map explicit audit-described resolver responsibilities to the canonical pipeline and controls.",
+      "verified_observations": [
+        "Six deterministic stages cover scope, namespaces, commits, authority/status, conflicts and cited context.",
+        "Semantic retrieval and ranking are isolated to stages 5 and 6.",
+        "Token budget planning remains outside the RAG contract."
+      ],
+      "favorable_evidence": [
+        "The functional mapping is strong and preserves a single authority model."
+      ],
+      "contrary_evidence": [
+        "The exact proposal may contain responsibilities not represented in the audit summary.",
+        "No implementation exists to establish actual contract conformance."
+      ],
+      "reproducibility": "PARTIAL_HIGH",
+      "limitations": [
+        "This is an architectural classification, not implementation approval."
+      ],
+      "uncertainty": "MEDIUM",
+      "consequences": "If implementation is ever considered, require an explicit conformance matrix rather than a new parallel contract.",
+      "determination": "MODIFIED"
+    }
+  ],
+  "evidence_supporting_change": [
+    {
+      "source_ref": "projects/lab/evidence/EVD-LAB-AUD-002.json",
+      "finding": "Exact bytes, authorization correspondence, consumer inventory and historical growth were independently reproduced."
+    },
+    {
+      "source_ref": "architecture/rag/FEDERATION_CONTRACT.json",
+      "finding": "The documented contract contains deterministic authority gates, semantic stages, namespace invalidation, citations, conflicts, cache role and safe failure states."
+    },
+    {
+      "source_ref": "docs/CONTINUITY_PROTOCOL.md",
+      "finding": "Bootstrap attachments are pointer-only and consumed transitions must resolve by state_key."
+    },
+    {
+      "source_ref": "schemas/brief.schema.json",
+      "finding": "The schema contains no token budgeting semantics."
+    }
+  ],
+  "evidence_against_change": [
+    {
+      "source_ref": "scripts/validate_repository.py",
+      "finding": "The mixed authorization_state representation is currently validated and internally consistent."
+    },
+    {
+      "source_ref": "projects/lab/evidence/EVD-LAB-AUD-002.json",
+      "finding": "No real token count, resolver fixture experiment or exact proposal source was available."
+    },
+    {
+      "source_ref": "registry/rag-contracts.json",
+      "finding": "RAG contracts are documented but not implemented; overlap does not establish working equivalence."
+    }
+  ],
+  "verification": {
+    "source_authenticity": "PASS_FOR_V2",
+    "v1_source": "UNAVAILABLE_NOT_RECONSTRUCTED",
+    "scope_match": "PASS_WITH_MISSING_EXACT_PROPOSAL",
+    "baseline_validity": "PASS_AT_EXPECTED_PARENT_HEAD",
+    "byte_reproducibility": "PASS",
+    "token_reproducibility": "TOKENIZER_NOT_EXECUTED",
+    "counterevidence_reviewed": true,
+    "alternative_explanations_reviewed": true,
+    "alternative_comparison": [
+      {
+        "alternative": "A_NO_CHANGE",
+        "absolute_token_reduction": "0",
+        "percentage_reduction": 0,
+        "residual_mandatory_cost": "105284_WORKING_TREE_BYTES_MINIMAL_ROUTE",
+        "selection_precision": "UNCHANGED_NOT_MEASURED",
+        "constraints_omitted": "NONE_NEW",
+        "contrary_evidence_omitted": "NONE_NEW",
+        "false_positives": "NOT_MEASURED",
+        "false_negatives": "NOT_MEASURED",
+        "authority_preservation": "HIGH",
+        "traceability": "HIGH",
+        "ownership_compatibility": "HIGH",
+        "continuity_compatibility": "HIGH",
+        "complexity": "NONE",
+        "maintenance": "CURRENT",
+        "failure_surface": "CURRENT",
+        "cost_shifted_to_llm_call": "CURRENT_FULL_REHYDRATION_COST",
+        "head_change_stability": "CURRENT_VERIFY_LIVE_AT_USE",
+        "cross_project_stability": "CURRENT",
+        "reversibility": "IMMEDIATE"
+      },
+      {
+        "alternative": "B_SCHEMA_HYGIENE",
+        "absolute_token_reduction": "NOT_MEASURED_PROJECTED_8079_75_BYTES_DIV_4_HEURISTIC_UNITS",
+        "percentage_reduction": "PROJECTED_30_697_PERCENT_BYTES",
+        "residual_mandatory_cost": "PROJECTED_72965_WORKING_TREE_BYTES",
+        "selection_precision": "NOT_MEASURED",
+        "constraints_omitted": "RISK_IF_ACTIVE_AUTHORIZATION_SIGNAL_OR_STATE_KEY_HISTORY_IS_MISREAD",
+        "contrary_evidence_omitted": "NOT_MEASURED",
+        "false_positives": "NOT_MEASURED",
+        "false_negatives": "NOT_MEASURED",
+        "authority_preservation": "POTENTIALLY_HIGH_REQUIRES_MIGRATION_TEST",
+        "traceability": "POTENTIALLY_HIGH_IF_REGISTRY_REMAINS_INTACT",
+        "ownership_compatibility": "MEDIUM_REQUIRES_SCHEMA_AND_CONSUMER_CHANGE",
+        "continuity_compatibility": "MEDIUM_REQUIRES_REVIEW",
+        "complexity": "LOW_TO_MEDIUM",
+        "maintenance": "LOW_AFTER_COORDINATED_MIGRATION",
+        "failure_surface": "SCHEMA_VALIDATOR_FIXTURE_AND_CONSUMER_MIGRATION",
+        "cost_shifted_to_llm_call": "LOW_IF_DETERMINISTIC_OMISSION_IS_SAFE",
+        "head_change_stability": "HIGH_IF_DERIVED_FROM_CURRENT_STATE",
+        "cross_project_stability": "UNKNOWN",
+        "reversibility": "HIGH_WITH_SINGLE_COMMIT",
+        "implementation_approval": "NONE"
+      },
+      {
+        "alternative": "C_CONTINUITY_PACKAGE_IMPROVEMENT",
+        "absolute_token_reduction": "NOT_MEASURED",
+        "percentage_reduction": "NOT_MEASURED",
+        "residual_mandatory_cost": "UNKNOWN",
+        "selection_precision": "NOT_MEASURED",
+        "constraints_omitted": "RISK_OF_PARALLEL_STATE_OR_STALE_SNAPSHOT",
+        "contrary_evidence_omitted": "NOT_MEASURED",
+        "false_positives": "NOT_MEASURED",
+        "false_negatives": "NOT_MEASURED",
+        "authority_preservation": "MEDIUM_TO_HIGH_IF_REFERENCE_ONLY",
+        "traceability": "HIGH_IF_SOURCE_REFS_AND_HEAD_POLICY_ARE_PRESERVED",
+        "ownership_compatibility": "MEDIUM",
+        "continuity_compatibility": "INHERENT_BUT_BOOTSTRAP_POINTER_RULE_LIMITS_CONTENT",
+        "complexity": "LOW_TO_MEDIUM",
+        "maintenance": "REQUIRES_STALE_AND_ARCHIVE_LIFECYCLE",
+        "failure_surface": "STALE_PACKAGE_DUPLICATED_STATE",
+        "cost_shifted_to_llm_call": "POSSIBLE_IF_PACKAGE_GENERATION_USES_LLM",
+        "head_change_stability": "REQUIRES_STALE_DETECTION",
+        "cross_project_stability": "PROJECT_SPECIFIC",
+        "reversibility": "HIGH",
+        "implementation_approval": "NONE"
+      },
+      {
+        "alternative": "D_DETERMINISTIC_REFERENCE_INDEX",
+        "absolute_token_reduction": "NOT_MEASURED",
+        "percentage_reduction": "NOT_MEASURED",
+        "residual_mandatory_cost": "UNKNOWN",
+        "selection_precision": "NOT_MEASURED",
+        "constraints_omitted": "MUST_INCLUDE_AUTHORITY_STATUS_PROJECT_AND_COMMIT_CONTROLS",
+        "contrary_evidence_omitted": "NOT_MEASURED",
+        "false_positives": "NOT_MEASURED",
+        "false_negatives": "NOT_MEASURED",
+        "authority_preservation": "POTENTIALLY_HIGH",
+        "traceability": "POTENTIALLY_HIGH",
+        "ownership_compatibility": "MEDIUM_IF_DERIVED_CACHE_ONLY",
+        "continuity_compatibility": "MEDIUM",
+        "complexity": "MEDIUM",
+        "maintenance": "INDEX_REBUILD_AND_STALE_REMOVAL",
+        "failure_surface": "INDEX_DRIFT_MISSING_REFERENCES",
+        "cost_shifted_to_llm_call": "LOW_IF_FULLY_DETERMINISTIC",
+        "head_change_stability": "MUST_USE_AFFECTED_NAMESPACE_ONLY",
+        "cross_project_stability": "REQUIRES_NAMESPACE_ISOLATION",
+        "reversibility": "HIGH_IF_DERIVED",
+        "implementation_approval": "NONE"
+      },
+      {
+        "alternative": "E_PARTIAL_IMPLEMENTATION_OF_RAG_FEDERATION_CONTRACT",
+        "absolute_token_reduction": "NOT_MEASURED",
+        "percentage_reduction": "NOT_MEASURED",
+        "residual_mandatory_cost": "UNKNOWN",
+        "selection_precision": "NOT_MEASURED",
+        "constraints_omitted": "NONE_IF_CONTRACT_CONFORMANT_STAGES_1_TO_4_AND_7_TO_8",
+        "contrary_evidence_omitted": "NOT_MEASURED",
+        "false_positives": "NOT_MEASURED",
+        "false_negatives": "NOT_MEASURED",
+        "authority_preservation": "HIGH_BY_CONTRACT",
+        "traceability": "HIGH_BY_CONTRACT",
+        "ownership_compatibility": "HIGH_BY_CONTRACT",
+        "continuity_compatibility": "MEDIUM_REQUIRES_EXPLICIT_BOUNDARY",
+        "complexity": "MEDIUM_TO_HIGH",
+        "maintenance": "NAMESPACE_AND_MANIFEST_LIFECYCLE",
+        "failure_surface": "TYPED_BUT_NOT_IMPLEMENTED",
+        "cost_shifted_to_llm_call": "LOW_FOR_DETERMINISTIC_STAGES",
+        "head_change_stability": "HIGH_BY_AFFECTED_NAMESPACE_RULE",
+        "cross_project_stability": "HIGH_BY_ISOLATION_CONTRACT",
+        "reversibility": "HIGH_IF_DERIVED_CACHE_ONLY",
+        "implementation_approval": "NONE"
+      },
+      {
+        "alternative": "F_READ_ONLY_DISCRIMINATING_EXPERIMENT",
+        "absolute_token_reduction": "0_IMMEDIATE",
+        "percentage_reduction": 0,
+        "residual_mandatory_cost": "UNCHANGED_DURING_EXPERIMENT",
+        "selection_precision": "PRIMARY_MEASUREMENT",
+        "constraints_omitted": "PRIMARY_MEASUREMENT",
+        "contrary_evidence_omitted": "PRIMARY_MEASUREMENT",
+        "false_positives": "PRIMARY_MEASUREMENT",
+        "false_negatives": "PRIMARY_MEASUREMENT",
+        "authority_preservation": "PRIMARY_GATE",
+        "traceability": "PRIMARY_GATE",
+        "ownership_compatibility": "NO_CANONICAL_WRITES",
+        "continuity_compatibility": "NO_PROTOCOL_CHANGE",
+        "complexity": "LOW",
+        "maintenance": "EPHEMERAL_FIXTURES_AND_REPORT",
+        "failure_surface": "LOW_READ_ONLY",
+        "cost_shifted_to_llm_call": "MUST_BE_MEASURED",
+        "head_change_stability": "CAN_COMPARE_PINNED_FIXTURES",
+        "cross_project_stability": "CAN_COMPARE_SYNTHETIC_PROJECT_SCOPES",
+        "reversibility": "IMMEDIATE",
+        "implementation_approval": "NONE",
+        "recommended_as_next_transition": true
+      },
+      {
+        "alternative": "G_FULL_VERIFIED_CONTEXT_BOOTSTRAP_RESOLVER",
+        "absolute_token_reduction": "NOT_MEASURED",
+        "percentage_reduction": "NOT_MEASURED",
+        "residual_mandatory_cost": "UNKNOWN",
+        "selection_precision": "NOT_MEASURED",
+        "constraints_omitted": "AUDIT_REPORTS_CONTROLS_WEAKER_THAN_RAG_CONTRACT",
+        "contrary_evidence_omitted": "NOT_MEASURED",
+        "false_positives": "NOT_MEASURED",
+        "false_negatives": "NOT_MEASURED",
+        "authority_preservation": "UNPROVEN",
+        "traceability": "UNPROVEN",
+        "ownership_compatibility": "LOW_IF_PARALLEL_ARCHITECTURE",
+        "continuity_compatibility": "LOW_FOR_SELECTED_CONTENT_BOOTSTRAP_ARTIFACT",
+        "complexity": "HIGH",
+        "maintenance": "HIGH",
+        "failure_surface": "HIGH_AND_PARTIALLY_DUPLICATIVE",
+        "cost_shifted_to_llm_call": "UNKNOWN",
+        "head_change_stability": "AUDIT_DESCRIBED_AS_TOO_COARSE",
+        "cross_project_stability": "UNPROVEN",
+        "reversibility": "MEDIUM",
+        "implementation_approval": "NONE"
+      }
+    ],
+    "no_alternative_approved_for_implementation": true
+  },
+  "technical_determination": "MODIFIED",
+  "reasoning_summary": "The external audit correctly identifies material byte cost, append-only authorization growth, type conflation, a pointer-only bootstrap rule, brief-schema self-correction and substantial overlap with the RAG federation contract. Its exact token count, resolver equivalence, invalidation behavior and implementation-selection thresholds cannot be fully confirmed because no tokenizer, complete resolver proposal or discriminating experiment was available. Schema hygiene remains a candidate, not an approved or demonstrated solution.",
+  "confidence": "MEDIUM",
+  "consequences": [
+    "Register audit v2 as external evidence with no authority effect.",
+    "Record only the supersession relation declared by v2 because v1 is unavailable.",
+    "Preserve exact bytes and label bytes/4 as a heuristic.",
+    "Do not create BOOTSTRAP_CONTEXT.md.",
+    "Do not implement resolver, RAG, CLI, schemas, runtime or product changes.",
+    "Do not create DEC-LAB-021.",
+    "Preserve RAG-FEDERATION-CONTRACT-001 as the single documented retrieval-governance architecture.",
+    "Require a separate authorization before any experiment or implementation consequence."
+  ],
+  "recommended_action": {
+    "action": "AUTHORIZE_READ_ONLY_DISCRIMINATING_EXPERIMENT_FOR_CONTEXT_SELECTION_ALTERNATIVES",
+    "purpose": "Compare no-change, schema-hygiene simulation, deterministic reference selection and contract-conformant deterministic RAG stages using pinned synthetic fixtures.",
+    "required_metrics": [
+      "real tokenizer counts if locally available without installation",
+      "absolute and percentage reduction",
+      "mandatory residual cost",
+      "selection precision",
+      "omitted constraints",
+      "omitted contrary evidence",
+      "false positives",
+      "false negatives",
+      "authority preservation",
+      "traceability",
+      "HEAD and cross-project stability",
+      "shifted LLM-call cost"
+    ],
+    "canonical_mutation": false,
+    "implementation_selection": false,
+    "authorization_required": true,
+    "single_next_transition": true
+  },
+  "approval_state": "NOT_REQUIRED"
+}

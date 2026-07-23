@@ -1,0 +1,366 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-AUD-002",
+  "title": "Verified context bootstrap external audit v2 and independently reproduced documentary measurements",
+  "project_id": "lab",
+  "evidence_class": "EXTERNAL_MODEL_AUDIT_WITH_READ_ONLY_REPRODUCTION",
+  "status": "REGISTERED_WITH_INDEPENDENT_REASSESSMENT_AND_DECLARED_SOURCE_LIMITATIONS",
+  "recorded_at": "2026-07-23",
+  "authorization_id": "AUTHORIZATION_LAB_VERIFIED_CONTEXT_BOOTSTRAP_AUDIT_RECONCILIATION_063",
+  "audited_parent_head": "b951aee9ec2f61dfa1bad2df2a18facb2c5471f8",
+  "external_sources": [
+    {
+      "name": "AUDIT-CLAUDE-VCBR-002.md",
+      "document_role": "EXTERNAL_AUDIT_REPORT",
+      "auditor": "Claude (Opus 4.8)",
+      "version": 2,
+      "mode": "INDEPENDENT_READ_ONLY",
+      "local_provenance_at_ingestion": "C:/Users/JF Martin/Downloads/AUDIT-CLAUDE-VCBR-002.md",
+      "size_bytes": 29257,
+      "sha256": "40469672ed9a94063992119dcf3e59280869e6fa9e606ab49e60ed94cec541b0",
+      "content_verification": "PASS_UTF8_CONTENT_REVIEWED",
+      "authority_effect": "NONE",
+      "repository_effect_declared_by_source": "NONE",
+      "runtime_effect": "NONE",
+      "declared_supersedes": "AUDIT-CLAUDE-VCBR-001"
+    },
+    {
+      "name": "AUDIT-CLAUDE-VCBR-001.md",
+      "status": "UNAVAILABLE",
+      "content_reconstructed": false,
+      "hash_verified": false,
+      "size_verified": false,
+      "relationship_to_v2": "SUPERSEDED_AS_DECLARED_BY_V2_ONLY",
+      "limitation": "The v1 file was not available in the repository, the supplied attachment directory or the wider Codex attachment store. No v1 content is invented or attributed independently."
+    }
+  ],
+  "proposal_source": {
+    "name": "VERIFIED_CONTEXT_BOOTSTRAP_RESOLVER",
+    "exact_complete_canonical_source_found": false,
+    "search_scope": [
+      "repository filenames",
+      "repository content excluding .git",
+      "Codex attachment filenames",
+      "Codex attachment content"
+    ],
+    "search_terms": [
+      "VERIFIED_CONTEXT_BOOTSTRAP_RESOLVER",
+      "AUDIT-CLAUDE-VCBR",
+      "COST_OF_REHYDRATION",
+      "BOOTSTRAP_CONTEXT_NON_CONFORMANCE"
+    ],
+    "result": "ONLY_AUTHORIZATION_AND_AUDIT_V2_DESCRIPTIONS_AVAILABLE",
+    "reassessment_boundary": "Claims about the proposal are limited to explicit descriptions in audit v2 and canonical LAB sources. No fictitious exact proposal is reconstructed."
+  },
+  "measurement_environment": {
+    "operating_system": "Windows",
+    "shell": "PowerShell",
+    "python": "3.13.7",
+    "node_tokenizer": "UNAVAILABLE",
+    "python_tiktoken": "UNAVAILABLE_MODULE_NOT_FOUND",
+    "dependency_installation_attempted": false,
+    "network_used_for_tokenizer": false,
+    "tokenizer_result": "TOKENIZER_NOT_EXECUTED",
+    "heuristic": {
+      "formula": "bytes/4",
+      "classification": "HEURISTIC_NOT_TOKEN_COUNT",
+      "confidence": "LOW_FOR_ABSOLUTE_TOKEN_MAGNITUDE"
+    }
+  },
+  "canonical_rehydration_route": {
+    "definition": "Minimal canonical state route used to reproduce the external audit magnitude. PENDING, ROADMAP, the eight post-manifest ChatGPT source files, task-specific governance documents, schemas and RAG architecture are reported separately because they are conditional or task-specific additions.",
+    "composition": [
+      {
+        "path": "project-sources/chatgpt/START_HERE.md",
+        "working_tree_bytes": 1168,
+        "share_percent": 1.109
+      },
+      {
+        "path": "LAB_CONTRACT.md",
+        "working_tree_bytes": 6097,
+        "share_percent": 5.791
+      },
+      {
+        "path": "METHODOLOGY.md",
+        "working_tree_bytes": 4462,
+        "share_percent": 4.238
+      },
+      {
+        "path": "CURRENT_STATE.json",
+        "working_tree_bytes": 13998,
+        "share_percent": 13.295
+      },
+      {
+        "path": "registry/index.json",
+        "working_tree_bytes": 2946,
+        "share_percent": 2.798
+      },
+      {
+        "path": "registry/projects.json",
+        "working_tree_bytes": 3000,
+        "share_percent": 2.849
+      },
+      {
+        "path": "projects/lab/PROJECT_STATE.json",
+        "working_tree_bytes": 13679,
+        "share_percent": 12.992
+      },
+      {
+        "path": "registry/decisions.json",
+        "working_tree_bytes": 10551,
+        "share_percent": 10.021
+      },
+      {
+        "path": "registry/authorizations.json",
+        "working_tree_bytes": 32319,
+        "share_percent": 30.697
+      },
+      {
+        "path": "registry/errors.json",
+        "working_tree_bytes": 2748,
+        "share_percent": 2.61
+      },
+      {
+        "path": "registry/evidence.json",
+        "working_tree_bytes": 9078,
+        "share_percent": 8.622
+      },
+      {
+        "path": "registry/reassessments.json",
+        "working_tree_bytes": 723,
+        "share_percent": 0.687
+      },
+      {
+        "path": "registry/patterns.json",
+        "working_tree_bytes": 3543,
+        "share_percent": 3.365
+      },
+      {
+        "path": "registry/rag-contracts.json",
+        "working_tree_bytes": 972,
+        "share_percent": 0.923
+      }
+    ],
+    "file_count": 14,
+    "working_tree_bytes": 105284,
+    "git_blob_bytes_at_parent": 103273,
+    "line_ending_difference_bytes": 2011,
+    "heuristic_bytes_div_4": 26321,
+    "heuristic_is_real_token_count": false,
+    "conditional_sources": {
+      "pending_and_roadmap_bytes": 20766,
+      "chatgpt_sources_after_manifest_bytes": 14684,
+      "task_specific_governance_docs_bytes": 8454,
+      "applicable_schema_bytes": 8866,
+      "applicable_rag_architecture_bytes": 15093,
+      "full_task_required_corpus_working_tree_bytes": 173147,
+      "full_task_required_corpus_heuristic_bytes_div_4": 43286.75
+    }
+  },
+  "authorization_measurements": {
+    "registry_records": 32,
+    "records_with_state_key": 32,
+    "unique_state_keys": 32,
+    "status_distribution": {
+      "CONSUMED_ON_VERIFIED_PUBLICATION": 6,
+      "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION": 26
+    },
+    "all_analyzed_authorizations_consumed": true,
+    "current_state_authorization_entries": 38,
+    "resolved_consumed_transitions": 32,
+    "non_transition_standing_flags": [
+      {
+        "name": "commit_authorized",
+        "value": false
+      },
+      {
+        "name": "push_authorized",
+        "value": false
+      },
+      {
+        "name": "runtime_authorized",
+        "value": false
+      },
+      {
+        "name": "integration_authorized",
+        "value": false
+      },
+      {
+        "name": "product_changes_authorized",
+        "value": false
+      },
+      {
+        "name": "codex_autonomous_authority",
+        "value": "NO"
+      }
+    ],
+    "registry_state_key_orphans": 0,
+    "consumed_transition_keys_without_registry_record": 0,
+    "verified_external_heads_entries": 16,
+    "authorization_registry_working_tree_bytes": 32319,
+    "authorization_registry_share_of_minimal_route_percent": 30.697,
+    "authorization_registry_heuristic_bytes_div_4": 8079.75
+  },
+  "consumer_inventory": {
+    "authorization_state_references": [
+      "CURRENT_STATE.json",
+      "schemas/current-state.schema.json",
+      "scripts/validate_repository.py",
+      "tests/expected_repository_state.json"
+    ],
+    "state_key_references": [
+      "docs/CONTINUITY_PROTOCOL.md",
+      "scripts/validate_repository.py",
+      "registry/authorizations.json",
+      "canonical authorization records"
+    ],
+    "future_separation_impact": [
+      "schemas/current-state.schema.json would require a schema change",
+      "scripts/validate_repository.py SAFE_AUTH and transition-key logic would require migration",
+      "tests/expected_repository_state.json would require fixture migration",
+      "docs/CONTINUITY_PROTOCOL.md state_key resolution wording would require review",
+      "all existing authorization records and registry correspondence must remain resolvable"
+    ]
+  },
+  "document_growth": {
+    "all_documentary_files": {
+      "extensions": [
+        ".md",
+        ".json",
+        ".txt"
+      ],
+      "period_start": "2026-06-28T16:22:42-04:00",
+      "period_end": "2026-07-23T02:05:54-04:00",
+      "elapsed_days": 24.405,
+      "commits": 164,
+      "commit_transitions": 163,
+      "first_bytes": 1661,
+      "last_bytes": 895940,
+      "delta_bytes": 894279,
+      "mean_delta_bytes_per_commit": 5486.374,
+      "mean_delta_bytes_per_day": 36643.27
+    },
+    "minimal_route_full_history": {
+      "limitation": "The route did not exist at the first commit; growth from zero mixes creation with later expansion.",
+      "first_bytes": 0,
+      "last_git_blob_bytes": 103273,
+      "mean_delta_bytes_per_commit": 633.577,
+      "mean_delta_bytes_per_day": 4231.633,
+      "heuristic_bytes_div_4_per_day": 1057.908
+    },
+    "minimal_route_comparable_window": {
+      "baseline_reason": "Earliest commit at which all 14 route paths exist simultaneously.",
+      "baseline_commit": "d3af193f33a08f5714f9e8bdb1dfca5f1c4e4b52",
+      "period_start": "2026-07-18T13:43:30-04:00",
+      "period_end": "2026-07-23T02:05:54-04:00",
+      "elapsed_days": 4.515556,
+      "commit_transitions": 67,
+      "baseline_git_blob_bytes": 45672,
+      "end_git_blob_bytes": 103273,
+      "delta_bytes": 57601,
+      "mean_delta_bytes_per_commit": 859.716,
+      "mean_delta_bytes_per_day": 12756.127,
+      "heuristic_bytes_div_4_per_day": 3189.032
+    },
+    "extrapolation_limitations": [
+      "The repository is in an intensive construction phase and the observed rate is not stationary.",
+      "Whole-history and complete-route windows produce materially different rates.",
+      "Commit frequency is authoring-process dependent.",
+      "bytes/4 is not a token count.",
+      "No future break date is confirmed from these windows alone."
+    ]
+  },
+  "bootstrap_context_verification": {
+    "canonical_rule": "Any ChatGPT bootstrap attachment may declare only repository, branch and entrypoint.",
+    "source_ref": "docs/CONTINUITY_PROTOCOL.md",
+    "selected_content_attachment_allowed": false,
+    "pointer_only_attachment_allowed": true,
+    "ephemeral_technical_reference_manifest": "NOT_ESTABLISHED_AS_BOOTSTRAP_ATTACHMENT_COMPATIBLE",
+    "canonical_source": "REPOSITORY_CONTENT",
+    "derived_cache": "NON_CANONICAL_READ_ONLY_IF_FUTURE_CONTRACT_IS_IMPLEMENTED",
+    "bootstrap_context_generated": false
+  },
+  "rag_contract_verification": {
+    "contract_id": "RAG-FEDERATION-CONTRACT-001",
+    "status": "DOCUMENTED_NOT_IMPLEMENTED",
+    "verified_controls": [
+      "authority_precedes_similarity",
+      "namespace isolation",
+      "exact commit pinning",
+      "authority and document-status filtering",
+      "project-scope filtering",
+      "cross-source conflict states",
+      "cited context result",
+      "derived read-only cache",
+      "repository as source of truth",
+      "affected-namespace-only rebuild",
+      "stale chunk removal",
+      "write boundary",
+      "safe failure states"
+    ],
+    "deterministic_stages": [
+      "RESOLVE_TASK_SCOPE",
+      "SELECT_AUTHORIZED_NAMESPACES",
+      "VERIFY_ACTIVE_COMMITS",
+      "FILTER_BY_AUTHORITY_AND_STATUS",
+      "DETECT_CROSS_SOURCE_CONFLICTS",
+      "RETURN_CITED_CONTEXT"
+    ],
+    "semantic_stages": [
+      "RETRIEVE_WITHIN_NAMESPACE",
+      "RANK_AUTHORITY_THEN_RELEVANCE"
+    ],
+    "implementation_effect": "NONE"
+  },
+  "commands": [
+    "git ls-remote origin refs/heads/main",
+    "Get-Item and Get-FileHash -Algorithm SHA256 on AUDIT-CLAUDE-VCBR-002.md",
+    "rg filename and content searches for the audit and resolver proposal",
+    "Get-Item.Length for working-tree source sizes",
+    "git cat-file -s HEAD:path for Git blob sizes",
+    "PowerShell ConvertFrom-Json state_key and authorization distribution checks",
+    "rg authorization_state and state_key consumer inventory",
+    "git log, git ls-tree -r -l and git rev-list for documentary growth",
+    "python and node local tokenizer availability checks",
+    "python scripts/validate_repository.py"
+  ],
+  "not_reproduced": [
+    {
+      "measurement": "REAL_TOKEN_COUNT",
+      "status": "TOKENIZER_NOT_EXECUTED",
+      "reason": "No appropriate tokenizer was installed locally and dependency installation was prohibited."
+    },
+    {
+      "measurement": "AUDIT_V1_FINDINGS_F1_TO_F11",
+      "status": "SOURCE_UNAVAILABLE",
+      "reason": "AUDIT-CLAUDE-VCBR-001.md was unavailable."
+    },
+    {
+      "measurement": "EXACT_RESOLVER_COMPONENT_BEHAVIOR",
+      "status": "COMPLETE_PROPOSAL_SOURCE_UNAVAILABLE",
+      "reason": "Only the v2 audit description was available."
+    },
+    {
+      "measurement": "SELECTION_PRECISION_FALSE_POSITIVES_FALSE_NEGATIVES",
+      "status": "NOT_EXECUTED",
+      "reason": "No resolver, RAG implementation or discriminating fixture experiment was authorized."
+    }
+  ],
+  "authority_boundary": {
+    "creates_decision": false,
+    "creates_implementation_approval": false,
+    "creates_runtime_authority": false,
+    "creates_rag_authority": false,
+    "creates_schema_change_authority": false,
+    "evidence_only": true
+  },
+  "source_refs": [
+    "LAB_CONTRACT.md",
+    "METHODOLOGY.md",
+    "CURRENT_STATE.json",
+    "docs/CONTINUITY_PROTOCOL.md",
+    "architecture/rag/FEDERATION_CONTRACT.json",
+    "projects/lab/reassessments/REA-LAB-003.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_VERIFIED_CONTEXT_BOOTSTRAP_AUDIT_RECONCILIATION_063.json"
+  ]
+}

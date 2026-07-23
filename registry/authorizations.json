@@ -711,6 +711,30 @@
       "rag_authorized": false,
       "external_project_changes_authorized": false,
       "wcag_claim_authorized": false
+    },
+    {
+      "id": "AUTHORIZATION_LAB_VERIFIED_CONTEXT_BOOTSTRAP_AUDIT_RECONCILIATION_063",
+      "state_key": "verified_context_bootstrap_audit_reconciliation_063",
+      "project_id": "lab",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "approved_by": "Jonathan Martínez",
+      "scope": "DOCUMENTARY_EXTERNAL_AUDIT_EVIDENCE_REPRODUCTION_AND_INDEPENDENT_REASSESSMENT",
+      "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_VERIFIED_CONTEXT_BOOTSTRAP_AUDIT_RECONCILIATION_063.json",
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "expected_parent_head": "b951aee9ec2f61dfa1bad2df2a18facb2c5471f8",
+      "updated_at": "2026-07-23",
+      "amendment_id": "AUTHORIZATION_LAB_VERIFIED_CONTEXT_BOOTSTRAP_AUDIT_RECONCILIATION_063_AMENDMENT_01",
+      "commit_authorized": true,
+      "push_authorized": true,
+      "test_fixture_update_authorized": true,
+      "runtime_authorized": false,
+      "integration_authorized": false,
+      "rag_implementation_authorized": false,
+      "resolver_implementation_authorized": false,
+      "schema_change_authorized": false,
+      "product_changes_authorized": false,
+      "external_repository_changes_authorized": false
     }
   ]
 }

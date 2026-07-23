@@ -1,7 +1,7 @@
 {
   "schema_version": "2.5.0",
   "document_id": "lab.current-state",
-  "version": "2.5.24",
+  "version": "2.5.25",
   "status": "GOVERNANCE_V2_CANONICAL_BASELINE",
   "updated_at": "2026-07-23",
   "active_project": "lab",
@@ -41,8 +41,8 @@
     "high_fidelity_visual_protocol": "foundation-library/visual-protocols/high-fidelity-visual-protocol.json",
     "visual_preference_benchmark": "foundation-library/visual-preferences/benchmarks/visual-preference-benchmark.manifest.json",
     "contextual_visual_calibration_evidence": "foundation-library/visual-preferences/evidence/EVD-LAB-VIS-001.json",
-    "external_audit_evidence": "projects/lab/evidence/EVD-LAB-AUD-001.json",
-    "external_audit_reassessment": "projects/lab/reassessments/REA-LAB-002.json",
+    "external_audit_evidence": "projects/lab/evidence/EVD-LAB-AUD-002.json",
+    "external_audit_reassessment": "projects/lab/reassessments/REA-LAB-003.json",
     "chatgpt_criterion_layer": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MANIFEST.json",
     "minimum_impeccable_visual_foundation": "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MANIFEST.json",
     "ecosystem_entrypoint": "README.md"
@@ -156,7 +156,8 @@
     "asset_first_icon_candidate_library_059": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "whatsapp_selected_asset_footer_integration_060": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "asset_first_icon_strategy_human_approval_closure_061": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "readme_ecosystem_and_pilot_entrypoint_update_062": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+    "readme_ecosystem_and_pilot_entrypoint_update_062": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "verified_context_bootstrap_audit_reconciliation_063": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
   },
   "verified_external_heads": {
     "symphonie": "b492852c0d76ff7cd44ca266dc8950c94638d568",
@@ -180,7 +181,7 @@
     "PHASE_4_ACCESSIBILITY_NORMATIVE_AND_ASSISTIVE_TECHNOLOGY_RESEARCH"
   ],
   "next_authorized_action": "NONE_AFTER_CONSUMPTION",
-  "next_recommended_transition": "NONE_HUMAN_BASELINE_APPROVED",
+  "next_recommended_transition": "AUTHORIZE_READ_ONLY_DISCRIMINATING_EXPERIMENT_FOR_CONTEXT_SELECTION_ALTERNATIVES",
   "continuity_read_order": [
     "LAB_CONTRACT.md",
     "METHODOLOGY.md",
@@ -195,25 +196,34 @@
     "current continuity package"
   ],
   "latest_reconciliation": {
-    "authorization_id": "AUTHORIZATION_LAB_EXTERNAL_AUDIT_RECONCILIATION_046",
-    "external_audit_status": "REGISTERED_AS_EVIDENCE_WITH_MATERIAL_CORRECTIONS",
-    "reassessment_id": "REA-LAB-002",
+    "authorization_id": "AUTHORIZATION_LAB_VERIFIED_CONTEXT_BOOTSTRAP_AUDIT_RECONCILIATION_063",
+    "amendment_id": "AUTHORIZATION_LAB_VERIFIED_CONTEXT_BOOTSTRAP_AUDIT_RECONCILIATION_063_AMENDMENT_01",
+    "external_audit_status": "V2_REGISTERED_WITH_DECLARED_V1_SUPERSESSION_AND_SOURCE_LIMITATIONS",
+    "external_audit_evidence": "EVD-LAB-AUD-002",
+    "external_source_sha256": "40469672ed9a94063992119dcf3e59280869e6fa9e606ab49e60ed94cec541b0",
+    "reassessment_id": "REA-LAB-003",
+    "technical_determination": "MODIFIED",
     "classifications": {
-      "S1": "MODIFIED",
-      "S5": "MODIFIED",
-      "S7": "REVERSED",
-      "S9": "MODIFIED"
+      "COST_OF_REHYDRATION": "MODIFIED",
+      "APPEND_ONLY_HISTORY_GROWTH": "CONFIRMED",
+      "AUTHORIZATION_REGISTRY_OVERHEAD": "CONFIRMED",
+      "AUTHORIZATION_STATE_TYPE_CONFLATION": "CONFIRMED",
+      "BOOTSTRAP_CONTEXT_NON_CONFORMANCE": "MODIFIED",
+      "RAG_CONTRACT_DUPLICATION": "MODIFIED",
+      "HEAD_INVALIDATION_GRANULARITY": "MODIFIED",
+      "DETERMINISTIC_RESOLUTION_REQUIREMENT": "CONFIRMED",
+      "TOKEN_THRESHOLD_VALIDITY": "INSUFFICIENT_EVIDENCE",
+      "SCHEMA_HYGIENE_ALTERNATIVE": "MODIFIED",
+      "BRIEF_SCHEMA_TOKEN_BUDGET_DUPLICATION": "REVERSED",
+      "RESOLVER_AS_NEW_ARCHITECTURE": "MODIFIED",
+      "RESOLVER_AS_PARTIAL_RAG_CONTRACT_IMPLEMENTATION": "MODIFIED"
     },
-    "monolithic_sequence": [
-      "SEPARATE_EXPLICIT_MONOLITHIC_GENERATION_AUTHORIZATION",
-      "GENERATE_VISUAL_REVIEW_MONOLITHIC",
-      "HUMAN_REVIEW_BY_JONATHAN_MARTINEZ",
-      "VISUAL_CALIBRATION_APPROVED_OR_OTHER_ALLOWED_HUMAN_DECISION"
-    ],
-    "benchmark_status": "PROPOSED_NOT_APPROVED",
-    "capability_version": "0.1.0-alpha.9",
-    "capability_contract_test": "PASS",
-    "capability_result_head": "81389f31f2655afd5e7fc9d825c1aac6bb6cd759",
+    "minimal_route_working_tree_bytes": 105284,
+    "minimal_route_git_blob_bytes": 103273,
+    "tokenizer_result": "TOKENIZER_NOT_EXECUTED",
+    "resolver_proposal_source": "COMPLETE_CANONICAL_SOURCE_UNAVAILABLE",
+    "implementation_effect": "NONE",
+    "next_recommended_transition": "AUTHORIZE_READ_ONLY_DISCRIMINATING_EXPERIMENT_FOR_CONTEXT_SELECTION_ALTERNATIVES",
     "authority_effect": "NONE_AFTER_CONSUMPTION"
   },
   "latest_integration": {

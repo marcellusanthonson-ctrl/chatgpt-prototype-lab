@@ -286,6 +286,46 @@
         "decisions/DEC-LAB-020.json",
         "patterns/PAT-LAB-008.json"
       ]
+    },
+    {
+      "id": "PEND-LAB-014",
+      "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+      "type": "READ_ONLY_DISCRIMINATING_CONTEXT_SELECTION_EXPERIMENT",
+      "subject": "Compare context-selection alternatives without canonical mutation or implementation selection",
+      "priority": "MEDIUM",
+      "single_recommended_transition": "AUTHORIZE_READ_ONLY_DISCRIMINATING_EXPERIMENT_FOR_CONTEXT_SELECTION_ALTERNATIVES",
+      "candidate_alternatives": [
+        "NO_CHANGE",
+        "SCHEMA_HYGIENE_SIMULATION",
+        "CONTINUITY_PACKAGE_IMPROVEMENT_SIMULATION",
+        "DETERMINISTIC_REFERENCE_INDEX_SIMULATION",
+        "PARTIAL_RAG_FEDERATION_CONTRACT_STAGES_1_TO_4_AND_7_TO_8_SIMULATION"
+      ],
+      "required_metrics": [
+        "REAL_TOKEN_COUNTS_IF_LOCAL_TOKENIZER_IS_AVAILABLE_WITHOUT_INSTALLATION",
+        "ABSOLUTE_AND_PERCENTAGE_REDUCTION",
+        "MANDATORY_RESIDUAL_COST",
+        "SELECTION_PRECISION",
+        "OMITTED_CONSTRAINTS",
+        "OMITTED_CONTRARY_EVIDENCE",
+        "FALSE_POSITIVES",
+        "FALSE_NEGATIVES",
+        "AUTHORITY_PRESERVATION",
+        "TRACEABILITY",
+        "HEAD_STABILITY",
+        "CROSS_PROJECT_STABILITY",
+        "SHIFTED_LLM_CALL_COST"
+      ],
+      "implementation_authorized": false,
+      "schema_change_authorized": false,
+      "rag_implementation_authorized": false,
+      "resolver_implementation_authorized": false,
+      "automatic_approval": false,
+      "source_refs": [
+        "projects/lab/evidence/EVD-LAB-AUD-002.json",
+        "projects/lab/reassessments/REA-LAB-003.json",
+        "projects/lab/authorizations/AUTHORIZATION_LAB_VERIFIED_CONTEXT_BOOTSTRAP_AUDIT_RECONCILIATION_063.json"
+      ]
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
   "project_id": "lab",
-  "updated_at": "2026-07-21",
-  "status": "TWO_ADJUDICATED_REASSESSMENTS",
+  "updated_at": "2026-07-23",
+  "status": "THREE_ADJUDICATED_REASSESSMENTS",
   "records": [
     {
       "id": "REA-LAB-001",
@@ -16,6 +16,13 @@
       "canonical_path": "projects/lab/reassessments/REA-LAB-002.json",
       "technical_determination": "MODIFIED",
       "evidence_ref": "EVD-LAB-AUD-001"
+    },
+    {
+      "id": "REA-LAB-003",
+      "status": "ADJUDICATED",
+      "canonical_path": "projects/lab/reassessments/REA-LAB-003.json",
+      "technical_determination": "MODIFIED",
+      "evidence_ref": "EVD-LAB-AUD-002"
     }
   ]
 }
