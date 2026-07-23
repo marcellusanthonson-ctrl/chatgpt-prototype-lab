@@ -2,7 +2,7 @@
 
 La fuente estructurada es `CURRENT_STATE.json`.
 
-- Versión: 2.5.23.
+- Versión: 2.5.24.
 - Fase: `MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_HUMAN_BASELINE_APPROVED`.
 - HEAD propio: `VERIFY_LIVE_AT_USE`.
 - Autorización activa reutilizable: ninguna.
@@ -23,6 +23,10 @@ La autorización `060` registra la selección humana: Bootstrap Icons 1.13.1 com
 
 La autorización `061` registra la aprobación visual humana del footer. `BRAND_ASSOCIATED_ICONOGRAPHY_HUMAN_REVIEW` queda `APPROVED_FOR_CURRENT_FOUNDATION_CONTEXT`, el baseline humano de la fundación queda `APPROVED` y la estrategia asset-first concluye `SUCCESS`. No quedan pendientes visuales abiertos. La aprobación contextual no establece conformidad WCAG ni aprobación jurídica general de marca.
 
+## Entrada del ecosistema
+
+La autorización `062` actualiza `README.md` como `ECOSYSTEM_CONCEPTUAL_AND_OPERATIONAL_ENTRYPOINT`, alineado con `CANONICAL_MODEL_V2_AND_APPROVED_FOUNDATION_BASELINE`. El README orienta la lectura del ecosistema federado, la aplicación contextual de fundaciones y patrones, y la preparación gobernada de pilotos; no es fuente paralela de estado ni concede autorización. No selecciona un piloto y no produce efectos de runtime, producto o proyectos externos.
+
 ## Autocorrección
 
 Para artefactos de interfaz rige el ciclo `RENDER → INSPECT → MEASURE → INTERACT → STRESS → DIAGNOSE → CORRECT_OR_RECONSTRUCT → REVALIDATE`. Una generación exitosa no constituye PASS y queda prohibido `PASS_WITH_KNOWN_VISUAL_DEFECTS`.
@@ -33,4 +37,4 @@ No se modificaron Symphonie, el piloto o Capability. No se creó V03, no se ejec
 
 ## Siguiente transición
 
-No existe una siguiente transición visual pendiente para este baseline. Cualquier uso productivo o externo de la marca requiere aprobación jurídica separada.
+No existe una siguiente transición visual pendiente para este baseline. Cualquier uso productivo o externo de la marca requiere aprobación jurídica separada. Después del consumo de `062`, `NEXT_AUTHORIZED_ACTION = NONE_AFTER_CONSUMPTION`.

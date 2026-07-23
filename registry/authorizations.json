@@ -689,6 +689,28 @@
       "external_asset_acquisition_authorized": false,
       "brand_usage_approval_authorized": false,
       "wcag_claim_authorized": false
+    },
+    {
+      "id": "AUTHORIZATION_LAB_README_ECOSYSTEM_AND_PILOT_ENTRYPOINT_UPDATE_062",
+      "state_key": "readme_ecosystem_and_pilot_entrypoint_update_062",
+      "project_id": "lab",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "approved_by": "Jonathan Martínez",
+      "scope": "DOCUMENTARY_ROOT_README_ECOSYSTEM_MAP_AND_PILOT_ENTRYPOINT",
+      "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_README_ECOSYSTEM_AND_PILOT_ENTRYPOINT_UPDATE_062.json",
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "expected_parent_head": "dd435423a5808d35d644dfcb13af86c58b7ed5b3",
+      "updated_at": "2026-07-23",
+      "commit_authorized": true,
+      "push_authorized": true,
+      "readme_update_authorized": true,
+      "new_pilot_execution_authorized": false,
+      "product_changes_authorized": false,
+      "runtime_authorized": false,
+      "rag_authorized": false,
+      "external_project_changes_authorized": false,
+      "wcag_claim_authorized": false
     }
   ]
 }

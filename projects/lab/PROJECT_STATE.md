@@ -33,4 +33,6 @@ La corrección geométrica `058` fue detenida y quedó `SUPERSEDED_BEFORE_PUBLIC
 
 `DEC-LAB-020` y la autorización `061` registran la aprobación visual humana final de Bootstrap Icons 1.13.1 en el footer para el contexto actual de la fundación. El baseline humano queda `APPROVED`, la estrategia asset-first queda `SUCCESS` y `PEND-LAB-013` se cierra por aprobación humana. `PAT-LAB-008` consolida el pipeline reutilizable desde identificación de necesidad hasta aprobación humana contextual. El resultado conserva `FOCUSED_BROWSER_VALIDATION=NOT_EXECUTED_AUTOMATION_SURFACE_UNAVAILABLE`, `STATIC_VALIDATION=PASS`, `WCAG_CONFORMANCE=NOT_ESTABLISHED` y `BRAND_USAGE_APPROVAL=PENDING_HUMAN_BRAND_USAGE_APPROVAL`.
 
+La autorización `062` convierte el `README.md` raíz en el mapa conceptual y operativo del ecosistema. Explica las capas federadas, el modelo de decisión contextual, el baseline adaptable, el patrón asset-first, el orden canónico de lectura y el flujo no autorizante para preparar pilotos. El README no replica estado canónico, no fija el HEAD vigente, no selecciona un piloto y no concede autoridad a modelos, skills o capacidades.
+
 No existe autorización activa reutilizable. El HEAD propio se verifica en vivo y nunca se almacena como estado canónico vigente.

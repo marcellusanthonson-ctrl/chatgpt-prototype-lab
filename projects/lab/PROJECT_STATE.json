@@ -14,6 +14,7 @@
   "content_completeness": "STRUCTURED_V2_WITH_SELECTIVE_CRITERION_LAYER_MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_AND_SELF_CORRECTION",
   "source_refs": [
     "projects/lab/PROJECT_STATE.md",
+    "README.md",
     "registry/projects.json",
     "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/MANIFEST.json",
     "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/EVIDENCE_UI_UX_REFERENTS_RESEARCH_REVIEW.md",
@@ -45,6 +46,7 @@
     "projects/lab/evidence/EVD-LAB-ICON-003.json",
     "decisions/DEC-LAB-020.json",
     "projects/lab/authorizations/AUTHORIZATION_LAB_ASSET_FIRST_ICON_STRATEGY_HUMAN_APPROVAL_CLOSURE_061.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_README_ECOSYSTEM_AND_PILOT_ENTRYPOINT_UPDATE_062.json",
     "projects/lab/evidence/EVD-LAB-ICON-004.json",
     "patterns/PAT-LAB-008.json",
     "projects/lab/evidence/EVD-LAB-VIS-002.json",
@@ -80,9 +82,19 @@
     },
     "authorization_registry": {
       "status": "RECONCILED_WITH_EXTERNAL_AUDIT_AUTHORIZATION_046",
-      "registered_consumed_transitions": 31,
-      "latest": "AUTHORIZATION_LAB_ASSET_FIRST_ICON_STRATEGY_HUMAN_APPROVAL_CLOSURE_061",
+      "registered_consumed_transitions": 32,
+      "latest": "AUTHORIZATION_LAB_README_ECOSYSTEM_AND_PILOT_ENTRYPOINT_UPDATE_062",
       "correspondence_policy": "STATE_KEY_REQUIRED"
+    },
+    "readme_entrypoint": {
+      "role": "ECOSYSTEM_CONCEPTUAL_AND_OPERATIONAL_ENTRYPOINT",
+      "alignment": "CANONICAL_MODEL_V2_AND_APPROVED_FOUNDATION_BASELINE",
+      "authority_effect": "NONE_AFTER_CONSUMPTION",
+      "new_pilot_authorized": false,
+      "runtime_effect": "NONE",
+      "product_effect": "NONE",
+      "external_project_effect": "NONE",
+      "authorization": "AUTHORIZATION_LAB_README_ECOSYSTEM_AND_PILOT_ENTRYPOINT_UPDATE_062"
     },
     "design_knowledge": {
       "package_id": "DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001",
@@ -261,6 +273,6 @@
     }
   },
   "head_policy": "VERIFY_LIVE_AT_USE",
-  "verified_parent_head": "53417d5b98f83f1c6b7ef1e00da845fa8b1198d6",
+  "verified_parent_head": "dd435423a5808d35d644dfcb13af86c58b7ed5b3",
   "self_head_is_canonical_state": false
 }

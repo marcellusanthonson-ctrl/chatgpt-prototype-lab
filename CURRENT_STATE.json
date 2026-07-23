@@ -1,7 +1,7 @@
 {
   "schema_version": "2.5.0",
   "document_id": "lab.current-state",
-  "version": "2.5.23",
+  "version": "2.5.24",
   "status": "GOVERNANCE_V2_CANONICAL_BASELINE",
   "updated_at": "2026-07-23",
   "active_project": "lab",
@@ -44,7 +44,8 @@
     "external_audit_evidence": "projects/lab/evidence/EVD-LAB-AUD-001.json",
     "external_audit_reassessment": "projects/lab/reassessments/REA-LAB-002.json",
     "chatgpt_criterion_layer": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MANIFEST.json",
-    "minimum_impeccable_visual_foundation": "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MANIFEST.json"
+    "minimum_impeccable_visual_foundation": "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MANIFEST.json",
+    "ecosystem_entrypoint": "README.md"
   },
   "projects": {
     "lab": {
@@ -154,7 +155,8 @@
     "trailing_whitespace_unblock_057": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "asset_first_icon_candidate_library_059": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "whatsapp_selected_asset_footer_integration_060": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "asset_first_icon_strategy_human_approval_closure_061": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+    "asset_first_icon_strategy_human_approval_closure_061": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "readme_ecosystem_and_pilot_entrypoint_update_062": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
   },
   "verified_external_heads": {
     "symphonie": "b492852c0d76ff7cd44ca266dc8950c94638d568",
@@ -177,7 +179,7 @@
   "completed_research_transitions": [
     "PHASE_4_ACCESSIBILITY_NORMATIVE_AND_ASSISTIVE_TECHNOLOGY_RESEARCH"
   ],
-  "next_authorized_action": "NONE_UNTIL_NEW_EXPLICIT_APPROVAL",
+  "next_authorized_action": "NONE_AFTER_CONSUMPTION",
   "next_recommended_transition": "NONE_HUMAN_BASELINE_APPROVED",
   "continuity_read_order": [
     "LAB_CONTRACT.md",
