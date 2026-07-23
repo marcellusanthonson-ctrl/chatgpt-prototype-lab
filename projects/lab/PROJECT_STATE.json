@@ -11,7 +11,7 @@
     "autonomous_model_authority": false
   },
   "summary": "Gobierno, autoridad, continuidad, auditoría y biblioteca documental gobernada entre proyectos.",
-  "content_completeness": "STRUCTURED_V2_WITH_SELECTIVE_CRITERION_LAYER_MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_AND_SELF_CORRECTION",
+  "content_completeness": "STRUCTURED_V2_WITH_SELECTIVE_CRITERION_LAYER_MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_SELF_CORRECTION_AND_BLINDED_CONTEXT_SELECTION_EXPERIMENT",
   "source_refs": [
     "projects/lab/PROJECT_STATE.md",
     "README.md",
@@ -56,7 +56,11 @@
     "projects/lab/evidence/EVD-LAB-MIVF-001.json",
     "projects/lab/evidence/EVD-LAB-ICON-001.json",
     "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/FUNCTIONAL_ICONOGRAPHY_CONTRACT.json",
-    "projects/lab/integrations/INT-LAB-002.json"
+    "projects/lab/integrations/INT-LAB-002.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_BLINDED_CONTEXT_SELECTION_DISCRIMINATING_EXPERIMENT_065.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_BLINDED_CONTEXT_SELECTION_EXPERIMENT_065_DOCUMENTARY_RECONCILIATION_066.json",
+    "projects/lab/evidence/EVD-LAB-EXP-001.json",
+    "projects/lab/experiments/EXP-LAB-001.json"
   ],
   "governance_paths": {
     "roadmap": "projects/lab/ROADMAP.json",
@@ -65,6 +69,7 @@
     "ideas": "projects/lab/ideas/index.json",
     "integrations": "projects/lab/integrations/index.json",
     "reassessments": "projects/lab/reassessments/index.json",
+    "experiments": "projects/lab/experiments/index.json",
     "chatgpt_project_sources": "project-sources/chatgpt/START_HERE.md"
   },
   "metadata": {
@@ -84,9 +89,9 @@
       "attached_files_role": "BOOTSTRAP_POINTER_ONLY"
     },
     "authorization_registry": {
-      "status": "RECONCILED_WITH_VERIFIED_CONTEXT_BOOTSTRAP_AUDIT_AUTHORIZATION_063",
-      "registered_consumed_transitions": 33,
-      "latest": "AUTHORIZATION_LAB_VERIFIED_CONTEXT_BOOTSTRAP_AUDIT_RECONCILIATION_063",
+      "status": "RECONCILED_THROUGH_BLINDED_CONTEXT_SELECTION_EXPERIMENT_065_DOCUMENTARY_RECONCILIATION_066",
+      "registered_consumed_transitions": 35,
+      "latest": "AUTHORIZATION_LAB_BLINDED_CONTEXT_SELECTION_EXPERIMENT_065_DOCUMENTARY_RECONCILIATION_066",
       "correspondence_policy": "STATE_KEY_REQUIRED"
     },
     "readme_entrypoint": {
@@ -210,6 +215,28 @@
       "runtime_effect": "NONE",
       "product_effect": "NONE"
     },
+    "blinded_context_selection_experiment_065": {
+      "status": "COMPLETED_REGISTERED_ALL_FIVE_ALTERNATIVES_NON_VIABLE",
+      "authorization": "AUTHORIZATION_LAB_BLINDED_CONTEXT_SELECTION_DISCRIMINATING_EXPERIMENT_065",
+      "reconciliation_authorization": "AUTHORIZATION_LAB_BLINDED_CONTEXT_SELECTION_EXPERIMENT_065_DOCUMENTARY_RECONCILIATION_066",
+      "experiment": "EXP-LAB-001",
+      "evidence": "EVD-LAB-EXP-001",
+      "global_result": "EXPERIMENT_DISCRIMINATES",
+      "fixture_count": 22,
+      "synthetic_document_count": 88,
+      "alternative_count": 5,
+      "total_run_count": 20,
+      "harness_blinding_validation": "PASS",
+      "all_alternatives": "NON_VIABLE",
+      "tokenizer_result": "TOKENIZER_NOT_EXECUTED",
+      "predecessor_064": "EXPERIMENT_INVALID_DUE_TO_ORACLE_LEAKAGE",
+      "implementation_selected": false,
+      "implementation_approved": false,
+      "runtime_effect": "NONE",
+      "product_effect": "NONE",
+      "architecture_effect": "NONE",
+      "next_recommended_transition": "AUTHORIZE_CLAUDE_READ_ONLY_ROOT_CAUSE_ANALYSIS_OF_EXPERIMENT_065"
+    },
     "chatgpt_criterion_layer": {
       "id": "CHATGPT-CRITERION-LAYER-001",
       "version": "1.1.0",
@@ -295,6 +322,6 @@
     }
   },
   "head_policy": "VERIFY_LIVE_AT_USE",
-  "verified_parent_head": "b951aee9ec2f61dfa1bad2df2a18facb2c5471f8",
+  "verified_parent_head": "ba99e61bcbc1dc094c30fb2932909ffa321c84ce",
   "self_head_is_canonical_state": false
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-07-16",
+  "updated_at": "2026-07-23",
   "records": [
     {
       "id": "SYM-P0B-DRY-RUN-001",
@@ -36,6 +36,15 @@
       "status": "PASS_WITH_FINDINGS",
       "canonical_path": "projects/symphonie/experiments/index.json",
       "updated_at": "2026-07-16"
+    },
+    {
+      "id": "EXP-LAB-001",
+      "project_id": "lab",
+      "status": "EXPERIMENT_DISCRIMINATES_ALL_FIVE_ALTERNATIVES_NON_VIABLE",
+      "canonical_path": "projects/lab/experiments/EXP-LAB-001.json",
+      "authorization_id": "AUTHORIZATION_LAB_BLINDED_CONTEXT_SELECTION_DISCRIMINATING_EXPERIMENT_065",
+      "evidence_id": "EVD-LAB-EXP-001",
+      "updated_at": "2026-07-23"
     }
   ]
 }

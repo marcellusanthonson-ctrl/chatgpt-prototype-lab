@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0.0",
+  "experiment_id": "EXP-LAB-001",
+  "title": "Blinded context-selection discriminating experiment 065",
+  "project_id": "lab",
+  "status": "EXPERIMENT_DISCRIMINATES",
+  "executed_at": "2026-07-23",
+  "authorization_id": "AUTHORIZATION_LAB_BLINDED_CONTEXT_SELECTION_DISCRIMINATING_EXPERIMENT_065",
+  "reconciliation_authorization_id": "AUTHORIZATION_LAB_BLINDED_CONTEXT_SELECTION_EXPERIMENT_065_DOCUMENTARY_RECONCILIATION_066",
+  "evidence_id": "EVD-LAB-EXP-001",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "pinned_commit": "ba99e61bcbc1dc094c30fb2932909ffa321c84ce",
+  "execution_status": "COMPLETED",
+  "execution_count": "ONE",
+  "operational_authorization_status": "CONSUMED_ON_EXPERIMENT_REPORT_DELIVERY",
+  "research_question": "Compare five context-selection alternatives under a physically and logically separated selector and evaluation oracle.",
+  "central_condition": "SELECTOR_INPUT != EVALUATION_ORACLE",
+  "architecture": {
+    "fixture_builder": "Created synthetic tasks, documents, private evaluation material, hashes and opaque identifiers without executing alternatives.",
+    "selector_runner": "Read only public tasks, synthetic content and observable metadata through a logged allowlist.",
+    "oracle_evaluator": "Loaded fixed private evaluation material only after all selection runs completed.",
+    "separation_validation": "PASS"
+  },
+  "corpus": {
+    "fixture_count": 22,
+    "synthetic_document_count": 88,
+    "alternative_count": 5,
+    "repetitions_per_alternative": 3,
+    "permutations_per_alternative": 1,
+    "total_run_count": 20,
+    "synthetic_only": true
+  },
+  "validations": {
+    "harness_blinding_validation": "PASS",
+    "oracle_canary_test": "PASS",
+    "gold_field_scan": "PASS",
+    "oracle_hash_stability": "PASS",
+    "runner_read_log_validation": "PASS",
+    "input_equality_validation": "PASS",
+    "repetition_determinism": "PASS_ALL_FIVE_ALTERNATIVES",
+    "order_stability": "PASS_ALL_FIVE_ALTERNATIVES",
+    "tokenizer_result": "TOKENIZER_NOT_EXECUTED",
+    "oracle_sha256_initial": "f0630d9b59df167056f88b27743068f5ef557a9ecd70d74716feda057d92dc4e",
+    "oracle_sha256_final": "f0630d9b59df167056f88b27743068f5ef557a9ecd70d74716feda057d92dc4e"
+  },
+  "alternatives": [
+    {
+      "id": "NO_CHANGE",
+      "f1": 0.394,
+      "critical_failures": 31,
+      "status": "NON_VIABLE"
+    },
+    {
+      "id": "SCHEMA_HYGIENE_SIMULATION",
+      "f1": 0.364,
+      "critical_failures": 9,
+      "status": "NON_VIABLE"
+    },
+    {
+      "id": "CONTINUITY_PACKAGE_IMPROVEMENT_SIMULATION",
+      "f1": 0.159,
+      "critical_failures": 4,
+      "status": "NON_VIABLE"
+    },
+    {
+      "id": "DETERMINISTIC_REFERENCE_INDEX_SIMULATION",
+      "f1": 0.358,
+      "critical_failures": 4,
+      "status": "NON_VIABLE"
+    },
+    {
+      "id": "PARTIAL_RAG_FEDERATION_CONTRACT_STAGES_1_TO_4_AND_7_TO_8_SIMULATION",
+      "f1": 0.194,
+      "critical_failures": 10,
+      "status": "NON_VIABLE"
+    }
+  ],
+  "interpretation": [
+    "EXPERIMENT_DISCRIMINATES does not mean that an alternative is viable.",
+    "All five tested alternatives are NON_VIABLE.",
+    "The experiment discriminated distinct failure profiles.",
+    "A higher F1 does not compensate for authority, ownership, safety or traceability failures.",
+    "Fewer critical failures do not constitute selection.",
+    "The need to improve context selection remains open.",
+    "The general proposal is not declared impossible by this experiment."
+  ],
+  "predecessor_064": {
+    "status": "EXPERIMENT_INVALID_DUE_TO_ORACLE_LEAKAGE",
+    "valid_experimental_evidence": false,
+    "harness_reused": false,
+    "metrics_reused": false,
+    "conclusions_reused_as_evidence": false
+  },
+  "limitations": [
+    "The corpus is synthetic and bounded.",
+    "The alternatives are deterministic simulations and not production implementations.",
+    "No local tokenizer was available without installation.",
+    "No embeddings, vector store, external model or real data was used.",
+    "The experiment does not select architecture or authorize implementation.",
+    "Root causes have not yet received an independent external read-only analysis."
+  ],
+  "effects": {
+    "canonical_mutation_during_065": "NONE",
+    "branch_created_during_065": false,
+    "commit_created_during_065": false,
+    "push_executed_during_065": false,
+    "implementation_selected": false,
+    "implementation_approved": false,
+    "runtime_effect": "NONE",
+    "product_effect": "NONE",
+    "architecture_effect": "NONE"
+  },
+  "next_authorized_action": "NONE",
+  "next_recommended_transition": "AUTHORIZE_CLAUDE_READ_ONLY_ROOT_CAUSE_ANALYSIS_OF_EXPERIMENT_065",
+  "source_refs": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_BLINDED_CONTEXT_SELECTION_DISCRIMINATING_EXPERIMENT_065.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_BLINDED_CONTEXT_SELECTION_EXPERIMENT_065_DOCUMENTARY_RECONCILIATION_066.json",
+    "projects/lab/evidence/EVD-LAB-EXP-001.json"
+  ]
+}

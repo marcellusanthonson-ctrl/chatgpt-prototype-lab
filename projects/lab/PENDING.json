@@ -289,11 +289,14 @@
     },
     {
       "id": "PEND-LAB-014",
-      "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+      "status": "COMPLETED_EXPERIMENT_DISCRIMINATES_ALL_ALTERNATIVES_NON_VIABLE",
       "type": "READ_ONLY_DISCRIMINATING_CONTEXT_SELECTION_EXPERIMENT",
       "subject": "Compare context-selection alternatives without canonical mutation or implementation selection",
       "priority": "MEDIUM",
-      "single_recommended_transition": "AUTHORIZE_READ_ONLY_DISCRIMINATING_EXPERIMENT_FOR_CONTEXT_SELECTION_ALTERNATIVES",
+      "completed_by": "EXP-LAB-001",
+      "authorization_id": "AUTHORIZATION_LAB_BLINDED_CONTEXT_SELECTION_DISCRIMINATING_EXPERIMENT_065",
+      "global_result": "EXPERIMENT_DISCRIMINATES",
+      "all_alternatives_status": "NON_VIABLE",
       "candidate_alternatives": [
         "NO_CHANGE",
         "SCHEMA_HYGIENE_SIMULATION",
@@ -324,7 +327,46 @@
       "source_refs": [
         "projects/lab/evidence/EVD-LAB-AUD-002.json",
         "projects/lab/reassessments/REA-LAB-003.json",
-        "projects/lab/authorizations/AUTHORIZATION_LAB_VERIFIED_CONTEXT_BOOTSTRAP_AUDIT_RECONCILIATION_063.json"
+        "projects/lab/authorizations/AUTHORIZATION_LAB_VERIFIED_CONTEXT_BOOTSTRAP_AUDIT_RECONCILIATION_063.json",
+        "projects/lab/authorizations/AUTHORIZATION_LAB_BLINDED_CONTEXT_SELECTION_DISCRIMINATING_EXPERIMENT_065.json",
+        "projects/lab/evidence/EVD-LAB-EXP-001.json",
+        "projects/lab/experiments/EXP-LAB-001.json"
+      ]
+    },
+    {
+      "id": "PEND-LAB-015",
+      "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+      "type": "EXTERNAL_READ_ONLY_ROOT_CAUSE_ANALYSIS",
+      "subject": "Independent root-cause analysis of experiment 065 failures and design constraints for a potential sixth context-selection alternative",
+      "priority": "MEDIUM",
+      "recommended_auditor": "Claude",
+      "audit_mode": "STRICT_READ_ONLY_INDEPENDENT_ANALYSIS",
+      "authorization_required": true,
+      "required_analysis": [
+        "PER_FIXTURE_ANALYSIS",
+        "PER_ALTERNATIVE_ANALYSIS",
+        "SHARED_CAUSES",
+        "ALTERNATIVE_SPECIFIC_CAUSES",
+        "DESIGN_FAILURES",
+        "RULE_FAILURES",
+        "METADATA_FAILURES",
+        "CORPUS_FAILURES",
+        "METRIC_FAILURES",
+        "FAVORABLE_AND_CONTRARY_EVIDENCE",
+        "EVIDENCE_SUFFICIENCY_FOR_A_POTENTIAL_SIXTH_ALTERNATIVE"
+      ],
+      "constraints": [
+        "ZERO_CANONICAL_MUTATION",
+        "ZERO_IMPLEMENTATION_SELECTION",
+        "ZERO_IMPLEMENTATION_APPROVAL",
+        "NO_SIXTH_ALTERNATIVE_DESIGN_WITHOUT_SEPARATE_AUTHORIZATION"
+      ],
+      "next_recommended_transition": "AUTHORIZE_CLAUDE_READ_ONLY_ROOT_CAUSE_ANALYSIS_OF_EXPERIMENT_065",
+      "current_authority": "NONE",
+      "source_refs": [
+        "projects/lab/experiments/EXP-LAB-001.json",
+        "projects/lab/evidence/EVD-LAB-EXP-001.json",
+        "projects/lab/authorizations/AUTHORIZATION_LAB_BLINDED_CONTEXT_SELECTION_EXPERIMENT_065_DOCUMENTARY_RECONCILIATION_066.json"
       ]
     }
   ]

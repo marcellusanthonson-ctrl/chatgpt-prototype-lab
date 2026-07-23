@@ -1,0 +1,272 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-EXP-001",
+  "title": "Verified blinded context-selection experiment 065 artifacts and results",
+  "project_id": "lab",
+  "evidence_class": "BLINDED_SYNTHETIC_CONTEXT_SELECTION_EXPERIMENT",
+  "status": "REGISTERED_VERIFIED_ALL_FIVE_ALTERNATIVES_NON_VIABLE",
+  "recorded_at": "2026-07-23",
+  "authorization_id": "AUTHORIZATION_LAB_BLINDED_CONTEXT_SELECTION_DISCRIMINATING_EXPERIMENT_065",
+  "reconciliation_authorization_id": "AUTHORIZATION_LAB_BLINDED_CONTEXT_SELECTION_EXPERIMENT_065_DOCUMENTARY_RECONCILIATION_066",
+  "experiment_id": "EXP-LAB-001",
+  "audited_parent_head": "ba99e61bcbc1dc094c30fb2932909ffa321c84ce",
+  "local_source": {
+    "workspace": "C:/Users/JF Martin/.codex/visualizations/2026/07/23/019f9081-eff7-7f50-86b2-e1dec2ba2181/AUTHORIZATION_065_20260723T154937",
+    "source_path_resolution": "The authorization text omitted the separator between the user directory and .codex; the unique existing workspace was resolved from the authorized visualization root and self-identifying manifest.",
+    "originals_modified": false,
+    "content_verification": "PASS"
+  },
+  "artifact_hashes": [
+    {
+      "path": "EXPERIMENT_REPORT.md",
+      "size_bytes": 4753,
+      "sha256": "e8ac7e1beba91e45d9687f64a913ecde2c803568d6c9e5de6ba0462660f70136"
+    },
+    {
+      "path": "EXPERIMENT_MANIFEST.json",
+      "size_bytes": 4253,
+      "sha256": "255709695a29e7f23c3fcdcddd558d6b5945112fc8d052340eb767bcfc1f4524"
+    },
+    {
+      "path": "ALTERNATIVE_COMPARISON.json",
+      "size_bytes": 17018,
+      "sha256": "121df4d4f018d007c4331dcf8f678ed6b4ecb703a68aff36fffc1ccd441d8e2f"
+    },
+    {
+      "path": "METRICS.json",
+      "size_bytes": 793493,
+      "sha256": "32110d6fe005ad374baaa5503e5904da5f1a80250fe8098afa19828030313f33"
+    },
+    {
+      "path": "LEAKAGE_VALIDATION.json",
+      "size_bytes": 847,
+      "sha256": "bc9bfa781660d7a135fed866b6de454f38b97417594f02eaa62f3e9e7f2a0b5f"
+    },
+    {
+      "path": "HASHES_INITIAL_FINAL.json",
+      "size_bytes": 1558,
+      "sha256": "78e5e0426e59cc6727f789fba51057d27a68569c9900e8418ef7f4e91abf58b1"
+    },
+    {
+      "path": "RUNNER_READ_LOGS.json",
+      "size_bytes": 52732,
+      "sha256": "4b270749609f85c97d87fa218d409e3cdbdb27075a862541ce46d0cf3a58dc5f"
+    },
+    {
+      "path": "public/DOCUMENT_CATALOG.json",
+      "size_bytes": 63074,
+      "sha256": "d4c2a6280a87b21faf3e9a8af4f9a58df1b923d02cc829afef82d6260fd72dd3"
+    },
+    {
+      "path": "public/TASKS.json",
+      "size_bytes": 6167,
+      "sha256": "5151fa4003a3d3a7611f8a369a3ce87711bdca33e82f4b117853fbf9f2e84c7e"
+    },
+    {
+      "path": "public/SELECTOR_DEFINITIONS.json",
+      "size_bytes": 3279,
+      "sha256": "157301830632b6f3a0f5a5d582345da658ae870542372c38bdec18145b1d3159"
+    },
+    {
+      "path": "private_oracles/ORACLES.json",
+      "size_bytes": 25943,
+      "sha256": "f0630d9b59df167056f88b27743068f5ef557a9ecd70d74716feda057d92dc4e"
+    }
+  ],
+  "run_set": {
+    "file_count": 20,
+    "ordered_path_and_hash_manifest_sha256": "ecbea5d68a56c8fdf82188571480d542b841a8940a4578ef0182cd6a9bbb0253",
+    "files": [
+      {
+        "path": "runs/CONTINUITY_PACKAGE_IMPROVEMENT_SIMULATION/run-01.json",
+        "size_bytes": 110909,
+        "sha256": "dbdf080eb1101d38691011f289cf909a7794e59b162f7bbd9a2f837dd030e7f2"
+      },
+      {
+        "path": "runs/CONTINUITY_PACKAGE_IMPROVEMENT_SIMULATION/run-02.json",
+        "size_bytes": 110909,
+        "sha256": "928b30e92ca4621f4f5e0b2666f32aea4c6b810c77eecefc5d66d97c4ec6ddc9"
+      },
+      {
+        "path": "runs/CONTINUITY_PACKAGE_IMPROVEMENT_SIMULATION/run-03.json",
+        "size_bytes": 110909,
+        "sha256": "4f93720899fc85b9ef7a69038d5b1755f492b10ed4dad6bd750a12a43f0408fd"
+      },
+      {
+        "path": "runs/CONTINUITY_PACKAGE_IMPROVEMENT_SIMULATION/run-permuted.json",
+        "size_bytes": 110931,
+        "sha256": "f1547dc08ef0facaf9b10e1c2e831348e9098673329f4a5e46c19049cfe5c781"
+      },
+      {
+        "path": "runs/DETERMINISTIC_REFERENCE_INDEX_SIMULATION/run-01.json",
+        "size_bytes": 110546,
+        "sha256": "2d1f7f935b88d6d0abb581ed16669db0dee42d854263f63fd736bcb67e6c8ace"
+      },
+      {
+        "path": "runs/DETERMINISTIC_REFERENCE_INDEX_SIMULATION/run-02.json",
+        "size_bytes": 110546,
+        "sha256": "979d4a59e08cf4a8258a965405f4a0a06fa8a7b41295b60332e2902724e916ac"
+      },
+      {
+        "path": "runs/DETERMINISTIC_REFERENCE_INDEX_SIMULATION/run-03.json",
+        "size_bytes": 110546,
+        "sha256": "c09baa701006c28ccba619ef0b61c82c3a90c0c32f684ba8adf5206e7e67f810"
+      },
+      {
+        "path": "runs/DETERMINISTIC_REFERENCE_INDEX_SIMULATION/run-permuted.json",
+        "size_bytes": 110568,
+        "sha256": "060c6c68e738bb3fc3ae2c294ec4a38d9e6607ab191d8853d50a9d45bd909122"
+      },
+      {
+        "path": "runs/NO_CHANGE/run-01.json",
+        "size_bytes": 34595,
+        "sha256": "a373e3af3742fd41623d45fe79afc7749db10fdefab9c8ecad5d2e4502553917"
+      },
+      {
+        "path": "runs/NO_CHANGE/run-02.json",
+        "size_bytes": 34595,
+        "sha256": "16e01beb0c50e3d59280031db12eb330f1f19fa807f9fcacd1e8d631fadf5190"
+      },
+      {
+        "path": "runs/NO_CHANGE/run-03.json",
+        "size_bytes": 34595,
+        "sha256": "6a1faa2fba953fdf53dce84e988bdec839bac221afc6261a8d8b35901da32298"
+      },
+      {
+        "path": "runs/NO_CHANGE/run-permuted.json",
+        "size_bytes": 34617,
+        "sha256": "45eec4f33d7acf3dae6e15485cdef07a39385a08b794dcb63d2926ecf140f18d"
+      },
+      {
+        "path": "runs/PARTIAL_RAG_FEDERATION_CONTRACT_STAGES_1_TO_4_AND_7_TO_8_SIMULATION/run-01.json",
+        "size_bytes": 141804,
+        "sha256": "61030704ce718f3a46b1bb612a290b1a87b894bce0b754d24e2c75f41b5729e3"
+      },
+      {
+        "path": "runs/PARTIAL_RAG_FEDERATION_CONTRACT_STAGES_1_TO_4_AND_7_TO_8_SIMULATION/run-02.json",
+        "size_bytes": 141804,
+        "sha256": "3ff303333bc0700477b1b532323df99e533674cb666a229771f229f22312423a"
+      },
+      {
+        "path": "runs/PARTIAL_RAG_FEDERATION_CONTRACT_STAGES_1_TO_4_AND_7_TO_8_SIMULATION/run-03.json",
+        "size_bytes": 141804,
+        "sha256": "22d76731651d541639c52a71fe9cdbf29b3146a65bfd18f3d15b96dacb31d128"
+      },
+      {
+        "path": "runs/PARTIAL_RAG_FEDERATION_CONTRACT_STAGES_1_TO_4_AND_7_TO_8_SIMULATION/run-permuted.json",
+        "size_bytes": 141826,
+        "sha256": "b834aadf64a645b11490d8d84fb99faa465b697827ed99f9ec8e558606704486"
+      },
+      {
+        "path": "runs/SCHEMA_HYGIENE_SIMULATION/run-01.json",
+        "size_bytes": 109092,
+        "sha256": "c67d81d18285edf1aa2a722705e25045596ac52e6e226762daf9393bb7d54138"
+      },
+      {
+        "path": "runs/SCHEMA_HYGIENE_SIMULATION/run-02.json",
+        "size_bytes": 109092,
+        "sha256": "661afc385b73a05ab508e91d27d8a09317d1f9abcb2f55500b5131449fb2036c"
+      },
+      {
+        "path": "runs/SCHEMA_HYGIENE_SIMULATION/run-03.json",
+        "size_bytes": 109092,
+        "sha256": "d3141875dab36c41529271e8e73063d2473028e7661aa26dfc8dcdbdcbcb81c8"
+      },
+      {
+        "path": "runs/SCHEMA_HYGIENE_SIMULATION/run-permuted.json",
+        "size_bytes": 109114,
+        "sha256": "bdf8f1489213db33244c1c4703e138dfcc821d5bd9d93264aef99156aa34d200"
+      }
+    ]
+  },
+  "verified_facts": {
+    "authorization_065_approved_by": "Jonathan Martínez",
+    "execution_status": "COMPLETED",
+    "execution_count": "ONE",
+    "operational_authorization_status": "CONSUMED_ON_EXPERIMENT_REPORT_DELIVERY",
+    "global_experimental_result": "EXPERIMENT_DISCRIMINATES",
+    "harness_blinding_validation": "PASS",
+    "oracle_canary_test": "PASS",
+    "gold_field_scan": "PASS",
+    "oracle_hash_stability": "PASS",
+    "runner_read_log_validation": "PASS",
+    "input_equality_validation": "PASS",
+    "repetition_determinism": "PASS_ALL_FIVE_ALTERNATIVES",
+    "order_stability": "PASS_ALL_FIVE_ALTERNATIVES",
+    "tokenizer_result": "TOKENIZER_NOT_EXECUTED",
+    "fixture_count": 22,
+    "synthetic_document_count": 88,
+    "alternative_count": 5,
+    "total_run_count": 20,
+    "canonical_mutation_during_065": "NONE",
+    "branch_created_during_065": false,
+    "commit_created_during_065": false,
+    "push_executed_during_065": false,
+    "implementation_selected": false,
+    "implementation_approved": false,
+    "oracle_sha256_initial": "f0630d9b59df167056f88b27743068f5ef557a9ecd70d74716feda057d92dc4e",
+    "oracle_sha256_final": "f0630d9b59df167056f88b27743068f5ef557a9ecd70d74716feda057d92dc4e"
+  },
+  "alternative_results": [
+    {
+      "alternative": "NO_CHANGE",
+      "f1": 0.394,
+      "critical_failures": 31,
+      "experimental_status": "NON_VIABLE"
+    },
+    {
+      "alternative": "SCHEMA_HYGIENE_SIMULATION",
+      "f1": 0.364,
+      "critical_failures": 9,
+      "experimental_status": "NON_VIABLE"
+    },
+    {
+      "alternative": "CONTINUITY_PACKAGE_IMPROVEMENT_SIMULATION",
+      "f1": 0.159,
+      "critical_failures": 4,
+      "experimental_status": "NON_VIABLE"
+    },
+    {
+      "alternative": "DETERMINISTIC_REFERENCE_INDEX_SIMULATION",
+      "f1": 0.358,
+      "critical_failures": 4,
+      "experimental_status": "NON_VIABLE"
+    },
+    {
+      "alternative": "PARTIAL_RAG_FEDERATION_CONTRACT_STAGES_1_TO_4_AND_7_TO_8_SIMULATION",
+      "f1": 0.194,
+      "critical_failures": 10,
+      "experimental_status": "NON_VIABLE"
+    }
+  ],
+  "interpretation": {
+    "discrimination_meaning": "The experiment distinguished failure profiles; it did not establish viability.",
+    "f1_boundary": "A higher F1 cannot compensate for authority, ownership, safety or traceability failures.",
+    "critical_failure_boundary": "Fewer critical failures do not constitute selection.",
+    "open_problem": "The need to improve context selection remains open.",
+    "general_proposal_impossibility": "NOT_ESTABLISHED",
+    "implementation_selection": "NONE",
+    "implementation_approval": "NONE"
+  },
+  "predecessor_064": {
+    "status": "EXPERIMENT_INVALID_DUE_TO_ORACLE_LEAKAGE",
+    "valid_evidence": false,
+    "reused": false
+  },
+  "authority_boundary": {
+    "creates_decision": false,
+    "selects_architecture": false,
+    "creates_implementation_approval": false,
+    "creates_runtime_authority": false,
+    "creates_rag_authority": false,
+    "creates_schema_change_authority": false,
+    "evidence_only": true
+  },
+  "source_refs": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_BLINDED_CONTEXT_SELECTION_DISCRIMINATING_EXPERIMENT_065.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_BLINDED_CONTEXT_SELECTION_EXPERIMENT_065_DOCUMENTARY_RECONCILIATION_066.json",
+    "projects/lab/experiments/EXP-LAB-001.json",
+    "projects/lab/evidence/EVD-LAB-AUD-002.json",
+    "projects/lab/reassessments/REA-LAB-003.json"
+  ]
+}

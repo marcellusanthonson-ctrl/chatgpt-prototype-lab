@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_BLINDED_CONTEXT_SELECTION_DISCRIMINATING_EXPERIMENT_065",
+  "state_key": "blinded_context_selection_discriminating_experiment_065",
+  "project_id": "lab",
+  "initial_status": "GRANTED",
+  "status": "CONSUMED_ON_EXPERIMENT_REPORT_DELIVERY",
+  "approved_by": "Jonathan Martínez",
+  "granted_at": "2026-07-23",
+  "consumed_at": "2026-07-23",
+  "approval_statement": "Apruebo AUTHORIZATION_LAB_BLINDED_CONTEXT_SELECTION_DISCRIMINATING_EXPERIMENT_065.",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "ba99e61bcbc1dc094c30fb2932909ffa321c84ce",
+  "mode": "STRICT_READ_ONLY_BLINDED_DISCRIMINATING_EXPERIMENT",
+  "scope": "EPHEMERAL_BLINDED_COMPARISON_OF_CONTEXT_SELECTION_ALTERNATIVES_USING_SYNTHETIC_FIXTURES_AND_PINNED_COMMITS_WITHOUT_CANONICAL_MUTATION_OR_IMPLEMENTATION_SELECTION",
+  "execution_count": "ONE",
+  "central_condition": "SELECTOR_INPUT != EVALUATION_ORACLE",
+  "components": [
+    "FIXTURE_BUILDER",
+    "SELECTOR_RUNNER",
+    "ORACLE_EVALUATOR"
+  ],
+  "alternatives": [
+    "NO_CHANGE",
+    "SCHEMA_HYGIENE_SIMULATION",
+    "CONTINUITY_PACKAGE_IMPROVEMENT_SIMULATION",
+    "DETERMINISTIC_REFERENCE_INDEX_SIMULATION",
+    "PARTIAL_RAG_FEDERATION_CONTRACT_STAGES_1_TO_4_AND_7_TO_8_SIMULATION"
+  ],
+  "authorized_actions": [
+    "CREATE_EPHEMERAL_SYNTHETIC_FIXTURES_OUTSIDE_REPOSITORY",
+    "EXECUTE_FIVE_BLINDED_SELECTOR_SIMULATIONS",
+    "EXECUTE_THREE_REPETITIONS_AND_ONE_DETERMINISTIC_PERMUTATION_PER_ALTERNATIVE",
+    "FIX_PRIVATE_ORACLES_BY_SHA256",
+    "LOG_ALL_SELECTOR_READS",
+    "EVALUATE_RESULTS_ONLY_AFTER_ALL_SELECTIONS_COMPLETE",
+    "DELIVER_TEMPORARY_ARTIFACTS_AND_REPORT"
+  ],
+  "prohibitions": [
+    "CANONICAL_REPOSITORY_MUTATION",
+    "COMMIT_OR_PUSH",
+    "REUSE_EXPERIMENT_064_HARNESS_METRICS_OR_CONCLUSIONS_AS_VALID_EVIDENCE",
+    "SELECT_OR_APPROVE_IMPLEMENTATION",
+    "IMPLEMENT_RESOLVER_RAG_EMBEDDINGS_OR_VECTOR_STORE",
+    "USE_EXTERNAL_SERVICES_REAL_DATA_OR_CREDENTIALS",
+    "DESIGN_AUTOMATICALLY_A_NEW_ALTERNATIVE"
+  ],
+  "execution_result": {
+    "status": "COMPLETED",
+    "global_result": "EXPERIMENT_DISCRIMINATES",
+    "fixture_count": 22,
+    "synthetic_document_count": 88,
+    "alternative_count": 5,
+    "total_run_count": 20,
+    "harness_blinding_validation": "PASS",
+    "all_alternatives": "NON_VIABLE",
+    "tokenizer_result": "TOKENIZER_NOT_EXECUTED",
+    "canonical_mutation": "NONE",
+    "branch_created": false,
+    "commit_created": false,
+    "push_executed": false,
+    "implementation_selected": false,
+    "implementation_approved": false
+  },
+  "evidence_id": "EVD-LAB-EXP-001",
+  "experiment_id": "EXP-LAB-001",
+  "commit_authorized": false,
+  "push_authorized": false,
+  "runtime_authorized": false,
+  "integration_authorized": false,
+  "rag_implementation_authorized": false,
+  "resolver_implementation_authorized": false,
+  "schema_change_authorized": false,
+  "product_changes_authorized": false,
+  "reusable_permission_after_consumption": false,
+  "next_authorized_action": "NONE",
+  "source_refs": [
+    "projects/lab/evidence/EVD-LAB-EXP-001.json",
+    "projects/lab/experiments/EXP-LAB-001.json"
+  ]
+}
