@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-ICON-002",
+  "project_id": "lab",
+  "kind": "LOCAL_BRAND_ICON_ASSET_CANDIDATE_LIBRARY_VALIDATION",
+  "status": "STATIC_PASS_BROWSER_AUTOMATION_UNAVAILABLE_MANUAL_REVIEW_READY",
+  "recorded_at": "2026-07-22",
+  "authorization_id": "AUTHORIZATION_LAB_ASSET_FIRST_ICON_CANDIDATE_LIBRARY_059",
+  "decision_id": "DEC-LAB-018",
+  "parent_head": "b99e816e6d46e7490a133719b7740d8a1e327b1f",
+  "library": {
+    "id": "LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001",
+    "version": "1.0.0",
+    "path": "foundation-library/brand-icons/LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001/MANIFEST.json",
+    "review_html": "foundation-library/brand-icons/LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001/REVIEW.html",
+    "candidate_count": 3,
+    "human_icon_selection": false,
+    "integration_status": "NOT_INTEGRATED"
+  },
+  "candidates": [
+    {
+      "candidate_id": "WHATSAPP-CANDIDATE-BOOTSTRAP-ICONS-001",
+      "source": "twbs/icons@ce0e49dd063243118a115f17ad1fe1fe7576d552:icons/whatsapp.svg",
+      "source_sha256": "dc1de80c69f87f91ff4570e40baf8ff824a6fb81e617a9e054c26907cd608647",
+      "local_sha256": "86ed6b7d9090fd1616604a9546defbc301546794a09c7dfa90c317e3ed09727e",
+      "byte_variance": "FINAL_NEWLINE_ONLY",
+      "file_license": "MIT",
+      "trademark_status": "PENDING_HUMAN_BRAND_USAGE_APPROVAL"
+    },
+    {
+      "candidate_id": "WHATSAPP-CANDIDATE-FONT-AWESOME-001",
+      "source": "FortAwesome/Font-Awesome@337dd2045d5621ce0f8567c33c256f3dedeed55d:svgs/brands/whatsapp.svg",
+      "source_sha256": "b234db986bb32c156ecae0f8c826f9fa6fd653283c162e5ef1b5539f40b20e5a",
+      "local_sha256": "c7c1dec5083b14e2af944f8da7c2ded5a51f2e54df863c2225dfe57ea92f799f",
+      "byte_variance": "FINAL_NEWLINE_ONLY",
+      "file_license": "CC-BY-4.0",
+      "trademark_status": "PENDING_HUMAN_BRAND_USAGE_APPROVAL"
+    },
+    {
+      "candidate_id": "WHATSAPP-CANDIDATE-TABLER-ICONS-001",
+      "source": "tabler/tabler-icons@a32f193adf0d48972066722e9ac18bf40b0821a7:icons/outline/brand-whatsapp.svg",
+      "source_sha256": "9bbaad3b257a124accd91dda575ea1a3e32318faa925a280879cb1a2dcd417dc",
+      "local_sha256": "9bbaad3b257a124accd91dda575ea1a3e32318faa925a280879cb1a2dcd417dc",
+      "byte_variance": "NONE",
+      "file_license": "MIT",
+      "trademark_status": "PENDING_HUMAN_BRAND_USAGE_APPROVAL"
+    }
+  ],
+  "validation": {
+    "source_references_and_tags": "PASS",
+    "local_sha256": "PASS",
+    "source_to_local_byte_variance": "PASS_RECORDED_FINAL_NEWLINE_ONLY_FOR_TWO_SINGLE_LINE_SOURCES",
+    "svg_xml_parse": "PASS",
+    "svg_security_allowlist": "PASS",
+    "copyright_and_notice_registration": "PASS",
+    "trademark_boundary_registration": "PASS",
+    "review_sizes_16_18_20_22_24": "PASS",
+    "review_containers_36_40_44": "PASS",
+    "review_light_dark_normal_hover_focus": "PASS",
+    "review_social_set_comparison": "PASS",
+    "offline_local_resource_boundary": "PASS",
+    "minimum_impeccable_fixture_unchanged": "PASS",
+    "browser_review": "NOT_EXECUTED_AUTOMATION_SURFACE_UNAVAILABLE"
+  },
+  "browser_review_execution": {
+    "status": "NOT_EXECUTED_AUTOMATION_SURFACE_UNAVAILABLE",
+    "attempted_surface": "VERCEL_AGENT_BROWSER_CLI",
+    "finding": "AGENT_BROWSER_COMMAND_NOT_INSTALLED_AND_NO_CONNECTED_BROWSER_SURFACE_CALLABLE",
+    "infrastructure_modified": false,
+    "dependencies_installed": false,
+    "browser_pass_claimed": false,
+    "manual_review_html_available": true
+  },
+  "human_baseline_review": {
+    "overall": "APPROVED_EXCEPT_BRAND_ASSOCIATED_ICONOGRAPHY",
+    "non_brand_baseline": "APPROVED",
+    "previous_baseline_tests": "PRESERVED_APPROVED_AND_CLOSED",
+    "brand_associated_iconography": "OPEN",
+    "only_visual_pending": "BRAND_ASSOCIATED_SOCIAL_ICON_ASSET_SELECTION_AND_INTEGRATION"
+  },
+  "authorization_058_closure": "SUPERSEDED_BEFORE_PUBLICATION_BY_ASSET_FIRST_ICON_STRATEGY",
+  "claim_boundaries": {
+    "human_icon_selection": false,
+    "brand_usage_approval": false,
+    "wcag_conformance": "NOT_ESTABLISHED",
+    "product_effect": "NONE",
+    "runtime_effect": "NONE",
+    "rag_effect": "NONE",
+    "integration_effect": "NONE"
+  }
+}

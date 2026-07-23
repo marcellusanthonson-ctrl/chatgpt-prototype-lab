@@ -25,4 +25,8 @@ La autorización `056` añadió `FUNCTIONAL_ICONOGRAPHY_CONTRACT.json`, clasific
 
 La autorización `057` desbloqueó la validación completa mediante la eliminación exacta de dos terminaciones de línea preexistentes en evidencia Markdown. Fue una corrección no semántica, sin efecto visual, probatorio o de contenido.
 
+La revisión humana posterior aprobó el baseline excepto la iconografía asociada a marcas. El baseline no marcario y todas sus pruebas anteriores quedan aprobados y cerrados; `BRAND_ASSOCIATED_SOCIAL_ICON_ASSET_SELECTION_AND_INTEGRATION` es el único pendiente visual del baseline.
+
+La corrección geométrica `058` fue detenida y quedó `SUPERSEDED_BEFORE_PUBLICATION_BY_ASSET_FIRST_ICON_STRATEGY`, sin publicación ni consumo. `DEC-LAB-018` y la autorización `059` adoptan `ASSET_FIRST_FOR_BRAND_ASSOCIATED_VISUALS`. La biblioteca `LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001` conserva tres candidatos WhatsApp de Bootstrap Icons, Font Awesome Free y Tabler Icons con referencias inmutables, hashes, notices, licencias de archivo y límites marcarios. `REVIEW.html` permite comparación offline; selección humana, aprobación marcaria e integración permanecen abiertas y separadas.
+
 No existe autorización activa reutilizable. El HEAD propio se verifica en vivo y nunca se almacena como estado canónico vigente.

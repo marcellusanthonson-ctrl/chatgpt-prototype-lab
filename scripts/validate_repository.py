@@ -561,6 +561,16 @@ def validate_foundation_library(registries: dict[str, Any]) -> None:
                         fail(f"{relative}: payment prohibition missing {term}")
         elif record.get("kind") in {"DESIGN_KNOWLEDGE_SOURCE_PACKAGE", "VISUAL_PREFERENCE_PROFILE", "HIGH_FIDELITY_VISUAL_PROTOCOL", "MINIMUM_VISUAL_FOUNDATION"}:
             require_file(relative)
+        elif record.get("kind") == "LOCAL_BRAND_ICON_ASSET_CANDIDATE_LIBRARY":
+            document = load_json(relative)
+            if document.get("library_id") != record_id:
+                fail(f"{relative}: local brand icon library identity mismatch")
+            if document.get("status") != "READY_FOR_HUMAN_REVIEW":
+                fail(f"{relative}: local brand icon library status differs")
+            if document.get("candidate_count") != 3:
+                fail(f"{relative}: local brand icon candidate count differs")
+            if document.get("integration_status") != "NOT_INTEGRATED":
+                fail(f"{relative}: local brand icon candidate was integrated")
         else:
             fail(f"foundation library: unsupported kind for {record_id}")
     if seen_designs != REQUIRED_DESIGN_ARCHETYPES:

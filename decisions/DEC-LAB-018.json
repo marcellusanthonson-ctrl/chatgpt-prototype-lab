@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "DEC-LAB-018",
+  "title": "Adoptar assets primero para visuales asociados a marcas",
+  "project": "lab",
+  "project_scope": ["lab"],
+  "status": "APPROVED",
+  "effective_date": "2026-07-22",
+  "updated_at": "2026-07-22",
+  "approval_state": "APPROVED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-22",
+  "approval_evidence": "Aprobación explícita de AUTHORIZATION_LAB_ASSET_FIRST_ICON_CANDIDATE_LIBRARY_059 por Jonathan Martínez el 2026-07-22.",
+  "decision": {
+    "principle": "ASSET_FIRST_FOR_BRAND_ASSOCIATED_VISUALS",
+    "rule": "Brand-associated visuals must begin with locally versioned, source-verifiable assets whose file licensing and trademark status are separately recorded.",
+    "geometry_policy": "NO_MODEL_REDRAW_REINTERPRETATION_NEUTRALIZATION_OR_APPROXIMATION_AS_FINAL_BRAND_GEOMETRY",
+    "selection_authority": "JONATHAN_MARTINEZ_EXPLICIT_HUMAN_DECISION",
+    "integration_gate": "SEPARATE_EXPLICIT_AUTHORIZATION_AFTER_HUMAN_SELECTION_AND_BRAND_USAGE_APPROVAL",
+    "copyright_trademark_separation": "REQUIRED"
+  },
+  "consequences": [
+    "CREATE_LOCAL_ICON_ASSET_CANDIDATE_LIBRARY",
+    "REQUIRE_IMMUTABLE_SOURCE_REFERENCE_AND_SHA256",
+    "REQUIRE_FILE_COPYRIGHT_AND_TRADEMARK_STATUS_SEPARATION",
+    "REQUIRE_OFFLINE_COMPARATIVE_REVIEW_BEFORE_SELECTION",
+    "PROHIBIT_AUTOMATIC_CANDIDATE_SELECTION_OR_INTEGRATION"
+  ],
+  "non_authorizations": [
+    "CANDIDATE_INTEGRATION",
+    "HUMAN_ICON_SELECTION",
+    "BRAND_USAGE_APPROVAL",
+    "PRODUCT_CHANGE",
+    "RUNTIME",
+    "RAG",
+    "DEPLOYMENT",
+    "WCAG_CONFORMANCE_CLAIM"
+  ],
+  "source_refs": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_ASSET_FIRST_ICON_CANDIDATE_LIBRARY_059.json",
+    "foundation-library/brand-icons/LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001/MANIFEST.json",
+    "projects/lab/evidence/EVD-LAB-ICON-002.json"
+  ],
+  "supersedes": [],
+  "superseded_by": null
+}

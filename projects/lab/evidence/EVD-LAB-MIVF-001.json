@@ -3,7 +3,7 @@
   "evidence_id": "EVD-LAB-MIVF-001",
   "project_id": "lab",
   "kind": "MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_VALIDATION",
-  "status": "TECHNICAL_FOUNDATION_PASS_AWAITING_HUMAN_BASELINE_REVIEW",
+  "status": "NON_BRAND_BASELINE_HUMAN_APPROVED_BRAND_ICONOGRAPHY_OPEN",
   "updated_at": "2026-07-22",
   "baseline": {
     "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
@@ -159,6 +159,8 @@
     "optical_geometry_and_pixel_alignment_passed": true,
     "absolute_sharpness_established_by_automation": false,
     "human_visual_approval_established": false,
+    "non_brand_baseline_human_approval_established": true,
+    "brand_associated_iconography_human_approval_established": false,
     "wcag_conformance_established": false,
     "product_readiness_established": false
   },
@@ -166,7 +168,7 @@
     "authorization_id": "AUTHORIZATION_LAB_FUNCTIONAL_ICONOGRAPHY_RECONCILIATION_056",
     "origin_parent_head": "ba0b040715d9f5e26fb8bd9e0a1d951a5b49fb53",
     "artifact_sha256": "13cab2709775e9c2923b85c2557988c57ce57987dac0fcb1aedc0e347660b405",
-    "status": "FUNCTIONAL_ICONOGRAPHY_CANDIDATE_CAPTURE_READY_FOR_HUMAN_REVIEW",
+    "status": "NON_BRAND_BASELINE_APPROVED_BRAND_ICONOGRAPHY_OPEN",
     "viewport_configurations": 206,
     "screenshot_configurations": 16,
     "width_range": "320_TO_1920_PX_MAXIMUM_STEP_16",
@@ -194,6 +196,17 @@
       "evidence_preserved": true
     }
   ],
+  "human_baseline_review_059": {
+    "overall": "APPROVED_EXCEPT_BRAND_ASSOCIATED_ICONOGRAPHY",
+    "non_brand_baseline": "APPROVED",
+    "previous_tests": "PRESERVED_APPROVED_AND_CLOSED",
+    "brand_associated_iconography": "OPEN",
+    "only_visual_pending": "BRAND_ASSOCIATED_SOCIAL_ICON_ASSET_SELECTION_AND_INTEGRATION",
+    "asset_first_library": "LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001",
+    "human_icon_selection": false,
+    "brand_usage_approval": false,
+    "wcag_conformance": "NOT_ESTABLISHED"
+  },
   "source_refs": [
     "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MANIFEST.json",
     "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/VALIDATION_MATRIX.json",
@@ -209,6 +222,8 @@
   "footer_correction_authorization_ref": "AUTHORIZATION_LAB_HUMAN_BASELINE_FOOTER_CORRECTION_055",
   "functional_iconography_authorization_ref": "AUTHORIZATION_LAB_FUNCTIONAL_ICONOGRAPHY_RECONCILIATION_056",
   "repository_validation_unblock_authorization_ref": "AUTHORIZATION_LAB_TRAILING_WHITESPACE_UNBLOCK_057",
+  "asset_first_icon_candidate_library_authorization_ref": "AUTHORIZATION_LAB_ASSET_FIRST_ICON_CANDIDATE_LIBRARY_059",
+  "authorization_058_operational_closure": "SUPERSEDED_BEFORE_PUBLICATION_BY_ASSET_FIRST_ICON_STRATEGY",
   "repository_validation_unblock_classification": "PREEXISTING_NON_SEMANTIC_VALIDATION_BLOCKER_CORRECTED",
   "authority_effect": "NONE"
 }

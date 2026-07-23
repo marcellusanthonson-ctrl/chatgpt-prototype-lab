@@ -262,6 +262,32 @@
         "DEPLOYMENT",
         "WCAG_CONFORMANCE_CLAIM"
       ]
+    },
+    {
+      "id": "DEC-LAB-018",
+      "title": "Adoptar assets primero para visuales asociados a marcas",
+      "project_scope": ["lab"],
+      "status": "APPROVED",
+      "approval_state": "APPROVED",
+      "canonical_path": "decisions/DEC-LAB-018.json",
+      "updated_at": "2026-07-22",
+      "approved_by": "Jonathan Martínez",
+      "consequences": [
+        "CREATE_LOCAL_ICON_ASSET_CANDIDATE_LIBRARY",
+        "REQUIRE_IMMUTABLE_SOURCE_REFERENCE_AND_SHA256",
+        "REQUIRE_FILE_COPYRIGHT_AND_TRADEMARK_STATUS_SEPARATION",
+        "PROHIBIT_AUTOMATIC_CANDIDATE_SELECTION_OR_INTEGRATION"
+      ],
+      "non_authorizations": [
+        "CANDIDATE_INTEGRATION",
+        "HUMAN_ICON_SELECTION",
+        "BRAND_USAGE_APPROVAL",
+        "PRODUCT_CHANGE",
+        "RUNTIME",
+        "RAG",
+        "DEPLOYMENT",
+        "WCAG_CONFORMANCE_CLAIM"
+      ]
     }
   ]
 }

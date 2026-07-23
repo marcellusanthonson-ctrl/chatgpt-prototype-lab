@@ -205,10 +205,14 @@
     },
     {
       "id": "PEND-LAB-012",
-      "status": "READY_FOR_HUMAN_REVIEW",
+      "status": "COMPLETED_PARTIAL_HUMAN_APPROVAL",
       "type": "HUMAN_BASELINE_REVIEW",
-      "subject": "Review the functional-iconography-reconciled candidate capture package for MINIMUM_IMPECCABLE_BASE_001.html",
+      "subject": "Non-brand baseline review for MINIMUM_IMPECCABLE_BASE_001.html",
       "priority": "HIGH",
+      "human_baseline_review": "APPROVED_EXCEPT_BRAND_ASSOCIATED_ICONOGRAPHY",
+      "non_brand_baseline": "APPROVED",
+      "previous_tests": "PRESERVED_APPROVED_AND_CLOSED",
+      "brand_associated_iconography": "OPEN",
       "artifact_sha256": "13cab2709775e9c2923b85c2557988c57ce57987dac0fcb1aedc0e347660b405",
       "geometry_configuration_count": 206,
       "capture_count": 16,
@@ -231,8 +235,41 @@
       "source_refs": [
         "projects/lab/evidence/EVD-LAB-MIVF-001.json",
         "projects/lab/evidence/EVD-LAB-ICON-001.json",
+        "projects/lab/evidence/EVD-LAB-ICON-002.json",
         "projects/lab/authorizations/AUTHORIZATION_LAB_FUNCTIONAL_ICONOGRAPHY_RECONCILIATION_056.json",
-        "projects/lab/authorizations/AUTHORIZATION_LAB_TRAILING_WHITESPACE_UNBLOCK_057.json"
+        "projects/lab/authorizations/AUTHORIZATION_LAB_TRAILING_WHITESPACE_UNBLOCK_057.json",
+        "projects/lab/authorizations/AUTHORIZATION_LAB_ASSET_FIRST_ICON_CANDIDATE_LIBRARY_059.json"
+      ]
+    },
+    {
+      "id": "PEND-LAB-013",
+      "status": "PENDING_HUMAN_SELECTION_AND_BRAND_USAGE_APPROVAL",
+      "type": "BRAND_ASSOCIATED_SOCIAL_ICON_ASSET_SELECTION_AND_INTEGRATION",
+      "subject": "BRAND_ASSOCIATED_SOCIAL_ICON_ASSET_SELECTION_AND_INTEGRATION",
+      "priority": "HIGH",
+      "only_open_baseline_visual_pending": true,
+      "library_id": "LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001",
+      "candidate_count": 3,
+      "human_icon_selection": false,
+      "brand_usage_approval": false,
+      "integration_status": "NOT_INTEGRATED",
+      "required_sequence": [
+        "HUMAN_COMPARE_REVIEW_HTML",
+        "HUMAN_SELECT_OR_REJECT_CANDIDATE",
+        "CONFIRM_BRAND_USAGE_APPROVAL",
+        "SEPARATE_EXPLICIT_INTEGRATION_AUTHORIZATION"
+      ],
+      "automatic_selection": false,
+      "product_effect": "NONE",
+      "runtime_effect": "NONE",
+      "rag_effect": "NONE",
+      "integration_effect": "NONE",
+      "wcag_conformance": "NOT_ESTABLISHED",
+      "source_refs": [
+        "foundation-library/brand-icons/LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001/MANIFEST.json",
+        "foundation-library/brand-icons/LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001/REVIEW.html",
+        "projects/lab/evidence/EVD-LAB-ICON-002.json",
+        "decisions/DEC-LAB-018.json"
       ]
     }
   ]

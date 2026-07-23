@@ -1,11 +1,11 @@
 {
   "schema_version": "2.5.0",
   "document_id": "lab.current-state",
-  "version": "2.5.20",
+  "version": "2.5.21",
   "status": "GOVERNANCE_V2_CANONICAL_BASELINE",
   "updated_at": "2026-07-22",
   "active_project": "lab",
-  "current_phase": "MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_TECHNICAL_PASS_AWAITING_HUMAN_BASELINE_REVIEW",
+  "current_phase": "ASSET_FIRST_BRAND_ICON_LIBRARY_READY_FOR_HUMAN_REVIEW",
   "methodology": {
     "version": "2.1",
     "path": "METHODOLOGY.md"
@@ -100,7 +100,8 @@
     "DEC-LAB-014",
     "DEC-LAB-015",
     "DEC-LAB-016",
-    "DEC-LAB-017"
+    "DEC-LAB-017",
+    "DEC-LAB-018"
   ],
   "open_errors": [],
   "validated_patterns": [
@@ -147,7 +148,8 @@
     "human_baseline_capture_package_054": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "human_baseline_footer_correction_055": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "functional_iconography_reconciliation_056": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "trailing_whitespace_unblock_057": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+    "trailing_whitespace_unblock_057": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "asset_first_icon_candidate_library_059": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
   },
   "verified_external_heads": {
     "symphonie": "b492852c0d76ff7cd44ca266dc8950c94638d568",
@@ -171,7 +173,7 @@
     "PHASE_4_ACCESSIBILITY_NORMATIVE_AND_ASSISTIVE_TECHNOLOGY_RESEARCH"
   ],
   "next_authorized_action": "NONE_UNTIL_NEW_EXPLICIT_APPROVAL",
-  "next_recommended_transition": "HUMAN_BASELINE_REVIEW_MINIMUM_IMPECCABLE_BASE_001",
+  "next_recommended_transition": "HUMAN_SELECT_BRAND_ASSOCIATED_SOCIAL_ICON_ASSET_WITH_SEPARATE_AUTHORIZATION",
   "continuity_read_order": [
     "LAB_CONTRACT.md",
     "METHODOLOGY.md",
@@ -214,12 +216,12 @@
     "status": "TECHNICAL_FOUNDATION_PASS_AWAITING_HUMAN_BASELINE_REVIEW",
     "static_validation": "PASS",
     "browser_validation": "OPTICAL_GEOMETRY_AND_PIXEL_ALIGNMENT_PASS_103_WIDTHS_DPR_1_AND_2_OFFLINE_INTERACTION_ZOOM_REFLOW",
-    "human_visual_approval": "NOT_ESTABLISHED",
+    "human_visual_approval": "APPROVED_EXCEPT_BRAND_ASSOCIATED_ICONOGRAPHY",
     "wcag_conformance": "NOT_ESTABLISHED",
     "candidate_baseline_capture": {
       "authorization_id": "AUTHORIZATION_LAB_FUNCTIONAL_ICONOGRAPHY_RECONCILIATION_056",
       "artifact_sha256": "13cab2709775e9c2923b85c2557988c57ce57987dac0fcb1aedc0e347660b405",
-      "status": "FUNCTIONAL_ICONOGRAPHY_CANDIDATE_CAPTURE_READY_FOR_HUMAN_REVIEW",
+      "status": "NON_BRAND_BASELINE_APPROVED_BRAND_ICONOGRAPHY_OPEN",
       "viewport_configurations": 206,
       "screenshot_configurations": 16,
       "device_scale_factors": [1, 2],
@@ -236,6 +238,23 @@
       "automation_classification": "OPTICAL_GEOMETRY_AND_PIXEL_ALIGNMENT_PASS",
       "absolute_sharpness": "NOT_ESTABLISHED_BY_AUTOMATION",
       "benchmark_approval": "NOT_ESTABLISHED"
+    },
+    "human_baseline_review": {
+      "overall": "APPROVED_EXCEPT_BRAND_ASSOCIATED_ICONOGRAPHY",
+      "non_brand_baseline": "APPROVED",
+      "previous_tests": "PRESERVED_APPROVED_AND_CLOSED",
+      "brand_associated_iconography": "OPEN",
+      "only_visual_pending": "BRAND_ASSOCIATED_SOCIAL_ICON_ASSET_SELECTION_AND_INTEGRATION"
+    },
+    "asset_first_brand_icon_library": {
+      "id": "LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001@1.0.0",
+      "status": "READY_FOR_HUMAN_REVIEW",
+      "candidates": 3,
+      "human_icon_selection": false,
+      "brand_usage_approval": false,
+      "integration_effect": "NONE",
+      "authorization_058": "SUPERSEDED_BEFORE_PUBLICATION_BY_ASSET_FIRST_ICON_STRATEGY",
+      "authorization_059": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
     },
     "authority_effect": "NONE_AFTER_CONSUMPTION"
   }
