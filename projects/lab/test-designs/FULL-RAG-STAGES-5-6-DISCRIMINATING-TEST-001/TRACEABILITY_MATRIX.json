@@ -1,0 +1,13 @@
+{
+  "schema_version":"1.0.0",
+  "requirements":[
+    {"requirement":"STAGE_5_RETRIEVAL","source":"architecture/rag/FEDERATION_CONTRACT.json#retrieval_pipeline.stage5","design":"STAGE_5_RETRIEVAL_CONTRACT.json"},
+    {"requirement":"STAGE_6_RANKING","source":"architecture/rag/FEDERATION_CONTRACT.json#retrieval_pipeline.stage6","design":"STAGE_6_RANKING_CONTRACT.json"},
+    {"requirement":"SECOND_CORPUS","source":"projects/lab/pending/PEND-LAB-016.json","design":"CORPUS_GENERATION_SPEC.json"},
+    {"requirement":"CONFLICT_AND_NEGATIVE_PRESERVATION","source":"projects/lab/evidence/EVD-LAB-AUD-003.json","design":"FIXTURE_TAXONOMY.json;VIABILITY_GATES.json"},
+    {"requirement":"PREREGISTERED_SCORING","source":"projects/lab/reconciliations/REC-LAB-EXP065-RCA002-001.json","design":"SCORING_RULES_DRAFT.json;METRIC_DEFINITIONS.json"},
+    {"requirement":"ZERO_LEAKAGE","source":"projects/lab/evidence/EVD-LAB-AUD-003.json","design":"LEAKAGE_PREVENTION_CONTRACT.json"},
+    {"requirement":"NO_EXECUTION_OR_IMPLEMENTATION","source":"AUTHORIZATION_LAB_FULL_RAG_STAGES_5_AND_6_DISCRIMINATING_TEST_DESIGN_070","design":"EXECUTION_BOUNDARY.json"}
+  ],
+  "unmapped_material_requirements":[]
+}
