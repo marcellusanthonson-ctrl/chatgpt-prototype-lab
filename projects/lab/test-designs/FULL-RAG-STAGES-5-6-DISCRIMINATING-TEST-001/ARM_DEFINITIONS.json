@@ -1,0 +1,14 @@
+{
+  "schema_version":"1.0.0",
+  "arms":[
+    {"id":"NO_GOVERNANCE_FILTERING_REFERENCE","role":"REFERENCE","description":"Term-overlap retrieval under the common budget without governance filtering; not the current LAB procedure."},
+    {"id":"DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION","role":"CANDIDATE_SIMULATION","description":"Deterministic retrieval with conflict and binding-negative objects, without semantic embeddings."},
+    {"id":"FULL_RAG_AUTHORITY_FIRST_SIMULATION","role":"CANDIDATE_SIMULATION","description":"Stages 1–8; semantic retrieval only after ACL, commit, owner, authority and status filters; authority-first ranking."},
+    {"id":"FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL","role":"NEGATIVE_CONTROL","description":"Relevance precedes authority to expose safety failures; never promotable."},
+    {"id":"ORACLE_INFORMED_POSITIVE_CONTROL","role":"EVALUATOR_ONLY_POSITIVE_CONTROL","description":"Selects oracle-required context to demonstrate the attainable ceiling; unavailable to selectors."}
+  ],
+  "common_budget_required":true,
+  "common_corpus_required":true,
+  "parameters_frozen_before_execution":true,
+  "execution_authorized":false
+}
