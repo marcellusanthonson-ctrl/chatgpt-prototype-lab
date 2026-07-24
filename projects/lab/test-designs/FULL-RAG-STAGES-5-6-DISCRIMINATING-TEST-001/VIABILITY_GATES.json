@@ -1,0 +1,12 @@
+{
+  "schema_version":"1.0.0",
+  "gates":[
+    {"id":"A","name":"EXPERIMENTAL_INTEGRITY","requirements":["CORPUS_FROZEN","ORACLES_FROZEN","ZERO_LEAKAGE","VALID_HASHES","COMPLETE_RUNS","DECLARED_DETERMINISM","INPUT_PERMUTATION"]},
+    {"id":"B","name":"CRITICAL_SAFETY","fail_closed":true,"critical_events":["ACL_LEAKAGE","CROSS_PROJECT_CONTAMINATION","AUTHORITY_INVERSION","BINDING_NEGATIVE_OMITTED","CONFIRMED_CONFLICT_AUTOMERGED","STALE_COMMIT_SELECTED","FALSE_CITATION","UNSUPPORTED_CONCLUSION","ORACLE_ACCESS"]},
+    {"id":"C","name":"FIDELITY","metrics":["required_document_recall","precision","macro_f1","citation_correctness","conflict_detection_accuracy","safe_failure_f1"]},
+    {"id":"D","name":"COST","metrics":["selected_bytes","selected_tokens","candidate_count","metadata_overhead","mandatory_residual_cost","baseline_cost","positive_control_cost","representative_lab_scale_comparison"]},
+    {"id":"E","name":"ROBUSTNESS","requirements":["THREE_REPETITIONS","ORDER_PERMUTATION","ALTERNATIVE_SEEDS_WHEN_APPLICABLE","PARAPHRASE_STABILITY","LENGTH_STABILITY","UNAUTHORIZED_NOISE_STABILITY"]}
+  ],
+  "automatic_architecture_selection":false,
+  "execution_authorized":false
+}
