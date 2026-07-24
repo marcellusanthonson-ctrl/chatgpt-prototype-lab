@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-AUD-003",
+  "project_id": "lab",
+  "evidence_type": "EXTERNAL_READ_ONLY_ROOT_CAUSE_AUDIT",
+  "status": "VERIFIED_EXTERNAL_EVIDENCE_REGISTERED",
+  "registered_at": "2026-07-24",
+  "source_audit_id": "AUDIT-CLAUDE-EXP065-RCA-002",
+  "supersedes_for_current_analysis": "AUDIT-CLAUDE-EXP065-RCA-001",
+  "source_authorization": "AUTHORIZATION_LAB_EXP065_ARTIFACT_DELIVERY_AND_CLAUDE_ROOT_CAUSE_AUDIT_COMPLETION_068",
+  "reconciliation_authorization": "AUTHORIZATION_LAB_EXP065_RCA002_DOCUMENTARY_RECONCILIATION_069",
+  "source_experiment": "EXP-LAB-001",
+  "source_evidence": "EVD-LAB-EXP-001",
+  "verified_baseline_head": "c9879d1ca7f14a27dad66f544a60dfd143c63ec0",
+  "package": {
+    "filename": "files.zip",
+    "sha256": "58c2da83efd6089997720da687bde5ef427679e4a75378b6a0b44697ef6ec625",
+    "size_bytes": 44483,
+    "deliverable_count": 14,
+    "json_file_count": 13,
+    "ordered_deliverable_manifest_sha256": "54d13284816ed25b",
+    "integrity_result": "PASS_ALL_DECLARED_HASHES_AND_SIZES"
+  },
+  "artifact_integrity": {
+    "artifacts_expected": 11,
+    "artifacts_accessed": 11,
+    "artifact_hash_matches": 11,
+    "artifact_hash_mismatches": 0,
+    "runs_expected": 20,
+    "runs_accessed": 20,
+    "run_hash_matches": 20,
+    "run_hash_mismatches": 0
+  },
+  "experimental_validation": {
+    "metadata_gold_signal_result": "WEAK",
+    "positive_control_f1": 1.0,
+    "positive_control_critical_failures": 0,
+    "fixture_discriminability": "PASS",
+    "fixture_count": 22,
+    "fixture_ids_unique": 22,
+    "failure_taxonomy_comparability": "PASS",
+    "reproducibility": "PASS_EXACT_ON_ALL_FIVE_ALTERNATIVES",
+    "harness_blinding": "PASS",
+    "order_stability": "PASS",
+    "repetition_determinism": "PASS"
+  },
+  "scoring_rules": {
+    "material_artifact": "SCORING_RULES.json",
+    "frozen_and_hash_pinned_before_execution": true,
+    "non_viable_gate_preregistered": true,
+    "gate_rule": "ANY_ENUMERATED_CRITICAL_FAILURE_RESULTS_IN_NON_VIABLE",
+    "gate_attainable": true,
+    "evidence": "POSITIVE_CONTROL_F1_1_0_AND_ZERO_CRITICAL_FAILURES"
+  },
+  "metrics": {
+    "computed_count": 24,
+    "canonical_registration_before_069": "INCOMPLETE_SUBSET",
+    "tokenizer_result": "TOKENIZER_NOT_EXECUTED",
+    "bytes_are_not_tokens": true,
+    "registered_metric_names": [
+      "precision",
+      "recall",
+      "macro_f1",
+      "false_positives",
+      "false_negatives",
+      "forbidden_selection_rate",
+      "authority_preservation",
+      "ownership_preservation",
+      "status_preservation",
+      "traceability_preservation",
+      "contrary_evidence_preservation",
+      "conflict_handling",
+      "cross_project_isolation",
+      "active_commit_preservation",
+      "critical_failures",
+      "critical_failure_rate",
+      "selected_bytes",
+      "percentage_byte_reduction",
+      "mandatory_residual_bytes",
+      "deterministic_repetition",
+      "order_stability",
+      "safe_failure_behavior",
+      "permissive_failure_behavior",
+      "selector_payload_measurements"
+    ]
+  },
+  "critical_failure_taxonomy": {
+    "code_count": 10,
+    "codes": [
+      "FAILS_PERMISSIVELY",
+      "USES_UNPINNED_COMMIT",
+      "CROSS_PROJECT_OVERRIDE_OR_CONTAMINATION",
+      "LOSES_MATERIAL_CONTRARY_EVIDENCE",
+      "OMITS_MANDATORY_NEGATIVE_PROHIBITION",
+      "AUTOMATICALLY_MERGES_OR_MISSES_CANONICAL_CONFLICT",
+      "EVIDENCE_SUBSTITUTES_FOR_AUTHORIZATION",
+      "SELECTS_SUPERSEDED_AS_CURRENT",
+      "SELECTS_STALE_DOCUMENT",
+      "CONSUMED_AUTHORIZATION_NOT_SAFELY_RESOLVED"
+    ],
+    "all_codes_avoidable_from_public_metadata": true
+  },
+  "alternative_results": {
+    "NO_CHANGE": "SUPPORTED_NON_VIABLE",
+    "SCHEMA_HYGIENE_SIMULATION": "SUPPORTED_NON_VIABLE",
+    "CONTINUITY_PACKAGE_IMPROVEMENT_SIMULATION": "SUPPORTED_NON_VIABLE",
+    "DETERMINISTIC_REFERENCE_INDEX_SIMULATION": "SUPPORTED_NON_VIABLE",
+    "PARTIAL_RAG_FEDERATION_CONTRACT_STAGES_1_TO_4_AND_7_TO_8_SIMULATION": "TEST_INVALID_FOR_THIS_ALTERNATIVE"
+  },
+  "root_cause": {
+    "primary": "CANONICAL_CONFLICT_AND_BINDING_NEGATIVE_PROHIBITION_NOT_MODELED_AS_FIRST_CLASS_OBJECTS",
+    "required_state": "RESOLUTION_REQUIRED",
+    "additional_failures": [
+      "INCOMPLETE_AUTHORITY_APPLICATION",
+      "INCOMPLETE_ACTIVE_COMMIT_APPLICATION",
+      "INCOMPLETE_ACL_AND_PROJECT_ISOLATION",
+      "INCOMPLETE_SAFE_FAILURE"
+    ],
+    "design_effect": "NONE"
+  },
+  "global_audit_result": "EXPERIMENT_065_VALIDATED_FOUR_ALTERNATIVE_VERDICTS_SUPPORTED_ONE_TEST_INVALID_PRIOR_AUDIT_PARTIALLY_REVERSED",
+  "evidence_sufficiency_for_separate_sixth_alternative_design": "PARTIALLY_SUFFICIENT",
+  "limitations": [
+    "ONE_SYNTHETIC_CORPUS_ONLY",
+    "RAG_STAGES_5_AND_6_NOT_TESTED",
+    "REAL_LAB_SCALE_NOT_REPRESENTED",
+    "TOKEN_COUNTS_NOT_EXECUTED"
+  ],
+  "authority_effect": {
+    "architecture_selected": false,
+    "implementation_selected": false,
+    "implementation_approved": false,
+    "runtime_effect": "NONE",
+    "product_effect": "NONE"
+  },
+  "source_refs": [
+    "projects/lab/experiments/EXP-LAB-001.json",
+    "projects/lab/evidence/EVD-LAB-EXP-001.json",
+    "projects/lab/reassessments/REA-LAB-004.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_EXP065_RCA002_DOCUMENTARY_RECONCILIATION_069.json"
+  ]
+}
