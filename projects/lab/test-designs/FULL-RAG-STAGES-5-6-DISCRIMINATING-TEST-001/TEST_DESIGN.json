@@ -1,0 +1,14 @@
+{
+  "schema_version":"1.0.0",
+  "id":"FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-001",
+  "status":"COMPLETE_NOT_EXECUTED",
+  "authorization":"AUTHORIZATION_LAB_FULL_RAG_STAGES_5_AND_6_DISCRIMINATING_TEST_DESIGN_070",
+  "research_question":"Can the complete eight-stage RAG federation contract, including namespace retrieval and authority-first ranking, satisfy preregistered safety, fidelity, cost and traceability gates on an independent synthetic corpus without oracle access?",
+  "scope":{"stages":[1,2,3,4,5,6,7,8],"documents_range":[150,300],"minimum_fixtures":36,"minimum_arms":5,"minimum_runs":30},
+  "principles":["AUTHORITY_BEFORE_SIMILARITY","ACL_BEFORE_RETRIEVAL","ACTIVE_COMMIT_ONLY","BINDING_NEGATIVE_PROHIBITIONS","CONFLICT_AS_FIRST_CLASS_OBJECT","DENY_BY_DEFAULT","EXACT_CITATIONS","PROJECT_ISOLATION"],
+  "outputs":"DESIGN_ONLY",
+  "execution_authorized":false,
+  "architecture_selected":false,
+  "implementation_selected":false,
+  "source_refs":["architecture/rag/FEDERATION_CONTRACT.json","projects/lab/evidence/EVD-LAB-AUD-003.json","projects/lab/reassessments/REA-LAB-004.json"]
+}
