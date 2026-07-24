@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0.0",
+  "reconciliation_id": "REC-LAB-EXP065-RCA002-001",
+  "project_id": "lab",
+  "status": "DOCUMENTARY_RECONCILIATION_COMPLETE",
+  "registered_at": "2026-07-24",
+  "authorization_id": "AUTHORIZATION_LAB_EXP065_RCA002_DOCUMENTARY_RECONCILIATION_069",
+  "expected_parent_head": "c9879d1ca7f14a27dad66f544a60dfd143c63ec0",
+  "source_audit": "AUDIT-CLAUDE-EXP065-RCA-002",
+  "source_experiment": "EXP-LAB-001",
+  "source_evidence": "EVD-LAB-EXP-001",
+  "registered_evidence": "EVD-LAB-AUD-003",
+  "registered_reassessment": "REA-LAB-004",
+  "authorization_068_status": "CONSUMED_ON_DELIVERY_OF_COMPLETE_AUDIT_002_PACKAGE",
+  "pending_transition": {
+    "closed": "PEND-LAB-015",
+    "closed_status": "COMPLETED_EXTERNAL_ROOT_CAUSE_AUDIT_DELIVERED_AND_RECONCILED",
+    "created": "PEND-LAB-016",
+    "created_status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION"
+  },
+  "canonical_corrections": {
+    "rca_001_status": "HISTORICAL_PARTIAL_AUDIT_MATERIALLY_REASSESSED",
+    "metrics_computed": 24,
+    "metrics_previously_registered": "INCOMPLETE_SUBSET",
+    "scoring_rules_materially_registered": true,
+    "non_viable_gate_preregistered": true,
+    "positive_control_f1": 1.0,
+    "fixture_discriminability": "PASS",
+    "failure_taxonomy_comparability": "PASS",
+    "four_alternatives": "SUPPORTED_NON_VIABLE",
+    "partial_rag_alternative": "TEST_INVALID_FOR_THIS_ALTERNATIVE",
+    "full_rag_contract_refuted": false,
+    "evidence_sufficiency": "PARTIALLY_SUFFICIENT"
+  },
+  "root_cause": {
+    "canonical_conflict_first_class_object_missing": true,
+    "resolution_required_state_missing": true,
+    "binding_negative_prohibition_not_preserved": true,
+    "public_metadata_was_available": true,
+    "new_design_created": false
+  },
+  "prohibitions_preserved": {
+    "architecture_selection": true,
+    "sixth_alternative_design": true,
+    "rag_implementation": true,
+    "runtime_change": true,
+    "product_change": true,
+    "real_data": true,
+    "deployment": true
+  },
+  "result": {
+    "audit_002_registered": true,
+    "implementation_selected": false,
+    "implementation_approved": false,
+    "architecture_selected": false,
+    "runtime_effect": "NONE",
+    "product_effect": "NONE",
+    "next_authorized_action": "NONE_AFTER_CONSUMPTION"
+  },
+  "registered_paths": [
+    "projects/lab/evidence/EVD-LAB-AUD-003.json",
+    "projects/lab/reassessments/REA-LAB-004.json",
+    "projects/lab/pending/PEND-LAB-015-CLOSURE.json",
+    "projects/lab/pending/PEND-LAB-016.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_EXP065_RCA002_DOCUMENTARY_RECONCILIATION_069.json"
+  ]
+}
