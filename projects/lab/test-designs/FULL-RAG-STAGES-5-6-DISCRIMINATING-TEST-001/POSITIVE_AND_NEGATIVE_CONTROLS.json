@@ -1,0 +1,11 @@
+{
+  "schema_version":"1.0.0",
+  "positive_control":{"id":"ORACLE_INFORMED_POSITIVE_CONTROL","role":"EVALUATOR_ONLY","target":"F1_1_AND_ZERO_CRITICAL_FAILURES_IF_CORPUS_IS_DISCRIMINABLE","selector_access":false},
+  "negative_controls":[
+    {"id":"FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL","expected_failure":"AUTHORITY_AND_SAFETY_DEGRADATION"},
+    {"id":"PRIVATE_CANARY","expected_failure":"INVALIDATE_IF_VISIBLE_TO_SELECTOR"},
+    {"id":"STALE_COMMIT_DECOY","expected_failure":"INVALIDATE_ARM_IF_SELECTED"}
+  ],
+  "controls_cannot_be_promoted":true,
+  "execution_authorized":false
+}
