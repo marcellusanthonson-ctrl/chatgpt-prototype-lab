@@ -1,0 +1,22 @@
+{
+  "schema_version":"1.0.0",
+  "status":"PASS_WITH_EXECUTION_NOT_AUTHORIZED",
+  "checks":[
+    {"id":"DELIVERABLE_COMPLETENESS","result":"PASS","expected":20,"present":20},
+    {"id":"STAGE_5_CONTRACT_DEFINED","result":"PASS"},
+    {"id":"STAGE_6_CONTRACT_DEFINED","result":"PASS"},
+    {"id":"SECOND_CORPUS_SPECIFIED_NOT_GENERATED","result":"PASS"},
+    {"id":"FIVE_ARMS_DEFINED","result":"PASS"},
+    {"id":"MINIMUM_30_RUNS_SPECIFIED_NOT_EXECUTED","result":"PASS"},
+    {"id":"LEAKAGE_CONTROLS_DEFINED","result":"PASS"},
+    {"id":"SCORING_AND_GATES_DRAFTED","result":"PASS"},
+    {"id":"NO_ORACLES_GENERATED","result":"PASS"},
+    {"id":"NO_EMBEDDINGS_OR_VECTOR_DATABASE","result":"PASS"},
+    {"id":"NO_PROVIDER_OR_ARCHITECTURE_SELECTED","result":"PASS"},
+    {"id":"NO_RUNTIME_PRODUCT_OR_EXTERNAL_REPOSITORY_EFFECT","result":"PASS"}
+  ],
+  "repository_validator_execution":"NOT_EXECUTED_NO_LOCAL_CHECKOUT_SURFACE",
+  "json_parse_validation":"STRUCTURALLY_REVIEWED_DURING_CREATION",
+  "runs_executed":0,
+  "implementation_authorized":false
+}
