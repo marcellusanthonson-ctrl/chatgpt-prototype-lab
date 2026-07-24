@@ -1,0 +1,12 @@
+{
+  "schema_version":"1.0.0",
+  "stage":6,
+  "id":"RANK_AUTHORITY_THEN_RELEVANCE",
+  "status":"DEFINED_FOR_SYNTHETIC_TEST_ONLY",
+  "ordered_dimensions":["authority_class","canonical_owner","document_status","active_commit","project_scope","binding_negative_prohibition","conflict_state","semantic_relevance","cost","deterministic_tie_break"],
+  "hard_rules":["SIMILARITY_CANNOT_OVERRIDE_AUTHORITY","OPTIONAL_CONTENT_CANNOT_DISPLACE_BINDING_PROHIBITION","STALE_CANNOT_DISPLACE_ACTIVE","OTHER_PROJECT_CANNOT_WIN_BY_SIMILARITY","CONFIRMED_CONFLICT_CANNOT_BE_AUTOMERGED","ABSENCE_OF_EVIDENCE_CANNOT_BECOME_POSITIVE_CONCLUSION"],
+  "conflict_states":["NONE","SUSPECTED","CONFIRMED","RESOLUTION_REQUIRED","RESOLVED"],
+  "on_resolution_required":"STOP_CONCLUSION_AND_RETURN_CITED_SOURCES",
+  "required_output_fields":["rank","candidate_id","authority_rank","relevance_rank","final_reason","conflict_state","prohibition_retained","citation","commit_sha"],
+  "execution_authorized":false
+}
