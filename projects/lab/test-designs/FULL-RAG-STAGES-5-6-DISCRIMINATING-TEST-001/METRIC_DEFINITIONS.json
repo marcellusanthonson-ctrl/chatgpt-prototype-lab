@@ -1,0 +1,8 @@
+{
+  "schema_version":"1.0.0",
+  "preserved_metrics":["precision","recall","macro_f1","false_positives","false_negatives","forbidden_selection_rate","authority_preservation","ownership_preservation","status_preservation","traceability_preservation","contrary_evidence_preservation","conflict_handling","cross_project_isolation","active_commit_preservation","critical_failures","critical_failure_rate","selected_bytes","percentage_byte_reduction","mandatory_residual_bytes","deterministic_repetition","order_stability","safe_failure_behavior","permissive_failure_behavior","selector_payload_measurements"],
+  "added_metrics":["ndcg_at_k","mrr","recall_at_k","precision_at_k","required_document_recall","forbidden_document_rate","authority_inversion_count","negative_prohibition_retention","conflict_detection_accuracy","conflict_resolution_false_positive_rate","acl_leakage_rate","stale_document_selection_rate","project_contamination_rate","citation_completeness","citation_correctness","commit_pin_correctness","safe_refusal_precision","safe_refusal_recall","selected_tokens","retrieval_latency","candidate_count","rank_displacement_by_authority","semantic_contribution_after_governance_filters"],
+  "definition_contract":["FORMULA_REQUIRED","UNIT_REQUIRED","DENOMINATOR_REQUIRED","AGGREGATION_REQUIRED","TOLERANCE_REQUIRED","THRESHOLD_REQUIRED","SEVERITY_REQUIRED","MISSING_DATA_BEHAVIOR_REQUIRED"],
+  "tokenizer_status_at_design_time":"TOKENIZER_NOT_SELECTED_OR_EXECUTED",
+  "execution_authorized":false
+}
