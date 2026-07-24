@@ -1,0 +1,15 @@
+{
+  "schema_version":"1.0.0",
+  "stage":5,
+  "id":"RETRIEVE_WITHIN_NAMESPACE",
+  "status":"DEFINED_FOR_SYNTHETIC_TEST_ONLY",
+  "inputs":["typed_task","authorized_namespaces","active_commit_allowlist","eligible_documents_after_stages_1_to_4","retrieval_query","budget","frozen_parameters"],
+  "preconditions":["ACL_PASSED","OWNER_RESOLVED","AUTHORITY_FILTERED","DOCUMENT_STATUS_ALLOWED","ACTIVE_COMMIT_VERIFIED"],
+  "retrieval_methods_allowed":["DETERMINISTIC_TERM_OR_SPARSE_RETRIEVAL","LOCAL_SYNTHETIC_DENSE_REPRESENTATION_IF_SEPARATELY_AUTHORIZED_FOR_EXECUTION"],
+  "rules":["RETRIEVE_ONLY_ELIGIBLE_DOCUMENTS","NO_ORACLE_ACCESS","EXCLUDE_STALE_SUPERSEDED_AND_DENIED","LOG_ALL_CONSIDERED_CANDIDATES","FROZEN_K_AND_THRESHOLDS","DETERMINISTIC_TIE_BREAK","PRESERVE_REQUIRED_METADATA_AND_CITATIONS"],
+  "no_candidate_state":"SAFE_NO_RETRIEVAL_RESULT",
+  "required_output_fields":["candidate_id","repository","path","document_id","commit_sha","authority_class","canonical_owner","project_scope","document_status","retrieval_score","rank_before_stage_6","bytes","tokens_if_available"],
+  "provider_selected":false,
+  "vector_database_selected":false,
+  "execution_authorized":false
+}
