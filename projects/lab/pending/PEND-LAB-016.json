@@ -1,60 +1,19 @@
 {
-  "schema_version": "1.0.0",
-  "id": "PEND-LAB-016",
-  "project_id": "lab",
-  "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
-  "type": "FULL_RAG_STAGES_5_AND_6_DISCRIMINATING_TEST_DESIGN",
-  "subject": "Design and execute a governed discriminating test of the complete RAG federation contract including stages 5 and 6",
-  "priority": "HIGH",
-  "created_at": "2026-07-24",
-  "predecessor_pending": "PEND-LAB-015",
-  "predecessor_resolution": "COMPLETED_EXTERNAL_ROOT_CAUSE_AUDIT_DELIVERED_AND_RECONCILED",
-  "authorization_required": true,
-  "current_authority": "NONE",
-  "required_scope": [
-    "SECOND_SYNTHETIC_CORPUS",
-    "RAG_STAGES_5_AND_6",
-    "MORE_REPRESENTATIVE_LAB_SCALE",
-    "REALISTIC_COST_MEASUREMENT",
-    "CANONICAL_CONFLICT_PRESERVATION",
-    "BINDING_NEGATIVE_PROHIBITION_PRESERVATION",
-    "FAIL_CLOSED_INVARIANTS",
-    "ACTIVE_COMMIT_AND_AUTHORITY_PRESERVATION",
-    "PROJECT_ISOLATION",
-    "TRACEABILITY"
-  ],
-  "required_preconditions": [
-    "RCA_002_DOCUMENTARY_RECONCILIATION_REGISTERED",
-    "SCORING_RULES_AND_24_METRICS_MATERIALLY_REPRESENTED",
-    "SEPARATE_TEST_DESIGN_AUTHORIZATION",
-    "NO_REAL_DATA",
-    "NO_PRODUCT_IMPLEMENTATION"
-  ],
-  "prohibitions_without_future_authorization": [
-    "DESIGN_SIXTH_ALTERNATIVE",
-    "SELECT_ARCHITECTURE",
-    "IMPLEMENT_RESOLVER",
-    "IMPLEMENT_RAG",
-    "CREATE_VECTOR_DATABASE",
-    "INSTALL_RUNTIME_DEPENDENCIES",
-    "USE_CREDENTIALS",
-    "USE_REAL_DATA",
-    "MODIFY_PRODUCT",
-    "DEPLOY_OR_RELEASE"
-  ],
-  "expected_future_outputs": [
-    "GOVERNED_TEST_DESIGN",
-    "SECOND_CORPUS_MANIFEST",
-    "STAGES_5_AND_6_EXECUTION_CONTRACT",
-    "PRE_REGISTERED_SCORING_RULES",
-    "POSITIVE_CONTROL",
-    "COST_AND_TOKEN_MEASUREMENT_PLAN",
-    "RESULTS_WITHOUT_AUTOMATIC_ARCHITECTURE_SELECTION"
-  ],
-  "source_refs": [
-    "projects/lab/evidence/EVD-LAB-AUD-003.json",
-    "projects/lab/reassessments/REA-LAB-004.json",
-    "projects/lab/experiments/EXP-LAB-001.json",
-    "architecture/rag/FEDERATION_CONTRACT.json"
-  ]
+  "schema_version":"1.0.0",
+  "id":"PEND-LAB-016",
+  "project_id":"lab",
+  "status":"COMPLETED_TEST_DESIGN_PUBLISHED_EXECUTION_NOT_AUTHORIZED",
+  "type":"FULL_RAG_STAGES_5_AND_6_DISCRIMINATING_TEST_DESIGN",
+  "subject":"Design a governed discriminating test of the complete RAG federation contract including stages 5 and 6",
+  "priority":"HIGH",
+  "created_at":"2026-07-24",
+  "completed_at":"2026-07-24",
+  "authorization_id":"AUTHORIZATION_LAB_FULL_RAG_STAGES_5_AND_6_DISCRIMINATING_TEST_DESIGN_070",
+  "completed_by":"FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-001",
+  "result":{"test_design_status":"COMPLETE_NOT_EXECUTED","stage_5_contract":"DEFINED_FOR_SYNTHETIC_TEST_ONLY","stage_6_contract":"DEFINED_FOR_SYNTHETIC_TEST_ONLY","second_corpus":"SPECIFIED_NOT_GENERATED","scoring_rules":"DRAFT_PREPARED_FOR_FUTURE_FREEZE","minimum_future_runs":30,"runs_executed":0},
+  "execution_authorized":false,
+  "architecture_selected":false,
+  "implementation_selected":false,
+  "successor_pending":"PEND-LAB-017",
+  "source_refs":["projects/lab/test-designs/FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-001/MANIFEST.json","projects/lab/authorizations/AUTHORIZATION_LAB_FULL_RAG_STAGES_5_AND_6_DISCRIMINATING_TEST_DESIGN_070.json","architecture/rag/FEDERATION_CONTRACT.json"]
 }
