@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0.0",
+  "experiment_id": "EXP-LAB-002",
+  "title": "Full RAG stages 5 and 6 discriminating synthetic test execution 071",
+  "project_id": "lab",
+  "status": "EXPERIMENT_VALID_CONTROLS_PASS_NO_CANDIDATE_VIABLE",
+  "executed_at": "2026-07-24",
+  "authorization_id": "AUTHORIZATION_LAB_FULL_RAG_STAGES_5_AND_6_DISCRIMINATING_TEST_EXECUTION_071",
+  "evidence_id": "EVD-LAB-EXP-002",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "authorized_parent_head": "98d89752ce038dccbeabd16ee2ff57dfee6db8b9",
+  "execution_status": "COMPLETED_REPRODUCIBLE",
+  "execution_count": "ONE",
+  "research_question": "Can the complete eight-stage RAG federation simulation, including stages 5 and 6, satisfy preregistered safety, fidelity, cost, traceability and robustness gates on an independent synthetic corpus without oracle access?",
+  "package": {
+    "id": "FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001",
+    "path": "projects/lab/test-executions/FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001/MANIFEST.json",
+    "file_count": 88,
+    "ordered_manifest_digest_sha256": "41facf4400af3e8e09e201239cc5b958fc93c10a78ed83a1de90ae3965614cae"
+  },
+  "corpus": {
+    "corpus_id": "FULL-RAG-SYNTHETIC-CORPUS-071-001",
+    "synthetic_document_count": 180,
+    "fixture_count": 42,
+    "namespace_count": 3,
+    "synthetic_project_count": 3,
+    "independence_result": "PASS_INDEPENDENT_SYNTHETIC_CORPUS",
+    "real_data_used": false
+  },
+  "execution": {
+    "arm_count": 5,
+    "configurations_per_arm": 6,
+    "total_run_count": 30,
+    "selector_process_count": 24,
+    "evaluator_process_count": 1,
+    "selector_oracle_access": false,
+    "post_freeze_hash_validation": "PASS",
+    "reproducibility": "PASS_EXACT",
+    "tokenizer_result": "TOKENIZER_NOT_AVAILABLE_NO_INSTALLATION_FALLBACK_USED"
+  },
+  "controls": {
+    "positive_control": "PASS_F1_1_ZERO_CRITICAL_FAILURES",
+    "negative_control": "PASS_DISCRIMINATES_UNSAFE_ORDERING",
+    "leakage_control": "PASS",
+    "private_canary": "PASS_NOT_VISIBLE_TO_SELECTOR"
+  },
+  "arm_results": {
+    "NO_GOVERNANCE_FILTERING_REFERENCE": {
+      "status": "NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS",
+      "macro_f1": 0.027116,
+      "required_document_recall": 0.251984,
+      "precision": 0.021825,
+      "critical_failures": 337
+    },
+    "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION": {
+      "status": "NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS",
+      "macro_f1": 0.238757,
+      "required_document_recall": 0.430556,
+      "precision": 0.212302,
+      "critical_failures": 110
+    },
+    "FULL_RAG_AUTHORITY_FIRST_SIMULATION": {
+      "status": "NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS",
+      "macro_f1": 0.261243,
+      "required_document_recall": 0.458333,
+      "precision": 0.234127,
+      "critical_failures": 48
+    },
+    "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL": {
+      "status": "NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS",
+      "macro_f1": 0.138889,
+      "required_document_recall": 0.305556,
+      "precision": 0.126984,
+      "critical_failures": 249
+    },
+    "ORACLE_INFORMED_POSITIVE_CONTROL": {
+      "status": "VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS_EVALUATOR_ONLY_NOT_PROMOTABLE",
+      "macro_f1": 1,
+      "required_document_recall": 1,
+      "precision": 1,
+      "critical_failures": 0
+    }
+  },
+  "interpretation": [
+    "THE_EXPERIMENT_IS_VALID_AND_THE_CONTROLS_DISCRIMINATE",
+    "NO_CANDIDATE_SIMULATION_PASSED_ALL_PREREGISTERED_GATES",
+    "THE_POSITIVE_CONTROL_IS_EVALUATOR_ONLY_AND_NOT_PROMOTABLE",
+    "THE_RESULT_IS_BOUNDED_TO_THE_SYNTHETIC_CORPUS_AND_FROZEN_PARAMETERS",
+    "THE_RESULT_DOES_NOT_SELECT_OR_REFUTE A PRODUCTION_ARCHITECTURE"
+  ],
+  "effects": {
+    "architecture_selected": false,
+    "implementation_selected": false,
+    "implementation_approved": false,
+    "runtime_effect": "NONE",
+    "product_effect": "NONE",
+    "external_repository_effect": "NONE",
+    "deployment": "NONE"
+  },
+  "successor_pending": "PEND-LAB-018",
+  "next_authorized_action": "NONE",
+  "source_refs": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_FULL_RAG_STAGES_5_AND_6_DISCRIMINATING_TEST_EXECUTION_071.json",
+    "projects/lab/test-designs/FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-001/MANIFEST.json",
+    "projects/lab/test-executions/FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001/MANIFEST.json",
+    "projects/lab/evidence/EVD-LAB-EXP-002.json",
+    "projects/lab/pending/PEND-LAB-018.json"
+  ]
+}

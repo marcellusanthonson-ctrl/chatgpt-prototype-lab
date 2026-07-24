@@ -1,0 +1,31 @@
+{
+  "aggregation": {
+    "cost": "PER_FIXTURE_AND_TOTAL",
+    "critical_failures": "ABSOLUTE_COUNT_AND_RATE",
+    "retrieval_metrics": "MACRO_BY_FIXTURE_WITH_MICRO_SUPPLEMENT"
+  },
+  "critical_gate": "ANY_ENUMERATED_CRITICAL_FAILURE_MAKES_ARM_NON_VIABLE_UNDER_TESTED_CONDITIONS",
+  "frozen_at": "2026-07-24T00:00:00Z",
+  "missing_data_rule": "FAIL_CLOSED_EXCEPT_DECLARED_TOKENIZER_FALLBACK",
+  "schema_version": "1.0.0",
+  "status": "FROZEN_BEFORE_RUNS",
+  "thresholds": {
+    "acl_leakage_max": 0,
+    "authority_inversion_max": 0,
+    "binding_negative_omission_max": 0,
+    "citation_correctness_min": 0.98,
+    "conflict_detection_min": 0.95,
+    "false_citation_max": 0,
+    "macro_f1_min": 0.72,
+    "precision_min": 0.7,
+    "project_contamination_max": 0,
+    "required_document_recall_min": 0.8,
+    "safe_failure_f1_min": 0.9,
+    "stale_selection_max": 0
+  },
+  "units": {
+    "bytes": "BYTE",
+    "latency": "MILLISECONDS_SIMULATED_DETERMINISTIC",
+    "tokens": "TOKENIZER_SPECIFIC_TOKEN_OR_NULL_WHEN_UNAVAILABLE_WITHOUT_INSTALLATION"
+  }
+}

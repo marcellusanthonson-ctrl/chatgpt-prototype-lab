@@ -1,0 +1,43 @@
+{
+  "arms": {
+    "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION": {
+      "budget_k": 2,
+      "deterministic_tie_break": "DOCUMENT_ID_ASCENDING",
+      "embeddings": false,
+      "provider": "NONE",
+      "vector_database": false
+    },
+    "FULL_RAG_AUTHORITY_FIRST_SIMULATION": {
+      "budget_k": 2,
+      "deterministic_tie_break": "DOCUMENT_ID_ASCENDING",
+      "embeddings": false,
+      "provider": "NONE",
+      "vector_database": false
+    },
+    "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL": {
+      "budget_k": 2,
+      "deterministic_tie_break": "DOCUMENT_ID_ASCENDING",
+      "embeddings": false,
+      "provider": "NONE",
+      "vector_database": false
+    },
+    "NO_GOVERNANCE_FILTERING_REFERENCE": {
+      "budget_k": 2,
+      "deterministic_tie_break": "DOCUMENT_ID_ASCENDING",
+      "embeddings": false,
+      "provider": "NONE",
+      "vector_database": false
+    },
+    "ORACLE_INFORMED_POSITIVE_CONTROL": {
+      "budget_k": 2,
+      "deterministic_tie_break": "DOCUMENT_ID_ASCENDING",
+      "embeddings": false,
+      "provider": "NONE",
+      "vector_database": false
+    }
+  },
+  "common_budget_k": 2,
+  "common_corpus": "FULL-RAG-SYNTHETIC-CORPUS-071-001",
+  "schema_version": "1.0.0",
+  "status": "FROZEN_BEFORE_RUNS"
+}

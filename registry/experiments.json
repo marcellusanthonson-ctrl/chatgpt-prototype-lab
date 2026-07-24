@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-07-23",
+  "updated_at": "2026-07-24",
   "records": [
     {
       "id": "SYM-P0B-DRY-RUN-001",
@@ -45,6 +45,15 @@
       "authorization_id": "AUTHORIZATION_LAB_BLINDED_CONTEXT_SELECTION_DISCRIMINATING_EXPERIMENT_065",
       "evidence_id": "EVD-LAB-EXP-001",
       "updated_at": "2026-07-23"
+    },
+    {
+      "id": "EXP-LAB-002",
+      "project_id": "lab",
+      "status": "EXPERIMENT_VALID_CONTROLS_PASS_NO_CANDIDATE_VIABLE",
+      "canonical_path": "projects/lab/experiments/EXP-LAB-002.json",
+      "authorization_id": "AUTHORIZATION_LAB_FULL_RAG_STAGES_5_AND_6_DISCRIMINATING_TEST_EXECUTION_071",
+      "evidence_id": "EVD-LAB-EXP-002",
+      "updated_at": "2026-07-24"
     }
   ]
 }

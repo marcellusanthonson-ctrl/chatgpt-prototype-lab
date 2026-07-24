@@ -1,0 +1,176 @@
+{
+  "process_role": "EVALUATOR_PRIVATE_ORACLE_ACCESS",
+  "reads": [
+    {
+      "access": "READ",
+      "path": "public/DOCUMENT_CATALOG.json",
+      "process_role": "EVALUATOR"
+    },
+    {
+      "access": "READ",
+      "path": "public/TASKS.json",
+      "process_role": "EVALUATOR"
+    },
+    {
+      "access": "READ",
+      "path": "private/PRIVATE_ORACLES.json",
+      "process_role": "EVALUATOR"
+    },
+    {
+      "access": "READ",
+      "path": "runs/DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION/ORDER_PERMUTATION.json",
+      "process_role": "EVALUATOR"
+    },
+    {
+      "access": "READ",
+      "path": "runs/DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION/PARAPHRASE_VARIANT.json",
+      "process_role": "EVALUATOR"
+    },
+    {
+      "access": "READ",
+      "path": "runs/DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION/REPETITION_1.json",
+      "process_role": "EVALUATOR"
+    },
+    {
+      "access": "READ",
+      "path": "runs/DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION/REPETITION_2.json",
+      "process_role": "EVALUATOR"
+    },
+    {
+      "access": "READ",
+      "path": "runs/DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION/REPETITION_3.json",
+      "process_role": "EVALUATOR"
+    },
+    {
+      "access": "READ",
+      "path": "runs/DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION/SCALE_VARIANT.json",
+      "process_role": "EVALUATOR"
+    },
+    {
+      "access": "READ",
+      "path": "runs/FULL_RAG_AUTHORITY_FIRST_SIMULATION/ORDER_PERMUTATION.json",
+      "process_role": "EVALUATOR"
+    },
+    {
+      "access": "READ",
+      "path": "runs/FULL_RAG_AUTHORITY_FIRST_SIMULATION/PARAPHRASE_VARIANT.json",
+      "process_role": "EVALUATOR"
+    },
+    {
+      "access": "READ",
+      "path": "runs/FULL_RAG_AUTHORITY_FIRST_SIMULATION/REPETITION_1.json",
+      "process_role": "EVALUATOR"
+    },
+    {
+      "access": "READ",
+      "path": "runs/FULL_RAG_AUTHORITY_FIRST_SIMULATION/REPETITION_2.json",
+      "process_role": "EVALUATOR"
+    },
+    {
+      "access": "READ",
+      "path": "runs/FULL_RAG_AUTHORITY_FIRST_SIMULATION/REPETITION_3.json",
+      "process_role": "EVALUATOR"
+    },
+    {
+      "access": "READ",
+      "path": "runs/FULL_RAG_AUTHORITY_FIRST_SIMULATION/SCALE_VARIANT.json",
+      "process_role": "EVALUATOR"
+    },
+    {
+      "access": "READ",
+      "path": "runs/FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL/ORDER_PERMUTATION.json",
+      "process_role": "EVALUATOR"
+    },
+    {
+      "access": "READ",
+      "path": "runs/FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL/PARAPHRASE_VARIANT.json",
+      "process_role": "EVALUATOR"
+    },
+    {
+      "access": "READ",
+      "path": "runs/FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL/REPETITION_1.json",
+      "process_role": "EVALUATOR"
+    },
+    {
+      "access": "READ",
+      "path": "runs/FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL/REPETITION_2.json",
+      "process_role": "EVALUATOR"
+    },
+    {
+      "access": "READ",
+      "path": "runs/FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL/REPETITION_3.json",
+      "process_role": "EVALUATOR"
+    },
+    {
+      "access": "READ",
+      "path": "runs/FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL/SCALE_VARIANT.json",
+      "process_role": "EVALUATOR"
+    },
+    {
+      "access": "READ",
+      "path": "runs/NO_GOVERNANCE_FILTERING_REFERENCE/ORDER_PERMUTATION.json",
+      "process_role": "EVALUATOR"
+    },
+    {
+      "access": "READ",
+      "path": "runs/NO_GOVERNANCE_FILTERING_REFERENCE/PARAPHRASE_VARIANT.json",
+      "process_role": "EVALUATOR"
+    },
+    {
+      "access": "READ",
+      "path": "runs/NO_GOVERNANCE_FILTERING_REFERENCE/REPETITION_1.json",
+      "process_role": "EVALUATOR"
+    },
+    {
+      "access": "READ",
+      "path": "runs/NO_GOVERNANCE_FILTERING_REFERENCE/REPETITION_2.json",
+      "process_role": "EVALUATOR"
+    },
+    {
+      "access": "READ",
+      "path": "runs/NO_GOVERNANCE_FILTERING_REFERENCE/REPETITION_3.json",
+      "process_role": "EVALUATOR"
+    },
+    {
+      "access": "READ",
+      "path": "runs/NO_GOVERNANCE_FILTERING_REFERENCE/SCALE_VARIANT.json",
+      "process_role": "EVALUATOR"
+    },
+    {
+      "access": "READ",
+      "path": "runs/ORACLE_INFORMED_POSITIVE_CONTROL/ORDER_PERMUTATION.json",
+      "process_role": "EVALUATOR"
+    },
+    {
+      "access": "READ",
+      "path": "runs/ORACLE_INFORMED_POSITIVE_CONTROL/PARAPHRASE_VARIANT.json",
+      "process_role": "EVALUATOR"
+    },
+    {
+      "access": "READ",
+      "path": "runs/ORACLE_INFORMED_POSITIVE_CONTROL/REPETITION_1.json",
+      "process_role": "EVALUATOR"
+    },
+    {
+      "access": "READ",
+      "path": "runs/ORACLE_INFORMED_POSITIVE_CONTROL/REPETITION_2.json",
+      "process_role": "EVALUATOR"
+    },
+    {
+      "access": "READ",
+      "path": "runs/ORACLE_INFORMED_POSITIVE_CONTROL/REPETITION_3.json",
+      "process_role": "EVALUATOR"
+    },
+    {
+      "access": "READ",
+      "path": "runs/ORACLE_INFORMED_POSITIVE_CONTROL/SCALE_VARIANT.json",
+      "process_role": "EVALUATOR"
+    },
+    {
+      "access": "READ",
+      "path": "reports/PRE_EVALUATION_INTEGRITY.json",
+      "process_role": "EVALUATOR"
+    }
+  ],
+  "schema_version": "1.0.0"
+}

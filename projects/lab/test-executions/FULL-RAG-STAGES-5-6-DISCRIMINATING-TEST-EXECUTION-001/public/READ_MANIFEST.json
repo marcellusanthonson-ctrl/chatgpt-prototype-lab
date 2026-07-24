@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "selector_allowed_reads": [
+    "public/READ_MANIFEST.json",
+    "public/DOCUMENT_CATALOG.json",
+    "public/TASKS.json",
+    "public/SYNONYMS.json",
+    "frozen/ARM_PARAMETERS.json"
+  ],
+  "selector_forbidden_prefixes": [
+    "private/",
+    "../"
+  ],
+  "selector_oracle_access": false
+}

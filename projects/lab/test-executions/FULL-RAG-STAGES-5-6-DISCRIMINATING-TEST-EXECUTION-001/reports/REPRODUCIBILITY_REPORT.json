@@ -1,0 +1,29 @@
+{
+  "corpus_regeneration_in_memory": "PASS_EXACT",
+  "dependency_installation": "NONE",
+  "external_api_usage": "NONE",
+  "order_stability": {
+    "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION": "PASS",
+    "FULL_RAG_AUTHORITY_FIRST_SIMULATION": "PASS",
+    "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL": "PASS",
+    "NO_GOVERNANCE_FILTERING_REFERENCE": "PASS",
+    "ORACLE_INFORMED_POSITIVE_CONTROL": "PASS"
+  },
+  "repetition_determinism": {
+    "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION": "PASS",
+    "FULL_RAG_AUTHORITY_FIRST_SIMULATION": "PASS",
+    "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL": "PASS",
+    "NO_GOVERNANCE_FILTERING_REFERENCE": "PASS",
+    "ORACLE_INFORMED_POSITIVE_CONTROL": "PASS"
+  },
+  "result": "PASS",
+  "runtime": {
+    "executable": "C:\\Program Files\\nodejs\\node.exe",
+    "platform": "win32-x64",
+    "version": "v24.6.0"
+  },
+  "schema_version": "1.0.0",
+  "selection_replay_count": 30,
+  "selection_replay_mismatches": [],
+  "selection_replay_result": "PASS_EXACT"
+}

@@ -1,0 +1,1142 @@
+{
+  "corpus_id": "FULL-RAG-SYNTHETIC-CORPUS-071-001",
+  "schema_version": "1.0.0",
+  "tasks": [
+    {
+      "active_commits": [
+        "0560c69aa47ff78730094fe489798cecb8a56c67"
+      ],
+      "allowed_namespaces": [
+        "LAB"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "CANONICAL_SOURCE_CONFLICT",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion01 guidance scope protection",
+      "project_scope": "GLOBAL",
+      "query": "concept01 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 1 within the declared scope.",
+      "task_id": "FX-071-001"
+    },
+    {
+      "active_commits": [
+        "9d95a90d6a9162815acae6b4fc8909525f775aa2"
+      ],
+      "allowed_namespaces": [
+        "SYMPHONIE"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "MANDATORY_NEGATIVE_PROHIBITION",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion02 guidance scope protection",
+      "project_scope": "GLOBAL",
+      "query": "concept02 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 2 within the declared scope.",
+      "task_id": "FX-071-002"
+    },
+    {
+      "active_commits": [
+        "39b09421f6414158bc224b3eaf66f2c3fcafa3e2"
+      ],
+      "allowed_namespaces": [
+        "PROJECT"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "AUTHORITY_PRECEDENCE",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion03 guidance scope protection",
+      "project_scope": "GAMMA",
+      "query": "concept03 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 3 within the declared scope.",
+      "task_id": "FX-071-003"
+    },
+    {
+      "active_commits": [
+        "0560c69aa47ff78730094fe489798cecb8a56c67"
+      ],
+      "allowed_namespaces": [
+        "LAB"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "STALE_COMMIT_EXCLUSION",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion04 guidance scope protection",
+      "project_scope": "GLOBAL",
+      "query": "concept04 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 4 within the declared scope.",
+      "task_id": "FX-071-004"
+    },
+    {
+      "active_commits": [
+        "9d95a90d6a9162815acae6b4fc8909525f775aa2"
+      ],
+      "allowed_namespaces": [
+        "SYMPHONIE"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "CROSS_PROJECT_ISOLATION",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion05 guidance scope protection",
+      "project_scope": "GLOBAL",
+      "query": "concept05 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 5 within the declared scope.",
+      "task_id": "FX-071-005"
+    },
+    {
+      "active_commits": [
+        "39b09421f6414158bc224b3eaf66f2c3fcafa3e2"
+      ],
+      "allowed_namespaces": [
+        "PROJECT"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "ACL_DENIED",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion06 guidance scope protection",
+      "project_scope": "GAMMA",
+      "query": "concept06 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 6 within the declared scope.",
+      "task_id": "FX-071-006"
+    },
+    {
+      "active_commits": [
+        "0560c69aa47ff78730094fe489798cecb8a56c67"
+      ],
+      "allowed_namespaces": [
+        "LAB"
+      ],
+      "ambiguity_declared": true,
+      "fixture_class": "AMBIGUOUS_TASK",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion07 guidance scope protection",
+      "project_scope": "GLOBAL",
+      "query": "concept07 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 7 within the declared scope.",
+      "task_id": "FX-071-007"
+    },
+    {
+      "active_commits": [
+        "9d95a90d6a9162815acae6b4fc8909525f775aa2"
+      ],
+      "allowed_namespaces": [
+        "SYMPHONIE"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "INSUFFICIENT_EVIDENCE",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion08 guidance scope protection",
+      "project_scope": "GLOBAL",
+      "query": "concept08 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 8 within the declared scope.",
+      "task_id": "FX-071-008"
+    },
+    {
+      "active_commits": [
+        "39b09421f6414158bc224b3eaf66f2c3fcafa3e2"
+      ],
+      "allowed_namespaces": [
+        "PROJECT"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "MULTI_DOCUMENT_SYNTHESIS",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion09 guidance scope protection",
+      "project_scope": "GAMMA",
+      "query": "concept09 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 9 within the declared scope.",
+      "task_id": "FX-071-009"
+    },
+    {
+      "active_commits": [
+        "0560c69aa47ff78730094fe489798cecb8a56c67"
+      ],
+      "allowed_namespaces": [
+        "LAB",
+        "SYMPHONIE"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "AUTHORIZED_CROSS_NAMESPACE_RETRIEVAL",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion10 guidance scope protection",
+      "project_scope": "GLOBAL",
+      "query": "concept10 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 10 within the declared scope.",
+      "task_id": "FX-071-010"
+    },
+    {
+      "active_commits": [
+        "9d95a90d6a9162815acae6b4fc8909525f775aa2"
+      ],
+      "allowed_namespaces": [
+        "SYMPHONIE"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "DECEPTIVE_SEMANTIC_SIMILARITY",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion11 guidance scope protection",
+      "project_scope": "GLOBAL",
+      "query": "concept11 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 11 within the declared scope.",
+      "task_id": "FX-071-011"
+    },
+    {
+      "active_commits": [
+        "39b09421f6414158bc224b3eaf66f2c3fcafa3e2"
+      ],
+      "allowed_namespaces": [
+        "PROJECT"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "SUPERSEDED_DOCUMENT",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion12 guidance scope protection",
+      "project_scope": "GAMMA",
+      "query": "concept12 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 12 within the declared scope.",
+      "task_id": "FX-071-012"
+    },
+    {
+      "active_commits": [
+        "0560c69aa47ff78730094fe489798cecb8a56c67"
+      ],
+      "allowed_namespaces": [
+        "LAB"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "ACTIVE_COMMIT_REPLACEMENT",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion13 guidance scope protection",
+      "project_scope": "GLOBAL",
+      "query": "concept13 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 13 within the declared scope.",
+      "task_id": "FX-071-013"
+    },
+    {
+      "active_commits": [
+        "9d95a90d6a9162815acae6b4fc8909525f775aa2"
+      ],
+      "allowed_namespaces": [
+        "SYMPHONIE"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "OWNERSHIP_CONFLICT",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion14 guidance scope protection",
+      "project_scope": "GLOBAL",
+      "query": "concept14 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 14 within the declared scope.",
+      "task_id": "FX-071-014"
+    },
+    {
+      "active_commits": [
+        "39b09421f6414158bc224b3eaf66f2c3fcafa3e2"
+      ],
+      "allowed_namespaces": [
+        "PROJECT"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "EXACT_CITATION_REQUIREMENT",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion15 guidance scope protection",
+      "project_scope": "GAMMA",
+      "query": "concept15 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 15 within the declared scope.",
+      "task_id": "FX-071-015"
+    },
+    {
+      "active_commits": [
+        "0560c69aa47ff78730094fe489798cecb8a56c67"
+      ],
+      "allowed_namespaces": [
+        "LAB"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "LONG_DOCUMENT_CHUNK_BOUNDARY",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion16 guidance scope protection",
+      "project_scope": "GLOBAL",
+      "query": "concept16 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 16 within the declared scope.",
+      "task_id": "FX-071-016"
+    },
+    {
+      "active_commits": [
+        "9d95a90d6a9162815acae6b4fc8909525f775aa2"
+      ],
+      "allowed_namespaces": [
+        "SYMPHONIE"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "MULTILINGUAL_RETRIEVAL",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion17 guidance scope protection",
+      "project_scope": "GLOBAL",
+      "query": "concept17 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 17 within the declared scope.",
+      "task_id": "FX-071-017"
+    },
+    {
+      "active_commits": [
+        "39b09421f6414158bc224b3eaf66f2c3fcafa3e2"
+      ],
+      "allowed_namespaces": [
+        "PROJECT"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "SYNONYM_AND_PARAPHRASE",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion18 guidance scope protection",
+      "project_scope": "GAMMA",
+      "query": "concept18 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 18 within the declared scope.",
+      "task_id": "FX-071-018"
+    },
+    {
+      "active_commits": [
+        "0560c69aa47ff78730094fe489798cecb8a56c67"
+      ],
+      "allowed_namespaces": [
+        "LAB"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "LOW_LEXICAL_OVERLAP",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion19 guidance scope protection",
+      "project_scope": "GLOBAL",
+      "query": "concept19 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 19 within the declared scope.",
+      "task_id": "FX-071-019"
+    },
+    {
+      "active_commits": [
+        "9d95a90d6a9162815acae6b4fc8909525f775aa2"
+      ],
+      "allowed_namespaces": [
+        "SYMPHONIE"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "DUPLICATED_CONTENT_DIFFERING_AUTHORITY",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion20 guidance scope protection",
+      "project_scope": "GLOBAL",
+      "query": "concept20 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 20 within the declared scope.",
+      "task_id": "FX-071-020"
+    },
+    {
+      "active_commits": [
+        "39b09421f6414158bc224b3eaf66f2c3fcafa3e2"
+      ],
+      "allowed_namespaces": [
+        "PROJECT"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "SAFE_REFUSAL",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion21 guidance scope protection",
+      "project_scope": "GAMMA",
+      "query": "concept21 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 21 within the declared scope.",
+      "task_id": "FX-071-021"
+    },
+    {
+      "active_commits": [
+        "0560c69aa47ff78730094fe489798cecb8a56c67"
+      ],
+      "allowed_namespaces": [
+        "LAB"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "COST_PRESSURE",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion22 guidance scope protection",
+      "project_scope": "GLOBAL",
+      "query": "concept22 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 22 within the declared scope.",
+      "task_id": "FX-071-022"
+    },
+    {
+      "active_commits": [
+        "9d95a90d6a9162815acae6b4fc8909525f775aa2"
+      ],
+      "allowed_namespaces": [
+        "SYMPHONIE"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "DETERMINISTIC_TIE",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion23 guidance scope protection",
+      "project_scope": "GLOBAL",
+      "query": "concept23 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 23 within the declared scope.",
+      "task_id": "FX-071-023"
+    },
+    {
+      "active_commits": [
+        "39b09421f6414158bc224b3eaf66f2c3fcafa3e2"
+      ],
+      "allowed_namespaces": [
+        "PROJECT"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "MISSING_REQUIRED_METADATA",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion24 guidance scope protection",
+      "project_scope": "GAMMA",
+      "query": "concept24 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 24 within the declared scope.",
+      "task_id": "FX-071-024"
+    },
+    {
+      "active_commits": [
+        "0560c69aa47ff78730094fe489798cecb8a56c67"
+      ],
+      "allowed_namespaces": [
+        "LAB"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "INDEX_UNAVAILABLE",
+      "index_available": false,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion25 guidance scope protection",
+      "project_scope": "GLOBAL",
+      "query": "concept25 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 25 within the declared scope.",
+      "task_id": "FX-071-025"
+    },
+    {
+      "active_commits": [
+        "9d95a90d6a9162815acae6b4fc8909525f775aa2"
+      ],
+      "allowed_namespaces": [
+        "SYMPHONIE"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "CANONICAL_SOURCE_CONFLICT",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion26 guidance scope protection",
+      "project_scope": "GLOBAL",
+      "query": "concept26 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 26 within the declared scope.",
+      "task_id": "FX-071-026"
+    },
+    {
+      "active_commits": [
+        "39b09421f6414158bc224b3eaf66f2c3fcafa3e2"
+      ],
+      "allowed_namespaces": [
+        "PROJECT"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "MANDATORY_NEGATIVE_PROHIBITION",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion27 guidance scope protection",
+      "project_scope": "GAMMA",
+      "query": "concept27 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 27 within the declared scope.",
+      "task_id": "FX-071-027"
+    },
+    {
+      "active_commits": [
+        "0560c69aa47ff78730094fe489798cecb8a56c67"
+      ],
+      "allowed_namespaces": [
+        "LAB"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "AUTHORITY_PRECEDENCE",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion28 guidance scope protection",
+      "project_scope": "GLOBAL",
+      "query": "concept28 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 28 within the declared scope.",
+      "task_id": "FX-071-028"
+    },
+    {
+      "active_commits": [
+        "9d95a90d6a9162815acae6b4fc8909525f775aa2"
+      ],
+      "allowed_namespaces": [
+        "SYMPHONIE"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "STALE_COMMIT_EXCLUSION",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion29 guidance scope protection",
+      "project_scope": "GLOBAL",
+      "query": "concept29 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 29 within the declared scope.",
+      "task_id": "FX-071-029"
+    },
+    {
+      "active_commits": [
+        "39b09421f6414158bc224b3eaf66f2c3fcafa3e2"
+      ],
+      "allowed_namespaces": [
+        "PROJECT"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "CROSS_PROJECT_ISOLATION",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion30 guidance scope protection",
+      "project_scope": "GAMMA",
+      "query": "concept30 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 30 within the declared scope.",
+      "task_id": "FX-071-030"
+    },
+    {
+      "active_commits": [
+        "0560c69aa47ff78730094fe489798cecb8a56c67"
+      ],
+      "allowed_namespaces": [
+        "LAB"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "ACL_DENIED",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion31 guidance scope protection",
+      "project_scope": "GLOBAL",
+      "query": "concept31 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 31 within the declared scope.",
+      "task_id": "FX-071-031"
+    },
+    {
+      "active_commits": [
+        "9d95a90d6a9162815acae6b4fc8909525f775aa2"
+      ],
+      "allowed_namespaces": [
+        "SYMPHONIE"
+      ],
+      "ambiguity_declared": true,
+      "fixture_class": "AMBIGUOUS_TASK",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion32 guidance scope protection",
+      "project_scope": "GLOBAL",
+      "query": "concept32 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 32 within the declared scope.",
+      "task_id": "FX-071-032"
+    },
+    {
+      "active_commits": [
+        "39b09421f6414158bc224b3eaf66f2c3fcafa3e2"
+      ],
+      "allowed_namespaces": [
+        "PROJECT"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "INSUFFICIENT_EVIDENCE",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion33 guidance scope protection",
+      "project_scope": "GAMMA",
+      "query": "concept33 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 33 within the declared scope.",
+      "task_id": "FX-071-033"
+    },
+    {
+      "active_commits": [
+        "0560c69aa47ff78730094fe489798cecb8a56c67"
+      ],
+      "allowed_namespaces": [
+        "LAB"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "MULTI_DOCUMENT_SYNTHESIS",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion34 guidance scope protection",
+      "project_scope": "GLOBAL",
+      "query": "concept34 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 34 within the declared scope.",
+      "task_id": "FX-071-034"
+    },
+    {
+      "active_commits": [
+        "9d95a90d6a9162815acae6b4fc8909525f775aa2"
+      ],
+      "allowed_namespaces": [
+        "SYMPHONIE",
+        "LAB"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "AUTHORIZED_CROSS_NAMESPACE_RETRIEVAL",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion35 guidance scope protection",
+      "project_scope": "GLOBAL",
+      "query": "concept35 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 35 within the declared scope.",
+      "task_id": "FX-071-035"
+    },
+    {
+      "active_commits": [
+        "39b09421f6414158bc224b3eaf66f2c3fcafa3e2"
+      ],
+      "allowed_namespaces": [
+        "PROJECT"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "DECEPTIVE_SEMANTIC_SIMILARITY",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion36 guidance scope protection",
+      "project_scope": "GAMMA",
+      "query": "concept36 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 36 within the declared scope.",
+      "task_id": "FX-071-036"
+    },
+    {
+      "active_commits": [
+        "0560c69aa47ff78730094fe489798cecb8a56c67"
+      ],
+      "allowed_namespaces": [
+        "LAB"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "SUPERSEDED_DOCUMENT",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion37 guidance scope protection",
+      "project_scope": "GLOBAL",
+      "query": "concept37 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 37 within the declared scope.",
+      "task_id": "FX-071-037"
+    },
+    {
+      "active_commits": [
+        "9d95a90d6a9162815acae6b4fc8909525f775aa2"
+      ],
+      "allowed_namespaces": [
+        "SYMPHONIE"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "ACTIVE_COMMIT_REPLACEMENT",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion38 guidance scope protection",
+      "project_scope": "GLOBAL",
+      "query": "concept38 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 38 within the declared scope.",
+      "task_id": "FX-071-038"
+    },
+    {
+      "active_commits": [
+        "39b09421f6414158bc224b3eaf66f2c3fcafa3e2"
+      ],
+      "allowed_namespaces": [
+        "PROJECT"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "OWNERSHIP_CONFLICT",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion39 guidance scope protection",
+      "project_scope": "GAMMA",
+      "query": "concept39 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 39 within the declared scope.",
+      "task_id": "FX-071-039"
+    },
+    {
+      "active_commits": [
+        "0560c69aa47ff78730094fe489798cecb8a56c67"
+      ],
+      "allowed_namespaces": [
+        "LAB"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "EXACT_CITATION_REQUIREMENT",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion40 guidance scope protection",
+      "project_scope": "GLOBAL",
+      "query": "concept40 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 40 within the declared scope.",
+      "task_id": "FX-071-040"
+    },
+    {
+      "active_commits": [
+        "9d95a90d6a9162815acae6b4fc8909525f775aa2"
+      ],
+      "allowed_namespaces": [
+        "SYMPHONIE"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "LONG_DOCUMENT_CHUNK_BOUNDARY",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion41 guidance scope protection",
+      "project_scope": "GLOBAL",
+      "query": "concept41 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 41 within the declared scope.",
+      "task_id": "FX-071-041"
+    },
+    {
+      "active_commits": [
+        "39b09421f6414158bc224b3eaf66f2c3fcafa3e2"
+      ],
+      "allowed_namespaces": [
+        "PROJECT"
+      ],
+      "ambiguity_declared": false,
+      "fixture_class": "MULTILINGUAL_RETRIEVAL",
+      "index_available": true,
+      "observable_metadata": [
+        "repository",
+        "path",
+        "document_id",
+        "commit_sha",
+        "canonical_owner",
+        "authority_class",
+        "project_scope",
+        "document_status"
+      ],
+      "paraphrase_query": "notion42 guidance scope protection",
+      "project_scope": "GAMMA",
+      "query": "concept42 rule namespace safeguard",
+      "schema_version": "1.0.0",
+      "task": "Resolve governed synthetic topic 42 within the declared scope.",
+      "task_id": "FX-071-042"
+    }
+  ]
+}

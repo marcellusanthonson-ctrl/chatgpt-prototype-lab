@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1.0",
   "project_id": "lab",
-  "updated_at": "2026-07-23",
+  "updated_at": "2026-07-24",
   "records": [
     {
       "id": "PEND-LAB-001",
@@ -367,6 +367,45 @@
         "projects/lab/experiments/EXP-LAB-001.json",
         "projects/lab/evidence/EVD-LAB-EXP-001.json",
         "projects/lab/authorizations/AUTHORIZATION_LAB_BLINDED_CONTEXT_SELECTION_EXPERIMENT_065_DOCUMENTARY_RECONCILIATION_066.json"
+      ]
+    },
+    {
+      "id": "PEND-LAB-017",
+      "status": "COMPLETED_REPRODUCIBLE_EXECUTION_PUBLISHED",
+      "type": "FULL_RAG_STAGES_5_AND_6_DISCRIMINATING_TEST_EXECUTION",
+      "subject": "Generate, freeze, execute and evaluate the complete stages 5 and 6 discriminating synthetic test",
+      "priority": "HIGH",
+      "completed_by": "FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001",
+      "authorization_id": "AUTHORIZATION_LAB_FULL_RAG_STAGES_5_AND_6_DISCRIMINATING_TEST_EXECUTION_071",
+      "experiment_id": "EXP-LAB-002",
+      "evidence_id": "EVD-LAB-EXP-002",
+      "run_count": 30,
+      "control_status": "PASS",
+      "candidate_result": "NO_CANDIDATE_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS",
+      "architecture_selected": false,
+      "implementation_selected": false,
+      "successor_pending": "PEND-LAB-018",
+      "source_refs": [
+        "projects/lab/pending/PEND-LAB-017.json",
+        "projects/lab/experiments/EXP-LAB-002.json",
+        "projects/lab/evidence/EVD-LAB-EXP-002.json",
+        "projects/lab/test-executions/FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001/MANIFEST.json"
+      ]
+    },
+    {
+      "id": "PEND-LAB-018",
+      "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+      "type": "INDEPENDENT_EXTERNAL_READ_ONLY_AUDIT",
+      "subject": "Independently audit the full RAG stages 5 and 6 execution package and findings",
+      "priority": "HIGH",
+      "authorization_required": true,
+      "current_authority": "NONE",
+      "automatic_approval": false,
+      "next_authorized_action": "NONE_UNTIL_SEPARATE_EXPLICIT_AUDIT_AUTHORIZATION",
+      "source_refs": [
+        "projects/lab/pending/PEND-LAB-018.json",
+        "projects/lab/experiments/EXP-LAB-002.json",
+        "projects/lab/evidence/EVD-LAB-EXP-002.json"
       ]
     }
   ]

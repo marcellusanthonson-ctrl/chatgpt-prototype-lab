@@ -1,7 +1,7 @@
 {
   "schema_version": "2.5.0",
   "document_id": "lab.current-state",
-  "version": "2.5.28",
+  "version": "2.5.29",
   "status": "GOVERNANCE_V2_CANONICAL_BASELINE",
   "updated_at": "2026-07-24",
   "active_project": "lab",
@@ -34,7 +34,10 @@
     "blinded_context_selection_evidence": "projects/lab/evidence/EVD-LAB-EXP-001.json",
     "exp065_rca002_reconciliation": "projects/lab/reconciliations/REC-LAB-EXP065-RCA002-001.json",
     "full_rag_test_design": "projects/lab/test-designs/FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-001/MANIFEST.json",
-    "full_rag_execution_pending": "projects/lab/pending/PEND-LAB-017.json"
+    "full_rag_execution_pending": "projects/lab/pending/PEND-LAB-017.json",
+    "full_rag_execution_package": "projects/lab/test-executions/FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001/MANIFEST.json",
+    "full_rag_execution_evidence": "projects/lab/evidence/EVD-LAB-EXP-002.json",
+    "full_rag_external_audit_pending": "projects/lab/pending/PEND-LAB-018.json"
   },
   "projects": {
     "lab": {"status": "active", "canonical_path": "projects/lab/PROJECT_STATE.md", "structured_state_path": "projects/lab/PROJECT_STATE.json"},
@@ -92,7 +95,8 @@
     "blinded_context_selection_experiment_065_documentary_reconciliation_066": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "exp065_artifact_delivery_and_claude_root_cause_audit_completion_068": "CONSUMED_ON_DELIVERY_OF_COMPLETE_AUDIT_002_PACKAGE",
     "exp065_rca002_documentary_reconciliation_069": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "full_rag_stages_5_and_6_discriminating_test_design_070": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+    "full_rag_stages_5_and_6_discriminating_test_design_070": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "full_rag_stages_5_and_6_discriminating_test_execution_071": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_OF_COMPLETE_REPRODUCIBLE_EXECUTION_PACKAGE"
   },
   "verified_external_heads": {
     "symphonie": "b492852c0d76ff7cd44ca266dc8950c94638d568",
@@ -114,7 +118,7 @@
   },
   "completed_research_transitions": ["PHASE_4_ACCESSIBILITY_NORMATIVE_AND_ASSISTIVE_TECHNOLOGY_RESEARCH"],
   "next_authorized_action": "NONE_AFTER_CONSUMPTION",
-  "next_recommended_transition": "AUTHORIZE_GENERATION_AND_EXECUTION_OF_FULL_RAG_STAGES_5_AND_6_DISCRIMINATING_TEST",
+  "next_recommended_transition": "AUTHORIZE_INDEPENDENT_EXTERNAL_READ_ONLY_AUDIT_OF_FULL_RAG_EXECUTION_071",
   "continuity_read_order": ["LAB_CONTRACT.md","METHODOLOGY.md","CURRENT_STATE.json","registry/index.json","registry/projects.json","projects/{active_project}/PROJECT_STATE.json","project decisions","project authorizations","open errors","applicable evidence","current continuity package"],
   "latest_reconciliation": {
     "authorization_id": "AUTHORIZATION_LAB_EXP065_RCA002_DOCUMENTARY_RECONCILIATION_069",
@@ -170,6 +174,33 @@
     "runtime_effect": "NONE",
     "product_effect": "NONE",
     "next_recommended_transition": "AUTHORIZE_GENERATION_AND_EXECUTION_OF_FULL_RAG_STAGES_5_AND_6_DISCRIMINATING_TEST",
+    "authority_effect": "NONE_AFTER_CONSUMPTION"
+  },
+  "latest_test_execution": {
+    "authorization_id": "AUTHORIZATION_LAB_FULL_RAG_STAGES_5_AND_6_DISCRIMINATING_TEST_EXECUTION_071",
+    "experiment_id": "EXP-LAB-002",
+    "evidence_id": "EVD-LAB-EXP-002",
+    "execution_id": "FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001",
+    "status": "COMPLETE_REPRODUCIBLE",
+    "manifest": "projects/lab/test-executions/FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001/MANIFEST.json",
+    "synthetic_document_count": 180,
+    "fixture_count": 42,
+    "run_count": 30,
+    "control_status": "PASS",
+    "leakage_control": "PASS",
+    "reproducibility": "PASS_EXACT",
+    "candidate_result": "NO_CANDIDATE_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS",
+    "full_rag_authority_first_result": "NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS",
+    "positive_control_result": "PASS_F1_1_ZERO_CRITICAL_FAILURES",
+    "negative_control_result": "PASS_DISCRIMINATES_UNSAFE_ORDERING",
+    "pend_lab_017_status": "COMPLETED_REPRODUCIBLE_EXECUTION_PUBLISHED",
+    "successor_pending": "PEND-LAB-018",
+    "architecture_selected": false,
+    "implementation_selected": false,
+    "implementation_approved": false,
+    "runtime_effect": "NONE",
+    "product_effect": "NONE",
+    "next_recommended_transition": "AUTHORIZE_INDEPENDENT_EXTERNAL_READ_ONLY_AUDIT_OF_FULL_RAG_EXECUTION_071",
     "authority_effect": "NONE_AFTER_CONSUMPTION"
   },
   "latest_integration": {

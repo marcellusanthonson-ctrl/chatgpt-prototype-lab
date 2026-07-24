@@ -1,0 +1,65 @@
+{
+  "baseline_cost_arm": "NO_GOVERNANCE_FILTERING_REFERENCE",
+  "full_corpus_bytes": 12695,
+  "per_arm": {
+    "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION": {
+      "candidate_count_mean": 20.690476,
+      "percentage_byte_reduction": 57.697256,
+      "retrieval_latency": {
+        "unit": "MILLISECONDS_SIMULATED_DETERMINISTIC",
+        "value": 1.751
+      },
+      "selected_bytes": 32222,
+      "selected_tokens": null
+    },
+    "FULL_RAG_AUTHORITY_FIRST_SIMULATION": {
+      "candidate_count_mean": 30.619048,
+      "percentage_byte_reduction": 63.749508,
+      "retrieval_latency": {
+        "unit": "MILLISECONDS_SIMULATED_DETERMINISTIC",
+        "value": 2.449
+      },
+      "selected_bytes": 27612,
+      "selected_tokens": null
+    },
+    "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL": {
+      "candidate_count_mean": 30.619048,
+      "percentage_byte_reduction": 38.860444,
+      "retrieval_latency": {
+        "unit": "MILLISECONDS_SIMULATED_DETERMINISTIC",
+        "value": 2.449
+      },
+      "selected_bytes": 46570,
+      "selected_tokens": null
+    },
+    "NO_GOVERNANCE_FILTERING_REFERENCE": {
+      "candidate_count_mean": 75.369048,
+      "percentage_byte_reduction": 36.14809,
+      "retrieval_latency": {
+        "unit": "MILLISECONDS_SIMULATED_DETERMINISTIC",
+        "value": 5.586
+      },
+      "selected_bytes": 48636,
+      "selected_tokens": null
+    },
+    "ORACLE_INFORMED_POSITIVE_CONTROL": {
+      "candidate_count_mean": 0.97619,
+      "percentage_byte_reduction": 81.882631,
+      "retrieval_latency": {
+        "unit": "MILLISECONDS_SIMULATED_DETERMINISTIC",
+        "value": 0.11
+      },
+      "selected_bytes": 13800,
+      "selected_tokens": null
+    }
+  },
+  "positive_control_cost_arm": "ORACLE_INFORMED_POSITIVE_CONTROL",
+  "representative_lab_scale_comparison": "SYNTHETIC_180_DOCUMENT_BOUND_ONLY",
+  "schema_version": "1.0.0",
+  "tokenizer": {
+    "installation_attempted": false,
+    "selected_tokens": null,
+    "status": "TOKENIZER_NOT_AVAILABLE_WITHOUT_INSTALLATION",
+    "tokens_reported_as_bytes": false
+  }
+}

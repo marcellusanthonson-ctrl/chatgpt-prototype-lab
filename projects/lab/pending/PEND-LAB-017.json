@@ -2,12 +2,13 @@
   "schema_version": "1.0.0",
   "id": "PEND-LAB-017",
   "project_id": "lab",
-  "status": "AUTHORIZED_AWAITING_CODEX_EXECUTION",
+  "status": "COMPLETED_REPRODUCIBLE_EXECUTION_PUBLISHED",
   "type": "FULL_RAG_STAGES_5_AND_6_DISCRIMINATING_TEST_EXECUTION",
   "subject": "Generate the independent synthetic corpus, freeze scoring and execute the complete stages 5 and 6 discriminating test",
   "priority": "HIGH",
   "created_at": "2026-07-24",
   "authorized_at": "2026-07-24",
+  "completed_at": "2026-07-24",
   "predecessor_pending": "PEND-LAB-016",
   "precondition_package": "FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-001",
   "current_authority": "AUTHORIZATION_LAB_FULL_RAG_STAGES_5_AND_6_DISCRIMINATING_TEST_EXECUTION_071",
@@ -32,10 +33,32 @@
     "NO_DEPENDENCY_INSTALLATION",
     "NO_EXTERNAL_API"
   ],
-  "next_authorized_action": "CODEX_EXECUTE_AUTHORIZATION_071_ONCE",
+  "completed_by": "FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001",
+  "result": {
+    "experiment_id": "EXP-LAB-002",
+    "evidence_id": "EVD-LAB-EXP-002",
+    "synthetic_document_count": 180,
+    "fixture_count": 42,
+    "run_count": 30,
+    "control_status": "PASS",
+    "leakage_control": "PASS",
+    "reproducibility": "PASS_EXACT",
+    "candidate_result": "NO_CANDIDATE_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS",
+    "architecture_selected": false,
+    "implementation_selected": false,
+    "implementation_approved": false,
+    "runtime_effect": "NONE",
+    "product_effect": "NONE"
+  },
+  "successor_pending": "PEND-LAB-018",
+  "next_authorized_action": "NONE_AFTER_CONSUMPTION",
   "source_refs": [
     "projects/lab/authorizations/AUTHORIZATION_LAB_FULL_RAG_STAGES_5_AND_6_DISCRIMINATING_TEST_EXECUTION_071.json",
     "projects/lab/test-designs/FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-001/MANIFEST.json",
-    "projects/lab/pending/PEND-LAB-016.json"
+    "projects/lab/pending/PEND-LAB-016.json",
+    "projects/lab/experiments/EXP-LAB-002.json",
+    "projects/lab/evidence/EVD-LAB-EXP-002.json",
+    "projects/lab/test-executions/FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001/MANIFEST.json",
+    "projects/lab/pending/PEND-LAB-018.json"
   ]
 }

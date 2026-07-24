@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "id": "PEND-LAB-018",
+  "project_id": "lab",
+  "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+  "type": "INDEPENDENT_EXTERNAL_READ_ONLY_AUDIT",
+  "subject": "Independently audit the complete reproducible package for full RAG stages 5 and 6 discriminating test execution 071",
+  "priority": "HIGH",
+  "created_at": "2026-07-24",
+  "predecessor_pending": "PEND-LAB-017",
+  "source_experiment": "EXP-LAB-002",
+  "source_evidence": "EVD-LAB-EXP-002",
+  "source_execution_package": "FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001",
+  "audit_mode": "STRICT_READ_ONLY_INDEPENDENT_EXTERNAL_AUDIT",
+  "authorization_required": true,
+  "required_scope": [
+    "VERIFY_COMPLETE_PACKAGE_HASHES_AND_MANIFEST",
+    "REPRODUCE_CORPUS_GENERATION_AND_ALL_30_RUNS",
+    "VERIFY_CORPUS_INDEPENDENCE",
+    "VERIFY_PUBLIC_PRIVATE_ORACLE_SEPARATION",
+    "VERIFY_PRIVATE_CANARY_AND_SELECTOR_READ_LOGS",
+    "VERIFY_PRE_RUN_FREEZE_AND_POST_FREEZE_HASH_STABILITY",
+    "VERIFY_SCORING_FORMULAS_METRICS_AND_GATE_RESULTS",
+    "REVIEW_FULL_RAG_AUTHORITY_FIRST_FAILURE_PROFILE",
+    "SEARCH_FAVORABLE_AND_CONTRARY_EVIDENCE",
+    "ASSESS_CLAIM_LIMITS_WITHOUT_SELECTING_ARCHITECTURE"
+  ],
+  "required_boundaries": [
+    "ZERO_CANONICAL_MUTATION",
+    "ZERO_REAL_DATA",
+    "ZERO_EXTERNAL_API",
+    "ZERO_DEPENDENCY_INSTALLATION",
+    "ZERO_ARCHITECTURE_SELECTION",
+    "ZERO_IMPLEMENTATION_SELECTION_OR_APPROVAL",
+    "ZERO_PRODUCT_OR_EXTERNAL_REPOSITORY_CHANGE",
+    "ZERO_DEPLOYMENT"
+  ],
+  "current_authority": "NONE",
+  "automatic_approval": false,
+  "next_authorized_action": "NONE_UNTIL_SEPARATE_EXPLICIT_AUDIT_AUTHORIZATION",
+  "source_refs": [
+    "projects/lab/experiments/EXP-LAB-002.json",
+    "projects/lab/evidence/EVD-LAB-EXP-002.json",
+    "projects/lab/test-executions/FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001/MANIFEST.json",
+    "projects/lab/test-executions/FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001/HASHES.json"
+  ]
+}

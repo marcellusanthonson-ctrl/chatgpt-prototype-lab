@@ -1,0 +1,22 @@
+{
+  "corpus_id": "FULL-RAG-SYNTHETIC-CORPUS-071-001",
+  "current_corpus_counts": {
+    "documents": 180,
+    "fixtures": 42
+  },
+  "new_document_graph": true,
+  "new_document_id_method": "OPAQUE_SHA256_DERIVED",
+  "new_fixture_id_namespace": "FX-071",
+  "new_seed": 71024001,
+  "new_task_templates": true,
+  "predecessor_artifacts_read_by_generator": false,
+  "predecessor_corpus_counts": {
+    "documents": 88,
+    "fixtures": 22
+  },
+  "predecessor_experiment": "EXP-LAB-001",
+  "process_basis": "GENERATED_FROM_DESIGN_SPEC_AND_NEW_SEED_WITHOUT_PREDECESSOR_ARTIFACT_INPUT",
+  "renamed_predecessor_fixtures": false,
+  "result": "PASS_INDEPENDENT_SYNTHETIC_CORPUS",
+  "schema_version": "1.0.0"
+}

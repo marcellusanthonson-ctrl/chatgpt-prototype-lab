@@ -1,0 +1,68 @@
+{
+  "architecture_selected": false,
+  "controls": {
+    "negative_control": "PASS_DISCRIMINATES_UNSAFE_ORDERING",
+    "positive_control": "PASS"
+  },
+  "execution_id": "FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001",
+  "gates_by_arm": {
+    "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION": {
+      "gates": {
+        "A_EXPERIMENTAL_INTEGRITY": "PASS",
+        "B_CRITICAL_SAFETY": "FAIL",
+        "C_FIDELITY": "FAIL",
+        "D_COST": "PASS_WITH_TOKENIZER_FALLBACK_DECLARED",
+        "E_ROBUSTNESS": "PASS"
+      },
+      "role": "CANDIDATE_SIMULATION_NO_SELECTION_EFFECT",
+      "tested_conditions_viability": "NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS"
+    },
+    "FULL_RAG_AUTHORITY_FIRST_SIMULATION": {
+      "gates": {
+        "A_EXPERIMENTAL_INTEGRITY": "PASS",
+        "B_CRITICAL_SAFETY": "FAIL",
+        "C_FIDELITY": "FAIL",
+        "D_COST": "PASS_WITH_TOKENIZER_FALLBACK_DECLARED",
+        "E_ROBUSTNESS": "PASS"
+      },
+      "role": "CANDIDATE_SIMULATION_NO_SELECTION_EFFECT",
+      "tested_conditions_viability": "NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS"
+    },
+    "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL": {
+      "gates": {
+        "A_EXPERIMENTAL_INTEGRITY": "PASS",
+        "B_CRITICAL_SAFETY": "FAIL",
+        "C_FIDELITY": "FAIL",
+        "D_COST": "PASS_WITH_TOKENIZER_FALLBACK_DECLARED",
+        "E_ROBUSTNESS": "PASS"
+      },
+      "role": "NEGATIVE_CONTROL_NOT_PROMOTABLE",
+      "tested_conditions_viability": "NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS"
+    },
+    "NO_GOVERNANCE_FILTERING_REFERENCE": {
+      "gates": {
+        "A_EXPERIMENTAL_INTEGRITY": "PASS",
+        "B_CRITICAL_SAFETY": "FAIL",
+        "C_FIDELITY": "FAIL",
+        "D_COST": "PASS_WITH_TOKENIZER_FALLBACK_DECLARED",
+        "E_ROBUSTNESS": "PASS"
+      },
+      "role": "REFERENCE_NOT_CURRENT_LAB_PROCEDURE",
+      "tested_conditions_viability": "NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS"
+    },
+    "ORACLE_INFORMED_POSITIVE_CONTROL": {
+      "gates": {
+        "A_EXPERIMENTAL_INTEGRITY": "PASS",
+        "B_CRITICAL_SAFETY": "PASS",
+        "C_FIDELITY": "PASS",
+        "D_COST": "PASS_WITH_TOKENIZER_FALLBACK_DECLARED",
+        "E_ROBUSTNESS": "PASS"
+      },
+      "role": "EVALUATOR_ONLY_POSITIVE_CONTROL_NOT_PROMOTABLE",
+      "tested_conditions_viability": "VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS"
+    }
+  },
+  "implementation_approved": false,
+  "implementation_selected": false,
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,848 @@
+{
+  "private_read_count": 0,
+  "read_count": 120,
+  "reads": [
+    {
+      "access": "READ",
+      "arm": "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION",
+      "configuration": "ORDER_PERMUTATION",
+      "path": "public/READ_MANIFEST.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION",
+      "configuration": "ORDER_PERMUTATION",
+      "path": "public/DOCUMENT_CATALOG.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION",
+      "configuration": "ORDER_PERMUTATION",
+      "path": "public/TASKS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION",
+      "configuration": "ORDER_PERMUTATION",
+      "path": "public/SYNONYMS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION",
+      "configuration": "ORDER_PERMUTATION",
+      "path": "frozen/ARM_PARAMETERS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION",
+      "configuration": "PARAPHRASE_VARIANT",
+      "path": "public/READ_MANIFEST.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION",
+      "configuration": "PARAPHRASE_VARIANT",
+      "path": "public/DOCUMENT_CATALOG.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION",
+      "configuration": "PARAPHRASE_VARIANT",
+      "path": "public/TASKS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION",
+      "configuration": "PARAPHRASE_VARIANT",
+      "path": "public/SYNONYMS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION",
+      "configuration": "PARAPHRASE_VARIANT",
+      "path": "frozen/ARM_PARAMETERS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION",
+      "configuration": "REPETITION_1",
+      "path": "public/READ_MANIFEST.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION",
+      "configuration": "REPETITION_1",
+      "path": "public/DOCUMENT_CATALOG.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION",
+      "configuration": "REPETITION_1",
+      "path": "public/TASKS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION",
+      "configuration": "REPETITION_1",
+      "path": "public/SYNONYMS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION",
+      "configuration": "REPETITION_1",
+      "path": "frozen/ARM_PARAMETERS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION",
+      "configuration": "REPETITION_2",
+      "path": "public/READ_MANIFEST.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION",
+      "configuration": "REPETITION_2",
+      "path": "public/DOCUMENT_CATALOG.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION",
+      "configuration": "REPETITION_2",
+      "path": "public/TASKS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION",
+      "configuration": "REPETITION_2",
+      "path": "public/SYNONYMS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION",
+      "configuration": "REPETITION_2",
+      "path": "frozen/ARM_PARAMETERS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION",
+      "configuration": "REPETITION_3",
+      "path": "public/READ_MANIFEST.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION",
+      "configuration": "REPETITION_3",
+      "path": "public/DOCUMENT_CATALOG.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION",
+      "configuration": "REPETITION_3",
+      "path": "public/TASKS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION",
+      "configuration": "REPETITION_3",
+      "path": "public/SYNONYMS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION",
+      "configuration": "REPETITION_3",
+      "path": "frozen/ARM_PARAMETERS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION",
+      "configuration": "SCALE_VARIANT",
+      "path": "public/READ_MANIFEST.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION",
+      "configuration": "SCALE_VARIANT",
+      "path": "public/DOCUMENT_CATALOG.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION",
+      "configuration": "SCALE_VARIANT",
+      "path": "public/TASKS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION",
+      "configuration": "SCALE_VARIANT",
+      "path": "public/SYNONYMS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION",
+      "configuration": "SCALE_VARIANT",
+      "path": "frozen/ARM_PARAMETERS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_AUTHORITY_FIRST_SIMULATION",
+      "configuration": "ORDER_PERMUTATION",
+      "path": "public/READ_MANIFEST.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_AUTHORITY_FIRST_SIMULATION",
+      "configuration": "ORDER_PERMUTATION",
+      "path": "public/DOCUMENT_CATALOG.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_AUTHORITY_FIRST_SIMULATION",
+      "configuration": "ORDER_PERMUTATION",
+      "path": "public/TASKS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_AUTHORITY_FIRST_SIMULATION",
+      "configuration": "ORDER_PERMUTATION",
+      "path": "public/SYNONYMS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_AUTHORITY_FIRST_SIMULATION",
+      "configuration": "ORDER_PERMUTATION",
+      "path": "frozen/ARM_PARAMETERS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_AUTHORITY_FIRST_SIMULATION",
+      "configuration": "PARAPHRASE_VARIANT",
+      "path": "public/READ_MANIFEST.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_AUTHORITY_FIRST_SIMULATION",
+      "configuration": "PARAPHRASE_VARIANT",
+      "path": "public/DOCUMENT_CATALOG.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_AUTHORITY_FIRST_SIMULATION",
+      "configuration": "PARAPHRASE_VARIANT",
+      "path": "public/TASKS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_AUTHORITY_FIRST_SIMULATION",
+      "configuration": "PARAPHRASE_VARIANT",
+      "path": "public/SYNONYMS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_AUTHORITY_FIRST_SIMULATION",
+      "configuration": "PARAPHRASE_VARIANT",
+      "path": "frozen/ARM_PARAMETERS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_AUTHORITY_FIRST_SIMULATION",
+      "configuration": "REPETITION_1",
+      "path": "public/READ_MANIFEST.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_AUTHORITY_FIRST_SIMULATION",
+      "configuration": "REPETITION_1",
+      "path": "public/DOCUMENT_CATALOG.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_AUTHORITY_FIRST_SIMULATION",
+      "configuration": "REPETITION_1",
+      "path": "public/TASKS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_AUTHORITY_FIRST_SIMULATION",
+      "configuration": "REPETITION_1",
+      "path": "public/SYNONYMS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_AUTHORITY_FIRST_SIMULATION",
+      "configuration": "REPETITION_1",
+      "path": "frozen/ARM_PARAMETERS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_AUTHORITY_FIRST_SIMULATION",
+      "configuration": "REPETITION_2",
+      "path": "public/READ_MANIFEST.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_AUTHORITY_FIRST_SIMULATION",
+      "configuration": "REPETITION_2",
+      "path": "public/DOCUMENT_CATALOG.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_AUTHORITY_FIRST_SIMULATION",
+      "configuration": "REPETITION_2",
+      "path": "public/TASKS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_AUTHORITY_FIRST_SIMULATION",
+      "configuration": "REPETITION_2",
+      "path": "public/SYNONYMS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_AUTHORITY_FIRST_SIMULATION",
+      "configuration": "REPETITION_2",
+      "path": "frozen/ARM_PARAMETERS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_AUTHORITY_FIRST_SIMULATION",
+      "configuration": "REPETITION_3",
+      "path": "public/READ_MANIFEST.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_AUTHORITY_FIRST_SIMULATION",
+      "configuration": "REPETITION_3",
+      "path": "public/DOCUMENT_CATALOG.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_AUTHORITY_FIRST_SIMULATION",
+      "configuration": "REPETITION_3",
+      "path": "public/TASKS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_AUTHORITY_FIRST_SIMULATION",
+      "configuration": "REPETITION_3",
+      "path": "public/SYNONYMS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_AUTHORITY_FIRST_SIMULATION",
+      "configuration": "REPETITION_3",
+      "path": "frozen/ARM_PARAMETERS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_AUTHORITY_FIRST_SIMULATION",
+      "configuration": "SCALE_VARIANT",
+      "path": "public/READ_MANIFEST.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_AUTHORITY_FIRST_SIMULATION",
+      "configuration": "SCALE_VARIANT",
+      "path": "public/DOCUMENT_CATALOG.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_AUTHORITY_FIRST_SIMULATION",
+      "configuration": "SCALE_VARIANT",
+      "path": "public/TASKS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_AUTHORITY_FIRST_SIMULATION",
+      "configuration": "SCALE_VARIANT",
+      "path": "public/SYNONYMS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_AUTHORITY_FIRST_SIMULATION",
+      "configuration": "SCALE_VARIANT",
+      "path": "frozen/ARM_PARAMETERS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL",
+      "configuration": "ORDER_PERMUTATION",
+      "path": "public/READ_MANIFEST.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL",
+      "configuration": "ORDER_PERMUTATION",
+      "path": "public/DOCUMENT_CATALOG.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL",
+      "configuration": "ORDER_PERMUTATION",
+      "path": "public/TASKS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL",
+      "configuration": "ORDER_PERMUTATION",
+      "path": "public/SYNONYMS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL",
+      "configuration": "ORDER_PERMUTATION",
+      "path": "frozen/ARM_PARAMETERS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL",
+      "configuration": "PARAPHRASE_VARIANT",
+      "path": "public/READ_MANIFEST.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL",
+      "configuration": "PARAPHRASE_VARIANT",
+      "path": "public/DOCUMENT_CATALOG.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL",
+      "configuration": "PARAPHRASE_VARIANT",
+      "path": "public/TASKS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL",
+      "configuration": "PARAPHRASE_VARIANT",
+      "path": "public/SYNONYMS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL",
+      "configuration": "PARAPHRASE_VARIANT",
+      "path": "frozen/ARM_PARAMETERS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL",
+      "configuration": "REPETITION_1",
+      "path": "public/READ_MANIFEST.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL",
+      "configuration": "REPETITION_1",
+      "path": "public/DOCUMENT_CATALOG.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL",
+      "configuration": "REPETITION_1",
+      "path": "public/TASKS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL",
+      "configuration": "REPETITION_1",
+      "path": "public/SYNONYMS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL",
+      "configuration": "REPETITION_1",
+      "path": "frozen/ARM_PARAMETERS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL",
+      "configuration": "REPETITION_2",
+      "path": "public/READ_MANIFEST.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL",
+      "configuration": "REPETITION_2",
+      "path": "public/DOCUMENT_CATALOG.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL",
+      "configuration": "REPETITION_2",
+      "path": "public/TASKS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL",
+      "configuration": "REPETITION_2",
+      "path": "public/SYNONYMS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL",
+      "configuration": "REPETITION_2",
+      "path": "frozen/ARM_PARAMETERS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL",
+      "configuration": "REPETITION_3",
+      "path": "public/READ_MANIFEST.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL",
+      "configuration": "REPETITION_3",
+      "path": "public/DOCUMENT_CATALOG.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL",
+      "configuration": "REPETITION_3",
+      "path": "public/TASKS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL",
+      "configuration": "REPETITION_3",
+      "path": "public/SYNONYMS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL",
+      "configuration": "REPETITION_3",
+      "path": "frozen/ARM_PARAMETERS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL",
+      "configuration": "SCALE_VARIANT",
+      "path": "public/READ_MANIFEST.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL",
+      "configuration": "SCALE_VARIANT",
+      "path": "public/DOCUMENT_CATALOG.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL",
+      "configuration": "SCALE_VARIANT",
+      "path": "public/TASKS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL",
+      "configuration": "SCALE_VARIANT",
+      "path": "public/SYNONYMS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL",
+      "configuration": "SCALE_VARIANT",
+      "path": "frozen/ARM_PARAMETERS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "NO_GOVERNANCE_FILTERING_REFERENCE",
+      "configuration": "ORDER_PERMUTATION",
+      "path": "public/READ_MANIFEST.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "NO_GOVERNANCE_FILTERING_REFERENCE",
+      "configuration": "ORDER_PERMUTATION",
+      "path": "public/DOCUMENT_CATALOG.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "NO_GOVERNANCE_FILTERING_REFERENCE",
+      "configuration": "ORDER_PERMUTATION",
+      "path": "public/TASKS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "NO_GOVERNANCE_FILTERING_REFERENCE",
+      "configuration": "ORDER_PERMUTATION",
+      "path": "public/SYNONYMS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "NO_GOVERNANCE_FILTERING_REFERENCE",
+      "configuration": "ORDER_PERMUTATION",
+      "path": "frozen/ARM_PARAMETERS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "NO_GOVERNANCE_FILTERING_REFERENCE",
+      "configuration": "PARAPHRASE_VARIANT",
+      "path": "public/READ_MANIFEST.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "NO_GOVERNANCE_FILTERING_REFERENCE",
+      "configuration": "PARAPHRASE_VARIANT",
+      "path": "public/DOCUMENT_CATALOG.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "NO_GOVERNANCE_FILTERING_REFERENCE",
+      "configuration": "PARAPHRASE_VARIANT",
+      "path": "public/TASKS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "NO_GOVERNANCE_FILTERING_REFERENCE",
+      "configuration": "PARAPHRASE_VARIANT",
+      "path": "public/SYNONYMS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "NO_GOVERNANCE_FILTERING_REFERENCE",
+      "configuration": "PARAPHRASE_VARIANT",
+      "path": "frozen/ARM_PARAMETERS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "NO_GOVERNANCE_FILTERING_REFERENCE",
+      "configuration": "REPETITION_1",
+      "path": "public/READ_MANIFEST.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "NO_GOVERNANCE_FILTERING_REFERENCE",
+      "configuration": "REPETITION_1",
+      "path": "public/DOCUMENT_CATALOG.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "NO_GOVERNANCE_FILTERING_REFERENCE",
+      "configuration": "REPETITION_1",
+      "path": "public/TASKS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "NO_GOVERNANCE_FILTERING_REFERENCE",
+      "configuration": "REPETITION_1",
+      "path": "public/SYNONYMS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "NO_GOVERNANCE_FILTERING_REFERENCE",
+      "configuration": "REPETITION_1",
+      "path": "frozen/ARM_PARAMETERS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "NO_GOVERNANCE_FILTERING_REFERENCE",
+      "configuration": "REPETITION_2",
+      "path": "public/READ_MANIFEST.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "NO_GOVERNANCE_FILTERING_REFERENCE",
+      "configuration": "REPETITION_2",
+      "path": "public/DOCUMENT_CATALOG.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "NO_GOVERNANCE_FILTERING_REFERENCE",
+      "configuration": "REPETITION_2",
+      "path": "public/TASKS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "NO_GOVERNANCE_FILTERING_REFERENCE",
+      "configuration": "REPETITION_2",
+      "path": "public/SYNONYMS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "NO_GOVERNANCE_FILTERING_REFERENCE",
+      "configuration": "REPETITION_2",
+      "path": "frozen/ARM_PARAMETERS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "NO_GOVERNANCE_FILTERING_REFERENCE",
+      "configuration": "REPETITION_3",
+      "path": "public/READ_MANIFEST.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "NO_GOVERNANCE_FILTERING_REFERENCE",
+      "configuration": "REPETITION_3",
+      "path": "public/DOCUMENT_CATALOG.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "NO_GOVERNANCE_FILTERING_REFERENCE",
+      "configuration": "REPETITION_3",
+      "path": "public/TASKS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "NO_GOVERNANCE_FILTERING_REFERENCE",
+      "configuration": "REPETITION_3",
+      "path": "public/SYNONYMS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "NO_GOVERNANCE_FILTERING_REFERENCE",
+      "configuration": "REPETITION_3",
+      "path": "frozen/ARM_PARAMETERS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "NO_GOVERNANCE_FILTERING_REFERENCE",
+      "configuration": "SCALE_VARIANT",
+      "path": "public/READ_MANIFEST.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "NO_GOVERNANCE_FILTERING_REFERENCE",
+      "configuration": "SCALE_VARIANT",
+      "path": "public/DOCUMENT_CATALOG.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "NO_GOVERNANCE_FILTERING_REFERENCE",
+      "configuration": "SCALE_VARIANT",
+      "path": "public/TASKS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "NO_GOVERNANCE_FILTERING_REFERENCE",
+      "configuration": "SCALE_VARIANT",
+      "path": "public/SYNONYMS.json",
+      "process_role": "SELECTOR"
+    },
+    {
+      "access": "READ",
+      "arm": "NO_GOVERNANCE_FILTERING_REFERENCE",
+      "configuration": "SCALE_VARIANT",
+      "path": "frozen/ARM_PARAMETERS.json",
+      "process_role": "SELECTOR"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "selector_process_count": 24
+}

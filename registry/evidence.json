@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-07-23",
+  "updated_at": "2026-07-24",
   "records": [
     {
       "id": "EVD-SYM-001",
@@ -221,6 +221,19 @@
       "experiment_id": "EXP-LAB-001",
       "oracle_sha256": "f0630d9b59df167056f88b27743068f5ef557a9ecd70d74716feda057d92dc4e",
       "updated_at": "2026-07-23"
+    },
+    {
+      "id": "EVD-LAB-EXP-002",
+      "path": "projects/lab/evidence/EVD-LAB-EXP-002.json",
+      "kind": "FULL_RAG_STAGES_5_AND_6_SYNTHETIC_DISCRIMINATING_TEST_EXECUTION",
+      "project_id": "lab",
+      "status": "REGISTERED_COMPLETE_REPRODUCIBLE_AWAITING_INDEPENDENT_EXTERNAL_AUDIT",
+      "canonical_path": "projects/lab/evidence/EVD-LAB-EXP-002.json",
+      "authorization_id": "AUTHORIZATION_LAB_FULL_RAG_STAGES_5_AND_6_DISCRIMINATING_TEST_EXECUTION_071",
+      "experiment_id": "EXP-LAB-002",
+      "execution_package": "projects/lab/test-executions/FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001/MANIFEST.json",
+      "ordered_manifest_digest_sha256": "41facf4400af3e8e09e201239cc5b958fc93c10a78ed83a1de90ae3965614cae",
+      "updated_at": "2026-07-24"
     }
   ]
 }

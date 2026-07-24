@@ -1,0 +1,22 @@
+{
+  "arms": [
+    "NO_GOVERNANCE_FILTERING_REFERENCE",
+    "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION",
+    "FULL_RAG_AUTHORITY_FIRST_SIMULATION",
+    "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL",
+    "ORACLE_INFORMED_POSITIVE_CONTROL"
+  ],
+  "common_budget": true,
+  "common_corpus": true,
+  "configurations_per_arm": [
+    "REPETITION_1",
+    "REPETITION_2",
+    "REPETITION_3",
+    "ORDER_PERMUTATION",
+    "PARAPHRASE_VARIANT",
+    "SCALE_VARIANT"
+  ],
+  "expected_runs": 30,
+  "schema_version": "1.0.0",
+  "status": "FROZEN_BEFORE_RUNS"
+}

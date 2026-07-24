@@ -1,0 +1,49 @@
+{
+  "design_source_hashes": {
+    "ARM_DEFINITIONS.json": "e58304539975d117d794300f5d7748e6449412a78dbae7cdd8edc21cac4c6624",
+    "CORPUS_GENERATION_SPEC.json": "c19ae006fa1c46893d5abbc5aa2834944e0a3a29b7a88ef8cabc61c001da4358",
+    "COST_AND_TOKEN_MEASUREMENT_PLAN.json": "76dd21d2b13ff1665b6fccd7cea9d81bfdb1d9a38c401e53b1c78eefa22d9a81",
+    "DESIGN_VALIDATION_REPORT.json": "f0fd9fd64bdee50860abb5a615faa2c0cfcee5bd1bd357331080117ad54b3482",
+    "EXECUTION_BOUNDARY.json": "4e9dafda4b416603cdf44477b2cbcb6db7aadb42419e0bcbe25e1e25d428f028",
+    "FIXTURE_TAXONOMY.json": "eae91c168f5afa6c68d2b27225bbdcbe6f9961b27d5a1cbe9d19446e94b55517",
+    "LEAKAGE_PREVENTION_CONTRACT.json": "de7ea0388877b60fc7834ba5bc1f6cddbafd8b60d453f337747ff4b02e196243",
+    "MANIFEST.json": "782e5153a1564d50ef05470899dbeea7e908548b616c02dc80fca1cc5524a3d2",
+    "METRIC_DEFINITIONS.json": "5ee64b20789652aa23b18bce87eec7fbf1a9d98d9de1e5d62c8e533c0b17bf8d",
+    "POSITIVE_AND_NEGATIVE_CONTROLS.json": "eb04fcd3283a7bda2297d90773895a9b772614ecc0e29e0fcab58f0d4c685917",
+    "RESEARCH_QUESTION_AND_HYPOTHESES.json": "1134ca6b0db021f8861ade04f67619a7d43c72eed3747877b4b32ae919c0429a",
+    "RISK_REGISTER.json": "275c87cd84b867849efb2052c87d79798f1b9ba426a8edb874199f3c4628ee42",
+    "RUN_MATRIX.json": "e9bd8c99322d3609d60d86c282662708f7fd551d811e048b90b924fd08c91e32",
+    "SCORING_RULES_DRAFT.json": "fc80b34885fe163247f317505b92daf02d1b35823a1949272cfd27509f28f55f",
+    "STAGE_5_RETRIEVAL_CONTRACT.json": "aebcdd7d09ac2b2bd3e06cbd74409352e403799a564b2dd4e252168d627271f6",
+    "STAGE_6_RANKING_CONTRACT.json": "755d50a83a3485fed582da503bbfeb52dcb93a3f4f6cfe49c5163a846643da0d",
+    "TEST_DESIGN.json": "45937cb705d21c07e00676d1be5a25c77144e9ab332ce621a7dc2ffd01665cdb",
+    "TEST_DESIGN.md": "ff192a5a2372a42af500057158cc35bdac055aeff8892ad8767a1db2c2244689",
+    "TRACEABILITY_MATRIX.json": "4b43d95858c61437c5dc27cc297610997f53b530ecc620696b8fc436190d0262",
+    "VIABILITY_GATES.json": "ed0024e718fbb8e801e541c6fdb860a33740b6b931ffbe5b1a25f7ceaeecde14"
+  },
+  "frozen_at": "2026-07-24T00:00:00Z",
+  "hash_algorithm": "SHA-256",
+  "private_hashes": {
+    "private/CANARY_RECORD.json": "382a88dcccfd6efeb99f6444c6bcf21585c6958475e3847fcbb28ed4a704ae73",
+    "private/PRIVATE_ORACLES.json": "bca484a225a85dc1dfa0a39a9eba3f40ca4e034b17e1cb360ce7665efa07b9e9"
+  },
+  "public_hashes": {
+    "public/CORPUS_MANIFEST.json": "6ed6a17f73ef3ddb82025387016a8dc7b7c10772aeff358b4a235fbb1b9b87a9",
+    "public/DOCUMENT_CATALOG.json": "6a52b3936fcf179b471be2967e2409fe53f1e3b06341cd41ae55967b77726a85",
+    "public/READ_MANIFEST.json": "74f52c761a49c86bb50093468eba120198ea4956c5f33fe7cb78c5f807d1e784",
+    "public/SYNONYMS.json": "11e201b1aa0baf88dce088a6b40bfced61808a92dae07f585eedd86497ad7237",
+    "public/TASKS.json": "b472ef4f5ecd689f98357e2ae66f4ce129ecd054fffff9eb49b1741218a3c24d"
+  },
+  "schema_version": "1.0.0",
+  "scoring_parameter_and_harness_hashes": {
+    "frozen/ARM_PARAMETERS.json": "b3834bd95f34dff23b0fa7c206966c406576eb61a3f51e162e727dab9b9c87ac",
+    "frozen/RUN_MATRIX.json": "6eb8b93bc39af8dcfb329b25ee02a588ef5c4540ee13314b698cb8ea2dfc02e7",
+    "frozen/SCORING_RULES.json": "9d5f1d5463575c46d5a59a50ff000159fa8392e297d3166d95c5665440cd26d5",
+    "frozen/SEEDS.json": "3b20aa65c56b165202182d8cdc7de8ab6d2fc448912699dadd58968d149dbf43",
+    "harness/evaluator.mjs": "3b3ac536cf2f40d6b7ce6157c2bdc945079ea6424975ae1b5f45b8ed28f1d5d3",
+    "harness/execute.mjs": "f4c2ac6c83cb3ce9ec37d2e40e2a7d488bc04ce7f6d28e9c44424cdb14a5a4b4",
+    "harness/lib.mjs": "e81f38dd0209920a7d5f81f39f3d4c53519a0ad02f1e284511ed74cab55f3e1c",
+    "harness/selector.mjs": "3c810980895c2fe1db7b70049b2fe6b736e27a73b6a8585dc6cb40a292c2115a"
+  },
+  "status": "FROZEN_BEFORE_RUNS"
+}

@@ -1,0 +1,23 @@
+{
+  "frozen_paths": [
+    "public/CORPUS_MANIFEST.json",
+    "public/DOCUMENT_CATALOG.json",
+    "public/TASKS.json",
+    "public/SYNONYMS.json",
+    "public/READ_MANIFEST.json",
+    "private/PRIVATE_ORACLES.json",
+    "private/CANARY_RECORD.json",
+    "frozen/ARM_PARAMETERS.json",
+    "frozen/SEEDS.json",
+    "frozen/RUN_MATRIX.json",
+    "frozen/SCORING_RULES.json",
+    "harness/evaluator.mjs",
+    "harness/execute.mjs",
+    "harness/lib.mjs",
+    "harness/selector.mjs"
+  ],
+  "hash_manifest": "frozen/HASHES_INITIAL.json",
+  "mutation_policy": "ANY_POST_FREEZE_HASH_CHANGE_INVALIDATES_EXPERIMENT",
+  "schema_version": "1.0.0",
+  "status": "FROZEN_BEFORE_RUNS"
+}

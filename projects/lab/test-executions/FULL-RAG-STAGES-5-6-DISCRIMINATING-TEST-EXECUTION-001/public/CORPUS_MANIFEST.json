@@ -1,0 +1,40 @@
+{
+  "authorization_id": "AUTHORIZATION_LAB_FULL_RAG_STAGES_5_AND_6_DISCRIMINATING_TEST_EXECUTION_071",
+  "corpus_id": "FULL-RAG-SYNTHETIC-CORPUS-071-001",
+  "design_id": "FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-001",
+  "document_count": 180,
+  "fixture_count": 42,
+  "generated_at": "2026-07-24T00:00:00Z",
+  "namespaces": [
+    "LAB",
+    "SYMPHONIE",
+    "PROJECT"
+  ],
+  "real_data_used": false,
+  "required_properties": [
+    "ACTIVE_AND_STALE_COMMITS",
+    "SUPERSEDED_DOCUMENTS",
+    "AUTHORITY_CONFLICTS",
+    "SEMANTIC_DUPLICATES_WITH_DIFFERENT_AUTHORITY",
+    "OUT_OF_SCOPE_LEXICAL_DECOYS",
+    "BINDING_NEGATIVE_PROHIBITIONS",
+    "ACL_DENIALS",
+    "AMBIGUOUS_TASKS",
+    "INSUFFICIENT_EVIDENCE",
+    "CANONICAL_CONFLICTS",
+    "LONG_FRAGMENTED_DOCUMENTS",
+    "MULTILINGUAL_NOISE",
+    "LENGTH_VARIATION",
+    "MULTI_DOCUMENT_RELEVANCE",
+    "AUTHORIZED_CROSS_NAMESPACE_CONTEXT"
+  ],
+  "schema_version": "1.0.0",
+  "seed": 71024001,
+  "status": "GENERATED_SYNTHETIC_AND_FROZEN",
+  "synthetic_only": true,
+  "synthetic_projects": [
+    "ALPHA",
+    "BETA",
+    "GAMMA"
+  ]
+}

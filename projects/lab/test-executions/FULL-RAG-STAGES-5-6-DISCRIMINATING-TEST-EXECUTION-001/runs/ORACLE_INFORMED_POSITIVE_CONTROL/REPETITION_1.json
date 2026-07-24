@@ -1,0 +1,1138 @@
+{
+  "arm": "ORACLE_INFORMED_POSITIVE_CONTROL",
+  "configuration": "REPETITION_1",
+  "execution_id": "FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001",
+  "fixture_count": 42,
+  "fixture_results": [
+    {
+      "candidate_count": 2,
+      "conflict_state": "RESOLUTION_REQUIRED",
+      "safe_refusal": false,
+      "selected": [
+        {
+          "authority_class": "GLOBAL_GOVERNANCE",
+          "authority_rank": 100,
+          "bytes": 59,
+          "candidate_id": "DOC-5F90D3811C72D49C",
+          "citation": "synthetic-lab/lab-source@0560c69aa47ff78730094fe489798cecb8a56c67:synthetic/lab/doc-5f90d3811c72d49c.json",
+          "commit_sha": "0560c69aa47ff78730094fe489798cecb8a56c67",
+          "conflict_marker": "SOURCE_A",
+          "document_id": "DOC-5F90D3811C72D49C",
+          "document_status": "APPROVED",
+          "path": "synthetic/lab/doc-5f90d3811c72d49c.json",
+          "prohibition_retained": false,
+          "project_scope": "GLOBAL",
+          "rank": 1,
+          "repository": "synthetic-lab/lab-source",
+          "retrieval_score": 1
+        },
+        {
+          "authority_class": "CANONICAL_DECISION",
+          "authority_rank": 90,
+          "bytes": 43,
+          "candidate_id": "DOC-26C7D3612A0C4CA0",
+          "citation": "synthetic-lab/lab-source@0560c69aa47ff78730094fe489798cecb8a56c67:synthetic/lab/doc-26c7d3612a0c4ca0.json",
+          "commit_sha": "0560c69aa47ff78730094fe489798cecb8a56c67",
+          "conflict_marker": "SOURCE_B",
+          "document_id": "DOC-26C7D3612A0C4CA0",
+          "document_status": "APPROVED",
+          "path": "synthetic/lab/doc-26c7d3612a0c4ca0.json",
+          "prohibition_retained": false,
+          "project_scope": "GLOBAL",
+          "rank": 2,
+          "repository": "synthetic-lab/lab-source",
+          "retrieval_score": 1
+        }
+      ],
+      "simulated_latency_ms": 0.12,
+      "task_id": "FX-071-001",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 2,
+      "conflict_state": "NONE",
+      "safe_refusal": false,
+      "selected": [
+        {
+          "authority_class": "ORCHESTRATION_CONTRACT",
+          "authority_rank": 100,
+          "bytes": 59,
+          "candidate_id": "DOC-FF14691F15661C04",
+          "citation": "synthetic-symphonie/orchestrator@9d95a90d6a9162815acae6b4fc8909525f775aa2:synthetic/symphonie/doc-ff14691f15661c04.json",
+          "commit_sha": "9d95a90d6a9162815acae6b4fc8909525f775aa2",
+          "conflict_marker": null,
+          "document_id": "DOC-FF14691F15661C04",
+          "document_status": "APPROVED",
+          "path": "synthetic/symphonie/doc-ff14691f15661c04.json",
+          "prohibition_retained": true,
+          "project_scope": "GLOBAL",
+          "rank": 1,
+          "repository": "synthetic-symphonie/orchestrator",
+          "retrieval_score": 1
+        },
+        {
+          "authority_class": "GATE_POLICY",
+          "authority_rank": 90,
+          "bytes": 43,
+          "candidate_id": "DOC-D4C6AE7A4EE4F4BA",
+          "citation": "synthetic-symphonie/orchestrator@9d95a90d6a9162815acae6b4fc8909525f775aa2:synthetic/symphonie/doc-d4c6ae7a4ee4f4ba.json",
+          "commit_sha": "9d95a90d6a9162815acae6b4fc8909525f775aa2",
+          "conflict_marker": null,
+          "document_id": "DOC-D4C6AE7A4EE4F4BA",
+          "document_status": "APPROVED",
+          "path": "synthetic/symphonie/doc-d4c6ae7a4ee4f4ba.json",
+          "prohibition_retained": true,
+          "project_scope": "GLOBAL",
+          "rank": 2,
+          "repository": "synthetic-symphonie/orchestrator",
+          "retrieval_score": 1
+        }
+      ],
+      "simulated_latency_ms": 0.12,
+      "task_id": "FX-071-002",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 1,
+      "conflict_state": "NONE",
+      "safe_refusal": false,
+      "selected": [
+        {
+          "authority_class": "PROJECT_DECISION",
+          "authority_rank": 100,
+          "bytes": 59,
+          "candidate_id": "DOC-5D7331F6E105A216",
+          "citation": "synthetic-project/gamma@39b09421f6414158bc224b3eaf66f2c3fcafa3e2:synthetic/project/doc-5d7331f6e105a216.json",
+          "commit_sha": "39b09421f6414158bc224b3eaf66f2c3fcafa3e2",
+          "conflict_marker": null,
+          "document_id": "DOC-5D7331F6E105A216",
+          "document_status": "APPROVED",
+          "path": "synthetic/project/doc-5d7331f6e105a216.json",
+          "prohibition_retained": false,
+          "project_scope": "GAMMA",
+          "rank": 1,
+          "repository": "synthetic-project/gamma",
+          "retrieval_score": 1
+        }
+      ],
+      "simulated_latency_ms": 0.11,
+      "task_id": "FX-071-003",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 1,
+      "conflict_state": "NONE",
+      "safe_refusal": false,
+      "selected": [
+        {
+          "authority_class": "GLOBAL_GOVERNANCE",
+          "authority_rank": 100,
+          "bytes": 59,
+          "candidate_id": "DOC-AA6B0036A487D27B",
+          "citation": "synthetic-lab/lab-source@0560c69aa47ff78730094fe489798cecb8a56c67:synthetic/lab/doc-aa6b0036a487d27b.json",
+          "commit_sha": "0560c69aa47ff78730094fe489798cecb8a56c67",
+          "conflict_marker": null,
+          "document_id": "DOC-AA6B0036A487D27B",
+          "document_status": "APPROVED",
+          "path": "synthetic/lab/doc-aa6b0036a487d27b.json",
+          "prohibition_retained": false,
+          "project_scope": "GLOBAL",
+          "rank": 1,
+          "repository": "synthetic-lab/lab-source",
+          "retrieval_score": 1
+        }
+      ],
+      "simulated_latency_ms": 0.11,
+      "task_id": "FX-071-004",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 1,
+      "conflict_state": "NONE",
+      "safe_refusal": false,
+      "selected": [
+        {
+          "authority_class": "ORCHESTRATION_CONTRACT",
+          "authority_rank": 100,
+          "bytes": 59,
+          "candidate_id": "DOC-FC6C72D29AC056D3",
+          "citation": "synthetic-symphonie/orchestrator@9d95a90d6a9162815acae6b4fc8909525f775aa2:synthetic/symphonie/doc-fc6c72d29ac056d3.json",
+          "commit_sha": "9d95a90d6a9162815acae6b4fc8909525f775aa2",
+          "conflict_marker": null,
+          "document_id": "DOC-FC6C72D29AC056D3",
+          "document_status": "APPROVED",
+          "path": "synthetic/symphonie/doc-fc6c72d29ac056d3.json",
+          "prohibition_retained": false,
+          "project_scope": "GLOBAL",
+          "rank": 1,
+          "repository": "synthetic-symphonie/orchestrator",
+          "retrieval_score": 1
+        }
+      ],
+      "simulated_latency_ms": 0.11,
+      "task_id": "FX-071-005",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 0,
+      "conflict_state": "NONE",
+      "safe_refusal": true,
+      "selected": [],
+      "simulated_latency_ms": 0.1,
+      "task_id": "FX-071-006",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 0,
+      "conflict_state": "NONE",
+      "safe_refusal": true,
+      "selected": [],
+      "simulated_latency_ms": 0.1,
+      "task_id": "FX-071-007",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 0,
+      "conflict_state": "NONE",
+      "safe_refusal": true,
+      "selected": [],
+      "simulated_latency_ms": 0.1,
+      "task_id": "FX-071-008",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 2,
+      "conflict_state": "NONE",
+      "safe_refusal": false,
+      "selected": [
+        {
+          "authority_class": "PROJECT_DECISION",
+          "authority_rank": 100,
+          "bytes": 59,
+          "candidate_id": "DOC-F2E5187D554E32BF",
+          "citation": "synthetic-project/gamma@39b09421f6414158bc224b3eaf66f2c3fcafa3e2:synthetic/project/doc-f2e5187d554e32bf.json",
+          "commit_sha": "39b09421f6414158bc224b3eaf66f2c3fcafa3e2",
+          "conflict_marker": null,
+          "document_id": "DOC-F2E5187D554E32BF",
+          "document_status": "APPROVED",
+          "path": "synthetic/project/doc-f2e5187d554e32bf.json",
+          "prohibition_retained": false,
+          "project_scope": "GAMMA",
+          "rank": 1,
+          "repository": "synthetic-project/gamma",
+          "retrieval_score": 1
+        },
+        {
+          "authority_class": "PROJECT_STATE",
+          "authority_rank": 90,
+          "bytes": 46,
+          "candidate_id": "DOC-48625B646FA7D925",
+          "citation": "synthetic-project/gamma@39b09421f6414158bc224b3eaf66f2c3fcafa3e2:synthetic/project/doc-48625b646fa7d925.json",
+          "commit_sha": "39b09421f6414158bc224b3eaf66f2c3fcafa3e2",
+          "conflict_marker": null,
+          "document_id": "DOC-48625B646FA7D925",
+          "document_status": "APPROVED",
+          "path": "synthetic/project/doc-48625b646fa7d925.json",
+          "prohibition_retained": false,
+          "project_scope": "GAMMA",
+          "rank": 2,
+          "repository": "synthetic-project/gamma",
+          "retrieval_score": 1
+        }
+      ],
+      "simulated_latency_ms": 0.12,
+      "task_id": "FX-071-009",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 1,
+      "conflict_state": "NONE",
+      "safe_refusal": false,
+      "selected": [
+        {
+          "authority_class": "GLOBAL_GOVERNANCE",
+          "authority_rank": 100,
+          "bytes": 59,
+          "candidate_id": "DOC-216DA3AC7F13BAE8",
+          "citation": "synthetic-lab/lab-source@0560c69aa47ff78730094fe489798cecb8a56c67:synthetic/lab/doc-216da3ac7f13bae8.json",
+          "commit_sha": "0560c69aa47ff78730094fe489798cecb8a56c67",
+          "conflict_marker": null,
+          "document_id": "DOC-216DA3AC7F13BAE8",
+          "document_status": "APPROVED",
+          "path": "synthetic/lab/doc-216da3ac7f13bae8.json",
+          "prohibition_retained": false,
+          "project_scope": "GLOBAL",
+          "rank": 1,
+          "repository": "synthetic-lab/lab-source",
+          "retrieval_score": 1
+        }
+      ],
+      "simulated_latency_ms": 0.11,
+      "task_id": "FX-071-010",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 1,
+      "conflict_state": "NONE",
+      "safe_refusal": false,
+      "selected": [
+        {
+          "authority_class": "ORCHESTRATION_CONTRACT",
+          "authority_rank": 100,
+          "bytes": 59,
+          "candidate_id": "DOC-DB96291D41F870B0",
+          "citation": "synthetic-symphonie/orchestrator@9d95a90d6a9162815acae6b4fc8909525f775aa2:synthetic/symphonie/doc-db96291d41f870b0.json",
+          "commit_sha": "9d95a90d6a9162815acae6b4fc8909525f775aa2",
+          "conflict_marker": null,
+          "document_id": "DOC-DB96291D41F870B0",
+          "document_status": "APPROVED",
+          "path": "synthetic/symphonie/doc-db96291d41f870b0.json",
+          "prohibition_retained": false,
+          "project_scope": "GLOBAL",
+          "rank": 1,
+          "repository": "synthetic-symphonie/orchestrator",
+          "retrieval_score": 1
+        }
+      ],
+      "simulated_latency_ms": 0.11,
+      "task_id": "FX-071-011",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 1,
+      "conflict_state": "NONE",
+      "safe_refusal": false,
+      "selected": [
+        {
+          "authority_class": "PROJECT_DECISION",
+          "authority_rank": 100,
+          "bytes": 59,
+          "candidate_id": "DOC-C0DBD585FDBF61D9",
+          "citation": "synthetic-project/gamma@39b09421f6414158bc224b3eaf66f2c3fcafa3e2:synthetic/project/doc-c0dbd585fdbf61d9.json",
+          "commit_sha": "39b09421f6414158bc224b3eaf66f2c3fcafa3e2",
+          "conflict_marker": null,
+          "document_id": "DOC-C0DBD585FDBF61D9",
+          "document_status": "APPROVED",
+          "path": "synthetic/project/doc-c0dbd585fdbf61d9.json",
+          "prohibition_retained": false,
+          "project_scope": "GAMMA",
+          "rank": 1,
+          "repository": "synthetic-project/gamma",
+          "retrieval_score": 1
+        }
+      ],
+      "simulated_latency_ms": 0.11,
+      "task_id": "FX-071-012",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 1,
+      "conflict_state": "NONE",
+      "safe_refusal": false,
+      "selected": [
+        {
+          "authority_class": "GLOBAL_GOVERNANCE",
+          "authority_rank": 100,
+          "bytes": 59,
+          "candidate_id": "DOC-8D6CA7C2EB9289E8",
+          "citation": "synthetic-lab/lab-source@0560c69aa47ff78730094fe489798cecb8a56c67:synthetic/lab/doc-8d6ca7c2eb9289e8.json",
+          "commit_sha": "0560c69aa47ff78730094fe489798cecb8a56c67",
+          "conflict_marker": null,
+          "document_id": "DOC-8D6CA7C2EB9289E8",
+          "document_status": "APPROVED",
+          "path": "synthetic/lab/doc-8d6ca7c2eb9289e8.json",
+          "prohibition_retained": false,
+          "project_scope": "GLOBAL",
+          "rank": 1,
+          "repository": "synthetic-lab/lab-source",
+          "retrieval_score": 1
+        }
+      ],
+      "simulated_latency_ms": 0.11,
+      "task_id": "FX-071-013",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 2,
+      "conflict_state": "RESOLUTION_REQUIRED",
+      "safe_refusal": false,
+      "selected": [
+        {
+          "authority_class": "ORCHESTRATION_CONTRACT",
+          "authority_rank": 100,
+          "bytes": 59,
+          "candidate_id": "DOC-675EC637C30AB4F0",
+          "citation": "synthetic-symphonie/orchestrator@9d95a90d6a9162815acae6b4fc8909525f775aa2:synthetic/symphonie/doc-675ec637c30ab4f0.json",
+          "commit_sha": "9d95a90d6a9162815acae6b4fc8909525f775aa2",
+          "conflict_marker": "SOURCE_A",
+          "document_id": "DOC-675EC637C30AB4F0",
+          "document_status": "APPROVED",
+          "path": "synthetic/symphonie/doc-675ec637c30ab4f0.json",
+          "prohibition_retained": false,
+          "project_scope": "GLOBAL",
+          "rank": 1,
+          "repository": "synthetic-symphonie/orchestrator",
+          "retrieval_score": 1
+        },
+        {
+          "authority_class": "GATE_POLICY",
+          "authority_rank": 90,
+          "bytes": 43,
+          "candidate_id": "DOC-F21CB3634A27B3E9",
+          "citation": "synthetic-symphonie/orchestrator@9d95a90d6a9162815acae6b4fc8909525f775aa2:synthetic/symphonie/doc-f21cb3634a27b3e9.json",
+          "commit_sha": "9d95a90d6a9162815acae6b4fc8909525f775aa2",
+          "conflict_marker": "SOURCE_B",
+          "document_id": "DOC-F21CB3634A27B3E9",
+          "document_status": "APPROVED",
+          "path": "synthetic/symphonie/doc-f21cb3634a27b3e9.json",
+          "prohibition_retained": false,
+          "project_scope": "GLOBAL",
+          "rank": 2,
+          "repository": "synthetic-symphonie/orchestrator",
+          "retrieval_score": 1
+        }
+      ],
+      "simulated_latency_ms": 0.12,
+      "task_id": "FX-071-014",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 1,
+      "conflict_state": "NONE",
+      "safe_refusal": false,
+      "selected": [
+        {
+          "authority_class": "PROJECT_DECISION",
+          "authority_rank": 100,
+          "bytes": 59,
+          "candidate_id": "DOC-372A85A05478D352",
+          "citation": "synthetic-project/gamma@39b09421f6414158bc224b3eaf66f2c3fcafa3e2:synthetic/project/doc-372a85a05478d352.json",
+          "commit_sha": "39b09421f6414158bc224b3eaf66f2c3fcafa3e2",
+          "conflict_marker": null,
+          "document_id": "DOC-372A85A05478D352",
+          "document_status": "APPROVED",
+          "path": "synthetic/project/doc-372a85a05478d352.json",
+          "prohibition_retained": false,
+          "project_scope": "GAMMA",
+          "rank": 1,
+          "repository": "synthetic-project/gamma",
+          "retrieval_score": 1
+        }
+      ],
+      "simulated_latency_ms": 0.11,
+      "task_id": "FX-071-015",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 1,
+      "conflict_state": "NONE",
+      "safe_refusal": false,
+      "selected": [
+        {
+          "authority_class": "GLOBAL_GOVERNANCE",
+          "authority_rank": 100,
+          "bytes": 59,
+          "candidate_id": "DOC-D449A8F6C4C37D8A",
+          "citation": "synthetic-lab/lab-source@0560c69aa47ff78730094fe489798cecb8a56c67:synthetic/lab/doc-d449a8f6c4c37d8a.json",
+          "commit_sha": "0560c69aa47ff78730094fe489798cecb8a56c67",
+          "conflict_marker": null,
+          "document_id": "DOC-D449A8F6C4C37D8A",
+          "document_status": "APPROVED",
+          "path": "synthetic/lab/doc-d449a8f6c4c37d8a.json",
+          "prohibition_retained": false,
+          "project_scope": "GLOBAL",
+          "rank": 1,
+          "repository": "synthetic-lab/lab-source",
+          "retrieval_score": 1
+        }
+      ],
+      "simulated_latency_ms": 0.11,
+      "task_id": "FX-071-016",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 1,
+      "conflict_state": "NONE",
+      "safe_refusal": false,
+      "selected": [
+        {
+          "authority_class": "ORCHESTRATION_CONTRACT",
+          "authority_rank": 100,
+          "bytes": 59,
+          "candidate_id": "DOC-98D403C8A2E58766",
+          "citation": "synthetic-symphonie/orchestrator@9d95a90d6a9162815acae6b4fc8909525f775aa2:synthetic/symphonie/doc-98d403c8a2e58766.json",
+          "commit_sha": "9d95a90d6a9162815acae6b4fc8909525f775aa2",
+          "conflict_marker": null,
+          "document_id": "DOC-98D403C8A2E58766",
+          "document_status": "APPROVED",
+          "path": "synthetic/symphonie/doc-98d403c8a2e58766.json",
+          "prohibition_retained": false,
+          "project_scope": "GLOBAL",
+          "rank": 1,
+          "repository": "synthetic-symphonie/orchestrator",
+          "retrieval_score": 1
+        }
+      ],
+      "simulated_latency_ms": 0.11,
+      "task_id": "FX-071-017",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 1,
+      "conflict_state": "NONE",
+      "safe_refusal": false,
+      "selected": [
+        {
+          "authority_class": "PROJECT_DECISION",
+          "authority_rank": 100,
+          "bytes": 59,
+          "candidate_id": "DOC-625EE8B996F1ECAE",
+          "citation": "synthetic-project/gamma@39b09421f6414158bc224b3eaf66f2c3fcafa3e2:synthetic/project/doc-625ee8b996f1ecae.json",
+          "commit_sha": "39b09421f6414158bc224b3eaf66f2c3fcafa3e2",
+          "conflict_marker": null,
+          "document_id": "DOC-625EE8B996F1ECAE",
+          "document_status": "APPROVED",
+          "path": "synthetic/project/doc-625ee8b996f1ecae.json",
+          "prohibition_retained": false,
+          "project_scope": "GAMMA",
+          "rank": 1,
+          "repository": "synthetic-project/gamma",
+          "retrieval_score": 1
+        }
+      ],
+      "simulated_latency_ms": 0.11,
+      "task_id": "FX-071-018",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 1,
+      "conflict_state": "NONE",
+      "safe_refusal": false,
+      "selected": [
+        {
+          "authority_class": "GLOBAL_GOVERNANCE",
+          "authority_rank": 100,
+          "bytes": 59,
+          "candidate_id": "DOC-A233DCC1D349D78D",
+          "citation": "synthetic-lab/lab-source@0560c69aa47ff78730094fe489798cecb8a56c67:synthetic/lab/doc-a233dcc1d349d78d.json",
+          "commit_sha": "0560c69aa47ff78730094fe489798cecb8a56c67",
+          "conflict_marker": null,
+          "document_id": "DOC-A233DCC1D349D78D",
+          "document_status": "APPROVED",
+          "path": "synthetic/lab/doc-a233dcc1d349d78d.json",
+          "prohibition_retained": false,
+          "project_scope": "GLOBAL",
+          "rank": 1,
+          "repository": "synthetic-lab/lab-source",
+          "retrieval_score": 1
+        }
+      ],
+      "simulated_latency_ms": 0.11,
+      "task_id": "FX-071-019",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 1,
+      "conflict_state": "NONE",
+      "safe_refusal": false,
+      "selected": [
+        {
+          "authority_class": "ORCHESTRATION_CONTRACT",
+          "authority_rank": 100,
+          "bytes": 59,
+          "candidate_id": "DOC-228485000BC3E223",
+          "citation": "synthetic-symphonie/orchestrator@9d95a90d6a9162815acae6b4fc8909525f775aa2:synthetic/symphonie/doc-228485000bc3e223.json",
+          "commit_sha": "9d95a90d6a9162815acae6b4fc8909525f775aa2",
+          "conflict_marker": null,
+          "document_id": "DOC-228485000BC3E223",
+          "document_status": "APPROVED",
+          "path": "synthetic/symphonie/doc-228485000bc3e223.json",
+          "prohibition_retained": false,
+          "project_scope": "GLOBAL",
+          "rank": 1,
+          "repository": "synthetic-symphonie/orchestrator",
+          "retrieval_score": 1
+        }
+      ],
+      "simulated_latency_ms": 0.11,
+      "task_id": "FX-071-020",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 0,
+      "conflict_state": "NONE",
+      "safe_refusal": true,
+      "selected": [],
+      "simulated_latency_ms": 0.1,
+      "task_id": "FX-071-021",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 1,
+      "conflict_state": "NONE",
+      "safe_refusal": false,
+      "selected": [
+        {
+          "authority_class": "GLOBAL_GOVERNANCE",
+          "authority_rank": 100,
+          "bytes": 59,
+          "candidate_id": "DOC-AB0E3DB9F156A356",
+          "citation": "synthetic-lab/lab-source@0560c69aa47ff78730094fe489798cecb8a56c67:synthetic/lab/doc-ab0e3db9f156a356.json",
+          "commit_sha": "0560c69aa47ff78730094fe489798cecb8a56c67",
+          "conflict_marker": null,
+          "document_id": "DOC-AB0E3DB9F156A356",
+          "document_status": "APPROVED",
+          "path": "synthetic/lab/doc-ab0e3db9f156a356.json",
+          "prohibition_retained": false,
+          "project_scope": "GLOBAL",
+          "rank": 1,
+          "repository": "synthetic-lab/lab-source",
+          "retrieval_score": 1
+        }
+      ],
+      "simulated_latency_ms": 0.11,
+      "task_id": "FX-071-022",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 1,
+      "conflict_state": "NONE",
+      "safe_refusal": false,
+      "selected": [
+        {
+          "authority_class": "ORCHESTRATION_CONTRACT",
+          "authority_rank": 100,
+          "bytes": 59,
+          "candidate_id": "DOC-A1E7827DE624E760",
+          "citation": "synthetic-symphonie/orchestrator@9d95a90d6a9162815acae6b4fc8909525f775aa2:synthetic/symphonie/doc-a1e7827de624e760.json",
+          "commit_sha": "9d95a90d6a9162815acae6b4fc8909525f775aa2",
+          "conflict_marker": null,
+          "document_id": "DOC-A1E7827DE624E760",
+          "document_status": "APPROVED",
+          "path": "synthetic/symphonie/doc-a1e7827de624e760.json",
+          "prohibition_retained": false,
+          "project_scope": "GLOBAL",
+          "rank": 1,
+          "repository": "synthetic-symphonie/orchestrator",
+          "retrieval_score": 1
+        }
+      ],
+      "simulated_latency_ms": 0.11,
+      "task_id": "FX-071-023",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 0,
+      "conflict_state": "NONE",
+      "safe_refusal": true,
+      "selected": [],
+      "simulated_latency_ms": 0.1,
+      "task_id": "FX-071-024",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 0,
+      "conflict_state": "NONE",
+      "safe_refusal": true,
+      "selected": [],
+      "simulated_latency_ms": 0.1,
+      "task_id": "FX-071-025",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 2,
+      "conflict_state": "RESOLUTION_REQUIRED",
+      "safe_refusal": false,
+      "selected": [
+        {
+          "authority_class": "ORCHESTRATION_CONTRACT",
+          "authority_rank": 100,
+          "bytes": 59,
+          "candidate_id": "DOC-644CB9009D46101E",
+          "citation": "synthetic-symphonie/orchestrator@9d95a90d6a9162815acae6b4fc8909525f775aa2:synthetic/symphonie/doc-644cb9009d46101e.json",
+          "commit_sha": "9d95a90d6a9162815acae6b4fc8909525f775aa2",
+          "conflict_marker": "SOURCE_A",
+          "document_id": "DOC-644CB9009D46101E",
+          "document_status": "APPROVED",
+          "path": "synthetic/symphonie/doc-644cb9009d46101e.json",
+          "prohibition_retained": false,
+          "project_scope": "GLOBAL",
+          "rank": 1,
+          "repository": "synthetic-symphonie/orchestrator",
+          "retrieval_score": 1
+        },
+        {
+          "authority_class": "GATE_POLICY",
+          "authority_rank": 90,
+          "bytes": 43,
+          "candidate_id": "DOC-67158A103D49F283",
+          "citation": "synthetic-symphonie/orchestrator@9d95a90d6a9162815acae6b4fc8909525f775aa2:synthetic/symphonie/doc-67158a103d49f283.json",
+          "commit_sha": "9d95a90d6a9162815acae6b4fc8909525f775aa2",
+          "conflict_marker": "SOURCE_B",
+          "document_id": "DOC-67158A103D49F283",
+          "document_status": "APPROVED",
+          "path": "synthetic/symphonie/doc-67158a103d49f283.json",
+          "prohibition_retained": false,
+          "project_scope": "GLOBAL",
+          "rank": 2,
+          "repository": "synthetic-symphonie/orchestrator",
+          "retrieval_score": 1
+        }
+      ],
+      "simulated_latency_ms": 0.12,
+      "task_id": "FX-071-026",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 2,
+      "conflict_state": "NONE",
+      "safe_refusal": false,
+      "selected": [
+        {
+          "authority_class": "PROJECT_DECISION",
+          "authority_rank": 100,
+          "bytes": 59,
+          "candidate_id": "DOC-A076BEA6FDE2474A",
+          "citation": "synthetic-project/gamma@39b09421f6414158bc224b3eaf66f2c3fcafa3e2:synthetic/project/doc-a076bea6fde2474a.json",
+          "commit_sha": "39b09421f6414158bc224b3eaf66f2c3fcafa3e2",
+          "conflict_marker": null,
+          "document_id": "DOC-A076BEA6FDE2474A",
+          "document_status": "APPROVED",
+          "path": "synthetic/project/doc-a076bea6fde2474a.json",
+          "prohibition_retained": true,
+          "project_scope": "GAMMA",
+          "rank": 1,
+          "repository": "synthetic-project/gamma",
+          "retrieval_score": 1
+        },
+        {
+          "authority_class": "PROJECT_STATE",
+          "authority_rank": 90,
+          "bytes": 46,
+          "candidate_id": "DOC-A420CE0D1D5E7A32",
+          "citation": "synthetic-project/gamma@39b09421f6414158bc224b3eaf66f2c3fcafa3e2:synthetic/project/doc-a420ce0d1d5e7a32.json",
+          "commit_sha": "39b09421f6414158bc224b3eaf66f2c3fcafa3e2",
+          "conflict_marker": null,
+          "document_id": "DOC-A420CE0D1D5E7A32",
+          "document_status": "APPROVED",
+          "path": "synthetic/project/doc-a420ce0d1d5e7a32.json",
+          "prohibition_retained": true,
+          "project_scope": "GAMMA",
+          "rank": 2,
+          "repository": "synthetic-project/gamma",
+          "retrieval_score": 1
+        }
+      ],
+      "simulated_latency_ms": 0.12,
+      "task_id": "FX-071-027",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 1,
+      "conflict_state": "NONE",
+      "safe_refusal": false,
+      "selected": [
+        {
+          "authority_class": "GLOBAL_GOVERNANCE",
+          "authority_rank": 100,
+          "bytes": 59,
+          "candidate_id": "DOC-218482BD975E12B6",
+          "citation": "synthetic-lab/lab-source@0560c69aa47ff78730094fe489798cecb8a56c67:synthetic/lab/doc-218482bd975e12b6.json",
+          "commit_sha": "0560c69aa47ff78730094fe489798cecb8a56c67",
+          "conflict_marker": null,
+          "document_id": "DOC-218482BD975E12B6",
+          "document_status": "APPROVED",
+          "path": "synthetic/lab/doc-218482bd975e12b6.json",
+          "prohibition_retained": false,
+          "project_scope": "GLOBAL",
+          "rank": 1,
+          "repository": "synthetic-lab/lab-source",
+          "retrieval_score": 1
+        }
+      ],
+      "simulated_latency_ms": 0.11,
+      "task_id": "FX-071-028",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 1,
+      "conflict_state": "NONE",
+      "safe_refusal": false,
+      "selected": [
+        {
+          "authority_class": "ORCHESTRATION_CONTRACT",
+          "authority_rank": 100,
+          "bytes": 59,
+          "candidate_id": "DOC-68E5E1A9F4A4D715",
+          "citation": "synthetic-symphonie/orchestrator@9d95a90d6a9162815acae6b4fc8909525f775aa2:synthetic/symphonie/doc-68e5e1a9f4a4d715.json",
+          "commit_sha": "9d95a90d6a9162815acae6b4fc8909525f775aa2",
+          "conflict_marker": null,
+          "document_id": "DOC-68E5E1A9F4A4D715",
+          "document_status": "APPROVED",
+          "path": "synthetic/symphonie/doc-68e5e1a9f4a4d715.json",
+          "prohibition_retained": false,
+          "project_scope": "GLOBAL",
+          "rank": 1,
+          "repository": "synthetic-symphonie/orchestrator",
+          "retrieval_score": 1
+        }
+      ],
+      "simulated_latency_ms": 0.11,
+      "task_id": "FX-071-029",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 1,
+      "conflict_state": "NONE",
+      "safe_refusal": false,
+      "selected": [
+        {
+          "authority_class": "PROJECT_DECISION",
+          "authority_rank": 100,
+          "bytes": 59,
+          "candidate_id": "DOC-4CDA05D21FBA4A95",
+          "citation": "synthetic-project/gamma@39b09421f6414158bc224b3eaf66f2c3fcafa3e2:synthetic/project/doc-4cda05d21fba4a95.json",
+          "commit_sha": "39b09421f6414158bc224b3eaf66f2c3fcafa3e2",
+          "conflict_marker": null,
+          "document_id": "DOC-4CDA05D21FBA4A95",
+          "document_status": "APPROVED",
+          "path": "synthetic/project/doc-4cda05d21fba4a95.json",
+          "prohibition_retained": false,
+          "project_scope": "GAMMA",
+          "rank": 1,
+          "repository": "synthetic-project/gamma",
+          "retrieval_score": 1
+        }
+      ],
+      "simulated_latency_ms": 0.11,
+      "task_id": "FX-071-030",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 0,
+      "conflict_state": "NONE",
+      "safe_refusal": true,
+      "selected": [],
+      "simulated_latency_ms": 0.1,
+      "task_id": "FX-071-031",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 0,
+      "conflict_state": "NONE",
+      "safe_refusal": true,
+      "selected": [],
+      "simulated_latency_ms": 0.1,
+      "task_id": "FX-071-032",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 0,
+      "conflict_state": "NONE",
+      "safe_refusal": true,
+      "selected": [],
+      "simulated_latency_ms": 0.1,
+      "task_id": "FX-071-033",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 2,
+      "conflict_state": "NONE",
+      "safe_refusal": false,
+      "selected": [
+        {
+          "authority_class": "GLOBAL_GOVERNANCE",
+          "authority_rank": 100,
+          "bytes": 59,
+          "candidate_id": "DOC-CBCE4FB50C1A6E65",
+          "citation": "synthetic-lab/lab-source@0560c69aa47ff78730094fe489798cecb8a56c67:synthetic/lab/doc-cbce4fb50c1a6e65.json",
+          "commit_sha": "0560c69aa47ff78730094fe489798cecb8a56c67",
+          "conflict_marker": null,
+          "document_id": "DOC-CBCE4FB50C1A6E65",
+          "document_status": "APPROVED",
+          "path": "synthetic/lab/doc-cbce4fb50c1a6e65.json",
+          "prohibition_retained": false,
+          "project_scope": "GLOBAL",
+          "rank": 1,
+          "repository": "synthetic-lab/lab-source",
+          "retrieval_score": 1
+        },
+        {
+          "authority_class": "CANONICAL_DECISION",
+          "authority_rank": 90,
+          "bytes": 43,
+          "candidate_id": "DOC-9A7F1467BDFFF2FB",
+          "citation": "synthetic-lab/lab-source@0560c69aa47ff78730094fe489798cecb8a56c67:synthetic/lab/doc-9a7f1467bdfff2fb.json",
+          "commit_sha": "0560c69aa47ff78730094fe489798cecb8a56c67",
+          "conflict_marker": null,
+          "document_id": "DOC-9A7F1467BDFFF2FB",
+          "document_status": "APPROVED",
+          "path": "synthetic/lab/doc-9a7f1467bdfff2fb.json",
+          "prohibition_retained": false,
+          "project_scope": "GLOBAL",
+          "rank": 2,
+          "repository": "synthetic-lab/lab-source",
+          "retrieval_score": 1
+        }
+      ],
+      "simulated_latency_ms": 0.12,
+      "task_id": "FX-071-034",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 1,
+      "conflict_state": "NONE",
+      "safe_refusal": false,
+      "selected": [
+        {
+          "authority_class": "ORCHESTRATION_CONTRACT",
+          "authority_rank": 100,
+          "bytes": 59,
+          "candidate_id": "DOC-FFD0D2B6FABCFDD1",
+          "citation": "synthetic-symphonie/orchestrator@9d95a90d6a9162815acae6b4fc8909525f775aa2:synthetic/symphonie/doc-ffd0d2b6fabcfdd1.json",
+          "commit_sha": "9d95a90d6a9162815acae6b4fc8909525f775aa2",
+          "conflict_marker": null,
+          "document_id": "DOC-FFD0D2B6FABCFDD1",
+          "document_status": "APPROVED",
+          "path": "synthetic/symphonie/doc-ffd0d2b6fabcfdd1.json",
+          "prohibition_retained": false,
+          "project_scope": "GLOBAL",
+          "rank": 1,
+          "repository": "synthetic-symphonie/orchestrator",
+          "retrieval_score": 1
+        }
+      ],
+      "simulated_latency_ms": 0.11,
+      "task_id": "FX-071-035",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 1,
+      "conflict_state": "NONE",
+      "safe_refusal": false,
+      "selected": [
+        {
+          "authority_class": "PROJECT_DECISION",
+          "authority_rank": 100,
+          "bytes": 59,
+          "candidate_id": "DOC-6FAC1EC0795F8FAF",
+          "citation": "synthetic-project/gamma@39b09421f6414158bc224b3eaf66f2c3fcafa3e2:synthetic/project/doc-6fac1ec0795f8faf.json",
+          "commit_sha": "39b09421f6414158bc224b3eaf66f2c3fcafa3e2",
+          "conflict_marker": null,
+          "document_id": "DOC-6FAC1EC0795F8FAF",
+          "document_status": "APPROVED",
+          "path": "synthetic/project/doc-6fac1ec0795f8faf.json",
+          "prohibition_retained": false,
+          "project_scope": "GAMMA",
+          "rank": 1,
+          "repository": "synthetic-project/gamma",
+          "retrieval_score": 1
+        }
+      ],
+      "simulated_latency_ms": 0.11,
+      "task_id": "FX-071-036",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 1,
+      "conflict_state": "NONE",
+      "safe_refusal": false,
+      "selected": [
+        {
+          "authority_class": "GLOBAL_GOVERNANCE",
+          "authority_rank": 100,
+          "bytes": 59,
+          "candidate_id": "DOC-6EBAEBD95B800E5B",
+          "citation": "synthetic-lab/lab-source@0560c69aa47ff78730094fe489798cecb8a56c67:synthetic/lab/doc-6ebaebd95b800e5b.json",
+          "commit_sha": "0560c69aa47ff78730094fe489798cecb8a56c67",
+          "conflict_marker": null,
+          "document_id": "DOC-6EBAEBD95B800E5B",
+          "document_status": "APPROVED",
+          "path": "synthetic/lab/doc-6ebaebd95b800e5b.json",
+          "prohibition_retained": false,
+          "project_scope": "GLOBAL",
+          "rank": 1,
+          "repository": "synthetic-lab/lab-source",
+          "retrieval_score": 1
+        }
+      ],
+      "simulated_latency_ms": 0.11,
+      "task_id": "FX-071-037",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 1,
+      "conflict_state": "NONE",
+      "safe_refusal": false,
+      "selected": [
+        {
+          "authority_class": "ORCHESTRATION_CONTRACT",
+          "authority_rank": 100,
+          "bytes": 59,
+          "candidate_id": "DOC-19B8A34AA41784B2",
+          "citation": "synthetic-symphonie/orchestrator@9d95a90d6a9162815acae6b4fc8909525f775aa2:synthetic/symphonie/doc-19b8a34aa41784b2.json",
+          "commit_sha": "9d95a90d6a9162815acae6b4fc8909525f775aa2",
+          "conflict_marker": null,
+          "document_id": "DOC-19B8A34AA41784B2",
+          "document_status": "APPROVED",
+          "path": "synthetic/symphonie/doc-19b8a34aa41784b2.json",
+          "prohibition_retained": false,
+          "project_scope": "GLOBAL",
+          "rank": 1,
+          "repository": "synthetic-symphonie/orchestrator",
+          "retrieval_score": 1
+        }
+      ],
+      "simulated_latency_ms": 0.11,
+      "task_id": "FX-071-038",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 2,
+      "conflict_state": "RESOLUTION_REQUIRED",
+      "safe_refusal": false,
+      "selected": [
+        {
+          "authority_class": "PROJECT_DECISION",
+          "authority_rank": 100,
+          "bytes": 59,
+          "candidate_id": "DOC-703492397AC7C54B",
+          "citation": "synthetic-project/gamma@39b09421f6414158bc224b3eaf66f2c3fcafa3e2:synthetic/project/doc-703492397ac7c54b.json",
+          "commit_sha": "39b09421f6414158bc224b3eaf66f2c3fcafa3e2",
+          "conflict_marker": "SOURCE_A",
+          "document_id": "DOC-703492397AC7C54B",
+          "document_status": "APPROVED",
+          "path": "synthetic/project/doc-703492397ac7c54b.json",
+          "prohibition_retained": false,
+          "project_scope": "GAMMA",
+          "rank": 1,
+          "repository": "synthetic-project/gamma",
+          "retrieval_score": 1
+        },
+        {
+          "authority_class": "PROJECT_STATE",
+          "authority_rank": 90,
+          "bytes": 46,
+          "candidate_id": "DOC-E347938CF4FB31D4",
+          "citation": "synthetic-project/gamma@39b09421f6414158bc224b3eaf66f2c3fcafa3e2:synthetic/project/doc-e347938cf4fb31d4.json",
+          "commit_sha": "39b09421f6414158bc224b3eaf66f2c3fcafa3e2",
+          "conflict_marker": "SOURCE_B",
+          "document_id": "DOC-E347938CF4FB31D4",
+          "document_status": "APPROVED",
+          "path": "synthetic/project/doc-e347938cf4fb31d4.json",
+          "prohibition_retained": false,
+          "project_scope": "GAMMA",
+          "rank": 2,
+          "repository": "synthetic-project/gamma",
+          "retrieval_score": 1
+        }
+      ],
+      "simulated_latency_ms": 0.12,
+      "task_id": "FX-071-039",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 1,
+      "conflict_state": "NONE",
+      "safe_refusal": false,
+      "selected": [
+        {
+          "authority_class": "GLOBAL_GOVERNANCE",
+          "authority_rank": 100,
+          "bytes": 59,
+          "candidate_id": "DOC-E4AF86DA104FF19F",
+          "citation": "synthetic-lab/lab-source@0560c69aa47ff78730094fe489798cecb8a56c67:synthetic/lab/doc-e4af86da104ff19f.json",
+          "commit_sha": "0560c69aa47ff78730094fe489798cecb8a56c67",
+          "conflict_marker": null,
+          "document_id": "DOC-E4AF86DA104FF19F",
+          "document_status": "APPROVED",
+          "path": "synthetic/lab/doc-e4af86da104ff19f.json",
+          "prohibition_retained": false,
+          "project_scope": "GLOBAL",
+          "rank": 1,
+          "repository": "synthetic-lab/lab-source",
+          "retrieval_score": 1
+        }
+      ],
+      "simulated_latency_ms": 0.11,
+      "task_id": "FX-071-040",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 1,
+      "conflict_state": "NONE",
+      "safe_refusal": false,
+      "selected": [
+        {
+          "authority_class": "ORCHESTRATION_CONTRACT",
+          "authority_rank": 100,
+          "bytes": 59,
+          "candidate_id": "DOC-2CD1C490571E1D1E",
+          "citation": "synthetic-symphonie/orchestrator@9d95a90d6a9162815acae6b4fc8909525f775aa2:synthetic/symphonie/doc-2cd1c490571e1d1e.json",
+          "commit_sha": "9d95a90d6a9162815acae6b4fc8909525f775aa2",
+          "conflict_marker": null,
+          "document_id": "DOC-2CD1C490571E1D1E",
+          "document_status": "APPROVED",
+          "path": "synthetic/symphonie/doc-2cd1c490571e1d1e.json",
+          "prohibition_retained": false,
+          "project_scope": "GLOBAL",
+          "rank": 1,
+          "repository": "synthetic-symphonie/orchestrator",
+          "retrieval_score": 1
+        }
+      ],
+      "simulated_latency_ms": 0.11,
+      "task_id": "FX-071-041",
+      "task_observed": true
+    },
+    {
+      "candidate_count": 1,
+      "conflict_state": "NONE",
+      "safe_refusal": false,
+      "selected": [
+        {
+          "authority_class": "PROJECT_DECISION",
+          "authority_rank": 100,
+          "bytes": 59,
+          "candidate_id": "DOC-659FFB0F61E54EE8",
+          "citation": "synthetic-project/gamma@39b09421f6414158bc224b3eaf66f2c3fcafa3e2:synthetic/project/doc-659ffb0f61e54ee8.json",
+          "commit_sha": "39b09421f6414158bc224b3eaf66f2c3fcafa3e2",
+          "conflict_marker": null,
+          "document_id": "DOC-659FFB0F61E54EE8",
+          "document_status": "APPROVED",
+          "path": "synthetic/project/doc-659ffb0f61e54ee8.json",
+          "prohibition_retained": false,
+          "project_scope": "GAMMA",
+          "rank": 1,
+          "repository": "synthetic-project/gamma",
+          "retrieval_score": 1
+        }
+      ],
+      "simulated_latency_ms": 0.11,
+      "task_id": "FX-071-042",
+      "task_observed": true
+    }
+  ],
+  "oracle_access": true,
+  "process_role": "EVALUATOR_ONLY_POSITIVE_CONTROL",
+  "read_log": [
+    {
+      "access": "READ",
+      "path": "public/DOCUMENT_CATALOG.json",
+      "process_role": "EVALUATOR"
+    },
+    {
+      "access": "READ",
+      "path": "public/TASKS.json",
+      "process_role": "EVALUATOR"
+    },
+    {
+      "access": "READ",
+      "path": "private/PRIVATE_ORACLES.json",
+      "process_role": "EVALUATOR"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "selection_fingerprint": "677bb03e7e7e161c50d1588ba68a6907c9b6d5efb5038e7813219cdcf1a57abc",
+  "selector_access": false
+}

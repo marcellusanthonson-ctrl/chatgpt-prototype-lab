@@ -1,12 +1,17 @@
 {
   "schema_version": "1.0.0",
   "project_id": "lab",
-  "updated_at": "2026-07-23",
+  "updated_at": "2026-07-24",
   "records": [
     {
       "id": "EXP-LAB-001",
       "status": "EXPERIMENT_DISCRIMINATES",
       "canonical_path": "projects/lab/experiments/EXP-LAB-001.json"
+    },
+    {
+      "id": "EXP-LAB-002",
+      "status": "EXPERIMENT_VALID_CONTROLS_PASS_NO_CANDIDATE_VIABLE",
+      "canonical_path": "projects/lab/experiments/EXP-LAB-002.json"
     }
   ]
 }
