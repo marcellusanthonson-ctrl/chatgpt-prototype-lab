@@ -1,0 +1,10 @@
+{
+  "architecture_class": "The audit does NOT and cannot refute or select the authority-first RAG architectural class; the tested arm omits the dense-semantic component that defines production RAG.",
+  "authority": "This audit creates NO authority. Per LAB_CONTRACT, only Jonathan Martinez can approve; an audit is not an authorization.",
+  "design_independence": "Only corpus-artifact independence from EXP-LAB-001 was verifiable; design-concept independence was not assessed and is not claimed.",
+  "formula_independence": "Independent recomputation reimplemented the DOCUMENTED formulas; where lib.mjs formulas are idiosyncratic, the audit follows the declared definitions rather than an external gold standard.",
+  "no_actions_taken": "No architecture/implementation selection, no approval, no deployment, no product/runtime effect, no canonical mutation, no dependency install, no external API, no real data.",
+  "remote_head": "Live remote HEAD was not fetched (no-network/read-only boundary). Verification is against the local mounted working copy whose HEAD equals EXPECTED_HEAD.",
+  "reproduction": "NEAR_EXACT_REPRODUCTION. Two files (REPRODUCIBILITY_REPORT.json, HASHES.json) are environment-bound and not byte-reproducible; all substantive artifacts are.",
+  "scope_of_result": "Bounded synthetic test only: 180 documents, 42 fixtures, budget_k=2, lexical retrieval with trivial synonym expansion, no embeddings/vector DB/provider."
+}

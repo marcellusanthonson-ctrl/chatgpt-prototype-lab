@@ -1,0 +1,31 @@
+{
+  "canonical_repo_mutated": false,
+  "dependencies_installed": 0,
+  "difference_root_cause": "REPRODUCIBILITY_REPORT.json.runtime {executable,platform,version} is environment-specific (original: win32-x64, node v24.6.0, C:\\Program Files\\nodejs\\node.exe; auditor: linux-x64, node v22.22.3, /usr/bin/node). HASHES.json differs only because it hashes that report.",
+  "external_apis_used": 0,
+  "files_byte_identical": 86,
+  "files_differing": [
+    "HASHES.json",
+    "reports/REPRODUCIBILITY_REPORT.json"
+  ],
+  "files_total": 88,
+  "gate_results_json_identical": true,
+  "harness_self_report": {
+    "controls": {
+      "negative_control": "PASS_DISCRIMINATES_UNSAFE_ORDERING",
+      "positive_control": "PASS"
+    },
+    "documents": 180,
+    "fixtures": 42,
+    "package_files": 88,
+    "runs": 30,
+    "status": "PASS"
+  },
+  "method": "Ran package harness `node harness/execute.mjs --output <empty external dir>` (Node v22.22.3, linux-x64). No dependency install, no network. Compared all 88 output files byte-for-byte (SHA-256) against published package.",
+  "metrics_json_identical": true,
+  "real_data_used": false,
+  "reproduction_classification": "NEAR_EXACT_REPRODUCTION",
+  "result": "PASS_WITH_ENVIRONMENT_BOUND_DIGEST_NOTE",
+  "run_fingerprints_identical": true,
+  "substantive_files_identical": true
+}

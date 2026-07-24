@@ -234,6 +234,21 @@
       "execution_package": "projects/lab/test-executions/FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001/MANIFEST.json",
       "ordered_manifest_digest_sha256": "41facf4400af3e8e09e201239cc5b958fc93c10a78ed83a1de90ae3965614cae",
       "updated_at": "2026-07-24"
+    },
+    {
+      "id": "EVD-LAB-AUD-004",
+      "path": "projects/lab/evidence/EVD-LAB-AUD-004.json",
+      "kind": "INDEPENDENT_EXTERNAL_READ_ONLY_FULL_RAG_EXECUTION_AUDIT",
+      "project_id": "lab",
+      "status": "VERIFIED_EXTERNAL_EVIDENCE_REGISTERED_AND_RECONCILED",
+      "canonical_path": "projects/lab/evidence/EVD-LAB-AUD-004.json",
+      "authorization_id": "AUTHORIZATION_LAB_INDEPENDENT_EXTERNAL_READ_ONLY_AUDIT_OF_FULL_RAG_EXECUTION_071_072",
+      "reconciliation_authorization_id": "AUTHORIZATION_LAB_FULL_RAG_EXECUTION_071_EXTERNAL_AUDIT_RECONCILIATION_073",
+      "reassessment_id": "REA-LAB-005",
+      "external_audit_id": "AUDIT-CLAUDE-FULL-RAG-EXECUTION-071-001",
+      "external_audit_manifest": "projects/lab/external-audits/AUDIT-CLAUDE-FULL-RAG-EXECUTION-071-001/AUDIT_MANIFEST.json",
+      "source_archive_sha256": "9827f64b083a51e52ec219fc1bfc5c58b17dee84c4ce64be8a060876ecf084ab",
+      "updated_at": "2026-07-24"
     }
   ]
 }

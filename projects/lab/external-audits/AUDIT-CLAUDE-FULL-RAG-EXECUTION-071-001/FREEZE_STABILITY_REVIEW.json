@@ -1,0 +1,12 @@
+{
+  "claim": "FREEZE_STABLE",
+  "design_source_hashes_checked": 20,
+  "design_source_mismatches": 0,
+  "frozen_entries_changed": 0,
+  "frozen_entries_checked": 15,
+  "harness_enforcement": "execute.mjs recomputes initial hashes both BEFORE evaluation and AFTER evaluation and fails closed (POST_FREEZE_HASH_CHANGE) on any change.",
+  "method": "Compare HASHES_INITIAL.json (public/private/harness/scoring + 20 design sources) to current on-disk SHA-256; inspect harness pre/post-evaluation post-freeze hash checks.",
+  "mutation_policy": "ANY_POST_FREEZE_HASH_CHANGE_INVALIDATES_EXPERIMENT",
+  "post_freeze_mutations_declared": 0,
+  "result": "PASS"
+}

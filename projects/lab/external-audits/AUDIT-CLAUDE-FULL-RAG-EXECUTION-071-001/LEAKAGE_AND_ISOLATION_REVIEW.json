@@ -1,0 +1,27 @@
+{
+  "canary_occurrences_outside_private": 0,
+  "canary_sha256_matches_report": true,
+  "canary_sha256_recomputed": "84edb305f43b83b8378b45ac02e24fa721ee8b10708b3d427f7bf5146c3144eb",
+  "canary_value": "PRIVATE-CANARY-071-73698151B989A5C32096E47F",
+  "claim": "LEAKAGE_CONTROL_PASS",
+  "evaluator_has_oracle_access": true,
+  "metadata_gold_signal": "Opaque document IDs; governance metadata is observable contract input, not a private gold label. Candidate arms have access to authority_rank yet still fail -> signal availability does not rescue them.",
+  "method": "Independent scan of 24 selector run read_logs + RUNNER_READ_LOGS (120 reads); SHA-256 of canary vs CANARY_VALIDATION; grep canary string and oracle field names across non-private files; inspect selector.mjs trackedRead guard.",
+  "oracle_field_names_in_public_payload": 0,
+  "residual_note": "Governance metadata (authority_rank/status/acl/commit) correlates strongly with oracle required/forbidden sets; this is by design (observable governed inputs) and does not constitute oracle leakage, but makes the corpus 'discriminable' for the positive control.",
+  "result": "PASS",
+  "selector_allowed_paths_observed": [
+    "frozen/ARM_PARAMETERS.json",
+    "public/DOCUMENT_CATALOG.json",
+    "public/READ_MANIFEST.json",
+    "public/SYNONYMS.json",
+    "public/TASKS.json"
+  ],
+  "selector_code_guard": "trackedRead() throws PRIVATE_READ_BLOCKED on any private/ path and READ_OUTSIDE_ROOT_BLOCKED outside root; READ_MANIFEST allowlist enforced.",
+  "selector_evaluator_separate_processes": true,
+  "selector_oracle_access_flag_all_false": true,
+  "selector_private_reads": 0,
+  "selector_process_role": "SELECTOR_ISOLATED_NO_ORACLE_ACCESS",
+  "selector_runs": 24,
+  "selector_total_reads": 120
+}

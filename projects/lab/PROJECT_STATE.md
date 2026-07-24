@@ -35,4 +35,14 @@ La corrección geométrica `058` fue detenida y quedó `SUPERSEDED_BEFORE_PUBLIC
 
 La autorización `062` convierte el `README.md` raíz en el mapa conceptual y operativo del ecosistema. Explica las capas federadas, el modelo de decisión contextual, el baseline adaptable, el patrón asset-first, el orden canónico de lectura y el flujo no autorizante para preparar pilotos. El README no replica estado canónico, no fija el HEAD vigente, no selecciona un piloto y no concede autoridad a modelos, skills o capacidades.
 
+## Ejecución full RAG 071 y auditoría externa
+
+La ejecución sintética `EXP-LAB-002` conserva 180 documentos, 42 fixtures y 30 runs. Los controles, aislamiento, canary, freeze, métricas y gates permanecen validados. Ningún candidato fue viable bajo las condiciones sintéticas probadas.
+
+La auditoría externa `AUDIT-CLAUDE-FULL-RAG-EXECUTION-071-001`, registrada como `EVD-LAB-AUD-004` y reevaluada en `REA-LAB-005`, confirmó los 12 claims. El dictamen de reconciliación es `CONFIRMED`: `FULL_RAG_AUTHORITY_FIRST_SIMULATION` fue `NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS`.
+
+El Markdown de la ejecución fue corregido para coincidir con el JSON, las métricas y los gates. No cambió ningún resultado numérico. El brazo probado usó `embeddings=false`, `provider=NONE`, `budget_k=2` y recuperación predominantemente léxica con contribución semántica limitada. Este resultado no refuta toda la clase arquitectónica authority-first.
+
+`PEND-LAB-018` está `COMPLETED_EXTERNAL_AUDIT_DELIVERED_AND_RECONCILED`. `PEND-LAB-019` propone un análisis de fallos y un siguiente test, pero requiere autorización separada y no selecciona arquitectura ni implementación.
+
 No existe autorización activa reutilizable. El HEAD propio se verifica en vivo y nunca se almacena como estado canónico vigente.

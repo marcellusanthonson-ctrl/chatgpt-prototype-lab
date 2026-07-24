@@ -1,0 +1,65 @@
+{
+  "all_independent_values_match_published": true,
+  "claim": "METRICS_CORRECT",
+  "definition_notes": [
+    "precision = tp/|selected|, but =1 when selected empty and required empty (idiosyncratic but uniform).",
+    "recall = required-tp/|required|, =1 when required empty (safe fixtures).",
+    "macro aggregation over 252 fixture-evaluations (42 fixtures x 6 configs).",
+    "tokens null: TOKENIZER_NOT_AVAILABLE fallback declared, not silently substituted with bytes."
+  ],
+  "fixture_evaluations_per_arm": 252,
+  "full_metrics_json_reproduced_byte_identical": true,
+  "independent_recomputation": {
+    "FULL_RAG_AUTHORITY_FIRST_SIMULATION": {
+      "codes": [
+        "BINDING_NEGATIVE_OMITTED",
+        "UNSUPPORTED_CONCLUSION"
+      ],
+      "critical_failures": 48,
+      "macro_f1": 0.261243,
+      "precision": 0.234127,
+      "recall": 0.458333
+    },
+    "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL": {
+      "codes": [
+        "AUTHORITY_INVERSION",
+        "BINDING_NEGATIVE_OMITTED",
+        "CONFIRMED_CONFLICT_AUTOMERGED",
+        "UNSUPPORTED_CONCLUSION"
+      ],
+      "critical_failures": 249,
+      "macro_f1": 0.138889,
+      "precision": 0.126984,
+      "recall": 0.305556
+    },
+    "ORACLE_INFORMED_POSITIVE_CONTROL": {
+      "codes": [],
+      "critical_failures": 0,
+      "macro_f1": 1.0,
+      "precision": 1.0,
+      "recall": 1.0
+    }
+  },
+  "method": "Independent Python reimplementation of the documented fixture-level formulas (precision, recall, macro_f1, critical failure codes) applied to the 30 raw run files + private oracle + document catalog, WITHOUT importing the harness. Also full-package byte-identical harness re-run.",
+  "published_values": {
+    "FULL_RAG_AUTHORITY_FIRST_SIMULATION": {
+      "critical_failures": 48,
+      "macro_f1": 0.261243,
+      "precision": 0.234127,
+      "recall": 0.458333
+    },
+    "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL": {
+      "critical_failures": 249,
+      "macro_f1": 0.138889,
+      "precision": 0.126984,
+      "recall": 0.305556
+    },
+    "ORACLE_INFORMED_POSITIVE_CONTROL": {
+      "critical_failures": 0,
+      "macro_f1": 1,
+      "precision": 1,
+      "recall": 1
+    }
+  },
+  "result": "PASS"
+}

@@ -1,0 +1,36 @@
+{
+  "authority_rank_distribution": {
+    "10": 54,
+    "20": 42,
+    "90": 42,
+    "100": 42
+  },
+  "claim": "CORPUS_INDEPENDENT",
+  "current_counts": {
+    "documents": 180,
+    "fixtures": 42
+  },
+  "document_count": 180,
+  "document_id_method": "OPAQUE_SHA256_DERIVED (all DOC- prefixed)",
+  "fixture_count": 42,
+  "fixture_namespace": "FX-071 (all fixtures)",
+  "generation_seed": 71024001,
+  "generator_purity": "generateCorpus(seed) is a pure deterministic function of GENERATION_SEED; reads no EXP-LAB-001 files.",
+  "generator_reads_predecessor_artifacts": false,
+  "limitation": "Independence of corpus ARTIFACTS is confirmed (distinct seed, opaque IDs, no predecessor reads). Whether the DESIGN was informed by EXP-LAB-001 knowledge is neither claimed nor verifiable from artifacts; not required for the corpus-independence claim.",
+  "method": "Count documents/fixtures; inspect generator (harness/lib.mjs generateCorpus) for predecessor-artifact reads; compare against CORPUS_INDEPENDENCE_REPORT and predecessor EXP-LAB-001 counts.",
+  "namespace_distribution": {
+    "LAB": 60,
+    "PROJECT": 60,
+    "SYMPHONIE": 60
+  },
+  "oracle_fixture_count": 42,
+  "predecessor_counts": {
+    "documents": 88,
+    "fixtures": 22
+  },
+  "predecessor_experiment": "EXP-LAB-001",
+  "real_data_used": false,
+  "result": "PASS_INDEPENDENT_SYNTHETIC_CORPUS",
+  "synthetic_only": true
+}

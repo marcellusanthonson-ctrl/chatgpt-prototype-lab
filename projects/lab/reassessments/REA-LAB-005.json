@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "reassessment_id": "REA-LAB-005",
+  "project_id": "lab",
+  "status": "ADJUDICATED",
+  "decision_domain": "FACTUAL",
+  "subject": "Independent reassessment of AUDIT-CLAUDE-FULL-RAG-EXECUTION-071-001 and the interpretation of execution 071",
+  "previous_position": {
+    "structured_result": "FULL_RAG_AUTHORITY_FIRST_SIMULATION_NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS",
+    "human_markdown_view": "INCORRECTLY_STATED_VIABLE",
+    "architecture_class_effect": "NOT_SELECTED_OR_REFUTED"
+  },
+  "trigger": {
+    "authorization_id": "AUTHORIZATION_LAB_FULL_RAG_EXECUTION_071_EXTERNAL_AUDIT_RECONCILIATION_073",
+    "external_audit": "AUDIT-CLAUDE-FULL-RAG-EXECUTION-071-001",
+    "evidence_id": "EVD-LAB-AUD-004",
+    "reason": "EXTERNAL_AUDIT_DELIVERED_WITH_DOCUMENTARY_DIVERGENCE_AND_SCOPE_QUALIFICATION"
+  },
+  "claims_under_review": [
+    {"claim_id": 1, "claim": "PACKAGE_COMPLETE_REPRODUCIBLE", "determination": "CONFIRMED"},
+    {"claim_id": 2, "claim": "CORPUS_INDEPENDENT", "determination": "CONFIRMED"},
+    {"claim_id": 3, "claim": "LEAKAGE_CONTROL_PASS", "determination": "CONFIRMED"},
+    {"claim_id": 4, "claim": "FREEZE_STABLE", "determination": "CONFIRMED"},
+    {"claim_id": 5, "claim": "POSITIVE_CONTROL_PASS", "determination": "CONFIRMED"},
+    {"claim_id": 6, "claim": "NEGATIVE_CONTROL_DISCRIMINATES", "determination": "CONFIRMED"},
+    {"claim_id": 7, "claim": "METRICS_CORRECT", "determination": "CONFIRMED"},
+    {"claim_id": 8, "claim": "GATES_CORRECT", "determination": "CONFIRMED"},
+    {"claim_id": 9, "claim": "NO_CANDIDATE_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS", "determination": "CONFIRMED"},
+    {"claim_id": 10, "claim": "FULL_RAG_AUTHORITY_FIRST_NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS", "determination": "CONFIRMED"},
+    {"claim_id": 11, "claim": "NO_ARCHITECTURE_SELECTED", "determination": "CONFIRMED"},
+    {"claim_id": 12, "claim": "NO_PRODUCT_OR_RUNTIME_EFFECT", "determination": "CONFIRMED"}
+  ],
+  "evidence_supporting_change": [
+    "EXECUTION_SUMMARY_MD_CONTRADICTED_STRUCTURED_JSON_AND_GATE_RESULTS",
+    "FULL_RAG_ARM_USED_EMBEDDINGS_FALSE_PROVIDER_NONE_AND_PREDOMINANTLY_LEXICAL_RETRIEVAL",
+    "SEMANTIC_CONTRIBUTION_WAS_LIMITED_TO_0_027777",
+    "NON_VIABILITY_IS_BOUNDED_TO_THE_SYNTHETIC_HARNESS_AND_FROZEN_PARAMETERS"
+  ],
+  "evidence_against_change": [
+    "NO_NUMERIC_METRIC_OR_GATE_DISCREPANCY_FOUND",
+    "ALL_87_HISTORICAL_EXECUTION_HASHES_MATCHED_BEFORE_DOCUMENTARY_RECONCILIATION",
+    "POSITIVE_AND_NEGATIVE_CONTROLS_REMAIN_DISCRIMINATING",
+    "NO_EVIDENCE_SUPPORTS_REVERSING_THE_NON_VIABILITY_RESULT_WITHIN_TESTED_CONDITIONS"
+  ],
+  "verification": {
+    "external_deliverables": 18,
+    "external_json_valid": 17,
+    "external_hashes_checked": 17,
+    "external_hash_mismatches": 0,
+    "execution_hashes_checked": 87,
+    "execution_hash_mismatches": 0,
+    "claims_reviewed": 12,
+    "claims_confirmed": 12,
+    "audit_mutations": 0,
+    "audit_commits": 0,
+    "audit_pushes": 0
+  },
+  "technical_determination": "CONFIRMED",
+  "reasoning_summary": "The audit is well supported claim by claim. It confirms the execution integrity and the authority-first arm's non-viability under the exact synthetic conditions, while correctly requiring the human Markdown view to be corrected and the conclusion to remain bounded to the tested lexical simulation. The evidence does not refute the authority-first RAG architectural class.",
+  "confidence": "HIGH",
+  "consequences": [
+    "CORRECT_EXECUTION_SUMMARY_MARKDOWN_TO_NON_VIABLE",
+    "PRESERVE_ALL_NUMERIC_RESULTS_AND_EXPERIMENTAL_JSON",
+    "REGISTER_THAT_THE_TESTED_ARM_USED_NO_EMBEDDINGS_AND_PROVIDER_NONE",
+    "REGISTER_THIS_RESULT_DOES_NOT_REFUTE_THE_ENTIRE_ARCHITECTURE_CLASS",
+    "CLOSE_PEND_LAB_018",
+    "CREATE_PEND_LAB_019_WITHOUT_AUTHORIZATION_EFFECT"
+  ],
+  "recommended_action": {
+    "pending_id": "PEND-LAB-019",
+    "action": "SEPARATELY_AUTHORIZE_FULL_RAG_AUTHORITY_FIRST_FAILURE_ANALYSIS_AND_NEXT_TEST_PROPOSAL",
+    "current_authority": "NONE"
+  },
+  "approval_state": "NOT_REQUIRED"
+}

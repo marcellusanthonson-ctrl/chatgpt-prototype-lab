@@ -1,0 +1,26 @@
+{
+  "algorithm": "SHA-256",
+  "design_source_hashes": {
+    "count": 20,
+    "mismatches": 0,
+    "missing": 0
+  },
+  "digest_recomputation_note": "Digest formula = sha256(join('\\n', 'relpath\\t'+hash) over all files except HASHES.json). Re-run reproduces digest only if the environment-dependent REPRODUCIBILITY_REPORT.json is byte-identical; it is not, so the top-level digest is environment-bound.",
+  "evidence_registry_hash_cross_check": {
+    "EVD-LAB-EXP-002.frozen_inputs.corpus_sha256": "6a52b3936fcf179b471be2967e2409fe53f1e3b06341cd41ae55967b77726a85 == public/DOCUMENT_CATALOG.json",
+    "all_match": true,
+    "ordered_manifest_digest": "41facf4400af3e8e09e201239cc5b958fc93c10a78ed83a1de90ae3965614cae == HASHES.json",
+    "private_oracle_sha256": "bca484a225a85dc1dfa0a39a9eba3f40ca4e034b17e1cb360ce7665efa07b9e9 == private/PRIVATE_ORACLES.json",
+    "scoring_sha256": "9d5f1d5463575c46d5a59a50ff000159fa8392e297d3166d95c5665440cd26d5 == frozen/SCORING_RULES.json",
+    "tasks_sha256": "b472ef4f5ecd689f98357e2ae66f4ce129ecd054fffff9eb49b1741218a3c24d == public/TASKS.json"
+  },
+  "freeze_initial_vs_current": {
+    "changed": 0,
+    "frozen_public_private_harness_scoring_entries": 15
+  },
+  "method": "SHA-256 recomputation of all 87 hashed files vs HASHES.json; ordered_manifest_digest recomputation; freeze hashes vs HASHES_INITIAL.json and design dir.",
+  "ordered_file_hashes_checked": 87,
+  "ordered_file_hashes_mismatches": 0,
+  "published_ordered_manifest_digest": "41facf4400af3e8e09e201239cc5b958fc93c10a78ed83a1de90ae3965614cae",
+  "result": "PASS"
+}

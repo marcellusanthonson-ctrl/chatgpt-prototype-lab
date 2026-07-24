@@ -394,18 +394,45 @@
     },
     {
       "id": "PEND-LAB-018",
-      "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+      "status": "COMPLETED_EXTERNAL_AUDIT_DELIVERED_AND_RECONCILED",
       "type": "INDEPENDENT_EXTERNAL_READ_ONLY_AUDIT",
       "subject": "Independently audit the full RAG stages 5 and 6 execution package and findings",
       "priority": "HIGH",
       "authorization_required": true,
-      "current_authority": "NONE",
+      "audit_authorization": "AUTHORIZATION_LAB_INDEPENDENT_EXTERNAL_READ_ONLY_AUDIT_OF_FULL_RAG_EXECUTION_071_072",
+      "reconciliation_authorization": "AUTHORIZATION_LAB_FULL_RAG_EXECUTION_071_EXTERNAL_AUDIT_RECONCILIATION_073",
+      "external_audit": "AUDIT-CLAUDE-FULL-RAG-EXECUTION-071-001",
+      "evidence_id": "EVD-LAB-AUD-004",
+      "reassessment_id": "REA-LAB-005",
+      "audit_result": "AUDIT_CONFIRMS_EXECUTION_MODIFIES_INTERPRETATION",
+      "audit_reconciliation_verdict": "CONFIRMED",
+      "claims_confirmed": 12,
+      "current_authority": "NONE_AFTER_CONSUMPTION",
       "automatic_approval": false,
-      "next_authorized_action": "NONE_UNTIL_SEPARATE_EXPLICIT_AUDIT_AUTHORIZATION",
+      "successor_pending": "PEND-LAB-019",
+      "next_authorized_action": "NONE",
       "source_refs": [
         "projects/lab/pending/PEND-LAB-018.json",
         "projects/lab/experiments/EXP-LAB-002.json",
-        "projects/lab/evidence/EVD-LAB-EXP-002.json"
+        "projects/lab/evidence/EVD-LAB-EXP-002.json",
+        "projects/lab/evidence/EVD-LAB-AUD-004.json",
+        "projects/lab/reassessments/REA-LAB-005.json"
+      ]
+    },
+    {
+      "id": "PEND-LAB-019",
+      "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+      "type": "FULL_RAG_AUTHORITY_FIRST_FAILURE_ANALYSIS_AND_NEXT_TEST_PROPOSAL",
+      "subject": "Analyze the bounded authority-first failure profile and propose a next discriminating test without selecting architecture or implementation",
+      "priority": "HIGH",
+      "authorization_required": true,
+      "current_authority": "NONE",
+      "automatic_approval": false,
+      "next_authorized_action": "NONE_UNTIL_SEPARATE_EXPLICIT_AUTHORIZATION",
+      "source_refs": [
+        "projects/lab/pending/PEND-LAB-019.json",
+        "projects/lab/evidence/EVD-LAB-AUD-004.json",
+        "projects/lab/reassessments/REA-LAB-005.json"
       ]
     }
   ]

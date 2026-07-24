@@ -1,0 +1,33 @@
+{
+  "audit_id": "AUDIT-CLAUDE-FULL-RAG-EXECUTION-071-001",
+  "audit_mode": "STRICT_READ_ONLY",
+  "audited_execution": "FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001",
+  "audited_head": "404819e4a622bf7e5e7a55bf1a45b17abb5a74cb",
+  "auditor": "CLAUDE",
+  "authorization": "AUTHORIZATION_072",
+  "created_at": "2026-07-24",
+  "deliverable_count": 18,
+  "deliverables": [
+    "AUDIT_MANIFEST.json",
+    "AUDIT_REPORT.md",
+    "AUDIT_REPORT.json",
+    "PACKAGE_INTEGRITY_REVIEW.json",
+    "HASH_VERIFICATION.json",
+    "REPRODUCTION_REPORT.json",
+    "CORPUS_REVIEW.json",
+    "LEAKAGE_AND_ISOLATION_REVIEW.json",
+    "FREEZE_STABILITY_REVIEW.json",
+    "CONTROL_REVIEW.json",
+    "METRIC_RECOMPUTATION.json",
+    "GATE_RECOMPUTATION.json",
+    "FULL_RAG_FAILURE_PROFILE.json",
+    "CLAIM_VERDICTS.json",
+    "FAVORABLE_AND_CONTRARY_EVIDENCE.json",
+    "LIMITATIONS.json",
+    "FILES_READ.json",
+    "HASHES.json"
+  ],
+  "global_result": "AUDIT_CONFIRMS_EXECUTION_MODIFIES_INTERPRETATION",
+  "hashes_manifest": "HASHES.json",
+  "schema_version": "1.0.0"
+}

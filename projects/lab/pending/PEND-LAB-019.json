@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "id": "PEND-LAB-019",
+  "project_id": "lab",
+  "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+  "type": "FULL_RAG_AUTHORITY_FIRST_FAILURE_ANALYSIS_AND_NEXT_TEST_PROPOSAL",
+  "subject": "Analyze the bounded authority-first failure profile and propose a next discriminating test without selecting architecture or implementation",
+  "priority": "HIGH",
+  "created_at": "2026-07-24",
+  "predecessor_pending": "PEND-LAB-018",
+  "source_experiment": "EXP-LAB-002",
+  "source_evidence": "EVD-LAB-EXP-002",
+  "external_audit_evidence": "EVD-LAB-AUD-004",
+  "reassessment": "REA-LAB-005",
+  "authorization_required": true,
+  "required_scope": [
+    "ANALYZE_FAILURE_ATTRIBUTION_WITH_FAVORABLE_AND_CONTRARY_EVIDENCE",
+    "SEPARATE_HARNESS_LIMITATIONS_FROM_ARCHITECTURE_CLASS_CLAIMS",
+    "ASSESS_BUDGET_K_2_SAFE_REFUSAL_AND_LEXICAL_RETRIEVAL_LIMITATIONS",
+    "PROPOSE_A_DISCRIMINATING_NEXT_TEST",
+    "DEFINE_GATES_CONTROLS_AND_CLAIM_LIMITS_BEFORE_ANY_EXECUTION"
+  ],
+  "required_boundaries": [
+    "NO_ARCHITECTURE_SELECTION",
+    "NO_IMPLEMENTATION_SELECTION_OR_APPROVAL",
+    "NO_EMBEDDING_PROVIDER_SELECTION",
+    "NO_TEST_EXECUTION",
+    "NO_RUNTIME_OR_PRODUCT_CHANGE",
+    "NO_REAL_DATA_EXTERNAL_API_DEPENDENCY_INSTALLATION_OR_DEPLOYMENT"
+  ],
+  "current_authority": "NONE",
+  "automatic_approval": false,
+  "next_authorized_action": "NONE_UNTIL_SEPARATE_EXPLICIT_AUTHORIZATION",
+  "source_refs": [
+    "projects/lab/evidence/EVD-LAB-AUD-004.json",
+    "projects/lab/reassessments/REA-LAB-005.json",
+    "projects/lab/experiments/EXP-LAB-002.json",
+    "projects/lab/test-executions/FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001/frozen/ARM_PARAMETERS.json",
+    "projects/lab/test-executions/FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001/reports/METRICS.json",
+    "projects/lab/test-executions/FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001/reports/GATE_RESULTS.json"
+  ]
+}

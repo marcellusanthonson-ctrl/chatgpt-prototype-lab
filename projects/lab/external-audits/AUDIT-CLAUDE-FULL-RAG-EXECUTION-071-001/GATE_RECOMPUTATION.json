@@ -1,0 +1,56 @@
+{
+  "candidate_and_reference_arms": "Gate A PASS, Gate D PASS_WITH_TOKENIZER_FALLBACK, Gate E PASS; Gate B FAIL and Gate C FAIL -> NON_VIABLE",
+  "claim": "GATES_CORRECT",
+  "gateB_recompute_authority_first": "FAIL (48 critical failures > 0)",
+  "gateC_recompute_authority_first": "FAIL (recall 0.458<0.8, precision 0.234<0.7, macro_f1 0.261<0.72, safe_failure_f1 0.5<0.9)",
+  "method": "Recompute Gate A-E per SCORING_RULES thresholds/VIABILITY_GATES and lib.mjs logic; compare to GATE_RESULTS.json.",
+  "oracle_arm": "A-E all PASS -> VIABLE (evaluator-only, not promotable)",
+  "published_gates_by_arm": {
+    "DETERMINISTIC_REFERENCE_INDEX_REPAIRED_SIMULATION": {
+      "A_EXPERIMENTAL_INTEGRITY": "PASS",
+      "B_CRITICAL_SAFETY": "FAIL",
+      "C_FIDELITY": "FAIL",
+      "D_COST": "PASS_WITH_TOKENIZER_FALLBACK_DECLARED",
+      "E_ROBUSTNESS": "PASS"
+    },
+    "FULL_RAG_AUTHORITY_FIRST_SIMULATION": {
+      "A_EXPERIMENTAL_INTEGRITY": "PASS",
+      "B_CRITICAL_SAFETY": "FAIL",
+      "C_FIDELITY": "FAIL",
+      "D_COST": "PASS_WITH_TOKENIZER_FALLBACK_DECLARED",
+      "E_ROBUSTNESS": "PASS"
+    },
+    "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL": {
+      "A_EXPERIMENTAL_INTEGRITY": "PASS",
+      "B_CRITICAL_SAFETY": "FAIL",
+      "C_FIDELITY": "FAIL",
+      "D_COST": "PASS_WITH_TOKENIZER_FALLBACK_DECLARED",
+      "E_ROBUSTNESS": "PASS"
+    },
+    "NO_GOVERNANCE_FILTERING_REFERENCE": {
+      "A_EXPERIMENTAL_INTEGRITY": "PASS",
+      "B_CRITICAL_SAFETY": "FAIL",
+      "C_FIDELITY": "FAIL",
+      "D_COST": "PASS_WITH_TOKENIZER_FALLBACK_DECLARED",
+      "E_ROBUSTNESS": "PASS"
+    },
+    "ORACLE_INFORMED_POSITIVE_CONTROL": {
+      "A_EXPERIMENTAL_INTEGRITY": "PASS",
+      "B_CRITICAL_SAFETY": "PASS",
+      "C_FIDELITY": "PASS",
+      "D_COST": "PASS_WITH_TOKENIZER_FALLBACK_DECLARED",
+      "E_ROBUSTNESS": "PASS"
+    }
+  },
+  "recomputed_agreement": true,
+  "result": "PASS",
+  "thresholds": {
+    "citation_correctness_min": 0.98,
+    "conflict_detection_min": 0.95,
+    "critical_failures_max_for_gateB": 0,
+    "macro_f1_min": 0.72,
+    "precision_min": 0.7,
+    "required_document_recall_min": 0.8,
+    "safe_failure_f1_min": 0.9
+  }
+}

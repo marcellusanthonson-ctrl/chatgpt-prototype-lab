@@ -1,0 +1,20 @@
+{
+  "contrary_or_cautionary": [
+    "EXECUTION_SUMMARY.md prose states authority-first was 'viable' - directly contradicting METRICS/GATE_RESULTS/EXECUTION_SUMMARY.json.",
+    "'FULL RAG' arms use embeddings=false/provider=NONE; the semantic component is a trivial synonym map (2.78% contribution) - the arm under-represents real RAG.",
+    "budget_k=2 structurally caps recall for multi-document required fixtures.",
+    "ordered_manifest_digest embeds an environment-dependent report, so the top-level digest is not portable.",
+    "Corpus is adversarial-by-construction and bounded (180 docs) - results do not generalize beyond tested conditions.",
+    "Governance metadata strongly correlates with oracle labels (by design), making the task discriminable for the oracle ceiling."
+  ],
+  "favorable_to_execution_validity": [
+    "HEAD matches EXPECTED_HEAD; 88/88 files; 87/87 hashes match.",
+    "Near-exact reproduction: 86/88 files byte-identical, run fingerprints and METRICS/GATE_RESULTS identical.",
+    "Freeze stable: 0 post-freeze mutations across 35 frozen/design hashes.",
+    "Zero selector private reads across 120 logged reads; canary provably absent from public artifacts.",
+    "Positive control F1=1/0-crit and negative control discriminates -> evaluator is sound and not rigged.",
+    "Independent (non-harness) metric recomputation matches published values exactly.",
+    "Strong role separation encoded and enforced in code (selector cannot read private/, separate processes)."
+  ],
+  "net_assessment": "Execution integrity and results are well supported; the principal issues are interpretive/documentation (MD vs JSON) and scope (implementation vs architecture), not computational errors."
+}

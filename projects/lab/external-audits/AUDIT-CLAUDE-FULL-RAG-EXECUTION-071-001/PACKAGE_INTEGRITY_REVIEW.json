@@ -1,0 +1,23 @@
+{
+  "actual_minus_declared": [],
+  "branch": "main",
+  "claim": "PACKAGE_COMPLETE_REPRODUCIBLE (integrity component)",
+  "corpus_document_count": 180,
+  "declared_minus_actual": [],
+  "files_on_disk": 88,
+  "fixture_count": 42,
+  "hashes_entries": 87,
+  "hashes_self_excluded": "HASHES.json",
+  "head_match": true,
+  "local_head_observed": "404819e4a622bf7e5e7a55bf1a45b17abb5a74cb",
+  "manifest_file_count_declared": 88,
+  "manifest_status_field": "COMPLETE_REPRODUCIBLE",
+  "method": "Enumerate files on disk, compare to MANIFEST.files and HASHES.ordered_file_hashes; recompute SHA-256 of every file.",
+  "notes": "88 declared = 88 on disk, no extras/missing. All 87 hashed files (HASHES.json self-excluded) recompute-match.",
+  "recomputed_hash_mismatches": 0,
+  "recomputed_hash_missing": 0,
+  "remote_head_expected": "404819e4a622bf7e5e7a55bf1a45b17abb5a74cb",
+  "remote_head_verification": "NOT_PERFORMED_NO_NETWORK (local mounted working copy HEAD matches EXPECTED_HEAD; live remote fetch not attempted per read-only/no-external boundary)",
+  "result": "PASS",
+  "run_file_count": 30
+}

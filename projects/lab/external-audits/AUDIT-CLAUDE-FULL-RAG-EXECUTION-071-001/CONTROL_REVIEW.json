@@ -1,0 +1,26 @@
+{
+  "method": "Independent recomputation of positive/negative control metrics from raw run files + oracle; compare to GATE_RESULTS controls.",
+  "negative_control": {
+    "arm": "FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL",
+    "authority_inversion_count": 180,
+    "critical_failures": 249,
+    "interpretation": "Relevance-before-authority ordering surfaces authority inversion + safety failures as designed.",
+    "macro_f1": 0.138889,
+    "verdict": "PASS_DISCRIMINATES_UNSAFE_ORDERING"
+  },
+  "negative_control_recompute_match": true,
+  "positive_control": {
+    "arm": "ORACLE_INFORMED_POSITIVE_CONTROL",
+    "critical_failures": 0,
+    "gates": "A-E all PASS",
+    "interpretation": "Proves the evaluation harness CAN award viability -> not rigged to fail all arms.",
+    "macro_f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "role": "EVALUATOR_ONLY_NOT_PROMOTABLE",
+    "verdict": "PASS",
+    "viability": "VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS"
+  },
+  "positive_control_recompute_match": true,
+  "result": "CONTROLS_DISCRIMINATE_PASS"
+}

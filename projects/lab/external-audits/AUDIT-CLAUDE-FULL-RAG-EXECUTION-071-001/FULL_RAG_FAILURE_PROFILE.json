@@ -1,0 +1,58 @@
+{
+  "arm": "FULL_RAG_AUTHORITY_FIRST_SIMULATION",
+  "critical_failure_codes": [
+    "BINDING_NEGATIVE_OMITTED",
+    "UNSUPPORTED_CONCLUSION"
+  ],
+  "critical_failures": 48,
+  "failing_gates": [
+    "B_CRITICAL_SAFETY",
+    "C_FIDELITY"
+  ],
+  "failure_source_attribution": {
+    "contract": "PARTIAL: budget_k=2 (frozen) is too small to return multi-document required sets (CANONICAL_SOURCE_CONFLICT, MANDATORY_NEGATIVE_PROHIBITION, MULTI_DOCUMENT_SYNTHESIS, OWNERSHIP_CONFLICT need 2 required docs while decoys/others compete).",
+    "corpus": "CONTRIBUTING: adversarial-by-construction (each fixture has a high-lexical decoy); bounded to 180 synthetic docs.",
+    "cost": "NOT_A_FACTOR: Gate D passes; byte reduction 63.7%.",
+    "evaluator": "SOUND: positive control reaches F1=1 / 0 critical failures; negative control discriminates.",
+    "harness": "CONTRIBUTING: safe-refusal is only triggered when zero docs are eligible+scored; lexical decoys (decoyText repeats the query tokens) survive governance filters in INSUFFICIENT_EVIDENCE/SAFE_REFUSAL/MISSING_REQUIRED_METADATA fixtures -> selection>0 -> UNSUPPORTED_CONCLUSION.",
+    "insufficient_evidence": "NO: reproduction is near-exact and metrics independently confirmed.",
+    "ranking": "NOT_PRIMARY: authority-first ranking works as intended (authority_inversion_count=0, forbidden_selection_rate=0, conflict_detection=1.0). It is the SAFEST candidate arm.",
+    "semantic_representation": "PRIMARY: the arm is described as 'semantic retrieval' but implemented with embeddings=false, provider=NONE and a trivial synonym map ({rule<->guidance, conceptNN<->notionNN}); measured semantic contribution over the deterministic reference = 2.78% recall. The defining component of RAG (dense semantic retrieval) is NOT exercised.",
+    "thresholds": "NOT_A_DEFECT: preregistered and frozen before runs; applied uniformly; positive control clears them."
+  },
+  "implementation_vs_architecture": {
+    "conclusion": "FULL_RAG_AUTHORITY_FIRST_NON_VIABLE is CONFIRMED strictly as a synthetic-tested-implementation result. Reading it as architectural-class refutation would be REVERSED by the evidence.",
+    "distinction": "This REFUTES the specific bounded lexical simulation, NOT the authority-first RAG architectural CLASS.",
+    "reasons": [
+      "No dense embeddings / vector retrieval exercised (provider NONE).",
+      "budget_k=2 hard cap.",
+      "Trivial synonym expansion as the only 'semantic' signal.",
+      "Synthetic adversarial corpus of 180 docs.",
+      "Safe-refusal logic is a selection-count heuristic, not a calibrated abstention policy."
+    ]
+  },
+  "key_metrics": {
+    "acl_leakage_rate": 0,
+    "authority_inversion_count": 0,
+    "citation_correctness": 1.0,
+    "conflict_detection_accuracy": 1.0,
+    "macro_f1": 0.261243,
+    "negative_prohibition_retention": 0.5,
+    "precision": 0.234127,
+    "project_contamination_rate": 0,
+    "required_document_recall": 0.458333,
+    "safe_failure_f1": 0.5,
+    "safe_refusal_recall": 0.333333,
+    "semantic_contribution_after_governance_filters": 0.027777,
+    "stale_document_selection_rate": 0
+  },
+  "package_narrative_divergence": {
+    "authoritative_source": "JSON (machine-computed) governs per LAB_CONTRACT precedence (JSON is structured source; Markdown is a human view).",
+    "contradiction": "EXECUTION_SUMMARY.json, reports/METRICS.json and reports/GATE_RESULTS.json all record FULL_RAG_AUTHORITY_FIRST_SIMULATION = NON_VIABLE (Gate B FAIL, Gate C FAIL).",
+    "finding": "EXECUTION_SUMMARY.md (published) states: 'The authority-first full RAG simulation was viable under the bounded synthetic tested conditions ... the evaluator-only positive control reached the expected ceiling.'",
+    "impact": "Interpretation only; the result itself stands as NON_VIABLE.",
+    "root_cause": "The .md is a hardcoded static string in harness/execute.mjs (writeMarkdown), NOT derived from the computed result; re-running the harness regenerates the same contradictory prose.",
+    "severity": "MEDIUM (documentation/reporting defect; does not change the numeric result but misstates it in the human-readable summary)."
+  },
+  "viability": "NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS"
+}

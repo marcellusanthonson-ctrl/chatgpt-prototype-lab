@@ -1,0 +1,290 @@
+{
+  "audit_mode": "STRICT_READ_ONLY",
+  "auditor": "CLAUDE",
+  "claims": [
+    {
+      "claim": "PACKAGE_COMPLETE_REPRODUCIBLE",
+      "claim_id": 1,
+      "contrary_evidence": [
+        "2 files differ (REPRODUCIBILITY_REPORT.json + cascaded HASHES.json) due to environment-specific runtime block",
+        "top-level ordered_manifest_digest is therefore not portable across environments"
+      ],
+      "favorable_evidence": [
+        "88 declared = 88 on disk, 0 missing/extra",
+        "87/87 file hashes match HASHES.json",
+        "HEAD == EXPECTED_HEAD 404819e4",
+        "harness re-run PASS: 180 docs/42 fixtures/30 runs/88 files",
+        "86/88 files byte-identical incl. METRICS.json & GATE_RESULTS.json; run fingerprints identical"
+      ],
+      "files_keys_references": [
+        "MANIFEST.json",
+        "HASHES.json",
+        "reports/REPRODUCIBILITY_REPORT.json",
+        "harness/execute.mjs"
+      ],
+      "impact": "Package is complete and (near-)exactly reproducible; digest portability is a minor methodological weakness.",
+      "method": "File enumeration vs MANIFEST/HASHES; SHA-256 recomputation of 87 files; full harness re-run to external empty dir; byte-for-byte diff of 88 outputs.",
+      "severity": "LOW",
+      "uncertainty": "LOW - the only non-reproducible bytes are an environment fingerprint, not results.",
+      "verdict": "CONFIRMED"
+    },
+    {
+      "claim": "CORPUS_INDEPENDENT",
+      "claim_id": 2,
+      "contrary_evidence": [
+        "Corpus independence != design independence; whether the design reused EXP-LAB-001 conceptual structure is not artifact-verifiable"
+      ],
+      "favorable_evidence": [
+        "180 docs / 42 fixtures / 42 oracles",
+        "generateCorpus(seed) reads NO predecessor artifacts (pure fn of GENERATION_SEED 71024001)",
+        "opaque SHA256 DOC- ids; FX-071 namespace",
+        "counts differ from predecessor 22/88"
+      ],
+      "files_keys_references": [
+        "harness/lib.mjs::generateCorpus",
+        "reports/CORPUS_INDEPENDENCE_REPORT.json",
+        "public/CORPUS_MANIFEST.json"
+      ],
+      "impact": "Corpus artifacts are independent and synthetic; claim not overstated (does not assert design-level independence).",
+      "method": "Count docs/fixtures; inspect generateCorpus() purity; compare seed/IDs/counts to EXP-LAB-001.",
+      "severity": "LOW",
+      "uncertainty": "LOW",
+      "verdict": "CONFIRMED"
+    },
+    {
+      "claim": "LEAKAGE_CONTROL_PASS",
+      "claim_id": 3,
+      "contrary_evidence": [
+        "Governance metadata observable to selector correlates with oracle labels (by design, not leakage)"
+      ],
+      "favorable_evidence": [
+        "0 selector private reads (independently recomputed)",
+        "selector reads only 5 allowlisted public/frozen paths",
+        "canary sha256 == report; canary string 0 occurrences outside private/",
+        "no oracle field names in public payload",
+        "selector.mjs hard-throws on private/ paths; selector/evaluator separate processes"
+      ],
+      "files_keys_references": [
+        "harness/selector.mjs",
+        "reports/RUNNER_READ_LOGS.json",
+        "reports/CANARY_VALIDATION.json",
+        "reports/LEAKAGE_VALIDATION.json",
+        "private/CANARY_RECORD.json"
+      ],
+      "impact": "Selector never accessed private oracles or canary; isolation holds.",
+      "method": "Independent scan of 24 selector read_logs + RUNNER_READ_LOGS (120 reads); canary SHA-256; grep canary + oracle field names across non-private files; selector.mjs guard inspection.",
+      "severity": "LOW",
+      "uncertainty": "LOW",
+      "verdict": "CONFIRMED"
+    },
+    {
+      "claim": "FREEZE_STABLE",
+      "claim_id": 4,
+      "contrary_evidence": [],
+      "favorable_evidence": [
+        "15/15 frozen entries unchanged",
+        "20/20 design source hashes match",
+        "post_freeze_mutations=0",
+        "harness fails closed on any post-freeze hash change (checked before AND after evaluation)"
+      ],
+      "files_keys_references": [
+        "frozen/FREEZE_MANIFEST.json",
+        "frozen/HASHES_INITIAL.json",
+        "harness/execute.mjs"
+      ],
+      "impact": "Inputs and scoring were frozen before runs and unchanged through evaluation.",
+      "method": "Compare HASHES_INITIAL (15 frozen + 20 design sources) to current on-disk; inspect harness post-freeze checks.",
+      "severity": "LOW",
+      "uncertainty": "NONE",
+      "verdict": "CONFIRMED"
+    },
+    {
+      "claim": "POSITIVE_CONTROL_PASS",
+      "claim_id": 5,
+      "contrary_evidence": [
+        "Positive control is evaluator-only (echoes oracle required docs); it demonstrates a ceiling, not a retrieval capability"
+      ],
+      "favorable_evidence": [
+        "macro_f1=1.0, precision=1.0, recall=1.0, 0 critical failures",
+        "Gates A-E all PASS -> VIABLE",
+        "independent recompute matches exactly"
+      ],
+      "files_keys_references": [
+        "runs/ORACLE_INFORMED_POSITIVE_CONTROL/*",
+        "reports/METRICS.json",
+        "reports/GATE_RESULTS.json"
+      ],
+      "impact": "Confirms the evaluator can award viability -> harness is not rigged to fail all arms; correctly flagged NOT_PROMOTABLE.",
+      "method": "Independent recomputation of oracle-arm metrics from raw runs; gate recheck.",
+      "severity": "LOW",
+      "uncertainty": "LOW",
+      "verdict": "CONFIRMED"
+    },
+    {
+      "claim": "NEGATIVE_CONTROL_DISCRIMINATES",
+      "claim_id": 6,
+      "contrary_evidence": [
+        "NO_GOVERNANCE reference actually has MORE critical failures (337); negative control is not the single worst arm, but it is the designated discriminator and behaves as designed"
+      ],
+      "favorable_evidence": [
+        "authority_inversion_count=180, critical_failures=249, macro_f1=0.139",
+        "classified PASS_DISCRIMINATES_UNSAFE_ORDERING",
+        "independent recompute matches"
+      ],
+      "files_keys_references": [
+        "runs/FULL_RAG_RELEVANCE_FIRST_NEGATIVE_CONTROL/*",
+        "reports/GATE_RESULTS.json"
+      ],
+      "impact": "Relevance-before-authority ordering surfaces authority/safety degradation as intended.",
+      "method": "Independent recomputation of relevance-first metrics; compare to controls block.",
+      "severity": "LOW",
+      "uncertainty": "LOW",
+      "verdict": "CONFIRMED"
+    },
+    {
+      "claim": "METRICS_CORRECT",
+      "claim_id": 7,
+      "contrary_evidence": [
+        "Some formula idiosyncrasies (precision=1 on empty-and-no-required; safe_refusal denominators) - uniform across arms, not erroneous"
+      ],
+      "favorable_evidence": [
+        "precision/recall/macro_f1/critical-failure counts & codes match published for authority-first, positive and negative arms",
+        "reports/METRICS.json reproduced byte-identical"
+      ],
+      "files_keys_references": [
+        "reports/METRICS.json",
+        "harness/lib.mjs::evaluateAll",
+        "private/PRIVATE_ORACLES.json"
+      ],
+      "impact": "Aggregate metrics faithfully reflect the raw run files under the declared formulas.",
+      "method": "Independent Python reimplementation of documented formulas over raw runs+oracle+catalog (no harness import); plus byte-identical harness re-run of METRICS.json.",
+      "severity": "LOW",
+      "uncertainty": "LOW",
+      "verdict": "CONFIRMED"
+    },
+    {
+      "claim": "GATES_CORRECT",
+      "claim_id": 8,
+      "contrary_evidence": [
+        "Gate D reports PASS_WITH_TOKENIZER_FALLBACK_DECLARED (token metric null) - explicitly declared, not hidden"
+      ],
+      "favorable_evidence": [
+        "Gate decisions recomputed match published for all 5 arms",
+        "thresholds == frozen SCORING_RULES/VIABILITY_GATES",
+        "candidates FAIL B & C; oracle PASS all"
+      ],
+      "files_keys_references": [
+        "reports/GATE_RESULTS.json",
+        "frozen/SCORING_RULES.json",
+        "projects/lab/test-designs/.../VIABILITY_GATES.json"
+      ],
+      "impact": "Gate evaluation is correct and consistent with preregistered thresholds.",
+      "method": "Recompute Gate A-E per frozen thresholds; compare to GATE_RESULTS.json.",
+      "severity": "LOW",
+      "uncertainty": "LOW",
+      "verdict": "CONFIRMED"
+    },
+    {
+      "claim": "NO_CANDIDATE_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS",
+      "claim_id": 9,
+      "contrary_evidence": [
+        "Bounded to 180 synthetic docs, budget_k=2, lexical-only representation - narrow condition set"
+      ],
+      "favorable_evidence": [
+        "All 4 selector arms NON_VIABLE (incl. both candidates)",
+        "only ORACLE_INFORMED (evaluator-only, not promotable) VIABLE"
+      ],
+      "files_keys_references": [
+        "reports/GATE_RESULTS.json",
+        "reports/METRICS.json",
+        "EXECUTION_SUMMARY.json"
+      ],
+      "impact": "No promotable candidate passed all preregistered gates under the tested synthetic conditions.",
+      "method": "Aggregate viability across all selector arms; confirm only evaluator-only oracle is viable.",
+      "severity": "MEDIUM",
+      "uncertainty": "LOW within scope; result is explicitly bounded.",
+      "verdict": "CONFIRMED"
+    },
+    {
+      "claim": "FULL_RAG_AUTHORITY_FIRST_NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS",
+      "claim_id": 10,
+      "contrary_evidence": [
+        "Arm is the SAFEST candidate (authority_inversion=0, forbidden=0, conflict_detection=1.0)",
+        "'semantic retrieval' implemented WITHOUT embeddings (provider NONE); semantic contribution only 2.78% -> the defining RAG component is not exercised",
+        "budget_k=2 hard cap; adversarial 180-doc corpus",
+        "PUBLISHED EXECUTION_SUMMARY.md prose contradicts this and calls the arm 'viable'"
+      ],
+      "favorable_evidence": [
+        "Gate B FAIL (48 crit: BINDING_NEGATIVE_OMITTED, UNSUPPORTED_CONCLUSION) & Gate C FAIL (recall/precision/f1/safe_f1 below thresholds)",
+        "independent recompute matches"
+      ],
+      "files_keys_references": [
+        "reports/METRICS.json",
+        "reports/GATE_RESULTS.json",
+        "EXECUTION_SUMMARY.md (divergent)",
+        "EXECUTION_SUMMARY.json",
+        "harness/lib.mjs::selectForTask",
+        "frozen/ARM_PARAMETERS.json"
+      ],
+      "impact": "CONFIRMED as a synthetic-implementation result. Any reading as refutation of the authority-first RAG architectural class would be REVERSED. The package's own Markdown misstates the result (JSON governs).",
+      "method": "Recompute authority-first gates; attribute failure source; test implementation-vs-architecture distinction.",
+      "severity": "MEDIUM",
+      "uncertainty": "MEDIUM on interpretation: the numeric result is solid, but its MEANING must be scoped to the tested implementation, not the architectural class.",
+      "verdict": "CONFIRMED"
+    },
+    {
+      "claim": "NO_ARCHITECTURE_SELECTED",
+      "claim_id": 11,
+      "contrary_evidence": [],
+      "favorable_evidence": [
+        "architecture_selected=false in METRICS/GATES/EXECUTION_SUMMARY/EXP-LAB-002/EVD",
+        "EXECUTION_BOUNDARY forbids SELECT_ARCHITECTURE",
+        "interpretation: 'does not select or refute a production architecture'"
+      ],
+      "files_keys_references": [
+        "EXECUTION_SUMMARY.json",
+        "projects/lab/experiments/EXP-LAB-002.json",
+        "test-designs/.../EXECUTION_BOUNDARY.json"
+      ],
+      "impact": "No architecture was or is selected by the execution or by this audit.",
+      "method": "Inspect all effect fields and boundary contract; auditor selects none.",
+      "severity": "LOW",
+      "uncertainty": "NONE",
+      "verdict": "CONFIRMED"
+    },
+    {
+      "claim": "NO_PRODUCT_OR_RUNTIME_EFFECT",
+      "claim_id": 12,
+      "contrary_evidence": [],
+      "favorable_evidence": [
+        "runtime_effect/product_effect=NONE",
+        "real_data_used=false, external_api=false, dependency_installation=false, deployment=false",
+        "auditor: 0 package files modified"
+      ],
+      "files_keys_references": [
+        "EXECUTION_SUMMARY.json",
+        "reports/EXECUTION_VALIDATION_REPORT.json"
+      ],
+      "impact": "Execution and audit are inert with respect to products, runtime and external repositories.",
+      "method": "Inspect effect fields; confirm synthetic-only, no external API/deps/deploy; confirm auditor made 0 canonical mutations.",
+      "severity": "LOW",
+      "uncertainty": "NONE",
+      "verdict": "CONFIRMED"
+    }
+  ],
+  "execution_id": "FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001",
+  "global_result": "AUDIT_CONFIRMS_EXECUTION_MODIFIES_INTERPRETATION",
+  "global_result_rationale": "All 12 claims are individually CONFIRMED on the evidence. The global qualifier is MODIFIES_INTERPRETATION (not CONFIRMS_RESULT) because (a) the published EXECUTION_SUMMARY.md prose contradicts the authoritative JSON by calling FULL_RAG_AUTHORITY_FIRST 'viable', and (b) the non-viability must be read as an implementation-under-synthetic-conditions result, not as refutation of the authority-first RAG architectural class. Neither modifier reverses any numeric result.",
+  "summary_counts": {
+    "CONFIRMED": 12,
+    "INSUFFICIENT_EVIDENCE": 0,
+    "MODIFIED": 0,
+    "REVERSED": 0
+  },
+  "verdict_scale": [
+    "CONFIRMED",
+    "MODIFIED",
+    "REVERSED",
+    "INSUFFICIENT_EVIDENCE"
+  ]
+}

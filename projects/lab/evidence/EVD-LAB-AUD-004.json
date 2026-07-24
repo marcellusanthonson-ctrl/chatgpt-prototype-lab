@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-AUD-004",
+  "project_id": "lab",
+  "evidence_type": "INDEPENDENT_EXTERNAL_READ_ONLY_FULL_RAG_EXECUTION_AUDIT",
+  "status": "VERIFIED_EXTERNAL_EVIDENCE_REGISTERED_AND_RECONCILED",
+  "registered_at": "2026-07-24",
+  "source_audit_id": "AUDIT-CLAUDE-FULL-RAG-EXECUTION-071-001",
+  "source_authorization": "AUTHORIZATION_LAB_INDEPENDENT_EXTERNAL_READ_ONLY_AUDIT_OF_FULL_RAG_EXECUTION_071_072",
+  "reconciliation_authorization": "AUTHORIZATION_LAB_FULL_RAG_EXECUTION_071_EXTERNAL_AUDIT_RECONCILIATION_073",
+  "source_experiment": "EXP-LAB-002",
+  "source_evidence": "EVD-LAB-EXP-002",
+  "source_execution_package": "FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001",
+  "verified_baseline_head": "404819e4a622bf7e5e7a55bf1a45b17abb5a74cb",
+  "external_package": {
+    "canonical_manifest": "projects/lab/external-audits/AUDIT-CLAUDE-FULL-RAG-EXECUTION-071-001/AUDIT_MANIFEST.json",
+    "canonical_hashes": "projects/lab/external-audits/AUDIT-CLAUDE-FULL-RAG-EXECUTION-071-001/HASHES.json",
+    "source_archive_filename": "AUDIT-~1.rar",
+    "source_archive_sha256": "9827f64b083a51e52ec219fc1bfc5c58b17dee84c4ce64be8a060876ecf084ab",
+    "source_archive_size_bytes": 29988,
+    "deliverable_count": 18,
+    "json_file_count": 17,
+    "individual_file_hashes_checked": 17,
+    "individual_file_hash_mismatches": 0,
+    "ordered_manifest_digest_sha256": "3e09c308cc5ddf8812fbc19f811f11c1d439c2396040d611ca4f35b5e976217d",
+    "integrity_result": "PASS"
+  },
+  "audited_execution_integrity": {
+    "files_declared": 88,
+    "files_observed": 88,
+    "individual_hashes_checked": 87,
+    "individual_hash_mismatches": 0,
+    "synthetic_document_count": 180,
+    "fixture_count": 42,
+    "run_count": 30,
+    "freeze_stability": "PASS",
+    "selector_evaluator_isolation": "PASS",
+    "private_canary": "PASS",
+    "metrics": "CONFIRMED_CORRECT_WITHOUT_RECALCULATION_BY_RECONCILIATION_EXECUTOR",
+    "gates": "CONFIRMED_CORRECT_WITHOUT_RECALCULATION_BY_RECONCILIATION_EXECUTOR",
+    "positive_control": "PASS_F1_1_ZERO_CRITICAL_FAILURES",
+    "negative_control": "PASS_DISCRIMINATES_UNSAFE_ORDERING"
+  },
+  "audit_boundaries": {
+    "canonical_mutations": 0,
+    "commits": 0,
+    "pushes": 0,
+    "dependencies_installed": 0,
+    "external_apis_used": 0,
+    "real_data_used": false
+  },
+  "claims": {
+    "total": 12,
+    "confirmed": 12,
+    "modified": 0,
+    "reversed": 0,
+    "insufficient_evidence": 0
+  },
+  "global_audit_result": "AUDIT_CONFIRMS_EXECUTION_MODIFIES_INTERPRETATION",
+  "independent_reconciliation_verdict": "CONFIRMED",
+  "reconciled_interpretation": {
+    "full_rag_authority_first_simulation": "NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS",
+    "embeddings": false,
+    "provider": "NONE",
+    "retrieval_character": "PREDOMINANTLY_LEXICAL",
+    "semantic_contribution": "LIMITED",
+    "architecture_class_refuted": false,
+    "statement": "THIS_RESULT_DOES_NOT_REFUTE_THE_ENTIRE_ARCHITECTURE_CLASS",
+    "markdown_json_divergence": "CORRECTED",
+    "numeric_results_changed": false
+  },
+  "limitations": [
+    "SYNTHETIC_BOUNDED_EXECUTION_ONLY",
+    "NO_DENSE_EMBEDDINGS_OR_VECTOR_RETRIEVAL_EXERCISED",
+    "PROVIDER_NONE",
+    "BUDGET_K_2",
+    "NEAR_EXACT_REPRODUCTION_WITH_ENVIRONMENT_BOUND_REPORT_AND_DIGEST",
+    "NO_PRODUCTION_ARCHITECTURE_GENERALIZATION"
+  ],
+  "authority_effect": {
+    "architecture_selected": false,
+    "implementation_selected": false,
+    "implementation_approved": false,
+    "runtime_effect": "NONE",
+    "product_effect": "NONE",
+    "next_authorized_action": "NONE"
+  },
+  "source_refs": [
+    "projects/lab/external-audits/AUDIT-CLAUDE-FULL-RAG-EXECUTION-071-001/AUDIT_MANIFEST.json",
+    "projects/lab/external-audits/AUDIT-CLAUDE-FULL-RAG-EXECUTION-071-001/AUDIT_REPORT.json",
+    "projects/lab/external-audits/AUDIT-CLAUDE-FULL-RAG-EXECUTION-071-001/CLAIM_VERDICTS.json",
+    "projects/lab/external-audits/AUDIT-CLAUDE-FULL-RAG-EXECUTION-071-001/HASHES.json",
+    "projects/lab/test-executions/FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001/EXECUTION_SUMMARY.json",
+    "projects/lab/test-executions/FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001/reports/METRICS.json",
+    "projects/lab/test-executions/FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001/reports/GATE_RESULTS.json",
+    "projects/lab/reassessments/REA-LAB-005.json"
+  ]
+}

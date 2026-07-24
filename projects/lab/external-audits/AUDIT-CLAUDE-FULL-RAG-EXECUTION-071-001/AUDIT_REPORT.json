@@ -1,0 +1,89 @@
+{
+  "audit_id": "AUDIT-CLAUDE-FULL-RAG-EXECUTION-071-001",
+  "audit_mode": "STRICT_READ_ONLY_INDEPENDENT_EXTERNAL",
+  "audited_package": "FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001",
+  "auditor": "CLAUDE",
+  "authorization": "AUTHORIZATION_LAB_INDEPENDENT_EXTERNAL_READ_ONLY_AUDIT_OF_FULL_RAG_EXECUTION_071_072",
+  "boundaries_respected": {
+    "ARCHITECTURE_SELECTED": "NO",
+    "AUDITOR": "CLAUDE",
+    "AUDIT_MODE": "STRICT_READ_ONLY",
+    "AUDIT_RESULT": "AUDIT_CONFIRMS_EXECUTION_MODIFIES_INTERPRETATION",
+    "AUTHORIZATION_072_STATUS": "CONSUMED_ON_DELIVERY_OF_COMPLETE_EXTERNAL_AUDIT_PACKAGE",
+    "CANONICAL_MUTATIONS": 0,
+    "COMMITS": 0,
+    "DEPENDENCIES_INSTALLED": 0,
+    "EXTERNAL_APIS_USED": 0,
+    "IMPLEMENTATION_APPROVED": "NO",
+    "IMPLEMENTATION_SELECTED": "NO",
+    "NEXT_AUTHORIZED_ACTION": "NONE_AFTER_CONSUMPTION",
+    "PUSHES": 0,
+    "REAL_DATA_USED": "NO"
+  },
+  "branch": "main",
+  "claim_verdicts": {
+    "CORPUS_INDEPENDENT": "CONFIRMED",
+    "FREEZE_STABLE": "CONFIRMED",
+    "FULL_RAG_AUTHORITY_FIRST_NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS": "CONFIRMED",
+    "GATES_CORRECT": "CONFIRMED",
+    "LEAKAGE_CONTROL_PASS": "CONFIRMED",
+    "METRICS_CORRECT": "CONFIRMED",
+    "NEGATIVE_CONTROL_DISCRIMINATES": "CONFIRMED",
+    "NO_ARCHITECTURE_SELECTED": "CONFIRMED",
+    "NO_CANDIDATE_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS": "CONFIRMED",
+    "NO_PRODUCT_OR_RUNTIME_EFFECT": "CONFIRMED",
+    "PACKAGE_COMPLETE_REPRODUCIBLE": "CONFIRMED",
+    "POSITIVE_CONTROL_PASS": "CONFIRMED"
+  },
+  "expected_head": "404819e4a622bf7e5e7a55bf1a45b17abb5a74cb",
+  "failure_source_attribution_summary": "PRIMARY: absent semantic representation (embeddings=false). CONTRIBUTING: budget_k=2 cap and safe-refusal defeated by lexical decoys. NOT_AT_FAULT: ranking (works), evaluator (sound), thresholds (preregistered), cost.",
+  "final": {
+    "ARCHITECTURE_SELECTED": "NO",
+    "AUDITOR": "CLAUDE",
+    "AUDIT_MODE": "STRICT_READ_ONLY",
+    "AUDIT_RESULT": "AUDIT_CONFIRMS_EXECUTION_MODIFIES_INTERPRETATION",
+    "AUTHORIZATION_072_STATUS": "CONSUMED_ON_DELIVERY_OF_COMPLETE_EXTERNAL_AUDIT_PACKAGE",
+    "CANONICAL_MUTATIONS": 0,
+    "COMMITS": 0,
+    "DEPENDENCIES_INSTALLED": 0,
+    "EXTERNAL_APIS_USED": 0,
+    "IMPLEMENTATION_APPROVED": "NO",
+    "IMPLEMENTATION_SELECTED": "NO",
+    "NEXT_AUTHORIZED_ACTION": "NONE_AFTER_CONSUMPTION",
+    "PUSHES": 0,
+    "REAL_DATA_USED": "NO"
+  },
+  "global_result": "AUDIT_CONFIRMS_EXECUTION_MODIFIES_INTERPRETATION",
+  "head_match": true,
+  "key_findings": [
+    "88/88 files present; 87/87 SHA-256 match; HEAD == EXPECTED_HEAD.",
+    "Near-exact reproduction: 86/88 byte-identical; only the environment-dependent runtime block (+cascaded HASHES.json) differs.",
+    "Metrics and gates independently recomputed (no harness import) match published values exactly.",
+    "Zero selector private reads; canary provably not exposed; freeze stable (0 post-freeze mutations).",
+    "Positive control passes (F1=1, 0 critical), negative control discriminates -> evaluator sound.",
+    "All 4 selector arms NON_VIABLE; only evaluator-only oracle VIABLE (not promotable).",
+    "FULL_RAG_AUTHORITY_FIRST is the safest candidate (authority_inversion=0) but NON_VIABLE via Gate B (48 critical: binding-negative omission + unsupported conclusion) and Gate C (recall 0.458, precision 0.234, macro_f1 0.261, safe_failure_f1 0.5)."
+  ],
+  "material_divergences": [
+    {
+      "detail": "EXECUTION_SUMMARY.md calls FULL_RAG_AUTHORITY_FIRST 'viable'; EXECUTION_SUMMARY.json + METRICS.json + GATE_RESULTS.json record NON_VIABLE. The .md is a hardcoded string in execute.mjs, not derived from results. JSON governs per LAB_CONTRACT.",
+      "impact": "Interpretation only; numeric result unchanged.",
+      "severity": "MEDIUM",
+      "type": "MARKDOWN_VS_JSON"
+    },
+    {
+      "detail": "Non-viability is a synthetic-tested-implementation result (no embeddings, budget_k=2, trivial synonyms); it does NOT refute the authority-first RAG architectural class.",
+      "impact": "Prevents over-generalization of the finding.",
+      "severity": "MEDIUM",
+      "type": "SCOPE"
+    },
+    {
+      "detail": "ordered_manifest_digest embeds env-dependent REPRODUCIBILITY_REPORT.json.",
+      "impact": "Top-level digest is environment-bound; per-file frozen hashes remain the portable integrity anchor.",
+      "severity": "LOW",
+      "type": "DIGEST_PORTABILITY"
+    }
+  ],
+  "observed_head": "404819e4a622bf7e5e7a55bf1a45b17abb5a74cb",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab"
+}
