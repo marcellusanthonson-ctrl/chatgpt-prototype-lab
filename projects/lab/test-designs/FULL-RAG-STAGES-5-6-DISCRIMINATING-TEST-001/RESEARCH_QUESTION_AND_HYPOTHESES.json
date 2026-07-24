@@ -1,0 +1,13 @@
+{
+  "schema_version":"1.0.0",
+  "research_question":"Can a complete stages-1-to-8 simulation improve retrieval while satisfying preregistered safety, fidelity, cost and traceability gates without oracle access?",
+  "hypotheses":[
+    {"id":"H0","name":"NO_USEFUL_DISCRIMINATION","claim":"Stages 5 and 6 do not materially improve retrieval or critical failures."},
+    {"id":"H1","name":"SAFE_IMPROVEMENT","claim":"Recall and F1 improve without additional critical failures."},
+    {"id":"H2","name":"UNSAFE_IMPROVEMENT","claim":"Semantic relevance improves while authority, isolation, prohibitions or conflicts degrade."},
+    {"id":"H3","name":"OVERCONSERVATIVE_SAFETY","claim":"Critical failures are avoided but mandatory recall remains below threshold."},
+    {"id":"H4","name":"BOUNDED_CONTRACT_VIABILITY","claim":"All critical gates pass and preregistered fidelity, cost and traceability thresholds are satisfied."}
+  ],
+  "separations":["ARCHITECTURE_CLASS_VIABILITY","CONCRETE_IMPLEMENTATION_QUALITY","CORPUS_QUALITY","EVALUATOR_QUALITY","SEMANTIC_PERFORMANCE","SECURITY_COMPLIANCE"],
+  "automatic_architecture_selection":false
+}
