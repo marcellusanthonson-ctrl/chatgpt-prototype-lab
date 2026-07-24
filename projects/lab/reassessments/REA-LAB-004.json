@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "reassessment_id": "REA-LAB-004",
+  "project_id": "lab",
+  "status": "COMPLETED_REGISTERED",
+  "registered_at": "2026-07-24",
+  "subject": "Reassessment of AUDIT-CLAUDE-EXP065-RCA-001 using full experiment 065 artifacts and AUDIT-CLAUDE-EXP065-RCA-002",
+  "source_audit": "AUDIT-CLAUDE-EXP065-RCA-002",
+  "prior_audit": "AUDIT-CLAUDE-EXP065-RCA-001",
+  "authorization_id": "AUTHORIZATION_LAB_EXP065_RCA002_DOCUMENTARY_RECONCILIATION_069",
+  "method": "INDEPENDENT_CLAIM_BY_CLAIM_REASSESSMENT_WITH_FULL_ARTIFACT_ACCESS",
+  "global_determination": "PRIOR_AUDIT_MATERIALLY_REVERSED_AND_PARTIALLY_MODIFIED",
+  "determinations": {
+    "VIABILITY_CRITERION_NOT_PREREGISTERED": "REVERSED",
+    "BENCHMARK_INTRINSICALLY_BIASED_OR_IMPOSSIBLE": "REVERSED",
+    "REPETITION_DETERMINISM": "CONFIRMED",
+    "ORDER_STABILITY": "CONFIRMED",
+    "FAILURE_TAXONOMY_COMPARABILITY": "CONFIRMED",
+    "METRICS_NOT_MEASURED": "MODIFIED",
+    "NO_CHANGE_PAYLOAD_ANOMALY_PROVES_FIDELITY_FAILURE": "REVERSED",
+    "FULL_RAG_CONTRACT_WAS_EVALUATED": "REVERSED",
+    "EXPERIMENT_USED_22_FIXTURES_88_DOCUMENTS_20_RUNS": "CONFIRMED",
+    "BLINDING_VALIDATION": "CONFIRMED",
+    "EXPERIMENT_RESULTS_REPRODUCIBLE": "CONFIRMED",
+    "DETERMINISTIC_REFERENCE_INDEX_REPAIRABLE_WITHIN_CLASS": "MODIFIED",
+    "PARTIAL_RAG_NON_VIABILITY_REFUTES_FULL_RAG": "REVERSED"
+  },
+  "corrected_interpretation": {
+    "four_alternatives": "SUPPORTED_NON_VIABLE",
+    "partial_rag_alternative": "TEST_INVALID_FOR_THIS_ALTERNATIVE",
+    "full_rag_contract": "NOT_EVALUATED",
+    "evidence_sufficiency": "PARTIALLY_SUFFICIENT",
+    "architecture_selection": "NOT_AUTHORIZED_AND_NOT_ESTABLISHED",
+    "implementation_authority": "NONE"
+  },
+  "evidence": {
+    "positive_control_f1": 1.0,
+    "positive_control_critical_failures": 0,
+    "fixture_discriminability": "PASS",
+    "failure_taxonomy_comparability": "PASS",
+    "artifact_hash_matches": 11,
+    "run_hash_matches": 20,
+    "metrics_reproducibility": "PASS_EXACT_ON_ALL_FIVE_ALTERNATIVES"
+  },
+  "historical_preservation": {
+    "prior_audit_deleted": false,
+    "prior_audit_role": "HISTORICAL_PARTIAL_AUDIT",
+    "current_analysis_source": "AUDIT-CLAUDE-EXP065-RCA-002"
+  },
+  "authority_effect": "NONE",
+  "source_refs": [
+    "projects/lab/evidence/EVD-LAB-AUD-003.json",
+    "projects/lab/evidence/EVD-LAB-EXP-001.json",
+    "projects/lab/experiments/EXP-LAB-001.json"
+  ]
+}
