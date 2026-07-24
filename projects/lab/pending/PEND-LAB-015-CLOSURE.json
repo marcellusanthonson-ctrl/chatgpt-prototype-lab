@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "pending_id": "PEND-LAB-015",
+  "project_id": "lab",
+  "status": "COMPLETED_EXTERNAL_ROOT_CAUSE_AUDIT_DELIVERED_AND_RECONCILED",
+  "closed_at": "2026-07-24",
+  "closed_by_authorization": "AUTHORIZATION_LAB_EXP065_RCA002_DOCUMENTARY_RECONCILIATION_069",
+  "source_audit": "AUDIT-CLAUDE-EXP065-RCA-002",
+  "evidence_id": "EVD-LAB-AUD-003",
+  "reassessment_id": "REA-LAB-004",
+  "successor_pending": "PEND-LAB-016",
+  "result": {
+    "global_audit_result": "EXPERIMENT_065_VALIDATED_FOUR_ALTERNATIVE_VERDICTS_SUPPORTED_ONE_TEST_INVALID_PRIOR_AUDIT_PARTIALLY_REVERSED",
+    "evidence_sufficiency": "PARTIALLY_SUFFICIENT",
+    "four_alternatives": "SUPPORTED_NON_VIABLE",
+    "partial_rag_alternative": "TEST_INVALID_FOR_THIS_ALTERNATIVE",
+    "full_rag_contract_evaluated": false
+  },
+  "authority_effect": {
+    "architecture_selected": false,
+    "implementation_selected": false,
+    "implementation_approved": false,
+    "next_authorized_action": "NONE"
+  },
+  "source_refs": [
+    "projects/lab/evidence/EVD-LAB-AUD-003.json",
+    "projects/lab/reassessments/REA-LAB-004.json",
+    "projects/lab/pending/PEND-LAB-016.json"
+  ]
+}
