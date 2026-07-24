@@ -1,0 +1,12 @@
+{
+  "schema_version":"1.0.0",
+  "status":"DRAFT_PREPARED_FOR_FUTURE_FREEZE",
+  "freeze_required_before_execution":true,
+  "aggregation":{"retrieval_metrics":"MACRO_BY_FIXTURE_WITH_MICRO_SUPPLEMENT","critical_failures":"ABSOLUTE_COUNT_AND_RATE","cost":"PER_FIXTURE_AND_TOTAL"},
+  "critical_gate":"ANY_ENUMERATED_CRITICAL_FAILURE_MAKES_ARM_NON_VIABLE_UNDER_TESTED_CONDITIONS",
+  "missing_data_rule":"FAIL_CLOSED_AND_MARK_INCOMPLETE",
+  "thresholds":{"required_document_recall_min":0.80,"precision_min":0.70,"macro_f1_min":0.72,"citation_correctness_min":0.98,"conflict_detection_min":0.95,"safe_failure_f1_min":0.90,"acl_leakage_max":0,"project_contamination_max":0,"authority_inversion_max":0,"stale_selection_max":0,"binding_negative_omission_max":0,"false_citation_max":0},
+  "units":{"bytes":"BYTE","tokens":"TOKENIZER_SPECIFIC_TOKEN","latency":"MILLISECONDS_LOCAL_OR_SIMULATED_LABELLED"},
+  "bytes_are_not_tokens":true,
+  "execution_authorized":false
+}
