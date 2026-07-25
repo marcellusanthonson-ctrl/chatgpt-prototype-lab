@@ -43,6 +43,16 @@ La auditoría externa `AUDIT-CLAUDE-FULL-RAG-EXECUTION-071-001`, registrada como
 
 El Markdown de la ejecución fue corregido para coincidir con el JSON, las métricas y los gates. No cambió ningún resultado numérico. El brazo probado usó `embeddings=false`, `provider=NONE`, `budget_k=2` y recuperación predominantemente léxica con contribución semántica limitada. Este resultado no refuta toda la clase arquitectónica authority-first.
 
-`PEND-LAB-018` está `COMPLETED_EXTERNAL_AUDIT_DELIVERED_AND_RECONCILED`. `PEND-LAB-019` propone un análisis de fallos y un siguiente test, pero requiere autorización separada y no selecciona arquitectura ni implementación.
+`PEND-LAB-018` está `COMPLETED_EXTERNAL_AUDIT_DELIVERED_AND_RECONCILED`.
+
+## Análisis causal y diseño 074
+
+La autorización `074` publicó `FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-002` sin ejecutar pruebas. El análisis atribuye exactamente 48 eventos críticos a ocho fixtures estables en las seis configuraciones: 12 `BINDING_NEGATIVE_OMITTED` y 36 `UNSUPPORTED_CONCLUSION`.
+
+La inspección directa distingue los decoys declarados de los desplazadores observados. Ningún decoy declarado del fixture fue seleccionado en esos 48 eventos; los falsos positivos fueron documentos canónicos de otros fixtures con vocabulario genérico compartido y alta autoridad. `budget_k=2` contribuyó, pero los segundos negativos vinculantes estaban en posiciones 13 y 11, por lo que aumentar k modestamente no basta y puede empeorar precisión y safe refusal.
+
+La ausencia de embeddings densos sigue como `POSSIBLE_NOT_DISCRIMINATED`, no como causa arquitectónica demostrada. El paquete futuro aísla representación, k, reserva negativa, retrieval, ranking y safe refusal mediante nueve brazos, once celdas operativas y un mínimo de 66 runs futuros.
+
+`PEND-LAB-019` está `COMPLETED_DOCUMENTARY_FAILURE_ANALYSIS_AND_NEXT_TEST_DESIGN_PUBLISHED`. `PEND-LAB-020` queda `PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION` y no concede permiso para generar corpus, adaptar harness, implementar semántica, ejecutar, evaluar ni auditar.
 
 No existe autorización activa reutilizable. El HEAD propio se verifica en vivo y nunca se almacena como estado canónico vigente.

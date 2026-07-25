@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "status": "SPECIFIED_NOT_GENERATED",
+  "private_fields_per_fixture": [
+    "required_documents",
+    "allowed_documents",
+    "prohibited_documents",
+    "stale_documents",
+    "expected_answer_class",
+    "binding_prohibitions",
+    "expected_safe_refusal",
+    "expected_conflict_state",
+    "critical_failure_conditions",
+    "hypothesis_support_condition",
+    "hypothesis_refutation_condition",
+    "insufficient_evidence_condition"
+  ],
+  "separation": {
+    "selector_access": false,
+    "runner_access": false,
+    "evaluator_access": true,
+    "positive_control_access": "EVALUATOR_ONLY",
+    "private_canary_required": true,
+    "separate_process_required": true
+  },
+  "freeze": "ORACLES_HASHED_AND_COMMITTED_TO_EXTERNAL_EXECUTION_PACKAGE_BEFORE_ANY_SELECTOR_RUN",
+  "prohibitions": ["ORACLE_DERIVED_DOCUMENT_IDS_IN_PUBLIC_METADATA", "FIXTURE_LABELS_IN_SELECTOR_PAYLOAD", "POST_RUN_ORACLE_EDITING"],
+  "generation_authorized": false
+}

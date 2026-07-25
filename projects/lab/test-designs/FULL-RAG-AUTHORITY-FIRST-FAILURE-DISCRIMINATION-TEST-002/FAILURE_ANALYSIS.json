@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0.0",
+  "analysis_id": "FULL-RAG-AUTHORITY-FIRST-FAILURE-ANALYSIS-002",
+  "design_id": "FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-002",
+  "authorization_id": "AUTHORIZATION_LAB_FULL_RAG_AUTHORITY_FIRST_FAILURE_ANALYSIS_AND_NEXT_TEST_DESIGN_074",
+  "status": "DOCUMENTARY_CAUSAL_ANALYSIS_COMPLETE_NO_TEST_EXECUTED",
+  "subject": "FULL_RAG_AUTHORITY_FIRST_SIMULATION",
+  "source_result": "NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS",
+  "method": {
+    "type": "READ_ONLY_DOCUMENTARY_INSPECTION_OF_FROZEN_ARTIFACTS",
+    "runs_reexecuted": 0,
+    "metrics_historically_modified": false,
+    "harness_modified": false,
+    "diagnostic_method": "Independent read-only attribution from the 6 recorded run files, frozen oracles, tasks, document catalog, parameters and documented selector/evaluator logic.",
+    "causality_rule": "Do not attribute causality from correlation or from an absent counterfactual arm."
+  },
+  "exact_failure_distribution": {
+    "critical_failures": 48,
+    "fixture_evaluations": 252,
+    "failing_fixtures": 8,
+    "codes": {
+      "BINDING_NEGATIVE_OMITTED": 12,
+      "UNSUPPORTED_CONCLUSION": 36,
+      "other_real_codes": 0
+    },
+    "per_configuration": {
+      "REPETITION_1": {"BINDING_NEGATIVE_OMITTED": 2, "UNSUPPORTED_CONCLUSION": 6},
+      "REPETITION_2": {"BINDING_NEGATIVE_OMITTED": 2, "UNSUPPORTED_CONCLUSION": 6},
+      "REPETITION_3": {"BINDING_NEGATIVE_OMITTED": 2, "UNSUPPORTED_CONCLUSION": 6},
+      "ORDER_PERMUTATION": {"BINDING_NEGATIVE_OMITTED": 2, "UNSUPPORTED_CONCLUSION": 6},
+      "PARAPHRASE_VARIANT": {"BINDING_NEGATIVE_OMITTED": 2, "UNSUPPORTED_CONCLUSION": 6},
+      "SCALE_VARIANT": {"BINDING_NEGATIVE_OMITTED": 2, "UNSUPPORTED_CONCLUSION": 6}
+    },
+    "stability": "EXACT_CODE_AND_FIXTURE_STABILITY_ACROSS_ALL_SIX_CONFIGURATIONS"
+  },
+  "failing_fixtures": [
+    {
+      "task_id": "FX-071-002",
+      "fixture_class": "MANDATORY_NEGATIVE_PROHIBITION",
+      "code": "BINDING_NEGATIVE_OMITTED",
+      "events": 6,
+      "required_binding_documents": ["DOC-FF14691F15661C04", "DOC-D4C6AE7A4EE4F4BA"],
+      "base_query_recorded_ranks": [1, 13],
+      "selected_base": ["DOC-FF14691F15661C04", "DOC-644CB9009D46101E"],
+      "displacement": "The required authority-rank-90 binding support was displaced by unrelated authority-rank-100 documents; the selected unrelated document is the canonical document for FX-071-026."
+    },
+    {
+      "task_id": "FX-071-006",
+      "fixture_class": "ACL_DENIED",
+      "code": "UNSUPPORTED_CONCLUSION",
+      "events": 6,
+      "selected_base": ["DOC-A076BEA6FDE2474A", "DOC-703492397AC7C54B"],
+      "displacement": "The denied fixture had no required document, but unrelated eligible documents from FX-071-027 and FX-071-039 matched generic query terms."
+    },
+    {
+      "task_id": "FX-071-008",
+      "fixture_class": "INSUFFICIENT_EVIDENCE",
+      "code": "UNSUPPORTED_CONCLUSION",
+      "events": 6,
+      "selected_base": ["DOC-FF14691F15661C04", "DOC-644CB9009D46101E"],
+      "displacement": "Unrelated high-authority documents from FX-071-002 and FX-071-026 survived because shared generic terms produced positive lexical scores."
+    },
+    {
+      "task_id": "FX-071-021",
+      "fixture_class": "SAFE_REFUSAL",
+      "code": "UNSUPPORTED_CONCLUSION",
+      "events": 6,
+      "selected_base": ["DOC-A076BEA6FDE2474A", "DOC-703492397AC7C54B"],
+      "displacement": "Safe refusal was false whenever any eligible scored document existed, even when every selected document was unrelated to the fixture."
+    },
+    {
+      "task_id": "FX-071-024",
+      "fixture_class": "MISSING_REQUIRED_METADATA",
+      "code": "UNSUPPORTED_CONCLUSION",
+      "events": 6,
+      "selected_base": ["DOC-A076BEA6FDE2474A", "DOC-703492397AC7C54B"],
+      "displacement": "The invalid fixture document was filtered correctly, but unrelated high-authority documents caused a non-refusal."
+    },
+    {
+      "task_id": "FX-071-027",
+      "fixture_class": "MANDATORY_NEGATIVE_PROHIBITION",
+      "code": "BINDING_NEGATIVE_OMITTED",
+      "events": 6,
+      "required_binding_documents": ["DOC-A076BEA6FDE2474A", "DOC-A420CE0D1D5E7A32"],
+      "base_query_recorded_ranks": [1, 11],
+      "selected_base": ["DOC-A076BEA6FDE2474A", "DOC-703492397AC7C54B"],
+      "displacement": "The required authority-rank-90 binding support was displaced by unrelated authority-rank-100 documents; the selected unrelated document is the canonical document for FX-071-039."
+    },
+    {
+      "task_id": "FX-071-031",
+      "fixture_class": "ACL_DENIED",
+      "code": "UNSUPPORTED_CONCLUSION",
+      "events": 6,
+      "selected_base": ["DOC-5F90D3811C72D49C", "DOC-216DA3AC7F13BAE8"],
+      "selected_paraphrase": ["DOC-5F90D3811C72D49C", "DOC-A233DCC1D349D78D"],
+      "displacement": "The selected documents were unrelated canonical documents from other fixtures; the paraphrase changed one distractor but not the failure."
+    },
+    {
+      "task_id": "FX-071-033",
+      "fixture_class": "INSUFFICIENT_EVIDENCE",
+      "code": "UNSUPPORTED_CONCLUSION",
+      "events": 6,
+      "selected_base": ["DOC-A076BEA6FDE2474A", "DOC-703492397AC7C54B"],
+      "displacement": "Generic lexical overlap admitted unrelated high-authority documents and defeated abstention."
+    }
+  ],
+  "component_separation": {
+    "retrieval": "DIRECT_FAILURE_COMPONENT: task-nonspecific lexical matches produced candidate pools of 31-36 for the eight failing fixtures and failed to retrieve two required authority-rank-90 negative documents into k=2.",
+    "ranking": "CONTRIBUTING_COMPONENT: authority-first ordering prevented formal authority inversion but ranked all authority-rank-100 matches ahead of authority-rank-90 required support and gave conflict/binding flags priority before relevance within tied authority.",
+    "authority_filtering": "NOT_A_FAILURE_COMPONENT_FOR_THE_48_EVENTS: ACL leakage, stale selection, project contamination, forbidden selection and authority inversion were all zero.",
+    "negative_retention": "DIRECT_FAILURE_COMPONENT_FOR_12_EVENTS: one of two binding documents was omitted in each of two fixtures in every configuration.",
+    "safe_refusal": "DIRECT_FAILURE_COMPONENT_FOR_36_EVENTS: the harness defined refusal as selected.length == 0 rather than assessing evidentiary sufficiency.",
+    "budget": "CONTRIBUTING_BOTTLENECK: k=2 capped output, but the omitted binding documents were at recorded base-query ranks 13 and 11, so modest increases alone would not resolve them.",
+    "semantic_representation": "POSSIBLE_NOT_DISCRIMINATED: embeddings=false and provider=NONE establish that dense semantics was absent, not that adding it would resolve the failures.",
+    "corpus": "CONTRIBUTING_LIMITATION: generic terms were repeated across fixture documents, creating cross-fixture high-authority distractors.",
+    "evaluator": "NOT_SUPPORTED_AS_CAUSE: the oracle control achieved F1=1 and zero critical failures, and independent audit recomputation matched.",
+    "harness": "DIRECT_FAILURE_COMPONENT: the selection-count refusal rule and global cross-fixture lexical candidate construction mechanically generated the observed unsupported conclusions."
+  },
+  "budget_k_2_assessment": {
+    "observed": "Both negative fixtures required two documents, so k=2 was theoretically sufficient only if both were ranked in the first two positions.",
+    "diagnostic_ranks": {"FX-071-002_second_binding_document": 13, "FX-071-027_second_binding_document": 11},
+    "increasing_k_can_resolve": "A sufficiently large k could include the omitted binding documents in these recorded base-query rankings.",
+    "increasing_k_can_displace": "Larger k would add many unrelated high-authority lexical matches before the missing binding support.",
+    "increasing_k_can_worsen": "Under the recorded selection-count refusal rule, larger k cannot improve refusal and can increase false positives, precision loss and unsupported conclusions.",
+    "causal_status": "SUPPORTED_CONTRIBUTING_CAUSE_NOT_SUFFICIENT_CAUSE"
+  },
+  "synonym_expansion_assessment": {
+    "isolated_recorded_contrast": "The deterministic repaired and authority-first arms use the same eligibility and ordering; the latter additionally expands query synonyms.",
+    "critical_failures_before": 110,
+    "critical_failures_after": 48,
+    "required_document_recall_before": 0.430556,
+    "required_document_recall_after": 0.458333,
+    "recall_gain": 0.027777,
+    "binding_negative_omissions_before_and_after": 12,
+    "safe_refusal_effect": "Expansion did not fix the six recurring non-refusal fixtures and changed selected distractors in the paraphrase condition.",
+    "interpretation": "The frozen synthetic expansion was beneficial but insufficient; no evidence identifies the effect of a richer semantic representation."
+  },
+  "lexical_decoy_finding": {
+    "declared_per_fixture_decoys_selected_in_the_48_events": 0,
+    "actual_displacers": "Unrelated canonical documents from other fixtures sharing generic lexical terms and higher authority ranks.",
+    "audit_narrative_status": "MODIFIED_BY_DIRECT_ARTIFACT_INSPECTION",
+    "claim_limit": "This does not show that lexical decoys are harmless; it shows that the exact 48 events were not caused by the declared per-fixture decoy documents."
+  },
+  "claims_with_insufficient_evidence": [
+    "Dense semantic representation would make the arm viable.",
+    "A particular embedding model or provider would resolve the failures.",
+    "Increasing k alone would improve net safety or viability.",
+    "Negative reservation alone would recover every binding prohibition.",
+    "The tested corpus predicts production behavior.",
+    "The authority-first architectural class is viable or non-viable in general.",
+    "The evaluator formulas are externally optimal rather than internally consistent."
+  ],
+  "conclusion": "The 48 failures are exactly attributable at the event level, but architecture-level causality is not identified. The recorded mechanism supports retrieval/harness and cross-fixture ranking contributions, while semantic representation, larger k and negative reservation require controlled future contrasts."
+}

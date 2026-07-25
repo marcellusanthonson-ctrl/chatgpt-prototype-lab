@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "requirements": [
+    {"requirement": "EXACT_48_FAILURE_ATTRIBUTION", "sources": ["projects/lab/test-executions/FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001/runs/FULL_RAG_AUTHORITY_FIRST_SIMULATION/", "projects/lab/test-executions/FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001/private/PRIVATE_ORACLES.json"], "outputs": ["FAILURE_ANALYSIS.json", "FIXTURE_FAILURE_ATTRIBUTION.json"]},
+    {"requirement": "EXTERNAL_AUDIT_RECONCILIATION", "sources": ["projects/lab/evidence/EVD-LAB-AUD-004.json", "projects/lab/reassessments/REA-LAB-005.json", "projects/lab/external-audits/AUDIT-CLAUDE-FULL-RAG-EXECUTION-071-001/FULL_RAG_FAILURE_PROFILE.json"], "outputs": ["FAILURE_ANALYSIS.json", "FAVORABLE_AND_CONTRARY_EVIDENCE.json"]},
+    {"requirement": "CAUSAL_HYPOTHESIS_CLASSIFICATION", "sources": ["projects/lab/pending/PEND-LAB-019.json"], "outputs": ["CAUSAL_HYPOTHESES.json", "ALTERNATIVE_EXPLANATIONS.json"]},
+    {"requirement": "MINIMUM_ARMS", "sources": ["AUTHORIZATION_LAB_FULL_RAG_AUTHORITY_FIRST_FAILURE_ANALYSIS_AND_NEXT_TEST_DESIGN_074"], "outputs": ["ARM_DEFINITIONS.json", "RUN_MATRIX.json"]},
+    {"requirement": "VARIABLE_ISOLATION", "sources": ["projects/lab/test-executions/FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001/frozen/ARM_PARAMETERS.json"], "outputs": ["VARIABLE_ISOLATION_MATRIX.json", "VIABILITY_AND_CAUSAL_GATES.json"]},
+    {"requirement": "FUTURE_SYNTHETIC_CORPUS_WITHOUT_GENERATION", "sources": ["projects/lab/test-designs/FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-001/CORPUS_GENERATION_SPEC.json"], "outputs": ["CORPUS_AND_FIXTURE_SPEC.json", "PRIVATE_ORACLE_SPEC.json"]},
+    {"requirement": "PUBLIC_PRIVATE_SEPARATION", "sources": ["projects/lab/test-designs/FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-001/LEAKAGE_PREVENTION_CONTRACT.json"], "outputs": ["PRIVATE_ORACLE_SPEC.json", "LEAKAGE_PREVENTION_CONTRACT.json"]},
+    {"requirement": "COMPARABLE_METRICS", "sources": ["projects/lab/experiments/EXP-LAB-002.json", "projects/lab/evidence/EVD-LAB-EXP-002.json"], "outputs": ["SCORING_RULES_DRAFT.json", "METRIC_DEFINITIONS.json"]},
+    {"requirement": "FREEZABLE_GATES_AND_CONTROLS", "sources": ["projects/lab/test-executions/FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001/frozen/SCORING_RULES.json"], "outputs": ["VIABILITY_AND_CAUSAL_GATES.json", "CONTROL_DEFINITIONS.json"]},
+    {"requirement": "NO_EXECUTION_OR_SELECTION", "sources": ["projects/lab/pending/PEND-LAB-019.json"], "outputs": ["EXECUTION_BOUNDARY.json", "README.md", "MANIFEST.json"]},
+    {"requirement": "SUCCESSOR_PENDING", "sources": ["projects/lab/pending/PEND-LAB-019.json"], "outputs": ["projects/lab/pending/PEND-LAB-020.json"]}
+  ],
+  "unmapped_material_requirements": []
+}

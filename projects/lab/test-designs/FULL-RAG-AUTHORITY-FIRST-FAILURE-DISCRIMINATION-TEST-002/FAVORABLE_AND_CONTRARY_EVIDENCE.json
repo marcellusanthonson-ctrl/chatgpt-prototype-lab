@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "records": [
+    {"hypothesis_id": "H-SEMANTIC-REPRESENTATION", "favorable": ["No embeddings or provider", "Low semantic contribution", "Low recall"], "contrary": ["No semantic counterfactual", "Refusal rule directly explains 36 events"], "net": "POSSIBLE_NOT_DISCRIMINATED"},
+    {"hypothesis_id": "H-PREDOMINANTLY-LEXICAL", "favorable": ["31-36 candidates in failing fixtures", "Generic token collisions", "Unrelated canonical selections"], "contrary": ["Expansion improved the recorded arm"], "net": "SUPPORTED_CONTRIBUTING_CAUSE"},
+    {"hypothesis_id": "H-BUDGET-K2", "favorable": ["Missing negatives ranked 13 and 11", "Output capped at two"], "contrary": ["Ranking/retrieval placed them below k", "More k can worsen precision and refusal"], "net": "SUPPORTED_CONTRIBUTING_CAUSE"},
+    {"hypothesis_id": "H-NEGATIVE-RESERVATION", "favorable": ["Twelve stable omissions", "No reserved slot"], "contrary": ["No reservation arm", "Reservation depends on retrieval and correct labeling"], "net": "POSSIBLE_NOT_DISCRIMINATED"},
+    {"hypothesis_id": "H-SAFE-REFUSAL-HEURISTIC", "favorable": ["selected.length===0 rule", "All 36 events had two unrelated selections"], "contrary": ["Upstream retrieval noise was necessary"], "net": "SUPPORTED_PRIMARY_CAUSE"},
+    {"hypothesis_id": "H-DECLARED-DECOYS", "favorable": ["Corpus included decoys"], "contrary": ["None was selected in the 48 events"], "net": "CONTRADICTED"},
+    {"hypothesis_id": "H-CROSS-FIXTURE-DISTRACTORS", "favorable": ["Every false selection mapped to another fixture's canonical document"], "contrary": ["Synthetic prevalence may differ from production"], "net": "SUPPORTED_PRIMARY_CAUSE"},
+    {"hypothesis_id": "H-SYNONYM-EXPANSION", "favorable": ["110 to 48 critical failures", "Recall +0.027777"], "contrary": ["All 48 target failures persisted", "Synthetic trivial mapping"], "net": "SUPPORTED_CONTRIBUTING_CAUSE"},
+    {"hypothesis_id": "H-RETRIEVAL", "favorable": ["164 false negatives", "Recall 0.458333", "Missing negative ranks"], "contrary": ["Perfect retrieval arm absent"], "net": "SUPPORTED_PRIMARY_CAUSE"},
+    {"hypothesis_id": "H-RANKING", "favorable": ["Precision 0.234127 despite authority preservation", "Rank-100 distractors displaced rank-90 required support"], "contrary": ["Formal authority and safety filtering passed"], "net": "SUPPORTED_CONTRIBUTING_CAUSE"},
+    {"hypothesis_id": "H-AUTHORITY-FILTERING", "favorable": [], "contrary": ["Zero authority inversion, leakage, stale, contamination and forbidden rate"], "net": "CONTRADICTED"},
+    {"hypothesis_id": "H-CORPUS", "favorable": ["Repeated generic vocabulary", "Cross-fixture candidate collision"], "contrary": ["Positive control proves resolvability", "Adversarial stress was intentional"], "net": "SUPPORTED_CONTRIBUTING_CAUSE"},
+    {"hypothesis_id": "H-EVALUATOR", "favorable": ["Some formulas are idiosyncratic"], "contrary": ["Positive and negative controls pass", "Independent recomputation agrees"], "net": "CONTRADICTED"},
+    {"hypothesis_id": "H-HARNESS", "favorable": ["Selection-count refusal", "No evidentiary sufficiency decision"], "contrary": ["Integrity, isolation and reproducibility passed"], "net": "SUPPORTED_PRIMARY_CAUSE"}
+  ],
+  "rule": "Each future causal verdict requires favorable evidence, contrary evidence and a single-variable contrast."
+}

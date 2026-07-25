@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "status": "EXECUTION_NOT_AUTHORIZED",
+  "current_authorization": "AUTHORIZATION_LAB_FULL_RAG_AUTHORITY_FIRST_FAILURE_ANALYSIS_AND_NEXT_TEST_DESIGN_074",
+  "current_scope": "DOCUMENTARY_FAILURE_ANALYSIS_AND_TEST_DESIGN_ONLY",
+  "roles_for_future_execution": {
+    "corpus_generator": "SEPARATE_BOUNDED_ROLE",
+    "semantic_simulation_builder": "PROVIDER_NEUTRAL_SEPARATE_BOUNDED_ROLE",
+    "selector": "NO_PRIVATE_ORACLE_ACCESS",
+    "evaluator": "PRIVATE_ORACLE_ACCESS_AFTER_SELECTION_FREEZE",
+    "auditor": "INDEPENDENT_READ_ONLY",
+    "approver": "Jonathan Martinez"
+  },
+  "future_execution_requires": "SEPARATE_EXPLICIT_AUTHORIZATION_REFERENCING_PEND-LAB-020",
+  "not_authorized_now": [
+    "GENERATE_CORPUS",
+    "ADAPT_OR_IMPLEMENT_HARNESS",
+    "IMPLEMENT_SEMANTIC_INTERFACES",
+    "GENERATE_EMBEDDINGS",
+    "SELECT_PROVIDER",
+    "RUN_ANY_ARM_OR_FIXTURE",
+    "USE_PRIVATE_ORACLES_FOR_EVALUATION",
+    "CALCULATE_EXECUTION_METRICS",
+    "APPLY_EXECUTION_GATES",
+    "PUBLISH_EXECUTION_RESULTS",
+    "PERFORM_INDEPENDENT_AUDIT",
+    "SELECT_ARCHITECTURE",
+    "SELECT_OR_APPROVE_IMPLEMENTATION",
+    "MODIFY_PRODUCT_RUNTIME_OR_SYMPHONIE",
+    "INSTALL_DEPENDENCIES",
+    "USE_EXTERNAL_API_OR_REAL_DATA",
+    "DEPLOY"
+  ],
+  "claims": {
+    "test_executed": false,
+    "corpus_generated": false,
+    "embeddings_generated": false,
+    "provider_selected": false,
+    "architecture_selected": false,
+    "implementation_selected": false,
+    "implementation_approved": false,
+    "product_effect": "NONE",
+    "runtime_effect": "NONE"
+  }
+}

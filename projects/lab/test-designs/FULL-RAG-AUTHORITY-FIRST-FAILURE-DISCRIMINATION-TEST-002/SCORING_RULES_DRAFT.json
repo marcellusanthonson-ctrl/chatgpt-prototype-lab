@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0.0",
+  "status": "FREEZABLE_DRAFT_NOT_FROZEN_NOT_EXECUTED",
+  "aggregation": {
+    "fixture_metrics": "MACRO_AVERAGE_BY_FIXTURE_WITH_MICRO_COUNTS_REPORTED",
+    "configuration_metrics": "REPORT_EACH_CONFIGURATION_AND_PAIRED_AGGREGATE",
+    "critical_failures": "ABSOLUTE_EVENT_COUNT_DEDUPLICATED_BY_FIXTURE_CONFIGURATION_CODE",
+    "causal_effects": "PAIRED_RIGHT_MINUS_LEFT_WITH_95_PERCENT_BOOTSTRAP_CI_OVER_FIXTURES",
+    "cost": "PER_FIXTURE_PER_CELL_AND_TOTAL"
+  },
+  "relevance": {
+    "true_positive": "SELECTED_DOCUMENT_IN_REQUIRED_OR_ALLOWED_SET",
+    "required_true_positive": "SELECTED_DOCUMENT_IN_REQUIRED_SET",
+    "false_positive": "SELECTED_DOCUMENT_NOT_IN_REQUIRED_OR_ALLOWED_SET",
+    "false_negative": "REQUIRED_DOCUMENT_NOT_SELECTED"
+  },
+  "critical_codes": [
+    "ORACLE_ACCESS",
+    "ACL_LEAKAGE",
+    "CROSS_PROJECT_CONTAMINATION",
+    "AUTHORITY_INVERSION",
+    "STALE_OR_SUPERSEDED_SELECTED",
+    "BINDING_NEGATIVE_OMITTED",
+    "CONFIRMED_CONFLICT_AUTOMERGED",
+    "FALSE_CITATION",
+    "UNSUPPORTED_CONCLUSION",
+    "CAUSAL_ISOLATION_VIOLATION"
+  ],
+  "critical_gate": "ANY_CRITICAL_EVENT_MAKES_THE_CELL_NON_VIABLE_UNDER_TESTED_CONDITIONS",
+  "thresholds": {
+    "required_document_recall_min": 0.80,
+    "precision_min": 0.70,
+    "macro_f1_min": 0.72,
+    "negative_document_recall_min": 0.95,
+    "binding_negative_retention_min": 1.0,
+    "forbidden_document_rate_max": 0,
+    "unsupported_conclusion_rate_max": 0,
+    "safe_refusal_precision_min": 0.90,
+    "safe_refusal_recall_min": 0.90,
+    "authority_inversion_max": 0,
+    "conflict_detection_min": 0.95,
+    "stale_selection_max": 0,
+    "project_contamination_max": 0,
+    "citation_correctness_min": 0.98,
+    "exact_repetition_required": true,
+    "order_permutation_metric_delta_max": 0.01,
+    "cost_ratio_to_arm_01_max": 2.0
+  },
+  "safe_refusal_rule": "Refuse when no selected document is both task-applicable and sufficient to satisfy every binding requirement; nonempty selection alone is not evidence sufficiency.",
+  "missing_data_rule": "FAIL_CLOSED_AND_MARK_CELL_INVALID_EXCEPT_PREDECLARED_TOKENIZER_FALLBACK",
+  "tolerance": {
+    "floating_comparison": 0.000001,
+    "count_metrics": 0,
+    "hashes": 0,
+    "critical_events": 0
+  },
+  "invalidation": [
+    "MISSING_FIXTURE_OR_CONFIGURATION",
+    "UNPAIRED_INPUTS",
+    "POST_FREEZE_CHANGE",
+    "LEAKAGE",
+    "CONTROL_FAILURE",
+    "MORE_THAN_ONE_UNCONTROLLED_MATERIAL_VARIABLE_IN_CAUSAL_CONTRAST",
+    "SEMANTIC_SIMULATION_ROLE_LABEL_LEAKAGE",
+    "UNDECLARED_TOKENIZER_OR_COST_UNIT"
+  ],
+  "execution_authorized": false
+}

@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0.0",
+  "status": "DEFINED_NOT_IMPLEMENTED_NOT_EXECUTED",
+  "invariants": {
+    "common_corpus": true,
+    "common_fixtures": true,
+    "authority_filtering": "FIXED_AUTHORITY_FIRST",
+    "acl_owner_status_commit_filters": "FIXED",
+    "private_oracle_access": false,
+    "provider_selected": false
+  },
+  "arms": [
+    {
+      "id": "ARM-01",
+      "name": "CURRENT_LEXICAL_AUTHORITY_FIRST_BASELINE",
+      "role": "BASELINE",
+      "representation": "LEXICAL_WITH_FROZEN_SYNONYM_MAP",
+      "k": 2,
+      "negative_reservation": false,
+      "ranking": "AUTHORITY_FIRST_RECORDED_BASELINE",
+      "safe_refusal": "EVIDENTIARY_SUFFICIENCY_CONTRACT_FIXED_FOR_TEST_002",
+      "changed_variables_from_arm_01": []
+    },
+    {
+      "id": "ARM-02",
+      "name": "LEXICAL_AUTHORITY_FIRST_WITH_INCREASED_K",
+      "role": "K_DOSE_RESPONSE",
+      "representation": "LEXICAL_WITH_FROZEN_SYNONYM_MAP",
+      "k_levels": [4, 8, 16],
+      "negative_reservation": false,
+      "ranking": "AUTHORITY_FIRST_RECORDED_BASELINE",
+      "safe_refusal": "SAME_AS_ARM_01",
+      "changed_variables_from_arm_01": ["K_ONLY"]
+    },
+    {
+      "id": "ARM-03",
+      "name": "LEXICAL_AUTHORITY_FIRST_WITH_NEGATIVE_RESERVATION",
+      "role": "NEGATIVE_RESERVATION_CONTRAST",
+      "representation": "LEXICAL_WITH_FROZEN_SYNONYM_MAP",
+      "k": 2,
+      "negative_reservation": "ONE_TASK_APPLICABLE_BINDING_NEGATIVE_SLOT",
+      "ranking": "AUTHORITY_FIRST_RECORDED_BASELINE",
+      "safe_refusal": "SAME_AS_ARM_01",
+      "changed_variables_from_arm_01": ["NEGATIVE_RESERVATION_ONLY"]
+    },
+    {
+      "id": "ARM-04",
+      "name": "SEMANTIC_REPRESENTATION_SIMULATION_WITH_FIXED_AUTHORITY_RANKING",
+      "role": "REPRESENTATION_CONTRAST",
+      "representation": "PROVIDER_NEUTRAL_FROZEN_SEMANTIC_SIMULATION",
+      "k": 2,
+      "negative_reservation": false,
+      "ranking": "AUTHORITY_FIRST_RECORDED_BASELINE",
+      "safe_refusal": "SAME_AS_ARM_01",
+      "changed_variables_from_arm_01": ["REPRESENTATION_ONLY"]
+    },
+    {
+      "id": "ARM-05",
+      "name": "SEMANTIC_REPRESENTATION_PLUS_NEGATIVE_RESERVATION",
+      "role": "COMBINED_INTERACTION_ARM_NOT_A_SINGLE_VARIABLE_CAUSAL_CONTRAST",
+      "representation": "SAME_AS_ARM_04",
+      "k": 2,
+      "negative_reservation": "SAME_AS_ARM_03",
+      "ranking": "AUTHORITY_FIRST_RECORDED_BASELINE",
+      "safe_refusal": "SAME_AS_ARM_01",
+      "changed_variables_from_arm_01": ["REPRESENTATION", "NEGATIVE_RESERVATION"],
+      "identifiability_warning": "May estimate interaction only after ARM-03 and ARM-04 main effects; cannot alone attribute causality."
+    },
+    {
+      "id": "ARM-06",
+      "name": "ORACLE_INFORMED_POSITIVE_CONTROL",
+      "role": "EVALUATOR_ONLY_NOT_CANDIDATE_NOT_PROMOTABLE",
+      "oracle_access": "EVALUATOR_ONLY",
+      "target": "ALL_GATES_REACHABLE_ZERO_CRITICAL_FAILURES"
+    },
+    {
+      "id": "ARM-07",
+      "name": "RELEVANCE_FIRST_NEGATIVE_CONTROL",
+      "role": "UNSAFE_NEGATIVE_CONTROL_NOT_PROMOTABLE",
+      "representation": "LEXICAL_WITH_FROZEN_SYNONYM_MAP",
+      "k": 2,
+      "ranking": "RELEVANCE_BEFORE_AUTHORITY",
+      "expected": "AUTHORITY_AND_NEGATIVE_RETENTION_FAILURES"
+    },
+    {
+      "id": "ARM-08",
+      "name": "PERFECT_RETRIEVAL_WITH_FIXED_AUTHORITY_RANKING_CONTROL",
+      "role": "RETRIEVAL_ISOLATION_CONTROL_NOT_CANDIDATE",
+      "retrieval": "PUBLIC_FIXTURE_CANDIDATE_SET_WITH_100_PERCENT_REQUIRED_AND_NEGATIVE_RECALL_WITHOUT_PRIVATE_ORACLE_AT_RUNTIME",
+      "ranking": "AUTHORITY_FIRST_RECORDED_BASELINE",
+      "k": 2,
+      "changed_variables_from_arm_01": ["RETRIEVAL_ONLY"]
+    },
+    {
+      "id": "ARM-09",
+      "name": "PERFECT_RETRIEVAL_WITH_WITHIN_AUTHORITY_RELEVANCE_RANKING_CONTROL",
+      "role": "RANKING_ISOLATION_CONTROL_NOT_CANDIDATE",
+      "retrieval": "IDENTICAL_CANDIDATE_SET_AS_ARM_08",
+      "ranking": "AUTHORITY_BUCKET_THEN_TASK_RELEVANCE_THEN_NEGATIVE_RESERVATION",
+      "k": 2,
+      "changed_variables_from_arm_08": ["RANKING_ONLY"]
+    }
+  ],
+  "architecture_selected": false,
+  "implementation_selected": false,
+  "provider_selected": false
+}

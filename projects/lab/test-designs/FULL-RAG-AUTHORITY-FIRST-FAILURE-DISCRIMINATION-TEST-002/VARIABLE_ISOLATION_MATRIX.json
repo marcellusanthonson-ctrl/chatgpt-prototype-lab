@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "material_variables": [
+    "REPRESENTATION",
+    "K",
+    "NEGATIVE_RESERVATION",
+    "AUTHORITY_FILTERING",
+    "RETRIEVAL_CANDIDATE_SET",
+    "WITHIN_AUTHORITY_RANKING",
+    "SAFE_REFUSAL_POLICY",
+    "LEXICAL_DECOY_DENSITY",
+    "LEXICAL_OVERLAP",
+    "SYNONYMY",
+    "PARAPHRASE",
+    "POLYSEMY",
+    "MULTILINGUALITY",
+    "STALE_SUPERSEDED_STATUS",
+    "POSITIVE_NEGATIVE_COOCCURRENCE"
+  ],
+  "contrasts": [
+    {"id": "C-REP", "left": "ARM-01", "right": "ARM-04", "changed": ["REPRESENTATION"], "held_constant": ["K", "NEGATIVE_RESERVATION", "AUTHORITY_FILTERING", "RANKING", "SAFE_REFUSAL", "CORPUS"]},
+    {"id": "C-K4", "left": "ARM-01", "right": "ARM-02@K4", "changed": ["K"], "held_constant": ["REPRESENTATION", "NEGATIVE_RESERVATION", "AUTHORITY_FILTERING", "RANKING", "SAFE_REFUSAL", "CORPUS"]},
+    {"id": "C-K8", "left": "ARM-01", "right": "ARM-02@K8", "changed": ["K"], "held_constant": ["REPRESENTATION", "NEGATIVE_RESERVATION", "AUTHORITY_FILTERING", "RANKING", "SAFE_REFUSAL", "CORPUS"]},
+    {"id": "C-K16", "left": "ARM-01", "right": "ARM-02@K16", "changed": ["K"], "held_constant": ["REPRESENTATION", "NEGATIVE_RESERVATION", "AUTHORITY_FILTERING", "RANKING", "SAFE_REFUSAL", "CORPUS"]},
+    {"id": "C-NEG", "left": "ARM-01", "right": "ARM-03", "changed": ["NEGATIVE_RESERVATION"], "held_constant": ["REPRESENTATION", "K", "AUTHORITY_FILTERING", "RANKING", "SAFE_REFUSAL", "CORPUS"]},
+    {"id": "C-RETRIEVAL", "left": "ARM-01", "right": "ARM-08", "changed": ["RETRIEVAL_CANDIDATE_SET"], "held_constant": ["K", "AUTHORITY_FILTERING", "RANKING", "SAFE_REFUSAL", "CORPUS"]},
+    {"id": "C-RANK", "left": "ARM-08", "right": "ARM-09", "changed": ["WITHIN_AUTHORITY_RANKING"], "held_constant": ["RETRIEVAL_CANDIDATE_SET", "K", "AUTHORITY_FILTERING", "SAFE_REFUSAL", "CORPUS"]},
+    {"id": "C-INTERACTION", "left": "ARM-01", "right": "ARM-05", "changed": ["REPRESENTATION", "NEGATIVE_RESERVATION"], "held_constant": ["K", "AUTHORITY_FILTERING", "RANKING", "SAFE_REFUSAL", "CORPUS"], "causal_attribution": "PROHIBITED_ALONE_INTERACTION_ONLY"},
+    {"id": "C-CONTROL-POS", "left": "ARM-01", "right": "ARM-06", "changed": ["ORACLE_INFORMATION"], "causal_attribution": "PROHIBITED_CONTROL_ONLY"},
+    {"id": "C-CONTROL-NEG", "left": "ARM-01", "right": "ARM-07", "changed": ["AUTHORITY_ORDER"], "causal_attribution": "UNSAFE_CONTROL_ONLY"}
+  ],
+  "fixture_factorization": {
+    "lexical_overlap": ["HIGH", "LOW"],
+    "decoy_density": ["NONE", "LOW", "HIGH"],
+    "synonymy": ["ABSENT", "PRESENT"],
+    "paraphrase": ["ABSENT", "PRESENT"],
+    "polysemy": ["ABSENT", "PRESENT"],
+    "multilinguality": ["MONOLINGUAL", "CROSS_LANGUAGE"],
+    "status": ["ACTIVE", "STALE", "SUPERSEDED"],
+    "evidence_polarity": ["POSITIVE_ONLY", "NEGATIVE_ONLY", "POSITIVE_AND_NEGATIVE", "NONE_SUFFICIENT"]
+  },
+  "identifiability_rule": "If a contrast changes more than one uncontrolled material variable, causal attribution is prohibited and the causal-discrimination gate fails."
+}

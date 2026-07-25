@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "source_arm": "FULL_RAG_AUTHORITY_FIRST_SIMULATION",
+  "total_critical_failures": 48,
+  "configuration_stability": "EXACT",
+  "configurations": ["REPETITION_1", "REPETITION_2", "REPETITION_3", "ORDER_PERMUTATION", "PARAPHRASE_VARIANT", "SCALE_VARIANT"],
+  "records": [
+    {"task_id": "FX-071-002", "fixture_class": "MANDATORY_NEGATIVE_PROHIBITION", "code": "BINDING_NEGATIVE_OMITTED", "events": 6, "stable_across_all_configurations": true, "required": ["DOC-FF14691F15661C04", "DOC-D4C6AE7A4EE4F4BA"], "selected_base": ["DOC-FF14691F15661C04", "DOC-644CB9009D46101E"], "omitted_required_rank_base": 13, "displacer_source_fixture": "FX-071-026"},
+    {"task_id": "FX-071-006", "fixture_class": "ACL_DENIED", "code": "UNSUPPORTED_CONCLUSION", "events": 6, "stable_across_all_configurations": true, "required": [], "selected_base": ["DOC-A076BEA6FDE2474A", "DOC-703492397AC7C54B"], "displacer_source_fixtures": ["FX-071-027", "FX-071-039"]},
+    {"task_id": "FX-071-008", "fixture_class": "INSUFFICIENT_EVIDENCE", "code": "UNSUPPORTED_CONCLUSION", "events": 6, "stable_across_all_configurations": true, "required": [], "selected_base": ["DOC-FF14691F15661C04", "DOC-644CB9009D46101E"], "displacer_source_fixtures": ["FX-071-002", "FX-071-026"]},
+    {"task_id": "FX-071-021", "fixture_class": "SAFE_REFUSAL", "code": "UNSUPPORTED_CONCLUSION", "events": 6, "stable_across_all_configurations": true, "required": [], "selected_base": ["DOC-A076BEA6FDE2474A", "DOC-703492397AC7C54B"], "displacer_source_fixtures": ["FX-071-027", "FX-071-039"]},
+    {"task_id": "FX-071-024", "fixture_class": "MISSING_REQUIRED_METADATA", "code": "UNSUPPORTED_CONCLUSION", "events": 6, "stable_across_all_configurations": true, "required": [], "selected_base": ["DOC-A076BEA6FDE2474A", "DOC-703492397AC7C54B"], "displacer_source_fixtures": ["FX-071-027", "FX-071-039"]},
+    {"task_id": "FX-071-027", "fixture_class": "MANDATORY_NEGATIVE_PROHIBITION", "code": "BINDING_NEGATIVE_OMITTED", "events": 6, "stable_across_all_configurations": true, "required": ["DOC-A076BEA6FDE2474A", "DOC-A420CE0D1D5E7A32"], "selected_base": ["DOC-A076BEA6FDE2474A", "DOC-703492397AC7C54B"], "omitted_required_rank_base": 11, "displacer_source_fixture": "FX-071-039"},
+    {"task_id": "FX-071-031", "fixture_class": "ACL_DENIED", "code": "UNSUPPORTED_CONCLUSION", "events": 6, "stable_across_all_configurations": true, "required": [], "selected_base": ["DOC-5F90D3811C72D49C", "DOC-216DA3AC7F13BAE8"], "selected_paraphrase": ["DOC-5F90D3811C72D49C", "DOC-A233DCC1D349D78D"], "displacer_source_fixtures": ["FX-071-001", "FX-071-010", "FX-071-019"]},
+    {"task_id": "FX-071-033", "fixture_class": "INSUFFICIENT_EVIDENCE", "code": "UNSUPPORTED_CONCLUSION", "events": 6, "stable_across_all_configurations": true, "required": [], "selected_base": ["DOC-A076BEA6FDE2474A", "DOC-703492397AC7C54B"], "displacer_source_fixtures": ["FX-071-027", "FX-071-039"]}
+  ],
+  "code_totals": {"BINDING_NEGATIVE_OMITTED": 12, "UNSUPPORTED_CONCLUSION": 36},
+  "declared_fixture_decoys_selected_in_failures": 0,
+  "interpretation": "Failure identity is stable; selected distractor identity is also stable except one paraphrase substitution in FX-071-031."
+}

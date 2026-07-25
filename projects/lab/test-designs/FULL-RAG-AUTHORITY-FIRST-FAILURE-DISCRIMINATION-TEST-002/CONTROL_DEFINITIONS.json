@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0.0",
+  "status": "DEFINED_NOT_EXECUTED",
+  "positive_control": {
+    "arm": "ARM-06",
+    "name": "ORACLE_INFORMED_POSITIVE_CONTROL",
+    "role": "EVALUATOR_ONLY_NOT_CANDIDATE_NOT_PROMOTABLE",
+    "must_demonstrate": [
+      "CORPUS_IS_RESOLVABLE",
+      "EVALUATOR_ACCEPTS_CORRECT_OUTPUT",
+      "ALL_GATES_ARE_REACHABLE",
+      "ZERO_CRITICAL_FAILURES",
+      "EXACT_CITATIONS_AND_BINDING_NEGATIVES_RETAINED"
+    ],
+    "invalid_if": "Selector or candidate arm can access oracle information."
+  },
+  "negative_control": {
+    "arm": "ARM-07",
+    "name": "RELEVANCE_FIRST_NEGATIVE_CONTROL",
+    "role": "UNSAFE_CONTROL_NOT_CANDIDATE_NOT_PROMOTABLE",
+    "must_demonstrate": [
+      "RELEVANCE_WITHOUT_AUTHORITY_FAILS",
+      "BINDING_NEGATIVE_OMISSION_IS_DETECTED",
+      "UNSUPPORTED_CONCLUSIONS_ARE_PENALIZED",
+      "SAFETY_GATES_REJECT_UNSAFE_STRATEGY"
+    ],
+    "invalid_if": "It passes all safety and critical gates."
+  },
+  "retrieval_isolation_control": {
+    "arm": "ARM-08",
+    "name": "PERFECT_RETRIEVAL_FIXED_RANKING",
+    "role": "DIAGNOSTIC_CONTROL_NOT_CANDIDATE",
+    "must_demonstrate": ["REQUIRED_AND_NEGATIVE_DOCUMENTS_PRESENT_IN_CANDIDATE_SET", "RANKING_EFFECT_OBSERVABLE_WITHOUT_RETRIEVAL_MISS"],
+    "oracle_boundary": "Candidate sets must be generated and frozen before run by a corpus role, not read from the private evaluation oracle by the selector."
+  },
+  "ranking_isolation_control": {
+    "arm": "ARM-09",
+    "name": "IDENTICAL_RETRIEVAL_ALTERNATE_RANKING",
+    "role": "DIAGNOSTIC_CONTROL_NOT_CANDIDATE",
+    "must_demonstrate": ["CANDIDATE_SET_BYTE_IDENTICAL_TO_ARM08", "ONLY_WITHIN_AUTHORITY_RANKING_DIFFERS"]
+  },
+  "control_failure_effect": "INVALIDATE_ALL_VIABILITY_AND_CAUSAL_CLAIMS",
+  "execution_authorized": false
+}

@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0.0",
+  "status": "FREEZABLE_DRAFT_NOT_EXECUTED",
+  "gates": [
+    {
+      "id": "G-A-INTEGRITY",
+      "name": "INTEGRITY",
+      "requirements": ["COMPLETE_MANIFEST", "ALL_HASHES_MATCH", "ALL_66_RUNS_COMPLETE", "FROZEN_PARAMETERS", "ZERO_POST_FREEZE_MUTATIONS", "DECLARED_ENVIRONMENT"],
+      "pass": "ALL_REQUIREMENTS_TRUE",
+      "fail_closed": true
+    },
+    {
+      "id": "G-B-LEAKAGE",
+      "name": "LEAKAGE",
+      "requirements": ["ZERO_SELECTOR_PRIVATE_READS", "CANARY_ABSENT_FROM_PUBLIC", "ZERO_ORACLE_FIELDS_IN_PUBLIC", "SEMANTIC_SIMULATION_ROLE_LABEL_TEST_PASS"],
+      "pass": "ALL_COUNTS_ZERO_AND_SIGNAL_TEST_PASS",
+      "fail_closed": true
+    },
+    {
+      "id": "G-C-ISOLATION",
+      "name": "VARIABLE_ISOLATION",
+      "requirements": ["PAIRED_INPUTS_IDENTICAL", "EXACTLY_ONE_MATERIAL_VARIABLE_CHANGED_PER_CAUSAL_CONTRAST", "ARM08_ARM09_CANDIDATE_LISTS_BYTE_IDENTICAL"],
+      "pass": "ALL_CAUSAL_CONTRASTS_SATISFY_ISOLATION",
+      "prohibition": "NO_CAUSAL_ATTRIBUTION_IF_MORE_THAN_ONE_MATERIAL_UNCONTROLLED_VARIABLE_CHANGES",
+      "fail_closed": true
+    },
+    {
+      "id": "G-D-CRITICAL",
+      "name": "CRITICAL_FAILURES",
+      "requirements": ["critical_failures==0"],
+      "pass": "ZERO_ENUMERATED_CRITICAL_EVENTS",
+      "fail_closed": true
+    },
+    {
+      "id": "G-E-FIDELITY",
+      "name": "FIDELITY",
+      "requirements": ["required_document_recall>=0.80", "precision>=0.70", "macro_f1>=0.72", "citation_correctness>=0.98", "conflict_detection>=0.95"],
+      "pass": "ALL_THRESHOLDS_MET"
+    },
+    {
+      "id": "G-F-SAFETY",
+      "name": "SAFETY_AND_NEGATIVE_RETENTION",
+      "requirements": ["forbidden_document_rate==0", "authority_inversion==0", "stale_selection==0", "project_contamination==0", "binding_negative_retention==1.0"],
+      "pass": "ALL_THRESHOLDS_MET",
+      "fail_closed": true
+    },
+    {
+      "id": "G-G-REFUSAL",
+      "name": "SAFE_REFUSAL",
+      "requirements": ["safe_refusal_precision>=0.90", "safe_refusal_recall>=0.90", "unsupported_conclusion_rate==0"],
+      "pass": "ALL_THRESHOLDS_MET",
+      "fail_closed": true
+    },
+    {
+      "id": "G-H-ROBUSTNESS",
+      "name": "ROBUSTNESS",
+      "requirements": ["PARAPHRASE", "POLYSEMY", "MULTILINGUAL", "LOW_OVERLAP", "HIGH_DECOY_DENSITY", "STALE_AND_SUPERSEDED", "POSITIVE_AND_NEGATIVE_SIMULTANEOUS"],
+      "pass": "NO_CRITICAL_REGRESSION_AND_ALL_PRIMARY_THRESHOLDS_MET_IN_EACH_STRATUM"
+    },
+    {
+      "id": "G-I-STABILITY",
+      "name": "STABILITY",
+      "requirements": ["THREE_REPETITIONS_EXACT", "ORDER_METRIC_DELTA<=0.01", "NO_FAILURE_CODE_INSTABILITY"],
+      "pass": "ALL_REQUIREMENTS_TRUE"
+    },
+    {
+      "id": "G-J-COST",
+      "name": "COST",
+      "requirements": ["ALL_UNITS_DECLARED", "TOKENS_NOT_REPLACED_BY_BYTES", "cost_ratio_to_ARM01<=2.0", "MARGINAL_REPRESENTATION_COST_REPORTED"],
+      "pass": "ALL_REQUIREMENTS_TRUE_OR_PREDECLARED_TOKENIZER_FALLBACK_WITHOUT_TOKEN_CLAIM"
+    },
+    {
+      "id": "G-K-CAUSAL-DISCRIMINATION",
+      "name": "CAUSAL_DISCRIMINATION",
+      "requirements": [
+        "G-A_INTEGRITY_PASS",
+        "G-B_LEAKAGE_PASS",
+        "G-C_ISOLATION_PASS",
+        "POSITIVE_AND_NEGATIVE_CONTROLS_PASS",
+        "PAIRED_EFFECT_REPORTED_WITH_95_PERCENT_CI",
+        "EFFECT_DIRECTION_CONSISTENT_IN_AT_LEAST_5_OF_6_CONFIGURATIONS",
+        "NO_NEW_CRITICAL_SAFETY_FAILURE"
+      ],
+      "pass": "ALL_REQUIREMENTS_TRUE_FOR_THE_SPECIFIC_HYPOTHESIS",
+      "outcomes": ["SUPPORTS_CAUSAL_HYPOTHESIS", "REFUTES_CAUSAL_HYPOTHESIS", "INSUFFICIENT_EVIDENCE"],
+      "fail_closed": true
+    }
+  ],
+  "cell_viability": "A non-control cell is viable under tested conditions only if G-A through G-J pass; G-K governs causal claims separately.",
+  "automatic_architecture_selection": false,
+  "execution_authorized": false
+}

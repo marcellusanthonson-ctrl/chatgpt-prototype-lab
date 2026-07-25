@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "design_id": "FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-002",
+  "status": "DESIGN_READY_FOR_SEPARATE_EXECUTION_AUTHORIZATION",
+  "checks": [
+    {"id": "DELIVERABLE_COMPLETENESS", "result": "PASS", "expected": 24, "present": 24},
+    {"id": "FAILURE_COUNT", "result": "PASS", "expected": 48, "observed": 48},
+    {"id": "FAILURE_CODE_DISTRIBUTION", "result": "PASS", "expected": {"BINDING_NEGATIVE_OMITTED": 12, "UNSUPPORTED_CONCLUSION": 36}, "other_codes": 0},
+    {"id": "SIX_CONFIGURATION_STABILITY", "result": "PASS"},
+    {"id": "HYPOTHESIS_CLASSIFICATIONS_EXACT_ENUM", "result": "PASS"},
+    {"id": "FAVORABLE_AND_CONTRARY_EVIDENCE", "result": "PASS"},
+    {"id": "REFUTATION_AND_REQUIRED_TEST_PER_HYPOTHESIS", "result": "PASS"},
+    {"id": "MINIMUM_SEVEN_ARMS", "result": "PASS", "present": 9},
+    {"id": "K_LEVELS_2_4_8_16", "result": "PASS"},
+    {"id": "NEGATIVE_RESERVATION_ISOLATED", "result": "PASS"},
+    {"id": "SEMANTIC_REPRESENTATION_ISOLATED", "result": "PASS"},
+    {"id": "RETRIEVAL_AND_RANKING_ISOLATED", "result": "PASS"},
+    {"id": "SAFE_REFUSAL_DEFINED", "result": "PASS"},
+    {"id": "CORPUS_SPECIFIED_NOT_GENERATED", "result": "PASS"},
+    {"id": "PRIVATE_ORACLE_SPECIFIED_NOT_GENERATED", "result": "PASS"},
+    {"id": "LEAKAGE_AND_PUBLIC_PRIVATE_SEPARATION", "result": "PASS"},
+    {"id": "METRICS_FORMULAS_DENOMINATORS_AGGREGATION_TOLERANCE_INVALIDITY", "result": "PASS"},
+    {"id": "FREEZABLE_GATES", "result": "PASS"},
+    {"id": "POSITIVE_AND_NEGATIVE_CONTROLS", "result": "PASS"},
+    {"id": "RUN_MATRIX_MINIMUM_66_FUTURE_RUNS", "result": "PASS"},
+    {"id": "CLAIM_LIMITS", "result": "PASS"},
+    {"id": "NO_TEST_EXECUTION", "result": "PASS", "runs_executed": 0},
+    {"id": "NO_CORPUS_OR_EMBEDDINGS", "result": "PASS", "corpus_generated": false, "embeddings_generated": false},
+    {"id": "NO_PROVIDER_ARCHITECTURE_OR_IMPLEMENTATION_SELECTION", "result": "PASS"},
+    {"id": "NO_PRODUCT_OR_RUNTIME_EFFECT", "result": "PASS"}
+  ],
+  "repository_validator_baseline": {
+    "parent_head": "cd9273cd623de984898c5a5a488a38fc4ff9d7f3",
+    "failure_count": 30,
+    "preexisting_categories": {
+      "historical_execution_line_limits": 25,
+      "singleton_registry_shape_count_mismatches": 3,
+      "current_state_schema_unexpected_fields": 2
+    }
+  },
+  "final_repository_validation": {
+    "result": "PASS_NO_NEW_FAILURES",
+    "failure_count": 29,
+    "baseline_failure_count": 30,
+    "delta": -1,
+    "remaining_failures_are_preexisting": true
+  },
+  "historical_artifacts_changed": false,
+  "architecture_selected": false,
+  "implementation_selected": false,
+  "implementation_approved": false,
+  "provider_selected": false,
+  "product_effect": "NONE",
+  "runtime_effect": "NONE"
+}

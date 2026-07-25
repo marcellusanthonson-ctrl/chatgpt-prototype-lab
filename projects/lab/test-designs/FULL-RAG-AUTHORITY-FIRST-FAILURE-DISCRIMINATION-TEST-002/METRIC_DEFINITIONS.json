@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "status": "FREEZABLE_DRAFT_NOT_EXECUTED",
+  "common_aggregation": "Compute per fixture and configuration, macro-average across fixtures, report micro numerator and denominator, then paired aggregate across shared fixtures.",
+  "metrics": [
+    {"id": "precision", "formula": "TP/(TP+FP)", "denominator": "selected_documents", "unit": "RATIO", "tolerance": 0.000001, "invalid_if": "selected set absent; empty set scored 1 only when no required or allowed documents"},
+    {"id": "recall", "formula": "TP/|required_or_allowed_documents|", "denominator": "required_plus_allowed", "unit": "RATIO", "tolerance": 0.000001, "invalid_if": "oracle set absent"},
+    {"id": "macro_f1", "formula": "mean(2*precision_i*recall_i/(precision_i+recall_i))", "denominator": "valid_fixture_evaluations", "unit": "RATIO", "tolerance": 0.000001, "invalid_if": "any required fixture evaluation missing"},
+    {"id": "required_document_recall", "formula": "selected_required/required", "denominator": "required_documents", "unit": "RATIO", "tolerance": 0.000001, "invalid_if": "oracle required set absent"},
+    {"id": "negative_document_recall", "formula": "selected_required_negative/required_negative", "denominator": "required_binding_negative_documents", "unit": "RATIO", "tolerance": 0.000001, "invalid_if": "reported only on negative-bearing fixtures"},
+    {"id": "forbidden_document_rate", "formula": "selected_forbidden/selected", "denominator": "selected_documents", "unit": "RATIO", "tolerance": 0, "invalid_if": "forbidden labels unavailable"},
+    {"id": "binding_negative_retention", "formula": "retained_required_negative/required_negative", "denominator": "required_binding_negative_documents", "unit": "RATIO", "tolerance": 0, "invalid_if": "negative-bearing fixture missing"},
+    {"id": "unsupported_conclusion_rate", "formula": "unsupported_conclusion_events/safe_refusal_expected_evaluations", "denominator": "safe_refusal_expected_evaluations", "unit": "RATIO", "tolerance": 0, "invalid_if": "refusal oracle absent"},
+    {"id": "safe_refusal_precision", "formula": "correct_refusals/all_refusals", "denominator": "returned_refusals", "unit": "RATIO", "tolerance": 0.000001, "invalid_if": "no refusal-eligible fixture exists"},
+    {"id": "safe_refusal_recall", "formula": "correct_refusals/expected_refusals", "denominator": "expected_refusals", "unit": "RATIO", "tolerance": 0.000001, "invalid_if": "expected-refusal set absent"},
+    {"id": "authority_inversion", "formula": "count(selected_lower_authority_displacing_required_higher_authority)", "denominator": "fixture_evaluations", "unit": "COUNT_AND_RATE", "tolerance": 0, "invalid_if": "authority metadata absent"},
+    {"id": "conflict_detection", "formula": "correct_conflict_states/expected_conflict_states", "denominator": "expected_conflict_states", "unit": "RATIO", "tolerance": 0.000001, "invalid_if": "conflict oracle absent"},
+    {"id": "stale_selection", "formula": "selected_stale_or_superseded/selected", "denominator": "selected_documents", "unit": "RATIO", "tolerance": 0, "invalid_if": "status metadata absent"},
+    {"id": "project_contamination", "formula": "selected_out_of_scope_project/selected", "denominator": "selected_documents", "unit": "RATIO", "tolerance": 0, "invalid_if": "project scope absent"},
+    {"id": "citation_correctness", "formula": "exact_valid_citations/selected_documents", "denominator": "selected_documents", "unit": "RATIO", "tolerance": 0.000001, "invalid_if": "citation field absent"},
+    {"id": "rank_displacement", "formula": "sum(max(0,observed_required_rank-ideal_required_rank))", "denominator": "required_documents", "unit": "RANK_POSITIONS", "tolerance": 0, "invalid_if": "full ranked list not logged"},
+    {"id": "semantic_only_recovery_rate", "formula": "required_docs_recovered_by_ARM04_not_ARM01/required_docs_missed_by_ARM01", "denominator": "ARM01_required_misses", "unit": "RATIO", "tolerance": 0.000001, "invalid_if": "paired representation contrast invalid"},
+    {"id": "lexical_decoy_displacement_rate", "formula": "top_k_declared_decoys_displacing_required/fixture_evaluations_with_declared_decoys", "denominator": "eligible_declared_decoy_fixtures", "unit": "RATIO", "tolerance": 0.000001, "invalid_if": "decoy role hidden from evaluator"},
+    {"id": "cross_fixture_distractor_rate", "formula": "selected_unrelated_canonical_cross_fixture/selected", "denominator": "selected_documents", "unit": "RATIO", "tolerance": 0.000001, "invalid_if": "fixture provenance unavailable to evaluator"},
+    {"id": "recall_gain_by_k", "formula": "required_recall_ARM02@k-required_recall_ARM01", "denominator": "paired_fixture_evaluations", "unit": "DELTA_RATIO", "tolerance": 0.000001, "invalid_if": "any variable other than k differs"},
+    {"id": "precision_loss_by_k", "formula": "precision_ARM01-precision_ARM02@k", "denominator": "paired_fixture_evaluations", "unit": "DELTA_RATIO", "tolerance": 0.000001, "invalid_if": "any variable other than k differs"},
+    {"id": "benefit_of_negative_reservation", "formula": "binding_retention_ARM03-binding_retention_ARM01", "denominator": "paired_negative_fixture_evaluations", "unit": "DELTA_RATIO", "tolerance": 0.000001, "invalid_if": "any variable other than reservation differs"},
+    {"id": "marginal_representation_cost", "formula": "cost_ARM04-cost_ARM01", "denominator": "paired_fixture_evaluations", "unit": "TOKENS_BYTES_NORMALIZED_COMPUTE_AND_MILLISECONDS_SEPARATELY", "tolerance": 0.000001, "invalid_if": "units or runtime environment differ"},
+    {"id": "critical_failures", "formula": "count(unique fixture,configuration,code)", "denominator": "fixture_evaluations", "unit": "COUNT_AND_RATE", "tolerance": 0, "invalid_if": "failure taxonomy or fixture set differs"}
+  ],
+  "token_rule": "Bytes are never substituted for tokens; tokenizer name/version or explicit TOKENIZER_NOT_AVAILABLE must be reported.",
+  "execution_authorized": false
+}

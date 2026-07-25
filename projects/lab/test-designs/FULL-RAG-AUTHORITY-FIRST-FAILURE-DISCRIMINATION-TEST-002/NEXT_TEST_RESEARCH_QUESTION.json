@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0.0",
+  "design_id": "FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-002",
+  "status": "DESIGN_ONLY_NOT_EXECUTED",
+  "primary_question": "Under a frozen independent synthetic corpus and constant authority filtering, which isolated changes in representation, k, negative reservation, ranking and safe-refusal policy causally alter binding-negative retention, unsupported conclusions and required-document recall?",
+  "secondary_questions": [
+    "Does a semantic representation recover evidence that lexical retrieval misses without increasing forbidden or unsupported selections?",
+    "What is the paired recall gain and precision loss at k=4, 8 and 16 relative to k=2?",
+    "Does task-scoped negative reservation reduce binding-negative omissions at fixed retrieval, ranking and k?",
+    "Do failures remain when retrieval is perfect but authority-first ranking is unchanged?",
+    "Do failures remain when candidate sets are fixed but within-authority ranking changes?",
+    "Can an explicit evidentiary-sufficiency policy improve safe-refusal recall without degrading precision?"
+  ],
+  "null_hypothesis": "No isolated intervention materially changes the preregistered causal outcomes without a safety regression.",
+  "causal_claim_rule": "A causal claim is prohibited unless the paired contrast changes exactly one material variable, controls pass and the causal-discrimination gate passes.",
+  "claim_limits": [
+    "NO_PRODUCT_VIABILITY_CLAIM",
+    "NO_ARCHITECTURE_SELECTION",
+    "NO_IMPLEMENTATION_SELECTION",
+    "NO_PROVIDER_SELECTION",
+    "NO_ARCHITECTURE_CLASS_CONFIRMATION_OR_REFUTATION",
+    "FUTURE_SYNTHETIC_TEST_ONLY"
+  ]
+}

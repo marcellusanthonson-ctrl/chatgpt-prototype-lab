@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "status": "DESIGNED_NOT_EXECUTED",
+  "operational_cells": [
+    "ARM-01",
+    "ARM-02@K4",
+    "ARM-02@K8",
+    "ARM-02@K16",
+    "ARM-03",
+    "ARM-04",
+    "ARM-05",
+    "ARM-06",
+    "ARM-07",
+    "ARM-08",
+    "ARM-09"
+  ],
+  "configurations_per_cell": [
+    "REPETITION_1",
+    "REPETITION_2",
+    "REPETITION_3",
+    "ORDER_PERMUTATION",
+    "PARAPHRASE_VARIANT",
+    "SCALE_AND_DECOY_DENSITY_VARIANT"
+  ],
+  "minimum_future_runs": 66,
+  "paired_fixture_policy": "EVERY_OPERATIONAL_CELL_RECEIVES_THE_SAME_FROZEN_FIXTURE_IDS_AND_INPUT_VARIANTS",
+  "seed_policy": "THREE_PREDECLARED_SEEDS_SHARED_BY_ALL_NON_ORACLE_CELLS",
+  "ordering_policy": "IDENTICAL_BASE_ORDER_AND_IDENTICAL_PERMUTATION_FOR_PAIRED_CELLS",
+  "evaluation_order": "ALL_SELECTION_OUTPUTS_COMPLETE_AND_HASHED_BEFORE_PRIVATE_ORACLE_EVALUATION",
+  "stopping_rule": "NO_EARLY_STOP_FOR_PERFORMANCE; STOP_ONLY_ON_INVALIDATING_INTEGRITY_LEAKAGE_ISOLATION_OR_CONTROL_FAILURE",
+  "runs_executed": 0
+}

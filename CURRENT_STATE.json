@@ -1,7 +1,7 @@
 {
   "schema_version": "2.5.0",
   "document_id": "lab.current-state",
-  "version": "2.5.30",
+  "version": "2.5.31",
   "status": "GOVERNANCE_V2_CANONICAL_BASELINE",
   "updated_at": "2026-07-24",
   "active_project": "lab",
@@ -38,7 +38,9 @@
     "full_rag_execution_package": "projects/lab/test-executions/FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001/MANIFEST.json",
     "full_rag_execution_evidence": "projects/lab/evidence/EVD-LAB-EXP-002.json",
     "full_rag_external_audit_package": "projects/lab/external-audits/AUDIT-CLAUDE-FULL-RAG-EXECUTION-071-001/AUDIT_MANIFEST.json",
-    "full_rag_failure_analysis_pending": "projects/lab/pending/PEND-LAB-019.json"
+    "full_rag_failure_analysis_pending": "projects/lab/pending/PEND-LAB-019.json",
+    "full_rag_failure_analysis_design": "projects/lab/test-designs/FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-002/MANIFEST.json",
+    "full_rag_failure_discrimination_execution_pending": "projects/lab/pending/PEND-LAB-020.json"
   },
   "projects": {
     "lab": {"status": "active", "canonical_path": "projects/lab/PROJECT_STATE.md", "structured_state_path": "projects/lab/PROJECT_STATE.json"},
@@ -99,7 +101,8 @@
     "full_rag_stages_5_and_6_discriminating_test_design_070": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "full_rag_stages_5_and_6_discriminating_test_execution_071": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_OF_COMPLETE_REPRODUCIBLE_EXECUTION_PACKAGE",
     "independent_external_read_only_audit_of_full_rag_execution_071_072": "CONSUMED_ON_DELIVERY_OF_COMPLETE_EXTERNAL_AUDIT_PACKAGE",
-    "full_rag_execution_071_external_audit_reconciliation_073": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+    "full_rag_execution_071_external_audit_reconciliation_073": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "full_rag_authority_first_failure_analysis_and_next_test_design_074": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
   },
   "verified_external_heads": {
     "symphonie": "b492852c0d76ff7cd44ca266dc8950c94638d568",
@@ -121,7 +124,7 @@
   },
   "completed_research_transitions": ["PHASE_4_ACCESSIBILITY_NORMATIVE_AND_ASSISTIVE_TECHNOLOGY_RESEARCH"],
   "next_authorized_action": "NONE_AFTER_CONSUMPTION",
-  "next_recommended_transition": "SEPARATELY_AUTHORIZE_FULL_RAG_AUTHORITY_FIRST_FAILURE_ANALYSIS_AND_NEXT_TEST_PROPOSAL",
+  "next_recommended_transition": "SEPARATELY_AUTHORIZE_FULL_RAG_AUTHORITY_FIRST_FAILURE_DISCRIMINATION_TEST_EXECUTION",
   "continuity_read_order": ["LAB_CONTRACT.md","METHODOLOGY.md","CURRENT_STATE.json","registry/index.json","registry/projects.json","projects/{active_project}/PROJECT_STATE.json","project decisions","project authorizations","open errors","applicable evidence","current continuity package"],
   "latest_reconciliation": {
     "authorization_id": "AUTHORIZATION_LAB_FULL_RAG_EXECUTION_071_EXTERNAL_AUDIT_RECONCILIATION_073",
@@ -160,25 +163,29 @@
     "authority_effect": "NONE_AFTER_CONSUMPTION"
   },
   "latest_test_design": {
-    "authorization_id": "AUTHORIZATION_LAB_FULL_RAG_STAGES_5_AND_6_DISCRIMINATING_TEST_DESIGN_070",
-    "package_id": "FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-001",
-    "status": "COMPLETE_NOT_EXECUTED",
-    "manifest": "projects/lab/test-designs/FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-001/MANIFEST.json",
-    "pend_lab_016_status": "COMPLETED_TEST_DESIGN_PUBLISHED_EXECUTION_NOT_AUTHORIZED",
-    "successor_pending": "PEND-LAB-017",
-    "stage_5_contract": "DEFINED_FOR_SYNTHETIC_TEST_ONLY",
-    "stage_6_contract": "DEFINED_FOR_SYNTHETIC_TEST_ONLY",
-    "second_corpus": "SPECIFIED_NOT_GENERATED",
-    "minimum_future_runs": 30,
+    "authorization_id": "AUTHORIZATION_LAB_FULL_RAG_AUTHORITY_FIRST_FAILURE_ANALYSIS_AND_NEXT_TEST_DESIGN_074",
+    "package_id": "FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-002",
+    "status": "DESIGN_READY_FOR_SEPARATE_EXECUTION_AUTHORIZATION",
+    "manifest": "projects/lab/test-designs/FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-002/MANIFEST.json",
+    "source_pending": "PEND-LAB-019",
+    "pend_lab_019_status": "COMPLETED_DOCUMENTARY_FAILURE_ANALYSIS_AND_NEXT_TEST_DESIGN_PUBLISHED",
+    "successor_pending": "PEND-LAB-020",
+    "critical_failures_analyzed": 48,
+    "binding_negative_omitted": 12,
+    "unsupported_conclusion": 36,
+    "arm_count": 9,
+    "operational_cell_count": 11,
+    "minimum_future_runs": 66,
+    "corpus_status": "SPECIFIED_NOT_GENERATED",
     "runs_executed": 0,
     "embeddings_generated": 0,
-    "vector_database_created": false,
+    "provider_selected": false,
     "architecture_selected": false,
     "implementation_selected": false,
     "implementation_approved": false,
     "runtime_effect": "NONE",
     "product_effect": "NONE",
-    "next_recommended_transition": "AUTHORIZE_GENERATION_AND_EXECUTION_OF_FULL_RAG_STAGES_5_AND_6_DISCRIMINATING_TEST",
+    "next_recommended_transition": "SEPARATELY_AUTHORIZE_FULL_RAG_AUTHORITY_FIRST_FAILURE_DISCRIMINATION_TEST_EXECUTION",
     "authority_effect": "NONE_AFTER_CONSUMPTION"
   },
   "latest_test_execution": {

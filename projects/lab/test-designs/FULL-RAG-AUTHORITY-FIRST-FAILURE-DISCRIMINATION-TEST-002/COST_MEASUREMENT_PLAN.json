@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "status": "DESIGNED_NOT_EXECUTED",
+  "measurements": [
+    "PUBLIC_CORPUS_BYTES",
+    "CANDIDATE_BYTES",
+    "SELECTED_CONTEXT_BYTES",
+    "PUBLIC_CORPUS_TOKENS_IF_TOKENIZER_AVAILABLE",
+    "CANDIDATE_TOKENS_IF_TOKENIZER_AVAILABLE",
+    "SELECTED_CONTEXT_TOKENS_IF_TOKENIZER_AVAILABLE",
+    "SEMANTIC_REPRESENTATION_NORMALIZED_COMPUTE_UNITS",
+    "INDEX_BUILD_NORMALIZED_COMPUTE_UNITS",
+    "RETRIEVAL_MILLISECONDS",
+    "RANKING_MILLISECONDS",
+    "EVALUATION_MILLISECONDS",
+    "METADATA_AND_LOG_BYTES"
+  ],
+  "marginal_representation_cost": {
+    "contrast": "ARM-04_MINUS_ARM-01",
+    "units_reported_separately": ["BYTES", "TOKENS", "NORMALIZED_COMPUTE_UNITS", "MILLISECONDS"],
+    "aggregation": "PER_FIXTURE_MEDIAN_P95_AND_TOTAL",
+    "maximum_ratio_to_arm_01": 2.0
+  },
+  "k_cost_curve": "Report ARM-02@K4, K8 and K16 candidate/selected cost separately and paired against ARM-01.",
+  "tokenizer_rule": "Use only a locally available version-pinned tokenizer; otherwise report TOKENIZER_NOT_AVAILABLE and do not infer tokens from bytes.",
+  "provider_cost": "NOT_APPLICABLE_PROVIDER_SELECTION_PROHIBITED",
+  "installation_authorized": false,
+  "execution_authorized": false
+}

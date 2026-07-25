@@ -421,18 +421,40 @@
     },
     {
       "id": "PEND-LAB-019",
-      "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+      "status": "COMPLETED_DOCUMENTARY_FAILURE_ANALYSIS_AND_NEXT_TEST_DESIGN_PUBLISHED",
       "type": "FULL_RAG_AUTHORITY_FIRST_FAILURE_ANALYSIS_AND_NEXT_TEST_PROPOSAL",
       "subject": "Analyze the bounded authority-first failure profile and propose a next discriminating test without selecting architecture or implementation",
+      "priority": "HIGH",
+      "authorization_required": true,
+      "completed_by_authorization": "AUTHORIZATION_LAB_FULL_RAG_AUTHORITY_FIRST_FAILURE_ANALYSIS_AND_NEXT_TEST_DESIGN_074",
+      "completed_by_design": "FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-002",
+      "current_authority": "NONE_AFTER_CONSUMPTION",
+      "automatic_approval": false,
+      "successor_pending": "PEND-LAB-020",
+      "next_authorized_action": "NONE_AFTER_CONSUMPTION",
+      "source_refs": [
+        "projects/lab/pending/PEND-LAB-019.json",
+        "projects/lab/evidence/EVD-LAB-AUD-004.json",
+        "projects/lab/reassessments/REA-LAB-005.json",
+        "projects/lab/authorizations/AUTHORIZATION_LAB_FULL_RAG_AUTHORITY_FIRST_FAILURE_ANALYSIS_AND_NEXT_TEST_DESIGN_074.json",
+        "projects/lab/test-designs/FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-002/MANIFEST.json",
+        "projects/lab/pending/PEND-LAB-020.json"
+      ]
+    },
+    {
+      "id": "PEND-LAB-020",
+      "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+      "type": "FULL_RAG_AUTHORITY_FIRST_FAILURE_DISCRIMINATION_TEST_EXECUTION",
+      "subject": "Generate, freeze, execute, evaluate and independently audit test design 002 under a separate bounded authorization",
       "priority": "HIGH",
       "authorization_required": true,
       "current_authority": "NONE",
       "automatic_approval": false,
       "next_authorized_action": "NONE_UNTIL_SEPARATE_EXPLICIT_AUTHORIZATION",
       "source_refs": [
-        "projects/lab/pending/PEND-LAB-019.json",
-        "projects/lab/evidence/EVD-LAB-AUD-004.json",
-        "projects/lab/reassessments/REA-LAB-005.json"
+        "projects/lab/pending/PEND-LAB-020.json",
+        "projects/lab/authorizations/AUTHORIZATION_LAB_FULL_RAG_AUTHORITY_FIRST_FAILURE_ANALYSIS_AND_NEXT_TEST_DESIGN_074.json",
+        "projects/lab/test-designs/FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-002/MANIFEST.json"
       ]
     }
   ]
