@@ -529,18 +529,39 @@
     },
     {
       "id": "PEND-LAB-023",
-      "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+      "status": "SUPERSEDED_BEFORE_EXECUTION",
       "type": "FULL_RAG_DESIGN_TRACEABILITY_REMEDIATION_AND_FRESH_TEST_DESIGN",
       "subject": "Prospectively remediate design traceability and produce isolated fresh test designs without executing them",
+      "priority": "HIGH",
+      "authorization_required": true,
+      "superseded_by_authorization": "AUTHORIZATION_LAB_SYMPHONIE_MINIMUM_COMPLETE_WORKFLOW_ECR_PRODUCT_LEADERSHIP_RECONCILIATION_079",
+      "supersession_reason": "FULL_RAG_LINE_CLOSED_AS_DOCUMENTED_RESEARCH_BASELINE_AND_FUTURE_ARCHITECTURAL_DEVELOPMENT_REDIRECTED_TO_ECR",
+      "execution_performed": false,
+      "current_authority": "NONE_AFTER_SUPERSESSION",
+      "automatic_approval": false,
+      "next_authorized_action": "NONE_AFTER_SUPERSESSION",
+      "source_refs": [
+        "projects/lab/pending/PEND-LAB-023.json",
+        "decisions/DEC-LAB-021.json",
+        "projects/lab/remediation-plans/FULL-RAG-POST-AUDIT-REMEDIATION-PLAN-001.json",
+        "projects/lab/full-rag-line-closure/FULL-RAG-LINE-CLOSURE-001.json",
+        "foundation-library/evidential-control/ECR-CAPABILITY-001/MANIFEST.json"
+      ]
+    },
+    {
+      "id": "PEND-LAB-024",
+      "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+      "type": "PRODUCT_LEADERSHIP_DISCRIMINATING_TEST_EXECUTION_AND_EXTERNAL_AUDIT",
+      "subject": "Execute and independently audit the Product Leadership activation and value discrimination test design",
       "priority": "HIGH",
       "authorization_required": true,
       "current_authority": "NONE",
       "automatic_approval": false,
       "next_authorized_action": "NONE_UNTIL_SEPARATE_EXPLICIT_AUTHORIZATION",
       "source_refs": [
-        "projects/lab/pending/PEND-LAB-023.json",
-        "decisions/DEC-LAB-021.json",
-        "projects/lab/remediation-plans/FULL-RAG-POST-AUDIT-REMEDIATION-PLAN-001.json"
+        "projects/lab/pending/PEND-LAB-024.json",
+        "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/MANIFEST.json",
+        "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json"
       ]
     }
   ]

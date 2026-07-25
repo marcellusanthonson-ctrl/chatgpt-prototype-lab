@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "package_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001",
+  "status": "DESIGN_READY_FOR_SEPARATE_EXECUTION_AND_AUDIT_AUTHORIZATION",
+  "authorization_id": "AUTHORIZATION_LAB_SYMPHONIE_MINIMUM_COMPLETE_WORKFLOW_ECR_PRODUCT_LEADERSHIP_RECONCILIATION_079",
+  "source_package": "PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001",
+  "successor_pending": "PEND-LAB-024",
+  "files": [
+    "MANIFEST.json",
+    "TEST_DESIGN.json",
+    "RUN_MATRIX.json",
+    "SCORING_AND_GATES.json",
+    "README.md"
+  ],
+  "file_count": 5,
+  "fixture_source": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/FIXTURES.json",
+  "fixture_count": 40,
+  "arm_count": 4,
+  "minimum_future_outputs": 88,
+  "test_executed": false,
+  "corpus_generated": false,
+  "provider_selected": false,
+  "architecture_selected": false,
+  "implementation_selected": false,
+  "implementation_approved": false,
+  "product_effect": "NONE",
+  "runtime_effect": "NONE",
+  "next_authorized_action": "NONE_AFTER_CONSUMPTION"
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "id": "PEND-LAB-024",
+  "project_id": "lab",
+  "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+  "type": "PRODUCT_LEADERSHIP_DISCRIMINATING_TEST_EXECUTION_AND_EXTERNAL_AUDIT",
+  "subject": "Execute and independently audit the Product Leadership activation and value discrimination test design",
+  "priority": "HIGH",
+  "created_at": "2026-07-25",
+  "source_authorization": "AUTHORIZATION_LAB_SYMPHONIE_MINIMUM_COMPLETE_WORKFLOW_ECR_PRODUCT_LEADERSHIP_RECONCILIATION_079",
+  "source_test_design": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001",
+  "authorization_required": true,
+  "status_boundary": "PROPOSAL_ONLY_NOT_AUTHORIZATION",
+  "required_future_authorizations": [
+    "SEPARATE_BOUNDED_SYNTHETIC_TEST_EXECUTION",
+    "SEPARATE_INDEPENDENT_READ_ONLY_EXTERNAL_AUDIT",
+    "SEPARATE_DOCUMENTARY_RECONCILIATION"
+  ],
+  "prohibitions": [
+    "EXECUTE_TESTS_WITHOUT_NEW_AUTHORIZATION",
+    "ACTIVATE_OR_INTEGRATE_PRODUCT_LEADERSHIP",
+    "USE_REAL_PRODUCT_DATA",
+    "SELECT_ECR_ARCHITECTURE_OR_PROVIDER",
+    "MODIFY_PRODUCT_OR_RUNTIME",
+    "DEPLOY"
+  ],
+  "current_authority": "NONE",
+  "automatic_approval": false,
+  "next_authorized_action": "NONE_UNTIL_SEPARATE_EXPLICIT_AUTHORIZATION",
+  "source_refs": [
+    "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/MANIFEST.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json"
+  ]
+}

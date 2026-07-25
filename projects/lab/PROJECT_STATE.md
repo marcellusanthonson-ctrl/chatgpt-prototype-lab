@@ -81,4 +81,14 @@ Las cinco hipótesis son `H-DECLARED-DECOYS` e `H-SYNONYM-EXPANSION` con procede
 
 No se modificaron diseño 002, ejecución 002, harness, resultados, EXP-LAB-003, EVD-LAB-EXP-003, auditoría 076, EVD-LAB-AUD-005, REA-LAB-006 ni autorizaciones 070–077.
 
+## Reconciliación RAG, ECR y Product Leadership 079
+
+La línea Full RAG queda cerrada como baseline de investigación documentado. Su interpretación reconciliada se preserva, pero `RAG_RESOLVED = NO`, `RAG_ARCHITECTURE_SELECTED = NO`, `RAG_PROVIDER_SELECTED = NO` y `RAG_IMPLEMENTATION_APPROVED = NO`. El cierre no reescribe evidencia histórica. `PEND-LAB-023` queda `SUPERSEDED_BEFORE_EXECUTION`.
+
+ECR se registra como `PROPOSED_TRANSVERSAL_EVIDENTIAL_CONTROL_CAPABILITY`. Su propósito futuro es controlar procedencia, aplicabilidad, autoridad, contradicciones y lineage antes de la acción. No existe implementación, runtime, proveedor, stack o arquitectura seleccionada. Symphonie es el primer consumidor previsto.
+
+El paquete `PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001` permanece `CANDIDATE_REQUIRES_DISCRIMINATING_TESTS`, no integrado, inactivo y sin consumo automático. Incluye 40 fixtures y un contrato de activación selectivo. La referencia histórica 064 es evidencia externa y no autoridad reutilizable.
+
+El diseño `PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001` compara baseline y paquete mediante evaluación cegada, controles positivo y negativo y gates de precisión, falsa activación, autoridad, evidencia inventada, reapertura y valor incremental. No se ejecutó. `PEND-LAB-024` conserva la única propuesta de ejecución y auditoría futuras.
+
 No existe autorización activa reutilizable. El HEAD propio se verifica en vivo y nunca se almacena como estado canónico vigente.

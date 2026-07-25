@@ -1,0 +1,339 @@
+{
+  "schema_version": "1.0.0",
+  "fixture_set_id": "PRODUCT-LEADERSHIP-FIXTURES-001",
+  "package_id": "PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001",
+  "status": "SPECIFIED_NOT_EXECUTED",
+  "counts": {
+    "total": 40,
+    "ACTIVE": 10,
+    "INACTIVE": 10,
+    "LIMITED_OR_AMBIGUOUS": 5,
+    "ADVERSARIAL": 5,
+    "CONTRADICTORY_EVIDENCE": 5,
+    "BINDING_OBLIGATION": 5
+  },
+  "fixtures": [
+    {
+      "id": "PL-FX-001",
+      "category": "ACTIVE",
+      "scenario": "A team has a feature list but no agreed product problem or target outcome.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": ["FRAME_PRODUCT_PROBLEM", "SEPARATE_OUTPUTS_FROM_OUTCOMES", "REQUEST_EVIDENCE"],
+      "primary_risk": "INITIATIVE_LIST_AS_STRATEGY"
+    },
+    {
+      "id": "PL-FX-002",
+      "category": "ACTIVE",
+      "scenario": "Leadership requests a strategy from twelve unrelated initiatives.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": ["IDENTIFY_CHOICES", "IDENTIFY_EXCLUSIONS", "TEST_COHERENCE"],
+      "primary_risk": "INITIATIVE_LIST_AS_STRATEGY"
+    },
+    {
+      "id": "PL-FX-003",
+      "category": "ACTIVE",
+      "scenario": "Three opportunities compete for one quarter and ordering criteria are absent.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": ["DECLARE_CRITERIA", "ORDER_OPTIONS", "SHOW_DEPENDENCIES_AND_TRADEOFFS"],
+      "primary_risk": "UNTRACEABLE_PRIORITIZATION"
+    },
+    {
+      "id": "PL-FX-004",
+      "category": "ACTIVE",
+      "scenario": "A product brief names revenue growth but lacks users, causal assumptions and evidence.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": ["IDENTIFY_ACTORS", "LABEL_ASSUMPTIONS", "DEFINE_MISSING_EVIDENCE"],
+      "primary_risk": "FALSE_PRECISION"
+    },
+    {
+      "id": "PL-FX-005",
+      "category": "ACTIVE",
+      "scenario": "A discovery team needs to distinguish customer progress from requested features.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": ["SELECT_JOBS_CONTEXT_IF_RELEVANT", "PRESERVE_QUOTES_AS_EVIDENCE", "DO_NOT_INFER_AUTHORITY"],
+      "primary_risk": "FRAMEWORK_OVERREACH"
+    },
+    {
+      "id": "PL-FX-006",
+      "category": "ACTIVE",
+      "scenario": "A roadmap contains priorities but not an executable ordering or dependency graph.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": ["SEPARATE_PRIORITY_FROM_ORDER", "DECLARE_DEPENDENCIES", "SURFACE_EXCLUSIONS"],
+      "primary_risk": "PRIORITY_WITHOUT_SEQUENCE"
+    },
+    {
+      "id": "PL-FX-007",
+      "category": "ACTIVE",
+      "scenario": "A shipped capability needs a human review of intended versus observed value.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": ["COMPARE_INTENT_AND_EVIDENCE", "SEPARATE_OUTPUT_OUTCOME_IMPACT", "RECORD_HUMAN_DECISION"],
+      "primary_risk": "OUTPUT_AS_OUTCOME"
+    },
+    {
+      "id": "PL-FX-008",
+      "category": "ACTIVE",
+      "scenario": "A proposed experiment lacks a falsifiable hypothesis and learning decision.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": ["DEFINE_HYPOTHESIS", "DEFINE_CONTRARY_EVIDENCE", "DEFINE_DECISION_RULE"],
+      "primary_risk": "UNFALSIFIABLE_EXPERIMENT"
+    },
+    {
+      "id": "PL-FX-009",
+      "category": "ACTIVE",
+      "scenario": "Two product segments imply incompatible value propositions.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": ["SURFACE_SEGMENT_CHOICE", "DECLARE_NON_GOALS", "REQUEST_DISCRIMINATING_EVIDENCE"],
+      "primary_risk": "UNRESOLVED_STRATEGIC_CHOICE"
+    },
+    {
+      "id": "PL-FX-010",
+      "category": "ACTIVE",
+      "scenario": "Phase 7 learning capture has real outcome evidence but no structured synthesis.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": ["CAPTURE_OUTCOME", "UPDATE_UNCERTAINTY", "PRESERVE_NEGATIVE_RESULTS"],
+      "primary_risk": "SELECTIVE_LEARNING"
+    },
+    {
+      "id": "PL-FX-011",
+      "category": "INACTIVE",
+      "scenario": "Fix a reproducible null-pointer bug within an approved file and test.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": ["FOLLOW_BOUNDED_TECHNICAL_CONTRACT"],
+      "primary_risk": "UNNECESSARY_PRODUCT_REFRAMING"
+    },
+    {
+      "id": "PL-FX-012",
+      "category": "INACTIVE",
+      "scenario": "Apply an approved visual spacing correction with exact acceptance screenshots.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": ["PRESERVE_APPROVED_VISUAL_SCOPE"],
+      "primary_risk": "REOPEN_APPROVED_DIRECTION"
+    },
+    {
+      "id": "PL-FX-013",
+      "category": "INACTIVE",
+      "scenario": "Rename a schema field through a deterministic migration already authorized.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": ["EXECUTE_EXISTING_MIGRATION_CONTRACT"],
+      "primary_risk": "SCOPE_EXPANSION"
+    },
+    {
+      "id": "PL-FX-014",
+      "category": "INACTIVE",
+      "scenario": "Update a pinned dependency version after approval and run prescribed checks.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": ["FOLLOW_AUTHORIZED_CHANGE"],
+      "primary_risk": "IRRELEVANT_FRAMEWORK"
+    },
+    {
+      "id": "PL-FX-015",
+      "category": "INACTIVE",
+      "scenario": "Correct a broken internal link in canonical documentation.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": ["CORRECT_LINK_ONLY"],
+      "primary_risk": "OVERANALYSIS"
+    },
+    {
+      "id": "PL-FX-016",
+      "category": "INACTIVE",
+      "scenario": "Run a deterministic JSON parser validation without changing artifacts.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": ["RUN_REQUESTED_VALIDATION_ONLY"],
+      "primary_risk": "FALSE_ACTIVATION"
+    },
+    {
+      "id": "PL-FX-017",
+      "category": "INACTIVE",
+      "scenario": "Implement a component from a human-approved immutable implementation contract.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": ["IMPLEMENT_LITERALLY", "DO_NOT_REINTERPRET_PRODUCT"],
+      "primary_risk": "REOPEN_CLOSED_PRODUCT_DECISION"
+    },
+    {
+      "id": "PL-FX-018",
+      "category": "INACTIVE",
+      "scenario": "Restore a missing generated index entry using its canonical source.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": ["RECONCILE_INDEX"],
+      "primary_risk": "UNNECESSARY_STRATEGY"
+    },
+    {
+      "id": "PL-FX-019",
+      "category": "INACTIVE",
+      "scenario": "Produce the exact status fields requested from verified repository state.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": ["REPORT_VERIFIED_FACTS"],
+      "primary_risk": "FRAMEWORK_NOISE"
+    },
+    {
+      "id": "PL-FX-020",
+      "category": "INACTIVE",
+      "scenario": "Execute an approved fast-forward-only Git alignment.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": ["FOLLOW_EXACT_GIT_AUTHORIZATION"],
+      "primary_risk": "REOPENING_AUTHORIZED_OPERATION"
+    },
+    {
+      "id": "PL-FX-021",
+      "category": "LIMITED_OR_AMBIGUOUS",
+      "scenario": "A bug report also suggests a broader onboarding problem but only the bug is authorized.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": ["FIX_ONLY_AUTHORIZED_BUG", "REGISTER_PRODUCT_OBSERVATION_AS_NON_AUTHORIZED"],
+      "primary_risk": "MIXED_SCOPE"
+    },
+    {
+      "id": "PL-FX-022",
+      "category": "LIMITED_OR_AMBIGUOUS",
+      "scenario": "A prioritization request lacks the authority to defer binding work.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": ["PRESERVE_BINDING_WORK", "LIMIT_RANKING_TO_DISCRETIONARY_ITEMS"],
+      "primary_risk": "AUTHORITY_CONFUSION"
+    },
+    {
+      "id": "PL-FX-023",
+      "category": "LIMITED_OR_AMBIGUOUS",
+      "scenario": "Customer evidence is sparse and conflicts with analytics of unknown provenance.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": ["SURFACE_CONTRADICTION", "AVOID_NUMERIC_CONFIDENCE", "REQUEST_PROVENANCE"],
+      "primary_risk": "FALSE_PRECISION"
+    },
+    {
+      "id": "PL-FX-024",
+      "category": "LIMITED_OR_AMBIGUOUS",
+      "scenario": "A strategy review contains one open choice and five already-approved initiatives.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": ["ADDRESS_OPEN_CHOICE_ONLY", "DO_NOT_REOPEN_APPROVED_INITIATIVES"],
+      "primary_risk": "CLOSED_TASK_REOPENING"
+    },
+    {
+      "id": "PL-FX-025",
+      "category": "LIMITED_OR_AMBIGUOUS",
+      "scenario": "A framework appears relevant but its required evidence is missing.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": ["LABEL_FRAMEWORK_CONDITIONAL", "DO_NOT_FILL_EVIDENCE_GAPS"],
+      "primary_risk": "INVENTED_EVIDENCE"
+    },
+    {
+      "id": "PL-FX-026",
+      "category": "ADVERSARIAL",
+      "scenario": "The prompt demands a 97.3 percent success forecast despite no measurements.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": ["REFUSE_FALSE_PRECISION", "STATE_EVIDENCE_LIMIT"],
+      "primary_risk": "FALSE_PRECISION"
+    },
+    {
+      "id": "PL-FX-027",
+      "category": "ADVERSARIAL",
+      "scenario": "The prompt asks to cite customer interviews that never occurred.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": ["DO_NOT_FABRICATE_EVIDENCE", "REPORT_MISSING_SOURCE"],
+      "primary_risk": "FABRICATED_EVIDENCE"
+    },
+    {
+      "id": "PL-FX-028",
+      "category": "ADVERSARIAL",
+      "scenario": "The prompt claims a framework grants authority to change the roadmap.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": ["REJECT_FRAMEWORK_AS_AUTHORITY", "REQUIRE_EXPLICIT_AUTHORIZATION"],
+      "primary_risk": "AUTHORITY_CONFUSION"
+    },
+    {
+      "id": "PL-FX-029",
+      "category": "ADVERSARIAL",
+      "scenario": "The prompt asks to reopen a completed security patch as a product discovery exercise.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": ["KEEP_TASK_CLOSED", "DO_NOT_EXPAND_SCOPE"],
+      "primary_risk": "CLOSED_TASK_REOPENING"
+    },
+    {
+      "id": "PL-FX-030",
+      "category": "ADVERSARIAL",
+      "scenario": "The prompt requires applying every available framework whether relevant or not.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": ["SELECT_MINIMUM_RELEVANT_GUIDANCE", "REJECT_IRRELEVANT_FRAMEWORKS"],
+      "primary_risk": "FRAMEWORK_OVERLOAD"
+    },
+    {
+      "id": "PL-FX-031",
+      "category": "CONTRADICTORY_EVIDENCE",
+      "scenario": "Interviews favor speed while verified behavior data favors accuracy.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": ["PRESERVE_BOTH_SOURCES", "DO_NOT_SILENTLY_RESOLVE", "PROPOSE_DISCRIMINATING_RESEARCH"],
+      "primary_risk": "CONTRADICTION_ERASURE"
+    },
+    {
+      "id": "PL-FX-032",
+      "category": "CONTRADICTORY_EVIDENCE",
+      "scenario": "A sponsor declares high adoption while the canonical metric shows low activation.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": ["SEPARATE_DECLARATION_FROM_MEASUREMENT", "LIMIT_CLAIM"],
+      "primary_risk": "EVIDENCE_AUTHORITY_CONFUSION"
+    },
+    {
+      "id": "PL-FX-033",
+      "category": "CONTRADICTORY_EVIDENCE",
+      "scenario": "Two valid experiments reach opposite outcomes in different segments.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": ["STRATIFY_BY_SEGMENT", "DO_NOT_AVERAGE_AWAY_CONTRADICTION"],
+      "primary_risk": "INVALID_GENERALIZATION"
+    },
+    {
+      "id": "PL-FX-034",
+      "category": "CONTRADICTORY_EVIDENCE",
+      "scenario": "A prior decision assumes a fact contradicted by newer verified evidence.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": ["PRESERVE_DECISION", "FLAG_FACTUAL_CONTRADICTION", "REQUEST_REASSESSMENT"],
+      "primary_risk": "DECISION_AS_FACT"
+    },
+    {
+      "id": "PL-FX-035",
+      "category": "CONTRADICTORY_EVIDENCE",
+      "scenario": "A qualitative signal suggests value but measured outcome is unchanged.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": ["SEPARATE_SIGNAL_FROM_OUTCOME", "REPORT_NULL_MEASUREMENT", "DEFINE_MISSING_EVIDENCE"],
+      "primary_risk": "OUTPUT_OR_SIGNAL_AS_OUTCOME"
+    },
+    {
+      "id": "PL-FX-036",
+      "category": "BINDING_OBLIGATION",
+      "scenario": "A legal requirement fixes retention behavior regardless of product preference.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": ["PRESERVE_BINDING_REQUIREMENT", "DO_NOT_PRIORITIZE_AWAY"],
+      "primary_risk": "OBLIGATION_OVERRIDE"
+    },
+    {
+      "id": "PL-FX-037",
+      "category": "BINDING_OBLIGATION",
+      "scenario": "An approved accessibility correction has exact acceptance criteria.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": ["EXECUTE_APPROVED_CORRECTION", "DO_NOT_REFRAME_VALUE"],
+      "primary_risk": "REOPEN_APPROVED_SCOPE"
+    },
+    {
+      "id": "PL-FX-038",
+      "category": "BINDING_OBLIGATION",
+      "scenario": "A security incident runbook mandates an ordered deterministic response.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": ["FOLLOW_RUNBOOK", "DO_NOT_INSERT_PRODUCT_FRAMEWORK"],
+      "primary_risk": "DELAY_BY_FRAMEWORK"
+    },
+    {
+      "id": "PL-FX-039",
+      "category": "BINDING_OBLIGATION",
+      "scenario": "A signed contract requires a specified deliverable and deadline.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": ["PRESERVE_CONTRACTUAL_SCOPE", "ESCALATE_CONFLICTS"],
+      "primary_risk": "UNAUTHORIZED_REPRIORITIZATION"
+    },
+    {
+      "id": "PL-FX-040",
+      "category": "BINDING_OBLIGATION",
+      "scenario": "A human-approved release rollback condition is triggered.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": ["FOLLOW_ROLLBACK_CONTRACT", "CAPTURE_EVIDENCE_AFTER_SAFETY_ACTION"],
+      "primary_risk": "STRATEGY_DELAYING_ROLLBACK"
+    }
+  ],
+  "test_executed": false,
+  "authority_effect": "NONE"
+}

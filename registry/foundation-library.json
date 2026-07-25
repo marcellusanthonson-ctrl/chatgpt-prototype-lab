@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0.0",
   "library_id": "lab.foundation-library",
-  "version": "1.5.3",
+  "version": "1.6.0",
   "status": "DOCUMENTED_AND_VALIDATED",
   "scope": "DOCUMENTATION_AND_VALIDATION_ONLY",
-  "updated_at": "2026-07-23",
+  "updated_at": "2026-07-25",
   "governance": {
     "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
     "branch": "main",
@@ -185,6 +185,31 @@
       "integration_status": "PUBLISHED",
       "human_contextual_approval": "APPROVED",
       "strategy_result": "SUCCESS"
+    },
+    {
+      "id": "ECR-CAPABILITY-001",
+      "kind": "TRANSVERSAL_EVIDENTIAL_CONTROL_CAPABILITY",
+      "canonical_path": "foundation-library/evidential-control/ECR-CAPABILITY-001/MANIFEST.json",
+      "status": "PROPOSED_TRANSVERSAL_EVIDENTIAL_CONTROL_CAPABILITY",
+      "version": "0.1.0",
+      "implemented": false,
+      "runtime": "NONE",
+      "architecture_selected": false,
+      "provider_selected": false,
+      "first_intended_consumer": "SYMPHONIE"
+    },
+    {
+      "id": "PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001",
+      "kind": "PRODUCT_LEADERSHIP_CANDIDATE_PACKAGE",
+      "canonical_path": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/MANIFEST.json",
+      "status": "CANDIDATE_REQUIRES_DISCRIMINATING_TESTS",
+      "version": "0.1.0",
+      "fixture_count": 40,
+      "integrated": false,
+      "active": false,
+      "automatic_consumption": false,
+      "runtime_effect": "NONE",
+      "authority_effect": "NONE"
     }
   ],
   "quality_gates": [
@@ -209,6 +234,10 @@
     "ZERO_KNOWN_CORRECTABLE_DEFECTS_AT_DELIVERY",
     "RENDER_INSPECT_DIAGNOSE_CORRECT_REVALIDATE",
     "STRUCTURAL_DEFECT_REQUIRES_RECONSTRUCTION"
+    ,"PRODUCT_LEADERSHIP_ACTIVATION_PRECISION"
+    ,"PRODUCT_LEADERSHIP_AUTHORITY_SEPARATION"
+    ,"PRODUCT_LEADERSHIP_VALUE_MEASURED_NOT_ASSUMED"
+    ,"ECR_ARCHITECTURE_GATE_NOT_READY"
   ],
   "authorizations": [
     {
@@ -260,6 +289,11 @@
     {
       "id": "AUTHORIZATION_LAB_ASSET_FIRST_ICON_STRATEGY_HUMAN_APPROVAL_CLOSURE_061",
       "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "approved_by": "Jonathan Martínez"
+    },
+    {
+      "id": "AUTHORIZATION_LAB_SYMPHONIE_MINIMUM_COMPLETE_WORKFLOW_ECR_PRODUCT_LEADERSHIP_RECONCILIATION_079",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_IN_BOTH_REPOSITORIES",
       "approved_by": "Jonathan Martínez"
     }
   ]

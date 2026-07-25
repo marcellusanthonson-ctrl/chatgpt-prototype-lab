@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "capability_id": "ECR-CAPABILITY-001",
+  "name": "Evidential Control and Reconciliation",
+  "status": "PROPOSED_TRANSVERSAL_EVIDENTIAL_CONTROL_CAPABILITY",
+  "implemented": false,
+  "runtime": "NONE",
+  "architecture_selected": false,
+  "provider_selected": false,
+  "first_intended_consumer": "SYMPHONIE",
+  "purpose": "Provide a future cross-project control plane for evidence provenance, authority separation, contradiction preservation, claim lineage, applicability and reconciliation before architectural action.",
+  "relationship_to_lab": "LAB remains the canonical owner of governance, decisions, authorization and cross-project evidence policy.",
+  "relationship_to_symphonie": "Symphonie is the first intended consumer through a documented future interface only.",
+  "relationship_to_rag": "ECR supersedes the Full RAG experimental line as a future architectural direction without declaring RAG resolved or prescribing retrieval technology.",
+  "future_consumers": [
+    "SYMPHONIE",
+    "MAMMOTHSKILLS",
+    "AUTHORIZED_PRODUCT_PROJECTS",
+    "AUDIT_AND_CONTINUITY_WORKFLOWS"
+  ],
+  "planned_capabilities": [
+    "SOURCE_PROVENANCE_REGISTRATION",
+    "EVIDENCE_CLASSIFICATION",
+    "AUTHORITY_AND_EVIDENCE_SEPARATION",
+    "CLAIM_LINEAGE",
+    "CONTRADICTION_PRESERVATION",
+    "APPLICABILITY_FILTERING",
+    "RECONCILIATION_RECORDS",
+    "REVOCATION_AND_SUPERSESSION",
+    "AUDITABLE_EMPTY_RESULT",
+    "FAIL_CLOSED_GATES"
+  ],
+  "boundaries": [
+    "NO_RUNTIME",
+    "NO_AUTOMATIC_REPOSITORY_ACCESS",
+    "NO_EMBEDDINGS_OR_VECTOR_STORE_SELECTION",
+    "NO_PROVIDER_OR_STACK_SELECTION",
+    "NO_AUTONOMOUS_AUTHORITY",
+    "NO_PRODUCT_INTEGRATION",
+    "NO_INFERENCE_AS_EVIDENCE"
+  ],
+  "risks": [
+    "AUTHORITY_CONFUSION",
+    "FALSE_PROVENANCE_CONFIDENCE",
+    "STALE_EVIDENCE",
+    "CROSS_PROJECT_LEAKAGE",
+    "OVERBROAD_APPLICABILITY",
+    "CONTRADICTION_ERASURE",
+    "ARCHITECTURE_PRECOMMITMENT",
+    "AUTOMATION_BIAS"
+  ],
+  "architecture_selection_gates": [
+    "CONSUMER_REQUIREMENTS_APPROVED",
+    "DATA_AND_PRIVACY_BOUNDARIES_APPROVED",
+    "EVIDENCE_AND_AUTHORITY_MODEL_VALIDATED",
+    "SYNTHETIC_FAILURE_TESTS_PASS",
+    "CROSS_PROJECT_ISOLATION_PASS",
+    "CONTRADICTION_AND_REVOCATION_PASS",
+    "PROVIDER_NEUTRAL_COMPARISON_AUTHORIZED_AND_COMPLETED",
+    "INDEPENDENT_AUDIT_COMPLETED",
+    "HUMAN_ARCHITECTURE_DECISION_RECORDED"
+  ],
+  "authority_effect": "NONE",
+  "product_effect": "NONE",
+  "source_refs": [
+    "projects/lab/full-rag-line-closure/FULL-RAG-LINE-CLOSURE-001.json",
+    "architecture/rag/FEDERATION_CONTRACT.json",
+    "LAB_CONTRACT.md",
+    "METHODOLOGY.md"
+  ]
+}

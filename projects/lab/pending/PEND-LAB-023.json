@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "id": "PEND-LAB-023",
   "project_id": "lab",
-  "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+  "status": "SUPERSEDED_BEFORE_EXECUTION",
   "type": "FULL_RAG_DESIGN_TRACEABILITY_REMEDIATION_AND_FRESH_TEST_DESIGN",
   "subject": "Prospectively remediate design traceability and produce isolated fresh test designs without executing them",
   "priority": "HIGH",
@@ -12,7 +12,7 @@
   "source_decision": "DEC-LAB-021",
   "source_remediation_plan": "FULL-RAG-POST-AUDIT-REMEDIATION-PLAN-001",
   "authorization_required": true,
-  "status_boundary": "PROPOSAL_ONLY_NOT_AUTHORIZATION",
+  "status_boundary": "SUPERSEDED_BY_AUTHORIZATION_079_WITHOUT_EXECUTION",
   "proposed_outputs": [
     "PROSPECTIVE_COMPLETE_DESIGN_SOURCE_TRACEABILITY",
     "ISOLATED_C_RANK_TEST_DESIGN",
@@ -32,14 +32,19 @@
     "MODIFY_PRODUCT_OR_RUNTIME",
     "DEPLOY"
   ],
-  "current_authority": "NONE",
+  "superseded_by_authorization": "AUTHORIZATION_LAB_SYMPHONIE_MINIMUM_COMPLETE_WORKFLOW_ECR_PRODUCT_LEADERSHIP_RECONCILIATION_079",
+  "supersession_reason": "FULL_RAG_LINE_CLOSED_AS_DOCUMENTED_RESEARCH_BASELINE_AND_FUTURE_ARCHITECTURAL_DEVELOPMENT_REDIRECTED_TO_ECR",
+  "execution_performed": false,
+  "current_authority": "NONE_AFTER_SUPERSESSION",
   "automatic_approval": false,
-  "next_authorized_action": "NONE_UNTIL_SEPARATE_EXPLICIT_AUTHORIZATION",
+  "next_authorized_action": "NONE_AFTER_SUPERSESSION",
   "source_refs": [
     "decisions/DEC-LAB-021.json",
     "projects/lab/remediation-plans/FULL-RAG-POST-AUDIT-REMEDIATION-PLAN-001.json",
     "projects/lab/pending/PEND-LAB-022.json",
     "projects/lab/evidence/EVD-LAB-AUD-005.json",
-    "projects/lab/reassessments/REA-LAB-006.json"
+    "projects/lab/reassessments/REA-LAB-006.json",
+    "projects/lab/full-rag-line-closure/FULL-RAG-LINE-CLOSURE-001.json",
+    "foundation-library/evidential-control/ECR-CAPABILITY-001/MANIFEST.json"
   ]
 }

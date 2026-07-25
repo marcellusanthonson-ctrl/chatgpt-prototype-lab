@@ -250,8 +250,18 @@
     {
       "order": 23,
       "item": "FULL_RAG_DESIGN_TRACEABILITY_REMEDIATION_AND_FRESH_TEST_DESIGN",
-      "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+      "status": "SUPERSEDED_BEFORE_EXECUTION",
       "pending": "PEND-LAB-023",
+      "superseded_by": "ECR_PROPOSED_TRANSVERSAL_EVIDENTIAL_CONTROL_CAPABILITY",
+      "execution_performed": false,
+      "authority_effect": "NONE",
+      "next_gate": "NONE_FULL_RAG_LINE_CLOSED"
+    },
+    {
+      "order": 24,
+      "item": "PRODUCT_LEADERSHIP_DISCRIMINATING_TEST_EXECUTION_AND_EXTERNAL_AUDIT",
+      "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+      "pending": "PEND-LAB-024",
       "authority_effect": "NONE",
       "next_gate": "SEPARATE_EXPLICIT_AUTHORIZATION"
     }

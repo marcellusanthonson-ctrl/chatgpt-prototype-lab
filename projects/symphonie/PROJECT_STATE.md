@@ -6,9 +6,9 @@ La fuente estructurada del LAB es PROJECT_STATE.json. El estado operativo perten
 
 - Repositorio: marcellusanthonson-ctrl/symphonie.
 - Rama: main.
-- HEAD: 9de9dcf5c58583cd46bece41a0e772e3671801ff.
-- Versión documental: 0.4.0.
-- Fileset: 49.
+- HEAD: `VERIFY_LIVE_AT_USE`; parent verificado de la reconciliación 079: `f3b10dcc26266c15de9658e97ba63a59525ec13d`.
+- Versión documental reconciliada: 0.8.0.
+- Fileset objetivo de la reconciliación: 58.
 - Fases: 8.
 - Runtime e integración: no autorizados.
 
@@ -33,5 +33,7 @@ Fase 0 tiene baseline experimental sin validación completa de runtime. Fases 1,
 ## Pendiente principal
 
 Los schemas de las fases 1, 2, 5, 6 y 7 fueron publicados y verificados en el HEAD indicado. DEC-LAB-015 mantiene el método proporcional como baseline experimental; su repetibilidad sigue pendiente con al menos tres skills distintas.
+
+La reconciliación 079 completa documentalmente los contratos mínimos de las ocho fases y valida su grafo de transición sin ejecutar un piloto. La interfaz ECR queda `DOCUMENTED_NOT_IMPLEMENTED` y Product Leadership `DOCUMENTED_BUT_DISABLED_PENDING_TESTS`.
 
 No existe una siguiente acción autorizada.

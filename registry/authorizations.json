@@ -995,6 +995,31 @@
       "implementation_selection_authorized": false,
       "architecture_selection_authorized": false,
       "product_changes_authorized": false
+    },
+    {
+      "id": "AUTHORIZATION_LAB_SYMPHONIE_MINIMUM_COMPLETE_WORKFLOW_ECR_PRODUCT_LEADERSHIP_RECONCILIATION_079",
+      "state_key": "symphonie_minimum_complete_workflow_ecr_product_leadership_reconciliation_079",
+      "project_id": "lab",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_IN_BOTH_REPOSITORIES",
+      "approved_by": "Jonathan Martínez",
+      "scope": "DOCUMENTARY_FULL_RAG_CLOSURE_ECR_PROPOSAL_PRODUCT_LEADERSHIP_CANDIDATE_AND_SYMPHONIE_MINIMUM_COMPLETE_WORKFLOW",
+      "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_SYMPHONIE_MINIMUM_COMPLETE_WORKFLOW_ECR_PRODUCT_LEADERSHIP_RECONCILIATION_079.json",
+      "repositories": [
+        "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+        "marcellusanthonson-ctrl/symphonie"
+      ],
+      "branch": "main",
+      "expected_parent_head_lab": "05144efd81bfb1c0bde590183c54a8bd93472d96",
+      "expected_parent_head_symphonie": "f3b10dcc26266c15de9658e97ba63a59525ec13d",
+      "updated_at": "2026-07-25",
+      "commit_authorized": true,
+      "push_authorized": true,
+      "source_file_update_authorized": true,
+      "test_execution_authorized": false,
+      "runtime_authorized": false,
+      "implementation_selection_authorized": false,
+      "architecture_selection_authorized": false,
+      "product_changes_authorized": false
     }
   ]
 }

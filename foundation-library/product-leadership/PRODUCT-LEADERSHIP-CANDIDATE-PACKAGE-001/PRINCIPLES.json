@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "package_id": "PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001",
+  "status": "CANDIDATE_REQUIRES_DISCRIMINATING_TESTS",
+  "principles": [
+    {
+      "id": "PL-P01",
+      "statement": "Start from the product problem and intended outcome before proposing initiatives.",
+      "claim_class": "CANDIDATE_HEURISTIC",
+      "activation": "PRODUCT_DEFINITION_OR_STRATEGIC_AMBIGUITY"
+    },
+    {
+      "id": "PL-P02",
+      "statement": "Separate outputs, outcomes and impacts explicitly.",
+      "claim_class": "CANDIDATE_HEURISTIC",
+      "activation": "VALUE_OR_SUCCESS_CRITERIA"
+    },
+    {
+      "id": "PL-P03",
+      "statement": "Treat strategy as choices and exclusions, not a list of initiatives.",
+      "claim_class": "CANDIDATE_HEURISTIC",
+      "activation": "STRATEGY_OR_PRIORITIZATION"
+    },
+    {
+      "id": "PL-P04",
+      "statement": "Preserve evidence provenance and label assumptions, unknowns and contradictions.",
+      "claim_class": "GOVERNANCE_ALIGNED_CANDIDATE",
+      "activation": "EVIDENCE_OR_RISK_REVIEW"
+    },
+    {
+      "id": "PL-P05",
+      "statement": "Do not infer authority from evidence, recommendations or framework output.",
+      "claim_class": "BINDING_GOVERNANCE_BOUNDARY",
+      "activation": "ALWAYS_WHEN_PACKAGE_IS_USED"
+    },
+    {
+      "id": "PL-P06",
+      "statement": "Prioritization must expose criterion, ordering, trade-offs and excluded work.",
+      "claim_class": "CANDIDATE_HEURISTIC",
+      "activation": "PRIORITIZATION_OR_SEQUENCE"
+    },
+    {
+      "id": "PL-P07",
+      "statement": "Choose only context-relevant frameworks and record why alternatives were rejected.",
+      "claim_class": "CANDIDATE_HEURISTIC",
+      "activation": "FRAMEWORK_SELECTION"
+    },
+    {
+      "id": "PL-P08",
+      "statement": "Avoid false precision when evidence cannot support numeric confidence or forecasts.",
+      "claim_class": "EVIDENCE_BOUNDARY",
+      "activation": "METRICS_FORECASTS_OR_SCORING"
+    },
+    {
+      "id": "PL-P09",
+      "statement": "Closed tasks and binding obligations stay closed unless new authority explicitly reopens them.",
+      "claim_class": "BINDING_GOVERNANCE_BOUNDARY",
+      "activation": "TASK_STATUS_OR_OBLIGATION"
+    },
+    {
+      "id": "PL-P10",
+      "statement": "Candidate value is established through comparative evidence, not asserted by the package.",
+      "claim_class": "EXPERIMENTAL_BOUNDARY",
+      "activation": "PACKAGE_EVALUATION"
+    }
+  ],
+  "integrated": false,
+  "active": false,
+  "authority_effect": "NONE"
+}

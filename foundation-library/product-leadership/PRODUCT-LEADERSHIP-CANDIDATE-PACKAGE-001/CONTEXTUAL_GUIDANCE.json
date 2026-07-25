@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0.0",
+  "package_id": "PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001",
+  "contexts": [
+    {
+      "context": "PRODUCT_DEFINITION",
+      "activation": "ACTIVE",
+      "guidance": ["DEFINE_PROBLEM", "IDENTIFY_PRIMARY_OUTCOME", "SEPARATE_ASSUMPTIONS_FROM_EVIDENCE", "RECORD_NON_GOALS"]
+    },
+    {
+      "context": "RESEARCH_AND_EVIDENCE",
+      "activation": "ACTIVE_OR_LIMITED",
+      "guidance": ["REGISTER_PROVENANCE", "SURFACE_CONTRADICTIONS", "LIMIT_CLAIMS", "DEFINE_MISSING_EVIDENCE"]
+    },
+    {
+      "context": "STRATEGY_AND_PRIORITIZATION",
+      "activation": "ACTIVE",
+      "guidance": ["STATE_CHOICES", "STATE_EXCLUSIONS", "DEFINE_CRITERIA", "ORDER_WITH_DEPENDENCIES"]
+    },
+    {
+      "context": "HUMAN_VALUE_REVIEW",
+      "activation": "ACTIVE",
+      "guidance": ["COMPARE_INTENT_TO_OBSERVED_VALUE", "PRESERVE_HUMAN_DECISION", "RECORD_CONDITIONS"]
+    },
+    {
+      "context": "OUTCOME_AND_LEARNING_CAPTURE",
+      "activation": "ACTIVE_IF_EVIDENCE_EXISTS",
+      "guidance": ["SEPARATE_OUTPUT_FROM_OUTCOME", "RECORD_RESULT", "UPDATE_UNCERTAINTY", "DO_NOT_INVENT_IMPACT"]
+    },
+    {
+      "context": "CLOSED_TECHNICAL_OR_DETERMINISTIC_WORK",
+      "activation": "INACTIVE",
+      "guidance": ["FOLLOW_EXISTING_CONTRACT", "DO_NOT_REOPEN_SCOPE", "DO_NOT_ADD_PRODUCT_FRAMEWORK"]
+    }
+  ],
+  "symphonie_future_points": {
+    "PHASE_0": "ELIGIBILITY_ROUTING",
+    "PHASE_1": "PRIMARY_PRODUCT_CRITERION",
+    "PHASE_2": "EVIDENCE_AND_RISK_CRITERION",
+    "PHASE_6": "HUMAN_VALUE_REVIEW",
+    "PHASE_7": "OUTCOME_AND_LEARNING_CAPTURE"
+  },
+  "integration_status": "DOCUMENTED_BUT_DISABLED_PENDING_TESTS"
+}

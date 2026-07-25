@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "package_id": "PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001",
+  "risks": [
+    {"id": "PL-R01", "risk": "FALSE_ACTIVATION_ON_CLOSED_TASK", "severity": "HIGH", "control": "INACTIVE_CLASS_AND_NEGATIVE_FIXTURES"},
+    {"id": "PL-R02", "risk": "REOPENING_CLOSED_SCOPE", "severity": "HIGH", "control": "TASK_STATE_AND_AUTHORITY_PRECHECK"},
+    {"id": "PL-R03", "risk": "FRAMEWORK_AS_AUTHORITY", "severity": "CRITICAL", "control": "AUTHORITY_EFFECT_NONE"},
+    {"id": "PL-R04", "risk": "FABRICATED_EVIDENCE", "severity": "CRITICAL", "control": "PROVENANCE_REQUIRED_AND_ZERO_TOLERANCE_GATE"},
+    {"id": "PL-R05", "risk": "FALSE_PRECISION", "severity": "HIGH", "control": "UNCERTAINTY_AND_EVIDENCE_LIMITS"},
+    {"id": "PL-R06", "risk": "IRRELEVANT_FRAMEWORK_OVERLAY", "severity": "MEDIUM", "control": "REJECTED_FRAMEWORKS_REQUIRED"},
+    {"id": "PL-R07", "risk": "OUTPUT_PRESENTED_AS_OUTCOME", "severity": "HIGH", "control": "OUTPUT_OUTCOME_IMPACT_SEPARATION"},
+    {"id": "PL-R08", "risk": "INITIATIVE_LIST_PRESENTED_AS_STRATEGY", "severity": "HIGH", "control": "CHOICES_EXCLUSIONS_AND_COHERENCE_REQUIRED"},
+    {"id": "PL-R09", "risk": "PRIORITY_SCORE_WITHOUT_ORDER_OR_DEPENDENCIES", "severity": "MEDIUM", "control": "ORDER_AND_DEPENDENCIES_REQUIRED"},
+    {"id": "PL-R10", "risk": "PACKAGE_ACTIVATED_AUTOMATICALLY", "severity": "CRITICAL", "control": "AUTOMATIC_CONSUMPTION_FALSE"}
+  ],
+  "residual_risk": "UNKNOWN_UNTIL_DISCRIMINATING_TESTS_AND_EXTERNAL_AUDIT",
+  "integration_status": "DISABLED"
+}

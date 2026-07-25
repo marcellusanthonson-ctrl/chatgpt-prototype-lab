@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "package_id": "PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001",
+  "runtime_dependencies": [],
+  "provider_dependencies": [],
+  "architecture_dependencies": [],
+  "documentary_dependencies": [
+    {
+      "id": "LAB_GOVERNANCE",
+      "type": "CANONICAL_INTERNAL",
+      "required_for": "AUTHORITY_AND_CLAIM_BOUNDARIES"
+    },
+    {
+      "id": "SYMPHONIE_PHASE_CONTRACTS",
+      "type": "FUTURE_CONSUMER_INTERFACE",
+      "required_for": "CONTEXTUAL_ACTIVATION_POINTS"
+    },
+    {
+      "id": "REGISTERED_PRODUCT_LEADERSHIP_SOURCES",
+      "type": "EXTERNAL_CONTEXTUAL_REFERENCES",
+      "required_for": "PROVENANCE_ONLY"
+    }
+  ],
+  "network_access_required": false,
+  "automatic_source_ingestion": false,
+  "external_source_authority": "NONE",
+  "dependency_selection_effect": "NONE"
+}

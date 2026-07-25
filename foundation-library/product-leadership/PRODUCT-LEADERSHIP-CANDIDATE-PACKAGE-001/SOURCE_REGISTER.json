@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0.0",
+  "register_id": "PRODUCT-LEADERSHIP-SOURCE-REGISTER-001",
+  "package_id": "PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001",
+  "sources": [
+    {
+      "id": "PL-SRC-001",
+      "source": "Inspired",
+      "author": "Marty Cagan",
+      "role": "PRODUCT_DISCOVERY_AND_EMPOWERED_TEAM_CONTEXT",
+      "claim_status": "CONTEXTUAL_SECONDARY_SOURCE_NOT_AUTHORITY"
+    },
+    {
+      "id": "PL-SRC-002",
+      "source": "Continuous Discovery Habits",
+      "author": "Teresa Torres",
+      "role": "CONTINUOUS_DISCOVERY_AND_OPPORTUNITY_MAPPING_CONTEXT",
+      "claim_status": "CONTEXTUAL_SECONDARY_SOURCE_NOT_AUTHORITY"
+    },
+    {
+      "id": "PL-SRC-003",
+      "source": "Competing Against Luck",
+      "author": "Clayton Christensen and collaborators",
+      "role": "JOBS_AND_PROGRESS_CONTEXT",
+      "claim_status": "CONTEXTUAL_SECONDARY_SOURCE_NOT_AUTHORITY"
+    },
+    {
+      "id": "PL-SRC-004",
+      "source": "Good Strategy Bad Strategy",
+      "author": "Richard Rumelt",
+      "role": "STRATEGIC_CHOICES_AND_COHERENCE_CONTEXT",
+      "claim_status": "CONTEXTUAL_SECONDARY_SOURCE_NOT_AUTHORITY"
+    },
+    {
+      "id": "PL-SRC-005",
+      "source": "Escaping the Build Trap",
+      "author": "Melissa Perri",
+      "role": "OUTPUT_OUTCOME_AND_PRODUCT_OPERATING_MODEL_CONTEXT",
+      "claim_status": "CONTEXTUAL_SECONDARY_SOURCE_NOT_AUTHORITY"
+    },
+    {
+      "id": "PL-SRC-006",
+      "source": "Prior conversation authorization 064",
+      "author": "Jonathan Martínez",
+      "role": "EXTERNAL_HISTORICAL_EVIDENCE_ONLY",
+      "status": "APPROVED_IN_PRIOR_CONVERSATION_NOT_CANONICALLY_EXECUTED",
+      "reused_as_authority": false,
+      "canonical_evidence": "projects/lab/evidence/EVD-LAB-PL-001.json"
+    }
+  ],
+  "copyright_boundary": "No source text is reproduced; the package records original candidate synthesis and provenance labels.",
+  "automatic_consumption": false,
+  "authority_effect": "NONE"
+}

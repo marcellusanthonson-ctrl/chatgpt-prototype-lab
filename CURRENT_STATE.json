@@ -1,7 +1,7 @@
 {
   "schema_version": "2.5.0",
   "document_id": "lab.current-state",
-  "version": "2.5.34",
+  "version": "2.5.35",
   "status": "GOVERNANCE_V2_CANONICAL_BASELINE",
   "updated_at": "2026-07-25",
   "active_project": "lab",
@@ -48,7 +48,12 @@
     "full_rag_post_audit_planning_pending": "projects/lab/pending/PEND-LAB-022.json",
     "full_rag_post_audit_decision": "decisions/DEC-LAB-021.json",
     "full_rag_post_audit_remediation_plan": "projects/lab/remediation-plans/FULL-RAG-POST-AUDIT-REMEDIATION-PLAN-001.json",
-    "full_rag_design_traceability_and_fresh_test_design_pending": "projects/lab/pending/PEND-LAB-023.json"
+    "full_rag_design_traceability_and_fresh_test_design_pending": "projects/lab/pending/PEND-LAB-023.json",
+    "full_rag_line_closure": "projects/lab/full-rag-line-closure/FULL-RAG-LINE-CLOSURE-001.json",
+    "ecr_capability": "foundation-library/evidential-control/ECR-CAPABILITY-001/MANIFEST.json",
+    "product_leadership_candidate_package": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/MANIFEST.json",
+    "product_leadership_test_design": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json",
+    "product_leadership_test_execution_and_audit_pending": "projects/lab/pending/PEND-LAB-024.json"
   },
   "projects": {
     "lab": {"status": "active", "canonical_path": "projects/lab/PROJECT_STATE.md", "structured_state_path": "projects/lab/PROJECT_STATE.json"},
@@ -114,10 +119,11 @@
     "full_rag_authority_first_failure_discrimination_test_execution_075": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_OF_COMPLETE_REPRODUCIBLE_EXECUTION_PACKAGE",
     "independent_external_read_only_audit_of_full_rag_failure_discrimination_execution_002_076": "CONSUMED_ON_DELIVERY_OF_COMPLETE_EXTERNAL_AUDIT_PACKAGE",
     "full_rag_failure_discrimination_execution_002_external_audit_reconciliation_077": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "full_rag_post_audit_decision_and_remediation_planning_078_revision_2": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+    "full_rag_post_audit_decision_and_remediation_planning_078_revision_2": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "symphonie_minimum_complete_workflow_ecr_product_leadership_reconciliation_079": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_IN_BOTH_REPOSITORIES"
   },
   "verified_external_heads": {
-    "symphonie": "b492852c0d76ff7cd44ca266dc8950c94638d568",
+    "symphonie": "f3b10dcc26266c15de9658e97ba63a59525ec13d",
     "lab_base_before_transition": "7f1a7e101f42a981ad68e7602318b07bc62970b3",
     "lab_base_before_foundation_library": "4367b736c22d92937ec8ad1174bd9c9610baa313",
     "lab_base_before_foundation_evidence": "2e4608d7adc69ddf507a013f8da6cf513a0754ba",
@@ -136,8 +142,44 @@
   },
   "completed_research_transitions": ["PHASE_4_ACCESSIBILITY_NORMATIVE_AND_ASSISTIVE_TECHNOLOGY_RESEARCH"],
   "next_authorized_action": "NONE_AFTER_CONSUMPTION",
-  "next_recommended_transition": "SEPARATELY_AUTHORIZE_FULL_RAG_DESIGN_TRACEABILITY_REMEDIATION_AND_FRESH_TEST_DESIGN",
+  "next_recommended_transition": "SEPARATELY_AUTHORIZE_PRODUCT_LEADERSHIP_DISCRIMINATING_TEST_EXECUTION",
   "continuity_read_order": ["LAB_CONTRACT.md","METHODOLOGY.md","CURRENT_STATE.json","registry/index.json","registry/projects.json","projects/{active_project}/PROJECT_STATE.json","project decisions","project authorizations","open errors","applicable evidence","current continuity package"],
+  "full_rag_line": {
+    "status": "CLOSED_AS_DOCUMENTED_RESEARCH_BASELINE",
+    "reason": "SUPERSEDED_FOR_FUTURE_ARCHITECTURAL_DEVELOPMENT_BY_ECR_DIRECTION",
+    "closure": "FULL-RAG-LINE-CLOSURE-001",
+    "pend_lab_023_status": "SUPERSEDED_BEFORE_EXECUTION",
+    "rag_resolved": false,
+    "rag_architecture_selected": false,
+    "rag_provider_selected": false,
+    "rag_implementation_approved": false,
+    "runtime_effect": "NONE",
+    "product_effect": "NONE"
+  },
+  "ecr_capability": {
+    "id": "ECR-CAPABILITY-001",
+    "status": "PROPOSED_TRANSVERSAL_EVIDENTIAL_CONTROL_CAPABILITY",
+    "implemented": false,
+    "runtime": "NONE",
+    "architecture_selected": false,
+    "provider_selected": false,
+    "first_intended_consumer": "SYMPHONIE",
+    "product_effect": "NONE",
+    "authority_effect": "NONE"
+  },
+  "product_leadership_candidate": {
+    "package_id": "PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001",
+    "status": "CANDIDATE_REQUIRES_DISCRIMINATING_TESTS",
+    "integrated": false,
+    "active": false,
+    "automatic_consumption": false,
+    "test_design": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001",
+    "test_executed": false,
+    "fixture_count": 40,
+    "successor_pending": "PEND-LAB-024",
+    "runtime_effect": "NONE",
+    "authority_effect": "NONE"
+  },
   "latest_reconciliation": {
     "authorization_id": "AUTHORIZATION_LAB_FULL_RAG_FAILURE_DISCRIMINATION_EXECUTION_002_EXTERNAL_AUDIT_RECONCILIATION_077",
     "source_authorization_id": "AUTHORIZATION_LAB_INDEPENDENT_EXTERNAL_READ_ONLY_AUDIT_OF_FULL_RAG_FAILURE_DISCRIMINATION_EXECUTION_002_076",
@@ -175,8 +217,10 @@
     "remediation_plan_id": "FULL-RAG-POST-AUDIT-REMEDIATION-PLAN-001",
     "pend_lab_022_status": "COMPLETED_DOCUMENTARY_DECISIONS_AND_REMEDIATION_PLAN_PUBLISHED",
     "current_successor_pending": "PEND-LAB-023",
+    "current_successor_pending_status": "SUPERSEDED_BEFORE_EXECUTION",
+    "full_rag_line_status": "CLOSED_AS_DOCUMENTED_RESEARCH_BASELINE",
     "architecture_decision_gate": "NOT_READY",
-    "next_recommended_transition": "SEPARATELY_AUTHORIZE_FULL_RAG_DESIGN_TRACEABILITY_REMEDIATION_AND_FRESH_TEST_DESIGN",
+    "next_recommended_transition": "SEPARATELY_AUTHORIZE_PRODUCT_LEADERSHIP_DISCRIMINATING_TEST_EXECUTION",
     "authority_effect": "NONE_AFTER_CONSUMPTION"
   },
   "latest_test_design": {
@@ -233,13 +277,15 @@
     "pend_lab_022_status": "COMPLETED_DOCUMENTARY_DECISIONS_AND_REMEDIATION_PLAN_PUBLISHED",
     "architecture_decision_gate": "NOT_READY",
     "successor_pending": "PEND-LAB-023",
+    "successor_pending_status": "SUPERSEDED_BEFORE_EXECUTION",
+    "full_rag_line_status": "CLOSED_AS_DOCUMENTED_RESEARCH_BASELINE",
     "provider_selected": false,
     "architecture_selected": false,
     "implementation_selected": false,
     "implementation_approved": false,
     "runtime_effect": "NONE",
     "product_effect": "NONE",
-    "next_recommended_transition": "SEPARATELY_AUTHORIZE_FULL_RAG_DESIGN_TRACEABILITY_REMEDIATION_AND_FRESH_TEST_DESIGN",
+    "next_recommended_transition": "SEPARATELY_AUTHORIZE_PRODUCT_LEADERSHIP_DISCRIMINATING_TEST_EXECUTION",
     "authority_effect": "NONE_AFTER_CONSUMPTION"
   },
   "latest_integration": {

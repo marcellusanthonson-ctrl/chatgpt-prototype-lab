@@ -570,7 +570,14 @@ def validate_foundation_library(registries: dict[str, Any]) -> None:
                 for term in ["pan", "cvc", "importe", "credenciales"]:
                     if term not in forbidden_text:
                         fail(f"{relative}: payment prohibition missing {term}")
-        elif record.get("kind") in {"DESIGN_KNOWLEDGE_SOURCE_PACKAGE", "VISUAL_PREFERENCE_PROFILE", "HIGH_FIDELITY_VISUAL_PROTOCOL", "MINIMUM_VISUAL_FOUNDATION"}:
+        elif record.get("kind") in {
+            "DESIGN_KNOWLEDGE_SOURCE_PACKAGE",
+            "VISUAL_PREFERENCE_PROFILE",
+            "HIGH_FIDELITY_VISUAL_PROTOCOL",
+            "MINIMUM_VISUAL_FOUNDATION",
+            "TRANSVERSAL_EVIDENTIAL_CONTROL_CAPABILITY",
+            "PRODUCT_LEADERSHIP_CANDIDATE_PACKAGE",
+        }:
             require_file(relative)
         elif record.get("kind") == "LOCAL_BRAND_ICON_ASSET_CANDIDATE_LIBRARY":
             document = load_json(relative)

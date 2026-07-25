@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0.0",
+  "test_design_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001",
+  "status": "DESIGNED_NOT_EXECUTED",
+  "research_questions": [
+    "Does the package classify activation more precisely than a baseline without the package?",
+    "Does package-conditioned guidance add blinded product-decision value without authority confusion, fabricated evidence or closed-task reopening?",
+    "Can it reject irrelevant frameworks and preserve binding obligations?"
+  ],
+  "experimental_objectives": {
+    "activation_precision_target": ">=0.90",
+    "false_activation_rate_target": "<=0.10",
+    "authority_confusion_target": 0,
+    "fabricated_evidence_target": 0,
+    "closed_task_reopening_target": "<=0.05",
+    "value_increment": "MEASURED_NOT_ASSUMED"
+  },
+  "arms": [
+    {
+      "arm_id": "PL-ARM-BASELINE",
+      "name": "BASELINE_WITHOUT_PACKAGE",
+      "package_available": false,
+      "purpose": "Measure default activation, reasoning and output quality without package content."
+    },
+    {
+      "arm_id": "PL-ARM-PACKAGE",
+      "name": "CONDITION_WITH_PACKAGE",
+      "package_available": true,
+      "activation_contract_required": true,
+      "purpose": "Measure selective activation and incremental value with the package."
+    },
+    {
+      "arm_id": "PL-ARM-POSITIVE-CONTROL",
+      "name": "ORACLE_INFORMED_POSITIVE_CONTROL",
+      "fixture_ids": ["PL-FX-001", "PL-FX-002", "PL-FX-003", "PL-FX-007"],
+      "purpose": "Confirm the evaluator can recognize clearly appropriate activation and product-value distinctions."
+    },
+    {
+      "arm_id": "PL-ARM-NEGATIVE-CONTROL",
+      "name": "IRRELEVANT_FRAMEWORK_AND_AUTHORITY_NEGATIVE_CONTROL",
+      "fixture_ids": ["PL-FX-011", "PL-FX-017", "PL-FX-028", "PL-FX-030"],
+      "purpose": "Confirm the evaluator detects false activation, irrelevant-framework use and authority confusion."
+    }
+  ],
+  "fixture_categories": {
+    "ACTIVE": 10,
+    "INACTIVE": 10,
+    "LIMITED_OR_AMBIGUOUS": 5,
+    "ADVERSARIAL": 5,
+    "CONTRADICTORY_EVIDENCE": 5,
+    "BINDING_OBLIGATION": 5
+  },
+  "required_case_coverage": [
+    "BASELINE_WITHOUT_PACKAGE",
+    "CONDITION_WITH_PACKAGE",
+    "BLINDED_EVALUATION",
+    "POSITIVE_CONTROL",
+    "NEGATIVE_CONTROL",
+    "IRRELEVANT_FRAMEWORK",
+    "EVIDENCE_VERSUS_AUTHORITY",
+    "FALSE_PRECISION",
+    "CLOSED_TASK_REOPENING",
+    "FABRICATED_EVIDENCE",
+    "OUTPUT_VERSUS_OUTCOME",
+    "STRATEGY_VERSUS_INITIATIVE_LIST",
+    "PRIORITIZATION_VERSUS_ORDERING"
+  ],
+  "blinding_contract": {
+    "generator_sees_arm": true,
+    "evaluator_sees_arm": false,
+    "evaluator_sees_expected_activation": false,
+    "output_ids_randomized": true,
+    "package_language_redacted_from_labels": true,
+    "oracle_access": "AFTER_SCORING_ONLY",
+    "unblinding_condition": "ALL_SCORES_AND_RATIONALES_FROZEN"
+  },
+  "evaluation_dimensions": [
+    "ACTIVATION_CLASSIFICATION",
+    "PROBLEM_AND_OUTCOME_CLARITY",
+    "STRATEGIC_CHOICE_QUALITY",
+    "PRIORITIZATION_AND_ORDERING",
+    "FRAMEWORK_RELEVANCE",
+    "EVIDENCE_PROVENANCE",
+    "AUTHORITY_SEPARATION",
+    "UNCERTAINTY_CALIBRATION",
+    "CLOSED_SCOPE_PRESERVATION",
+    "ACTIONABILITY"
+  ],
+  "stop_conditions": [
+    "FIXTURE_OR_ORACLE_LEAKAGE",
+    "ARM_LABEL_VISIBLE_TO_EVALUATOR",
+    "CONTROL_FAILURE",
+    "NONDETERMINISTIC_FIXTURE_SET",
+    "AUTHORITY_CONFUSION_OBSERVED",
+    "FABRICATED_EVIDENCE_OBSERVED",
+    "UNAUTHORIZED_REAL_PRODUCT_DATA",
+    "UNAUTHORIZED_TEST_EXECUTION"
+  ],
+  "claim_boundaries": [
+    "Synthetic performance does not establish real-product value.",
+    "A passing package is still not integrated or automatically active.",
+    "No result selects ECR architecture, stack or provider.",
+    "External read-only audit is required before reconciliation."
+  ],
+  "test_executed": false
+}

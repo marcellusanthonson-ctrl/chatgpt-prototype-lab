@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "package_id": "PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001",
+  "frameworks": [
+    {
+      "id": "PL-FW-PROBLEM-OUTCOME",
+      "purpose": "Separate problem, output, outcome and impact.",
+      "use_when": ["VALUE_DEFINITION", "SUCCESS_CRITERIA", "OUTCOME_REVIEW"],
+      "do_not_use_when": ["DETERMINISTIC_IMPLEMENTATION_TASK"],
+      "authority_effect": "NONE"
+    },
+    {
+      "id": "PL-FW-STRATEGIC-CHOICES",
+      "purpose": "Expose diagnosis, guiding choices, exclusions and coherent actions.",
+      "use_when": ["STRATEGY_FORMULATION", "CONFLICTING_INITIATIVES"],
+      "do_not_use_when": ["BINDING_OBLIGATION_WITH_FIXED_EXECUTION"],
+      "authority_effect": "NONE"
+    },
+    {
+      "id": "PL-FW-OPPORTUNITY-MAPPING",
+      "purpose": "Relate outcomes, opportunities, assumptions and experiments without treating the map as truth.",
+      "use_when": ["DISCOVERY", "OPPORTUNITY_PRIORITIZATION"],
+      "do_not_use_when": ["CLOSED_BUG_FIX", "EVIDENCE_TOO_WEAK_TO_MAP"],
+      "authority_effect": "NONE"
+    },
+    {
+      "id": "PL-FW-JOBS-CONTEXT",
+      "purpose": "Examine progress sought and contextual constraints.",
+      "use_when": ["USER_MOTIVATION", "ALTERNATIVE_BEHAVIOR"],
+      "do_not_use_when": ["LEGAL_OR_BINDING_REQUIREMENT"],
+      "authority_effect": "NONE"
+    },
+    {
+      "id": "PL-FW-PRIORITIZATION-ORDER",
+      "purpose": "Make criteria, sequence, dependencies and trade-offs explicit.",
+      "use_when": ["PORTFOLIO_ORDERING", "ROADMAP_TRADEOFF"],
+      "do_not_use_when": ["ORDER_ALREADY_BOUND_BY_AUTHORITY_OR_SAFETY"],
+      "authority_effect": "NONE"
+    },
+    {
+      "id": "PL-FW-LEARNING-LOOP",
+      "purpose": "Capture hypothesis, evidence, decision, outcome and next learning.",
+      "use_when": ["EXPERIMENT_REVIEW", "POST_RELEASE_LEARNING"],
+      "do_not_use_when": ["TEST_NOT_EXECUTED"],
+      "authority_effect": "NONE"
+    }
+  ],
+  "selection_contract": "Select only frameworks whose use_when matches the task and explicitly reject irrelevant frameworks.",
+  "integrated": false,
+  "active": false
+}

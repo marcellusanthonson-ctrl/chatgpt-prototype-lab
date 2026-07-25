@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "test_design_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001",
+  "status": "SPECIFIED_NOT_EXECUTED",
+  "cells": [
+    {
+      "cell_id": "PL-CELL-01",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_scope": "ALL_40_FIXTURES",
+      "outputs": 40,
+      "blinded_evaluation": true
+    },
+    {
+      "cell_id": "PL-CELL-02",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_scope": "ALL_40_FIXTURES",
+      "outputs": 40,
+      "blinded_evaluation": true
+    },
+    {
+      "cell_id": "PL-CELL-03",
+      "arm": "PL-ARM-POSITIVE-CONTROL",
+      "fixture_scope": "FOUR_PINNED_POSITIVE_FIXTURES",
+      "outputs": 4,
+      "blinded_evaluation": true
+    },
+    {
+      "cell_id": "PL-CELL-04",
+      "arm": "PL-ARM-NEGATIVE-CONTROL",
+      "fixture_scope": "FOUR_PINNED_NEGATIVE_FIXTURES",
+      "outputs": 4,
+      "blinded_evaluation": true
+    }
+  ],
+  "minimum_future_outputs": 88,
+  "execution_order": "SEEDED_RANDOM_INTERLEAVING",
+  "seed_policy": "PREDECLARE_AND_FREEZE_BEFORE_GENERATION",
+  "repetitions": 1,
+  "future_repeatability_requirement": "AT_LEAST_ONE_SEPARATE_REPRODUCTION_BEFORE_INTEGRATION_DECISION",
+  "execution_authorized": false
+}

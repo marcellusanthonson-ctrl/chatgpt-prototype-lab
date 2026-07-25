@@ -3,16 +3,17 @@
   "project_id": "symphonie",
   "name": "Symphonie",
   "status": "known_and_synced",
-  "updated_at": "2026-07-17",
+  "updated_at": "2026-07-25",
   "canonical_repository": "marcellusanthonson-ctrl/symphonie",
   "canonical_branch": "main",
-  "verified_head": "9de9dcf5c58583cd46bece41a0e772e3671801ff",
+  "head_policy": "VERIFY_LIVE_AT_USE",
+  "verified_parent_head": "f3b10dcc26266c15de9658e97ba63a59525ec13d",
   "authority": {
     "sole_approver": "Jonathan Martínez",
     "autonomous_model_authority": false
   },
   "summary": "Workflow canónico de ocho fases y memoria gobernada.",
-  "content_completeness": "STRUCTURED_V2_BASELINE_WITH_ALL_PHASE_SCHEMAS",
+  "content_completeness": "MINIMUM_COMPLETE_EIGHT_PHASE_WORKFLOW_DOCUMENTED_NOT_PILOTED",
   "source_refs": [
     "projects/symphonie/PROJECT_STATE.md",
     "registry/projects.json"
@@ -26,8 +27,15 @@
     "reassessments": "projects/symphonie/reassessments/index.json"
   },
   "metadata": {
-    "fileset": 49,
+    "fileset": 58,
     "total_phases": 8,
+    "minimum_complete_workflow": {
+      "status": "DOCUMENTED_NOT_EXECUTED",
+      "transition_graph": "VALIDATED_DOCUMENTARY_GRAPH",
+      "ecr_consumption_status": "DOCUMENTED_NOT_IMPLEMENTED",
+      "product_leadership_status": "DOCUMENTED_BUT_DISABLED_PENDING_TESTS",
+      "real_pilot_executed": false
+    },
     "phase_maturity": {
       "PHASE_0": "EXPERIMENTAL_NOT_RUNTIME_VALIDATED",
       "PHASE_1": "DEFINED_WITH_CANONICAL_SCHEMAS_NOT_TESTED",

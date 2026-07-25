@@ -2,7 +2,7 @@
 
 La fuente estructurada es `CURRENT_STATE.json`.
 
-- Versión: 2.5.34.
+- Versión: 2.5.35.
 - Fase: `MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_HUMAN_BASELINE_APPROVED`.
 - HEAD propio: `VERIFY_LIVE_AT_USE`.
 - Autorización activa reutilizable: ninguna.
@@ -55,6 +55,16 @@ Las cinco hipótesis son `H-DECLARED-DECOYS`, `H-SYNONYM-EXPANSION`, `H-AUTHORIT
 
 No se modificaron el diseño 002, la ejecución 002, el harness ni los resultados históricos. No se ejecutaron pruebas ni se generó corpus. No se seleccionaron proveedor, arquitectura o implementación; no hubo aprobación ni efecto de producto o runtime.
 
+## Cierre RAG, ECR y Product Leadership 079
+
+La línea experimental Full RAG queda `CLOSED_AS_DOCUMENTED_RESEARCH_BASELINE` por `SUPERSEDED_FOR_FUTURE_ARCHITECTURAL_DEVELOPMENT_BY_ECR_DIRECTION`. Este cierre no resuelve RAG ni selecciona arquitectura, proveedor o implementación. `DEC-LAB-021`, los diseños, ejecuciones, harness, resultados, auditorías y `FULL-RAG-POST-AUDIT-REMEDIATION-PLAN-001` permanecen intactos. `PEND-LAB-023` queda `SUPERSEDED_BEFORE_EXECUTION`.
+
+`ECR-CAPABILITY-001` queda `PROPOSED_TRANSVERSAL_EVIDENTIAL_CONTROL_CAPABILITY`, sin implementación, runtime, stack, proveedor o arquitectura seleccionados. LAB conserva gobierno y Symphonie es el primer consumidor previsto mediante una interfaz futura documentada.
+
+`PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001` queda `CANDIDATE_REQUIRES_DISCRIMINATING_TESTS`, desactivado, no integrado y sin consumo automático. La autorización histórica 064 se registra únicamente como evidencia externa `APPROVED_IN_PRIOR_CONVERSATION_NOT_CANONICALLY_EXECUTED`; no se reutiliza como autoridad.
+
+`PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001` especifica 40 fixtures, baseline sin paquete, condición con paquete, evaluación cegada y controles. No se ejecutó. `PEND-LAB-024` propone separadamente su futura ejecución y auditoría externa.
+
 ## Siguiente transición
 
-No existe una siguiente transición visual pendiente para este baseline. Cualquier uso productivo o externo de la marca requiere aprobación jurídica separada. Para la línea experimental, la transición propuesta es autorizar separadamente `PEND-LAB-023`; la propuesta no concede autoridad. Después del consumo de `078_REVISION_2`, `NEXT_AUTHORIZED_ACTION = NONE_AFTER_CONSUMPTION`.
+No existe una siguiente transición visual pendiente para este baseline. Cualquier uso productivo o externo de la marca requiere aprobación jurídica separada. La transición experimental propuesta es autorizar separadamente la ejecución sintética delimitada de `PEND-LAB-024`; la propuesta no concede autoridad. Después del consumo de `079`, `NEXT_AUTHORIZED_ACTION = NONE_AFTER_CONSUMPTION`.

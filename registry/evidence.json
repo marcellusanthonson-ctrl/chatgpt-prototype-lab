@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-07-24",
+  "updated_at": "2026-07-25",
   "records": [
     {
       "id": "EVD-SYM-001",
@@ -277,6 +277,17 @@
       "external_audit_manifest": "projects/lab/external-audits/AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001/AUDIT_MANIFEST.json",
       "source_archive_sha256": "a26c959f7c156f1318199d148daa78aed78bfa94b8e405d6dd0bfc21954cc56b",
       "updated_at": "2026-07-24"
+    },
+    {
+      "id": "EVD-LAB-PL-001",
+      "path": "projects/lab/evidence/EVD-LAB-PL-001.json",
+      "kind": "EXTERNAL_HISTORICAL_AUTHORIZATION_ASSERTION",
+      "project_id": "lab",
+      "status": "APPROVED_IN_PRIOR_CONVERSATION_NOT_CANONICALLY_EXECUTED",
+      "canonical_path": "projects/lab/evidence/EVD-LAB-PL-001.json",
+      "historical_reference": "AUTHORIZATION_064",
+      "reused_as_authority": false,
+      "updated_at": "2026-07-25"
     }
   ]
 }

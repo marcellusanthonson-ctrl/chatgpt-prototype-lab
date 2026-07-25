@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-PL-001",
+  "project_id": "lab",
+  "evidence_type": "EXTERNAL_HISTORICAL_AUTHORIZATION_ASSERTION",
+  "status": "APPROVED_IN_PRIOR_CONVERSATION_NOT_CANONICALLY_EXECUTED",
+  "registered_at": "2026-07-25",
+  "historical_reference": "AUTHORIZATION_064",
+  "canonical_authorization_record_found": false,
+  "reused_as_authority": false,
+  "permitted_use": "EXTERNAL_EVIDENCE_FOR_PRODUCT_LEADERSHIP_CANDIDATE_PROVENANCE_ONLY",
+  "prohibited_uses": [
+    "AUTHORIZE_TEST_EXECUTION",
+    "AUTHORIZE_INTEGRATION",
+    "AUTHORIZE_RUNTIME",
+    "AUTHORIZE_PRODUCT_CHANGE",
+    "AUTHORIZE_AUTOMATIC_ACTIVATION"
+  ],
+  "authority_effect": "NONE",
+  "source_refs": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_SYMPHONIE_MINIMUM_COMPLETE_WORKFLOW_ECR_PRODUCT_LEADERSHIP_RECONCILIATION_079.json",
+    "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/SOURCE_REGISTER.json"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "package_id": "PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001",
+  "claims": [
+    {
+      "claim_id": "PL-CLM-001",
+      "claim": "Selective product-leadership guidance may improve product framing compared with an unguided baseline.",
+      "classification": "HYPOTHESIS",
+      "source_refs": ["PL-P01", "PL-P02", "PL-P03"],
+      "required_evidence": "BLINDED_COMPARATIVE_TEST",
+      "current_status": "UNTESTED"
+    },
+    {
+      "claim_id": "PL-CLM-002",
+      "claim": "The activation contract can avoid applying product frameworks to closed or binding work.",
+      "classification": "HYPOTHESIS",
+      "source_refs": ["PRODUCT-LEADERSHIP-ACTIVATION-CONTRACT-001"],
+      "required_evidence": "NEGATIVE_ADVERSARIAL_AND_BINDING_FIXTURES",
+      "current_status": "UNTESTED"
+    },
+    {
+      "claim_id": "PL-CLM-003",
+      "claim": "The package does not grant authority or supply missing evidence.",
+      "classification": "DOCUMENTARY_CONTRACT",
+      "source_refs": ["LAB_CONTRACT.md", "PL-P05", "PL-P08"],
+      "required_evidence": "STATIC_AND_DISCRIMINATING_TESTS",
+      "current_status": "DOCUMENTED_NOT_OPERATIONALLY_VALIDATED"
+    },
+    {
+      "claim_id": "PL-CLM-004",
+      "claim": "The package creates measurable incremental value.",
+      "classification": "OPEN_EXPERIMENTAL_CLAIM",
+      "source_refs": ["PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001"],
+      "required_evidence": "BLINDED_VALUE_COMPARISON",
+      "current_status": "MEASURED_NOT_ASSUMED"
+    }
+  ],
+  "authority_effect": "NONE"
+}
