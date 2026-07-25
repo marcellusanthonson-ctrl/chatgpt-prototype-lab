@@ -1046,6 +1046,32 @@
       "implementation_selection_authorized": false,
       "architecture_selection_authorized": false,
       "product_changes_authorized": false
+    },
+    {
+      "id": "AUTHORIZATION_LAB_SYMPHONIE_ALL_PHASES_VALIDATION_GAP_AND_MAINTAINABILITY_RECONCILIATION_082",
+      "state_key": "symphonie_all_phases_validation_gap_and_maintainability_reconciliation_082",
+      "project_id": "lab",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_IN_BOTH_REPOSITORIES",
+      "approved_by": "Jonathan Martínez",
+      "scope": "SYNTHETIC_ALL_PHASES_VALIDATION_GAP_RECONCILIATION_AND_CODE_MAINTAINABILITY_POLICY",
+      "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_SYMPHONIE_ALL_PHASES_VALIDATION_GAP_AND_MAINTAINABILITY_RECONCILIATION_082.json",
+      "repositories": [
+        "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+        "marcellusanthonson-ctrl/symphonie"
+      ],
+      "branch": "main",
+      "expected_parent_head_lab": "19cfe5da25fbf33e5e466b32283a6ca9f04dc3f5",
+      "expected_parent_head_symphonie": "12ac15b1a2c5644389b3785c4de93b0a1781feb8",
+      "result_commit_symphonie": "1d74f90a059f4e8068d7fe654e85add6163771d3",
+      "updated_at": "2026-07-25",
+      "commit_authorized": true,
+      "push_authorized": true,
+      "source_file_update_authorized": true,
+      "test_execution_authorized": true,
+      "runtime_authorized": false,
+      "implementation_selection_authorized": false,
+      "architecture_selection_authorized": false,
+      "product_changes_authorized": false
     }
   ]
 }

@@ -563,6 +563,25 @@
         "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/MANIFEST.json",
         "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json"
       ]
+    },
+    {
+      "id": "PEND-LAB-025",
+      "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+      "type": "REAL_SYMPHONIE_ALL_PHASES_PILOT_OR_REAL_HUMAN_GATE",
+      "subject": "Consider a separately authorized real all-phases pilot or one exact real human gate after synthetic validation 082",
+      "priority": "MEDIUM",
+      "authorization_required": true,
+      "real_data_authorized": false,
+      "runtime_authorized": false,
+      "deployment_authorized": false,
+      "current_authority": "NONE",
+      "automatic_approval": false,
+      "next_authorized_action": "NONE_UNTIL_SEPARATE_EXPLICIT_AUTHORIZATION",
+      "source_refs": [
+        "projects/lab/authorizations/AUTHORIZATION_LAB_SYMPHONIE_ALL_PHASES_VALIDATION_GAP_AND_MAINTAINABILITY_RECONCILIATION_082.json",
+        "projects/lab/evidence/EVD-LAB-SYMPHONIE-ALL-PHASES-082.json",
+        "projects/symphonie/continuity/CURRENT_CONTINUITY.json"
+      ]
     }
   ]
 }

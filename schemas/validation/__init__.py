@@ -1,0 +1,1 @@
+"""Modular repository validation implementation."""
