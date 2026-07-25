@@ -1,0 +1,24 @@
+{
+  "coherence_with_runs": "PASS - frozen public/private/harness inputs are exactly those consumed by the 66 runs; selection hashes frozen before any private-oracle evaluation.",
+  "entries_changed_vs_disk": 0,
+  "evaluator_started_at_freeze": false,
+  "finding_source_design_hashes": {
+    "impact": "Design provenance is not cryptographically bound in the freeze. Does NOT affect run/metric/gate results (design hashes are unused downstream and excluded from the reproduction comparison). Execution artifacts (harness, arm params, scoring, metrics, gates, corpus, oracles) ARE pinned.",
+    "observation": "frozen/SOURCE_DESIGN_HASHES.json declares files:[] (empty). The design directory (>=8 files) is NOT hash-pinned by the freeze.",
+    "reproduces_identically": true,
+    "root_cause": "harness computes repositoryRoot = resolve(sourceRoot,'../../../../..') which is ONE level above the actual repo root; designRoot therefore does not exist and relativeFiles() returns []. Deterministic (reproduces empty), no error thrown.",
+    "severity": "MEDIUM"
+  },
+  "freeze_entries": 24,
+  "method": "Verify 24 FREEZE_MANIFEST entries vs disk; recompute ordered_digest; inspect POST_FREEZE_VALIDATION and harness post-freeze checks; inspect SOURCE_DESIGN_HASHES.",
+  "ordered_digest_recomputed_match": true,
+  "post_freeze_validation": "PASS_ZERO_MUTATIONS",
+  "result": "PASS_WITH_NON_MATERIAL_FINDINGS",
+  "run_files_present_at_freeze": 0,
+  "selection_freeze": {
+    "arm06_present": 0,
+    "evaluator_started": false,
+    "hash_entries": 60,
+    "selector_run_count": 60
+  }
+}

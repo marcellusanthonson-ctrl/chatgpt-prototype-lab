@@ -1,0 +1,46 @@
+{
+  "authority_gate_fail_explanation": "AUTHORITY=FAIL is driven by ARM-03 (authority_inversion=327) and ARM-05 (161), both negative-reservation cells: forcing a binding-negative into the k budget displaces higher-authority required docs. This is a substantive experimental result (a trade-off), NOT a scoring defect. It does not block test_result because test validity depends on freeze/runs/leakage/controls/reproducibility.",
+  "cell_viability": {
+    "ARM-01": "NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS",
+    "ARM-02@K16": "NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS",
+    "ARM-02@K4": "NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS",
+    "ARM-02@K8": "NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS",
+    "ARM-03": "NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS",
+    "ARM-04": "NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS",
+    "ARM-05": "NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS",
+    "ARM-06": "POSITIVE_CONTROL_NOT_CANDIDATE",
+    "ARM-07": "NEGATIVE_CONTROL_NOT_CANDIDATE",
+    "ARM-08": "NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS",
+    "ARM-09": "NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS"
+  },
+  "method": "Recompute per-cell viability against frozen THRESHOLDS and global gates against harness logic; compare to GATE_RESULTS.json.",
+  "published_global_gates": {
+    "AUTHORITY": "FAIL",
+    "BINDING_NEGATIVES": "PASS_DISCRIMINATES",
+    "CAUSALITY": "PASS_SINGLE_VARIABLE_CONTRASTS",
+    "COST": "PASS_UNITS_SEPARATED",
+    "INTEGRITY": "PASS",
+    "ISOLATION": "PASS",
+    "LEAKAGE": "PASS",
+    "NEGATIVE_CONTROL": "PASS_DISCRIMINATES_UNSAFE_STRATEGY",
+    "POSITIVE_CONTROL": "PASS",
+    "PRECISION": "PASS_REPORTED_NO_SINGLE_METRIC_PROMOTION",
+    "RECALL": "PASS_DISCRIMINATES",
+    "REPRODUCIBILITY": "PASS",
+    "SAFE_REFUSAL": "PASS_DISCRIMINATES",
+    "STABILITY": "PASS",
+    "UNSUPPORTED_CONCLUSIONS": "PASS_DISCRIMINATES"
+  },
+  "recomputed_agreement": true,
+  "result": "PASS",
+  "test_result": "TEST_VALID_DISCRIMINATING_RESULTS_PUBLISHED",
+  "thresholds": {
+    "binding_negative_retention_min": 1,
+    "citation_correctness_min": 0.98,
+    "conflict_detection_min": 0.95,
+    "macro_f1_min": 0.72,
+    "precision_min": 0.7,
+    "required_document_recall_min": 0.8,
+    "unsupported_conclusion_rate_max": 0
+  }
+}

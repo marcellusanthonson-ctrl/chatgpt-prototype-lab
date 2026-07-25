@@ -55,12 +55,16 @@ La ausencia de embeddings densos sigue como `POSSIBLE_NOT_DISCRIMINATED`, no com
 
 `PEND-LAB-019` está `COMPLETED_DOCUMENTARY_FAILURE_ANALYSIS_AND_NEXT_TEST_DESIGN_PUBLISHED`. El diseño quedó ejecutado posteriormente bajo la autorización separada `075`.
 
-## Ejecución discriminante 075
+## Ejecución discriminante 075 y auditoría externa 076/077
 
 La autorización `075` ejecutó exactamente una vez `FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-002`. El paquete reproducible contiene 280 documentos sintéticos, 84 fixtures y 66 runs distribuidos entre nueve brazos, once celdas operativas y seis configuraciones.
 
-El resultado es `TEST_VALID_DISCRIMINATING_RESULTS_PUBLISHED`. El control positivo pasó, el control negativo discriminó la estrategia insegura, los selectores registraron cero lecturas privadas y la reproducción fue `PASS_EXACT`. Los contrastes sintéticos apoyan retrieval y la heurística de safe refusal como causas primarias bajo las condiciones probadas; ranking no quedó apoyado cuando se mantuvo fijo el conjunto candidato, y escala de corpus permanece `POSSIBLE_NOT_DISCRIMINATED`.
+La auditoría externa estrictamente read-only autorizada por `076` revisó 107 archivos y reprodujo 66 runs. El paquete original de 19 archivos quedó importado sin alterar como `AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001`; su dictamen es `AUDIT_CONFIRMS_EXECUTION_MODIFIES_INTERPRETATION`.
 
-`PEND-LAB-020` está `COMPLETED_REPRODUCIBLE_EXECUTION_PUBLISHED_EXTERNAL_AUDIT_REQUIRED`. `PEND-LAB-021` propone una auditoría externa independiente y estrictamente read-only, pero no la autoriza. No se seleccionaron proveedor, arquitectura o implementación; no hubo aprobación de implementación ni efectos de producto, runtime, Symphonie, despliegue o repositorios externos.
+La reconciliación `077`, evidenciada por `EVD-LAB-AUD-005` y adjudicada en `REA-LAB-006`, conserva el resultado de ejecución `TEST_VALID_DISCRIMINATING_RESULTS_PUBLISHED` y fija la interpretación en `VALID_DISCRIMINATING_SYNTHETIC_RESULTS_WITH_QUALIFIED_CAUSAL_ATTRIBUTIONS`. Se confirmaron controles, aislamiento, integridad y reproducción. Retrieval y safe refusal siguen apoyados como causas primarias bajo las condiciones sintéticas probadas.
+
+La atribución causal queda acotada por tres hallazgos no invalidantes: el archivo de hashes de diseño no enumeró fuentes; el brazo C-RANK alteró ranking y representación conjuntamente, por lo que su resultado nulo no aísla una refutación causal de ranking; y cinco de catorce hipótesis reportadas eran históricas, compuestas o codificadas, frente a nueve hipótesis frescas. La auditoría también registró una observación menor sobre el log estático del selector. Ningún hallazgo revierte o invalida la ejecución.
+
+`PEND-LAB-020` permanece `COMPLETED_REPRODUCIBLE_EXECUTION_PUBLISHED_EXTERNAL_AUDIT_REQUIRED`. `PEND-LAB-021` está `COMPLETED_EXTERNAL_AUDIT_DELIVERED_AND_RECONCILED`. `PEND-LAB-022` propone únicamente la decisión documental posterior a la auditoría y no concede autoridad. No se seleccionaron proveedor, arquitectura o implementación; no hubo aprobación de implementación ni efectos de producto, runtime, Symphonie, despliegue o repositorios externos.
 
 No existe autorización activa reutilizable. El HEAD propio se verifica en vivo y nunca se almacena como estado canónico vigente.

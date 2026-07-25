@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "reassessment_id": "REA-LAB-006",
+  "project_id": "lab",
+  "status": "ADJUDICATED",
+  "decision_domain": "FACTUAL",
+  "subject": "Independent reassessment of the external audit of full RAG failure discrimination execution 002",
+  "previous_position": {
+    "execution_result": "TEST_VALID_DISCRIMINATING_RESULTS_PUBLISHED",
+    "causal_interpretation": "FULL_CAUSAL_DISCRIMINATION_ACROSS_FOURTEEN_HYPOTHESES",
+    "ranking_interpretation": "NOT_SUPPORTED_AS_CAUSALLY_ISOLATED",
+    "design_source_provenance": "ASSUMED_FROZEN"
+  },
+  "trigger": {
+    "authorization_id": "AUTHORIZATION_LAB_FULL_RAG_FAILURE_DISCRIMINATION_EXECUTION_002_EXTERNAL_AUDIT_RECONCILIATION_077",
+    "audit_authorization_id": "AUTHORIZATION_LAB_INDEPENDENT_EXTERNAL_READ_ONLY_AUDIT_OF_FULL_RAG_FAILURE_DISCRIMINATION_EXECUTION_002_076",
+    "external_audit": "AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001",
+    "evidence_id": "EVD-LAB-AUD-005",
+    "reason": "EXTERNAL_AUDIT_CONFIRMS_EXECUTION_AND_REQUIRES_THREE_INTERPRETATION_QUALIFICATIONS"
+  },
+  "claims_under_review": [
+    {
+      "finding_id": 1,
+      "claim": "SOURCE_DESIGN_HASHES_JSON_CRYPTOGRAPHICALLY_FREEZES_DESIGN_PROVENANCE",
+      "determination": "CONFIRMED_AS_FALSE",
+      "verdict": "CONFIRMED",
+      "interpretation": "DESIGN_SOURCE_PROVENANCE_NOT_CRYPTOGRAPHICALLY_FROZEN",
+      "materiality": "NON_INVALIDATING_TRACEABILITY_GAP"
+    },
+    {
+      "finding_id": 2,
+      "claim": "C_RANK_ISOLATES_RANKING_AS_A_SINGLE_MATERIAL_VARIABLE",
+      "determination": "CONFIRMED_AS_FALSE_WITH_QUALIFICATION",
+      "verdict": "CONFIRMED_WITH_QUALIFICATION",
+      "interpretation": "NULL_EFFECT_OBSERVED_IN_CONFOUNDED_CONTRAST_NOT_ISOLATED_CAUSAL_REFUTATION",
+      "preserved_result": "H_RANKING_NOT_SUPPORTED_IN_OBSERVED_CONTRAST"
+    },
+    {
+      "finding_id": 3,
+      "claim": "ALL_FOURTEEN_HYPOTHESES_ARE_SUPPORTED_BY_FRESH_EXECUTION_002_CONTRASTS",
+      "determination": "CONFIRMED_AS_FALSE",
+      "verdict": "CONFIRMED",
+      "interpretation": "NINE_HYPOTHESES_SUPPORTED_BY_FRESH_CONTRASTS_FIVE_REQUIRE_QUALIFIED_PROVENANCE"
+    }
+  ],
+  "evidence_supporting_change": [
+    "FROZEN_SOURCE_DESIGN_HASHES_FILES_ARRAY_IS_EMPTY",
+    "C_RANK_CHANGES_RANKING_AND_REPRESENTATION",
+    "HYPOTHESIS_VERDICTS_IDENTIFIES_FIVE_HISTORICAL_COMPOSITE_OR_CODED_ATTRIBUTIONS",
+    "INDEPENDENT_METRIC_RECOMPUTATION_MATCHES_ALL_ELEVEN_CELLS",
+    "CONTROLS_AND_PRIMARY_CAUSAL_CONTRASTS_REMAIN_VALID"
+  ],
+  "evidence_against_change": [
+    "ALL_106_EXECUTION_PACKAGE_HASHES_MATCH",
+    "ALL_66_RUNS_AND_RESULT_BEARING_ARTIFACTS_REPRODUCE_WITH_ONLY_NON_MATERIAL_DIFFERENCES",
+    "FREEZE_PARAMETERS_CORPUS_ORACLES_SCORING_METRICS_AND_GATES_REMAIN_INTEGRAL",
+    "RETRIEVAL_AND_SAFE_REFUSAL_PRIMARY_CAUSES_ARE_CLEANLY_IDENTIFIED",
+    "NO_EVIDENCE_SUPPORTS_INVALIDATING_OR_REVERSING_EXECUTION_002"
+  ],
+  "verification": {
+    "source_archive_sha256_match": true,
+    "external_deliverables": 19,
+    "external_json_valid": 18,
+    "external_hashes_checked": 18,
+    "external_hash_mismatches": 0,
+    "execution_files_audited": 107,
+    "runs_reviewed": 66,
+    "findings_independently_reviewed": 3,
+    "auditor_canonical_mutations": 0
+  },
+  "technical_determination": "MODIFIED",
+  "reasoning_summary": "The audit evidence confirms execution integrity, controls, metrics, gates and the primary retrieval and safe-refusal findings. It also correctly identifies an unfrozen design-provenance link, a confounded ranking contrast and five non-fresh hypothesis attributions. These are material interpretation qualifications but do not invalidate or reverse the published synthetic execution result.",
+  "confidence": "HIGH",
+  "consequences": [
+    "PRESERVE_EXECUTION_RESULT_TEST_VALID_DISCRIMINATING_RESULTS_PUBLISHED",
+    "QUALIFY_CAUSAL_ATTRIBUTIONS_AS_PARTIAL",
+    "PRESERVE_H_RANKING_NOT_SUPPORTED_ONLY_IN_OBSERVED_CONTRAST",
+    "DO_NOT_CLAIM_RANKING_CAUSALLY_REFUTED",
+    "REGISTER_NINE_FRESH_AND_FIVE_HISTORICAL_COMPOSITE_OR_CODED_HYPOTHESES",
+    "CLOSE_PEND_LAB_021",
+    "CREATE_PEND_LAB_022_WITHOUT_AUTHORIZATION_EFFECT"
+  ],
+  "recommended_action": {
+    "pending_id": "PEND-LAB-022",
+    "action": "SEPARATELY_AUTHORIZE_DOCUMENTARY_POST_AUDIT_DECISION_AND_REMEDIATION_PLANNING",
+    "current_authority": "NONE"
+  },
+  "approval_state": "NOT_REQUIRED"
+}

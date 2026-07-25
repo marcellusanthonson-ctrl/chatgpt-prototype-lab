@@ -1,0 +1,20 @@
+{
+  "contrary_or_cautionary": [
+    "frozen/SOURCE_DESIGN_HASHES.json is empty (files:[]) due to a repositoryRoot off-by-one path bug -> design provenance is NOT hash-pinned (deterministic, non-material to results).",
+    "C-RANK (ARM-08 vs ARM-09) is labeled a single-variable contrast but varies BOTH ranking and representation; its null is under-identified.",
+    "5 of 14 hypothesis verdicts (H-DECLARED-DECOYS, H-SYNONYM-EXPANSION, H-AUTHORITY-FILTERING, plus derived H-PREDOMINANTLY-LEXICAL, H-CROSS-FIXTURE-DISTRACTORS) are hardcoded/historical/derived, not freshly discriminated in 002.",
+    "Selector read_log is a static declaration, not runtime-instrumented.",
+    "AUTHORITY global gate = FAIL (ARM-03/ARM-05 negative-reservation authority inversion) - a real result, but note the candidate authority-first cells are non-viable across the board.",
+    "Results are bounded to a 280-doc synthetic corpus with a local provider-neutral semantic simulation; no external validity."
+  ],
+  "favorable_to_test_validity": [
+    "HEAD == EXPECTED_SOURCE_HEAD; 107/107 files; 106/106 hashes match; freeze digest and manifest digest match registry (EXP-003/EVD-003).",
+    "Freeze stable: 24 entries unchanged, POST_FREEZE_VALIDATION zero mutations, selections frozen before private evaluation.",
+    "Full harness re-run reproduces PASS_EXACT; all 66 runs and causal/cost/leakage/gates byte-identical; metrics parsed-identical; independent metric recomputation matches all 11 cells.",
+    "Selector isolation: 60 runs, 0 private reads, canary absent from public, oracle use only post-freeze.",
+    "Controls discriminate strongly (positive F1=1/0-crit; negative 975 crit/402 inversion).",
+    "Clean single-variable contrasts for representation, k, negative reservation, retrieval, and safe-refusal policy.",
+    "Interpretation is correctly bounded (no architecture/provider/implementation/production claims; semantic = local simulation)."
+  ],
+  "net_assessment": "Execution integrity, isolation, reproducibility, metrics and gates are strongly supported. The primary causal findings (retrieval quality and the safe-refusal heuristic) are cleanly identified. The qualifications concern a confounded ranking contrast, several non-fresh hypothesis attributions, and an empty design-hash freeze - all of which narrow the interpretation without reversing the execution or its primary results."
+}

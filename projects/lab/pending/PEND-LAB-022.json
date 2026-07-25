@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "id": "PEND-LAB-022",
+  "project_id": "lab",
+  "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+  "type": "FULL_RAG_POST_AUDIT_DECISION_AND_REMEDIATION_PLANNING",
+  "subject": "Decide and plan documentary remediation after audit 076 without executing fixes, tests, architecture selection or implementation",
+  "priority": "HIGH",
+  "created_at": "2026-07-24",
+  "predecessor_pending": "PEND-LAB-021",
+  "source_authorization": "AUTHORIZATION_LAB_FULL_RAG_FAILURE_DISCRIMINATION_EXECUTION_002_EXTERNAL_AUDIT_RECONCILIATION_077",
+  "source_audit": "AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001",
+  "source_evidence": "EVD-LAB-AUD-005",
+  "source_reassessment": "REA-LAB-006",
+  "authorization_required": true,
+  "status_boundary": "PROPOSAL_ONLY_NOT_AUTHORIZATION",
+  "documentary_decisions_only": [
+    "WHETHER_TO_REMEDIATE_DESIGN_TRACEABILITY",
+    "WHETHER_TO_CREATE_AN_ISOLATED_C_RANK_CONTRAST",
+    "WHETHER_TO_REPLACE_FIVE_HISTORICAL_ATTRIBUTIONS_WITH_FRESH_CONTRASTS",
+    "WHAT_EVIDENCE_IS_REQUIRED_BEFORE_CONSIDERING_AN_ARCHITECTURE_DECISION"
+  ],
+  "prohibitions": [
+    "CORRECT_HARNESS",
+    "MODIFY_EXECUTION_002",
+    "EXECUTE_NEW_TESTS",
+    "GENERATE_CORPUS",
+    "SELECT_PROVIDER",
+    "SELECT_ARCHITECTURE",
+    "SELECT_OR_APPROVE_IMPLEMENTATION",
+    "MODIFY_PRODUCT_OR_RUNTIME"
+  ],
+  "current_authority": "NONE",
+  "automatic_approval": false,
+  "next_authorized_action": "NONE_UNTIL_SEPARATE_EXPLICIT_AUTHORIZATION",
+  "source_refs": [
+    "projects/lab/external-audits/AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001/AUDIT_REPORT.json",
+    "projects/lab/evidence/EVD-LAB-AUD-005.json",
+    "projects/lab/reassessments/REA-LAB-006.json"
+  ]
+}

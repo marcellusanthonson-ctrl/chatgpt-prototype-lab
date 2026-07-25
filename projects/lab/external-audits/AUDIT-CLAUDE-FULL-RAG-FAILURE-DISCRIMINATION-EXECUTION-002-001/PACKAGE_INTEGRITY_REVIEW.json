@@ -1,0 +1,19 @@
+{
+  "declared_file_count": 107,
+  "declared_minus_disk": [],
+  "disk_minus_declared": [],
+  "expected_source_head": "7054a1bfc9344065ad3bb9637ce8d7b808562d7a",
+  "files_on_disk": 107,
+  "hashed_entries": 106,
+  "head_match": true,
+  "manifest_status": "TEST_VALID_DISCRIMINATING_RESULTS_PUBLISHED",
+  "method": "Enumerate files; compare MANIFEST.files vs disk vs HASHES.ordered_file_hashes; recompute SHA-256 of all 106 hashed files.",
+  "note": "MANIFEST.source_pending=PEND-LAB-020 is the EXECUTION pending; PEND-LAB-021 is the audit successor pending. Consistent, not a divergence.",
+  "observed_head": "7054a1bfc9344065ad3bb9637ce8d7b808562d7a",
+  "recomputed_hash_mismatches": 0,
+  "remote_head_verification": "NOT_FETCHED_NO_NETWORK; local mounted working-copy HEAD equals EXPECTED_SOURCE_HEAD_LAB",
+  "result": "PASS",
+  "run_count": 66,
+  "self_excluded": "HASHES.json",
+  "source_pending_in_manifest": "PEND-LAB-020"
+}

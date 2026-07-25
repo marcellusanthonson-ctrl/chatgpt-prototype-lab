@@ -1,0 +1,116 @@
+{
+  "all_11_cells_match_published": true,
+  "all_11_cells_recomputed": true,
+  "method": "Independent Python reimplementation of the documented per-fixture formulas over the 66 raw run files + private oracle + document catalog + tasks, WITHOUT importing the harness. Computed recall(macro), precision(macro), macro_f1, critical_failures, authority_inversion for ALL 11 cells and compared to METRICS.json.",
+  "note": "macro recall (METRICS.recall) e.g. ARM-01=0.787698; micro required_document_recall e.g. ARM-01=0.632716 - both reproduced.",
+  "per_metric": [
+    {
+      "delta": 0,
+      "materiality": "NONE",
+      "metric": "recall",
+      "published_vs_recomputed": "EXACT_MATCH_ALL_CELLS",
+      "verdict": "PASS"
+    },
+    {
+      "delta": 0,
+      "materiality": "NONE",
+      "metric": "precision",
+      "published_vs_recomputed": "EXACT_MATCH_ALL_CELLS",
+      "verdict": "PASS"
+    },
+    {
+      "delta": 0,
+      "materiality": "NONE",
+      "metric": "macro_f1",
+      "published_vs_recomputed": "EXACT_MATCH_ALL_CELLS",
+      "verdict": "PASS"
+    },
+    {
+      "delta": 0,
+      "materiality": "NONE",
+      "metric": "required_document_recall",
+      "published_vs_recomputed": "EXACT_MATCH_ALL_CELLS",
+      "verdict": "PASS"
+    },
+    {
+      "delta": 0,
+      "materiality": "NONE",
+      "metric": "binding_negative_retention",
+      "published_vs_recomputed": "EXACT_MATCH_ALL_CELLS",
+      "verdict": "PASS"
+    },
+    {
+      "delta": 0,
+      "materiality": "NONE",
+      "metric": "unsupported_conclusion_rate",
+      "published_vs_recomputed": "EXACT_MATCH_ALL_CELLS",
+      "verdict": "PASS"
+    },
+    {
+      "delta": 0,
+      "materiality": "NONE",
+      "metric": "safe_refusal_recall",
+      "published_vs_recomputed": "EXACT_MATCH_ALL_CELLS",
+      "verdict": "PASS"
+    },
+    {
+      "delta": 0,
+      "materiality": "NONE",
+      "metric": "authority_inversion",
+      "published_vs_recomputed": "EXACT_MATCH_ALL_CELLS",
+      "verdict": "PASS"
+    },
+    {
+      "delta": 0,
+      "materiality": "NONE",
+      "metric": "critical_failures",
+      "published_vs_recomputed": "EXACT_MATCH_ALL_CELLS",
+      "verdict": "PASS"
+    }
+  ],
+  "representative_values": {
+    "ARM-01": {
+      "authority_inversion": 0,
+      "critical_failures": 142,
+      "macro_f1": 0.482937,
+      "precision": 0.406746,
+      "recall": 0.787698
+    },
+    "ARM-03": {
+      "authority_inversion": 327,
+      "critical_failures": 435,
+      "macro_f1": 0.194048,
+      "precision": 0.175595,
+      "recall": 0.376984
+    },
+    "ARM-06": {
+      "authority_inversion": 0,
+      "critical_failures": 0,
+      "macro_f1": 1.0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "ARM-07": {
+      "authority_inversion": 402,
+      "critical_failures": 975,
+      "macro_f1": 0.053968,
+      "precision": 0.059524,
+      "recall": 0.210317
+    },
+    "ARM-08": {
+      "authority_inversion": 0,
+      "critical_failures": 108,
+      "macro_f1": 0.819048,
+      "precision": 0.821429,
+      "recall": 0.97619
+    },
+    "ARM-09": {
+      "authority_inversion": 0,
+      "critical_failures": 108,
+      "macro_f1": 0.819048,
+      "precision": 0.821429,
+      "recall": 0.97619
+    }
+  },
+  "result": "PASS"
+}

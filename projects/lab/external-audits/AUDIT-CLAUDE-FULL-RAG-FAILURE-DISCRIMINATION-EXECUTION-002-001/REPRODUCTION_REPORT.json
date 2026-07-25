@@ -1,0 +1,39 @@
+{
+  "all_66_runs_reproduced": "BYTE_IDENTICAL",
+  "byte_differing_files": [
+    "HASHES.json",
+    "METRICS.json",
+    "README.md",
+    "REPRODUCTION_REPORT.json"
+  ],
+  "byte_identical_files": 103,
+  "causal_cost_leakage_gates_reproduced": "BYTE_IDENTICAL",
+  "commands": [
+    "node harness/execute.mjs --output <ext> --skip-reproduction",
+    "node harness/execute.mjs --output <ext>"
+  ],
+  "environment": {
+    "dependencies_installed": 0,
+    "external_apis_used": 0,
+    "node": "v22.22.3",
+    "platform": "linux-x64",
+    "real_data_used": false
+  },
+  "full_pipeline_self_report": "PASS_EXACT (reproduction:PASS_EXACT, runs:66, documents:280, fixtures:84)",
+  "materiality": {
+    "HASHES.json": "NON_MATERIAL - cascade of the three above.",
+    "METRICS.json": "NON_MATERIAL - byte diff is declared JSON whitespace compaction (REPOSITORY_1200_PHYSICAL_LINE_POLICY); parsed JSON identical (independently confirmed).",
+    "README.md": "NON_MATERIAL - published README adds one honest sentence disclosing the METRICS whitespace normalization.",
+    "REPRODUCTION_REPORT.json": "NON_MATERIAL - environment fingerprint (node v24.6.0/win32 original) + publication_normalization disclosure block."
+  },
+  "method": "Ran published harness twice in external dirs (Node v22.22.3, linux-x64, no deps, no network): (a) --skip-reproduction, (b) full pipeline with nested self-reproduction. Byte-compared all 107 files; parsed-compared JSON differences.",
+  "metrics_reproduced": "PARSED_IDENTICAL",
+  "note": "All result-bearing artifacts reproduce exactly; the four byte-differences are whitespace normalization, honest disclosure additions, and environment fingerprint. None alter any value.",
+  "parsed_identical_among_differing": {
+    "HASHES.json": false,
+    "METRICS.json": true,
+    "README.md": false,
+    "REPRODUCTION_REPORT.json": false
+  },
+  "verdict": "REPRODUCED_WITH_NON_MATERIAL_DIFFERENCES"
+}

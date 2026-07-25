@@ -934,6 +934,46 @@
       "implementation_selection_authorized": false,
       "architecture_selection_authorized": false,
       "product_changes_authorized": false
+    },
+    {
+      "id": "AUTHORIZATION_LAB_INDEPENDENT_EXTERNAL_READ_ONLY_AUDIT_OF_FULL_RAG_FAILURE_DISCRIMINATION_EXECUTION_002_076",
+      "state_key": "independent_external_read_only_audit_of_full_rag_failure_discrimination_execution_002_076",
+      "project_id": "lab",
+      "status": "CONSUMED_ON_DELIVERY_OF_COMPLETE_EXTERNAL_AUDIT_PACKAGE",
+      "approved_by": "Jonathan Martínez",
+      "scope": "STRICT_READ_ONLY_INDEPENDENT_EXTERNAL_AUDIT",
+      "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_INDEPENDENT_EXTERNAL_READ_ONLY_AUDIT_OF_FULL_RAG_FAILURE_DISCRIMINATION_EXECUTION_002_076.json",
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "expected_head": "7054a1bfc9344065ad3bb9637ce8d7b808562d7a",
+      "updated_at": "2026-07-24",
+      "commit_authorized": false,
+      "push_authorized": false,
+      "runtime_authorized": false,
+      "implementation_selection_authorized": false,
+      "architecture_selection_authorized": false,
+      "product_changes_authorized": false
+    },
+    {
+      "id": "AUTHORIZATION_LAB_FULL_RAG_FAILURE_DISCRIMINATION_EXECUTION_002_EXTERNAL_AUDIT_RECONCILIATION_077",
+      "state_key": "full_rag_failure_discrimination_execution_002_external_audit_reconciliation_077",
+      "project_id": "lab",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "approved_by": "Jonathan Martínez",
+      "scope": "DOCUMENTARY_EXTERNAL_AUDIT_RECONCILIATION",
+      "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_FULL_RAG_FAILURE_DISCRIMINATION_EXECUTION_002_EXTERNAL_AUDIT_RECONCILIATION_077.json",
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "expected_parent_head": "7054a1bfc9344065ad3bb9637ce8d7b808562d7a",
+      "updated_at": "2026-07-24",
+      "commit_authorized": true,
+      "push_authorized": true,
+      "source_file_update_authorized": true,
+      "test_execution_authorized": false,
+      "runtime_authorized": false,
+      "implementation_selection_authorized": false,
+      "architecture_selection_authorized": false,
+      "product_changes_authorized": false
     }
   ]
 }

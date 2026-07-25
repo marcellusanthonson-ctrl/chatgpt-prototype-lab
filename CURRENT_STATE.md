@@ -2,7 +2,7 @@
 
 La fuente estructurada es `CURRENT_STATE.json`.
 
-- Versión: 2.5.32.
+- Versión: 2.5.33.
 - Fase: `MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_HUMAN_BASELINE_APPROVED`.
 - HEAD propio: `VERIFY_LIVE_AT_USE`.
 - Autorización activa reutilizable: ninguna.
@@ -35,12 +35,16 @@ Para artefactos de interfaz rige el ciclo `RENDER → INSPECT → MEASURE → IN
 
 No se modificaron Symphonie, el piloto o Capability. No se creó V03, no se ejecutó la propuesta 051 y no se autorizaron dirección visual, imágenes, runtime, RAG, backend, despliegue o claims WCAG.
 
-## Ejecución full RAG discriminante 075
+## Ejecución full RAG discriminante 075 y auditoría 076/077
 
 `FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-EXECUTION-002` publicó 66 runs reproducibles sobre corpus exclusivamente sintético. El resultado es `TEST_VALID_DISCRIMINATING_RESULTS_PUBLISHED`, con controles positivo y negativo aprobados, aislamiento sin fugas y reproducción `PASS_EXACT`.
 
-`PEND-LAB-020` está completado y `PEND-LAB-021` propone la auditoría externa independiente read-only. La auditoría no se ejecutó y requiere autorización separada. No se seleccionaron proveedor, arquitectura o implementación, y no hubo aprobación ni efecto de producto o runtime.
+La auditoría externa read-only autorizada por `076` revisó 107 archivos y reprodujo los 66 runs. Su paquete original contiene 19 archivos y quedó preservado sin alterar. `EVD-LAB-AUD-005` y `REA-LAB-006` registran el dictamen `AUDIT_CONFIRMS_EXECUTION_MODIFIES_INTERPRETATION`.
+
+La ejecución permanece válida y no fue revertida. La interpretación reconciliada es `VALID_DISCRIMINATING_SYNTHETIC_RESULTS_WITH_QUALIFIED_CAUSAL_ATTRIBUTIONS`: retrieval y safe refusal conservan apoyo causal bajo las condiciones sintéticas, mientras ranking no quedó aislado porque C-RANK cambió conjuntamente ranking y representación. La ausencia de fuentes en los hashes de diseño y la mezcla de nueve hipótesis frescas con cinco históricas, compuestas o codificadas son limitaciones no invalidantes.
+
+`PEND-LAB-020` permanece completado. `PEND-LAB-021` está `COMPLETED_EXTERNAL_AUDIT_DELIVERED_AND_RECONCILED`. `PEND-LAB-022` propone la decisión documental posterior a la auditoría; no la autoriza. No se seleccionaron proveedor, arquitectura o implementación, y no hubo aprobación ni efecto de producto o runtime.
 
 ## Siguiente transición
 
-No existe una siguiente transición visual pendiente para este baseline. Cualquier uso productivo o externo de la marca requiere aprobación jurídica separada. Para la línea experimental, la transición propuesta es autorizar separadamente la auditoría de `PEND-LAB-021`; la propuesta no concede autoridad. Después del consumo de `075`, `NEXT_AUTHORIZED_ACTION = NONE_AFTER_CONSUMPTION`.
+No existe una siguiente transición visual pendiente para este baseline. Cualquier uso productivo o externo de la marca requiere aprobación jurídica separada. Para la línea experimental, la transición propuesta es resolver documentalmente `PEND-LAB-022` mediante autorización separada; la propuesta no concede autoridad. Después del consumo de `077`, `NEXT_AUTHORIZED_ACTION = NONE_AFTER_CONSUMPTION`.

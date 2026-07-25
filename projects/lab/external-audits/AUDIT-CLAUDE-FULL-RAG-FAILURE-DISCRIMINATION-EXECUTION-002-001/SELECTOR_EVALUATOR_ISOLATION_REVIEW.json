@@ -1,0 +1,21 @@
+{
+  "arm06_absent_from_selection_freeze": true,
+  "evaluator_oracle_access": true,
+  "evaluator_role": "EVALUATOR_ONLY_ORACLE_POSITIVE_CONTROL",
+  "evaluator_runs_arm06": 6,
+  "method": "Inspect harness runSelector (allowlist + private block), all 60 selector run oracle_access/process_role flags and read_logs, SELECTIONS_FREEZE ordering, EVALUATOR_READ_LOGS.",
+  "oracle_use_only_after_selection_freeze": true,
+  "residual_note": {
+    "impact": "Evidence of zero private reads is by-construction, not by runtime instrumentation.",
+    "observation": "Each selector run's read_log is a STATIC declared array, not a runtime-instrumented capture of fs reads (unlike execution-001's trackedRead). Isolation is nonetheless enforced structurally by the allowlist/private-block in code and by the fact that createSelection only reads public inputs.",
+    "severity": "LOW"
+  },
+  "selection_freeze_before_evaluation": true,
+  "selection_freeze_run_count": 60,
+  "selector_code_guard": "runSelector enforces PUBLIC_READ_MANIFEST allowlist and throws READ_BLOCKED on any path containing 'private'; selector never opens private/.",
+  "selector_oracle_access_all_false": true,
+  "selector_private_reads": 0,
+  "selector_process_role": "SELECTOR_ISOLATED_NO_PRIVATE_ORACLE_ACCESS",
+  "selector_runs": 60,
+  "verdict": "PASS_WITH_NON_MATERIAL_FINDINGS"
+}

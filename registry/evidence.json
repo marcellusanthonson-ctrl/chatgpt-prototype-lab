@@ -262,6 +262,21 @@
       "execution_package": "projects/lab/test-executions/FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-EXECUTION-002/MANIFEST.json",
       "ordered_manifest_digest_sha256": "32c099b8bf0e7edc5bcd4f99156240c8eec5877c423244e6f2f0c27e07ed4f40",
       "updated_at": "2026-07-24"
+    },
+    {
+      "id": "EVD-LAB-AUD-005",
+      "path": "projects/lab/evidence/EVD-LAB-AUD-005.json",
+      "kind": "INDEPENDENT_EXTERNAL_READ_ONLY_FULL_RAG_FAILURE_DISCRIMINATION_EXECUTION_AUDIT",
+      "project_id": "lab",
+      "status": "VERIFIED_EXTERNAL_EVIDENCE_REGISTERED_AND_RECONCILED",
+      "canonical_path": "projects/lab/evidence/EVD-LAB-AUD-005.json",
+      "authorization_id": "AUTHORIZATION_LAB_INDEPENDENT_EXTERNAL_READ_ONLY_AUDIT_OF_FULL_RAG_FAILURE_DISCRIMINATION_EXECUTION_002_076",
+      "reconciliation_authorization_id": "AUTHORIZATION_LAB_FULL_RAG_FAILURE_DISCRIMINATION_EXECUTION_002_EXTERNAL_AUDIT_RECONCILIATION_077",
+      "reassessment_id": "REA-LAB-006",
+      "external_audit_id": "AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001",
+      "external_audit_manifest": "projects/lab/external-audits/AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001/AUDIT_MANIFEST.json",
+      "source_archive_sha256": "a26c959f7c156f1318199d148daa78aed78bfa94b8e405d6dd0bfc21954cc56b",
+      "updated_at": "2026-07-24"
     }
   ]
 }

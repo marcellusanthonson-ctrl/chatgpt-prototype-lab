@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "id": "PEND-LAB-021",
   "project_id": "lab",
-  "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+  "status": "COMPLETED_EXTERNAL_AUDIT_DELIVERED_AND_RECONCILED",
   "type": "INDEPENDENT_EXTERNAL_READ_ONLY_AUDIT_OF_FULL_RAG_FAILURE_DISCRIMINATION_EXECUTION",
   "subject": "Independently audit execution 002, its frozen inputs, isolation, causal claims, gates and reproducibility",
   "priority": "HIGH",
@@ -14,7 +14,7 @@
   "source_evidence": "EVD-LAB-EXP-003",
   "authorization_required": true,
   "audit_mode": "STRICT_READ_ONLY_INDEPENDENT_EXTERNAL_AUDIT",
-  "status_boundary": "PROPOSAL_ONLY_NOT_AUTHORIZATION",
+  "status_boundary": "COMPLETED_BY_AUTHORIZATION_077",
   "required_review": [
     "FREEZE_INTEGRITY",
     "SELECTOR_EVALUATOR_ISOLATION_AND_LEAKAGE",
@@ -31,13 +31,27 @@
     "NO_IMPLEMENTATION_APPROVAL",
     "NO_PRODUCT_RUNTIME_OR_DEPLOYMENT_EFFECT"
   ],
-  "current_authority": "NONE",
+  "completed_by_authorization": "AUTHORIZATION_LAB_FULL_RAG_FAILURE_DISCRIMINATION_EXECUTION_002_EXTERNAL_AUDIT_RECONCILIATION_077",
+  "audit_authorization": "AUTHORIZATION_LAB_INDEPENDENT_EXTERNAL_READ_ONLY_AUDIT_OF_FULL_RAG_FAILURE_DISCRIMINATION_EXECUTION_002_076",
+  "audit_package": "AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001",
+  "evidence": "EVD-LAB-AUD-005",
+  "reassessment": "REA-LAB-006",
+  "audit_result": "AUDIT_CONFIRMS_EXECUTION_MODIFIES_INTERPRETATION",
+  "reconciliation_result": "CONFIRMED_WITH_INTERPRETATION_QUALIFICATIONS",
+  "current_authority": "NONE_AFTER_CONSUMPTION",
   "automatic_approval": false,
-  "next_authorized_action": "NONE_UNTIL_SEPARATE_EXPLICIT_AUTHORIZATION",
+  "successor_pending": "PEND-LAB-022",
+  "next_authorized_action": "NONE_AFTER_CONSUMPTION",
   "source_refs": [
     "projects/lab/test-executions/FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-EXECUTION-002/MANIFEST.json",
     "projects/lab/test-executions/FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-EXECUTION-002/VALIDATION_REPORT.json",
     "projects/lab/experiments/EXP-LAB-003.json",
-    "projects/lab/evidence/EVD-LAB-EXP-003.json"
+    "projects/lab/evidence/EVD-LAB-EXP-003.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_INDEPENDENT_EXTERNAL_READ_ONLY_AUDIT_OF_FULL_RAG_FAILURE_DISCRIMINATION_EXECUTION_002_076.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_FULL_RAG_FAILURE_DISCRIMINATION_EXECUTION_002_EXTERNAL_AUDIT_RECONCILIATION_077.json",
+    "projects/lab/external-audits/AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001/AUDIT_MANIFEST.json",
+    "projects/lab/evidence/EVD-LAB-AUD-005.json",
+    "projects/lab/reassessments/REA-LAB-006.json",
+    "projects/lab/pending/PEND-LAB-022.json"
   ]
 }

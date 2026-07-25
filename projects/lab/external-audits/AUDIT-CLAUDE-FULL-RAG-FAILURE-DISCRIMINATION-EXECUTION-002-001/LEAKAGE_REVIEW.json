@@ -1,0 +1,13 @@
+{
+  "arm08_arm09_candidate_sets_identical": true,
+  "canary_occurrences_outside_private": 0,
+  "canary_value": "PRIVATE-CANARY-075-AE3474A74F22E419D54F8B45",
+  "cross_arm_contamination": false,
+  "method": "Independent canary scan; oracle-field scan of SEMANTIC_LEXICON/public; PERFECT_CANDIDATES contamination check; cross-arm ARM-08/ARM-09 candidate-set check.",
+  "perfect_candidates_contaminate_unauthorized_arms": false,
+  "perfect_candidates_scope": "PERFECT_CANDIDATES used ONLY by ARM-08 and ARM-09 (retrieval=FROZEN_PERFECT_PUBLIC_CANDIDATES); other arms use GLOBAL_PUBLIC_CORPUS. Verified in cellParameters and createSelection.",
+  "private_canary_visible_in_public": false,
+  "results_incorporate_private_information_early": false,
+  "semantic_role_label_leaks": [],
+  "verdict": "PASS_NO_LEAKAGE"
+}

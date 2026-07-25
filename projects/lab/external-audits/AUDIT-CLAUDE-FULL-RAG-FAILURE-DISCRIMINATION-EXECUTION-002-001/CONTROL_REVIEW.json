@@ -1,0 +1,27 @@
+{
+  "method": "Independent recomputation of ARM-06 (positive) and ARM-07 (negative) metrics from raw runs; compare to controls block.",
+  "negative_control": {
+    "authority_inversion": 402,
+    "cell": "ARM-07",
+    "critical_failures": 975,
+    "forbidden_document_rate": 0.419643,
+    "interpretation": "Relevance-before-authority ordering surfaces massive authority inversion and forbidden selection as designed.",
+    "macro_f1": 0.053968,
+    "role": "RELEVANCE_FIRST_UNSAFE_CONTROL",
+    "verdict": "PASS_DISCRIMINATES_UNSAFE_STRATEGY"
+  },
+  "positive_control": {
+    "authority_inversion": 0,
+    "binding_negative_retention": 1.0,
+    "cell": "ARM-06",
+    "critical_failures": 0,
+    "interpretation": "Oracle-informed ceiling reaches perfect metrics with zero critical failures -> the evaluator can award viability; not rigged, not promotable.",
+    "macro_f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "role": "EVALUATOR_ONLY_ORACLE_POSITIVE_CONTROL",
+    "verdict": "PASS"
+  },
+  "recompute_match": true,
+  "result": "CONTROLS_DISCRIMINATE_PASS"
+}

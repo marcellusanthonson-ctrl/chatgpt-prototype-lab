@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-AUD-005",
+  "project_id": "lab",
+  "evidence_type": "INDEPENDENT_EXTERNAL_READ_ONLY_FULL_RAG_FAILURE_DISCRIMINATION_EXECUTION_AUDIT",
+  "status": "VERIFIED_EXTERNAL_EVIDENCE_REGISTERED_AND_RECONCILED",
+  "registered_at": "2026-07-24",
+  "source_auditor": "CLAUDE",
+  "audit_authorization": "AUTHORIZATION_LAB_INDEPENDENT_EXTERNAL_READ_ONLY_AUDIT_OF_FULL_RAG_FAILURE_DISCRIMINATION_EXECUTION_002_076",
+  "reconciliation_authorization": "AUTHORIZATION_LAB_FULL_RAG_FAILURE_DISCRIMINATION_EXECUTION_002_EXTERNAL_AUDIT_RECONCILIATION_077",
+  "audit_mode": "STRICT_READ_ONLY_INDEPENDENT_EXTERNAL_AUDIT",
+  "source_head": "7054a1bfc9344065ad3bb9637ce8d7b808562d7a",
+  "source_execution": "FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-EXECUTION-002",
+  "source_experiment": "EXP-LAB-003",
+  "source_evidence": "EVD-LAB-EXP-003",
+  "audit_package": "AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001",
+  "external_package": {
+    "canonical_manifest": "projects/lab/external-audits/AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001/AUDIT_MANIFEST.json",
+    "canonical_hashes": "projects/lab/external-audits/AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001/AUDIT_HASHES.json",
+    "source_archive_filename": "AUDIT-~2.rar",
+    "source_archive_sha256": "a26c959f7c156f1318199d148daa78aed78bfa94b8e405d6dd0bfc21954cc56b",
+    "source_archive_size_bytes": 24795,
+    "audit_package_files": 19,
+    "json_file_count": 18,
+    "individual_file_hashes_checked": 18,
+    "individual_file_hash_mismatches": 0,
+    "ordered_manifest_digest_sha256": "4e15a69f710459ac880065d637e46a010dcc07d56b3b7972e8e9433919f351ad",
+    "integrity_result": "PASS"
+  },
+  "files_audited": 107,
+  "runs_reviewed": 66,
+  "audit_result": "AUDIT_CONFIRMS_EXECUTION_MODIFIES_INTERPRETATION",
+  "reproduction_result": "REPRODUCED_WITH_NON_MATERIAL_DIFFERENCES",
+  "freeze_integrity": "PASS_WITH_NON_MATERIAL_FINDINGS",
+  "isolation_and_leakage": "PASS_NO_LEAKAGE",
+  "causal_claims": "PRIMARY_CAUSES_CONFIRMED_SOME_ATTRIBUTIONS_QUALIFIED",
+  "reconciled_interpretation": "VALID_DISCRIMINATING_SYNTHETIC_RESULTS_WITH_QUALIFIED_CAUSAL_ATTRIBUTIONS",
+  "claims": {
+    "confirmed": [
+      "EXECUTION_002_PUBLISHED",
+      "107_FILES",
+      "66_RUNS",
+      "9_ARMS",
+      "11_OPERATIONAL_CELLS",
+      "EXECUTION_HASHES_INTEGRAL",
+      "SELECTOR_EVALUATOR_ISOLATION",
+      "NO_LEAKAGE",
+      "SUBSTANTIALLY_EXACT_REPRODUCTION",
+      "METRICS_RECALCULABLE",
+      "POSITIVE_AND_NEGATIVE_CONTROLS_VALID",
+      "RETRIEVAL_PRIMARY_CAUSE_WITHIN_SYNTHETIC_EXPERIMENT",
+      "SAFE_REFUSAL_HEURISTIC_PRIMARY_CAUSE_WITHIN_SYNTHETIC_EXPERIMENT"
+    ],
+    "modified": [
+      "VALID_DISCRIMINATING_SYNTHETIC_RESULTS_WITH_PARTIAL_QUALIFIED_CAUSAL_ATTRIBUTIONS",
+      "RANKING_NULL_OBSERVED_IN_CONFOUNDED_CONTRAST_NOT_CAUSALLY_REFUTED",
+      "NINE_FRESH_CONTRAST_HYPOTHESES_FIVE_HISTORICAL_COMPOSITE_OR_CODED"
+    ]
+  },
+  "canonical_mutation_by_auditor": false,
+  "authority_effect": {
+    "provider_selected": false,
+    "architecture_selected": false,
+    "implementation_selected": false,
+    "implementation_approved": false,
+    "runtime_effect": "NONE",
+    "product_effect": "NONE",
+    "next_authorized_action": "NONE"
+  },
+  "source_refs": [
+    "projects/lab/external-audits/AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001/AUDIT_REPORT.json",
+    "projects/lab/external-audits/AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001/CAUSAL_IDENTIFIABILITY_REVIEW.json",
+    "projects/lab/external-audits/AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001/HYPOTHESIS_VERDICTS.json",
+    "projects/lab/reassessments/REA-LAB-006.json",
+    "projects/lab/pending/PEND-LAB-022.json"
+  ]
+}

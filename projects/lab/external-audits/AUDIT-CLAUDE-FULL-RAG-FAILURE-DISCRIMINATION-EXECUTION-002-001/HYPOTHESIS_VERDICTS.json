@@ -1,0 +1,139 @@
+{
+  "asserted_hardcoded_or_historical": [
+    "H-DECLARED-DECOYS",
+    "H-SYNONYM-EXPANSION",
+    "H-AUTHORITY-FILTERING"
+  ],
+  "count": 14,
+  "freshly_discriminated_by_002_contrasts": [
+    "H-SEMANTIC-REPRESENTATION",
+    "H-BUDGET-K2",
+    "H-NEGATIVE-RESERVATION",
+    "H-SAFE-REFUSAL-HEURISTIC",
+    "H-RETRIEVAL",
+    "H-CORPUS",
+    "H-EVALUATOR",
+    "H-HARNESS"
+  ],
+  "hypotheses": [
+    {
+      "auditor_verdict": "CONFIRMED",
+      "confidence": "HIGH",
+      "hypothesis_id": "H-SEMANTIC-REPRESENTATION",
+      "note": "Clean single-variable contrast ARM-01 vs ARM-04; +0.0397 recall.",
+      "package_classification": "SUPPORTED_CONTRIBUTING_CAUSE",
+      "package_evidence": "C-REP"
+    },
+    {
+      "auditor_verdict": "CONFIRMED_WITH_QUALIFICATION",
+      "confidence": "MEDIUM",
+      "hypothesis_id": "H-PREDOMINANTLY-LEXICAL",
+      "note": "Same contrast reused; the small semantic gain supports a predominantly-lexical baseline, but this is an inference from C-REP, not an independent contrast.",
+      "package_classification": "SUPPORTED_CONTRIBUTING_CAUSE",
+      "package_evidence": "C-REP"
+    },
+    {
+      "auditor_verdict": "CONFIRMED_WITH_QUALIFICATION",
+      "confidence": "HIGH",
+      "hypothesis_id": "H-BUDGET-K2",
+      "note": "k raises recall (+0.058) but collapses precision (0.41->0.06) and floods distractors; contributing cause of the recall ceiling, NOT a remedy.",
+      "package_classification": "SUPPORTED_CONTRIBUTING_CAUSE",
+      "package_evidence": "C-K4"
+    },
+    {
+      "auditor_verdict": "CONFIRMED_WITH_QUALIFICATION",
+      "confidence": "HIGH",
+      "hypothesis_id": "H-NEGATIVE-RESERVATION",
+      "note": "Retention +0.107 but induces authority_inversion=327 and recall collapse (ARM-03); a trade-off, not a clean improvement.",
+      "package_classification": "SUPPORTED_CONTRIBUTING_CAUSE",
+      "package_evidence": "C-NEG"
+    },
+    {
+      "auditor_verdict": "CONFIRMED",
+      "confidence": "HIGH",
+      "hypothesis_id": "H-SAFE-REFUSAL-HEURISTIC",
+      "note": "Cleanest contrast: legacy 1.0 -> fixed 0.25 unsupported, selections held constant.",
+      "package_classification": "SUPPORTED_PRIMARY_CAUSE",
+      "package_evidence": "C-SAFE-REFUSAL"
+    },
+    {
+      "auditor_verdict": "INSUFFICIENT_EVIDENCE",
+      "confidence": "LOW",
+      "hypothesis_id": "H-DECLARED-DECOYS",
+      "note": "Verdict is hardcoded and cites historical 071 attribution, NOT a fresh 002 contrast. Not discriminated by this execution.",
+      "package_classification": "CONTRADICTED",
+      "package_evidence": "HISTORICAL_48_EVENT_ATTRIBUTION_PRESERVED"
+    },
+    {
+      "auditor_verdict": "CONFIRMED_WITH_QUALIFICATION",
+      "confidence": "MEDIUM",
+      "hypothesis_id": "H-CROSS-FIXTURE-DISTRACTORS",
+      "note": "Cross-fixture distractor rate is real and rises with k (0.59->0.94), but the classification derives from a composite (representation + distractor strata), not a dedicated single-variable contrast.",
+      "package_classification": "SUPPORTED_CONTRIBUTING_CAUSE",
+      "package_evidence": "C-REP_AND_DISTRACTOR_STRATA"
+    },
+    {
+      "auditor_verdict": "INSUFFICIENT_EVIDENCE",
+      "confidence": "LOW",
+      "hypothesis_id": "H-SYNONYM-EXPANSION",
+      "note": "Hardcoded, cites historical 071 evidence; not discriminated by a fresh 002 contrast.",
+      "package_classification": "SUPPORTED_CONTRIBUTING_CAUSE",
+      "package_evidence": "HISTORICAL_PAIRED_EVIDENCE_071"
+    },
+    {
+      "auditor_verdict": "CONFIRMED",
+      "confidence": "HIGH",
+      "hypothesis_id": "H-RETRIEVAL",
+      "note": "Clean single-variable contrast ARM-01 vs ARM-08; +0.19 recall, largest effect.",
+      "package_classification": "SUPPORTED_PRIMARY_CAUSE",
+      "package_evidence": "C-RETRIEVAL"
+    },
+    {
+      "auditor_verdict": "CONFIRMED_WITH_QUALIFICATION",
+      "confidence": "MEDIUM",
+      "hypothesis_id": "H-RANKING",
+      "note": "Package verdict NOT_SUPPORTED agrees with observed null, BUT the C-RANK contrast (ARM-08 vs ARM-09) confounds ranking with representation; the null is under-identified rather than a clean isolation of ranking.",
+      "package_classification": "NOT_SUPPORTED",
+      "package_evidence": "C-RANK"
+    },
+    {
+      "auditor_verdict": "CONFIRMED_WITH_QUALIFICATION",
+      "confidence": "MEDIUM",
+      "hypothesis_id": "H-AUTHORITY-FILTERING",
+      "note": "Supported by the observed zero ACL/stale/contamination filter violations in candidate arms, but the classification string is hardcoded rather than tied to a contrast.",
+      "package_classification": "CONTRADICTED",
+      "package_evidence": "ZERO_FILTER_VIOLATIONS_IN_CANDIDATE_ARMS"
+    },
+    {
+      "auditor_verdict": "CONFIRMED",
+      "confidence": "HIGH",
+      "hypothesis_id": "H-CORPUS",
+      "note": "Correctly declines to attribute causality to the composite SCALE_AND_DECOY_DENSITY configuration; honest non-attribution.",
+      "package_classification": "POSSIBLE_NOT_DISCRIMINATED",
+      "package_evidence": "SCALE_CONFIGURATION_IS_COMPOSITE_NOT_CAUSAL"
+    },
+    {
+      "auditor_verdict": "CONFIRMED",
+      "confidence": "HIGH",
+      "hypothesis_id": "H-EVALUATOR",
+      "note": "Positive (F1=1/0-crit) and negative (975 crit) controls jointly refute an evaluator artifact.",
+      "package_classification": "CONTRADICTED",
+      "package_evidence": "POSITIVE_AND_NEGATIVE_CONTROLS"
+    },
+    {
+      "auditor_verdict": "CONFIRMED_WITH_QUALIFICATION",
+      "confidence": "MEDIUM",
+      "hypothesis_id": "H-HARNESS",
+      "note": "The safe-refusal policy is a harness policy; the within-arm contrast supports it, but H-HARNESS and H-SAFE-REFUSAL-HEURISTIC share the same single evidence source.",
+      "package_classification": "SUPPORTED_PRIMARY_CAUSE",
+      "package_evidence": "C-SAFE-REFUSAL"
+    }
+  ],
+  "method": "For each of the 14 hypotheses, compare package classification to the underlying contrast; assess whether it is freshly discriminated in 002 or asserted from hardcoded/historical/derived evidence.",
+  "summary": "9 of 14 are supported by fresh single-variable/within-arm contrasts; 3 are hardcoded/historical (071) attributions; 2-3 are derived from composite evidence. The primary-cause findings (retrieval, safe-refusal heuristic) are robust.",
+  "under_identified_or_derived": [
+    "H-PREDOMINANTLY-LEXICAL",
+    "H-CROSS-FIXTURE-DISTRACTORS",
+    "H-RANKING"
+  ]
+}

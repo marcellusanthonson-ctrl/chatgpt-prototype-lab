@@ -1,0 +1,54 @@
+{
+  "arm_02_k_sweep": [
+    "ARM-02@K4",
+    "ARM-02@K8",
+    "ARM-02@K16"
+  ],
+  "broken_references": 0,
+  "cells": [
+    "ARM-01",
+    "ARM-02@K4",
+    "ARM-02@K8",
+    "ARM-02@K16",
+    "ARM-03",
+    "ARM-04",
+    "ARM-05",
+    "ARM-06",
+    "ARM-07",
+    "ARM-08",
+    "ARM-09"
+  ],
+  "configurations": [
+    "REPETITION_1",
+    "REPETITION_2",
+    "REPETITION_3",
+    "ORDER_PERMUTATION",
+    "PARAPHRASE_VARIANT",
+    "SCALE_AND_DECOY_DENSITY_VARIANT"
+  ],
+  "duplicate_runs": 0,
+  "json_markdown_divergences": [
+    {
+      "file": "EXECUTION_SUMMARY.md",
+      "status": "CONSISTENT with EXECUTION_SUMMARY.json (both TEST_VALID..., 280 docs, 66 runs, 11 cells)"
+    }
+  ],
+  "method": "Recount cells/arms/runs from disk; verify 6 configs x 11 cells = 66; check missing/duplicate/orphan runs and JSON/MD divergences.",
+  "missing_runs": 0,
+  "orphan_paths": 0,
+  "published": {
+    "ARM_COUNT": 9,
+    "FILE_COUNT": 107,
+    "OPERATIONAL_CELL_COUNT": 11,
+    "RUN_COUNT": 66
+  },
+  "recomputed": {
+    "ARM_COUNT": 9,
+    "FILE_COUNT": 107,
+    "OPERATIONAL_CELL_COUNT": 11,
+    "RUN_COUNT": 66
+  },
+  "result": "PASS",
+  "results_traceable_to_runs": true,
+  "unmanifested_files": 0
+}

@@ -1,0 +1,82 @@
+{
+  "audit_id": "AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001",
+  "file_count_hashed": 18,
+  "hash_algorithm": "SHA-256",
+  "ordered_file_hashes": [
+    {
+      "path": "AUDIT_MANIFEST.json",
+      "sha256": "9cb8e82c263666f616191857bfd01b7f6abef5f0ff89a929cb45d09a1c2f7399"
+    },
+    {
+      "path": "AUDIT_REPORT.json",
+      "sha256": "c5b43f88db4c41df22f86e92075e99782922299f374ed587534b108627039074"
+    },
+    {
+      "path": "AUDIT_REPORT.md",
+      "sha256": "2096b45a6ab907d73d410d050a4a760f4d3deb07918acaaeec6233920a048bfb"
+    },
+    {
+      "path": "CAUSAL_IDENTIFIABILITY_REVIEW.json",
+      "sha256": "f75fa62e4e95e77726992b6e4e2af2b8922b56dba43e6f448bcadcbaf204c1b1"
+    },
+    {
+      "path": "CLAIM_VERDICTS.json",
+      "sha256": "648e3d12b35cf51e4c494421725f0193b50873e54e56ff57c3bc55fbc9f5e792"
+    },
+    {
+      "path": "CONTROL_REVIEW.json",
+      "sha256": "610d756c693d664bb2dba12b48f1fc0d1a2211850a0b5f4c001423e64d2d559d"
+    },
+    {
+      "path": "FAVORABLE_AND_CONTRARY_EVIDENCE.json",
+      "sha256": "b3a67cad6ee5793c4c6fc8c3aef005f71dbfa4d39fc02de9502e77eb45e06b05"
+    },
+    {
+      "path": "FREEZE_INTEGRITY_REVIEW.json",
+      "sha256": "7172ae04d603bee4750bb561c1517e07482f01245a363a700eec4b4e0ed5a9ec"
+    },
+    {
+      "path": "GATE_RECOMPUTATION.json",
+      "sha256": "6db771167678b39018ef35bed6d257d8596a5af118d68c4081bc0de8ab73fd33"
+    },
+    {
+      "path": "HASH_VERIFICATION.json",
+      "sha256": "c249835871b9ce6feb8acc3da670fd41bf3477f37cb31205b2093dd54e16e4c5"
+    },
+    {
+      "path": "HYPOTHESIS_VERDICTS.json",
+      "sha256": "2c8bf59e79f7a486ef19ec2137ceea544f8c2b3b210ba316994482aa8b3c7ad4"
+    },
+    {
+      "path": "LEAKAGE_REVIEW.json",
+      "sha256": "bdd97ee91d3538fda9a6a3a1d7d783eeb3406bb6a72d1286ff760d0acd1523a3"
+    },
+    {
+      "path": "LIMITATIONS.json",
+      "sha256": "543fdd8422aaa584120179cdeecd852623bf2ce1f2c8894bbb4e64415805260b"
+    },
+    {
+      "path": "METRIC_RECOMPUTATION.json",
+      "sha256": "952fe0d4018d8a2a218dd4014b8bc5a5d1443aea872fcf237c8bc3876af97fbf"
+    },
+    {
+      "path": "PACKAGE_INTEGRITY_REVIEW.json",
+      "sha256": "2b97223c562b166ffb20ed9026a999b9f0026b2783fa232ff5260774f31809be"
+    },
+    {
+      "path": "REPRODUCTION_REPORT.json",
+      "sha256": "13fbaf38811480fc7439c87ebede7a6c8cda01586f0dfbe99f3092501b404563"
+    },
+    {
+      "path": "RUN_MATRIX_REVIEW.json",
+      "sha256": "67022862c4ae0fc8b429ddfa0a58312b11ec9d60db02bd0b749cf2d2b5922da6"
+    },
+    {
+      "path": "SELECTOR_EVALUATOR_ISOLATION_REVIEW.json",
+      "sha256": "07bd1b7c4c1b0151fa2a2706d3f532d3ead6f5a548acb6e3ce64b651ffe8ce26"
+    }
+  ],
+  "ordered_manifest_digest_sha256": "4e15a69f710459ac880065d637e46a010dcc07d56b3b7972e8e9433919f351ad",
+  "schema_version": "1.0.0",
+  "self_excluded": "AUDIT_HASHES.json"
+}

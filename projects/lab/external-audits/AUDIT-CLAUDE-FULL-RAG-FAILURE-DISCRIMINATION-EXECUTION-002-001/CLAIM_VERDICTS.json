@@ -1,0 +1,166 @@
+{
+  "claims": [
+    {
+      "auditor_verdict": "CONFIRMED_WITH_QUALIFICATION - k raises recall but is not a fix; it trades precision/safety",
+      "claim": "Effect of increasing k",
+      "confidence": "HIGH",
+      "contrary_evidence": [
+        "precision collapses 0.407->0.231->0.116->0.058",
+        "cross_fixture_distractor_rate rises 0.59->0.94",
+        "critical failures do not fall (142->144)"
+      ],
+      "favorable_evidence": [
+        "C-K4/K8/K16 recall increases +0.058/+0.060/+0.060 (paired, tight CIs)",
+        "required_document_recall 0.63->0.72"
+      ],
+      "missing_evidence": []
+    },
+    {
+      "auditor_verdict": "CONFIRMED_WITH_QUALIFICATION - improves retention but induces authority inversion and recall loss",
+      "claim": "Effect of reserving binding negatives",
+      "confidence": "HIGH",
+      "contrary_evidence": [
+        "ARM-03 authority_inversion=327, recall drops to 0.377, critical failures jump to 435"
+      ],
+      "favorable_evidence": [
+        "C-NEG binding retention +0.107 (CI 0.079-0.135)",
+        "ARM-03 binding_negative_retention 0.5 vs ARM-01 0"
+      ],
+      "missing_evidence": []
+    },
+    {
+      "auditor_verdict": "CONFIRMED - contributing cause, strictly under synthetic local-simulation conditions",
+      "claim": "Effect of semantic representation",
+      "confidence": "HIGH",
+      "contrary_evidence": [
+        "Gain is small; +50% normalized compute; semantic is a LOCAL simulation, not real embeddings"
+      ],
+      "favorable_evidence": [
+        "C-REP recall +0.0397 (CI 0.028-0.052), clean single-variable ARM-01 vs ARM-04"
+      ],
+      "missing_evidence": [
+        "No real-embedding comparison (out of scope by design)"
+      ]
+    },
+    {
+      "auditor_verdict": "CONFIRMED - primary cause of unsupported conclusions; cleanest contrast",
+      "claim": "Safe refusal",
+      "confidence": "HIGH",
+      "contrary_evidence": [
+        "Residual 0.25 unsupported remains even with the fixed heuristic"
+      ],
+      "favorable_evidence": [
+        "C-SAFE-REFUSAL legacy 1.0 -> fixed 0.25 unsupported (-0.75), selections held constant (within-arm)"
+      ],
+      "missing_evidence": []
+    },
+    {
+      "auditor_verdict": "CONFIRMED_WITH_QUALIFICATION",
+      "claim": "Cross-fixture distractors",
+      "confidence": "MEDIUM",
+      "contrary_evidence": [
+        "Classified via composite 'C-REP_AND_DISTRACTOR_STRATA', not a dedicated single-variable contrast"
+      ],
+      "favorable_evidence": [
+        "cross_fixture_distractor_rate is nonzero and grows with k (ARM-01 0.593 -> ARM-02@K16 0.940)"
+      ],
+      "missing_evidence": [
+        "No isolated distractor-density-only contrast at fixed k"
+      ]
+    },
+    {
+      "auditor_verdict": "CONFIRMED_WITH_QUALIFICATION - the no-effect conclusion is plausible but under-identified",
+      "claim": "Ranking by authority",
+      "confidence": "MEDIUM",
+      "contrary_evidence": [
+        "C-RANK (ARM-08 vs ARM-09) confounds ranking WITH representation; listed as single-variable but is not; ARM-08==ARM-09 on all metrics"
+      ],
+      "favorable_evidence": [
+        "Package verdict NOT_SUPPORTED matches observed C-RANK=0"
+      ],
+      "missing_evidence": [
+        "No clean ranking-only contrast (e.g. authority-first vs task-applicability holding representation constant)"
+      ]
+    },
+    {
+      "auditor_verdict": "CONFIRMED - retrieval and safe-refusal heuristic are the supported primary causes",
+      "claim": "Primary causes",
+      "confidence": "HIGH",
+      "contrary_evidence": [
+        "Even ARM-08/09 perfect retrieval remain NON_VIABLE (108 critical) -> retrieval alone insufficient"
+      ],
+      "favorable_evidence": [
+        "Retrieval quality: C-RETRIEVAL +0.19 (largest, clean)",
+        "Safe-refusal heuristic: C-SAFE-REFUSAL -0.75 (clean)"
+      ],
+      "missing_evidence": []
+    },
+    {
+      "auditor_verdict": "CONFIRMED",
+      "claim": "Contributing causes",
+      "confidence": "HIGH",
+      "contrary_evidence": [
+        "Each carries a counter-effect (precision/authority/recall trade-offs)"
+      ],
+      "favorable_evidence": [
+        "k, semantic representation, negative reservation each show directional paired effects"
+      ],
+      "missing_evidence": []
+    },
+    {
+      "auditor_verdict": "CONFIRMED_WITH_QUALIFICATION - semantic reproduction exact; 4 non-material byte differences declared/environmental",
+      "claim": "Reproducibility exact",
+      "confidence": "HIGH",
+      "contrary_evidence": [
+        "4 files not byte-reproducible: METRICS (whitespace), README+REPRODUCTION_REPORT (disclosure additions), HASHES (cascade)"
+      ],
+      "favorable_evidence": [
+        "Full harness re-run PASS_EXACT; 66 runs + CAUSAL + COST + LEAKAGE + GATE_RESULTS byte-identical; METRICS parsed-identical"
+      ],
+      "missing_evidence": []
+    },
+    {
+      "auditor_verdict": "CONFIRMED",
+      "claim": "Isolation",
+      "confidence": "HIGH",
+      "contrary_evidence": [
+        "Selector read_log is a static declaration, not runtime-instrumented"
+      ],
+      "favorable_evidence": [
+        "60 selector runs, 0 private reads, oracle_access=false; canary absent from public; evaluator only after selection freeze"
+      ],
+      "missing_evidence": []
+    },
+    {
+      "auditor_verdict": "CONFIRMED_WITH_QUALIFICATION - the test genuinely discriminates the primary causes; a subset of hypothesis verdicts are asserted rather than freshly discriminated",
+      "claim": "Discriminant validity",
+      "confidence": "HIGH",
+      "contrary_evidence": [
+        "5 of 14 hypotheses rely on hardcoded/historical/derived attributions rather than fresh 002 contrasts; C-RANK confounded; freeze omits design-source hash pinning"
+      ],
+      "favorable_evidence": [
+        "Positive control F1=1/0-crit; negative control 975 crit/402 inversion; clean single-variable contrasts for k, representation, negatives, retrieval, safe-refusal"
+      ],
+      "missing_evidence": []
+    }
+  ],
+  "interpretation_limits_check": {
+    "ARCHITECTURE_APPROVED": "NOT_CLAIMED",
+    "GENERALIZED_BEYOND_SYNTHETIC_CORPUS": "NOT_CLAIMED",
+    "IMPLEMENTATION_APPROVED": "NOT_CLAIMED",
+    "PRODUCTION_READY": "NOT_CLAIMED",
+    "PROVIDER_APPROVED": "NOT_CLAIMED",
+    "RAG_OPERATIONAL": "NOT_CLAIMED (CLAIM_BOUNDARIES prohibits; EXECUTION_SUMMARY declares NONE)",
+    "REAL_WORLD_VALIDATED": "NOT_CLAIMED",
+    "verdict": "NO_OVERCLAIM_FOUND - package consistently bounds itself to synthetic tested conditions and local semantic simulation"
+  },
+  "method": "For each specially-important claim: gather favorable/contrary/missing evidence, assign auditor verdict and confidence.",
+  "verdict_scale": [
+    "CONFIRMED",
+    "CONFIRMED_WITH_QUALIFICATION",
+    "MODIFIED",
+    "REVERSED",
+    "INSUFFICIENT_EVIDENCE",
+    "NOT_AUDITABLE"
+  ]
+}

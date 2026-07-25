@@ -1,0 +1,15 @@
+{
+  "algorithm": "SHA-256",
+  "freeze_digest_recomputation": "MATCH (sha256 of 'path\\tsha256' join over 24 freeze entries)",
+  "freeze_ordered_digest": "0e81fc241693b16be69c3a903055d07016f700864e0f7ef84dc238e1aa04bfd0",
+  "method": "SHA-256 recomputation of 106 hashed files vs HASHES.json; ordered_manifest_digest and FREEZE ordered_digest recomputation; registry cross-check.",
+  "mismatches": 0,
+  "ordered_file_hashes_checked": 106,
+  "published_ordered_manifest_digest": "32c099b8bf0e7edc5bcd4f99156240c8eec5877c423244e6f2f0c27e07ed4f40",
+  "registry_cross_check": {
+    "EVD-LAB-EXP-003.freeze_ordered_digest": "0e81fc24...bfd0 == FREEZE_MANIFEST.json",
+    "EXP-LAB-003.ordered_manifest_digest": "32c099b8bf0e7edc5bcd4f99156240c8eec5877c423244e6f2f0c27e07ed4f40 == HASHES.json",
+    "all_match": true
+  },
+  "result": "PASS"
+}

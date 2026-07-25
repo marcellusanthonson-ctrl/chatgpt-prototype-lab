@@ -1,0 +1,17 @@
+{
+  "audit_scope": "Read-only external audit of execution 002 at HEAD 7054a1b; no canonical mutation, no commit/push, no dependency install, no external API, no real data.",
+  "authority": "This audit creates no authority, selects nothing, approves nothing, and does not close PEND-LAB-021.",
+  "causal_identifiability": "C-RANK is confounded; ~5 hypotheses are not freshly discriminated; conclusions about ranking are under-identified.",
+  "external_validity": "NONE. Synthetic 280-doc corpus, LOCAL_PROVIDER_NEUTRAL semantic simulation (NOT real embeddings), no language-model generation.",
+  "formula_independence": "Independent recomputation reimplements the DOCUMENTED formulas; where the harness definitions are idiosyncratic they are followed as declared.",
+  "freeze_provenance": "SOURCE_DESIGN_HASHES is empty; the design documents are not cryptographically bound by the freeze.",
+  "interpretation_prohibitions_upheld": [
+    "NO RAG_OPERATIONAL",
+    "NO ARCHITECTURE/PROVIDER/IMPLEMENTATION SELECTION OR APPROVAL",
+    "NO PRODUCTION_READY",
+    "NO REAL_WORLD_VALIDATION",
+    "NO GENERALIZATION_BEYOND_SYNTHETIC_CORPUS"
+  ],
+  "remote_head": "Live remote HEAD not fetched (no-network boundary); verified against local mounted working copy whose HEAD == EXPECTED_SOURCE_HEAD_LAB.",
+  "reproduction": "Semantic reproduction exact (PASS_EXACT); byte reproduction differs on 4 declared/environmental files (METRICS whitespace, README+REPRODUCTION_REPORT disclosures, HASHES cascade)."
+}

@@ -1,0 +1,115 @@
+{
+  "clean_single_variable_contrasts": [
+    "C-REP",
+    "C-K4",
+    "C-K8",
+    "C-K16",
+    "C-NEG",
+    "C-RETRIEVAL",
+    "C-SAFE-REFUSAL"
+  ],
+  "confounded_contrasts": [
+    "C-RANK"
+  ],
+  "contrasts": {
+    "C-K16": {
+      "mean_difference": 0.059524,
+      "pair": "ARM-01 vs ARM-02@K16",
+      "single_variable": true,
+      "varied": "k (2->16)",
+      "verdict": "CLEAN_SINGLE_VARIABLE"
+    },
+    "C-K4": {
+      "ci": [
+        0.039683,
+        0.075397
+      ],
+      "mean_difference": 0.05754,
+      "pair": "ARM-01 vs ARM-02@K4",
+      "single_variable": true,
+      "varied": "k (2->4)",
+      "verdict": "CLEAN_SINGLE_VARIABLE"
+    },
+    "C-K8": {
+      "mean_difference": 0.059524,
+      "pair": "ARM-01 vs ARM-02@K8",
+      "single_variable": true,
+      "varied": "k (2->8)",
+      "verdict": "CLEAN_SINGLE_VARIABLE"
+    },
+    "C-NEG": {
+      "ci": [
+        0.079365,
+        0.134921
+      ],
+      "mean_difference": 0.107143,
+      "note": "Improves binding retention but induces authority_inversion=327 and recall collapse in ARM-03 -> trade-off, not free win.",
+      "pair": "ARM-01 vs ARM-03",
+      "single_variable": true,
+      "varied": "negative_reservation (false->true)",
+      "verdict": "CLEAN_SINGLE_VARIABLE"
+    },
+    "C-RANK": {
+      "ci": [
+        0.0,
+        0.0
+      ],
+      "finding": "Labeled a single-variable contrast in the package but ARM-08 and ARM-09 differ in BOTH ranking and representation. Observed effect is exactly 0, and ARM-08/ARM-09 metrics are identical, so H-RANKING=NOT_SUPPORTED. The confound did NOT create a false positive, but the null is not cleanly attributable to ranking alone (it is an under-identified null).",
+      "mean_difference": 0.0,
+      "pair": "ARM-08 vs ARM-09",
+      "single_variable": false,
+      "varied": "ranking (AUTHORITY_FIRST->TASK_APPLICABILITY...) AND representation (LEXICAL->SEMANTIC)",
+      "verdict": "CONFOUNDED_TWO_VARIABLES"
+    },
+    "C-REP": {
+      "ci": [
+        0.027778,
+        0.051587
+      ],
+      "held_constant": "k=2,neg=false,retrieval=GLOBAL,ranking=AUTHORITY_FIRST",
+      "mean_difference": 0.039683,
+      "pair": "ARM-01 vs ARM-04",
+      "single_variable": true,
+      "varied": "representation (LEXICAL->SEMANTIC)",
+      "verdict": "CLEAN_SINGLE_VARIABLE"
+    },
+    "C-RETRIEVAL": {
+      "ci": [
+        0.166336,
+        0.215608
+      ],
+      "mean_difference": 0.190476,
+      "note": "Largest recall effect; primary cause of recall.",
+      "pair": "ARM-01 vs ARM-08",
+      "single_variable": true,
+      "varied": "retrieval (GLOBAL->PERFECT_CANDIDATES)",
+      "verdict": "CLEAN_SINGLE_VARIABLE"
+    },
+    "C-SAFE-REFUSAL": {
+      "difference": -0.75,
+      "fixed_unsupported_rate": 0.25,
+      "legacy_unsupported_rate": 1.0,
+      "note": "Strongest, cleanest contrast; isolates the evidentiary-sufficiency heuristic from selection.",
+      "pair": "ARM-01 legacy vs fixed policy (within-arm, selections held constant)",
+      "single_variable": true,
+      "varied": "safe-refusal policy only",
+      "verdict": "CLEAN_WITHIN_ARM_CONTRAST"
+    }
+  },
+  "contributing_findings": {
+    "k": "recall + but precision collapses 0.41->0.06 and distractor rate ->0.94; contributing, not a fix",
+    "negative_reservation": "retention +0.107 but authority_inversion 327 + recall collapse; contributing with safety trade-off",
+    "representation": "+0.04 recall at +50% compute; contributing"
+  },
+  "generalization_limits": "All effects bounded to the 280-doc synthetic corpus with LOCAL_PROVIDER_NEUTRAL semantic simulation; the semantic effect is NOT evidence about real embeddings.",
+  "identifiability_rule_declared": "NO_CAUSAL_ATTRIBUTION_IF_MORE_THAN_ONE_MATERIAL_UNCONTROLLED_VARIABLE_CHANGES",
+  "method": "For each declared contrast, verify the manipulated variable, held-constant variables, confounders, control, contrast size, stability; classify identifiability.",
+  "not_supported": {
+    "ranking": "C-RANK effect 0; but contrast confounds ranking+representation -> null is under-identified"
+  },
+  "primary_findings": {
+    "retrieval_quality": "SUPPORTED_PRIMARY_CAUSE of recall (C-RETRIEVAL +0.19, clean).",
+    "safe_refusal_heuristic": "SUPPORTED_PRIMARY_CAUSE of unsupported conclusions (C-SAFE-REFUSAL -0.75, clean within-arm)."
+  },
+  "verdict": "CAUSAL_CONTRASTS_LARGELY_IDENTIFIABLE_WITH_ONE_CONFOUNDED_CONTRAST_AND_SEVERAL_NON_FRESH_ATTRIBUTIONS"
+}

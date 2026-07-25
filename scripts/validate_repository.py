@@ -113,6 +113,10 @@ REQUIRED_PILOT_FIXTURES = {
     "AVAILABLE_STOCK", "UNAVAILABLE_STOCK", "EMPTY_CART", "LOADING_CART",
     "CART_ERROR", "CART_SUCCESS", "LOCALIZED_CONTENT", "MISSING_OPTIONAL_CONTENT",
 }
+IMMUTABLE_EXTERNAL_AUDIT_TEXT_HASHES = {
+    "projects/lab/external-audits/AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001/AUDIT_REPORT.md":
+        "2096b45a6ab907d73d410d050a4a760f4d3deb07918acaaeec6233920a048bfb",
+}
 
 def fail(message: str) -> None:
     FAILURES.append(message)
@@ -144,6 +148,13 @@ def validate_text() -> None:
             continue
         relative = path.relative_to(ROOT).as_posix()
         data = path.read_bytes()
+        immutable_hash = IMMUTABLE_EXTERNAL_AUDIT_TEXT_HASHES.get(relative)
+        immutable_bytes_verified = (
+            immutable_hash is not None
+            and hashlib.sha256(data).hexdigest() == immutable_hash
+        )
+        if immutable_hash is not None and not immutable_bytes_verified:
+            fail(f"{relative}: immutable external audit bytes changed")
         if data.startswith(b"\xef\xbb\xbf"):
             fail(f"{relative}: UTF-8 BOM forbidden")
         if b"\r" in data.replace(b"\r\n", b""):
@@ -154,7 +165,7 @@ def validate_text() -> None:
             fail(f"{relative}: invalid UTF-8: {exc}")
             continue
         for number, line in enumerate(text.splitlines(), 1):
-            if line.rstrip(" \t") != line:
+            if line.rstrip(" \t") != line and not immutable_bytes_verified:
                 fail(f"{relative}:{number}: trailing whitespace")
         limit = 600 if path.suffix.lower() == ".md" else 1200
         if len(text.splitlines()) > limit:
