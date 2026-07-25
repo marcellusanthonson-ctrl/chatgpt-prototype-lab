@@ -1,0 +1,433 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-EXECUTION-002",
+  "hash_algorithm": "SHA-256",
+  "self_excluded": "HASHES.json",
+  "ordered_file_hashes": [
+    {
+      "path": "ARM_PARAMETERS.json",
+      "sha256": "eccf7bb9f0de325f746f91cc313bf45083ecaddfa09529ac5943e524195d2a74"
+    },
+    {
+      "path": "CAUSAL_RESULTS.json",
+      "sha256": "2215a6d71d5620fe38eb4e76e89b7487b46c2571720f974e36bc5e41d104ac38"
+    },
+    {
+      "path": "CLAIM_BOUNDARIES.json",
+      "sha256": "31139980ff9fcf3b1fa009b9dd296b737edfeb0e9d4c1cf0cd7357d932dbc6af"
+    },
+    {
+      "path": "CORPUS_MANIFEST.json",
+      "sha256": "956d445da943b06ba9bdd8d3274312e4ce01acb90b11cfd7faba1627f9e3c831"
+    },
+    {
+      "path": "COST_RESULTS.json",
+      "sha256": "2167dd4e4aa03eed422f42d824449bf07a3213409e5fb70363aced2478de2e5b"
+    },
+    {
+      "path": "EXECUTION_SUMMARY.json",
+      "sha256": "34fd6f6375c8f92b3ccc46d883a9574763903cde9a44bc5908e0ffd2ecc9f1f2"
+    },
+    {
+      "path": "EXECUTION_SUMMARY.md",
+      "sha256": "f8916ba0bdcf4c817100a9614b52276c749b9a68843580ae49605c1002fa16f9"
+    },
+    {
+      "path": "FAILURE_TAXONOMY.json",
+      "sha256": "491208af4b964f3f83f2e3427a74a8c1f3cc04187b0d56822ed24687fcc60444"
+    },
+    {
+      "path": "FREEZE_MANIFEST.json",
+      "sha256": "7c64d7c39d53de2833be9548fa46aeafb4839c3bd2b7461a8a3c26f769b46258"
+    },
+    {
+      "path": "GATE_RESULTS.json",
+      "sha256": "ced51c3d3db0195ed052f83f098901ceaa82dd891eee3a165ab43990e5b32838"
+    },
+    {
+      "path": "LEAKAGE_AND_ISOLATION_REPORT.json",
+      "sha256": "bac94907b3dee727dc09438ac70ec6bb9899dd7d2cf9016b1daf1ab0746e713d"
+    },
+    {
+      "path": "LIMITATIONS.json",
+      "sha256": "2d374fad7f6bd932b10966cf28c203b27361ed07c8bc0d386dc1beafd8505225"
+    },
+    {
+      "path": "MANIFEST.json",
+      "sha256": "e6cdc164cdf96fe7378fe690a64b4f58ead295d778a8f9594ee76c534879aefe"
+    },
+    {
+      "path": "METRICS.json",
+      "sha256": "333e75305eff180499f1a41eea4fffc57ebd541ccb94d4e61479ad4fb41fdaad"
+    },
+    {
+      "path": "PRIVATE_ORACLE_MANIFEST.json",
+      "sha256": "489c40c0fa8b9676461b52d40e1bea7a6ecb5cfe7577ab4c410af64747bdd83e"
+    },
+    {
+      "path": "README.md",
+      "sha256": "e4aaff5b82cc9873f9d7a379e788b488e2cf1bbdc16d62c2249c59a353959a58"
+    },
+    {
+      "path": "REPRODUCTION_REPORT.json",
+      "sha256": "f9fd655c818e1a5dcb20e17d68c96d0235d0acecfef800aa67e11660c441d309"
+    },
+    {
+      "path": "RUNS/ARM-01/ORDER_PERMUTATION.json",
+      "sha256": "e434761af0e47c81eb026fea73b393257da0898881caacbbf1a0935d299bf9f0"
+    },
+    {
+      "path": "RUNS/ARM-01/PARAPHRASE_VARIANT.json",
+      "sha256": "5ffb87b27e35774c4e48d6a219763c0666e4d16156f2669ef8952fa60d876312"
+    },
+    {
+      "path": "RUNS/ARM-01/REPETITION_1.json",
+      "sha256": "2be06790756172cd03179ffedcf4e8eed6d65977f342f13340bfa6894327c213"
+    },
+    {
+      "path": "RUNS/ARM-01/REPETITION_2.json",
+      "sha256": "d5daa967bef628fbf5a5d3db7c6513779c13b869c6afbcc18b2135a631f54a99"
+    },
+    {
+      "path": "RUNS/ARM-01/REPETITION_3.json",
+      "sha256": "b9a0d6275bf2cfea13c0989a301a6e432045f3a9ee00151ce803d1753aba8f02"
+    },
+    {
+      "path": "RUNS/ARM-01/SCALE_AND_DECOY_DENSITY_VARIANT.json",
+      "sha256": "354a2ff3a64a4621f0f775ec558bb055a77abf6cbf71913f9e56c06ac9cec573"
+    },
+    {
+      "path": "RUNS/ARM-02_K16/ORDER_PERMUTATION.json",
+      "sha256": "b9869f0a1a4fb56d0f9eeed5d147f28d62fbc02022751d6db466fccc3673a7c0"
+    },
+    {
+      "path": "RUNS/ARM-02_K16/PARAPHRASE_VARIANT.json",
+      "sha256": "79dfd90ffa88cefed308faa4a7b7fb9a7f99b90f925558436f76604958cc2d16"
+    },
+    {
+      "path": "RUNS/ARM-02_K16/REPETITION_1.json",
+      "sha256": "9000e6083ca52e350c4c18ad08b75018f5d448cfbfde05acc6277cf0da259e8c"
+    },
+    {
+      "path": "RUNS/ARM-02_K16/REPETITION_2.json",
+      "sha256": "88e292ea714aa1881c4db6895c622077ef76e865c4f5f48713f75839289591e5"
+    },
+    {
+      "path": "RUNS/ARM-02_K16/REPETITION_3.json",
+      "sha256": "cb7b33a83aa4ee4eb072bb3f43593146b7fd1f3a4f946573a16d70e4f1f36408"
+    },
+    {
+      "path": "RUNS/ARM-02_K16/SCALE_AND_DECOY_DENSITY_VARIANT.json",
+      "sha256": "759895a9326e6544282047f6d14d42e18f01d08d8a9ca433ea0f0d95a336519f"
+    },
+    {
+      "path": "RUNS/ARM-02_K4/ORDER_PERMUTATION.json",
+      "sha256": "06a2797ef267c9cd1562ca3452ed381223d21e9b9ca02177e2ab575b0adabc94"
+    },
+    {
+      "path": "RUNS/ARM-02_K4/PARAPHRASE_VARIANT.json",
+      "sha256": "fd94d27c18b1ef76d24a36e35baf714ae3b149077f8e3fa8fb0bb8aff95a273b"
+    },
+    {
+      "path": "RUNS/ARM-02_K4/REPETITION_1.json",
+      "sha256": "ce24e09b55c5d7edc2b1c0330ee04ea9520805500d8466b6533cac82421ab8e4"
+    },
+    {
+      "path": "RUNS/ARM-02_K4/REPETITION_2.json",
+      "sha256": "52c985bf386173c154b256d1304536bf931c54d33e3b8f10a558884a13422438"
+    },
+    {
+      "path": "RUNS/ARM-02_K4/REPETITION_3.json",
+      "sha256": "26272ea27b1f1f30c2a9bcb3ba6d4278aba11d6290ef2a65554a21205b666eac"
+    },
+    {
+      "path": "RUNS/ARM-02_K4/SCALE_AND_DECOY_DENSITY_VARIANT.json",
+      "sha256": "f90d4e96e21ce8d985c20a4aeb9924e5e5b8a312e86514f5b771b3c17b3733df"
+    },
+    {
+      "path": "RUNS/ARM-02_K8/ORDER_PERMUTATION.json",
+      "sha256": "5121d7ab5d57623611cdb1e6649656f9f19c1fdb3ea1858e5e6f58dc7564d77f"
+    },
+    {
+      "path": "RUNS/ARM-02_K8/PARAPHRASE_VARIANT.json",
+      "sha256": "c065da889399ada7adff91fe05f60d8d6b818c3d2bb6cb7b5b15f2c272d80c81"
+    },
+    {
+      "path": "RUNS/ARM-02_K8/REPETITION_1.json",
+      "sha256": "a1632b8de6d8e244d72d1566b2252bc5110548477e4cc9c2d4f555635ee52509"
+    },
+    {
+      "path": "RUNS/ARM-02_K8/REPETITION_2.json",
+      "sha256": "c151577a342fd08b8895d2554f811c38fe0fdc39bc4eb51e97442814a9510e89"
+    },
+    {
+      "path": "RUNS/ARM-02_K8/REPETITION_3.json",
+      "sha256": "eb3a3ff12d316336f48c85f1559011b599c6dc808b46073205875848d6b95103"
+    },
+    {
+      "path": "RUNS/ARM-02_K8/SCALE_AND_DECOY_DENSITY_VARIANT.json",
+      "sha256": "fb73bfbb644acb8ba11ede9c4f0c4cf8f064f6d0cdd161c4aa13c855e94e7202"
+    },
+    {
+      "path": "RUNS/ARM-03/ORDER_PERMUTATION.json",
+      "sha256": "9c03915ab6479f3fb822abc9bf298fb13e8ebda80918424e47bd5d74a8c9a788"
+    },
+    {
+      "path": "RUNS/ARM-03/PARAPHRASE_VARIANT.json",
+      "sha256": "98eb561e08ecc66826d0e90590aeb7041c1150623bdc228832dd4da3bb65f121"
+    },
+    {
+      "path": "RUNS/ARM-03/REPETITION_1.json",
+      "sha256": "12cad6ce4779e3e8ff2f104b6e8f6cf8590c7be6083dfd09796ffce1eac30b18"
+    },
+    {
+      "path": "RUNS/ARM-03/REPETITION_2.json",
+      "sha256": "107685c2efa192423dfe0350436686f92981661ec22887d31f6bf5180c6f15f7"
+    },
+    {
+      "path": "RUNS/ARM-03/REPETITION_3.json",
+      "sha256": "048ad805aabd0a253c7864a2ef4138fa9d3148f0ad9c4e1d40b62c1882f1fd1a"
+    },
+    {
+      "path": "RUNS/ARM-03/SCALE_AND_DECOY_DENSITY_VARIANT.json",
+      "sha256": "c9b77786fdd539e6ab8aa018e675608495cf1c644d0807a94dfffc8da2e1617a"
+    },
+    {
+      "path": "RUNS/ARM-04/ORDER_PERMUTATION.json",
+      "sha256": "54ec596bf7eea7bde1701581f06ccb9f6ee228a85abbcda02d51f9ea3924d87a"
+    },
+    {
+      "path": "RUNS/ARM-04/PARAPHRASE_VARIANT.json",
+      "sha256": "c1b43929728943af4181ccd3f3b4233a2c26459f6d2b7bc0280692fd1426cbf2"
+    },
+    {
+      "path": "RUNS/ARM-04/REPETITION_1.json",
+      "sha256": "3f0e3ec520ca4be4f0405383c77f71bd9792b920e41dee0ace87cef49e71b7ae"
+    },
+    {
+      "path": "RUNS/ARM-04/REPETITION_2.json",
+      "sha256": "e87ec8a874110de5971fb9f30e33a4f7588598135a05a623341c465ed69acf0c"
+    },
+    {
+      "path": "RUNS/ARM-04/REPETITION_3.json",
+      "sha256": "bb03144afe07d9cea5b6c5b22d29ecbc2c3325b981b792656593799c09337c06"
+    },
+    {
+      "path": "RUNS/ARM-04/SCALE_AND_DECOY_DENSITY_VARIANT.json",
+      "sha256": "951565d2ffe6615062b6934a1b972b2ff02f42d8cff12b18b99b0884b2a4a4a4"
+    },
+    {
+      "path": "RUNS/ARM-05/ORDER_PERMUTATION.json",
+      "sha256": "5c6dee8e9214df153fc61fe1875c70ce1b6cbd74f0b6f195f4ed63ad5005573a"
+    },
+    {
+      "path": "RUNS/ARM-05/PARAPHRASE_VARIANT.json",
+      "sha256": "7fe8f1dff6b8e8a48a21efc9d4891c565933795c4c6ca9a62d6f1694cae43601"
+    },
+    {
+      "path": "RUNS/ARM-05/REPETITION_1.json",
+      "sha256": "0d898a17b57b370565d2fcf8ea5031436e95ea1664167b5d5edd980e3c9a93c7"
+    },
+    {
+      "path": "RUNS/ARM-05/REPETITION_2.json",
+      "sha256": "8edf3c056c168926a0ce17b2b132ab82ed77147ac323c973f523866854957508"
+    },
+    {
+      "path": "RUNS/ARM-05/REPETITION_3.json",
+      "sha256": "92ade8269e17c517f7e4061391f4de913ab26512821f94208c7e33b26446152c"
+    },
+    {
+      "path": "RUNS/ARM-05/SCALE_AND_DECOY_DENSITY_VARIANT.json",
+      "sha256": "dceeed8e746e13f954d8aa95a54ddfc073aa47c8b7a28d0c139c64eaa14cc61d"
+    },
+    {
+      "path": "RUNS/ARM-06/ORDER_PERMUTATION.json",
+      "sha256": "c1885e9613b04c70f29649377eba88c6f1777eba1f6756054a1438d0346b89ef"
+    },
+    {
+      "path": "RUNS/ARM-06/PARAPHRASE_VARIANT.json",
+      "sha256": "09bd586d7b51ca2b37a707808efb0dd797463b737cb95f39f8ab43700e036ba6"
+    },
+    {
+      "path": "RUNS/ARM-06/REPETITION_1.json",
+      "sha256": "645decfdc2813781c83ca8944a042678d50966e7ed94f207fd61c328dcb60b19"
+    },
+    {
+      "path": "RUNS/ARM-06/REPETITION_2.json",
+      "sha256": "121ec2b6d3255fbb1130c4f14ad2c3e623963b1110b7cccb030ee89c56835b6f"
+    },
+    {
+      "path": "RUNS/ARM-06/REPETITION_3.json",
+      "sha256": "6db44fc6a4eaf9cf4d8f9db3fbc4a514e0620c457c6e62c4df58c04635552bd7"
+    },
+    {
+      "path": "RUNS/ARM-06/SCALE_AND_DECOY_DENSITY_VARIANT.json",
+      "sha256": "afcb771416f91e51d6349bf25682b1fc5097df113933d67714946b07186a7028"
+    },
+    {
+      "path": "RUNS/ARM-07/ORDER_PERMUTATION.json",
+      "sha256": "ea3ee03e13134660b557c65a540c4bf03b9f9ebacba47b1f99972d06a98790b5"
+    },
+    {
+      "path": "RUNS/ARM-07/PARAPHRASE_VARIANT.json",
+      "sha256": "cfd423f8d4ab4a144dbb66be15b62279fb5bb038ece8a887917deeee1ee2aced"
+    },
+    {
+      "path": "RUNS/ARM-07/REPETITION_1.json",
+      "sha256": "8c6627748a0c742a4db564399731558d423b860a04379741941752c2e8efcce7"
+    },
+    {
+      "path": "RUNS/ARM-07/REPETITION_2.json",
+      "sha256": "388f8e8530dcb7eb899a174a434060d6a249879b076760fb3a423cdce96a722e"
+    },
+    {
+      "path": "RUNS/ARM-07/REPETITION_3.json",
+      "sha256": "c45dc72f1162fac7251aed9c26621220bd5f884e1e20614bec7a007f7bb330b2"
+    },
+    {
+      "path": "RUNS/ARM-07/SCALE_AND_DECOY_DENSITY_VARIANT.json",
+      "sha256": "7c7c5606f9849f05388e5e5ffbcfa4db21c4a1c5101687f1d63386b159f7f665"
+    },
+    {
+      "path": "RUNS/ARM-08/ORDER_PERMUTATION.json",
+      "sha256": "bbc16945bee6fe83a777b5dfae7e02dcf0039a61a811c6a0e090d94b032215c1"
+    },
+    {
+      "path": "RUNS/ARM-08/PARAPHRASE_VARIANT.json",
+      "sha256": "32047b49b9d3c7e48572ebbf9c396f6caaa326c25ac06a7d2b886e6d75d8bb0d"
+    },
+    {
+      "path": "RUNS/ARM-08/REPETITION_1.json",
+      "sha256": "b5755a98ddfc4f72d1d46c1eecbdda2fc47c6a1292703a87af518971d7cb2a0d"
+    },
+    {
+      "path": "RUNS/ARM-08/REPETITION_2.json",
+      "sha256": "ef8c4ab5fc9cc48d0b5ad46ba23a6bd0fb5b67147b4672e4e6186c8c59f31ea3"
+    },
+    {
+      "path": "RUNS/ARM-08/REPETITION_3.json",
+      "sha256": "50af97a831b2c7dce0176047032c6c4bff7c4859b9b8f769c160d93af0399bd6"
+    },
+    {
+      "path": "RUNS/ARM-08/SCALE_AND_DECOY_DENSITY_VARIANT.json",
+      "sha256": "9746d60509f4830e9db9619efee6a6db423f8d0577ec10e4bccff5fc619a16a7"
+    },
+    {
+      "path": "RUNS/ARM-09/ORDER_PERMUTATION.json",
+      "sha256": "09296e929ac858a3f386ae1fe3a12d285ad56f3d1615e5323815161e60c4cd1b"
+    },
+    {
+      "path": "RUNS/ARM-09/PARAPHRASE_VARIANT.json",
+      "sha256": "78134121d7aa4b0a8c1259f6a409ca8548f28811186e8fe906d7e50632a419da"
+    },
+    {
+      "path": "RUNS/ARM-09/REPETITION_1.json",
+      "sha256": "d9b0f8466b4cca3e144f376bb01fdc648f127794839f0cc5d8acdb548799af6f"
+    },
+    {
+      "path": "RUNS/ARM-09/REPETITION_2.json",
+      "sha256": "c6b890cdc327cab94e8b455af1cfe3157d3f4b466572217621ce0c6eaddbe3e2"
+    },
+    {
+      "path": "RUNS/ARM-09/REPETITION_3.json",
+      "sha256": "68bbf2534951e4b62688d573337e968a45f07235d1ef4b5b37d5423ae71d0ec1"
+    },
+    {
+      "path": "RUNS/ARM-09/SCALE_AND_DECOY_DENSITY_VARIANT.json",
+      "sha256": "da368dd2d42e978b73dad18f6be4b673b5cd11bbd602d4567a625b37191e368a"
+    },
+    {
+      "path": "RUN_MATRIX.json",
+      "sha256": "b40d02c359959bb54f0e265a133dbde966f1b1488f7043b5584cd221ab23e6ff"
+    },
+    {
+      "path": "VALIDATION_REPORT.json",
+      "sha256": "8762308a1d7d432095aa0bc396c6c11719e0b56f908633f74124f3c89b5a49a1"
+    },
+    {
+      "path": "frozen/ARM_PARAMETERS.json",
+      "sha256": "eccf7bb9f0de325f746f91cc313bf45083ecaddfa09529ac5943e524195d2a74"
+    },
+    {
+      "path": "frozen/CLAIM_BOUNDARIES.json",
+      "sha256": "31139980ff9fcf3b1fa009b9dd296b737edfeb0e9d4c1cf0cd7357d932dbc6af"
+    },
+    {
+      "path": "frozen/GATE_DEFINITIONS.json",
+      "sha256": "7409424698fcb1b07d39581c68e3d81b50538d6986f8ce3a5143b3ccd694e217"
+    },
+    {
+      "path": "frozen/METRIC_DEFINITIONS.json",
+      "sha256": "7057628e7267c718ec44999f8a892b2bb08b88f3bc7ca88368712beecd4bdb2e"
+    },
+    {
+      "path": "frozen/RUN_MATRIX.json",
+      "sha256": "b40d02c359959bb54f0e265a133dbde966f1b1488f7043b5584cd221ab23e6ff"
+    },
+    {
+      "path": "frozen/SCORING_RULES.json",
+      "sha256": "58dbde9a81af36dbe14a2cecf9f26f2191be155db829b483f20bfa6942c30045"
+    },
+    {
+      "path": "frozen/SEEDS.json",
+      "sha256": "3d316c5f03dd0ed81368a35e8eb8a3048dd9ce25d37ca62e8a5b4671118a7ad7"
+    },
+    {
+      "path": "frozen/SOURCE_DESIGN_HASHES.json",
+      "sha256": "1b3f84a1dd3cffbf1a34fa85bd6fed52917ac0804403657f3b19e59d550971bd"
+    },
+    {
+      "path": "frozen/STOP_CONDITIONS.json",
+      "sha256": "a4e7fae82852608310437c048f9e0a6267ee7a0f0d09a3055845c4739afab99d"
+    },
+    {
+      "path": "harness/execute.mjs",
+      "sha256": "597a7ac6adc1176dc549cf79cd9fd0c7ba48d11a70e557b37df3e8be0e480ea1"
+    },
+    {
+      "path": "private/CANARY.json",
+      "sha256": "0ea1891462550749e222cf95670cbbb9cbaae1632095c47b08698363aec8b81a"
+    },
+    {
+      "path": "private/PRIVATE_ORACLES.json",
+      "sha256": "a10d05564b7c53100fd8ec290971eac4dc01f9152ccb0fa9fd0f245a69a5f199"
+    },
+    {
+      "path": "public/DOCUMENT_CATALOG.json",
+      "sha256": "8859141298edc396778d8d26ae34b38f47c16e7328dd43e93662f1c8974f93f2"
+    },
+    {
+      "path": "public/LEXICAL_SYNONYMS.json",
+      "sha256": "a5ae3497e9a5bb24bd83e5e5c1feee57fcfc19ad51a9dc75e4042a4270a026e5"
+    },
+    {
+      "path": "public/PERFECT_CANDIDATES.json",
+      "sha256": "2316672e276f28d72c36841a06b798607e011e25d31bf94917394111cc0957a3"
+    },
+    {
+      "path": "public/PUBLIC_READ_MANIFEST.json",
+      "sha256": "d4a0bf001c4ab894eae2b281f6f18c8216b1c49b699dfa051e322796cd2ced08"
+    },
+    {
+      "path": "public/SEMANTIC_LEXICON.json",
+      "sha256": "bdff935e9029e5c1536893c2bd34ed588a90c802ad72afa608b473fa0469709c"
+    },
+    {
+      "path": "public/TASKS.json",
+      "sha256": "894ca41a37b35b8fd66b929e32bd6ef017f9b17207b2ad9c7fc41acff79f01e1"
+    },
+    {
+      "path": "reports/EVALUATOR_READ_LOGS.json",
+      "sha256": "ae173e07a9a59ad8911f2f000ab7ea43418e7e31126b2588bb571ef44afa8325"
+    },
+    {
+      "path": "reports/POST_FREEZE_VALIDATION.json",
+      "sha256": "9569847eca4db5086bfc8a70d425f8b235af35295b3b6db4f2dce9964564f0e1"
+    },
+    {
+      "path": "reports/SELECTIONS_FREEZE.json",
+      "sha256": "792177245620a5c457509a196fddf0baaced4d85c8e3810c4be86bb55096c112"
+    }
+  ],
+  "ordered_manifest_digest_sha256": "32c099b8bf0e7edc5bcd4f99156240c8eec5877c423244e6f2f0c27e07ed4f40"
+}

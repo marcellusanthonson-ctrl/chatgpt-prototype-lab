@@ -1,0 +1,78 @@
+{
+  "by_cell": {
+    "ARM-01": {
+      "normalized_compute_ratio_to_arm_01": 1,
+      "normalized_compute_units": 77616,
+      "provider_cost": "NOT_APPLICABLE",
+      "selected_bytes": 122370
+    },
+    "ARM-02@K16": {
+      "normalized_compute_ratio_to_arm_01": 1,
+      "normalized_compute_units": 77616,
+      "provider_cost": "NOT_APPLICABLE",
+      "selected_bytes": 979679
+    },
+    "ARM-02@K4": {
+      "normalized_compute_ratio_to_arm_01": 1,
+      "normalized_compute_units": 77616,
+      "provider_cost": "NOT_APPLICABLE",
+      "selected_bytes": 244466
+    },
+    "ARM-02@K8": {
+      "normalized_compute_ratio_to_arm_01": 1,
+      "normalized_compute_units": 77616,
+      "provider_cost": "NOT_APPLICABLE",
+      "selected_bytes": 492302
+    },
+    "ARM-03": {
+      "normalized_compute_ratio_to_arm_01": 1,
+      "normalized_compute_units": 77616,
+      "provider_cost": "NOT_APPLICABLE",
+      "selected_bytes": 120584
+    },
+    "ARM-04": {
+      "normalized_compute_ratio_to_arm_01": 1.5,
+      "normalized_compute_units": 116424,
+      "provider_cost": "NOT_APPLICABLE",
+      "selected_bytes": 121665
+    },
+    "ARM-05": {
+      "normalized_compute_ratio_to_arm_01": 1.5,
+      "normalized_compute_units": 116424,
+      "provider_cost": "NOT_APPLICABLE",
+      "selected_bytes": 120165
+    },
+    "ARM-06": {
+      "normalized_compute_ratio_to_arm_01": 0.008349,
+      "normalized_compute_units": 648,
+      "provider_cost": "NOT_APPLICABLE",
+      "selected_bytes": 76608
+    },
+    "ARM-07": {
+      "normalized_compute_ratio_to_arm_01": 1,
+      "normalized_compute_units": 77616,
+      "provider_cost": "NOT_APPLICABLE",
+      "selected_bytes": 99946
+    },
+    "ARM-08": {
+      "normalized_compute_ratio_to_arm_01": 0.034323,
+      "normalized_compute_units": 2664,
+      "provider_cost": "NOT_APPLICABLE",
+      "selected_bytes": 107712
+    },
+    "ARM-09": {
+      "normalized_compute_ratio_to_arm_01": 0.051484,
+      "normalized_compute_units": 3996,
+      "provider_cost": "NOT_APPLICABLE",
+      "selected_bytes": 106488
+    }
+  },
+  "execution_id": "FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-EXECUTION-002",
+  "marginal_representation_cost": {
+    "normalized_compute_units": 38808,
+    "selected_bytes": -705
+  },
+  "schema_version": "1.0.0",
+  "tokenizer_status": "TOKENIZER_NOT_AVAILABLE_NO_INSTALLATION_PERFORMED",
+  "units_separate": true
+}

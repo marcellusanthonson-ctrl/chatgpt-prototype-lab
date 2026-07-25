@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "experiment_id": "EXP-LAB-003",
+  "title": "Full RAG authority-first failure discrimination synthetic execution 075",
+  "project_id": "lab",
+  "status": "TEST_VALID_DISCRIMINATING_RESULTS_PUBLISHED",
+  "executed_at": "2026-07-24",
+  "authorization_id": "AUTHORIZATION_LAB_FULL_RAG_AUTHORITY_FIRST_FAILURE_DISCRIMINATION_TEST_EXECUTION_075",
+  "evidence_id": "EVD-LAB-EXP-003",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "authorized_parent_head": "1b2cc3fd06296b26f5a1f151c7385cd4782bddb8",
+  "execution_status": "COMPLETED_REPRODUCIBLE",
+  "execution_count": "ONE",
+  "design_id": "FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-002",
+  "package": {
+    "id": "FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-EXECUTION-002",
+    "path": "projects/lab/test-executions/FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-EXECUTION-002/MANIFEST.json",
+    "file_count": 107,
+    "ordered_manifest_digest_sha256": "32c099b8bf0e7edc5bcd4f99156240c8eec5877c423244e6f2f0c27e07ed4f40"
+  },
+  "corpus": {
+    "synthetic_document_count": 280,
+    "fixture_count": 84,
+    "template_count": 14,
+    "real_data_used": false
+  },
+  "execution": {
+    "arm_count": 9,
+    "operational_cell_count": 11,
+    "configurations_per_cell": 6,
+    "total_run_count": 66,
+    "selector_process_count": 60,
+    "evaluator_process_count": 1,
+    "selector_oracle_access": false,
+    "post_freeze_hash_validation": "PASS",
+    "reproducibility": "PASS_EXACT"
+  },
+  "controls": {
+    "positive_control": "PASS",
+    "negative_control": "PASS_DISCRIMINATES_UNSAFE_STRATEGY",
+    "leakage_and_isolation": "PASS_NO_LEAKAGE_ISOLATION_VALID",
+    "private_canary_visible_in_public": false
+  },
+  "global_result": "TEST_VALID_DISCRIMINATING_RESULTS_PUBLISHED",
+  "interpretation": [
+    "THE_TEST_IS_VALID_AND_DISCRIMINATES_MULTIPLE_FAILURE_CAUSES",
+    "SAFE_REFUSAL_HEURISTIC_AND_RETRIEVAL_ARE_SUPPORTED_PRIMARY_CAUSES_UNDER_THE_SYNTHETIC_TESTED_CONDITIONS",
+    "RANKING_IS_NOT_SUPPORTED_IN_THE_FIXED_CANDIDATE_SET_CONTRAST",
+    "CORPUS_SCALE_REMAINS_POSSIBLE_NOT_DISCRIMINATED",
+    "RESULTS_DO_NOT_SELECT_A_PROVIDER_ARCHITECTURE_OR_IMPLEMENTATION"
+  ],
+  "effects": {
+    "provider_selected": false,
+    "architecture_selected": false,
+    "implementation_selected": false,
+    "implementation_approved": false,
+    "runtime_effect": "NONE",
+    "product_effect": "NONE",
+    "external_repository_effect": "NONE",
+    "deployment": "NONE"
+  },
+  "successor_pending": "PEND-LAB-021",
+  "next_authorized_action": "NONE",
+  "source_refs": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_FULL_RAG_AUTHORITY_FIRST_FAILURE_DISCRIMINATION_TEST_EXECUTION_075.json",
+    "projects/lab/test-designs/FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-002/MANIFEST.json",
+    "projects/lab/test-executions/FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-EXECUTION-002/MANIFEST.json",
+    "projects/lab/evidence/EVD-LAB-EXP-003.json",
+    "projects/lab/pending/PEND-LAB-021.json"
+  ]
+}

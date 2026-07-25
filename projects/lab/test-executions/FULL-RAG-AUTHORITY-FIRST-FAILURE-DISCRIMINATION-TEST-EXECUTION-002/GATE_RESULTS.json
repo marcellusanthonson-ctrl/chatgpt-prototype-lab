@@ -1,0 +1,79 @@
+{
+  "cell_results": {
+    "ARM-01": {
+      "all_thresholds_pass": false,
+      "critical_failures": 142,
+      "status": "NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS"
+    },
+    "ARM-02@K16": {
+      "all_thresholds_pass": false,
+      "critical_failures": 144,
+      "status": "NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS"
+    },
+    "ARM-02@K4": {
+      "all_thresholds_pass": false,
+      "critical_failures": 140,
+      "status": "NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS"
+    },
+    "ARM-02@K8": {
+      "all_thresholds_pass": false,
+      "critical_failures": 144,
+      "status": "NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS"
+    },
+    "ARM-03": {
+      "all_thresholds_pass": false,
+      "critical_failures": 435,
+      "status": "NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS"
+    },
+    "ARM-04": {
+      "all_thresholds_pass": false,
+      "critical_failures": 139,
+      "status": "NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS"
+    },
+    "ARM-05": {
+      "all_thresholds_pass": false,
+      "critical_failures": 245,
+      "status": "NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS"
+    },
+    "ARM-06": {
+      "all_thresholds_pass": true,
+      "critical_failures": 0,
+      "status": "POSITIVE_CONTROL_NOT_CANDIDATE"
+    },
+    "ARM-07": {
+      "all_thresholds_pass": false,
+      "critical_failures": 975,
+      "status": "NEGATIVE_CONTROL_NOT_CANDIDATE"
+    },
+    "ARM-08": {
+      "all_thresholds_pass": false,
+      "critical_failures": 108,
+      "status": "NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS"
+    },
+    "ARM-09": {
+      "all_thresholds_pass": false,
+      "critical_failures": 108,
+      "status": "NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS"
+    }
+  },
+  "execution_id": "FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-EXECUTION-002",
+  "global_gates": {
+    "AUTHORITY": "FAIL",
+    "BINDING_NEGATIVES": "PASS_DISCRIMINATES",
+    "CAUSALITY": "PASS_SINGLE_VARIABLE_CONTRASTS",
+    "COST": "PASS_UNITS_SEPARATED",
+    "INTEGRITY": "PASS",
+    "ISOLATION": "PASS",
+    "LEAKAGE": "PASS",
+    "NEGATIVE_CONTROL": "PASS_DISCRIMINATES_UNSAFE_STRATEGY",
+    "POSITIVE_CONTROL": "PASS",
+    "PRECISION": "PASS_REPORTED_NO_SINGLE_METRIC_PROMOTION",
+    "RECALL": "PASS_DISCRIMINATES",
+    "REPRODUCIBILITY": "PASS",
+    "SAFE_REFUSAL": "PASS_DISCRIMINATES",
+    "STABILITY": "PASS",
+    "UNSUPPORTED_CONCLUSIONS": "PASS_DISCRIMINATES"
+  },
+  "schema_version": "1.0.0",
+  "test_result": "TEST_VALID_DISCRIMINATING_RESULTS_PUBLISHED"
+}

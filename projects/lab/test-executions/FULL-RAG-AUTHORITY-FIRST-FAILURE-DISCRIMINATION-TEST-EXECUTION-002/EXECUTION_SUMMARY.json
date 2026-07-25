@@ -1,0 +1,28 @@
+{
+  "architecture_selected": false,
+  "arm_count": 9,
+  "authorization_id": "AUTHORIZATION_LAB_FULL_RAG_AUTHORITY_FIRST_FAILURE_DISCRIMINATION_TEST_EXECUTION_075",
+  "causal_hypothesis_count": 14,
+  "controls": {
+    "negative": "PASS_DISCRIMINATES_UNSAFE_STRATEGY",
+    "positive": "PASS"
+  },
+  "design_id": "FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-002",
+  "execution_id": "FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-EXECUTION-002",
+  "external_audit": "NOT_EXECUTED_REQUIRES_SEPARATE_AUTHORIZATION",
+  "fixture_count": 84,
+  "freeze": "PASS",
+  "implementation_approved": false,
+  "implementation_selected": false,
+  "leakage": "PASS_NO_LEAKAGE_ISOLATION_VALID",
+  "operational_cell_count": 11,
+  "product_effect": "NONE",
+  "provider_selected": false,
+  "reproducibility": "PASS_EXACT",
+  "run_count": 66,
+  "runtime_effect": "NONE",
+  "schema_version": "1.0.0",
+  "status": "TEST_VALID_DISCRIMINATING_RESULTS_PUBLISHED",
+  "successor_pending": "PEND-LAB-021",
+  "synthetic_document_count": 280
+}

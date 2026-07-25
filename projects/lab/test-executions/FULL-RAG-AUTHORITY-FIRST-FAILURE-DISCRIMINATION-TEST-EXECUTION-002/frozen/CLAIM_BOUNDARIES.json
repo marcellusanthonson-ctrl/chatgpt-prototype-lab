@@ -1,0 +1,18 @@
+{
+  "allowed": [
+    "SYNTHETIC_BOUNDED_CAUSAL_RESULT",
+    "TESTED_CONDITIONS_ONLY"
+  ],
+  "architecture_selected": false,
+  "implementation_selected": false,
+  "prohibited": [
+    "ARCHITECTURE_APPROVED",
+    "IMPLEMENTATION_APPROVED",
+    "PROVIDER_APPROVED",
+    "PRODUCTION_READY",
+    "RAG_OPERATIONAL"
+  ],
+  "provider_selected": false,
+  "schema_version": "1.0.0",
+  "status": "FROZEN_BEFORE_FIRST_RUN"
+}

@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "architecture_selected": false,
+    "arm_count_9": true,
+    "freeze_hashes": true,
+    "historical_070_074_mutation": false,
+    "implementation_selected": false,
+    "negative_control": "PASS_DISCRIMINATES_UNSAFE_STRATEGY",
+    "operational_cell_count_11": true,
+    "positive_control": "PASS",
+    "product_effect": "NONE",
+    "provider_selected": false,
+    "reproducibility": "PASS_EXACT",
+    "run_count_66": true,
+    "runtime_effect": "NONE",
+    "selector_private_reads_zero": true,
+    "semantic_role_label_leaks_zero": true
+  },
+  "execution_id": "FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-EXECUTION-002",
+  "result": "PASS_COMPLETE_REPRODUCIBLE_PACKAGE",
+  "schema_version": "1.0.0"
+}

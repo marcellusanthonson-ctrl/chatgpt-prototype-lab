@@ -53,6 +53,14 @@ La inspección directa distingue los decoys declarados de los desplazadores obse
 
 La ausencia de embeddings densos sigue como `POSSIBLE_NOT_DISCRIMINATED`, no como causa arquitectónica demostrada. El paquete futuro aísla representación, k, reserva negativa, retrieval, ranking y safe refusal mediante nueve brazos, once celdas operativas y un mínimo de 66 runs futuros.
 
-`PEND-LAB-019` está `COMPLETED_DOCUMENTARY_FAILURE_ANALYSIS_AND_NEXT_TEST_DESIGN_PUBLISHED`. `PEND-LAB-020` queda `PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION` y no concede permiso para generar corpus, adaptar harness, implementar semántica, ejecutar, evaluar ni auditar.
+`PEND-LAB-019` está `COMPLETED_DOCUMENTARY_FAILURE_ANALYSIS_AND_NEXT_TEST_DESIGN_PUBLISHED`. El diseño quedó ejecutado posteriormente bajo la autorización separada `075`.
+
+## Ejecución discriminante 075
+
+La autorización `075` ejecutó exactamente una vez `FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-002`. El paquete reproducible contiene 280 documentos sintéticos, 84 fixtures y 66 runs distribuidos entre nueve brazos, once celdas operativas y seis configuraciones.
+
+El resultado es `TEST_VALID_DISCRIMINATING_RESULTS_PUBLISHED`. El control positivo pasó, el control negativo discriminó la estrategia insegura, los selectores registraron cero lecturas privadas y la reproducción fue `PASS_EXACT`. Los contrastes sintéticos apoyan retrieval y la heurística de safe refusal como causas primarias bajo las condiciones probadas; ranking no quedó apoyado cuando se mantuvo fijo el conjunto candidato, y escala de corpus permanece `POSSIBLE_NOT_DISCRIMINATED`.
+
+`PEND-LAB-020` está `COMPLETED_REPRODUCIBLE_EXECUTION_PUBLISHED_EXTERNAL_AUDIT_REQUIRED`. `PEND-LAB-021` propone una auditoría externa independiente y estrictamente read-only, pero no la autoriza. No se seleccionaron proveedor, arquitectura o implementación; no hubo aprobación de implementación ni efectos de producto, runtime, Symphonie, despliegue o repositorios externos.
 
 No existe autorización activa reutilizable. El HEAD propio se verifica en vivo y nunca se almacena como estado canónico vigente.

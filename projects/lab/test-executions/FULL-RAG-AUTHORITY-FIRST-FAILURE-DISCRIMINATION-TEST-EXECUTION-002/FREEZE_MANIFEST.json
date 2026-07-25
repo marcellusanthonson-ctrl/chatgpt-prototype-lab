@@ -1,0 +1,108 @@
+{
+  "entries": [
+    {
+      "path": "public/DOCUMENT_CATALOG.json",
+      "sha256": "8859141298edc396778d8d26ae34b38f47c16e7328dd43e93662f1c8974f93f2"
+    },
+    {
+      "path": "public/TASKS.json",
+      "sha256": "894ca41a37b35b8fd66b929e32bd6ef017f9b17207b2ad9c7fc41acff79f01e1"
+    },
+    {
+      "path": "public/SEMANTIC_LEXICON.json",
+      "sha256": "bdff935e9029e5c1536893c2bd34ed588a90c802ad72afa608b473fa0469709c"
+    },
+    {
+      "path": "public/LEXICAL_SYNONYMS.json",
+      "sha256": "a5ae3497e9a5bb24bd83e5e5c1feee57fcfc19ad51a9dc75e4042a4270a026e5"
+    },
+    {
+      "path": "public/PERFECT_CANDIDATES.json",
+      "sha256": "2316672e276f28d72c36841a06b798607e011e25d31bf94917394111cc0957a3"
+    },
+    {
+      "path": "public/PUBLIC_READ_MANIFEST.json",
+      "sha256": "d4a0bf001c4ab894eae2b281f6f18c8216b1c49b699dfa051e322796cd2ced08"
+    },
+    {
+      "path": "private/PRIVATE_ORACLES.json",
+      "sha256": "a10d05564b7c53100fd8ec290971eac4dc01f9152ccb0fa9fd0f245a69a5f199"
+    },
+    {
+      "path": "private/CANARY.json",
+      "sha256": "0ea1891462550749e222cf95670cbbb9cbaae1632095c47b08698363aec8b81a"
+    },
+    {
+      "path": "CORPUS_MANIFEST.json",
+      "sha256": "956d445da943b06ba9bdd8d3274312e4ce01acb90b11cfd7faba1627f9e3c831"
+    },
+    {
+      "path": "PRIVATE_ORACLE_MANIFEST.json",
+      "sha256": "489c40c0fa8b9676461b52d40e1bea7a6ecb5cfe7577ab4c410af64747bdd83e"
+    },
+    {
+      "path": "ARM_PARAMETERS.json",
+      "sha256": "eccf7bb9f0de325f746f91cc313bf45083ecaddfa09529ac5943e524195d2a74"
+    },
+    {
+      "path": "RUN_MATRIX.json",
+      "sha256": "b40d02c359959bb54f0e265a133dbde966f1b1488f7043b5584cd221ab23e6ff"
+    },
+    {
+      "path": "FAILURE_TAXONOMY.json",
+      "sha256": "491208af4b964f3f83f2e3427a74a8c1f3cc04187b0d56822ed24687fcc60444"
+    },
+    {
+      "path": "CLAIM_BOUNDARIES.json",
+      "sha256": "31139980ff9fcf3b1fa009b9dd296b737edfeb0e9d4c1cf0cd7357d932dbc6af"
+    },
+    {
+      "path": "frozen/ARM_PARAMETERS.json",
+      "sha256": "eccf7bb9f0de325f746f91cc313bf45083ecaddfa09529ac5943e524195d2a74"
+    },
+    {
+      "path": "frozen/RUN_MATRIX.json",
+      "sha256": "b40d02c359959bb54f0e265a133dbde966f1b1488f7043b5584cd221ab23e6ff"
+    },
+    {
+      "path": "frozen/SCORING_RULES.json",
+      "sha256": "58dbde9a81af36dbe14a2cecf9f26f2191be155db829b483f20bfa6942c30045"
+    },
+    {
+      "path": "frozen/METRIC_DEFINITIONS.json",
+      "sha256": "7057628e7267c718ec44999f8a892b2bb08b88f3bc7ca88368712beecd4bdb2e"
+    },
+    {
+      "path": "frozen/GATE_DEFINITIONS.json",
+      "sha256": "7409424698fcb1b07d39581c68e3d81b50538d6986f8ce3a5143b3ccd694e217"
+    },
+    {
+      "path": "frozen/SEEDS.json",
+      "sha256": "3d316c5f03dd0ed81368a35e8eb8a3048dd9ce25d37ca62e8a5b4671118a7ad7"
+    },
+    {
+      "path": "frozen/STOP_CONDITIONS.json",
+      "sha256": "a4e7fae82852608310437c048f9e0a6267ee7a0f0d09a3055845c4739afab99d"
+    },
+    {
+      "path": "frozen/CLAIM_BOUNDARIES.json",
+      "sha256": "31139980ff9fcf3b1fa009b9dd296b737edfeb0e9d4c1cf0cd7357d932dbc6af"
+    },
+    {
+      "path": "frozen/SOURCE_DESIGN_HASHES.json",
+      "sha256": "1b3f84a1dd3cffbf1a34fa85bd6fed52917ac0804403657f3b19e59d550971bd"
+    },
+    {
+      "path": "harness/execute.mjs",
+      "sha256": "597a7ac6adc1176dc549cf79cd9fd0c7ba48d11a70e557b37df3e8be0e480ea1"
+    }
+  ],
+  "evaluator_started": false,
+  "execution_id": "FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-EXECUTION-002",
+  "frozen_at": "2026-07-24T00:00:00Z",
+  "hash_algorithm": "SHA-256",
+  "ordered_digest_sha256": "0e81fc241693b16be69c3a903055d07016f700864e0f7ef84dc238e1aa04bfd0",
+  "run_files_present_at_freeze": 0,
+  "schema_version": "1.0.0",
+  "status": "FROZEN_BEFORE_FIRST_RUN"
+}

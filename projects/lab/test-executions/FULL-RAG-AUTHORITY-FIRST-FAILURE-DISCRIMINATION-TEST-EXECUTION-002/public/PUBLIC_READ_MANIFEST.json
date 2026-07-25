@@ -1,0 +1,12 @@
+{
+  "private_reads": [],
+  "schema_version": "1.0.0",
+  "selector_allowed_reads": [
+    "public/DOCUMENT_CATALOG.json",
+    "public/TASKS.json",
+    "public/LEXICAL_SYNONYMS.json",
+    "public/SEMANTIC_LEXICON.json",
+    "public/PERFECT_CANDIDATES.json",
+    "ARM_PARAMETERS.json"
+  ]
+}

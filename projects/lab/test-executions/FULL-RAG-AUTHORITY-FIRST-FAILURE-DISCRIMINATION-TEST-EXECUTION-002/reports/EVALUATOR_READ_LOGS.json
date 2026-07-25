@@ -1,0 +1,11 @@
+{
+  "process_role": "EVALUATOR_PRIVATE_ACCESS_AFTER_SELECTION_FREEZE",
+  "reads": [
+    "reports/SELECTIONS_FREEZE.json",
+    "private/PRIVATE_ORACLES.json",
+    "public/DOCUMENT_CATALOG.json",
+    "public/TASKS.json",
+    "RUNS/**"
+  ],
+  "schema_version": "1.0.0"
+}

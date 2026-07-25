@@ -249,6 +249,19 @@
       "external_audit_manifest": "projects/lab/external-audits/AUDIT-CLAUDE-FULL-RAG-EXECUTION-071-001/AUDIT_MANIFEST.json",
       "source_archive_sha256": "9827f64b083a51e52ec219fc1bfc5c58b17dee84c4ce64be8a060876ecf084ab",
       "updated_at": "2026-07-24"
+    },
+    {
+      "id": "EVD-LAB-EXP-003",
+      "path": "projects/lab/evidence/EVD-LAB-EXP-003.json",
+      "kind": "FULL_RAG_AUTHORITY_FIRST_FAILURE_DISCRIMINATION_SYNTHETIC_EXECUTION",
+      "project_id": "lab",
+      "status": "REGISTERED_COMPLETE_REPRODUCIBLE_EXTERNAL_AUDIT_REQUIRED",
+      "canonical_path": "projects/lab/evidence/EVD-LAB-EXP-003.json",
+      "authorization_id": "AUTHORIZATION_LAB_FULL_RAG_AUTHORITY_FIRST_FAILURE_DISCRIMINATION_TEST_EXECUTION_075",
+      "experiment_id": "EXP-LAB-003",
+      "execution_package": "projects/lab/test-executions/FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-EXECUTION-002/MANIFEST.json",
+      "ordered_manifest_digest_sha256": "32c099b8bf0e7edc5bcd4f99156240c8eec5877c423244e6f2f0c27e07ed4f40",
+      "updated_at": "2026-07-24"
     }
   ]
 }

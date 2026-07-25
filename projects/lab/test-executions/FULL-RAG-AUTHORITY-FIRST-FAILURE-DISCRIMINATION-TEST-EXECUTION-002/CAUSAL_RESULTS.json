@@ -1,0 +1,174 @@
+{
+  "architecture_selected": false,
+  "contrasts": {
+    "C-K16": {
+      "bootstrap_95_ci": [
+        0.041667,
+        0.078373
+      ],
+      "bootstrap_iterations": 1000,
+      "mean_difference": 0.059524,
+      "paired_n": 504,
+      "seed": 75024017
+    },
+    "C-K4": {
+      "bootstrap_95_ci": [
+        0.039683,
+        0.075397
+      ],
+      "bootstrap_iterations": 1000,
+      "mean_difference": 0.05754,
+      "paired_n": 504,
+      "seed": 75024017
+    },
+    "C-K8": {
+      "bootstrap_95_ci": [
+        0.041667,
+        0.078373
+      ],
+      "bootstrap_iterations": 1000,
+      "mean_difference": 0.059524,
+      "paired_n": 504,
+      "seed": 75024017
+    },
+    "C-NEG": {
+      "bootstrap_95_ci": [
+        0.079365,
+        0.134921
+      ],
+      "bootstrap_iterations": 1000,
+      "mean_difference": 0.107143,
+      "paired_n": 504,
+      "seed": 75024019
+    },
+    "C-RANK": {
+      "bootstrap_95_ci": [
+        0,
+        0
+      ],
+      "bootstrap_iterations": 1000,
+      "mean_difference": 0,
+      "paired_n": 504,
+      "seed": 75024017
+    },
+    "C-REP": {
+      "bootstrap_95_ci": [
+        0.027778,
+        0.051587
+      ],
+      "bootstrap_iterations": 1000,
+      "mean_difference": 0.039683,
+      "paired_n": 504,
+      "seed": 75024017
+    },
+    "C-RETRIEVAL": {
+      "bootstrap_95_ci": [
+        0.166336,
+        0.215608
+      ],
+      "bootstrap_iterations": 1000,
+      "mean_difference": 0.190476,
+      "paired_n": 504,
+      "seed": 75024017
+    },
+    "C-SAFE-REFUSAL": {
+      "difference": -0.75,
+      "fixed_unsupported_rate": 0.25,
+      "legacy_unsupported_rate": 1,
+      "paired_n": 72,
+      "selection_lists_held_constant": true
+    }
+  },
+  "execution_id": "FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-EXECUTION-002",
+  "hypotheses": [
+    {
+      "architecture_effect": "NONE",
+      "classification": "SUPPORTED_CONTRIBUTING_CAUSE",
+      "evidence": "C-REP",
+      "hypothesis_id": "H-SEMANTIC-REPRESENTATION"
+    },
+    {
+      "architecture_effect": "NONE",
+      "classification": "SUPPORTED_CONTRIBUTING_CAUSE",
+      "evidence": "C-REP",
+      "hypothesis_id": "H-PREDOMINANTLY-LEXICAL"
+    },
+    {
+      "architecture_effect": "NONE",
+      "classification": "SUPPORTED_CONTRIBUTING_CAUSE",
+      "evidence": "C-K4",
+      "hypothesis_id": "H-BUDGET-K2"
+    },
+    {
+      "architecture_effect": "NONE",
+      "classification": "SUPPORTED_CONTRIBUTING_CAUSE",
+      "evidence": "C-NEG",
+      "hypothesis_id": "H-NEGATIVE-RESERVATION"
+    },
+    {
+      "architecture_effect": "NONE",
+      "classification": "SUPPORTED_PRIMARY_CAUSE",
+      "evidence": "C-SAFE-REFUSAL",
+      "hypothesis_id": "H-SAFE-REFUSAL-HEURISTIC"
+    },
+    {
+      "architecture_effect": "NONE",
+      "classification": "CONTRADICTED",
+      "evidence": "HISTORICAL_48_EVENT_ATTRIBUTION_PRESERVED",
+      "hypothesis_id": "H-DECLARED-DECOYS"
+    },
+    {
+      "architecture_effect": "NONE",
+      "classification": "SUPPORTED_CONTRIBUTING_CAUSE",
+      "evidence": "C-REP_AND_DISTRACTOR_STRATA",
+      "hypothesis_id": "H-CROSS-FIXTURE-DISTRACTORS"
+    },
+    {
+      "architecture_effect": "NONE",
+      "classification": "SUPPORTED_CONTRIBUTING_CAUSE",
+      "evidence": "HISTORICAL_PAIRED_EVIDENCE_071",
+      "hypothesis_id": "H-SYNONYM-EXPANSION"
+    },
+    {
+      "architecture_effect": "NONE",
+      "classification": "SUPPORTED_PRIMARY_CAUSE",
+      "evidence": "C-RETRIEVAL",
+      "hypothesis_id": "H-RETRIEVAL"
+    },
+    {
+      "architecture_effect": "NONE",
+      "classification": "NOT_SUPPORTED",
+      "evidence": "C-RANK",
+      "hypothesis_id": "H-RANKING"
+    },
+    {
+      "architecture_effect": "NONE",
+      "classification": "CONTRADICTED",
+      "evidence": "ZERO_FILTER_VIOLATIONS_IN_CANDIDATE_ARMS",
+      "hypothesis_id": "H-AUTHORITY-FILTERING"
+    },
+    {
+      "architecture_effect": "NONE",
+      "classification": "POSSIBLE_NOT_DISCRIMINATED",
+      "evidence": "SCALE_CONFIGURATION_IS_COMPOSITE_NOT_CAUSAL",
+      "hypothesis_id": "H-CORPUS"
+    },
+    {
+      "architecture_effect": "NONE",
+      "classification": "CONTRADICTED",
+      "evidence": "POSITIVE_AND_NEGATIVE_CONTROLS",
+      "hypothesis_id": "H-EVALUATOR"
+    },
+    {
+      "architecture_effect": "NONE",
+      "classification": "SUPPORTED_PRIMARY_CAUSE",
+      "evidence": "C-SAFE-REFUSAL",
+      "hypothesis_id": "H-HARNESS"
+    }
+  ],
+  "identifiability_rule": "NO_CAUSAL_ATTRIBUTION_IF_MORE_THAN_ONE_MATERIAL_UNCONTROLLED_VARIABLE_CHANGES",
+  "implementation_selected": false,
+  "provider_selected": false,
+  "schema_version": "1.0.0",
+  "status": "VALID_CAUSAL_CONTRASTS_EVALUATED"
+}

@@ -912,6 +912,28 @@
       "implementation_authorized": false,
       "architecture_selection_authorized": false,
       "product_changes_authorized": false
+    },
+    {
+      "id": "AUTHORIZATION_LAB_FULL_RAG_AUTHORITY_FIRST_FAILURE_DISCRIMINATION_TEST_EXECUTION_075",
+      "state_key": "full_rag_authority_first_failure_discrimination_test_execution_075",
+      "project_id": "lab",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_OF_COMPLETE_REPRODUCIBLE_EXECUTION_PACKAGE",
+      "approved_by": "Jonathan Martinez",
+      "scope": "SYNTHETIC_REPRODUCIBLE_DISCRIMINATING_TEST_EXECUTION",
+      "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_FULL_RAG_AUTHORITY_FIRST_FAILURE_DISCRIMINATION_TEST_EXECUTION_075.json",
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "expected_parent_head": "1b2cc3fd06296b26f5a1f151c7385cd4782bddb8",
+      "updated_at": "2026-07-24",
+      "commit_authorized": true,
+      "push_authorized": true,
+      "test_execution_authorized": true,
+      "external_audit_authorized": false,
+      "provider_selection_authorized": false,
+      "runtime_authorized": false,
+      "implementation_selection_authorized": false,
+      "architecture_selection_authorized": false,
+      "product_changes_authorized": false
     }
   ]
 }

@@ -443,18 +443,50 @@
     },
     {
       "id": "PEND-LAB-020",
-      "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+      "status": "COMPLETED_REPRODUCIBLE_EXECUTION_PUBLISHED_EXTERNAL_AUDIT_REQUIRED",
       "type": "FULL_RAG_AUTHORITY_FIRST_FAILURE_DISCRIMINATION_TEST_EXECUTION",
-      "subject": "Generate, freeze, execute, evaluate and independently audit test design 002 under a separate bounded authorization",
+      "subject": "Generate, freeze, execute and evaluate test design 002; external audit remains separately authorized",
       "priority": "HIGH",
       "authorization_required": true,
+      "completed_by_authorization": "AUTHORIZATION_LAB_FULL_RAG_AUTHORITY_FIRST_FAILURE_DISCRIMINATION_TEST_EXECUTION_075",
+      "completed_by_execution": "FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-EXECUTION-002",
+      "experiment_id": "EXP-LAB-003",
+      "evidence_id": "EVD-LAB-EXP-003",
+      "test_result": "TEST_VALID_DISCRIMINATING_RESULTS_PUBLISHED",
+      "run_count": 66,
+      "reproducibility": "PASS_EXACT",
+      "external_audit": "NOT_EXECUTED_REQUIRES_SEPARATE_AUTHORIZATION",
+      "current_authority": "NONE_AFTER_CONSUMPTION",
+      "automatic_approval": false,
+      "successor_pending": "PEND-LAB-021",
+      "next_authorized_action": "NONE_AFTER_CONSUMPTION",
+      "source_refs": [
+        "projects/lab/pending/PEND-LAB-020.json",
+        "projects/lab/authorizations/AUTHORIZATION_LAB_FULL_RAG_AUTHORITY_FIRST_FAILURE_ANALYSIS_AND_NEXT_TEST_DESIGN_074.json",
+        "projects/lab/test-designs/FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-002/MANIFEST.json",
+        "projects/lab/authorizations/AUTHORIZATION_LAB_FULL_RAG_AUTHORITY_FIRST_FAILURE_DISCRIMINATION_TEST_EXECUTION_075.json",
+        "projects/lab/test-executions/FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-EXECUTION-002/MANIFEST.json",
+        "projects/lab/experiments/EXP-LAB-003.json",
+        "projects/lab/evidence/EVD-LAB-EXP-003.json",
+        "projects/lab/pending/PEND-LAB-021.json"
+      ]
+    },
+    {
+      "id": "PEND-LAB-021",
+      "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+      "type": "INDEPENDENT_EXTERNAL_READ_ONLY_AUDIT_OF_FULL_RAG_FAILURE_DISCRIMINATION_EXECUTION",
+      "subject": "Independently audit execution 002, its isolation, causal claims, gates and reproducibility",
+      "priority": "HIGH",
+      "authorization_required": true,
+      "audit_mode": "STRICT_READ_ONLY_INDEPENDENT_EXTERNAL_AUDIT",
       "current_authority": "NONE",
       "automatic_approval": false,
       "next_authorized_action": "NONE_UNTIL_SEPARATE_EXPLICIT_AUTHORIZATION",
       "source_refs": [
-        "projects/lab/pending/PEND-LAB-020.json",
-        "projects/lab/authorizations/AUTHORIZATION_LAB_FULL_RAG_AUTHORITY_FIRST_FAILURE_ANALYSIS_AND_NEXT_TEST_DESIGN_074.json",
-        "projects/lab/test-designs/FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-002/MANIFEST.json"
+        "projects/lab/pending/PEND-LAB-021.json",
+        "projects/lab/test-executions/FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-EXECUTION-002/MANIFEST.json",
+        "projects/lab/experiments/EXP-LAB-003.json",
+        "projects/lab/evidence/EVD-LAB-EXP-003.json"
       ]
     }
   ]

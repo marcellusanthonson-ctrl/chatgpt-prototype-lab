@@ -1,0 +1,42 @@
+{
+  "critical_codes": [
+    "ORACLE_ACCESS",
+    "ACL_LEAKAGE",
+    "CROSS_PROJECT_CONTAMINATION",
+    "AUTHORITY_INVERSION",
+    "STALE_OR_SUPERSEDED_SELECTED",
+    "BINDING_NEGATIVE_OMITTED",
+    "CONFIRMED_CONFLICT_AUTOMERGED",
+    "FALSE_CITATION",
+    "UNSUPPORTED_CONCLUSION",
+    "FORBIDDEN_DOCUMENT_SELECTED",
+    "CAUSAL_ISOLATION_VIOLATION"
+  ],
+  "invalidation": [
+    "MISSING_RUN",
+    "POST_FREEZE_CHANGE",
+    "PRIVATE_ORACLE_SELECTOR_READ",
+    "CONTROL_FAILURE",
+    "MULTIPLE_UNCONTROLLED_VARIABLES",
+    "NON_REPRODUCIBLE_OUTPUT"
+  ],
+  "safe_refusal": "REFUSE_UNLESS_SELECTED_EVIDENCE_IS_TOPIC_APPLICABLE_CANONICAL_AND_SATISFIES_PUBLIC_SLOT_NEGATIVE_AND_CONFLICT_CONTRACTS",
+  "schema_version": "1.0.0",
+  "status": "FROZEN_BEFORE_FIRST_RUN",
+  "thresholds": {
+    "authority_inversion_max": 0,
+    "binding_negative_retention_min": 1,
+    "citation_correctness_min": 0.98,
+    "conflict_detection_min": 0.95,
+    "cost_ratio_to_arm_01_max": 2,
+    "forbidden_document_rate_max": 0,
+    "macro_f1_min": 0.72,
+    "precision_min": 0.7,
+    "project_contamination_max": 0,
+    "required_document_recall_min": 0.8,
+    "safe_refusal_precision_min": 0.9,
+    "safe_refusal_recall_min": 0.9,
+    "stale_selection_max": 0,
+    "unsupported_conclusion_rate_max": 0
+  }
+}

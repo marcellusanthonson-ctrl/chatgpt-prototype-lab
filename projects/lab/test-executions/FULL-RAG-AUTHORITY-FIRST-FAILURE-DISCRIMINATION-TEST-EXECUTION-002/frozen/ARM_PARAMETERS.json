@@ -1,0 +1,113 @@
+{
+  "cells": {
+    "ARM-01": {
+      "cell": "ARM-01",
+      "k": 2,
+      "negative_reservation": false,
+      "ranking": "AUTHORITY_FIRST_THEN_REPRESENTATION_SCORE",
+      "representation": "LEXICAL_FROZEN_SYNONYMS",
+      "retrieval": "GLOBAL_PUBLIC_CORPUS",
+      "safe_refusal": "FROZEN_EVIDENTIARY_SUFFICIENCY"
+    },
+    "ARM-02@K16": {
+      "cell": "ARM-02@K16",
+      "k": 16,
+      "negative_reservation": false,
+      "ranking": "AUTHORITY_FIRST_THEN_REPRESENTATION_SCORE",
+      "representation": "LEXICAL_FROZEN_SYNONYMS",
+      "retrieval": "GLOBAL_PUBLIC_CORPUS",
+      "safe_refusal": "FROZEN_EVIDENTIARY_SUFFICIENCY"
+    },
+    "ARM-02@K4": {
+      "cell": "ARM-02@K4",
+      "k": 4,
+      "negative_reservation": false,
+      "ranking": "AUTHORITY_FIRST_THEN_REPRESENTATION_SCORE",
+      "representation": "LEXICAL_FROZEN_SYNONYMS",
+      "retrieval": "GLOBAL_PUBLIC_CORPUS",
+      "safe_refusal": "FROZEN_EVIDENTIARY_SUFFICIENCY"
+    },
+    "ARM-02@K8": {
+      "cell": "ARM-02@K8",
+      "k": 8,
+      "negative_reservation": false,
+      "ranking": "AUTHORITY_FIRST_THEN_REPRESENTATION_SCORE",
+      "representation": "LEXICAL_FROZEN_SYNONYMS",
+      "retrieval": "GLOBAL_PUBLIC_CORPUS",
+      "safe_refusal": "FROZEN_EVIDENTIARY_SUFFICIENCY"
+    },
+    "ARM-03": {
+      "cell": "ARM-03",
+      "k": 2,
+      "negative_reservation": true,
+      "ranking": "AUTHORITY_FIRST_THEN_REPRESENTATION_SCORE",
+      "representation": "LEXICAL_FROZEN_SYNONYMS",
+      "retrieval": "GLOBAL_PUBLIC_CORPUS",
+      "safe_refusal": "FROZEN_EVIDENTIARY_SUFFICIENCY"
+    },
+    "ARM-04": {
+      "cell": "ARM-04",
+      "k": 2,
+      "negative_reservation": false,
+      "ranking": "AUTHORITY_FIRST_THEN_REPRESENTATION_SCORE",
+      "representation": "PROVIDER_NEUTRAL_LOCAL_SEMANTIC_SIMULATION",
+      "retrieval": "GLOBAL_PUBLIC_CORPUS",
+      "safe_refusal": "FROZEN_EVIDENTIARY_SUFFICIENCY"
+    },
+    "ARM-05": {
+      "cell": "ARM-05",
+      "k": 2,
+      "negative_reservation": true,
+      "ranking": "AUTHORITY_FIRST_THEN_REPRESENTATION_SCORE",
+      "representation": "PROVIDER_NEUTRAL_LOCAL_SEMANTIC_SIMULATION",
+      "retrieval": "GLOBAL_PUBLIC_CORPUS",
+      "safe_refusal": "FROZEN_EVIDENTIARY_SUFFICIENCY"
+    },
+    "ARM-06": {
+      "cell": "ARM-06",
+      "k": 2,
+      "negative_reservation": false,
+      "ranking": "AUTHORITY_FIRST_THEN_REPRESENTATION_SCORE",
+      "representation": "LEXICAL_FROZEN_SYNONYMS",
+      "retrieval": "GLOBAL_PUBLIC_CORPUS",
+      "safe_refusal": "FROZEN_EVIDENTIARY_SUFFICIENCY"
+    },
+    "ARM-07": {
+      "cell": "ARM-07",
+      "k": 2,
+      "negative_reservation": false,
+      "ranking": "RELEVANCE_FIRST_UNSAFE_CONTROL",
+      "representation": "LEXICAL_FROZEN_SYNONYMS",
+      "retrieval": "GLOBAL_PUBLIC_CORPUS",
+      "safe_refusal": "FROZEN_EVIDENTIARY_SUFFICIENCY"
+    },
+    "ARM-08": {
+      "cell": "ARM-08",
+      "k": 2,
+      "negative_reservation": false,
+      "ranking": "AUTHORITY_FIRST_THEN_REPRESENTATION_SCORE",
+      "representation": "LEXICAL_FROZEN_SYNONYMS",
+      "retrieval": "FROZEN_PERFECT_PUBLIC_CANDIDATES",
+      "safe_refusal": "FROZEN_EVIDENTIARY_SUFFICIENCY"
+    },
+    "ARM-09": {
+      "cell": "ARM-09",
+      "k": 2,
+      "negative_reservation": false,
+      "ranking": "TASK_APPLICABILITY_THEN_NEGATIVE_THEN_AUTHORITY",
+      "representation": "PROVIDER_NEUTRAL_LOCAL_SEMANTIC_SIMULATION",
+      "retrieval": "FROZEN_PERFECT_PUBLIC_CANDIDATES",
+      "safe_refusal": "FROZEN_EVIDENTIARY_SUFFICIENCY"
+    }
+  },
+  "provider_selected": false,
+  "real_embeddings": false,
+  "schema_version": "1.0.0",
+  "semantic_interface": {
+    "dimensions": "SPARSE_PUBLIC_CONCEPT_SET",
+    "external_api": false,
+    "provider": "NONE",
+    "type": "LOCAL_PROVIDER_NEUTRAL_DETERMINISTIC_CONCEPT_SIMULATION"
+  },
+  "status": "FROZEN_BEFORE_FIRST_RUN"
+}

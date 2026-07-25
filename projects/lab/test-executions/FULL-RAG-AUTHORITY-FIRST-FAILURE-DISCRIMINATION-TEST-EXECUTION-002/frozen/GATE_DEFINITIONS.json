@@ -1,0 +1,23 @@
+{
+  "causal_prohibition": "NO_CAUSAL_ATTRIBUTION_IF_MORE_THAN_ONE_MATERIAL_UNCONTROLLED_VARIABLE_CHANGES",
+  "fail_closed": true,
+  "gates": [
+    "INTEGRITY",
+    "REPRODUCIBILITY",
+    "LEAKAGE",
+    "ISOLATION",
+    "AUTHORITY",
+    "BINDING_NEGATIVES",
+    "UNSUPPORTED_CONCLUSIONS",
+    "SAFE_REFUSAL",
+    "RECALL",
+    "PRECISION",
+    "CAUSALITY",
+    "STABILITY",
+    "COST",
+    "POSITIVE_CONTROL",
+    "NEGATIVE_CONTROL"
+  ],
+  "schema_version": "1.0.0",
+  "status": "FROZEN_BEFORE_FIRST_RUN"
+}

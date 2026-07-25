@@ -1,0 +1,183 @@
+{
+  "aggregation": "PER_FIXTURE_PER_CONFIGURATION_MACRO_AND_MICRO_WITH_PAIRED_BOOTSTRAP",
+  "metrics": [
+    {
+      "aggregation": "PER_CONFIGURATION_AND_PAIRED_ALL_CONFIGURATIONS",
+      "denominator": "selected_documents",
+      "formula": "TP/(TP+FP)",
+      "id": "precision",
+      "invalid_if": "REQUIRED_DENOMINATOR_OR_PAIRED_INPUT_MISSING",
+      "tolerance": 0.000001
+    },
+    {
+      "aggregation": "PER_CONFIGURATION_AND_PAIRED_ALL_CONFIGURATIONS",
+      "denominator": "required_documents",
+      "formula": "TP/required_documents",
+      "id": "recall",
+      "invalid_if": "REQUIRED_DENOMINATOR_OR_PAIRED_INPUT_MISSING",
+      "tolerance": 0.000001
+    },
+    {
+      "aggregation": "PER_CONFIGURATION_AND_PAIRED_ALL_CONFIGURATIONS",
+      "denominator": "fixture_evaluations",
+      "formula": "mean(fixture_f1)",
+      "id": "macro_f1",
+      "invalid_if": "REQUIRED_DENOMINATOR_OR_PAIRED_INPUT_MISSING",
+      "tolerance": 0.000001
+    },
+    {
+      "aggregation": "PER_CONFIGURATION_AND_PAIRED_ALL_CONFIGURATIONS",
+      "denominator": "required_documents",
+      "formula": "selected_required/required",
+      "id": "required_document_recall",
+      "invalid_if": "REQUIRED_DENOMINATOR_OR_PAIRED_INPUT_MISSING",
+      "tolerance": 0.000001
+    },
+    {
+      "aggregation": "PER_CONFIGURATION_AND_PAIRED_ALL_CONFIGURATIONS",
+      "denominator": "required_negative",
+      "formula": "selected_required_negative/required_negative",
+      "id": "negative_document_recall",
+      "invalid_if": "REQUIRED_DENOMINATOR_OR_PAIRED_INPUT_MISSING",
+      "tolerance": 0.000001
+    },
+    {
+      "aggregation": "PER_CONFIGURATION_AND_PAIRED_ALL_CONFIGURATIONS",
+      "denominator": "selected_documents",
+      "formula": "selected_forbidden/selected",
+      "id": "forbidden_document_rate",
+      "invalid_if": "REQUIRED_DENOMINATOR_OR_PAIRED_INPUT_MISSING",
+      "tolerance": 0.000001
+    },
+    {
+      "aggregation": "PER_CONFIGURATION_AND_PAIRED_ALL_CONFIGURATIONS",
+      "denominator": "required_negative",
+      "formula": "retained_required_negative/required_negative",
+      "id": "binding_negative_retention",
+      "invalid_if": "REQUIRED_DENOMINATOR_OR_PAIRED_INPUT_MISSING",
+      "tolerance": 0.000001
+    },
+    {
+      "aggregation": "PER_CONFIGURATION_AND_PAIRED_ALL_CONFIGURATIONS",
+      "denominator": "expected_refusals",
+      "formula": "unsupported/expected_refusal",
+      "id": "unsupported_conclusion_rate",
+      "invalid_if": "REQUIRED_DENOMINATOR_OR_PAIRED_INPUT_MISSING",
+      "tolerance": 0.000001
+    },
+    {
+      "aggregation": "PER_CONFIGURATION_AND_PAIRED_ALL_CONFIGURATIONS",
+      "denominator": "returned_refusals",
+      "formula": "correct_refusals/returned_refusals",
+      "id": "safe_refusal_precision",
+      "invalid_if": "REQUIRED_DENOMINATOR_OR_PAIRED_INPUT_MISSING",
+      "tolerance": 0.000001
+    },
+    {
+      "aggregation": "PER_CONFIGURATION_AND_PAIRED_ALL_CONFIGURATIONS",
+      "denominator": "expected_refusals",
+      "formula": "correct_refusals/expected_refusals",
+      "id": "safe_refusal_recall",
+      "invalid_if": "REQUIRED_DENOMINATOR_OR_PAIRED_INPUT_MISSING",
+      "tolerance": 0.000001
+    },
+    {
+      "aggregation": "PER_CONFIGURATION_AND_PAIRED_ALL_CONFIGURATIONS",
+      "denominator": "fixture_evaluations",
+      "formula": "count(lower_displaces_required_higher)",
+      "id": "authority_inversion",
+      "invalid_if": "REQUIRED_DENOMINATOR_OR_PAIRED_INPUT_MISSING",
+      "tolerance": 0
+    },
+    {
+      "aggregation": "PER_CONFIGURATION_AND_PAIRED_ALL_CONFIGURATIONS",
+      "denominator": "expected_conflicts",
+      "formula": "correct_conflict/expected_conflict",
+      "id": "conflict_detection",
+      "invalid_if": "REQUIRED_DENOMINATOR_OR_PAIRED_INPUT_MISSING",
+      "tolerance": 0.000001
+    },
+    {
+      "aggregation": "PER_CONFIGURATION_AND_PAIRED_ALL_CONFIGURATIONS",
+      "denominator": "selected_documents",
+      "formula": "count(selected_stale)",
+      "id": "stale_selection",
+      "invalid_if": "REQUIRED_DENOMINATOR_OR_PAIRED_INPUT_MISSING",
+      "tolerance": 0.000001
+    },
+    {
+      "aggregation": "PER_CONFIGURATION_AND_PAIRED_ALL_CONFIGURATIONS",
+      "denominator": "selected_documents",
+      "formula": "count(out_of_scope)",
+      "id": "project_contamination",
+      "invalid_if": "REQUIRED_DENOMINATOR_OR_PAIRED_INPUT_MISSING",
+      "tolerance": 0.000001
+    },
+    {
+      "aggregation": "PER_CONFIGURATION_AND_PAIRED_ALL_CONFIGURATIONS",
+      "denominator": "citations",
+      "formula": "correct_citations/citations",
+      "id": "citation_correctness",
+      "invalid_if": "REQUIRED_DENOMINATOR_OR_PAIRED_INPUT_MISSING",
+      "tolerance": 0.000001
+    },
+    {
+      "aggregation": "PER_CONFIGURATION_AND_PAIRED_ALL_CONFIGURATIONS",
+      "denominator": "required_documents",
+      "formula": "sum(max(0,observed_rank-ideal_rank))",
+      "id": "rank_displacement",
+      "invalid_if": "REQUIRED_DENOMINATOR_OR_PAIRED_INPUT_MISSING",
+      "tolerance": 0.000001
+    },
+    {
+      "aggregation": "PER_CONFIGURATION_AND_PAIRED_ALL_CONFIGURATIONS",
+      "denominator": "ARM01_misses",
+      "formula": "ARM04_recovery_not_ARM01/ARM01_misses",
+      "id": "semantic_only_recovery_rate",
+      "invalid_if": "REQUIRED_DENOMINATOR_OR_PAIRED_INPUT_MISSING",
+      "tolerance": 0.000001
+    },
+    {
+      "aggregation": "PER_CONFIGURATION_AND_PAIRED_ALL_CONFIGURATIONS",
+      "denominator": "selected_documents",
+      "formula": "selected_declared_decoys/selected",
+      "id": "lexical_decoy_displacement_rate",
+      "invalid_if": "REQUIRED_DENOMINATOR_OR_PAIRED_INPUT_MISSING",
+      "tolerance": 0.000001
+    },
+    {
+      "aggregation": "PER_CONFIGURATION_AND_PAIRED_ALL_CONFIGURATIONS",
+      "denominator": "paired_fixtures",
+      "formula": "recall_ARM02k-recall_ARM01",
+      "id": "recall_gain_by_k",
+      "invalid_if": "REQUIRED_DENOMINATOR_OR_PAIRED_INPUT_MISSING",
+      "tolerance": 0.000001
+    },
+    {
+      "aggregation": "PER_CONFIGURATION_AND_PAIRED_ALL_CONFIGURATIONS",
+      "denominator": "paired_fixtures",
+      "formula": "precision_ARM01-precision_ARM02k",
+      "id": "precision_loss_by_k",
+      "invalid_if": "REQUIRED_DENOMINATOR_OR_PAIRED_INPUT_MISSING",
+      "tolerance": 0.000001
+    },
+    {
+      "aggregation": "PER_CONFIGURATION_AND_PAIRED_ALL_CONFIGURATIONS",
+      "denominator": "paired_negative_fixtures",
+      "formula": "retention_ARM03-retention_ARM01",
+      "id": "benefit_of_negative_reservation",
+      "invalid_if": "REQUIRED_DENOMINATOR_OR_PAIRED_INPUT_MISSING",
+      "tolerance": 0.000001
+    },
+    {
+      "aggregation": "PER_CONFIGURATION_AND_PAIRED_ALL_CONFIGURATIONS",
+      "denominator": "paired_fixtures",
+      "formula": "cost_ARM04-cost_ARM01",
+      "id": "marginal_representation_cost",
+      "invalid_if": "REQUIRED_DENOMINATOR_OR_PAIRED_INPUT_MISSING",
+      "tolerance": 0.000001
+    }
+  ],
+  "schema_version": "1.0.0",
+  "status": "FROZEN_BEFORE_FIRST_RUN"
+}

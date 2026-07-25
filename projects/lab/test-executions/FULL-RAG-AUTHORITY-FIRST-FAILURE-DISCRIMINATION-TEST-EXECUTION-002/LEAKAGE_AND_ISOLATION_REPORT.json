@@ -1,0 +1,23 @@
+{
+  "arm_08_arm_09_candidate_sets_identical": true,
+  "evaluator_processes": 1,
+  "evaluator_started_after_selection_freeze": true,
+  "execution_id": "FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-EXECUTION-002",
+  "interaction_only_contrast": "ARM-01_VS_ARM-05_NOT_USED_FOR_MAIN_EFFECT_ATTRIBUTION",
+  "private_canary_visible_in_public": false,
+  "result": "PASS_NO_LEAKAGE_ISOLATION_VALID",
+  "schema_version": "1.0.0",
+  "selector_private_reads": 0,
+  "selector_processes": 60,
+  "semantic_role_label_leaks": [],
+  "single_variable_contrasts": [
+    "C-REP",
+    "C-K4",
+    "C-K8",
+    "C-K16",
+    "C-NEG",
+    "C-RETRIEVAL",
+    "C-RANK",
+    "C-SAFE-REFUSAL"
+  ]
+}

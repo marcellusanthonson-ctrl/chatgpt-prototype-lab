@@ -1,0 +1,21 @@
+{
+  "compared_files": 71,
+  "execution_id": "FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-EXECUTION-002",
+  "mismatches": [],
+  "reproduction_environment": {
+    "architecture": "x64",
+    "dependencies_installed": 0,
+    "external_apis_used": 0,
+    "node": "v24.6.0",
+    "platform": "win32"
+  },
+  "publication_normalization": {
+    "file": "METRICS.json",
+    "operation": "JSON_WHITESPACE_COMPACTION_ONLY_AFTER_EXACT_REPRODUCTION_COMPARISON",
+    "semantic_content_changed": false,
+    "reason": "REPOSITORY_1200_PHYSICAL_LINE_POLICY",
+    "verification": "PARSED_JSON_IDENTICAL_BEFORE_AND_AFTER_NORMALIZATION"
+  },
+  "result": "PASS_EXACT",
+  "schema_version": "1.0.0"
+}

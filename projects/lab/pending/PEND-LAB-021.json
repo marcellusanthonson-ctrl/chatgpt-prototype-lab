@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "id": "PEND-LAB-021",
+  "project_id": "lab",
+  "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+  "type": "INDEPENDENT_EXTERNAL_READ_ONLY_AUDIT_OF_FULL_RAG_FAILURE_DISCRIMINATION_EXECUTION",
+  "subject": "Independently audit execution 002, its frozen inputs, isolation, causal claims, gates and reproducibility",
+  "priority": "HIGH",
+  "created_at": "2026-07-24",
+  "predecessor_pending": "PEND-LAB-020",
+  "source_authorization": "AUTHORIZATION_LAB_FULL_RAG_AUTHORITY_FIRST_FAILURE_DISCRIMINATION_TEST_EXECUTION_075",
+  "source_execution": "FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-EXECUTION-002",
+  "source_experiment": "EXP-LAB-003",
+  "source_evidence": "EVD-LAB-EXP-003",
+  "authorization_required": true,
+  "audit_mode": "STRICT_READ_ONLY_INDEPENDENT_EXTERNAL_AUDIT",
+  "status_boundary": "PROPOSAL_ONLY_NOT_AUTHORIZATION",
+  "required_review": [
+    "FREEZE_INTEGRITY",
+    "SELECTOR_EVALUATOR_ISOLATION_AND_LEAKAGE",
+    "REPRODUCIBILITY",
+    "METRICS_AND_GATE_CALCULATION",
+    "CAUSAL_IDENTIFIABILITY_AND_HYPOTHESIS_CLASSIFICATION",
+    "FAVORABLE_AND_CONTRARY_EVIDENCE",
+    "CLAIM_BOUNDARIES_AND_LIMITATIONS"
+  ],
+  "required_boundaries": [
+    "READ_ONLY",
+    "NO_CANONICAL_MUTATION",
+    "NO_PROVIDER_ARCHITECTURE_OR_IMPLEMENTATION_SELECTION",
+    "NO_IMPLEMENTATION_APPROVAL",
+    "NO_PRODUCT_RUNTIME_OR_DEPLOYMENT_EFFECT"
+  ],
+  "current_authority": "NONE",
+  "automatic_approval": false,
+  "next_authorized_action": "NONE_UNTIL_SEPARATE_EXPLICIT_AUTHORIZATION",
+  "source_refs": [
+    "projects/lab/test-executions/FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-EXECUTION-002/MANIFEST.json",
+    "projects/lab/test-executions/FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-EXECUTION-002/VALIDATION_REPORT.json",
+    "projects/lab/experiments/EXP-LAB-003.json",
+    "projects/lab/evidence/EVD-LAB-EXP-003.json"
+  ]
+}
