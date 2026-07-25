@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-07-24",
+  "updated_at": "2026-07-25",
   "records": [
     {
       "id": "AUTH-LAB-GOVERNANCE-V2-013",
@@ -966,6 +966,27 @@
       "branch": "main",
       "expected_parent_head": "7054a1bfc9344065ad3bb9637ce8d7b808562d7a",
       "updated_at": "2026-07-24",
+      "commit_authorized": true,
+      "push_authorized": true,
+      "source_file_update_authorized": true,
+      "test_execution_authorized": false,
+      "runtime_authorized": false,
+      "implementation_selection_authorized": false,
+      "architecture_selection_authorized": false,
+      "product_changes_authorized": false
+    },
+    {
+      "id": "AUTHORIZATION_LAB_FULL_RAG_POST_AUDIT_DECISION_AND_REMEDIATION_PLANNING_078_REVISION_2",
+      "state_key": "full_rag_post_audit_decision_and_remediation_planning_078_revision_2",
+      "project_id": "lab",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "approved_by": "Jonathan Martínez",
+      "scope": "DOCUMENTARY_POST_AUDIT_DECISION_AND_REMEDIATION_PLANNING",
+      "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_FULL_RAG_POST_AUDIT_DECISION_AND_REMEDIATION_PLANNING_078_REVISION_2.json",
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "expected_parent_head": "29b5642b08e356dc89751e26b32027a40709ba02",
+      "updated_at": "2026-07-25",
       "commit_authorized": true,
       "push_authorized": true,
       "source_file_update_authorized": true,

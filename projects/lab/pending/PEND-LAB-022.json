@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "id": "PEND-LAB-022",
   "project_id": "lab",
-  "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+  "status": "COMPLETED_DOCUMENTARY_DECISIONS_AND_REMEDIATION_PLAN_PUBLISHED",
   "type": "FULL_RAG_POST_AUDIT_DECISION_AND_REMEDIATION_PLANNING",
   "subject": "Decide and plan documentary remediation after audit 076 without executing fixes, tests, architecture selection or implementation",
   "priority": "HIGH",
@@ -13,7 +13,7 @@
   "source_evidence": "EVD-LAB-AUD-005",
   "source_reassessment": "REA-LAB-006",
   "authorization_required": true,
-  "status_boundary": "PROPOSAL_ONLY_NOT_AUTHORIZATION",
+  "status_boundary": "COMPLETED_BY_AUTHORIZATION_078_REVISION_2",
   "documentary_decisions_only": [
     "WHETHER_TO_REMEDIATE_DESIGN_TRACEABILITY",
     "WHETHER_TO_CREATE_AN_ISOLATED_C_RANK_CONTRAST",
@@ -30,12 +30,21 @@
     "SELECT_OR_APPROVE_IMPLEMENTATION",
     "MODIFY_PRODUCT_OR_RUNTIME"
   ],
-  "current_authority": "NONE",
+  "completed_by_authorization": "AUTHORIZATION_LAB_FULL_RAG_POST_AUDIT_DECISION_AND_REMEDIATION_PLANNING_078_REVISION_2",
+  "decision": "DEC-LAB-021",
+  "remediation_plan": "FULL-RAG-POST-AUDIT-REMEDIATION-PLAN-001",
+  "successor_pending": "PEND-LAB-023",
+  "architecture_decision_gate": "NOT_READY",
+  "current_authority": "NONE_AFTER_CONSUMPTION",
   "automatic_approval": false,
-  "next_authorized_action": "NONE_UNTIL_SEPARATE_EXPLICIT_AUTHORIZATION",
+  "next_authorized_action": "NONE_AFTER_CONSUMPTION",
   "source_refs": [
     "projects/lab/external-audits/AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001/AUDIT_REPORT.json",
     "projects/lab/evidence/EVD-LAB-AUD-005.json",
-    "projects/lab/reassessments/REA-LAB-006.json"
+    "projects/lab/reassessments/REA-LAB-006.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_FULL_RAG_POST_AUDIT_DECISION_AND_REMEDIATION_PLANNING_078_REVISION_2.json",
+    "decisions/DEC-LAB-021.json",
+    "projects/lab/remediation-plans/FULL-RAG-POST-AUDIT-REMEDIATION-PLAN-001.json",
+    "projects/lab/pending/PEND-LAB-023.json"
   ]
 }

@@ -1,0 +1,553 @@
+{
+  "schema_version": "1.0.0",
+  "plan_id": "FULL-RAG-POST-AUDIT-REMEDIATION-PLAN-001",
+  "project_id": "lab",
+  "status": "DOCUMENTARY_PLAN_APPROVED_NOT_EXECUTED",
+  "created_at": "2026-07-25",
+  "source_authorization": "AUTHORIZATION_LAB_FULL_RAG_POST_AUDIT_DECISION_AND_REMEDIATION_PLANNING_078_REVISION_2",
+  "source_decision": "DEC-LAB-021",
+  "source_pending": "PEND-LAB-022",
+  "source_audit": "AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001",
+  "source_evidence": "EVD-LAB-AUD-005",
+  "source_reassessment": "REA-LAB-006",
+  "scope": "Prospectively plan design-source traceability, an isolated C-RANK contrast, fresh contrasts for exactly five qualified hypotheses, bounded future execution, external audit and architecture-readiness reassessment.",
+  "source_findings": [
+    {
+      "finding": "DESIGN_SOURCE_PROVENANCE_NOT_CRYPTOGRAPHICALLY_FROZEN",
+      "materiality": "NON_INVALIDATING_TRACEABILITY_GAP",
+      "planned_response": "REMEDIATE_DESIGN_SOURCE_TRACEABILITY"
+    },
+    {
+      "finding": "NULL_EFFECT_OBSERVED_IN_CONFOUNDED_CONTRAST_NOT_ISOLATED_CAUSAL_REFUTATION",
+      "materiality": "INTERPRETATION_QUALIFICATION",
+      "planned_response": "DESIGN_ISOLATED_C_RANK_CONTRAST"
+    },
+    {
+      "finding": "NINE_HYPOTHESES_SUPPORTED_BY_FRESH_CONTRASTS_FIVE_REQUIRE_QUALIFIED_PROVENANCE",
+      "materiality": "INTERPRETATION_QUALIFICATION",
+      "planned_response": "REPLACE_FIVE_QUALIFIED_HYPOTHESES_WITH_FRESH_CONTRASTS"
+    }
+  ],
+  "decisions": [
+    {
+      "decision": "REMEDIATE_DESIGN_SOURCE_TRACEABILITY",
+      "verdict": "REMEDIATION_REQUIRED",
+      "priority": "HIGH"
+    },
+    {
+      "decision": "DESIGN_ISOLATED_C_RANK_CONTRAST",
+      "verdict": "NEW_ISOLATED_CONTRAST_REQUIRED",
+      "priority": "HIGH"
+    },
+    {
+      "decision": "REPLACE_FIVE_QUALIFIED_HYPOTHESES_WITH_FRESH_CONTRASTS",
+      "verdict": "FRESH_CONTRASTS_REQUIRED_BEFORE_STRONG_CAUSAL_CLAIMS",
+      "priority": "MEDIUM_HIGH"
+    },
+    {
+      "decision": "DEFINE_ARCHITECTURE_DECISION_EVIDENCE_GATE",
+      "verdict": "NOT_READY",
+      "priority": "HIGH"
+    }
+  ],
+  "design_traceability_acceptance_contract": {
+    "required_outputs": [
+      "COMPLETE_SOURCE_INVENTORY",
+      "SHA256_FOR_EACH_SOURCE",
+      "ORDERED_MANIFEST_DIGEST",
+      "CANONICAL_PATH_FOR_EACH_SOURCE",
+      "TRACEABLE_DESIGN_FREEZE_EXECUTION_RELATION"
+    ],
+    "fail_closed_rule": "ANY_MISSING_UNHASHED_NONCANONICAL_OR_UNLINKED_SOURCE_BLOCKS_FREEZE",
+    "historical_preservation": [
+      "DO_NOT_MODIFY_DESIGN_002",
+      "DO_NOT_MODIFY_EXECUTION_002",
+      "DO_NOT_REWRITE_HISTORICAL_RESULTS"
+    ]
+  },
+  "isolated_c_rank_acceptance_contract": {
+    "variable_to_manipulate": "RANKING_ONLY",
+    "held_constant": [
+      "REPRESENTATION",
+      "CORPUS",
+      "K",
+      "FILTERS",
+      "SCORING",
+      "CANDIDATE_SET",
+      "SAFE_REFUSAL_POLICY"
+    ],
+    "required_controls": [
+      "POSITIVE_CONTROL",
+      "NEGATIVE_CONTROL"
+    ],
+    "required_gate": "NO_CAUSAL_ATTRIBUTION_IF_MORE_THAN_ONE_MATERIAL_UNCONTROLLED_VARIABLE_CHANGES",
+    "required_evidence": [
+      "FAVORABLE_EVIDENCE",
+      "CONTRARY_EVIDENCE"
+    ],
+    "no_conclusion_criterion": "IF_RANKING_IS_NOT_THE_ONLY_MATERIAL_VARIABLE_OR_CONTROLS_DO_NOT_DISCRIMINATE_THEN_REPORT_INSUFFICIENT_EVIDENCE",
+    "execution_authorized": false
+  },
+  "five_qualified_hypotheses": [
+    {
+      "hypothesis_id": "H-DECLARED-DECOYS",
+      "current_provenance": "HISTORICAL",
+      "variable_to_manipulate": "DECLARED_PER_FIXTURE_DECOY_PRESENCE",
+      "required_control": "IDENTICAL_SYNTHETIC_FIXTURES_WITH_DECLARED_DECOY_TOGGLE_ONLY",
+      "metric": [
+        "declared_decoy_selection_rate",
+        "cross_fixture_distractor_rate",
+        "required_document_recall",
+        "unsupported_conclusion_rate"
+      ],
+      "gate": "DECLARED_DECOY_SINGLE_VARIABLE_IDENTIFIABILITY_PASS",
+      "favorable_evidence": "The historical corpus intentionally included high-overlap declared decoys.",
+      "contrary_evidence": "Zero declared per-fixture decoys were selected in the 48 historical critical events; observed false positives were cross-fixture canonical documents.",
+      "missing_evidence": "A fresh paired contrast that changes only declared decoy presence.",
+      "closure_criterion": "A reproducible paired effect or stable null is measured with all non-decoy variables held constant and both evidence directions reported.",
+      "claim_boundary": "Any result is limited to the authorized synthetic corpus and cannot establish production decoy prevalence."
+    },
+    {
+      "hypothesis_id": "H-SYNONYM-EXPANSION",
+      "current_provenance": "HISTORICAL",
+      "variable_to_manipulate": "FROZEN_LEXICAL_SYNONYM_EXPANSION",
+      "required_control": "IDENTICAL_LEXICAL_RETRIEVAL_WITH_SYNONYM_EXPANSION_DISABLED_AND_ALL_OTHER_VARIABLES_FIXED",
+      "metric": [
+        "semantic_only_recovery_rate",
+        "required_document_recall",
+        "safe_refusal_recall",
+        "critical_failures"
+      ],
+      "gate": "SYNONYM_EXPANSION_SINGLE_VARIABLE_IDENTIFIABILITY_PASS",
+      "favorable_evidence": "Historical 071 evidence associated expansion with critical failures falling from 110 to 48 and required recall rising from 0.430556 to 0.458333.",
+      "contrary_evidence": "The 12 binding-negative omissions and 36 unsupported conclusions persisted, and the mapping was synthetic and trivial.",
+      "missing_evidence": "A fresh contrast separating lexical synonym expansion from semantic representation.",
+      "closure_criterion": "A reproducible paired result isolates expansion alone and reports benefit, null or harm without importing the historical attribution.",
+      "claim_boundary": "No result may generalize from a frozen synthetic synonym map to real embeddings or provider behavior."
+    },
+    {
+      "hypothesis_id": "H-AUTHORITY-FILTERING",
+      "current_provenance": "HARDCODED",
+      "variable_to_manipulate": "SYNTHETIC_GOVERNANCE_FILTER_ENFORCEMENT",
+      "required_control": "KNOWN_CORRECT_FILTER_BASELINE_VERSUS_SINGLE_CONTROLLED_SYNTHETIC_FILTER_MUTATION",
+      "metric": [
+        "authority_inversion",
+        "acl_leakage",
+        "stale_selection",
+        "project_contamination",
+        "forbidden_document_rate"
+      ],
+      "gate": "POSITIVE_CONTROL_PASSES_AND_NEGATIVE_FILTER_CONTROL_IS_DISCRIMINATED_WITH_ZERO_UNCONTROLLED_CHANGES",
+      "favorable_evidence": "Candidate arms observed zero ACL, stale, contamination and forbidden-selection violations.",
+      "contrary_evidence": "The contradicted classification was hardcoded rather than established by a dedicated fresh contrast.",
+      "missing_evidence": "A fresh synthetic filter-mutation control with the evaluator blinded to condition.",
+      "closure_criterion": "The correct filter passes and the isolated known-unsafe mutation fails the declared governance metrics reproducibly.",
+      "claim_boundary": "The contrast may validate the synthetic evaluator and filter contract only; it cannot approve operational governance."
+    },
+    {
+      "hypothesis_id": "H-PREDOMINANTLY-LEXICAL",
+      "current_provenance": "COMPOUND",
+      "variable_to_manipulate": "RETRIEVAL_REPRESENTATION_MODE",
+      "required_control": "LEXICAL_BASELINE_WITH_CORPUS_COLLISION_STRATA_K_FILTERS_RANKING_SCORING_AND_REFUSAL_FIXED",
+      "metric": [
+        "precision",
+        "candidate_count",
+        "cross_fixture_distractor_rate",
+        "rank_displacement",
+        "required_document_recall"
+      ],
+      "gate": "REPRESENTATION_ONLY_CONTRAST_WITH_COLLISION_STRATA_BALANCED_AND_IDENTIFIABILITY_PASS",
+      "favorable_evidence": "Generic shared tokens produced large task-nonspecific candidate sets and the existing C-REP contrast showed a small semantic recall gain.",
+      "contrary_evidence": "The current attribution reuses C-REP and is an inference, not an independent contrast for predominantly lexical candidate-set behavior.",
+      "missing_evidence": "A dedicated fresh contrast measuring task specificity while only representation changes.",
+      "closure_criterion": "A reproducible paired delta or stable null is observed in task-specific candidate metrics with collision strata held constant.",
+      "claim_boundary": "A provider-neutral synthetic representation result cannot be interpreted as evidence about any real embedding provider."
+    },
+    {
+      "hypothesis_id": "H-CROSS-FIXTURE-DISTRACTORS",
+      "current_provenance": "COMPOUND",
+      "variable_to_manipulate": "CROSS_FIXTURE_LEXICAL_COLLISION_PRESENCE",
+      "required_control": "IDENTICAL_SYNTHETIC_CORPUS_WITH_CROSS_FIXTURE_COLLISION_TOGGLE_ONLY",
+      "metric": [
+        "cross_fixture_distractor_rate",
+        "rank_displacement",
+        "precision",
+        "required_document_recall",
+        "unsupported_conclusion_rate"
+      ],
+      "gate": "CROSS_FIXTURE_DISTRACTOR_SINGLE_VARIABLE_IDENTIFIABILITY_PASS",
+      "favorable_evidence": "Observed false positives were high-authority documents from other fixtures and distractor rate increased with k.",
+      "contrary_evidence": "The current classification derives from representation plus distractor strata rather than a dedicated single-variable contrast.",
+      "missing_evidence": "A fresh density-stratified paired contrast that changes only cross-fixture collisions.",
+      "closure_criterion": "A reproducible paired effect or stable null is measured with representation, ranking, k, filters, scoring and refusal held constant.",
+      "claim_boundary": "Any causal conclusion remains bounded to the synthetic corpus construction and does not establish real-world distractor prevalence."
+    }
+  ],
+  "ordered_phases": [
+    {
+      "phase": "PHASE_A",
+      "name": "DESIGN_TRACEABILITY_REMEDIATION",
+      "objective": "Define prospective complete cryptographic provenance for future designs without altering design 002 or execution 002.",
+      "inputs": [
+        "AUDIT_FINDING_SOURCE_DESIGN_HASHES_EMPTY",
+        "DESIGN_TRACEABILITY_ACCEPTANCE_CONTRACT",
+        "HISTORICAL_DESIGN_002_AND_EXECUTION_002_READ_ONLY_REFERENCES"
+      ],
+      "outputs": [
+        "PROSPECTIVE_SOURCE_INVENTORY",
+        "SOURCE_SHA256_MANIFEST",
+        "ORDERED_MANIFEST_DIGEST",
+        "DESIGN_FREEZE_EXECUTION_TRACEABILITY_MATRIX",
+        "FAIL_CLOSED_VALIDATION_RULES"
+      ],
+      "dependency": "NONE",
+      "entry_criteria": [
+        "SEPARATE_EXPLICIT_AUTHORIZATION",
+        "HISTORICAL_PATHS_DECLARED_READ_ONLY"
+      ],
+      "exit_criteria": [
+        "ALL_SOURCES_ENUMERATED_HASHED_CANONICALLY_PATHED_AND_LINKED",
+        "ORDERED_DIGEST_RECOMPUTES",
+        "MISSING_SOURCE_NEGATIVE_CHECK_FAILS_CLOSED"
+      ],
+      "stop_conditions": [
+        "ANY_SOURCE_PROVENANCE_UNKNOWN",
+        "ANY_REQUEST_TO_RETROACTIVELY_MODIFY_HISTORICAL_ARTIFACTS",
+        "HASH_OR_PATH_DIVERGENCE"
+      ],
+      "future_authorization_required": "FULL_RAG_DESIGN_TRACEABILITY_REMEDIATION_AND_FRESH_TEST_DESIGN",
+      "unauthorized_effects": [
+        "NO_HISTORICAL_MUTATION",
+        "NO_TEST_EXECUTION",
+        "NO_ARCHITECTURE_OR_IMPLEMENTATION_SELECTION"
+      ]
+    },
+    {
+      "phase": "PHASE_B",
+      "name": "ISOLATED_C_RANK_TEST_DESIGN",
+      "objective": "Produce a test design that varies ranking only and can identify or decline a ranking causal claim.",
+      "inputs": [
+        "PHASE_A_VERIFIED_TRACEABILITY",
+        "C_RANK_AUDIT_FINDING",
+        "ISOLATED_C_RANK_ACCEPTANCE_CONTRACT"
+      ],
+      "outputs": [
+        "ISOLATED_C_RANK_ARM_PAIR",
+        "HELD_CONSTANT_VARIABLE_MATRIX",
+        "POSITIVE_AND_NEGATIVE_CONTROLS",
+        "IDENTIFIABILITY_GATE",
+        "NO_CONCLUSION_CRITERION"
+      ],
+      "dependency": "PHASE_A",
+      "entry_criteria": [
+        "PHASE_A_EXIT_CRITERIA_PASS",
+        "REPRESENTATION_CORPUS_K_FILTERS_SCORING_CANDIDATES_AND_REFUSAL_FREEZABLE"
+      ],
+      "exit_criteria": [
+        "RANKING_IS_THE_ONLY_VARIED_MATERIAL_VARIABLE",
+        "CONTROLS_AND_METRICS_ARE_PREDECLARED",
+        "FAVORABLE_CONTRARY_AND_MISSING_EVIDENCE_FIELDS_COMPLETE"
+      ],
+      "stop_conditions": [
+        "REPRESENTATION_OR_ANY_OTHER_MATERIAL_VARIABLE_DIFFERS",
+        "CONTROL_CANNOT_DISCRIMINATE",
+        "CLAIM_BOUNDARY_MISSING"
+      ],
+      "future_authorization_required": "FULL_RAG_DESIGN_TRACEABILITY_REMEDIATION_AND_FRESH_TEST_DESIGN",
+      "unauthorized_effects": [
+        "NO_C_RANK_EXECUTION",
+        "NO_RANKING_CAUSAL_CONCLUSION",
+        "NO_ARCHITECTURE_SELECTION"
+      ]
+    },
+    {
+      "phase": "PHASE_C",
+      "name": "FIVE_FRESH_HYPOTHESIS_TEST_DESIGN",
+      "objective": "Produce fresh isolated test designs for exactly the five audit-qualified hypotheses.",
+      "inputs": [
+        "PHASE_A_VERIFIED_TRACEABILITY",
+        "PHASE_B_DESIGN_DISCIPLINE",
+        "FIVE_QUALIFIED_HYPOTHESIS_CONTRACTS"
+      ],
+      "outputs": [
+        "FIVE_SINGLE_VARIABLE_OR_CONTROLLED_MUTATION_TEST_DESIGNS",
+        "FUTURE_CONTRAST_MATRIX",
+        "METRIC_AND_GATE_MATRIX",
+        "CLAIM_BOUNDARIES"
+      ],
+      "dependency": "PHASE_B",
+      "entry_criteria": [
+        "PHASE_B_EXIT_CRITERIA_PASS",
+        "EXACT_FIVE_HYPOTHESIS_IDS_MATCH_AUDIT"
+      ],
+      "exit_criteria": [
+        "EACH_HYPOTHESIS_HAS_ALL_REQUIRED_FIELDS",
+        "NO_HYPOTHESIS_USES_HISTORICAL_RESULTS_AS_FRESH_EVIDENCE",
+        "EACH_DESIGN_HAS_FAVORABLE_CONTRARY_MISSING_AND_CLOSURE_RULES"
+      ],
+      "stop_conditions": [
+        "ANY_SIXTH_HYPOTHESIS_ADDED",
+        "ANY_MATERIAL_VARIABLE_UNCONTROLLED",
+        "ANY_EXECUTION_OR_CORPUS_GENERATION_ATTEMPT"
+      ],
+      "future_authorization_required": "FULL_RAG_DESIGN_TRACEABILITY_REMEDIATION_AND_FRESH_TEST_DESIGN",
+      "unauthorized_effects": [
+        "NO_TEST_EXECUTION",
+        "NO_EXECUTION_CORPUS_GENERATION",
+        "NO_STRONG_CAUSAL_CLAIM"
+      ]
+    },
+    {
+      "phase": "PHASE_D",
+      "name": "BOUNDED_EXECUTION_PROPOSAL",
+      "objective": "Prepare a bounded execution brief for later human authorization without granting execution authority.",
+      "inputs": [
+        "PHASE_A_TRACEABILITY_PACKAGE",
+        "PHASE_B_C_RANK_DESIGN",
+        "PHASE_C_FIVE_HYPOTHESIS_DESIGNS"
+      ],
+      "outputs": [
+        "BOUNDED_EXECUTION_BRIEF",
+        "FROZEN_SCOPE_PROPOSAL",
+        "RUN_AND_COST_PROPOSAL",
+        "STOP_CONDITIONS",
+        "EXTERNAL_AUDIT_REQUIREMENT"
+      ],
+      "dependency": "PHASE_C",
+      "entry_criteria": [
+        "PHASES_A_B_C_EXIT_CRITERIA_PASS",
+        "ALL_EXECUTION_INPUTS_PROSPECTIVELY TRACEABLE"
+      ],
+      "exit_criteria": [
+        "BRIEF_SEPARATES_PROPOSAL_FROM_AUTHORIZATION",
+        "RUNS_CONTROLS_METRICS_GATES_AND_COSTS_ARE_BOUNDED",
+        "NO_PROVIDER_OR_ARCHITECTURE_IS_SELECTED"
+      ],
+      "stop_conditions": [
+        "EXECUTION_ASSUMED_AUTHORIZED",
+        "REAL_DATA_OR_REAL_PROVIDER_REQUIRED_WITHOUT_SEPARATE_AUTHORITY",
+        "SCOPE_CANNOT_BE_BOUNDED"
+      ],
+      "future_authorization_required": "SEPARATE_BOUNDED_TEST_EXECUTION_AUTHORIZATION",
+      "unauthorized_effects": [
+        "NO_EXECUTION",
+        "NO_CORPUS_GENERATION",
+        "NO_PROVIDER_ARCHITECTURE_OR_IMPLEMENTATION_SELECTION"
+      ]
+    },
+    {
+      "phase": "PHASE_E",
+      "name": "POST_EXECUTION_EXTERNAL_AUDIT",
+      "objective": "Independently audit any future authorized execution, including provenance, identifiability, controls, reproducibility and claims.",
+      "inputs": [
+        "SEPARATELY_AUTHORIZED_AND_COMPLETED_FUTURE_EXECUTION",
+        "COMPLETE_HASHED_EXECUTION_PACKAGE",
+        "PREDECLARED_METRICS_GATES_AND_CLAIM_BOUNDARIES"
+      ],
+      "outputs": [
+        "INDEPENDENT_EXTERNAL_AUDIT_PACKAGE",
+        "HASH_AND_REPRODUCTION_REVIEW",
+        "CAUSAL_IDENTIFIABILITY_VERDICTS",
+        "FAVORABLE_AND_CONTRARY_EVIDENCE",
+        "LIMITATIONS"
+      ],
+      "dependency": "PHASE_D_AND_SEPARATELY_AUTHORIZED_EXECUTION",
+      "entry_criteria": [
+        "FUTURE_EXECUTION_COMPLETED_UNDER_SEPARATE_AUTHORIZATION",
+        "AUDIT_AUTHORIZATION_GRANTED",
+        "AUDITOR_HAS_READ_ONLY_COMPLETE_PACKAGE"
+      ],
+      "exit_criteria": [
+        "HASHES_RECOMPUTED",
+        "RESULTS_REPRODUCED_OR_DIVERGENCES_EXPLAINED",
+        "IDENTIFIABILITY_AND_CLAIMS_INDEPENDENTLY_ADJUDICATED"
+      ],
+      "stop_conditions": [
+        "INCOMPLETE_PACKAGE",
+        "HASH_MISMATCH",
+        "AUDITOR_MUTATION_REQUEST",
+        "MISSING_AUTHORIZATION"
+      ],
+      "future_authorization_required": "SEPARATE_INDEPENDENT_EXTERNAL_READ_ONLY_AUDIT_AUTHORIZATION",
+      "unauthorized_effects": [
+        "NO_CANONICAL_MUTATION_BY_AUDITOR",
+        "NO_ARCHITECTURE_OR_IMPLEMENTATION_SELECTION",
+        "NO_PRODUCT_OR_RUNTIME_EFFECT"
+      ]
+    },
+    {
+      "phase": "PHASE_F",
+      "name": "ARCHITECTURE_DECISION_READINESS_REASSESSMENT",
+      "objective": "Determine whether the evidence gate is ready for a later human architecture decision without selecting an architecture.",
+      "inputs": [
+        "PHASE_A_TRACEABILITY_RESULT",
+        "ISOLATED_C_RANK_RESULT",
+        "FIVE_FRESH_HYPOTHESIS_RESULTS",
+        "FUTURE_EXECUTION_REPRODUCIBILITY_AND_LEAKAGE_RESULTS",
+        "POST_EXECUTION_EXTERNAL_AUDIT"
+      ],
+      "outputs": [
+        "ARCHITECTURE_DECISION_READINESS_REASSESSMENT",
+        "GATE_STATUS_READY_OR_NOT_READY",
+        "RESIDUAL_EVIDENCE_GAPS",
+        "CLAIM_BOUNDARIES"
+      ],
+      "dependency": "PHASE_E",
+      "entry_criteria": [
+        "PHASE_E_EXIT_CRITERIA_PASS",
+        "ALL_ARCHITECTURE_GATE_INPUTS_AVAILABLE"
+      ],
+      "exit_criteria": [
+        "EVERY_GATE_CONDITION_EXPLICITLY_ADJUDICATED",
+        "REAL_PROVIDER_COMPARISON_REMAINS_SEPARATELY_AUTHORIZED",
+        "NO_ARCHITECTURE_OR_IMPLEMENTATION_SELECTED"
+      ],
+      "stop_conditions": [
+        "ANY_REQUIRED_RESULT_MISSING",
+        "REPRODUCIBILITY_OR_LEAKAGE_GATE_FAILS",
+        "CLAIM_BOUNDARY_FAILS",
+        "SELECTION_REQUESTED_WITHOUT_AUTHORITY"
+      ],
+      "future_authorization_required": "SEPARATE_ARCHITECTURE_DECISION_READINESS_REASSESSMENT_AUTHORIZATION",
+      "unauthorized_effects": [
+        "NO_ARCHITECTURE_SELECTION",
+        "NO_IMPLEMENTATION_SELECTION_OR_APPROVAL",
+        "NO_PRODUCT_OR_RUNTIME_EFFECT"
+      ]
+    }
+  ],
+  "dependencies": {
+    "PHASE_B": [
+      "PHASE_A"
+    ],
+    "PHASE_C": [
+      "PHASE_A",
+      "PHASE_B"
+    ],
+    "PHASE_D": [
+      "PHASE_A",
+      "PHASE_B",
+      "PHASE_C"
+    ],
+    "PHASE_E": [
+      "PHASE_D",
+      "SEPARATELY_AUTHORIZED_FUTURE_EXECUTION"
+    ],
+    "PHASE_F": [
+      "PHASE_E"
+    ]
+  },
+  "acceptance_criteria": [
+    "DESIGN_TRACEABILITY_IS_COMPLETE_HASHED_ORDERED_CANONICAL_AND_FAIL_CLOSED",
+    "C_RANK_DESIGN_VARIES_ONLY_RANKING",
+    "EXACTLY_FIVE_AUDIT_QUALIFIED_HYPOTHESES_HAVE_FRESH_DESIGNS",
+    "EVERY_DESIGN_DECLARES_CONTROL_METRIC_GATE_BIDIRECTIONAL_EVIDENCE_MISSING_EVIDENCE_CLOSURE_AND_CLAIM_BOUNDARY",
+    "FUTURE_EXECUTION_REQUIRES_SEPARATE_AUTHORIZATION",
+    "POST_EXECUTION_EXTERNAL_AUDIT_IS_MANDATORY",
+    "ARCHITECTURE_GATE_REMAINS_NOT_READY_UNTIL_ALL_REQUIRED_RESULTS_PASS"
+  ],
+  "validation_requirements": [
+    "ALL_JSON_VALID",
+    "IDS_UNIQUE",
+    "REFERENCES_VALID",
+    "MARKDOWN_JSON_COHERENT",
+    "HISTORICAL_OBJECT_HASHES_UNCHANGED",
+    "NO_EXECUTION_OR_HARNESS_DIFF",
+    "ZERO_NEW_REPOSITORY_VALIDATOR_FAILURES"
+  ],
+  "future_authorization_boundaries": [
+    "PEND_LAB_023_DOES_NOT_AUTHORIZE_WORK",
+    "PHASES_A_B_C_REQUIRE_SEPARATE_DESIGN_AUTHORIZATION",
+    "PHASE_D_CANNOT_AUTHORIZE_ITS_OWN_EXECUTION",
+    "ANY_EXECUTION_REQUIRES_A_SEPARATE_BOUNDED_AUTHORIZATION",
+    "PHASE_E_REQUIRES_A_SEPARATE_EXTERNAL_AUDIT_AUTHORIZATION",
+    "PHASE_F_REQUIRES_A_SEPARATE_REASSESSMENT_AUTHORIZATION",
+    "REAL_PROVIDER_COMPARISON_REQUIRES_FUTURE_SEPARATE_AUTHORIZATION",
+    "ARCHITECTURE_AND_IMPLEMENTATION_SELECTION_REMAIN_UNAUTHORIZED"
+  ],
+  "risks": [
+    {
+      "risk": "RETROACTIVE_HISTORY_REWRITE",
+      "mitigation": "PROSPECTIVE_ONLY_REMEDIATION_AND_OBJECT_HASH_GUARDS"
+    },
+    {
+      "risk": "MULTIVARIABLE_CONFOUND",
+      "mitigation": "HELD_CONSTANT_MATRIX_AND_IDENTIFIABILITY_GATE"
+    },
+    {
+      "risk": "HISTORICAL_EVIDENCE_RELABELLED_AS_FRESH",
+      "mitigation": "FRESH_PROVENANCE_REQUIRED_PER_HYPOTHESIS"
+    },
+    {
+      "risk": "SYNTHETIC_RESULTS_OVERGENERALIZED",
+      "mitigation": "CLAIM_BOUNDARIES_AND_REAL_PROVIDER_COMPARISON_SEPARATE"
+    },
+    {
+      "risk": "DOCUMENTARY_PLAN_TREATED_AS_EXECUTION_AUTHORITY",
+      "mitigation": "EXPLICIT_AUTHORITY_NONE_AND_PHASE_SPECIFIC_FUTURE_AUTHORIZATIONS"
+    }
+  ],
+  "non_goals": [
+    "MODIFY_DESIGN_002",
+    "MODIFY_EXECUTION_002",
+    "CORRECT_HARNESS",
+    "EXECUTE_TESTS",
+    "GENERATE_CORPUS_OR_EMBEDDINGS",
+    "SELECT_PROVIDER",
+    "SELECT_ARCHITECTURE",
+    "SELECT_OR_APPROVE_IMPLEMENTATION",
+    "CHANGE_PRODUCT_OR_RUNTIME",
+    "DEPLOY",
+    "GENERALIZE_BEYOND_SYNTHETIC_EVIDENCE"
+  ],
+  "claim_boundaries": [
+    "EXECUTION_002_REMAINS_TEST_VALID_DISCRIMINATING_RESULTS_PUBLISHED",
+    "RECONCILED_INTERPRETATION_REMAINS_VALID_DISCRIMINATING_SYNTHETIC_RESULTS_WITH_QUALIFIED_CAUSAL_ATTRIBUTIONS",
+    "H_RANKING_REMAINS_NOT_SUPPORTED_ONLY_IN_THE_OBSERVED_CONFOUNDED_CONTRAST",
+    "RANKING_CAUSALLY_REFUTED_IS_PROHIBITED",
+    "THE_FIVE_QUALIFIED_HYPOTHESES_DO_NOT_SUPPORT_STRONG_CAUSAL_CLAIMS_UNTIL_FRESH_RESULTS_EXIST",
+    "NO_RESULT_IS_OPERATIONAL_REAL_WORLD_OR_PROVIDER_VALIDATION"
+  ],
+  "architecture_readiness_gate": {
+    "status": "NOT_READY",
+    "design_traceability_remediated": "REQUIRED",
+    "isolated_c_rank_result": "REQUIRED",
+    "five_fresh_hypothesis_results": "REQUIRED",
+    "reproducibility": "PASS_REQUIRED",
+    "leakage_isolation": "PASS_REQUIRED",
+    "claim_boundaries": "PASS_REQUIRED",
+    "external_audit": "REQUIRED_AFTER_EXECUTION",
+    "real_provider_comparison": "FUTURE_SEPARATE_AUTHORIZATION_REQUIRED",
+    "architecture_selection": "NOT_AUTHORIZED",
+    "implementation_selection": "NOT_AUTHORIZED"
+  },
+  "rollback_or_preservation_rules": [
+    "DESIGN_002_EXECUTION_002_EXP_LAB_003_EVD_LAB_EXP_003_AUDIT_076_EVD_LAB_AUD_005_REA_LAB_006_AND_AUTHORIZATIONS_070_TO_077_ARE_IMMUTABLE",
+    "FUTURE_REMEDIATION_CREATES_NEW_PROSPECTIVE_ARTIFACTS",
+    "FAILED_FUTURE_PHASES_PRESERVE_PRIOR_EVIDENCE_AND_REPORT_STOP_CONDITION",
+    "NO_FAILED_OR_NULL_RESULT_IS_REMOVED_OR_RELABELED",
+    "ROLLBACK_MEANS_WITHDRAWING_ONLY_NEW_UNPUBLISHED_PROPOSALS_NOT_REWRITING_HISTORY"
+  ],
+  "successor_pending": "PEND-LAB-023",
+  "authority_effect": {
+    "provider_selected": false,
+    "architecture_selected": false,
+    "implementation_selected": false,
+    "implementation_approved": false,
+    "execution_authorized": false,
+    "product_effect": "NONE",
+    "runtime_effect": "NONE",
+    "next_authorized_action": "NONE_AFTER_CONSUMPTION"
+  },
+  "source_refs": [
+    "decisions/DEC-LAB-021.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_FULL_RAG_POST_AUDIT_DECISION_AND_REMEDIATION_PLANNING_078_REVISION_2.json",
+    "projects/lab/pending/PEND-LAB-022.json",
+    "projects/lab/pending/PEND-LAB-023.json",
+    "projects/lab/external-audits/AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001/AUDIT_REPORT.json",
+    "projects/lab/external-audits/AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001/CAUSAL_IDENTIFIABILITY_REVIEW.json",
+    "projects/lab/external-audits/AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001/HYPOTHESIS_VERDICTS.json",
+    "projects/lab/evidence/EVD-LAB-AUD-005.json",
+    "projects/lab/reassessments/REA-LAB-006.json"
+  ]
+}

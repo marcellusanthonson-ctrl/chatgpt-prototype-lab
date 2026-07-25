@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "id": "PEND-LAB-023",
+  "project_id": "lab",
+  "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+  "type": "FULL_RAG_DESIGN_TRACEABILITY_REMEDIATION_AND_FRESH_TEST_DESIGN",
+  "subject": "Prospectively remediate design traceability and produce isolated fresh test designs without executing them",
+  "priority": "HIGH",
+  "created_at": "2026-07-25",
+  "predecessor_pending": "PEND-LAB-022",
+  "source_authorization": "AUTHORIZATION_LAB_FULL_RAG_POST_AUDIT_DECISION_AND_REMEDIATION_PLANNING_078_REVISION_2",
+  "source_decision": "DEC-LAB-021",
+  "source_remediation_plan": "FULL-RAG-POST-AUDIT-REMEDIATION-PLAN-001",
+  "authorization_required": true,
+  "status_boundary": "PROPOSAL_ONLY_NOT_AUTHORIZATION",
+  "proposed_outputs": [
+    "PROSPECTIVE_COMPLETE_DESIGN_SOURCE_TRACEABILITY",
+    "ISOLATED_C_RANK_TEST_DESIGN",
+    "FRESH_TEST_DESIGNS_FOR_EXACTLY_FIVE_QUALIFIED_HYPOTHESES",
+    "IDENTIFIABILITY_AND_CLAIM_BOUNDARY_GATES",
+    "FUTURE_CONTRAST_MATRIX",
+    "BRIEF_FOR_SEPARATELY_AUTHORIZED_BOUNDED_EXECUTION"
+  ],
+  "prohibitions": [
+    "MODIFY_HISTORICAL_DESIGN_002_OR_EXECUTION_002",
+    "MODIFY_HISTORICAL_NUMERIC_RESULTS",
+    "EXECUTE_TESTS",
+    "GENERATE_EXECUTION_CORPUS",
+    "SELECT_PROVIDER",
+    "SELECT_ARCHITECTURE",
+    "SELECT_OR_APPROVE_IMPLEMENTATION",
+    "MODIFY_PRODUCT_OR_RUNTIME",
+    "DEPLOY"
+  ],
+  "current_authority": "NONE",
+  "automatic_approval": false,
+  "next_authorized_action": "NONE_UNTIL_SEPARATE_EXPLICIT_AUTHORIZATION",
+  "source_refs": [
+    "decisions/DEC-LAB-021.json",
+    "projects/lab/remediation-plans/FULL-RAG-POST-AUDIT-REMEDIATION-PLAN-001.json",
+    "projects/lab/pending/PEND-LAB-022.json",
+    "projects/lab/evidence/EVD-LAB-AUD-005.json",
+    "projects/lab/reassessments/REA-LAB-006.json"
+  ]
+}

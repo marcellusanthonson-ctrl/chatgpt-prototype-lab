@@ -65,6 +65,20 @@ La reconciliación `077`, evidenciada por `EVD-LAB-AUD-005` y adjudicada en `REA
 
 La atribución causal queda acotada por tres hallazgos no invalidantes: el archivo de hashes de diseño no enumeró fuentes; el brazo C-RANK alteró ranking y representación conjuntamente, por lo que su resultado nulo no aísla una refutación causal de ranking; y cinco de catorce hipótesis reportadas eran históricas, compuestas o codificadas, frente a nueve hipótesis frescas. La auditoría también registró una observación menor sobre el log estático del selector. Ningún hallazgo revierte o invalida la ejecución.
 
-`PEND-LAB-020` permanece `COMPLETED_REPRODUCIBLE_EXECUTION_PUBLISHED_EXTERNAL_AUDIT_REQUIRED`. `PEND-LAB-021` está `COMPLETED_EXTERNAL_AUDIT_DELIVERED_AND_RECONCILED`. `PEND-LAB-022` propone únicamente la decisión documental posterior a la auditoría y no concede autoridad. No se seleccionaron proveedor, arquitectura o implementación; no hubo aprobación de implementación ni efectos de producto, runtime, Symphonie, despliegue o repositorios externos.
+`PEND-LAB-020` permanece `COMPLETED_REPRODUCIBLE_EXECUTION_PUBLISHED_EXTERNAL_AUDIT_REQUIRED`. `PEND-LAB-021` está `COMPLETED_EXTERNAL_AUDIT_DELIVERED_AND_RECONCILED`. La reconciliación creó `PEND-LAB-022` para una decisión documental posterior, resuelta en la transición siguiente. No se seleccionaron proveedor, arquitectura o implementación; no hubo aprobación de implementación ni efectos de producto, runtime, Symphonie, despliegue o repositorios externos.
+
+## Decisión y plan posterior a la auditoría 078 revisión 2
+
+La revisión 2 de la autorización `078` corrigió el conflicto con la decisión histórica `DEC-LAB-016` y publicó la nueva decisión canónica `DEC-LAB-021`. La decisión exige remediación prospectiva de trazabilidad, un diseño C-RANK que varíe exclusivamente ranking, diseños frescos para cinco hipótesis calificadas y un gate de evidencia previo a arquitectura.
+
+`FULL-RAG-POST-AUDIT-REMEDIATION-PLAN-001` define seis fases ordenadas: remediación de trazabilidad, diseño C-RANK aislado, diseño de cinco contrastes frescos, propuesta delimitada de ejecución, auditoría externa posterior y reevaluación de readiness arquitectónico. Cada fase declara inputs, outputs, dependencias, criterios de entrada y salida, stop conditions, autorización futura y efectos no autorizados.
+
+Las cinco hipótesis son `H-DECLARED-DECOYS` e `H-SYNONYM-EXPANSION` con procedencia histórica, `H-AUTHORITY-FILTERING` con procedencia hardcoded, y `H-PREDOMINANTLY-LEXICAL` e `H-CROSS-FIXTURE-DISTRACTORS` con procedencia compuesta. Cada una conserva evidencia favorable y contraria, evidencia faltante, criterio de cierre y límite de claim.
+
+`ARCHITECTURE_DECISION_GATE` permanece `NOT_READY`. Requiere trazabilidad remediada, resultado C-RANK aislado, cinco resultados frescos, reproducción e aislamiento aprobados, límites de claims aprobados y auditoría externa posterior. Una comparación con proveedores reales requiere autorización futura separada.
+
+`PEND-LAB-022` está `COMPLETED_DOCUMENTARY_DECISIONS_AND_REMEDIATION_PLAN_PUBLISHED`. Su único sucesor es `PEND-LAB-023`, que propone trazabilidad prospectiva y diseños frescos, pero no autoriza modificar históricos, ejecutar pruebas, generar corpus, seleccionar proveedor o arquitectura, implementar ni cambiar producto o runtime.
+
+No se modificaron diseño 002, ejecución 002, harness, resultados, EXP-LAB-003, EVD-LAB-EXP-003, auditoría 076, EVD-LAB-AUD-005, REA-LAB-006 ni autorizaciones 070–077.
 
 No existe autorización activa reutilizable. El HEAD propio se verifica en vivo y nunca se almacena como estado canónico vigente.

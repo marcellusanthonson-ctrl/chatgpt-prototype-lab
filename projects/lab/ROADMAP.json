@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1.0",
   "project_id": "lab",
-  "updated_at": "2026-07-24",
+  "updated_at": "2026-07-25",
   "authority_effect": "NONE",
   "records": [
     {
@@ -238,8 +238,20 @@
     {
       "order": 22,
       "item": "FULL_RAG_POST_AUDIT_DECISION_AND_REMEDIATION_PLANNING",
-      "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+      "status": "COMPLETED_DOCUMENTARY_DECISIONS_AND_REMEDIATION_PLAN_PUBLISHED",
       "pending": "PEND-LAB-022",
+      "authorization": "AUTHORIZATION_LAB_FULL_RAG_POST_AUDIT_DECISION_AND_REMEDIATION_PLANNING_078_REVISION_2",
+      "decision": "DEC-LAB-021",
+      "remediation_plan": "FULL-RAG-POST-AUDIT-REMEDIATION-PLAN-001",
+      "architecture_decision_gate": "NOT_READY",
+      "authority_effect": "NONE",
+      "next_gate": "SEPARATE_DESIGN_TRACEABILITY_REMEDIATION_AND_FRESH_TEST_DESIGN_AUTHORIZATION"
+    },
+    {
+      "order": 23,
+      "item": "FULL_RAG_DESIGN_TRACEABILITY_REMEDIATION_AND_FRESH_TEST_DESIGN",
+      "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+      "pending": "PEND-LAB-023",
       "authority_effect": "NONE",
       "next_gate": "SEPARATE_EXPLICIT_AUTHORIZATION"
     }

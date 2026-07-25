@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0.0",
+  "id": "DEC-LAB-021",
+  "title": "Aprobar decisiones y plan documental de remediación posterior a la auditoría full RAG",
+  "project": "lab",
+  "project_scope": [
+    "lab"
+  ],
+  "status": "APPROVED",
+  "effective_date": "2026-07-25",
+  "updated_at": "2026-07-25",
+  "approval_state": "APPROVED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-25",
+  "approval_evidence": "Aprobación explícita de AUTHORIZATION_LAB_FULL_RAG_POST_AUDIT_DECISION_AND_REMEDIATION_PLANNING_078_REVISION_2 por Jonathan Martínez.",
+  "decision": {
+    "source_pending": "PEND-LAB-022",
+    "source_audit": "AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001",
+    "source_evidence": "EVD-LAB-AUD-005",
+    "source_reassessment": "REA-LAB-006",
+    "decisions": [
+      "REMEDIATE_DESIGN_SOURCE_TRACEABILITY",
+      "DESIGN_ISOLATED_C_RANK_CONTRAST",
+      "REPLACE_FIVE_QUALIFIED_HYPOTHESES_WITH_FRESH_CONTRASTS",
+      "DEFINE_ARCHITECTURE_DECISION_EVIDENCE_GATE"
+    ],
+    "design_source_traceability": {
+      "verdict": "REMEDIATION_REQUIRED",
+      "priority": "HIGH",
+      "rationale": "SOURCE_DESIGN_HASHES.json did not cryptographically freeze the complete source design provenance",
+      "prospective_requirements": [
+        "COMPLETE_SOURCE_INVENTORY",
+        "SHA256_FOR_EACH_SOURCE",
+        "ORDERED_MANIFEST_DIGEST",
+        "CANONICAL_PATHS",
+        "TRACEABLE_DESIGN_FREEZE_EXECUTION_RELATION",
+        "FAIL_CLOSED_ON_ANY_MISSING_SOURCE",
+        "PRESERVE_HISTORICAL_DESIGN_002_AND_EXECUTION_002"
+      ],
+      "retroactive_historical_modification": false
+    },
+    "isolated_c_rank_contrast": {
+      "verdict": "NEW_ISOLATED_CONTRAST_REQUIRED",
+      "priority": "HIGH",
+      "rationale": "Existing C-RANK contrast changes ranking and semantic representation simultaneously",
+      "requirements": [
+        "VARY_RANKING_ONLY",
+        "HOLD_REPRESENTATION_CONSTANT",
+        "HOLD_CORPUS_K_FILTERS_AND_SCORING_CONSTANT",
+        "INCLUDE_POSITIVE_CONTROL",
+        "INCLUDE_NEGATIVE_CONTROL",
+        "INCLUDE_IDENTIFIABILITY_GATE",
+        "DECLARE_FAVORABLE_AND_CONTRARY_EVIDENCE",
+        "DECLARE_NO_CONCLUSION_CRITERION"
+      ],
+      "execution_authorized": false
+    },
+    "five_qualified_hypotheses": {
+      "verdict": "FRESH_CONTRASTS_REQUIRED_BEFORE_STRONG_CAUSAL_CLAIMS",
+      "priority": "MEDIUM_HIGH",
+      "hypothesis_ids": [
+        "H-DECLARED-DECOYS",
+        "H-SYNONYM-EXPANSION",
+        "H-AUTHORITY-FILTERING",
+        "H-PREDOMINANTLY-LEXICAL",
+        "H-CROSS-FIXTURE-DISTRACTORS"
+      ],
+      "fresh_results_required": true
+    },
+    "architecture_decision_gate": {
+      "status": "NOT_READY",
+      "design_traceability_remediated": "REQUIRED",
+      "isolated_c_rank_result": "REQUIRED",
+      "five_fresh_hypothesis_results": "REQUIRED",
+      "reproducibility": "PASS_REQUIRED",
+      "leakage_isolation": "PASS_REQUIRED",
+      "claim_boundaries": "PASS_REQUIRED",
+      "external_audit": "REQUIRED_AFTER_EXECUTION",
+      "real_provider_comparison": "FUTURE_SEPARATE_AUTHORIZATION_REQUIRED",
+      "architecture_selection": "NOT_AUTHORIZED",
+      "implementation_selection": "NOT_AUTHORIZED"
+    },
+    "remediation_order": [
+      "DESIGN_TRACEABILITY_REMEDIATION",
+      "ISOLATED_C_RANK_TEST_DESIGN",
+      "FIVE_FRESH_HYPOTHESIS_TEST_DESIGN",
+      "BOUNDED_EXECUTION_PROPOSAL",
+      "POST_EXECUTION_EXTERNAL_AUDIT",
+      "ARCHITECTURE_DECISION_READINESS_REASSESSMENT"
+    ],
+    "provider_selected": false,
+    "architecture_selected": false,
+    "implementation_selected": false,
+    "implementation_approved": false,
+    "execution_authorized": false,
+    "product_effect": "NONE",
+    "runtime_effect": "NONE",
+    "authority_effect": "NONE_AFTER_CONSUMPTION"
+  },
+  "consequences": [
+    "PUBLISH_FULL_RAG_POST_AUDIT_REMEDIATION_PLAN_001",
+    "CLOSE_PEND_LAB_022",
+    "CREATE_PEND_LAB_023",
+    "REQUIRE_SEPARATE_AUTHORIZATION_FOR_EACH_EXECUTIONAL_TRANSITION",
+    "KEEP_ARCHITECTURE_DECISION_GATE_NOT_READY"
+  ],
+  "non_authorizations": [
+    "HARNESS_CORRECTION",
+    "HISTORICAL_DESIGN_OR_EXECUTION_MODIFICATION",
+    "NEW_TEST_EXECUTION",
+    "NEW_CORPUS_GENERATION",
+    "PROVIDER_SELECTION",
+    "ARCHITECTURE_SELECTION",
+    "IMPLEMENTATION_SELECTION",
+    "IMPLEMENTATION_APPROVAL",
+    "PRODUCT_CHANGE",
+    "RUNTIME_CHANGE",
+    "DEPLOYMENT"
+  ],
+  "source_refs": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_FULL_RAG_POST_AUDIT_DECISION_AND_REMEDIATION_PLANNING_078_REVISION_2.json",
+    "projects/lab/pending/PEND-LAB-022.json",
+    "projects/lab/external-audits/AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001/AUDIT_REPORT.json",
+    "projects/lab/external-audits/AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001/HYPOTHESIS_VERDICTS.json",
+    "projects/lab/evidence/EVD-LAB-AUD-005.json",
+    "projects/lab/reassessments/REA-LAB-006.json",
+    "projects/lab/remediation-plans/FULL-RAG-POST-AUDIT-REMEDIATION-PLAN-001.json",
+    "projects/lab/pending/PEND-LAB-023.json"
+  ],
+  "supersedes": [],
+  "superseded_by": null
+}

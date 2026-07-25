@@ -1,6 +1,6 @@
 {
   "schema_version": "1.3.0",
-  "updated_at": "2026-07-23",
+  "updated_at": "2026-07-25",
   "records": [
     {
       "id": "DEC-LAB-001",
@@ -333,6 +333,31 @@
         "PRODUCT_CHANGE",
         "RUNTIME",
         "EXTERNAL_PROJECT_CHANGE"
+      ]
+    },
+    {
+      "id": "DEC-LAB-021",
+      "title": "Aprobar decisiones y plan documental de remediación posterior a la auditoría full RAG",
+      "project_scope": ["lab"],
+      "status": "APPROVED",
+      "approval_state": "APPROVED",
+      "canonical_path": "decisions/DEC-LAB-021.json",
+      "updated_at": "2026-07-25",
+      "approved_by": "Jonathan Martínez",
+      "consequences": [
+        "PUBLISH_FULL_RAG_POST_AUDIT_REMEDIATION_PLAN_001",
+        "CLOSE_PEND_LAB_022",
+        "CREATE_PEND_LAB_023",
+        "KEEP_ARCHITECTURE_DECISION_GATE_NOT_READY"
+      ],
+      "non_authorizations": [
+        "HISTORICAL_ARTIFACT_MODIFICATION",
+        "TEST_EXECUTION",
+        "CORPUS_GENERATION",
+        "PROVIDER_OR_ARCHITECTURE_SELECTION",
+        "IMPLEMENTATION_SELECTION_OR_APPROVAL",
+        "PRODUCT_OR_RUNTIME_CHANGE",
+        "DEPLOYMENT"
       ]
     }
   ]

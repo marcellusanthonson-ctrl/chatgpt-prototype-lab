@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1.0",
   "project_id": "lab",
-  "updated_at": "2026-07-24",
+  "updated_at": "2026-07-25",
   "records": [
     {
       "id": "PEND-LAB-001",
@@ -503,19 +503,44 @@
     },
     {
       "id": "PEND-LAB-022",
-      "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+      "status": "COMPLETED_DOCUMENTARY_DECISIONS_AND_REMEDIATION_PLAN_PUBLISHED",
       "type": "FULL_RAG_POST_AUDIT_DECISION_AND_REMEDIATION_PLANNING",
       "subject": "Decide and plan documentary remediation after audit 076 without executing fixes, tests, architecture selection or implementation",
+      "priority": "HIGH",
+      "authorization_required": true,
+      "completed_by_authorization": "AUTHORIZATION_LAB_FULL_RAG_POST_AUDIT_DECISION_AND_REMEDIATION_PLANNING_078_REVISION_2",
+      "decision": "DEC-LAB-021",
+      "remediation_plan": "FULL-RAG-POST-AUDIT-REMEDIATION-PLAN-001",
+      "architecture_decision_gate": "NOT_READY",
+      "current_authority": "NONE_AFTER_CONSUMPTION",
+      "automatic_approval": false,
+      "successor_pending": "PEND-LAB-023",
+      "next_authorized_action": "NONE_AFTER_CONSUMPTION",
+      "source_refs": [
+        "projects/lab/pending/PEND-LAB-022.json",
+        "projects/lab/external-audits/AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001/AUDIT_REPORT.json",
+        "projects/lab/evidence/EVD-LAB-AUD-005.json",
+        "projects/lab/reassessments/REA-LAB-006.json",
+        "projects/lab/authorizations/AUTHORIZATION_LAB_FULL_RAG_POST_AUDIT_DECISION_AND_REMEDIATION_PLANNING_078_REVISION_2.json",
+        "decisions/DEC-LAB-021.json",
+        "projects/lab/remediation-plans/FULL-RAG-POST-AUDIT-REMEDIATION-PLAN-001.json",
+        "projects/lab/pending/PEND-LAB-023.json"
+      ]
+    },
+    {
+      "id": "PEND-LAB-023",
+      "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+      "type": "FULL_RAG_DESIGN_TRACEABILITY_REMEDIATION_AND_FRESH_TEST_DESIGN",
+      "subject": "Prospectively remediate design traceability and produce isolated fresh test designs without executing them",
       "priority": "HIGH",
       "authorization_required": true,
       "current_authority": "NONE",
       "automatic_approval": false,
       "next_authorized_action": "NONE_UNTIL_SEPARATE_EXPLICIT_AUTHORIZATION",
       "source_refs": [
-        "projects/lab/pending/PEND-LAB-022.json",
-        "projects/lab/external-audits/AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001/AUDIT_REPORT.json",
-        "projects/lab/evidence/EVD-LAB-AUD-005.json",
-        "projects/lab/reassessments/REA-LAB-006.json"
+        "projects/lab/pending/PEND-LAB-023.json",
+        "decisions/DEC-LAB-021.json",
+        "projects/lab/remediation-plans/FULL-RAG-POST-AUDIT-REMEDIATION-PLAN-001.json"
       ]
     }
   ]

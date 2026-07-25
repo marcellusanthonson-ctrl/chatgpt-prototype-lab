@@ -1,9 +1,9 @@
 {
   "schema_version": "2.5.0",
   "document_id": "lab.current-state",
-  "version": "2.5.33",
+  "version": "2.5.34",
   "status": "GOVERNANCE_V2_CANONICAL_BASELINE",
-  "updated_at": "2026-07-24",
+  "updated_at": "2026-07-25",
   "active_project": "lab",
   "current_phase": "MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_HUMAN_BASELINE_APPROVED",
   "methodology": {"version": "2.1", "path": "METHODOLOGY.md"},
@@ -45,7 +45,10 @@
     "full_rag_failure_discrimination_execution_evidence": "projects/lab/evidence/EVD-LAB-EXP-003.json",
     "full_rag_failure_discrimination_external_audit_pending": "projects/lab/pending/PEND-LAB-021.json",
     "full_rag_failure_discrimination_external_audit_package": "projects/lab/external-audits/AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001/AUDIT_MANIFEST.json",
-    "full_rag_post_audit_planning_pending": "projects/lab/pending/PEND-LAB-022.json"
+    "full_rag_post_audit_planning_pending": "projects/lab/pending/PEND-LAB-022.json",
+    "full_rag_post_audit_decision": "decisions/DEC-LAB-021.json",
+    "full_rag_post_audit_remediation_plan": "projects/lab/remediation-plans/FULL-RAG-POST-AUDIT-REMEDIATION-PLAN-001.json",
+    "full_rag_design_traceability_and_fresh_test_design_pending": "projects/lab/pending/PEND-LAB-023.json"
   },
   "projects": {
     "lab": {"status": "active", "canonical_path": "projects/lab/PROJECT_STATE.md", "structured_state_path": "projects/lab/PROJECT_STATE.json"},
@@ -56,7 +59,7 @@
     "aster-flyt": {"status": "referenced", "canonical_path": "projects/aster-flyt/PROJECT_STATE.md", "structured_state_path": "projects/aster-flyt/PROJECT_STATE.json"},
     "waypoint": {"status": "referenced", "canonical_path": "projects/waypoint/PROJECT_STATE.md", "structured_state_path": "projects/waypoint/PROJECT_STATE.json"}
   },
-  "decisions_in_force": ["DEC-LAB-001","DEC-LAB-002","DEC-LAB-003","DEC-LAB-004","DEC-LAB-005","DEC-LAB-006","DEC-LAB-007","DEC-LAB-008","DEC-LAB-009","DEC-LAB-010","DEC-LAB-011","DEC-LAB-012","DEC-LAB-013","DEC-LAB-014","DEC-LAB-015","DEC-LAB-016","DEC-LAB-017","DEC-LAB-018","DEC-LAB-019","DEC-LAB-020"],
+  "decisions_in_force": ["DEC-LAB-001","DEC-LAB-002","DEC-LAB-003","DEC-LAB-004","DEC-LAB-005","DEC-LAB-006","DEC-LAB-007","DEC-LAB-008","DEC-LAB-009","DEC-LAB-010","DEC-LAB-011","DEC-LAB-012","DEC-LAB-013","DEC-LAB-014","DEC-LAB-015","DEC-LAB-016","DEC-LAB-017","DEC-LAB-018","DEC-LAB-019","DEC-LAB-020","DEC-LAB-021"],
   "open_errors": [],
   "validated_patterns": ["PAT-LAB-001","PAT-LAB-002","PAT-LAB-003","PAT-LAB-004","PAT-MA-001","PAT-LAB-005","PAT-LAB-006","PAT-LAB-007","PAT-LAB-008"],
   "authorization_state": {
@@ -110,7 +113,8 @@
     "full_rag_authority_first_failure_analysis_and_next_test_design_074": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "full_rag_authority_first_failure_discrimination_test_execution_075": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_OF_COMPLETE_REPRODUCIBLE_EXECUTION_PACKAGE",
     "independent_external_read_only_audit_of_full_rag_failure_discrimination_execution_002_076": "CONSUMED_ON_DELIVERY_OF_COMPLETE_EXTERNAL_AUDIT_PACKAGE",
-    "full_rag_failure_discrimination_execution_002_external_audit_reconciliation_077": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+    "full_rag_failure_discrimination_execution_002_external_audit_reconciliation_077": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "full_rag_post_audit_decision_and_remediation_planning_078_revision_2": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
   },
   "verified_external_heads": {
     "symphonie": "b492852c0d76ff7cd44ca266dc8950c94638d568",
@@ -132,7 +136,7 @@
   },
   "completed_research_transitions": ["PHASE_4_ACCESSIBILITY_NORMATIVE_AND_ASSISTIVE_TECHNOLOGY_RESEARCH"],
   "next_authorized_action": "NONE_AFTER_CONSUMPTION",
-  "next_recommended_transition": "SEPARATELY_AUTHORIZE_FULL_RAG_POST_AUDIT_DECISION_AND_REMEDIATION_PLANNING",
+  "next_recommended_transition": "SEPARATELY_AUTHORIZE_FULL_RAG_DESIGN_TRACEABILITY_REMEDIATION_AND_FRESH_TEST_DESIGN",
   "continuity_read_order": ["LAB_CONTRACT.md","METHODOLOGY.md","CURRENT_STATE.json","registry/index.json","registry/projects.json","projects/{active_project}/PROJECT_STATE.json","project decisions","project authorizations","open errors","applicable evidence","current continuity package"],
   "latest_reconciliation": {
     "authorization_id": "AUTHORIZATION_LAB_FULL_RAG_FAILURE_DISCRIMINATION_EXECUTION_002_EXTERNAL_AUDIT_RECONCILIATION_077",
@@ -166,7 +170,13 @@
     "architecture_selected": false,
     "runtime_effect": "NONE",
     "product_effect": "NONE",
-    "next_recommended_transition": "SEPARATELY_AUTHORIZE_FULL_RAG_POST_AUDIT_DECISION_AND_REMEDIATION_PLANNING",
+    "post_audit_planning_authorization_id": "AUTHORIZATION_LAB_FULL_RAG_POST_AUDIT_DECISION_AND_REMEDIATION_PLANNING_078_REVISION_2",
+    "post_audit_decision_id": "DEC-LAB-021",
+    "remediation_plan_id": "FULL-RAG-POST-AUDIT-REMEDIATION-PLAN-001",
+    "pend_lab_022_status": "COMPLETED_DOCUMENTARY_DECISIONS_AND_REMEDIATION_PLAN_PUBLISHED",
+    "current_successor_pending": "PEND-LAB-023",
+    "architecture_decision_gate": "NOT_READY",
+    "next_recommended_transition": "SEPARATELY_AUTHORIZE_FULL_RAG_DESIGN_TRACEABILITY_REMEDIATION_AND_FRESH_TEST_DESIGN",
     "authority_effect": "NONE_AFTER_CONSUMPTION"
   },
   "latest_test_design": {
@@ -218,14 +228,18 @@
     "reconciled_interpretation": "VALID_DISCRIMINATING_SYNTHETIC_RESULTS_WITH_QUALIFIED_CAUSAL_ATTRIBUTIONS",
     "pend_lab_020_status": "COMPLETED_REPRODUCIBLE_EXECUTION_PUBLISHED_EXTERNAL_AUDIT_REQUIRED",
     "pend_lab_021_status": "COMPLETED_EXTERNAL_AUDIT_DELIVERED_AND_RECONCILED",
-    "successor_pending": "PEND-LAB-022",
+    "post_audit_decision": "DEC-LAB-021",
+    "remediation_plan": "FULL-RAG-POST-AUDIT-REMEDIATION-PLAN-001",
+    "pend_lab_022_status": "COMPLETED_DOCUMENTARY_DECISIONS_AND_REMEDIATION_PLAN_PUBLISHED",
+    "architecture_decision_gate": "NOT_READY",
+    "successor_pending": "PEND-LAB-023",
     "provider_selected": false,
     "architecture_selected": false,
     "implementation_selected": false,
     "implementation_approved": false,
     "runtime_effect": "NONE",
     "product_effect": "NONE",
-    "next_recommended_transition": "SEPARATELY_AUTHORIZE_FULL_RAG_POST_AUDIT_DECISION_AND_REMEDIATION_PLANNING",
+    "next_recommended_transition": "SEPARATELY_AUTHORIZE_FULL_RAG_DESIGN_TRACEABILITY_REMEDIATION_AND_FRESH_TEST_DESIGN",
     "authority_effect": "NONE_AFTER_CONSUMPTION"
   },
   "latest_integration": {

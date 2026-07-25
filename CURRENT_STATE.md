@@ -2,7 +2,7 @@
 
 La fuente estructurada es `CURRENT_STATE.json`.
 
-- Versión: 2.5.33.
+- Versión: 2.5.34.
 - Fase: `MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_HUMAN_BASELINE_APPROVED`.
 - HEAD propio: `VERIFY_LIVE_AT_USE`.
 - Autorización activa reutilizable: ninguna.
@@ -43,8 +43,18 @@ La auditoría externa read-only autorizada por `076` revisó 107 archivos y repr
 
 La ejecución permanece válida y no fue revertida. La interpretación reconciliada es `VALID_DISCRIMINATING_SYNTHETIC_RESULTS_WITH_QUALIFIED_CAUSAL_ATTRIBUTIONS`: retrieval y safe refusal conservan apoyo causal bajo las condiciones sintéticas, mientras ranking no quedó aislado porque C-RANK cambió conjuntamente ranking y representación. La ausencia de fuentes en los hashes de diseño y la mezcla de nueve hipótesis frescas con cinco históricas, compuestas o codificadas son limitaciones no invalidantes.
 
-`PEND-LAB-020` permanece completado. `PEND-LAB-021` está `COMPLETED_EXTERNAL_AUDIT_DELIVERED_AND_RECONCILED`. `PEND-LAB-022` propone la decisión documental posterior a la auditoría; no la autoriza. No se seleccionaron proveedor, arquitectura o implementación, y no hubo aprobación ni efecto de producto o runtime.
+`PEND-LAB-020` permanece completado. `PEND-LAB-021` está `COMPLETED_EXTERNAL_AUDIT_DELIVERED_AND_RECONCILED`. La auditoría creó `PEND-LAB-022` para resolver documentalmente sus remediaciones; esa transición se cerró mediante la autorización posterior descrita abajo. No se seleccionaron proveedor, arquitectura o implementación, y no hubo aprobación ni efecto de producto o runtime.
+
+## Decisión y plan posterior a la auditoría 078 revisión 2
+
+`DEC-LAB-021` aprueba cuatro decisiones documentales: remediar prospectivamente la trazabilidad criptográfica del diseño, diseñar un contraste C-RANK que varíe sólo ranking, reemplazar con contrastes frescos las cinco hipótesis calificadas por la auditoría y mantener el gate previo a arquitectura en `NOT_READY`.
+
+`FULL-RAG-POST-AUDIT-REMEDIATION-PLAN-001` ordena seis fases: trazabilidad, diseño C-RANK aislado, diseños para cinco hipótesis, propuesta de ejecución delimitada, auditoría externa posterior y reevaluación de readiness arquitectónico. El plan no ejecuta ninguna fase y exige autorizaciones separadas.
+
+Las cinco hipótesis son `H-DECLARED-DECOYS`, `H-SYNONYM-EXPANSION`, `H-AUTHORITY-FILTERING`, `H-PREDOMINANTLY-LEXICAL` y `H-CROSS-FIXTURE-DISTRACTORS`. `PEND-LAB-022` está `COMPLETED_DOCUMENTARY_DECISIONS_AND_REMEDIATION_PLAN_PUBLISHED`; su único sucesor es `PEND-LAB-023`, que permanece como propuesta sin autoridad.
+
+No se modificaron el diseño 002, la ejecución 002, el harness ni los resultados históricos. No se ejecutaron pruebas ni se generó corpus. No se seleccionaron proveedor, arquitectura o implementación; no hubo aprobación ni efecto de producto o runtime.
 
 ## Siguiente transición
 
-No existe una siguiente transición visual pendiente para este baseline. Cualquier uso productivo o externo de la marca requiere aprobación jurídica separada. Para la línea experimental, la transición propuesta es resolver documentalmente `PEND-LAB-022` mediante autorización separada; la propuesta no concede autoridad. Después del consumo de `077`, `NEXT_AUTHORIZED_ACTION = NONE_AFTER_CONSUMPTION`.
+No existe una siguiente transición visual pendiente para este baseline. Cualquier uso productivo o externo de la marca requiere aprobación jurídica separada. Para la línea experimental, la transición propuesta es autorizar separadamente `PEND-LAB-023`; la propuesta no concede autoridad. Después del consumo de `078_REVISION_2`, `NEXT_AUTHORIZED_ACTION = NONE_AFTER_CONSUMPTION`.
