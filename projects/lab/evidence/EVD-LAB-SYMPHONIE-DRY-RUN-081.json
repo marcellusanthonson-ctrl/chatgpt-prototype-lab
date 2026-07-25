@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-SYMPHONIE-DRY-RUN-081",
+  "project_id": "lab",
+  "kind": "SYNTHETIC_END_TO_END_WORKFLOW_DRY_RUN_AND_OPERATIONAL_GAP_ANALYSIS",
+  "status": "REGISTERED_READY_WITH_BOUNDED_GAPS_VERIFIED_DUAL_PUBLICATION",
+  "authorization_id": "AUTHORIZATION_SYMPHONIE_MINIMUM_END_TO_END_DRY_RUN_AND_OPERATIONAL_GAP_ANALYSIS_081",
+  "authorization_revision": 3,
+  "executed_at": "2026-07-25",
+  "authorization_source_sha256": "fd5110ca379372bb34a6547adb2dcb140031d18d8c76066d9f44c199b0e80485",
+  "repositories": {
+    "lab": {
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "initial_head": "576ae9378dda76b28e95ca919aaa40e2e00e0618",
+      "final_commit_policy": "VERIFY_LIVE_AT_USE_NOT_SELF_EMBEDDED"
+    },
+    "symphonie": {
+      "repository": "marcellusanthonson-ctrl/symphonie",
+      "initial_head": "8b632545240e888b15b609d32cf0b6ba1b1c7afc",
+      "final_commit": "12ac15b1a2c5644389b3785c4de93b0a1781feb8",
+      "artifact_root": "dry-runs/AUTHORIZATION-081"
+    }
+  },
+  "execution_summary": {
+    "synthetic_project_id": "SYMPHONIE-SYNTHETIC-WEB-EXPERIENCE-081",
+    "phase_range": "PHASE_0_TO_PHASE_7",
+    "minimum_artifacts_complete": true,
+    "normal_path": "PASS_SIMULATED_ONLY",
+    "fail_closed": "PASS",
+    "phase_5_to_4_return": "PASS",
+    "phase_5_to_3_return": "PASS",
+    "phase_6_human_rejection": "PASS_SYNTHETIC_ONLY",
+    "continuity_reconstruction": "PASS",
+    "schema_validation": "PASS",
+    "lab_repository_validation": "FAIL_32_CLASSIFIED_28_BASELINE_4_EXPECTED_FIXTURE_DIVERGENCES",
+    "browser_validation": {
+      "result": "PASS",
+      "width_range": [
+        320,
+        1920
+      ],
+      "step": 16,
+      "cases": 101,
+      "external_network_requests": 0,
+      "console_errors": 0,
+      "keyboard_and_recovery": "PASS",
+      "text_spacing_reflow": "PASS"
+    }
+  },
+  "validation_boundaries": {
+    "real_human_approval": false,
+    "wcag_conformance": false,
+    "real_product_validation": false,
+    "production_readiness": false,
+    "runtime_or_deployment": false,
+    "ecr_runtime": false,
+    "product_leadership_active": false
+  },
+  "operational_gaps": [
+    {
+      "gap_id": "GAP-081-OP-001",
+      "severity": "MEDIUM",
+      "summary": "Canonical human-gate schemas have no non-authoritative simulation outcome.",
+      "source": "symphonie:dry-runs/AUTHORIZATION-081/gaps/OPERATIONAL_GAPS.json"
+    },
+    {
+      "gap_id": "GAP-081-OP-002",
+      "severity": "MEDIUM",
+      "summary": "The Symphonie repository validator preserves two historical Phase 3 marker failures.",
+      "source": "symphonie:dry-runs/AUTHORIZATION-081/validation/REPOSITORY_VALIDATION.txt"
+    },
+    {
+      "gap_id": "GAP-081-OP-003",
+      "severity": "LOW",
+      "summary": "Phase 1 narrative lags its later schema registry and minimum-workflow overlay.",
+      "source": "symphonie:dry-runs/AUTHORIZATION-081/gaps/OPERATIONAL_GAPS.json"
+    },
+    {
+      "gap_id": "GAP-081-LAB-001",
+      "severity": "MEDIUM",
+      "summary": "LAB canonical validation already carries 28 baseline failures: 25 historical physical-line limits, one reconciliation-count mismatch, and two pre-existing CURRENT_STATE fields outside its schema.",
+      "source": "scripts/validate_repository.py",
+      "recommended_correction": "Reconcile existing LAB validator debt under a separate explicit authorization without rewriting historical packages.",
+      "authorization_required": true
+    },
+    {
+      "gap_id": "GAP-081-LAB-002",
+      "severity": "LOW",
+      "summary": "LAB expected-state fixture is a fixed historical snapshot outside this authorization allowlist; canonical additions therefore make only the fixture comparison fail.",
+      "source": "tests/expected_repository_state.json",
+      "recommended_correction": "Refresh the expected-state fixture under a separate explicit authorization.",
+      "authorization_required": true
+    }
+  ],
+  "final_verdict": "READY_WITH_BOUNDED_GAPS",
+  "historical_findings_preserved": true,
+  "next_action": "SEPARATELY_AUTHORIZE_TEST_EVENT_SCHEMA_AND_VALIDATOR_FIXTURE_RECONCILIATION_OR_ANY_REAL_PILOT",
+  "source_refs": [
+    "projects/lab/authorizations/AUTHORIZATION_SYMPHONIE_MINIMUM_END_TO_END_DRY_RUN_AND_OPERATIONAL_GAP_ANALYSIS_081.json",
+    "marcellusanthonson-ctrl/symphonie:dry-runs/AUTHORIZATION-081/MANIFEST.json",
+    "marcellusanthonson-ctrl/symphonie:dry-runs/AUTHORIZATION-081/final/FINAL_REPORT.json",
+    "marcellusanthonson-ctrl/symphonie:continuity/CURRENT_CONTINUITY.json"
+  ]
+}

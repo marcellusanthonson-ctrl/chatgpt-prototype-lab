@@ -7,16 +7,17 @@
   "canonical_repository": "marcellusanthonson-ctrl/symphonie",
   "canonical_branch": "main",
   "head_policy": "VERIFY_LIVE_AT_USE",
-  "verified_parent_head": "f3b10dcc26266c15de9658e97ba63a59525ec13d",
+  "verified_parent_head": "12ac15b1a2c5644389b3785c4de93b0a1781feb8",
   "authority": {
     "sole_approver": "Jonathan Martínez",
     "autonomous_model_authority": false
   },
   "summary": "Workflow canónico de ocho fases y memoria gobernada.",
-  "content_completeness": "MINIMUM_COMPLETE_EIGHT_PHASE_WORKFLOW_DOCUMENTED_NOT_PILOTED",
+  "content_completeness": "MINIMUM_COMPLETE_EIGHT_PHASE_WORKFLOW_SYNTHETICALLY_VALIDATED_WITH_BOUNDED_GAPS",
   "source_refs": [
     "projects/symphonie/PROJECT_STATE.md",
-    "registry/projects.json"
+    "registry/projects.json",
+    "projects/lab/evidence/EVD-LAB-SYMPHONIE-DRY-RUN-081.json"
   ],
   "governance_paths": {
     "roadmap": "projects/symphonie/ROADMAP.json",
@@ -30,11 +31,17 @@
     "fileset": 58,
     "total_phases": 8,
     "minimum_complete_workflow": {
-      "status": "DOCUMENTED_NOT_EXECUTED",
+      "status": "SYNTHETIC_END_TO_END_VALIDATED_WITH_BOUNDED_GAPS",
       "transition_graph": "VALIDATED_DOCUMENTARY_GRAPH",
       "ecr_consumption_status": "DOCUMENTED_NOT_IMPLEMENTED",
       "product_leadership_status": "DOCUMENTED_BUT_DISABLED_PENDING_TESTS",
-      "real_pilot_executed": false
+      "real_pilot_executed": false,
+      "synthetic_phase_range": "PHASE_0_TO_PHASE_7",
+      "scenario_count": 6,
+      "real_human_gates": "PENDING",
+      "canonical_repository_validator": "FAIL_TWO_PRESERVED_HISTORICAL_PHASE_3_MARKERS",
+      "final_verdict": "READY_WITH_BOUNDED_GAPS",
+      "result_commit": "12ac15b1a2c5644389b3785c4de93b0a1781feb8"
     },
     "phase_maturity": {
       "PHASE_0": "EXPERIMENTAL_NOT_RUNTIME_VALIDATED",

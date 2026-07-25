@@ -1020,6 +1020,32 @@
       "implementation_selection_authorized": false,
       "architecture_selection_authorized": false,
       "product_changes_authorized": false
+    },
+    {
+      "id": "AUTHORIZATION_SYMPHONIE_MINIMUM_END_TO_END_DRY_RUN_AND_OPERATIONAL_GAP_ANALYSIS_081",
+      "state_key": "symphonie_minimum_end_to_end_dry_run_and_operational_gap_analysis_081",
+      "project_id": "lab",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_IN_BOTH_REPOSITORIES",
+      "approved_by": "Jonathan Martínez",
+      "scope": "SYNTHETIC_OFFLINE_MINIMUM_END_TO_END_PHASE_0_TO_7_DRY_RUN_AND_OPERATIONAL_GAP_ANALYSIS",
+      "canonical_path": "projects/lab/authorizations/AUTHORIZATION_SYMPHONIE_MINIMUM_END_TO_END_DRY_RUN_AND_OPERATIONAL_GAP_ANALYSIS_081.json",
+      "repositories": [
+        "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+        "marcellusanthonson-ctrl/symphonie"
+      ],
+      "branch": "main",
+      "expected_parent_head_lab": "576ae9378dda76b28e95ca919aaa40e2e00e0618",
+      "expected_parent_head_symphonie": "8b632545240e888b15b609d32cf0b6ba1b1c7afc",
+      "result_commit_symphonie": "12ac15b1a2c5644389b3785c4de93b0a1781feb8",
+      "updated_at": "2026-07-25",
+      "commit_authorized": true,
+      "push_authorized": true,
+      "source_file_update_authorized": true,
+      "test_execution_authorized": true,
+      "runtime_authorized": false,
+      "implementation_selection_authorized": false,
+      "architecture_selection_authorized": false,
+      "product_changes_authorized": false
     }
   ]
 }

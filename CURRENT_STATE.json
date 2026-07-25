@@ -1,11 +1,11 @@
 {
   "schema_version": "2.5.0",
   "document_id": "lab.current-state",
-  "version": "2.5.35",
-  "status": "GOVERNANCE_V2_CANONICAL_BASELINE",
+  "version": "2.5.36",
+  "status": "SYMPHONIE_SYNTHETIC_END_TO_END_DRY_RUN_REGISTERED_READY_WITH_BOUNDED_GAPS",
   "updated_at": "2026-07-25",
   "active_project": "lab",
-  "current_phase": "MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_HUMAN_BASELINE_APPROVED",
+  "current_phase": "SYMPHONIE_MINIMUM_END_TO_END_DRY_RUN_READY_WITH_BOUNDED_GAPS",
   "methodology": {"version": "2.1", "path": "METHODOLOGY.md"},
   "contract": {"version": "2.1", "path": "LAB_CONTRACT.md", "amended_by": ["DEC-LAB-013", "DEC-LAB-014"]},
   "authority": {"sole_approver": "Jonathan Martínez", "chatgpt": "COORDINATE_VALIDATE_AUDIT_ORDER", "claude": "DISCOVERY_OR_DEFINITION_WHEN_ASSIGNED", "codex": "BOUNDED_EXECUTOR_ONLY", "codex_autonomous_authority": "NO"},
@@ -120,10 +120,12 @@
     "independent_external_read_only_audit_of_full_rag_failure_discrimination_execution_002_076": "CONSUMED_ON_DELIVERY_OF_COMPLETE_EXTERNAL_AUDIT_PACKAGE",
     "full_rag_failure_discrimination_execution_002_external_audit_reconciliation_077": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "full_rag_post_audit_decision_and_remediation_planning_078_revision_2": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "symphonie_minimum_complete_workflow_ecr_product_leadership_reconciliation_079": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_IN_BOTH_REPOSITORIES"
+    "symphonie_minimum_complete_workflow_ecr_product_leadership_reconciliation_079": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_IN_BOTH_REPOSITORIES",
+    "symphonie_minimum_end_to_end_dry_run_and_operational_gap_analysis_081": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_IN_BOTH_REPOSITORIES"
   },
   "verified_external_heads": {
-    "symphonie": "f3b10dcc26266c15de9658e97ba63a59525ec13d",
+    "symphonie": "12ac15b1a2c5644389b3785c4de93b0a1781feb8",
+    "lab_base_before_symphonie_dry_run_081": "576ae9378dda76b28e95ca919aaa40e2e00e0618",
     "lab_base_before_transition": "7f1a7e101f42a981ad68e7602318b07bc62970b3",
     "lab_base_before_foundation_library": "4367b736c22d92937ec8ad1174bd9c9610baa313",
     "lab_base_before_foundation_evidence": "2e4608d7adc69ddf507a013f8da6cf513a0754ba",
@@ -140,9 +142,9 @@
     "symphonie_premium_ecommerce_pilot": "0105d90ad105360dd95169220c6bf444375aa9ec",
     "lab_base_before_visual_preference_benchmark": "b585b5941f6085ce844716740b59f5687c7ebdad"
   },
-  "completed_research_transitions": ["PHASE_4_ACCESSIBILITY_NORMATIVE_AND_ASSISTIVE_TECHNOLOGY_RESEARCH"],
+  "completed_research_transitions": ["PHASE_4_ACCESSIBILITY_NORMATIVE_AND_ASSISTIVE_TECHNOLOGY_RESEARCH","SYMPHONIE_MINIMUM_END_TO_END_DRY_RUN_081_READY_WITH_BOUNDED_GAPS"],
   "next_authorized_action": "NONE_AFTER_CONSUMPTION",
-  "next_recommended_transition": "SEPARATELY_AUTHORIZE_PRODUCT_LEADERSHIP_DISCRIMINATING_TEST_EXECUTION",
+  "next_recommended_transition": "SEPARATELY_AUTHORIZE_CANONICAL_TEST_EVENT_SCHEMA_AND_VALIDATOR_FIXTURE_RECONCILIATION_OR_ANY_REAL_PILOT",
   "continuity_read_order": ["LAB_CONTRACT.md","METHODOLOGY.md","CURRENT_STATE.json","registry/index.json","registry/projects.json","projects/{active_project}/PROJECT_STATE.json","project decisions","project authorizations","open errors","applicable evidence","current continuity package"],
   "full_rag_line": {
     "status": "CLOSED_AS_DOCUMENTED_RESEARCH_BASELINE",
