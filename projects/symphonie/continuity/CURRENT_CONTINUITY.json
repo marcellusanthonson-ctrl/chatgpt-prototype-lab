@@ -9,13 +9,13 @@
       "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
       "branch": "main",
       "head_policy": "VERIFY_LIVE_AT_USE",
-      "verified_parent_head": "576ae9378dda76b28e95ca919aaa40e2e00e0618"
+      "verified_parent_head": "b6181790b87c7fe0d3c42f80838069b161cd4e60"
     },
     {
       "role": "WORKFLOW",
       "repository": "marcellusanthonson-ctrl/symphonie",
       "branch": "main",
-      "verified_head": "1d74f90a059f4e8068d7fe654e85add6163771d3"
+      "verified_head": "31dd1345026240c83b015feef34d6f7f2d2147b7"
     },
     {
       "role": "SKILL_PRODUCER",
@@ -36,8 +36,8 @@
     "marcellusanthonson-ctrl/symphonie:registro/metodos-validacion.json"
   ],
   "current_state": {
-    "symphonie_version": "0.8.2",
-    "fileset": 130,
+    "symphonie_version": "0.8.3",
+    "fileset": 164,
     "total_phases": 8,
     "runtime_authorized": false,
     "integration_authorized": false,
@@ -50,7 +50,11 @@
     "phase_results": "PHASES_0A_0B_0C_1_TO_7_AND_CLOSURE_PASS_SIMULATED_ONLY",
     "scenario_count": 11,
     "operational_gap_count": 0,
-    "real_human_gates": "PENDING"
+    "real_human_gates": "PENDING",
+    "livhavn_pilot_status": "AWAITING_REAL_VISUAL_CALIBRATION_DECISION",
+    "livhavn_completed_through": "GENERATE_MONOLITHIC_VISUAL_CALIBRATION",
+    "livhavn_next_required_gate": "VISUAL_CALIBRATION_APPROVED",
+    "phase_4_status": "NOT_AUTHORIZED"
   },
   "facts": [
     "Dedicated Symphonie repository is canonical",
@@ -58,7 +62,11 @@
     "Synthetic Phase 0 to 7 handoffs, returns, fail-closed behavior and continuity passed",
     "All simulated human events have authority_effect NONE",
     "Real human gates, real-product validation and production readiness remain pending",
-    "Final verdict is ALL_PHASES_VALIDATED_WITH_BOUNDED_LIMITS"
+    "Authorization 082 final verdict remains ALL_PHASES_VALIDATED_WITH_BOUNDED_LIMITS",
+    "Authorization 083 revision 3 generated and technically validated the offline LivHavn monolithic visual calibration",
+    "MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001 was mandatory for technical finish and did not select the visual direction",
+    "LivHavn direction LIVHAVN-VD-01 is awaiting Jonathan Martínez's real visual calibration decision",
+    "Phase 4 remains not authorized"
   ],
   "approved_decisions": [
     "DEC-LAB-004",
@@ -92,7 +100,8 @@
       "SYM-DOCUMENTARY-BASELINE-REPAIR-005",
       "SYM-CANONICAL-EVIDENCE-REGISTRY-011",
       "AUTHORIZATION_SYMPHONIE_MINIMUM_END_TO_END_DRY_RUN_AND_OPERATIONAL_GAP_ANALYSIS_081"
-      ,"AUTHORIZATION_LAB_SYMPHONIE_ALL_PHASES_VALIDATION_GAP_AND_MAINTAINABILITY_RECONCILIATION_082"
+      ,"AUTHORIZATION_LAB_SYMPHONIE_ALL_PHASES_VALIDATION_GAP_AND_MAINTAINABILITY_RECONCILIATION_082",
+      "AUTHORIZATION_SYMPHONIE_LIVHAVN_SYNTHETIC_FULL_WORKFLOW_PILOT_083"
     ],
     "expired": []
   },
@@ -103,23 +112,29 @@
     "LAB governance v2 candidate",
     "LAB epistemic independence and objective reassessment contract",
     "DEC-LAB-015 experimental risk-proportional validation baseline",
-    "Authorization 081 synthetic minimum end-to-end Phase 0 to 7 dry run"
+    "Authorization 081 synthetic minimum end-to-end Phase 0 to 7 dry run",
+    "Authorization 082 all-phases validation and bounded-gap reconciliation",
+    "Authorization 083 revision 3 LivHavn workflow through monolithic visual calibration"
   ],
   "pending_work": [
-    "Any real pilot or real human approval requires separate explicit authorization"
+    "Jonathan Martínez reviews LIVHAVN-VD-01 and records one real visual calibration decision",
+    "Any repository write after that decision requires separate explicit authorization",
+    "Phase 4 remains not authorized"
   ],
   "open_errors": [],
   "known_risks": [
     "STALE_CROSS_REPOSITORY_SNAPSHOTS",
     "SIMULATED_HUMAN_EVENT_MISTAKEN_FOR_REAL_APPROVAL",
-    "HISTORICAL_VALIDATOR_FAILURE_MISTAKEN_FOR_NEW_REGRESSION"
+    "HISTORICAL_VALIDATOR_FAILURE_MISTAKEN_FOR_NEW_REGRESSION",
+    "AUTHORIZED_MONOLITHIC_EXCEPTION_MISTAKEN_FOR_UNCLASSIFIED_LINE_LIMIT_FAILURE"
   ],
   "experiments": [
     "SYM-P0B-DRY-RUN-001",
     "SYM-EXT-INTERVIEW-TIER1-001",
     "SYM-P3A-REG08-001",
     "SYM-P3A-REG09-001",
-    "SYM-HANDOFF-3A-4A-017"
+    "SYM-HANDOFF-3A-4A-017",
+    "SYM-LIVHAVN-P3-CALIBRATION-083"
   ],
   "skills": [
     "interview-script",
@@ -132,8 +147,9 @@
   "roadmap_ref": "projects/symphonie/ROADMAP.json",
   "attachments_ref": "projects/symphonie/continuity/ATTACHMENT_MANIFEST.json",
   "next_recommended_action": {
-    "action": "Separately authorize any real all-phases pilot or real human gate",
-    "authorization_required": true
+    "action": "Jonathan Martínez reviews LIVHAVN-VD-01 and records one real visual calibration decision",
+    "authorization_required": false,
+    "repository_write_after_decision_requires_separate_authorization": true
   },
   "prohibited_actions": [
     "RUNTIME",

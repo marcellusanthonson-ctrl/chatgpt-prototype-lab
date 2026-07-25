@@ -7,18 +7,20 @@
   "canonical_repository": "marcellusanthonson-ctrl/symphonie",
   "canonical_branch": "main",
   "head_policy": "VERIFY_LIVE_AT_USE",
-  "verified_parent_head": "1d74f90a059f4e8068d7fe654e85add6163771d3",
+  "verified_parent_head": "31dd1345026240c83b015feef34d6f7f2d2147b7",
   "authority": {
     "sole_approver": "Jonathan Martínez",
     "autonomous_model_authority": false
   },
   "summary": "Workflow canónico de ocho fases y memoria gobernada.",
-  "content_completeness": "ALL_PHASES_VALIDATED_WITH_BOUNDED_LIMITS",
+  "content_completeness": "LIVHAVN_MONOLITHIC_VISUAL_CALIBRATION_AWAITING_REAL_HUMAN_DECISION",
   "source_refs": [
     "projects/symphonie/PROJECT_STATE.md",
     "registry/projects.json",
     "projects/lab/evidence/EVD-LAB-SYMPHONIE-DRY-RUN-081.json",
-    "projects/lab/evidence/EVD-LAB-SYMPHONIE-ALL-PHASES-082.json"
+    "projects/lab/evidence/EVD-LAB-SYMPHONIE-ALL-PHASES-082.json",
+    "projects/lab/authorizations/AUTHORIZATION_SYMPHONIE_LIVHAVN_SYNTHETIC_FULL_WORKFLOW_PILOT_083.json",
+    "projects/lab/evidence/EVD-LAB-SYMPHONIE-LIVHAVN-PILOT-083.json"
   ],
   "governance_paths": {
     "roadmap": "projects/symphonie/ROADMAP.json",
@@ -29,7 +31,7 @@
     "reassessments": "projects/symphonie/reassessments/index.json"
   },
   "metadata": {
-    "fileset": 130,
+    "fileset": 164,
     "total_phases": 8,
     "minimum_complete_workflow": {
       "status": "ALL_PHASES_SYNTHETICALLY_VALIDATED_WITH_BOUNDED_LIMITS",
@@ -48,11 +50,28 @@
       "PHASE_0": "EXPERIMENTAL_NOT_RUNTIME_VALIDATED",
       "PHASE_1": "DEFINED_WITH_CANONICAL_SCHEMAS_NOT_TESTED",
       "PHASE_2": "DEFINED_WITH_CANONICAL_SCHEMAS_NOT_TESTED",
-      "PHASE_3": "PARTIALLY_VALIDATED_WITH_FINDINGS",
+      "PHASE_3": "LIVHAVN_MONOLITHIC_CALIBRATION_TECHNICAL_PASS_AWAITING_REAL_HUMAN_DECISION",
       "PHASE_4": "PARTIALLY_RUNTIME_VALIDATED",
       "PHASE_5": "DEFINED_WITH_CANONICAL_SCHEMAS_NOT_TESTED",
       "PHASE_6": "DEFINED_WITH_CANONICAL_SCHEMAS_NOT_TESTED",
       "PHASE_7": "DEFINED_WITH_CANONICAL_SCHEMAS_NOT_TESTED"
+    },
+    "livhavn_visual_calibration_pilot": {
+      "authorization_id": "AUTHORIZATION_SYMPHONIE_LIVHAVN_SYNTHETIC_FULL_WORKFLOW_PILOT_083",
+      "authorization_revision": 3,
+      "pilot_id": "SYMPHONIE-PILOT-LIVHAVN-001",
+      "status": "AWAITING_REAL_VISUAL_CALIBRATION_DECISION",
+      "completed_through": "GENERATE_MONOLITHIC_VISUAL_CALIBRATION",
+      "visual_direction_id": "LIVHAVN-VD-01",
+      "design_mode": "balanced",
+      "technical_foundation": "MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001",
+      "technical_foundation_role": "NEUTRAL_TECHNICAL_QUALITY_FIXTURE_NOT_VISUAL_DIRECTION",
+      "profile_applicability": "PARTIALLY_APPLICABLE_TO_LIVHAVN_CONTEXT",
+      "result_commit": "31dd1345026240c83b015feef34d6f7f2d2147b7",
+      "final_verdict": "LIVHAVN_VISUAL_CALIBRATION_READY_WITH_BOUNDED_GAPS",
+      "next_required_gate": "VISUAL_CALIBRATION_APPROVED",
+      "phase_4_status": "NOT_AUTHORIZED",
+      "authority_effect": "NONE"
     },
     "canonical_registries": [
       "registro/fases.json",

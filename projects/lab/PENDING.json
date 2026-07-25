@@ -566,20 +566,24 @@
     },
     {
       "id": "PEND-LAB-025",
-      "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
-      "type": "REAL_SYMPHONIE_ALL_PHASES_PILOT_OR_REAL_HUMAN_GATE",
-      "subject": "Consider a separately authorized real all-phases pilot or one exact real human gate after synthetic validation 082",
-      "priority": "MEDIUM",
-      "authorization_required": true,
+      "status": "AWAITING_REAL_HUMAN_VISUAL_CALIBRATION_DECISION",
+      "type": "LIVHAVN_VISUAL_CALIBRATION_HUMAN_GATE",
+      "subject": "Jonathan Martínez reviews the exact LivHavn direction LIVHAVN-VD-01 and records one real visual calibration decision without initiating expansion or Phase 4",
+      "priority": "HIGH",
+      "authorization_required": false,
+      "repository_write_after_decision_requires_separate_authorization": true,
+      "decision_authority": "JONATHAN_MARTINEZ_ONLY",
+      "next_required_gate": "VISUAL_CALIBRATION_APPROVED",
       "real_data_authorized": false,
       "runtime_authorized": false,
       "deployment_authorized": false,
-      "current_authority": "NONE",
+      "phase_4_authorized": false,
+      "current_authority": "REAL_HUMAN_VISUAL_DECISION_ONLY",
       "automatic_approval": false,
-      "next_authorized_action": "NONE_UNTIL_SEPARATE_EXPLICIT_AUTHORIZATION",
+      "next_authorized_action": "JONATHAN_MARTINEZ_REVIEWS_LIVHAVN_VD_01",
       "source_refs": [
-        "projects/lab/authorizations/AUTHORIZATION_LAB_SYMPHONIE_ALL_PHASES_VALIDATION_GAP_AND_MAINTAINABILITY_RECONCILIATION_082.json",
-        "projects/lab/evidence/EVD-LAB-SYMPHONIE-ALL-PHASES-082.json",
+        "projects/lab/authorizations/AUTHORIZATION_SYMPHONIE_LIVHAVN_SYNTHETIC_FULL_WORKFLOW_PILOT_083.json",
+        "projects/lab/evidence/EVD-LAB-SYMPHONIE-LIVHAVN-PILOT-083.json",
         "projects/symphonie/continuity/CURRENT_CONTINUITY.json"
       ]
     }

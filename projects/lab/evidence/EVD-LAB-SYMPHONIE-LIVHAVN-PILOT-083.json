@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-SYMPHONIE-LIVHAVN-PILOT-083",
+  "project_id": "lab",
+  "kind": "SYNTHETIC_LIVHAVN_MONOLITHIC_VISUAL_CALIBRATION_PILOT",
+  "status": "READY_WITH_BOUNDED_GAPS_AWAITING_REAL_HUMAN_VISUAL_CALIBRATION_DECISION",
+  "authorization_id": "AUTHORIZATION_SYMPHONIE_LIVHAVN_SYNTHETIC_FULL_WORKFLOW_PILOT_083",
+  "authorization_revision": 3,
+  "executed_at": "2026-07-25",
+  "repositories": {
+    "lab": {
+      "initial_head": "b6181790b87c7fe0d3c42f80838069b161cd4e60",
+      "final_commit": "VERIFY_LIVE_AT_USE_NOT_SELF_EMBEDDED"
+    },
+    "symphonie": {
+      "initial_head": "1d74f90a059f4e8068d7fe654e85add6163771d3",
+      "final_commit": "31dd1345026240c83b015feef34d6f7f2d2147b7",
+      "artifact_root": "pilotos/SYMPHONIE-PILOT-LIVHAVN-001"
+    }
+  },
+  "resumption_preflight": {
+    "result": "PASS",
+    "partial_file_count": 17,
+    "partial_inventory": "pilotos/SYMPHONIE-PILOT-LIVHAVN-001/evidence/REVISION_3_PARTIAL_WORKTREE_INVENTORY.json",
+    "sha256_manifest_result": "PASS",
+    "unexpected_dirty_paths": 0,
+    "lab_worktree_at_start": "CLEAN"
+  },
+  "phase_results": {
+    "phase_0_to_2_revalidation": "PASS_SYNTHETIC_ONLY",
+    "phase_3_visual_inputs_schema": "PASS",
+    "design_mode": "balanced",
+    "calibration_mode": "MONOLITHIC_VISUAL_CALIBRATION",
+    "sequence_steps_1_to_6": "PASS",
+    "completed_through": "GENERATE_MONOLITHIC_VISUAL_CALIBRATION",
+    "steps_7_to_11_executed": false
+  },
+  "visual_direction": {
+    "id": "LIVHAVN-VD-01",
+    "revision": "1",
+    "status": "PROPOSED_FOR_HUMAN_CALIBRATION_REVIEW",
+    "profile_applicability": "PARTIALLY_APPLICABLE_TO_LIVHAVN_CONTEXT"
+  },
+  "technical_foundation": {
+    "id": "MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001",
+    "version": "1.1.1",
+    "role": "NEUTRAL_TECHNICAL_QUALITY_FIXTURE_NOT_VISUAL_DIRECTION",
+    "applicability": "MANDATORY_FOR_TECHNICAL_AND_FINISH_QUALITY",
+    "may_select_visual_direction": false
+  },
+  "visual_artifact": {
+    "path": "pilotos/SYMPHONIE-PILOT-LIVHAVN-001/phase-3/VISUAL_REVIEW_MONOLITHIC.html",
+    "sha256": "383438dcb9df32a0d8f91cf71133ae5f44db05ac5551637187e6c956e90c1766",
+    "file_protocol": "PASS",
+    "browser_width_points": 101,
+    "external_requests": 0,
+    "console_errors": 0,
+    "bilingual": "PASS",
+    "keyboard_and_focus": "PASS",
+    "reduced_motion": "PASS",
+    "progress_calculation": "PASS_66_PERCENT",
+    "net_calculation": "PASS_79200_EUR"
+  },
+  "validation_summary": {
+    "json_parse": "PASS",
+    "duplicate_ids": "PASS",
+    "references": "PASS",
+    "declared_digests": "PASS",
+    "visual_inputs_schema": "PASS",
+    "visual_calibration_package_schema": "PASS",
+    "allowed_paths": "PASS",
+    "historical_evidence_preserved": true,
+    "symphonie_validator": "FAIL_ONE_CLASSIFIED_BOUNDED_MONOLITHIC_EXCEPTION_REGISTRY_GAP",
+    "symphonie_tests": "5_PASS_1_FAIL_SAME_CLASSIFIED_GAP",
+    "lab_validator": "FAIL_FOUR_CLASSIFIED_STALE_EXPECTED_STATE_FIXTURE_MISMATCHES",
+    "lab_tests": "NO_EXECUTABLE_TESTS_PRESENT",
+    "independent_failures": 0
+  },
+  "bounded_gaps": [
+    {
+      "id": "LIVHAVN-GAP-001",
+      "classification": "AUTHORIZED_MONOLITHIC_EXCEPTION_NOT_REGISTRABLE_UNDER_ALLOWLIST",
+      "detail": "The 082 validator requires an entry in its immutable exception register even though authorization 083 exclusively authorizes this HTML and requires the exact exception header.",
+      "scope_effect": "NONE",
+      "human_gate_effect": "NONE"
+    },
+    {
+      "id": "LIVHAVN-GAP-002",
+      "classification": "LAB_EXPECTED_STATE_FIXTURE_OUTSIDE_AUTHORIZATION_ALLOWLIST",
+      "detail": "The LAB validator reports the authorized current phase, registry counts, Symphonie head and authorization state as mismatches against tests/expected_repository_state.json; revision 3 does not authorize that fixture.",
+      "scope_effect": "NONE",
+      "human_gate_effect": "NONE"
+    }
+  ],
+  "terminal_state": {
+    "pilot_status": "AWAITING_REAL_VISUAL_CALIBRATION_DECISION",
+    "next_required_gate": "VISUAL_CALIBRATION_APPROVED",
+    "gate_owner": "Jonathan Martínez",
+    "high_fidelity_gate": "NOT_EXECUTED",
+    "phase_4_status": "NOT_AUTHORIZED"
+  },
+  "real_data_effect": "NONE",
+  "real_payment_effect": "NONE",
+  "human_authority_effect": "NONE",
+  "historical_findings_preserved": true,
+  "final_verdict": "LIVHAVN_VISUAL_CALIBRATION_READY_WITH_BOUNDED_GAPS",
+  "next_action": "JONATHAN_MARTINEZ_REVIEWS_LIVHAVN_VD_01_AND_RECORDS_ONE_REAL_VISUAL_CALIBRATION_DECISION"
+}

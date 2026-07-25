@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_SYMPHONIE_LIVHAVN_SYNTHETIC_FULL_WORKFLOW_PILOT_083",
+  "authorization_revision": 3,
+  "supersedes_authorization_revision": 2,
+  "state_key": "symphonie_livhavn_synthetic_full_workflow_pilot_083",
+  "project_id": "lab",
+  "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_AWAITING_HUMAN_VISUAL_CALIBRATION_DECISION",
+  "approved_by": "Jonathan Martínez",
+  "granted_at": "2026-07-25",
+  "consumed_at": "2026-07-25",
+  "executor": "CODEX",
+  "execution_count": 1,
+  "execution_count_limit": 1,
+  "revision_2_execution_result": "PARTIAL_NOT_CONSUMED",
+  "authorization_source": {
+    "kind": "CODEX_ATTACHMENT_PASTED_TEXT",
+    "revision": 3,
+    "sha256": "2e71694b44371a6d0151392efec1bb4b04e6571830b1ecabb3d827965141632b"
+  },
+  "execution_directive_amendment": {
+    "foundation_reference": "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MANIFEST.json",
+    "foundation_role": "NEUTRAL_TECHNICAL_QUALITY_FIXTURE_NOT_VISUAL_DIRECTION",
+    "foundation_applicability": "MANDATORY_FOR_TECHNICAL_AND_FINISH_QUALITY",
+    "visual_preference_profile_applicability": "PARTIALLY_APPLICABLE_TO_LIVHAVN_CONTEXT",
+    "foundation_must_not_select_visual_direction": true
+  },
+  "repositories": [
+    {
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "expected_parent_head": "b6181790b87c7fe0d3c42f80838069b161cd4e60",
+      "final_commit_policy": "VERIFY_LIVE_AT_USE_NOT_SELF_EMBEDDED",
+      "commit_authorized": true,
+      "push_authorized": true
+    },
+    {
+      "repository": "marcellusanthonson-ctrl/symphonie",
+      "branch": "main",
+      "expected_parent_head": "1d74f90a059f4e8068d7fe654e85add6163771d3",
+      "result_commit": "31dd1345026240c83b015feef34d6f7f2d2147b7",
+      "commit_authorized": true,
+      "push_authorized": true
+    }
+  ],
+  "scope": "CONTROLLED_RESUMPTION_OF_SYNTHETIC_LIVHAVN_WORKFLOW_THROUGH_MONOLITHIC_VISUAL_CALIBRATION",
+  "authorized_actions": [
+    "INVENTORY_AND_REUSE_REVISION_2_PARTIAL_FILES",
+    "REVALIDATE_SYNTHETIC_PHASES_0A_0B_0C_1_AND_2",
+    "CREATE_STRICT_PHASE_3_VISUAL_INPUTS_WITH_BALANCED_DESIGN_MODE",
+    "EXECUTE_PHASE_3_PRECALIBRATION_SEQUENCE_STEPS_1_THROUGH_6",
+    "GENERATE_ONE_OFFLINE_MONOLITHIC_VISUAL_CALIBRATION_ARTIFACT",
+    "APPLY_NEUTRAL_MINIMUM_IMPECCABLE_VISUAL_FOUNDATION",
+    "CREATE_ONE_ATOMIC_COMMIT_PER_REPOSITORY",
+    "PUSH_AND_VERIFY_BOTH_REMOTE_HEADS"
+  ],
+  "prohibitions": [
+    "VISUAL_CALIBRATION_SELF_APPROVAL",
+    "MULTIPAGE_EXPANSION",
+    "HIGH_FIDELITY_BASELINE_APPROVAL",
+    "FINAL_IMPLEMENTATION_CONTRACT",
+    "PHASE_4_OR_LATER",
+    "REAL_DATA",
+    "REAL_PAYMENTS",
+    "EXTERNAL_NETWORK_FROM_ARTIFACT",
+    "DEPLOYMENT_OR_RELEASE",
+    "FORCE_PUSH_AMEND_REBASE_OR_HISTORY_REWRITE"
+  ],
+  "result": {
+    "execution": "LIVHAVN_SYNTHETIC_WORKFLOW_COMPLETED_THROUGH_MONOLITHIC_VISUAL_CALIBRATION",
+    "pilot_id": "SYMPHONIE-PILOT-LIVHAVN-001",
+    "final_verdict": "LIVHAVN_VISUAL_CALIBRATION_READY_WITH_BOUNDED_GAPS",
+    "terminal_state": "AWAITING_REAL_VISUAL_CALIBRATION_DECISION",
+    "symphonie_commit": "31dd1345026240c83b015feef34d6f7f2d2147b7",
+    "lab_commit": "VERIFY_LIVE_AT_USE_NOT_SELF_EMBEDDED",
+    "next_required_gate": "VISUAL_CALIBRATION_APPROVED",
+    "gate_owner": "Jonathan Martínez",
+    "phase_4_status": "NOT_AUTHORIZED",
+    "real_human_decision": "PENDING",
+    "real_data_effect": "NONE",
+    "real_payment_effect": "NONE",
+    "authority_effect": "NONE"
+  },
+  "next_authorized_action": "NONE_AFTER_CONSUMPTION_EXCEPT_REAL_HUMAN_VISUAL_REVIEW_BY_JONATHAN_MARTINEZ"
+}

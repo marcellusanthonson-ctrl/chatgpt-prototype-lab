@@ -1072,6 +1072,33 @@
       "implementation_selection_authorized": false,
       "architecture_selection_authorized": false,
       "product_changes_authorized": false
+    },
+    {
+      "id": "AUTHORIZATION_SYMPHONIE_LIVHAVN_SYNTHETIC_FULL_WORKFLOW_PILOT_083",
+      "state_key": "symphonie_livhavn_synthetic_full_workflow_pilot_083",
+      "project_id": "lab",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_AWAITING_HUMAN_VISUAL_CALIBRATION_DECISION",
+      "approved_by": "Jonathan Martínez",
+      "scope": "CONTROLLED_RESUMPTION_OF_SYNTHETIC_LIVHAVN_WORKFLOW_THROUGH_MONOLITHIC_VISUAL_CALIBRATION",
+      "canonical_path": "projects/lab/authorizations/AUTHORIZATION_SYMPHONIE_LIVHAVN_SYNTHETIC_FULL_WORKFLOW_PILOT_083.json",
+      "repositories": [
+        "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+        "marcellusanthonson-ctrl/symphonie"
+      ],
+      "branch": "main",
+      "authorization_revision": 3,
+      "expected_parent_head_lab": "b6181790b87c7fe0d3c42f80838069b161cd4e60",
+      "expected_parent_head_symphonie": "1d74f90a059f4e8068d7fe654e85add6163771d3",
+      "result_commit_symphonie": "31dd1345026240c83b015feef34d6f7f2d2147b7",
+      "updated_at": "2026-07-25",
+      "commit_authorized": true,
+      "push_authorized": true,
+      "source_file_update_authorized": true,
+      "test_execution_authorized": true,
+      "runtime_authorized": false,
+      "implementation_selection_authorized": false,
+      "architecture_selection_authorized": false,
+      "product_changes_authorized": false
     }
   ]
 }

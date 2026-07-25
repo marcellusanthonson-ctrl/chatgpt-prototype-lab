@@ -1,11 +1,11 @@
 {
   "schema_version": "2.5.0",
   "document_id": "lab.current-state",
-  "version": "2.5.37",
-  "status": "SYMPHONIE_ALL_PHASES_VALIDATED_WITH_BOUNDED_LIMITS",
+  "version": "2.5.38",
+  "status": "SYMPHONIE_LIVHAVN_VISUAL_CALIBRATION_AWAITING_REAL_HUMAN_DECISION",
   "updated_at": "2026-07-25",
   "active_project": "lab",
-  "current_phase": "SYMPHONIE_ALL_PHASES_VALIDATION_AND_MAINTAINABILITY_RECONCILIATION_COMPLETE",
+  "current_phase": "SYMPHONIE_LIVHAVN_MONOLITHIC_VISUAL_CALIBRATION_COMPLETE_HUMAN_GATE_PENDING",
   "methodology": {"version": "2.1", "path": "METHODOLOGY.md"},
   "contract": {"version": "2.1", "path": "LAB_CONTRACT.md", "amended_by": ["DEC-LAB-013", "DEC-LAB-014"]},
   "authority": {"sole_approver": "Jonathan Martínez", "chatgpt": "COORDINATE_VALIDATE_AUDIT_ORDER", "claude": "DISCOVERY_OR_DEFINITION_WHEN_ASSIGNED", "codex": "BOUNDED_EXECUTOR_ONLY", "codex_autonomous_authority": "NO"},
@@ -53,7 +53,9 @@
     "ecr_capability": "foundation-library/evidential-control/ECR-CAPABILITY-001/MANIFEST.json",
     "product_leadership_candidate_package": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/MANIFEST.json",
     "product_leadership_test_design": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json",
-    "product_leadership_test_execution_and_audit_pending": "projects/lab/pending/PEND-LAB-024.json"
+    "product_leadership_test_execution_and_audit_pending": "projects/lab/pending/PEND-LAB-024.json",
+    "livhavn_pilot_authorization": "projects/lab/authorizations/AUTHORIZATION_SYMPHONIE_LIVHAVN_SYNTHETIC_FULL_WORKFLOW_PILOT_083.json",
+    "livhavn_pilot_evidence": "projects/lab/evidence/EVD-LAB-SYMPHONIE-LIVHAVN-PILOT-083.json"
   },
   "projects": {
     "lab": {"status": "active", "canonical_path": "projects/lab/PROJECT_STATE.md", "structured_state_path": "projects/lab/PROJECT_STATE.json"},
@@ -122,10 +124,12 @@
     "full_rag_post_audit_decision_and_remediation_planning_078_revision_2": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "symphonie_minimum_complete_workflow_ecr_product_leadership_reconciliation_079": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_IN_BOTH_REPOSITORIES",
     "symphonie_minimum_end_to_end_dry_run_and_operational_gap_analysis_081": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_IN_BOTH_REPOSITORIES",
-    "symphonie_all_phases_validation_gap_and_maintainability_reconciliation_082": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_IN_BOTH_REPOSITORIES"
+    "symphonie_all_phases_validation_gap_and_maintainability_reconciliation_082": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_IN_BOTH_REPOSITORIES",
+    "symphonie_livhavn_synthetic_full_workflow_pilot_083": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_AWAITING_HUMAN_VISUAL_CALIBRATION_DECISION"
   },
   "verified_external_heads": {
-    "symphonie": "1d74f90a059f4e8068d7fe654e85add6163771d3",
+    "symphonie": "31dd1345026240c83b015feef34d6f7f2d2147b7",
+    "symphonie_base_before_livhavn_pilot_083": "1d74f90a059f4e8068d7fe654e85add6163771d3",
     "lab_base_before_all_phases_validation_082": "19cfe5da25fbf33e5e466b32283a6ca9f04dc3f5",
     "lab_base_before_symphonie_dry_run_081": "576ae9378dda76b28e95ca919aaa40e2e00e0618",
     "lab_base_before_transition": "7f1a7e101f42a981ad68e7602318b07bc62970b3",
@@ -144,9 +148,9 @@
     "symphonie_premium_ecommerce_pilot": "0105d90ad105360dd95169220c6bf444375aa9ec",
     "lab_base_before_visual_preference_benchmark": "b585b5941f6085ce844716740b59f5687c7ebdad"
   },
-  "completed_research_transitions": ["PHASE_4_ACCESSIBILITY_NORMATIVE_AND_ASSISTIVE_TECHNOLOGY_RESEARCH","SYMPHONIE_MINIMUM_END_TO_END_DRY_RUN_081_READY_WITH_BOUNDED_GAPS","SYMPHONIE_ALL_PHASES_VALIDATION_082_WITH_BOUNDED_LIMITS"],
+  "completed_research_transitions": ["PHASE_4_ACCESSIBILITY_NORMATIVE_AND_ASSISTIVE_TECHNOLOGY_RESEARCH","SYMPHONIE_MINIMUM_END_TO_END_DRY_RUN_081_READY_WITH_BOUNDED_GAPS","SYMPHONIE_ALL_PHASES_VALIDATION_082_WITH_BOUNDED_LIMITS","SYMPHONIE_LIVHAVN_MONOLITHIC_VISUAL_CALIBRATION_083_READY_WITH_BOUNDED_GAPS"],
   "next_authorized_action": "NONE_AFTER_CONSUMPTION",
-  "next_recommended_transition": "SEPARATELY_AUTHORIZE_ANY_REAL_ALL_PHASES_PILOT_OR_REAL_HUMAN_GATE",
+  "next_recommended_transition": "JONATHAN_MARTINEZ_REVIEWS_LIVHAVN_VD_01_AND_RECORDS_ONE_REAL_VISUAL_CALIBRATION_DECISION",
   "continuity_read_order": ["LAB_CONTRACT.md","METHODOLOGY.md","CURRENT_STATE.json","registry/index.json","registry/projects.json","projects/{active_project}/PROJECT_STATE.json","project decisions","project authorizations","open errors","applicable evidence","current continuity package"],
   "full_rag_line": {
     "status": "CLOSED_AS_DOCUMENTED_RESEARCH_BASELINE",
@@ -293,17 +297,22 @@
     "authority_effect": "NONE_AFTER_CONSUMPTION"
   },
   "latest_symphonie_validation": {
-    "authorization_id": "AUTHORIZATION_LAB_SYMPHONIE_ALL_PHASES_VALIDATION_GAP_AND_MAINTAINABILITY_RECONCILIATION_082",
-    "evidence_id": "EVD-LAB-SYMPHONIE-ALL-PHASES-082",
-    "symphonie_commit": "1d74f90a059f4e8068d7fe654e85add6163771d3",
-    "validated_nodes": ["PHASE_0A","PHASE_0B","PHASE_0C","PHASE_1","PHASE_2","PHASE_3","PHASE_4","PHASE_5","PHASE_6","PHASE_7","CLOSURE"],
-    "scenario_count": 11,
-    "temporary_agent_model": "CODEX",
-    "claude": "DEFERRED_NOT_INTEGRATED",
+    "authorization_id": "AUTHORIZATION_SYMPHONIE_LIVHAVN_SYNTHETIC_FULL_WORKFLOW_PILOT_083",
+    "authorization_revision": 3,
+    "evidence_id": "EVD-LAB-SYMPHONIE-LIVHAVN-PILOT-083",
+    "pilot_id": "SYMPHONIE-PILOT-LIVHAVN-001",
+    "symphonie_commit": "31dd1345026240c83b015feef34d6f7f2d2147b7",
+    "completed_through": "GENERATE_MONOLITHIC_VISUAL_CALIBRATION",
+    "visual_direction_id": "LIVHAVN-VD-01",
+    "design_mode": "balanced",
+    "technical_foundation": "MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001",
+    "technical_foundation_role": "NEUTRAL_TECHNICAL_QUALITY_FIXTURE_NOT_VISUAL_DIRECTION",
     "real_human_decisions": "PENDING",
+    "next_required_gate": "VISUAL_CALIBRATION_APPROVED",
+    "phase_4_status": "NOT_AUTHORIZED",
     "real_product_effect": "NONE",
     "authority_effect": "NONE",
-    "final_verdict": "ALL_PHASES_VALIDATED_WITH_BOUNDED_LIMITS"
+    "final_verdict": "LIVHAVN_VISUAL_CALIBRATION_READY_WITH_BOUNDED_GAPS"
   },
   "latest_integration": {
     "integration_id": "INT-LAB-002",
