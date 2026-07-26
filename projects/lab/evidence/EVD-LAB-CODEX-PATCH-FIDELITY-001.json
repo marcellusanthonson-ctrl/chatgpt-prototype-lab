@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-CODEX-PATCH-FIDELITY-001",
+  "title": "Codex high-fidelity execution under complete bounded patch packages",
+  "status": "DOCUMENTED",
+  "recorded_at": "2026-07-26",
+  "project_id": "lab",
+  "evidence_class": "CROSS_PROJECT_EXECUTION_EVIDENCE",
+  "source_repositories": [
+    {
+      "repository": "marcellusanthonson-ctrl/carolina-md-landing-next-patch",
+      "branch": "main",
+      "commit": "89113a9926695da5d6ba578cc22ff2896887863e",
+      "role": "PATCH_PLAN_AND_HANDOFF_SOURCE"
+    },
+    {
+      "repository": "marcellusanthonson-ctrl/carolina-md-next-landing",
+      "branch": "main",
+      "commits": [
+        "bcf3af02911c6f2faa8d1b1fa91c4a449cdea943",
+        "f48d2f261fe5abcf1a1f976888a19a9fdb07e507"
+      ],
+      "role": "NEXTJS_MIGRATION_AND_RESPONSIVE_POLISH_RESULT"
+    }
+  ],
+  "observed_chain": [
+    "APPROVED_LANDING_SOURCE",
+    "REACT_VITE_INTEGRATION",
+    "COMPLETE_MIGRATION_PATCH_PACKAGE",
+    "CODEX_REACT_VITE_TO_NEXTJS_EXECUTION",
+    "RESPONSIVE_AND_LEGAL_MODAL_POLISH"
+  ],
+  "confirmed_facts": [
+    "The patch repository explicitly prohibited redesign, reinterpretation, asset replacement, Tailwind conversion and changes to copy, hierarchy, colors, spacing, shadows, animations or responsive behavior.",
+    "The patch repository identified the approved source repository, branch and source commit.",
+    "The implementation repository records a migration of the approved Carolina MD landing to Next.js and subsequent responsive polish.",
+    "Codex can execute high-fidelity transformations when the target, source, preservation rules, forbidden changes and validation expectations are operationally explicit."
+  ],
+  "claim_assessment": {
+    "claim": "Codex is extremely precise following well-specified instructions.",
+    "verdict": "CONFIRMED_IN_PRINCIPLE",
+    "exact_99_percent_metric": "INSUFFICIENT_EVIDENCE_AS_NUMERIC_MEASUREMENT",
+    "high_fidelity_result": "SUPPORTED_BY_REPOSITORY_EVIDENCE"
+  },
+  "strategy_reassessment": {
+    "previous_risk": "PRIMARY_CODEX_EXECUTION_WEAKNESS",
+    "reassessment": "REVERSED_AS_PRIMARY_ROOT_CAUSE",
+    "primary_observed_gap": "INSUFFICIENT_VISUAL_OUTCOME_SPECIFICATION_AND_CONTEXTUAL_IMPACT_CRITERIA",
+    "methodological_consequence": "Treat original visual creation as an intent-driven patch package with the same operational precision used in successful technical migrations, while preserving creative freedom and human visual authority."
+  },
+  "reusable_principles": [
+    "WHEN_TARGET_ARTIFACT_EXISTS_USE_FIDELITY_BASED_TRANSFORMATION",
+    "WHEN_TARGET_ARTIFACT_DOES_NOT_EXIST_USE_INTENT_DRIVEN_ART_DIRECTION_WITH_HUMAN_CALIBRATION",
+    "CODEX_EXECUTION_FIDELITY_IS_NOT_THE_PRIMARY_OBSERVED_GAP",
+    "COMPLETE_BOUNDED_CONTEXT_OUTPERFORMS_VAGUE_VISUAL_ADJECTIVES",
+    "TECHNICAL_CORRECTNESS_DOES_NOT_EQUAL_VISUAL_SUCCESS"
+  ],
+  "authority_effect": "NONE",
+  "integration_effect": "NONE",
+  "runtime_effect": "NONE"
+}
