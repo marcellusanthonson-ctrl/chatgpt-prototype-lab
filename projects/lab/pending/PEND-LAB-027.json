@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "id": "PEND-LAB-027",
+  "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+  "type": "SOFTWARE_SOLUTION_ENGINEERING_DISCRIMINATING_TEST_EXECUTION_AND_EXTERNAL_AUDIT",
+  "subject": "Execute and independently audit the Software Solution Engineering activation and value discrimination test design",
+  "priority": "HIGH",
+  "authorization_required": true,
+  "current_authority": "NONE",
+  "automatic_approval": false,
+  "preserves_pending": ["PEND-LAB-026"],
+  "next_authorized_action": "NONE_UNTIL_SEPARATE_EXPLICIT_AUTHORIZATION",
+  "source_refs": [
+    "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/MANIFEST.json",
+    "projects/lab/test-designs/SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json"
+  ]
+}
