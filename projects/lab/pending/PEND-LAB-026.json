@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "id": "PEND-LAB-026",
+  "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+  "type": "INTELLIGENT_APPLICATION_CONSTRUCTION_DISCRIMINATING_TEST_EXECUTION_AND_EXTERNAL_AUDIT",
+  "subject": "Execute and independently audit the Intelligent Application Construction activation and value discrimination test design",
+  "priority": "HIGH",
+  "authorization_required": true,
+  "current_authority": "NONE",
+  "automatic_approval": false,
+  "next_authorized_action": "NONE_UNTIL_SEPARATE_EXPLICIT_AUTHORIZATION",
+  "source_refs": [
+    "foundation-library/intelligent-application-construction/INTELLIGENT-APPLICATION-CONSTRUCTION-CANDIDATE-PACKAGE-001/MANIFEST.json",
+    "projects/lab/test-designs/INTELLIGENT-APPLICATION-CONSTRUCTION-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json"
+  ]
+}
