@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "REGISTRY-DELTA-SSE-DDIA-092",
+  "authorization_id": "AUTHORIZATION_LAB_SSE_DDIA_FOUNDATIONAL_NORMALIZATION_092",
+  "status": "DOCUMENTED_AND_PUBLISHED",
+  "package": "SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001@0.2.0",
+  "normalization": "SSE-DDIA-FOUNDATIONAL-NORMALIZATION-001",
+  "changes": {
+    "source_edition_roles_normalized": true,
+    "ddia_subcontracts_added": 15,
+    "fixtures_added": 8,
+    "fixture_count_total": 20,
+    "test_design_updated": true
+  },
+  "preserved_boundaries": {
+    "integrated": false,
+    "active": false,
+    "test_executed": false,
+    "external_audit_executed": false,
+    "runtime_effect": "NONE",
+    "rag_effect": "NONE",
+    "product_effect": "NONE",
+    "pend_lab_026_modified": false
+  },
+  "paths": [
+    "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/DDIA_FOUNDATIONAL_NORMALIZATION.json",
+    "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/SOURCE_REGISTER.json",
+    "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/FIXTURES.json",
+    "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/MANIFEST.json",
+    "projects/lab/test-designs/SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json"
+  ]
+}
