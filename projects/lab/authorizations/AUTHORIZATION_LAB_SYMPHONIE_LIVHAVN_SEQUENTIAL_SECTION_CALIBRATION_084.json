@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_SYMPHONIE_LIVHAVN_SEQUENTIAL_SECTION_CALIBRATION_084",
+  "revision": 1,
+  "status": "GRANTED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-25",
+  "target_repositories": [
+    {"repository":"marcellusanthonson-ctrl/chatgpt-prototype-lab","branch":"main","expected_parent_head":"c46b9ae16c3fab75e61ceb1292decf405cba32e4"},
+    {"repository":"marcellusanthonson-ctrl/symphonie","branch":"main","expected_parent_head":"31dd1345026240c83b015feef34d6f7f2d2147b7"}
+  ],
+  "scope": "REGISTER_REAL_HUMAN_REJECTION_AND_ESTABLISH_SEQUENTIAL_SECTION_BY_SECTION_MONOLITHIC_HTML_CALIBRATION",
+  "human_decision": {
+    "current_livhavn_designs": "NO_DESIGN_APPROVED",
+    "livhavn_vd_01": "REJECTED_BY_REAL_HUMAN_REVIEW",
+    "later_ungoverned_iterations": "NOT_APPROVED",
+    "local_block_editor": "DEFERRED_NOT_SELECTED_FOR_CURRENT_WORKFLOW"
+  },
+  "new_findings": [
+    {
+      "id": "LIVHAVN-RWD-001",
+      "class": "DEFECT",
+      "statement": "Responsive behavior is inconsistent across widths; headings fail to reflow correctly and become visually stuck or too close to boundaries at some intermediate sizes.",
+      "required_treatment": "Use fluid type and container constraints validated across continuous width sweeps, not only named breakpoints. Headings must reflow, preserve safe inline padding, avoid clipping and maintain readable line lengths."
+    },
+    {
+      "id": "LIVHAVN-IMG-001",
+      "class": "MANDATORY_VISUAL_RULE",
+      "statement": "Abstract imagery must not be used unless Jonathan Martínez explicitly requests it.",
+      "required_treatment": "Default to realistic, contextually credible photography or realistic visual assets. Abstract, symbolic, synthetic or illustrative animal imagery requires explicit authorization."
+    }
+  ],
+  "calibration_mode": "SEQUENTIAL_SECTION_BY_SECTION_MONOLITHIC_HTML_CALIBRATION",
+  "active_section": "HEADER_AND_HERO_FOUNDATION",
+  "rules": [
+    "ONE_ACTIVE_SECTION_PER_ITERATION",
+    "ONE_REQUESTED_VARIABLE_OR_COHERENT_CHANGE_SET_PER_ITERATION",
+    "ALL_NON_ACTIVE_SECTIONS_LOCKED",
+    "CONTINUOUS_RESPONSIVE_WIDTH_VALIDATION",
+    "NO_ABSTRACT_IMAGES_UNLESS_EXPLICITLY_REQUESTED"
+  ],
+  "authorized_actions": [
+    "REGISTER_HUMAN_DECISION",
+    "REGISTER_RESPONSIVE_AND_IMAGERY_FINDINGS",
+    "CREATE_INITIAL_OFFLINE_MONOLITHIC_HEADER_AND_HERO_FOUNDATION",
+    "VALIDATE_HTML_CSS_KEYBOARD_REFLOW_OVERFLOW_AND_INTERMEDIATE_WIDTHS",
+    "CREATE_ONE_ATOMIC_COMMIT_PER_REPOSITORY",
+    "PUSH_AND_VERIFY_REMOTE_HEADS"
+  ],
+  "prohibitions": [
+    "NO_PHASE_4",
+    "NO_PRODUCT_IMPLEMENTATION",
+    "NO_REAL_DATA",
+    "NO_REAL_PAYMENTS",
+    "NO_BACKEND",
+    "NO_DEPLOYMENT",
+    "NO_FULL_PAGE_IMAGE_VARIATION_LOOP",
+    "NO_ABSTRACT_IMAGES_WITHOUT_EXPLICIT_REQUEST",
+    "NO_UNREQUESTED_CHANGES_TO_LOCKED_SECTIONS",
+    "NO_AUTOMATIC_VISUAL_APPROVAL"
+  ],
+  "authority_after_consumption": "NONE"
+}
