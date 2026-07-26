@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0.0",
+  "normalization_id": "SSE-DDIA-FOUNDATIONAL-NORMALIZATION-001",
+  "package_id": "SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001",
+  "status": "DOCUMENTED_NOT_ACTIVATED",
+  "source_authorization": "AUTHORIZATION_LAB_SSE_DDIA_FOUNDATIONAL_NORMALIZATION_092",
+  "edition_policy": {
+    "first_edition": {
+      "year": 2017,
+      "role": "FOUNDATIONAL_FIRST_EDITION",
+      "freshness": "HISTORICALLY_AUTHORITATIVE_BUT_SUPERSEDED",
+      "repository_lead": "aasthas2022/SDE-Interview-and-Prep-Roadmap",
+      "repository_role": "DISCOVERY_LEAD_ONLY",
+      "normative_for_current_tooling": false,
+      "content_ingestion_authorized": false
+    },
+    "current_edition": {
+      "year": 2026,
+      "role": "CURRENT_PRIMARY_BOOK_EDITION",
+      "freshness": "CURRENT_2026",
+      "preferred_for_normalization": true,
+      "official_or_lawfully_acquired_access_required": true
+    }
+  },
+  "subcontracts": {
+    "SSE-03": [
+      "QUALITY_ATTRIBUTE_REQUIRES_OBSERVABLE_MEASURE_OR_EXPLICIT_ARGUMENT",
+      "STORAGE_ENGINE_CHOICE_REQUIRES_WORKLOAD_CHARACTERIZATION",
+      "CONSISTENCY_REQUIREMENTS_MUST_BE_EXPRESSED_AS_DOMAIN_INVARIANTS",
+      "REPLICATION_REQUIRES_EXPLICIT_STALENESS_AND_FAILURE_SEMANTICS",
+      "PARTITIONING_REQUIRES_LOAD_DISTRIBUTION_EVIDENCE",
+      "DERIVED_STATE_MUST_NOT_SILENTLY_REPLACE_SOURCE_AUTHORITY"
+    ],
+    "SSE-04": [
+      "DATA_AND_INTERFACE_EVOLUTION_ARE_ARCHITECTURE_CONCERNS",
+      "BACKWARD_AND_FORWARD_COMPATIBILITY_MUST_BE_EXPLICIT",
+      "MIGRATION_REPROCESSING_DEPRECATION_AND_ROLLBACK_REQUIRE_DESIGN"
+    ],
+    "SSE-07": [
+      "TIMEOUT_DOES_NOT_ESTABLISH_OPERATION_FAILURE",
+      "DISTRIBUTION_REQUIRES_EXPLICIT_PARTIAL_FAILURE_CLOCK_ORDERING_AND_COORDINATION_ANALYSIS",
+      "CROSS_BOUNDARY_INVARIANTS_REQUIRE_ARCHITECTURE_REASSESSMENT"
+    ],
+    "SSE-09": [
+      "EVENT_TIME_PROCESSING_TIME_AND_ARRIVAL_TIME_MUST_NOT_BE_CONFLATED",
+      "CRITICAL_INVARIANTS_REQUIRE_END_TO_END_VERIFICATION",
+      "DERIVED_DATA_REQUIRES_PROVENANCE_FRESHNESS_REBUILD_AND_RECONCILIATION"
+    ]
+  },
+  "copyright_boundary": [
+    "NO_PDF_COPY",
+    "NO_BOOK_TEXT_REPRODUCTION",
+    "NO_EMBEDDINGS",
+    "NO_VECTOR_INGESTION",
+    "NO_CORPUS_CREATION",
+    "DERIVED_RULES_MUST_BE_ORIGINAL_AND_TRACEABLE"
+  ],
+  "effects": {
+    "activation": "NONE",
+    "runtime": "NONE",
+    "rag": "NONE",
+    "architecture_selection": "NONE",
+    "product": "NONE"
+  }
+}
