@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "package_id": "SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001",
+  "status": "CANDIDATE_NOT_APPROVED",
+  "records": [
+    {"id": "SSE-P-001", "statement": "Architecture must be proportional to verified product, system, organizational and lifecycle needs.", "modules": ["SSE-01", "SSE-02"]},
+    {"id": "SSE-P-002", "statement": "Prefer the simplest reversible architecture that satisfies binding functional and non-functional requirements.", "modules": ["SSE-02", "SSE-04"]},
+    {"id": "SSE-P-003", "statement": "A modular monolith is the default comparison baseline before distribution; it is not an automatic final choice.", "modules": ["SSE-01", "SSE-07"]},
+    {"id": "SSE-P-004", "statement": "Distribution requires explicit evidence for independent deployability, isolation, differential scaling or organizational autonomy.", "modules": ["SSE-07"]},
+    {"id": "SSE-P-005", "statement": "Reliability, scalability, maintainability, security and operability remain separate requirements and trade-offs.", "modules": ["SSE-02", "SSE-03", "SSE-09", "SSE-10"]},
+    {"id": "SSE-P-006", "statement": "Data architecture must record system of record, derived state, consistency expectations, failure modes and lineage.", "modules": ["SSE-03"]},
+    {"id": "SSE-P-007", "statement": "An architecture decision requires context, alternatives, trade-offs, evidence, reversibility, review trigger and retirement condition.", "modules": ["SSE-02", "SSE-04"]},
+    {"id": "SSE-P-008", "statement": "Code review, testing, documentation, dependency management, build systems and migrations are part of solution sustainability.", "modules": ["SSE-05", "SSE-09"]},
+    {"id": "SSE-P-009", "statement": "Legacy changes begin by characterizing observed behavior and creating a bounded safety net before structural refactoring.", "modules": ["SSE-06"]},
+    {"id": "SSE-P-010", "statement": "Patterns are conditional responses to specific forces and must not be accumulated as default structure.", "modules": ["SSE-08"]},
+    {"id": "SSE-P-011", "statement": "Interview architectures and historical examples cannot establish production fitness without current project evidence.", "modules": ["SSE-02", "SSE-07"]},
+    {"id": "SSE-P-012", "statement": "Current security controls and claims require current primary sources and project-specific threat and data boundaries.", "modules": ["SSE-10"]}
+  ],
+  "promotion_rule": "NO_PRINCIPLE_IS_APPROVED_OR_ACTIVE_BEFORE_DISCRIMINATING_TEST_EXECUTION_EXTERNAL_AUDIT_AND_HUMAN_DECISION"
+}
