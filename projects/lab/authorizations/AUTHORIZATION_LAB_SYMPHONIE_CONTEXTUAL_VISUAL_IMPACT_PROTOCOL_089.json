@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_SYMPHONIE_CONTEXTUAL_VISUAL_IMPACT_PROTOCOL_089",
+  "revision": 1,
+  "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_OF_DOCUMENTARY_EVIDENCE_AND_CODEX_BRIEF",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-26",
+  "consumed_at": "2026-07-26",
+  "executor": "CHATGPT",
+  "execution_count": 1,
+  "execution_count_limit": 1,
+  "project_id": "SYMPHONIE-PILOT-LIVHAVN-001",
+  "scope": "DOCUMENTARY_REGISTRATION_AND_BRIEF_CREATION_ONLY",
+  "repositories": [
+    {
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "expected_parent_head": "e9d25f2f092c1f7430b12921e8efc25d430e7663",
+      "commit_authorized": true,
+      "push_authorized": true
+    },
+    {
+      "repository": "marcellusanthonson-ctrl/symphonie",
+      "branch": "main",
+      "expected_parent_head": "95da1b1ce9b0d0e00631e2913a1dc203144ba1ef",
+      "commit_authorized": true,
+      "push_authorized": true
+    }
+  ],
+  "authorized_outputs": [
+    "projects/lab/evidence/EVD-LAB-CODEX-PATCH-FIDELITY-001.json",
+    "pilotos/SYMPHONIE-PILOT-LIVHAVN-001/phase-3/LIVHAVN_INTENT_PATCH_BRIEF_089.json"
+  ],
+  "authorized_actions": [
+    "REGISTER_CODEX_PATCH_PACKAGE_FIDELITY_EVIDENCE",
+    "REGISTER_VISUAL_STRATEGY_REASSESSMENT",
+    "CREATE_INTENT_DRIVEN_PATCH_BRIEF_FOR_CODEX"
+  ],
+  "forbidden_actions": [
+    "NO_HTML_CREATION",
+    "NO_PRODUCT_CODE_MODIFICATION",
+    "NO_IMAGE_GENERATION",
+    "NO_DEPENDENCY_INSTALLATION",
+    "NO_RUNTIME_EXECUTION",
+    "NO_DEPLOYMENT",
+    "NO_NEW_VISUAL_DIRECTION_EXECUTION"
+  ],
+  "consumption_criterion": "DOCUMENTARY_EVIDENCE_AND_BRIEF_PUBLISHED_AND_REMOTE_HEADS_VERIFIED",
+  "active_execution_authority_after_consumption": "NONE"
+}
