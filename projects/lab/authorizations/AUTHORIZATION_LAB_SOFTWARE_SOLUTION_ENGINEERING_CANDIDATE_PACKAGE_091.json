@@ -3,9 +3,10 @@
   "authorization_id": "AUTHORIZATION_LAB_SOFTWARE_SOLUTION_ENGINEERING_CANDIDATE_PACKAGE_091",
   "project_id": "lab",
   "title": "Create the Software Solution Engineering candidate knowledge package and discriminating test design",
-  "status": "GRANTED_FOR_THIS_DOCUMENTARY_EXECUTION",
+  "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_OF_COMPLETE_DOCUMENTARY_PACKAGE_AND_TEST_DESIGN",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-07-26",
+  "consumed_at": "2026-07-26",
   "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "branch": "main",
   "expected_parent_head": "3163f34ff4fb5d5a1acee782f813228fc59e1718",
@@ -41,8 +42,19 @@
     "DEPLOYMENT",
     "RELEASE"
   ],
+  "published_artifacts": [
+    "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/MANIFEST.json",
+    "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/ACTIVATION_CONTRACT.json",
+    "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/SOURCE_REGISTER.json",
+    "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/PRINCIPLES.json",
+    "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/MISUSE_RISKS.json",
+    "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/FIXTURES.json",
+    "projects/lab/test-designs/SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json",
+    "projects/lab/pending/PEND-LAB-027.json",
+    "registry/deltas/software-solution-engineering-091.json"
+  ],
   "consumption_criterion": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_OF_COMPLETE_DOCUMENTARY_PACKAGE_AND_TEST_DESIGN",
-  "authority_effect": "BOUNDED_DOCUMENTARY_WRITE_ONLY",
+  "authority_effect": "NONE_AFTER_CONSUMPTION",
   "product_effect": "NONE",
   "runtime_effect": "NONE"
 }
