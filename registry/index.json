@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-07-25",
+  "updated_at": "2026-07-26",
   "counts": {
     "projects": 7,
     "decisions": 21,
@@ -9,13 +9,13 @@
     "ideas": 5,
     "integrations": 6,
     "experiments": 8,
-    "authorizations": 50,
-    "evidence": 29,
+    "authorizations": 51,
+    "evidence": 30,
     "unincorporated": 0,
     "proposals": 3,
     "sessions": 1,
     "reassessments": 5,
-    "reconciliations": 1,
+    "reconciliations": 2,
     "test_designs": 3,
     "test_executions": 2,
     "source_packages": 2,
@@ -37,13 +37,22 @@
     "integrations": "registry/integrations.json",
     "experiments": "registry/experiments.json",
     "authorizations": "registry/authorizations.json",
+    "authorization_deltas": [
+      "registry/deltas/authorizations-089.json"
+    ],
     "evidence": "registry/evidence.json",
+    "evidence_deltas": [
+      "registry/deltas/evidence-code-fidelity-001.json"
+    ],
     "unincorporated": "registry/unincorporated.json",
     "proposals": "registry/proposals.json",
     "sessions": "registry/sessions.json",
     "reassessments": "registry/reassessments.json",
     "external_audits": "projects/lab/external-audits/index.json",
-    "reconciliations": "projects/lab/reconciliations/REC-LAB-EXP065-RCA002-001.json",
+    "reconciliations": [
+      "projects/lab/reconciliations/REC-LAB-EXP065-RCA002-001.json",
+      "projects/lab/reconciliations/REC-LAB-SYMPHONIE-VISUAL-089-001.json"
+    ],
     "test_designs": "projects/lab/test-designs/index.json",
     "pending_successor": "projects/lab/pending/PEND-LAB-024.json",
     "test_executions": "projects/lab/test-executions/index.json",
@@ -58,13 +67,16 @@
     "decision": "DEC-LAB-021",
     "error": "ERR-LAB-006",
     "pattern": "PAT-LAB-008",
-    "authorization": "AUTHORIZATION_SYMPHONIE_LIVHAVN_SYNTHETIC_FULL_WORKFLOW_PILOT_083",
-    "evidence": "EVD-LAB-SYMPHONIE-LIVHAVN-PILOT-083",
+    "authorization": "AUTHORIZATION_LAB_SYMPHONIE_CONTEXTUAL_VISUAL_IMPACT_PROTOCOL_089",
+    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_SYMPHONIE_CONTEXTUAL_VISUAL_IMPACT_PROTOCOL_089.json",
+    "evidence": "EVD-LAB-CODEX-PATCH-FIDELITY-001",
+    "evidence_path": "projects/lab/evidence/EVD-LAB-CODEX-PATCH-FIDELITY-001.json",
     "experiment": "EXP-LAB-003",
     "proposal": "PROP-LAB-003",
     "session": "SES-2026-06-28-001",
     "reassessment": "REA-LAB-006",
-    "reconciliation": "REC-LAB-EXP065-RCA002-001",
+    "reconciliation": "REC-LAB-SYMPHONIE-VISUAL-089-001",
+    "reconciliation_path": "projects/lab/reconciliations/REC-LAB-SYMPHONIE-VISUAL-089-001.json",
     "test_design": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001",
     "pending": "PEND-LAB-025",
     "test_execution": "FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-EXECUTION-002",
@@ -84,6 +96,7 @@
     "integration": "INT-LAB-002",
     "chatgpt_criterion_layer": "CHATGPT-CRITERION-LAYER-001@1.1.0",
     "minimum_impeccable_visual_foundation": "MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001@1.1.1",
-    "local_icon_asset_candidate_library": "LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001@1.1.0"
+    "local_icon_asset_candidate_library": "LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001@1.1.0",
+    "livhavn_intent_patch_brief": "pilotos/SYMPHONIE-PILOT-LIVHAVN-001/phase-3/LIVHAVN_INTENT_PATCH_BRIEF_089.json"
   }
 }
