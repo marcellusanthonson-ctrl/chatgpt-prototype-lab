@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "updated_at": "2026-07-26",
+  "base_state": "CURRENT_STATE.json",
+  "delta_id": "CURRENT-STATE-DELTA-SYMPHONIE-VISUAL-089",
+  "status_transition": {
+    "from": "SYMPHONIE_LIVHAVN_VISUAL_CALIBRATION_AWAITING_REAL_HUMAN_DECISION",
+    "to": "SYMPHONIE_LIVHAVN_087_REJECTED_INTENT_PATCH_BRIEF_089_REGISTERED_AWAITING_NEW_EXECUTION_AUTHORIZATION"
+  },
+  "active_project": "lab",
+  "facts": [
+    "LIVHAVN_DIRECTION_087_HUMAN_VISUAL_RESULT_REJECTED",
+    "AUTHORIZATION_089_CONSUMED_ON_VERIFIED_DOCUMENTARY_PUBLICATION",
+    "CODEX_PATCH_FIDELITY_EVIDENCE_REGISTERED",
+    "LIVHAVN_INTENT_PATCH_BRIEF_089_PUBLISHED",
+    "NO_NEW_VISUAL_DIRECTION_EXECUTION_AUTHORIZED"
+  ],
+  "canonical_refs": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_SYMPHONIE_CONTEXTUAL_VISUAL_IMPACT_PROTOCOL_089.json",
+    "projects/lab/evidence/EVD-LAB-CODEX-PATCH-FIDELITY-001.json",
+    "projects/lab/reconciliations/REC-LAB-SYMPHONIE-VISUAL-089-001.json",
+    "pilotos/SYMPHONIE-PILOT-LIVHAVN-001/phase-3/LIVHAVN_INTENT_PATCH_BRIEF_089.json"
+  ],
+  "authority": {
+    "commit_authorized": false,
+    "push_authorized": false,
+    "runtime_authorized": false,
+    "new_visual_direction_authorized": false,
+    "active_execution_authority": "NONE"
+  },
+  "next_required_transition": "EXPLICIT_BOUNDED_AUTHORIZATION_TO_EXECUTE_A_NEW_LIVHAVN_VISUAL_DIRECTION_FROM_BRIEF_089"
+}
