@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_SYMPHONIE_LIVHAVN_NEW_CONTROLLED_DIRECTION_087",
+  "revision": 1,
+  "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_OF_THE_NEW_MONOLITHIC_DIRECTION_COMPLETE_DOCUMENTATION_AND_PREDELIVERY_GATE_REPORT",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-25",
+  "consumed_at": "2026-07-25",
+  "executor": "CODEX",
+  "execution_count": 1,
+  "execution_count_limit": 1,
+  "project_id": "SYMPHONIE-PILOT-LIVHAVN-001",
+  "phase": "PHASE_3_MONOLITHIC_VISUAL_CALIBRATION",
+  "capability": "HEADER_AND_HERO",
+  "design_mode": "CONTROLLED_REALISTIC_EDITORIAL",
+  "applicable_archetype": "SOCIAL_IMPACT_FUNDRAISING_AND_CARE_TRANSPARENCY",
+  "direction_count": 1,
+  "human_direction_shortlist_required": false,
+  "three_direction_requirement": "NOT_APPLICABLE_HISTORICAL_ONLY",
+  "repositories": [
+    {
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "expected_parent_head": "74677ef03518748bf2455a7fd16616eff996d832",
+      "result_commit": "VERIFY_LIVE_AT_USE_NOT_SELF_EMBEDDED",
+      "commit_authorized": true,
+      "push_authorized": true
+    },
+    {
+      "repository": "marcellusanthonson-ctrl/symphonie",
+      "branch": "main",
+      "expected_parent_head": "567ff78dae4be8d51bb4e8491db8e79d82e4fef6",
+      "result_commit": "95da1b1ce9b0d0e00631e2913a1dc203144ba1ef",
+      "commit_authorized": true,
+      "push_authorized": true
+    }
+  ],
+  "references": {
+    "visual_profile": {
+      "id": "VPP-JM-001",
+      "version": "1.2.0",
+      "resolved_source_commit": "93d9ace",
+      "applicability": "PARTIALLY_APPLICABLE_CONTEXTUAL_SIGNALS_ONLY"
+    },
+    "functional_baseline": {
+      "id": "MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001",
+      "version": "1.1.1",
+      "role": "NEUTRAL_TECHNICAL_QUALITY_FIXTURE_NOT_VISUAL_DIRECTION"
+    },
+    "criterion_layer": {
+      "id": "CHATGPT-CRITERION-LAYER-001",
+      "version": "1.1.0"
+    },
+    "rejected_direction": {
+      "id": "LIVHAVN-VD-01",
+      "usage": "NEGATIVE_AUDIT_EVIDENCE_ONLY",
+      "aesthetic_reuse": "PROHIBITED"
+    }
+  },
+  "scope": {
+    "active_sections": ["LIV-001", "LIV-002"],
+    "locked_sections": ["LIV-003", "LIV-004", "LIV-005", "LIV-006", "LIV-007", "LIV-008", "LIV-009", "LIV-010", "LIV-011", "LIV-012"],
+    "phase_4": "NOT_AUTHORIZED",
+    "application_implementation": "NOT_AUTHORIZED",
+    "backend": "NOT_AUTHORIZED",
+    "payments": "NOT_AUTHORIZED",
+    "real_data": "NOT_AUTHORIZED",
+    "authentication": "NOT_AUTHORIZED",
+    "deployment": "NOT_AUTHORIZED"
+  },
+  "outputs": [
+    {
+      "path": "pilotos/SYMPHONIE-PILOT-LIVHAVN-001/phase-3/LIVHAVN_NEW_DIRECTION_087.html",
+      "sha256": "3294a2fe28cdb21f8ee69fb5562048f51ae6c29c159b0fe97d46c7d0ca06ab24"
+    },
+    {
+      "path": "pilotos/SYMPHONIE-PILOT-LIVHAVN-001/phase-3/SECTION_REGISTRY.json",
+      "sha256": "aa0762b4362febc437cd65fe923e27a076ccb3efe10d31d34728420d382bb196"
+    },
+    {
+      "path": "pilotos/SYMPHONIE-PILOT-LIVHAVN-001/phase-3/VISUAL_SPEC_087.md",
+      "sha256": "30fa2721855481010fc826351433e0bf0138c168c09915a482695dbb0b2a6314"
+    },
+    {
+      "path": "pilotos/SYMPHONIE-PILOT-LIVHAVN-001/phase-3/CHANGE_REPORT_087.md",
+      "sha256": "9c7f8d8a2d738c7ff8f77071540ff64de90a4b16be0e8796a5a2edc438c9103c"
+    },
+    {
+      "path": "pilotos/SYMPHONIE-PILOT-LIVHAVN-001/phase-3/VISUAL_DELTA_AUDIT_087.md",
+      "sha256": "2f4a7a22b2a97c52faf47d7c3d9b4c24616ef70113ea95b80c0e195fae6b1c37"
+    },
+    {
+      "path": "pilotos/SYMPHONIE-PILOT-LIVHAVN-001/phase-3/LIVHAVN_NEW_DIRECTION_087.predelivery-report.json",
+      "sha256": "f42cf9935aba92d2fdd1c6ca06c98d7939c4f020f3f78897548b48e26544e95a"
+    },
+    {
+      "path": "pilotos/SYMPHONIE-PILOT-LIVHAVN-001/phase-3/brief-087.json",
+      "sha256": "2539b136d46f352bcfa5bb97b09544fab935f110ba177c736dfb64be15660680"
+    },
+    {
+      "path": "pilotos/SYMPHONIE-PILOT-LIVHAVN-001/phase-3/scoping-087.json",
+      "sha256": "ffe588834fbbcca60e235d29544dc56e4193b904602f8bf8735947591d2f731b"
+    }
+  ],
+  "gate": {
+    "id": "LIVHAVN_HTML_PREDELIVERY_AUTOMATED_GATE",
+    "verdict": "PASS_READY_FOR_HUMAN_VISUAL_REVIEW",
+    "static_validation": "PASS",
+    "browser_validation": "PASS",
+    "browser_runtime": "LOCAL_CHROME_HEADLESS",
+    "measured_width_count": 108,
+    "range_px": [320, 1920],
+    "keyboard": "PASS",
+    "focus": "PASS",
+    "review_labels_no_reflow": "PASS",
+    "reduced_motion": "PASS",
+    "text_zoom_200_percent": "PASS",
+    "external_network": "ZERO",
+    "console_errors": "ZERO",
+    "automatic_findings": []
+  },
+  "imagery": {
+    "class": "REALISTIC_RENDER",
+    "source": "OPENAI_IMAGEGEN_SYNTHETIC_ORIGINAL",
+    "real_people_or_animals": false,
+    "abstract_symbolic_or_illustrative": false,
+    "embedded_in_html": true,
+    "external_requests": false
+  },
+  "result": {
+    "visual_direction": "CUADERNO_DE_CAMPO_EDITORIAL",
+    "technical_delivery_gate": "PASS_READY_FOR_HUMAN_VISUAL_REVIEW",
+    "human_visual_approval": "PENDING",
+    "technical_gate_pass_equals_visual_approval": false,
+    "phase_4_status": "NOT_AUTHORIZED",
+    "real_data_effect": "NONE",
+    "real_payment_effect": "NONE",
+    "deployment_effect": "NONE",
+    "authority_effect": "NONE"
+  },
+  "consumption_evidence": {
+    "symphonie_commit": "95da1b1ce9b0d0e00631e2913a1dc203144ba1ef",
+    "symphonie_remote_head": "VERIFY_LIVE_AT_USE",
+    "lab_commit": "VERIFY_LIVE_AT_USE_NOT_SELF_EMBEDDED",
+    "lab_remote_head": "VERIFY_LIVE_AT_USE"
+  },
+  "active_execution_authority_after_consumption": "NONE"
+}
