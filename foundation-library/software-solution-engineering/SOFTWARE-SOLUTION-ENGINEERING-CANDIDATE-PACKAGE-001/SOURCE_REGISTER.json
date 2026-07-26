@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "package_id": "SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001",
   "repository_lead": {
     "repository": "iamindian/References_Books",
@@ -9,6 +9,14 @@
     "content_ingestion_authorized": false,
     "license_boundary": "REPOSITORY_STRUCTURE_AND_README_LICENSE_DO_NOT_ESTABLISH_BOOK_REUSE_RIGHTS"
   },
+  "additional_repository_leads": [
+    {
+      "repository": "aasthas2022/SDE-Interview-and-Prep-Roadmap",
+      "path": "System Design/Resources/Designing Data Intensive Applications by Martin Kleppmann.pdf",
+      "role": "DISCOVERY_LEAD_ONLY",
+      "content_ingestion_authorized": false
+    }
+  ],
   "priority_sources": [
     {
       "id": "SRC-SSE-001",
@@ -21,8 +29,12 @@
       "id": "SRC-SSE-002",
       "title": "Designing Data-Intensive Applications",
       "role": "PRIMARY_HIGH_VALUE_CANDIDATE",
-      "preferred_source": "CURRENT_OFFICIAL_EDITION",
-      "candidate_domains": ["RELIABILITY", "SCALABILITY", "MAINTAINABILITY", "DATA_MODELS", "REPLICATION", "PARTITIONING", "TRANSACTIONS", "BATCH_STREAMING"]
+      "preferred_source": "CURRENT_OFFICIAL_EDITION_2026",
+      "edition_policy": {
+        "2017": "FOUNDATIONAL_FIRST_EDITION_HISTORICALLY_AUTHORITATIVE_BUT_SUPERSEDED",
+        "2026": "CURRENT_PRIMARY_BOOK_EDITION_PREFERRED_FOR_NORMALIZATION"
+      },
+      "candidate_domains": ["RELIABILITY", "SCALABILITY", "MAINTAINABILITY", "DATA_MODELS", "STORAGE_ENGINES", "SCHEMA_EVOLUTION", "REPLICATION", "PARTITIONING", "TRANSACTIONS", "DISTRIBUTED_FAILURE", "BATCH_STREAMING", "DERIVED_DATA_AUTHORITY", "END_TO_END_INTEGRITY"]
     },
     {
       "id": "SRC-SSE-003",
@@ -46,13 +58,7 @@
       "candidate_domains": ["DOMAIN_MODEL", "TRANSACTION_SCRIPT", "SERVICE_LAYER", "REPOSITORY", "DATA_MAPPER", "UNIT_OF_WORK", "GATEWAY"]
     }
   ],
-  "secondary_sources": [
-    "THE_PRAGMATIC_PROGRAMMER",
-    "CODE_COMPLETE",
-    "CLEAN_ARCHITECTURE",
-    "CLEAN_CODE",
-    "HEAD_FIRST_DESIGN_PATTERNS"
-  ],
+  "secondary_sources": ["THE_PRAGMATIC_PROGRAMMER", "CODE_COMPLETE", "CLEAN_ARCHITECTURE", "CLEAN_CODE", "HEAD_FIRST_DESIGN_PATTERNS"],
   "secondary_rule": "NO_PROMOTION_WITHOUT_INCREMENTAL_VALUE_AND_MISUSE_TESTS",
   "excluded_or_limited": [
     {"class": "SYSTEM_DESIGN_INTERVIEW_BOOKS", "status": "TRAINING_REFERENCE_ONLY"},
@@ -60,12 +66,5 @@
     {"class": "STACK_SPECIFIC_BOOKS", "status": "STACK_SPECIFIC_REFERENCE_ONLY"},
     {"class": "ALGORITHM_AND_CODING_INTERVIEW_BOOKS", "status": "OUT_OF_SCOPE_FOR_SSE_LAYER"}
   ],
-  "copyright_boundary": [
-    "NO_BOOK_COPY",
-    "NO_BOOK_TEXT_REPRODUCTION",
-    "NO_EMBEDDINGS",
-    "NO_VECTOR_INGESTION",
-    "NO_CORPUS_CREATION",
-    "USE_OFFICIAL_OR_LAWFULLY_ACQUIRED_SOURCES"
-  ]
+  "copyright_boundary": ["NO_BOOK_COPY", "NO_BOOK_TEXT_REPRODUCTION", "NO_EMBEDDINGS", "NO_VECTOR_INGESTION", "NO_CORPUS_CREATION", "USE_OFFICIAL_OR_LAWFULLY_ACQUIRED_SOURCES"]
 }
