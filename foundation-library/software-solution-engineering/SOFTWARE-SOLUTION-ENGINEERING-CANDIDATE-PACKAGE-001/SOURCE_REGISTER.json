@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "package_id": "SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001",
+  "repository_lead": {
+    "repository": "iamindian/References_Books",
+    "branch": "master",
+    "observed_head": "d09eca98d2be09d15ed3d7ed162ff9ed2c1ea5bd",
+    "role": "DISCOVERY_LEAD_ONLY",
+    "content_ingestion_authorized": false,
+    "license_boundary": "REPOSITORY_STRUCTURE_AND_README_LICENSE_DO_NOT_ESTABLISH_BOOK_REUSE_RIGHTS"
+  },
+  "priority_sources": [
+    {
+      "id": "SRC-SSE-001",
+      "title": "Software Engineering at Google",
+      "role": "PRIMARY_HIGH_VALUE_CANDIDATE",
+      "preferred_source": "OFFICIAL_ABSEIL_DIGITAL_EDITION",
+      "candidate_domains": ["TIME_SCALE_TRADEOFFS", "CODE_REVIEW", "TESTING", "DOCUMENTATION", "DEPENDENCIES", "MIGRATIONS", "SUSTAINABILITY"]
+    },
+    {
+      "id": "SRC-SSE-002",
+      "title": "Designing Data-Intensive Applications",
+      "role": "PRIMARY_HIGH_VALUE_CANDIDATE",
+      "preferred_source": "CURRENT_OFFICIAL_EDITION",
+      "candidate_domains": ["RELIABILITY", "SCALABILITY", "MAINTAINABILITY", "DATA_MODELS", "REPLICATION", "PARTITIONING", "TRANSACTIONS", "BATCH_STREAMING"]
+    },
+    {
+      "id": "SRC-SSE-003",
+      "title": "Building Microservices, Second Edition",
+      "role": "CONDITIONAL_ARCHITECTURE_CANDIDATE",
+      "preferred_source": "OFFICIAL_SECOND_EDITION",
+      "candidate_domains": ["MODULAR_MONOLITH", "SERVICE_BOUNDARIES", "INDEPENDENT_DEPLOYABILITY", "DISTRIBUTED_MONOLITH", "OPERABILITY_COST"]
+    },
+    {
+      "id": "SRC-SSE-004",
+      "title": "Working Effectively with Legacy Code",
+      "role": "PRIMARY_LEGACY_RECOVERY_CANDIDATE",
+      "preferred_source": "LAWFULLY_ACQUIRED_EDITION",
+      "candidate_domains": ["CHARACTERIZATION_TESTS", "SEAMS", "DEPENDENCY_BREAKING", "SAFE_INCREMENTAL_CHANGE"]
+    },
+    {
+      "id": "SRC-SSE-005",
+      "title": "Patterns of Enterprise Application Architecture",
+      "role": "CONDITIONAL_PATTERN_CATALOG",
+      "preferred_source": "OFFICIAL_FOWLER_CATALOG_AND_LAWFUL_BOOK_ACCESS",
+      "candidate_domains": ["DOMAIN_MODEL", "TRANSACTION_SCRIPT", "SERVICE_LAYER", "REPOSITORY", "DATA_MAPPER", "UNIT_OF_WORK", "GATEWAY"]
+    }
+  ],
+  "secondary_sources": [
+    "THE_PRAGMATIC_PROGRAMMER",
+    "CODE_COMPLETE",
+    "CLEAN_ARCHITECTURE",
+    "CLEAN_CODE",
+    "HEAD_FIRST_DESIGN_PATTERNS"
+  ],
+  "secondary_rule": "NO_PROMOTION_WITHOUT_INCREMENTAL_VALUE_AND_MISUSE_TESTS",
+  "excluded_or_limited": [
+    {"class": "SYSTEM_DESIGN_INTERVIEW_BOOKS", "status": "TRAINING_REFERENCE_ONLY"},
+    {"class": "OLD_SECURITY_BOOKS", "status": "HISTORICAL_SECURITY_REFERENCE_ONLY"},
+    {"class": "STACK_SPECIFIC_BOOKS", "status": "STACK_SPECIFIC_REFERENCE_ONLY"},
+    {"class": "ALGORITHM_AND_CODING_INTERVIEW_BOOKS", "status": "OUT_OF_SCOPE_FOR_SSE_LAYER"}
+  ],
+  "copyright_boundary": [
+    "NO_BOOK_COPY",
+    "NO_BOOK_TEXT_REPRODUCTION",
+    "NO_EMBEDDINGS",
+    "NO_VECTOR_INGESTION",
+    "NO_CORPUS_CREATION",
+    "USE_OFFICIAL_OR_LAWFULLY_ACQUIRED_SOURCES"
+  ]
+}
