@@ -3,9 +3,10 @@
   "authorization_id": "AUTHORIZATION_LAB_INTELLIGENT_APPLICATION_CONSTRUCTION_CANDIDATE_PACKAGE_090",
   "project_id": "lab",
   "title": "Create the Intelligent Application Construction candidate knowledge package and discriminating test design",
-  "status": "GRANTED_FOR_THIS_DOCUMENTARY_EXECUTION",
+  "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-07-26",
+  "consumed_at": "2026-07-26",
   "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "branch": "main",
   "expected_parent_head": "561b294f067bb75a90d1f6f02039f9138f528e1b",
@@ -38,7 +39,15 @@
     "EXTERNAL_AUDIT_EXECUTION"
   ],
   "consumption_criterion": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_OF_COMPLETE_DOCUMENTARY_PACKAGE_AND_TEST_DESIGN",
-  "authority_effect": "BOUNDED_DOCUMENTARY_WRITE_ONLY",
+  "result_refs": [
+    "foundation-library/intelligent-application-construction/INTELLIGENT-APPLICATION-CONSTRUCTION-CANDIDATE-PACKAGE-001/MANIFEST.json",
+    "foundation-library/intelligent-application-construction/INTELLIGENT-APPLICATION-CONSTRUCTION-CANDIDATE-PACKAGE-001/README.md",
+    "projects/lab/test-designs/INTELLIGENT-APPLICATION-CONSTRUCTION-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json",
+    "projects/lab/test-designs/INTELLIGENT-APPLICATION-CONSTRUCTION-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/FIXTURES.json",
+    "projects/lab/pending/PEND-LAB-026.json",
+    "registry/deltas/intelligent-application-construction-090.json"
+  ],
+  "authority_effect": "NONE_AFTER_CONSUMPTION",
   "product_effect": "NONE",
   "runtime_effect": "NONE"
 }
