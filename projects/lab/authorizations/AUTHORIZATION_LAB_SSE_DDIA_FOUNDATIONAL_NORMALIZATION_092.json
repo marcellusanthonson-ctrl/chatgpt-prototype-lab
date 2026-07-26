@@ -3,9 +3,10 @@
   "authorization_id": "AUTHORIZATION_LAB_SSE_DDIA_FOUNDATIONAL_NORMALIZATION_092",
   "project_id": "lab",
   "title": "Normalize Designing Data-Intensive Applications within the SSE candidate package",
-  "status": "GRANTED_FOR_THIS_DOCUMENTARY_EXECUTION",
+  "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-07-26",
+  "consumed_at": "2026-07-26",
   "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "branch": "main",
   "expected_parent_head": "cb58e4e57a409fa8fc838666d8baec9c7be7bbb7",
@@ -34,8 +35,10 @@
     "VECTOR_DATABASE",
     "ARCHITECTURE_OR_STACK_SELECTION"
   ],
+  "publication_delta": "registry/deltas/sse-ddia-foundational-normalization-092.json",
   "consumption_criterion": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_OF_DDIA_NORMALIZATION",
-  "authority_effect": "BOUNDED_DOCUMENTARY_WRITE_ONLY",
+  "authority_effect": "NONE_AFTER_CONSUMPTION",
   "runtime_effect": "NONE",
-  "product_effect": "NONE"
+  "product_effect": "NONE",
+  "next_authorized_action": "NONE"
 }
