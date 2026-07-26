@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "reconciliation_id": "REC-LAB-SYMPHONIE-VISUAL-089-001",
+  "updated_at": "2026-07-26",
+  "project_id": "lab",
+  "status": "COMPLETED_WITH_APPEND_ONLY_REGISTRY_DELTAS",
+  "authorization_id": "AUTHORIZATION_LAB_SYMPHONIE_CONTEXTUAL_VISUAL_IMPACT_PROTOCOL_089",
+  "purpose": "Reconcile the consumed authorization, Codex patch fidelity evidence and LivHavn intent-driven patch brief into canonical discovery without destructively replacing historical aggregate registries.",
+  "inputs": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_SYMPHONIE_CONTEXTUAL_VISUAL_IMPACT_PROTOCOL_089.json",
+    "projects/lab/evidence/EVD-LAB-CODEX-PATCH-FIDELITY-001.json",
+    "pilotos/SYMPHONIE-PILOT-LIVHAVN-001/phase-3/LIVHAVN_INTENT_PATCH_BRIEF_089.json"
+  ],
+  "outputs": [
+    "registry/deltas/authorizations-089.json",
+    "registry/deltas/evidence-code-fidelity-001.json",
+    "registry/index.json"
+  ],
+  "facts_registered": [
+    "CODEX_EXECUTION_FIDELITY_IS_NOT_THE_PRIMARY_OBSERVED_GAP",
+    "HIGH_FIDELITY_TRANSFORMATION_IS_SUPPORTED_WHEN_A_COMPLETE_BOUNDED_PATCH_PACKAGE_EXISTS",
+    "PRIMARY_VISUAL_GAP_IS_INSUFFICIENT_VISUAL_OUTCOME_SPECIFICATION_AND_CONTEXTUAL_IMPACT_CRITERIA",
+    "THE_REPORTED_99_PERCENT_SUCCESS_REMAINS_A_HUMAN_ASSESSMENT_NOT_AN_INDEPENDENTLY_REPRODUCED_METRIC"
+  ],
+  "registry_strategy": {
+    "mode": "APPEND_ONLY_DELTAS",
+    "reason": "Preserve historical aggregate registries and avoid destructive full-file replacement while making new records canonically discoverable from registry/index.json.",
+    "base_authorization_registry": "registry/authorizations.json",
+    "authorization_delta": "registry/deltas/authorizations-089.json",
+    "base_evidence_registry": "registry/evidence.json",
+    "evidence_delta": "registry/deltas/evidence-code-fidelity-001.json"
+  },
+  "authority": {
+    "runtime_authorized": false,
+    "integration_authorized": false,
+    "product_changes_authorized": false,
+    "new_visual_direction_authorized": false,
+    "active_execution_authority": "NONE"
+  },
+  "validation": {
+    "json": "PASS",
+    "duplicate_ids": "PASS_WITH_BASE_AND_DELTA_NAMESPACES",
+    "canonical_paths": "PASS",
+    "remote_publication": "PENDING_FINAL_HEAD_VERIFICATION"
+  }
+}
