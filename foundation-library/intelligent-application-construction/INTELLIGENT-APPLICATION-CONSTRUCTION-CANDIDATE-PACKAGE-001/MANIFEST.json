@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "package_id": "INTELLIGENT-APPLICATION-CONSTRUCTION-CANDIDATE-PACKAGE-001",
+  "name": "Intelligent Application Construction Candidate Package",
+  "version": "0.1.0",
+  "status": "CANDIDATE_REQUIRES_DISCRIMINATING_TESTS",
+  "integrated": false,
+  "active": false,
+  "automatic_consumption": false,
+  "runtime_effect": "NONE",
+  "authority_effect": "NONE",
+  "rag_effect": "NONE",
+  "created_at": "2026-07-26",
+  "source_authorization": "AUTHORIZATION_LAB_INTELLIGENT_APPLICATION_CONSTRUCTION_CANDIDATE_PACKAGE_090",
+  "first_intended_consumer": "SYMPHONIE",
+  "purpose": "Provide selective, evidence-bounded guidance for translating an approved product problem into a verifiable, operable and safe intelligent application without presuming that ML, LLMs or agents are necessary.",
+  "modules": [
+    {"id": "IAC-01", "name": "PROBLEM_TO_SOLUTION_FRAMING"},
+    {"id": "IAC-02", "name": "SUCCESS_CONTRACT"},
+    {"id": "IAC-03", "name": "SIMPLEST_VIABLE_INTELLIGENT_APPROACH"},
+    {"id": "IAC-04", "name": "FIRST_VERTICAL_INTELLIGENT_SLICE"},
+    {"id": "IAC-05", "name": "DATA_AND_EVIDENCE_READINESS"},
+    {"id": "IAC-06", "name": "EVALUATION_AND_FAILURE_ANALYSIS"},
+    {"id": "IAC-07", "name": "DEPLOYMENT_AND_SAFEGUARDS"},
+    {"id": "IAC-08", "name": "MONITORING_AND_LIFECYCLE"},
+    {"id": "IAC-09", "name": "GENERATIVE_AND_AGENTIC_EXTENSION"}
+  ],
+  "principles": [
+    "BEGIN_WITH_HUMAN_AND_PRODUCT_OUTCOME_NOT_MODEL_SELECTION",
+    "AI_USE_REQUIRES_EXPLICIT_COMPARISON_WITH_NON_AI_ALTERNATIVES",
+    "SEPARATE_BUSINESS_PRODUCT_MODEL_SYSTEM_SAFETY_AND_OPERATIONAL_METRICS",
+    "BUILD_THE_SIMPLEST_END_TO_END_VERTICAL_SLICE_BEFORE_LOCAL_OPTIMIZATION",
+    "AGGREGATE_METRIC_PASS_DOES_NOT_ESTABLISH_APPLICATION_VALUE",
+    "EVALUATE_CONCRETE_FAILURES_SEGMENTS_AND_COSTS_NOT_ONLY_AVERAGES",
+    "PROBABILISTIC_BEHAVIOR_REQUIRES_ABSTENTION_FALLBACK_HUMAN_ESCALATION_AND_ROLLBACK",
+    "DEPLOYMENT_STARTS_MONITORING_DEGRADATION_ABUSE_AND_UPDATE_GOVERNANCE",
+    "GENERATIVE_AND_AGENTIC_GUIDANCE_REQUIRES_CURRENT_PRIMARY_SOURCES_SEPARATE_FROM_THE_2020_BOOK"
+  ],
+  "activation": {
+    "automatic": false,
+    "active_when": [
+      "INTELLIGENT_BEHAVIOR_IS_BEING_DESIGNED",
+      "AI_OR_NON_AI_APPROACH_MUST_BE_CHOSEN",
+      "FIRST_END_TO_END_INTELLIGENT_SLICE_IS_REQUIRED",
+      "DATA_EVALUATION_SAFEGUARDS_OR_MONITORING_MUST_BE_DEFINED",
+      "MODEL_OPTIMIZATION_RISKS_BYPASSING_PRODUCT_VALIDATION"
+    ],
+    "inactive_when": [
+      "CLOSED_TECHNICAL_TASK",
+      "BOUNDED_BUG_FIX",
+      "APPROVED_DETERMINISTIC_IMPLEMENTATION",
+      "CRUD_WITHOUT_INTELLIGENT_COMPONENT",
+      "VISUAL_OR_ACCESSIBILITY_CORRECTION",
+      "DETERMINISTIC_OPERATION"
+    ]
+  },
+  "sources": [
+    {
+      "id": "SRC-IAC-001",
+      "title": "Building Machine Learning Powered Applications: Going from Idea to Product",
+      "author": "Emmanuel Ameisen",
+      "publisher": "O'Reilly Media",
+      "year": 2020,
+      "role": "PRIMARY_BOOK_CANDIDATE",
+      "repository_lead": "DanielRizvi/oreilly-books-collection-",
+      "repository_role": "DISCOVERY_LEAD_ONLY",
+      "access_policy": "USE_LAWFULLY_ACQUIRED_OR_OFFICIAL_ACCESS_ONLY",
+      "content_ingestion_authorized": false
+    },
+    {
+      "id": "SRC-IAC-002",
+      "title": "NIST AI 600-1 Generative AI Profile",
+      "publisher": "NIST",
+      "year": 2024,
+      "role": "REQUIRED_CURRENT_PRIMARY_EXTENSION_FOR_GENERATIVE_AI",
+      "status": "TO_BE_NORMALIZED_BEFORE_IAC_09_PROMOTION"
+    }
+  ],
+  "copyright_boundary": [
+    "NO_REPOSITORY_PDF_COPY",
+    "NO_BOOK_TEXT_REPRODUCTION",
+    "NO_EMBEDDINGS",
+    "NO_VECTOR_INGESTION",
+    "NO_TRAINING_CORPUS_CREATION",
+    "DERIVED_PRINCIPLES_MUST_BE_ORIGINAL_AND_TRACEABLE"
+  ],
+  "evidence_limits": [
+    "THE_2020_BOOK_IS_NOT_SUFFICIENT_FOR_CURRENT_LLM_RAG_OR_AGENTIC_ARCHITECTURE",
+    "BOOK_EXAMPLES_DO_NOT_CREATE_BINDING_ENGINEERING_STANDARDS",
+    "PROJECT_CONTRACTS_SECURITY_PRIVACY_ACCESSIBILITY_AND_MAINTAINABILITY_REQUIREMENTS_PREVAIL",
+    "NO_VALUE_INCREMENT_CLAIM_BEFORE_DISCRIMINATING_TEST_EXECUTION",
+    "NO_PROVIDER_STACK_OR_ARCHITECTURE_SELECTION"
+  ],
+  "misuse_risks": [
+    "AI_SOLUTIONISM",
+    "FRAMEWORK_OVERACTIVATION",
+    "DUPLICATION_WITH_PRODUCT_LEADERSHIP",
+    "REOPENING_CLOSED_PRODUCT_DECISIONS",
+    "MODEL_METRIC_TUNNEL_VISION",
+    "UNAUTHORIZED_ARCHITECTURE_SELECTION",
+    "STALE_GENERATIVE_AI_GUIDANCE",
+    "COPYRIGHT_VIOLATION",
+    "DATA_RIGHTS_ASSUMPTIONS",
+    "AUTOMATION_BIAS"
+  ],
+  "test_design": "INTELLIGENT-APPLICATION-CONSTRUCTION-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001",
+  "fixture_count": 10,
+  "value_increment": "MEASURED_NOT_ASSUMED",
+  "product_effect": "NONE",
+  "next_authorized_action": "NONE_AFTER_CONSUMPTION"
+}
