@@ -3,7 +3,7 @@
   "reconciliation_id": "REC-LAB-SYMPHONIE-VISUAL-089-001",
   "updated_at": "2026-07-26",
   "project_id": "lab",
-  "status": "COMPLETED_WITH_APPEND_ONLY_REGISTRY_DELTAS",
+  "status": "COMPLETED_AND_VERIFIED_WITH_APPEND_ONLY_REGISTRY_DELTAS",
   "authorization_id": "AUTHORIZATION_LAB_SYMPHONIE_CONTEXTUAL_VISUAL_IMPACT_PROTOCOL_089",
   "purpose": "Reconcile the consumed authorization, Codex patch fidelity evidence and LivHavn intent-driven patch brief into canonical discovery without destructively replacing historical aggregate registries.",
   "inputs": [
@@ -30,6 +30,10 @@
     "base_evidence_registry": "registry/evidence.json",
     "evidence_delta": "registry/deltas/evidence-code-fidelity-001.json"
   },
+  "verified_remote_heads": {
+    "chatgpt_prototype_lab": "7f72ea07425c5dd8532bf4cc338233a8cddd7557",
+    "symphonie": "4b0af78c85a7a3e6fb56a171143b09aa55db6756"
+  },
   "authority": {
     "runtime_authorized": false,
     "integration_authorized": false,
@@ -41,6 +45,7 @@
     "json": "PASS",
     "duplicate_ids": "PASS_WITH_BASE_AND_DELTA_NAMESPACES",
     "canonical_paths": "PASS",
-    "remote_publication": "PENDING_FINAL_HEAD_VERIFICATION"
+    "registry_index_discovery": "PASS",
+    "remote_publication": "PASS"
   }
 }
