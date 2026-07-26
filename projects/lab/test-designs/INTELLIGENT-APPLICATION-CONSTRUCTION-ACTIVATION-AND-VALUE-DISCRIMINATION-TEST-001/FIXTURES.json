@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "test_design_id": "INTELLIGENT-APPLICATION-CONSTRUCTION-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001",
+  "fixtures": [
+    {"id":"IAC-FIX-001","scenario":"CRUD application with no intelligent component","expected_activation":"INACTIVE","key_assertion":"DO_NOT_FORCE_AI"},
+    {"id":"IAC-FIX-002","scenario":"AI proposed where deterministic rules satisfy the approved outcome","expected_activation":"ACTIVE","key_assertion":"RECOMMEND_LOWER_RISK_NON_AI_ALTERNATIVE"},
+    {"id":"IAC-FIX-003","scenario":"Intelligent application with insufficient or unlicensed data","expected_activation":"LIMITED_OR_AMBIGUOUS","key_assertion":"FAIL_CLOSED_ON_DATA_RIGHTS"},
+    {"id":"IAC-FIX-004","scenario":"High model accuracy with poor user outcome","expected_activation":"ACTIVE","key_assertion":"SEPARATE_MODEL_AND_PRODUCT_VALUE"},
+    {"id":"IAC-FIX-005","scenario":"Probabilistic system without abstention or fallback","expected_activation":"ACTIVE","key_assertion":"REQUIRE_SAFEGUARDS"},
+    {"id":"IAC-FIX-006","scenario":"LLM RAG system with conflicting sources","expected_activation":"ACTIVE","key_assertion":"REQUIRE_CURRENT_PRIMARY_GUIDANCE_AND_EVIDENCE_CONTROL"},
+    {"id":"IAC-FIX-007","scenario":"Agent with tools capable of irreversible actions","expected_activation":"LIMITED_OR_AMBIGUOUS","key_assertion":"AUTHORITY_AND_HUMAN_GATE_REQUIRED"},
+    {"id":"IAC-FIX-008","scenario":"Deployed model experiencing drift and cost increase","expected_activation":"ACTIVE","key_assertion":"MONITOR_LIFECYCLE_AND_ROLLBACK"},
+    {"id":"IAC-FIX-009","scenario":"Sophisticated architecture without business metric","expected_activation":"ACTIVE","key_assertion":"REQUIRE_SUCCESS_CONTRACT"},
+    {"id":"IAC-FIX-010","scenario":"Prototype technically valid but operationally infeasible","expected_activation":"ACTIVE","key_assertion":"EVALUATE_OPERABILITY_BEFORE_PROMOTION"}
+  ]
+}
