@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_SYMPHONIE_LIVHAVN_SECTION_IDENTIFICATION_PROTOCOL_085",
+  "revision": 1,
+  "status": "GRANTED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-25",
+  "target_repositories": [
+    {"repository":"marcellusanthonson-ctrl/chatgpt-prototype-lab","branch":"main","expected_parent_head":"fe7727f501462706b0c2be07b36b70cd2f5efb9a"},
+    {"repository":"marcellusanthonson-ctrl/symphonie","branch":"main","expected_parent_head":"67a7d0307dadda6ff519746fa937b9cefc4c58ad"}
+  ],
+  "scope": "DOCUMENT_AND_IMPLEMENT_STABLE_SECTION_AND_ELEMENT_IDENTIFIERS_FOR_LIVHAVN_VISUAL_CALIBRATION",
+  "figma_status": "DOCUMENTED_FUTURE_OPTION",
+  "rules": [
+    "ONLY_EXPLICIT_TARGETS_MAY_CHANGE",
+    "RETIRED_CODES_MUST_NOT_BE_REUSED",
+    "NO_CODE_WITHOUT_STABLE_VISUAL_IDENTIFIERS",
+    "ABSTRACT_IMAGE_PROHIBITED_UNLESS_EXPLICITLY_REQUESTED"
+  ],
+  "deliverables": [
+    "SECTION_IDENTIFICATION_PROTOCOL.md",
+    "SECTION_REGISTRY.json",
+    "VISUAL_SPEC_TEMPLATE.md",
+    "CHANGE_REPORT_TEMPLATE.md",
+    "TAGGED_HEADER_AND_HERO_HTML"
+  ],
+  "prohibitions": [
+    "NO_FIGMA_INTEGRATION",
+    "NO_FIGMA_PLUGIN",
+    "NO_AUTOMATIC_HTML_TO_FIGMA_IMPORT",
+    "NO_VISUAL_REDESIGN",
+    "NO_IMAGE_REPLACEMENT",
+    "NO_TYPOGRAPHY_CHANGE",
+    "NO_COLOR_CHANGE",
+    "NO_CONTENT_CHANGE",
+    "NO_PHASE_4",
+    "NO_PRODUCT_IMPLEMENTATION",
+    "NO_DEPLOYMENT"
+  ],
+  "consumption_criterion": "VERIFIED_REMOTE_PUBLICATION_IN_BOTH_REPOSITORIES",
+  "authority_after_consumption": "NONE"
+}
