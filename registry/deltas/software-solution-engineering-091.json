@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "REGISTRY-DELTA-SSE-091",
+  "updated_at": "2026-07-26",
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_SOFTWARE_SOLUTION_ENGINEERING_CANDIDATE_PACKAGE_091",
+    "path": "projects/lab/authorizations/AUTHORIZATION_LAB_SOFTWARE_SOLUTION_ENGINEERING_CANDIDATE_PACKAGE_091.json"
+  },
+  "foundation_library": {
+    "id": "SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001",
+    "version": "0.1.0",
+    "status": "CANDIDATE_REQUIRES_DISCRIMINATING_TESTS",
+    "path": "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/MANIFEST.json",
+    "integrated": false,
+    "active": false,
+    "automatic_consumption": false
+  },
+  "test_design": {
+    "id": "SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001",
+    "status": "DESIGNED_NOT_EXECUTED",
+    "path": "projects/lab/test-designs/SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json",
+    "fixture_count": 12,
+    "execution_authorized": false,
+    "external_audit_authorized": false
+  },
+  "pending": {
+    "id": "PEND-LAB-027",
+    "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+    "path": "projects/lab/pending/PEND-LAB-027.json",
+    "preserves": ["PEND-LAB-026"]
+  },
+  "source_repository": {
+    "repository": "iamindian/References_Books",
+    "branch": "master",
+    "observed_head": "d09eca98d2be09d15ed3d7ed162ff9ed2c1ea5bd",
+    "role": "DISCOVERY_LEAD_ONLY",
+    "content_ingestion_authorized": false
+  },
+  "effects": {
+    "authority": "NONE_AFTER_AUTHORIZATION_CONSUMPTION",
+    "runtime": "NONE",
+    "rag": "NONE",
+    "product": "NONE",
+    "symphonie": "NONE",
+    "mammothskills": "NONE"
+  }
+}
