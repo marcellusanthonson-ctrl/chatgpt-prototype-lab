@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "REGISTRY-DELTA-IAC-090",
+  "updated_at": "2026-07-26",
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_INTELLIGENT_APPLICATION_CONSTRUCTION_CANDIDATE_PACKAGE_090",
+    "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_INTELLIGENT_APPLICATION_CONSTRUCTION_CANDIDATE_PACKAGE_090.json"
+  },
+  "foundation_library": {
+    "id": "INTELLIGENT-APPLICATION-CONSTRUCTION-CANDIDATE-PACKAGE-001",
+    "kind": "INTELLIGENT_APPLICATION_CONSTRUCTION_CANDIDATE_PACKAGE",
+    "version": "0.1.0",
+    "status": "CANDIDATE_REQUIRES_DISCRIMINATING_TESTS",
+    "canonical_path": "foundation-library/intelligent-application-construction/INTELLIGENT-APPLICATION-CONSTRUCTION-CANDIDATE-PACKAGE-001/MANIFEST.json",
+    "integrated": false,
+    "active": false,
+    "automatic_consumption": false,
+    "runtime_effect": "NONE",
+    "authority_effect": "NONE",
+    "rag_effect": "NONE"
+  },
+  "test_design": {
+    "id": "INTELLIGENT-APPLICATION-CONSTRUCTION-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001",
+    "status": "DESIGNED_NOT_EXECUTED",
+    "fixture_count": 10,
+    "canonical_path": "projects/lab/test-designs/INTELLIGENT-APPLICATION-CONSTRUCTION-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json"
+  },
+  "pending": {
+    "id": "PEND-LAB-026",
+    "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+    "canonical_path": "projects/lab/pending/PEND-LAB-026.json"
+  },
+  "facts": [
+    "NO_PDF_COPIED_OR_INGESTED",
+    "NO_EMBEDDINGS_OR_VECTOR_STORAGE",
+    "NO_PACKAGE_ACTIVATION",
+    "NO_TEST_EXECUTION",
+    "NO_SYMPHONIE_OR_PRODUCT_CHANGE"
+  ],
+  "next_required_transition": "SEPARATE_EXPLICIT_AUTHORIZATION_FOR_DISCRIMINATING_TEST_EXECUTION_AND_EXTERNAL_AUDIT"
+}
