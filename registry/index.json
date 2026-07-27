@@ -9,15 +9,15 @@
     "ideas": 5,
     "integrations": 6,
     "experiments": 8,
-    "authorizations": 55,
-    "evidence": 31,
+    "authorizations": 63,
+    "evidence": 35,
     "unincorporated": 0,
     "proposals": 3,
     "sessions": 1,
     "reassessments": 5,
-    "reconciliations": 2,
-    "test_designs": 5,
-    "test_executions": 2,
+    "reconciliations": 6,
+    "test_designs": 6,
+    "test_executions": 3,
     "source_packages": 2,
     "foundation_library": 23,
     "visual_preferences": 1,
@@ -43,18 +43,21 @@
       "registry/deltas/intelligent-application-construction-090.json",
       "registry/deltas/software-solution-engineering-091.json",
       "registry/deltas/livhavn-surgical-visual-patch-093.json",
-      "registry/deltas/symphonie-phases-0-3-brief-architecture-094.json"
+      "registry/deltas/symphonie-phases-0-3-brief-architecture-094.json",
+      "registry/deltas/product-leadership-test-003-documentary-sync-104.json"
     ],
     "evidence": "registry/evidence.json",
     "evidence_deltas": [
       "registry/deltas/evidence-code-fidelity-001.json",
-      "registry/deltas/livhavn-surgical-visual-patch-093.json"
+      "registry/deltas/livhavn-surgical-visual-patch-093.json",
+      "registry/deltas/product-leadership-test-003-documentary-sync-104.json"
     ],
     "current_state": "CURRENT_STATE.json",
     "current_state_deltas": [
       "registry/deltas/current-state-visual-089.json",
       "registry/deltas/livhavn-surgical-visual-patch-093.json",
-      "registry/deltas/symphonie-phases-0-3-brief-architecture-094.json"
+      "registry/deltas/symphonie-phases-0-3-brief-architecture-094.json",
+      "registry/deltas/product-leadership-test-003-documentary-sync-104.json"
     ],
     "pattern_deltas": ["registry/deltas/livhavn-surgical-visual-patch-093.json"],
     "error_deltas": ["registry/deltas/livhavn-surgical-visual-patch-093.json"],
@@ -65,16 +68,22 @@
     "external_audits": "projects/lab/external-audits/index.json",
     "reconciliations": [
       "projects/lab/reconciliations/REC-LAB-EXP065-RCA002-001.json",
-      "projects/lab/reconciliations/REC-LAB-SYMPHONIE-VISUAL-089-001.json"
+      "projects/lab/reconciliations/REC-LAB-SYMPHONIE-VISUAL-089-001.json",
+      "projects/lab/reconciliations/REC-LAB-PRODUCT-LEADERSHIP-EXECUTION-002-001.json",
+      "projects/lab/reconciliations/REC-LAB-PRODUCT-LEADERSHIP-EXTERNAL-AUDIT-002-002.json",
+      "projects/lab/reconciliations/REC-LAB-CLAUDE-AUDIT-TEST-003-003.json",
+      "projects/lab/reconciliations/REC-LAB-PRODUCT-LEADERSHIP-TEST-003-STATE-SYNC-004.json"
     ],
     "test_designs": "projects/lab/test-designs/index.json",
     "test_design_deltas": [
       "registry/deltas/intelligent-application-construction-090.json",
-      "registry/deltas/software-solution-engineering-091.json"
+      "registry/deltas/software-solution-engineering-091.json",
+      "registry/deltas/product-leadership-test-003-documentary-sync-104.json"
     ],
     "pending_successors": [
       "projects/lab/pending/PEND-LAB-026.json",
-      "projects/lab/pending/PEND-LAB-027.json"
+      "projects/lab/pending/PEND-LAB-027.json",
+      "projects/lab/pending/PEND-LAB-029.json"
     ],
     "test_executions": "projects/lab/test-executions/index.json",
     "source_packages": "registry/source-packages.json",
@@ -93,22 +102,22 @@
     "decision_path": "decisions/DEC-LAB-022.json",
     "error": "ERR-LAB-007",
     "pattern": "PAT-LAB-009",
-    "authorization": "AUTHORIZATION_LAB_SYMPHONIE_PHASES_0_3_AND_BRIEF_ARCHITECTURE_094",
-    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_SYMPHONIE_PHASES_0_3_AND_BRIEF_ARCHITECTURE_094.json",
-    "evidence": "EVD-LAB-SYMPHONIE-LIVHAVN-PATCH-001",
-    "evidence_path": "projects/lab/evidence/EVD-LAB-SYMPHONIE-LIVHAVN-PATCH-001.json",
-    "current_state_delta": "SYMPHONIE-PHASES-0-3-BRIEF-ARCHITECTURE-DELTA-094",
-    "current_state_delta_path": "registry/deltas/symphonie-phases-0-3-brief-architecture-094.json",
+    "authorization": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST_003_DOCUMENTARY_STATE_SYNCHRONIZATION_104",
+    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST_003_DOCUMENTARY_STATE_SYNCHRONIZATION_104.json",
+    "evidence": "CLAUDE_ADVERSARIAL_AUDIT_PRODUCT_LEADERSHIP_PROSPECTIVE_TEST_003_20260727",
+    "evidence_path": "projects/lab/evidence/product-leadership/claude-adversarial-audit-test-003/CLAUDE_AUDIT_REPORT.md",
+    "current_state_delta": "PRODUCT-LEADERSHIP-TEST-003-DOCUMENTARY-SYNC-104",
+    "current_state_delta_path": "registry/deltas/product-leadership-test-003-documentary-sync-104.json",
     "experiment": "EXP-LAB-003",
     "proposal": "PROP-LAB-003",
     "session": "SES-2026-06-28-001",
     "reassessment": "REA-LAB-006",
-    "reconciliation": "REC-LAB-SYMPHONIE-VISUAL-089-001",
-    "reconciliation_path": "projects/lab/reconciliations/REC-LAB-SYMPHONIE-VISUAL-089-001.json",
-    "test_design": "SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001",
-    "pending": "PEND-LAB-027",
-    "test_execution": "FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATING-TEST-EXECUTION-002",
-    "external_audit": "AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001",
+    "reconciliation": "REC-LAB-PRODUCT-LEADERSHIP-TEST-003-STATE-SYNC-004",
+    "reconciliation_path": "projects/lab/reconciliations/REC-LAB-PRODUCT-LEADERSHIP-TEST-003-STATE-SYNC-004.json",
+    "test_design": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003",
+    "pending": "PEND-LAB-029",
+    "test_execution": "PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-EXECUTION-002",
+    "external_audit": "CLAUDE_ADVERSARIAL_AUDIT_PRODUCT_LEADERSHIP_PROSPECTIVE_TEST_003_20260727",
     "source_package": "DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001@1.2.0",
     "foundation_library": "SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001@0.1.0",
     "ecr_capability": "ECR-CAPABILITY-001@0.1.0",
