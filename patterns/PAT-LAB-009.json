@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "id": "PAT-LAB-009",
+  "title": "Surgical visual patch with locked unchanged surface",
+  "project_scope": ["lab", "symphonie"],
+  "status": "VALIDATED",
+  "validation_state": "VALIDATED_BY_PIXEL_IDENTICAL_FROZEN_REGION_AND_HUMAN_CONFIRMATION",
+  "canonical_path": "patterns/PAT-LAB-009.json",
+  "updated_at": "2026-07-26",
+  "pattern": "SURGICAL_VISUAL_PATCH",
+  "activation_conditions": [
+    "EXACT_HUMAN_SELECTED_PARENT_EXISTS",
+    "REQUEST_CHANGES_ONE_ASSET_OR_ONE_LOCALIZED_PROPERTY",
+    "USER_REQUIRES_IDENTICAL_UNCHANGED_SURFACE",
+    "UNREQUESTED_CREATIVE_INTERPRETATION_IS_NOT_ALLOWED"
+  ],
+  "contract": {
+    "default_mode": "SURGICAL_PATCH",
+    "creative_autonomy": "NONE_UNLESS_EXPLICITLY_GRANTED",
+    "unmentioned_elements": "LOCKED",
+    "unrequested_improvements": "FORBIDDEN",
+    "visual_parent": "EXACT_REFERENCED_ARTIFACT",
+    "maximum_material_changes": 1,
+    "region_scoped_diff_required": true
+  },
+  "required_controls": [
+    "DECLARE_ARTIFACT_ROLES",
+    "DECLARE_CHANGE_BUDGET",
+    "LIST_MUTABLE_REGIONS_AND_PROPERTIES",
+    "LOCK_ALL_UNCHANGED_SURFACES",
+    "PRESERVE_PARENT_HASH",
+    "VERIFY_DOM_AND_CSS_DIFF_SCOPE",
+    "VERIFY_PIXEL_DIFF_OUTSIDE_MUTABLE_MASK",
+    "SEPARATE_TECHNICAL_PASS_FROM_HUMAN_VISUAL_APPROVAL"
+  ],
+  "validation_case": {
+    "project": "SYMPHONIE-PILOT-LIVHAVN-001",
+    "parent": "LIVHAVN_BRIEF_091_R3_HEADER_HERO_CANDIDATE_01.html",
+    "negative_case": "LIVHAVN_BRIEF_091_R3_CAT_DEPTH_REVISION_CANDIDATE_02.html",
+    "positive_case": "LIVHAVN_BRIEF_091_R3_CAT_ONLY_PATCH_CANDIDATE_03.html",
+    "allowed_change": "IMG_SRC_DATA_URI_ONLY",
+    "css_properties_modified": 0,
+    "pixel_differences_outside_image_mask": 0,
+    "human_result": "DESIGN_IDENTICAL_EXCEPT_FOR_IMAGE"
+  },
+  "approved_by": "Jonathan Martínez",
+  "authorization_ref": "AUTHORIZATION_LAB_SYMPHONIE_SURGICAL_VISUAL_PATCH_LEARNING_093",
+  "evidence_ref": "EVD-LAB-SYMPHONIE-LIVHAVN-PATCH-001"
+}
