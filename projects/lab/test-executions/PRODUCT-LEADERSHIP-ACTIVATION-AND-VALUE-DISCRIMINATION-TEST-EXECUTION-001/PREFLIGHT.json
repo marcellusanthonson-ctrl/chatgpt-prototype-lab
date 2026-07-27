@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-001",
+  "preflight_status": "FAIL_CLOSED",
+  "checks": [
+    {"id":"PF-HEAD","result":"PASS","detail":"Remote main HEAD verified before execution."},
+    {"id":"PF-AUTHORITY","result":"PASS","detail":"Bounded execution authorization 095 recorded."},
+    {"id":"PF-SYNTHETIC-DATA","result":"PASS","detail":"No real product or personal data required."},
+    {"id":"PF-FIXTURE-FREEZE","result":"PASS","detail":"Canonical fixture set fixed at 40 records."},
+    {"id":"PF-RUN-MATRIX","result":"PASS","detail":"Four cells and minimum 88 outputs confirmed."},
+    {"id":"PF-BLINDING","result":"FAIL","detail":"The same agent designated to generate/evaluate had already inspected oracle-bearing fixture content."},
+    {"id":"PF-CONTROLS","result":"NOT_RUN","detail":"Generation prohibited after stop condition."},
+    {"id":"PF-SCORING","result":"NOT_RUN","detail":"No valid blinded outputs existed to score."}
+  ],
+  "applied_rule": "FAIL_CLOSED_ON_PREDECLARED_STOP_CONDITION",
+  "next_step": "REPRODUCE_WITH_SEPARATE_GENERATOR_AND_EVALUATOR_CONTEXTS_THAT_HAVE_NOT_SEEN_ORACLES"
+}
