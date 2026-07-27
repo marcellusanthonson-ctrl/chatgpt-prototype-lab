@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "reconciliation_id": "REC-LAB-PRODUCT-LEADERSHIP-TEST-003-STATE-SYNC-004",
+  "project_id": "lab",
+  "authorization_ref": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST_003_DOCUMENTARY_STATE_SYNCHRONIZATION_104",
+  "effective_head_before_sync": "fb1ce2007bf6224f9605a098b7f921bd14e1a61c",
+  "scope": "AGGREGATE_DOCUMENTARY_STATE_SYNCHRONIZATION",
+  "synchronized_subjects": [
+    "AUTHORIZATIONS_097_104",
+    "PRODUCT_LEADERSHIP_CLEAN_REPRODUCTION_EXECUTION_002",
+    "EXTERNAL_AUDIT_EXECUTION_002",
+    "CLAUDE_ADVERSARIAL_AUDIT_TEST_003",
+    "PRODUCT_LEADERSHIP_PROSPECTIVE_VALUE_TEST_003",
+    "PEND_LAB_029"
+  ],
+  "result": {
+    "execution_002": "INSUFFICIENT_EVIDENCE",
+    "test_003": "HARDENED_REQUIRES_HUMAN_APPROVAL_AND_SEPARATE_EXECUTION_AUTHORIZATION",
+    "execution_authorized": false,
+    "activation": false,
+    "integration": false,
+    "next_action": "HUMAN_APPROVAL_MODIFICATION_OR_REJECTION_OF_HARDENED_TEST_003_CONTRACT"
+  },
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_104_CONSUMPTION"
+}
