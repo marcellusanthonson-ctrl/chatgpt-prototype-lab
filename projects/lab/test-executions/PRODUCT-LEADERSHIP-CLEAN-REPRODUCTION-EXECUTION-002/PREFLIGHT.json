@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-EXECUTION-002",
+  "authorization_ref": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_CODEX_CLEAN_REPRODUCTION_EXECUTION_098",
+  "brief_ref": "BRIEF_PRODUCT_LEADERSHIP_CODEX_CLEAN_REPRODUCTION_098",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "checked_at_utc": "2026-07-27T17:54:07.068Z",
+  "execution_anchor_commit": "ef25d93cfa7eb7acc68ed1cddda4bc3ff112e66b",
+  "live_remote_head_before_execution": "90bc2aa98c2c87ca0eb188ff2af5a9a18532df58",
+  "head_equality_required": false,
+  "anchor_is_ancestor_of_live_remote_head": true,
+  "anchor_comparison": {
+    "changed_path_count": 4,
+    "changed_paths": [
+      {
+        "status": "M",
+        "path": "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_CODEX_CLEAN_REPRODUCTION_EXECUTION_097.json"
+      },
+      {
+        "status": "A",
+        "path": "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_CODEX_CLEAN_REPRODUCTION_EXECUTION_098.json"
+      },
+      {
+        "status": "A",
+        "path": "projects/lab/briefs/BRIEF_PRODUCT_LEADERSHIP_CODEX_CLEAN_REPRODUCTION_098.json"
+      },
+      {
+        "status": "A",
+        "path": "projects/lab/briefs/START_PROMPT_PRODUCT_LEADERSHIP_CODEX_CLEAN_REPRODUCTION_098.md"
+      }
+    ],
+    "all_changed_paths_allowlisted": true,
+    "non_allowlisted_paths": []
+  },
+  "working_tree_clean_before_first_execution_write": true,
+  "local_main_fast_forwarded_to_live_remote_head_after_preflight": true,
+  "required_checks": {
+    "VERIFY_LIVE_HEAD": "PASS",
+    "VERIFY_EXECUTION_ANCHOR_IS_ANCESTOR_OF_LIVE_HEAD": "PASS",
+    "COMPARE_EXECUTION_ANCHOR_TO_LIVE_HEAD": "PASS",
+    "STOP_IF_ANY_CHANGED_PATH_IS_NOT_ALLOWLISTED": "PASS",
+    "VERIFY_WORKTREE_CLEAN_BEFORE_FIRST_EXECUTION_WRITE": "PASS"
+  },
+  "preflight_result": "PASS",
+  "stop_conditions_activated": []
+}

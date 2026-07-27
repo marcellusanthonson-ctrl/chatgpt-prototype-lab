@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-EXECUTION-002",
+  "test_design_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001",
+  "authorization_ref": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_CODEX_CLEAN_REPRODUCTION_EXECUTION_098",
+  "brief_ref": "BRIEF_PRODUCT_LEADERSHIP_CODEX_CLEAN_REPRODUCTION_098",
+  "source_package": "PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-PACKAGE-002",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "created_at_utc": "2026-07-27T18:28:07.528Z",
+  "status": "COMPLETE_REPRODUCIBLE_EXECUTION_PACKAGE",
+  "classification": "INSUFFICIENT_EVIDENCE",
+  "classification_is_not_integration_authority": true,
+  "files": [
+    "MANIFEST.json",
+    "PREFLIGHT.json",
+    "SEED_AND_ORDER.json",
+    "BASELINE_OUTPUTS.json",
+    "PACKAGE_OUTPUTS.json",
+    "CONTROL_OUTPUTS.json",
+    "RANDOMIZED_OUTPUTS_WITHOUT_ARM_LABELS.json",
+    "FROZEN_OUTPUT_MAPPING.json",
+    "FROZEN_SCORES.json",
+    "FROZEN_RATIONALES.json",
+    "HASH_MANIFEST.json",
+    "UNBLINDED_METRICS.json",
+    "GATE_RESULTS.json",
+    "RESULT.json",
+    "REPRODUCTION_README.md"
+  ],
+  "file_count": 15,
+  "output_counts": {
+    "baseline": 40,
+    "package": 40,
+    "positive_control": 4,
+    "negative_control": 4,
+    "total": 88
+  },
+  "role_contexts": [
+    {
+      "role": "BASELINE_GENERATOR_CONTEXT",
+      "isolated": true,
+      "oracle_access": false,
+      "arm_mapping_access": false,
+      "previous_execution_output_access": false,
+      "deliverables": ["BASELINE_OUTPUTS.json"]
+    },
+    {
+      "role": "PACKAGE_GENERATOR_CONTEXT",
+      "isolated": true,
+      "oracle_access": false,
+      "arm_mapping_access": false,
+      "previous_execution_output_access": false,
+      "deliverables": ["PACKAGE_OUTPUTS.json", "CONTROL_OUTPUTS.json"]
+    },
+    {
+      "role": "BLINDED_EVALUATOR_CONTEXT",
+      "isolated": true,
+      "arm_labels_visible": false,
+      "case_ids_visible": false,
+      "generator_input_access": false,
+      "oracle_access": false,
+      "deliverables": ["FROZEN_SCORES.json", "FROZEN_RATIONALES.json"]
+    },
+    {
+      "role": "POST_SCORE_ORACLE_CUSTODIAN_CONTEXT",
+      "isolated": true,
+      "oracle_access_after_freeze_only": true,
+      "pre_unblind_hash_verification": "PASS",
+      "deliverables": ["UNBLINDED_METRICS.json", "GATE_RESULTS.json", "RESULT.json"]
+    }
+  ],
+  "freeze_chronology": {
+    "seed_frozen_at_utc": "2026-07-27T17:54:07.068Z",
+    "mapping_frozen_at_utc": "2026-07-27T18:03:01.032Z",
+    "scores_and_rationales_frozen_at_utc": "2026-07-27T18:06:46.464Z",
+    "pre_unblind_hash_set_frozen_at_utc": "2026-07-27T18:12:20.921Z",
+    "oracle_first_accessed_at_utc": "2026-07-27T18:20:12.1447173Z",
+    "freeze_precedes_unblinding": true
+  },
+  "gates": {
+    "PL-GATE-CONTROLS": "PASS",
+    "PL-GATE-SAFETY": "PASS",
+    "PL-GATE-ACTIVATION": "PASS",
+    "PL-GATE-CLOSED-SCOPE": "PASS",
+    "PL-GATE-VALUE": "INCONCLUSIVE"
+  },
+  "stop_conditions_activated": [],
+  "data_classification": "SYNTHETIC_ONLY",
+  "real_product_data_count": 0,
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "activation_effect": "NONE",
+  "integration_effect": "NONE",
+  "promotion_or_rejection_effect": "NONE",
+  "external_audit_status": "NOT_PERFORMED_NOT_AUTHORIZED",
+  "divergences_and_limitations": [
+    "SCORING_AND_GATES.json does not quantify the predeclared effect threshold or uncertainty decision rule required to resolve PL-GATE-VALUE.",
+    "LAB_CONTRACT.md and METHODOLOGY.md were declared as allowed generator inputs but are absent from the repository; generation proceeded using the available allowlisted inputs because the role contract did not declare them mandatory.",
+    "The closed-or-binding denominator is not enumerated in SCORING_AND_GATES.json and was derived transparently from explicit oracle category and primary_risk labels.",
+    "Synthetic results do not establish real-product value and no external audit was executed."
+  ]
+}

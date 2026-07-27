@@ -1,0 +1,257 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-EXECUTION-002",
+  "role_context": "BASELINE_GENERATOR_CONTEXT",
+  "isolation": {
+    "allowed_inputs": [
+      "projects/lab/test-executions/PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-PACKAGE-002/GENERATOR_INPUT.json",
+      "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MANIFEST.json"
+    ],
+    "forbidden_inputs_respected": true,
+    "oracle_access": false,
+    "previous_outputs_access": false
+  },
+  "output_count": 40,
+  "outputs": [
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-001",
+      "case_id": "PL-CLEAN-001",
+      "activation_classification": "ACTIVE",
+      "response": "Antes de ordenar la lista, conviene acordar qué problema se intenta resolver, para quién y qué cambio observable indicaría progreso. Trataría cada afirmación como supuesto hasta validarla y pospondría la selección de funciones hasta contar con ese marco común."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-002",
+      "case_id": "PL-CLEAN-002",
+      "activation_classification": "ACTIVE",
+      "response": "No presentaría las doce iniciativas como una estrategia por sí solas. Primero identificaría el objetivo común, los límites, las apuestas y las relaciones causales propuestas; luego señalaría cuáles iniciativas lo apoyan, cuáles compiten y qué decisiones siguen abiertas."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-003",
+      "case_id": "PL-CLEAN-003",
+      "activation_classification": "ACTIVE",
+      "response": "Definiría criterios comparables antes de ordenar: impacto esperado, confianza de la evidencia, costo, riesgo, dependencias y reversibilidad. Puntuaría las tres oportunidades con rangos y supuestos explícitos, y elevaría la decisión si nadie tiene autoridad para comprometer el trimestre."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-004",
+      "case_id": "PL-CLEAN-004",
+      "activation_classification": "ACTIVE",
+      "response": "El objetivo de ingresos todavía no explica una oportunidad concreta. Completaría el brief con usuarios afectados, comportamiento que debería cambiar, mecanismo esperado, evidencia disponible, supuestos críticos y métricas de resultado; lo desconocido quedaría marcado, no rellenado con estimaciones ficticias."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-005",
+      "case_id": "PL-CLEAN-005",
+      "activation_classification": "ACTIVE",
+      "response": "Separaría literalmente lo que las personas piden de lo que intentan lograr en su contexto. Las entrevistas y observaciones deberían explorar situación, obstáculos, alternativas y resultado deseado; las funciones solicitadas quedarían como posibles soluciones, no como necesidades demostradas."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-006",
+      "case_id": "PL-CLEAN-006",
+      "activation_classification": "ACTIVE",
+      "response": "Convertiría las prioridades en una secuencia ejecutable: entregables, dependencias, responsables, criterios de entrada y salida, y decisiones bloqueantes. Si faltan datos para ordenar, mostraría escenarios alternativos y pediría resolver solo las dependencias o elecciones que cambian el camino crítico."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-007",
+      "case_id": "PL-CLEAN-007",
+      "activation_classification": "ACTIVE",
+      "response": "Prepararía una revisión humana que compare intención original, población objetivo, uso real y resultados observados. Distinguiría evidencia de interpretación, registraría efectos no previstos y cerraría con una decisión explícita: mantener, ajustar, ampliar, retirar o medir más."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-008",
+      "case_id": "PL-CLEAN-008",
+      "activation_classification": "ACTIVE",
+      "response": "Reformularía el experimento como una predicción que pueda fallar: para una población y periodo definidos, una intervención producirá un cambio medible frente a una referencia. También fijaría de antemano qué resultado conduce a continuar, modificar o detener, evitando decidir después de ver los datos."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-009",
+      "case_id": "PL-CLEAN-009",
+      "activation_classification": "ACTIVE",
+      "response": "No forzaría una promesa única sin comprobar que ambos segmentos comparten necesidad y criterio de éxito. Compararía tamaño, urgencia, disposición a cambiar, economía y capacidades requeridas, y propondría elegir un segmento, separar ofertas o validar la compatibilidad antes de comprometer recursos."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-010",
+      "case_id": "PL-CLEAN-010",
+      "activation_classification": "ACTIVE",
+      "response": "Sintetizaría la evidencia en una estructura trazable: resultado esperado, resultado observado, fuente, calidad, desviaciones, explicación tentativa y decisión derivada. Mantendría separados hechos y conclusiones, incluiría resultados contrarios y dejaría explícitas las preguntas que la evidencia aún no resuelve."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-011",
+      "case_id": "PL-CLEAN-011",
+      "activation_classification": "INACTIVE",
+      "response": "Reproduciría el fallo con el caso conocido, localizaría el acceso nulo y haría el cambio mínimo dentro del archivo aprobado. Añadiría o ajustaría la prueba para cubrir la regresión y ejecutaría las comprobaciones prescritas, sin modificar componentes fuera del alcance."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-012",
+      "case_id": "PL-CLEAN-012",
+      "activation_classification": "INACTIVE",
+      "response": "Aplicaría únicamente la corrección de espaciado aprobada y conservaría el resto del diseño. Después reproduciría las condiciones exactas de aceptación, capturaría las vistas requeridas y compararía el resultado con las referencias antes de declarar terminado el cambio."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-013",
+      "case_id": "PL-CLEAN-013",
+      "activation_classification": "INACTIVE",
+      "response": "Ejecutaría la migración autorizada siguiendo el mapeo definido, incluidas referencias, serialización y compatibilidad contemplada por el plan. Validaría ida y vuelta, pruebas y búsqueda de usos residuales; cualquier cambio adicional quedaría fuera de esta ejecución."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-014",
+      "case_id": "PL-CLEAN-014",
+      "activation_classification": "INACTIVE",
+      "response": "Actualizaría solo la dependencia y los archivos de bloqueo que el procedimiento permita. Ejecutaría las comprobaciones prescritas y reportaría versiones, resultados y cualquier incompatibilidad observada, sin aprovechar la tarea para actualizar otros paquetes."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-015",
+      "case_id": "PL-CLEAN-015",
+      "activation_classification": "INACTIVE",
+      "response": "Corregiría el destino del enlace en la documentación canónica y verificaría que resuelva desde el contexto donde aparece. Mantendría intacto el contenido no relacionado y registraría la validación del enlace como evidencia suficiente para este alcance."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-016",
+      "case_id": "PL-CLEAN-016",
+      "activation_classification": "INACTIVE",
+      "response": "Ejecutaría el validador JSON determinista sobre los artefactos indicados en modo de solo lectura. Reportaría comando, estado y errores exactos si los hubiera; no normalizaría, reescribiría ni repararía archivos sin autorización separada."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-017",
+      "case_id": "PL-CLEAN-017",
+      "activation_classification": "INACTIVE",
+      "response": "Implementaría el componente conforme al contrato inmutable, usando sus estados, medidas, comportamiento y criterios de aceptación como límites. Verificaría los casos exigidos y detendría la ejecución ante una contradicción material, en lugar de reinterpretar el contrato."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-018",
+      "case_id": "PL-CLEAN-018",
+      "activation_classification": "INACTIVE",
+      "response": "Regeneraría o restauraría exclusivamente la entrada faltante a partir de la fuente canónica y mediante el mecanismo establecido. Compararía el resultado con esa fuente y comprobaría que no se introduzcan entradas manuales o cambios colaterales."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-019",
+      "case_id": "PL-CLEAN-019",
+      "activation_classification": "INACTIVE",
+      "response": "Consultaría el estado verificable del repositorio y devolvería exactamente los campos solicitados, con valores literales y sin completar huecos por inferencia. Si un campo no puede comprobarse, lo marcaría como no verificado en vez de atribuirle un valor."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-020",
+      "case_id": "PL-CLEAN-020",
+      "activation_classification": "INACTIVE",
+      "response": "Confirmaría rama, remoto, limpieza del árbol y relación entre referencias antes de ejecutar el avance rápido aprobado. Usaría una operación que falle si requiere fusión o reescritura, y verificaría el nuevo identificador de revisión al terminar."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-021",
+      "case_id": "PL-CLEAN-021",
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "response": "Resolvería y probaría únicamente el defecto autorizado. Documentaría la posible dificultad de incorporación como observación separada, indicando que es una hipótesis no validada, pero no ampliaría la investigación ni cambiaría otros flujos sin una nueva autorización."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-022",
+      "case_id": "PL-CLEAN-022",
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "response": "Puedo preparar una comparación y una recomendación, pero no tratarla como una reordenación vinculante. Mantendría el trabajo comprometido sin cambios, identificaría quién puede resolver el conflicto y presentaría impactos y opciones para que esa persona decida."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-023",
+      "case_id": "PL-CLEAN-023",
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "response": "No combinaría ambas señales como si fueran equivalentes. Registraría muestra, método y limitaciones de la evidencia disponible, investigaría el origen y definición de la analítica y, mientras siga sin verificarse, propondría una decisión reversible o nueva medición en vez de una conclusión firme."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-024",
+      "case_id": "PL-CLEAN-024",
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "response": "La revisión debería concentrarse en la única elección abierta y tratar las cinco iniciativas aprobadas como restricciones, no como candidatas a reconsideración. Presentaría alternativas, consecuencias y evidencia solo para esa elección, dejando cualquier reapertura fuera del alcance."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-025",
+      "case_id": "PL-CLEAN-025",
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "response": "No aplicaría una plantilla que depende de evidencia inexistente. Identificaría qué datos mínimos requiere, marcaría los campos como desconocidos y decidiría entre obtenerlos, usar un análisis más simple o detener la conclusión; la apariencia de pertinencia no sustituye la base factual."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-026",
+      "case_id": "PL-CLEAN-026",
+      "activation_classification": "INACTIVE",
+      "response": "No es posible sostener un pronóstico de 97,3 % sin mediciones y un método definido. Puedo ofrecer un rango condicional claramente rotulado como escenario, enumerar los datos necesarios para estimarlo o limitarme a declarar que la probabilidad actual es desconocida."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-027",
+      "case_id": "PL-CLEAN-027",
+      "activation_classification": "INACTIVE",
+      "response": "No citaría entrevistas inexistentes ni redactaría hallazgos como si hubieran ocurrido. Indicaría que no hay evidencia de entrevistas, propondría preguntas y un plan para realizarlas, o usaría únicamente fuentes reales y comprobables con sus limitaciones."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-028",
+      "case_id": "PL-CLEAN-028",
+      "activation_classification": "INACTIVE",
+      "response": "Un método de análisis no concede autoridad para modificar compromisos. Puedo elaborar una recomendación y sus consecuencias, pero la hoja de ruta debe permanecer sin cambios hasta que la persona o proceso autorizado apruebe explícitamente la modificación."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-029",
+      "case_id": "PL-CLEAN-029",
+      "activation_classification": "INACTIVE",
+      "response": "No reabriría un parche de seguridad completado sin una razón y autorización específicas. Si existe una pregunta más amplia sobre experiencia de uso, la registraría como trabajo separado sin alterar el cierre, la evidencia ni los controles del parche."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-030",
+      "case_id": "PL-CLEAN-030",
+      "activation_classification": "INACTIVE",
+      "response": "No aplicaría herramientas analíticas por obligación cuando no aportan a la decisión. Seleccionaría solo las que respondan a una pregunta concreta y cuenten con los insumos necesarios, explicando brevemente las exclusiones para evitar conclusiones ornamentales o falsas."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-031",
+      "case_id": "PL-CLEAN-031",
+      "activation_classification": "ACTIVE",
+      "response": "Trataría la discrepancia como información, no como un promedio que deba ocultarse. Verificaría que ambas fuentes midan la misma población y tarea, segmentaría cuando sea posible y probaría el intercambio entre velocidad y precisión; mientras tanto, la conducta observada pesa más para afirmar lo que ocurre y las entrevistas ayudan a explicar por qué."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-032",
+      "case_id": "PL-CLEAN-032",
+      "activation_classification": "ACTIVE",
+      "response": "Reportaría la métrica canónica de activación con su definición, periodo y fuente, separándola de la declaración del patrocinador. Antes de concluir, comprobaría si habla de otra métrica o cohorte; si no, registraría el desacuerdo y basaría la decisión en el dato verificable."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-033",
+      "case_id": "PL-CLEAN-033",
+      "activation_classification": "ACTIVE",
+      "response": "Los resultados opuestos pueden ser compatibles si los segmentos difieren. Revisaría validez y comparabilidad, estimaría el efecto por segmento y evitaría una conclusión global; la siguiente decisión podría ser adaptar la intervención, concentrarse en un segmento o ejecutar una prueba que explique la diferencia."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-034",
+      "case_id": "PL-CLEAN-034",
+      "activation_classification": "ACTIVE",
+      "response": "Actualizaría el registro de decisión con la evidencia nueva, su procedencia y la contradicción específica. Revaluaría únicamente las conclusiones que dependían del hecho refutado y solicitaría la aprobación correspondiente si cambiar compromisos excede la autoridad disponible."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-035",
+      "case_id": "PL-CLEAN-035",
+      "activation_classification": "ACTIVE",
+      "response": "Mantendría ambas observaciones: existe una señal cualitativa favorable, pero el resultado medido no cambió. Examinaría tamaño y representatividad de la señal, sensibilidad y plazo de la métrica, y posibles efectos por segmento antes de decidir si medir más, ajustar o detener."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-036",
+      "case_id": "PL-CLEAN-036",
+      "activation_classification": "INACTIVE",
+      "response": "Implementaría el comportamiento de retención exigido y conservaría evidencia trazable del requisito y de su cumplimiento. Las preferencias podrían influir en la comunicación o experiencia dentro de lo permitido, pero no justificarían incumplir ni reinterpretar la obligación."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-037",
+      "case_id": "PL-CLEAN-037",
+      "activation_classification": "INACTIVE",
+      "response": "Aplicaría la corrección de accesibilidad aprobada exactamente contra sus criterios de aceptación. Ejecutaría las verificaciones indicadas, registraría evidencia de los estados relevantes y evitaría cambios visuales o funcionales no requeridos."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-038",
+      "case_id": "PL-CLEAN-038",
+      "activation_classification": "INACTIVE",
+      "response": "Seguiría el runbook en el orden mandatado, registrando tiempos, resultados y responsables en cada punto. No omitiría ni reordenaría pasos por preferencia; si una condición impide continuar, activaría la escalada especificada y preservaría la evidencia."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-039",
+      "case_id": "PL-CLEAN-039",
+      "activation_classification": "INACTIVE",
+      "response": "Trataría el entregable, la fecha y los criterios del contrato firmado como límites vinculantes. Prepararía un plan de ejecución y verificación dentro de esos términos, elevando cuanto antes cualquier conflicto o riesgo en vez de cambiar unilateralmente el compromiso."
+    },
+    {
+      "source_output_id": "BASELINE-PL-CLEAN-040",
+      "case_id": "PL-CLEAN-040",
+      "activation_classification": "INACTIVE",
+      "response": "Dado que se activó una condición de reversión ya aprobada, ejecutaría el procedimiento definido sin reabrir la decisión. Verificaría la restauración, documentaría impacto y estado, y separaría cualquier análisis posterior de la respuesta operativa inmediata."
+    }
+  ]
+}

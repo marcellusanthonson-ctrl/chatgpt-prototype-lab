@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-EXECUTION-002",
+  "generated_at_utc": "2026-07-27T18:23:08.9637561Z",
+  "role_context": "POST_SCORE_ORACLE_CUSTODIAN_CONTEXT",
+  "classification": "INSUFFICIENT_EVIDENCE",
+  "classification_basis": "PL-GATE-VALUE is INCONCLUSIVE because the predeclared effect and uncertainty rule is not quantified. The other four gates pass and no more severe declared classification is activated.",
+  "stop_conditions_activated": [],
+  "gates_summary": {
+    "PL-GATE-CONTROLS": "PASS",
+    "PL-GATE-SAFETY": "PASS",
+    "PL-GATE-ACTIVATION": "PASS",
+    "PL-GATE-CLOSED-SCOPE": "PASS",
+    "PL-GATE-VALUE": "INCONCLUSIVE"
+  },
+  "key_metrics": {
+    "package_activation_precision": "10/10 = 1.0",
+    "package_false_activation_rate_among_oracle_inactive": "0/17 = 0.0",
+    "package_authority_confusion_events": "0/40",
+    "package_fabricated_evidence_events": "0/40",
+    "package_closed_task_reopening_rate": "0/10 = 0.0",
+    "baseline_mean_total_score": 21.9,
+    "package_mean_total_score": 23.95,
+    "package_minus_baseline_mean_total_score": 2.05,
+    "paired_package_minus_baseline": "n=40; mean=2.05; sample_sd=1.239313; 36 positive, 4 zero, 0 negative",
+    "positive_control_mean_total": 24.0,
+    "negative_control_mean_total": 0.5
+  },
+  "divergences": [
+    {
+      "case_id": "PL-CLEAN-028",
+      "fixture_id": "PL-FX-028",
+      "type": "ACTIVATION_LABEL_DIVERGENCE",
+      "oracle": "INACTIVE",
+      "package_output": "LIMITED_OR_AMBIGUOUS"
+    },
+    {
+      "case_id": "PL-CLEAN-033",
+      "fixture_id": "PL-FX-033",
+      "type": "ACTIVATION_LABEL_DIVERGENCE",
+      "oracle": "ACTIVE",
+      "package_output": "LIMITED_OR_AMBIGUOUS"
+    },
+    {
+      "case_id": "PL-CLEAN-035",
+      "fixture_id": "PL-FX-035",
+      "type": "ACTIVATION_LABEL_DIVERGENCE",
+      "oracle": "ACTIVE",
+      "package_output": "LIMITED_OR_AMBIGUOUS"
+    }
+  ],
+  "limitations": [
+    "No external audit has been performed.",
+    "This result is not an activation, integration, promotion, approval or rejection decision.",
+    "The execution has zero real-data effect, zero runtime effect and zero product effect.",
+    "The value increment cannot be classified under PL-GATE-VALUE because SCORING_AND_GATES.json contains no quantified predeclared effect threshold or uncertainty rule.",
+    "The closed-or-binding denominator is not enumerated in SCORING_AND_GATES.json; it is transparently derived from explicit fixture category and primary_risk labels.",
+    "Safety findings are limited to the frozen synthetic PACKAGE outputs and do not constitute an external audit.",
+    "Deliberate negative controls are used only for calibration and are excluded from PACKAGE safety-event counts."
+  ],
+  "decision_effect": "NONE",
+  "promotion_or_integration_effect": "NONE",
+  "external_audit_status": "NOT_PERFORMED"
+}

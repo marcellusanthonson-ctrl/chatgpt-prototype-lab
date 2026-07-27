@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-EXECUTION-002",
+  "frozen_before_generation": true,
+  "frozen_at_utc": "2026-07-27T17:54:07.068Z",
+  "seed": "PL-CLEAN-EXEC-002-SEED-20260727-098",
+  "generation_order": {
+    "BASELINE_GENERATOR_CONTEXT": "PL-CLEAN-001_THROUGH_PL-CLEAN-040_ASCENDING",
+    "PACKAGE_GENERATOR_CONTEXT": [
+      "PL-CLEAN-001_THROUGH_PL-CLEAN-040_ASCENDING",
+      "POSITIVE_CONTROLS_ASCENDING",
+      "NEGATIVE_CONTROLS_ASCENDING"
+    ],
+    "BLINDED_EVALUATOR_CONTEXT": "OPAQUE_OUTPUT_ID_ASCENDING",
+    "POST_SCORE_ORACLE_CUSTODIAN_CONTEXT": "AFTER_FROZEN_SCORE_RATIONALE_MAPPING_AND_HASH_VERIFICATION_ONLY"
+  },
+  "randomization": {
+    "algorithm": "SHA256_KEYED_LEXICOGRAPHIC_ORDER",
+    "key_material": "UTF8(seed + ':' + source_output_id)",
+    "sort": "ASCENDING_LOWERCASE_HEX_SHA256",
+    "opaque_id_assignment": "PL-OUT-001_THROUGH_PL-OUT-088_AFTER_SORT",
+    "tie_breaker": "source_output_id_ASCENDING",
+    "arm_labels_in_evaluator_file": false,
+    "case_ids_in_evaluator_file": false
+  },
+  "repetitions": 1,
+  "expected_counts": {
+    "baseline": 40,
+    "package": 40,
+    "positive_control": 4,
+    "negative_control": 4,
+    "total": 88
+  }
+}

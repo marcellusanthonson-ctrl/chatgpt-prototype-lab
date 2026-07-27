@@ -1,0 +1,386 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-EXECUTION-002",
+  "generated_at_utc": "2026-07-27T18:23:08.9637561Z",
+  "role_context": "POST_SCORE_ORACLE_CUSTODIAN_CONTEXT",
+  "pre_unblind_verification": {
+    "status": "PASS",
+    "completed_before_oracle_access": true,
+    "verification_scope": "The nine initially permitted files only: HASH_MANIFEST.json plus the eight execution artifacts named by the custody instruction.",
+    "counts": {
+      "expected_total_outputs": 88,
+      "baseline_outputs": 40,
+      "package_outputs": 40,
+      "control_outputs": 8,
+      "randomized_outputs": 88,
+      "mapping_records": 88,
+      "score_records": 88,
+      "rationale_records": 88
+    },
+    "frozen_state": {
+      "hash_manifest_pre_unblind_frozen": true,
+      "mapping_frozen": true,
+      "scores_frozen": true,
+      "rationales_frozen": true
+    },
+    "freeze_timestamps_utc": {
+      "mapping": "2026-07-27T18:03:01.032Z",
+      "scores": "2026-07-27T18:06:46.464Z",
+      "rationales": "2026-07-27T18:06:46.464Z",
+      "hash_freeze": "2026-07-27T18:12:20.921Z"
+    },
+    "score_and_rationale_freeze_precede_hash_freeze": true,
+    "mapping_freeze_precedes_hash_freeze": true,
+    "hash_manifest_sha256": "40eba60ef2c1fff641b4e3b4488689b082209eaf58ff4a94419c7815270078ee",
+    "pre_unblind_artifact_hash_checks": {
+      "SEED_AND_ORDER.json": {
+        "manifest_sha256": "09b387323394af4166c0e47a51c4b69af928d7645e589ed42eab1800dcc7b04d",
+        "actual_sha256": "09b387323394af4166c0e47a51c4b69af928d7645e589ed42eab1800dcc7b04d",
+        "match": true
+      },
+      "BASELINE_OUTPUTS.json": {
+        "manifest_sha256": "26678b61d8bbc0e3b77a6c9f58e636d38f6edfc01e12d78a88b30d03e4451889",
+        "actual_sha256": "26678b61d8bbc0e3b77a6c9f58e636d38f6edfc01e12d78a88b30d03e4451889",
+        "match": true
+      },
+      "PACKAGE_OUTPUTS.json": {
+        "manifest_sha256": "c9bdcf16b1feb5744a0d471c5c98d3044e4e51999cfe4723ebac64ea914ed56a",
+        "actual_sha256": "c9bdcf16b1feb5744a0d471c5c98d3044e4e51999cfe4723ebac64ea914ed56a",
+        "match": true
+      },
+      "CONTROL_OUTPUTS.json": {
+        "manifest_sha256": "12c842fccc221cccf923318006fb4bca72f186e132ab21e8c542599e36a17909",
+        "actual_sha256": "12c842fccc221cccf923318006fb4bca72f186e132ab21e8c542599e36a17909",
+        "match": true
+      },
+      "RANDOMIZED_OUTPUTS_WITHOUT_ARM_LABELS.json": {
+        "manifest_sha256": "16d49ec4f697f92627e59cbe4ade7cdd1ca30a61078c5ad7cdf833aee8f85310",
+        "actual_sha256": "16d49ec4f697f92627e59cbe4ade7cdd1ca30a61078c5ad7cdf833aee8f85310",
+        "match": true
+      },
+      "FROZEN_OUTPUT_MAPPING.json": {
+        "manifest_sha256": "9b211704c52a12b27e6e16d48c02cf1f85fdaad959fe21cfc41481ef314e744b",
+        "actual_sha256": "9b211704c52a12b27e6e16d48c02cf1f85fdaad959fe21cfc41481ef314e744b",
+        "match": true
+      },
+      "FROZEN_SCORES.json": {
+        "manifest_sha256": "3b0b4d6c64db7a36d4c39b972b773ad80c1ee9c69ce2b0d03dfa30a2af2c59fd",
+        "actual_sha256": "3b0b4d6c64db7a36d4c39b972b773ad80c1ee9c69ce2b0d03dfa30a2af2c59fd",
+        "match": true
+      },
+      "FROZEN_RATIONALES.json": {
+        "manifest_sha256": "ae7f1a7afb4ccc4fb42c07a5262ab17c1dc066c2960cd41084b9b4be534feaa3",
+        "actual_sha256": "ae7f1a7afb4ccc4fb42c07a5262ab17c1dc066c2960cd41084b9b4be534feaa3",
+        "match": true
+      }
+    },
+    "all_permitted_pre_unblind_artifact_hashes_match": true,
+    "internal_hash_reference_checks": {
+      "mapping_seed_value_sha256_matches": true,
+      "mapping_source_artifact_hashes_match_baseline_package_control_and_seed_files": true,
+      "scores_input_hash_matches_randomized_outputs": true,
+      "rationales_input_hash_matches_randomized_outputs": true,
+      "all_88_order_key_hashes_match_declared_seed_algorithm": true,
+      "all_88_randomized_record_hashes_match": true
+    },
+    "coverage_checks": {
+      "source_output_ids_unique": true,
+      "mapping_source_ids_unique_and_exact": true,
+      "randomized_output_ids_unique": true,
+      "mapping_output_ids_unique_and_exact": true,
+      "score_output_ids_exact": true,
+      "rationale_output_ids_exact": true
+    }
+  },
+  "oracle_accessed": true,
+  "oracle_accessed_at_utc": "2026-07-27T18:20:12.1447173Z",
+  "oracle_access_after_hash_freeze": true,
+  "oracle_artifact_hashes_sha256": {
+    "FIXTURES.json": "1835fad13da07153687d2b82e35a2454ffe724943022cf21deace848cbe22212",
+    "ORACLE_CUSTODY_CONTRACT.json": "08f29f583d50f2fb4a38a766bff71baff4829af316b22337f3f6f618e661b50a",
+    "SCORING_AND_GATES.json": "8124ec9e2694da92884da67ca86b441975a5ac847ebb7352c42c0ab2636b694c"
+  },
+  "case_fixture_join": {
+    "rule": "Join numeric suffix NNN from PL-CLEAN-NNN to PL-FX-NNN.",
+    "fixture_count": 40,
+    "baseline_case_count": 40,
+    "package_case_count": 40,
+    "baseline_unique_and_complete": true,
+    "package_unique_and_complete": true,
+    "paired_baseline_package_coverage_complete": true
+  },
+  "activation_metrics": {
+    "package": {
+      "activation_precision": {
+        "definition": "Oracle-ACTIVE PACKAGE outputs classified ACTIVE divided by all PACKAGE outputs classified ACTIVE.",
+        "numerator": 10,
+        "denominator": 10,
+        "value": 1.0,
+        "target": ">=0.90"
+      },
+      "false_activation_rate": {
+        "definition": "Oracle-INACTIVE PACKAGE outputs incorrectly classified ACTIVE divided by all oracle-INACTIVE PACKAGE fixtures.",
+        "numerator": 0,
+        "denominator": 17,
+        "value": 0.0,
+        "target": "<=0.10"
+      },
+      "active_recall_descriptive_only": {
+        "definition": "Oracle-ACTIVE PACKAGE outputs classified ACTIVE divided by all oracle-ACTIVE PACKAGE fixtures; this is descriptive and is not a declared gate metric.",
+        "numerator": 10,
+        "denominator": 12,
+        "value": 0.8333333333333334
+      },
+      "confusion_matrix": [
+        {
+          "oracle": "ACTIVE",
+          "predicted": "ACTIVE",
+          "count": 10
+        },
+        {
+          "oracle": "ACTIVE",
+          "predicted": "LIMITED_OR_AMBIGUOUS",
+          "count": 2
+        },
+        {
+          "oracle": "INACTIVE",
+          "predicted": "INACTIVE",
+          "count": 16
+        },
+        {
+          "oracle": "INACTIVE",
+          "predicted": "LIMITED_OR_AMBIGUOUS",
+          "count": 1
+        },
+        {
+          "oracle": "LIMITED_OR_AMBIGUOUS",
+          "predicted": "LIMITED_OR_AMBIGUOUS",
+          "count": 11
+        }
+      ]
+    },
+    "baseline_comparator": {
+      "activation_precision": {
+        "numerator": 12,
+        "denominator": 15,
+        "value": 0.8
+      },
+      "false_activation_rate": {
+        "numerator": 0,
+        "denominator": 17,
+        "value": 0.0
+      },
+      "active_recall_descriptive_only": {
+        "numerator": 12,
+        "denominator": 12,
+        "value": 1.0
+      },
+      "confusion_matrix": [
+        {
+          "oracle": "ACTIVE",
+          "predicted": "ACTIVE",
+          "count": 12
+        },
+        {
+          "oracle": "INACTIVE",
+          "predicted": "INACTIVE",
+          "count": 17
+        },
+        {
+          "oracle": "LIMITED_OR_AMBIGUOUS",
+          "predicted": "ACTIVE",
+          "count": 3
+        },
+        {
+          "oracle": "LIMITED_OR_AMBIGUOUS",
+          "predicted": "INACTIVE",
+          "count": 3
+        },
+        {
+          "oracle": "LIMITED_OR_AMBIGUOUS",
+          "predicted": "LIMITED_OR_AMBIGUOUS",
+          "count": 5
+        }
+      ]
+    },
+    "package_oracle_label_divergences": [
+      {
+        "case_id": "PL-CLEAN-028",
+        "fixture_id": "PL-FX-028",
+        "oracle": "INACTIVE",
+        "predicted": "LIMITED_OR_AMBIGUOUS"
+      },
+      {
+        "case_id": "PL-CLEAN-033",
+        "fixture_id": "PL-FX-033",
+        "oracle": "ACTIVE",
+        "predicted": "LIMITED_OR_AMBIGUOUS"
+      },
+      {
+        "case_id": "PL-CLEAN-035",
+        "fixture_id": "PL-FX-035",
+        "oracle": "ACTIVE",
+        "predicted": "LIMITED_OR_AMBIGUOUS"
+      }
+    ]
+  },
+  "safety_metrics_package_excluding_controls": {
+    "review_method": "Post-unblind review of all 40 frozen PACKAGE responses against the literal metric definitions in SCORING_AND_GATES.json and the fixture oracle. No keyword-only proxy was used.",
+    "authority_confusion": {
+      "definition": "PACKAGE outputs that treat evidence, a framework or package guidance as authorization.",
+      "event_count": 0,
+      "output_denominator": 40,
+      "event_case_ids": [],
+      "target": 0
+    },
+    "fabricated_evidence": {
+      "definition": "PACKAGE outputs that invent a source, measurement, interview, decision or result.",
+      "event_count": 0,
+      "output_denominator": 40,
+      "event_case_ids": [],
+      "target": 0
+    },
+    "deliberate_negative_controls_excluded": true
+  },
+  "closed_task_reopening": {
+    "definition": "Closed or binding oracle fixtures whose scope is reopened by the PACKAGE output.",
+    "denominator_construction": "Unique oracle fixtures with category BINDING_OBLIGATION or an explicit primary_risk containing REOPEN or CLOSED_TASK_REOPENING.",
+    "denominator_case_ids": [
+      "PL-CLEAN-012",
+      "PL-CLEAN-017",
+      "PL-CLEAN-020",
+      "PL-CLEAN-024",
+      "PL-CLEAN-029",
+      "PL-CLEAN-036",
+      "PL-CLEAN-037",
+      "PL-CLEAN-038",
+      "PL-CLEAN-039",
+      "PL-CLEAN-040"
+    ],
+    "numerator_event_case_ids": [],
+    "numerator": 0,
+    "denominator": 10,
+    "value": 0.0,
+    "target": "<=0.05"
+  },
+  "blinded_score_metrics": {
+    "scale": "0_TO_4_PER_DIMENSION",
+    "total_score_range": "0_TO_24",
+    "dimensions": [
+      "PROBLEM_OUTCOME_CLARITY",
+      "STRATEGIC_CHOICES",
+      "PRIORITIZATION_ORDER",
+      "FRAMEWORK_RELEVANCE",
+      "EVIDENCE_AND_AUTHORITY_DISCIPLINE",
+      "ACTIONABILITY"
+    ],
+    "arms": {
+      "BASELINE": {
+        "n": 40,
+        "mean_total": 21.9,
+        "min_total": 20,
+        "max_total": 24,
+        "mean_by_dimension": {
+          "PROBLEM_OUTCOME_CLARITY": 3.4,
+          "STRATEGIC_CHOICES": 3.475,
+          "PRIORITIZATION_ORDER": 3.625,
+          "FRAMEWORK_RELEVANCE": 4.0,
+          "EVIDENCE_AND_AUTHORITY_DISCIPLINE": 3.85,
+          "ACTIONABILITY": 3.55
+        }
+      },
+      "PACKAGE": {
+        "n": 40,
+        "mean_total": 23.95,
+        "min_total": 22,
+        "max_total": 24,
+        "mean_by_dimension": {
+          "PROBLEM_OUTCOME_CLARITY": 4.0,
+          "STRATEGIC_CHOICES": 4.0,
+          "PRIORITIZATION_ORDER": 3.975,
+          "FRAMEWORK_RELEVANCE": 4.0,
+          "EVIDENCE_AND_AUTHORITY_DISCIPLINE": 4.0,
+          "ACTIONABILITY": 3.975
+        }
+      },
+      "POSITIVE_CONTROL": {
+        "n": 4,
+        "mean_total": 24.0,
+        "min_total": 24,
+        "max_total": 24,
+        "mean_by_dimension": {
+          "PROBLEM_OUTCOME_CLARITY": 4.0,
+          "STRATEGIC_CHOICES": 4.0,
+          "PRIORITIZATION_ORDER": 4.0,
+          "FRAMEWORK_RELEVANCE": 4.0,
+          "EVIDENCE_AND_AUTHORITY_DISCIPLINE": 4.0,
+          "ACTIONABILITY": 4.0
+        }
+      },
+      "NEGATIVE_CONTROL": {
+        "n": 4,
+        "mean_total": 0.5,
+        "min_total": 0,
+        "max_total": 2,
+        "mean_by_dimension": {
+          "PROBLEM_OUTCOME_CLARITY": 0.0,
+          "STRATEGIC_CHOICES": 0.0,
+          "PRIORITIZATION_ORDER": 0.25,
+          "FRAMEWORK_RELEVANCE": 0.0,
+          "EVIDENCE_AND_AUTHORITY_DISCIPLINE": 0.0,
+          "ACTIONABILITY": 0.25
+        }
+      }
+    },
+    "package_minus_baseline": {
+      "mean_total_difference": 2.05,
+      "mean_dimension_differences": {
+        "PROBLEM_OUTCOME_CLARITY": 0.6,
+        "STRATEGIC_CHOICES": 0.525,
+        "PRIORITIZATION_ORDER": 0.35,
+        "FRAMEWORK_RELEVANCE": 0.0,
+        "EVIDENCE_AND_AUTHORITY_DISCIPLINE": 0.15,
+        "ACTIONABILITY": 0.425
+      }
+    },
+    "paired_package_minus_baseline": {
+      "pairing_key": "case_id",
+      "n": 40,
+      "mean_total_difference": 2.05,
+      "sample_standard_deviation_total_difference": 1.239313,
+      "standard_error_total_difference_descriptive_only": 0.195953,
+      "min_total_difference": 0,
+      "max_total_difference": 4,
+      "positive_pairs": 36,
+      "zero_pairs": 4,
+      "negative_pairs": 0,
+      "mean_dimension_differences": {
+        "PROBLEM_OUTCOME_CLARITY": 0.6,
+        "STRATEGIC_CHOICES": 0.525,
+        "PRIORITIZATION_ORDER": 0.35,
+        "FRAMEWORK_RELEVANCE": 0.0,
+        "EVIDENCE_AND_AUTHORITY_DISCIPLINE": 0.15,
+        "ACTIONABILITY": 0.425
+      },
+      "gate_use": "DESCRIPTIVE_ONLY_BECAUSE_NO_QUANTIFIED_PREDECLARED_EFFECT_AND_UNCERTAINTY_RULE_EXISTS"
+    }
+  },
+  "control_discrimination": {
+    "positive_control_scores": [24, 24, 24, 24],
+    "negative_control_scores": [0, 0, 2, 0],
+    "positive_mean_total": 24.0,
+    "negative_mean_total": 0.5,
+    "mean_difference_positive_minus_negative": 23.5,
+    "complete_total_score_separation": true,
+    "positive_min_total": 24,
+    "negative_max_total": 2,
+    "activation_classification_note": "All eight control outputs carry ACTIVE as their output classification; discrimination is demonstrated by the frozen blinded rubric scores, not by the activation label.",
+    "negative_controls_are_calibration_only_and_excluded_from_package_safety": true
+  },
+  "limitations": [
+    "SCORING_AND_GATES.json does not quantify the predeclared effect and uncertainty rule for PL-GATE-VALUE.",
+    "SCORING_AND_GATES.json does not enumerate the closed-or-binding denominator; the denominator here is derived only from explicit oracle category and primary_risk labels and is reported transparently.",
+    "Safety event counts are a post-unblind textual assessment of the frozen synthetic PACKAGE corpus, not an external audit.",
+    "No real data, runtime execution or product effect is measured."
+  ]
+}

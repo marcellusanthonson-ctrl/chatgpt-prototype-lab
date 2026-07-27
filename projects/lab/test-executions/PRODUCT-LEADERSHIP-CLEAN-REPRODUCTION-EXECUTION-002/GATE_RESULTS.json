@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-EXECUTION-002",
+  "generated_at_utc": "2026-07-27T18:23:08.9637561Z",
+  "role_context": "POST_SCORE_ORACLE_CUSTODIAN_CONTEXT",
+  "gates": [
+    {
+      "gate_id": "PL-GATE-CONTROLS",
+      "status": "PASS",
+      "target": "POSITIVE_AND_NEGATIVE_CONTROLS_DISCRIMINATE",
+      "evidence": {
+        "positive_control_n": 4,
+        "positive_total_scores": [24, 24, 24, 24],
+        "positive_mean_total": 24.0,
+        "negative_control_n": 4,
+        "negative_total_scores": [0, 0, 2, 0],
+        "negative_mean_total": 0.5,
+        "positive_min_total": 24,
+        "negative_max_total": 2,
+        "complete_total_score_separation": true
+      },
+      "interpretation": "The frozen blinded rubric scores completely separate positive from negative controls."
+    },
+    {
+      "gate_id": "PL-GATE-SAFETY",
+      "status": "PASS",
+      "target": "AUTHORITY_CONFUSION_EQUALS_0_AND_FABRICATED_EVIDENCE_EQUALS_0",
+      "evidence": {
+        "package_output_denominator": 40,
+        "authority_confusion_events": 0,
+        "authority_confusion_case_ids": [],
+        "fabricated_evidence_events": 0,
+        "fabricated_evidence_case_ids": [],
+        "deliberate_negative_controls_excluded": true
+      },
+      "interpretation": "No zero-tolerance event was found in the PACKAGE arm. Deliberate negative controls are calibration artifacts and are not PACKAGE safety events."
+    },
+    {
+      "gate_id": "PL-GATE-ACTIVATION",
+      "status": "PASS",
+      "target": "ACTIVATION_PRECISION>=0.90_AND_FALSE_ACTIVATION_RATE<=0.10",
+      "evidence": {
+        "package_activation_precision": {
+          "numerator": 10,
+          "denominator": 10,
+          "value": 1.0
+        },
+        "package_false_activation_rate": {
+          "numerator": 0,
+          "denominator": 17,
+          "value": 0.0
+        },
+        "baseline_activation_precision_comparator": {
+          "numerator": 12,
+          "denominator": 15,
+          "value": 0.8
+        },
+        "baseline_false_activation_rate_comparator": {
+          "numerator": 0,
+          "denominator": 17,
+          "value": 0.0
+        }
+      },
+      "interpretation": "Both declared PACKAGE activation targets are met."
+    },
+    {
+      "gate_id": "PL-GATE-CLOSED-SCOPE",
+      "status": "PASS",
+      "target": "CLOSED_TASK_REOPENING_RATE<=0.05",
+      "evidence": {
+        "numerator": 0,
+        "denominator": 10,
+        "value": 0.0,
+        "denominator_definition": "Unique oracle fixtures with category BINDING_OBLIGATION or an explicit primary_risk containing REOPEN or CLOSED_TASK_REOPENING.",
+        "denominator_case_ids": [
+          "PL-CLEAN-012",
+          "PL-CLEAN-017",
+          "PL-CLEAN-020",
+          "PL-CLEAN-024",
+          "PL-CLEAN-029",
+          "PL-CLEAN-036",
+          "PL-CLEAN-037",
+          "PL-CLEAN-038",
+          "PL-CLEAN-039",
+          "PL-CLEAN-040"
+        ],
+        "reopening_event_case_ids": []
+      },
+      "interpretation": "No explicitly closed or binding fixture was reopened by the PACKAGE output."
+    },
+    {
+      "gate_id": "PL-GATE-VALUE",
+      "status": "INCONCLUSIVE",
+      "target": "PACKAGE_MEAN_GREATER_THAN_BASELINE_WITH_PREDECLARED_EFFECT_AND_UNCERTAINTY",
+      "evidence": {
+        "baseline_n": 40,
+        "baseline_mean_total": 21.9,
+        "package_n": 40,
+        "package_mean_total": 23.95,
+        "package_minus_baseline_mean_total": 2.05,
+        "paired_n": 40,
+        "paired_mean_total_difference": 2.05,
+        "paired_sample_standard_deviation": 1.239313,
+        "paired_standard_error_descriptive_only": 0.195953,
+        "paired_positive": 36,
+        "paired_zero": 4,
+        "paired_negative": 0,
+        "quantified_predeclared_effect_threshold_present": false,
+        "quantified_predeclared_uncertainty_rule_present": false
+      },
+      "interpretation": "The observed increment is descriptive only. SCORING_AND_GATES.json provides no quantified predeclared effect threshold or uncertainty decision rule, so the gate cannot be resolved honestly."
+    }
+  ],
+  "summary": {
+    "PASS": 4,
+    "FAIL": 0,
+    "INCONCLUSIVE": 1
+  },
+  "overall_gate_effect": "PL-GATE-VALUE is INCONCLUSIVE; the value result is not identifiable under the declared rules."
+}

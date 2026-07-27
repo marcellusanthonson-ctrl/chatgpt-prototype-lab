@@ -1,0 +1,903 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-EXECUTION-002",
+  "frozen": true,
+  "frozen_at_utc": "2026-07-27T18:03:01.032Z",
+  "available_to_blinded_evaluator": false,
+  "unblind_permitted_only_after": [
+    "ALL_OUTPUTS_FROZEN",
+    "FROZEN_SCORES_WRITTEN",
+    "FROZEN_RATIONALES_WRITTEN",
+    "SCORE_AND_RATIONALE_HASHES_RECORDED"
+  ],
+  "seed_sha256": "e0e12198a42d572cf6723d86bea8602096b2e9097cf91f15239f613cde9cc564",
+  "source_artifact_sha256": {
+    "BASELINE_OUTPUTS.json": "26678b61d8bbc0e3b77a6c9f58e636d38f6edfc01e12d78a88b30d03e4451889",
+    "PACKAGE_OUTPUTS.json": "c9bdcf16b1feb5744a0d471c5c98d3044e4e51999cfe4723ebac64ea914ed56a",
+    "CONTROL_OUTPUTS.json": "12c842fccc221cccf923318006fb4bca72f186e132ab21e8c542599e36a17909",
+    "SEED_AND_ORDER.json": "09b387323394af4166c0e47a51c4b69af928d7645e589ed42eab1800dcc7b04d"
+  },
+  "mapping_count": 88,
+  "mappings": [
+    {
+      "output_id": "PL-OUT-001",
+      "source_output_id": "PACKAGE-PL-CLEAN-020",
+      "case_id": "PL-CLEAN-020",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "01bca0ec2765e560297df801791bab49fb6c0bd870e551a56f1c43bc8f65b2cd",
+      "source_record_sha256": "50b344d36befb9024dc50adfff3f96eac676420247081e604ddbbcfdfe618a3b",
+      "randomized_record_sha256": "8f2108c06176fa9a95ab3f5cb4ffb500bbf3fab4e13325e2b71339ca4b1c69db"
+    },
+    {
+      "output_id": "PL-OUT-002",
+      "source_output_id": "BASELINE-PL-CLEAN-001",
+      "case_id": "PL-CLEAN-001",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "0541be698a7dbd93ab6757eb56413233b3b8835201f719ef003ab49829375801",
+      "source_record_sha256": "0c2d5682038e69863142979b66cdb6af5a4cdcfb356e31975056f5b45c1a4843",
+      "randomized_record_sha256": "ca6b591333aff0bea93c19a46c7ca901325d78d73d139e7b0f0ff1716198fb04"
+    },
+    {
+      "output_id": "PL-OUT-003",
+      "source_output_id": "BASELINE-PL-CLEAN-025",
+      "case_id": "PL-CLEAN-025",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "068007ef7d5565b1c733143aa6f509d6761093feb041650ce3bbceb71a020caf",
+      "source_record_sha256": "b546f34f78c9249c4ea8dc9d17203ee25abb329d7af80afd748d69f51fe8c7d1",
+      "randomized_record_sha256": "c0ffbfc339c7c3eac8070840141d4ae40210206e4fad026ae2269040a624f8dc"
+    },
+    {
+      "output_id": "PL-OUT-004",
+      "source_output_id": "POSITIVE-CONTROL-004",
+      "case_id": "PL-CLEAN-007",
+      "arm": "POSITIVE_CONTROL",
+      "control_type": "POSITIVE",
+      "order_key_sha256": "073586ecdf412a0566002220ffa2c250a4df03b22e689694ff5a7bea7627e56a",
+      "source_record_sha256": "d74a14bb58f607f4e72e008af8c0029759a0ef81ebee25a4bea2f57d9cde5edf",
+      "randomized_record_sha256": "f9f8c1b4a96f0f5bddf5dc9599aed4da94d86446e83bd2f56c9a8df174e65954"
+    },
+    {
+      "output_id": "PL-OUT-005",
+      "source_output_id": "PACKAGE-PL-CLEAN-038",
+      "case_id": "PL-CLEAN-038",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "0c2ecaec5841f0800cdceb962a46437a5b07f557df1d2d7cb28e6d6da951c592",
+      "source_record_sha256": "9681f721ebe069c69a9c2d2b633d7c639aace0de4dbdd41fec187680b4dfed64",
+      "randomized_record_sha256": "9688fe2b48f1963601144c9082e8cfb110f491dc270fb2e88961caa062419a45"
+    },
+    {
+      "output_id": "PL-OUT-006",
+      "source_output_id": "PACKAGE-PL-CLEAN-005",
+      "case_id": "PL-CLEAN-005",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "0fb579b92f0690cb763dde9e6aa04fcbb9631ab693bbfb49b3cec8c17cbf286b",
+      "source_record_sha256": "f28ec16061495fd2e36f0afb699c0abb03c4448eefde16646f5043c16d7880a9",
+      "randomized_record_sha256": "094fea41d1dc5bea03ca13ee76cd6b08e0299dd5f66da2b683c998f822cdd929"
+    },
+    {
+      "output_id": "PL-OUT-007",
+      "source_output_id": "PACKAGE-PL-CLEAN-036",
+      "case_id": "PL-CLEAN-036",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "15b35bf0bc7c6cf827d7be38f59979e509e73b6378dbe793932d3a9b30b9fde0",
+      "source_record_sha256": "bca6a22d9a282f18dc0e148da2b77daa25599579839c1d04750349df87c8ef24",
+      "randomized_record_sha256": "f8ba4dcfbd0b3712c6c26c4f1aad12885038c9d88c3e1e8b88cc0023d918fbf1"
+    },
+    {
+      "output_id": "PL-OUT-008",
+      "source_output_id": "BASELINE-PL-CLEAN-018",
+      "case_id": "PL-CLEAN-018",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "1ba4ff12ba0dec3d7098d3d808f013a3550176e29abf6f25a48005fdbb168689",
+      "source_record_sha256": "0b7fa52a2be34fd89ebd0dd4b9481cc0445eda4890271ceb27b849fbf65f2b34",
+      "randomized_record_sha256": "b1b95717c19034b3218d5726faa1e8bcd795cb2e337b7df491b09861f84fbfc7"
+    },
+    {
+      "output_id": "PL-OUT-009",
+      "source_output_id": "PACKAGE-PL-CLEAN-016",
+      "case_id": "PL-CLEAN-016",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "1f685fef625504c7f68759ff2dff9ba937fce6bd423aa2a168258565d8114f57",
+      "source_record_sha256": "ed029aa754ec040f1149334e1cb921c3b3af95f35f2fa58af34e66ea6c2707af",
+      "randomized_record_sha256": "00cebde0ecd9f06dbe169f3a95f09fc743463bedae6930c2a8f2ba18df7a6caf"
+    },
+    {
+      "output_id": "PL-OUT-010",
+      "source_output_id": "PACKAGE-PL-CLEAN-026",
+      "case_id": "PL-CLEAN-026",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "23cb591ed476d2fdf98db12514ade6e81a24c0db3ba7a361df727fadeb29e851",
+      "source_record_sha256": "550db9946e27d428bdba28d6572e2e790629bd13aae7523a364dd05fd5aefb3c",
+      "randomized_record_sha256": "e185a2470efaf26bd7a78f62f8864c463a248dfac69a77b690eae487bd1aef08"
+    },
+    {
+      "output_id": "PL-OUT-011",
+      "source_output_id": "BASELINE-PL-CLEAN-036",
+      "case_id": "PL-CLEAN-036",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "24b999cff49bf27e26d22ac9e14eb92582b38e39c4207f5eeb18f564d21867f7",
+      "source_record_sha256": "dc4b0047506835ce6bbf32aa963340e5af84644048adf15634d9b45baf788b37",
+      "randomized_record_sha256": "c79d4a52479186a5ca5c5898b4661cfc4b814169a3b687ea2cf7ec18406ba700"
+    },
+    {
+      "output_id": "PL-OUT-012",
+      "source_output_id": "NEGATIVE-CONTROL-003",
+      "case_id": "PL-CLEAN-028",
+      "arm": "NEGATIVE_CONTROL",
+      "control_type": "NEGATIVE",
+      "order_key_sha256": "26ff8b61798cc44a17949bb414339ddd2f3bc6ec53d036c82add5bcad0a15c8c",
+      "source_record_sha256": "4b1f6645b9b3e6d5e413d841bcc0ebd03d96f9013081a1008a51ee9c2eef619d",
+      "randomized_record_sha256": "f8c3380fa03a2372a85046640e98c5b3ae20e32ad45d4658bc63f2ac8bc1086e"
+    },
+    {
+      "output_id": "PL-OUT-013",
+      "source_output_id": "PACKAGE-PL-CLEAN-028",
+      "case_id": "PL-CLEAN-028",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "3232e5d803adafff19ecfdb0e8139507e38c4d52d61859733c545b8016c27b36",
+      "source_record_sha256": "960fb54ab164694503782663e13d72909ed5358ba8df9676ce9cc8ac97dd5321",
+      "randomized_record_sha256": "5e5f852ed86a9edc6d103b1350979788233fce23e5d7d365847288dddd0a3fb8"
+    },
+    {
+      "output_id": "PL-OUT-014",
+      "source_output_id": "PACKAGE-PL-CLEAN-008",
+      "case_id": "PL-CLEAN-008",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "34da3d0d7fb713937dcd2d5245675cb3191fc4ba56f5c6865b87bec17935fdb5",
+      "source_record_sha256": "3ea475105d6a67040c74671c163aac78078980cce23269940d0e20afe6693482",
+      "randomized_record_sha256": "f27a604d0385e51c9879cbd99abab7790a4a37322332e3b297a01da005f59cc3"
+    },
+    {
+      "output_id": "PL-OUT-015",
+      "source_output_id": "BASELINE-PL-CLEAN-015",
+      "case_id": "PL-CLEAN-015",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "3bb6d866387b42f9fcd3b6779f6b04283ec6717cb0b9c48841df53b719e0593b",
+      "source_record_sha256": "db03f50296a551d21a0685b096ff0d53b1db27e398f7341528042575ff85e27c",
+      "randomized_record_sha256": "30a2dd245bfa84c1e87f31bff08d1d1d79ecac9d046a5fe5bc9e2f9bf6130d4e"
+    },
+    {
+      "output_id": "PL-OUT-016",
+      "source_output_id": "PACKAGE-PL-CLEAN-019",
+      "case_id": "PL-CLEAN-019",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "3bcc17627efaecf8710e1a321b2666b17c61b0a1ef0d77e38e9e2069500fd069",
+      "source_record_sha256": "e67761386a36fcf5d708af46bdc9b65b9be4d925361232c3a7926b2609f04a4d",
+      "randomized_record_sha256": "510fcdea556a5f358706ae16b9c5e24e7d0126f734e05d9edb9f70dcd80f7b4c"
+    },
+    {
+      "output_id": "PL-OUT-017",
+      "source_output_id": "PACKAGE-PL-CLEAN-002",
+      "case_id": "PL-CLEAN-002",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "3d8cb1e559538c5a9ad5580cb694fd60ad699f427f0f7cb9286e3deadf38228d",
+      "source_record_sha256": "1f03ac2859518494ee53915374aebfd5663162ed6330e821482d9bb7b9944d56",
+      "randomized_record_sha256": "bfb1b4cab0f0eb5da2d9a9bfd98f685b7aec3ea6c147267e3c0b56b7b2dec9f0"
+    },
+    {
+      "output_id": "PL-OUT-018",
+      "source_output_id": "NEGATIVE-CONTROL-004",
+      "case_id": "PL-CLEAN-030",
+      "arm": "NEGATIVE_CONTROL",
+      "control_type": "NEGATIVE",
+      "order_key_sha256": "3e4cd89efd6c389664fd440d6695426469ae94a5cc8fa446e93e8971a76f466f",
+      "source_record_sha256": "3348eeda020696ef596e26d5cac752c9e197d9e1000d0ec3939bbf136ebd4d4b",
+      "randomized_record_sha256": "a08b9cb27fa668e2151b5f2f7416ddee45e2cd7945030b0266cc7454657f78db"
+    },
+    {
+      "output_id": "PL-OUT-019",
+      "source_output_id": "NEGATIVE-CONTROL-002",
+      "case_id": "PL-CLEAN-017",
+      "arm": "NEGATIVE_CONTROL",
+      "control_type": "NEGATIVE",
+      "order_key_sha256": "4779eab11978f834e6e620d2def2f67a37d4f41df7aba77ba28861f84810cd15",
+      "source_record_sha256": "262aa354af78ea98570868abb75431b36c1fb35abcbd89f297b8c8aaee94e899",
+      "randomized_record_sha256": "127ee4c2ade70096231781e598d4bbd82e62858e73302cf3848c06af165840cb"
+    },
+    {
+      "output_id": "PL-OUT-020",
+      "source_output_id": "POSITIVE-CONTROL-001",
+      "case_id": "PL-CLEAN-001",
+      "arm": "POSITIVE_CONTROL",
+      "control_type": "POSITIVE",
+      "order_key_sha256": "483ebe6180fbba3e8f117046bfc6626d3e1abf810d60e365727d9226aa5c6391",
+      "source_record_sha256": "786529d9b680159a212c482f13a4b58a3ef904b30ef4048c86e1eba54c697c08",
+      "randomized_record_sha256": "45f2276ca919d8f4fa96ed0f9c2532186e7150d326a85e8fd9b255faaa1195bd"
+    },
+    {
+      "output_id": "PL-OUT-021",
+      "source_output_id": "BASELINE-PL-CLEAN-034",
+      "case_id": "PL-CLEAN-034",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "48b86c4898958c6df665732f02d85fb81ae790829ad9b6e398a8e7f4242de669",
+      "source_record_sha256": "c6a52caf40de69ec4d47932557d6a7e295d76b5126304cad93235c957bec6d65",
+      "randomized_record_sha256": "070efdb8c0d5db86ffa6aee42407d39bc34183323f8b4c187581054efd2bbf73"
+    },
+    {
+      "output_id": "PL-OUT-022",
+      "source_output_id": "BASELINE-PL-CLEAN-021",
+      "case_id": "PL-CLEAN-021",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "4cb90a867544b4794169679630ebde3f69d1cf77554ba0b04ce74c27a093b839",
+      "source_record_sha256": "3ea9bf28b392f1d682604b2cabc8342b4b9d4eda6a791e6650b381f4e5eedfff",
+      "randomized_record_sha256": "b4e6f052abdc518e3eb981afa47961427bc8bfb4cb9bc8e5321d54a6f6be243d"
+    },
+    {
+      "output_id": "PL-OUT-023",
+      "source_output_id": "BASELINE-PL-CLEAN-016",
+      "case_id": "PL-CLEAN-016",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "4d8a4e3738e46539b2951208482e7b70b7a93516be7593ebc77f18f6c85a9b7c",
+      "source_record_sha256": "a613252c6bcd3602741aad4febfd0f4728aee5ae112993adc5252903d0fe41f0",
+      "randomized_record_sha256": "2d288df94ebf8cffea1eaa9f69b75aa71c1088f702b77591bc95ad8c7aca39ec"
+    },
+    {
+      "output_id": "PL-OUT-024",
+      "source_output_id": "BASELINE-PL-CLEAN-019",
+      "case_id": "PL-CLEAN-019",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "576abdb01001b1ac03dfdb013dd38289527dfd68e97da4b0396061927ae6a234",
+      "source_record_sha256": "62ac707b8f8a1eb8a38d1f57af83e20d4b198fcfc5a6d54e0ec90c0ac3e4fa1b",
+      "randomized_record_sha256": "d56575570d3253b3937d6fdffab9b19c337e1d4010eb27524e6c882e2a5ec2ee"
+    },
+    {
+      "output_id": "PL-OUT-025",
+      "source_output_id": "BASELINE-PL-CLEAN-014",
+      "case_id": "PL-CLEAN-014",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "581bdef06a6caaf12cdf8edc4d7bc30dcd311f502c215fedbdfbf1ae90ad5ee9",
+      "source_record_sha256": "cc6e4b82b13ff85cf14ebdbc238b5791e1d88c6072dc780a474da144e3c03de4",
+      "randomized_record_sha256": "9722ce8e87294c23b8be357be1d07251aecc6ee2d1a8d4bd02239d6e9034a4f1"
+    },
+    {
+      "output_id": "PL-OUT-026",
+      "source_output_id": "PACKAGE-PL-CLEAN-032",
+      "case_id": "PL-CLEAN-032",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "5acbf251df8ba3f1740c5954c5868f62aaaa5f67f342ff6aad94e6a34c813a9a",
+      "source_record_sha256": "4bb1015966ead16c499011b6cee953b8e4f58372cdc6b728627513a5d58bcbc9",
+      "randomized_record_sha256": "84a22892863b1058d265726a75babf8faaa1de99aa932874552d2b61ca251e18"
+    },
+    {
+      "output_id": "PL-OUT-027",
+      "source_output_id": "BASELINE-PL-CLEAN-037",
+      "case_id": "PL-CLEAN-037",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "5b211d47db9373f6fe157200603544bb8a34e33ad424b2967a37ee83a5740aab",
+      "source_record_sha256": "7acfec228b36caac3cefb0f40c78cb70028fb78a6e4d45afd242bd35a1fe34a6",
+      "randomized_record_sha256": "a9d8b4b992e3110f12a3879e80d2eb998ec8b88d1c0a5d4805b673ca44c4437a"
+    },
+    {
+      "output_id": "PL-OUT-028",
+      "source_output_id": "PACKAGE-PL-CLEAN-006",
+      "case_id": "PL-CLEAN-006",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "5c1578f44a380dc5ec5e281b50f95d8dd1482b1502c96134341d20b2b5a07429",
+      "source_record_sha256": "bbd2fb8513377536517af3b16e34fee692fc397325b9048fb161098125f8f039",
+      "randomized_record_sha256": "b7f4589c1c0f91269711e700f896fca1e4a9dcfc4c345224536a2fb4b08f9c8a"
+    },
+    {
+      "output_id": "PL-OUT-029",
+      "source_output_id": "BASELINE-PL-CLEAN-003",
+      "case_id": "PL-CLEAN-003",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "5fa5199411251c3ae20d32e3f4d8f866a89a28424640526f3715817acd967654",
+      "source_record_sha256": "5b7ff35a6363526710091a000a5e3210aad40ac1b79ddd4d6134245903d09e9b",
+      "randomized_record_sha256": "f6211554613a6927ed876101b9d744fc3141d5977d09cec3cc9788d21871a79c"
+    },
+    {
+      "output_id": "PL-OUT-030",
+      "source_output_id": "BASELINE-PL-CLEAN-017",
+      "case_id": "PL-CLEAN-017",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "642cae89229099a2c0f204e24318b5da12c9364f4cabe388b21e5cfb407879c3",
+      "source_record_sha256": "d0abd5b710e0efe77e287cd6aebbaf48745a44b205072e8d02d377420baaec20",
+      "randomized_record_sha256": "d9b25a7203113a2b34c7443c75f63df0d5d46ba82404d7bd993269ebca3af9f8"
+    },
+    {
+      "output_id": "PL-OUT-031",
+      "source_output_id": "BASELINE-PL-CLEAN-013",
+      "case_id": "PL-CLEAN-013",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "648ae605a4b4de38f8b695167df033bef8def37796a3fcd1f1c4f69f8848789c",
+      "source_record_sha256": "aa0d94edbb4551919e5e35e57c9b320be9f8ab1cfecadf5f7412cf1035f5651c",
+      "randomized_record_sha256": "a96db3c8a81c9e2e37b4f514629331b8894a655e15b8718d21f9fbcc90a81cf2"
+    },
+    {
+      "output_id": "PL-OUT-032",
+      "source_output_id": "BASELINE-PL-CLEAN-033",
+      "case_id": "PL-CLEAN-033",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "65c358a0b793d7ae87f333bd6c37818c025cfe9221ba41aaaa1412f7cd29683a",
+      "source_record_sha256": "797e346796e625fbf52b405be52513390d9df648211bd6a60f94b66830c47507",
+      "randomized_record_sha256": "f19c76e5210854480f82a9a80f1ebb163131231ab90f3de220023fd6e9a36a6b"
+    },
+    {
+      "output_id": "PL-OUT-033",
+      "source_output_id": "BASELINE-PL-CLEAN-011",
+      "case_id": "PL-CLEAN-011",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "6681dcffffd507ce58a065b25e751aa7702a6b7f0e6dd2fec47d511cd2d854ad",
+      "source_record_sha256": "9bcf353564781302713e47da23202ca3ad26c74eda64851583ff6876c8b48721",
+      "randomized_record_sha256": "d74ba5728866234c97452a0f9ebdd7d9f8aeadaa2d3e6f370de411739622ac58"
+    },
+    {
+      "output_id": "PL-OUT-034",
+      "source_output_id": "BASELINE-PL-CLEAN-031",
+      "case_id": "PL-CLEAN-031",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "67640b8dd93d52413b618341a1e6e22d40b85991a7a87fc4f7ef51385dd13573",
+      "source_record_sha256": "a0ed3d1ae91a1abd0ba60df2e14d4904fe705e40b53deaecd4eac1bac3a43926",
+      "randomized_record_sha256": "57db061252f4b412390ddd456dae1324846859725b795d82c08e790af4c9a5d7"
+    },
+    {
+      "output_id": "PL-OUT-035",
+      "source_output_id": "BASELINE-PL-CLEAN-008",
+      "case_id": "PL-CLEAN-008",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "6c042f610afa9792ca16902a51ca90c834d53c9e3a01da5cf1f51601e87e682e",
+      "source_record_sha256": "8d5156d4432b9cc196415793ddb712420db845410f1383cc63a58414cc8f3e7a",
+      "randomized_record_sha256": "5a8d757051c2a974fffeeb419b86759e03be7da33180c681aa844615d001c69c"
+    },
+    {
+      "output_id": "PL-OUT-036",
+      "source_output_id": "PACKAGE-PL-CLEAN-027",
+      "case_id": "PL-CLEAN-027",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "718a9722d5428d1aa4f57dd8bb08023c3383cfab2e19a2b092462b58ff26eb5d",
+      "source_record_sha256": "ce3f60c3cc9e91c3fd9ed380a309aa275dfb28b9f59f4ebb3302a600ea650c5b",
+      "randomized_record_sha256": "ff9a9fb0d68abfa9c1ed5379d675e4143be3d4524e4b4bb7fc1aadce73a3fe63"
+    },
+    {
+      "output_id": "PL-OUT-037",
+      "source_output_id": "PACKAGE-PL-CLEAN-031",
+      "case_id": "PL-CLEAN-031",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "7405d62d6778ac69b5a6f63d058e9d9879ccb3ee305abf89482fa9a5f6d8d8d2",
+      "source_record_sha256": "9bb6a3bb8115119af556d1f32f7539be8a6114b9edf706e1cf51d4290b92acc2",
+      "randomized_record_sha256": "9ee4b26ab78982195c6df48eda9dc5f4496e4b6f6b1107835e55fa2883adffb9"
+    },
+    {
+      "output_id": "PL-OUT-038",
+      "source_output_id": "PACKAGE-PL-CLEAN-033",
+      "case_id": "PL-CLEAN-033",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "74af47d734c7404d001f02a9d356bfa0998186e6230f951e2699e0e55a6c2d99",
+      "source_record_sha256": "107194cc816cb7a8cdb250f19d7c59b16d3945e86d8d50f2f76646d6b2c67983",
+      "randomized_record_sha256": "4f9488050913eaaf7f4c6e14effe525a726db937e8184d89e749c4e7ce3cb2cd"
+    },
+    {
+      "output_id": "PL-OUT-039",
+      "source_output_id": "PACKAGE-PL-CLEAN-004",
+      "case_id": "PL-CLEAN-004",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "7f5ceb1632845a0169a4c97ab462ebbd1ac88550eb5a78e27b3bfaeec26a425c",
+      "source_record_sha256": "d3d2527b3403d293e55ffd07a14beb3d0cfce3a588d05df931bf62f62af38b27",
+      "randomized_record_sha256": "b7ed051becaf908da0d685486074f47b42817739f17121bce3f65cccd46ca537"
+    },
+    {
+      "output_id": "PL-OUT-040",
+      "source_output_id": "PACKAGE-PL-CLEAN-018",
+      "case_id": "PL-CLEAN-018",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "82ec4e14a39e7c60c0fbc8b8bd78d3992ce5571bb3c50a91e2e63697b77a3cae",
+      "source_record_sha256": "800fecfe90a89b12c785e857caca2ad03af73a6681a0335a1fc73b1ad99caa12",
+      "randomized_record_sha256": "b7a9a48e7c546503a45bda3bb9fba835a4b1253e5e562ef65d9db78cb379d226"
+    },
+    {
+      "output_id": "PL-OUT-041",
+      "source_output_id": "BASELINE-PL-CLEAN-032",
+      "case_id": "PL-CLEAN-032",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "8498d241aeacf406f43a7caa242a28f66c8442148f17621ead0d32171e4585b9",
+      "source_record_sha256": "ac5d33058cca632d3dd0df6693eab80565ebd1b2eb777ab54c74e94b7ff8dcff",
+      "randomized_record_sha256": "577b7a21601632a819d267eaedc194dfad982162eb44cd6953571b5351ba60a0"
+    },
+    {
+      "output_id": "PL-OUT-042",
+      "source_output_id": "PACKAGE-PL-CLEAN-040",
+      "case_id": "PL-CLEAN-040",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "900241068fd2c85e1ab0d70bbaf73ef534b4afd0e56e4007ac0b2d0627df41e8",
+      "source_record_sha256": "46b6c26dc5298847d2a2d71a453fa77f59503817da3407702aad52a0de0e65b6",
+      "randomized_record_sha256": "5ec38be54c97bb453e6c2d6d4bc0ef794af23084a6e7c9dbc913e14a0c1339f7"
+    },
+    {
+      "output_id": "PL-OUT-043",
+      "source_output_id": "PACKAGE-PL-CLEAN-025",
+      "case_id": "PL-CLEAN-025",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "91ff2ca18baebf07dccedac384290de58cbc67060a4acb2f13805381679a6441",
+      "source_record_sha256": "41b248dbd0901b96b12e6d8e5d67eebc1f4225b3a03a6f8fe72f44b2d15f491d",
+      "randomized_record_sha256": "8c782a7e7c7085b35d55d45938e8d09b4470e5770219c68ecd69adb7b9bf7e7f"
+    },
+    {
+      "output_id": "PL-OUT-044",
+      "source_output_id": "BASELINE-PL-CLEAN-009",
+      "case_id": "PL-CLEAN-009",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "96f5fa73dd19c43aa3b318f37d89fd8ba0a35861347b82abdbd29f7752e290f7",
+      "source_record_sha256": "f63e94a38f1da946162b44c31d566cd6f54df67ca900a18bebf4615cec4cdc66",
+      "randomized_record_sha256": "2481c0470ab03966ff30228a55e4af266bf97f69e51901f34e859b8b94feb6f0"
+    },
+    {
+      "output_id": "PL-OUT-045",
+      "source_output_id": "BASELINE-PL-CLEAN-038",
+      "case_id": "PL-CLEAN-038",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "9cbc0cab804d6c6907f9acd5d3dfa863759779ec2f15f621391be5b9aa1d15ea",
+      "source_record_sha256": "d4739c7ef837d5750211c3c69df5af49219cd71276ad4dd61061d6dfea7bcbd9",
+      "randomized_record_sha256": "6948c735a34c269cecc48e28be4542a69faaf8fc9a2f0c43eef01c625d74e7db"
+    },
+    {
+      "output_id": "PL-OUT-046",
+      "source_output_id": "PACKAGE-PL-CLEAN-029",
+      "case_id": "PL-CLEAN-029",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "9e90b694c27f6ef9988a9e8df098426ca84598d7ad82bdd58cb4ba5d756a3726",
+      "source_record_sha256": "59635152b9182c89f354ce4bff7c321510ab4258275bab4908739c869f834c00",
+      "randomized_record_sha256": "8c77561c44ceb6948153890dd5e4a8dd52256d86b6df0b6cabb64a9711281c55"
+    },
+    {
+      "output_id": "PL-OUT-047",
+      "source_output_id": "PACKAGE-PL-CLEAN-014",
+      "case_id": "PL-CLEAN-014",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "a09a18cffcefdf0f92f2209fa0a03be6182cbc00684e0ef9af401eb479668fc1",
+      "source_record_sha256": "021b525e0a2c7841f4d8b2481a21e1129427b410db05a451814b60e52ce19f0e",
+      "randomized_record_sha256": "2ea5e5841f347e08558cdcf37dde921a6a1dd0d379e9a40b3df6d3f120e167aa"
+    },
+    {
+      "output_id": "PL-OUT-048",
+      "source_output_id": "BASELINE-PL-CLEAN-027",
+      "case_id": "PL-CLEAN-027",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "a1e27b6f689c62ccef6e3cd0365d51d0ce7234fee89c356c3918c62d48ccfe87",
+      "source_record_sha256": "6f1b518bd3fe6be34a27eb619a515f543f3cd9d659f5ad6281d94598f1d745fb",
+      "randomized_record_sha256": "54653c89f79e0398c2898575911fb7f3c9353f5a3e3e0e11c705649ad5ce6913"
+    },
+    {
+      "output_id": "PL-OUT-049",
+      "source_output_id": "BASELINE-PL-CLEAN-002",
+      "case_id": "PL-CLEAN-002",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "a24b3e78cb2ac1747f223c1c11ecaaa9cc5ac2ce911fb663f3ce6cee6d60fc58",
+      "source_record_sha256": "03c1cad0c06f5e3a597ee276f20695f371a24f7a11cef17c7bf21748a28e279b",
+      "randomized_record_sha256": "9490378c6c2c27c8902d28f231e71bdd3b48440ef654623bac0d19f58a294799"
+    },
+    {
+      "output_id": "PL-OUT-050",
+      "source_output_id": "BASELINE-PL-CLEAN-040",
+      "case_id": "PL-CLEAN-040",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "a66297ee7d795cf784612a60c124dc18638056526c78952fe0f2d197f96b0b81",
+      "source_record_sha256": "fe931b20efed68ced50b430e9c3fdc12d505775f09cd2d8e95bec9e3870dda55",
+      "randomized_record_sha256": "76312ca3348f8cdd3e81a1d230367211f53e79238eb5e6fc0fd2844b27b3c3f1"
+    },
+    {
+      "output_id": "PL-OUT-051",
+      "source_output_id": "PACKAGE-PL-CLEAN-022",
+      "case_id": "PL-CLEAN-022",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "a792fe76c4399855725cb9c8e194c7590e9f11488618afb9f038c0d10dce9d5a",
+      "source_record_sha256": "937fe3d8bf910ab1009c8d0e993c320d84f4301ea310ed9a5daf20a24eecf32f",
+      "randomized_record_sha256": "4248f180bd0626f748415cf141db48ff72271740a7111fec436fed0cc7b6c826"
+    },
+    {
+      "output_id": "PL-OUT-052",
+      "source_output_id": "PACKAGE-PL-CLEAN-024",
+      "case_id": "PL-CLEAN-024",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "ab2a51cfaf67b267c7f9c2ff30546eb39fad04ff371e95bd0409683f9e3825a4",
+      "source_record_sha256": "7bd59fc4833d8d131e1bf1a67a1574b9ea6cbfc42e9385a6b36b6d6ebfc9917f",
+      "randomized_record_sha256": "cf0a1445300b6d1cee8b5986bf04f2c0daebbfc1ab2cf77208cdf6c2246059ef"
+    },
+    {
+      "output_id": "PL-OUT-053",
+      "source_output_id": "PACKAGE-PL-CLEAN-010",
+      "case_id": "PL-CLEAN-010",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "ab4cde3b7af5672c9dbe4c14bddb4755fced53bbf0dc17f2138d92cf53a94449",
+      "source_record_sha256": "a5bb3dc14fe0240c6cb7e522e4ffc8dfc328ee75750692ec224fa35fd3897e9b",
+      "randomized_record_sha256": "0f37ec718e6c43f995ae84f232848e39b568ba2fdfef428475f6a0afea313a78"
+    },
+    {
+      "output_id": "PL-OUT-054",
+      "source_output_id": "PACKAGE-PL-CLEAN-011",
+      "case_id": "PL-CLEAN-011",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "ac131209c612fd03e61c6819635337ae9d626cd9db1705c4bac8d37604749d54",
+      "source_record_sha256": "f5f2b5ddabad7e95ed52196af79ddc5638f21d99db7214e53fe71173fb541e00",
+      "randomized_record_sha256": "3766f854e83e4fbd7f543feb0bdecbbd4f18dfd7c635837fb91019297e7a5342"
+    },
+    {
+      "output_id": "PL-OUT-055",
+      "source_output_id": "PACKAGE-PL-CLEAN-037",
+      "case_id": "PL-CLEAN-037",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "acd7d840e4a806d488085460d4971a0249da5285fea00991222ee60af446410b",
+      "source_record_sha256": "a10b04a569abd5f62ce2971fa0b0b47254b4862762a462b9459052e9fd29dccf",
+      "randomized_record_sha256": "41b5489dfc8d9e48d7846e1fa52ce3aa3247b909a0665d357a89c88f895ede7f"
+    },
+    {
+      "output_id": "PL-OUT-056",
+      "source_output_id": "BASELINE-PL-CLEAN-039",
+      "case_id": "PL-CLEAN-039",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "ae9e49a75af75d1b892fa19b9a9e9e11ea327c99a569c629bd650e9adb0be1ea",
+      "source_record_sha256": "1b2b9c0f6f287730e5140ef101a6ffc25ad63ba80d8c41027f96822b7ed4240d",
+      "randomized_record_sha256": "4a5f24046c56b85a330aa38547576ad785b9ee7d72d50ae5e01e75d265b16706"
+    },
+    {
+      "output_id": "PL-OUT-057",
+      "source_output_id": "BASELINE-PL-CLEAN-020",
+      "case_id": "PL-CLEAN-020",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "afe1ab4766ab55252ed599b94fd8b599749455d6fa1d46be30b7e6967e75aed3",
+      "source_record_sha256": "2ec7157ab6f64e15a0280319574aede649fa9873f3bc6c79d9c86866eeadbd9a",
+      "randomized_record_sha256": "dc4901d34c317d5cd21204fa3250f92039cdbb6bf4ddfddebb1ece06e311c96b"
+    },
+    {
+      "output_id": "PL-OUT-058",
+      "source_output_id": "BASELINE-PL-CLEAN-024",
+      "case_id": "PL-CLEAN-024",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "b03485a9a6fed251105d87fe3a5b7c7f79e030de23ae213fe33dcc0347218641",
+      "source_record_sha256": "e73501a9f2a78bdf6f7562412c54bc33e7cef1ad2f322f9f5d9f5eb3b0ede39b",
+      "randomized_record_sha256": "5902343c689bc3f22f0f34fa375ca45d41a2bea5c3a99b66720684dc8d225e29"
+    },
+    {
+      "output_id": "PL-OUT-059",
+      "source_output_id": "BASELINE-PL-CLEAN-023",
+      "case_id": "PL-CLEAN-023",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "b11a0c34ec0eec0180e9cb9ab37d7e102f2dff8812c59749bb24a51736114be1",
+      "source_record_sha256": "9d690266638fc35a26b9637f7c06c2c64013afeab13eb429a46802907d97c0f6",
+      "randomized_record_sha256": "269c9e9c668c6389f6d1617f37343bda89790f22129085e942d420ec1723b8a9"
+    },
+    {
+      "output_id": "PL-OUT-060",
+      "source_output_id": "PACKAGE-PL-CLEAN-035",
+      "case_id": "PL-CLEAN-035",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "b287ee3e8861c88b6a3ad776be392986dcf8529d94466327afe29dfa5dfaf599",
+      "source_record_sha256": "b50e8618c2b87e2d1cdd4a8e383aead338e18c6a69a0dbc3abdf7ade0ac05c38",
+      "randomized_record_sha256": "1ac677420950029fa0c5a4d33d2614c6f0891410bd45d27a05d135d0bb9c6610"
+    },
+    {
+      "output_id": "PL-OUT-061",
+      "source_output_id": "BASELINE-PL-CLEAN-010",
+      "case_id": "PL-CLEAN-010",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "b36208ef5b3542686ac1fcb73c5fbe1ee22ddc3f46b130b354216291ab5629fc",
+      "source_record_sha256": "e263bc8959a6b68c3eb997022b112bc6cbdf1a8ed7e8262e938c80ea3d64c60c",
+      "randomized_record_sha256": "cdd5974a5b998d9a13069486c986ea49d8f0fe666a7c5c3a6eed1c68159403cc"
+    },
+    {
+      "output_id": "PL-OUT-062",
+      "source_output_id": "PACKAGE-PL-CLEAN-021",
+      "case_id": "PL-CLEAN-021",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "b5841f984df2c66f90c4d08cff96dd67df8d7ea8853a3e705433faebd9307d4d",
+      "source_record_sha256": "e96cae913d967fb2cd47086220378e1b20071ba0a2c9aec349db8b611bb8ce73",
+      "randomized_record_sha256": "1d66ce1e139b4f90db4c2dbfd014902e419d4419162f4898663c003124834a97"
+    },
+    {
+      "output_id": "PL-OUT-063",
+      "source_output_id": "PACKAGE-PL-CLEAN-013",
+      "case_id": "PL-CLEAN-013",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "ba34de8aa763d368203d6be5d3d027ef6bee6e2056ebba28bcc7a88e5905056f",
+      "source_record_sha256": "8c7e6076d58fe6907369791cfb81719688c9cdc05ac914c7a10a1aceff50a8fc",
+      "randomized_record_sha256": "fe853ff68d0b63582d43b8d7dae0775fd489bed11890f1f1c489a80ac0b6f259"
+    },
+    {
+      "output_id": "PL-OUT-064",
+      "source_output_id": "PACKAGE-PL-CLEAN-030",
+      "case_id": "PL-CLEAN-030",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "bf225d4e175e0917e2727eb6bb4234076800191d945200c228a2e017cd552fd9",
+      "source_record_sha256": "cce7d240896446a0ff9aeb18c097e40947fbd2db7697d99cdbd5a2e105bc470e",
+      "randomized_record_sha256": "62de0aa4b6398083c25a473b6aeb5edefbdc8bd54478bd6038ab9c7b473f5ab9"
+    },
+    {
+      "output_id": "PL-OUT-065",
+      "source_output_id": "BASELINE-PL-CLEAN-028",
+      "case_id": "PL-CLEAN-028",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "bfd7d3c6683d49edc917a341c10cfcfcb6084367279ae1dccfbe3a8b4cfd091c",
+      "source_record_sha256": "d3da06eb0512eb00532400cda27a6e98bc0acebc273f5350e128f17429ac722a",
+      "randomized_record_sha256": "a49628f763c66e817267733827a6ac67278a02e41fb78162e83936b9553e2317"
+    },
+    {
+      "output_id": "PL-OUT-066",
+      "source_output_id": "PACKAGE-PL-CLEAN-007",
+      "case_id": "PL-CLEAN-007",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "c1c6d074594faed6721c68ae6a1c39ae3fa4b1bff89a63f796d4fbf7e3fdf8c5",
+      "source_record_sha256": "1571beee044e5ae7dbe80d5efdea4273e98e71a11832ac1628e98e3d9c1a34ce",
+      "randomized_record_sha256": "49a49e50bfbbba0dad32c1a232aa8ff3c505664714b5ffcd5771265564e2c481"
+    },
+    {
+      "output_id": "PL-OUT-067",
+      "source_output_id": "NEGATIVE-CONTROL-001",
+      "case_id": "PL-CLEAN-011",
+      "arm": "NEGATIVE_CONTROL",
+      "control_type": "NEGATIVE",
+      "order_key_sha256": "c307ac7ef5f280205c0fb50028049915f0d44b16eb7a440826fcb41dac2d1056",
+      "source_record_sha256": "a4de07d4c55b62028b8df2dd92d72ebed66bd8f10d2802334efd2651ef1b8cb3",
+      "randomized_record_sha256": "332fbc6963efbd7c462b7c849f4f72d31c6d7745255c1e91a5e51bf1ea3a9768"
+    },
+    {
+      "output_id": "PL-OUT-068",
+      "source_output_id": "BASELINE-PL-CLEAN-030",
+      "case_id": "PL-CLEAN-030",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "c355abf5daa63ecacb4ca4207aab21d8ca6691652f332e9a09c31590a6efa983",
+      "source_record_sha256": "48dbcb5d0ad0e7a87432600cabb317455d1bd2c63eb4f8fbdda3949c6b3cf901",
+      "randomized_record_sha256": "2fbd2b01ade05107efae11956b0e80613e7d76720bc0b3c5df2911c1e71e0361"
+    },
+    {
+      "output_id": "PL-OUT-069",
+      "source_output_id": "POSITIVE-CONTROL-003",
+      "case_id": "PL-CLEAN-003",
+      "arm": "POSITIVE_CONTROL",
+      "control_type": "POSITIVE",
+      "order_key_sha256": "c3730fbf230e73dfe3ac85264f78e53e057b30c5a7c4eea978e9083f39468c50",
+      "source_record_sha256": "8fd17a3c2e7518eccf3939251cb3d390cf46bb41ff7104bfdd7ea23cf91da530",
+      "randomized_record_sha256": "62d89532a3118f65b9fded79dae4d2d2340d3207f591c9c73841c9c5c5526d26"
+    },
+    {
+      "output_id": "PL-OUT-070",
+      "source_output_id": "PACKAGE-PL-CLEAN-003",
+      "case_id": "PL-CLEAN-003",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "c7cced256aa51e04ccb9e3954982eac5d47f09ebdf1cda6023ee6a1c66994226",
+      "source_record_sha256": "b80b80297f374a12b817b193659d76991e963992fe791d49dbdb92dda252f833",
+      "randomized_record_sha256": "d1177d863fb433ffef45f4fb7794695530b357c05f38727b503b45cb17c67806"
+    },
+    {
+      "output_id": "PL-OUT-071",
+      "source_output_id": "PACKAGE-PL-CLEAN-039",
+      "case_id": "PL-CLEAN-039",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "cadeec64da4c412605b07b75fbaab05ef6f8993a68fdeb01b89c8e8dc1bb76e8",
+      "source_record_sha256": "40bb66c3a4c63e5356374a56e66e4eca8306472c324850b8c6a06a3baf021646",
+      "randomized_record_sha256": "660ac6e2152dee6ff497d439eaefabd76859a4a9735bef240b3427f296f7564f"
+    },
+    {
+      "output_id": "PL-OUT-072",
+      "source_output_id": "PACKAGE-PL-CLEAN-009",
+      "case_id": "PL-CLEAN-009",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "cf29f45e8ce4f42528044c2fc519f3f249cc92eedec4798bfa670a19af7b03d8",
+      "source_record_sha256": "ffaa7ea1bc51c7d794394613308acf94f35988b3235b6ef9a63c4f3b8e338ae6",
+      "randomized_record_sha256": "e799d5ebe7d0d9b313fe56ed9d577438aff4a1debefdde4e013f8df903364e3c"
+    },
+    {
+      "output_id": "PL-OUT-073",
+      "source_output_id": "BASELINE-PL-CLEAN-004",
+      "case_id": "PL-CLEAN-004",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "d10479d7ac39a7c93089ea35e7e571aeeefbb9176c4c1b576bfe92bf4433f52b",
+      "source_record_sha256": "b7d1d832fb6b2bcab18aa23bddedd3118c6fc417a68211c12f3ae1743673d7bc",
+      "randomized_record_sha256": "495ad8dd31e0e0f03266643bafd6dc7a0737445f692dfe5ffb74b81946ab9da2"
+    },
+    {
+      "output_id": "PL-OUT-074",
+      "source_output_id": "PACKAGE-PL-CLEAN-001",
+      "case_id": "PL-CLEAN-001",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "da245f76c1092c0c3855a66c31121d9b3ffec78f9df50fcf4355f83f1572924d",
+      "source_record_sha256": "ed06734f6b08a708111f95f337567236e61c414b7ff3afd6667091b08f54136b",
+      "randomized_record_sha256": "150484f534eda87f8a56c54300202f690fb00e9a90801e82d51cea92efe3b721"
+    },
+    {
+      "output_id": "PL-OUT-075",
+      "source_output_id": "PACKAGE-PL-CLEAN-015",
+      "case_id": "PL-CLEAN-015",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "deac6228b745901224f064afd42a8a68c4b1c2cbe187b06fbfd7fad5a63ff2f1",
+      "source_record_sha256": "fa98754d58368ac19c2204069aab9952bd8c630f0769c311cdf3a1c2ac1521a6",
+      "randomized_record_sha256": "f1534c254d759cf045d7262b8f5860613ddcb15adbb3e377a4a289b2320f1651"
+    },
+    {
+      "output_id": "PL-OUT-076",
+      "source_output_id": "BASELINE-PL-CLEAN-005",
+      "case_id": "PL-CLEAN-005",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "e13df6c864c8dfbeaef5bbfdeda9714fdc17a98c9953f3ecb4d07548c6761038",
+      "source_record_sha256": "cc060551081d49be60a2551ad717f53de247acd7decd47388a57f5005c23a443",
+      "randomized_record_sha256": "14bf538c6791e9a0534c5d545f2a4dcc3ebc0d70c2809786f6aa7a6edcc7a5c2"
+    },
+    {
+      "output_id": "PL-OUT-077",
+      "source_output_id": "PACKAGE-PL-CLEAN-017",
+      "case_id": "PL-CLEAN-017",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "e2d4154c6de41d81eb326e668848b6ede6caa3c402c7ade3d754f213e4672e58",
+      "source_record_sha256": "55f6a73d65ca0382dcb74068326cf3e9ac403ad9058c2406143288478eade96a",
+      "randomized_record_sha256": "b1d3a2485d3c336699e163a2eaf27f11aff21ce38cffb997f39cf4ec6e66485c"
+    },
+    {
+      "output_id": "PL-OUT-078",
+      "source_output_id": "POSITIVE-CONTROL-002",
+      "case_id": "PL-CLEAN-002",
+      "arm": "POSITIVE_CONTROL",
+      "control_type": "POSITIVE",
+      "order_key_sha256": "e645c1e16c9b7f6c1d48549ebf5021cdff53548fce929cc666576bc849ed8449",
+      "source_record_sha256": "3e56b999e2fae2a5b2cd8e3ecd564a0de6ecf66a590ccc1c2a2f43ddd61b9759",
+      "randomized_record_sha256": "eb02e2e10112474f7407e0965b52a621156a7ccf4bb7393fa4be42af11cb220a"
+    },
+    {
+      "output_id": "PL-OUT-079",
+      "source_output_id": "BASELINE-PL-CLEAN-007",
+      "case_id": "PL-CLEAN-007",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "e64a48b7bad01682218cc29277dbc4858c5fca1da47f2a2b88e9e31360636431",
+      "source_record_sha256": "da85701b4f96e601a045ede3d97e512de48e7c34ca50cc99d96fe19d0c9591e3",
+      "randomized_record_sha256": "b24685fe9a44aa5d89b79bc35513f658e2f2d2c9b50213c23c3e8bc175477cc1"
+    },
+    {
+      "output_id": "PL-OUT-080",
+      "source_output_id": "BASELINE-PL-CLEAN-029",
+      "case_id": "PL-CLEAN-029",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "e7466f54514d720cd64f041581871ec8277b6e93516651abb7ad164c42cce196",
+      "source_record_sha256": "d88dbe29b62384cf5a8e7550afa329275485f64f409710070ef9ff74c7886a1f",
+      "randomized_record_sha256": "16f6b78358e9169bcde92f043f666fce5bab85c868dd1873d28dcb8638bef365"
+    },
+    {
+      "output_id": "PL-OUT-081",
+      "source_output_id": "BASELINE-PL-CLEAN-026",
+      "case_id": "PL-CLEAN-026",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "e979bf72f1f51043ff0b03fa743b1f858a7eac5e5dacdab5b68f062117e3e117",
+      "source_record_sha256": "80f9b9362faa12aa42fd0a13fd6ea2fbdd367693be15315f151b4b3237ebc158",
+      "randomized_record_sha256": "ae8fe64df175358f5e269786fa3db80c58d93571d04e8375ded4cfd7a89de22b"
+    },
+    {
+      "output_id": "PL-OUT-082",
+      "source_output_id": "PACKAGE-PL-CLEAN-034",
+      "case_id": "PL-CLEAN-034",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "ed856fd53cf5a01054d1af5f788bf3283752977325d5fc162f2dca155498a0cb",
+      "source_record_sha256": "897ad3d81be3b269c75618ec300489685c24b9c39c625d8774fb7485a1bc30a5",
+      "randomized_record_sha256": "975a1796b0ed831340ce30cbfdc785d69b7a63b15621ccc53e075df4a8df0639"
+    },
+    {
+      "output_id": "PL-OUT-083",
+      "source_output_id": "BASELINE-PL-CLEAN-006",
+      "case_id": "PL-CLEAN-006",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "edf1f86924aa5750af36ea27a77218c9b2a44bd34b8b6c696880f25c3bd1ad21",
+      "source_record_sha256": "cf6728d98110ca1ef2b4c42922d6b5d62f73892fe3bd619bf60224cad6788222",
+      "randomized_record_sha256": "2adf6252607a8b4a312e56fd0c5441795f585831645422f19040fee0e72a1c5e"
+    },
+    {
+      "output_id": "PL-OUT-084",
+      "source_output_id": "BASELINE-PL-CLEAN-035",
+      "case_id": "PL-CLEAN-035",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "f043be9d30e3f1e35df71901f59724d4f14bc0a73812c1010eed1bbeb4f319b6",
+      "source_record_sha256": "34f00799b14ae80536cb8a683fae99dfc1daa309a249fb17d22a220b306a0ceb",
+      "randomized_record_sha256": "06171c305e7f0fa10bf7b738338cca736c1c4682055623856e41ff9b37573309"
+    },
+    {
+      "output_id": "PL-OUT-085",
+      "source_output_id": "PACKAGE-PL-CLEAN-023",
+      "case_id": "PL-CLEAN-023",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "f6519bb9b8bcae3c86405ae9c08088108d669fba626bc280d41cdc2e4e49f0cc",
+      "source_record_sha256": "e0e14aaea83ff545f0934137e8c23ddd513a9e0fc8f5d4268f6c5a01f9bf2e7e",
+      "randomized_record_sha256": "4b1abf624e60207f2f4d3bd051b90da7ea940ea97d8cbd81e66005ff5cddf18c"
+    },
+    {
+      "output_id": "PL-OUT-086",
+      "source_output_id": "PACKAGE-PL-CLEAN-012",
+      "case_id": "PL-CLEAN-012",
+      "arm": "PACKAGE",
+      "control_type": null,
+      "order_key_sha256": "fb8107bbca65219512347661bed8360c87422ce007d1f579e161544e0603ed97",
+      "source_record_sha256": "4f8e1da6bcc614d9c3067d39bc954ef435cf067bb3c7dcaec6d2029247b58dce",
+      "randomized_record_sha256": "af237ab4e261f291515c64dc6ae73a15eb70272a2d2de4ea5d4a62410aa03a07"
+    },
+    {
+      "output_id": "PL-OUT-087",
+      "source_output_id": "BASELINE-PL-CLEAN-022",
+      "case_id": "PL-CLEAN-022",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "fd5849611296b86ec8232e88f4f59db118dedce750a3bc960f5fc1e55d04909d",
+      "source_record_sha256": "8afc5ae41458b257c17dbb238033996b5b53716b3b869c8fc001a9a585ee46ca",
+      "randomized_record_sha256": "9e8f65eb50e9afc1bdc5115680ab01f96f165907daabb52a4af215a111e60647"
+    },
+    {
+      "output_id": "PL-OUT-088",
+      "source_output_id": "BASELINE-PL-CLEAN-012",
+      "case_id": "PL-CLEAN-012",
+      "arm": "BASELINE",
+      "control_type": null,
+      "order_key_sha256": "fea44339526b5884f019f111327dcdb4aeee1afd54e9e20961238ad6257a42bd",
+      "source_record_sha256": "2f2aac73a82ca1d89245be794193a7e16f9e007bed63548c54d9caeff93c8b9b",
+      "randomized_record_sha256": "548a11b38c2d55a5709b1c3250cd9a5db97156617662e4db0ec583897df5a000"
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-EXECUTION-002",
+  "hash_algorithm": "SHA-256",
+  "state": "COMPLETE",
+  "pre_unblind_frozen": true,
+  "pre_unblind_frozen_at_utc": "2026-07-27T18:12:20.921Z",
+  "score_freeze_precedes_hash_freeze": true,
+  "hash_freeze_precedes_oracle_access": true,
+  "artifact_count": 29,
+  "pre_unblind_set_sha256": "e9d2ef3c72e3aa51cb1a6152b3c2760053ef6d0d0c3a1e6374b18c46ddafe158",
+  "artifacts": [
+    {
+      "path": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/ACTIVATION_CONTRACT.json",
+      "sha256": "4810284ed69e39de887f056be6c20417fb4a427e2307f3ad5a5cd1a58b323c63",
+      "bytes": 2175,
+      "freeze_phase": "PRE_UNBLIND"
+    },
+    {
+      "path": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/CONTEXTUAL_GUIDANCE.json",
+      "sha256": "ff876b32ec2438e5f473039d8c175d524bd5c464ef7690c90030f26d8e4577d6",
+      "bytes": 1645,
+      "freeze_phase": "PRE_UNBLIND"
+    },
+    {
+      "path": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/FIXTURES.json",
+      "sha256": "1835fad13da07153687d2b82e35a2454ffe724943022cf21deace848cbe22212",
+      "bytes": null,
+      "freeze_phase": "POST_SCORE_ORACLE_ACCESS",
+      "hash_source": "POST_SCORE_ORACLE_CUSTODIAN_CONTEXT"
+    },
+    {
+      "path": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/MANIFEST.json",
+      "sha256": "d90f0ef9a446faf0bbca2d25a8ba09694d3136e975412f8c4233738fbc5827df",
+      "bytes": 1183,
+      "freeze_phase": "PRE_UNBLIND"
+    },
+    {
+      "path": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/PRINCIPLES.json",
+      "sha256": "9239660ac4ab0035772d0bedc8891f7d25972e352e6befbd2b71de25816c5560",
+      "bytes": 2552,
+      "freeze_phase": "PRE_UNBLIND"
+    },
+    {
+      "path": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MANIFEST.json",
+      "sha256": "e710e69b3ff4fda519b35feee7e3c1529dd6f31d09dc5d80a2047482ae4b3e5a",
+      "bytes": 1765,
+      "freeze_phase": "PRE_UNBLIND"
+    },
+    {
+      "path": "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_CODEX_CLEAN_REPRODUCTION_EXECUTION_098.json",
+      "sha256": "3386b041116254db7a81152eaf241d3e885aa16bcfa4172cdfe73421b04c7662",
+      "bytes": 3306,
+      "freeze_phase": "PRE_UNBLIND"
+    },
+    {
+      "path": "projects/lab/briefs/BRIEF_PRODUCT_LEADERSHIP_CODEX_CLEAN_REPRODUCTION_098.json",
+      "sha256": "89aa9c84d313d71c68b5f7ccb04b735918dc89d89e7019b6eb7aaf7e17fae2bf",
+      "bytes": 6300,
+      "freeze_phase": "PRE_UNBLIND"
+    },
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/RUN_MATRIX.json",
+      "sha256": "52d85279e72cc90fec5087b3a1d5c6a17e42f4823fc8a82adcb9719d4488a330",
+      "bytes": 1203,
+      "freeze_phase": "FINAL_REFERENCE"
+    },
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/SCORING_AND_GATES.json",
+      "sha256": "8124ec9e2694da92884da67ca86b441975a5ac847ebb7352c42c0ab2636b694c",
+      "bytes": 2735,
+      "freeze_phase": "PRE_UNBLIND"
+    },
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/TEST_DESIGN.json",
+      "sha256": "d9077746467e9b690f0f33a3612fd5ea58cb161568026e002c339c9406b128aa",
+      "bytes": 3809,
+      "freeze_phase": "FINAL_REFERENCE"
+    },
+    {
+      "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-EXECUTION-002/BASELINE_OUTPUTS.json",
+      "sha256": "26678b61d8bbc0e3b77a6c9f58e636d38f6edfc01e12d78a88b30d03e4451889",
+      "bytes": 18427,
+      "freeze_phase": "PRE_UNBLIND"
+    },
+    {
+      "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-EXECUTION-002/CONTROL_OUTPUTS.json",
+      "sha256": "12c842fccc221cccf923318006fb4bca72f186e132ab21e8c542599e36a17909",
+      "bytes": 6234,
+      "freeze_phase": "PRE_UNBLIND"
+    },
+    {
+      "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-EXECUTION-002/FROZEN_OUTPUT_MAPPING.json",
+      "sha256": "9b211704c52a12b27e6e16d48c02cf1f85fdaad959fe21cfc41481ef314e744b",
+      "bytes": 42842,
+      "freeze_phase": "PRE_UNBLIND"
+    },
+    {
+      "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-EXECUTION-002/FROZEN_RATIONALES.json",
+      "sha256": "ae7f1a7afb4ccc4fb42c07a5262ab17c1dc066c2960cd41084b9b4be534feaa3",
+      "bytes": 80848,
+      "freeze_phase": "PRE_UNBLIND"
+    },
+    {
+      "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-EXECUTION-002/FROZEN_SCORES.json",
+      "sha256": "3b0b4d6c64db7a36d4c39b972b773ad80c1ee9c69ce2b0d03dfa30a2af2c59fd",
+      "bytes": 31133,
+      "freeze_phase": "PRE_UNBLIND"
+    },
+    {
+      "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-EXECUTION-002/GATE_RESULTS.json",
+      "sha256": "bd82dcfcab4d74563e2b330e2dcdce0f8d48324f2b4a0a13858abbb95b9b1406",
+      "bytes": 4323,
+      "freeze_phase": "POST_UNBLIND_FINAL"
+    },
+    {
+      "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-EXECUTION-002/MANIFEST.json",
+      "sha256": "a0176b98aaa814e3683d2d76c5e4cca092a107f13b887c7ae436eb5c77f36120",
+      "bytes": 4009,
+      "freeze_phase": "POST_UNBLIND_FINAL"
+    },
+    {
+      "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-EXECUTION-002/PACKAGE_OUTPUTS.json",
+      "sha256": "c9bdcf16b1feb5744a0d471c5c98d3044e4e51999cfe4723ebac64ea914ed56a",
+      "bytes": 29355,
+      "freeze_phase": "PRE_UNBLIND"
+    },
+    {
+      "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-EXECUTION-002/PREFLIGHT.json",
+      "sha256": "76e9d03abd926a3a71f56ab27a60336437797d906b27f247891354913f6d4c87",
+      "bytes": 1927,
+      "freeze_phase": "PRE_UNBLIND"
+    },
+    {
+      "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-EXECUTION-002/RANDOMIZED_OUTPUTS_WITHOUT_ARM_LABELS.json",
+      "sha256": "16d49ec4f697f92627e59cbe4ade7cdd1ca30a61078c5ad7cdf833aee8f85310",
+      "bytes": 48390,
+      "freeze_phase": "PRE_UNBLIND"
+    },
+    {
+      "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-EXECUTION-002/REPRODUCTION_README.md",
+      "sha256": "a591d4704631e2cefea9f4e533834ba693384eff9b3e68f082ee8b4e9c73ffe8",
+      "bytes": 4088,
+      "freeze_phase": "POST_UNBLIND_FINAL"
+    },
+    {
+      "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-EXECUTION-002/RESULT.json",
+      "sha256": "eee143c9d68c210324b56ffb2a344fcdb87bda98c0217dad3751290a4bae33b3",
+      "bytes": 2894,
+      "freeze_phase": "POST_UNBLIND_FINAL"
+    },
+    {
+      "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-EXECUTION-002/SEED_AND_ORDER.json",
+      "sha256": "09b387323394af4166c0e47a51c4b69af928d7645e589ed42eab1800dcc7b04d",
+      "bytes": 1232,
+      "freeze_phase": "PRE_UNBLIND"
+    },
+    {
+      "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-EXECUTION-002/UNBLINDED_METRICS.json",
+      "sha256": "31f6fd01d70031b778f5d07fa25104e3c0e171513a8ac745627e7c284bf53017",
+      "bytes": 13839,
+      "freeze_phase": "POST_UNBLIND_FINAL"
+    },
+    {
+      "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-PACKAGE-002/EVALUATOR_BRIEF.json",
+      "sha256": "126f5fbcd57433f4ff815c94f142cd2657a0662aeebfac19d4ece25a2c7b7f4c",
+      "bytes": 852,
+      "freeze_phase": "PRE_UNBLIND"
+    },
+    {
+      "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-PACKAGE-002/GENERATOR_INPUT.json",
+      "sha256": "3feced329ba4368f1868bb66dc7866e5b704aeb1c5a5ce6658481d9d49aed8ab",
+      "bytes": 5394,
+      "freeze_phase": "PRE_UNBLIND"
+    },
+    {
+      "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-PACKAGE-002/MANIFEST.json",
+      "sha256": "e1d406ed89ffb0fb4539af0c4b5b984267965bf3f3384ebdfa2e844973a65f2b",
+      "bytes": 1266,
+      "freeze_phase": "PRE_UNBLIND"
+    },
+    {
+      "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-PACKAGE-002/ORACLE_CUSTODY_CONTRACT.json",
+      "sha256": "08f29f583d50f2fb4a38a766bff71baff4829af316b22337f3f6f618e661b50a",
+      "bytes": null,
+      "freeze_phase": "POST_SCORE_ORACLE_ACCESS",
+      "hash_source": "POST_SCORE_ORACLE_CUSTODIAN_CONTEXT"
+    }
+  ],
+  "unavailable_declared_generator_inputs": [
+    "LAB_CONTRACT.md",
+    "METHODOLOGY.md"
+  ],
+  "oracle_artifacts_deferred_until_post_freeze": [],
+  "post_unblind_artifacts_pending": [],
+  "finalized_at_utc": "2026-07-27T18:30:20.505Z",
+  "pre_unblind_hash_manifest_sha256_before_finalization": "40eba60ef2c1fff641b4e3b4488689b082209eaf58ff4a94419c7815270078ee",
+  "oracle_access_after_pre_unblind_freeze": true,
+  "oracle_accessed_at_utc": "2026-07-27T18:20:12.1447173Z",
+  "complete_non_self_set_sha256": "0926de89a26f1ad423122810469853a449b87df7e72548321832b421e58197f0",
+  "required_execution_file_hash_coverage": {
+    "required_non_self_files": 14,
+    "hashed_non_self_files": 14,
+    "complete": true,
+    "self_hash_excluded_due_to_recursion": "HASH_MANIFEST.json"
+  },
+  "validation": {
+    "all_pre_unblind_hashes_reverified_unchanged": true,
+    "oracle_hashes_supplied_by_isolated_post_score_custodian": true,
+    "all_required_non_self_execution_files_hashed": true,
+    "hash_algorithm": "SHA-256"
+  }
+}
