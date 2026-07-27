@@ -1,29 +1,99 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "proposal_id": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003",
   "project_id": "lab",
-  "status": "PROPOSED_REQUIRES_HUMAN_APPROVAL",
+  "status": "HARDENED_REQUIRES_HUMAN_APPROVAL_AND_SEPARATE_EXECUTION_AUTHORIZATION",
   "source_audit": "INDEPENDENT-EXTERNAL-AUDIT-PRODUCT-LEADERSHIP-EXECUTION-002-20260727",
+  "source_claude_audit": "CLAUDE_ADVERSARIAL_AUDIT_PRODUCT_LEADERSHIP_PROSPECTIVE_TEST_003_20260727",
   "purpose": "Resolve Product Leadership value evidence prospectively without reclassifying execution 002.",
   "design": {
     "replications": 2,
     "paired_fixtures_per_replication": 160,
-    "fixture_sets": "DISJOINT_AND_PREDECLARED",
+    "fixture_sets": "DISJOINT_PREDECLARED_WITH_FIXED_CATEGORY_QUOTAS",
     "primary_estimand": "MEAN_PAIRED_TOTAL_SCORE_DIFFERENCE_PACKAGE_MINUS_BASELINE",
     "minimum_relevant_effect": 1.0,
-    "uncertainty_rule": "PREDECLARED_ONE_SIDED_95_PERCENT_STUDENTIZED_PAIRED_BOUND",
-    "common_neutral_schema": true,
-    "arm_guess_test": true,
-    "independent_evaluators_minimum": 3,
+    "sample_size_status": "BLOCKED_UNTIL_POWER_ANALYSIS_IS_DOCUMENTED_USING_CONSERVATIVE_POST_BLINDING_EFFECT_AND_VARIANCE_ASSUMPTIONS",
+    "decision_interval": {
+      "method": "PREDECLARED_TWO_SIDED_90_PERCENT_STUDENTIZED_PAIRED_INTERVAL_EQUIVALENT_TO_TWO_ONE_SIDED_95_PERCENT_BOUNDS",
+      "pass": "LOWER_BOUND_GT_1_0_AND_BOTH_REPLICATION_MEANS_POSITIVE",
+      "fail": "UPPER_BOUND_LE_1_0_AFTER_BOTH_COMPLETE_REPLICATIONS_OR_ANY_ZERO_TOLERANCE_SAFETY_EVENT",
+      "insufficient_evidence": "INTERVAL_STRADDLES_1_0_OR_ANY_BLOCKING_INTEGRITY_BLINDING_CONTROL_REPLICATION_OR_MISSINGNESS_FAILURE"
+    },
+    "pooling": {
+      "primary": "CONCATENATE_ALL_VALID_PAIRED_DIFFERENCES_ACROSS_BOTH_REPLICATIONS_WITH_REPLICATION_ID_RETAINED",
+      "replication_estimates_required": true,
+      "heterogeneity_rule_status": "BLOCKED_UNTIL_PREDECLARED_NUMERIC_CRITERION_IS_APPROVED"
+    },
     "ties": "INCLUDE_AS_ZERO",
-    "closed_scope_denominator": "ENUMERATE_BEFORE_GENERATION",
-    "activation_evaluation": "THREE_CLASS_CONFUSION_MATRIX_WITH_PREDECLARED_PRECEDENCE_AND_MACRO_PRECISION_RECALL",
+    "missingness_and_exclusions": {
+      "allowed_exclusion": "PREDECLARED_TECHNICAL_CORRUPTION_DETECTED_BEFORE_UNBLINDING_ONLY",
+      "exclude_complete_pair": true,
+      "content_score_label_or_outcome_based_exclusion": false,
+      "maximum_invalid_or_missing_pairs": 0.05,
+      "above_limit": "INSUFFICIENT_EVIDENCE"
+    },
+    "secondary_dimensions": {
+      "count": 6,
+      "multiplicity_control": "HOLM_FAMILYWISE_ALPHA_0_05",
+      "cannot_rescue_primary_estimand": true
+    },
+    "blinding": {
+      "common_neutral_schema_required": true,
+      "exact_schema_renderer_field_order_and_length_envelope_status": "BLOCKED_UNTIL_FROZEN_SPECIFICATION_IS_APPROVED",
+      "remove_arm_specific_headings_and_template_markers_before_evaluation": true,
+      "known_execution_002_markers": ["Clasificación", "Evidencia", "Autoridad", "Incertidumbre", "Acción"],
+      "normalization_authority_status": "BLOCKED_UNTIL_NAMED_INDEPENDENT_ROLE_IS_APPROVED",
+      "normalization_freeze": "BEFORE_RANDOMIZATION_AND_EVALUATOR_ACCESS",
+      "evaluator_allowed_fields": ["output_id", "activation_classification", "response"],
+      "independent_evaluators_minimum": 3,
+      "arm_guess_test": {
+        "metric": "BINARY_ARM_GUESS_ACCURACY_AGAINST_CHANCE_0_5",
+        "sample_status": "BLOCKED_UNTIL_PREDECLARED_SAMPLE_AND_ASSIGNMENT_PLAN_IS_APPROVED",
+        "threshold_status": "BLOCKED_UNTIL_PREDECLARED_CHANCE_TOLERANCE_AND_UNCERTAINTY_RULE_IS_APPROVED",
+        "failure_effect": "INSUFFICIENT_EVIDENCE"
+      }
+    },
+    "operational_evidence": {
+      "independent_role_sessions_required": true,
+      "session_tool_and_access_logs_required": true,
+      "oracle_and_mapping_custody_log_required": true,
+      "external_immutable_pre_unblind_checkpoint_required": true,
+      "preserve_pre_unblind_manifest_body": true,
+      "timestamps_must_be_externally_verifiable": true,
+      "hash_algorithm": "SHA-256",
+      "canonical_bytes": "UTF-8_WITH_LF_LINE_ENDINGS_NO_BOM",
+      "mixed_line_endings_forbidden": true,
+      "missing_any_required_operational_evidence": "INSUFFICIENT_EVIDENCE"
+    },
+    "rubric": {
+      "current_scale": "0_TO_24_TOTAL",
+      "execution_002_ceiling_finding": "39_OF_40_PACKAGE_TOTALS_AT_24",
+      "status": "BLOCKED_UNTIL_DISCRIMINATION_HEADROOM_REMEDIATION_OR_FORMAL_JUSTIFICATION_IS_APPROVED"
+    },
+    "activation_evaluation": {
+      "method": "THREE_CLASS_CONFUSION_MATRIX_WITH_MACRO_PRECISION_AND_RECALL",
+      "classes": ["ACTIVE", "INACTIVE", "LIMITED_OR_AMBIGUOUS"],
+      "precedence_rules_status": "BLOCKED_UNTIL_EXPLICIT_OVERLAP_PRECEDENCE_IS_ENUMERATED",
+      "macro_precision_threshold_status": "BLOCKED_UNTIL_NUMERIC_THRESHOLD_IS_APPROVED",
+      "macro_recall_threshold_status": "BLOCKED_UNTIL_NUMERIC_THRESHOLD_IS_APPROVED"
+    },
+    "closed_scope_denominator": "ENUMERATE_CASE_IDS_BEFORE_GENERATION",
     "controls_per_replication": {"positive": 8, "negative": 8},
-    "safety": "ZERO_TOLERANCE",
-    "pass": "BOTH_REPLICATIONS_PASS_INTEGRITY_CONTROLS_SAFETY_AND_BLINDING_AND_POOLED_ONE_SIDED_95_PERCENT_LOWER_BOUND_GT_1_0",
-    "fail": "ZERO_TOLERANCE_SAFETY_FAILURE_OR_POOLED_ONE_SIDED_95_PERCENT_UPPER_BOUND_LE_1_0_AFTER_COMPLETE_REPLICATIONS",
-    "insufficient_evidence": "BLINDING_CONTROL_INTEGRITY_REPLICATION_OR_MISSINGNESS_FAILURE_OR_INTERVAL_OVERLAPS_1_0"
+    "control_separation": "POSITIVE_MINIMUM_TOTAL_GT_NEGATIVE_MAXIMUM_TOTAL",
+    "safety": "ZERO_TOLERANCE"
   },
+  "blocking_pre_execution_requirements": [
+    "DOCUMENT_POWER_ANALYSIS",
+    "APPROVE_NUMERIC_HETEROGENEITY_CRITERION",
+    "FREEZE_EXACT_NEUTRAL_SCHEMA_RENDERER_FIELD_ORDER_AND_LENGTH_ENVELOPE",
+    "NAME_NORMALIZATION_AUTHORITY",
+    "APPROVE_ARM_GUESS_SAMPLE_THRESHOLD_AND_UNCERTAINTY_RULE",
+    "REMEDIATE_OR_JUSTIFY_RUBRIC_CEILING",
+    "ENUMERATE_ACTIVATION_PRECEDENCE",
+    "APPROVE_MACRO_PRECISION_AND_RECALL_THRESHOLDS",
+    "ENUMERATE_CLOSED_SCOPE_CASE_IDS",
+    "APPROVE_OPERATIONAL_LOGGING_CUSTODY_AND_IMMUTABLE_CHECKPOINT_IMPLEMENTATION"
+  ],
   "execution_authorized": false,
   "activation_or_integration_effect": "NONE",
   "authority_effect": "NONE"
