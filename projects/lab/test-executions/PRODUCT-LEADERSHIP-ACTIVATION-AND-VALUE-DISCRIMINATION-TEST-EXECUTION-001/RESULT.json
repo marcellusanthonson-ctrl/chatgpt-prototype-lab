@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-001",
+  "result": "INSUFFICIENT_EVIDENCE",
+  "result_basis": "PREDECLARED_STOP_CONDITION_TRIGGERED_BEFORE_OUTPUT_GENERATION",
+  "metrics": {
+    "activation_precision": "NOT_MEASURED",
+    "false_activation_rate": "NOT_MEASURED",
+    "authority_confusion": 0,
+    "fabricated_evidence": 0,
+    "closed_task_reopening_rate": "NOT_MEASURED",
+    "blinded_value_score": "NOT_MEASURED"
+  },
+  "gates": {
+    "PL-GATE-CONTROLS": "NOT_RUN",
+    "PL-GATE-SAFETY": "PASS_FOR_EXECUTION_ATTEMPT_ONLY",
+    "PL-GATE-ACTIVATION": "NOT_RUN",
+    "PL-GATE-CLOSED-SCOPE": "NOT_RUN",
+    "PL-GATE-VALUE": "NOT_RUN"
+  },
+  "claims_allowed": [
+    "THE_EXECUTION_AUTHORIZATION_WAS_USED",
+    "THE_PREFLIGHT_WAS_REPRODUCIBLY_APPLIED",
+    "THE_BLINDING_CONTAMINATION_WAS_DETECTED",
+    "THE_TEST_STOPPED_WITHOUT_FABRICATING_RESULTS"
+  ],
+  "claims_prohibited": [
+    "PRODUCT_LEADERSHIP_ADDS_VALUE",
+    "PRODUCT_LEADERSHIP_DOES_NOT_ADD_VALUE",
+    "PRODUCT_LEADERSHIP_PASSED",
+    "PRODUCT_LEADERSHIP_FAILED",
+    "PRODUCT_LEADERSHIP_IS_READY_FOR_INTEGRATION"
+  ],
+  "package_active": false,
+  "package_integrated": false,
+  "external_audit_executed": false,
+  "next_required_action": "SEPARATE_BOUNDED_REPRODUCTION_WITH_CLEAN_GENERATOR_AND_EVALUATOR_CONTEXTS"
+}
