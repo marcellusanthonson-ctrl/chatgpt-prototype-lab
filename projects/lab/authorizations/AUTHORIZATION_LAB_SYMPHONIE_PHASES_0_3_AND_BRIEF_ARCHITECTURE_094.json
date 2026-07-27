@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_SYMPHONIE_PHASES_0_3_AND_BRIEF_ARCHITECTURE_094",
+  "project_id": "lab",
+  "title": "Document the Symphonie phases 0-3 agent responsibility model and four-brief architecture",
+  "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_IN_BOTH_REPOSITORIES",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-27",
+  "consumed_at": "2026-07-27",
+  "repositories": [
+    {"name": "marcellusanthonson-ctrl/chatgpt-prototype-lab", "branch": "main", "expected_parent_head": "1e43776fbd9867f9f34de635178c480ea1b43941"},
+    {"name": "marcellusanthonson-ctrl/symphonie", "branch": "main", "expected_parent_head": "b38b3167a400932093cda4f915c7f71c93ba5447"}
+  ],
+  "scope": "DOCUMENTATION_AND_GOVERNANCE_ONLY",
+  "allowed_actions": [
+    "REGISTER_DECISION",
+    "DOCUMENT_PHASE_0_TO_3_AGENT_RESPONSIBILITIES",
+    "DOCUMENT_FOUR_BRIEF_CHAIN",
+    "DOCUMENT_PARENT_DIGEST_AND_INVALIDATION_RULES",
+    "UPDATE_DISCOVERY_INDEXES",
+    "COMMIT",
+    "PUSH",
+    "VERIFY_REMOTE"
+  ],
+  "forbidden_actions": [
+    "RUNTIME",
+    "PRODUCT_SOURCE_CHANGE",
+    "VISUAL_ARTIFACT_CHANGE",
+    "IMAGE_GENERATION",
+    "HTML_GENERATION",
+    "SKILL_INTEGRATION",
+    "MODEL_AUTONOMOUS_AUTHORITY",
+    "DEPLOYMENT",
+    "RELEASE"
+  ],
+  "decision_ref": "DEC-LAB-022",
+  "consumption_criterion": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_IN_BOTH_REPOSITORIES",
+  "authority_effect": "NONE_AFTER_CONSUMPTION",
+  "product_effect": "NONE",
+  "runtime_effect": "NONE"
+}
