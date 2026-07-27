@@ -3,7 +3,7 @@
   "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_CLEAN_REPRODUCTION_PREPARATION_096",
   "project_id": "lab",
   "title": "Prepare an isolated clean reproduction package for the Product Leadership discrimination test",
-  "status": "GRANTED_FOR_THIS_BOUNDED_PREPARATION",
+  "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-07-27",
   "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
@@ -39,7 +39,8 @@
     "DEPLOYMENT"
   ],
   "consumption_criterion": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_OF_COMPLETE_CLEAN_REPRODUCTION_HANDOFF_PACKAGE",
-  "authority_effect": "BOUNDED_DOCUMENTARY_PREPARATION_ONLY",
+  "consumed_by_package": "PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-PACKAGE-002",
+  "authority_effect": "NONE_AFTER_CONSUMPTION",
   "runtime_effect": "NONE",
   "product_effect": "NONE"
 }
