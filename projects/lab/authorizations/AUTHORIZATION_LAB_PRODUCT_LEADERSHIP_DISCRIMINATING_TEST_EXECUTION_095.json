@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_DISCRIMINATING_TEST_EXECUTION_095",
+  "project_id": "lab",
+  "title": "Execute the Product Leadership activation and value discrimination test and publish reproducible evidence",
+  "status": "GRANTED_FOR_THIS_BOUNDED_EXECUTION",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-27",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "49ed685aab9c54d86d387ff4a0c3dcdd792a0f2a",
+  "scope": "SYNTHETIC_TEST_EXECUTION_AND_EVIDENCE_ONLY",
+  "allowed_actions": [
+    "EXECUTE_PRODUCT_LEADERSHIP_DISCRIMINATING_TEST_PREFLIGHT",
+    "GENERATE_SYNTHETIC_OUTPUTS_WHEN_BLINDING_CONTRACT_REMAINS_VALID",
+    "APPLY_PREDECLARED_STOP_CONDITIONS",
+    "PRODUCE_REPRODUCIBLE_EXECUTION_EVIDENCE",
+    "REGISTER_EXECUTION_RESULT_AND_PENDING_SUCCESSOR",
+    "COMMIT",
+    "PUSH",
+    "VERIFY_REMOTE"
+  ],
+  "forbidden_actions": [
+    "ACTIVATE_PRODUCT_LEADERSHIP",
+    "INTEGRATE_PRODUCT_LEADERSHIP",
+    "EXTERNAL_AUDIT_EXECUTION",
+    "DOCUMENTARY_RECONCILIATION_OR_PROMOTION_DECISION",
+    "USE_REAL_PRODUCT_DATA",
+    "MODIFY_SYMPHONIE",
+    "MODIFY_PRODUCT_PROJECTS",
+    "RUNTIME",
+    "RAG",
+    "EMBEDDINGS",
+    "VECTOR_DATABASE",
+    "ARCHITECTURE_PROVIDER_OR_STACK_SELECTION",
+    "DEPLOYMENT",
+    "RELEASE"
+  ],
+  "consumption_criterion": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_OF_THE_REPRODUCIBLE_EXECUTION_OR_STOP_CONDITION_EVIDENCE_PACKAGE",
+  "authority_effect": "BOUNDED_SYNTHETIC_TEST_EXECUTION_ONLY",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE"
+}
