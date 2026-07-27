@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_SYMPHONIE_SURGICAL_VISUAL_PATCH_LEARNING_093",
+  "project_id": "lab",
+  "title": "Document LivHavn Candidate 091-03 visual patch learning across LAB and Symphonie",
+  "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_IN_BOTH_REPOSITORIES",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-26",
+  "consumed_at": "2026-07-26",
+  "repositories": [
+    "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "marcellusanthonson-ctrl/symphonie"
+  ],
+  "branches": ["main"],
+  "expected_parent_heads": {
+    "lab": "14b039a9387597f1eda5c410f3db4e3a89ce16dd",
+    "symphonie": "7df3d0a0e1baf5442166d37c4b2ae52a944c74d7"
+  },
+  "scope": "DOCUMENTARY_RECONCILIATION_ONLY",
+  "allowed_actions": [
+    "CREATE_PATTERN",
+    "CREATE_CONTAINED_ERROR_RECORD",
+    "CREATE_EVIDENCE_RECORD",
+    "CREATE_VISUAL_PATCH_PROTOCOL",
+    "CREATE_LIVHAVN_RETROSPECTIVE",
+    "UPDATE_REGISTRY_DISCOVERY",
+    "COMMIT",
+    "PUSH",
+    "VERIFY_REMOTE"
+  ],
+  "forbidden_actions": [
+    "GENERATE_IMAGES",
+    "MODIFY_IMAGES",
+    "MODIFY_CANDIDATE_HTML",
+    "MODIFY_PRODUCT_RUNTIME",
+    "CREATE_NEW_VISUAL_DIRECTION",
+    "DEPLOYMENT",
+    "RELEASE"
+  ],
+  "published_artifacts": [
+    "patterns/PAT-LAB-009.json",
+    "errors/ERR-LAB-007.json",
+    "projects/lab/evidence/EVD-LAB-SYMPHONIE-LIVHAVN-PATCH-001.json",
+    "docs/SURGICAL_VISUAL_PATCH_PROTOCOL.md",
+    "registry/deltas/livhavn-surgical-visual-patch-093.json",
+    "pilotos/SYMPHONIE-PILOT-LIVHAVN-001/phase-3/visual-review/LIVHAVN_CANDIDATE_091_02_03_RETROSPECTIVE_001.json",
+    "pilotos/SYMPHONIE-PILOT-LIVHAVN-001/phase-3/visual-review/SURGICAL_VISUAL_PATCH_CONTRACT_001.json"
+  ],
+  "consumption_criterion": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_IN_BOTH_REPOSITORIES",
+  "authority_effect": "NONE_AFTER_CONSUMPTION",
+  "product_effect": "NONE",
+  "runtime_effect": "NONE"
+}
