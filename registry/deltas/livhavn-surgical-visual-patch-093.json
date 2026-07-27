@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "updated_at": "2026-07-26",
+  "delta_id": "LIVHAVN-SURGICAL-VISUAL-PATCH-DELTA-093",
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_SYMPHONIE_SURGICAL_VISUAL_PATCH_LEARNING_093",
+    "state_key": "symphonie_surgical_visual_patch_learning_093",
+    "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_IN_BOTH_REPOSITORIES",
+    "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_SYMPHONIE_SURGICAL_VISUAL_PATCH_LEARNING_093.json",
+    "commit_authorized": true,
+    "push_authorized": true,
+    "runtime_authorized": false,
+    "product_changes_authorized": false,
+    "image_generation_authorized": false,
+    "active_execution_authority_after_consumption": "NONE"
+  },
+  "pattern": {
+    "id": "PAT-LAB-009",
+    "status": "VALIDATED",
+    "canonical_path": "patterns/PAT-LAB-009.json"
+  },
+  "error": {
+    "id": "ERR-LAB-007",
+    "status": "CONTAINED",
+    "canonical_path": "errors/ERR-LAB-007.json"
+  },
+  "evidence": {
+    "id": "EVD-LAB-SYMPHONIE-LIVHAVN-PATCH-001",
+    "status": "REGISTERED_WITH_NEGATIVE_AND_POSITIVE_COMPARATIVE_CASES",
+    "canonical_path": "projects/lab/evidence/EVD-LAB-SYMPHONIE-LIVHAVN-PATCH-001.json"
+  },
+  "protocol": "docs/SURGICAL_VISUAL_PATCH_PROTOCOL.md",
+  "facts": [
+    "CANDIDATE_02_TECHNICALLY_VALID_HUMAN_REJECTED_VISUAL_REGRESSION",
+    "CANDIDATE_03_IDENTICAL_TO_CANDIDATE_091_OUTSIDE_IMAGE_REGION",
+    "CODEX_HIGH_FIDELITY_CONFIRMED_FOR_EXPLICIT_BOUNDED_VERIFIABLE_TRANSFORMATION",
+    "TECHNICAL_PASS_DOES_NOT_ESTABLISH_VISUAL_SUCCESS",
+    "DEFAULT_LOCALIZED_CHANGE_MODE_IS_SURGICAL_PATCH"
+  ],
+  "authority_effect": "NONE_AFTER_CONSUMPTION"
+}
