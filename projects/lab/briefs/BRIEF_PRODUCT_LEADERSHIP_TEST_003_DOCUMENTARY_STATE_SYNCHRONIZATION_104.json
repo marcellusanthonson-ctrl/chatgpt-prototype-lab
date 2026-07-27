@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "brief_id": "BRIEF_PRODUCT_LEADERSHIP_TEST_003_DOCUMENTARY_STATE_SYNCHRONIZATION_104",
+  "project_id": "lab",
+  "authorization_ref": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST_003_DOCUMENTARY_STATE_SYNCHRONIZATION_104",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "fb1ce2007bf6224f9605a098b7f921bd14e1a61c",
+  "objective": "Synchronize aggregate canonical documentary state with the Product Leadership execution 002, audits, reconciliations, authorizations 095-104 and hardened Test 003 without creating execution authority.",
+  "required_actions": [
+    "CREATE_CANONICAL_SYNCHRONIZATION_DELTA",
+    "REGISTER_PENDING_HUMAN_APPROVAL",
+    "REGISTER_SYNCHRONIZATION_RECONCILIATION",
+    "UPDATE_REGISTRY_INDEX_REFERENCES",
+    "PRESERVE_EXECUTION_AUTHORIZED_FALSE",
+    "VALIDATE_REMOTE_PUBLICATION",
+    "MARK_AUTHORIZATION_104_CONSUMED"
+  ],
+  "forbidden": [
+    "EXECUTE_TEST_003",
+    "GENERATE_NEW_TEST_ARTIFACTS",
+    "ACTIVATE_OR_INTEGRATE_PRODUCT_LEADERSHIP",
+    "MODIFY_PRODUCTS_OR_RUNTIME"
+  ]
+}
