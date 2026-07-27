@@ -4,13 +4,13 @@
   "counts": {
     "projects": 7,
     "decisions": 21,
-    "errors": 7,
-    "patterns": 9,
+    "errors": 8,
+    "patterns": 10,
     "ideas": 5,
     "integrations": 6,
     "experiments": 8,
-    "authorizations": 53,
-    "evidence": 30,
+    "authorizations": 54,
+    "evidence": 31,
     "unincorporated": 0,
     "proposals": 3,
     "sessions": 1,
@@ -40,16 +40,21 @@
     "authorization_deltas": [
       "registry/deltas/authorizations-089.json",
       "registry/deltas/intelligent-application-construction-090.json",
-      "registry/deltas/software-solution-engineering-091.json"
+      "registry/deltas/software-solution-engineering-091.json",
+      "registry/deltas/livhavn-surgical-visual-patch-093.json"
     ],
     "evidence": "registry/evidence.json",
     "evidence_deltas": [
-      "registry/deltas/evidence-code-fidelity-001.json"
+      "registry/deltas/evidence-code-fidelity-001.json",
+      "registry/deltas/livhavn-surgical-visual-patch-093.json"
     ],
     "current_state": "CURRENT_STATE.json",
     "current_state_deltas": [
-      "registry/deltas/current-state-visual-089.json"
+      "registry/deltas/current-state-visual-089.json",
+      "registry/deltas/livhavn-surgical-visual-patch-093.json"
     ],
+    "pattern_deltas": ["registry/deltas/livhavn-surgical-visual-patch-093.json"],
+    "error_deltas": ["registry/deltas/livhavn-surgical-visual-patch-093.json"],
     "unincorporated": "registry/unincorporated.json",
     "proposals": "registry/proposals.json",
     "sessions": "registry/sessions.json",
@@ -82,14 +87,14 @@
   },
   "latest": {
     "decision": "DEC-LAB-021",
-    "error": "ERR-LAB-006",
-    "pattern": "PAT-LAB-008",
-    "authorization": "AUTHORIZATION_LAB_SOFTWARE_SOLUTION_ENGINEERING_CANDIDATE_PACKAGE_091",
-    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_SOFTWARE_SOLUTION_ENGINEERING_CANDIDATE_PACKAGE_091.json",
-    "evidence": "EVD-LAB-CODEX-PATCH-FIDELITY-001",
-    "evidence_path": "projects/lab/evidence/EVD-LAB-CODEX-PATCH-FIDELITY-001.json",
-    "current_state_delta": "CURRENT-STATE-DELTA-SYMPHONIE-VISUAL-089",
-    "current_state_delta_path": "registry/deltas/current-state-visual-089.json",
+    "error": "ERR-LAB-007",
+    "pattern": "PAT-LAB-009",
+    "authorization": "AUTHORIZATION_LAB_SYMPHONIE_SURGICAL_VISUAL_PATCH_LEARNING_093",
+    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_SYMPHONIE_SURGICAL_VISUAL_PATCH_LEARNING_093.json",
+    "evidence": "EVD-LAB-SYMPHONIE-LIVHAVN-PATCH-001",
+    "evidence_path": "projects/lab/evidence/EVD-LAB-SYMPHONIE-LIVHAVN-PATCH-001.json",
+    "current_state_delta": "LIVHAVN-SURGICAL-VISUAL-PATCH-DELTA-093",
+    "current_state_delta_path": "registry/deltas/livhavn-surgical-visual-patch-093.json",
     "experiment": "EXP-LAB-003",
     "proposal": "PROP-LAB-003",
     "session": "SES-2026-06-28-001",
@@ -98,7 +103,7 @@
     "reconciliation_path": "projects/lab/reconciliations/REC-LAB-SYMPHONIE-VISUAL-089-001.json",
     "test_design": "SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001",
     "pending": "PEND-LAB-027",
-    "test_execution": "FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-EXECUTION-002",
+    "test_execution": "FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATING-TEST-EXECUTION-002",
     "external_audit": "AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001",
     "source_package": "DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001@1.2.0",
     "foundation_library": "SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001@0.1.0",
@@ -118,6 +123,7 @@
     "chatgpt_criterion_layer": "CHATGPT-CRITERION-LAYER-001@1.1.0",
     "minimum_impeccable_visual_foundation": "MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001@1.1.1",
     "local_icon_asset_candidate_library": "LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001@1.1.0",
-    "livhavn_intent_patch_brief": "pilotos/SYMPHONIE-PILOT-LIVHAVN-001/phase-3/LIVHAVN_INTENT_PATCH_BRIEF_089.json"
+    "livhavn_intent_patch_brief": "pilotos/SYMPHONIE-PILOT-LIVHAVN-001/phase-3/LIVHAVN_INTENT_PATCH_BRIEF_089.json",
+    "surgical_visual_patch_protocol": "docs/SURGICAL_VISUAL_PATCH_PROTOCOL.md"
   }
 }
