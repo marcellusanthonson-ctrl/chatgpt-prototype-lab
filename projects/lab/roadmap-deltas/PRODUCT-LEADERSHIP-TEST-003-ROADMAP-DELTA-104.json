@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "PRODUCT-LEADERSHIP-TEST-003-ROADMAP-DELTA-104",
+  "project_id": "lab",
+  "authorization_ref": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST_003_DOCUMENTARY_STATE_SYNCHRONIZATION_104",
+  "status": "ACTIVE_HUMAN_GATE",
+  "current_milestone": "HARDENED_TEST_003_CONTRACT_COMPLETE",
+  "next_milestone": "HUMAN_APPROVAL_MODIFICATION_OR_REJECTION",
+  "execution_milestone_status": "NOT_AUTHORIZED",
+  "blocked_until": [
+    "HUMAN_DECISION_ON_HARDENED_CONTRACT",
+    "SEPARATE_EXPLICIT_EXECUTION_AUTHORIZATION"
+  ],
+  "authority_effect": "NONE"
+}
