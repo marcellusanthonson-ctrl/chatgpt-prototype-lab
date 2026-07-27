@@ -3,7 +3,7 @@
   "authorization_id": "AUTHORIZATION_LAB_CLAUDE_ADVERSARIAL_AUDIT_PRODUCT_LEADERSHIP_PROSPECTIVE_TEST_003_102",
   "project_id": "lab",
   "title": "Authorize Claude adversarial read-only audit of Product Leadership prospective test 003",
-  "status": "GRANTED_PENDING_CLAUDE_AUDIT",
+  "status": "CONSUMED_ON_RECEIPT_AND_HASH_VERIFICATION_OF_COMPLETE_CLAUDE_AUDIT_OUTPUTS",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-07-27",
   "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
@@ -13,6 +13,13 @@
   "audit_mode": "INDEPENDENT_ADVERSARIAL_READ_ONLY",
   "audit_subject": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003",
   "scope": "PROSPECTIVE_TEST_CONTRACT_DESIGN_AUDIT_ONLY",
+  "audit_result": {
+    "audited_head": "a052a88a5ca8c2b42932f5c4d12dbeead37bca2e",
+    "global_classification": "READY_AFTER_BOUNDED_CORRECTIONS",
+    "report_sha256": "201ebe72b5385fbe69164974a5c65b72b59cdd78ec7c0a9b7f8f12365f2f4223",
+    "findings_sha256": "1b1e5742de044066642577471196327cbb0bb57a9ab46ba82e2c6aeae3da776c",
+    "hash_verification": "PASS"
+  },
   "allowed_actions": [
     "READ_CANONICAL_GOVERNANCE_AND_PROSPECTIVE_TEST_SOURCES",
     "ASSESS_STATISTICAL_DESIGN",
@@ -26,12 +33,7 @@
     "PROPOSE_BOUNDED_CORRECTIONS_WITHOUT_EXECUTION",
     "PRODUCE_AUDIT_REPORT_AND_MACHINE_READABLE_FINDINGS"
   ],
-  "required_classifications": [
-    "CONFIRMED",
-    "MODIFIED",
-    "REVERSED",
-    "INSUFFICIENT_EVIDENCE"
-  ],
+  "required_classifications": ["CONFIRMED", "MODIFIED", "REVERSED", "INSUFFICIENT_EVIDENCE"],
   "forbidden_actions": [
     "MODIFY_REPOSITORY",
     "EXECUTE_TEST_003",
@@ -48,13 +50,12 @@
     "DEPLOYMENT",
     "RELEASE"
   ],
-  "required_outputs": [
-    "CLAUDE_AUDIT_REPORT.md",
-    "CLAUDE_AUDIT_FINDINGS.json"
-  ],
+  "required_outputs": ["CLAUDE_AUDIT_REPORT.md", "CLAUDE_AUDIT_FINDINGS.json"],
   "publication_boundary": "CLAUDE_RETURNS_OUTPUTS_OUTSIDE_REPOSITORY; SEPARATE_RECONCILIATION_AUTHORIZATION_REQUIRED_TO_COMMIT THEM",
   "consumption_criterion": "CONSUMED_WHEN_COMPLETE_CLAUDE_AUDIT_OUTPUTS_ARE_RECEIVED_AND_HASHES_ARE_VERIFIED",
-  "authority_effect": "BOUNDED_EXTERNAL_READ_ONLY_CONTRACT_AUDIT_ONLY",
+  "consumed_at": "2026-07-27",
+  "successor_authorization": "AUTHORIZATION_LAB_CLAUDE_AUDIT_RECONCILIATION_AND_TEST_003_HARDENING_103",
+  "authority_effect": "NONE_AFTER_CONSUMPTION",
   "runtime_effect": "NONE",
   "product_effect": "NONE"
 }
