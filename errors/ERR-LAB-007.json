@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ERR-LAB-007",
+  "title": "Localized visual substitution expanded into unauthorized creative revision",
+  "project_scope": ["lab", "symphonie"],
+  "severity": "HIGH",
+  "status": "CONTAINED",
+  "lifecycle_state": "CONTAINED",
+  "updated_at": "2026-07-26",
+  "observed_in": {
+    "project": "SYMPHONIE-PILOT-LIVHAVN-001",
+    "parent": "Candidate 091",
+    "regression": "Candidate 02",
+    "corrected_execution": "Candidate 03"
+  },
+  "cause": [
+    "AMBIGUOUS_PRESERVATION_CONTRACT",
+    "EXCESSIVE_CHANGE_BUDGET",
+    "CREATIVE_AUTONOMY_NOT_EXPLICITLY_DISABLED",
+    "MULTIPLE_VISUAL_VARIABLES_CHANGED_SIMULTANEOUSLY",
+    "NO_PARENT_FIDELITY_DIFF_GATE"
+  ],
+  "impact": [
+    "TECHNICALLY_VALID_BUT_VISUALLY_INFERIOR_RESULT",
+    "STRUCTURE_TYPOGRAPHY_COPY_COLOR_AND_COMPOSITION_DRIFT",
+    "LOST_TIME_AND_ADDITIONAL_ITERATION",
+    "TECHNICAL_PASS_MISREAD_AS_VISUAL_SUCCESS"
+  ],
+  "correction": [
+    "RESTORE_EXACT_PARENT_AS_VISUAL_SOURCE",
+    "SET_CREATIVE_AUTONOMY_TO_NONE",
+    "ALLOW_ONLY_IMG_SRC_REPLACEMENT",
+    "LOCK_ALL_UNMENTIONED_ELEMENTS",
+    "REQUIRE_ZERO_PIXEL_DIFF_OUTSIDE_MUTABLE_IMAGE_MASK",
+    "SEPARATE_TECHNICAL_AND_HUMAN_VISUAL_STATES"
+  ],
+  "prevention_refs": [
+    "patterns/PAT-LAB-009.json",
+    "docs/SURGICAL_VISUAL_PATCH_PROTOCOL.md",
+    "projects/lab/evidence/EVD-LAB-SYMPHONIE-LIVHAVN-PATCH-001.json"
+  ],
+  "authorization_ref": "AUTHORIZATION_LAB_SYMPHONIE_SURGICAL_VISUAL_PATCH_LEARNING_093",
+  "authorization_effect": "NONE_AFTER_CONSUMPTION"
+}
