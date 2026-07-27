@@ -2,20 +2,17 @@
   "schema_version": "1.0.0",
   "id": "PEND-LAB-028",
   "project_id": "lab",
-  "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+  "status": "COMPLETED_AND_SUPERSEDED_BY_PROSPECTIVE_TEST_APPROVAL_PENDING",
   "type": "PRODUCT_LEADERSHIP_EXECUTION_002_INDEPENDENT_EXTERNAL_AUDIT",
-  "subject": "Execute an independent external read-only audit of Product Leadership clean reproduction execution 002",
+  "subject": "Independent external read-only audit of Product Leadership clean reproduction execution 002",
   "priority": "HIGH",
-  "source_reconciliation": "REC-LAB-PRODUCT-LEADERSHIP-EXECUTION-002-001",
+  "source_reconciliation": "REC-LAB-PRODUCT-LEADERSHIP-EXTERNAL-AUDIT-002-002",
   "source_brief": "projects/lab/briefs/BRIEF_INDEPENDENT_EXTERNAL_AUDIT_PRODUCT_LEADERSHIP_EXECUTION_002_099.json",
+  "audit_completed": true,
+  "overall_classification": "INSUFFICIENT_EVIDENCE",
+  "prospective_test_proposal": "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/PROPOSAL.json",
   "authorization_required": true,
-  "prohibitions": [
-    "EXECUTE_AUDIT_WITHOUT_SEPARATE_AUTHORIZATION",
-    "MODIFY_REPOSITORY_DURING_AUDIT",
-    "PROMOTE_REJECT_ACTIVATE_OR_INTEGRATE_PRODUCT_LEADERSHIP",
-    "ADD_POST_HOC_VALUE_THRESHOLD"
-  ],
   "current_authority": "NONE",
   "automatic_approval": false,
-  "next_authorized_action": "NONE_UNTIL_SEPARATE_EXPLICIT_AUTHORIZATION"
+  "next_authorized_action": "NONE_UNTIL_HUMAN_APPROVAL_OF_PROSPECTIVE_TEST_CONTRACT"
 }
