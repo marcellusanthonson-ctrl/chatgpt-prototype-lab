@@ -1,15 +1,15 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-07-26",
+  "updated_at": "2026-07-27",
   "counts": {
     "projects": 7,
-    "decisions": 21,
+    "decisions": 22,
     "errors": 8,
     "patterns": 10,
     "ideas": 5,
     "integrations": 6,
     "experiments": 8,
-    "authorizations": 54,
+    "authorizations": 55,
     "evidence": 31,
     "unincorporated": 0,
     "proposals": 3,
@@ -31,6 +31,7 @@
   "registries": {
     "projects": "registry/projects.json",
     "decisions": "registry/decisions.json",
+    "decision_deltas": ["registry/deltas/symphonie-phases-0-3-brief-architecture-094.json"],
     "errors": "registry/errors.json",
     "patterns": "registry/patterns.json",
     "ideas": "registry/ideas.json",
@@ -41,7 +42,8 @@
       "registry/deltas/authorizations-089.json",
       "registry/deltas/intelligent-application-construction-090.json",
       "registry/deltas/software-solution-engineering-091.json",
-      "registry/deltas/livhavn-surgical-visual-patch-093.json"
+      "registry/deltas/livhavn-surgical-visual-patch-093.json",
+      "registry/deltas/symphonie-phases-0-3-brief-architecture-094.json"
     ],
     "evidence": "registry/evidence.json",
     "evidence_deltas": [
@@ -51,7 +53,8 @@
     "current_state": "CURRENT_STATE.json",
     "current_state_deltas": [
       "registry/deltas/current-state-visual-089.json",
-      "registry/deltas/livhavn-surgical-visual-patch-093.json"
+      "registry/deltas/livhavn-surgical-visual-patch-093.json",
+      "registry/deltas/symphonie-phases-0-3-brief-architecture-094.json"
     ],
     "pattern_deltas": ["registry/deltas/livhavn-surgical-visual-patch-093.json"],
     "error_deltas": ["registry/deltas/livhavn-surgical-visual-patch-093.json"],
@@ -86,15 +89,16 @@
     "design_knowledge_package": "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/MANIFEST.json"
   },
   "latest": {
-    "decision": "DEC-LAB-021",
+    "decision": "DEC-LAB-022",
+    "decision_path": "decisions/DEC-LAB-022.json",
     "error": "ERR-LAB-007",
     "pattern": "PAT-LAB-009",
-    "authorization": "AUTHORIZATION_LAB_SYMPHONIE_SURGICAL_VISUAL_PATCH_LEARNING_093",
-    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_SYMPHONIE_SURGICAL_VISUAL_PATCH_LEARNING_093.json",
+    "authorization": "AUTHORIZATION_LAB_SYMPHONIE_PHASES_0_3_AND_BRIEF_ARCHITECTURE_094",
+    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_SYMPHONIE_PHASES_0_3_AND_BRIEF_ARCHITECTURE_094.json",
     "evidence": "EVD-LAB-SYMPHONIE-LIVHAVN-PATCH-001",
     "evidence_path": "projects/lab/evidence/EVD-LAB-SYMPHONIE-LIVHAVN-PATCH-001.json",
-    "current_state_delta": "LIVHAVN-SURGICAL-VISUAL-PATCH-DELTA-093",
-    "current_state_delta_path": "registry/deltas/livhavn-surgical-visual-patch-093.json",
+    "current_state_delta": "SYMPHONIE-PHASES-0-3-BRIEF-ARCHITECTURE-DELTA-094",
+    "current_state_delta_path": "registry/deltas/symphonie-phases-0-3-brief-architecture-094.json",
     "experiment": "EXP-LAB-003",
     "proposal": "PROP-LAB-003",
     "session": "SES-2026-06-28-001",
@@ -124,6 +128,7 @@
     "minimum_impeccable_visual_foundation": "MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001@1.1.1",
     "local_icon_asset_candidate_library": "LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001@1.1.0",
     "livhavn_intent_patch_brief": "pilotos/SYMPHONIE-PILOT-LIVHAVN-001/phase-3/LIVHAVN_INTENT_PATCH_BRIEF_089.json",
-    "surgical_visual_patch_protocol": "docs/SURGICAL_VISUAL_PATCH_PROTOCOL.md"
+    "surgical_visual_patch_protocol": "docs/SURGICAL_VISUAL_PATCH_PROTOCOL.md",
+    "symphonie_phase_brief_architecture": "docs/SYMPHONIE_PHASES_0_3_AGENT_AND_BRIEF_ARCHITECTURE.md"
   }
 }
