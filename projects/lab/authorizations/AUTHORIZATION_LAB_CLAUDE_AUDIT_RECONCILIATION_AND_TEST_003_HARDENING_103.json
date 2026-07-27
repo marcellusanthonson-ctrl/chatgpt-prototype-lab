@@ -3,7 +3,7 @@
   "authorization_id": "AUTHORIZATION_LAB_CLAUDE_AUDIT_RECONCILIATION_AND_TEST_003_HARDENING_103",
   "project_id": "lab",
   "title": "Reconcile Claude adversarial audit and harden Product Leadership prospective test 003",
-  "status": "PARTIALLY_EXECUTED_PENDING_LITERAL_AUDIT_ARTIFACT_PUBLICATION",
+  "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-07-27",
   "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
@@ -14,11 +14,16 @@
   "source_audit": {
     "audited_head": "a052a88a5ca8c2b42932f5c4d12dbeead37bca2e",
     "classification": "READY_AFTER_BOUNDED_CORRECTIONS",
+    "report_path": "projects/lab/evidence/product-leadership/claude-adversarial-audit-test-003/CLAUDE_AUDIT_REPORT.md",
     "report_sha256": "201ebe72b5385fbe69164974a5c65b72b59cdd78ec7c0a9b7f8f12365f2f4223",
+    "findings_path": "projects/lab/evidence/product-leadership/claude-adversarial-audit-test-003/CLAUDE_AUDIT_FINDINGS.json",
     "findings_sha256": "1b1e5742de044066642577471196327cbb0bb57a9ab46ba82e2c6aeae3da776c",
-    "hash_verification": "PASS"
+    "hash_verification": "PASS",
+    "report_publication_commit": "59d642ac14c305d0ba67ee7cf0872791976cfa79",
+    "findings_publication_commit": "ec57c6746dc00e4697f6690238cec350aa4c3874"
   },
   "completed_actions": [
+    "INGEST_CLAUDE_AUDIT_REPORT_AND_FINDINGS_VERBATIM",
     "VERIFY_AUDIT_HASHES_AND_AUDITED_HEAD",
     "MARK_AUTHORIZATION_102_CONSUMED",
     "CREATE_CLAUDE_AUDIT_RECONCILIATION_RECORD",
@@ -33,8 +38,6 @@
     "PUSH",
     "VERIFY_REMOTE"
   ],
-  "remaining_action": "INGEST_CLAUDE_AUDIT_REPORT_AND_FINDINGS_VERBATIM",
-  "remaining_action_blocker": "CURRENT_GITHUB_CONNECTOR_ACCEPTS_UTF8_CONTENT_BUT_CANNOT_IMPORT_LOCAL_MOUNTED_FILE_PATHS_DIRECTLY; SOURCE_BYTES_ARE_VERIFIED_AND_AVAILABLE_IN_CONVERSATION",
   "mandatory_results": {
     "test_003_status": "HARDENED_REQUIRES_HUMAN_APPROVAL_AND_SEPARATE_EXECUTION_AUTHORIZATION",
     "execution_authorized": false,
@@ -58,7 +61,7 @@
     "RELEASE"
   ],
   "consumption_criterion": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_OF_CLAUDE_AUDIT_EVIDENCE_RECONCILIATION_AND_HARDENED_NON_EXECUTABLE_TEST_003_CONTRACT",
-  "authority_effect": "BOUNDED_DOCUMENTARY_RECONCILIATION_REMAINS_ONLY_FOR_LITERAL_AUDIT_ARTIFACT_PUBLICATION",
+  "authority_effect": "NONE_AFTER_CONSUMPTION",
   "runtime_effect": "NONE",
   "product_effect": "NONE"
 }
