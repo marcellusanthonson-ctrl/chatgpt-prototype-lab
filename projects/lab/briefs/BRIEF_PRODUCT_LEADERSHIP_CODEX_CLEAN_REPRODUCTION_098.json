@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0.0",
+  "brief_id": "BRIEF_PRODUCT_LEADERSHIP_CODEX_CLEAN_REPRODUCTION_098",
+  "project_id": "lab",
+  "executor": "CODEX",
+  "authorization_ref": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_CODEX_CLEAN_REPRODUCTION_EXECUTION_098",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "execution_anchor_commit": "ef25d93cfa7eb7acc68ed1cddda4bc3ff112e66b",
+  "preflight": {
+    "policy": "ANCHOR_MUST_BE_ANCESTOR_OF_LIVE_HEAD_AND_INTERVENING_CHANGES_MUST_BE_ALLOWLISTED",
+    "allowed_preexecution_paths": [
+      "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_CODEX_CLEAN_REPRODUCTION_EXECUTION_097.json",
+      "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_CODEX_CLEAN_REPRODUCTION_EXECUTION_098.json",
+      "projects/lab/briefs/BRIEF_PRODUCT_LEADERSHIP_CODEX_CLEAN_REPRODUCTION_098.json",
+      "projects/lab/briefs/START_PROMPT_PRODUCT_LEADERSHIP_CODEX_CLEAN_REPRODUCTION_098.md"
+    ],
+    "required_checks": [
+      "VERIFY_LIVE_HEAD",
+      "VERIFY_EXECUTION_ANCHOR_IS_ANCESTOR_OF_LIVE_HEAD",
+      "COMPARE_EXECUTION_ANCHOR_TO_LIVE_HEAD",
+      "STOP_IF_ANY_CHANGED_PATH_IS_NOT_ALLOWLISTED",
+      "VERIFY_WORKTREE_CLEAN_BEFORE_FIRST_EXECUTION_WRITE"
+    ]
+  },
+  "objective": "Execute PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001 reproducibly using isolated generation, blinded evaluation and post-score oracle custody, without activating or integrating Product Leadership.",
+  "source_package": "projects/lab/test-executions/PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-PACKAGE-002/MANIFEST.json",
+  "role_contracts": [
+    {
+      "role": "BASELINE_GENERATOR",
+      "allowed_inputs": [
+        "projects/lab/test-executions/PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-PACKAGE-002/GENERATOR_INPUT.json",
+        "LAB_CONTRACT.md",
+        "METHODOLOGY.md",
+        "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MANIFEST.json"
+      ],
+      "forbidden_inputs": ["FIXTURES.json", "ORACLE_CUSTODY_CONTRACT.json", "previous_execution_outputs", "arm_mappings"],
+      "deliverable": "BASELINE_OUTPUTS.json"
+    },
+    {
+      "role": "PACKAGE_GENERATOR",
+      "allowed_inputs": [
+        "projects/lab/test-executions/PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-PACKAGE-002/GENERATOR_INPUT.json",
+        "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/MANIFEST.json",
+        "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/ACTIVATION_CONTRACT.json",
+        "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/PRINCIPLES.json",
+        "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/CONTEXTUAL_GUIDANCE.json",
+        "LAB_CONTRACT.md",
+        "METHODOLOGY.md"
+      ],
+      "forbidden_inputs": ["FIXTURES.json", "ORACLE_CUSTODY_CONTRACT.json", "previous_execution_outputs", "arm_mappings"],
+      "deliverable": "PACKAGE_OUTPUTS.json"
+    },
+    {
+      "role": "BLINDED_EVALUATOR",
+      "allowed_inputs": [
+        "projects/lab/test-executions/PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-PACKAGE-002/EVALUATOR_BRIEF.json",
+        "RANDOMIZED_OUTPUTS_WITHOUT_ARM_LABELS.json"
+      ],
+      "forbidden_inputs": ["FIXTURES.json", "GENERATOR_INPUT.json", "ORACLE_CUSTODY_CONTRACT.json", "arm_mappings", "package_identity_per_output"],
+      "deliverables": ["FROZEN_SCORES.json", "FROZEN_RATIONALES.json"]
+    },
+    {
+      "role": "POST_SCORE_ORACLE_CUSTODIAN",
+      "allowed_inputs_after_freeze_only": [
+        "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/FIXTURES.json",
+        "projects/lab/test-executions/PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-PACKAGE-002/ORACLE_CUSTODY_CONTRACT.json",
+        "FROZEN_SCORES.json",
+        "FROZEN_RATIONALES.json",
+        "FROZEN_OUTPUT_MAPPING.json",
+        "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/SCORING_AND_GATES.json"
+      ],
+      "deliverables": ["UNBLINDED_METRICS.json", "GATE_RESULTS.json", "RESULT.json"]
+    }
+  ],
+  "execution_requirements": [
+    "FREEZE_AND_RECORD_SEED_BEFORE_GENERATION",
+    "GENERATE_40_BASELINE_OUTPUTS",
+    "GENERATE_40_PACKAGE_OUTPUTS",
+    "GENERATE_4_POSITIVE_CONTROL_OUTPUTS",
+    "GENERATE_4_NEGATIVE_CONTROL_OUTPUTS",
+    "HASH_EACH_INPUT_OUTPUT_SCORE_AND_MAPPING_ARTIFACT",
+    "RANDOMIZE_OUTPUT_IDENTIFIERS_BEFORE_EVALUATION",
+    "FREEZE_ALL_SCORES_AND_RATIONALES_BEFORE_ORACLE_ACCESS",
+    "APPLY_ALL_PREDECLARED_STOP_CONDITIONS",
+    "DO_NOT_INTERPRET_PASS_AS_INTEGRATION_AUTHORIZATION"
+  ],
+  "required_output_directory": "projects/lab/test-executions/PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-EXECUTION-002/",
+  "required_files": [
+    "MANIFEST.json",
+    "PREFLIGHT.json",
+    "SEED_AND_ORDER.json",
+    "BASELINE_OUTPUTS.json",
+    "PACKAGE_OUTPUTS.json",
+    "CONTROL_OUTPUTS.json",
+    "RANDOMIZED_OUTPUTS_WITHOUT_ARM_LABELS.json",
+    "FROZEN_OUTPUT_MAPPING.json",
+    "FROZEN_SCORES.json",
+    "FROZEN_RATIONALES.json",
+    "HASH_MANIFEST.json",
+    "UNBLINDED_METRICS.json",
+    "GATE_RESULTS.json",
+    "RESULT.json",
+    "REPRODUCTION_README.md"
+  ],
+  "validation": [
+    "JSON_PARSE_PASS",
+    "EXPECTED_OUTPUT_COUNT_EQUALS_88",
+    "NO_ORACLE_FIELDS_IN_GENERATOR_INPUTS",
+    "NO_ARM_LABELS_IN_EVALUATOR_INPUT",
+    "SCORE_FREEZE_PRECEDES_UNBLINDING",
+    "HASH_MANIFEST_COMPLETE",
+    "ZERO_REAL_PRODUCT_DATA",
+    "ZERO_PRODUCT_OR_RUNTIME_EFFECT",
+    "REMOTE_HEAD_VERIFIED_AFTER_PUBLICATION"
+  ],
+  "stop_conditions": [
+    "ANCHOR_NOT_ANCESTOR_OF_LIVE_HEAD",
+    "NON_ALLOWLISTED_PREEXECUTION_CHANGE",
+    "ORACLE_OR_FIXTURE_LEAKAGE",
+    "ROLE_ISOLATION_FAILURE",
+    "ARM_LABEL_VISIBLE_TO_EVALUATOR",
+    "OUTPUT_COUNT_OR_HASH_MISMATCH",
+    "CONTROL_FAILURE",
+    "AUTHORITY_CONFUSION",
+    "FABRICATED_EVIDENCE",
+    "UNAUTHORIZED_SCOPE_EXPANSION"
+  ],
+  "forbidden": [
+    "ACTIVATE_OR_INTEGRATE_PRODUCT_LEADERSHIP",
+    "EXTERNAL_AUDIT",
+    "PROMOTION_OR_REJECTION_DECISION",
+    "MODIFY_SYMPHONIE_OR_PRODUCTS",
+    "RUNTIME_RAG_EMBEDDINGS_OR_VECTOR_DATABASE",
+    "ARCHITECTURE_PROVIDER_STACK_SELECTION"
+  ]
+}
