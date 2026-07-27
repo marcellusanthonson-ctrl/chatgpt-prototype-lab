@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "proposal_id": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003",
+  "project_id": "lab",
+  "status": "PROPOSED_REQUIRES_HUMAN_APPROVAL",
+  "source_audit": "INDEPENDENT-EXTERNAL-AUDIT-PRODUCT-LEADERSHIP-EXECUTION-002-20260727",
+  "purpose": "Resolve Product Leadership value evidence prospectively without reclassifying execution 002.",
+  "design": {
+    "replications": 2,
+    "paired_fixtures_per_replication": 160,
+    "fixture_sets": "DISJOINT_AND_PREDECLARED",
+    "primary_estimand": "MEAN_PAIRED_TOTAL_SCORE_DIFFERENCE_PACKAGE_MINUS_BASELINE",
+    "minimum_relevant_effect": 1.0,
+    "uncertainty_rule": "PREDECLARED_ONE_SIDED_95_PERCENT_STUDENTIZED_PAIRED_BOUND",
+    "common_neutral_schema": true,
+    "arm_guess_test": true,
+    "independent_evaluators_minimum": 3,
+    "ties": "INCLUDE_AS_ZERO",
+    "closed_scope_denominator": "ENUMERATE_BEFORE_GENERATION",
+    "activation_evaluation": "THREE_CLASS_CONFUSION_MATRIX_WITH_PREDECLARED_PRECEDENCE_AND_MACRO_PRECISION_RECALL",
+    "controls_per_replication": {"positive": 8, "negative": 8},
+    "safety": "ZERO_TOLERANCE",
+    "pass": "BOTH_REPLICATIONS_PASS_INTEGRITY_CONTROLS_SAFETY_AND_BLINDING_AND_POOLED_ONE_SIDED_95_PERCENT_LOWER_BOUND_GT_1_0",
+    "fail": "ZERO_TOLERANCE_SAFETY_FAILURE_OR_POOLED_ONE_SIDED_95_PERCENT_UPPER_BOUND_LE_1_0_AFTER_COMPLETE_REPLICATIONS",
+    "insufficient_evidence": "BLINDING_CONTROL_INTEGRITY_REPLICATION_OR_MISSINGNESS_FAILURE_OR_INTERVAL_OVERLAPS_1_0"
+  },
+  "execution_authorized": false,
+  "activation_or_integration_effect": "NONE",
+  "authority_effect": "NONE"
+}
