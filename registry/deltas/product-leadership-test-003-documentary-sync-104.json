@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "PRODUCT-LEADERSHIP-TEST-003-DOCUMENTARY-SYNC-104",
+  "project_id": "lab",
+  "authorization_ref": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST_003_DOCUMENTARY_STATE_SYNCHRONIZATION_104",
+  "effective_at": "2026-07-27",
+  "state_delta": {
+    "status": "PRODUCT_LEADERSHIP_TEST_003_HARDENED_AWAITING_HUMAN_APPROVAL",
+    "current_phase": "PRODUCT_LEADERSHIP_PROSPECTIVE_TEST_003_CONTRACT_HARDENED_HUMAN_GATE_PENDING",
+    "active_project": "lab",
+    "product_leadership": {
+      "execution_002": "INSUFFICIENT_EVIDENCE",
+      "external_audit_002": "RECONCILED",
+      "claude_test_003_audit": "READY_AFTER_BOUNDED_CORRECTIONS_RECONCILED",
+      "test_003": "HARDENED_REQUIRES_HUMAN_APPROVAL_AND_SEPARATE_EXECUTION_AUTHORIZATION",
+      "execution_authorized": false,
+      "activation": false,
+      "integration": false
+    },
+    "authority": {
+      "commit_authorized": false,
+      "push_authorized": false,
+      "runtime_authorized": false,
+      "integration_authorized": false,
+      "product_changes_authorized": false,
+      "residual_authority": "NONE_AFTER_AUTHORIZATION_104_CONSUMPTION"
+    },
+    "next_action": "HUMAN_APPROVAL_OR_REJECTION_OF_HARDENED_TEST_003_CONTRACT"
+  },
+  "registrations": {
+    "authorizations": [
+      "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_CODEX_CLEAN_REPRODUCTION_EXECUTION_097",
+      "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_CODEX_CLEAN_REPRODUCTION_EXECUTION_098",
+      "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_EXECUTION_002_DOCUMENTARY_RECONCILIATION_099",
+      "AUTHORIZATION_LAB_INDEPENDENT_EXTERNAL_AUDIT_PRODUCT_LEADERSHIP_EXECUTION_002_100",
+      "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_EXTERNAL_AUDIT_RECONCILIATION_101",
+      "AUTHORIZATION_LAB_CLAUDE_ADVERSARIAL_AUDIT_PRODUCT_LEADERSHIP_PROSPECTIVE_TEST_003_102",
+      "AUTHORIZATION_LAB_CLAUDE_AUDIT_RECONCILIATION_AND_TEST_003_HARDENING_103",
+      "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST_003_DOCUMENTARY_STATE_SYNCHRONIZATION_104"
+    ],
+    "test_designs": ["PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003"],
+    "test_executions": ["PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-EXECUTION-002"],
+    "reconciliations": [
+      "REC-LAB-PRODUCT-LEADERSHIP-EXECUTION-002-001",
+      "REC-LAB-PRODUCT-LEADERSHIP-EXTERNAL-AUDIT-002-002",
+      "REC-LAB-CLAUDE-AUDIT-TEST-003-003",
+      "REC-LAB-PRODUCT-LEADERSHIP-TEST-003-STATE-SYNC-004"
+    ],
+    "evidence_paths": [
+      "projects/lab/evidence/product-leadership/external-audit-execution-002/AUDIT_REPORT.md",
+      "projects/lab/evidence/product-leadership/external-audit-execution-002/AUDIT_FINDINGS.json",
+      "projects/lab/evidence/product-leadership/claude-adversarial-audit-test-003/CLAUDE_AUDIT_REPORT.md",
+      "projects/lab/evidence/product-leadership/claude-adversarial-audit-test-003/CLAUDE_AUDIT_FINDINGS.json"
+    ],
+    "pending": "PEND-LAB-029"
+  },
+  "authority_effect": "NONE"
+}
