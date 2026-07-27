@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-001",
+  "event_id": "PL-EXEC-001-STOP-001",
+  "classification": "METHOD_CONTAMINATION",
+  "observed_condition": "The execution agent read canonical fixture records containing expected_activation and expected_behavior before output generation and evaluation.",
+  "affected_contracts": [
+    "EVALUATOR_SEES_EXPECTED_ACTIVATION_FALSE",
+    "ORACLE_ACCESS_AFTER_SCORING_ONLY",
+    "ALL_SCORES_AND_RATIONALES_FROZEN_BEFORE_UNBLINDING"
+  ],
+  "matched_stop_condition": "FIXTURE_OR_ORACLE_LEAKAGE",
+  "decision": "STOP_BEFORE_GENERATION",
+  "prevented_invalid_claims": [
+    "BLINDED_EVALUATION_COMPLETED",
+    "PACKAGE_VALUE_INCREMENT_MEASURED",
+    "ACTIVATION_PRECISION_MEASURED",
+    "PROMOTION_GATES_PASSED"
+  ],
+  "data_loss": "NONE",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE"
+}
