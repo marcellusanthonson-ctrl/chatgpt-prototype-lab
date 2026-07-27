@@ -3,23 +3,34 @@
   "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST_003_DOCUMENTARY_STATE_SYNCHRONIZATION_104",
   "project_id": "lab",
   "title": "Synchronize canonical documentary state for Product Leadership Test 003",
-  "status": "GRANTED_PENDING_SYNCHRONIZATION",
+  "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-07-27",
   "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "branch": "main",
   "expected_parent_head": "fb1ce2007bf6224f9605a098b7f921bd14e1a61c",
   "scope": "DOCUMENTARY_STATE_REGISTRY_PENDING_ROADMAP_AND_CONTINUITY_SYNCHRONIZATION_ONLY",
-  "allowed_actions": [
-    "REGISTER_AUTHORIZATIONS_095_THROUGH_104",
+  "completed_actions": [
+    "REGISTER_AUTHORIZATIONS_097_THROUGH_104",
     "REGISTER_PRODUCT_LEADERSHIP_EXECUTION_002_AUDITS_RECONCILIATIONS_AND_TEST_003",
     "SYNCHRONIZE_CURRENT_STATE_AND_PROJECT_STATE_BY_CANONICAL_DELTA",
     "REGISTER_PENDING_HUMAN_APPROVAL_OF_HARDENED_TEST_003_CONTRACT",
     "SYNCHRONIZE_ROADMAP_AND_CONTINUITY_REFERENCES",
-    "VALIDATE_REFERENCES_DUPLICATES_AND_AUTHORITY_BOUNDARIES",
+    "UPDATE_MASTER_REGISTRY_INDEX",
+    "UPDATE_TEST_DESIGN_INDEX",
     "COMMIT",
     "PUSH",
     "VERIFY_REMOTE"
+  ],
+  "published_artifacts": [
+    "projects/lab/briefs/BRIEF_PRODUCT_LEADERSHIP_TEST_003_DOCUMENTARY_STATE_SYNCHRONIZATION_104.json",
+    "registry/deltas/product-leadership-test-003-documentary-sync-104.json",
+    "projects/lab/pending/PEND-LAB-029.json",
+    "projects/lab/reconciliations/REC-LAB-PRODUCT-LEADERSHIP-TEST-003-STATE-SYNC-004.json",
+    "projects/lab/roadmap-deltas/PRODUCT-LEADERSHIP-TEST-003-ROADMAP-DELTA-104.json",
+    "projects/lab/continuity/PRODUCT-LEADERSHIP-TEST-003-DOCUMENTARY-SYNC-104.json",
+    "projects/lab/test-designs/index.json",
+    "registry/index.json"
   ],
   "mandatory_results": {
     "test_003_status": "HARDENED_REQUIRES_HUMAN_APPROVAL_AND_SEPARATE_EXECUTION_AUTHORIZATION",
@@ -41,7 +52,7 @@
     "RELEASE"
   ],
   "consumption_criterion": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_OF_COMPLETE_DOCUMENTARY_SYNCHRONIZATION",
-  "authority_effect": "BOUNDED_DOCUMENTARY_SYNCHRONIZATION_ONLY",
+  "authority_effect": "NONE_AFTER_CONSUMPTION",
   "runtime_effect": "NONE",
   "product_effect": "NONE"
 }
