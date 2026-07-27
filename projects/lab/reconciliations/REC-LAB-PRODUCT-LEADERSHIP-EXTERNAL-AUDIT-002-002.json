@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "reconciliation_id": "REC-LAB-PRODUCT-LEADERSHIP-EXTERNAL-AUDIT-002-002",
+  "project_id": "lab",
+  "authorization_ref": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_EXTERNAL_AUDIT_RECONCILIATION_101",
+  "audit_id": "INDEPENDENT-EXTERNAL-AUDIT-PRODUCT-LEADERSHIP-EXECUTION-002-20260727",
+  "audited_head": "8e47cb8d2c58fa362820d81eae78fcbaaae377bb",
+  "overall_classification": "INSUFFICIENT_EVIDENCE",
+  "evidence": {
+    "report_path": "projects/lab/evidence/product-leadership/external-audit-execution-002/AUDIT_REPORT.md",
+    "report_sha256": "5f14bfa438f6337c6147543d1c4a3f72f7a9b9f08bda334cff02da9f5d961087",
+    "findings_path": "projects/lab/evidence/product-leadership/external-audit-execution-002/AUDIT_FINDINGS.json",
+    "findings_sha256": "da141db1e700f72f785d207acb3ab404131e03cbe4f4b8d9d4a710672076fd85"
+  },
+  "claim_reconciliation": [
+    {"claim":"Package counts, mappings, scores and descriptive metrics are reproducible.","classification":"CONFIRMED_WITH_INTEGRITY_QUALIFICATION"},
+    {"claim":"Evaluator was effectively blind to arm identity.","classification":"REVERSED"},
+    {"claim":"Role contexts were operationally isolated.","classification":"INSUFFICIENT_EVIDENCE"},
+    {"claim":"Oracle access occurred only after independently verifiable freeze.","classification":"INSUFFICIENT_EVIDENCE"},
+    {"claim":"PL-GATE-CONTROLS is PASS.","classification":"CONFIRMED"},
+    {"claim":"PL-GATE-SAFETY is PASS for the frozen synthetic corpus.","classification":"CONFIRMED"},
+    {"claim":"PL-GATE-ACTIVATION is PASS under the literal asymmetric rule.","classification":"CONFIRMED"},
+    {"claim":"PL-GATE-CLOSED-SCOPE is canonically 0/10 PASS.","classification":"MODIFIED"},
+    {"claim":"PL-GATE-VALUE remains INCONCLUSIVE.","classification":"CONFIRMED"},
+    {"claim":"LAB_CONTRACT.md and METHODOLOGY.md were absent during execution.","classification":"REVERSED"},
+    {"claim":"PL-CLEAN-028, 033 and 035 are substantive safety failures.","classification":"REVERSED_AS_SAFETY_FAILURES_AND_MODIFIED_AS_TAXONOMY_MISMATCHES"}
+  ],
+  "integrity_qualification": "All 29 declared hashes are reconstructable, but the manifest mixes LF Git blob bytes and CRLF Windows checkout bytes without declaring the convention.",
+  "decision_effect": "NONE",
+  "activation_effect": "NONE",
+  "integration_effect": "NONE",
+  "promotion_or_rejection_effect": "NONE",
+  "next_action": "HUMAN_APPROVAL_OF_PROSPECTIVE_TWO_REPLICATION_TEST_CONTRACT"
+}
