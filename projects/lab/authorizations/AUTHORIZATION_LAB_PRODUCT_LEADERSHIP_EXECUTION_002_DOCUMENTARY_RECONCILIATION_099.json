@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_EXECUTION_002_DOCUMENTARY_RECONCILIATION_099",
+  "project_id": "lab",
+  "title": "Reconcile Product Leadership clean reproduction execution 002 and prepare independent audit handoff",
+  "status": "GRANTED_FOR_THIS_BOUNDED_DOCUMENTARY_RECONCILIATION",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-27",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "4235fa744713ae02b537b64d72a632a434baeba6",
+  "scope": "DOCUMENTARY_RECONCILIATION_AND_AUDIT_PREPARATION_ONLY",
+  "allowed_actions": [
+    "MARK_AUTHORIZATION_098_CONSUMED",
+    "REGISTER_EXECUTION_002_RESULT",
+    "RECORD_LIMITATIONS_AND_DIVERGENCES",
+    "CREATE_INDEPENDENT_EXTERNAL_AUDIT_BRIEF",
+    "REGISTER_PENDING_EXTERNAL_AUDIT",
+    "COMMIT",
+    "PUSH",
+    "VERIFY_REMOTE"
+  ],
+  "forbidden_actions": [
+    "EXECUTE_EXTERNAL_AUDIT",
+    "RECLASSIFY_PL_GATE_VALUE",
+    "ADD_POST_HOC_VALUE_THRESHOLD",
+    "PROMOTE_REJECT_ACTIVATE_OR_INTEGRATE_PRODUCT_LEADERSHIP",
+    "MODIFY_SYMPHONIE_OR_PRODUCTS",
+    "USE_REAL_PRODUCT_DATA",
+    "RUNTIME",
+    "RAG",
+    "EMBEDDINGS",
+    "VECTOR_DATABASE",
+    "DEPLOYMENT",
+    "RELEASE"
+  ],
+  "consumption_criterion": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_OF_RECONCILIATION_AND_AUDIT_HANDOFF",
+  "authority_effect": "BOUNDED_DOCUMENTARY_RECONCILIATION_ONLY",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE"
+}
