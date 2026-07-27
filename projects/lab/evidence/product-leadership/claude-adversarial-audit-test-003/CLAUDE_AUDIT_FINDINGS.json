@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0.0",
+  "brief_id": "BRIEF_CLAUDE_ADVERSARIAL_AUDIT_PRODUCT_LEADERSHIP_PROSPECTIVE_TEST_003_102",
+  "authorization_ref": "AUTHORIZATION_LAB_CLAUDE_ADVERSARIAL_AUDIT_PRODUCT_LEADERSHIP_PROSPECTIVE_TEST_003_102",
+  "audit_mode": "INDEPENDENT_ADVERSARIAL_READ_ONLY",
+  "auditor": "CLAUDE",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "audited_head": "a052a88a5ca8c2b42932f5c4d12dbeead37bca2e",
+  "audited_head_subject": "docs: add Claude adversarial audit start prompt for Product Leadership test 003",
+  "expected_parent_head": "e5276b626dc39e7b13810d1921c40cb67c6c3265",
+  "expected_parent_head_status": "VERIFIED_ANCESTOR_OF_AUDITED_HEAD_3_COMMITS_BEHIND",
+  "intervening_commits_effect": "ADD_ONLY_AUTHORIZATION_102_BRIEF_AND_AUDIT_PROMPT_NO_SUBJECT_ARTIFACT_CHANGE",
+  "working_tree_state": "CLEAN",
+  "clone_provenance": "FRESH_ISOLATED_CLONE_NATIVE_FS_RESET_HARD_TO_ORIGIN_MAIN; prior local clone abandoned (20 behind, 359 uncommitted, stale index.lock)",
+  "generated_at_utc": "2026-07-27T22:09:45Z",
+  "subject": "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/PROPOSAL.json",
+  "subject_form": "30_LINE_DESIGN_CONTRACT_ONLY_NO_MANIFEST_RUNMATRIX_OR_SCORING_ARTIFACT",
+  "evidence_chain_integrity": {
+    "rec_002_002_report_sha256_declared": "5f14bfa438f6337c6147543d1c4a3f72f7a9b9f08bda334cff02da9f5d961087",
+    "rec_002_002_report_sha256_recomputed": "5f14bfa438f6337c6147543d1c4a3f72f7a9b9f08bda334cff02da9f5d961087",
+    "rec_002_002_findings_sha256_declared": "da141db1e700f72f785d207acb3ab404131e03cbe4f4b8d9d4a710672076fd85",
+    "rec_002_002_findings_sha256_recomputed": "da141db1e700f72f785d207acb3ab404131e03cbe4f4b8d9d4a710672076fd85",
+    "match": true,
+    "line_endings_in_clone": "LF_NO_CRLF_DRIFT"
+  },
+  "domain_findings": {
+    "statistical_design": {
+      "JUSTIFICATION_OF_160_PAIRED_FIXTURES_PER_REPLICATION": {"classification": "MODIFIED", "note": "Asserted with no power analysis; conservative for the 002 effect but unjustified for a smaller post-blinding/post-ceiling effect near the +1.0 MRE."},
+      "MINIMUM_RELEVANT_EFFECT_PLUS_1_POINT": {"classification": "CONFIRMED", "note": "Predeclared, interpretable rubric-level rationale, fixed before outcomes."},
+      "ONE_SIDED_95_PERCENT_STUDENTIZED_RULE": {"classification": "MODIFIED", "note": "Inconsistent: PASS uses one-sided lower bound >1.0 while FAIL uses upper bound <=1.0 and INSUFFICIENT uses interval-overlaps-1.0; a single one-sided procedure yields only one bound. Reconcile to an explicit two-sided interval."},
+      "POOLING_AND_REPLICATION_HETEROGENEITY": {"classification": "MODIFIED", "note": "Pooling estimator and a between-replication heterogeneity criterion unspecified; 'both means positive' is not a heterogeneity test."},
+      "MISSINGNESS_EXCLUSIONS_AND_MULTIPLE_DIMENSIONS": {"classification": "MODIFIED", "note": "Holm FWER 0.05, exclusion policy and >5%-missing => INSUFFICIENT exist in the source design but are dropped from the PROPOSAL contract."},
+      "PASS_FAIL_AND_INDETERMINATE_REGION": {"classification": "MODIFIED", "note": "Three regions and zero-tolerance safety stop present, but FAIL/INSUFFICIENT boundary is ambiguous until the interval definition is fixed."}
+    },
+    "blinding": {
+      "EXACT_NEUTRAL_SCHEMA_AND_RENDERER": {"classification": "MODIFIED", "note": "common_neutral_schema:true is a claim, not a verifiable spec; exact schema/field-order/length-envelope/renderer undefined."},
+      "STYLE_FINGERPRINT_REMOVAL": {"classification": "MODIFIED", "note": "Pre-evaluation marker-removal step (source design) absent from PROPOSAL; must be defined against the 002 five-marker fingerprint."},
+      "ARM_GUESS_TEST_METRIC_SAMPLE_SIZE_AND_THRESHOLD": {"classification": "INSUFFICIENT_EVIDENCE", "note": "arm_guess_test:true but no metric, sample size, or predeclared chance tolerance; unauditable and post-hoc-gameable."},
+      "NORMALIZATION_AUTHORITY_AND_FREEZE_POINT": {"classification": "INSUFFICIENT_EVIDENCE", "note": "No named normalization authority and no freeze point."},
+      "EVALUATOR_INFORMATION_BOUNDARIES": {"classification": "MODIFIED", "note": ">=3 evaluators specified; the 002-CONFIRMED field-hygiene boundary not restated as a binding term."}
+    },
+    "operational_evidence": {
+      "ROLE_ISOLATION": {"classification": "INSUFFICIENT_EVIDENCE", "note": "No requirement for evidence of operational isolation; unremediated 002 defect."},
+      "SESSION_AND_ACCESS_LOGS": {"classification": "INSUFFICIENT_EVIDENCE", "note": "No session/tool/access-log requirement."},
+      "ORACLE_AND_MAPPING_CUSTODY": {"classification": "INSUFFICIENT_EVIDENCE", "note": "No custody log or independent attestation of oracle-access timing."},
+      "IMMUTABLE_PRE_UNBLIND_CHECKPOINTS": {"classification": "INSUFFICIENT_EVIDENCE", "note": "No requirement to preserve an external immutable pre-unblind checkpoint; exact 002 gap."},
+      "TIMESTAMPS_HASHES_AND_LINE_ENDING_POLICY": {"classification": "INSUFFICIENT_EVIDENCE", "note": "No hash/line-ending policy despite 002 mixed LF/CRLF finding."}
+    },
+    "rubric_and_taxonomy": {
+      "CEILING_EFFECT_AND_SCORE_DISCRIMINATION": {"classification": "MODIFIED", "note": "Unaddressed; 002 showed 39/40 PACKAGE at max 24; +1.0 MRE against near-saturated instrument threatens the estimand."},
+      "THREE_CLASS_PRECISION_RECALL_AND_CONFUSION_MATRIX": {"classification": "CONFIRMED", "note": "Full three-class matrix with macro precision/recall specified; pass thresholds not yet wired into the gate."},
+      "ACTIVE_INACTIVE_LIMITED_PRECEDENCE": {"classification": "MODIFIED", "note": "Precedence promised as predeclared but the actual overlap rules are not enumerated."},
+      "CLOSED_SCOPE_DENOMINATOR_ENUMERATION": {"classification": "CONFIRMED", "note": "Enumerate-before-generation cures the 002 post-hoc incomplete denominator."},
+      "CONTROL_DESIGN_AND_SEPARATION": {"classification": "CONFIRMED", "note": ">=8 positive / >=8 negative per replication with positive-min > negative-max; stronger than 002's 4/4."}
+    },
+    "governance": {
+      "NO_AUTOMATIC_PROMOTION_OR_INTEGRATION": {"classification": "CONFIRMED", "note": "execution_authorized:false; activation/integration/authority effect NONE."},
+      "AUTHORITY_BOUNDARIES": {"classification": "CONFIRMED", "note": "PROPOSED_REQUIRES_HUMAN_APPROVAL; read-only audit authorization with outside-repository publication boundary."},
+      "AUDIT_AND_RECONCILIATION_SEQUENCE": {"classification": "CONFIRMED", "note": "Execution 002 -> audit 002 -> reconciliation 002-002 -> design 003 intact, hash-verified, no reclassification of 002."},
+      "STOP_CONDITIONS_AND_FAILURE_CLASSIFICATION": {"classification": "CONFIRMED", "note": "Zero-tolerance safety stop plus three-region classification; region boundary needs the statistical fix."}
+    }
+  },
+  "domain_rollup": {
+    "statistical_design": "READY_AFTER_BOUNDED_CORRECTIONS",
+    "blinding": "READY_AFTER_BOUNDED_CORRECTIONS",
+    "operational_evidence": "NOT_ADDRESSED_REQUIRES_ADDITION",
+    "rubric_and_taxonomy": "READY_AFTER_BOUNDED_CORRECTIONS",
+    "governance": "CONFIRMED_SOUND"
+  },
+  "material_gaps": [
+    "Operational auditability (isolation logs, immutable pre-unblind checkpoints, oracle custody, hash/line-ending policy) entirely unaddressed; independent cause of 002 INSUFFICIENT_EVIDENCE could recur.",
+    "PROPOSAL.json is a lossy compression of its own source design: Holm, exclusions, >5% missing rule, marker-removal step, arm-guess threshold, macro-metric thresholds dropped.",
+    "Rubric ceiling (39/40 PACKAGE at 24) unremediated; threatens the primary estimand.",
+    "Decision-interval definition internally inconsistent (one-sided label vs upper+lower bounds + overlap region)."
+  ],
+  "required_corrections_before_execution": [
+    "Add an operational-evidence contract (session/access logs, immutable pre-unblind checkpoint, oracle/mapping custody logs, declared hash + line-ending policy) as blocking run conditions.",
+    "Reconcile the decision interval: single explicit interval so PASS(lower>1.0)/FAIL(upper<=1.0)/INSUFFICIENT(straddles 1.0) requires no post-hoc bound choice.",
+    "Specify blinding operationally: exact neutral schema/field-order/length-envelope/renderer, marker-removal defined against the 002 fingerprint, named normalization authority and freeze point, evaluator field-hygiene boundary as a binding term.",
+    "Make the arm-guess test auditable: predeclare metric, sample size, and chance-tolerance threshold.",
+    "Restore dropped statistical terms into the contract: Holm FWER 0.05, exclusion policy, >5%-missing => INSUFFICIENT, pooling estimator, between-replication heterogeneity criterion.",
+    "Address the rubric ceiling: revise for discrimination/headroom or justify the scale so a +1.0 MRE is detectable.",
+    "Document a power calculation for 160/replication under a conservative SD and smaller anticipated post-blinding effect.",
+    "Enumerate activation precedence and attach macro precision/recall pass thresholds before any generation."
+  ],
+  "global_classification": "READY_AFTER_BOUNDED_CORRECTIONS",
+  "single_next_action": "Return the eight bounded corrections to the design owner and obtain human approval of a hardened, fully-specified executable Test 003 contract before any separate execution authorization and before generating any new output. Do not execute, simulate, promote, or integrate anything in the interim.",
+  "execution_002_reclassified": false,
+  "forbidden_actions_respected": [
+    "MODIFY_REPOSITORY", "EXECUTE_OR_SIMULATE_TEST_003", "GENERATE_NEW_FIXTURES_OR_OUTCOMES",
+    "TREAT_EXECUTION_002_AS_RECLASSIFIED", "CREATE_POST_HOC_THRESHOLDS", "AUTHORIZE_EXECUTION",
+    "PROMOTE_REJECT_ACTIVATE_OR_INTEGRATE_PRODUCT_LEADERSHIP", "MODIFY_SYMPHONIE_OR_PRODUCTS", "USE_REAL_DATA"
+  ],
+  "publication_boundary": "OUTPUTS_RETURNED_OUTSIDE_REPOSITORY; SEPARATE_RECONCILIATION_AUTHORIZATION_REQUIRED_TO_COMMIT",
+  "audit_report_file": "CLAUDE_AUDIT_REPORT.md",
+  "audit_report_sha256": "201ebe72b5385fbe69164974a5c65b72b59cdd78ec7c0a9b7f8f12365f2f4223"
+}
