@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "SYMPHONIE-PHASES-0-3-BRIEF-ARCHITECTURE-DELTA-094",
+  "updated_at": "2026-07-27",
+  "records": {
+    "decision": {
+      "id": "DEC-LAB-022",
+      "path": "decisions/DEC-LAB-022.json",
+      "status": "APPROVED"
+    },
+    "authorization": {
+      "id": "AUTHORIZATION_LAB_SYMPHONIE_PHASES_0_3_AND_BRIEF_ARCHITECTURE_094",
+      "path": "projects/lab/authorizations/AUTHORIZATION_LAB_SYMPHONIE_PHASES_0_3_AND_BRIEF_ARCHITECTURE_094.json",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_IN_BOTH_REPOSITORIES"
+    },
+    "protocol": {
+      "id": "SYMPHONIE-PHASES-0-3-AGENT-AND-BRIEF-ARCHITECTURE",
+      "path": "docs/SYMPHONIE_PHASES_0_3_AGENT_AND_BRIEF_ARCHITECTURE.md",
+      "status": "PUBLISHED"
+    }
+  },
+  "symphonie_refs": [
+    "modelo/PHASES_0_3_AGENT_RESPONSIBILITY_AND_BRIEF_ARCHITECTURE.md",
+    "modelo/BRIEF_CHAIN_CONTRACT.json"
+  ],
+  "authority_effect": "NONE_AFTER_CONSUMPTION"
+}
