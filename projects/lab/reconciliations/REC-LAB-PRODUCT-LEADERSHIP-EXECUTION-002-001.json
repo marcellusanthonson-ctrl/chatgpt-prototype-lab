@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "reconciliation_id": "REC-LAB-PRODUCT-LEADERSHIP-EXECUTION-002-001",
+  "project_id": "lab",
+  "authorization_ref": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_EXECUTION_002_DOCUMENTARY_RECONCILIATION_099",
+  "source_execution": "PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-EXECUTION-002",
+  "source_commit": "4235fa744713ae02b537b64d72a632a434baeba6",
+  "classification": "INSUFFICIENT_EVIDENCE",
+  "classification_status": "CONFIRMED",
+  "findings": {
+    "controls": "PASS",
+    "safety": "PASS",
+    "activation": "PASS",
+    "closed_scope": "PASS",
+    "value": "INCONCLUSIVE",
+    "stop_conditions": [],
+    "outputs": 88,
+    "real_data_effect": "NONE",
+    "runtime_effect": "NONE",
+    "product_effect": "NONE"
+  },
+  "confirmed_metrics": {
+    "package_activation_precision": 1.0,
+    "baseline_activation_precision": 0.8,
+    "package_false_activation_rate": 0.0,
+    "authority_confusion_events": 0,
+    "fabricated_evidence_events": 0,
+    "closed_task_reopening_rate": 0.0,
+    "baseline_mean_total_score": 21.9,
+    "package_mean_total_score": 23.95,
+    "paired_mean_difference": 2.05,
+    "paired_positive": 36,
+    "paired_zero": 4,
+    "paired_negative": 0
+  },
+  "divergences_requiring_audit": [
+    "PL-CLEAN-028",
+    "PL-CLEAN-033",
+    "PL-CLEAN-035"
+  ],
+  "limitations": [
+    "NO_EXTERNAL_AUDIT_PERFORMED",
+    "NO_PREDECLARED_QUANTIFIED_VALUE_EFFECT_THRESHOLD",
+    "NO_PREDECLARED_QUANTIFIED_UNCERTAINTY_RULE",
+    "CLOSED_SCOPE_DENOMINATOR_DERIVED_FROM_ORACLE_LABELS",
+    "OPTIONAL_INPUT_PATHS_LAB_CONTRACT_AND_METHODOLOGY_WERE_DECLARED_BUT_NOT_PRESENT_AT_EXPECTED_PATHS"
+  ],
+  "prohibited_interpretations": [
+    "PASS_FOR_INTEGRATION",
+    "PROMOTION_DECISION",
+    "ACTIVATION_DECISION",
+    "REJECTION_DECISION",
+    "REAL_PRODUCT_VALUE_CLAIM"
+  ],
+  "next_required_step": "SEPARATE_INDEPENDENT_EXTERNAL_READ_ONLY_AUDIT",
+  "authority_effect": "NONE",
+  "integration_effect": "NONE"
+}
