@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0.0",
+  "brief_id": "BRIEF_CLAUDE_ADVERSARIAL_AUDIT_PRODUCT_LEADERSHIP_PROSPECTIVE_TEST_003_102",
+  "authorization_ref": "AUTHORIZATION_LAB_CLAUDE_ADVERSARIAL_AUDIT_PRODUCT_LEADERSHIP_PROSPECTIVE_TEST_003_102",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "e5276b626dc39e7b13810d1921c40cb67c6c3265",
+  "audit_mode": "INDEPENDENT_ADVERSARIAL_READ_ONLY",
+  "objective": "Determine whether the prospective Product Leadership value test 003 is sufficiently specified, statistically defensible, effectively blind, operationally auditable and ready for bounded contract hardening or execution authorization.",
+  "required_inputs": [
+    "project-sources/chatgpt/START_HERE.md",
+    "LAB_CONTRACT.md",
+    "METHODOLOGY.md",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/PROPOSAL.json",
+    "projects/lab/evidence/product-leadership/external-audit-execution-002/AUDIT_REPORT.md",
+    "projects/lab/evidence/product-leadership/external-audit-execution-002/AUDIT_FINDINGS.json",
+    "projects/lab/reconciliations/REC-LAB-PRODUCT-LEADERSHIP-EXTERNAL-AUDIT-002-002.json"
+  ],
+  "audit_domains": {
+    "statistical_design": [
+      "JUSTIFICATION_OF_160_PAIRED_FIXTURES_PER_REPLICATION",
+      "MINIMUM_RELEVANT_EFFECT_PLUS_1_POINT",
+      "ONE_SIDED_95_PERCENT_STUDENTIZED_RULE",
+      "POOLING_AND_REPLICATION_HETEROGENEITY",
+      "MISSINGNESS_EXCLUSIONS_AND_MULTIPLE_DIMENSIONS",
+      "PASS_FAIL_AND_INDETERMINATE_REGION"
+    ],
+    "blinding": [
+      "EXACT_NEUTRAL_SCHEMA_AND_RENDERER",
+      "STYLE_FINGERPRINT_REMOVAL",
+      "ARM_GUESS_TEST_METRIC_SAMPLE_SIZE_AND_THRESHOLD",
+      "NORMALIZATION_AUTHORITY_AND_FREEZE_POINT",
+      "EVALUATOR_INFORMATION_BOUNDARIES"
+    ],
+    "operational_evidence": [
+      "ROLE_ISOLATION",
+      "SESSION_AND_ACCESS_LOGS",
+      "ORACLE_AND_MAPPING_CUSTODY",
+      "IMMUTABLE_PRE_UNBLIND_CHECKPOINTS",
+      "TIMESTAMPS_HASHES_AND_LINE_ENDING_POLICY"
+    ],
+    "rubric_and_taxonomy": [
+      "CEILING_EFFECT_AND_SCORE_DISCRIMINATION",
+      "THREE_CLASS_PRECISION_RECALL_AND_CONFUSION_MATRIX",
+      "ACTIVE_INACTIVE_LIMITED_PRECEDENCE",
+      "CLOSED_SCOPE_DENOMINATOR_ENUMERATION",
+      "CONTROL_DESIGN_AND_SEPARATION"
+    ],
+    "governance": [
+      "NO_AUTOMATIC_PROMOTION_OR_INTEGRATION",
+      "AUTHORITY_BOUNDARIES",
+      "AUDIT_AND_RECONCILIATION_SEQUENCE",
+      "STOP_CONDITIONS_AND_FAILURE_CLASSIFICATION"
+    ]
+  },
+  "required_claim_classifications": [
+    "CONFIRMED",
+    "MODIFIED",
+    "REVERSED",
+    "INSUFFICIENT_EVIDENCE"
+  ],
+  "required_global_classification": [
+    "READY_FOR_EXECUTION_AUTHORIZATION",
+    "READY_AFTER_BOUNDED_CORRECTIONS",
+    "REQUIRES_MATERIAL_REDESIGN",
+    "INSUFFICIENT_EVIDENCE"
+  ],
+  "required_outputs": [
+    "CLAUDE_AUDIT_REPORT.md",
+    "CLAUDE_AUDIT_FINDINGS.json"
+  ],
+  "required_report_sections": [
+    "AUDITED_HEAD_AND_SCOPE",
+    "METHODOLOGY",
+    "STRENGTHS",
+    "MATERIAL_GAPS",
+    "STATISTICAL_FINDINGS",
+    "BLINDING_FINDINGS",
+    "OPERATIONAL_EVIDENCE_FINDINGS",
+    "RUBRIC_AND_TAXONOMY_FINDINGS",
+    "GOVERNANCE_FINDINGS",
+    "REQUIRED_CORRECTIONS_BEFORE_EXECUTION",
+    "GLOBAL_CLASSIFICATION",
+    "SINGLE_NEXT_ACTION"
+  ],
+  "forbidden": [
+    "MODIFY_REPOSITORY",
+    "EXECUTE_OR_SIMULATE_TEST_003",
+    "GENERATE_NEW_FIXTURES_OR_OUTCOMES",
+    "TREAT_EXECUTION_002_AS_RECLASSIFIED",
+    "CREATE_POST_HOC_THRESHOLDS",
+    "AUTHORIZE_EXECUTION",
+    "PROMOTE_REJECT_ACTIVATE_OR_INTEGRATE_PRODUCT_LEADERSHIP",
+    "MODIFY_SYMPHONIE_OR_PRODUCTS",
+    "USE_REAL_DATA"
+  ],
+  "completion_condition": "Both external audit files are complete, internally consistent, hashed with SHA-256, identify the audited HEAD, classify every material domain and provide one bounded next action without repository modification or execution authority."
+}
