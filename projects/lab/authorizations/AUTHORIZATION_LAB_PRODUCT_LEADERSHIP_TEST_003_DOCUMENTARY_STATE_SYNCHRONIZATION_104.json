@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST_003_DOCUMENTARY_STATE_SYNCHRONIZATION_104",
+  "project_id": "lab",
+  "title": "Synchronize canonical documentary state for Product Leadership Test 003",
+  "status": "GRANTED_PENDING_SYNCHRONIZATION",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-27",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "fb1ce2007bf6224f9605a098b7f921bd14e1a61c",
+  "scope": "DOCUMENTARY_STATE_REGISTRY_PENDING_ROADMAP_AND_CONTINUITY_SYNCHRONIZATION_ONLY",
+  "allowed_actions": [
+    "REGISTER_AUTHORIZATIONS_095_THROUGH_104",
+    "REGISTER_PRODUCT_LEADERSHIP_EXECUTION_002_AUDITS_RECONCILIATIONS_AND_TEST_003",
+    "SYNCHRONIZE_CURRENT_STATE_AND_PROJECT_STATE_BY_CANONICAL_DELTA",
+    "REGISTER_PENDING_HUMAN_APPROVAL_OF_HARDENED_TEST_003_CONTRACT",
+    "SYNCHRONIZE_ROADMAP_AND_CONTINUITY_REFERENCES",
+    "VALIDATE_REFERENCES_DUPLICATES_AND_AUTHORITY_BOUNDARIES",
+    "COMMIT",
+    "PUSH",
+    "VERIFY_REMOTE"
+  ],
+  "mandatory_results": {
+    "test_003_status": "HARDENED_REQUIRES_HUMAN_APPROVAL_AND_SEPARATE_EXECUTION_AUTHORIZATION",
+    "execution_authorized": false,
+    "product_leadership_activation": false,
+    "product_leadership_integration": false,
+    "authority_after_consumption": "NONE"
+  },
+  "forbidden_actions": [
+    "EXECUTE_TEST_003",
+    "GENERATE_FIXTURES_OUTPUTS_SCORES_OR_ORACLES",
+    "PROMOTE_REJECT_ACTIVATE_OR_INTEGRATE_PRODUCT_LEADERSHIP",
+    "MODIFY_SYMPHONIE_OR_PRODUCTS",
+    "RUNTIME",
+    "RAG",
+    "EMBEDDINGS",
+    "VECTOR_DATABASE",
+    "DEPLOYMENT",
+    "RELEASE"
+  ],
+  "consumption_criterion": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_OF_COMPLETE_DOCUMENTARY_SYNCHRONIZATION",
+  "authority_effect": "BOUNDED_DOCUMENTARY_SYNCHRONIZATION_ONLY",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE"
+}
