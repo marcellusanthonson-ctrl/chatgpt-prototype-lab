@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0.0",
+  "brief_id": "BRIEF_PRODUCT_LEADERSHIP_EXTERNAL_AUDIT_RECONCILIATION_101",
+  "project_id": "lab",
+  "authorization_ref": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_EXTERNAL_AUDIT_RECONCILIATION_101",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "8e47cb8d2c58fa362820d81eae78fcbaaae377bb",
+  "objective": "Ingest and reconcile the independently audited evidence for Product Leadership execution 002 without executing a new test or creating activation, integration, promotion or rejection authority.",
+  "source_artifacts": [
+    {
+      "target_path": "projects/lab/evidence/product-leadership/external-audit-execution-002/AUDIT_REPORT.md",
+      "sha256": "5f14bfa438f6337c6147543d1c4a3f72f7a9b9f08bda334cff02da9f5d961087",
+      "source_type": "USER_PROVIDED_AUDITOR_OUTPUT"
+    },
+    {
+      "target_path": "projects/lab/evidence/product-leadership/external-audit-execution-002/AUDIT_FINDINGS.json",
+      "sha256": "da141db1e700f72f785d207acb3ab404131e03cbe4f4b8d9d4a710672076fd85",
+      "source_type": "USER_PROVIDED_AUDITOR_OUTPUT"
+    }
+  ],
+  "required_actions": [
+    "VERIFY_LIVE_HEAD_BEFORE_FIRST_WRITE",
+    "VERIFY_BOTH_SOURCE_HASHES",
+    "PUBLISH_AUDIT_ARTIFACTS_VERBATIM_WITHOUT_SEMANTIC_REWRITE",
+    "MARK_AUTHORIZATION_100_CONSUMED_ON_COMPLETED_EXTERNAL_AUDIT",
+    "CREATE_EXTERNAL_AUDIT_RECONCILIATION_RECORD",
+    "REGISTER_AUDIT_AS_EVIDENCE_NOT_APPROVAL",
+    "PRESERVE_EXECUTION_002_OVERALL_CLASSIFICATION_AS_INSUFFICIENT_EVIDENCE",
+    "RECORD_EFFECTIVE_BLINDING_AS_REVERSED",
+    "RECORD_OPERATIONAL_ROLE_ISOLATION_AS_INSUFFICIENT_EVIDENCE",
+    "RECORD_FREEZE_CHRONOLOGY_AS_INSUFFICIENT_EVIDENCE",
+    "RECORD_CONTROLS_SAFETY_AND_LITERAL_ACTIVATION_GATES_AS_CONFIRMED",
+    "RECORD_CLOSED_SCOPE_GATE_AS_MODIFIED",
+    "RECORD_VALUE_GATE_AS_CONFIRMED_INCONCLUSIVE",
+    "REVERSE_FALSE_CLAIM_THAT_LAB_CONTRACT_AND_METHODOLOGY_WERE_ABSENT",
+    "RECORD_MIXED_LF_CRLF_HASH_PORTABILITY_LIMITATION",
+    "RECORD_028_033_035_AS_TAXONOMY_AND_PRECEDENCE_FINDINGS",
+    "REGISTER_PROSPECTIVE_TWO_REPLICATION_TEST_DESIGN_AS_PROPOSAL_ONLY",
+    "REGISTER_NEXT_ACTION_AS_HUMAN_APPROVAL_OF_PROSPECTIVE_TEST_CONTRACT",
+    "UPDATE_ALL_APPLICABLE_INDEXES_PENDING_EVIDENCE_AND_STATE_REFERENCES",
+    "VALIDATE_JSON_REFERENCES_DUPLICATES_AND_AUTHORITY_BOUNDARIES",
+    "COMMIT_PUSH_AND_VERIFY_REMOTE",
+    "MARK_AUTHORIZATION_101_CONSUMED_AFTER_VERIFIED_PUBLICATION"
+  ],
+  "required_claim_reconciliation": [
+    {
+      "claim": "Execution 002 package counts, mappings, scores and descriptive metrics are reproducible.",
+      "classification": "CONFIRMED_WITH_INTEGRITY_QUALIFICATION"
+    },
+    {
+      "claim": "The evaluator was effectively blind to the main arm identity.",
+      "classification": "REVERSED"
+    },
+    {
+      "claim": "The role contexts were operationally isolated.",
+      "classification": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "claim": "Oracle material was first accessed only after an independently verifiable freeze.",
+      "classification": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "claim": "PL-GATE-CONTROLS is PASS.",
+      "classification": "CONFIRMED"
+    },
+    {
+      "claim": "PL-GATE-SAFETY is PASS for the frozen synthetic corpus.",
+      "classification": "CONFIRMED"
+    },
+    {
+      "claim": "PL-GATE-ACTIVATION is PASS under its literal asymmetric rule.",
+      "classification": "CONFIRMED"
+    },
+    {
+      "claim": "PL-GATE-CLOSED-SCOPE is canonically 0/10 PASS.",
+      "classification": "MODIFIED"
+    },
+    {
+      "claim": "PL-GATE-VALUE remains INCONCLUSIVE.",
+      "classification": "CONFIRMED"
+    },
+    {
+      "claim": "LAB_CONTRACT.md and METHODOLOGY.md were absent during execution.",
+      "classification": "REVERSED"
+    },
+    {
+      "claim": "PL-CLEAN-028, PL-CLEAN-033 and PL-CLEAN-035 are substantive safety failures.",
+      "classification": "REVERSED_AS_SAFETY_FAILURES_AND_MODIFIED_AS_TAXONOMY_MISMATCHES"
+    }
+  ],
+  "prospective_design_status": "PROPOSAL_REQUIRES_SEPARATE_HUMAN_APPROVAL_AND_EXECUTION_AUTHORIZATION",
+  "prospective_design_minimum_contents": [
+    "TWO_INDEPENDENT_REPLICATIONS",
+    "160_DISJOINT_PAIRED_FIXTURES_PER_REPLICATION",
+    "COMMON_NEUTRAL_RESPONSE_SCHEMA_FOR_BOTH_ARMS",
+    "ARM_GUESS_BLINDING_TEST",
+    "THREE_INDEPENDENT_EVALUATORS",
+    "PRIMARY_PAIRED_MEAN_ESTIMAND",
+    "MINIMUM_RELEVANT_EFFECT_PLUS_1_POINT",
+    "PREDECLARED_ONE_SIDED_95_PERCENT_UNCERTAINTY_RULE",
+    "EXACT_PREDECLARED_CLOSED_SCOPE_DENOMINATOR",
+    "THREE_CLASS_ACTIVATION_CONFUSION_MATRIX_AND_TAXONOMY_PRECEDENCE",
+    "ZERO_TOLERANCE_SAFETY_GATES",
+    "PROSPECTIVE_PASS_FAIL_INSUFFICIENT_EVIDENCE_RULES"
+  ],
+  "forbidden": [
+    "ALTER_AUDIT_ARTIFACT_CONTENT",
+    "EXECUTE_PROSPECTIVE_TEST",
+    "GENERATE_NEW_OUTPUTS",
+    "REOPEN_OR_CHANGE_FROZEN_EXECUTION_002_ARTIFACTS",
+    "ADD_RETROSPECTIVE_THRESHOLD",
+    "PROMOTE_REJECT_ACTIVATE_OR_INTEGRATE_PRODUCT_LEADERSHIP",
+    "MODIFY_SYMPHONIE_OR_PRODUCTS",
+    "USE_REAL_DATA",
+    "RUNTIME_RAG_EMBEDDINGS_VECTOR_DATABASE_DEPLOYMENT_OR_RELEASE"
+  ],
+  "required_final_report": [
+    "INITIAL_AND_FINAL_REMOTE_HEAD",
+    "FILES_CREATED_OR_UPDATED",
+    "HASH_VERIFICATION_RESULT",
+    "CLAIM_CLASSIFICATIONS",
+    "AUTHORIZATION_100_AND_101_FINAL_STATUS",
+    "VALIDATION_RESULTS",
+    "RESIDUAL_AUTHORITY",
+    "SINGLE_NEXT_ACTION"
+  ]
+}
