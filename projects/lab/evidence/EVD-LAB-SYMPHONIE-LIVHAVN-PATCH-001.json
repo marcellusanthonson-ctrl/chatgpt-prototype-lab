@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-SYMPHONIE-LIVHAVN-PATCH-001",
+  "project_id": "lab",
+  "kind": "HUMAN_VISUAL_REVIEW_AND_PATCH_FIDELITY_EVIDENCE",
+  "status": "REGISTERED_WITH_NEGATIVE_AND_POSITIVE_COMPARATIVE_CASES",
+  "updated_at": "2026-07-26",
+  "authorization_id": "AUTHORIZATION_LAB_SYMPHONIE_SURGICAL_VISUAL_PATCH_LEARNING_093",
+  "pilot": "SYMPHONIE-PILOT-LIVHAVN-001",
+  "claims": [
+    {
+      "claim": "Candidate 02 passed technical checks but was a human-rejected visual regression",
+      "determination": "CONFIRMED"
+    },
+    {
+      "claim": "Candidate 03 preserved Candidate 091 exactly outside the image region",
+      "determination": "CONFIRMED"
+    },
+    {
+      "claim": "Codex executed the localized transformation accurately when the brief fixed the parent, disabled creative autonomy and required measurable diff bounds",
+      "determination": "CONFIRMED_FOR_THIS_BOUNDED_CASE"
+    }
+  ],
+  "negative_case": {
+    "id": "LIVHAVN-CANDIDATE-02",
+    "technical_execution_result": "PASS",
+    "human_visual_result": "REJECTED_VISUAL_REGRESSION",
+    "observed_drift": [
+      "TYPOGRAPHY",
+      "LAYOUT_PROPORTIONS",
+      "IMAGE_FRAME",
+      "PALETTE",
+      "COPY",
+      "NAVIGATION",
+      "CTA_TREATMENT",
+      "MATERIALITY"
+    ],
+    "lesson": "TECHNICAL_VALIDITY_DOES_NOT_ESTABLISH_VISUAL_SUCCESS"
+  },
+  "positive_case": {
+    "id": "LIVHAVN-CANDIDATE-03",
+    "parent_html_sha256_before_after": "36F755D20B18970F61A8884AC33DD2E22DE61913AB09A0600485CC986712A0DD",
+    "successor_html_sha256": "7F7DB07D8375718BB6546E7166F24E704D632473563DACA0F95E0BE3F0238830",
+    "successor_png_sha256": "EE80C312CBA1D8B238D07B08F3D68A90EE220C110DAAFB8EA2B39DBD0E769AE5",
+    "modified_region": "IMG_SRC_DATA_URI_ONLY",
+    "visual_region": {"x": 633.59375, "y": 80, "width": 806.390625, "height": 820},
+    "css_properties_modified": [],
+    "pixel_differences_outside_mask": 0,
+    "maximum_delta_outside_mask": 0,
+    "images_generated": false,
+    "candidate_02_design_reference_used": false,
+    "candidate_02_asset_source_only": true,
+    "human_observation": "DESIGN_IDENTICAL_ONLY_IMAGE_CHANGED"
+  },
+  "derived_rules": [
+    "DEFAULT_TO_SURGICAL_PATCH_FOR_LOCALIZED_CHANGES_ON_HUMAN_SELECTED_PARENTS",
+    "LOCK_ALL_UNMENTIONED_ELEMENTS",
+    "FORBID_UNREQUESTED_IMPROVEMENTS",
+    "ASSIGN_EXACT_ROLES_TO_EACH_SOURCE_ARTIFACT",
+    "ISOLATE_ONE_VISUAL_VARIABLE_PER_ITERATION_WHEN_FEASIBLE",
+    "REQUIRE_REGION_SCOPED_DIFF_VALIDATION",
+    "SEPARATE_TECHNICAL_PASS_FROM_HUMAN_VISUAL_APPROVAL"
+  ],
+  "limitations": [
+    "EVIDENCE_SUPPORTS_THIS_BOUNDED_EXECUTION_CASE_AND_DOES_NOT_PROVE_UNIVERSAL_CODEX_PERFECTION",
+    "LOCAL_ARTIFACT_PATHS_AND_HASHES_WERE_REPORTED_BY_THE_EXECUTOR_AND_HUMANLY_REVIEWED",
+    "NO_IMAGE_GENERATION_OR_REPOSITORY_PRODUCT_CHANGE_WAS_PERFORMED_DURING_DOCUMENTARY_RECONCILIATION"
+  ]
+}
