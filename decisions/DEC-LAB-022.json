@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "id": "DEC-LAB-022",
+  "title": "Symphonie phases 0-3 use ChatGPT process ownership with specialized Claude participation and a four-brief chain",
+  "status": "APPROVED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-27",
+  "project_scope": ["lab", "symphonie"],
+  "decision": {
+    "phase_process_owner": "CHATGPT",
+    "human_decision_owner": "JONATHAN_MARTINEZ",
+    "claude_role": "DISCOVERY_DEFINITION_AND_INDEPENDENT_CRITIQUE_WHEN_EXPLICITLY_ASSIGNED",
+    "codex_role": "BOUNDED_PROTOTYPE_AND_IMPLEMENTATION_EXECUTOR",
+    "codex_autonomous_product_design_authority": "NO",
+    "brief_chain": [
+      "PRODUCT_BRIEF",
+      "ARCHITECTURE_SCOPE_PACKAGE",
+      "UX_UI_DESIGN_BRIEF",
+      "CODEX_EXECUTION_BRIEF"
+    ]
+  },
+  "phase_assignment": {
+    "phase_0A": {"owner": "CHATGPT", "claude": "OPTIONAL_NOT_REQUIRED_BY_DEFAULT"},
+    "phase_0B": {"process_owner": "CHATGPT", "analysis_agent": "CLAUDE_WHEN_ASSIGNED", "validator": "CHATGPT"},
+    "phase_0C": {"decision_owner": "JONATHAN_MARTINEZ"},
+    "phase_1": {"process_owner": "CHATGPT", "discovery_agent": "CLAUDE_WHEN_ASSIGNED", "brief_synthesis": "CHATGPT", "approval": "JONATHAN_MARTINEZ"},
+    "phase_2": {"process_owner": "CHATGPT", "definition_and_critique": "CLAUDE_WHEN_ASSIGNED", "technical_feasibility": "CODEX_WHEN_AUTHORIZED", "approval": "JONATHAN_MARTINEZ"},
+    "phase_3": {"process_owner": "CHATGPT", "ux_ui_definition": "CHATGPT", "independent_critique": "CLAUDE_WHEN_ASSIGNED", "prototype_execution": "CODEX", "visual_approval": "JONATHAN_MARTINEZ"}
+  },
+  "brief_ownership": {
+    "PRODUCT_BRIEF": {"canonical_phase": "PHASE_1", "purpose": "DEFINE_PRODUCT_BUSINESS_USERS_OBJECTIVES_SCOPE_AND_SUCCESS"},
+    "ARCHITECTURE_SCOPE_PACKAGE": {"canonical_phase": "PHASE_2", "purpose": "DEFINE_INFORMATION_PRODUCT_AND_TECHNICAL_ARCHITECTURE"},
+    "UX_UI_DESIGN_BRIEF": {"canonical_phase": "PHASE_3", "purpose": "DEFINE_EXPERIENCE_AND_VISUAL_DIRECTION_WITHOUT_REINVENTING_PRODUCT"},
+    "CODEX_EXECUTION_BRIEF": {"canonical_phase": "EXECUTION_LAYER", "purpose": "DEFINE_EXACT_BOUNDED_TRANSFORMATION_AND_VALIDATION"}
+  },
+  "invariants": [
+    "BRIEFS_REFERENCE_PARENT_REVISIONS_AND_DIGESTS_INSTEAD_OF_DUPLICATING_CANONICAL_CONTENT",
+    "A_LOWER_LEVEL_BRIEF_MAY_NOT_SILENTLY_CHANGE_A_HIGHER_LEVEL_DECISION",
+    "UNMENTIONED_EXECUTION_SURFACES_ARE_LOCKED_BY_DEFAULT",
+    "CLAUDE_OUTPUT_IS_INPUT_TO_RECONCILIATION_NOT_AN_AUTOMATIC_ORDER_TO_CODEX",
+    "CODEX_TECHNICAL_PASS_DOES_NOT_CREATE_PRODUCT_OR_VISUAL_APPROVAL",
+    "JONATHAN_RETAINS_ALL_NORMATIVE_AND_HUMAN_GATES"
+  ],
+  "consequences": [
+    "SYMPHONIE_PHASES_0_TO_3_ARE_NOT_REASSIGNED_TO_CHATGPT_ONLY",
+    "CHATGPT_BECOMES_THE_PROCESS_AND_FINAL_BRIEF_OWNER",
+    "CLAUDE_REMAINS_AVAILABLE_FOR_SPECIALIZED_DISCOVERY_DEFINITION_AND_CRITIQUE",
+    "CODEX_RECEIVES_ONLY_RECONCILED_BOUNDED_EXECUTION_BRIEFS",
+    "PHASE_3_MUST_SEPARATE_UX_UI_DIRECTION_FROM_CODEX_EXECUTION"
+  ],
+  "non_authorizations": [
+    "NO_RUNTIME",
+    "NO_PRODUCT_CHANGE",
+    "NO_VISUAL_GENERATION",
+    "NO_SKILL_INTEGRATION",
+    "NO_DEPLOYMENT",
+    "NO_AUTONOMOUS_MODEL_APPROVAL"
+  ],
+  "source_refs": [
+    "LAB_CONTRACT.md",
+    "METHODOLOGY.md",
+    "marcellusanthonson-ctrl/symphonie:modelo/MATRIZ_AGENTES_AUTORIDAD.md",
+    "marcellusanthonson-ctrl/symphonie:fases/fase-0/CONTRATO_FASE.md",
+    "marcellusanthonson-ctrl/symphonie:fases/fase-1/CONTRATO_FASE.md",
+    "marcellusanthonson-ctrl/symphonie:fases/fase-2/CONTRATO_FASE.md",
+    "marcellusanthonson-ctrl/symphonie:registro/fases.json",
+    "patterns/PAT-LAB-009.json",
+    "projects/lab/evidence/EVD-LAB-SYMPHONIE-LIVHAVN-PATCH-001.json"
+  ],
+  "authority_effect": "NORMATIVE_DOCUMENTARY_DECISION_ONLY"
+}
