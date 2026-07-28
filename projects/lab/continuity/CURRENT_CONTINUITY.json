@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0.0",
+  "continuity_id": "LAB-CONTINUITY-PRODUCT-LEADERSHIP-TEST-003-HYBRID-2026-07-27",
+  "project_id": "lab",
+  "status": "CURRENT",
+  "created_at": "2026-07-27",
+  "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "canonical_branch": "main",
+  "verified_head_at_package_start": "da57b0822e308e52a98945797b5071880d916481",
+  "entrypoint": "project-sources/chatgpt/START_HERE.md",
+  "required_reading_order": [
+    "VERIFY_LIVE_HEAD_OF_MAIN",
+    "LAB_CONTRACT.md",
+    "METHODOLOGY.md",
+    "CURRENT_STATE.json",
+    "registry/index.json",
+    "registry/projects.json",
+    "projects/lab/PROJECT_STATE.json",
+    "APPLICABLE_DECISIONS_AUTHORIZATIONS_PENDING_EVIDENCE_CONTINUITY",
+    "project-sources/chatgpt/01_SOURCE_MANIFEST.md"
+  ],
+  "subject": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003",
+  "verified_facts": [
+    {
+      "fact": "Test 003 has not been executed; no fixtures, outputs, scores, oracles, mappings or materialized IDs were generated.",
+      "source_refs": [
+        "projects/lab/test-executions/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/PREFLIGHT_STOP_107.json",
+        "projects/lab/distributed-environment/PRODUCT-LEADERSHIP-TEST-003/PREFLIGHT_STOP_109.json"
+      ]
+    },
+    {
+      "fact": "Product Leadership remains inactive and not integrated.",
+      "source_refs": [
+        "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST_003_CODEX_MULTROLE_EXECUTION_107.json",
+        "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST_003_DISTRIBUTED_ENVIRONMENT_IMPLEMENTATION_109.json"
+      ]
+    },
+    {
+      "fact": "Claude is formally assigned as the independent read-only auditor for Test 003.",
+      "source_refs": ["projects/lab/decisions/DEC-LAB-023.json"]
+    },
+    {
+      "fact": "The approved implementation direction is hybrid constraint-first: six Codex cloud tasks, an external randomization custodian, external role-scoped storage and Claude as auditor.",
+      "source_refs": [
+        "projects/lab/decisions/DEC-LAB-024.json",
+        "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/ROLE_PROVIDER_ASSIGNMENT_MATRIX.json"
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "id": "DEC-LAB-023",
+      "status": "APPROVED",
+      "decision": "Assign Claude as INDEPENDENT_AUDITOR with read-only access and no other Test 003 role."
+    },
+    {
+      "id": "DEC-LAB-024",
+      "status": "APPROVED",
+      "decision": "Adopt HYBRID_CONSTRAINT_FIRST_CODEX_MULTI_AGENT_WITH_EXTERNAL_BOUNDARIES."
+    }
+  ],
+  "authorization_state": {
+    "authorization_106": "CONSUMED_ON_FAIL_CLOSED_PREFLIGHT_STOP",
+    "authorization_107": "CONSUMED_ON_FAIL_CLOSED_CODEX_MULTROLE_PREFLIGHT_STOP",
+    "authorization_108": "CONSUMED_ON_DISTRIBUTED_PROTOCOL_PUBLICATION",
+    "authorization_109": "CONSUMED_ON_FAIL_CLOSED_INFRASTRUCTURE_PREFLIGHT_STOP",
+    "active_execution_authority": "NONE",
+    "test_003_execution_authorized": false,
+    "runtime_authorized": false,
+    "integration_authorized": false,
+    "product_changes_authorized": false
+  },
+  "completed_work": [
+    "Complete Test 003 statistical, blinding, rubric, denominator, evidence and operational contract approved by Jonathan Martínez.",
+    "Two fail-closed operational preflights documented without test content generation.",
+    "Distributed eight-role execution protocol documented.",
+    "Constraint-first role/provider matrix strategy documented.",
+    "Claude formally assigned as independent auditor.",
+    "Hybrid Codex multi-agent implementation direction approved.",
+    "Initial role provider assignment matrix published."
+  ],
+  "current_matrix": {
+    "codex_cloud_tasks": [
+      "PACKAGE_GENERATOR",
+      "BASELINE_GENERATOR",
+      "NORMALIZATION_OPERATOR",
+      "EVALUATOR_1",
+      "EVALUATOR_2",
+      "EVALUATOR_3"
+    ],
+    "external_roles": {
+      "RANDOMIZATION_CUSTODIAN": "UNASSIGNED_EXTERNAL_HUMAN_OR_SERVICE_IDENTITY",
+      "INDEPENDENT_AUDITOR": "CLAUDE_READ_ONLY"
+    },
+    "external_provider": {
+      "recommended_candidate": "AWS",
+      "candidate_architecture": [
+        "IAM roles and role-scoped credentials",
+        "S3 with Object Lock for artifacts, logs and checkpoints",
+        "Secrets Manager and KMS for custodian-only mapping custody",
+        "CloudTrail for access evidence"
+      ],
+      "selection_status": "RECOMMENDED_NOT_PROVISIONED",
+      "cost_posture": "SMALL_PREFLIGHT_EXPECTED_TO_FIT_NEW_ACCOUNT_CREDITS_OR_LOW_SINGLE_DIGIT_USD_COST",
+      "source_refs": ["projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/ROLE_PROVIDER_ASSIGNMENT_MATRIX.json"]
+    }
+  },
+  "pending": [
+    {
+      "id": "PEND-LAB-030",
+      "item": "Repair validate_repository.py handling of list-valued registry/index.json deltas under separate authorization.",
+      "status": "OPEN"
+    },
+    {
+      "item": "Formally select and configure the external provider architecture for the hybrid Test 003 environment.",
+      "status": "OPEN"
+    },
+    {
+      "item": "Assign a concrete randomization custodian identity.",
+      "status": "OPEN"
+    },
+    {
+      "item": "Prove Codex task-specific credentials, deny boundaries and separate environment evidence.",
+      "status": "OPEN"
+    },
+    {
+      "item": "Prove Claude external read-only access boundary.",
+      "status": "OPEN"
+    },
+    {
+      "item": "Issue a separate bounded authorization for AWS architecture design and preflight only.",
+      "status": "OPEN"
+    }
+  ],
+  "risks": [
+    "Codex sandboxes or worktrees must not be treated as independent security principals without credential and deny-policy evidence.",
+    "Claude cannot be considered independent if it shares writable storage, credentials or unreleased mapping access.",
+    "Object Lock and retention settings can be difficult or irreversible; use a disposable test bucket before final locking.",
+    "AWS Free Tier or credits do not guarantee zero cost; configure a low budget alert before resource creation.",
+    "The existing global validator divergence prevents claiming a fully clean repository-wide validation until PEND-LAB-030 is resolved."
+  ],
+  "limits": [
+    "Do not execute Test 003.",
+    "Do not generate fixtures, outputs, scores, oracles or randomization mappings.",
+    "Do not activate or integrate Product Leadership.",
+    "Do not modify Symphonie or products.",
+    "Do not provision AWS resources without a new explicit bounded authorization."
+  ],
+  "attachments": [
+    "CURRENT_CONTINUITY.json",
+    "CURRENT_CONTINUITY.md",
+    "ATTACHMENT_MANIFEST.json",
+    "START_PROMPT.md"
+  ],
+  "single_next_action": "Formally adopt AWS as the external provider candidate and authorize design of the exact IAM, S3 Object Lock, Secrets Manager/KMS and CloudTrail preflight architecture without creating test content.",
+  "authority_effect": "NONE"
+}
