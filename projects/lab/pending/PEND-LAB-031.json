@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "id": "PEND-LAB-031",
   "project_id": "lab",
-  "status": "OPEN_HUMAN_SECURITY_CONFIGURATION_REQUIRED",
+  "status": "COMPLETED_STS_ASSUMED_ROLE_VERIFIED",
   "type": "PL003_AWS_ASSUMED_ROLE_PROFILE_CORRECTION",
   "subject": "Correct and independently verify the local MFA-backed pl003-plan-operator profile before resuming authorization 112",
   "priority": "HIGH",
@@ -21,8 +21,17 @@
     "EXPAND_IAM_PERMISSIONS_OR_CREATE_UNAUTHORIZED_PRINCIPALS"
   ],
   "authorization_112_status": "GRANTED_NOT_CONSUMED",
+  "resolved_at": "2026-07-28",
+  "resolution": {
+    "profile": "pl003-plan-operator",
+    "region": "sa-east-1",
+    "sts_result": "PASS_ASSUMED_ROLE_PL003PreflightPlanOperator",
+    "account_id_published": false,
+    "credentials_tokens_or_mfa_codes_published": false,
+    "successor_pending": "PEND-LAB-032"
+  },
   "product_leadership_test_003_executed": false,
   "product_leadership_active": false,
   "product_leadership_integrated": false,
-  "next_action": "HUMAN_CORRECTS_AND_VERIFIES_THE_MFA_BACKED_PL003_PLAN_OPERATOR_PROFILE"
+  "next_action": "NONE_COMPLETED_SUCCESSOR_PEND_LAB_032"
 }

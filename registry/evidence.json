@@ -344,6 +344,36 @@
       "canonical_path": "projects/lab/evidence/EVD-LAB-PL003-AWS-APPLY-112.json",
       "authorization_id": "AUTHORIZATION_LAB_PL003_AWS_PROVISIONED_PREFLIGHT_AND_TEARDOWN_112",
       "updated_at": "2026-07-28"
+    },
+    {
+      "id": "EVD-LAB-PL003-AWS-IDENTITY-112-ATTEMPT-002",
+      "path": "projects/lab/evidence/EVD-LAB-PL003-AWS-IDENTITY-112-ATTEMPT-002.json",
+      "kind": "REDACTED_AWS_IDENTITY_AND_IAM_SECURITY_PREFLIGHT_EVIDENCE",
+      "project_id": "lab",
+      "status": "IDENTITY_PASS_IAM_BOUNDARY_FAIL",
+      "canonical_path": "projects/lab/evidence/EVD-LAB-PL003-AWS-IDENTITY-112-ATTEMPT-002.json",
+      "authorization_id": "AUTHORIZATION_LAB_PL003_AWS_PROVISIONED_PREFLIGHT_AND_TEARDOWN_112",
+      "updated_at": "2026-07-28"
+    },
+    {
+      "id": "EVD-LAB-PL003-AWS-COST-GUARD-112-ATTEMPT-002",
+      "path": "projects/lab/evidence/EVD-LAB-PL003-AWS-COST-GUARD-112-ATTEMPT-002.json",
+      "kind": "REDACTED_AWS_COST_GUARD_PREFLIGHT_EVIDENCE",
+      "project_id": "lab",
+      "status": "BLOCKED_NOT_ATTEMPTED",
+      "canonical_path": "projects/lab/evidence/EVD-LAB-PL003-AWS-COST-GUARD-112-ATTEMPT-002.json",
+      "authorization_id": "AUTHORIZATION_LAB_PL003_AWS_PROVISIONED_PREFLIGHT_AND_TEARDOWN_112",
+      "updated_at": "2026-07-28"
+    },
+    {
+      "id": "EVD-LAB-PL003-AWS-APPLY-112-ATTEMPT-002",
+      "path": "projects/lab/evidence/EVD-LAB-PL003-AWS-APPLY-112-ATTEMPT-002.json",
+      "kind": "REDACTED_AWS_TERRAFORM_APPLY_ATTEMPT_EVIDENCE",
+      "project_id": "lab",
+      "status": "BLOCKED_BEFORE_TERRAFORM",
+      "canonical_path": "projects/lab/evidence/EVD-LAB-PL003-AWS-APPLY-112-ATTEMPT-002.json",
+      "authorization_id": "AUTHORIZATION_LAB_PL003_AWS_PROVISIONED_PREFLIGHT_AND_TEARDOWN_112",
+      "updated_at": "2026-07-28"
     }
   ]
 }

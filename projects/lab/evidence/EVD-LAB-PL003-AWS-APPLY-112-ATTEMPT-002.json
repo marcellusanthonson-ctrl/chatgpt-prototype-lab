@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-PL003-AWS-APPLY-112-ATTEMPT-002",
+  "project_id": "lab",
+  "kind": "REDACTED_AWS_TERRAFORM_APPLY_ATTEMPT_EVIDENCE",
+  "status": "BLOCKED_BEFORE_TERRAFORM",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_AWS_PROVISIONED_PREFLIGHT_AND_TEARDOWN_112",
+  "execution_id": "PRODUCT-LEADERSHIP-TEST-003-AWS-PREFLIGHT-EXECUTION-002",
+  "executed_at": "2026-07-28",
+  "execution_head": "b4fdefc78b19f62b81a787a236541dc370bdfff6",
+  "execution": {
+    "terraform_init_executed": false,
+    "terraform_fmt_check_executed": false,
+    "terraform_validate_executed": false,
+    "terraform_plan_executed": false,
+    "terraform_apply_executed": false,
+    "terraform_destroy_executed": false,
+    "resources_created_by_this_attempt": 0,
+    "resources_modified_by_this_attempt": 0,
+    "resources_deleted_by_this_attempt": 0,
+    "t0_recorded": false
+  },
+  "block": {
+    "stage": "AWS_IDENTITY_SECURITY_AND_REGION_PREFLIGHT",
+    "stop_condition": "IAM_PERMISSION_EXPANSION_REQUIRED",
+    "permission_boundary_configured": false,
+    "attached_policy": "PL003PreflightPlanReadOnly",
+    "inline_policy_count": 0,
+    "permission_expansion_attempted": false
+  },
+  "local_validation": {
+    "json_parse_all_changed_json": "PASS",
+    "canonical_matrix_coverage": "PASS_38_OF_38_IDS_RECORDED",
+    "manifest_hash_verification": "PASS",
+    "sensitive_shape_scan": "PASS_ZERO_ACCOUNT_OR_CREDENTIAL_PATTERNS",
+    "git_diff_check": "PASS",
+    "repository_validator": "EXPECTED_KNOWN_FAIL_PEND_LAB_030"
+  },
+  "scope_preservation": {
+    "product_leadership_test_003_executed": false,
+    "fixtures_outputs_scores_oracles_or_mappings_generated": false,
+    "product_leadership_active": false,
+    "product_leadership_integrated": false,
+    "real_data_used": false,
+    "real_secret_value_materialized": false
+  },
+  "result": "APPLY_NOT_ATTEMPTED_ZERO_AWS_MUTATION"
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "PL003-AWS-PROVISIONED-PREFLIGHT-BLOCKED-112-ATTEMPT-002",
+  "project_id": "lab",
+  "created_at": "2026-07-28",
+  "authorization_ref": "AUTHORIZATION_LAB_PL003_AWS_PROVISIONED_PREFLIGHT_AND_TEARDOWN_112",
+  "state_delta": {
+    "status": "PL003_AWS_PROVISIONED_PREFLIGHT_BLOCKED_AT_IAM_SECURITY_GATE",
+    "pend_lab_031_status": "COMPLETED_STS_ASSUMED_ROLE_VERIFIED",
+    "successor_pending": "PEND-LAB-032",
+    "active_aws_execution_authority": "GRANTED_NOT_CONSUMED_BLOCKED_BY_IAM_PERMISSION_GATE",
+    "terraform_apply_executed": false,
+    "aws_resources_mutated_by_attempt": false,
+    "matrix_cases_executed": 0,
+    "product_leadership_test_003_executed": false,
+    "product_leadership_active": false,
+    "product_leadership_integrated": false,
+    "next_action": "OBTAIN_SEPARATE_BOUNDED_IAM_PROVISIONING_OPERATOR_AUTHORIZATION"
+  },
+  "registrations": {
+    "evidence": [
+      "projects/lab/evidence/EVD-LAB-PL003-AWS-IDENTITY-112-ATTEMPT-002.json",
+      "projects/lab/evidence/EVD-LAB-PL003-AWS-COST-GUARD-112-ATTEMPT-002.json",
+      "projects/lab/evidence/EVD-LAB-PL003-AWS-APPLY-112-ATTEMPT-002.json"
+    ],
+    "test_execution": "projects/lab/test-executions/PRODUCT-LEADERSHIP-TEST-003-AWS-PREFLIGHT-EXECUTION-002/MANIFEST.json",
+    "pending_closed": "projects/lab/pending/PEND-LAB-031.json",
+    "pending_opened": "projects/lab/pending/PEND-LAB-032.json",
+    "continuity": "projects/lab/continuity/CURRENT_CONTINUITY.json"
+  },
+  "stop_condition": "IAM_PERMISSION_EXPANSION_REQUIRED",
+  "authority_effect": "AUTHORIZATION_112_REMAINS_GRANTED_NOT_CONSUMED"
+}

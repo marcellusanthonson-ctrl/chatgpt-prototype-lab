@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-PL003-AWS-COST-GUARD-112-ATTEMPT-002",
+  "project_id": "lab",
+  "kind": "REDACTED_AWS_COST_GUARD_PREFLIGHT_EVIDENCE",
+  "status": "BLOCKED_NOT_ATTEMPTED",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_AWS_PROVISIONED_PREFLIGHT_AND_TEARDOWN_112",
+  "execution_id": "PRODUCT-LEADERSHIP-TEST-003-AWS-PREFLIGHT-EXECUTION-002",
+  "executed_at": "2026-07-28",
+  "identity_gate": "STS_PASS_IAM_BOUNDARY_FAIL",
+  "cost_guard": {
+    "aws_budget_or_equivalent_checked": false,
+    "aws_budget_or_equivalent_created_or_modified": false,
+    "warning_threshold_usd": 3.0,
+    "hard_stop_threshold_usd": 5.0,
+    "verified_before_apply": false
+  },
+  "stop_condition": "IAM_PERMISSION_EXPANSION_REQUIRED",
+  "result": "BLOCKED_BEFORE_COST_GUARD_ZERO_COST_GUARD_MUTATION"
+}

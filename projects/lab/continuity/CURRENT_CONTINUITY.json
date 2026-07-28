@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "continuity_id": "LAB-CONTINUITY-PL003-AWS-PROVISIONED-PREFLIGHT-BLOCKED-112",
+  "continuity_id": "LAB-CONTINUITY-PL003-AWS-PROVISIONED-PREFLIGHT-BLOCKED-112-ATTEMPT-002",
   "project_id": "lab",
   "status": "CURRENT_BLOCKED_FAIL_CLOSED",
   "created_at": "2026-07-28",
@@ -22,13 +22,15 @@
   ],
   "subject": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003",
   "latest_execution_attempt": {
-    "execution_id": "PRODUCT-LEADERSHIP-TEST-003-AWS-PREFLIGHT-EXECUTION-001",
+    "execution_id": "PRODUCT-LEADERSHIP-TEST-003-AWS-PREFLIGHT-EXECUTION-002",
+    "prior_execution_id": "PRODUCT-LEADERSHIP-TEST-003-AWS-PREFLIGHT-EXECUTION-001",
     "authorization_id": "AUTHORIZATION_LAB_PL003_AWS_PROVISIONED_PREFLIGHT_AND_TEARDOWN_112",
-    "execution_head": "f43bf7a5c17134ff823e933f6f2b87b4011ac0df",
-    "status": "BLOCKED_BEFORE_AWS_ACCESS",
-    "stop_condition": "AWS_IDENTITY_NOT_THE_BOUNDED_OPERATOR",
-    "detail": "The pl003-plan-operator profile role_arn equals its MFA device ARN and does not identify PL003PreflightPlanOperator.",
-    "aws_service_api_calls": 0,
+    "execution_head": "b4fdefc78b19f62b81a787a236541dc370bdfff6",
+    "status": "BLOCKED_AT_IAM_SECURITY_GATE",
+    "stop_condition": "IAM_PERMISSION_EXPANSION_REQUIRED",
+    "detail": "STS passed as PL003PreflightPlanOperator, but the role has no permission boundary, has only PL003PreflightPlanReadOnly, and cannot verify the current root security summary.",
+    "aws_read_only_calls": 6,
+    "aws_mutation_calls": 0,
     "terraform_apply_executed": false,
     "matrix_cases_executed": 0,
     "resources_mutated_by_attempt": 0
@@ -92,7 +94,7 @@
     "authorization_111D": "CONSUMED",
     "authorization_111E": "GRANTED_FOR_CONTINUITY_PUBLICATION_ONLY",
     "authorization_112": "GRANTED_NOT_CONSUMED",
-    "active_aws_execution_authority": "GRANTED_NOT_CONSUMED_BLOCKED_PENDING_SAFE_PROFILE_CORRECTION",
+    "active_aws_execution_authority": "GRANTED_NOT_CONSUMED_BLOCKED_BY_IAM_PERMISSION_GATE",
     "terraform_apply_authorized": true,
     "terraform_destroy_authorized": true,
     "aws_resource_provisioning_authorized": true,
@@ -110,7 +112,9 @@
     "Local plan and temporary credentials removed after evidence capture.",
     "Missing *.tfplan ignore rule corrected and documented.",
     "Authorizations 111C and 111D consumed after verified publication.",
-    "Authorization 112 execution attempt stopped before AWS access because the approved profile did not point to the bounded plan operator role."
+    "Authorization 112 execution attempt 001 stopped before AWS access because the approved profile did not point to the bounded plan operator role.",
+    "PEND-LAB-031 was resolved after execution attempt 002 verified STS as an assumed-role session of PL003PreflightPlanOperator.",
+    "Execution attempt 002 stopped at the IAM security gate because the role has no permission boundary and only the read-only plan policy."
   ],
   "operational_estimate": {
     "active_work_to_functional_validation": "4_TO_6_HOURS",
@@ -125,12 +129,17 @@
   "pending": [
     {
       "id": "PEND-LAB-031",
-      "item": "Human corrects and verifies the MFA-backed pl003-plan-operator profile without disclosing credentials, MFA code or full account ID.",
-      "status": "OPEN_HUMAN_SECURITY_CONFIGURATION_REQUIRED"
+      "item": "Correct and verify the MFA-backed pl003-plan-operator profile without disclosing credentials, MFA code or full account ID.",
+      "status": "COMPLETED_STS_ASSUMED_ROLE_VERIFIED"
+    },
+    {
+      "id": "PEND-LAB-032",
+      "item": "Obtain separate authority for a bounded provisioning operator with a permission boundary and current root-security visibility.",
+      "status": "OPEN_SEPARATE_IAM_AUTHORITY_REQUIRED"
     },
     {
       "item": "Configure a low AWS budget alert before any resource creation.",
-      "status": "BLOCKED_BEHIND_IDENTITY_GATE"
+      "status": "BLOCKED_BEHIND_IAM_PERMISSION_GATE"
     },
     {
       "item": "Assign the concrete randomization custodian identity and prove Claude read-only independence before Test 003.",
@@ -174,6 +183,6 @@
     "ATTACHMENT_MANIFEST.json",
     "START_PROMPT.md"
   ],
-  "single_next_action": "Human corrects and verifies the MFA-backed pl003-plan-operator profile; do not resume authorization 112 until that identity gate passes.",
-  "authority_effect": "AUTHORIZATION_112_REMAINS_GRANTED_NOT_CONSUMED_EXECUTION_BLOCKED"
+  "single_next_action": "Obtain separate explicit authorization for a bounded provisioning operator with a permission boundary and current root-security visibility; do not expand PL003PreflightPlanOperator under authorization 112.",
+  "authority_effect": "AUTHORIZATION_112_REMAINS_GRANTED_NOT_CONSUMED_EXECUTION_BLOCKED_BY_IAM_PERMISSION_GATE"
 }

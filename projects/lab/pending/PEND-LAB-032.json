@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "id": "PEND-LAB-032",
+  "project_id": "lab",
+  "status": "OPEN_SEPARATE_IAM_AUTHORITY_REQUIRED",
+  "type": "PL003_AWS_PROVISIONING_OPERATOR_PERMISSION_BOUNDARY",
+  "subject": "Establish a separately authorized bounded provisioning operator and current root-security visibility before resuming authorization 112",
+  "priority": "HIGH",
+  "source_execution": "projects/lab/test-executions/PRODUCT-LEADERSHIP-TEST-003-AWS-PREFLIGHT-EXECUTION-002/MANIFEST.json",
+  "source_evidence": "projects/lab/evidence/EVD-LAB-PL003-AWS-IDENTITY-112-ATTEMPT-002.json",
+  "verified_facts": [
+    "STS verified pl003-plan-operator as an assumed-role session of PL003PreflightPlanOperator.",
+    "The role has no permissions boundary.",
+    "The role has one attached policy named PL003PreflightPlanReadOnly.",
+    "The role has zero inline policies.",
+    "iam:GetAccountSummary is denied to the active role, so current root MFA and root access-key state could not be reverified."
+  ],
+  "stop_condition": "IAM_PERMISSION_EXPANSION_REQUIRED",
+  "authorization_112_status": "GRANTED_NOT_CONSUMED",
+  "required_resolution": [
+    "Obtain separate explicit authority for a bounded provisioning operator and its permission boundary.",
+    "Preserve MFA-backed temporary assumed-role credentials only.",
+    "Permit current verification of root MFA and absence of root access keys.",
+    "Do not alter the reviewed 49-create Terraform package or its 13-positive and 25-negative matrix."
+  ],
+  "forbidden_resolution": [
+    "EXPAND_PL003PreflightPlanOperator_UNDER_AUTHORIZATION_112",
+    "USE_ROOT_FOR_ORDINARY_EXECUTION",
+    "REMOVE_MFA_OR_PERMISSION_BOUNDARIES",
+    "PUBLISH_CREDENTIALS_TOKENS_MFA_CODES_OR_FULL_ACCOUNT_ID"
+  ],
+  "next_action": "OBTAIN_SEPARATE_BOUNDED_IAM_PROVISIONING_OPERATOR_AUTHORIZATION"
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-PL003-AWS-IDENTITY-112-ATTEMPT-002",
+  "project_id": "lab",
+  "kind": "REDACTED_AWS_IDENTITY_AND_IAM_SECURITY_PREFLIGHT_EVIDENCE",
+  "status": "IDENTITY_PASS_IAM_BOUNDARY_FAIL",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_AWS_PROVISIONED_PREFLIGHT_AND_TEARDOWN_112",
+  "execution_id": "PRODUCT-LEADERSHIP-TEST-003-AWS-PREFLIGHT-EXECUTION-002",
+  "executed_at": "2026-07-28",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "execution_head": "b4fdefc78b19f62b81a787a236541dc370bdfff6",
+  "identity": {
+    "profile": "pl003-plan-operator",
+    "region": "sa-east-1",
+    "configured_role_match": true,
+    "mfa_serial_configured": true,
+    "sts_account_shape_valid": true,
+    "sts_identity": "ASSUMED_ROLE_PL003PreflightPlanOperator",
+    "configured_and_sts_account_match": true,
+    "full_account_id_recorded": false
+  },
+  "iam_security": {
+    "get_account_summary": "DENIED",
+    "root_mfa_current_state_verified": false,
+    "root_access_keys_current_state_verified": false,
+    "get_role": "PASS",
+    "permission_boundary_configured": false,
+    "attached_policy_count": 1,
+    "attached_policy_names": ["PL003PreflightPlanReadOnly"],
+    "inline_policy_count": 0
+  },
+  "aws_calls": {
+    "sts_get_caller_identity": 1,
+    "iam_get_account_summary": 2,
+    "iam_get_role": 1,
+    "iam_list_attached_role_policies": 1,
+    "iam_list_role_policies": 1,
+    "mutation_calls": 0
+  },
+  "stop_condition": "IAM_PERMISSION_EXPANSION_REQUIRED",
+  "containment": [
+    "No policy, role, permission boundary or credential configuration was changed.",
+    "No AWS Budget, Terraform plan, apply, destroy or infrastructure test was attempted.",
+    "No full account ID, credential, token, MFA code or ARN was recorded."
+  ],
+  "result": "BLOCKED_FAIL_CLOSED_AFTER_STS_BEFORE_COST_GUARD"
+}

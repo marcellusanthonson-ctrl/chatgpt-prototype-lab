@@ -3,49 +3,55 @@
 Fecha: 2026-07-28
 Repositorio canónico: `marcellusanthonson-ctrl/chatgpt-prototype-lab`
 Rama: `main`
-HEAD de ejecución: `f43bf7a5c17134ff823e933f6f2b87b4011ac0df`
-Política HEAD: `VERIFY_LIVE_AT_USE`
+HEAD de ejecución 002: `b4fdefc78b19f62b81a787a236541dc370bdfff6`
 
 ## Resultado vigente
 
-La ejecución autorizada por 112 quedó bloqueada de forma fail-closed antes de
-cualquier acceso a AWS. El perfil local aprobado `pl003-plan-operator` tiene
-`role_arn` igual al ARN de su dispositivo MFA y no apunta al rol
-`PL003PreflightPlanOperator`.
+`PEND-LAB-031` quedó resuelto. STS verificó el perfil
+`pl003-plan-operator`, región `sa-east-1`, como una sesión assumed-role de
+`PL003PreflightPlanOperator`. No se publicó el ID completo de cuenta,
+credenciales, tokens ni códigos MFA.
 
-No se ejecutó STS, no se consultó ni configuró AWS Budgets, no se ejecutaron
-`terraform plan`, `apply` o `destroy`, y esta tentativa no creó, modificó ni
-eliminó recursos AWS.
+La ejecución enlazada `PRODUCT-LEADERSHIP-TEST-003-AWS-PREFLIGHT-EXECUTION-002`
+se detuvo en el resto del gate IAM:
 
-## Matriz y teardown
+- el rol no tiene permission boundary;
+- sólo tiene la política adjunta `PL003PreflightPlanReadOnly`;
+- no tiene políticas inline;
+- `iam:GetAccountSummary` fue denegado, por lo que no pudo reverificarse el
+  estado actual de MFA y access keys root.
 
-- Casos positivos definidos: 13; ejecutados: 0; bloqueados: 13.
-- Casos negativos definidos: 25; ejecutados: 0; bloqueados: 25.
-- Teardown fase uno: no requerido porque no hubo `apply`.
-- Teardown fase dos: no requerido porque no se crearon objetos ni recursos.
-- Estado global de la cuenta AWS: no consultado y no afirmado.
+Continuar requeriría ampliar permisos fuera de 112. Se activó
+`IAM_PERMISSION_EXPANSION_REQUIRED`.
 
-## Autoridad
+## Efectos
 
-`AUTHORIZATION_LAB_PL003_AWS_PROVISIONED_PREFLIGHT_AND_TEARDOWN_112` permanece
-`GRANTED_NOT_CONSUMED`. Su criterio de consumo no se cumplió. La ejecución no
-puede continuar mientras la identidad asumida no sea verificable como el
-operador acotado.
+- Llamadas AWS read-only: 6.
+- Mutaciones AWS: 0.
+- Cost guard: no alcanzado.
+- Terraform init, fmt, validate, plan, apply y destroy: no ejecutados.
+- Matriz: 0/13 positivas y 0/25 negativas ejecutadas; las 38 quedaron
+  registradas como bloqueadas.
+- Teardown: no requerido; no hubo `apply`.
 
-Product Leadership Test 003 no fue ejecutado. No se generaron fixtures,
-outputs, scores, oráculos ni mappings. Product Leadership permanece inactivo y
-no integrado.
+Product Leadership Test 003 no fue ejecutado. Product Leadership permanece
+inactivo y no integrado.
 
 ## Evidencia
 
-- `projects/lab/evidence/EVD-LAB-PL003-AWS-COST-GUARD-112.json`
-- `projects/lab/evidence/EVD-LAB-PL003-AWS-APPLY-112.json`
-- `projects/lab/test-executions/PRODUCT-LEADERSHIP-TEST-003-AWS-PREFLIGHT-EXECUTION-001/MANIFEST.json`
-- `projects/lab/pending/PEND-LAB-031.json`
+- `projects/lab/evidence/EVD-LAB-PL003-AWS-IDENTITY-112-ATTEMPT-002.json`
+- `projects/lab/evidence/EVD-LAB-PL003-AWS-COST-GUARD-112-ATTEMPT-002.json`
+- `projects/lab/evidence/EVD-LAB-PL003-AWS-APPLY-112-ATTEMPT-002.json`
+- `projects/lab/test-executions/PRODUCT-LEADERSHIP-TEST-003-AWS-PREFLIGHT-EXECUTION-002/MANIFEST.json`
+- `projects/lab/pending/PEND-LAB-032.json`
+
+## Autoridad
+
+La autorización 112 permanece `GRANTED_NOT_CONSUMED`. No se cumplió su criterio
+de consumo.
 
 ## Siguiente acción única
 
-Jonathan corrige y verifica humanamente el perfil MFA
-`pl003-plan-operator` para que asuma exactamente
-`PL003PreflightPlanOperator`, sin revelar credenciales, código MFA ni ID
-completo de cuenta; no reanudar 112 antes de que ese gate pase.
+Obtener autorización explícita separada para un operador de aprovisionamiento
+acotado con permission boundary y visibilidad actual del estado de seguridad
+root; no ampliar `PL003PreflightPlanOperator` bajo 112.
