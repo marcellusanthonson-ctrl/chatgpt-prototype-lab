@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "PRODUCT-LEADERSHIP-TEST-003-AWS-PREFLIGHT-DESIGN-110",
+  "project_id": "lab",
+  "authorization_ref": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST_003_AWS_PREFLIGHT_ARCHITECTURE_DESIGN_110",
+  "effective_at": "2026-07-27",
+  "state_delta": {
+    "status": "PRODUCT_LEADERSHIP_TEST_003_AWS_PREFLIGHT_DESIGN_AUTHORIZED_NOT_PROVISIONED",
+    "current_phase": "AWS_PREFLIGHT_STATIC_IAC_AUTHORING_READY_FOR_CODEX",
+    "active_project": "lab",
+    "product_leadership": {
+      "test_003": "NOT_EXECUTED",
+      "activation": false,
+      "integration": false,
+      "aws_provider": "FORMALLY_SELECTED_FOR_DISPOSABLE_PREFLIGHT_DESIGN",
+      "aws_provisioned": false,
+      "codex_static_iac_authoring": "AUTHORIZED_BOUNDED"
+    },
+    "authority": {
+      "commit_authorized": true,
+      "push_authorized": true,
+      "runtime_authorized": false,
+      "integration_authorized": false,
+      "product_changes_authorized": false,
+      "aws_api_access_authorized": false,
+      "aws_resource_provisioning_authorized": false,
+      "test_003_execution_authorized": false,
+      "residual_authority": "AUTHORIZATION_110_ONLY_UNTIL_COMPLETE_STATIC_IAC_PACKAGE_PUBLICATION"
+    },
+    "next_action": "CODEX_AUTHORS_AND_VALIDATES_STATIC_AWS_PREFLIGHT_IAC_PACKAGE_WITHOUT_AWS_ACCESS"
+  },
+  "registrations": {
+    "decision": "DEC-LAB-025",
+    "authorization": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST_003_AWS_PREFLIGHT_ARCHITECTURE_DESIGN_110",
+    "test_design": "PRODUCT-LEADERSHIP-TEST-003-AWS-PREFLIGHT-ARCHITECTURE-001",
+    "brief": "CODEX-PRODUCT-LEADERSHIP-TEST-003-AWS-PREFLIGHT-IAC-AUTHORING-110"
+  },
+  "constraints": {
+    "aws_not_provisioned": true,
+    "test_003_not_executed": true,
+    "product_leadership_inactive": true,
+    "product_leadership_not_integrated": true,
+    "claude_role": "EXTERNAL_READ_ONLY",
+    "randomization_custodian": "EXTERNAL_IDENTITY_UNASSIGNED"
+  },
+  "authority_effect": "BOUNDED_STATIC_IAC_AUTHORING_AUTHORITY"
+}
