@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "PL003-AWS-PROVISIONED-PREFLIGHT-AUTHORIZATION-112",
+  "project_id": "lab",
+  "created_at": "2026-07-28",
+  "authorization_additions": [
+    {
+      "authorization_id": "AUTHORIZATION_LAB_PL003_AWS_PROVISIONED_PREFLIGHT_AND_TEARDOWN_112",
+      "path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_AWS_PROVISIONED_PREFLIGHT_AND_TEARDOWN_112.json",
+      "status": "GRANTED",
+      "approved_by": "Jonathan Martínez",
+      "approved_at": "2026-07-28",
+      "historical_parent_head": "5079ae9b8cacfee99ec3393a24d7b15b2f32f39e",
+      "subject": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003_AWS_INFRASTRUCTURE_PREFLIGHT",
+      "terraform_apply_authorized": true,
+      "aws_resource_provisioning_authorized": true,
+      "infrastructure_boundary_tests_authorized": true,
+      "two_phase_teardown_authorized": true,
+      "product_leadership_test_003_execution_authorized": false,
+      "target_test_completion_hours": 48,
+      "maximum_infrastructure_retention_calendar_days": 7,
+      "maximum_unexpected_cost_overage_usd": 5.0
+    }
+  ],
+  "state_effect": {
+    "active_aws_execution_authority": "AUTHORIZATION_LAB_PL003_AWS_PROVISIONED_PREFLIGHT_AND_TEARDOWN_112",
+    "scope": "AWS_INFRASTRUCTURE_PREFLIGHT_ONLY",
+    "product_leadership_test_003": "NOT_AUTHORIZED",
+    "product_leadership_activation": "NOT_AUTHORIZED",
+    "product_leadership_integration": "NOT_AUTHORIZED",
+    "runtime": "NOT_AUTHORIZED",
+    "product_changes": "NOT_AUTHORIZED"
+  },
+  "next_action": "PREPARE_AND_VALIDATE_THE_BOUNDED_EXECUTION_BRIEF_COST_GUARD_AND_FINAL_PREFLIGHT_BEFORE_ANY_TERRAFORM_APPLY",
+  "authority_effect": "BOUNDED_AWS_PREFLIGHT_EXECUTION_AUTHORITY_GRANTED"
+}
