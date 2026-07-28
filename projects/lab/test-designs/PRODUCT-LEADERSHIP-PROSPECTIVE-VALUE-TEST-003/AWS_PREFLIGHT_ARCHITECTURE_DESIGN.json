@@ -1,0 +1,140 @@
+{
+  "schema_version": "1.0.0",
+  "design_id": "PRODUCT-LEADERSHIP-TEST-003-AWS-PREFLIGHT-ARCHITECTURE-001",
+  "project_id": "lab",
+  "subject": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003",
+  "status": "DESIGN_APPROVED_NOT_PROVISIONED",
+  "provider": "AWS",
+  "authorization_ref": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST_003_AWS_PREFLIGHT_ARCHITECTURE_DESIGN_110",
+  "decision_refs": ["DEC-LAB-023", "DEC-LAB-024", "DEC-LAB-025"],
+  "purpose": "Define a disposable fail-closed security preflight that proves role, credential, storage, custody, immutability and audit boundaries before any Test 003 content generation.",
+  "account_and_region": {
+    "account_posture": "DEDICATED_LAB_OR_ISOLATED_NON_PRODUCTION_ACCOUNT",
+    "region": "MUST_BE_FIXED_BY_FUTURE_PROVISIONING_AUTHORIZATION",
+    "data_class": "SYNTHETIC_NON_TEST_ONLY",
+    "budget_alert_required_before_resource_creation": true,
+    "mandatory_tags": {
+      "Project": "PRODUCT-LEADERSHIP-TEST-003",
+      "Environment": "PREFLIGHT",
+      "DataClass": "SYNTHETIC-NON-TEST",
+      "Owner": "LAB",
+      "Disposable": "true"
+    }
+  },
+  "principals": [
+    {"id":"pl003-package-generator","provider":"CODEX_CLOUD_TASK","credential":"ROLE_SCOPED_STS_SESSION","allowed":"READ_SYNTHETIC_INPUT_WRITE_PACKAGE_PREFIX","denied":["BASELINE_PREFIX","MAPPING","ORACLE","SCORES","EVALUATOR_OUTPUTS"]},
+    {"id":"pl003-baseline-generator","provider":"CODEX_CLOUD_TASK","credential":"ROLE_SCOPED_STS_SESSION","allowed":"READ_SYNTHETIC_INPUT_WRITE_BASELINE_PREFIX","denied":["PACKAGE_PREFIX","MAPPING","ORACLE","SCORES","EVALUATOR_OUTPUTS"]},
+    {"id":"pl003-normalization-operator","provider":"CODEX_CLOUD_TASK","credential":"ROLE_SCOPED_STS_SESSION","allowed":"READ_FROZEN_RAW_WRITE_NORMALIZED_ONLY","denied":["ARM_IDENTITY","MAPPING","ORACLE","SCORES","GENERATOR_CREDENTIALS"]},
+    {"id":"pl003-evaluator-1","provider":"CODEX_CLOUD_TASK","credential":"ROLE_SCOPED_STS_SESSION","allowed":"READ_BLINDED_WRITE_EVALUATION_1_ONLY","denied":["MAPPING","ORACLE","EVALUATION_2","EVALUATION_3"]},
+    {"id":"pl003-evaluator-2","provider":"CODEX_CLOUD_TASK","credential":"ROLE_SCOPED_STS_SESSION","allowed":"READ_BLINDED_WRITE_EVALUATION_2_ONLY","denied":["MAPPING","ORACLE","EVALUATION_1","EVALUATION_3"]},
+    {"id":"pl003-evaluator-3","provider":"CODEX_CLOUD_TASK","credential":"ROLE_SCOPED_STS_SESSION","allowed":"READ_BLINDED_WRITE_EVALUATION_3_ONLY","denied":["MAPPING","ORACLE","EVALUATION_1","EVALUATION_2"]},
+    {"id":"pl003-randomization-custodian","provider":"EXTERNAL_HUMAN_OR_SERVICE_IDENTITY","credential":"EXTERNAL_PRINCIPAL_WITH_EXTERNAL_ID","allowed":"EXCLUSIVE_SECRET_AND_KMS_DECRYPT_ACCESS","denied":["CONTENT_REWRITE","EVALUATION","PRE_RELEASE_SCORES"]},
+    {"id":"pl003-claude-auditor","provider":"CLAUDE","credential":"EXTERNAL_READ_ONLY_ROLE_WITH_EXTERNAL_ID","allowed":"READ_RELEASED_HASH_LOG_CHECKPOINT_ATTESTATION_AND_FINAL_PACKAGE","denied":["WRITE","DELETE","MAPPING","GENERATION","EVALUATION","SCORING"]},
+    {"id":"pl003-preflight-controller","provider":"BOUNDED_ADMINISTRATIVE_EXECUTOR","credential":"TEMPORARY_BOOTSTRAP_ROLE","allowed":"CREATE_AND_VALIDATE_ONLY_WITHIN_FUTURE_AUTHORIZATION","denied":["SELF_ESCALATION","BOUNDARY_REMOVAL","TRAIL_DISABLE","RETENTION_REDUCTION","CUSTODIAN_DECRYPT"]}
+  ],
+  "iam_controls": {
+    "temporary_sessions_only": true,
+    "permission_boundaries_required": true,
+    "explicit_deny_required": true,
+    "shared_credentials_forbidden": true,
+    "wildcard_resource_permissions_forbidden": true,
+    "external_id_for_external_principals": true,
+    "mfa_for_sensitive_administration": true,
+    "functional_roles_may_not_modify_control_plane": true
+  },
+  "s3": {
+    "buckets": [
+      {"logical_name":"artifacts","purpose":"role-scoped synthetic inputs outputs and released final artifacts","object_lock":true,"versioning":true},
+      {"logical_name":"audit","purpose":"CloudTrail logs deny-test evidence hashes and checkpoints","object_lock":true,"versioning":true},
+      {"logical_name":"custody","purpose":"encrypted synthetic mapping and custodian attestations","object_lock":true,"versioning":true}
+    ],
+    "artifact_prefixes": ["inputs/","package-generator/","baseline-generator/","frozen-raw/","normalized/","blinded/","evaluations/evaluator-1/","evaluations/evaluator-2/","evaluations/evaluator-3/","released-final/"],
+    "audit_prefixes": ["cloudtrail/","access-evidence/","deny-test-results/","hash-manifests/","checkpoint-attestations/","preflight-report/"],
+    "custody_prefixes": ["encrypted-mapping/","custodian-attestations/","release-records/"],
+    "public_access_block": true,
+    "functional_delete_forbidden": true,
+    "cross_role_write_forbidden": true
+  },
+  "object_lock": {
+    "first_preflight_bucket_posture": "DISPOSABLE",
+    "mode": "GOVERNANCE",
+    "retention": "SHORT_EXPLICIT_PERIOD_SET_BY_FUTURE_AUTHORIZATION",
+    "compliance_mode_for_first_preflight": false,
+    "functional_roles_may_not_reduce_or_bypass_retention": true,
+    "required_tests": ["DELETE_DENIED","DESTRUCTIVE_OVERWRITE_PREVENTED_BY_VERSIONING_AND_RETENTION","RETENTION_METADATA_VERIFIABLE","CHECKPOINT_IMMUTABILITY_PROVEN"]
+  },
+  "secrets_and_kms": {
+    "secret_name": "/pl003/preflight/randomization-mapping",
+    "secret_content": "SYNTHETIC_SENTINEL_ONLY",
+    "kms_alias": "alias/pl003-preflight-custodian",
+    "decrypt_principal": "pl003-randomization-custodian",
+    "decrypt_denied_to": ["ALL_CODEX_TASKS","CLAUDE_AUDITOR","PREFLIGHT_CONTROLLER_DURING_NORMAL_OPERATION"],
+    "key_administration_separated_from_key_use": true,
+    "access_logging_required": true
+  },
+  "cloudtrail": {
+    "trail_name": "pl003-preflight-trail",
+    "management_read_write_events": true,
+    "s3_data_events_all_three_buckets": true,
+    "services": ["STS","IAM","S3","SECRETS_MANAGER","KMS"],
+    "log_file_validation": true,
+    "immutable_destination": "AUDIT_BUCKET_WITH_OBJECT_LOCK",
+    "functional_roles_may_not_stop_or_modify_trail": true
+  },
+  "deny_tests": [
+    "CROSS_ROLE_PREFIX_READ_DENIED",
+    "CROSS_ROLE_PREFIX_WRITE_DENIED",
+    "DELETE_OBJECT_AND_VERSION_DENIED",
+    "OBJECT_LOCK_RETENTION_CHANGE_DENIED",
+    "CLOUDTRAIL_STOP_OR_UPDATE_DENIED",
+    "MAPPING_SECRET_READ_DENIED_FOR_ALL_NON_CUSTODIANS",
+    "CUSTODIAN_KMS_DECRYPT_DENIED_FOR_ALL_NON_CUSTODIANS",
+    "INCOMPATIBLE_ROLE_ASSUME_DENIED",
+    "BUCKET_POLICY_AND_IAM_POLICY_MODIFICATION_DENIED",
+    "CLAUDE_WRITE_DELETE_AND_UNRELEASED_ACCESS_DENIED"
+  ],
+  "preflight_sequence": [
+    "VERIFY_NO_TEST_003_EXECUTION_AUTHORITY",
+    "VERIFY_PRODUCT_LEADERSHIP_INACTIVE_NOT_INTEGRATED",
+    "VERIFY_ACCOUNT_REGION_BUDGET_AND_TAGS",
+    "CREATE_ONLY_DISPOSABLE_PREFLIGHT_RESOURCES_UNDER_FUTURE_AUTHORIZATION",
+    "CREATE_ROLES_PERMISSION_BOUNDARIES_AND_POLICIES",
+    "CREATE_BUCKETS_WITH_VERSIONING_AND_OBJECT_LOCK",
+    "CREATE_KMS_KEY_AND_SYNTHETIC_SECRET",
+    "ENABLE_AND_VERIFY_CLOUDTRAIL",
+    "LOAD_NON_TEST_SYNTHETIC_SENTINELS",
+    "RUN_POSITIVE_ROLE_TESTS",
+    "RUN_ALL_DENY_TESTS",
+    "PROVE_CUSTODIAN_EXCLUSIVITY",
+    "PROVE_CLAUDE_READ_ONLY_BOUNDARY",
+    "PROVE_LOG_AND_CHECKPOINT_IMMUTABILITY",
+    "GENERATE_SHA256_MANIFESTS_AND_ATTESTATIONS",
+    "ISSUE_PASS_OR_FAIL_CLOSED_REPORT",
+    "DO_NOT_PROCEED_TO_TEST_003"
+  ],
+  "acceptance": {
+    "required": [
+      "EIGHT_SUBJECT_ROLES_HAVE_ENFORCEABLE_PRINCIPALS_AND_BOUNDARIES",
+      "SIX_CODEX_TASKS_HAVE_DISTINCT_TEMPORARY_ROLE_CREDENTIALS",
+      "NO_INCOMPATIBLE_SHARED_WRITEABLE_STORAGE",
+      "ONLY_CUSTODIAN_CAN_DECRYPT_SYNTHETIC_SECRET",
+      "CLAUDE_READ_ONLY_POSITIVE_AND_NEGATIVE_TESTS_PASS",
+      "ALL_DENY_TESTS_RETURN_EXPECTED_DENIAL",
+      "CLOUDTRAIL_RECORDS_REQUIRED_EVENTS",
+      "CHECKPOINTS_AND_LOGS_ARE_IMMUTABLE",
+      "SHA256_MANIFESTS_ARE_REPRODUCIBLE",
+      "NO_TEST_003_CONTENT_WAS_CREATED",
+      "PRODUCT_LEADERSHIP_REMAINS_INACTIVE_NOT_INTEGRATED"
+    ],
+    "failure_result": "FAIL_CLOSED",
+    "pass_does_not_authorize_test_003": true
+  },
+  "current_effect": {
+    "aws_provisioned": false,
+    "test_003_executed": false,
+    "product_leadership_active": false,
+    "product_leadership_integrated": false,
+    "runtime_effect": "NONE",
+    "authority_effect": "NONE"
+  }
+}
