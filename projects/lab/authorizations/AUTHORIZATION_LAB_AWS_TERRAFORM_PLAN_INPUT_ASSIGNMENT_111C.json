@@ -1,13 +1,23 @@
 {
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_AWS_TERRAFORM_PLAN_INPUT_ASSIGNMENT_111C",
+  "revision": 2,
   "project_id": "lab",
   "status": "GRANTED",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-07-28",
+  "repaired_at": "2026-07-28",
   "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "branch": "main",
-  "expected_parent_head": "a2128c8271070f1edbae82dbdda19e58a4e2c0fe",
+  "historical_parent_head": "a2128c8271070f1edbae82dbdda19e58a4e2c0fe",
+  "execution_head_policy": "VERIFY_LIVE_AT_USE",
+  "execution_head_requirements": [
+    "REMOTE_MAIN_HEAD_MUST_BE_READ_LIVE_IMMEDIATELY_BEFORE_EXECUTION",
+    "LOCAL_HEAD_MUST_EQUAL_LIVE_REMOTE_MAIN_HEAD",
+    "WORKTREE_MUST_BE_CLEAN",
+    "NO_STORED_HEAD_VALUE_IS_EXECUTION_AUTHORITY"
+  ],
+  "repair_reason": "Remove contradictory stored-HEAD execution gates while preserving historical parent provenance and enforcing the canonical VERIFY_LIVE_AT_USE policy.",
   "subject": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003",
   "parent_authorization": "AUTHORIZATION_LAB_AWS_PLAN_ROLE_PERMISSIONS_AND_LOCAL_CONNECTIVITY_111B",
   "scope": "DETERMINISTIC_SYNTHETIC_PROCESS_LOCAL_INPUTS_AND_TERRAFORM_PLAN_REFRESH_FALSE_ONLY",
@@ -66,8 +76,8 @@
     "MODIFY_SYMPHONIE_MAMMOTHSKILLS_OR_PRODUCTS"
   ],
   "mandatory_gates": [
-    "REMOTE_HEAD_MATCHES_EXPECTED_PARENT_HEAD",
-    "LOCAL_HEAD_MATCHES_REMOTE_MAIN",
+    "LIVE_REMOTE_MAIN_HEAD_READ_AT_USE",
+    "LOCAL_HEAD_EQUALS_LIVE_REMOTE_MAIN_HEAD",
     "WORKTREE_CLEAN_BEFORE_PLAN",
     "ASSUMED_ROLE_IDENTITY_IS_PL003PreflightPlanOperator",
     "TERRAFORM_INIT_FMT_AND_VALIDATE_PASS",
@@ -77,7 +87,7 @@
     "NO_APPLY_OR_DESTROY_EXECUTED"
   ],
   "stop_conditions": [
-    "HEAD_MISMATCH",
+    "LOCAL_HEAD_DIFFERS_FROM_LIVE_REMOTE_MAIN_HEAD",
     "WORKTREE_NOT_CLEAN_BEFORE_PLAN",
     "CALLER_IDENTITY_MISMATCH",
     "MISSING_OR_DUPLICATE_SYNTHETIC_PRINCIPAL",
@@ -86,7 +96,7 @@
     "PLAN_CONTAINS_OUT_OF_SCOPE_RESOURCE_TYPE",
     "ANY_CREDENTIAL_SECRET_TOKEN_OR_FULL_ACCOUNT_ID_WOULD_BE_PUBLISHED"
   ],
-  "consumption_criterion": "CONSUMED_AFTER_REDACTED_PLAN_EVIDENCE_IS_PUBLISHED_AND_REMOTE_VERIFIED_WITH_ZERO_AWS_RESOURCES_CREATED_MODIFIED_OR_DELETED",
+  "consumption_criterion": "CONSUMED_AFTER_REDACTED_PLAN_EVIDENCE_IS_PUBLISHED_AND REMOTE_VERIFIED_WITH_ZERO_AWS_RESOURCES_CREATED_MODIFIED_OR_DELETED",
   "terraform_apply_authorized": false,
   "aws_resource_provisioning_authorized": false,
   "test_003_execution_authorized": false,
