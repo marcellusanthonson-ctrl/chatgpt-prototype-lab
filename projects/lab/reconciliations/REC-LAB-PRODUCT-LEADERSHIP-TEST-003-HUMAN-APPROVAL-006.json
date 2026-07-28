@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0.0",
+  "reconciliation_id": "REC-LAB-PRODUCT-LEADERSHIP-TEST-003-HUMAN-APPROVAL-006",
+  "project_id": "lab",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-27",
+  "subject": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003",
+  "source_decision": "projects/lab/decisions/HUMAN_APPROVAL_PRODUCT_LEADERSHIP_TEST_003_COMPLETE_CONTRACT.json",
+  "source_pending": "projects/lab/pending/PEND-LAB-029.json",
+  "source_contract": "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/PROPOSAL.json",
+  "result": {
+    "contract_status": "CONTRACT_APPROVED_REQUIRES_SEPARATE_EXECUTION_AUTHORIZATION",
+    "pending_029": "COMPLETED_BY_HUMAN_APPROVAL",
+    "execution_authorized": false,
+    "fixtures_or_outputs_generated": false,
+    "product_leadership_active": false,
+    "product_leadership_integrated": false,
+    "current_authority": "NONE"
+  },
+  "next_action": "SEPARATE_EXECUTION_AUTHORIZATION_REQUIRED_BEFORE_ANY_TEST_003_RUN",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE"
+}
