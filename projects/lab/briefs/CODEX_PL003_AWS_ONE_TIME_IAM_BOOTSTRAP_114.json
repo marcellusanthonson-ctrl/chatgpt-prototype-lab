@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0.0",
+  "brief_id": "CODEX_PL003_AWS_ONE_TIME_IAM_BOOTSTRAP_114",
+  "project_id": "lab",
+  "status": "READY",
+  "created_at": "2026-07-28",
+  "objective": "Execute only authorization 114: create and verify a temporary MFA-backed bounded IAM setup role, use it to enable completion of authorization 113, then remove the setup role and all temporary artifacts without Terraform, root, general administration or PL003 preflight provisioning.",
+  "repositories": [{
+    "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "branch": "main",
+    "expected_parent_head": "02505c35f7337931802aa23258e8f95838289023",
+    "head_policy": "VERIFY_LIVE_AT_USE"
+  }],
+  "authority": {
+    "authorization_ref": "AUTHORIZATION_LAB_PL003_AWS_ONE_TIME_IAM_BOOTSTRAP_114",
+    "authorization_status": "GRANTED",
+    "approved_by": "Jonathan Martínez",
+    "executor": "Codex",
+    "bootstrap_profile": "pl003-bootstrap",
+    "target_setup_role": "PL003PreflightIAMSetupOperator",
+    "target_setup_profile": "pl003-iam-setup-operator",
+    "authorization_113_may_resume_after_setup_role_pass": true,
+    "authorization_112_may_execute": false,
+    "terraform_authorized": false,
+    "root_authorized": false
+  },
+  "source_refs": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_AWS_ONE_TIME_IAM_BOOTSTRAP_114.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_AWS_BOUNDED_PROVISIONING_OPERATOR_113.json",
+    "projects/lab/pending/PEND-LAB-032.json",
+    "projects/lab/evidence/EVD-LAB-PL003-AWS-BOUNDED-PROVISIONING-OPERATOR-113.json",
+    "projects/lab/evidence/EVD-LAB-PL003-AWS-ROOT-SECURITY-VISIBILITY-113.json"
+  ],
+  "execution_sequence": [
+    "VERIFY_REMOTE_HEAD_CANONICAL_STATE_AND_CLEAN_WORKTREE",
+    "VERIFY_PL003_BOOTSTRAP_PROFILE_AND_MFA_WITHOUT_DISCLOSURE",
+    "DESIGN_MINIMUM_SETUP_BOUNDARY_POLICY_AND_MFA_ONLY_TRUST",
+    "FAIL_CLOSED_IF_ROOT_ADMINISTRATOR_ACCESS_OR_UNBOUNDED_WILDCARDS_ARE_REQUIRED",
+    "CREATE_BOUNDARY_AND_PL003PreflightIAMSetupOperator_WITH_BOUNDARY_FROM_CREATION",
+    "ATTACH_ONLY_MINIMUM_TEMPORARY_SETUP_POLICY",
+    "CONFIGURE_PL003_IAM_SETUP_OPERATOR_LOCAL_ASSUME_ROLE_PROFILE",
+    "VERIFY_STS_ASSUMED_ROLE_PL003PreflightIAMSetupOperator",
+    "VERIFY_SESSION_MAXIMUM_60_MINUTES_MFA_AND_NO_NEW_PERSISTENT_CREDENTIALS",
+    "RESUME_AUTHORIZATION_113_USING_ONLY_SETUP_ROLE",
+    "CREATE_AND_VERIFY_PL003PreflightProvisioningOperator_UNDER_113",
+    "VERIFY_ROOT_SECURITY_VISIBILITY_AND_EFFECTIVE_DENIES_UNDER_113",
+    "REMOVE_SETUP_ROLE_TEMPORARY_POLICIES_BOUNDARY_IF_UNUSED_AND_LOCAL_PROFILE",
+    "VERIFY_ZERO_TEMPORARY_SETUP_ARTIFACTS_AND_NO_ACTIVE_REUSABLE_SETUP_AUTHORITY",
+    "PUBLISH_REDACTED_EVIDENCE_UPDATE_PENDING_CONTINUITY_AUTHORIZATIONS_AND_REGISTRIES",
+    "VERIFY_REMOTE_PUBLICATION"
+  ],
+  "required_security_controls": [
+    "MFA_REQUIRED",
+    "ASSUME_ROLE_TEMPORARY_CREDENTIALS_ONLY",
+    "MAX_SESSION_60_MINUTES",
+    "NO_ROOT",
+    "NO_ADMINISTRATOR_ACCESS",
+    "NO_NEW_IAM_USERS",
+    "NO_NEW_ACCESS_KEYS",
+    "NO_MODIFICATION_OF_PL003PreflightPlanOperator",
+    "NO_PASSROLE_OUTSIDE_EXPLICIT_PL003_ROLES",
+    "NO_BOUNDARY_REMOVAL_OUTSIDE_TEMPORARY_AUTHORIZED_RESOURCES",
+    "NO_TERRAFORM",
+    "NO_AUTHORIZATION_112_PREFLIGHT_RESOURCES"
+  ],
+  "required_outputs": [
+    "projects/lab/evidence/EVD-LAB-PL003-AWS-ONE-TIME-IAM-BOOTSTRAP-114.json",
+    "projects/lab/evidence/EVD-LAB-PL003-AWS-IAM-SETUP-TEARDOWN-114.json",
+    "projects/lab/evidence/EVD-LAB-PL003-AWS-BOUNDED-PROVISIONING-OPERATOR-113.json",
+    "projects/lab/evidence/EVD-LAB-PL003-AWS-ROOT-SECURITY-VISIBILITY-113.json",
+    "projects/lab/pending/PEND-LAB-032.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.md"
+  ],
+  "acceptance_checks": [
+    "BOOTSTRAP_SESSION_MFA_BACKED",
+    "SETUP_ROLE_CREATED_WITH_EFFECTIVE_BOUNDARY",
+    "SETUP_TRUST_LIMITED_TO_APPROVED_BOOTSTRAP_PRINCIPAL_AND_MFA",
+    "SETUP_STS_IDENTITY_VERIFIED",
+    "NO_GENERAL_ADMINISTRATION",
+    "NO_NEW_PERSISTENT_CREDENTIALS",
+    "AUTHORIZATION_113_COMPLETED_OR_EXACTLY_BLOCKED",
+    "SETUP_ROLE_AND_TEMPORARY_ARTIFACTS_REMOVED_AFTER_113",
+    "PL003PreflightPlanOperator_UNCHANGED",
+    "NO_TERRAFORM_OR_PREFLIGHT_RESOURCE_PROVISIONING",
+    "SENSITIVE_DATA_REDACTION_PASS",
+    "REMOTE_PUBLICATION_VERIFIED"
+  ],
+  "stop_conditions": [
+    "HEAD_OR_CANONICAL_CONTRADICTION",
+    "BOOTSTRAP_PROFILE_NOT_MFA_BACKED",
+    "ROOT_REQUIRED",
+    "ADMINISTRATOR_ACCESS_REQUIRED",
+    "UNBOUNDED_PERMISSION_REQUIRED",
+    "BOUNDARY_CANNOT_BE_EFFECTIVE",
+    "UNAUTHORIZED_TRUST_PRINCIPAL_REQUIRED",
+    "PERSISTENT_CREDENTIAL_REQUIRED",
+    "SETUP_ARTIFACT_REMOVAL_CANNOT_BE_GUARANTEED",
+    "PRIVILEGE_ESCALATION_PATH_DETECTED",
+    "TERRAFORM_OR_AUTHORIZATION_112_RESOURCE_REQUIRED"
+  ],
+  "response_contract": {
+    "format": "JSON_AND_CONCISE_HUMAN_SUMMARY",
+    "required_sections": [
+      "RESULT",
+      "HEAD_AND_REPOSITORY",
+      "BOOTSTRAP_SESSION_STATUS",
+      "SETUP_ROLE_STATUS",
+      "BOUNDARY_AND_TRUST_STATUS",
+      "AUTHORIZATION_113_STATUS",
+      "ROOT_SECURITY_VISIBILITY",
+      "SETUP_TEARDOWN_STATUS",
+      "EVIDENCE_PATHS",
+      "PEND_LAB_032_STATUS",
+      "AUTHORIZATION_114_STATUS",
+      "AUTHORIZATION_112_STATUS",
+      "DIVERGENCES",
+      "SINGLE_NEXT_ACTION"
+    ],
+    "certainty_policy": "DO_NOT_CLAIM_PASS_FOR_ANY_CHECK_NOT_EXECUTED"
+  }
+}
