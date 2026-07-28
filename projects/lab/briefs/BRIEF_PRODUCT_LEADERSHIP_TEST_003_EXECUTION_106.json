@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "brief_id": "BRIEF_PRODUCT_LEADERSHIP_TEST_003_EXECUTION_106",
+  "project_id": "lab",
+  "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST_003_EXECUTION_106",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "23d970b96134b06d3aac42d86ebe907229e2b99e",
+  "subject": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003",
+  "mode": "SYNTHETIC_EXECUTION_WITH_FAIL_CLOSED_OPERATIONAL_PREFLIGHT",
+  "execution_contract": "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/EXECUTION_CONTRACT.json",
+  "preflight_requirements": [
+    "independent_package_generator",
+    "independent_baseline_generator",
+    "independent_normalization_operator",
+    "independent_randomization_custodian",
+    "three_independent_evaluators",
+    "independent_auditor",
+    "session_tool_and_access_logs",
+    "oracle_and_mapping_custody_log",
+    "external_immutable_pre_unblind_checkpoint",
+    "canonical_hash_pipeline"
+  ],
+  "stop_condition": "STOP_BEFORE_ANY_FIXTURE_CONTENT_IF_ROLE_INDEPENDENCE_OR_EVIDENCE_CUSTODY_CANNOT_BE_VERIFIED",
+  "publication_boundary": "NO_EXECUTION_ARTIFACTS_UNLESS_PREFLIGHT_PASS",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE"
+}
