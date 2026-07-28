@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "manifest_id": "PL003-PREFLIGHT-107-PRE-UNBLIND-CHECKPOINT",
+  "test_id": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003",
+  "captured_at_utc": "2026-07-28T01:21:45.420Z",
+  "status": "NOT_CREATED_FAIL_CLOSED_BEFORE_EXPERIMENTAL_ARTIFACT_GENERATION",
+  "external_immutable_checkpoint": null,
+  "external_timestamp": null,
+  "pre_unblind_manifest_body_preserved": false,
+  "required_checkpoint_artifacts": [
+    {
+      "artifact": "RUN_MATRIX",
+      "created": false
+    },
+    {
+      "artifact": "CASE_ID_MANIFEST",
+      "created": false
+    },
+    {
+      "artifact": "ROLE_ASSIGNMENT",
+      "created": false
+    },
+    {
+      "artifact": "NORMALIZATION_SPEC",
+      "created": false
+    },
+    {
+      "artifact": "RANDOMIZATION_MAP_ENCRYPTED_OR_SEALED",
+      "created": false
+    },
+    {
+      "artifact": "RUBRIC_AND_ANCHORS",
+      "created": false
+    },
+    {
+      "artifact": "SCORING_AND_GATES",
+      "created": false
+    },
+    {
+      "artifact": "HASH_MANIFEST",
+      "created": false
+    }
+  ],
+  "reason": "Checkpoint publication cannot precede a PASS because operational role separation, role logging, and exclusive mapping custody are not verifiable. No experimental checkpoint artifacts were generated.",
+  "verification_result": "FAIL",
+  "stop_condition": "EXTERNAL_IMMUTABLE_CHECKPOINT_NOT_PROVABLE"
+}

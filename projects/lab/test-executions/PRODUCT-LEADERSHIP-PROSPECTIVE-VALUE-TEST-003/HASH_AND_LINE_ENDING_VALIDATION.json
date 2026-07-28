@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0.0",
+  "validation_id": "PL003-PREFLIGHT-107-HASH-LINE-ENDINGS",
+  "test_id": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003",
+  "captured_at_utc": "2026-07-28T01:21:45.420Z",
+  "status": "PASS_FOR_FAIL_CLOSED_STOP_PACKAGE_ONLY",
+  "algorithm": "SHA-256",
+  "canonical_bytes": "UTF-8_WITH_LF_LINE_ENDINGS_NO_BOM",
+  "scope": "FAIL_CLOSED_PREFLIGHT_STOP_PACKAGE_ONLY",
+  "files": [
+    {
+      "file": "ROLE_ASSIGNMENT_MANIFEST.json",
+      "sha256": "f0af7631bb1aed4aab6a04116c32b5c345fe63fd98bfcbadf31748b2526b81a4",
+      "bytes": 1607,
+      "utf8": true,
+      "lf_only": true,
+      "bom": false,
+      "json_parse": "PASS"
+    },
+    {
+      "file": "ACCESS_MATRIX.json",
+      "sha256": "bbf7b98a7b41cfaed3ad8a1ee16abcff4dad16b6a4df14f4518b4c194c0c36a5",
+      "bytes": 1889,
+      "utf8": true,
+      "lf_only": true,
+      "bom": false,
+      "json_parse": "PASS"
+    },
+    {
+      "file": "SESSION_AND_TOOL_LOG_MANIFEST.json",
+      "sha256": "4e7cd16968ed500a78519a034013f262c9f6422fd452bc1509ddd2a7f6589e29",
+      "bytes": 1773,
+      "utf8": true,
+      "lf_only": true,
+      "bom": false,
+      "json_parse": "PASS"
+    },
+    {
+      "file": "ORACLE_MAPPING_CUSTODY_LOG.json",
+      "sha256": "c62e92eb68035779aab69120b35db65875d78e94c237663331f9ac71f17dc6f7",
+      "bytes": 773,
+      "utf8": true,
+      "lf_only": true,
+      "bom": false,
+      "json_parse": "PASS"
+    },
+    {
+      "file": "PRE_UNBLIND_CHECKPOINT_MANIFEST.json",
+      "sha256": "2e3f528f36f4ff0edd4dbafb79f6061f9f3348abb32fc3f842705e7b578ab608",
+      "bytes": 1366,
+      "utf8": true,
+      "lf_only": true,
+      "bom": false,
+      "json_parse": "PASS"
+    },
+    {
+      "file": "PREFLIGHT_RESULT.json",
+      "sha256": "16af4f29c241b77f48400b0b2c92282e717317279fdbe5632d807a63b4cd0df9",
+      "bytes": 2186,
+      "utf8": true,
+      "lf_only": true,
+      "bom": false,
+      "json_parse": "PASS"
+    },
+    {
+      "file": "PREFLIGHT_STOP_107.json",
+      "sha256": "25192b8e081092f3f187676bdfad801577845ac6a3df9c63f2047a5b2a8e7330",
+      "bytes": 1961,
+      "utf8": true,
+      "lf_only": true,
+      "bom": false,
+      "json_parse": "PASS"
+    }
+  ],
+  "self_hash_policy": "THIS_MANIFEST_DOES_NOT_SELF_HASH_TO_AVOID_RECURSIVE_CONTENT",
+  "self_file_validation": {
+    "utf8": true,
+    "lf_only": true,
+    "bom": false,
+    "json_parse": "PASS"
+  },
+  "mixed_line_endings_detected": false,
+  "bom_detected": false,
+  "json_parse_validation": "PASS",
+  "verification_result": "PASS_FOR_FAIL_CLOSED_STOP_PACKAGE_ONLY"
+}

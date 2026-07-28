@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "matrix_id": "PL003-PREFLIGHT-107-ACCESS-MATRIX",
+  "test_id": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003",
+  "captured_at_utc": "2026-07-28T01:21:45.420Z",
+  "status": "FAIL_CLOSED_ACCESS_BOUNDARIES_NOT_ENFORCEABLE",
+  "required_boundaries": [
+    {
+      "role": "PACKAGE_GENERATOR",
+      "required": "ISOLATED_WORKSPACE_AND_SESSION",
+      "observed": "NOT_PROVISIONED"
+    },
+    {
+      "role": "BASELINE_GENERATOR",
+      "required": "ISOLATED_WORKSPACE_AND_SESSION",
+      "observed": "NOT_PROVISIONED"
+    },
+    {
+      "role": "INDEPENDENT_NORMALIZATION_OPERATOR",
+      "required": "NO_ORACLE_OR_MAPPING_ACCESS",
+      "observed": "NO_ROLE_SCOPED_DENY_CONTROL_AVAILABLE"
+    },
+    {
+      "role": "RANDOMIZATION_CUSTODIAN",
+      "required": "SOLE_MAPPING_CUSTODY_BEFORE_UNBLIND",
+      "observed": "NO_EXCLUSIVE_STORAGE_PRINCIPAL_AVAILABLE"
+    },
+    {
+      "role": "EVALUATOR_1",
+      "required": "BLINDED_TO_ARMS",
+      "observed": "NO_ROLE_SCOPED_DENY_CONTROL_AVAILABLE"
+    },
+    {
+      "role": "EVALUATOR_2",
+      "required": "BLINDED_TO_ARMS",
+      "observed": "NO_ROLE_SCOPED_DENY_CONTROL_AVAILABLE"
+    },
+    {
+      "role": "EVALUATOR_3",
+      "required": "BLINDED_TO_ARMS",
+      "observed": "NO_ROLE_SCOPED_DENY_CONTROL_AVAILABLE"
+    },
+    {
+      "role": "AUDITOR",
+      "required": "INDEPENDENT_READ_ONLY_REVIEW",
+      "observed": "NO_INDEPENDENT_READ_ONLY_PRINCIPAL_AVAILABLE"
+    }
+  ],
+  "shared_environment": {
+    "operating_system_principal": "CodexSandboxOffline",
+    "machine": "DESKTOP-P7H5725",
+    "workspace": "C:/Users/JF Martin/Documents/Proyectos/chatgpt-prototype-lab",
+    "filesystem_visibility": "SHARED",
+    "tool_permissions": "SHARED",
+    "write_capability": "SHARED_WITHIN_WORKSPACE"
+  },
+  "verification_result": "FAIL",
+  "stop_condition": "ROLE_OR_ACCESS_BOUNDARY_NOT_VERIFIABLE"
+}

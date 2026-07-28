@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "result_id": "PL003-PREFLIGHT-107-RESULT",
+  "test_id": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003",
+  "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST_003_CODEX_MULTROLE_EXECUTION_107",
+  "captured_at_utc": "2026-07-28T01:21:45.420Z",
+  "verified_remote_head": "15d4480e28a0045cc381d68792749802536ad4fa",
+  "expected_parent_head": "c45738b8159db8e20f96d5446ed0420d5dac06d3",
+  "intervening_commits_verified_as_authorization_brief_and_prompt_only": true,
+  "mode": "MULTROLE_SYNTHETIC_EXECUTION_FAIL_CLOSED",
+  "status": "STOP",
+  "classification": "INSUFFICIENT_OPERATIONAL_PREFLIGHT_CAPABILITY",
+  "checks": {
+    "live_head_and_clean_tree": "PASS",
+    "package_generator_isolation": "FAIL",
+    "baseline_generator_isolation": "FAIL",
+    "normalization_operator_no_oracle_or_mapping_access": "FAIL_NOT_ENFORCEABLE",
+    "randomization_custodian_sole_mapping_custody": "FAIL_NOT_ENFORCEABLE",
+    "three_blinded_evaluators": "FAIL_NOT_PROVISIONED",
+    "independent_read_only_auditor": "FAIL_NOT_PROVISIONED",
+    "role_session_tool_and_access_logs": "FAIL_NOT_AVAILABLE",
+    "external_immutable_pre_unblind_checkpoint": "FAIL_NOT_PROVABLE",
+    "canonical_hash_and_line_ending_pipeline": "PASS_FOR_FAIL_CLOSED_STOP_PACKAGE_ONLY"
+  },
+  "triggered_stop_conditions": [
+    "ROLE_OR_ACCESS_BOUNDARY_NOT_VERIFIABLE",
+    "SHARED_UNLOGGED_SESSION_BETWEEN_INCOMPATIBLE_ROLES",
+    "ORACLE_OR_MAPPING_CUSTODY_NOT_SEGREGATED",
+    "EXTERNAL_IMMUTABLE_CHECKPOINT_NOT_PROVABLE"
+  ],
+  "validation_divergences": [
+    {
+      "validator": "scripts/validate_repository.py",
+      "result": "ERROR",
+      "error": "TypeError: unsupported operand type(s) for /: 'WindowsPath' and 'list'",
+      "provenance": "PREEXISTING_AT_VERIFIED_REMOTE_HEAD",
+      "scope_effect": "NOT_CORRECTED_OUTSIDE_AUTHORIZATION_107"
+    }
+  ],
+  "execution_authorized_after_preflight": false,
+  "generated": {
+    "fixture_content": 0,
+    "outputs": 0,
+    "scores": 0,
+    "oracles": 0,
+    "randomization_mappings": 0
+  },
+  "product_leadership_active": false,
+  "product_leadership_integrated": false,
+  "runtime_effect": "NONE",
+  "product_effect": "NONE"
+}

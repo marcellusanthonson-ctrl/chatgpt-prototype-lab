@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "log_id": "PL003-PREFLIGHT-107-ORACLE-MAPPING-CUSTODY",
+  "test_id": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003",
+  "captured_at_utc": "2026-07-28T01:21:45.420Z",
+  "status": "FAIL_CLOSED_CUSTODIAN_NOT_PROVISIONED",
+  "custodian": null,
+  "exclusive_custody_control_available": false,
+  "sealed_storage_created": false,
+  "encryption_key_created": false,
+  "oracle_created": false,
+  "randomization_mapping_created": false,
+  "mapping_access_events": [],
+  "unblinding_events": [],
+  "reason": "No role-scoped storage principal or enforceable exclusive access boundary exists for a randomization custodian in the available environment.",
+  "verification_result": "FAIL",
+  "stop_condition": "ORACLE_OR_MAPPING_CUSTODY_NOT_SEGREGATED"
+}

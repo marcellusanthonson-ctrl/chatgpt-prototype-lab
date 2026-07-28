@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "PRODUCT-LEADERSHIP-TEST-003-PREFLIGHT-STOP-107",
+  "project_id": "lab",
+  "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST_003_CODEX_MULTROLE_EXECUTION_107",
+  "subject": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003",
+  "captured_at_utc": "2026-07-28T01:21:45.420Z",
+  "status": "BLOCKED_FAIL_CLOSED_BEFORE_FIXTURE_GENERATION",
+  "verified_remote_head_before_stop_package": "15d4480e28a0045cc381d68792749802536ad4fa",
+  "expected_parent_head": "c45738b8159db8e20f96d5446ed0420d5dac06d3",
+  "preflight_artifacts": [
+    "ROLE_ASSIGNMENT_MANIFEST.json",
+    "ACCESS_MATRIX.json",
+    "SESSION_AND_TOOL_LOG_MANIFEST.json",
+    "ORACLE_MAPPING_CUSTODY_LOG.json",
+    "PRE_UNBLIND_CHECKPOINT_MANIFEST.json",
+    "HASH_AND_LINE_ENDING_VALIDATION.json",
+    "PREFLIGHT_RESULT.json"
+  ],
+  "reason": "The available Codex sessions share one operating-system principal, filesystem, workspace, and tool permission set. Role-specific access denials, sole randomization mapping custody, independently immutable per-role logs, and an independent read-only auditor cannot be operationally proven.",
+  "classification": "INSUFFICIENT_OPERATIONAL_PREFLIGHT_CAPABILITY",
+  "validation_divergence": {
+    "validator": "scripts/validate_repository.py",
+    "result": "ERROR_ON_PREEXISTING_REGISTRY_INDEX_LIST_VALUE",
+    "introduced_by_stop_package": false,
+    "corrected": false
+  },
+  "generated": {
+    "fixture_content": 0,
+    "outputs": 0,
+    "scores": 0,
+    "oracles": 0,
+    "randomization_mappings": 0
+  },
+  "execution_result": "NOT_RUN",
+  "replications_executed": 0,
+  "case_ids_materialized": 0,
+  "product_leadership_active": false,
+  "product_leadership_integrated": false,
+  "activation_effect": "NONE",
+  "integration_effect": "NONE",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "authorization_consumption": "PENDING_VERIFIED_REMOTE_PUBLICATION_OF_THIS_DOCUMENTED_FAIL_CLOSED_STOP"
+}
