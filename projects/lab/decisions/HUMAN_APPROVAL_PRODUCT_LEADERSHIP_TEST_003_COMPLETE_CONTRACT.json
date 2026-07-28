@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "decision_id": "HUMAN_APPROVAL_PRODUCT_LEADERSHIP_TEST_003_COMPLETE_CONTRACT",
+  "project_id": "lab",
+  "decision_type": "HUMAN_CONTRACT_APPROVAL",
+  "status": "APPROVED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-27",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_head": "7dbb3e109f2b3364a52f28d4e3ba6e0bd247c30c",
+  "subject": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003",
+  "scope": "Approval of the complete documentary and technical Test 003 contract only",
+  "approved_components": [
+    "STATISTICAL_DESIGN",
+    "BLINDING_PROTOCOL",
+    "ARM_GUESS_TEST",
+    "REVISED_RUBRIC",
+    "TAXONOMY_AND_THRESHOLDS",
+    "CLOSED_SCOPE_DENOMINATOR",
+    "MANDATORY_OPERATIONAL_EVIDENCE",
+    "SEPARATED_ROLES",
+    "PASS_FAIL_INSUFFICIENT_EVIDENCE_CRITERIA"
+  ],
+  "not_authorized": [
+    "EXECUTE_TEST_003",
+    "GENERATE_FIXTURES_OUTPUTS_SCORES_OR_ORACLES",
+    "ACTIVATE_PRODUCT_LEADERSHIP",
+    "INTEGRATE_PRODUCT_LEADERSHIP",
+    "MODIFY_SYMPHONIE_OR_PRODUCTS",
+    "USE_REAL_PRODUCT_DATA",
+    "RUNTIME",
+    "RAG",
+    "EMBEDDINGS",
+    "DEPLOYMENT",
+    "RELEASE"
+  ],
+  "resulting_status": "CONTRACT_APPROVED_REQUIRES_SEPARATE_EXECUTION_AUTHORIZATION",
+  "execution_authorized": false,
+  "product_leadership_active": false,
+  "product_leadership_integrated": false,
+  "authority_effect": "NONE"
+}
