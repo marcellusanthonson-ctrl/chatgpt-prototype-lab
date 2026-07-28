@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "matrix_id": "PRODUCT-LEADERSHIP-TEST-003-ROLE-PROVIDER-ASSIGNMENT-MATRIX-001",
+  "project_id": "lab",
+  "subject": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003",
+  "status": "INITIAL_ASSIGNMENT_REQUIRES_PROVIDER_AND_BOUNDARY_VERIFICATION",
+  "strategy": "HYBRID_CONSTRAINT_FIRST_CODEX_MULTI_AGENT_WITH_EXTERNAL_BOUNDARIES",
+  "source_decision": "projects/lab/decisions/DEC-LAB-024.json",
+  "assignments": [
+    {
+      "role": "PACKAGE_GENERATOR",
+      "provider": "CODEX_CLOUD_TASK",
+      "required_identity": "DISTINCT_TASK_ENVIRONMENT_AND_ROLE_SCOPED_CREDENTIAL",
+      "required_storage": "EXTERNAL_PACKAGE_PREFIX_WRITE_ONLY_PLUS_FIXTURE_INPUT_READ",
+      "forbidden_access": ["baseline_outputs","mapping","oracle","scores","evaluator_outputs"],
+      "execution_mode": "PARALLEL_WITH_BASELINE_GENERATOR",
+      "eligibility": "CONDITIONAL"
+    },
+    {
+      "role": "BASELINE_GENERATOR",
+      "provider": "CODEX_CLOUD_TASK",
+      "required_identity": "DISTINCT_TASK_ENVIRONMENT_AND_ROLE_SCOPED_CREDENTIAL",
+      "required_storage": "EXTERNAL_BASELINE_PREFIX_WRITE_ONLY_PLUS_FIXTURE_INPUT_READ",
+      "forbidden_access": ["package_outputs","mapping","oracle","scores","evaluator_outputs"],
+      "execution_mode": "PARALLEL_WITH_PACKAGE_GENERATOR",
+      "eligibility": "CONDITIONAL"
+    },
+    {
+      "role": "NORMALIZATION_OPERATOR",
+      "provider": "CODEX_CLOUD_TASK",
+      "required_identity": "DISTINCT_TASK_ENVIRONMENT_AND_ROLE_SCOPED_CREDENTIAL",
+      "required_storage": "READ_FROZEN_ARM_OUTPUTS_WRITE_NORMALIZED_ONLY",
+      "forbidden_access": ["arm_identity","mapping","oracle","scores","generator_credentials"],
+      "execution_mode": "SEQUENTIAL_AFTER_RAW_OUTPUT_FREEZE",
+      "eligibility": "CONDITIONAL"
+    },
+    {
+      "role": "RANDOMIZATION_CUSTODIAN",
+      "provider": "EXTERNAL_HUMAN_OR_SERVICE_IDENTITY",
+      "required_identity": "DISTINCT_NON_CODEX_PRINCIPAL_WITH_EXCLUSIVE_SECRET_STORE",
+      "required_storage": "CUSTODIAN_ONLY_ENCRYPTED_MAPPING_STORE",
+      "forbidden_access": ["content_rewrite","evaluation","scores_before_release"],
+      "execution_mode": "SEQUENTIAL_AFTER_NORMALIZATION_FREEZE",
+      "eligibility": "UNASSIGNED_PROVIDER_REQUIRED"
+    },
+    {
+      "role": "EVALUATOR_1",
+      "provider": "CODEX_CLOUD_TASK",
+      "required_identity": "DISTINCT_TASK_ENVIRONMENT_AND_ROLE_SCOPED_CREDENTIAL",
+      "required_storage": "READ_BLINDED_OUTPUTS_WRITE_EVALUATION_1_ONLY",
+      "forbidden_access": ["mapping","oracle","evaluation_2","evaluation_3"],
+      "execution_mode": "PARALLEL_WITH_EVALUATOR_2_AND_3",
+      "eligibility": "CONDITIONAL"
+    },
+    {
+      "role": "EVALUATOR_2",
+      "provider": "CODEX_CLOUD_TASK",
+      "required_identity": "DISTINCT_TASK_ENVIRONMENT_AND_ROLE_SCOPED_CREDENTIAL",
+      "required_storage": "READ_BLINDED_OUTPUTS_WRITE_EVALUATION_2_ONLY",
+      "forbidden_access": ["mapping","oracle","evaluation_1","evaluation_3"],
+      "execution_mode": "PARALLEL_WITH_EVALUATOR_1_AND_3",
+      "eligibility": "CONDITIONAL"
+    },
+    {
+      "role": "EVALUATOR_3",
+      "provider": "CODEX_CLOUD_TASK",
+      "required_identity": "DISTINCT_TASK_ENVIRONMENT_AND_ROLE_SCOPED_CREDENTIAL",
+      "required_storage": "READ_BLINDED_OUTPUTS_WRITE_EVALUATION_3_ONLY",
+      "forbidden_access": ["mapping","oracle","evaluation_1","evaluation_2"],
+      "execution_mode": "PARALLEL_WITH_EVALUATOR_1_AND_2",
+      "eligibility": "CONDITIONAL"
+    },
+    {
+      "role": "INDEPENDENT_AUDITOR",
+      "provider": "CLAUDE",
+      "required_identity": "DISTINCT_EXTERNAL_ACCOUNT_OR_ENVIRONMENT",
+      "required_storage": "READ_ONLY_LOG_HASH_CHECKPOINT_AND_FINAL_PACKAGE_ACCESS",
+      "forbidden_access": ["modify_test_artifacts","unreleased_mapping","generator_execution","evaluation","scoring"],
+      "execution_mode": "CHECKPOINT_REVIEW_AND_FINAL_AUDIT",
+      "eligibility": "FORMALLY_ASSIGNED_REQUIRES_ACCESS_BOUNDARY_VERIFICATION"
+    }
+  ],
+  "hard_gates": [
+    "DISTINCT_PRINCIPAL_OR_ENFORCEABLE_ROLE_CREDENTIAL_PER_ROLE",
+    "DISTINCT_ENVIRONMENT_OR_VERIFIABLE_ACCESS_BOUNDARY_PER_ROLE",
+    "ROLE_ACCESS_DENY_TESTS_PASS",
+    "NO_SHARED_WRITEABLE_STORAGE_ACROSS_INCOMPATIBLE_ROLES",
+    "CUSTODIAN_ONLY_MAPPING_SECRET_ACCESS_PROVEN",
+    "CLAUDE_AUDITOR_READ_ONLY_ACCESS_PROVEN",
+    "APPEND_ONLY_LOG_AND_CHECKPOINT_STORE_PROVEN",
+    "CANONICAL_SHA256_UTF8_LF_NO_BOM_PIPELINE_PASS"
+  ],
+  "unresolved_assignments": [
+    "SELECT_EXTERNAL_STORAGE_AND_SECRET_PROVIDER",
+    "ASSIGN_RANDOMIZATION_CUSTODIAN_IDENTITY",
+    "PROVE_CODEX_ROLE_SCOPED_CREDENTIAL_AND_DENY_BOUNDARIES",
+    "PROVE_CLAUDE_READ_ONLY_EXTERNAL_BOUNDARY"
+  ],
+  "preflight_status": "NOT_RUN",
+  "test_003_execution_authorized": false,
+  "fixtures_or_outputs_generated": false,
+  "product_leadership_active": false,
+  "product_leadership_integrated": false,
+  "authority_effect": "NONE"
+}
