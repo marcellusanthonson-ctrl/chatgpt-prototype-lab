@@ -1,0 +1,94 @@
+{
+    "schema_version":  "1.0.0",
+    "evidence_id":  "EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A-ATTEMPT-002",
+    "attempt_id":  "ATTEMPT-002",
+    "predecessor_evidence":  "projects/lab/evidence/EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A-ATTEMPT-001.json",
+    "evidence_path":  "projects/lab/evidence/EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A-ATTEMPT-002.json",
+    "project_id":  "lab",
+    "kind":  "REDACTED_AWS_REPLACEMENT_SESSION_AND_IAM_BOOTSTRAP_EXECUTION_EVIDENCE",
+    "status":  "BLOCKED_BEFORE_REPLACEMENT_SESSION",
+    "authorization_id":  "AUTHORIZATION_LAB_PL003_AWS_ONE_TIME_IAM_BOOTSTRAP_114A",
+    "parent_authorization_id":  "AUTHORIZATION_LAB_PL003_AWS_ONE_TIME_IAM_BOOTSTRAP_114",
+    "related_authorization_id":  "AUTHORIZATION_LAB_PL003_AWS_BOUNDED_PROVISIONING_OPERATOR_113",
+    "executed_at":  "2026-07-28T20:02:12Z",
+    "repository":  "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "branch":  "main",
+    "execution_head":  "1bc73a14f4e48c9a0a4a63782df15685d2a31a18",
+    "replacement_session":  {
+                                "get_session_token_calls":  0,
+                                "mfa_backed":  false,
+                                "maximum_session_seconds":  3600,
+                                "storage":  "PROCESS_MEMORY_ONLY",
+                                "temporary_credentials_printed":  false,
+                                "temporary_credentials_persisted":  false,
+                                "cleared_at_end":  true
+                            },
+    "bootstrap_identity":  {
+                               "expected":  "IAM_USER_SESSION_pl003-bootstrap-operator",
+                               "sts_verified":  false,
+                               "full_account_id_recorded":  false
+                           },
+    "pre_mutation_gate":  {
+                              "bootstrap_simulation_completed":  false,
+                              "all_required_setup_and_teardown_actions_allowed":  false,
+                              "aws_mutations_before_gate":  0
+                          },
+    "setup_operator":  {
+                           "role_created":  false,
+                           "boundary_created":  false,
+                           "execution_policy_created":  false,
+                           "policy_attached":  false,
+                           "assumed_role_sts_verified":  false,
+                           "mfa_trust_verified":  false,
+                           "boundary_verified":  false,
+                           "maximum_session_seconds":  3600
+                       },
+    "authorization_113":  {
+                              "status":  "BLOCKED_FAIL_CLOSED",
+                              "provisioning_role_created":  false,
+                              "boundary_created":  false,
+                              "execution_policy_created":  false,
+                              "assumed_role_sts_verified":  false,
+                              "effective_scope_tests":  "NOT_EXECUTED",
+                              "plan_operator_unchanged":  "NOT_VERIFIED"
+                          },
+    "root_security_visibility":  {
+                                     "get_account_summary":  "NOT_EXECUTED",
+                                     "root_mfa_enabled":  "NOT_VERIFIED",
+                                     "root_access_keys_absent":  "NOT_VERIFIED",
+                                     "root_identity_used":  false
+                                 },
+    "teardown":  {
+                     "target_partial_artifacts_removed_if_required":  false,
+                     "setup_role_removed":  false,
+                     "setup_boundary_removed":  false,
+                     "setup_execution_policy_removed":  false,
+                     "setup_profile_present":  false,
+                     "complete":  true
+                 },
+    "aws_calls":  {
+                      "sts_get_session_token":  0,
+                      "sts_other":  0,
+                      "iam_read_or_simulation":  0,
+                      "iam_mutation":  0,
+                      "terraform":  0,
+                      "preflight_112_resource_mutation":  0
+                  },
+    "forbidden_effects":  {
+                              "plan_operator_modified":  false,
+                              "iam_users_created":  0,
+                              "access_keys_created":  0,
+                              "administrator_access_used":  false,
+                              "terraform_executed":  false,
+                              "product_leadership_test_003_executed":  false,
+                              "product_leadership_active":  false,
+                              "product_leadership_integrated":  false
+                          },
+    "failure_code":  "WORKTREE_NOT_CLEAN",
+    "redaction":  {
+                      "full_account_id_included":  false,
+                      "full_principal_arns_included":  false,
+                      "credentials_tokens_or_mfa_codes_included":  false
+                  },
+    "result":  "BLOCKED"
+}

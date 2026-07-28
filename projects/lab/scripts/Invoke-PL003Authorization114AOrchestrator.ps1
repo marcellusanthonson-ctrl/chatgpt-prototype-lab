@@ -2,6 +2,8 @@
 param(
     [switch]$LocalClosureTest,
     [switch]$LocalAttemptPathTest,
+    [ValidateSet('ATTEMPTS_ONLY', 'FOREIGN_UNTRACKED', 'TRACKED_MODIFIED')]
+    [string]$LocalWorktreeGateTest,
     [string]$EvidenceDirectoryOverride
 )
 
@@ -9,6 +11,61 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
 $repositoryRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..\..')).Path
+$capturedWorktreeEntries = @(
+    git -C $repositoryRoot status --porcelain=v1 --untracked-files=all
+)
+if ($LASTEXITCODE -ne 0) {
+    throw 'WORKTREE_STATUS_CAPTURE_FAILED'
+}
+$capturedExecutionHead = git -C $repositoryRoot rev-parse HEAD
+if ($LASTEXITCODE -ne 0) {
+    throw 'EXECUTION_HEAD_CAPTURE_FAILED'
+}
+$capturedBranch = git -C $repositoryRoot branch --show-current
+if ($LASTEXITCODE -ne 0) {
+    throw 'BRANCH_CAPTURE_FAILED'
+}
+
+$isLocalWorktreeGateTest = -not [string]::IsNullOrWhiteSpace($LocalWorktreeGateTest)
+$preexistingWorktreeEntries = if ($isLocalWorktreeGateTest) {
+    switch ($LocalWorktreeGateTest) {
+        'ATTEMPTS_ONLY' {
+            @(
+                '?? projects/lab/evidence/EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A-ATTEMPT-001.json',
+                '?? projects/lab/evidence/EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A-ATTEMPT-002.json'
+            )
+        }
+        'FOREIGN_UNTRACKED' {
+            @('?? projects/lab/evidence/UNRELATED-LOCAL-FILE.json')
+        }
+        'TRACKED_MODIFIED' {
+            @(' M projects/lab/scripts/Invoke-UnrelatedOperation.ps1')
+        }
+    }
+} else {
+    @($capturedWorktreeEntries)
+}
+$attemptEvidenceEntryPattern = '^\?\? projects/lab/evidence/EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A-ATTEMPT-[0-9][0-9][0-9]\.json$'
+$ignoredPreMfaAttemptEntries = @(
+    $preexistingWorktreeEntries | Where-Object {
+        $_ -cmatch $attemptEvidenceEntryPattern
+    }
+)
+$blockingWorktreeEntries = @(
+    $preexistingWorktreeEntries | Where-Object {
+        $_ -cnotmatch $attemptEvidenceEntryPattern
+    }
+)
+$ignoredPreMfaAttemptEvidence = @(
+    $ignoredPreMfaAttemptEntries | ForEach-Object {
+        [ordered]@{
+            path = $_.Substring(3)
+            classification = 'FAILED_PRE_MFA_ATTEMPT'
+            operational_success = $false
+        }
+    }
+)
+
 $canonicalEvidenceDirectory = Join-Path $repositoryRoot 'projects\lab\evidence'
 $evidenceDirectory = if ([string]::IsNullOrWhiteSpace($EvidenceDirectoryOverride)) {
     $canonicalEvidenceDirectory
@@ -44,7 +101,7 @@ $predecessorEvidence = if ($null -eq $predecessorFileName) {
     "projects/lab/evidence/$predecessorFileName"
 }
 $evidenceRelativePath = "projects/lab/evidence/$attemptFileName"
-$isLocalTest = $LocalClosureTest -or $LocalAttemptPathTest
+$isLocalTest = $LocalClosureTest -or $LocalAttemptPathTest -or $isLocalWorktreeGateTest
 $sourceProfile = 'pl003-bootstrap'
 $mfaReferenceProfile = 'pl003-plan-operator'
 $expectedBootstrapPrincipal = 'pl003-bootstrap-operator'
@@ -98,7 +155,11 @@ $result = [ordered]@{
     executed_at = [DateTimeOffset]::UtcNow.ToString('yyyy-MM-ddTHH:mm:ssZ')
     repository = 'marcellusanthonson-ctrl/chatgpt-prototype-lab'
     branch = 'main'
-    execution_head = $null
+    execution_head = $capturedExecutionHead
+    preexisting_worktree_entries = @($preexistingWorktreeEntries)
+    ignored_pre_mfa_attempt_evidence = @($ignoredPreMfaAttemptEvidence)
+    current_attempt_path = $evidenceRelativePath
+    worktree_gate_result = 'PENDING'
     replacement_session = [ordered]@{
         get_session_token_calls = 0
         mfa_backed = $false
@@ -421,16 +482,19 @@ try {
     if (-not [string]::IsNullOrWhiteSpace($EvidenceDirectoryOverride)) {
         throw 'EVIDENCE_DIRECTORY_OVERRIDE_FORBIDDEN_OPERATIONALLY'
     }
-    if (-not (Get-Command aws -ErrorAction SilentlyContinue)) {
-        throw 'AWS_CLI_NOT_AVAILABLE'
-    }
-
-    $result.execution_head = (git -C $repositoryRoot rev-parse HEAD)
-    if ((git -C $repositoryRoot branch --show-current) -ne 'main') {
+    if ($capturedBranch -ne 'main') {
         throw 'BRANCH_MISMATCH'
     }
-    if (@(git -C $repositoryRoot status --porcelain).Count -ne 0) {
+    if ($blockingWorktreeEntries.Count -ne 0) {
+        $result.worktree_gate_result = 'BLOCKED'
         throw 'WORKTREE_NOT_CLEAN'
+    }
+    $result.worktree_gate_result = 'PASS'
+    if ($isLocalWorktreeGateTest) {
+        throw 'LOCAL_WORKTREE_GATE_TEST_PASS'
+    }
+    if (-not (Get-Command aws -ErrorAction SilentlyContinue)) {
+        throw 'AWS_CLI_NOT_AVAILABLE'
     }
 
     $profiles = @(aws configure list-profiles 2>$null)
@@ -1070,6 +1134,16 @@ try {
         $result.result = 'LOCAL_TEST_PASS'
         $result.failure_code = $null
     }
+    if ($isLocalWorktreeGateTest -and $message -eq 'LOCAL_WORKTREE_GATE_TEST_PASS') {
+        $result.status = 'LOCAL_WORKTREE_GATE_PASS'
+        $result.result = 'LOCAL_TEST_PASS'
+        $result.failure_code = $null
+    }
+    if ($isLocalWorktreeGateTest -and $message -eq 'WORKTREE_NOT_CLEAN') {
+        $result.status = 'LOCAL_WORKTREE_GATE_BLOCKED'
+        $result.result = 'BLOCKED'
+        $result.failure_code = 'WORKTREE_NOT_CLEAN'
+    }
     if ($message -match '^[A-Z0-9_:-]+$') {
         if (-not $isLocalTest) {
             $result.failure_code = $message.Replace(':','_').Replace('-','_')
@@ -1168,6 +1242,10 @@ $safeSummary = [ordered]@{
     attempt_id = $result.attempt_id
     predecessor_evidence = $result.predecessor_evidence
     evidence_path = $result.evidence_path
+    preexisting_worktree_entries = $result.preexisting_worktree_entries
+    ignored_pre_mfa_attempt_evidence = $result.ignored_pre_mfa_attempt_evidence
+    current_attempt_path = $result.current_attempt_path
+    worktree_gate_result = $result.worktree_gate_result
     secrets_printed = $false
 }
 $safeSummary | ConvertTo-Json -Depth 6
