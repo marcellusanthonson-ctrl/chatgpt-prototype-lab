@@ -1,20 +1,21 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "id": "PEND-LAB-029",
   "project_id": "lab",
-  "status": "AWAITING_HUMAN_DECISION",
-  "type": "PRODUCT_LEADERSHIP_TEST_003_HARDENED_CONTRACT_APPROVAL",
-  "subject": "Approve, modify or reject the hardened Product Leadership prospective Test 003 contract",
+  "status": "AWAITING_HUMAN_APPROVAL_OF_COMPLETE_CONTRACT",
+  "type": "PRODUCT_LEADERSHIP_TEST_003_COMPLETE_CONTRACT_APPROVAL",
+  "subject": "Approve or reject the complete non-executable Product Leadership prospective Test 003 contract",
   "priority": "HIGH",
   "source_test_design": "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/PROPOSAL.json",
-  "source_reconciliation": "REC-LAB-CLAUDE-AUDIT-TEST-003-003",
+  "execution_contract": "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/EXECUTION_CONTRACT.json",
+  "all_documentary_pre_execution_blocks_resolved": true,
   "authorization_required_for_execution": true,
   "current_authority": "NONE",
   "automatic_approval": false,
-  "next_action": "HUMAN_APPROVAL_MODIFICATION_OR_REJECTION_OF_HARDENED_TEST_003_CONTRACT",
+  "next_action": "HUMAN_APPROVAL_OR_REJECTION_OF_COMPLETE_TEST_003_CONTRACT",
   "prohibitions": [
     "EXECUTE_TEST_003_WITHOUT_SEPARATE_AUTHORIZATION",
-    "GENERATE_FIXTURES_OUTPUTS_SCORES_OR_ORACLES",
+    "GENERATE_FIXTURE_CONTENT_OUTPUTS_SCORES_OR_ORACLES",
     "ACTIVATE_OR_INTEGRATE_PRODUCT_LEADERSHIP"
   ]
 }
