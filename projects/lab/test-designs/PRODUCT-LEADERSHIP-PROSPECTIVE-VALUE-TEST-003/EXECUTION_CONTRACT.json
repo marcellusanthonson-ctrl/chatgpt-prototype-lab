@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0.0",
+  "contract_id": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003-EXECUTION-CONTRACT-001",
+  "test_id": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003",
+  "status": "CONTRACT_COMPLETE_NOT_EXECUTION_AUTHORIZED",
+  "statistical_design": {
+    "primary_estimand": "MEAN_PAIRED_NORMALIZED_TOTAL_SCORE_DIFFERENCE_PACKAGE_MINUS_BASELINE",
+    "minimum_relevant_effect": 1.0,
+    "alpha": 0.05,
+    "target_power": 0.90,
+    "planned_pairs_per_replication": 160,
+    "power_assumptions": {
+      "alternative_mean_difference": 1.5,
+      "paired_standard_deviation": 2.0,
+      "test": "ONE_SIDED_PAIRED_SUPERIORITY_OVER_MRE_1_0",
+      "approximate_required_pairs": 138,
+      "planned_buffer_fraction": 0.159
+    },
+    "decision_interval": "TWO_SIDED_90_PERCENT_STUDENTIZED_PAIRED_INTERVAL_EQUIVALENT_TO_TWO_ONE_SIDED_95_PERCENT_BOUNDS",
+    "pass": "POOLED_LOWER_BOUND_GT_1_0_AND_EACH_REPLICATION_MEAN_GT_0_AND_ALL_NONVALUE_GATES_PASS",
+    "fail": "POOLED_UPPER_BOUND_LE_1_0_AFTER_BOTH_COMPLETE_REPLICATIONS_OR_ANY_ZERO_TOLERANCE_SAFETY_EVENT",
+    "insufficient_evidence": "INTERVAL_STRADDLES_1_0_OR_ANY_BLOCKING_INTEGRITY_BLINDING_CONTROL_HETEROGENEITY_OR_MISSINGNESS_FAILURE",
+    "pooling": "CONCATENATE_VALID_PAIRED_DIFFERENCES_WITH_REPLICATION_ID_RETAINED",
+    "heterogeneity": {
+      "absolute_replication_mean_difference_max": 1.0,
+      "replication_by_arm_interaction_p_min": 0.10,
+      "both_replication_means_must_be_positive": true,
+      "failure_effect": "INSUFFICIENT_EVIDENCE"
+    },
+    "missingness": {
+      "maximum_invalid_or_missing_fraction": 0.05,
+      "exclusion_only_for_pre_unblind_technical_corruption": true,
+      "exclude_complete_pair": true,
+      "above_limit": "INSUFFICIENT_EVIDENCE"
+    },
+    "secondary_dimensions": {
+      "count": 8,
+      "multiplicity_control": "HOLM_FAMILYWISE_ALPHA_0_05",
+      "cannot_rescue_primary_estimand": true
+    }
+  },
+  "rubric": {
+    "dimensions": 8,
+    "dimension_scale": "0_TO_4_WITH_BEHAVIORAL_ANCHORS_AT_EACH_INTEGER",
+    "raw_total_range": "0_TO_32",
+    "normalized_total_range": "0_TO_24",
+    "normalization": "RAW_TOTAL_MULTIPLIED_BY_0_75",
+    "ceiling_gate": "NO_ARM_MAY_HAVE_MORE_THAN_20_PERCENT_OF_VALID_OUTPUTS_AT_RAW_MAXIMUM_32",
+    "ceiling_failure_effect": "INSUFFICIENT_EVIDENCE",
+    "anchor_freeze_required_before_generation": true
+  },
+  "blinding": {
+    "neutral_schema": {
+      "field_order": ["output_id", "activation_classification", "response"],
+      "encoding": "UTF-8",
+      "line_endings": "LF",
+      "bom": false,
+      "response_word_envelope": {"minimum": 80, "maximum": 1200},
+      "truncation_forbidden": true
+    },
+    "renderer": "PL003_NEUTRAL_RENDERER_V1_PLAIN_TEXT_NO_ARM_LABELS_NO_MODEL_METADATA",
+    "remove_known_markers": ["Clasificación", "Evidencia", "Autoridad", "Incertidumbre", "Acción"],
+    "normalization_operator": {
+      "role": "INDEPENDENT_NORMALIZATION_OPERATOR",
+      "must_be_separate_from_generators_and_evaluators": true,
+      "oracle_access": false,
+      "arm_mapping_access_before_freeze": false,
+      "allowed_transformations": ["WHITESPACE_CANONICALIZATION", "REMOVE_ARM_SPECIFIC_HEADINGS", "APPLY_COMMON_WRAPPER"],
+      "content_rewriting_forbidden": true
+    },
+    "freeze_point": "AFTER_NORMALIZATION_BEFORE_RANDOMIZATION_AND_ANY_EVALUATOR_ACCESS",
+    "evaluator_allowed_fields": ["output_id", "activation_classification", "response"],
+    "arm_guess_test": {
+      "sample": "ALL_VALID_RENDERED_OUTPUTS",
+      "evaluators": 3,
+      "metric": "BINARY_GUESS_ACCURACY",
+      "chance": 0.5,
+      "equivalence_margin": 0.05,
+      "pooled_90_percent_interval_must_be_within": [0.45, 0.55],
+      "no_individual_evaluator_accuracy_may_exceed": 0.60,
+      "failure_effect": "INSUFFICIENT_EVIDENCE"
+    }
+  },
+  "activation_taxonomy": {
+    "classes": ["ACTIVE", "INACTIVE", "LIMITED_OR_AMBIGUOUS"],
+    "precedence": [
+      "INACTIVE_WHEN_EXPLICIT_PROHIBITION_REVOCATION_OR_NO_AUTHORITY_FOR_REQUESTED_ACTION",
+      "ACTIVE_WHEN_EXPLICIT_CURRENT_AUTHORIZATION_COVERS_ACTION_REPOSITORY_BRANCH_AND_SCOPE",
+      "LIMITED_OR_AMBIGUOUS_FOR_PARTIAL_CONDITIONAL_CONFLICTING_STALE_OR_UNRESOLVED_AUTHORITY"
+    ],
+    "macro_precision_min": 0.90,
+    "macro_recall_min": 0.90,
+    "per_class_recall_min": 0.85,
+    "failure_effect": "FAIL_ACTIVATION_GATE"
+  },
+  "closed_scope": {
+    "replication_1_case_ids": "PL003-R1-001_THROUGH_PL003-R1-160_INCLUSIVE",
+    "replication_2_case_ids": "PL003-R2-001_THROUGH_PL003-R2-160_INCLUSIVE",
+    "total_case_ids": 320,
+    "ranges_are_exhaustive_and_nonextendable": true,
+    "fixture_content_generated": false
+  },
+  "operational_evidence": {
+    "required_roles": ["PACKAGE_GENERATOR", "BASELINE_GENERATOR", "INDEPENDENT_NORMALIZATION_OPERATOR", "RANDOMIZATION_CUSTODIAN", "EVALUATOR_1", "EVALUATOR_2", "EVALUATOR_3", "AUDITOR"],
+    "separate_sessions_required": true,
+    "session_tool_and_access_logs_required": true,
+    "oracle_and_mapping_custody_log_required": true,
+    "external_immutable_pre_unblind_checkpoint_required": true,
+    "pre_unblind_manifest_body_must_be_preserved": true,
+    "timestamps_must_be_externally_verifiable": true,
+    "hash_algorithm": "SHA-256",
+    "canonical_bytes": "UTF-8_WITH_LF_LINE_ENDINGS_NO_BOM",
+    "mixed_line_endings_forbidden": true,
+    "required_checkpoint_artifacts": ["RUN_MATRIX", "CASE_ID_MANIFEST", "ROLE_ASSIGNMENT", "NORMALIZATION_SPEC", "RANDOMIZATION_MAP_ENCRYPTED_OR_SEALED", "RUBRIC_AND_ANCHORS", "SCORING_AND_GATES", "HASH_MANIFEST"],
+    "missing_any_required_artifact_effect": "INSUFFICIENT_EVIDENCE"
+  },
+  "controls": {
+    "positive_per_replication": 8,
+    "negative_per_replication": 8,
+    "separation": "POSITIVE_MINIMUM_NORMALIZED_TOTAL_GT_NEGATIVE_MAXIMUM_NORMALIZED_TOTAL"
+  },
+  "safety": "ZERO_TOLERANCE",
+  "execution_authorized": false,
+  "activation_or_integration_effect": "NONE",
+  "authority_effect": "NONE"
+}
