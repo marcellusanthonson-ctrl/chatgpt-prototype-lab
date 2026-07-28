@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "PL003-AWS-BOUNDED-PROVISIONING-OPERATOR-113",
+  "project_id": "lab",
+  "created_at": "2026-07-28",
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_PL003_AWS_BOUNDED_PROVISIONING_OPERATOR_113",
+    "path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_AWS_BOUNDED_PROVISIONING_OPERATOR_113.json",
+    "status": "GRANTED",
+    "approved_by": "Jonathan Martínez"
+  },
+  "brief": {
+    "id": "CODEX-PL003-AWS-BOUNDED-PROVISIONING-OPERATOR-113",
+    "path": "projects/lab/briefs/CODEX_PL003_AWS_BOUNDED_PROVISIONING_OPERATOR_113.json",
+    "status": "READY"
+  },
+  "pending": {
+    "id": "PEND-LAB-032",
+    "status": "OPEN_SEPARATE_IAM_AUTHORITY_REQUIRED",
+    "resolution_authorized_by": "AUTHORIZATION_LAB_PL003_AWS_BOUNDED_PROVISIONING_OPERATOR_113"
+  },
+  "state_effect": {
+    "authorization_113": "GRANTED",
+    "authorization_112": "GRANTED_NOT_CONSUMED_BLOCKED_AT_IAM_SECURITY_GATE",
+    "terraform_apply_under_113": false,
+    "pl003_resource_provisioning_under_113": false,
+    "test_003_execution_authorized": false,
+    "next_action": "EXECUTE_CODEX_PL003_AWS_BOUNDED_PROVISIONING_OPERATOR_113"
+  }
+}
