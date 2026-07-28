@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "PL003-AWS-ONE-TIME-IAM-BOOTSTRAP-114A",
+  "project_id": "lab",
+  "effective_at": "2026-07-28",
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_PL003_AWS_ONE_TIME_IAM_BOOTSTRAP_114A",
+    "path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_AWS_ONE_TIME_IAM_BOOTSTRAP_114A.json",
+    "status": "GRANTED"
+  },
+  "brief": "projects/lab/briefs/CODEX_PL003_AWS_ONE_TIME_IAM_BOOTSTRAP_114A.json",
+  "state_effect": {
+    "authorization_114a": "GRANTED_NOT_CONSUMED",
+    "authorization_114": "GRANTED_NOT_CONSUMED_BLOCKED_PENDING_REPLACEMENT_SESSION",
+    "authorization_113": "GRANTED_NOT_CONSUMED_BLOCKED",
+    "authorization_112": "GRANTED_NOT_CONSUMED_BLOCKED_AT_IAM_SECURITY_GATE",
+    "product_leadership_test_003_executed": false,
+    "aws_mutations_under_114a": 0
+  },
+  "single_next_action": "EXECUTE_ONE_REPLACEMENT_MFA_SESSION_AND_CONTINUE_114_IN_THE_SAME_USER_CONTROLLED_POWERSHELL_PROCESS"
+}
