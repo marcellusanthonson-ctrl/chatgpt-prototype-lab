@@ -3,14 +3,14 @@
   "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST_003_BLOCK_RESOLUTION_105",
   "project_id": "lab",
   "title": "Resolve bounded pre-execution blocks in Product Leadership Test 003",
-  "status": "GRANTED_PENDING_BLOCK_RESOLUTION",
+  "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-07-27",
   "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "branch": "main",
   "expected_parent_head": "85f9aeafdce4a234bb9a9875dee71aacf7730d3e",
   "scope": "DOCUMENTARY_AND_TECHNICAL_PRE_EXECUTION_CONTRACT_COMPLETION_ONLY",
-  "allowed_actions": [
+  "completed_actions": [
     "DOCUMENT_POWER_ANALYSIS_AND_SAMPLE_SIZE_ASSUMPTIONS",
     "APPROVE_NUMERIC_REPLICATION_HETEROGENEITY_RULE",
     "FREEZE_NEUTRAL_SCHEMA_RENDERER_FIELD_ORDER_AND_LENGTH_ENVELOPE",
@@ -21,13 +21,14 @@
     "APPROVE_MACRO_PRECISION_AND_RECALL_THRESHOLDS",
     "ENUMERATE_CLOSED_SCOPE_CASE_IDS_WITHOUT_GENERATING_FIXTURE_CONTENT",
     "DEFINE_OPERATIONAL_LOGGING_CUSTODY_AND_IMMUTABLE_CHECKPOINT_IMPLEMENTATION",
-    "UPDATE_TEST_003_CONTRACT_SUPPORTING_SPECS_PENDING_AND_REGISTRY_DELTAS",
+    "UPDATE_TEST_003_CONTRACT_SUPPORTING_SPECS_PENDING_AND_RECONCILIATION",
     "COMMIT",
     "PUSH",
     "VERIFY_REMOTE"
   ],
-  "mandatory_results": {
+  "results": {
     "test_003_status": "CONTRACT_COMPLETE_AWAITING_HUMAN_APPROVAL_AND_SEPARATE_EXECUTION_AUTHORIZATION",
+    "execution_contract": "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/EXECUTION_CONTRACT.json",
     "all_documentary_pre_execution_blocks_resolved": true,
     "execution_authorized": false,
     "fixtures_or_outputs_generated": false,
@@ -51,7 +52,7 @@
     "RELEASE"
   ],
   "consumption_criterion": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_OF_COMPLETE_NON_EXECUTABLE_TEST_003_CONTRACT_AND_ALL_SUPPORTING_PRE_EXECUTION_SPECIFICATIONS",
-  "authority_effect": "BOUNDED_TEST_CONTRACT_COMPLETION_ONLY",
+  "authority_effect": "NONE_AFTER_CONSUMPTION",
   "runtime_effect": "NONE",
   "product_effect": "NONE"
 }
