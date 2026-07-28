@@ -2,9 +2,10 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_CONTINUITY_PL003_AWS_PROVISIONED_PREFLIGHT_HANDOFF_111E",
   "project_id": "lab",
-  "status": "GRANTED",
+  "status": "CONSUMED",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-07-28",
+  "consumed_at": "2026-07-28",
   "approval_source": "Explicit instruction: create a continuity protocol and continue in a new conversation.",
   "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "branch": "main",
@@ -27,6 +28,12 @@
     "CREDENTIAL_SECRET_TOKEN_OR_ACCOUNT_ID_PUBLICATION"
   ],
   "consumption_criterion": "CONSUMED_AFTER_THE_FOUR_FILE_CURRENT_CONTINUITY_PACKAGE_IS_PUBLISHED_AND_REMOTE_VERIFIED",
+  "consumption_evidence": [
+    "projects/lab/continuity/CURRENT_CONTINUITY.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.md",
+    "projects/lab/continuity/ATTACHMENT_MANIFEST.json",
+    "projects/lab/continuity/START_PROMPT.md"
+  ],
   "terraform_apply_authorized": false,
   "aws_resource_provisioning_authorized": false,
   "test_003_execution_authorized": false,
