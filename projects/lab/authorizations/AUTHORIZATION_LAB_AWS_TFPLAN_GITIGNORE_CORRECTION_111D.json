@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_AWS_TFPLAN_GITIGNORE_CORRECTION_111D",
+  "project_id": "lab",
+  "status": "GRANTED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-28",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "historical_parent_head": "cc6a63f7e1004aa3e8dfdbfc1870168ac3ee827b",
+  "execution_head_policy": "VERIFY_LIVE_AT_USE",
+  "subject": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003",
+  "scope": "MINIMAL_TFPLAN_GITIGNORE_CORRECTION_AND_REDACTED_DOCUMENTARY_CLOSURE_ONLY",
+  "allowed_actions": [
+    "ADD_EXACT_PATTERN_STAR_DOT_TFPLAN_TO_TERRAFORM_GITIGNORE",
+    "VERIFY_PATTERN_PRESENCE_AND_NO_OTHER_GITIGNORE_CHANGE",
+    "PUBLISH_REDACTED_EVIDENCE",
+    "MARK_THIS_AUTHORIZATION_CONSUMED"
+  ],
+  "forbidden_actions": [
+    "RUN_TERRAFORM_PLAN_APPLY_OR_DESTROY",
+    "CREATE_MODIFY_OR_DELETE_AWS_RESOURCES",
+    "MODIFY_TERRAFORM_CONFIGURATION",
+    "MODIFY_ANY_PRODUCT_OR_OTHER_PROJECT",
+    "STORE_PLAN_STATE_VARIABLES_CREDENTIALS_OR_SECRETS"
+  ],
+  "mandatory_gates": [
+    "REMOTE_MAIN_HEAD_READ_LIVE_AT_USE",
+    "TARGET_GITIGNORE_MATCHES_VERIFIED_BASELINE",
+    "ONLY_STAR_DOT_TFPLAN_IS_ADDED",
+    "REMOTE_PUBLICATION_VERIFIED"
+  ],
+  "consumption_criterion": "CONSUMED_AFTER_EXACT_GITIGNORE_CORRECTION_AND_REDACTED_EVIDENCE_ARE_PUBLISHED_AND_REMOTE_VERIFIED",
+  "terraform_execution_authorized": false,
+  "aws_resource_provisioning_authorized": false,
+  "runtime_authorized": false,
+  "integration_authorized": false,
+  "product_changes_authorized": false
+}
