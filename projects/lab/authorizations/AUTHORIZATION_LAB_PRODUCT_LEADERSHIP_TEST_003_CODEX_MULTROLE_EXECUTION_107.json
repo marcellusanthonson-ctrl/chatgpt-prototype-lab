@@ -3,7 +3,7 @@
   "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST_003_CODEX_MULTROLE_EXECUTION_107",
   "project_id": "lab",
   "title": "Authorize Codex multirole synthetic execution of Product Leadership Test 003",
-  "status": "GRANTED_PENDING_CODEX_OPERATIONAL_PREFLIGHT",
+  "status": "CONSUMED_ON_DOCUMENTED_FAIL_CLOSED_CODEX_PREFLIGHT_STOP",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-07-27",
   "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
@@ -14,28 +14,27 @@
   "scope": "CODEX_MULTROLE_SYNTHETIC_EXECUTION_ONLY_AFTER_VERIFIABLE_PREFLIGHT_PASS",
   "required_contract": "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/EXECUTION_CONTRACT.json",
   "required_previous_stop": "projects/lab/test-executions/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/PREFLIGHT_STOP_106.json",
-  "allowed_actions": [
-    "PROVISION_ISOLATED_CODEX_ROLE_WORKSPACES",
-    "ASSIGN_DISTINCT_ROLE_IDENTITIES_AND_ACCESS_BOUNDARIES",
+  "preflight_result": "BLOCKED_FAIL_CLOSED_BEFORE_FIXTURE_GENERATION",
+  "preflight_record": "projects/lab/test-executions/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/PREFLIGHT_STOP_107.json",
+  "preflight_package_commit": "26d46b39dc090abaf0c2bbf7bea0028a7ef689d2",
+  "completed_actions": [
+    "VERIFY_ISOLATED_CODEX_ROLE_WORKSPACE_CAPABILITY",
+    "VERIFY_DISTINCT_ROLE_IDENTITY_AND_ACCESS_BOUNDARY_CAPABILITY",
+    "DOCUMENT_ROLE_AND_ACCESS_BOUNDARY_FAILURE",
     "VERIFY_SESSION_TOOL_AND_ACCESS_LOGGING",
     "VERIFY_ORACLE_MAPPING_CUSTODY_AND_EXTERNAL_IMMUTABLE_CHECKPOINT",
     "RUN_PREFLIGHT_AND_PUBLISH_PREFLIGHT_EVIDENCE",
-    "GENERATE_SYNTHETIC_FIXTURES_OUTPUTS_SCORES_AND_ORACLES_ONLY_AFTER_PREFLIGHT_PASS",
-    "EXECUTE_TWO_PREDECLARED_REPLICATIONS",
-    "COMPUTE_ONLY_PREDECLARED_STATISTICS_AND_GATES",
-    "PUBLISH_COMPLETE_REPRODUCIBLE_EXECUTION_PACKAGE",
+    "PUBLISH_DOCUMENTED_FAIL_CLOSED_CODEX_PREFLIGHT_STOP",
     "COMMIT",
     "PUSH",
     "VERIFY_REMOTE"
   ],
-  "mandatory_role_separation": {
-    "package_generator": "ISOLATED_WORKSPACE_AND_SESSION",
-    "baseline_generator": "ISOLATED_WORKSPACE_AND_SESSION",
-    "normalization_operator": "NO_ORACLE_OR_MAPPING_ACCESS",
-    "randomization_custodian": "SOLE_MAPPING_CUSTODY_BEFORE_UNBLIND",
-    "evaluators": 3,
-    "auditor": "INDEPENDENT_READ_ONLY_REVIEW"
-  },
+  "not_executed_due_to_failed_preflight": [
+    "GENERATE_SYNTHETIC_FIXTURES_OUTPUTS_SCORES_AND_ORACLES",
+    "EXECUTE_TWO_PREDECLARED_REPLICATIONS",
+    "COMPUTE_ONLY_PREDECLARED_STATISTICS_AND_GATES",
+    "PUBLISH_COMPLETE_REPRODUCIBLE_EXECUTION_PACKAGE"
+  ],
   "fail_closed_rule": "IF_ANY_ROLE_ACCESS_LOG_CUSTODY_HASH_OR_CHECKPOINT_REQUIREMENT_IS_NOT_VERIFIABLY_SATISFIED_STOP_BEFORE_GENERATION",
   "forbidden_actions": [
     "SIMULATE_INDEPENDENCE_WITHIN_ONE_SHARED_UNLOGGED_SESSION",
@@ -50,8 +49,16 @@
     "DEPLOYMENT",
     "RELEASE"
   ],
+  "generated": {
+    "fixture_content": 0,
+    "outputs": 0,
+    "scores": 0,
+    "oracles": 0,
+    "randomization_mappings": 0
+  },
+  "replications_executed": 0,
   "consumption_criterion": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_OF_COMPLETE_REPRODUCIBLE_EXECUTION_PACKAGE_OR_DOCUMENTED_FAIL_CLOSED_CODEX_PREFLIGHT_STOP",
-  "authority_effect": "BOUNDED_CODEX_SYNTHETIC_TEST_EXECUTION_ONLY",
+  "authority_effect": "NONE_AFTER_CONSUMPTION",
   "product_leadership_active": false,
   "product_leadership_integrated": false,
   "runtime_effect": "NONE",
