@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "PL003-AWS-ONE-TIME-IAM-BOOTSTRAP-AUTHORIZATION-114",
+  "project_id": "lab",
+  "created_at": "2026-07-28",
+  "status": "ACTIVE_AUTHORIZATION_GRANTED",
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_PL003_AWS_ONE_TIME_IAM_BOOTSTRAP_114",
+    "path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_AWS_ONE_TIME_IAM_BOOTSTRAP_114.json",
+    "status": "GRANTED"
+  },
+  "brief": {
+    "id": "CODEX_PL003_AWS_ONE_TIME_IAM_BOOTSTRAP_114",
+    "path": "projects/lab/briefs/CODEX_PL003_AWS_ONE_TIME_IAM_BOOTSTRAP_114.json",
+    "status": "READY"
+  },
+  "state_effect": {
+    "active_execution_authority": "AUTHORIZATION_LAB_PL003_AWS_ONE_TIME_IAM_BOOTSTRAP_114",
+    "authorization_113": "GRANTED_NOT_CONSUMED_BLOCKED_PENDING_TEMPORARY_SETUP_ROLE",
+    "authorization_112": "GRANTED_NOT_CONSUMED_BLOCKED_AT_IAM_SECURITY_GATE",
+    "pending": "PEND-LAB-032",
+    "terraform_authorized_under_114": false,
+    "product_leadership_test_003_authorized": false
+  }
+}
