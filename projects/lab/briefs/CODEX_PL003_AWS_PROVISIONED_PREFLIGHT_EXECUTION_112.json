@@ -1,0 +1,277 @@
+{
+  "schema_version": "1.0.0",
+  "brief_id": "CODEX-PL003-AWS-PROVISIONED-PREFLIGHT-EXECUTION-112",
+  "project_id": "lab",
+  "status": "READY",
+  "created_at": "2026-07-28",
+  "objective": "Execute only the approved temporary AWS infrastructure preflight for Product Leadership Prospective Value Test 003, complete the 13 positive and 25 negative boundary checks preferably within 48 hours, capture redacted evidence, retain infrastructure only for a concrete authorized retest, and complete mandatory two-phase teardown no later than seven calendar days after successful apply while keeping unexpected cost overage below USD 5.",
+  "repositories": [
+    {
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "expected_parent_head": "04ad0e83d46459386d4dbb24f9a3bbc641e266f5",
+      "head_policy": "VERIFY_LIVE_AT_USE"
+    }
+  ],
+  "authority": {
+    "authorization_ref": "AUTHORIZATION_LAB_PL003_AWS_PROVISIONED_PREFLIGHT_AND_TEARDOWN_112",
+    "authorization_status": "GRANTED",
+    "approved_by": "Jonathan Martínez",
+    "executor": "Codex",
+    "coordinator": "ChatGPT",
+    "claude_role": "NONE_UNDER_THIS_BRIEF",
+    "terraform_apply_authorized": true,
+    "terraform_destroy_authorized": true,
+    "aws_resource_provisioning_authorized": true,
+    "infrastructure_boundary_tests_authorized": true,
+    "test_003_execution_authorized": false,
+    "product_leadership_activation_authorized": false,
+    "product_leadership_integration_authorized": false,
+    "runtime_authorized": false,
+    "product_changes_authorized": false
+  },
+  "source_refs": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_AWS_PROVISIONED_PREFLIGHT_AND_TEARDOWN_112.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/aws-preflight/STATIC_IAC_PACKAGE_MANIFEST.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/aws-preflight/ROLE_ACCESS_AND_DENY_TEST_MATRIX.json",
+    "projects/lab/evidence/EVD-LAB-AWS-TERRAFORM-PLAN-111C.json",
+    "projects/lab/evidence/EVD-LAB-AWS-TFPLAN-GITIGNORE-111D.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json"
+  ],
+  "scope": {
+    "working_directory": "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/aws-preflight/terraform",
+    "approved_package_only": true,
+    "expected_plan_create_count": 49,
+    "approved_resources": {
+      "s3_buckets": 3,
+      "kms_keys": 3,
+      "kms_aliases": 3,
+      "iam_roles": 9,
+      "permissions_boundary": 1,
+      "secrets_manager_empty_containers": 1,
+      "cloudtrails": 1
+    },
+    "positive_test_cases": 13,
+    "negative_test_cases": 25,
+    "data_policy": "MINIMAL_SYNTHETIC_DISPOSABLE_ONLY",
+    "target_test_completion_hours_from_apply": 48,
+    "maximum_infrastructure_retention_days_from_apply": 7,
+    "maximum_unexpected_cost_overage_usd": 5,
+    "warning_cost_overage_usd": 3,
+    "retention_allowed_only_for": [
+      "REPEAT_FAILED_OR_INCONCLUSIVE_AUTHORIZED_TEST",
+      "VERIFY_AMBIGUOUS_RESULT",
+      "RECOVER_MISSING_EVIDENCE",
+      "RERUN_EXISTING_AUTHORIZED_MATRIX_CONTROL"
+    ],
+    "forbidden_actions": [
+      "EXECUTE_PRODUCT_LEADERSHIP_TEST_003",
+      "GENERATE_TEST_003_FIXTURES_OUTPUTS_SCORES_ORACLES_OR_RANDOMIZATION_MAPPINGS",
+      "ACTIVATE_OR_INTEGRATE_PRODUCT_LEADERSHIP",
+      "USE_REAL_PERSONAL_CLINICAL_PRODUCT_OR_PRODUCTION_DATA",
+      "CREATE_REAL_SECRET_VALUES",
+      "ADD_AWS_SERVICES_OR_RESOURCES_OUTSIDE_THE_REVIEWED_PACKAGE",
+      "EXPAND_THE_13_POSITIVE_OR_25_NEGATIVE_TEST_MATRIX",
+      "USE_ROOT_FOR_ORDINARY_EXECUTION",
+      "CREATE_ROOT_ACCESS_KEYS",
+      "PUBLISH_CREDENTIALS_SECRETS_TOKENS_TF_VAR_VALUES_OR_FULL_AWS_ACCOUNT_ID",
+      "RETAIN_INFRASTRUCTURE_BEYOND_SEVEN_CALENDAR_DAYS",
+      "EXCEED_USD_5_UNEXPECTED_COST_OVERAGE",
+      "REUSE_AUTHORIZATION_AFTER_CONSUMPTION"
+    ]
+  },
+  "execution_sequence": [
+    {
+      "step": 1,
+      "name": "LIVE_HEAD_AND_WORKTREE_PREFLIGHT",
+      "actions": [
+        "Resolve remote main HEAD and require exact match with expected_parent_head before repository mutation.",
+        "Confirm repository and branch.",
+        "Confirm worktree is clean or changes are explicitly bounded.",
+        "Stop on any canonical contradiction."
+      ]
+    },
+    {
+      "step": 2,
+      "name": "AWS_IDENTITY_SECURITY_AND_REGION_PREFLIGHT",
+      "actions": [
+        "Verify the intended AWS account and region without publishing the full account ID.",
+        "Verify active identity through STS.",
+        "Use temporary assumed-role credentials only.",
+        "Verify root MFA protection and absence of root access keys.",
+        "Verify the bounded IAM plan operator and permissions boundary.",
+        "Clear credentials and stop if identity or permissions exceed the approved boundary."
+      ]
+    },
+    {
+      "step": 3,
+      "name": "COST_GUARD",
+      "actions": [
+        "Configure and verify an AWS Budget or equivalent low-cost guard before apply.",
+        "Set a preventive alert low enough to stop before USD 5 unexpected overage.",
+        "Treat USD 3 estimated overage as warning and immediate review threshold.",
+        "Treat USD 5 observed or conservatively estimated overage as hard stop and teardown trigger.",
+        "Capture redacted evidence without email address, full account ID, credentials or tokens."
+      ]
+    },
+    {
+      "step": 4,
+      "name": "TERRAFORM_FINAL_STATIC_AND_PLAN_GATE",
+      "actions": [
+        "Run terraform init using the approved local-backend package configuration.",
+        "Run terraform fmt -check.",
+        "Run terraform validate.",
+        "Generate a fresh saved plan with refresh disabled only if still required by the reviewed workflow.",
+        "Inspect the complete plan and require exactly the approved resource types and bounded scope.",
+        "Require no unexpected updates, deletes or replacements.",
+        "Delete any local plan artifact after its authorized use and ensure *.tfplan remains ignored."
+      ]
+    },
+    {
+      "step": 5,
+      "name": "TERRAFORM_APPLY",
+      "actions": [
+        "Apply only the newly reviewed saved plan.",
+        "Record T0 as the successful apply timestamp.",
+        "Record redacted resource identifiers and region.",
+        "Stop immediately on unplanned resources, permissions escalation, security deviation or unexpected cost signal."
+      ]
+    },
+    {
+      "step": 6,
+      "name": "INFRASTRUCTURE_BOUNDARY_TEST_EXECUTION",
+      "actions": [
+        "Execute all 13 positive cases and 25 negative cases from the canonical matrix only.",
+        "Group independent checks to minimize elapsed time.",
+        "Use minimal synthetic disposable objects only.",
+        "For every case record test ID, assumed identity, redacted target, expected result, observed result, timestamp, region and PASS, FAIL or BLOCKED.",
+        "Capture CloudTrail management and S3 data-event evidence required by the matrix.",
+        "Target full primary execution and evidence completion by T0 plus 48 hours."
+      ]
+    },
+    {
+      "step": 7,
+      "name": "POST_TEST_RETENTION_DECISION",
+      "actions": [
+        "Stop all new writes after the primary matrix completes.",
+        "If all expected results and evidence are complete, begin teardown immediately.",
+        "Retain infrastructure only when one concrete existing authorized test must be repeated or evidence recovered.",
+        "Document the exact reason, tests pending, resources retained, cost estimate and scheduled teardown time.",
+        "Review retained infrastructure daily and remove unnecessary access and processes.",
+        "Do not retain infrastructure for hypothetical convenience."
+      ]
+    },
+    {
+      "step": 8,
+      "name": "PHASE_ONE_TEARDOWN",
+      "actions": [
+        "Revoke or disable temporary access no longer required.",
+        "Stop all writes.",
+        "Destroy all immediately removable resources.",
+        "Initiate KMS deletion scheduling and Secrets Manager deletion or recovery-window handling as approved and applicable.",
+        "Record resources temporarily retained by Object Lock or mandatory AWS windows.",
+        "Verify no runtime or Product Leadership integration exists."
+      ]
+    },
+    {
+      "step": 9,
+      "name": "PHASE_TWO_TEARDOWN_AND_FINAL_VERIFICATION",
+      "actions": [
+        "After Object Lock expiry, delete object versions and delete markers.",
+        "Empty and delete the three buckets.",
+        "Remove remaining eligible resources.",
+        "Verify zero active resources or list exact mandatory scheduled deletions with dates.",
+        "Begin final teardown no later than T0 plus seven calendar days under all circumstances."
+      ]
+    },
+    {
+      "step": 10,
+      "name": "LAB_RECONCILIATION_AND_PUBLICATION",
+      "actions": [
+        "Publish redacted execution evidence, test results, cost guard evidence and teardown reports.",
+        "Update applicable pending, evidence, authorization, registry and continuity records.",
+        "Run repository validation and record any validator limitation separately.",
+        "Commit and push only bounded artifacts.",
+        "Verify remote publication.",
+        "Mark authorization 112 CONSUMED only when its consumption criterion is met."
+      ]
+    }
+  ],
+  "required_outputs": [
+    "projects/lab/evidence/EVD-LAB-PL003-AWS-COST-GUARD-112.json",
+    "projects/lab/evidence/EVD-LAB-PL003-AWS-APPLY-112.json",
+    "projects/lab/test-executions/PRODUCT-LEADERSHIP-TEST-003-AWS-PREFLIGHT-EXECUTION-001/MANIFEST.json",
+    "projects/lab/test-executions/PRODUCT-LEADERSHIP-TEST-003-AWS-PREFLIGHT-EXECUTION-001/RESULTS.json",
+    "projects/lab/test-executions/PRODUCT-LEADERSHIP-TEST-003-AWS-PREFLIGHT-EXECUTION-001/PHASE_ONE_TEARDOWN.json",
+    "projects/lab/test-executions/PRODUCT-LEADERSHIP-TEST-003-AWS-PREFLIGHT-EXECUTION-001/PHASE_TWO_TEARDOWN.json",
+    "projects/lab/test-executions/PRODUCT-LEADERSHIP-TEST-003-AWS-PREFLIGHT-EXECUTION-001/FINAL_RESOURCE_VERIFICATION.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.md"
+  ],
+  "acceptance_checks": [
+    "REMOTE_HEAD_MATCHED_AT_EXECUTION_START",
+    "TEMPORARY_ASSUMED_ROLE_CREDENTIALS_ONLY",
+    "ROOT_MFA_VERIFIED_AND_ROOT_ACCESS_KEYS_ABSENT",
+    "LOW_COST_GUARD_VERIFIED_BEFORE_APPLY",
+    "TERRAFORM_FMT_PASS",
+    "TERRAFORM_VALIDATE_PASS",
+    "FRESH_PLAN_REVIEWED_AND_BOUNDED",
+    "NO_UNEXPECTED_UPDATE_DELETE_OR_REPLACEMENT",
+    "APPLY_LIMITED_TO_APPROVED_PACKAGE",
+    "13_POSITIVE_CASES_RECORDED",
+    "25_NEGATIVE_CASES_RECORDED",
+    "NO_CREDENTIAL_SECRET_TOKEN_OR_FULL_ACCOUNT_ID_DISCLOSURE",
+    "NO_REAL_DATA_USED",
+    "PRODUCT_LEADERSHIP_TEST_003_NOT_EXECUTED",
+    "PRODUCT_LEADERSHIP_NOT_ACTIVE_OR_INTEGRATED",
+    "PRIMARY_TESTS_TARGETED_WITHIN_48_HOURS",
+    "UNEXPECTED_COST_OVERAGE_BELOW_USD_5",
+    "PHASE_ONE_TEARDOWN_COMPLETED_OR_EXACTLY_BLOCKED",
+    "FINAL_TEARDOWN_INITIATED_WITHIN_SEVEN_CALENDAR_DAYS",
+    "ZERO_ACTIVE_RESOURCES_OR_EXACT_MANDATORY_SCHEDULED_DELETIONS",
+    "REPOSITORY_VALIDATION_PASS_OR_DOCUMENTED_BLOCK",
+    "REMOTE_PUBLICATION_VERIFIED"
+  ],
+  "stop_conditions": [
+    "REMOTE_HEAD_MISMATCH",
+    "CANONICAL_CONTRADICTION",
+    "WORKTREE_SCOPE_AMBIGUOUS",
+    "AWS_ACCOUNT_OR_REGION_MISMATCH",
+    "AWS_IDENTITY_NOT_THE_BOUNDED_OPERATOR",
+    "ROOT_REQUIRED_FOR_ORDINARY_EXECUTION",
+    "PERSISTENT_CREDENTIAL_OR_SECRET_EXPOSURE",
+    "COST_GUARD_NOT_VERIFIABLE",
+    "UNEXPECTED_PLAN_RESOURCE_UPDATE_DELETE_OR_REPLACEMENT",
+    "IAM_PERMISSION_EXPANSION_REQUIRED",
+    "OBJECT_LOCK_OR_POLICY_PREVENTS_GUARANTEED_BOUNDED_TEARDOWN",
+    "REAL_DATA_REQUIRED",
+    "TEST_MATRIX_EXPANSION_REQUIRED",
+    "PRODUCT_LEADERSHIP_TEST_003_IMPACT_DETECTED",
+    "RUNTIME_OR_INTEGRATION_DETECTED",
+    "UNEXPECTED_COST_SIGNAL",
+    "ESTIMATED_OR_OBSERVED_UNEXPECTED_OVERAGE_REACHES_USD_5",
+    "NO_CONCRETE_RETEST_JUSTIFIES_RETENTION",
+    "ALL_EXPECTED_RESULTS_AND_EVIDENCE_COMPLETE",
+    "T0_PLUS_SEVEN_DAYS_REACHED",
+    "TEARDOWN_CANNOT_BE_INITIATED_WITHIN_AUTHORIZED_LIMITS"
+  ],
+  "consumption_criterion": "Authorization 112 is consumed after provisioned preflight evidence, all attempted matrix results, phase-one teardown, bounded residual-resource record, repository publication and remote verification are complete. Phase-two cleanup may remain as a mandatory scheduled follow-up only where Object Lock or AWS deletion windows prevent immediate final deletion.",
+  "response_contract": {
+    "format": "JSON_AND_CONCISE_HUMAN_SUMMARY",
+    "required_sections": [
+      "RESULT",
+      "HEAD_AND_REPOSITORY",
+      "COST_STATUS",
+      "TERRAFORM_STATUS",
+      "TEST_MATRIX_STATUS",
+      "EVIDENCE_PATHS",
+      "TEARDOWN_STATUS",
+      "RESIDUAL_RESOURCES_OR_SCHEDULED_DELETIONS",
+      "DIVERGENCES",
+      "AUTHORIZATION_STATUS",
+      "SINGLE_NEXT_ACTION"
+    ],
+    "certainty_policy": "DO_NOT_CLAIM_PASS_FOR_ANY_CHECK_NOT_EXECUTED",
+    "single_next_action_required": true
+  }
+}
