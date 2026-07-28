@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-07-27",
+  "updated_at": "2026-07-28",
   "counts": {
     "projects": 7,
     "decisions": 22,
@@ -9,7 +9,7 @@
     "ideas": 5,
     "integrations": 6,
     "experiments": 8,
-    "authorizations": 63,
+    "authorizations": 64,
     "evidence": 35,
     "unincorporated": 0,
     "proposals": 3,
@@ -44,7 +44,8 @@
       "registry/deltas/software-solution-engineering-091.json",
       "registry/deltas/livhavn-surgical-visual-patch-093.json",
       "registry/deltas/symphonie-phases-0-3-brief-architecture-094.json",
-      "registry/deltas/product-leadership-test-003-documentary-sync-104.json"
+      "registry/deltas/product-leadership-test-003-documentary-sync-104.json",
+      "registry/deltas/pl003-aws-provisioned-preflight-authorization-112.json"
     ],
     "evidence": "registry/evidence.json",
     "evidence_deltas": [
@@ -57,7 +58,8 @@
       "registry/deltas/current-state-visual-089.json",
       "registry/deltas/livhavn-surgical-visual-patch-093.json",
       "registry/deltas/symphonie-phases-0-3-brief-architecture-094.json",
-      "registry/deltas/product-leadership-test-003-documentary-sync-104.json"
+      "registry/deltas/product-leadership-test-003-documentary-sync-104.json",
+      "registry/deltas/pl003-aws-provisioned-preflight-authorization-112.json"
     ],
     "pattern_deltas": ["registry/deltas/livhavn-surgical-visual-patch-093.json"],
     "error_deltas": ["registry/deltas/livhavn-surgical-visual-patch-093.json"],
@@ -102,12 +104,12 @@
     "decision_path": "decisions/DEC-LAB-022.json",
     "error": "ERR-LAB-007",
     "pattern": "PAT-LAB-009",
-    "authorization": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST_003_DOCUMENTARY_STATE_SYNCHRONIZATION_104",
-    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST_003_DOCUMENTARY_STATE_SYNCHRONIZATION_104.json",
+    "authorization": "AUTHORIZATION_LAB_PL003_AWS_PROVISIONED_PREFLIGHT_AND_TEARDOWN_112",
+    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_AWS_PROVISIONED_PREFLIGHT_AND_TEARDOWN_112.json",
     "evidence": "CLAUDE_ADVERSARIAL_AUDIT_PRODUCT_LEADERSHIP_PROSPECTIVE_TEST_003_20260727",
     "evidence_path": "projects/lab/evidence/product-leadership/claude-adversarial-audit-test-003/CLAUDE_AUDIT_REPORT.md",
-    "current_state_delta": "PRODUCT-LEADERSHIP-TEST-003-DOCUMENTARY-SYNC-104",
-    "current_state_delta_path": "registry/deltas/product-leadership-test-003-documentary-sync-104.json",
+    "current_state_delta": "PL003-AWS-PROVISIONED-PREFLIGHT-AUTHORIZATION-112",
+    "current_state_delta_path": "registry/deltas/pl003-aws-provisioned-preflight-authorization-112.json",
     "experiment": "EXP-LAB-003",
     "proposal": "PROP-LAB-003",
     "session": "SES-2026-06-28-001",
