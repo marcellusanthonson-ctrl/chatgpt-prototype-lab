@@ -1,13 +1,50 @@
 [CmdletBinding()]
 param(
-    [switch]$LocalClosureTest
+    [switch]$LocalClosureTest,
+    [switch]$LocalAttemptPathTest,
+    [string]$EvidenceDirectoryOverride
 )
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
 $repositoryRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..\..')).Path
-$evidencePath = Join-Path $repositoryRoot 'projects\lab\evidence\EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A.json'
+$canonicalEvidenceDirectory = Join-Path $repositoryRoot 'projects\lab\evidence'
+$evidenceDirectory = if ([string]::IsNullOrWhiteSpace($EvidenceDirectoryOverride)) {
+    $canonicalEvidenceDirectory
+} else {
+    $EvidenceDirectoryOverride
+}
+$evidenceBaseName = 'EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A'
+$legacyEvidencePath = Join-Path $evidenceDirectory "$evidenceBaseName.json"
+$attemptNumber = 1
+do {
+    $attemptId = 'ATTEMPT-{0:D3}' -f $attemptNumber
+    $attemptFileName = "$evidenceBaseName-$attemptId.json"
+    $evidencePath = Join-Path $evidenceDirectory $attemptFileName
+    if (-not (Test-Path -LiteralPath $evidencePath)) {
+        break
+    }
+    $attemptNumber++
+    if ($attemptNumber -gt 999) {
+        throw 'ATTEMPT_PATH_SPACE_EXHAUSTED'
+    }
+} while ($true)
+
+$predecessorFileName = if ($attemptNumber -gt 1) {
+    "$evidenceBaseName-ATTEMPT-{0:D3}.json" -f ($attemptNumber - 1)
+} elseif (Test-Path -LiteralPath $legacyEvidencePath) {
+    "$evidenceBaseName.json"
+} else {
+    $null
+}
+$predecessorEvidence = if ($null -eq $predecessorFileName) {
+    $null
+} else {
+    "projects/lab/evidence/$predecessorFileName"
+}
+$evidenceRelativePath = "projects/lab/evidence/$attemptFileName"
+$isLocalTest = $LocalClosureTest -or $LocalAttemptPathTest
 $sourceProfile = 'pl003-bootstrap'
 $mfaReferenceProfile = 'pl003-plan-operator'
 $expectedBootstrapPrincipal = 'pl003-bootstrap-operator'
@@ -48,7 +85,10 @@ foreach ($name in $temporaryEnvironmentNames) {
 
 $result = [ordered]@{
     schema_version = '1.0.0'
-    evidence_id = 'EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A'
+    evidence_id = "$evidenceBaseName-$attemptId"
+    attempt_id = $attemptId
+    predecessor_evidence = $predecessorEvidence
+    evidence_path = $evidenceRelativePath
     project_id = 'lab'
     kind = 'REDACTED_AWS_REPLACEMENT_SESSION_AND_IAM_BOOTSTRAP_EXECUTION_EVIDENCE'
     status = 'IN_PROGRESS'
@@ -165,7 +205,7 @@ $targetAttached = $false
 $targetVerified = $false
 $planBaselineHash = $null
 $teardownFailures = [System.Collections.Generic.List[string]]::new()
-$writeEvidence = -not $LocalClosureTest -and -not (Test-Path -LiteralPath $evidencePath)
+$writeEvidence = -not $isLocalTest
 
 function ConvertTo-PolicyJson {
     param([Parameter(Mandatory)]$Document)
@@ -375,8 +415,11 @@ try {
     if ($LocalClosureTest) {
         throw 'LOCAL_CLOSURE_TEST'
     }
-    if (-not $writeEvidence) {
-        throw 'EVIDENCE_PATH_ALREADY_EXISTS'
+    if ($LocalAttemptPathTest) {
+        throw 'LOCAL_ATTEMPT_PATH_TEST'
+    }
+    if (-not [string]::IsNullOrWhiteSpace($EvidenceDirectoryOverride)) {
+        throw 'EVIDENCE_DIRECTORY_OVERRIDE_FORBIDDEN_OPERATIONALLY'
     }
     if (-not (Get-Command aws -ErrorAction SilentlyContinue)) {
         throw 'AWS_CLI_NOT_AVAILABLE'
@@ -1022,21 +1065,26 @@ try {
         $result.result = 'LOCAL_TEST_PASS'
         $result.failure_code = $null
     }
+    if ($LocalAttemptPathTest -and $message -eq 'LOCAL_ATTEMPT_PATH_TEST') {
+        $result.status = 'LOCAL_ATTEMPT_PATH_SELECTION_COMPLETED'
+        $result.result = 'LOCAL_TEST_PASS'
+        $result.failure_code = $null
+    }
     if ($message -match '^[A-Z0-9_:-]+$') {
-        if (-not $LocalClosureTest) {
+        if (-not $isLocalTest) {
             $result.failure_code = $message.Replace(':','_').Replace('-','_')
         }
     } else {
         $result.failure_code = 'UNEXPECTED_ORCHESTRATOR_FAILURE'
     }
-    if (-not $LocalClosureTest -and $result.replacement_session.get_session_token_calls -eq 0) {
+    if (-not $isLocalTest -and $result.replacement_session.get_session_token_calls -eq 0) {
         $result.status = 'BLOCKED_BEFORE_REPLACEMENT_SESSION'
-    } elseif (-not $LocalClosureTest -and -not $result.pre_mutation_gate.all_required_setup_and_teardown_actions_allowed) {
+    } elseif (-not $isLocalTest -and -not $result.pre_mutation_gate.all_required_setup_and_teardown_actions_allowed) {
         $result.status = 'BLOCKED_AFTER_MFA_BEFORE_AWS_MUTATION'
-    } elseif (-not $LocalClosureTest -and -not $targetVerified) {
+    } elseif (-not $isLocalTest -and -not $targetVerified) {
         $result.status = 'BLOCKED_FAIL_CLOSED_WITH_ROLLBACK_REQUIRED'
     }
-    if (-not $LocalClosureTest) {
+    if (-not $isLocalTest) {
         $result.authorization_113.status = 'BLOCKED_FAIL_CLOSED'
         $result.result = 'BLOCKED'
     }
@@ -1092,11 +1140,20 @@ try {
 
     if ($writeEvidence) {
         $evidenceJson = $result | ConvertTo-Json -Depth 20
-        [IO.File]::WriteAllText(
-            $evidencePath,
-            ($evidenceJson + [Environment]::NewLine),
-            [Text.UTF8Encoding]::new($false)
+        $evidenceBytes = [Text.UTF8Encoding]::new($false).GetBytes(
+            $evidenceJson + [Environment]::NewLine
         )
+        $evidenceStream = [IO.File]::Open(
+            $evidencePath,
+            [IO.FileMode]::CreateNew,
+            [IO.FileAccess]::Write,
+            [IO.FileShare]::None
+        )
+        try {
+            $evidenceStream.Write($evidenceBytes, 0, $evidenceBytes.Length)
+        } finally {
+            $evidenceStream.Dispose()
+        }
     }
 }
 
@@ -1108,11 +1165,13 @@ $safeSummary = [ordered]@{
     authorization_113 = $result.authorization_113.status
     root_security = $result.root_security_visibility
     failure_code = $result.failure_code
-    evidence_path = 'projects/lab/evidence/EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A.json'
+    attempt_id = $result.attempt_id
+    predecessor_evidence = $result.predecessor_evidence
+    evidence_path = $result.evidence_path
     secrets_printed = $false
 }
 $safeSummary | ConvertTo-Json -Depth 6
-if ($LocalClosureTest) {
+if ($isLocalTest) {
     return
 }
 if ($result.result -in @('PASS','LOCAL_TEST_PASS')) {
