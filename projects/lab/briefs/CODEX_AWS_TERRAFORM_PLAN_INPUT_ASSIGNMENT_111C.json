@@ -1,17 +1,19 @@
 {
   "schema_version": "1.0.0",
   "brief_id": "CODEX-AWS-TERRAFORM-PLAN-INPUT-ASSIGNMENT-111C",
+  "revision": 2,
   "status": "READY_FOR_CODEX_AND_HUMAN_SUPERVISION",
   "agent": "CODEX_DESKTOP_APP_OR_HUMAN_POWERSHELL",
   "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "branch": "main",
-  "expected_parent_head": "85e8df6a61eef106ca02b388a3d8c85812490d19",
+  "historical_parent_head": "85e8df6a61eef106ca02b388a3d8c85812490d19",
+  "execution_head_policy": "VERIFY_LIVE_AT_USE",
   "authorization_ref": "AUTHORIZATION_LAB_AWS_TERRAFORM_PLAN_INPUT_ASSIGNMENT_111C",
   "objective": "Set deterministic synthetic plan-only Terraform inputs in the current PowerShell process, run terraform plan with refresh disabled to a local gitignored file, and produce only a redacted resource-count summary without creating resources.",
   "working_directory": "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/aws-preflight/terraform",
   "preconditions": [
-    "LIVE_REMOTE_HEAD_EQUALS_EXPECTED_PARENT_HEAD",
-    "LOCAL_HEAD_EQUALS_REMOTE_MAIN",
+    "READ_LIVE_REMOTE_MAIN_HEAD_IMMEDIATELY_BEFORE_EXECUTION",
+    "LOCAL_HEAD_EQUALS_LIVE_REMOTE_MAIN_HEAD",
     "WORKTREE_CLEAN",
     "CURRENT_POWERSHELL_PROCESS_HAS_TEMPORARY_PL003PreflightPlanOperator_CREDENTIALS",
     "STS_CALLER_IDENTITY_CONFIRMS_EXPECTED_ASSUMED_ROLE",
@@ -27,7 +29,7 @@
     "external_ids": "DETERMINISTIC_PLAN_ONLY_STRINGS_WITH_PREFIX_PL003_PLAN_20260728"
   },
   "execution_sequence": [
-    "VERIFY_LIVE_HEAD_LOCAL_HEAD_AND_CLEAN_WORKTREE",
+    "VERIFY_LIVE_REMOTE_HEAD_LOCAL_HEAD_AND_CLEAN_WORKTREE",
     "VERIFY_ASSUMED_ROLE_IDENTITY_WITHOUT_PUBLISHING_FULL_ACCOUNT_ID",
     "READ_ACCOUNT_ID_TO_PROCESS_VARIABLE_ONLY",
     "BUILD_SIX_DISTINCT_CODEX_PRINCIPAL_ARNS",
