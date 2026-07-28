@@ -9,7 +9,7 @@
     "ideas": 5,
     "integrations": 6,
     "experiments": 8,
-    "authorizations": 66,
+    "authorizations": 67,
     "evidence": 42,
     "unincorporated": 0,
     "proposals": 3,
@@ -48,7 +48,8 @@
       "registry/deltas/pl003-aws-provisioned-preflight-authorization-112.json",
       "registry/deltas/pl003-aws-bounded-provisioning-operator-113.json",
       "registry/deltas/pl003-aws-bounded-provisioning-operator-113-blocked.json",
-      "registry/deltas/pl003-aws-one-time-iam-bootstrap-authorization-114.json"
+      "registry/deltas/pl003-aws-one-time-iam-bootstrap-authorization-114.json",
+      "registry/deltas/pl003-aws-one-time-iam-bootstrap-114a.json"
     ],
     "evidence": "registry/evidence.json",
     "evidence_deltas": [
@@ -70,7 +71,8 @@
       "registry/deltas/pl003-aws-provisioned-preflight-blocked-112-attempt-002.json",
       "registry/deltas/pl003-aws-bounded-provisioning-operator-113.json",
       "registry/deltas/pl003-aws-bounded-provisioning-operator-113-blocked.json",
-      "registry/deltas/pl003-aws-one-time-iam-bootstrap-authorization-114.json"
+      "registry/deltas/pl003-aws-one-time-iam-bootstrap-authorization-114.json",
+      "registry/deltas/pl003-aws-one-time-iam-bootstrap-114a.json"
     ],
     "pattern_deltas": ["registry/deltas/livhavn-surgical-visual-patch-093.json"],
     "error_deltas": ["registry/deltas/livhavn-surgical-visual-patch-093.json"],
@@ -116,12 +118,12 @@
     "decision_path": "decisions/DEC-LAB-022.json",
     "error": "ERR-LAB-007",
     "pattern": "PAT-LAB-009",
-    "authorization": "AUTHORIZATION_LAB_PL003_AWS_ONE_TIME_IAM_BOOTSTRAP_114",
-    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_AWS_ONE_TIME_IAM_BOOTSTRAP_114.json",
+    "authorization": "AUTHORIZATION_LAB_PL003_AWS_ONE_TIME_IAM_BOOTSTRAP_114A",
+    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_AWS_ONE_TIME_IAM_BOOTSTRAP_114A.json",
     "evidence": "EVD-LAB-PL003-AWS-BOUNDED-PROVISIONING-OPERATOR-113",
     "evidence_path": "projects/lab/evidence/EVD-LAB-PL003-AWS-BOUNDED-PROVISIONING-OPERATOR-113.json",
-    "current_state_delta": "PL003-AWS-ONE-TIME-IAM-BOOTSTRAP-AUTHORIZATION-114",
-    "current_state_delta_path": "registry/deltas/pl003-aws-one-time-iam-bootstrap-authorization-114.json",
+    "current_state_delta": "PL003-AWS-ONE-TIME-IAM-BOOTSTRAP-114A",
+    "current_state_delta_path": "registry/deltas/pl003-aws-one-time-iam-bootstrap-114a.json",
     "experiment": "EXP-LAB-003",
     "proposal": "PROP-LAB-003",
     "session": "SES-2026-06-28-001",
