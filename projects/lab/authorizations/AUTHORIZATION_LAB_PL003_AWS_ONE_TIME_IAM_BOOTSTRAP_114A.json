@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_AWS_ONE_TIME_IAM_BOOTSTRAP_114A",
+  "project_id": "lab",
+  "status": "GRANTED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-28",
+  "historical_parent_head": "65092691edb586600de57627bbbe6a75d1198c43",
+  "execution_head_policy": "VERIFY_LIVE_AT_USE",
+  "amends": "AUTHORIZATION_LAB_PL003_AWS_ONE_TIME_IAM_BOOTSTRAP_114",
+  "objective": "Authorize exactly one replacement MFA-backed bootstrap session because the prior validated session was intentionally discarded before operational use or AWS mutation.",
+  "replacement_session_limit": 1,
+  "previous_session_status": "DISCARDED_NO_ACTIVE_CREDENTIALS_RETAINED",
+  "previous_session_aws_mutations": 0,
+  "authorized_actions": [
+    "START_EXACTLY_ONE_REPLACEMENT_MFA_BACKED_GETSESSIONTOKEN_SESSION",
+    "KEEP_SESSION_EPHEMERAL_FOR_ACTIVE_114_AND_113_EXECUTION_ONLY",
+    "TRANSFER_TEMPORARY_CREDENTIALS_WITHOUT_PRINTING_PUBLISHING_OR_REPOSITORY_PERSISTENCE",
+    "RESUME_REMAINING_AUTHORIZATION_114_SCOPE",
+    "RESUME_AUTHORIZATION_113_ONLY_AFTER_SETUP_ROLE_VERIFICATION",
+    "REMOVE_ALL_TEMPORARY_LOCAL_AND_AWS_SETUP_ARTIFACTS"
+  ],
+  "unchanged_boundaries": {
+    "root_use_allowed": false,
+    "administrator_access_allowed": false,
+    "new_iam_users_allowed": false,
+    "new_access_keys_allowed": false,
+    "modify_plan_operator_allowed": false,
+    "terraform_allowed": false,
+    "preflight_112_resources_allowed": false,
+    "product_leadership_test_003_allowed": false,
+    "maximum_session_minutes": 60
+  },
+  "forbidden_actions": [
+    "START_MORE_THAN_ONE_REPLACEMENT_SESSION",
+    "REUSE_PRIOR_SESSION",
+    "RETAIN_CREDENTIALS_AFTER_EXECUTION",
+    "PERSIST_SECRETS_IN_PERMANENT_CONFIGURATION",
+    "EXPAND_AUTHORIZATIONS_112_113_OR_114",
+    "USE_SESSION_OUTSIDE_PL003_SCOPE",
+    "PUBLISH_FULL_ACCOUNT_ID_CREDENTIALS_TOKENS_OR_MFA_CODES"
+  ],
+  "stop_conditions": [
+    "EPHEMERAL_SECURE_SESSION_HANDLING_CANNOT_BE_GUARANTEED",
+    "THIRD_SESSION_REQUIRED",
+    "ROOT_OR_GENERAL_ADMINISTRATION_REQUIRED",
+    "CREDENTIAL_PERSISTENCE_DETECTED",
+    "AUTHORIZATION_114_BOUNDARIES_REQUIRE_MODIFICATION",
+    "COMPLETE_TEMPORARY_ARTIFACT_CLEANUP_CANNOT_BE_GUARANTEED"
+  ],
+  "consumption_effect": "114A is consumed when the single replacement session is started and used. Authorization 114 retains its original consumption criterion.",
+  "post_consumption_authority": "NONE_UNDER_114A"
+}
