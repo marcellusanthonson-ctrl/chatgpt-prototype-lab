@@ -9,7 +9,7 @@
     "ideas": 5,
     "integrations": 6,
     "experiments": 8,
-    "authorizations": 64,
+    "authorizations": 65,
     "evidence": 40,
     "unincorporated": 0,
     "proposals": 3,
@@ -45,7 +45,8 @@
       "registry/deltas/livhavn-surgical-visual-patch-093.json",
       "registry/deltas/symphonie-phases-0-3-brief-architecture-094.json",
       "registry/deltas/product-leadership-test-003-documentary-sync-104.json",
-      "registry/deltas/pl003-aws-provisioned-preflight-authorization-112.json"
+      "registry/deltas/pl003-aws-provisioned-preflight-authorization-112.json",
+      "registry/deltas/pl003-aws-bounded-provisioning-operator-113.json"
     ],
     "evidence": "registry/evidence.json",
     "evidence_deltas": [
@@ -63,7 +64,8 @@
       "registry/deltas/product-leadership-test-003-documentary-sync-104.json",
       "registry/deltas/pl003-aws-provisioned-preflight-authorization-112.json",
       "registry/deltas/pl003-aws-provisioned-preflight-blocked-112.json",
-      "registry/deltas/pl003-aws-provisioned-preflight-blocked-112-attempt-002.json"
+      "registry/deltas/pl003-aws-provisioned-preflight-blocked-112-attempt-002.json",
+      "registry/deltas/pl003-aws-bounded-provisioning-operator-113.json"
     ],
     "pattern_deltas": ["registry/deltas/livhavn-surgical-visual-patch-093.json"],
     "error_deltas": ["registry/deltas/livhavn-surgical-visual-patch-093.json"],
@@ -109,12 +111,12 @@
     "decision_path": "decisions/DEC-LAB-022.json",
     "error": "ERR-LAB-007",
     "pattern": "PAT-LAB-009",
-    "authorization": "AUTHORIZATION_LAB_PL003_AWS_PROVISIONED_PREFLIGHT_AND_TEARDOWN_112",
-    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_AWS_PROVISIONED_PREFLIGHT_AND_TEARDOWN_112.json",
+    "authorization": "AUTHORIZATION_LAB_PL003_AWS_BOUNDED_PROVISIONING_OPERATOR_113",
+    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_AWS_BOUNDED_PROVISIONING_OPERATOR_113.json",
     "evidence": "EVD-LAB-PL003-AWS-APPLY-112-ATTEMPT-002",
     "evidence_path": "projects/lab/evidence/EVD-LAB-PL003-AWS-APPLY-112-ATTEMPT-002.json",
-    "current_state_delta": "PL003-AWS-PROVISIONED-PREFLIGHT-BLOCKED-112-ATTEMPT-002",
-    "current_state_delta_path": "registry/deltas/pl003-aws-provisioned-preflight-blocked-112-attempt-002.json",
+    "current_state_delta": "PL003-AWS-BOUNDED-PROVISIONING-OPERATOR-113",
+    "current_state_delta_path": "registry/deltas/pl003-aws-bounded-provisioning-operator-113.json",
     "experiment": "EXP-LAB-003",
     "proposal": "PROP-LAB-003",
     "session": "SES-2026-06-28-001",
