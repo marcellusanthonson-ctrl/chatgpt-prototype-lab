@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "brief_id": "CODEX-PRODUCT-LEADERSHIP-TEST-003-AWS-PREFLIGHT-IAC-AUTHORING-110",
+  "task_id": "PRODUCT-LEADERSHIP-TEST-003-AWS-PREFLIGHT-IAC-AUTHORING",
+  "status": "READY_FOR_CODEX",
+  "agent": "CODEX",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "head_policy": "VERIFY_LIVE_AT_USE",
+  "authorization_ref": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST_003_AWS_PREFLIGHT_ARCHITECTURE_DESIGN_110",
+  "decision_refs": ["DEC-LAB-023", "DEC-LAB-024", "DEC-LAB-025"],
+  "objective": "Produce a complete static Infrastructure as Code package and validation plan implementing the approved AWS disposable security preflight design without accessing AWS or provisioning resources.",
+  "source_refs": [
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/AWS_PREFLIGHT_ARCHITECTURE_DESIGN.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/ROLE_PROVIDER_ASSIGNMENT_MATRIX.json",
+    "projects/lab/decisions/DEC-LAB-023.json",
+    "projects/lab/decisions/DEC-LAB-024.json",
+    "projects/lab/decisions/DEC-LAB-025.json"
+  ],
+  "allowed_paths": [
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/aws-preflight/**",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/*AWS*",
+    "projects/lab/evidence/product-leadership/aws-preflight-design/**",
+    "registry/deltas/**",
+    "projects/lab/continuity/**"
+  ],
+  "required_outputs": [
+    "Terraform or CloudFormation package with technical choice documented",
+    "IAM roles trust policies permission boundaries and explicit deny policies",
+    "S3 bucket prefix Object Lock versioning encryption and public access controls",
+    "Secrets Manager resource policy and KMS key policy",
+    "CloudTrail configuration and immutable log destination",
+    "ROLE_ACCESS_AND_DENY_TEST_MATRIX.json",
+    "STATIC_IAC_PACKAGE_MANIFEST.json",
+    "STATIC_VALIDATION_REPORT.json",
+    "FUTURE_PROVISIONED_PREFLIGHT_AUTHORIZATION_BRIEF.json"
+  ],
+  "acceptance_checks": [
+    "NO_AWS_API_CALLS",
+    "NO_REAL_CREDENTIALS_OR_SECRETS",
+    "NO_TERRAFORM_PLAN_APPLY_OR_DESTROY_AGAINST_AWS",
+    "NO_CLOUDFORMATION_DEPLOYMENT",
+    "SIX_CODEX_TASK_ROLES_ARE_DISTINCT",
+    "CUSTODIAN_ONLY_SECRET_AND_KMS_DECRYPT_ACCESS",
+    "CLAUDE_EXTERNAL_READ_ONLY_ACCESS",
+    "FUNCTIONAL_ROLES_CANNOT_MODIFY_IAM_KMS_S3_CONTROL_POLICIES_OBJECT_LOCK_OR_CLOUDTRAIL",
+    "ALL_MATERIAL_DENY_TESTS_HAVE_EXPECTED_RESULTS",
+    "OBJECT_LOCK_FIRST_PREFLIGHT_USES_DISPOSABLE_GOVERNANCE_MODE",
+    "PRODUCT_LEADERSHIP_REMAINS_INACTIVE_NOT_INTEGRATED",
+    "TEST_003_REMAINS_NOT_EXECUTED"
+  ],
+  "forbidden_actions": [
+    "AWS_ACCOUNT_ACCESS",
+    "AWS_CREDENTIAL_USE",
+    "RESOURCE_PROVISIONING",
+    "REMOTE_TERRAFORM_PLAN",
+    "TERRAFORM_APPLY_OR_DESTROY",
+    "CLOUDFORMATION_DEPLOY",
+    "TEST_003_EXECUTION_OR_CONTENT_GENERATION",
+    "RANDOMIZATION_MAPPING_CREATION",
+    "PRODUCT_LEADERSHIP_ACTIVATION_OR_INTEGRATION",
+    "SYMPHONIE_MAMMOTHSKILLS_OR_PRODUCT_MODIFICATION"
+  ],
+  "stop_conditions": [
+    "AWS_ACCESS_IS_REQUIRED",
+    "REAL_SECRET_OR_CREDENTIAL_IS_REQUIRED",
+    "MATERIAL_SOURCE_CONTRADICTION_OR_OMISSION",
+    "BOUNDARY_CANNOT_BE_EXPRESSED_AS_ENFORCEABLE_POLICY",
+    "SCOPE_EXPANDS_BEYOND_STATIC_DESIGN_AND_IAC"
+  ],
+  "response_contract": {
+    "report": ["RESULT","FILES_CREATED_OR_UPDATED","STATIC_VALIDATIONS","DIVERGENCES","AUTHORITY_STATE","SINGLE_NEXT_ACTION"],
+    "success_state": "STATIC_IAC_DESIGN_PACKAGE_PUBLISHED_AWS_NOT_PROVISIONED",
+    "failure_state": "BLOCKED_FAIL_CLOSED_WITH_EXACT_REASON"
+  }
+}
