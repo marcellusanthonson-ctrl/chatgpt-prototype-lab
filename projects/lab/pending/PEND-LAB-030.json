@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "id": "PEND-LAB-030",
+  "project_id": "lab",
+  "status": "OPEN",
+  "type": "VALIDATOR_REGISTRY_INDEX_LIST_VALUE_COMPATIBILITY",
+  "subject": "Update scripts/validate_repository.py to support list-valued delta fields in registry/index.json",
+  "priority": "MEDIUM",
+  "source_stop": "projects/lab/test-executions/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/PREFLIGHT_STOP_107.json",
+  "introduced_by_test_003": false,
+  "effect": "GLOBAL_VALIDATION_CANNOT_DECLARE_CLEAN_PASS_UNTIL_RESOLVED",
+  "scope_separation": "INDEPENDENT_FROM_DISTRIBUTED_TEST_003_ENVIRONMENT_PROTOCOL",
+  "authorization_required": true,
+  "current_authority": "NONE",
+  "next_action": "AUTHORIZE_BOUNDED_VALIDATOR_COMPATIBILITY_CORRECTION_AND_REGRESSION_TEST",
+  "product_leadership_active": false,
+  "product_leadership_integrated": false
+}
