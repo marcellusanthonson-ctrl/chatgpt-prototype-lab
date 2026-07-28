@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_AWS_BOOTSTRAP_ASSUME_ROLE_POLICY_111A",
+  "status": "GRANTED",
+  "approved_by": "Jonathan Martínez",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "96c684fa4d46256363647a3eeefca3cc9b81688c",
+  "scope": "ATTACH_SINGLE_ASSUME_ROLE_POLICY_ONLY",
+  "region": "sa-east-1",
+  "bootstrap_user": "pl003-bootstrap-operator",
+  "target_role": "PL003PreflightPlanOperator",
+  "allowed_actions": [
+    "Create one customer managed IAM policy whose only allowed action is sts:AssumeRole on PL003PreflightPlanOperator",
+    "Attach that policy only to pl003-bootstrap-operator",
+    "Verify the bootstrap user still has no AWS service permissions"
+  ],
+  "forbidden_actions": [
+    "CREATE_ACCESS_KEY",
+    "AWS_CLI_CONNECTION",
+    "TERRAFORM_PLAN",
+    "TERRAFORM_APPLY",
+    "AWS_RESOURCE_CREATE_UPDATE_DELETE",
+    "ATTACH_ADMINISTRATOR_POWERUSER_OR_READONLY_POLICIES",
+    "EXECUTE_TEST_003",
+    "ACTIVATE_OR_INTEGRATE_PRODUCT_LEADERSHIP"
+  ],
+  "success_result": "BOOTSTRAP_ASSUME_ROLE_POLICY_ATTACHED_NO_AWS_CONNECTION",
+  "authority_effect": "ACTIVE_ONLY_FOR_SINGLE_ASSUME_ROLE_POLICY"
+}
