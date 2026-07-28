@@ -3,7 +3,7 @@
   "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST_003_DISTRIBUTED_EXECUTION_PROTOCOL_108",
   "project_id": "lab",
   "title": "Design a verifiable distributed execution protocol for Product Leadership Test 003",
-  "status": "GRANTED_PENDING_PROTOCOL_PUBLICATION",
+  "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-07-27",
   "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
@@ -11,7 +11,13 @@
   "expected_parent_head": "d6a65557c1d0da6f89dbf41cad1bc18067658221",
   "subject": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003",
   "scope": "DISTRIBUTED_MULTROLE_EXECUTION_ARCHITECTURE_PROTOCOL_AND_IMPLEMENTATION_BRIEF_ONLY",
-  "allowed_actions": [
+  "published_artifacts": [
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/DISTRIBUTED_EXECUTION_PROTOCOL.json",
+    "projects/lab/briefs/BRIEF_PRODUCT_LEADERSHIP_TEST_003_DISTRIBUTED_EXECUTION_IMPLEMENTATION_108.json",
+    "projects/lab/briefs/START_PROMPT_PRODUCT_LEADERSHIP_TEST_003_DISTRIBUTED_ENVIRONMENT_108.md",
+    "projects/lab/pending/PEND-LAB-030.json"
+  ],
+  "completed_actions": [
     "DESIGN_EIGHT_ROLE_IDENTITY_AND_ENVIRONMENT_ISOLATION",
     "DEFINE_ROLE_SPECIFIC_STORAGE_AND_ACCESS_BOUNDARIES",
     "DEFINE_RANDOMIZATION_MAPPING_CUSTODY_AND_RELEASE_PROTOCOL",
@@ -48,7 +54,7 @@
     "RELEASE"
   ],
   "consumption_criterion": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_OF_DISTRIBUTED_EXECUTION_PROTOCOL_IMPLEMENTATION_BRIEF_AND_START_PROMPT",
-  "authority_effect": "BOUNDED_DISTRIBUTED_PROTOCOL_DESIGN_ONLY",
+  "authority_effect": "NONE_AFTER_CONSUMPTION",
   "runtime_effect": "NONE",
   "product_effect": "NONE"
 }
