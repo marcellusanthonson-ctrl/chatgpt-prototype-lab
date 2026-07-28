@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-AWS-TERRAFORM-PLAN-111C",
+  "project_id": "lab",
+  "kind": "REDACTED_AWS_TERRAFORM_PLAN_EVIDENCE",
+  "status": "PLAN_VALIDATED_ZERO_AWS_MUTATION_WITH_LOCAL_ARTIFACT_CLEANUP",
+  "authorization_id": "AUTHORIZATION_LAB_AWS_TERRAFORM_PLAN_INPUT_ASSIGNMENT_111C",
+  "executed_at": "2026-07-28",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "execution_head_policy": "VERIFY_LIVE_AT_USE",
+  "execution_environment": {
+    "terraform_version": "1.15.8",
+    "aws_provider_version": "6.56.0",
+    "region": "sa-east-1",
+    "caller_role_type": "ASSUMED_ROLE_PL003PreflightPlanOperator",
+    "backend": "DISABLED_LOCAL_ONLY",
+    "refresh": false,
+    "input": false
+  },
+  "plan_summary": {
+    "create": 49,
+    "update": 0,
+    "delete": 0,
+    "replace": 0,
+    "no_op": 0,
+    "total_resource_changes": 49
+  },
+  "resource_type_counts": {
+    "aws_cloudtrail": 1,
+    "aws_iam_policy": 1,
+    "aws_iam_role": 9,
+    "aws_iam_role_policy": 9,
+    "aws_kms_alias": 3,
+    "aws_kms_key": 3,
+    "aws_s3_bucket": 3,
+    "aws_s3_bucket_object_lock_configuration": 3,
+    "aws_s3_bucket_ownership_controls": 3,
+    "aws_s3_bucket_policy": 3,
+    "aws_s3_bucket_public_access_block": 3,
+    "aws_s3_bucket_server_side_encryption_configuration": 3,
+    "aws_s3_bucket_versioning": 3,
+    "aws_secretsmanager_secret": 1,
+    "aws_secretsmanager_secret_policy": 1
+  },
+  "safety_results": {
+    "terraform_apply_executed": false,
+    "terraform_destroy_executed": false,
+    "aws_resources_created_modified_or_deleted": false,
+    "tfvars_file_created": false,
+    "plan_committed": false,
+    "plan_retained": false,
+    "tf_var_environment_count_after_cleanup": 0,
+    "aws_temporary_credentials_present_after_cleanup": false,
+    "worktree_clean_after_cleanup": true
+  },
+  "deviation_and_containment": {
+    "finding": "The package-local .gitignore did not include a *.tfplan rule, so the initial PLAN_FILE_IGNORED gate returned false.",
+    "containment": "The plan was moved outside the repository before any commit, inspected only for redacted counts and resource types, then deleted.",
+    "repository_exposure": "NONE",
+    "follow_up": "Add an explicit *.tfplan ignore rule under separate authorized source-change scope before any future local plan is written inside the repository tree."
+  },
+  "redaction": {
+    "full_account_id_included": false,
+    "principal_arns_included": false,
+    "external_ids_included": false,
+    "credentials_or_tokens_included": false,
+    "plan_or_state_content_included": false
+  },
+  "authority_effect": {
+    "terraform_apply_authorized": false,
+    "aws_resource_provisioning_authorized": false,
+    "test_003_execution_authorized": false,
+    "runtime_authorized": false,
+    "integration_authorized": false,
+    "product_changes_authorized": false
+  }
+}
