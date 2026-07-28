@@ -374,6 +374,26 @@
       "canonical_path": "projects/lab/evidence/EVD-LAB-PL003-AWS-APPLY-112-ATTEMPT-002.json",
       "authorization_id": "AUTHORIZATION_LAB_PL003_AWS_PROVISIONED_PREFLIGHT_AND_TEARDOWN_112",
       "updated_at": "2026-07-28"
+    },
+    {
+      "id": "EVD-LAB-PL003-AWS-BOUNDED-PROVISIONING-OPERATOR-113",
+      "path": "projects/lab/evidence/EVD-LAB-PL003-AWS-BOUNDED-PROVISIONING-OPERATOR-113.json",
+      "kind": "REDACTED_AWS_BOUNDED_PROVISIONING_OPERATOR_EXECUTION_EVIDENCE",
+      "project_id": "lab",
+      "status": "BLOCKED_BEFORE_IAM_MUTATION",
+      "canonical_path": "projects/lab/evidence/EVD-LAB-PL003-AWS-BOUNDED-PROVISIONING-OPERATOR-113.json",
+      "authorization_id": "AUTHORIZATION_LAB_PL003_AWS_BOUNDED_PROVISIONING_OPERATOR_113",
+      "updated_at": "2026-07-28"
+    },
+    {
+      "id": "EVD-LAB-PL003-AWS-ROOT-SECURITY-VISIBILITY-113",
+      "path": "projects/lab/evidence/EVD-LAB-PL003-AWS-ROOT-SECURITY-VISIBILITY-113.json",
+      "kind": "REDACTED_AWS_ROOT_SECURITY_VISIBILITY_EVIDENCE",
+      "project_id": "lab",
+      "status": "BLOCKED_NOT_VERIFIED",
+      "canonical_path": "projects/lab/evidence/EVD-LAB-PL003-AWS-ROOT-SECURITY-VISIBILITY-113.json",
+      "authorization_id": "AUTHORIZATION_LAB_PL003_AWS_BOUNDED_PROVISIONING_OPERATOR_113",
+      "updated_at": "2026-07-28"
     }
   ]
 }

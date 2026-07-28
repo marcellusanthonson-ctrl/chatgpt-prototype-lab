@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-PL003-AWS-ROOT-SECURITY-VISIBILITY-113",
+  "project_id": "lab",
+  "kind": "REDACTED_AWS_ROOT_SECURITY_VISIBILITY_EVIDENCE",
+  "status": "BLOCKED_NOT_VERIFIED",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_AWS_BOUNDED_PROVISIONING_OPERATOR_113",
+  "executed_at": "2026-07-28",
+  "profile": "pl003-plan-operator",
+  "region": "sa-east-1",
+  "operation": "iam:GetAccountSummary",
+  "operation_result": "DENIED_OR_FAILED",
+  "root_mfa_currently_enabled": "NOT_VERIFIED",
+  "root_access_keys_currently_absent": "NOT_VERIFIED",
+  "root_identity_used": false,
+  "aws_mutation_performed": false,
+  "stop_condition": "ROOT_SECURITY_STATE_CANNOT_BE_VERIFIED_READ_ONLY",
+  "redaction": {
+    "full_account_id_included": false,
+    "credentials_tokens_or_mfa_codes_included": false
+  },
+  "result": "ROOT_SECURITY_VISIBILITY_GATE_BLOCKED"
+}

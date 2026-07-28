@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "PL003-AWS-BOUNDED-PROVISIONING-OPERATOR-113-BLOCKED",
+  "project_id": "lab",
+  "created_at": "2026-07-28",
+  "authorization_ref": "AUTHORIZATION_LAB_PL003_AWS_BOUNDED_PROVISIONING_OPERATOR_113",
+  "state_delta": {
+    "authorization_113": "GRANTED_NOT_CONSUMED_BLOCKED_BEFORE_IAM_MUTATION",
+    "authorization_112": "GRANTED_NOT_CONSUMED_BLOCKED_AT_IAM_SECURITY_GATE",
+    "pend_lab_032": "OPEN",
+    "plan_operator_modified": false,
+    "target_operator_created": false,
+    "aws_mutations": 0,
+    "product_leadership_test_003_executed": false,
+    "product_leadership_active": false,
+    "product_leadership_integrated": false,
+    "next_action": "PROVIDE_A_TEMPORARY_MFA_BACKED_BOUNDED_IAM_SETUP_ROLE_CAPABLE_OF_EXECUTING_AUTHORIZATION_113"
+  },
+  "registrations": {
+    "evidence": [
+      "projects/lab/evidence/EVD-LAB-PL003-AWS-BOUNDED-PROVISIONING-OPERATOR-113.json",
+      "projects/lab/evidence/EVD-LAB-PL003-AWS-ROOT-SECURITY-VISIBILITY-113.json"
+    ],
+    "pending": "projects/lab/pending/PEND-LAB-032.json",
+    "authorization": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_AWS_BOUNDED_PROVISIONING_OPERATOR_113.json",
+    "continuity": "projects/lab/continuity/CURRENT_CONTINUITY.json"
+  },
+  "authority_effect": "AUTHORIZATION_113_REMAINS_GRANTED_NOT_CONSUMED"
+}

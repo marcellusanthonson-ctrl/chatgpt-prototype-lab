@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "id": "PEND-LAB-032",
   "project_id": "lab",
-  "status": "OPEN_SEPARATE_IAM_AUTHORITY_REQUIRED",
+  "status": "OPEN_AUTHORIZED_EXECUTION_BLOCKED_MISSING_TEMPORARY_SETUP_PRINCIPAL",
   "type": "PL003_AWS_PROVISIONING_OPERATOR_PERMISSION_BOUNDARY",
   "subject": "Establish a separately authorized bounded provisioning operator and current root-security visibility before resuming authorization 112",
   "priority": "HIGH",
@@ -17,6 +17,24 @@
   ],
   "stop_condition": "IAM_PERMISSION_EXPANSION_REQUIRED",
   "authorization_112_status": "GRANTED_NOT_CONSUMED",
+  "authorization_113_attempt": {
+    "executed_at": "2026-07-28",
+    "execution_head": "1e486969b2f292da5313946d4d4aa9bea720f270",
+    "status": "BLOCKED_BEFORE_IAM_MUTATION",
+    "verified_plan_identity": "ASSUMED_ROLE_PL003PreflightPlanOperator",
+    "plan_operator_modified": false,
+    "target_operator_created": false,
+    "root_security_current_state_verified": false,
+    "aws_mutations": 0,
+    "stop_conditions": [
+      "GENERAL_ADMINISTRATIVE_PRIVILEGES_REQUIRED",
+      "ROOT_SECURITY_STATE_CANNOT_BE_VERIFIED_READ_ONLY"
+    ],
+    "evidence_refs": [
+      "projects/lab/evidence/EVD-LAB-PL003-AWS-BOUNDED-PROVISIONING-OPERATOR-113.json",
+      "projects/lab/evidence/EVD-LAB-PL003-AWS-ROOT-SECURITY-VISIBILITY-113.json"
+    ]
+  },
   "required_resolution": [
     "Obtain separate explicit authority for a bounded provisioning operator and its permission boundary.",
     "Preserve MFA-backed temporary assumed-role credentials only.",
@@ -29,5 +47,5 @@
     "REMOVE_MFA_OR_PERMISSION_BOUNDARIES",
     "PUBLISH_CREDENTIALS_TOKENS_MFA_CODES_OR_FULL_ACCOUNT_ID"
   ],
-  "next_action": "OBTAIN_SEPARATE_BOUNDED_IAM_PROVISIONING_OPERATOR_AUTHORIZATION"
+  "next_action": "PROVIDE_A_TEMPORARY_MFA_BACKED_BOUNDED_IAM_SETUP_ROLE_CAPABLE_OF_EXECUTING_AUTHORIZATION_113"
 }

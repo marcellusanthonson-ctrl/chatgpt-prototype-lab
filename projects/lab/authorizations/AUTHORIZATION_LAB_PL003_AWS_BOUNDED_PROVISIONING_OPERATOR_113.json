@@ -75,6 +75,25 @@
   "integration_authorized": false,
   "product_changes_authorized": false,
   "relation_to_authorization_112": "After authorization 113 is consumed, authorization 112 remains GRANTED_NOT_CONSUMED and may resume from the IAM security gate using the verified bounded provisioning profile.",
+  "execution_attempt": {
+    "executed_at": "2026-07-28",
+    "execution_head": "1e486969b2f292da5313946d4d4aa9bea720f270",
+    "status": "BLOCKED_BEFORE_IAM_MUTATION",
+    "plan_operator_identity_verified": true,
+    "plan_operator_modified": false,
+    "target_operator_created": false,
+    "root_security_current_state_verified": false,
+    "aws_mutation_count": 0,
+    "stop_conditions": [
+      "GENERAL_ADMINISTRATIVE_PRIVILEGES_REQUIRED",
+      "ROOT_SECURITY_STATE_CANNOT_BE_VERIFIED_READ_ONLY"
+    ],
+    "evidence_refs": [
+      "projects/lab/evidence/EVD-LAB-PL003-AWS-BOUNDED-PROVISIONING-OPERATOR-113.json",
+      "projects/lab/evidence/EVD-LAB-PL003-AWS-ROOT-SECURITY-VISIBILITY-113.json"
+    ],
+    "consumption_criterion_met": false
+  },
   "consumption_criterion": "CONSUMED_AFTER_THE_BOUNDED_OPERATOR_PERMISSION_BOUNDARY_MFA_TRUST_ROOT_SECURITY_VISIBILITY_AND_ASSUMED_ROLE_SESSION_ARE_VERIFIED_REDACTED_EVIDENCE_IS_PUBLISHED_PEND_LAB_032_IS_CLOSED_AND_REMOTE_PUBLICATION_IS_VERIFIED",
   "post_consumption_authority": "NONE_UNDER_113"
 }

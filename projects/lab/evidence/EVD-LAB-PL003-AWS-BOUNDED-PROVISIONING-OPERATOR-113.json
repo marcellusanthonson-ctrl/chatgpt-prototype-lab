@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-PL003-AWS-BOUNDED-PROVISIONING-OPERATOR-113",
+  "project_id": "lab",
+  "kind": "REDACTED_AWS_BOUNDED_PROVISIONING_OPERATOR_EXECUTION_EVIDENCE",
+  "status": "BLOCKED_BEFORE_IAM_MUTATION",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_AWS_BOUNDED_PROVISIONING_OPERATOR_113",
+  "executed_at": "2026-07-28",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "execution_head": "1e486969b2f292da5313946d4d4aa9bea720f270",
+  "current_identity": {
+    "profile": "pl003-plan-operator",
+    "region": "sa-east-1",
+    "sts_identity": "ASSUMED_ROLE_PL003PreflightPlanOperator",
+    "mfa_configured": true,
+    "temporary_session_verified": true,
+    "full_account_id_recorded": false
+  },
+  "plan_operator_preservation": {
+    "baseline_sha256": "14a5ada2810158eebe4b20abe399f98a5a95c82ef4d7b9a20a91c385d6272287",
+    "attached_policy_names": ["PL003PreflightPlanReadOnly"],
+    "inline_policy_count": 0,
+    "permission_boundary_configured": false,
+    "modified_by_authorization_113": false
+  },
+  "target_operator": {
+    "role_name": "PL003PreflightProvisioningOperator",
+    "local_profile_name": "pl003-provisioning-operator",
+    "role_existed_at_preflight": false,
+    "profile_existed_at_preflight": false,
+    "role_created_or_configured": false,
+    "permission_boundary_created_or_attached": false,
+    "trust_policy_created_or_modified": false,
+    "execution_policy_created_or_attached": false,
+    "sts_session_verified": false
+  },
+  "bootstrap_and_mutation_path": {
+    "approved_bootstrap_principal_name": "pl003-bootstrap-operator",
+    "bootstrap_read_visibility_from_plan_role": "DENIED",
+    "available_local_profiles": [
+      "pl003-bootstrap",
+      "pl003-plan-operator"
+    ],
+    "aws_environment_credential_variables_present": false,
+    "authorized_temporary_bounded_iam_mutation_principal_available": false,
+    "persistent_bootstrap_credentials_used_for_iam_mutation": false,
+    "general_administrative_identity_used": false
+  },
+  "effective_scope_tests": {
+    "permission_boundary_effective": "NOT_EXECUTED",
+    "trust_approved_principal_only": "NOT_EXECUTED",
+    "trust_requires_mfa": "NOT_EXECUTED",
+    "deny_general_administration": "NOT_EXECUTED",
+    "deny_iam_user_creation": "NOT_EXECUTED",
+    "deny_access_key_creation": "NOT_EXECUTED",
+    "deny_boundary_removal": "NOT_EXECUTED",
+    "deny_privilege_escalation": "NOT_EXECUTED",
+    "deny_cloudtrail_disable_delete": "NOT_EXECUTED",
+    "deny_cost_guard_removal": "NOT_EXECUTED"
+  },
+  "aws_calls": {
+    "sts_get_caller_identity": 1,
+    "iam_read_only_calls": 8,
+    "iam_mutation_calls": 0,
+    "terraform_calls": 0,
+    "pl003_resource_provisioning_calls": 0
+  },
+  "stop_conditions": [
+    "GENERAL_ADMINISTRATIVE_PRIVILEGES_REQUIRED",
+    "ROOT_SECURITY_STATE_CANNOT_BE_VERIFIED_READ_ONLY"
+  ],
+  "local_validation": {
+    "json_parse_all_changed_json": "PASS",
+    "sensitive_shape_scan": "PASS_ZERO_ACCOUNT_OR_CREDENTIAL_PATTERNS",
+    "git_diff_check": "PASS",
+    "repository_validator": "EXPECTED_KNOWN_FAIL_PEND_LAB_030"
+  },
+  "redaction": {
+    "full_account_id_included": false,
+    "principal_arns_included": false,
+    "credentials_tokens_or_mfa_codes_included": false
+  },
+  "result": "BLOCKED_FAIL_CLOSED_ZERO_AWS_MUTATION"
+}
