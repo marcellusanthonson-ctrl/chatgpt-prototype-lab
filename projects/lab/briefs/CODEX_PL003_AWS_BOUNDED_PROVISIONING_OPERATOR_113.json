@@ -1,0 +1,206 @@
+{
+  "schema_version": "1.0.0",
+  "brief_id": "CODEX-PL003-AWS-BOUNDED-PROVISIONING-OPERATOR-113",
+  "project_id": "lab",
+  "status": "READY",
+  "created_at": "2026-07-28",
+  "objective": "Create and independently verify a separate MFA-backed temporary AWS provisioning operator with an effective permissions boundary and current root-security read-only visibility, close PEND-LAB-032, and leave authorization 112 ready to resume without executing Terraform apply, destroy, the 38-case matrix, or Product Leadership Test 003 under this brief.",
+  "repositories": [
+    {
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "expected_parent_head": "ecbbe87a50e31ba8028afd3723ff927212a68a3a",
+      "head_policy": "VERIFY_LIVE_AT_USE"
+    }
+  ],
+  "authority": {
+    "authorization_ref": "AUTHORIZATION_LAB_PL003_AWS_BOUNDED_PROVISIONING_OPERATOR_113",
+    "authorization_status": "GRANTED",
+    "approved_by": "Jonathan Martínez",
+    "executor": "Codex",
+    "coordinator": "ChatGPT",
+    "iam_role_and_boundary_creation_authorized": true,
+    "trust_policy_configuration_authorized": true,
+    "bounded_policy_attachment_authorized": true,
+    "local_profile_configuration_authorized": true,
+    "sts_and_root_security_readonly_verification_authorized": true,
+    "terraform_apply_authorized": false,
+    "terraform_destroy_authorized": false,
+    "pl003_infrastructure_provisioning_authorized": false,
+    "test_003_execution_authorized": false,
+    "runtime_authorized": false,
+    "integration_authorized": false,
+    "product_changes_authorized": false
+  },
+  "source_refs": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_AWS_BOUNDED_PROVISIONING_OPERATOR_113.json",
+    "projects/lab/pending/PEND-LAB-032.json",
+    "projects/lab/evidence/EVD-LAB-PL003-AWS-IDENTITY-112-ATTEMPT-002.json",
+    "projects/lab/briefs/CODEX_PL003_AWS_PROVISIONED_PREFLIGHT_EXECUTION_112.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/aws-preflight/STATIC_IAC_PACKAGE_MANIFEST.json"
+  ],
+  "scope": {
+    "target_role_name": "PL003PreflightProvisioningOperator",
+    "target_profile_name": "pl003-provisioning-operator",
+    "region": "sa-east-1",
+    "existing_readonly_role_must_remain_unchanged": "PL003PreflightPlanOperator",
+    "required_capabilities": [
+      "MFA_REQUIRED_ASSUME_ROLE",
+      "TEMPORARY_CREDENTIALS_ONLY",
+      "EFFECTIVE_PERMISSION_BOUNDARY",
+      "BOUNDED_PL003_RESOURCE_PROVISIONING_AND_TEARDOWN_PERMISSIONS_FOR_AUTHORIZATION_112",
+      "AWS_BUDGET_CONFIGURATION_AND_READ_VISIBILITY_FOR_AUTHORIZATION_112",
+      "IAM_GETACCOUNTSUMMARY_READ_ONLY",
+      "CLOUDTRAIL_READ_AND_APPROVED_PL003_MANAGEMENT_WITH_DISABLE_DELETE_DENIED",
+      "DENY_IAM_USER_ACCESS_KEY_AND_UNBOUNDED_PRIVILEGE_ESCALATION"
+    ],
+    "forbidden_actions": [
+      "MODIFY_PL003PreflightPlanOperator",
+      "USE_ROOT_FOR_ORDINARY_EXECUTION",
+      "CREATE_IAM_USERS_OR_ROOT_ACCESS_KEYS",
+      "ATTACH_ADMINISTRATORACCESS",
+      "USE_UNBOUNDED_WILDCARD_POLICIES",
+      "REMOVE_MFA_OR_PERMISSION_BOUNDARIES",
+      "MODIFY_THE_REVIEWED_TERRAFORM_PACKAGE_OR_TEST_MATRIX",
+      "RUN_TERRAFORM_APPLY_OR_DESTROY",
+      "PROVISION_PL003_TEST_INFRASTRUCTURE",
+      "EXECUTE_PRODUCT_LEADERSHIP_TEST_003",
+      "ACTIVATE_OR_INTEGRATE_PRODUCT_LEADERSHIP",
+      "PUBLISH_ACCOUNT_ID_CREDENTIALS_TOKENS_OR_MFA_CODES"
+    ]
+  },
+  "execution_sequence": [
+    {
+      "step": 1,
+      "name": "CANONICAL_AND_REPOSITORY_PREFLIGHT",
+      "actions": [
+        "Verify remote main HEAD and reconstruct state through START_HERE.md mandatory order.",
+        "Require a clean or explicitly bounded worktree.",
+        "Read authorization 113, PEND-LAB-032, attempt-002 evidence and authorization 112 boundaries.",
+        "Stop on any canonical contradiction."
+      ]
+    },
+    {
+      "step": 2,
+      "name": "CURRENT_IDENTITY_AND_BOOTSTRAP_PREFLIGHT",
+      "actions": [
+        "Verify the existing pl003-plan-operator assumed-role session only as current read-only evidence.",
+        "Identify the approved MFA-backed bootstrap principal without publishing the full account ID.",
+        "Confirm no root ordinary execution and no persistent execution credentials."
+      ]
+    },
+    {
+      "step": 3,
+      "name": "DESIGN_BOUNDARY_AND_POLICIES",
+      "actions": [
+        "Construct the least-privilege permissions boundary for PL003PreflightProvisioningOperator.",
+        "Constrain resources by PL003 names, prefixes, tags, account and sa-east-1 when supported.",
+        "Explicitly deny IAM user and access-key creation, boundary removal, privilege escalation, root mutation, CloudTrail disable/delete and cost-guard removal during execution.",
+        "Permit iam:GetAccountSummary read-only for current root MFA and root access-key visibility.",
+        "Do not change the reviewed Terraform package or its matrix."
+      ]
+    },
+    {
+      "step": 4,
+      "name": "CREATE_BOUNDED_OPERATOR",
+      "actions": [
+        "Create or configure PL003PreflightProvisioningOperator.",
+        "Attach the effective permissions boundary.",
+        "Configure a trust policy limited to the approved bootstrap principal and requiring MFA.",
+        "Attach only the bounded execution policy required for the future authorization-112 workflow.",
+        "Use session duration and session naming that are temporary and auditable."
+      ]
+    },
+    {
+      "step": 5,
+      "name": "LOCAL_PROFILE_AND_STS_VERIFICATION",
+      "actions": [
+        "Create or correct local profile pl003-provisioning-operator using the approved source profile and MFA serial.",
+        "Run STS and require an assumed-role session of PL003PreflightProvisioningOperator.",
+        "Do not publish full account ID, ARN details beyond redacted role identity, tokens or MFA codes."
+      ]
+    },
+    {
+      "step": 6,
+      "name": "SECURITY_AND_EFFECTIVE_SCOPE_VERIFICATION",
+      "actions": [
+        "Verify the role has the required permissions boundary.",
+        "Verify trust requires MFA and only the approved principal.",
+        "Verify credentials are temporary.",
+        "Verify iam:GetAccountSummary can confirm root MFA enabled and root access keys absent.",
+        "Run bounded positive and negative IAM simulations or read-only checks sufficient to prove no general administrative authority.",
+        "Do not run Terraform or create PL003 test resources."
+      ]
+    },
+    {
+      "step": 7,
+      "name": "LAB_RECONCILIATION_AND_CONSUMPTION",
+      "actions": [
+        "Publish redacted authorization-113 execution evidence.",
+        "Close PEND-LAB-032 only if all gates pass.",
+        "Update continuity, evidence, authorization and registry indexes.",
+        "Mark authorization 113 CONSUMED only after remote verification.",
+        "Record authorization 112 as still GRANTED_NOT_CONSUMED and ready to resume from IAM security gate.",
+        "Commit and push only bounded artifacts and verify remote publication."
+      ]
+    }
+  ],
+  "required_outputs": [
+    "projects/lab/evidence/EVD-LAB-PL003-AWS-BOUNDED-PROVISIONING-OPERATOR-113.json",
+    "projects/lab/evidence/EVD-LAB-PL003-AWS-ROOT-SECURITY-VISIBILITY-113.json",
+    "projects/lab/pending/PEND-LAB-032.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_AWS_BOUNDED_PROVISIONING_OPERATOR_113.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.md"
+  ],
+  "acceptance_checks": [
+    "REMOTE_HEAD_MATCHED_OR_RECONCILED_WITHOUT_MATERIAL_DIVERGENCE",
+    "PL003PreflightPlanOperator_UNCHANGED",
+    "SEPARATE_PROVISIONING_OPERATOR_EXISTS",
+    "EFFECTIVE_PERMISSION_BOUNDARY_ATTACHED",
+    "TRUST_POLICY_REQUIRES_MFA_AND_APPROVED_PRINCIPAL_ONLY",
+    "TEMPORARY_ASSUMED_ROLE_SESSION_VERIFIED",
+    "ROOT_MFA_CURRENTLY_VERIFIED_ENABLED",
+    "ROOT_ACCESS_KEYS_CURRENTLY_VERIFIED_ABSENT",
+    "NO_GENERAL_ADMINISTRATIVE_AUTHORITY",
+    "NO_IAM_USER_OR_ACCESS_KEY_CREATION_AUTHORITY",
+    "NO_BOUNDARY_REMOVAL_OR_PRIVILEGE_ESCALATION_PATH",
+    "NO_TERRAFORM_APPLY_DESTROY_OR_PL003_RESOURCE_PROVISIONING",
+    "NO_SECRET_ACCOUNT_ID_TOKEN_OR_MFA_DISCLOSURE",
+    "PEND_LAB_032_CLOSED_ONLY_AFTER_PASS",
+    "AUTHORIZATION_113_CONSUMED_AFTER_REMOTE_VERIFICATION",
+    "AUTHORIZATION_112_REMAINS_GRANTED_NOT_CONSUMED"
+  ],
+  "stop_conditions": [
+    "REMOTE_HEAD_OR_CANONICAL_CONTRADICTION",
+    "GENERAL_ADMINISTRATIVE_PRIVILEGES_REQUIRED",
+    "EFFECTIVE_PERMISSION_BOUNDARY_CANNOT_BE_ENFORCED",
+    "TRUST_POLICY_ALLOWS_UNAUTHORIZED_PRINCIPALS",
+    "MFA_CANNOT_BE_REQUIRED",
+    "PERSISTENT_CREDENTIALS_REQUIRED",
+    "ROOT_SECURITY_STATE_CANNOT_BE_VERIFIED_READ_ONLY",
+    "UNBOUNDED_WILDCARD_OR_PRIVILEGE_ESCALATION_PATH_DETECTED",
+    "TERRAFORM_PACKAGE_OR_MATRIX_CHANGE_REQUIRED",
+    "TERRAFORM_OR_PL003_RESOURCE_EXECUTION_REQUIRED",
+    "SECRET_OR_ACCOUNT_ID_EXPOSURE_RISK"
+  ],
+  "response_contract": {
+    "format": "JSON_AND_CONCISE_HUMAN_SUMMARY",
+    "required_sections": [
+      "RESULT",
+      "HEAD_AND_REPOSITORY",
+      "OPERATOR_STATUS",
+      "PERMISSION_BOUNDARY_STATUS",
+      "TRUST_AND_MFA_STATUS",
+      "ROOT_SECURITY_VISIBILITY",
+      "EFFECTIVE_SCOPE_TESTS",
+      "EVIDENCE_PATHS",
+      "PEND_LAB_032_STATUS",
+      "AUTHORIZATION_113_STATUS",
+      "AUTHORIZATION_112_STATUS",
+      "DIVERGENCES",
+      "SINGLE_NEXT_ACTION"
+    ],
+    "certainty_policy": "DO_NOT_CLAIM_PASS_FOR_ANY_CONTROL_NOT_EXECUTED"
+  }
+}
