@@ -1,12 +1,13 @@
 {
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_AWS_TERRAFORM_PLAN_INPUT_ASSIGNMENT_111C",
-  "revision": 2,
+  "revision": 3,
   "project_id": "lab",
-  "status": "GRANTED",
+  "status": "CONSUMED",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-07-28",
   "repaired_at": "2026-07-28",
+  "consumed_at": "2026-07-28",
   "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "branch": "main",
   "historical_parent_head": "a2128c8271070f1edbae82dbdda19e58a4e2c0fe",
@@ -59,7 +60,7 @@
     "ALL_SYNTHETIC_PRINCIPAL_ARNS_MUST_USE_THE_VERIFIED_ACCOUNT_ONLY",
     "ALL_EXTERNAL_IDS_ARE_NON_SECRET_PLAN_ONLY_AND_MUST_NOT_BE_REUSED_FOR_PROVISIONING",
     "PLAN_COMMAND_MUST_INCLUDE_INPUT_FALSE_REFRESH_FALSE_OUT_LOCAL_PLAN_FILE",
-    "PLAN_FILE_MUST_REMAIN_GITIGNORED_AND_LOCAL_ONLY",
+    "PLAN_FILE_MUST_REMAIN_LOCAL_ONLY_AND_MUST_NOT_BE_COMMITTED",
     "ZERO_AWS_RESOURCES_CREATED_MODIFIED_OR_DELETED"
   ],
   "forbidden_actions": [
@@ -97,6 +98,21 @@
     "ANY_CREDENTIAL_SECRET_TOKEN_OR_FULL_ACCOUNT_ID_WOULD_BE_PUBLISHED"
   ],
   "consumption_criterion": "CONSUMED_AFTER_REDACTED_PLAN_EVIDENCE_IS_PUBLISHED_AND_REMOTE_VERIFIED_WITH_ZERO_AWS_RESOURCES_CREATED_MODIFIED_OR_DELETED",
+  "consumption_result": {
+    "evidence_ref": "projects/lab/evidence/EVD-LAB-AWS-TERRAFORM-PLAN-111C.json",
+    "plan_create_count": 49,
+    "plan_update_count": 0,
+    "plan_delete_count": 0,
+    "plan_replace_count": 0,
+    "aws_resources_mutated": false,
+    "apply_executed": false,
+    "destroy_executed": false,
+    "plan_deleted_after_redacted_capture": true,
+    "tf_var_environment_cleared": true,
+    "aws_temporary_credentials_cleared": true,
+    "worktree_clean_after_cleanup": true,
+    "tfplan_ignore_gap_recorded_for_separate_authorization": true
+  },
   "terraform_apply_authorized": false,
   "aws_resource_provisioning_authorized": false,
   "test_003_execution_authorized": false,
