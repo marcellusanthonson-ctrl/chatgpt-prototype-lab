@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "PRODUCT-LEADERSHIP-TEST-003-PREFLIGHT-STOP-106",
+  "project_id": "lab",
+  "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST_003_EXECUTION_106",
+  "subject": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003",
+  "status": "BLOCKED_FAIL_CLOSED_BEFORE_FIXTURE_GENERATION",
+  "verified_head_before_authorization": "23d970b96134b06d3aac42d86ebe907229e2b99e",
+  "preflight": {
+    "execution_contract_present": true,
+    "human_contract_approval_present": true,
+    "independent_package_generator": false,
+    "independent_baseline_generator": false,
+    "independent_normalization_operator": false,
+    "independent_randomization_custodian": false,
+    "three_independent_evaluators": false,
+    "independent_auditor": false,
+    "session_tool_and_access_logging": "NOT_VERIFIABLY_AVAILABLE_AS_ROLE_SEPARATED_EVIDENCE",
+    "oracle_and_mapping_custody_log": "NOT_VERIFIABLY_AVAILABLE_WITH_INDEPENDENT_CUSTODIAN",
+    "external_immutable_pre_unblind_checkpoint": "NOT_AVAILABLE_BEFORE_MULTI_ROLE_EXECUTION_ENVIRONMENT_EXISTS",
+    "canonical_hash_pipeline": "AVAILABLE_BUT_INSUFFICIENT_WITHOUT_ROLE_ISOLATION"
+  },
+  "reason": "CURRENT_SINGLE_AGENT_SINGLE_CONNECTOR_SESSION_CANNOT_PROVE_REQUIRED_OPERATIONAL_ROLE_ISOLATION_OR_INDEPENDENT_CUSTODY",
+  "generated": {
+    "fixture_content": 0,
+    "outputs": 0,
+    "scores": 0,
+    "oracles": 0
+  },
+  "classification": "INSUFFICIENT_OPERATIONAL_PREFLIGHT_CAPABILITY",
+  "product_leadership_active": false,
+  "product_leadership_integrated": false,
+  "execution_result": "NOT_RUN",
+  "next_required_action": "PROVISION_AND_AUTHORIZE_A_MULTI_ROLE_EXECUTION_ENVIRONMENT_OR_ASSIGN_SEPARATE_AGENTS_WITH_AUDITABLE_CUSTODY_BEFORE_REISSUING_EXECUTION"
+}
