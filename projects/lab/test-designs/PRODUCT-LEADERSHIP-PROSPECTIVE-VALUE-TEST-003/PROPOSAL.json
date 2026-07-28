@@ -1,11 +1,12 @@
 {
-  "schema_version": "1.2.0",
+  "schema_version": "1.3.0",
   "proposal_id": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003",
   "project_id": "lab",
-  "status": "CONTRACT_COMPLETE_AWAITING_HUMAN_APPROVAL_AND_SEPARATE_EXECUTION_AUTHORIZATION",
+  "status": "CONTRACT_APPROVED_REQUIRES_SEPARATE_EXECUTION_AUTHORIZATION",
   "source_audit": "INDEPENDENT-EXTERNAL-AUDIT-PRODUCT-LEADERSHIP-EXECUTION-002-20260727",
   "source_claude_audit": "CLAUDE_ADVERSARIAL_AUDIT_PRODUCT_LEADERSHIP_PROSPECTIVE_TEST_003_20260727",
   "execution_contract": "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/EXECUTION_CONTRACT.json",
+  "human_approval": "projects/lab/decisions/HUMAN_APPROVAL_PRODUCT_LEADERSHIP_TEST_003_COMPLETE_CONTRACT.json",
   "purpose": "Resolve Product Leadership value evidence prospectively without reclassifying execution 002.",
   "resolved_pre_execution_blocks": {
     "power_analysis": "RESOLVED_WITH_90_PERCENT_POWER_ASSUMPTIONS_AND_160_PAIRS_PER_REPLICATION",
@@ -19,9 +20,11 @@
     "closed_scope_case_ids": "RESOLVED_AS_TWO_EXHAUSTIVE_NONEXTENDABLE_RANGES_TOTALING_320_IDS",
     "operational_evidence": "RESOLVED_WITH_ROLE_LOG_CUSTODY_CHECKPOINT_HASH_AND_LINE_ENDING_REQUIREMENTS"
   },
-  "remaining_human_gate": "APPROVE_OR_REJECT_COMPLETE_NON_EXECUTABLE_CONTRACT",
+  "human_gate": "APPROVED",
   "execution_authorized": false,
   "fixtures_or_outputs_generated": false,
+  "product_leadership_active": false,
+  "product_leadership_integrated": false,
   "activation_or_integration_effect": "NONE",
   "authority_effect": "NONE"
 }
