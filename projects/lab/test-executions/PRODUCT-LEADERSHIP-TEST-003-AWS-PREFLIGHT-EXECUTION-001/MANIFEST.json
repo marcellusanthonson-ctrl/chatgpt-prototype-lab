@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-TEST-003-AWS-PREFLIGHT-EXECUTION-001",
+  "project_id": "lab",
+  "status": "BLOCKED_FAIL_CLOSED_BEFORE_AWS_ACCESS",
+  "created_at": "2026-07-28",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_AWS_PROVISIONED_PREFLIGHT_AND_TEARDOWN_112",
+  "brief_id": "CODEX-PL003-AWS-PROVISIONED-PREFLIGHT-EXECUTION-112",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "execution_head": "f43bf7a5c17134ff823e933f6f2b87b4011ac0df",
+  "stop_condition": "AWS_IDENTITY_NOT_THE_BOUNDED_OPERATOR",
+  "files": [
+    {"path":"RESULTS.json","sha256":"55311feb7ea3c1bb0106b2d5d301d9d8355fd0c5c00c3e22a3e0f804d4360271"},
+    {"path":"PHASE_ONE_TEARDOWN.json","sha256":"4036322987229686cf6e0ccb0dc3f64d04d5f11ae8617e4656edb643f5fa7b91"},
+    {"path":"PHASE_TWO_TEARDOWN.json","sha256":"4cfd597ca7cddaad3bece22af5a47a9e867831ab7afae4f7842236ce7547c1d1"},
+    {"path":"FINAL_RESOURCE_VERIFICATION.json","sha256":"5ddade2036309be43d0468ebc4929dc5e67de1b404511a473eab4957b34b6e87"}
+  ],
+  "execution_summary": {
+    "aws_service_api_calls": 0,
+    "terraform_apply_executed": false,
+    "terraform_destroy_executed": false,
+    "positive_cases_executed": 0,
+    "negative_cases_executed": 0,
+    "positive_cases_blocked": 13,
+    "negative_cases_blocked": 25,
+    "resources_created_by_this_attempt": 0,
+    "resources_modified_by_this_attempt": 0,
+    "resources_deleted_by_this_attempt": 0
+  },
+  "validation": {
+    "json_syntax": "PASS",
+    "canonical_matrix_ids": "PASS_38_OF_38",
+    "file_hashes": "PASS",
+    "sensitive_shape_scan": "PASS",
+    "repository_validator": "KNOWN_BLOCK_PEND_LAB_030"
+  },
+  "evidence_refs": [
+    "projects/lab/evidence/EVD-LAB-PL003-AWS-COST-GUARD-112.json",
+    "projects/lab/evidence/EVD-LAB-PL003-AWS-APPLY-112.json"
+  ],
+  "authority_effect": "AUTHORIZATION_112_REMAINS_GRANTED_NOT_CONSUMED",
+  "result": "PREFLIGHT_BLOCKED_BEFORE_AWS_ACCESS"
+}

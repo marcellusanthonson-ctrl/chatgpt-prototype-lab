@@ -10,14 +10,14 @@
     "integrations": 6,
     "experiments": 8,
     "authorizations": 64,
-    "evidence": 35,
+    "evidence": 37,
     "unincorporated": 0,
     "proposals": 3,
     "sessions": 1,
     "reassessments": 5,
     "reconciliations": 6,
     "test_designs": 6,
-    "test_executions": 3,
+    "test_executions": 4,
     "source_packages": 2,
     "foundation_library": 23,
     "visual_preferences": 1,
@@ -51,7 +51,8 @@
     "evidence_deltas": [
       "registry/deltas/evidence-code-fidelity-001.json",
       "registry/deltas/livhavn-surgical-visual-patch-093.json",
-      "registry/deltas/product-leadership-test-003-documentary-sync-104.json"
+      "registry/deltas/product-leadership-test-003-documentary-sync-104.json",
+      "registry/deltas/pl003-aws-provisioned-preflight-blocked-112.json"
     ],
     "current_state": "CURRENT_STATE.json",
     "current_state_deltas": [
@@ -59,7 +60,8 @@
       "registry/deltas/livhavn-surgical-visual-patch-093.json",
       "registry/deltas/symphonie-phases-0-3-brief-architecture-094.json",
       "registry/deltas/product-leadership-test-003-documentary-sync-104.json",
-      "registry/deltas/pl003-aws-provisioned-preflight-authorization-112.json"
+      "registry/deltas/pl003-aws-provisioned-preflight-authorization-112.json",
+      "registry/deltas/pl003-aws-provisioned-preflight-blocked-112.json"
     ],
     "pattern_deltas": ["registry/deltas/livhavn-surgical-visual-patch-093.json"],
     "error_deltas": ["registry/deltas/livhavn-surgical-visual-patch-093.json"],
@@ -85,7 +87,8 @@
     "pending_successors": [
       "projects/lab/pending/PEND-LAB-026.json",
       "projects/lab/pending/PEND-LAB-027.json",
-      "projects/lab/pending/PEND-LAB-029.json"
+      "projects/lab/pending/PEND-LAB-029.json",
+      "projects/lab/pending/PEND-LAB-031.json"
     ],
     "test_executions": "projects/lab/test-executions/index.json",
     "source_packages": "registry/source-packages.json",
@@ -106,10 +109,10 @@
     "pattern": "PAT-LAB-009",
     "authorization": "AUTHORIZATION_LAB_PL003_AWS_PROVISIONED_PREFLIGHT_AND_TEARDOWN_112",
     "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_AWS_PROVISIONED_PREFLIGHT_AND_TEARDOWN_112.json",
-    "evidence": "CLAUDE_ADVERSARIAL_AUDIT_PRODUCT_LEADERSHIP_PROSPECTIVE_TEST_003_20260727",
-    "evidence_path": "projects/lab/evidence/product-leadership/claude-adversarial-audit-test-003/CLAUDE_AUDIT_REPORT.md",
-    "current_state_delta": "PL003-AWS-PROVISIONED-PREFLIGHT-AUTHORIZATION-112",
-    "current_state_delta_path": "registry/deltas/pl003-aws-provisioned-preflight-authorization-112.json",
+    "evidence": "EVD-LAB-PL003-AWS-APPLY-112",
+    "evidence_path": "projects/lab/evidence/EVD-LAB-PL003-AWS-APPLY-112.json",
+    "current_state_delta": "PL003-AWS-PROVISIONED-PREFLIGHT-BLOCKED-112",
+    "current_state_delta_path": "registry/deltas/pl003-aws-provisioned-preflight-blocked-112.json",
     "experiment": "EXP-LAB-003",
     "proposal": "PROP-LAB-003",
     "session": "SES-2026-06-28-001",
@@ -117,8 +120,8 @@
     "reconciliation": "REC-LAB-PRODUCT-LEADERSHIP-TEST-003-STATE-SYNC-004",
     "reconciliation_path": "projects/lab/reconciliations/REC-LAB-PRODUCT-LEADERSHIP-TEST-003-STATE-SYNC-004.json",
     "test_design": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003",
-    "pending": "PEND-LAB-029",
-    "test_execution": "PRODUCT-LEADERSHIP-CLEAN-REPRODUCTION-EXECUTION-002",
+    "pending": "PEND-LAB-031",
+    "test_execution": "PRODUCT-LEADERSHIP-TEST-003-AWS-PREFLIGHT-EXECUTION-001",
     "external_audit": "CLAUDE_ADVERSARIAL_AUDIT_PRODUCT_LEADERSHIP_PROSPECTIVE_TEST_003_20260727",
     "source_package": "DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001@1.2.0",
     "foundation_library": "SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001@0.1.0",

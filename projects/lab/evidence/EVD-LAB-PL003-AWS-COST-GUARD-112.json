@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-PL003-AWS-COST-GUARD-112",
+  "project_id": "lab",
+  "kind": "REDACTED_AWS_COST_GUARD_PREFLIGHT_EVIDENCE",
+  "status": "BLOCKED_NOT_ATTEMPTED",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_AWS_PROVISIONED_PREFLIGHT_AND_TEARDOWN_112",
+  "executed_at": "2026-07-28",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "execution_head": "f43bf7a5c17134ff823e933f6f2b87b4011ac0df",
+  "precondition_result": {
+    "approved_profile": "pl003-plan-operator",
+    "expected_role": "PL003PreflightPlanOperator",
+    "source_profile_match": true,
+    "mfa_serial_configured": true,
+    "region_match": true,
+    "role_arn_points_to_expected_role": false,
+    "role_arn_equals_mfa_serial": true,
+    "sts_identity_verified": false
+  },
+  "cost_guard": {
+    "aws_budget_or_equivalent_checked": false,
+    "aws_budget_or_equivalent_created_or_modified": false,
+    "warning_threshold_usd": 3.0,
+    "hard_stop_threshold_usd": 5.0,
+    "verified_before_apply": false
+  },
+  "stop_condition": "AWS_IDENTITY_NOT_THE_BOUNDED_OPERATOR",
+  "containment": [
+    "No AWS service API call was made.",
+    "No credential, token, MFA code, account ID, ARN value or secret was recorded.",
+    "Cost guard configuration was not attempted because the identity gate failed first.",
+    "No Terraform plan or apply was executed."
+  ],
+  "redaction": {
+    "full_account_id_included": false,
+    "principal_arns_included": false,
+    "credentials_or_tokens_included": false,
+    "mfa_code_included": false,
+    "email_address_included": false
+  },
+  "result": "BLOCKED_FAIL_CLOSED_BEFORE_COST_GUARD"
+}

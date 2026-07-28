@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-07-25",
+  "updated_at": "2026-07-28",
   "records": [
     {
       "id": "EVD-SYM-001",
@@ -324,6 +324,26 @@
       "symphonie_commit": "31dd1345026240c83b015feef34d6f7f2d2147b7",
       "final_verdict": "LIVHAVN_VISUAL_CALIBRATION_READY_WITH_BOUNDED_GAPS",
       "updated_at": "2026-07-25"
+    },
+    {
+      "id": "EVD-LAB-PL003-AWS-COST-GUARD-112",
+      "path": "projects/lab/evidence/EVD-LAB-PL003-AWS-COST-GUARD-112.json",
+      "kind": "REDACTED_AWS_COST_GUARD_PREFLIGHT_EVIDENCE",
+      "project_id": "lab",
+      "status": "BLOCKED_NOT_ATTEMPTED",
+      "canonical_path": "projects/lab/evidence/EVD-LAB-PL003-AWS-COST-GUARD-112.json",
+      "authorization_id": "AUTHORIZATION_LAB_PL003_AWS_PROVISIONED_PREFLIGHT_AND_TEARDOWN_112",
+      "updated_at": "2026-07-28"
+    },
+    {
+      "id": "EVD-LAB-PL003-AWS-APPLY-112",
+      "path": "projects/lab/evidence/EVD-LAB-PL003-AWS-APPLY-112.json",
+      "kind": "REDACTED_AWS_TERRAFORM_APPLY_ATTEMPT_EVIDENCE",
+      "project_id": "lab",
+      "status": "BLOCKED_BEFORE_AWS_ACCESS",
+      "canonical_path": "projects/lab/evidence/EVD-LAB-PL003-AWS-APPLY-112.json",
+      "authorization_id": "AUTHORIZATION_LAB_PL003_AWS_PROVISIONED_PREFLIGHT_AND_TEARDOWN_112",
+      "updated_at": "2026-07-28"
     }
   ]
 }

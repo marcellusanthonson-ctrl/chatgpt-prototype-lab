@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-PL003-AWS-APPLY-112",
+  "project_id": "lab",
+  "kind": "REDACTED_AWS_TERRAFORM_APPLY_ATTEMPT_EVIDENCE",
+  "status": "BLOCKED_BEFORE_AWS_ACCESS",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_AWS_PROVISIONED_PREFLIGHT_AND_TEARDOWN_112",
+  "executed_at": "2026-07-28",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "execution_head": "f43bf7a5c17134ff823e933f6f2b87b4011ac0df",
+  "head_and_worktree": {
+    "remote_main_head_verified": true,
+    "local_head_equal_remote_main": true,
+    "worktree_clean_at_start": true,
+    "brief_parent_reconciled_as_single_brief_publication_commit": true
+  },
+  "tooling": {
+    "aws_cli": "2.36.9",
+    "terraform": "1.15.8",
+    "git": "2.47.1.windows.2"
+  },
+  "execution": {
+    "aws_service_api_calls": 0,
+    "terraform_init_executed": false,
+    "terraform_fmt_check_executed": false,
+    "terraform_validate_executed": false,
+    "terraform_plan_executed": false,
+    "terraform_apply_executed": false,
+    "terraform_destroy_executed": false,
+    "resources_created_by_this_attempt": 0,
+    "resources_modified_by_this_attempt": 0,
+    "resources_deleted_by_this_attempt": 0,
+    "t0_recorded": false
+  },
+  "local_validation": {
+    "json_parse_all_changed_json": "PASS",
+    "canonical_matrix_coverage": "PASS_38_OF_38_IDS_RECORDED",
+    "manifest_hash_verification": "PASS",
+    "sensitive_shape_scan": "PASS_ZERO_ACCOUNT_OR_CREDENTIAL_PATTERNS",
+    "git_diff_check": "PASS_AFTER_TRAILING_WHITESPACE_CORRECTION",
+    "repository_validator": "EXPECTED_KNOWN_FAIL_PEND_LAB_030",
+    "repository_validator_detail": "The list-valued registry delta field reaches pathlib as a list."
+  },
+  "block": {
+    "stage": "AWS_IDENTITY_SECURITY_AND_REGION_PREFLIGHT",
+    "stop_condition": "AWS_IDENTITY_NOT_THE_BOUNDED_OPERATOR",
+    "detail": "The approved local profile role_arn does not identify PL003PreflightPlanOperator and instead equals the configured MFA device ARN.",
+    "profile_modified": false,
+    "permission_expansion_attempted": false,
+    "persistent_credentials_activated": false
+  },
+  "scope_preservation": {
+    "product_leadership_test_003_executed": false,
+    "fixtures_outputs_scores_oracles_or_mappings_generated": false,
+    "product_leadership_active": false,
+    "product_leadership_integrated": false,
+    "real_data_used": false,
+    "real_secret_value_materialized": false
+  },
+  "redaction": {
+    "full_account_id_included": false,
+    "principal_arns_included": false,
+    "credentials_or_tokens_included": false,
+    "tf_var_sensitive_values_included": false,
+    "terraform_state_or_plan_included": false
+  },
+  "result": "APPLY_BLOCKED_ZERO_AWS_MUTATION_BY_THIS_ATTEMPT"
+}

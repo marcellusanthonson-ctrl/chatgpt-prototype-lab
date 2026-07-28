@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "id": "PEND-LAB-031",
+  "project_id": "lab",
+  "status": "OPEN_HUMAN_SECURITY_CONFIGURATION_REQUIRED",
+  "type": "PL003_AWS_ASSUMED_ROLE_PROFILE_CORRECTION",
+  "subject": "Correct and independently verify the local MFA-backed pl003-plan-operator profile before resuming authorization 112",
+  "priority": "HIGH",
+  "source_execution": "projects/lab/test-executions/PRODUCT-LEADERSHIP-TEST-003-AWS-PREFLIGHT-EXECUTION-001/MANIFEST.json",
+  "source_evidence": "projects/lab/evidence/EVD-LAB-PL003-AWS-APPLY-112.json",
+  "observed_block": "The configured role_arn does not point to PL003PreflightPlanOperator and equals the MFA device ARN.",
+  "required_resolution": [
+    "Human corrects role_arn without disclosing the account ID, credentials or MFA code.",
+    "Human establishes an MFA-backed temporary assumed-role session.",
+    "A new execution attempt verifies STS caller identity as PL003PreflightPlanOperator before any cost or Terraform operation."
+  ],
+  "forbidden_resolution": [
+    "USE_ROOT_FOR_ORDINARY_EXECUTION",
+    "ACTIVATE_PERSISTENT_CREDENTIALS_AS_THE_EXECUTION_IDENTITY",
+    "PUBLISH_CREDENTIALS_TOKENS_MFA_CODES_OR_FULL_ACCOUNT_ID",
+    "EXPAND_IAM_PERMISSIONS_OR_CREATE_UNAUTHORIZED_PRINCIPALS"
+  ],
+  "authorization_112_status": "GRANTED_NOT_CONSUMED",
+  "product_leadership_test_003_executed": false,
+  "product_leadership_active": false,
+  "product_leadership_integrated": false,
+  "next_action": "HUMAN_CORRECTS_AND_VERIFIES_THE_MFA_BACKED_PL003_PLAN_OPERATOR_PROFILE"
+}
