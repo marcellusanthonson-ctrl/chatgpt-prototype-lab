@@ -1,10 +1,5 @@
-Continúa ChatGPT Prototype LAB reconstruyendo primero el estado desde
-`project-sources/chatgpt/START_HERE.md`, verificando el HEAD remoto vigente de
-`main` y siguiendo exactamente su orden de lectura. Después lee
-`projects/lab/continuity/CURRENT_CONTINUITY.json`. El paquete Terraform estático
-del preflight AWS de Product Leadership Test 003 fue publicado y la autorización
-110 quedó consumida; AWS no fue accedido ni provisionado, Test 003 no fue
-ejecutado y Product Leadership sigue inactivo y no integrado. No uses
-credenciales ni ejecutes plan, apply, destroy o pruebas runtime. La única
-siguiente acción es que Jonathan Martínez revise y apruebe o rechace por separado
-el brief futuro de autorización para el preflight AWS provisionado.
+Continúa ChatGPT Prototype LAB reconstruyendo primero el estado desde `marcellusanthonson-ctrl/chatgpt-prototype-lab`, rama `main`, entrypoint `project-sources/chatgpt/START_HERE.md`; verifica el HEAD remoto vigente y sigue exactamente su orden de lectura. Después lee `projects/lab/continuity/CURRENT_CONTINUITY.json`, `CURRENT_CONTINUITY.md` y `ATTACHMENT_MANIFEST.json`.
+
+El preflight Terraform local de Product Leadership Test 003 ya fue validado: el plan propuso 49 creaciones, 0 actualizaciones, 0 eliminaciones y 0 reemplazos; no se ejecutó `apply` ni `destroy`, no se creó ningún recurso AWS, el plan local fue eliminado, las variables `TF_VAR_*` y las credenciales temporales fueron limpiadas, el worktree quedó limpio y `*.tfplan` ya está incluido en el `.gitignore`. Las autorizaciones 111C y 111D están consumidas. Product Leadership Test 003 no fue ejecutado y Product Leadership continúa inactivo y no integrado.
+
+No uses credenciales, no ejecutes Terraform ni modifiques AWS todavía. Comienza preparando una única autorización delimitada para: guard de coste, `terraform apply` solo del paquete revisado, ejecución exclusiva de las 13 pruebas positivas y 25 negativas de fronteras de infraestructura, evidencia redactada y teardown obligatorio en dos fases. Mantén fuera de alcance la ejecución de Product Leadership Test 003. El horizonte previsto es 4–6 horas activas para validación funcional el mismo día y 7–8 días calendario para verificar la eliminación definitiva por Object Lock y ventanas de eliminación de AWS.
