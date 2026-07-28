@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_CONTINUITY_PL003_AWS_PROVISIONED_PREFLIGHT_HANDOFF_111E",
+  "project_id": "lab",
+  "status": "GRANTED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-28",
+  "approval_source": "Explicit instruction: create a continuity protocol and continue in a new conversation.",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "historical_parent_head": "8994695eb74aff5d5cb37f799163edee11433328",
+  "execution_head_policy": "VERIFY_LIVE_AT_USE",
+  "subject": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003",
+  "scope": "UPDATE_CURRENT_CONTINUITY_PACKAGE_FOR_AWS_PROVISIONED_PREFLIGHT_HANDOFF_ONLY",
+  "allowed_actions": [
+    "UPDATE_CURRENT_CONTINUITY_JSON",
+    "UPDATE_CURRENT_CONTINUITY_MARKDOWN",
+    "UPDATE_ATTACHMENT_MANIFEST",
+    "UPDATE_START_PROMPT",
+    "MARK_THIS_AUTHORIZATION_CONSUMED_AFTER_REMOTE_VERIFICATION"
+  ],
+  "forbidden_actions": [
+    "TERRAFORM_PLAN_APPLY_OR_DESTROY",
+    "AWS_RESOURCE_CREATION_MODIFICATION_OR_DELETION",
+    "PRODUCT_LEADERSHIP_TEST_003_EXECUTION",
+    "RUNTIME_INTEGRATION_OR_PRODUCT_CHANGES",
+    "CREDENTIAL_SECRET_TOKEN_OR_ACCOUNT_ID_PUBLICATION"
+  ],
+  "consumption_criterion": "CONSUMED_AFTER_THE_FOUR_FILE_CURRENT_CONTINUITY_PACKAGE_IS_PUBLISHED_AND_REMOTE_VERIFIED",
+  "terraform_apply_authorized": false,
+  "aws_resource_provisioning_authorized": false,
+  "test_003_execution_authorized": false,
+  "runtime_authorized": false,
+  "integration_authorized": false,
+  "product_changes_authorized": false
+}
