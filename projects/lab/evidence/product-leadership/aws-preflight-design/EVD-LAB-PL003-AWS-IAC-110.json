@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-PL003-AWS-IAC-110",
+  "status": "STATIC_VALIDATION_EVIDENCE",
+  "created_at": "2026-07-27",
+  "authorization_ref": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST_003_AWS_PREFLIGHT_ARCHITECTURE_DESIGN_110",
+  "subject": "PRODUCT-LEADERSHIP-TEST-003-AWS-PREFLIGHT-STATIC-IAC",
+  "facts": [
+    "Terraform 1.15.8 native formatting and validation passed.",
+    "Terraform init used backend=false and installed signed hashicorp/aws 6.56.0.",
+    "No AWS service API call, Terraform plan, apply, destroy, or CloudFormation deployment occurred.",
+    "No AWS credential, secret value, fixture, output, score, oracle, or randomization mapping was created.",
+    "Runtime security boundaries remain unproven until separately authorized provisioning and deny testing.",
+    "Product Leadership remains inactive and not integrated; Test 003 remains unexecuted."
+  ],
+  "source_refs": [
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/aws-preflight/STATIC_VALIDATION_REPORT.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/aws-preflight/ROLE_ACCESS_AND_DENY_TEST_MATRIX.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/aws-preflight/terraform/.terraform.lock.hcl"
+  ],
+  "limitations": [
+    "AWS_NOT_ACCESSED",
+    "RESOURCES_NOT_PROVISIONED",
+    "RUNTIME_DENY_TESTS_NOT_EXECUTED",
+    "CLOUDTRAIL_EVENTS_NOT_OBSERVED",
+    "OBJECT_LOCK_NOT_RUNTIME_VERIFIED",
+    "PEND_LAB_030_REMAINS_OPEN"
+  ],
+  "authority_effect": "NONE"
+}

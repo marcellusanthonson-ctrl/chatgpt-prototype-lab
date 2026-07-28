@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "PRODUCT-LEADERSHIP-TEST-003-AWS-PREFLIGHT-IAC-110",
+  "project_id": "lab",
+  "effective_at": "2026-07-27",
+  "authorization_ref": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST_003_AWS_PREFLIGHT_ARCHITECTURE_DESIGN_110",
+  "state_delta": {
+    "status": "STATIC_IAC_DESIGN_PACKAGE_PUBLISHED_AWS_NOT_PROVISIONED",
+    "current_phase": "AWS_PREFLIGHT_STATIC_IAC_COMPLETE_FUTURE_PROVISIONING_AUTHORIZATION_REQUIRED",
+    "product_leadership": {
+      "test_003": "NOT_EXECUTED",
+      "activation": false,
+      "integration": false,
+      "aws_provider": "SELECTED_FOR_DISPOSABLE_PREFLIGHT_ONLY",
+      "aws_provisioned": false,
+      "runtime_boundaries_proven": false
+    },
+    "authority": {
+      "authorization_110": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "commit_authorized": false,
+      "push_authorized": false,
+      "aws_api_access_authorized": false,
+      "aws_resource_provisioning_authorized": false,
+      "test_003_execution_authorized": false,
+      "runtime_authorized": false,
+      "integration_authorized": false,
+      "product_changes_authorized": false,
+      "residual_authority": "NONE_AFTER_CONSUMPTION"
+    },
+    "pending": {
+      "PEND-LAB-030": "OPEN_UNCHANGED",
+      "future_aws_preflight": "DRAFT_REQUIRES_SEPARATE_EXPLICIT_AUTHORIZATION"
+    },
+    "next_action": "JONATHAN_REVIEWS_AND_SEPARATELY_APPROVES_OR_REJECTS_FUTURE_PROVISIONED_PREFLIGHT_BRIEF"
+  },
+  "registrations": {
+    "static_iac_manifest": "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/aws-preflight/STATIC_IAC_PACKAGE_MANIFEST.json",
+    "static_validation_report": "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/aws-preflight/STATIC_VALIDATION_REPORT.json",
+    "access_test_matrix": "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/aws-preflight/ROLE_ACCESS_AND_DENY_TEST_MATRIX.json",
+    "future_authorization_brief": "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/aws-preflight/FUTURE_PROVISIONED_PREFLIGHT_AUTHORIZATION_BRIEF.json",
+    "evidence": "projects/lab/evidence/product-leadership/aws-preflight-design/EVD-LAB-PL003-AWS-IAC-110.json",
+    "continuity": "projects/lab/continuity/PRODUCT-LEADERSHIP-TEST-003-AWS-PREFLIGHT-IAC-110.json"
+  },
+  "constraints": {
+    "aws_not_accessed": true,
+    "aws_not_provisioned": true,
+    "test_003_not_executed": true,
+    "product_leadership_inactive": true,
+    "product_leadership_not_integrated": true,
+    "runtime_claims_prohibited": true
+  },
+  "authority_effect": "RECORDS_AUTHORIZATION_110_CONSUMPTION_ON_VERIFIED_REMOTE_PUBLICATION"
+}

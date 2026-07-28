@@ -3,88 +3,55 @@
 Fecha: 2026-07-27  
 Repositorio canónico: `marcellusanthonson-ctrl/chatgpt-prototype-lab`  
 Rama: `main`  
-HEAD verificado al iniciar el paquete: `da57b0822e308e52a98945797b5071880d916481`  
+Política HEAD: `VERIFY_LIVE_AT_USE`
 Entrypoint: `project-sources/chatgpt/START_HERE.md`
 
-## Estado
+## Resultado
 
-- Test 003 no fue ejecutado.
+- Paquete Terraform estático del preflight AWS: completo y validado.
+- `terraform fmt -check -recursive`: PASS.
+- `terraform init -backend=false`: PASS; provider firmado `hashicorp/aws 6.56.0`.
+- `terraform validate`: PASS.
+- AWS accedido o provisionado: no.
+- Test 003 ejecutado: no.
 - Fixtures, outputs, scores, oráculos, mappings e IDs materializados: cero.
-- Product Leadership permanece inactivo y no integrado.
-- Autoridad de ejecución vigente: `NONE`.
-- Las autorizaciones 106, 107, 108 y 109 están consumidas.
+- Product Leadership: inactivo y no integrado.
+- Límites runtime probados en AWS: no.
 
-## Decisiones vigentes
+## Arquitectura estática
 
-- `DEC-LAB-023`: Claude es el auditor independiente read-only de Test 003.
-- `DEC-LAB-024`: estrategia híbrida aprobada: constraint-first + seis tareas Codex + límites externos + custodio externo + Claude auditor.
+- Tres buckets desechables con versioning, SSE-KMS, public access block y Object Lock Governance.
+- Tres claves KMS separadas: artifacts, audit y custody.
+- Secrets Manager sin `secret_version` ni valor materializado.
+- CloudTrail con management events y S3 data events para los tres buckets.
+- Nueve roles con permission boundary, allow mínimo y deny explícito.
+- Trece pruebas positivas y veinticinco negativas definidas, no ejecutadas.
 
-## Matriz actual
+## Autoridad
 
-Dentro de Codex:
+- `DEC-LAB-023`, `DEC-LAB-024` y `DEC-LAB-025`: APPROVED.
+- Autorización 110: `CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION`.
+- Provisionamiento AWS: no autorizado.
+- Ejecución Test 003: no autorizada.
+- Runtime, integración y cambios de producto: no autorizados.
+- `PEND-LAB-030`: abierto y sin cambios.
 
-- PACKAGE_GENERATOR
-- BASELINE_GENERATOR
-- NORMALIZATION_OPERATOR
-- EVALUATOR_1
-- EVALUATOR_2
-- EVALUATOR_3
+## Riesgos y límites
 
-Fuera de Codex:
-
-- RANDOMIZATION_CUSTODIAN: identidad externa aún no asignada.
-- INDEPENDENT_AUDITOR: Claude, sujeto a demostrar acceso exclusivamente read-only.
-
-## Proveedor externo
-
-AWS es el candidato recomendado, todavía no provisionado:
-
-- IAM para credenciales por rol y políticas deny.
-- S3 Object Lock para artefactos, logs y checkpoints.
-- Secrets Manager/KMS para custodia exclusiva del mapping.
-- CloudTrail para evidencia de accesos.
-
-## Trabajo completado
-
-1. Contrato completo de Test 003 aprobado humanamente.
-2. Dos preflights fail-closed publicados sin generar contenido del test.
-3. Protocolo distribuido de ocho roles documentado.
-4. Estrategia constraint-first documentada.
-5. Claude asignado formalmente como auditor.
-6. Estrategia híbrida Codex multi-agent adoptada.
-7. Matriz inicial de roles y proveedores publicada.
-
-## Pendientes
-
-1. Seleccionar formalmente la arquitectura AWS.
-2. Asignar la identidad concreta del custodio.
-3. Diseñar roles IAM, políticas deny, buckets/prefijos, secretos y checkpoints.
-4. Demostrar credenciales y límites por tarea Codex.
-5. Demostrar acceso externo read-only de Claude.
-6. Resolver `PEND-LAB-030` para el validador global bajo autorización separada.
-
-## Riesgos
-
-- Sandbox o worktree no equivale a principal independiente.
-- Claude pierde independencia si comparte credenciales, storage escribible o mapping no liberado.
-- Object Lock debe probarse primero en un bucket desechable.
-- AWS puede generar cargos; configurar budget alert bajo antes de crear recursos.
-- La divergencia del validador impide declarar validación global limpia.
-
-## Límites
-
-No ejecutar Test 003, no generar fixtures ni resultados, no crear mappings, no activar o integrar Product Leadership, no modificar Symphonie ni provisionar AWS sin una nueva autorización explícita.
+La validación estática no prueba fronteras runtime. Object Lock impide teardown
+inmediato hasta expirar la retención. Cualquier futuro preflight requiere cuenta
+aislada, región fija, budget alert, principales distintos, custodian externo,
+Claude read-only y autorización de teardown. Un PASS futuro tampoco autoriza
+Test 003.
 
 ## Siguiente acción única
 
-Adoptar formalmente AWS como proveedor candidato y autorizar únicamente el diseño del preflight exacto de IAM, S3 Object Lock, Secrets Manager/KMS y CloudTrail.
+Jonathan Martínez revisa y aprueba o rechaza por separado el brief de
+autorización para el preflight AWS provisionado.
 
-## Fuentes principales
+## Fuentes
 
-- `projects/lab/decisions/DEC-LAB-023.json`
-- `projects/lab/decisions/DEC-LAB-024.json`
-- `projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/DISTRIBUTED_EXECUTION_PROTOCOL.json`
-- `projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/ROLE_PROVIDER_MATRIX_STRATEGY.json`
-- `projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/ROLE_PROVIDER_ASSIGNMENT_MATRIX.json`
-- `projects/lab/test-executions/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/PREFLIGHT_STOP_107.json`
-- `projects/lab/distributed-environment/PRODUCT-LEADERSHIP-TEST-003/PREFLIGHT_STOP_109.json`
+- `projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/aws-preflight/STATIC_IAC_PACKAGE_MANIFEST.json`
+- `projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/aws-preflight/STATIC_VALIDATION_REPORT.json`
+- `projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/aws-preflight/FUTURE_PROVISIONED_PREFLIGHT_AUTHORIZATION_BRIEF.json`
+- `registry/deltas/product-leadership-test-003-aws-preflight-iac-110.json`

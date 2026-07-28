@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "continuity_id": "LAB-CONTINUITY-PRODUCT-LEADERSHIP-TEST-003-HYBRID-2026-07-27",
+  "continuity_id": "LAB-CONTINUITY-PL003-AWS-PREFLIGHT-IAC-110",
   "project_id": "lab",
   "status": "CURRENT",
   "created_at": "2026-07-27",
@@ -45,6 +45,13 @@
         "projects/lab/decisions/DEC-LAB-024.json",
         "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/ROLE_PROVIDER_ASSIGNMENT_MATRIX.json"
       ]
+    },
+    {
+      "fact": "The complete Terraform AWS preflight package passed native static validation without AWS access or provisioning.",
+      "source_refs": [
+        "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/aws-preflight/STATIC_IAC_PACKAGE_MANIFEST.json",
+        "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/aws-preflight/STATIC_VALIDATION_REPORT.json"
+      ]
     }
   ],
   "decisions": [
@@ -57,6 +64,11 @@
       "id": "DEC-LAB-024",
       "status": "APPROVED",
       "decision": "Adopt HYBRID_CONSTRAINT_FIRST_CODEX_MULTI_AGENT_WITH_EXTERNAL_BOUNDARIES."
+    },
+    {
+      "id": "DEC-LAB-025",
+      "status": "APPROVED",
+      "decision": "Adopt AWS for disposable security preflight design only."
     }
   ],
   "authorization_state": {
@@ -64,6 +76,7 @@
     "authorization_107": "CONSUMED_ON_FAIL_CLOSED_CODEX_MULTROLE_PREFLIGHT_STOP",
     "authorization_108": "CONSUMED_ON_DISTRIBUTED_PROTOCOL_PUBLICATION",
     "authorization_109": "CONSUMED_ON_FAIL_CLOSED_INFRASTRUCTURE_PREFLIGHT_STOP",
+    "authorization_110": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "active_execution_authority": "NONE",
     "test_003_execution_authorized": false,
     "runtime_authorized": false,
@@ -77,7 +90,9 @@
     "Constraint-first role/provider matrix strategy documented.",
     "Claude formally assigned as independent auditor.",
     "Hybrid Codex multi-agent implementation direction approved.",
-    "Initial role provider assignment matrix published."
+    "Initial role provider assignment matrix published.",
+    "Complete static Terraform package, IAM/KMS/S3/Secrets Manager/CloudTrail policies, access matrix, manifest, validation report, and future provisioned-preflight brief published.",
+    "Terraform fmt, init -backend=false, and validate passed without AWS access."
   ],
   "current_matrix": {
     "codex_cloud_tasks": [
@@ -100,7 +115,7 @@
         "Secrets Manager and KMS for custodian-only mapping custody",
         "CloudTrail for access evidence"
       ],
-      "selection_status": "RECOMMENDED_NOT_PROVISIONED",
+      "selection_status": "SELECTED_STATIC_IAC_COMPLETE_NOT_PROVISIONED",
       "cost_posture": "SMALL_PREFLIGHT_EXPECTED_TO_FIT_NEW_ACCOUNT_CREDITS_OR_LOW_SINGLE_DIGIT_USD_COST",
       "source_refs": ["projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/ROLE_PROVIDER_ASSIGNMENT_MATRIX.json"]
     }
@@ -109,10 +124,6 @@
     {
       "id": "PEND-LAB-030",
       "item": "Repair validate_repository.py handling of list-valued registry/index.json deltas under separate authorization.",
-      "status": "OPEN"
-    },
-    {
-      "item": "Formally select and configure the external provider architecture for the hybrid Test 003 environment.",
       "status": "OPEN"
     },
     {
@@ -128,7 +139,7 @@
       "status": "OPEN"
     },
     {
-      "item": "Issue a separate bounded authorization for AWS architecture design and preflight only.",
+      "item": "Review and separately approve or reject the draft future provisioned AWS preflight brief.",
       "status": "OPEN"
     }
   ],
@@ -152,6 +163,6 @@
     "ATTACHMENT_MANIFEST.json",
     "START_PROMPT.md"
   ],
-  "single_next_action": "Formally adopt AWS as the external provider candidate and authorize design of the exact IAM, S3 Object Lock, Secrets Manager/KMS and CloudTrail preflight architecture without creating test content.",
-  "authority_effect": "NONE"
+  "single_next_action": "Jonathan Martinez reviews and separately approves or rejects the future provisioned-preflight authorization brief.",
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_110_CONSUMPTION"
 }

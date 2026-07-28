@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "brief_id": "DRAFT-FUTURE-PL003-AWS-PROVISIONED-PREFLIGHT-001",
+  "status": "DRAFT_NOT_AUTHORIZED",
+  "authority_effect": "NONE",
+  "parent_authorization_ref": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST_003_AWS_PREFLIGHT_ARCHITECTURE_DESIGN_110",
+  "objective": "Provision and execute only the disposable AWS security-boundary preflight using non-test synthetic sentinels under a new explicit authorization.",
+  "preservation": {
+    "preserved_parent_content": [
+      "AWS access remains forbidden until this draft is separately approved.",
+      "Product Leadership Test 003 remains unexecuted.",
+      "No fixture, output, score, oracle, randomization mapping, or materialized test ID may be created.",
+      "Product Leadership remains inactive and not integrated.",
+      "Claude remains external and read-only.",
+      "Custodian secret and KMS decrypt access remains exclusive."
+    ],
+    "approved_additions": [],
+    "authorized_changes": [],
+    "omissions_detected": []
+  },
+  "required_human_inputs_before_grant": [
+    "EXACT_ISOLATED_NON_PRODUCTION_AWS_ACCOUNT_ID",
+    "EXACT_SINGLE_AWS_REGION",
+    "CONFIRMED_BUDGET_ALERT_AND_COST_OWNER",
+    "SHORT_GOVERNANCE_RETENTION_DAYS_BETWEEN_1_AND_30",
+    "SIX_DISTINCT_CODEX_TASK_PRINCIPAL_ARNS_AND_EXTERNAL_IDS",
+    "ASSIGNED_EXTERNAL_CUSTODIAN_PRINCIPAL_AND_EXTERNAL_ID",
+    "ASSIGNED_EXTERNAL_CLAUDE_AUDITOR_PRINCIPAL_AND_EXTERNAL_ID",
+    "MFA_PROTECTED_CONTROLLER_PRINCIPAL_AND_EXTERNAL_ID",
+    "SEPARATE_KMS_ADMINISTRATOR_PRINCIPAL",
+    "APPROVED_TEARDOWN_AND_OBJECT_LOCK_EXPIRY_WINDOW",
+    "APPROVED_EVIDENCE_RELEASE_SEQUENCE"
+  ],
+  "proposed_allowed_actions": [
+    "terraform init -backend=false",
+    "terraform plan with approved isolated account credentials",
+    "terraform apply only the reviewed static package",
+    "materialize one non-test synthetic sentinel secret value",
+    "load non-test synthetic sentinel objects",
+    "execute ROLE_ACCESS_AND_DENY_TEST_MATRIX.json",
+    "collect CloudTrail, retention, version, hash, and checkpoint evidence",
+    "issue PASS or FAIL_CLOSED",
+    "terraform destroy only after Governance retention permits and under explicit teardown authority"
+  ],
+  "mandatory_gates": [
+    "ACCOUNT_REGION_BUDGET_TAGS_VERIFIED",
+    "TERRAFORM_PLAN_REVIEWED_WITH_ZERO_OUT_OF_SCOPE_RESOURCES",
+    "NINE_TRUST_PRINCIPALS_DISTINCT_AS_REQUIRED",
+    "ALL_PERMISSION_BOUNDARIES_AND_RESOURCE_POLICIES_PRESENT",
+    "THREE_BUCKETS_USE_VERSIONING_SSE_KMS_PUBLIC_BLOCK_AND_GOVERNANCE_OBJECT_LOCK",
+    "THREE_KMS_KEYS_SEPARATE",
+    "NO_SECRET_VALUE_EXISTS_BEFORE_AUTHORIZED_SENTINEL_STEP",
+    "CLOUDTRAIL_MANAGEMENT_AND_ALL_THREE_S3_DATA_EVENTS_ENABLED",
+    "ALL_POSITIVE_TESTS_ALLOW",
+    "ALL_NEGATIVE_TESTS_DENY",
+    "CUSTODIAN_EXCLUSIVITY_PROVEN",
+    "CLAUDE_READ_ONLY_BOUNDARY_PROVEN",
+    "LOG_AND_CHECKPOINT_IMMUTABILITY_PROVEN",
+    "TEST_003_REMAINS_NOT_EXECUTED"
+  ],
+  "forbidden_actions": [
+    "EXECUTE_PRODUCT_LEADERSHIP_TEST_003",
+    "GENERATE_TEST_FIXTURES_OUTPUTS_SCORES_ORACLES_MAPPINGS_OR_MATERIALIZED_IDS",
+    "USE_REAL_SECRET_OR_SENSITIVE_DATA",
+    "ACTIVATE_OR_INTEGRATE_PRODUCT_LEADERSHIP",
+    "MODIFY_SYMPHONIE_MAMMOTHSKILLS_OR_ANY_PRODUCT",
+    "USE_COMPLIANCE_MODE_FOR_FIRST_PREFLIGHT",
+    "BYPASS_OR_REDUCE_OBJECT_LOCK_RETENTION",
+    "CONTINUE_AFTER_ANY_UNPROVEN_BOUNDARY",
+    "TREAT_PREFLIGHT_PASS_AS_TEST_003_EXECUTION_AUTHORITY"
+  ],
+  "stop_conditions": [
+    "AUTHORIZATION_NOT_EXPLICITLY_GRANTED",
+    "ACCOUNT_OR_REGION_DIFFERS_FROM_APPROVED_VALUES",
+    "REAL_CREDENTIAL_OR_SECRET_MUST_BE_RECORDED_IN_REPOSITORY",
+    "ANY_TERRAFORM_PLAN_RESOURCE_IS_OUT_OF_SCOPE",
+    "ANY_POSITIVE_OR_NEGATIVE_TEST_HAS_UNEXPECTED_RESULT",
+    "ANY_REQUIRED_CLOUDTRAIL_EVENT_IS_MISSING",
+    "CUSTODIAN_OR_AUDITOR_BOUNDARY_IS_UNPROVEN",
+    "TEARDOWN_CANNOT_RESPECT_OBJECT_LOCK"
+  ],
+  "success_result": "AWS_SECURITY_PREFLIGHT_PASS_AWS_RESOURCES_STILL_DISPOSABLE_TEST_003_NOT_AUTHORIZED",
+  "failure_result": "FAIL_CLOSED",
+  "single_next_action_after_static_package": "Jonathan Martinez may review and separately approve or reject this future provisioned-preflight brief."
+}

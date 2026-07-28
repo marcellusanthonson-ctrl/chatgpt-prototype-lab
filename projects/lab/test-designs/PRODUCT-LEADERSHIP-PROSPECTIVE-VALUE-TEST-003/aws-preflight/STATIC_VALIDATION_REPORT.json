@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0.0",
+  "report_id": "PL003-AWS-PREFLIGHT-STATIC-VALIDATION-001",
+  "status": "PASS_STATIC_ONLY",
+  "validated_at": "2026-07-27",
+  "authorization_ref": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST_003_AWS_PREFLIGHT_ARCHITECTURE_DESIGN_110",
+  "environment": {
+    "aws_cli": "aws-cli/2.36.9",
+    "terraform": "1.15.8",
+    "git": "2.47.1.windows.2",
+    "provider_lock": "hashicorp/aws 6.56.0"
+  },
+  "commands": [
+    {"command":"Get-Command aws","result":"PASS","network_effect":"NONE"},
+    {"command":"aws --version","result":"PASS","aws_api_calls":0},
+    {"command":"Get-Command terraform","result":"PASS","network_effect":"NONE"},
+    {"command":"terraform version","result":"PASS","network_effect":"NONE"},
+    {"command":"Get-Command git","result":"PASS","network_effect":"NONE"},
+    {"command":"git --version","result":"PASS","network_effect":"NONE"},
+    {"command":"terraform fmt -check -recursive","result":"INITIAL_FAIL_THEN_PASS","detail":"iam.tf and kms.tf were normalized with terraform fmt; the mandatory check then passed."},
+    {"command":"terraform init -backend=false -input=false","result":"PASS","detail":"Downloaded signed hashicorp/aws 6.56.0 and created .terraform.lock.hcl; no backend or AWS API call."},
+    {"command":"terraform validate","result":"INITIAL_FAIL_THEN_PASS","detail":"Replaced nonexistent setequals calls with deterministic key/value validation; native validation then passed."},
+    {"command":"python scripts/validate_repository.py","result":"EXPECTED_KNOWN_FAIL","detail":"PEND-LAB-030 reproduced: registry/index.json list-valued delta field reaches pathlib as a list. Correction is outside authorization 110."}
+  ],
+  "static_acceptance_checks": [
+    {"id":"NO_AWS_API_CALLS","result":"PASS","evidence":"No AWS service command executed; aws --version only."},
+    {"id":"NO_REAL_CREDENTIALS_OR_SECRETS","result":"PASS","evidence":"No credential values, tfvars, secret versions, or secret strings are present."},
+    {"id":"NO_TERRAFORM_PLAN_APPLY_OR_DESTROY_AGAINST_AWS","result":"PASS","evidence":"Only fmt, init -backend=false, and validate were executed."},
+    {"id":"NO_CLOUDFORMATION_DEPLOYMENT","result":"PASS","evidence":"No CloudFormation files or commands."},
+    {"id":"SIX_CODEX_TASK_ROLES_ARE_DISTINCT","result":"PASS_STATIC","evidence":"Six for_each role instances require six distinct principal ARNs and external IDs."},
+    {"id":"CUSTODIAN_ONLY_SECRET_AND_KMS_DECRYPT_ACCESS","result":"PASS_STATIC","evidence":"Identity, secret resource, and custody KMS key policies enforce custodian-only access."},
+    {"id":"CLAUDE_EXTERNAL_READ_ONLY_ACCESS","result":"PASS_STATIC","evidence":"External-ID trust plus read-only released prefixes and explicit sensitive/write denies."},
+    {"id":"FUNCTIONAL_ROLES_CANNOT_MODIFY_CONTROL_PLANE","result":"PASS_STATIC","evidence":"Common permission boundary denies IAM, KMS, S3 policy/Object Lock, Secrets Manager policy, and CloudTrail mutation."},
+    {"id":"ALL_MATERIAL_DENY_TESTS_HAVE_EXPECTED_RESULTS","result":"PASS_STATIC_MATRIX_COMPLETE","evidence":"13 positive and 25 negative cases specify expected results and evidence."},
+    {"id":"OBJECT_LOCK_FIRST_PREFLIGHT_USES_DISPOSABLE_GOVERNANCE_MODE","result":"PASS_STATIC","evidence":"All three buckets set object_lock_enabled, versioning, Governance default retention 1-30 days, and force_destroy=false."},
+    {"id":"PRODUCT_LEADERSHIP_REMAINS_INACTIVE_NOT_INTEGRATED","result":"PASS","evidence":"No Product Leadership source/runtime/integration files modified."},
+    {"id":"TEST_003_REMAINS_NOT_EXECUTED","result":"PASS","evidence":"No fixtures, outputs, scores, oracles, mappings, materialized IDs, plans, or runtime tests created."}
+  ],
+  "resource_inventory": {
+    "s3_buckets": 3,
+    "kms_keys": 3,
+    "secrets_manager_secret_containers": 1,
+    "secrets_manager_secret_versions": 0,
+    "cloudtrails": 1,
+    "iam_roles": 9,
+    "permission_boundaries": 1,
+    "positive_test_cases": 13,
+    "negative_test_cases": 25
+  },
+  "runtime_claims": {
+    "aws_provisioned": false,
+    "aws_boundaries_proven": false,
+    "deny_tests_executed": 0,
+    "cloudtrail_events_observed": 0,
+    "object_lock_runtime_verified": false,
+    "test_003_executed": false,
+    "product_leadership_active": false,
+    "product_leadership_integrated": false
+  },
+  "divergences": [
+    {
+      "id": "PEND-LAB-030",
+      "status": "OPEN_UNCHANGED",
+      "effect": "Repository-wide validator cannot declare a clean global PASS; this package's native Terraform and scoped JSON checks pass."
+    }
+  ],
+  "result": "STATIC_IAC_PACKAGE_VALID_AWS_NOT_PROVISIONED"
+}

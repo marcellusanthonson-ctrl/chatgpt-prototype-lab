@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "manifest_id": "LAB-CONTINUITY-ATTACHMENTS-PRODUCT-LEADERSHIP-TEST-003-2026-07-27",
+  "manifest_id": "LAB-CONTINUITY-ATTACHMENTS-PL003-AWS-PREFLIGHT-IAC-110",
   "status": "CURRENT",
   "project_id": "lab",
   "required_read_order": [
@@ -35,7 +35,11 @@
     "projects/lab/PROJECT_STATE.json",
     "projects/lab/decisions/DEC-LAB-023.json",
     "projects/lab/decisions/DEC-LAB-024.json",
-    "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/ROLE_PROVIDER_ASSIGNMENT_MATRIX.json"
+    "projects/lab/decisions/DEC-LAB-025.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/ROLE_PROVIDER_ASSIGNMENT_MATRIX.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/aws-preflight/STATIC_IAC_PACKAGE_MANIFEST.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/aws-preflight/STATIC_VALIDATION_REPORT.json",
+    "registry/deltas/product-leadership-test-003-aws-preflight-iac-110.json"
   ],
   "missing_attachments": [],
   "authority_effect": "NONE"

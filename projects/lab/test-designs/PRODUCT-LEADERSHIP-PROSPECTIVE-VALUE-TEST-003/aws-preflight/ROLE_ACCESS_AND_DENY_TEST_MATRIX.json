@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0.0",
+  "matrix_id": "PL003-AWS-PREFLIGHT-ROLE-ACCESS-AND-DENY-TEST-MATRIX-001",
+  "status": "STATIC_EXPECTATIONS_ONLY_NOT_EXECUTED",
+  "authorization_ref": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST_003_AWS_PREFLIGHT_ARCHITECTURE_DESIGN_110",
+  "subject": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003",
+  "aws_accessed": false,
+  "runtime_boundaries_proven": false,
+  "roles": [
+    {
+      "role": "PACKAGE_GENERATOR",
+      "terraform_role": "pl003-preflight-package-generator",
+      "allow": ["s3:GetObject artifacts/inputs/*", "s3:PutObject artifacts/package-generator/*", "KMS artifact key via S3"],
+      "explicit_deny": ["custody bucket", "custody KMS decrypt", "secret read/write", "delete", "retention bypass", "control-plane mutation", "role chaining"]
+    },
+    {
+      "role": "BASELINE_GENERATOR",
+      "terraform_role": "pl003-preflight-baseline-generator",
+      "allow": ["s3:GetObject artifacts/inputs/*", "s3:PutObject artifacts/baseline-generator/*", "KMS artifact key via S3"],
+      "explicit_deny": ["custody bucket", "custody KMS decrypt", "secret read/write", "delete", "retention bypass", "control-plane mutation", "role chaining"]
+    },
+    {
+      "role": "NORMALIZATION_OPERATOR",
+      "terraform_role": "pl003-preflight-normalization-operator",
+      "allow": ["s3:GetObject artifacts/frozen-raw/*", "s3:PutObject artifacts/normalized/*", "KMS artifact key via S3"],
+      "explicit_deny": ["custody bucket", "custody KMS decrypt", "secret read/write", "delete", "retention bypass", "control-plane mutation", "role chaining"]
+    },
+    {
+      "role": "EVALUATOR_1",
+      "terraform_role": "pl003-preflight-evaluator-1",
+      "allow": ["s3:GetObject artifacts/blinded/*", "s3:PutObject artifacts/evaluations/evaluator-1/*", "KMS artifact key via S3"],
+      "explicit_deny": ["custody bucket", "custody KMS decrypt", "secret read/write", "other evaluator prefixes", "delete", "retention bypass", "control-plane mutation", "role chaining"]
+    },
+    {
+      "role": "EVALUATOR_2",
+      "terraform_role": "pl003-preflight-evaluator-2",
+      "allow": ["s3:GetObject artifacts/blinded/*", "s3:PutObject artifacts/evaluations/evaluator-2/*", "KMS artifact key via S3"],
+      "explicit_deny": ["custody bucket", "custody KMS decrypt", "secret read/write", "other evaluator prefixes", "delete", "retention bypass", "control-plane mutation", "role chaining"]
+    },
+    {
+      "role": "EVALUATOR_3",
+      "terraform_role": "pl003-preflight-evaluator-3",
+      "allow": ["s3:GetObject artifacts/blinded/*", "s3:PutObject artifacts/evaluations/evaluator-3/*", "KMS artifact key via S3"],
+      "explicit_deny": ["custody bucket", "custody KMS decrypt", "secret read/write", "other evaluator prefixes", "delete", "retention bypass", "control-plane mutation", "role chaining"]
+    },
+    {
+      "role": "RANDOMIZATION_CUSTODIAN",
+      "terraform_role": "pl003-preflight-randomization-custodian",
+      "allow": ["custody S3 prefixes", "custody KMS key use", "Secrets Manager describe/get/put"],
+      "explicit_deny": ["artifact writes", "audit writes", "delete", "retention bypass", "control-plane mutation", "role chaining"]
+    },
+    {
+      "role": "INDEPENDENT_AUDITOR",
+      "terraform_role": "pl003-preflight-claude-auditor",
+      "allow": ["released-final read", "released audit evidence read", "artifact/audit KMS decrypt via S3"],
+      "explicit_deny": ["all writes", "all deletes", "unreleased artifact reads", "custody reads", "secret access", "custody KMS decrypt", "control-plane mutation", "role chaining"]
+    },
+    {
+      "role": "PREFLIGHT_CONTROLLER",
+      "terraform_role": "pl003-preflight-controller",
+      "allow": ["CloudTrail status/lookup", "preflight-report read", "audit KMS decrypt via S3"],
+      "explicit_deny": ["custody reads/writes", "secret access", "custody KMS decrypt", "retention bypass", "control-plane mutation after creation", "role chaining"]
+    }
+  ],
+  "test_cases": [
+    {"id":"POS-001","principal":"PACKAGE_GENERATOR","operation":"GET artifacts/inputs/sentinel.txt","expected":"ALLOW","evidence_required":"CloudTrail S3 data event"},
+    {"id":"POS-002","principal":"PACKAGE_GENERATOR","operation":"PUT artifacts/package-generator/sentinel.txt with artifact KMS","expected":"ALLOW","evidence_required":"CloudTrail S3 data event and version ID"},
+    {"id":"POS-003","principal":"BASELINE_GENERATOR","operation":"GET artifacts/inputs/sentinel.txt","expected":"ALLOW","evidence_required":"CloudTrail S3 data event"},
+    {"id":"POS-004","principal":"BASELINE_GENERATOR","operation":"PUT artifacts/baseline-generator/sentinel.txt with artifact KMS","expected":"ALLOW","evidence_required":"CloudTrail S3 data event and version ID"},
+    {"id":"POS-005","principal":"NORMALIZATION_OPERATOR","operation":"GET artifacts/frozen-raw/sentinel.txt","expected":"ALLOW","evidence_required":"CloudTrail S3 data event"},
+    {"id":"POS-006","principal":"NORMALIZATION_OPERATOR","operation":"PUT artifacts/normalized/sentinel.txt with artifact KMS","expected":"ALLOW","evidence_required":"CloudTrail S3 data event and version ID"},
+    {"id":"POS-007","principal":"EVALUATOR_1","operation":"GET artifacts/blinded/sentinel.txt and PUT own evaluation sentinel","expected":"ALLOW","evidence_required":"CloudTrail read/write data events"},
+    {"id":"POS-008","principal":"EVALUATOR_2","operation":"GET artifacts/blinded/sentinel.txt and PUT own evaluation sentinel","expected":"ALLOW","evidence_required":"CloudTrail read/write data events"},
+    {"id":"POS-009","principal":"EVALUATOR_3","operation":"GET artifacts/blinded/sentinel.txt and PUT own evaluation sentinel","expected":"ALLOW","evidence_required":"CloudTrail read/write data events"},
+    {"id":"POS-010","principal":"RANDOMIZATION_CUSTODIAN","operation":"GET future authorized non-test sentinel from Secrets Manager","expected":"ALLOW","evidence_required":"CloudTrail Secrets Manager and KMS events"},
+    {"id":"POS-011","principal":"RANDOMIZATION_CUSTODIAN","operation":"PUT custody/custodian-attestations/sentinel.txt","expected":"ALLOW","evidence_required":"CloudTrail S3 and KMS events"},
+    {"id":"POS-012","principal":"INDEPENDENT_AUDITOR","operation":"GET audit/hash-manifests/sentinel.sha256 and artifacts/released-final/sentinel.txt","expected":"ALLOW","evidence_required":"CloudTrail read events"},
+    {"id":"POS-013","principal":"PREFLIGHT_CONTROLLER","operation":"GetTrailStatus and GET audit/preflight-report/static.json","expected":"ALLOW","evidence_required":"CloudTrail management/read events"},
+    {"id":"DENY-001","principal":"PACKAGE_GENERATOR","operation":"GET artifacts/baseline-generator/sentinel.txt","expected":"DENY","control":"no allow plus prefix list restriction"},
+    {"id":"DENY-002","principal":"BASELINE_GENERATOR","operation":"PUT artifacts/package-generator/sentinel.txt","expected":"DENY","control":"no allow plus prefix list restriction"},
+    {"id":"DENY-003","principal":"NORMALIZATION_OPERATOR","operation":"GET artifacts/package-generator/sentinel.txt","expected":"DENY","control":"no allow plus prefix list restriction"},
+    {"id":"DENY-004","principal":"EVALUATOR_1","operation":"PUT artifacts/evaluations/evaluator-2/sentinel.txt","expected":"DENY","control":"no allow plus prefix list restriction"},
+    {"id":"DENY-005","principal":"EVALUATOR_2","operation":"GET artifacts/evaluations/evaluator-1/sentinel.txt","expected":"DENY","control":"no read allow"},
+    {"id":"DENY-006","principal":"EVALUATOR_3","operation":"PUT artifacts/evaluations/evaluator-1/sentinel.txt","expected":"DENY","control":"no allow plus prefix list restriction"},
+    {"id":"DENY-007","principal":"ALL_CODEX_TASK_ROLES","operation":"secretsmanager:GetSecretValue custody secret","expected":"DENY","control":"identity explicit deny, secret resource deny, KMS deny"},
+    {"id":"DENY-008","principal":"INDEPENDENT_AUDITOR","operation":"secretsmanager:GetSecretValue custody secret","expected":"DENY","control":"identity explicit deny, secret resource deny, KMS deny"},
+    {"id":"DENY-009","principal":"PREFLIGHT_CONTROLLER","operation":"kms:Decrypt custody key","expected":"DENY","control":"identity explicit deny and KMS NotPrincipal deny"},
+    {"id":"DENY-010","principal":"ALL_NON_CUSTODIAN_ROLES","operation":"GET custody/encrypted-mapping/sentinel.enc","expected":"DENY","control":"bucket NotPrincipal deny"},
+    {"id":"DENY-011","principal":"INDEPENDENT_AUDITOR","operation":"GET artifacts/blinded/sentinel.txt","expected":"DENY","control":"auditor explicit unreleased deny"},
+    {"id":"DENY-012","principal":"INDEPENDENT_AUDITOR","operation":"PUT artifacts/released-final/sentinel.txt","expected":"DENY","control":"no write allow and boundary maximum does not overcome identity policy"},
+    {"id":"DENY-013","principal":"INDEPENDENT_AUDITOR","operation":"DELETE audit/hash-manifests/sentinel.sha256","expected":"DENY","control":"permission boundary and bucket explicit deny"},
+    {"id":"DENY-014","principal":"ALL_NINE_ROLES","operation":"s3:BypassGovernanceRetention","expected":"DENY","control":"permission boundary and bucket explicit deny"},
+    {"id":"DENY-015","principal":"ALL_NINE_ROLES","operation":"s3:DeleteObjectVersion","expected":"DENY","control":"permission boundary and bucket explicit deny"},
+    {"id":"DENY-016","principal":"ALL_NINE_ROLES","operation":"s3:PutBucketObjectLockConfiguration","expected":"DENY","control":"permission boundary explicit deny"},
+    {"id":"DENY-017","principal":"ALL_NINE_ROLES","operation":"s3:PutBucketPolicy","expected":"DENY","control":"permission boundary and bucket explicit deny"},
+    {"id":"DENY-018","principal":"ALL_NINE_ROLES","operation":"cloudtrail:StopLogging","expected":"DENY","control":"permission boundary explicit deny"},
+    {"id":"DENY-019","principal":"ALL_NINE_ROLES","operation":"cloudtrail:UpdateTrail","expected":"DENY","control":"permission boundary explicit deny"},
+    {"id":"DENY-020","principal":"ALL_NINE_ROLES","operation":"kms:PutKeyPolicy","expected":"DENY","control":"permission boundary explicit deny"},
+    {"id":"DENY-021","principal":"ALL_NINE_ROLES","operation":"iam:PutRolePermissionsBoundary","expected":"DENY","control":"permission boundary explicit deny"},
+    {"id":"DENY-022","principal":"ALL_NINE_ROLES","operation":"sts:AssumeRole any other subject role","expected":"DENY","control":"permission boundary explicit deny"},
+    {"id":"DENY-023","principal":"RANDOMIZATION_CUSTODIAN","operation":"PUT artifacts/released-final/sentinel.txt","expected":"DENY","control":"custodian identity explicit deny"},
+    {"id":"DENY-024","principal":"UNAUTHENTICATED_OR_PUBLIC","operation":"GET any bucket object","expected":"DENY","control":"public access blocks, ownership enforcement, no public policy"},
+    {"id":"DENY-025","principal":"ANY_PRINCIPAL","operation":"S3 request without TLS","expected":"DENY","control":"bucket aws:SecureTransport explicit deny"}
+  ],
+  "execution_rules": {
+    "runtime_execution_authorized": false,
+    "all_tests_require_future_provisioning_authorization": true,
+    "use_only_non_test_synthetic_sentinels": true,
+    "any_unexpected_allow_or_missing_event": "FAIL_CLOSED",
+    "pass_does_not_authorize_test_003": true
+  },
+  "current_effect": {
+    "aws_provisioned": false,
+    "tests_executed": 0,
+    "test_003_executed": false,
+    "product_leadership_active": false,
+    "product_leadership_integrated": false
+  }
+}

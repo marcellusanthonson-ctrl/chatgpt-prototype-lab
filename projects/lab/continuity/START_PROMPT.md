@@ -1,1 +1,10 @@
-Continúa el desarrollo de ChatGPT Prototype LAB reconstruyendo primero el estado desde `marcellusanthonson-ctrl/chatgpt-prototype-lab`, rama `main`, entrypoint `project-sources/chatgpt/START_HERE.md`; verifica el HEAD remoto vigente y sigue exactamente su orden de lectura. Después lee `projects/lab/continuity/CURRENT_CONTINUITY.json`, `CURRENT_CONTINUITY.md` y `ATTACHMENT_MANIFEST.json`. No ejecutes Test 003 ni provisionares infraestructura todavía. Comienza reconciliando la estrategia híbrida aprobada para Product Leadership Test 003, con seis tareas Codex, custodio externo, Claude como auditor read-only y AWS como proveedor recomendado aún no provisionado; la única siguiente acción es preparar la adopción formal y el diseño exacto del preflight AWS para IAM, S3 Object Lock, Secrets Manager/KMS y CloudTrail, manteniendo Product Leadership inactivo y sin autoridad de ejecución vigente.
+Continúa ChatGPT Prototype LAB reconstruyendo primero el estado desde
+`project-sources/chatgpt/START_HERE.md`, verificando el HEAD remoto vigente de
+`main` y siguiendo exactamente su orden de lectura. Después lee
+`projects/lab/continuity/CURRENT_CONTINUITY.json`. El paquete Terraform estático
+del preflight AWS de Product Leadership Test 003 fue publicado y la autorización
+110 quedó consumida; AWS no fue accedido ni provisionado, Test 003 no fue
+ejecutado y Product Leadership sigue inactivo y no integrado. No uses
+credenciales ni ejecutes plan, apply, destroy o pruebas runtime. La única
+siguiente acción es que Jonathan Martínez revise y apruebe o rechace por separado
+el brief futuro de autorización para el preflight AWS provisionado.

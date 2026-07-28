@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0.0",
+  "manifest_id": "PL003-AWS-PREFLIGHT-STATIC-IAC-PACKAGE-001",
+  "status": "COMPLETE_STATIC_VALIDATED_NOT_PROVISIONED",
+  "created_at": "2026-07-27",
+  "authorization_ref": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST_003_AWS_PREFLIGHT_ARCHITECTURE_DESIGN_110",
+  "decision_refs": ["DEC-LAB-023", "DEC-LAB-024", "DEC-LAB-025"],
+  "technical_choice": "TERRAFORM",
+  "terraform": {
+    "cli_version": "1.15.8",
+    "provider": "hashicorp/aws",
+    "provider_version": "6.56.0",
+    "backend": "LOCAL_DEFAULT_NO_BACKEND_BLOCK",
+    "credentials_configured": false,
+    "aws_data_sources": 0,
+    "terraform_outputs": 0
+  },
+  "inventory": {
+    "package_files_excluding_manifest": 14,
+    "s3_buckets": 3,
+    "kms_keys": 3,
+    "secret_containers": 1,
+    "secret_versions": 0,
+    "cloudtrails": 1,
+    "iam_roles": 9,
+    "permission_boundaries": 1,
+    "positive_test_cases": 13,
+    "negative_test_cases": 25
+  },
+  "files": [
+    {"path":"FUTURE_PROVISIONED_PREFLIGHT_AUTHORIZATION_BRIEF.json","sha256":"d55c997a835e44a7b464b031d11bdef601b6d90e1e145f299fff5b1520e17d86","role":"DRAFT_FUTURE_AUTHORIZATION"},
+    {"path":"README.md","sha256":"6ac76884057e7b1661daf613b0597e7c73ef2007c63774bed04a0ec91de160a4","role":"TECHNICAL_DECISION_AND_BOUNDARIES"},
+    {"path":"ROLE_ACCESS_AND_DENY_TEST_MATRIX.json","sha256":"7b71ddae7cc11f9a99831c4ab9d06563ec9c56982a87c62fdb2419ef30a24763","role":"ACCESS_AND_DENY_EXPECTATIONS"},
+    {"path":"STATIC_VALIDATION_REPORT.json","sha256":"84ad031b70c6cba8b9ea73bdce681cf29c6de7bd5ac1d8039e19cc95b64ac04d","role":"STATIC_VALIDATION_RESULT"},
+    {"path":"terraform/.gitignore","sha256":"b9264f5f937c6afd9c7f37f0d44df07270cfbdcd8e00ad12d172ef7112b4d8cd","role":"LOCAL_STATE_AND_CACHE_EXCLUSIONS"},
+    {"path":"terraform/.terraform.lock.hcl","sha256":"7df11b90b89d25258d4400fcd28005bade904ab2e28ca566428f3719d089c6bb","role":"SIGNED_PROVIDER_LOCK"},
+    {"path":"terraform/cloudtrail.tf","sha256":"bc7c4283e895fb88c849060b9bf007142a4c705e01babe10cfc689183a694794","role":"MANAGEMENT_AND_S3_DATA_EVENT_TRAIL"},
+    {"path":"terraform/iam.tf","sha256":"dc97e4c330b9700558c8a4928c8e47fa637f5bdc1add75dddc690781310e25cf","role":"NINE_ROLES_BOUNDARY_MINIMUM_ALLOW_EXPLICIT_DENY"},
+    {"path":"terraform/kms.tf","sha256":"7613b5d6fd5bb948b71b8f3bca788b9928f9594b32b8ae20bb47481dc5a5bd4d","role":"THREE_SEPARATE_KMS_KEYS_AND_POLICIES"},
+    {"path":"terraform/locals.tf","sha256":"a6fee9d4e3d817e590bcb4037b4fd890841eeeb9ef4eb075602ae43c4b0eb2b8","role":"ROLE_PREFIX_AND_TAG_MODEL"},
+    {"path":"terraform/s3.tf","sha256":"b6ade1cacaeb5be6eae1e6e3289023d37b82071cfc5d78da737df2f04c13b162","role":"THREE_OBJECT_LOCK_GOVERNANCE_BUCKETS"},
+    {"path":"terraform/secrets.tf","sha256":"624f65fc9c0dda382611d143912cad8c1df1afcfc113507d10e2f7ff5b6c8188","role":"EMPTY_SECRET_CONTAINER_AND_RESOURCE_POLICY"},
+    {"path":"terraform/variables.tf","sha256":"5a197dd7298affaaff83b52fe0007888bc163e3763b54307fbbe26215ffab8e3","role":"FUTURE_AUTHORIZATION_INPUT_GATES"},
+    {"path":"terraform/versions.tf","sha256":"972ade021483aa5fa7473ec11bc3f0828e9b27835a01dc316483947a803cfc75","role":"TERRAFORM_AND_PROVIDER_CONSTRAINTS"}
+  ],
+  "manifest_integrity": {
+    "self_hash_included": false,
+    "reason": "Avoid self-referential hash; Git object identity protects the manifest itself.",
+    "canonical_encoding": "UTF-8",
+    "line_endings": "LF_AFTER_GIT_NORMALIZATION"
+  },
+  "source_refs": [
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/AWS_PREFLIGHT_ARCHITECTURE_DESIGN.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/ROLE_PROVIDER_ASSIGNMENT_MATRIX.json",
+    "projects/lab/briefs/CODEX_PRODUCT_LEADERSHIP_TEST_003_AWS_PREFLIGHT_IAC_AUTHORING_110.json"
+  ],
+  "prohibitions_preserved": {
+    "aws_accessed": false,
+    "resources_provisioned": false,
+    "terraform_plan_executed": false,
+    "terraform_apply_or_destroy_executed": false,
+    "cloudformation_deployed": false,
+    "test_003_executed": false,
+    "fixtures_outputs_scores_oracles_mappings_generated": false,
+    "product_leadership_active": false,
+    "product_leadership_integrated": false
+  }
+}
