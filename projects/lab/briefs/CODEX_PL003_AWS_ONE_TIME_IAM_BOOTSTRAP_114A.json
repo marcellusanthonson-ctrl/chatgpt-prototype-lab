@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "brief_id": "CODEX_PL003_AWS_ONE_TIME_IAM_BOOTSTRAP_114A",
+  "project_id": "lab",
+  "status": "READY",
+  "executor": "Codex",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "entrypoint": "project-sources/chatgpt/START_HERE.md",
+  "authorization": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_AWS_ONE_TIME_IAM_BOOTSTRAP_114A.json",
+  "parent_authorization": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_AWS_ONE_TIME_IAM_BOOTSTRAP_114.json",
+  "objective": "Use exactly one replacement MFA-backed bootstrap session to complete the remaining authorized 114 scope, then 113, without expanding 112, 113 or 114.",
+  "required_sequence": [
+    "VERIFY_LIVE_HEAD_REPOSITORY_AND_CLEAN_WORKTREE",
+    "READ_START_HERE_AND_CANONICAL_ORDER",
+    "CONFIRM_NO_ACTIVE_PRIOR_SESSION_AND_NO_REUSABLE_TEMPORARY_CREDENTIALS",
+    "PREPARE_A_MANUALLY_RUN_LOCAL_POWERSHELL_ORCHESTRATOR_THAT_RETAINS_CREDENTIALS_ONLY_IN_ITS_PROCESS",
+    "PROMPT_FOR_ONE_NEW_TOTP_IN_USER_TERMINAL",
+    "CALL_GETSESSIONTOKEN_EXACTLY_ONCE",
+    "VERIFY_BOOTSTRAP_IDENTITY_WITH_REDACTED_STS_OUTPUT",
+    "CONTINUE_114_IN_THE_SAME_PROCESS_WITHOUT_DISCARDING_SESSION",
+    "CREATE_AND_VERIFY_PL003PreflightIAMSetupOperator_WITH_BOUNDARY_AND_MFA_TRUST",
+    "RESUME_113_USING_ONLY_THE_SETUP_OPERATOR",
+    "COMPLETE_OR_FAIL_CLOSED_113",
+    "REMOVE_SETUP_ROLE_POLICIES_PROFILES_VARIABLES_FILES_AND_SESSION_ARTIFACTS",
+    "PUBLISH_REDACTED_EVIDENCE_AND_CANONICAL_STATE"
+  ],
+  "interaction_contract": {
+    "mfa_entry_location": "USER_CONTROLLED_POWERSHELL_ONLY",
+    "codex_internal_terminal_prompt_forbidden": true,
+    "chat_mfa_entry_forbidden": true,
+    "session_count": 1,
+    "maximum_session_minutes": 60,
+    "credentials_must_remain_in_same_local_process": true,
+    "credentials_must_not_be_printed_or_committed": true
+  },
+  "forbidden": [
+    "SECOND_REPLACEMENT_SESSION",
+    "DISCARD_SESSION_BEFORE_114_OPERATIONAL_SCOPE_COMPLETES",
+    "ROOT_USE",
+    "GENERAL_ADMINISTRATION",
+    "NEW_IAM_USERS_OR_ACCESS_KEYS",
+    "MODIFY_PL003PreflightPlanOperator",
+    "TERRAFORM_OR_PREFLIGHT_112_EXECUTION",
+    "PRODUCT_LEADERSHIP_TEST_003",
+    "SECRET_OR_FULL_ACCOUNT_ID_DISCLOSURE"
+  ],
+  "stop_conditions": [
+    "HEAD_OR_CANONICAL_STATE_CONFLICT",
+    "GETSESSIONTOKEN_FAILURE",
+    "SESSION_CANNOT_BE_RETAINED_EPHEMERALLY_IN_SAME_PROCESS",
+    "THIRD_SESSION_REQUIRED",
+    "ROOT_OR_GENERAL_ADMIN_REQUIRED",
+    "BOUNDARY_OR_MFA_TRUST_CANNOT_BE_ENFORCED",
+    "COMPLETE_TEARDOWN_CANNOT_BE_GUARANTEED"
+  ],
+  "expected_outputs": [
+    "projects/lab/evidence/EVD-LAB-PL003-AWS-ONE-TIME-IAM-BOOTSTRAP-114.json",
+    "projects/lab/evidence/EVD-LAB-PL003-AWS-IAM-SETUP-TEARDOWN-114.json",
+    "projects/lab/evidence/EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A.json",
+    "updated authorization 114A, 114 and 113 state",
+    "updated PEND-LAB-032 and continuity",
+    "registry and evidence indexes"
+  ],
+  "response_contract": [
+    "RESULT",
+    "HEAD_AND_REPOSITORY",
+    "REPLACEMENT_SESSION_STATUS",
+    "BOOTSTRAP_SESSION_STATUS",
+    "SETUP_ROLE_STATUS",
+    "AUTHORIZATION_113_STATUS",
+    "ROOT_SECURITY_VISIBILITY",
+    "TEARDOWN_STATUS",
+    "EVIDENCE_PATHS",
+    "PEND_LAB_032_STATUS",
+    "AUTHORIZATION_114A_STATUS",
+    "AUTHORIZATION_114_STATUS",
+    "AUTHORIZATION_112_STATUS",
+    "DIVERGENCES",
+    "SINGLE_NEXT_ACTION"
+  ]
+}
