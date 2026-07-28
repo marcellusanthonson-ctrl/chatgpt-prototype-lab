@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-AWS-TFPLAN-GITIGNORE-111D",
+  "project_id": "lab",
+  "authorization_id": "AUTHORIZATION_LAB_AWS_TFPLAN_GITIGNORE_CORRECTION_111D",
+  "status": "PASS",
+  "executed_at": "2026-07-28",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "change": {
+    "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/aws-preflight/terraform/.gitignore",
+    "added_pattern": "*.tfplan",
+    "other_content_changed": false
+  },
+  "verification": {
+    "terraform_executed": false,
+    "aws_resources_mutated": false,
+    "credentials_or_secrets_recorded": false,
+    "scope_expansion": false
+  },
+  "result": "LOCAL_TERRAFORM_PLAN_FILES_ARE_NOW_EXCLUDED_FROM_GIT_TRACKING_BY_EXACT_PATTERN"
+}
