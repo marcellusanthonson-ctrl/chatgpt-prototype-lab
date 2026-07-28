@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "PRODUCT-LEADERSHIP-TEST-003-DISTRIBUTED-EXECUTION-PROTOCOL-001",
+  "subject": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003",
+  "status": "DOCUMENTED_REQUIRES_SEPARATE_IMPLEMENTATION_AND_EXECUTION_AUTHORIZATION",
+  "purpose": "Provide verifiable operational independence for Test 003 after single-environment preflight stops 106 and 107.",
+  "roles": [
+    {"id":"PACKAGE_GENERATOR","identity":"DISTINCT_OS_OR_CLOUD_PRINCIPAL","workspace":"ISOLATED_READ_WRITE","may_read":["fixture_inputs","package_candidate"],"may_write":["package_outputs","role_logs"],"forbidden":["baseline_outputs","randomization_mapping","oracle","scores"]},
+    {"id":"BASELINE_GENERATOR","identity":"DISTINCT_OS_OR_CLOUD_PRINCIPAL","workspace":"ISOLATED_READ_WRITE","may_read":["fixture_inputs","baseline_contract"],"may_write":["baseline_outputs","role_logs"],"forbidden":["package_outputs","randomization_mapping","oracle","scores"]},
+    {"id":"NORMALIZATION_OPERATOR","identity":"DISTINCT_OS_OR_CLOUD_PRINCIPAL","workspace":"ISOLATED_READ_WRITE","may_read":["arm_outputs_without_mapping"],"may_write":["normalized_outputs","normalization_log"],"forbidden":["oracle","scores","generator_credentials","arm_identity"]},
+    {"id":"RANDOMIZATION_CUSTODIAN","identity":"DISTINCT_OS_OR_CLOUD_PRINCIPAL_WITH_EXCLUSIVE_SECRET_STORE","workspace":"ISOLATED_SECRET_BOUNDARY","may_read":["normalized_output_hashes"],"may_write":["encrypted_mapping","custody_log","release_attestation"],"forbidden":["content_rewrite","scores","evaluation"]},
+    {"id":"EVALUATOR_1","identity":"DISTINCT_OS_OR_CLOUD_PRINCIPAL","workspace":"READ_ONLY_EVALUATION","may_read":["blinded_outputs","rubric"],"may_write":["evaluation_1","evaluator_1_log"],"forbidden":["mapping","oracle","other_evaluations"]},
+    {"id":"EVALUATOR_2","identity":"DISTINCT_OS_OR_CLOUD_PRINCIPAL","workspace":"READ_ONLY_EVALUATION","may_read":["blinded_outputs","rubric"],"may_write":["evaluation_2","evaluator_2_log"],"forbidden":["mapping","oracle","other_evaluations"]},
+    {"id":"EVALUATOR_3","identity":"DISTINCT_OS_OR_CLOUD_PRINCIPAL","workspace":"READ_ONLY_EVALUATION","may_read":["blinded_outputs","rubric"],"may_write":["evaluation_3","evaluator_3_log"],"forbidden":["mapping","oracle","other_evaluations"]},
+    {"id":"INDEPENDENT_AUDITOR","identity":"DISTINCT_READ_ONLY_PRINCIPAL","workspace":"READ_ONLY_AUDIT","may_read":["all_hash_manifests","all_logs","checkpoint_attestations","final_package"],"may_write":["audit_report","audit_findings"],"forbidden":["modify_test_artifacts","access_unreleased_mapping","execute_generators"]}
+  ],
+  "required_isolation": {
+    "shared_os_principal": false,
+    "shared_writeable_workspace": false,
+    "shared_credentials": false,
+    "cross_role_secret_visibility": false,
+    "auditor_write_access_to_subject_artifacts": false,
+    "minimum_identity_evidence": ["principal_id","environment_id","credential_scope","access_policy_snapshot","session_start_end_timestamps"]
+  },
+  "artifact_exchange": {
+    "transport": "APPEND_ONLY_OBJECT_STORE_OR_EQUIVALENT_IMMUTABLE_ARTIFACT_REPOSITORY",
+    "canonical_bytes": "UTF-8_LF_NO_BOM",
+    "hash": "SHA-256",
+    "manifest_required_for_every_transfer": true,
+    "manifest_fields": ["artifact_id","producer_role","consumer_role","sha256","byte_length","created_at_utc","environment_id","previous_manifest_hash"],
+    "chain_model": "HASH_CHAIN_PER_STAGE"
+  },
+  "custody": {
+    "mapping_encryption": "ENCRYPTED_AT_REST_WITH_CUSTODIAN_ONLY_DECRYPT_PERMISSION",
+    "mapping_release": "ONLY_AFTER_ALL_EVALUATIONS_AND_ARM_GUESS_SUBMISSIONS_ARE_HASH_FROZEN",
+    "oracle_access": "CUSTODIAN_AND_POST_FREEZE_SCORING_PROCESS_ONLY",
+    "release_requires": ["three_evaluation_freeze_attestations","arm_guess_freeze_attestation","auditor_checkpoint_acknowledgement"]
+  },
+  "checkpoints": [
+    "CP0_ROLE_AND_ACCESS_POLICY_FREEZE",
+    "CP1_FIXTURE_INPUT_MANIFEST_FREEZE",
+    "CP2_RAW_OUTPUT_HASH_FREEZE",
+    "CP3_NORMALIZED_OUTPUT_HASH_FREEZE",
+    "CP4_BLINDED_PACKAGE_AND_MAPPING_CUSTODY_FREEZE",
+    "CP5_ALL_EVALUATIONS_AND_ARM_GUESSES_FREEZE",
+    "CP6_MAPPING_RELEASE_AND_SCORING_FREEZE",
+    "CP7_FINAL_PACKAGE_FREEZE"
+  ],
+  "checkpoint_requirements": {
+    "external_immutable_timestamp": true,
+    "append_only_manifest": true,
+    "auditor_readable": true,
+    "producer_cannot_rewrite_after_freeze": true
+  },
+  "preflight_pass_requires": [
+    "EIGHT_DISTINCT_VERIFIED_PRINCIPALS",
+    "EIGHT_DISTINCT_ENVIRONMENT_OR_ACCESS_BOUNDARY_RECORDS",
+    "ROLE_ACCESS_MATRIX_DENY_TESTS_PASS",
+    "CUSTODIAN_ONLY_MAPPING_SECRET_ACCESS_PROVEN",
+    "AUDITOR_READ_ONLY_ACCESS_PROVEN",
+    "APPEND_ONLY_LOG_AND_CHECKPOINT_STORE_PROVEN",
+    "CANONICAL_HASH_PIPELINE_PASS",
+    "NO_SHARED_WRITEABLE_WORKSPACE_ACROSS_INCOMPATIBLE_ROLES"
+  ],
+  "fail_closed": "ANY_UNPROVEN_OR_FAILED_PREFLIGHT_ITEM_STOPS_BEFORE_FIXTURE_CONTENT_GENERATION",
+  "implementation_options": [
+    "EIGHT_SEPARATE_CLOUD_SANDBOX_OR_VM_IDENTITIES_WITH_SCOPED_OBJECT_STORAGE",
+    "EIGHT_SEPARATE_GITHUB_ENVIRONMENTS_AND_SERVICE_IDENTITIES_WITH_EXTERNAL_IMMUTABLE_STORAGE",
+    "HYBRID_HUMAN_AND_AGENT_ROLES_WITH_DISTINCT_ACCOUNTS_AND_SIGNED_ARTIFACT_EXCHANGE"
+  ],
+  "not_sufficient": [
+    "MULTIPLE_PROCESSES_UNDER_ONE_OS_PRINCIPAL",
+    "MULTIPLE_WORKTREES_WITH_SHARED_CREDENTIALS",
+    "MULTIPLE_CHAT_SESSIONS_WITH_SHARED_FILESYSTEM_AND_PERMISSIONS",
+    "ROLE_LABELS_WITHOUT_DENY_POLICY_EVIDENCE"
+  ],
+  "execution_authorized": false,
+  "product_leadership_active": false,
+  "product_leadership_integrated": false,
+  "authority_effect": "NONE"
+}
