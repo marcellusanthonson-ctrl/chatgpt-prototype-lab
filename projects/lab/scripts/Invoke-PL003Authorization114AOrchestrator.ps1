@@ -1,5 +1,7 @@
 [CmdletBinding()]
-param()
+param(
+    [switch]$LocalClosureTest
+)
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
@@ -59,39 +61,39 @@ $result = [ordered]@{
     execution_head = $null
     replacement_session = [ordered]@{
         get_session_token_calls = 0
-        mfa_backed = false
+        mfa_backed = $false
         maximum_session_seconds = $durationSeconds
         storage = 'PROCESS_MEMORY_ONLY'
-        temporary_credentials_printed = false
-        temporary_credentials_persisted = false
-        cleared_at_end = false
+        temporary_credentials_printed = $false
+        temporary_credentials_persisted = $false
+        cleared_at_end = $false
     }
     bootstrap_identity = [ordered]@{
         expected = 'IAM_USER_SESSION_pl003-bootstrap-operator'
-        sts_verified = false
-        full_account_id_recorded = false
+        sts_verified = $false
+        full_account_id_recorded = $false
     }
     pre_mutation_gate = [ordered]@{
-        bootstrap_simulation_completed = false
-        all_required_setup_and_teardown_actions_allowed = false
+        bootstrap_simulation_completed = $false
+        all_required_setup_and_teardown_actions_allowed = $false
         aws_mutations_before_gate = 0
     }
     setup_operator = [ordered]@{
-        role_created = false
-        boundary_created = false
-        execution_policy_created = false
-        policy_attached = false
-        assumed_role_sts_verified = false
-        mfa_trust_verified = false
-        boundary_verified = false
+        role_created = $false
+        boundary_created = $false
+        execution_policy_created = $false
+        policy_attached = $false
+        assumed_role_sts_verified = $false
+        mfa_trust_verified = $false
+        boundary_verified = $false
         maximum_session_seconds = $durationSeconds
     }
     authorization_113 = [ordered]@{
         status = 'NOT_STARTED'
-        provisioning_role_created = false
-        boundary_created = false
-        execution_policy_created = false
-        assumed_role_sts_verified = false
+        provisioning_role_created = $false
+        boundary_created = $false
+        execution_policy_created = $false
+        assumed_role_sts_verified = $false
         effective_scope_tests = 'NOT_EXECUTED'
         plan_operator_unchanged = 'NOT_VERIFIED'
     }
@@ -99,15 +101,15 @@ $result = [ordered]@{
         get_account_summary = 'NOT_EXECUTED'
         root_mfa_enabled = 'NOT_VERIFIED'
         root_access_keys_absent = 'NOT_VERIFIED'
-        root_identity_used = false
+        root_identity_used = $false
     }
     teardown = [ordered]@{
-        target_partial_artifacts_removed_if_required = false
-        setup_role_removed = false
-        setup_boundary_removed = false
-        setup_execution_policy_removed = false
-        setup_profile_present = false
-        complete = false
+        target_partial_artifacts_removed_if_required = $false
+        setup_role_removed = $false
+        setup_boundary_removed = $false
+        setup_execution_policy_removed = $false
+        setup_profile_present = $false
+        complete = $false
     }
     aws_calls = [ordered]@{
         sts_get_session_token = 0
@@ -118,20 +120,20 @@ $result = [ordered]@{
         preflight_112_resource_mutation = 0
     }
     forbidden_effects = [ordered]@{
-        plan_operator_modified = false
+        plan_operator_modified = $false
         iam_users_created = 0
         access_keys_created = 0
-        administrator_access_used = false
-        terraform_executed = false
-        product_leadership_test_003_executed = false
-        product_leadership_active = false
-        product_leadership_integrated = false
+        administrator_access_used = $false
+        terraform_executed = $false
+        product_leadership_test_003_executed = $false
+        product_leadership_active = $false
+        product_leadership_integrated = $false
     }
     failure_code = $null
     redaction = [ordered]@{
-        full_account_id_included = false
-        full_principal_arns_included = false
-        credentials_tokens_or_mfa_codes_included = false
+        full_account_id_included = $false
+        full_principal_arns_included = $false
+        credentials_tokens_or_mfa_codes_included = $false
     }
     result = 'IN_PROGRESS'
 }
@@ -163,7 +165,7 @@ $targetAttached = $false
 $targetVerified = $false
 $planBaselineHash = $null
 $teardownFailures = [System.Collections.Generic.List[string]]::new()
-$writeEvidence = -not (Test-Path -LiteralPath $evidencePath)
+$writeEvidence = -not $LocalClosureTest -and -not (Test-Path -LiteralPath $evidencePath)
 
 function ConvertTo-PolicyJson {
     param([Parameter(Mandatory)]$Document)
@@ -370,6 +372,9 @@ function Remove-SetupArtifacts {
 }
 
 try {
+    if ($LocalClosureTest) {
+        throw 'LOCAL_CLOSURE_TEST'
+    }
     if (-not $writeEvidence) {
         throw 'EVIDENCE_PATH_ALREADY_EXISTS'
     }
@@ -1012,20 +1017,29 @@ try {
     $result.result = 'PASS'
 } catch {
     $message = [string]$_.Exception.Message
+    if ($LocalClosureTest -and $message -eq 'LOCAL_CLOSURE_TEST') {
+        $result.status = 'LOCAL_CLOSURE_PATH_COMPLETED'
+        $result.result = 'LOCAL_TEST_PASS'
+        $result.failure_code = $null
+    }
     if ($message -match '^[A-Z0-9_:-]+$') {
-        $result.failure_code = $message.Replace(':','_').Replace('-','_')
+        if (-not $LocalClosureTest) {
+            $result.failure_code = $message.Replace(':','_').Replace('-','_')
+        }
     } else {
         $result.failure_code = 'UNEXPECTED_ORCHESTRATOR_FAILURE'
     }
-    if ($result.replacement_session.get_session_token_calls -eq 0) {
+    if (-not $LocalClosureTest -and $result.replacement_session.get_session_token_calls -eq 0) {
         $result.status = 'BLOCKED_BEFORE_REPLACEMENT_SESSION'
-    } elseif (-not $result.pre_mutation_gate.all_required_setup_and_teardown_actions_allowed) {
+    } elseif (-not $LocalClosureTest -and -not $result.pre_mutation_gate.all_required_setup_and_teardown_actions_allowed) {
         $result.status = 'BLOCKED_AFTER_MFA_BEFORE_AWS_MUTATION'
-    } elseif (-not $targetVerified) {
+    } elseif (-not $LocalClosureTest -and -not $targetVerified) {
         $result.status = 'BLOCKED_FAIL_CLOSED_WITH_ROLLBACK_REQUIRED'
     }
-    $result.authorization_113.status = 'BLOCKED_FAIL_CLOSED'
-    $result.result = 'BLOCKED'
+    if (-not $LocalClosureTest) {
+        $result.authorization_113.status = 'BLOCKED_FAIL_CLOSED'
+        $result.result = 'BLOCKED'
+    }
 } finally {
     if (-not $targetVerified -and ($targetRoleCreated -or $targetPolicyCreated -or $targetBoundaryCreated)) {
         Remove-TargetPartialArtifacts
@@ -1095,10 +1109,13 @@ $safeSummary = [ordered]@{
     root_security = $result.root_security_visibility
     failure_code = $result.failure_code
     evidence_path = 'projects/lab/evidence/EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A.json'
-    secrets_printed = false
+    secrets_printed = $false
 }
 $safeSummary | ConvertTo-Json -Depth 6
-if ($result.result -eq 'PASS') {
+if ($LocalClosureTest) {
+    return
+}
+if ($result.result -in @('PASS','LOCAL_TEST_PASS')) {
     exit 0
 }
 exit 1
