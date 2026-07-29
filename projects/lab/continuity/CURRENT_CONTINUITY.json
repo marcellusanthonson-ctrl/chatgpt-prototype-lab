@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "continuity_id": "LAB-CONTINUITY-PL003-CORRECTED-ATOMIC-SIMULATION-RETRY-126-BLOCKED",
+  "continuity_id": "LAB-CONTINUITY-PL003-PROPAGATION-AWARE-ATOMIC-SIMULATION-RETRY-127-PASS",
   "project_id": "lab",
-  "status": "CURRENT_BLOCKED_SIMULATION_ACCESS_DENIED_AFTER_TEMPORARY_GRANT_ROLLBACK_VERIFIED",
+  "status": "CURRENT_SIMULATION_CALL_CAPABILITY_RESOLVED_IMPLICIT_DENY_REQUIRES_DOCUMENTARY_RECONCILIATION",
   "created_at": "2026-07-29",
   "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "canonical_branch": "main",
@@ -274,6 +274,53 @@
     "credentials_cleared": true,
     "temporary_files_cleared": true
   },
+  "latest_authorization_127_attempt": {
+    "authorization_id": "AUTHORIZATION_LAB_PL003_PROPAGATION_AWARE_ATOMIC_SIMULATION_RETRY_127",
+    "status": "PASS_PROPAGATION_AWARE_SIMULATION_COMPLETED_AND_POLICY_REMOVED",
+    "directed_suite": "PASS_28_CASES",
+    "bootstrap_identity_verified_redacted": true,
+    "assume_role_900_succeeded": true,
+    "role_identity_verified_redacted": true,
+    "minimum_session_margin_before_wait_seconds": 890,
+    "minimum_session_margin_after_wait_seconds": 770,
+    "baseline_policy_count": 0,
+    "baseline_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "temporary_grant_succeeded": true,
+    "stored_policy_semantic_match": true,
+    "stored_policy_semantic_sha256": "48907bfbb41025c8c6f0a9ac657e1607fce94948c5a9a69b5a810b0423439d48",
+    "stabilization_elapsed_seconds": 120.003,
+    "aws_calls_during_stabilization": 0,
+    "simulation_attempt_count": 1,
+    "simulation_call_succeeded": true,
+    "simulation_evaluation_decision": "implicitDeny",
+    "simulated_action_executed": false,
+    "rollback_verified": true,
+    "final_policy_count": 0,
+    "final_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "final_hash_equals_baseline": true,
+    "final_set_equals_baseline": true,
+    "temporary_policy_absent_final": true,
+    "session_isolation": "PASS",
+    "propagation_confirmed": false,
+    "structural_denial_confirmed": false,
+    "evidence": "projects/lab/evidence/EVD-LAB-PL003-PROPAGATION-AWARE-ATOMIC-SIMULATION-RETRY-127-ATTEMPT-001.json",
+    "aws_calls": {
+      "sts": 4,
+      "iam": 6,
+      "other": 0
+    },
+    "iam_mutations": {
+      "temporary_grant": 1,
+      "rollback": 1,
+      "persistent": 0,
+      "unexpected": 0
+    },
+    "terraform_executions": 0,
+    "provisioning_executions": 0,
+    "product_leadership_test_003_executions": 0,
+    "credentials_cleared": true,
+    "temporary_files_cleared": true
+  },
   "verified_facts": [
     {
       "fact": "The static AWS Terraform package passed fmt, init with backend disabled, validate, and a local refresh-false plan using temporary assumed-role credentials.",
@@ -374,6 +421,13 @@
         "projects/lab/evidence/EVD-LAB-PL003-CORRECTED-ATOMIC-SIMULATION-RETRY-126-ATTEMPT-001.json",
         "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_CORRECTED_ATOMIC_SIMULATION_RETRY_126.json"
       ]
+    },
+    {
+      "fact": "Authorization 127 read and semantically verified the exact stored policy, completed 120.003 monotonic seconds with zero AWS calls, executed one successful simulation API call returning implicitDeny, and restored the exact empty baseline with zero persistent mutation.",
+      "source_refs": [
+        "projects/lab/evidence/EVD-LAB-PL003-PROPAGATION-AWARE-ATOMIC-SIMULATION-RETRY-127-ATTEMPT-001.json",
+        "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_PROPAGATION_AWARE_ATOMIC_SIMULATION_RETRY_127.json"
+      ]
     }
   ],
   "architecture": {
@@ -409,6 +463,7 @@
     "authorization_124": "CONSUMED_BLOCKED_NO_EXISTING_BOUNDED_CREATOR_CAPABILITY",
     "authorization_125": "CONSUMED_BLOCKED_LOCAL_EMPTY_BASELINE_HASH_FAILURE_BEFORE_GRANT",
     "authorization_126": "CONSUMED_BLOCKED_SIMULATION_CALL_FAILED_ROLLBACK_VERIFIED",
+    "authorization_127": "CONSUMED_PASS_PROPAGATION_AWARE_SIMULATION_COMPLETED_AND_POLICY_REMOVED",
     "active_aws_execution_authority": "NONE",
     "terraform_apply_authorized": false,
     "terraform_destroy_authorized": false,
@@ -452,7 +507,10 @@
     "Authorization 125 stopped on a local empty-baseline hash defect before PutUserPolicy, simulation or mutation, then cleared all credentials without opening a second MFA session.",
     "The empty-baseline hash defect was reproduced and fixed locally; 19 synthetic cases now pass.",
     "Authorization 126 passed 20 directed cases, verified empty baseline hashing and session isolation, and successfully applied the exact temporary policy.",
-    "The single authorization 126 simulation returned AccessDenied; mandatory rollback executed first in finally and restored the exact empty baseline with zero persistent mutation."
+    "The single authorization 126 simulation returned AccessDenied; mandatory rollback executed first in finally and restored the exact empty baseline with zero persistent mutation.",
+    "Authorization 127 passed 28 directed cases, read and semantically verified the exact temporary policy, and retained sufficient session margin.",
+    "Authorization 127 completed 120.003 monotonic seconds with zero AWS calls during stabilization, then its single simulation API call succeeded and returned implicitDeny.",
+    "Authorization 127 executed DeleteUserPolicy first in finally and restored the exact empty baseline with zero persistent mutation; neither propagation nor structural denial was declared confirmed."
   ],
   "operational_estimate": {
     "active_work_to_functional_validation": "4_TO_6_HOURS",
@@ -472,8 +530,8 @@
     },
     {
       "id": "PEND-LAB-032",
-      "item": "Resolve or discriminate the simulation AccessDenied observed immediately after a successful temporary grant while preserving atomic rollback.",
-      "status": "OPEN_BLOCKED_SIMULATION_ACCESS_DENIED_AFTER_TEMPORARY_GRANT_ROLLBACK_VERIFIED_NO_ACTIVE_EXECUTION_AUTHORITY"
+      "item": "Resolve the bootstrap iam:SimulatePrincipalPolicy call-capability blocker while preserving atomic rollback.",
+      "status": "COMPLETED_PROPAGATION_AWARE_SIMULATION_CALL_SUCCEEDED_POLICY_REMOVED"
     },
     {
       "item": "Configure a low AWS budget alert before any resource creation.",
@@ -521,6 +579,6 @@
     "ATTACHMENT_MANIFEST.json",
     "START_PROMPT.md"
   ],
-  "single_next_action": "Separately authorize one propagation-aware atomic retry with bounded pre-simulation stabilization.",
-  "authority_effect": "NONE_AFTER_AUTHORIZATION_126_CONSUMPTION"
+  "single_next_action": "Separately authorize documentary reconciliation of the implicitDeny result and selection of the next least-privilege preflight gate.",
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_127_CONSUMPTION"
 }

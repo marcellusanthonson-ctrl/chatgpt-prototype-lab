@@ -1,0 +1,165 @@
+{
+    "schema_version":  "1.0.0",
+    "evidence_id":  "EVD-LAB-PL003-PROPAGATION-AWARE-ATOMIC-SIMULATION-RETRY-127-ATTEMPT-001",
+    "authorization_id":  "AUTHORIZATION_LAB_PL003_PROPAGATION_AWARE_ATOMIC_SIMULATION_RETRY_127",
+    "project_id":  "lab",
+    "kind":  "REDACTED_PROPAGATION_AWARE_ATOMIC_SIMULATION_RETRY_EVIDENCE",
+    "status":  "COMPLETE",
+    "executed_at":  "2026-07-29T22:12:25Z",
+    "repository":  "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "branch_mode":  "DETACHED_HEAD",
+    "execution_head":  "5540a46c8f7cd8be199cb563692d3f6b6f402b55",
+    "prechecks":  {
+                      "head":  "PASS",
+                      "worktree":  "PASS",
+                      "inherited_credentials":  "PASS_ZERO",
+                      "authorization_127_registered_granted":  "PASS",
+                      "authorizations_118_through_126_consumed":  "PASS",
+                      "inherited_execution_authority":  "NONE",
+                      "directed_suite":  "PASS",
+                      "directed_case_count":  28,
+                      "monotonic_wait_seconds":  120,
+                      "zero_aws_calls_during_wait":  true,
+                      "session_margin":  "PASS",
+                      "interruption_during_stabilization":  "PASS",
+                      "mandatory_rollback":  "PASS",
+                      "one_simulation":  true,
+                      "stored_policy_semantic_hash":  "48907bfbb41025c8c6f0a9ac657e1607fce94948c5a9a69b5a810b0423439d48",
+                      "baseline_and_final_identical":  true,
+                      "aws_cli":  "PASS",
+                      "cli_history_disabled":  "PASS",
+                      "reusable_temporary_profiles_absent":  "PASS"
+                  },
+    "bootstrap_identity":  {
+                               "verified":  true,
+                               "redacted_identifier":  "IAM_USER:\u003cREDACTED_ACCOUNT_ID\u003e:pl003-bootstrap-operator"
+                           },
+    "assume_role":  {
+                        "attempted":  true,
+                        "duration_seconds":  900,
+                        "succeeded":  true
+                    },
+    "role_identity":  {
+                          "verified":  true,
+                          "redacted_identifier":  "ASSUMED_ROLE:\u003cREDACTED_ACCOUNT_ID\u003e:PL003BoundedSimulationSetupOperator/PL003Authorization127"
+                      },
+    "session_margin":  {
+                           "minimum_required_before_wait_seconds":  300,
+                           "bootstrap_remaining_before_wait_seconds":  3587,
+                           "role_remaining_before_wait_seconds":  890,
+                           "minimum_remaining_before_wait_seconds":  890,
+                           "sufficient_before_wait":  true,
+                           "minimum_remaining_after_wait_seconds":  770
+                       },
+    "baseline":  {
+                     "list_attempted":  true,
+                     "temporary_policy_absent":  true,
+                     "policy_name_count":  0,
+                     "sorted_policy_names_sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                 },
+    "temporary_grant":  {
+                            "policy_name":  "PL003AtomicSimulationOnly127",
+                            "document_sha256":  "de8b3ac1c747d63fc05e9862c63ba8c658f85f16c90887389c0ac7a0afe828f2",
+                            "put_attempted":  true,
+                            "put_succeeded":  true
+                        },
+    "stored_policy":  {
+                          "get_attempted":  true,
+                          "get_succeeded":  true,
+                          "semantic_match":  true,
+                          "authorized_semantic_sha256":  "48907bfbb41025c8c6f0a9ac657e1607fce94948c5a9a69b5a810b0423439d48",
+                          "stored_semantic_sha256":  "48907bfbb41025c8c6f0a9ac657e1607fce94948c5a9a69b5a810b0423439d48"
+                      },
+    "stabilization":  {
+                          "clock":  "LOCAL_MONOTONIC_STOPWATCH",
+                          "target_seconds":  120,
+                          "elapsed_seconds":  120.003,
+                          "completed":  true,
+                          "interrupted":  false,
+                          "aws_calls_before":  7,
+                          "aws_calls_after":  7,
+                          "aws_calls_during":  0
+                      },
+    "simulation":  {
+                       "attempted":  true,
+                       "attempt_count":  1,
+                       "tested_action":  "iam:CreatePolicy",
+                       "simulated_action_executed":  false,
+                       "call_succeeded":  true,
+                       "evaluation_decision":  "implicitDeny",
+                       "sanitized_classifier":  "SIMULATION_ACTION_NOT_AUTHORIZED",
+                       "mandatory_classification":  "PASS_PROPAGATION_AWARE_SIMULATION_COMPLETED_AND_POLICY_REMOVED"
+                   },
+    "rollback":  {
+                     "required":  true,
+                     "delete_was_first_finally_aws_operation":  true,
+                     "delete_attempted":  true,
+                     "delete_succeeded":  true,
+                     "final_list_attempted":  true,
+                     "temporary_policy_absent":  true,
+                     "final_policy_name_count":  0,
+                     "final_sorted_policy_names_sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                     "final_hash_equals_baseline":  true,
+                     "final_set_equals_baseline":  true,
+                     "verified":  true
+                 },
+    "session_isolation":  {
+                              "bootstrap_used_for_simulation":  true,
+                              "bootstrap_used_for_policy_mutation_or_read":  false,
+                              "role_used_for_policy_mutation_and_read":  true,
+                              "role_used_for_simulation":  false,
+                              "result":  "PASS"
+                          },
+    "aws_calls":  {
+                      "sts_get_session_token":  1,
+                      "sts_get_caller_identity_bootstrap":  1,
+                      "sts_assume_role":  1,
+                      "sts_get_caller_identity_role":  1,
+                      "iam_list_user_policies_baseline":  1,
+                      "iam_put_user_policy":  1,
+                      "iam_get_user_policy":  1,
+                      "iam_simulate_principal_policy":  1,
+                      "iam_delete_user_policy":  1,
+                      "iam_list_user_policies_final":  1,
+                      "other_aws":  0
+                  },
+    "mutations":  {
+                      "temporary_grant_attempts":  1,
+                      "temporary_grant_successes":  1,
+                      "rollback_attempts":  1,
+                      "rollback_successes":  1,
+                      "persistent_at_completion":  0,
+                      "unexpected":  0
+                  },
+    "final_state":  {
+                        "bootstrap_inline_policy_set_restored":  true,
+                        "temporary_policy_absent":  true,
+                        "role_modified":  false,
+                        "trust_modified":  false,
+                        "boundary_modified":  false,
+                        "role_policy_modified":  false,
+                        "identities_or_access_keys_created":  0,
+                        "infrastructure_mutations":  0,
+                        "terraform_executions":  0,
+                        "provisioning_executions":  0,
+                        "product_leadership_test_003_executions":  0,
+                        "product_leadership_active":  false,
+                        "product_leadership_integrated":  false
+                    },
+    "credentials_cleared":  true,
+    "temporary_files_cleared":  true,
+    "failure_code":  null,
+    "failure_metadata":  null,
+    "result":  "PASS_PROPAGATION_AWARE_SIMULATION_COMPLETED_AND_POLICY_REMOVED",
+    "interpretation_limits":  {
+                                  "propagation_confirmed":  false,
+                                  "structural_denial_confirmed":  false
+                              },
+    "redaction":  {
+                      "full_account_id_included":  false,
+                      "full_arns_included":  false,
+                      "credentials_tokens_or_mfa_codes_included":  false,
+                      "raw_aws_output_included":  false
+                  },
+    "post_attempt_authority":  "NONE"
+}

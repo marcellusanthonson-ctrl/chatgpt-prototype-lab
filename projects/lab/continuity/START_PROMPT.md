@@ -4,23 +4,24 @@ remoto vigente, lee `project-sources/chatgpt/START_HERE.md` y sigue exactamente
 su orden. Después lee `projects/lab/continuity/CURRENT_CONTINUITY.json`,
 `CURRENT_CONTINUITY.md` y `ATTACHMENT_MANIFEST.json`.
 
-La autorización 126 consumió el único reintento atómico corregido. La suite
-dirigida pasó 20/20 casos. El baseline bootstrap fue vacío con SHA-256
-`e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`.
-El rol exacto fue asumido durante 900 segundos, aplicó una vez la policy
-temporal exacta y la única simulación read-only desde bootstrap devolvió
-`AccessDenied`. `DeleteUserPolicy` fue la primera operación AWS del bloque
-`finally` y restauró el baseline vacío; el hash y el conjunto final coinciden
-con el baseline.
+La autorización 127 completó el reintento atómico consciente de propagación.
+La suite dirigida pasó 28/28 casos. El rol exacto fue asumido durante 900
+segundos, aplicó y leyó una vez la policy temporal exacta, verificó su hash
+semántico, y conservó 890 segundos de margen mínimo antes de la espera.
 
-Hubo nueve llamadas AWS —cuatro STS y cinco IAM—, dos mutaciones temporales
+La estabilización duró 120.003 segundos mediante reloj monotónico local, con
+cero llamadas AWS. La única simulación read-only fue exitosa y devolvió
+`implicitDeny`; la acción simulada no se ejecutó. `DeleteUserPolicy` fue la
+primera operación AWS de `finally` y restauró el baseline vacío exacto.
+
+Hubo diez llamadas AWS —cuatro STS y seis IAM—, dos mutaciones temporales
 exitosas —grant y rollback— y cero mutaciones persistentes. No se ejecutaron
 Terraform, provisioning, Product Leadership Test 003 ni activación o
-integración de Product Leadership. Las credenciales y los archivos temporales
-fueron eliminados.
+integración de Product Leadership. No se confirma causalidad de propagación ni
+denegación estructural.
 
-No reutilices las autorizaciones 118–126 ni las autorizaciones 112, 113, 114,
+No reutilices las autorizaciones 118–127 ni las autorizaciones 112, 113, 114,
 114A o 117 como autoridad. La autoridad AWS activa es `NONE`. La única
-siguiente acción es autorizar separadamente un único reintento atómico
-consciente de propagación, con estabilización acotada antes de la simulación y
-rollback obligatorio.
+siguiente acción es autorizar separadamente la reconciliación documental de
+`implicitDeny` y la selección del siguiente gate de preflight con privilegio
+mínimo.

@@ -21,15 +21,19 @@
     "assume_role_duration_900": "PASS_REQUEST_SUCCEEDED",
     "role_identity": "PASS_REDACTED_EXPECTED_ASSUMED_ROLE",
     "role_can_list_bootstrap_inline_policies": "PASS",
-    "role_can_apply_and_remove_exact_temporary_policy": "PASS_AUTHORIZATION_126_EXACT_GRANT_AND_ROLLBACK",
+    "role_can_apply_and_remove_exact_temporary_policy": "PASS_AUTHORIZATIONS_126_AND_127_EXACT_GRANT_AND_ROLLBACK",
+    "role_can_read_exact_temporary_policy": "PASS_AUTHORIZATION_127_EXACT_STORED_POLICY_READ",
     "trust_document_direct_read": "NOT_AUTHORIZED_BY_125",
     "boundary_document_direct_read": "NOT_AUTHORIZED_BY_125",
     "inline_role_policy_direct_read": "NOT_AUTHORIZED_BY_125",
     "attached_managed_policies_direct_read": "NOT_AUTHORIZED_BY_125",
     "manual_bootstrap_mutation_count_direct_verification": "NOT_INDEPENDENTLY_VERIFIABLE_BY_125"
   },
-  "claim_limit": "ROLE_ASSUMPTION_IDENTITY_DURATION_LIST_BASELINE_AND_EXACT_TEMPORARY_GRANT_ROLLBACK_CAPABILITIES_ARE_PROGRAMMATICALLY_SUPPORTED_TRUST_BOUNDARY_ROLE_POLICY_AND_ATTACHED_POLICY_DOCUMENTS_REMAIN_NOT_DIRECTLY_READ",
+  "claim_limit": "ROLE_ASSUMPTION_IDENTITY_DURATION_LIST_BASELINE_AND_EXACT_TEMPORARY_GRANT_READ_AND_ROLLBACK_CAPABILITIES_ARE_PROGRAMMATICALLY_SUPPORTED_TRUST_BOUNDARY_ROLE_POLICY_AND_ATTACHED_POLICY_DOCUMENTS_REMAIN_NOT_DIRECTLY_READ",
   "programmatic_evidence": "projects/lab/evidence/EVD-LAB-PL003-MANUAL-SETUP-ATOMIC-SIMULATION-125-ATTEMPT-001.json",
-  "additional_programmatic_evidence": "projects/lab/evidence/EVD-LAB-PL003-CORRECTED-ATOMIC-SIMULATION-RETRY-126-ATTEMPT-001.json",
+  "additional_programmatic_evidence": [
+    "projects/lab/evidence/EVD-LAB-PL003-CORRECTED-ATOMIC-SIMULATION-RETRY-126-ATTEMPT-001.json",
+    "projects/lab/evidence/EVD-LAB-PL003-PROPAGATION-AWARE-ATOMIC-SIMULATION-RETRY-127-ATTEMPT-001.json"
+  ],
   "authority_effect": "NONE"
 }
