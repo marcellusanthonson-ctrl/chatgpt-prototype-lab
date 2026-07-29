@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "PL003-ATTEMPT-004-DOCUMENTARY-RECONCILIATION-115",
+  "project_id": "lab",
+  "effective_at": "2026-07-29",
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_PL003_ATTEMPT_004_DOCUMENTARY_RECONCILIATION_115",
+    "path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_ATTEMPT_004_DOCUMENTARY_RECONCILIATION_115.json",
+    "status": "CONSUMED"
+  },
+  "evidence": {
+    "id": "EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A-ATTEMPT-004",
+    "path": "projects/lab/evidence/EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A-ATTEMPT-004.json",
+    "status": "BLOCKED_FAIL_CLOSED"
+  },
+  "state_effect": {
+    "authorization_114a": "CONSUMED",
+    "authorization_114a_post_consumption_authority": "NONE",
+    "attempt_004": "BLOCKED_FAIL_CLOSED",
+    "current_blocker": "BOOTSTRAP_SIMULATION_UNAVAILABLE_OR_DENIED",
+    "aws_iam_mutations": 0,
+    "aws_infrastructure_mutations": 0,
+    "terraform_executed": false,
+    "product_leadership_test_003_executed": false,
+    "product_leadership_active": false,
+    "product_leadership_integrated": false,
+    "active_execution_authority": "NONE",
+    "next_authorized_action": "NONE_AFTER_CONSUMPTION"
+  },
+  "forbidden_next_actions": [
+    "AWS_EXECUTION",
+    "IAM_SIMULATION_OR_MUTATION",
+    "TERRAFORM_EXECUTION",
+    "PRODUCT_LEADERSHIP_TEST_003_EXECUTION"
+  ],
+  "single_next_action": "OBTAIN_NEW_EXPLICIT_AUTHORIZATION_BEFORE_ANY_FURTHER_PL003_AWS_OR_TEST_EXECUTION"
+}
