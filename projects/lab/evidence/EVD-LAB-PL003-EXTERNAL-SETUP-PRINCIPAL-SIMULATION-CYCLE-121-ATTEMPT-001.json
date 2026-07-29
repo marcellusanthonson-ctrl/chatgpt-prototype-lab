@@ -1,0 +1,103 @@
+{
+    "schema_version":  "1.0.0",
+    "evidence_id":  "EVD-LAB-PL003-EXTERNAL-SETUP-PRINCIPAL-SIMULATION-CYCLE-121-ATTEMPT-001",
+    "authorization_id":  "AUTHORIZATION_LAB_PL003_EXTERNAL_SETUP_PRINCIPAL_SIMULATION_CYCLE_121",
+    "project_id":  "lab",
+    "kind":  "REDACTED_EXTERNAL_SETUP_PRINCIPAL_ATOMIC_CYCLE_PRECHECK_EVIDENCE",
+    "status":  "BLOCKED",
+    "executed_at":  "2026-07-29T14:01:14Z",
+    "repository":  "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "execution_head":  "0b903ca44ee9a9ebfea428ddbc03475b7d94b018",
+    "prechecks":  {
+                      "head":  "PASS",
+                      "worktree":  "PASS",
+                      "authorizations_118_119_120_consumed":  "PASS",
+                      "active_execution_authority_before_121":  "NONE",
+                      "aws_cli":  "PASS",
+                      "cli_history_disabled":  "PASS",
+                      "inherited_temporary_credentials_absent":  "PASS",
+                      "reusable_temporary_profiles_absent":  "PASS",
+                      "temporary_files_absent":  "PASS",
+                      "synthetic_two_principal_cycle":  "PASS",
+                      "session_isolation":  "PASS",
+                      "rollback_first_after_put_failure":  "PASS"
+                  },
+    "policy":  {
+                   "name":  "PL003AtomicSimulationOnly121",
+                   "sha256":  "bb1e517f6e58f8cf50789c2418444f695a4fd6ca0a705ccd7937de4119b2bd22",
+                   "exact_action":  "iam:SimulatePrincipalPolicy",
+                   "statement_count":  1,
+                   "action_count":  1,
+                   "condition_count":  0,
+                   "additional_actions":  0
+               },
+    "external_principal":  {
+                               "expected_setup_profile_present":  false,
+                               "selected":  false,
+                               "identity_verified":  false,
+                               "redacted_identifier":  "NONE",
+                               "privilege_classification":  "NO_BOUNDED_EXTERNAL_SETUP_PRINCIPAL",
+                               "read_only_plan_operator_present":  true,
+                               "read_only_plan_operator_compatible":  false,
+                               "canonical_permission_evidence":  "projects/lab/evidence/EVD-LAB-PL003-AWS-BOUNDED-PROVISIONING-OPERATOR-113.json"
+                           },
+    "bootstrap_principal":  {
+                                "session_started":  false,
+                                "identity_verified":  false,
+                                "redacted_identifier":  "NOT_EXECUTED"
+                            },
+    "baseline":  {
+                     "executed":  false,
+                     "temporary_policy_absence_verified":  false
+                 },
+    "grant":  {
+                  "attempted":  false,
+                  "succeeded":  false
+              },
+    "simulation":  {
+                       "attempted":  false,
+                       "completed_without_access_denied":  false
+                   },
+    "rollback":  {
+                     "required":  false,
+                     "attempted":  false,
+                     "verified":  false
+                 },
+    "final_state":  {
+                        "temporary_policy_created_by_121":  false,
+                        "persistent_iam_mutations":  0,
+                        "aws_resources_created":  0,
+                        "terraform_executions":  0,
+                        "product_leadership_test_003_executions":  0,
+                        "product_leadership_active":  false,
+                        "product_leadership_integrated":  false
+                    },
+    "aws_calls":  {
+                      "external_sts_get_caller_identity":  0,
+                      "external_iam_list_user_policies":  0,
+                      "external_iam_get_user_policy":  0,
+                      "external_iam_put_user_policy":  0,
+                      "external_iam_delete_user_policy":  0,
+                      "bootstrap_sts_get_session_token":  0,
+                      "bootstrap_sts_get_caller_identity":  0,
+                      "bootstrap_iam_simulate_principal_policy":  0,
+                      "other_aws":  0
+                  },
+    "iam_mutations":  {
+                          "expected":  0,
+                          "actual":  0,
+                          "unexpected":  0,
+                          "persistent":  0
+                      },
+    "external_credentials_cleared":  true,
+    "bootstrap_credentials_cleared":  true,
+    "result":  "BLOCKED_NO_BOUNDED_EXTERNAL_SETUP_PRINCIPAL",
+    "failure_code":  "BLOCKED_NO_BOUNDED_EXTERNAL_SETUP_PRINCIPAL",
+    "redaction":  {
+                      "full_account_id_included":  false,
+                      "full_arns_included":  false,
+                      "credentials_tokens_or_mfa_codes_included":  false,
+                      "raw_aws_output_persisted":  false
+                  },
+    "post_attempt_authority":  "NONE"
+}

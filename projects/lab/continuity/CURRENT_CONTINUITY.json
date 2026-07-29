@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "continuity_id": "LAB-CONTINUITY-PL003-ATOMIC-SIMULATION-PERMISSION-CYCLE-120-BLOCKED",
+  "continuity_id": "LAB-CONTINUITY-PL003-EXTERNAL-SETUP-PRINCIPAL-CYCLE-121-BLOCKED",
   "project_id": "lab",
-  "status": "CURRENT_BLOCKED_EXACT_POLICY_GET_ACCESS_DENIED",
+  "status": "CURRENT_BLOCKED_NO_BOUNDED_EXTERNAL_SETUP_PRINCIPAL",
   "created_at": "2026-07-29",
   "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "canonical_branch": "main",
@@ -111,6 +111,21 @@
     "product_leadership_test_003_executions": 0,
     "ephemeral_credentials_cleared": true
   },
+  "latest_authorization_121_attempt": {
+    "authorization_id": "AUTHORIZATION_LAB_PL003_EXTERNAL_SETUP_PRINCIPAL_SIMULATION_CYCLE_121",
+    "status": "CONSUMED_BLOCKED_NO_BOUNDED_EXTERNAL_SETUP_PRINCIPAL",
+    "external_setup_principal_selected": false,
+    "read_only_plan_operator_present": true,
+    "read_only_plan_operator_compatible": false,
+    "bootstrap_session_started": false,
+    "evidence": "projects/lab/evidence/EVD-LAB-PL003-EXTERNAL-SETUP-PRINCIPAL-SIMULATION-CYCLE-121-ATTEMPT-001.json",
+    "aws_calls": 0,
+    "iam_mutations": 0,
+    "persistent_mutations": 0,
+    "terraform_executions": 0,
+    "product_leadership_test_003_executions": 0,
+    "credentials_cleared": true
+  },
   "verified_facts": [
     {
       "fact": "The static AWS Terraform package passed fmt, init with backend disabled, validate, and a local refresh-false plan using temporary assumed-role credentials.",
@@ -168,6 +183,13 @@
         "projects/lab/evidence/EVD-LAB-PL003-ATOMIC-SIMULATION-PERMISSION-CYCLE-120-ATTEMPT-001.json",
         "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_ATOMIC_SIMULATION_PERMISSION_CYCLE_120.json"
       ]
+    },
+    {
+      "fact": "Authorization 121 found no existing bounded external setup principal; the existing plan operator remains read-only and incompatible, so the execution stopped before any AWS session or call.",
+      "source_refs": [
+        "projects/lab/evidence/EVD-LAB-PL003-EXTERNAL-SETUP-PRINCIPAL-SIMULATION-CYCLE-121-ATTEMPT-001.json",
+        "projects/lab/evidence/EVD-LAB-PL003-AWS-BOUNDED-PROVISIONING-OPERATOR-113.json"
+      ]
     }
   ],
   "architecture": {
@@ -197,6 +219,7 @@
     "authorization_118": "CONSUMED",
     "authorization_119": "CONSUMED_BLOCKED_FAIL_CLOSED_OTHER",
     "authorization_120": "CONSUMED_BLOCKED_BASELINE_EXACT_POLICY_READ_FAILED",
+    "authorization_121": "CONSUMED_BLOCKED_NO_BOUNDED_EXTERNAL_SETUP_PRINCIPAL",
     "active_aws_execution_authority": "NONE",
     "terraform_apply_authorized": false,
     "terraform_destroy_authorized": false,
@@ -225,7 +248,9 @@
     "Authorization 119 verified the expected bootstrap principal and attempted one minimum baseline read, then stopped before grant because ListUserPolicies failed.",
     "Authorization 119 executed one GetSessionToken, one GetCallerIdentity and one IAM baseline read, with zero simulations, zero mutations, zero resources, no Terraform and no Product Leadership Test 003, then cleared all ephemeral credentials.",
     "Authorization 120 implemented and locally validated the exact atomic cycle with DeleteUserPolicy as the first finally AWS operation after any PutUserPolicy attempt.",
-    "Authorization 120 received AccessDenied from the exact-name GetUserPolicy baseline and stopped before PutUserPolicy, simulation, DeleteUserPolicy or mutation, then cleared all ephemeral credentials."
+    "Authorization 120 received AccessDenied from the exact-name GetUserPolicy baseline and stopped before PutUserPolicy, simulation, DeleteUserPolicy or mutation, then cleared all ephemeral credentials.",
+    "Authorization 121 validated the two-principal atomic cycle locally, then stopped with zero AWS calls because no bounded external setup principal exists.",
+    "The existing pl003-plan-operator remains classified as read-only and incompatible with the four exact IAM setup actions required by authorization 121."
   ],
   "operational_estimate": {
     "active_work_to_functional_validation": "4_TO_6_HOURS",
@@ -245,8 +270,8 @@
     },
     {
       "id": "PEND-LAB-032",
-      "item": "Provide a bounded external principal or mechanism that can inspect and atomically manage only the exact temporary inline policy on the verified bootstrap user.",
-      "status": "OPEN_BLOCKED_EXACT_POLICY_GET_ACCESS_DENIED_NO_ACTIVE_EXECUTION_AUTHORITY"
+      "item": "Create or configure under separate authorization a narrowly bounded external setup principal before attempting the two-principal atomic cycle.",
+      "status": "OPEN_BLOCKED_NO_BOUNDED_EXTERNAL_SETUP_PRINCIPAL_NO_ACTIVE_EXECUTION_AUTHORITY"
     },
     {
       "item": "Configure a low AWS budget alert before any resource creation.",
@@ -294,6 +319,6 @@
     "ATTACHMENT_MANIFEST.json",
     "START_PROMPT.md"
   ],
-  "single_next_action": "Separately authorize a bounded external exact-policy manager without reusing authorizations 118, 119 or 120.",
-  "authority_effect": "NONE_AFTER_AUTHORIZATION_120_CONSUMPTION"
+  "single_next_action": "Separately authorize creation or configuration of a narrowly bounded external setup principal without reusing authorizations 118, 119, 120 or 121.",
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_121_CONSUMPTION"
 }

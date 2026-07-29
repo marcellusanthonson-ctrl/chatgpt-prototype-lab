@@ -77,6 +77,18 @@
     "evidence_ref": "projects/lab/evidence/EVD-LAB-PL003-ATOMIC-SIMULATION-PERMISSION-CYCLE-120-ATTEMPT-001.json",
     "ephemeral_credentials_cleared": true
   },
-  "required_resolution": "A separate explicit authorization must provide a bounded external principal or mechanism that can inspect and atomically manage only the exact temporary inline policy on the verified bootstrap user; the bootstrap session itself cannot read that exact policy baseline.",
+  "authorization_121_result": {
+    "authorization_id": "AUTHORIZATION_LAB_PL003_EXTERNAL_SETUP_PRINCIPAL_SIMULATION_CYCLE_121",
+    "status": "CONSUMED_BLOCKED_NO_BOUNDED_EXTERNAL_SETUP_PRINCIPAL",
+    "external_setup_principal_selected": false,
+    "read_only_plan_operator_present": true,
+    "read_only_plan_operator_compatible": false,
+    "bootstrap_session_started": false,
+    "aws_calls": 0,
+    "iam_mutations": 0,
+    "evidence_ref": "projects/lab/evidence/EVD-LAB-PL003-EXTERNAL-SETUP-PRINCIPAL-SIMULATION-CYCLE-121-ATTEMPT-001.json",
+    "credentials_cleared": true
+  },
+  "required_resolution": "A separate explicit authorization must create or configure a narrowly bounded external setup principal before the two-principal atomic simulation cycle can be attempted; authorization 121 did not permit creating or modifying that principal.",
   "active_execution_authority": "NONE"
 }

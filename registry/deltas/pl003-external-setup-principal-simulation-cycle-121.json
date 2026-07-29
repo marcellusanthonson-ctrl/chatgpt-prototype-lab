@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "PL003-EXTERNAL-SETUP-PRINCIPAL-SIMULATION-CYCLE-121",
+  "project_id": "lab",
+  "effective_at": "2026-07-29",
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_PL003_EXTERNAL_SETUP_PRINCIPAL_SIMULATION_CYCLE_121",
+    "path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_EXTERNAL_SETUP_PRINCIPAL_SIMULATION_CYCLE_121.json",
+    "status": "CONSUMED"
+  },
+  "implementation": {
+    "precheck_script": "projects/lab/scripts/Invoke-PL003ExternalSetupPrincipalSimulationCycle121Precheck.ps1",
+    "synthetic_test": "projects/lab/scripts/tests/Invoke-PL003ExternalSetupPrincipalSimulationCycle121.Tests.ps1",
+    "synthetic_result": "PASS",
+    "synthetic_case_count": 6,
+    "policy_sha256": "bb1e517f6e58f8cf50789c2418444f695a4fd6ca0a705ccd7937de4119b2bd22",
+    "exact_action": "iam:SimulatePrincipalPolicy",
+    "additional_actions": 0,
+    "conditions": 0,
+    "session_isolation": "PASS",
+    "rollback_first_after_put_failure": "PASS",
+    "aws_calls_during_synthetic_tests": 0
+  },
+  "evidence": {
+    "id": "EVD-LAB-PL003-EXTERNAL-SETUP-PRINCIPAL-SIMULATION-CYCLE-121-ATTEMPT-001",
+    "path": "projects/lab/evidence/EVD-LAB-PL003-EXTERNAL-SETUP-PRINCIPAL-SIMULATION-CYCLE-121-ATTEMPT-001.json",
+    "result": "BLOCKED_NO_BOUNDED_EXTERNAL_SETUP_PRINCIPAL"
+  },
+  "state_effect": {
+    "external_setup_principal_selected": false,
+    "read_only_plan_operator_present": true,
+    "read_only_plan_operator_compatible": false,
+    "bootstrap_session_started": false,
+    "baseline_executed": false,
+    "grant_attempted": false,
+    "simulation_attempted": false,
+    "rollback_required": false,
+    "temporary_policy_created_by_121": false,
+    "current_blocker": "NO_BOUNDED_EXTERNAL_SETUP_PRINCIPAL",
+    "active_execution_authority": "NONE",
+    "aws_calls": 0,
+    "iam_mutations": 0,
+    "persistent_mutations": 0,
+    "aws_resources_created": 0,
+    "terraform_executed": false,
+    "product_leadership_test_003_executed": false,
+    "product_leadership_active": false,
+    "product_leadership_integrated": false,
+    "credentials_cleared": true
+  },
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_121_CONSUMPTION"
+}
