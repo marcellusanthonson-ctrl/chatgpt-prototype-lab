@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "PL003-IMPLICIT-DENY-RECONCILIATION-129",
+  "project_id": "lab",
+  "authorization": "AUTHORIZATION_LAB_PL003_IMPLICIT_DENY_RECONCILIATION_AND_LEAST_PRIVILEGE_GATE_129",
+  "changes": {
+    "analysis_added": "projects/lab/analyses/PL003_IMPLICIT_DENY_RECONCILIATION_001.json",
+    "test_design_added": "projects/lab/test-designs/PL003_LEAST_PRIVILEGE_EFFECTIVE_PERMISSION_GATE_001/MANIFEST.json",
+    "implicit_deny_classification": "SIMULATION_MECHANISM_VALID_ACTION_NOT_ALLOWED_IN_EVALUATED_CONTEXT",
+    "selected_next_gate": "PL003_LEAST_PRIVILEGE_EFFECTIVE_PERMISSION_GATE_001",
+    "provisioning_authorized": false,
+    "product_leadership_test_003_authorized": false,
+    "active_execution_authority": "NONE"
+  },
+  "single_next_action": "SEPARATELY_AUTHORIZE_THE_READ_ONLY_EFFECTIVE_PERMISSION_GATE_AFTER_FREEZING_THE_EXACT_ACTION_RESOURCE_CONTEXT_MATRIX",
+  "authority_effect": "NONE"
+}
