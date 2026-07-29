@@ -1,0 +1,111 @@
+{
+    "schema_version":  "1.0.0",
+    "evidence_id":  "EVD-LAB-PL003-CREATE-BOUNDED-SETUP-ROLE-122-ATTEMPT-001",
+    "authorization_id":  "AUTHORIZATION_LAB_PL003_CREATE_BOUNDED_SETUP_ROLE_122",
+    "project_id":  "lab",
+    "kind":  "REDACTED_BOUNDED_SETUP_ROLE_COMPATIBILITY_PREFLIGHT_EVIDENCE",
+    "status":  "BLOCKED",
+    "executed_at":  "2026-07-29T15:03:48Z",
+    "repository":  "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "execution_head":  "2a450ae98c84723b7f002d76cf3582c93239aed8",
+    "prechecks":  {
+                      "head":  "PASS",
+                      "worktree":  "PASS",
+                      "authorization_122_registered_granted":  "PASS",
+                      "authorizations_118_119_120_121_consumed":  "PASS",
+                      "pend_lab_032":  "OPEN_BLOCKED_NO_BOUNDED_EXTERNAL_SETUP_PRINCIPAL",
+                      "aws_cli":  "PASS",
+                      "cli_history_disabled":  "PASS",
+                      "inherited_temporary_credentials_absent":  "PASS",
+                      "reusable_temporary_profiles_absent":  "PASS",
+                      "synthetic_documents":  "PASS"
+                  },
+    "creator_identity":  {
+                             "session_started":  false,
+                             "verified":  false,
+                             "redacted_identifier":  "NOT_EXECUTED"
+                         },
+    "artifacts":  {
+                      "role":  {
+                                   "name":  "PL003BoundedSimulationSetupOperator",
+                                   "requested_maximum_session_seconds":  900,
+                                   "aws_api_minimum_maximum_session_seconds":  3600,
+                                   "exact_requirement_representable":  false,
+                                   "created":  false
+                               },
+                      "trust":  {
+                                    "sha256":  "cb08e67527ad19a13856401db156bc13f8886f1a6b169ef4b0c8837635bc4d73",
+                                    "exact_bootstrap_user":  true,
+                                    "mfa_required":  true,
+                                    "applied":  false
+                                },
+                      "boundary":  {
+                                       "name":  "PL003BoundedSimulationSetupBoundary122",
+                                       "sha256":  "6c0f33a25fe4027477bb903c8944f5868ea7863d1e9089c899778133cdeeea0b",
+                                       "created":  false
+                                   },
+                      "role_policy":  {
+                                          "name":  "PL003BoundedSimulationSetupRolePolicy122",
+                                          "sha256":  "6c0f33a25fe4027477bb903c8944f5868ea7863d1e9089c899778133cdeeea0b",
+                                          "applied":  false
+                                      }
+                  },
+    "assume_role":  {
+                        "attempted":  false,
+                        "duration_seconds":  900,
+                        "succeeded":  false
+                    },
+    "baseline":  {
+                     "bootstrap_inline_policy_list_attempted":  false,
+                     "result":  "NOT_EXECUTED"
+                 },
+    "privilege_analysis":  {
+                               "exact_bootstrap_user_only":  true,
+                               "allowed_iam_actions":  [
+                                                           "iam:ListUserPolicies",
+                                                           "iam:GetUserPolicy",
+                                                           "iam:PutUserPolicy",
+                                                           "iam:DeleteUserPolicy"
+                                                       ],
+                               "wildcard_iam_actions":  0,
+                               "permissions_on_other_users":  0,
+                               "iam_pass_role":  false,
+                               "administrator_managed_policies":  0,
+                               "technical_verdict":  "DOCUMENTS_BOUNDED_BUT_ROLE_MAXIMUM_SESSION_REQUIREMENT_NOT_REPRESENTABLE"
+                           },
+    "aws_calls":  {
+                      "sts_get_session_token":  0,
+                      "sts_get_caller_identity_creator":  0,
+                      "iam_create_policy":  0,
+                      "iam_create_role":  0,
+                      "iam_put_role_policy":  0,
+                      "sts_assume_role":  0,
+                      "sts_get_caller_identity_role":  0,
+                      "iam_list_user_policies":  0,
+                      "other_aws":  0
+                  },
+    "mutations":  {
+                      "expected_if_compatible":  3,
+                      "actual":  0,
+                      "unexpected":  0,
+                      "bootstrap_user_changes":  0,
+                      "persistent":  0
+                  },
+    "out_of_scope":  {
+                         "terraform_executions":  0,
+                         "provisioning_executions":  0,
+                         "product_leadership_test_003_executions":  0,
+                         "product_leadership_active":  false,
+                         "product_leadership_integrated":  false
+                     },
+    "credentials_cleared":  true,
+    "result":  "BLOCKED_ROLE_MAX_SESSION_DURATION_900_NOT_REPRESENTABLE",
+    "failure_code":  "BLOCKED_ROLE_MAX_SESSION_DURATION_900_NOT_REPRESENTABLE",
+    "redaction":  {
+                      "full_account_id_included":  false,
+                      "full_arns_included":  false,
+                      "credentials_tokens_or_mfa_codes_included":  false,
+                      "raw_aws_output_persisted":  false
+                  },
+    "post_attempt_authority":  "NONE"
+}

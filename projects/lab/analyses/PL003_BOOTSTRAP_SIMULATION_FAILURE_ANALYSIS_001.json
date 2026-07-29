@@ -89,6 +89,19 @@
     "evidence_ref": "projects/lab/evidence/EVD-LAB-PL003-EXTERNAL-SETUP-PRINCIPAL-SIMULATION-CYCLE-121-ATTEMPT-001.json",
     "credentials_cleared": true
   },
-  "required_resolution": "A separate explicit authorization must create or configure a narrowly bounded external setup principal before the two-principal atomic simulation cycle can be attempted; authorization 121 did not permit creating or modifying that principal.",
+  "authorization_122_result": {
+    "authorization_id": "AUTHORIZATION_LAB_PL003_CREATE_BOUNDED_SETUP_ROLE_122",
+    "status": "CONSUMED_BLOCKED_ROLE_MAX_SESSION_DURATION_900_NOT_REPRESENTABLE",
+    "requested_role_maximum_session_seconds": 900,
+    "aws_create_role_minimum_maximum_session_seconds": 3600,
+    "role_created": false,
+    "boundary_created": false,
+    "role_policy_applied": false,
+    "aws_calls": 0,
+    "iam_mutations": 0,
+    "bootstrap_user_changes": 0,
+    "evidence_ref": "projects/lab/evidence/EVD-LAB-PL003-CREATE-BOUNDED-SETUP-ROLE-122-ATTEMPT-001.json"
+  },
+  "required_resolution": "A separate explicit authorization must decide whether to allow AWS IAM's minimum role MaxSessionDuration of 3600 seconds while requiring every operational AssumeRole request to use DurationSeconds 900; authorization 122 required an exact 900-second role maximum and is consumed.",
   "active_execution_authority": "NONE"
 }
