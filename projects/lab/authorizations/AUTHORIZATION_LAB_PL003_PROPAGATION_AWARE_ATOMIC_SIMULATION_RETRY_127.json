@@ -1,0 +1,201 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_PROPAGATION_AWARE_ATOMIC_SIMULATION_RETRY_127",
+  "project_id": "lab",
+  "status": "GRANTED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-29",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "be55cfc60bb46e0f7c20a4870f9c123433b127e0",
+  "execution_head_policy": "VERIFY_LIVE_AT_USE",
+  "objective": "Execute one propagation-aware atomic iam:SimulatePrincipalPolicy retry with exact stored-policy verification, a monotonic 120-second AWS-silent stabilization interval, one simulation and mandatory rollback.",
+  "target": {
+    "bootstrap_user": "EXACT_PREVIOUSLY_VERIFIED_BOOTSTRAP_USER",
+    "role_name": "PL003BoundedSimulationSetupOperator",
+    "temporary_bootstrap_policy_name": "PL003AtomicSimulationOnly127",
+    "assume_role_duration_seconds": 900
+  },
+  "temporary_policy": {
+    "mechanism": "INLINE_USER_POLICY",
+    "name": "PL003AtomicSimulationOnly127",
+    "document": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Sid": "AtomicPL003SimulationOnly127",
+          "Effect": "Allow",
+          "Action": "iam:SimulatePrincipalPolicy",
+          "Resource": "*"
+        }
+      ]
+    },
+    "additional_actions_allowed": 0
+  },
+  "stabilization_contract": {
+    "clock": "LOCAL_MONOTONIC",
+    "target_seconds": 120,
+    "aws_calls_during_interval": 0,
+    "polling": false,
+    "minimum_session_margin_before_wait_seconds": 300,
+    "interruption_requires_rollback": true
+  },
+  "required_local_validations": [
+    "EXACT_MONOTONIC_WAIT_120_SECONDS",
+    "ZERO_AWS_CALLS_DURING_WAIT",
+    "SESSION_EXPIRATION_MARGIN",
+    "INTERRUPTION_DURING_STABILIZATION",
+    "MANDATORY_ROLLBACK",
+    "ONE_SIMULATION_ONLY",
+    "STORED_POLICY_READ_AND_SEMANTIC_HASH",
+    "BASELINE_AND_FINAL_STATE_IDENTICAL"
+  ],
+  "atomic_sequence": [
+    "START_EXACTLY_ONE_NEW_BOOTSTRAP_MFA_SESSION",
+    "VERIFY_BOOTSTRAP_IDENTITY_REDACTED",
+    "ASSUME_EXACT_ROLE_ONCE_FOR_900_SECONDS",
+    "VERIFY_ASSUMED_ROLE_IDENTITY_AND_REDACTED_SESSION_MARGIN",
+    "LIST_BOOTSTRAP_INLINE_POLICIES_BASELINE",
+    "CONFIRM_PL003AtomicSimulationOnly127_ABSENT",
+    "COMPUTE_BASELINE_SHA256",
+    "PUT_EXACT_TEMPORARY_INLINE_POLICY_ONCE_FROM_ROLE_SESSION",
+    "GET_EXACT_TEMPORARY_INLINE_POLICY_ONCE_FROM_ROLE_SESSION",
+    "VERIFY_STORED_POLICY_SEMANTICALLY_AND_HASH_IT",
+    "CONFIRM_SESSION_MARGIN",
+    "WAIT_EXACTLY_120_SECONDS_WITH_LOCAL_MONOTONIC_CLOCK",
+    "MAKE_ZERO_AWS_CALLS_DURING_WAIT",
+    "SIMULATE_PRINCIPAL_POLICY_ONCE_FROM_BOOTSTRAP_SESSION",
+    "SIMULATE_ONLY_IAM_CREATE_POLICY",
+    "DO_NOT_EXECUTE_SIMULATED_ACTION",
+    "DO_NOT_REPEAT_SIMULATION",
+    "DELETE_USER_POLICY_AS_FIRST_FINALLY_AWS_OPERATION_AFTER_PUT",
+    "LIST_BOOTSTRAP_INLINE_POLICIES_FINAL",
+    "CONFIRM_TEMPORARY_POLICY_ABSENT",
+    "CONFIRM_FINAL_HASH_EQUALS_BASELINE_HASH",
+    "CONFIRM_FINAL_INLINE_POLICY_SET_EQUALS_BASELINE",
+    "CLEAR_ALL_TEMPORARY_CREDENTIALS_VARIABLES_AND_FILES",
+    "CLASSIFY_WITHOUT_AUTOMATIC_PROPAGATION_ATTRIBUTION"
+  ],
+  "session_separation": {
+    "bootstrap_session": [
+      "STS_GET_CALLER_IDENTITY",
+      "STS_ASSUME_ROLE",
+      "IAM_SIMULATE_PRINCIPAL_POLICY"
+    ],
+    "assumed_role_session": [
+      "STS_GET_CALLER_IDENTITY",
+      "IAM_LIST_USER_POLICIES_BASELINE",
+      "IAM_PUT_EXACT_TEMPORARY_USER_POLICY",
+      "IAM_GET_EXACT_TEMPORARY_USER_POLICY",
+      "IAM_DELETE_EXACT_TEMPORARY_USER_POLICY",
+      "IAM_LIST_USER_POLICIES_FINAL"
+    ],
+    "credential_mixing_allowed": false
+  },
+  "call_limits": {
+    "sts_get_session_token": 1,
+    "sts_get_caller_identity_bootstrap": 1,
+    "sts_assume_role": 1,
+    "sts_get_caller_identity_role": 1,
+    "iam_list_user_policies": 2,
+    "iam_put_user_policy": 1,
+    "iam_get_user_policy": 1,
+    "iam_simulate_principal_policy": 1,
+    "iam_delete_user_policy": 1,
+    "other_aws": 0
+  },
+  "rollback_contract": {
+    "delete_after_put_attempt": true,
+    "delete_is_first_finally_aws_operation": true,
+    "final_list_required": true,
+    "temporary_policy_absence_required": true,
+    "final_hash_must_equal_baseline_hash": true,
+    "final_set_must_equal_baseline": true,
+    "active_iam_incident_if_not_verified": true
+  },
+  "result_classes": [
+    "PASS_PROPAGATION_AWARE_SIMULATION_COMPLETED_AND_POLICY_REMOVED",
+    "BLOCKED_ACCESS_DENIED_AFTER_BOUNDED_STABILIZATION",
+    "BLOCKED_ASSUME_ROLE_FAILED",
+    "BLOCKED_BASELINE_READ_FAILED",
+    "BLOCKED_EXISTING_TEMPORARY_POLICY_COLLISION",
+    "BLOCKED_TEMPORARY_GRANT_FAILED",
+    "BLOCKED_STORED_POLICY_READ_FAILED",
+    "BLOCKED_STORED_POLICY_SEMANTIC_MISMATCH",
+    "BLOCKED_INSUFFICIENT_SESSION_MARGIN",
+    "BLOCKED_STABILIZATION_INTERRUPTED",
+    "BLOCKED_SIMULATION_CALL_FAILED_OTHER",
+    "BLOCKED_ROLLBACK_NOT_VERIFIED_ACTIVE_IAM_INCIDENT",
+    "BLOCKED_FAIL_CLOSED_OTHER"
+  ],
+  "classification_constraints": {
+    "access_denied_after_all_bounded_controls": "BLOCKED_ACCESS_DENIED_AFTER_BOUNDED_STABILIZATION",
+    "simulation_no_longer_access_denied": "PASS_PROPAGATION_AWARE_SIMULATION_COMPLETED_AND_POLICY_REMOVED",
+    "propagation_confirmed_allowed": false,
+    "structural_denial_confirmed_allowed": false
+  },
+  "forbidden_actions": [
+    "TERRAFORM",
+    "PROVISIONING",
+    "PRODUCT_LEADERSHIP_TEST_003",
+    "PRODUCT_LEADERSHIP_ACTIVATION_OR_INTEGRATION",
+    "MODIFY_ROLE_TRUST_BOUNDARY_OR_ROLE_POLICY",
+    "CREATE_IDENTITIES_OR_ACCESS_KEYS",
+    "MORE_THAN_ONE_SIMULATION",
+    "AWS_POLLING_DURING_STABILIZATION",
+    "ANY_OTHER_IAM_ACTION",
+    "PERSIST_CREDENTIALS",
+    "EXECUTE_THE_SIMULATED_ACTION",
+    "LEAVE_TEMPORARY_POLICY_PRESENT",
+    "PUBLISH_SECRETS_OR_FULL_IDENTIFIERS",
+    "REUSE_AUTHORIZATIONS_118_THROUGH_126"
+  ],
+  "stop_conditions": [
+    "HEAD_MISMATCH",
+    "WORKTREE_NOT_CLEAN",
+    "INHERITED_CREDENTIALS_PRESENT",
+    "LOCAL_DIRECTED_SUITE_FAILURE",
+    "BOOTSTRAP_IDENTITY_MISMATCH",
+    "ASSUME_ROLE_FAILED",
+    "ASSUMED_ROLE_IDENTITY_MISMATCH",
+    "BASELINE_READ_FAILED",
+    "EXISTING_TEMPORARY_POLICY_COLLISION",
+    "TEMPORARY_GRANT_FAILED",
+    "STORED_POLICY_READ_FAILED",
+    "STORED_POLICY_SEMANTIC_MISMATCH",
+    "INSUFFICIENT_SESSION_MARGIN",
+    "STABILIZATION_INTERRUPTED",
+    "SIMULATION_TERMINAL_RESULT",
+    "ROLLBACK_DELETE_FAILED",
+    "FINAL_LIST_FAILED",
+    "TEMPORARY_POLICY_STILL_PRESENT",
+    "FINAL_HASH_MISMATCH",
+    "FINAL_INLINE_POLICY_SET_CHANGED",
+    "CREDENTIAL_OR_TEMPORARY_FILE_CLEANUP_FAILED",
+    "UNEXPECTED_AWS_OPERATION_OR_MUTATION",
+    "UNREDACTABLE_SENSITIVE_INFORMATION"
+  ],
+  "response_contract": [
+    "INITIAL_HEAD",
+    "PRE_AWS_PRECHECKS",
+    "DIRECTED_SYNTHETIC_SUITE",
+    "REDACTED_BOOTSTRAP_IDENTITY",
+    "ASSUME_ROLE_AND_SESSION_MARGIN",
+    "REDACTED_ASSUMED_ROLE_IDENTITY",
+    "BASELINE_RESULT",
+    "BASELINE_HASH",
+    "TEMPORARY_GRANT_RESULT",
+    "STORED_POLICY_READ_AND_SEMANTIC_HASH",
+    "BOUNDED_STABILIZATION_RESULT",
+    "READ_ONLY_SIMULATION_RESULT",
+    "MANDATORY_CLASSIFICATION",
+    "ROLLBACK_RESULT",
+    "FINAL_BASELINE_HASH_AND_POLICY_SET",
+    "CALLS_AND_MUTATIONS",
+    "FINAL_AWS_AND_PRODUCT_STATE",
+    "VALIDATIONS_PUBLISHED_FILES_COMMIT_AND_FINAL_REMOTE_HEAD",
+    "SINGLE_NEXT_RECOMMENDED_ACTION"
+  ],
+  "consumption_criterion": "CONSUMED_AFTER_ONE_TERMINAL_PROPAGATION_AWARE_RESULT_IS_PUBLISHED_ROLLBACK_AND_FINAL_BASELINE_ARE_VERIFIED_CREDENTIALS_AND_TEMPORARY_FILES_ARE_CLEARED_AND_FINAL_REMOTE_HEAD_IS_VERIFIED",
+  "post_consumption_authority": "NONE"
+}
