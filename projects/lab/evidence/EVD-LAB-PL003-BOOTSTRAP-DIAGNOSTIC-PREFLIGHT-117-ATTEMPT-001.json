@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-PL003-BOOTSTRAP-DIAGNOSTIC-PREFLIGHT-117-ATTEMPT-001",
+  "attempt_id": "ATTEMPT-001",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_BOOTSTRAP_DIAGNOSTIC_PREFLIGHT_EXECUTION_117",
+  "project_id": "lab",
+  "status": "BLOCKED_BEFORE_AWS_EXECUTION",
+  "executed_at": "2026-07-29",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "execution_head": "c02826564af31f31bc94eb57491809b6aeae19fb",
+  "failure_code": "AWS_EXECUTION_SURFACE_UNAVAILABLE_IN_CURRENT_CONVERSATION",
+  "diagnostic_surface": {
+    "aws_cli_available": false,
+    "authenticated_local_runtime_available": false,
+    "ephemeral_mfa_session_started": false,
+    "sanitized_aws_error_capture_available": false
+  },
+  "aws_calls": {
+    "sts_get_session_token": 0,
+    "sts_get_caller_identity": 0,
+    "iam_simulate_principal_policy": 0,
+    "iam_mutation": 0,
+    "other_aws": 0
+  },
+  "forbidden_effects": {
+    "terraform_executed": false,
+    "product_leadership_test_003_executed": false,
+    "product_leadership_active": false,
+    "product_leadership_integrated": false,
+    "root_used": false,
+    "administrator_access_used": false,
+    "secrets_persisted": false
+  },
+  "result": "BLOCKED_FAIL_CLOSED",
+  "post_attempt_authority": "NONE",
+  "redaction": {
+    "credentials_tokens_or_mfa_codes_included": false,
+    "full_account_id_included": false,
+    "full_principal_arns_included": false
+  }
+}
