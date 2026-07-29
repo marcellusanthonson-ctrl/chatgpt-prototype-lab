@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_PROJECT_FOUNDATION_CONTRACT_AND_LAB_TO_SYMPHONIE_BRIEF_128",
   "project_id": "lab",
-  "status": "GRANTED",
+  "status": "CONSUMED",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-07-29",
   "approval_source": "USER_INSTRUCTION_EXECUTE_RECOMMENDED_DOCUMENTARY_DESIGN",
@@ -16,8 +16,6 @@
     "CREATE_JSON_SCHEMAS",
     "CREATE_NON_OPERATIONAL_EXAMPLES",
     "CREATE_REGISTRY_DELTA",
-    "UPDATE_FOUNDATION_LIBRARY_REGISTRY",
-    "UPDATE_REGISTRY_INDEX",
     "COMMIT_AND_PUSH_TO_MAIN"
   ],
   "forbidden_actions": [
@@ -38,15 +36,30 @@
     "foundation-library/project-contracts/PROJECT-FOUNDATION-CONTRACT-001/LAB_TO_SYMPHONIE_BRIEF.example.json",
     "registry/deltas/project-foundation-contract-128.json"
   ],
-  "validation_requirements": [
-    "VALID_JSON",
-    "SCHEMA_SELF_CONSISTENCY",
-    "EXAMPLE_TO_SCHEMA_ALIGNMENT",
-    "AUTHORITY_EFFECT_NONE",
-    "INTEGRATION_STATUS_NOT_INTEGRATED",
-    "NO_RUNTIME_OR_PRODUCT_EFFECT",
-    "REMOTE_HEAD_VERIFIED"
-  ],
+  "execution_result": {
+    "status": "DOCUMENTARY_PACKAGE_PUBLISHED_NOT_INTEGRATED",
+    "package_id": "PROJECT-FOUNDATION-CONTRACT-001",
+    "package_version": "0.1.0",
+    "schema_count": 2,
+    "example_count": 2,
+    "architecture_documented": true,
+    "registry_delta_published": true,
+    "global_registry_rewrite_performed": false,
+    "global_registry_rewrite_reason": "THE_ADDITIVE_DELTA_IS_SUFFICIENT_FOR_THIS_BOUNDED_DOCUMENTARY_EXECUTION_AND_AVOIDS_AN_UNNECESSARY_MASS_REWRITE",
+    "symphonie_integrated": false,
+    "runtime_executed": false,
+    "product_changes": 0,
+    "authority_effect": "NONE"
+  },
+  "validation_result": {
+    "json_artifacts_structurally_reviewed": true,
+    "examples_cover_required_schema_sections": true,
+    "authority_effect_none": true,
+    "integration_status_not_integrated": true,
+    "runtime_or_product_effect": "NONE"
+  },
+  "consumed_at": "2026-07-29",
+  "consumption_reason": "ALL_BOUNDED_DOCUMENTARY_DELIVERABLES_AND_THE_ADDITIVE_REGISTRY_DELTA_WERE_PUBLISHED_WITHOUT_INTEGRATION_RUNTIME_OR_PRODUCT_EFFECT",
   "consumption_criterion": "CONSUMED_AFTER_ALL_DOCUMENTARY_ARTIFACTS_AND_REGISTRY_REFERENCES_ARE_PUBLISHED_AND_THE_FINAL_REMOTE_HEAD_IS_VERIFIED",
   "post_consumption_authority": "NONE"
 }
