@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "id": "PEND-LAB-032",
   "project_id": "lab",
-  "status": "OPEN_BLOCKED_ROLE_MAX_SESSION_DURATION_900_NOT_REPRESENTABLE_NO_ACTIVE_EXECUTION_AUTHORITY",
+  "status": "OPEN_BLOCKED_CREATOR_GET_POLICY_ACCESS_DENIED_NO_ACTIVE_EXECUTION_AUTHORITY",
   "type": "PL003_AWS_PROVISIONING_OPERATOR_PERMISSION_BOUNDARY",
   "subject": "Resolve the confirmed lack of authorization for iam:SimulatePrincipalPolicy before any AWS provisioning or Product Leadership Test 003 execution",
   "priority": "HIGH",
@@ -21,7 +21,7 @@
     "Authorization 118 used one GetSessionToken, one GetCallerIdentity and one SimulatePrincipalPolicy call, with zero other AWS calls and zero mutations.",
     "All authorization 118 temporary credentials were cleared."
   ],
-  "stop_condition": "ROLE_MAX_SESSION_DURATION_900_NOT_REPRESENTABLE",
+  "stop_condition": "BOUNDARY_COLLISION_PREFLIGHT_ACCESS_DENIED",
   "authorization_112_status": "GRANTED_NOT_CONSUMED_BLOCKED_NO_ACTIVE_EXECUTION_AUTHORITY",
   "authorization_113_status": "GRANTED_NOT_CONSUMED_BLOCKED_NO_ACTIVE_EXECUTION_AUTHORITY",
   "authorization_114_status": "NOT_RESUMABLE_WITHOUT_NEW_EXPLICIT_AUTHORIZATION",
@@ -107,8 +107,29 @@
     "credentials_cleared": true,
     "evidence_ref": "projects/lab/evidence/EVD-LAB-PL003-CREATE-BOUNDED-SETUP-ROLE-122-ATTEMPT-001.json"
   },
+  "authorization_123_bounded_setup_role_compatibility_attempt": {
+    "status": "CONSUMED_BLOCKED_BOUNDARY_COLLISION_PREFLIGHT_ACCESS_DENIED",
+    "create_role_maximum_session_seconds": 3600,
+    "assume_role_duration_seconds": 900,
+    "creator_identity_verified_redacted": true,
+    "boundary_get_policy_calls": 1,
+    "boundary_absence_confirmed": false,
+    "role_get_role_calls": 0,
+    "aws_error_code": "AccessDenied",
+    "role_created": false,
+    "boundary_created": false,
+    "role_policy_applied": false,
+    "assume_role_attempted": false,
+    "bootstrap_baseline_reads_executed": false,
+    "aws_calls": 3,
+    "aws_mutations": 0,
+    "bootstrap_user_changes": 0,
+    "credentials_cleared": true,
+    "evidence_ref": "projects/lab/evidence/EVD-LAB-PL003-CREATE-BOUNDED-SETUP-ROLE-COMPATIBILITY-123-ATTEMPT-001.json"
+  },
   "required_resolution": [
-    "Decide under separate authorization whether AWS IAM's minimum role MaxSessionDuration of 3600 seconds is acceptable while requiring every AssumeRole request to use 900 seconds.",
+    "Provide a separately authorized bounded creator principal or capability for the exact collision reads, creation, verification and compensating cleanup operations required by authorization 123.",
+    "Retain CreateRole MaxSessionDuration 3600 and every operational AssumeRole request at 900 seconds.",
     "Preserve MFA-backed ephemeral credentials and existing permission boundaries.",
     "Require a successful pre-mutation simulation gate before any IAM or infrastructure mutation.",
     "Keep Product Leadership Test 003 inactive until separately authorized after the AWS preflight is valid."
@@ -119,6 +140,7 @@
     "REUSE_AUTHORIZATION_120",
     "REUSE_AUTHORIZATION_121",
     "REUSE_AUTHORIZATION_122",
+    "REUSE_AUTHORIZATION_123",
     "START_A_NEW_MFA_SESSION_WITHOUT_NEW_EXPLICIT_AUTHORIZATION",
     "EXECUTE_AWS_IAM_OR_TERRAFORM_WITHOUT_NEW_EXPLICIT_AUTHORIZATION",
     "EXECUTE_PRODUCT_LEADERSHIP_TEST_003",
@@ -127,5 +149,5 @@
     "PUBLISH_CREDENTIALS_TOKENS_MFA_CODES_SECRETS_OR_FULL_ACCOUNT_ID"
   ],
   "active_execution_authority": "NONE",
-  "next_action": "SEPARATELY_AUTHORIZE_AWS_MINIMUM_ROLE_MAX_SESSION_3600_WITH_OPERATIONAL_ASSUME_ROLE_DURATION_900_OR_SELECT_ANOTHER_MECHANISM"
+  "next_action": "SEPARATELY_AUTHORIZE_OR_SUPPLY_A_BOUNDED_CREATOR_PRINCIPAL_FOR_THE_EXACT_AUTHORIZATION_123_COLLISION_CREATION_VERIFICATION_AND_COMPENSATION_OPERATIONS"
 }

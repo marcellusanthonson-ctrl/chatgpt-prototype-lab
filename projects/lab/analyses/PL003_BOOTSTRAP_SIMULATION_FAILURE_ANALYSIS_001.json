@@ -102,6 +102,23 @@
     "bootstrap_user_changes": 0,
     "evidence_ref": "projects/lab/evidence/EVD-LAB-PL003-CREATE-BOUNDED-SETUP-ROLE-122-ATTEMPT-001.json"
   },
-  "required_resolution": "A separate explicit authorization must decide whether to allow AWS IAM's minimum role MaxSessionDuration of 3600 seconds while requiring every operational AssumeRole request to use DurationSeconds 900; authorization 122 required an exact 900-second role maximum and is consumed.",
+  "authorization_123_result": {
+    "authorization_id": "AUTHORIZATION_LAB_PL003_CREATE_BOUNDED_SETUP_ROLE_COMPATIBILITY_123",
+    "status": "CONSUMED_BLOCKED_BOUNDARY_COLLISION_PREFLIGHT_ACCESS_DENIED",
+    "create_role_maximum_session_seconds": 3600,
+    "assume_role_duration_seconds": 900,
+    "creator_identity_verified_redacted": true,
+    "boundary_collision_get_policy_calls": 1,
+    "aws_error_code": "AccessDenied",
+    "role_created": false,
+    "boundary_created": false,
+    "role_policy_applied": false,
+    "aws_calls": 3,
+    "iam_mutations": 0,
+    "bootstrap_user_changes": 0,
+    "evidence_ref": "projects/lab/evidence/EVD-LAB-PL003-CREATE-BOUNDED-SETUP-ROLE-COMPATIBILITY-123-ATTEMPT-001.json",
+    "credentials_cleared": true
+  },
+  "required_resolution": "Provide a separately authorized bounded creator principal or capability that can perform authorization 123's exact collision reads, creation, verification and compensating cleanup operations; the bootstrap principal was verified but iam:GetPolicy was denied before any mutation.",
   "active_execution_authority": "NONE"
 }

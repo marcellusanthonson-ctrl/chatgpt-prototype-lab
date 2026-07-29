@@ -1,0 +1,161 @@
+{
+    "schema_version":  "1.0.0",
+    "evidence_id":  "EVD-LAB-PL003-CREATE-BOUNDED-SETUP-ROLE-COMPATIBILITY-123-ATTEMPT-001",
+    "authorization_id":  "AUTHORIZATION_LAB_PL003_CREATE_BOUNDED_SETUP_ROLE_COMPATIBILITY_123",
+    "project_id":  "lab",
+    "kind":  "REDACTED_BOUNDED_SETUP_ROLE_COMPATIBILITY_EXECUTION_EVIDENCE",
+    "status":  "BLOCKED",
+    "executed_at":  "2026-07-29T15:34:19Z",
+    "repository":  "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "branch_mode":  "DETACHED_HEAD",
+    "execution_head":  "ca9705944d5b2235dbfee3c8212ffda1a49edce9",
+    "prechecks":  {
+                      "head":  "PASS",
+                      "worktree":  "PASS",
+                      "authorization_123_registered_granted":  "PASS",
+                      "authorizations_118_119_120_121_122_consumed":  "PASS",
+                      "inherited_execution_authority":  "NONE",
+                      "pend_lab_032_before_execution":  "OPEN_BLOCKED_ROLE_MAX_SESSION_DURATION_900_NOT_REPRESENTABLE_NO_ACTIVE_EXECUTION_AUTHORITY",
+                      "synthetic_and_documents":  "PASS",
+                      "sanitized_error_classifier":  "PASS",
+                      "aws_cli":  "PASS",
+                      "cli_history_disabled":  "PASS",
+                      "inherited_temporary_credentials_absent":  "PASS",
+                      "reusable_temporary_profiles_absent":  "PASS"
+                  },
+    "creator_identity":  {
+                             "verified":  true,
+                             "redacted_identifier":  "IAM_USER:\u003cREDACTED_ACCOUNT_ID\u003e:pl003-bootstrap-operator",
+                             "mfa_session":  "PASS_EPHEMERAL_IN_MEMORY_ONLY"
+                         },
+    "collision_preflight":  {
+                                "boundary_absent":  false,
+                                "role_absent":  false,
+                                "result":  "NOT_EXECUTED"
+                            },
+    "artifacts":  {
+                      "role":  {
+                                   "name":  "PL003BoundedSimulationSetupOperator",
+                                   "create_role_maximum_session_seconds":  3600,
+                                   "created":  false,
+                                   "verified":  false
+                               },
+                      "trust":  {
+                                    "sha256":  "cb08e67527ad19a13856401db156bc13f8886f1a6b169ef4b0c8837635bc4d73",
+                                    "exact_bootstrap_user":  true,
+                                    "mfa_required":  true,
+                                    "verified":  false
+                                },
+                      "boundary":  {
+                                       "name":  "PL003BoundedSimulationSetupBoundary122",
+                                       "sha256":  "6c0f33a25fe4027477bb903c8944f5868ea7863d1e9089c899778133cdeeea0b",
+                                       "created":  false,
+                                       "verified":  false
+                                   },
+                      "role_policy":  {
+                                          "name":  "PL003BoundedSimulationSetupRolePolicy122",
+                                          "sha256":  "6c0f33a25fe4027477bb903c8944f5868ea7863d1e9089c899778133cdeeea0b",
+                                          "applied":  false,
+                                          "verified":  false
+                                      }
+                  },
+    "assume_role":  {
+                        "attempted":  false,
+                        "duration_seconds":  900,
+                        "succeeded":  false
+                    },
+    "assumed_role_identity":  {
+                                  "verified":  false,
+                                  "redacted_identifier":  "NOT_EXECUTED"
+                              },
+    "baseline":  {
+                     "bootstrap_inline_policy_list_attempted":  false,
+                     "result":  "NOT_EXECUTED",
+                     "policy_name_count":  null,
+                     "sorted_policy_names_sha256":  null
+                 },
+    "privilege_analysis":  {
+                               "exact_bootstrap_user_only":  true,
+                               "allowed_iam_actions":  [
+                                                           "iam:ListUserPolicies",
+                                                           "iam:GetUserPolicy",
+                                                           "iam:PutUserPolicy",
+                                                           "iam:DeleteUserPolicy"
+                                                       ],
+                               "wildcard_iam_actions":  0,
+                               "permissions_on_other_identities":  0,
+                               "iam_pass_role":  false,
+                               "attached_role_policies":  0,
+                               "technical_verdict":  "PENDING"
+                           },
+    "aws_calls":  {
+                      "sts_get_session_token":  1,
+                      "sts_get_caller_identity_creator":  1,
+                      "iam_get_policy_collision":  1,
+                      "iam_get_role_collision":  0,
+                      "iam_create_policy":  0,
+                      "iam_create_role":  0,
+                      "iam_put_role_policy":  0,
+                      "iam_get_policy_verification":  0,
+                      "iam_get_policy_version":  0,
+                      "iam_get_role_verification":  0,
+                      "iam_get_role_policy":  0,
+                      "sts_assume_role":  0,
+                      "sts_get_caller_identity_role":  0,
+                      "iam_list_user_policies":  0,
+                      "iam_delete_role_policy_compensation":  0,
+                      "iam_delete_role_compensation":  0,
+                      "iam_delete_policy_compensation":  0,
+                      "other_aws":  0
+                  },
+    "mutations":  {
+                      "creation_attempts":  0,
+                      "creation_successes":  0,
+                      "compensation_attempts":  0,
+                      "compensation_successes":  0,
+                      "unexpected":  0,
+                      "bootstrap_user_changes":  0,
+                      "persistent_at_completion":  0
+                  },
+    "compensation":  {
+                         "required":  false,
+                         "attempted":  false,
+                         "succeeded":  null,
+                         "operations":  [
+
+                                        ]
+                     },
+    "out_of_scope":  {
+                         "bootstrap_put_user_policy":  0,
+                         "bootstrap_delete_user_policy":  0,
+                         "iam_simulate_principal_policy":  0,
+                         "terraform_executions":  0,
+                         "provisioning_executions":  0,
+                         "product_leadership_test_003_executions":  0,
+                         "product_leadership_active":  false,
+                         "product_leadership_integrated":  false
+                     },
+    "credentials_cleared":  true,
+    "failure_code":  "BOUNDARY_COLLISION_PREFLIGHT_FAILED",
+    "failure_metadata":  {
+                             "exit_code":  254,
+                             "service":  "iam",
+                             "operation":  "GetPolicy",
+                             "aws_error_code":  "AccessDenied",
+                             "exception_class":  "AWS_CLI_SERVICE_ERROR",
+                             "http_status":  null,
+                             "stderr_captured_in_memory":  true,
+                             "stdout_captured_in_memory":  true,
+                             "stderr_persisted":  false,
+                             "stdout_persisted":  false
+                         },
+    "result":  "BLOCKED_FAIL_CLOSED",
+    "redaction":  {
+                      "full_account_id_included":  false,
+                      "full_arns_included":  false,
+                      "credentials_tokens_or_mfa_codes_included":  false,
+                      "request_ids_included":  false,
+                      "raw_aws_output_persisted":  false
+                  },
+    "post_attempt_authority":  "NONE"
+}

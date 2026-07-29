@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_PL003_CREATE_BOUNDED_SETUP_ROLE_COMPATIBILITY_123",
   "project_id": "lab",
-  "status": "GRANTED",
+  "status": "CONSUMED",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-07-29",
   "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
@@ -109,6 +109,44 @@
     "script": "projects/lab/scripts/Invoke-PL003CreateBoundedSetupRoleCompatibility123.ps1",
     "synthetic_tests": "projects/lab/scripts/tests/Invoke-PL003CreateBoundedSetupRoleCompatibility123.Tests.ps1"
   },
+  "execution_result": {
+    "status": "CONSUMED_BLOCKED_BOUNDARY_COLLISION_PREFLIGHT_ACCESS_DENIED",
+    "failure_code": "BOUNDARY_COLLISION_PREFLIGHT_FAILED",
+    "aws_error_code": "AccessDenied",
+    "creator_identity_verified_redacted": true,
+    "synthetic_result": "PASS",
+    "synthetic_case_count": 20,
+    "collision_preflight": {
+      "boundary_get_policy_attempted": true,
+      "boundary_absence_confirmed": false,
+      "role_get_role_attempted": false,
+      "role_absence_confirmed": false
+    },
+    "role_created": false,
+    "boundary_created": false,
+    "role_policy_applied": false,
+    "assume_role_attempted": false,
+    "bootstrap_baseline_reads_executed": false,
+    "evidence": "projects/lab/evidence/EVD-LAB-PL003-CREATE-BOUNDED-SETUP-ROLE-COMPATIBILITY-123-ATTEMPT-001.json",
+    "aws_calls": {
+      "sts_get_session_token": 1,
+      "sts_get_caller_identity_creator": 1,
+      "iam_get_policy_collision": 1,
+      "iam_get_role_collision": 0,
+      "other_aws": 0
+    },
+    "iam_mutations": 0,
+    "bootstrap_user_changes": 0,
+    "persistent_mutations": 0,
+    "aws_resources_created": 0,
+    "compensation_required": false,
+    "terraform_executions": 0,
+    "provisioning_executions": 0,
+    "product_leadership_test_003_executions": 0,
+    "product_leadership_active": false,
+    "product_leadership_integrated": false,
+    "credentials_cleared": true
+  },
   "response_contract": [
     "INITIAL_HEAD",
     "REDACTED_CREATOR_IDENTITY",
@@ -125,6 +163,8 @@
     "VALIDATIONS_FILES_COMMIT_AND_FINAL_REMOTE_HEAD",
     "SINGLE_NEXT_RECOMMENDED_ACTION"
   ],
+  "consumed_at": "2026-07-29",
+  "consumption_reason": "THE_SINGLE_AUTHORIZED_CREATOR_SESSION_VERIFIED_THE_EXACT_BOOTSTRAP_IDENTITY_THEN_RECEIVED_ACCESS_DENIED_ON_THE_FIRST_BOUNDARY_COLLISION_PREFLIGHT_READ_BEFORE_ANY IAM MUTATION ROLE ASSUMPTION OR BOOTSTRAP_BASELINE_READ",
   "consumption_criterion": "CONSUMED_AFTER_A_TERMINAL_EXECUTION_RESULT_IS_PUBLISHED_ALL_EPHEMERAL_CREDENTIALS_ARE_CLEARED_BOOTSTRAP_USER_MUTATIONS_REMAIN_ZERO_AND_FINAL_REMOTE_HEAD_IS_VERIFIED",
   "post_consumption_authority": "NONE"
 }
