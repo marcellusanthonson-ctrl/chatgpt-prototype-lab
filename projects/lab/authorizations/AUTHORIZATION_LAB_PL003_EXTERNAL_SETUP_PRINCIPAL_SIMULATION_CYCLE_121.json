@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_EXTERNAL_SETUP_PRINCIPAL_SIMULATION_CYCLE_121",
+  "project_id": "lab",
+  "status": "GRANTED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-29",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "1021ddf5975d6d5a857d4d91fbb934ffe498b646",
+  "execution_head_policy": "VERIFY_LIVE_AT_USE",
+  "mode": "EXTERNAL_BOUNDED_SETUP_PRINCIPAL_ATOMIC_PERMISSION_CYCLE",
+  "objective": "Use an existing bounded external setup principal to apply and remove exactly one temporary iam:SimulatePrincipalPolicy inline policy on the verified bootstrap user, with a completely isolated bootstrap MFA simulation session.",
+  "temporary_policy": {
+    "name": "PL003AtomicSimulationOnly121",
+    "document": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Sid": "TemporaryPL003SimulationOnly",
+          "Effect": "Allow",
+          "Action": "iam:SimulatePrincipalPolicy",
+          "Resource": "*"
+        }
+      ]
+    },
+    "additional_actions_allowed": 0,
+    "conditions_allowed": 0
+  },
+  "external_setup_principal_requirements": {
+    "must_already_exist": true,
+    "allowed_actions_on_exact_bootstrap_user": [
+      "iam:ListUserPolicies",
+      "iam:GetUserPolicy",
+      "iam:PutUserPolicy",
+      "iam:DeleteUserPolicy"
+    ],
+    "root_allowed": false,
+    "administrator_access_allowed": false,
+    "creation_or_modification_allowed": false
+  },
+  "separation_of_duties": {
+    "external_session": [
+      "BASELINE",
+      "PUT_EXACT_INLINE_POLICY",
+      "DELETE_EXACT_INLINE_POLICY",
+      "VERIFY_FINAL_BASELINE"
+    ],
+    "bootstrap_session": [
+      "GET_CALLER_IDENTITY",
+      "SIMULATE_PRINCIPAL_POLICY"
+    ],
+    "credential_mixing_allowed": false
+  },
+  "call_limits": {
+    "external_sts_get_caller_identity": 1,
+    "external_iam_list_user_policies": 2,
+    "external_iam_get_user_policy": 1,
+    "external_iam_put_user_policy": 1,
+    "external_iam_delete_user_policy": 1,
+    "bootstrap_sts_get_session_token": 1,
+    "bootstrap_sts_get_caller_identity": 1,
+    "bootstrap_iam_simulate_principal_policy": 1,
+    "other_aws": 0
+  },
+  "stop_conditions": [
+    "HEAD_MISMATCH",
+    "WORKTREE_NOT_CLEAN",
+    "NO_BOUNDED_EXTERNAL_SETUP_PRINCIPAL",
+    "EXTERNAL_PRINCIPAL_ROOT_OR_OVERPRIVILEGED",
+    "BASELINE_READ_FAILED",
+    "EXISTING_POLICY_COLLISION",
+    "POLICY_DOCUMENT_MISMATCH",
+    "SESSION_ISOLATION_FAILED",
+    "BOOTSTRAP_PRINCIPAL_MISMATCH",
+    "SIMULATION_STILL_ACCESS_DENIED",
+    "ROLLBACK_NOT_VERIFIED_ACTIVE_IAM_INCIDENT",
+    "UNEXPECTED_MUTATION",
+    "CREDENTIAL_CLEANUP_FAILED"
+  ],
+  "forbidden_actions": [
+    "CREATE_OR_MODIFY_EXTERNAL_PRINCIPAL",
+    "CREATE_ANY_PRINCIPAL_ACCESS_KEY_MANAGED_POLICY_TRUST_POLICY_OR_PERMISSION_BOUNDARY",
+    "ROOT_OR_ADMINISTRATOR_ACCESS",
+    "ANY_ADDITIONAL_IAM_ACTION",
+    "IAM_SIMULATE_CUSTOM_POLICY",
+    "IAM_PASS_ROLE",
+    "PERSISTENT_IAM_MUTATION",
+    "AWS_RESOURCE_CREATION",
+    "PROVISIONING",
+    "TERRAFORM",
+    "PRODUCT_LEADERSHIP_TEST_003",
+    "PRODUCT_LEADERSHIP_ACTIVATION_OR_INTEGRATION",
+    "CREDENTIAL_PERSISTENCE",
+    "REUSE_AUTHORIZATIONS_118_119_OR_120"
+  ],
+  "implementation": {
+    "precheck_script": "projects/lab/scripts/Invoke-PL003ExternalSetupPrincipalSimulationCycle121Precheck.ps1",
+    "synthetic_tests": "projects/lab/scripts/tests/Invoke-PL003ExternalSetupPrincipalSimulationCycle121.Tests.ps1"
+  },
+  "result_classes": [
+    "PASS_EXTERNAL_SETUP_ATOMIC_SIMULATION_VERIFIED_AND_REMOVED",
+    "BLOCKED_NO_BOUNDED_EXTERNAL_SETUP_PRINCIPAL",
+    "BLOCKED_EXTERNAL_PRINCIPAL_OVERPRIVILEGED",
+    "BLOCKED_BASELINE_READ_FAILED",
+    "BLOCKED_EXISTING_POLICY_COLLISION",
+    "BLOCKED_POLICY_DOCUMENT_MISMATCH",
+    "BLOCKED_SESSION_ISOLATION_FAILED",
+    "BLOCKED_SIMULATION_STILL_ACCESS_DENIED",
+    "BLOCKED_ROLLBACK_NOT_VERIFIED_ACTIVE_IAM_INCIDENT",
+    "BLOCKED_FAIL_CLOSED_OTHER"
+  ],
+  "consumption_criterion": "CONSUMED_AFTER_A_TERMINAL_RESULT_IS_PUBLISHED_CREDENTIALS_ARE_CLEARED_AND_FINAL_REMOTE_HEAD_IS_VERIFIED",
+  "post_consumption_authority": "NONE"
+}
