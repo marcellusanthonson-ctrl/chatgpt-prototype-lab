@@ -1,0 +1,24 @@
+{
+  "schema_version":"1.0.0",
+  "delta_id":"PROJECT-FOUNDATION-CONTRACT-128",
+  "created_at":"2026-07-29",
+  "project_id":"lab",
+  "authorization_id":"AUTHORIZATION_LAB_PROJECT_FOUNDATION_CONTRACT_AND_LAB_TO_SYMPHONIE_BRIEF_128",
+  "change_class":"DOCUMENTARY_FOUNDATION_CAPABILITY",
+  "summary":"Adds a non-integrated Project Foundation Contract capability and LAB-to-Symphonie structured brief contract.",
+  "added_files":[
+    "foundation-library/project-contracts/PROJECT-FOUNDATION-CONTRACT-001/MANIFEST.json",
+    "foundation-library/project-contracts/PROJECT-FOUNDATION-CONTRACT-001/ARCHITECTURE.md",
+    "foundation-library/project-contracts/PROJECT-FOUNDATION-CONTRACT-001/PROJECT_FOUNDATION_CONTRACT.schema.json",
+    "foundation-library/project-contracts/PROJECT-FOUNDATION-CONTRACT-001/LAB_TO_SYMPHONIE_BRIEF.schema.json",
+    "foundation-library/project-contracts/PROJECT-FOUNDATION-CONTRACT-001/PROJECT_FOUNDATION_CONTRACT.example.json",
+    "foundation-library/project-contracts/PROJECT-FOUNDATION-CONTRACT-001/LAB_TO_SYMPHONIE_BRIEF.example.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PROJECT_FOUNDATION_CONTRACT_AND_LAB_TO_SYMPHONIE_BRIEF_128.json"
+  ],
+  "registry_effects":{"authorization_count_delta":1,"foundation_library_count_delta":1,"latest_authorization":"AUTHORIZATION_LAB_PROJECT_FOUNDATION_CONTRACT_AND_LAB_TO_SYMPHONIE_BRIEF_128","latest_foundation_library":"PROJECT-FOUNDATION-CONTRACT-001@0.1.0"},
+  "authority_effect":"NONE_AFTER_CONSUMPTION",
+  "runtime_effect":"NONE",
+  "integration_effect":"NONE",
+  "product_effect":"NONE",
+  "next_action":"Select one project for a separately authorized documentary pilot that instantiates the contract and tests the LAB-to-Symphonie parsing boundary."
+}
