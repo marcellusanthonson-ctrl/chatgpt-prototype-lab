@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "analysis_id": "PL003_IMPLICIT_DENY_RECONCILIATION_001",
+  "project_id": "lab",
+  "status": "COMPLETED_DOCUMENTARY_RECONCILIATION",
+  "source_authorization": "AUTHORIZATION_LAB_PL003_PROPAGATION_AWARE_ATOMIC_SIMULATION_RETRY_127",
+  "source_evidence": "projects/lab/evidence/EVD-LAB-PL003-PROPAGATION-AWARE-ATOMIC-SIMULATION-RETRY-127-ATTEMPT-001.json",
+  "observed_facts": [
+    "The temporary permission to call iam:SimulatePrincipalPolicy was stored, stabilized and accepted by AWS.",
+    "The single simulation API call succeeded.",
+    "The simulated iam:CreatePolicy action was evaluated as implicitDeny.",
+    "The simulated action was not executed.",
+    "The temporary permission was removed and the exact baseline was restored.",
+    "No persistent or unexpected AWS mutation remained."
+  ],
+  "technical_interpretation": {
+    "classification": "SIMULATION_MECHANISM_VALID_ACTION_NOT_ALLOWED_IN_EVALUATED_CONTEXT",
+    "meaning": "implicitDeny indicates that no applicable Allow produced an effective permission for the evaluated action and context; it is not equivalent to an explicit Deny and does not identify a single causal policy layer.",
+    "causality_status": "INSUFFICIENT_EVIDENCE_FOR_SINGLE_CAUSE"
+  },
+  "candidate_causes_not_confirmed": [
+    "IDENTITY_POLICY_LACKS_APPLICABLE_ALLOW",
+    "PERMISSIONS_BOUNDARY_DOES_NOT_ALLOW_ACTION_OR_RESOURCE",
+    "SESSION_POLICY_OR_CONTEXT_RESTRICTS_ACTION",
+    "SCP_OR_RCP_LIMITS_EFFECTIVE_PERMISSION",
+    "RESOURCE_OR_CONTEXT_INPUTS_DO_NOT_MATCH_POLICY_CONDITIONS",
+    "SIMULATION_INPUT_DID_NOT_REPRESENT_THE_INTENDED_PROVISIONING_PRINCIPAL"
+  ],
+  "reconciled_conclusions": [
+    "Authorization 127 successfully validated the safe simulation mechanism.",
+    "Authorization 127 did not validate permission to create an IAM policy.",
+    "No provisioning gate may infer effective permission from successful simulator invocation alone.",
+    "The next gate must simulate the intended bounded provisioning principal, exact action-resource pairs and required context before any mutation is considered.",
+    "A passing simulation remains evidence for authorization evaluation only and does not itself authorize provisioning."
+  ],
+  "forbidden_inferences": [
+    "PROPAGATION_WAS_THE_CONFIRMED_CAUSE_OF_AUTHORIZATION_126_ACCESS_DENIED",
+    "A_STRUCTURAL_DENY_WAS_CONFIRMED",
+    "IAM_CREATE_POLICY_IS_AUTHORIZED",
+    "TERRAFORM_APPLY_IS_AUTHORIZED",
+    "PRODUCT_LEADERSHIP_TEST_003_IS_AUTHORIZED"
+  ],
+  "selected_next_gate": "PL003_LEAST_PRIVILEGE_EFFECTIVE_PERMISSION_GATE_001",
+  "authority_effect": "NONE"
+}
