@@ -8,6 +8,13 @@
     "path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_CODEX_BOOTSTRAP_DIAGNOSTIC_EXECUTION_118.json",
     "status": "GRANTED"
   },
+  "implementation": {
+    "diagnostic_script": "projects/lab/scripts/Invoke-PL003BootstrapDiagnosticPreflight.ps1",
+    "synthetic_classifier_test": "projects/lab/scripts/tests/Invoke-PL003BootstrapDiagnosticClassifier.Tests.ps1",
+    "synthetic_classifier_result": "PASS",
+    "synthetic_classifier_case_count": 10,
+    "aws_calls_during_synthetic_tests": 0
+  },
   "supporting_evidence": [
     {
       "id": "EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A-ATTEMPT-003-LOCAL-CAPTURE",
