@@ -63,6 +63,20 @@
     "evidence_ref": "projects/lab/evidence/EVD-LAB-PL003-TEMPORARY-SIMULATION-PERMISSION-119-ATTEMPT-001.json",
     "ephemeral_credentials_cleared": true
   },
-  "required_resolution": "A separate explicit authorization must provide a bounded principal or mechanism capable of reading the target inline-policy baseline and performing an atomic temporary grant and rollback; authorization 119 is consumed and did not attempt the grant.",
+  "authorization_120_result": {
+    "authorization_id": "AUTHORIZATION_LAB_PL003_ATOMIC_SIMULATION_PERMISSION_CYCLE_120",
+    "status": "CONSUMED_BLOCKED_BASELINE_EXACT_POLICY_READ_FAILED",
+    "failure_code": "BLOCKED_BASELINE_EXACT_POLICY_READ_FAILED",
+    "aws_error_code": "AccessDenied",
+    "principal_verified_redacted": true,
+    "baseline_mechanism": "GetUserPolicy_EXACT_NAME",
+    "put_user_policy_attempts": 0,
+    "simulations": 0,
+    "delete_user_policy_attempts": 0,
+    "iam_mutations": 0,
+    "evidence_ref": "projects/lab/evidence/EVD-LAB-PL003-ATOMIC-SIMULATION-PERMISSION-CYCLE-120-ATTEMPT-001.json",
+    "ephemeral_credentials_cleared": true
+  },
+  "required_resolution": "A separate explicit authorization must provide a bounded external principal or mechanism that can inspect and atomically manage only the exact temporary inline policy on the verified bootstrap user; the bootstrap session itself cannot read that exact policy baseline.",
   "active_execution_authority": "NONE"
 }

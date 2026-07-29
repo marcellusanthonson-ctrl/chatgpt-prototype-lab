@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_PL003_ATOMIC_SIMULATION_PERMISSION_CYCLE_120",
   "project_id": "lab",
-  "status": "GRANTED",
+  "status": "CONSUMED",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-07-29",
   "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
@@ -71,6 +71,38 @@
     "FILES_COMMIT_AND_FINAL_REMOTE_HEAD",
     "SINGLE_NEXT_RECOMMENDED_ACTION"
   ],
+  "execution_result": {
+    "status": "BLOCKED_BASELINE_EXACT_POLICY_READ_FAILED",
+    "failure_code": "BLOCKED_BASELINE_EXACT_POLICY_READ_FAILED",
+    "aws_error_code": "AccessDenied",
+    "principal_verified_redacted": true,
+    "baseline_mechanism": "GetUserPolicy_EXACT_NAME",
+    "baseline_absence_confirmed": false,
+    "put_user_policy_attempted": false,
+    "simulation_executed": false,
+    "delete_user_policy_required": false,
+    "temporary_policy_created_by_execution": false,
+    "evidence": "projects/lab/evidence/EVD-LAB-PL003-ATOMIC-SIMULATION-PERMISSION-CYCLE-120-ATTEMPT-001.json",
+    "aws_calls": {
+      "sts_get_session_token": 1,
+      "sts_get_caller_identity": 1,
+      "iam_get_user_policy": 1,
+      "iam_put_user_policy": 0,
+      "iam_simulate_principal_policy": 0,
+      "iam_delete_user_policy": 0,
+      "other_aws": 0
+    },
+    "iam_mutations": 0,
+    "persistent_mutations": 0,
+    "aws_resources_created": 0,
+    "terraform_executions": 0,
+    "product_leadership_test_003_executions": 0,
+    "product_leadership_active": false,
+    "product_leadership_integrated": false,
+    "ephemeral_credentials_cleared": true
+  },
+  "consumed_at": "2026-07-29",
+  "consumption_reason": "THE_SINGLE_AUTHORIZED_SESSION_REACHED_THE_EXACT_NAME_BASELINE_GET_USER_POLICY_CALL_AND_RECEIVED_ACCESS_DENIED_BEFORE_PUT_SIMULATION_OR_MUTATION",
   "consumption_criterion": "CONSUMED_AFTER_A_TERMINAL_ATOMIC_CYCLE_RESULT_IS_PUBLISHED_CREDENTIALS_ARE_CLEARED_AND_FINAL_REMOTE_HEAD_IS_VERIFIED",
   "post_consumption_authority": "NONE"
 }

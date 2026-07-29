@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "continuity_id": "LAB-CONTINUITY-PL003-TEMPORARY-SIMULATION-PERMISSION-119-BLOCKED",
+  "continuity_id": "LAB-CONTINUITY-PL003-ATOMIC-SIMULATION-PERMISSION-CYCLE-120-BLOCKED",
   "project_id": "lab",
-  "status": "CURRENT_BLOCKED_BASELINE_INLINE_POLICY_LIST_FAILED",
+  "status": "CURRENT_BLOCKED_EXACT_POLICY_GET_ACCESS_DENIED",
   "created_at": "2026-07-29",
   "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "canonical_branch": "main",
@@ -89,6 +89,28 @@
     "product_leadership_test_003_executions": 0,
     "ephemeral_credentials_cleared": true
   },
+  "latest_authorization_120_attempt": {
+    "authorization_id": "AUTHORIZATION_LAB_PL003_ATOMIC_SIMULATION_PERMISSION_CYCLE_120",
+    "status": "CONSUMED_BLOCKED_BASELINE_EXACT_POLICY_READ_FAILED",
+    "failure_code": "BLOCKED_BASELINE_EXACT_POLICY_READ_FAILED",
+    "aws_error_code": "AccessDenied",
+    "principal_verified_redacted": true,
+    "evidence": "projects/lab/evidence/EVD-LAB-PL003-ATOMIC-SIMULATION-PERMISSION-CYCLE-120-ATTEMPT-001.json",
+    "aws_calls": {
+      "sts_get_session_token": 1,
+      "sts_get_caller_identity": 1,
+      "iam_get_user_policy": 1,
+      "iam_put_user_policy": 0,
+      "iam_simulate_principal_policy": 0,
+      "iam_delete_user_policy": 0,
+      "other_aws": 0
+    },
+    "iam_mutations": 0,
+    "persistent_mutations": 0,
+    "terraform_executions": 0,
+    "product_leadership_test_003_executions": 0,
+    "ephemeral_credentials_cleared": true
+  },
   "verified_facts": [
     {
       "fact": "The static AWS Terraform package passed fmt, init with backend disabled, validate, and a local refresh-false plan using temporary assumed-role credentials.",
@@ -139,6 +161,13 @@
         "projects/lab/evidence/EVD-LAB-PL003-TEMPORARY-SIMULATION-PERMISSION-119-ATTEMPT-001.json",
         "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_TEMPORARY_SIMULATION_PERMISSION_119.json"
       ]
+    },
+    {
+      "fact": "Authorization 120 verified the expected bootstrap principal but the exact-name GetUserPolicy baseline returned AccessDenied, so no PutUserPolicy, simulation, DeleteUserPolicy or mutation occurred.",
+      "source_refs": [
+        "projects/lab/evidence/EVD-LAB-PL003-ATOMIC-SIMULATION-PERMISSION-CYCLE-120-ATTEMPT-001.json",
+        "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_ATOMIC_SIMULATION_PERMISSION_CYCLE_120.json"
+      ]
     }
   ],
   "architecture": {
@@ -167,6 +196,7 @@
     "authorization_117": "CONSUMED",
     "authorization_118": "CONSUMED",
     "authorization_119": "CONSUMED_BLOCKED_FAIL_CLOSED_OTHER",
+    "authorization_120": "CONSUMED_BLOCKED_BASELINE_EXACT_POLICY_READ_FAILED",
     "active_aws_execution_authority": "NONE",
     "terraform_apply_authorized": false,
     "terraform_destroy_authorized": false,
@@ -193,7 +223,9 @@
     "Authorization 118 completed one read-only diagnostic and classified iam:SimulatePrincipalPolicy as SIMULATION_ACTION_NOT_AUTHORIZED.",
     "Authorization 118 executed three AWS calls, zero mutations, no Terraform and no Product Leadership Test 003, then cleared all ephemeral credentials.",
     "Authorization 119 verified the expected bootstrap principal and attempted one minimum baseline read, then stopped before grant because ListUserPolicies failed.",
-    "Authorization 119 executed one GetSessionToken, one GetCallerIdentity and one IAM baseline read, with zero simulations, zero mutations, zero resources, no Terraform and no Product Leadership Test 003, then cleared all ephemeral credentials."
+    "Authorization 119 executed one GetSessionToken, one GetCallerIdentity and one IAM baseline read, with zero simulations, zero mutations, zero resources, no Terraform and no Product Leadership Test 003, then cleared all ephemeral credentials.",
+    "Authorization 120 implemented and locally validated the exact atomic cycle with DeleteUserPolicy as the first finally AWS operation after any PutUserPolicy attempt.",
+    "Authorization 120 received AccessDenied from the exact-name GetUserPolicy baseline and stopped before PutUserPolicy, simulation, DeleteUserPolicy or mutation, then cleared all ephemeral credentials."
   ],
   "operational_estimate": {
     "active_work_to_functional_validation": "4_TO_6_HOURS",
@@ -213,8 +245,8 @@
     },
     {
       "id": "PEND-LAB-032",
-      "item": "Provide a bounded principal or mechanism that can read the target inline-policy baseline and guarantee an atomic exact temporary grant and removal.",
-      "status": "OPEN_BLOCKED_BASELINE_INLINE_POLICY_LIST_FAILED_NO_ACTIVE_EXECUTION_AUTHORITY"
+      "item": "Provide a bounded external principal or mechanism that can inspect and atomically manage only the exact temporary inline policy on the verified bootstrap user.",
+      "status": "OPEN_BLOCKED_EXACT_POLICY_GET_ACCESS_DENIED_NO_ACTIVE_EXECUTION_AUTHORITY"
     },
     {
       "item": "Configure a low AWS budget alert before any resource creation.",
@@ -262,6 +294,6 @@
     "ATTACHMENT_MANIFEST.json",
     "START_PROMPT.md"
   ],
-  "single_next_action": "Separately authorize a bounded baseline-read and atomic temporary-permission path without reusing authorization 118 or 119.",
-  "authority_effect": "NONE_AFTER_AUTHORIZATION_119_CONSUMPTION"
+  "single_next_action": "Separately authorize a bounded external exact-policy manager without reusing authorizations 118, 119 or 120.",
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_120_CONSUMPTION"
 }

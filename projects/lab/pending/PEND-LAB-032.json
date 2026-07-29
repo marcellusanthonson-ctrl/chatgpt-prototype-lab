@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "id": "PEND-LAB-032",
   "project_id": "lab",
-  "status": "OPEN_BLOCKED_BASELINE_INLINE_POLICY_LIST_FAILED_NO_ACTIVE_EXECUTION_AUTHORITY",
+  "status": "OPEN_BLOCKED_EXACT_POLICY_GET_ACCESS_DENIED_NO_ACTIVE_EXECUTION_AUTHORITY",
   "type": "PL003_AWS_PROVISIONING_OPERATOR_PERMISSION_BOUNDARY",
   "subject": "Resolve the confirmed lack of authorization for iam:SimulatePrincipalPolicy before any AWS provisioning or Product Leadership Test 003 execution",
   "priority": "HIGH",
@@ -21,7 +21,7 @@
     "Authorization 118 used one GetSessionToken, one GetCallerIdentity and one SimulatePrincipalPolicy call, with zero other AWS calls and zero mutations.",
     "All authorization 118 temporary credentials were cleared."
   ],
-  "stop_condition": "BASELINE_INLINE_POLICY_LIST_FAILED",
+  "stop_condition": "EXACT_POLICY_GET_ACCESS_DENIED",
   "authorization_112_status": "GRANTED_NOT_CONSUMED_BLOCKED_NO_ACTIVE_EXECUTION_AUTHORITY",
   "authorization_113_status": "GRANTED_NOT_CONSUMED_BLOCKED_NO_ACTIVE_EXECUTION_AUTHORITY",
   "authorization_114_status": "NOT_RESUMABLE_WITHOUT_NEW_EXPLICIT_AUTHORIZATION",
@@ -63,8 +63,23 @@
     "ephemeral_credentials_cleared": true,
     "evidence_ref": "projects/lab/evidence/EVD-LAB-PL003-TEMPORARY-SIMULATION-PERMISSION-119-ATTEMPT-001.json"
   },
+  "authorization_120_atomic_cycle_attempt": {
+    "status": "CONSUMED_BLOCKED_BASELINE_EXACT_POLICY_READ_FAILED",
+    "failure_code": "BLOCKED_BASELINE_EXACT_POLICY_READ_FAILED",
+    "aws_error_code": "AccessDenied",
+    "principal_verified_redacted": true,
+    "sts_get_session_token_calls": 1,
+    "sts_get_caller_identity_calls": 1,
+    "iam_get_user_policy_calls": 1,
+    "iam_put_user_policy_calls": 0,
+    "iam_simulate_principal_policy_calls": 0,
+    "iam_delete_user_policy_calls": 0,
+    "aws_mutations": 0,
+    "ephemeral_credentials_cleared": true,
+    "evidence_ref": "projects/lab/evidence/EVD-LAB-PL003-ATOMIC-SIMULATION-PERMISSION-CYCLE-120-ATTEMPT-001.json"
+  },
   "required_resolution": [
-    "Provide a separately authorized bounded principal or mechanism that can first read the target inline-policy baseline and can guarantee both the exact temporary grant and its removal.",
+    "Provide a separately authorized bounded external principal or mechanism that can inspect and atomically manage only the exact temporary inline policy on the verified bootstrap user.",
     "Preserve MFA-backed ephemeral credentials and existing permission boundaries.",
     "Require a successful pre-mutation simulation gate before any IAM or infrastructure mutation.",
     "Keep Product Leadership Test 003 inactive until separately authorized after the AWS preflight is valid."
@@ -72,6 +87,7 @@
   "forbidden_resolution": [
     "REUSE_AUTHORIZATION_114A",
     "REUSE_AUTHORIZATION_118_OR_119",
+    "REUSE_AUTHORIZATION_120",
     "START_A_NEW_MFA_SESSION_WITHOUT_NEW_EXPLICIT_AUTHORIZATION",
     "EXECUTE_AWS_IAM_OR_TERRAFORM_WITHOUT_NEW_EXPLICIT_AUTHORIZATION",
     "EXECUTE_PRODUCT_LEADERSHIP_TEST_003",
@@ -80,5 +96,5 @@
     "PUBLISH_CREDENTIALS_TOKENS_MFA_CODES_SECRETS_OR_FULL_ACCOUNT_ID"
   ],
   "active_execution_authority": "NONE",
-  "next_action": "SEPARATELY_AUTHORIZE_A_BOUNDED_BASELINE_READ_AND_ATOMIC_TEMPORARY_PERMISSION_PATH_WITHOUT_REUSING_118_OR_119"
+  "next_action": "SEPARATELY_AUTHORIZE_A_BOUNDED_EXTERNAL_EXACT_POLICY_MANAGER_WITHOUT_REUSING_118_119_OR_120"
 }

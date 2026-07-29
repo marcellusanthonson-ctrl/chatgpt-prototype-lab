@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "PL003-ATOMIC-SIMULATION-PERMISSION-CYCLE-120",
+  "project_id": "lab",
+  "effective_at": "2026-07-29",
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_PL003_ATOMIC_SIMULATION_PERMISSION_CYCLE_120",
+    "path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_ATOMIC_SIMULATION_PERMISSION_CYCLE_120.json",
+    "status": "CONSUMED"
+  },
+  "implementation": {
+    "script": "projects/lab/scripts/Invoke-PL003AtomicSimulationPermissionCycle120.ps1",
+    "synthetic_test": "projects/lab/scripts/tests/Invoke-PL003AtomicSimulationPermissionCycle120.Tests.ps1",
+    "synthetic_result": "PASS",
+    "synthetic_case_count": 20,
+    "authorized_policy_sha256": "653b85ffa9c4079745b1c6036d52a5c5b1ac22d03a285a3c804d39f628c3593e",
+    "authorized_action": "iam:SimulatePrincipalPolicy",
+    "additional_actions": 0,
+    "delete_is_first_finally_aws_operation": "PASS",
+    "aws_calls_during_synthetic_tests": 0
+  },
+  "evidence": {
+    "id": "EVD-LAB-PL003-ATOMIC-SIMULATION-PERMISSION-CYCLE-120-ATTEMPT-001",
+    "path": "projects/lab/evidence/EVD-LAB-PL003-ATOMIC-SIMULATION-PERMISSION-CYCLE-120-ATTEMPT-001.json",
+    "result": "BLOCKED_BASELINE_EXACT_POLICY_READ_FAILED",
+    "aws_error_code": "AccessDenied"
+  },
+  "state_effect": {
+    "principal_verified_redacted": true,
+    "baseline_absence_confirmed": false,
+    "put_user_policy_attempted": false,
+    "simulation_executed": false,
+    "delete_user_policy_required": false,
+    "temporary_policy_created_by_execution": false,
+    "current_blocker": "EXACT_POLICY_GET_ACCESS_DENIED",
+    "active_execution_authority": "NONE",
+    "aws_calls": {
+      "sts_get_session_token": 1,
+      "sts_get_caller_identity": 1,
+      "iam_get_user_policy": 1,
+      "iam_put_user_policy": 0,
+      "iam_simulate_principal_policy": 0,
+      "iam_delete_user_policy": 0,
+      "other_aws": 0
+    },
+    "iam_mutations": 0,
+    "persistent_mutations": 0,
+    "aws_resources_created": 0,
+    "terraform_executed": false,
+    "product_leadership_test_003_executed": false,
+    "product_leadership_active": false,
+    "product_leadership_integrated": false,
+    "ephemeral_credentials_cleared": true
+  },
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_120_CONSUMPTION"
+}
