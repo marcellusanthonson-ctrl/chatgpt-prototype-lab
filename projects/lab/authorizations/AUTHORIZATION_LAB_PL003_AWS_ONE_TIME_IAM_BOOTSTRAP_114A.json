@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_PL003_AWS_ONE_TIME_IAM_BOOTSTRAP_114A",
   "project_id": "lab",
-  "status": "GRANTED",
+  "status": "CONSUMED",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-07-28",
   "historical_parent_head": "65092691edb586600de57627bbbe6a75d1198c43",
@@ -48,6 +48,10 @@
     "AUTHORIZATION_114_BOUNDARIES_REQUIRE_MODIFICATION",
     "COMPLETE_TEMPORARY_ARTIFACT_CLEANUP_CANNOT_BE_GUARANTEED"
   ],
-  "consumption_effect": "114A is consumed when the single replacement session is started and used. Authorization 114 retains its original consumption criterion.",
+  "consumption_effect": "114A was consumed when the single replacement MFA-backed session was started in ATTEMPT-004. No AWS or IAM mutation occurred.",
+  "consumed_by_attempt": "ATTEMPT-004",
+  "consumed_evidence": "projects/lab/evidence/EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A-ATTEMPT-004.json",
+  "consumed_at": "2026-07-29",
+  "terminal_blocker": "BOOTSTRAP_SIMULATION_UNAVAILABLE_OR_DENIED",
   "post_consumption_authority": "NONE_UNDER_114A"
 }
