@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_BOOTSTRAP_SIMULATION_FAILURE_READ_ONLY_ANALYSIS_116",
+  "project_id": "lab",
+  "status": "CONSUMED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-29",
+  "expected_parent_head": "9038117b06bc11c3a824a88b3dc0fd895fe4d39b",
+  "mode": "READ_ONLY_ANALYSIS_AND_DOCUMENTARY_DESIGN",
+  "objective": "Analyze ATTEMPT-004 bootstrap simulation failure statically and design a successor diagnostic preflight without AWS execution.",
+  "authorized_actions": [
+    "STATIC_REPOSITORY_ANALYSIS",
+    "DOCUMENT_ROOT_CAUSE_HYPOTHESES",
+    "DESIGN_SUCCESSOR_DIAGNOSTIC_PREFLIGHT",
+    "PREPARE_NON_AUTHORIZED_EXECUTION_BRIEF",
+    "COMMIT_AND_PUSH_DOCUMENTARY_RESULTS"
+  ],
+  "forbidden_actions": [
+    "AWS_CALLS",
+    "MFA_SESSION",
+    "IAM_SIMULATION",
+    "IAM_MUTATION",
+    "TERRAFORM_EXECUTION",
+    "PRODUCT_LEADERSHIP_TEST_003_EXECUTION",
+    "PRODUCT_LEADERSHIP_ACTIVATION_OR_INTEGRATION"
+  ],
+  "consumption_criterion": "Consumed on verified publication of the static analysis, successor preflight design and non-authorized execution brief.",
+  "post_consumption_authority": "NONE"
+}
