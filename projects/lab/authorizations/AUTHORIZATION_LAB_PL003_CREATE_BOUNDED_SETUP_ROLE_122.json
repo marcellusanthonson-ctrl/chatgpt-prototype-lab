@@ -25,8 +25,12 @@
     "name": "PL003BoundedSimulationSetupOperator",
     "maximum_session_duration_seconds": 900,
     "trust": "EXACT_BOOTSTRAP_USER_AND_MFA_ONLY",
-    "permission_boundary": "DEDICATED_EXACT_BOUNDARY",
-    "inline_policy": "MINIMUM_BOOTSTRAP_INLINE_POLICY_MANAGEMENT_ONLY"
+    "permission_boundary": "PL003BoundedSimulationSetupBoundary122",
+    "inline_policy": "PL003BoundedSimulationSetupRolePolicy122"
+  },
+  "implementation": {
+    "precheck_script": "projects/lab/scripts/Invoke-PL003CreateBoundedSetupRole122Precheck.ps1",
+    "synthetic_tests": "projects/lab/scripts/tests/Invoke-PL003CreateBoundedSetupRole122.Tests.ps1"
   },
   "forbidden_actions": [
     "PUT_OR_DELETE_POLICY_ON_BOOTSTRAP_USER",
