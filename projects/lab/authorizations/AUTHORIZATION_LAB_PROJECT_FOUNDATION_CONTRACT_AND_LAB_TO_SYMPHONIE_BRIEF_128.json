@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_PROJECT_FOUNDATION_CONTRACT_AND_LAB_TO_SYMPHONIE_BRIEF_128",
+  "project_id": "lab",
+  "status": "GRANTED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-29",
+  "approval_source": "USER_INSTRUCTION_EXECUTE_RECOMMENDED_DOCUMENTARY_DESIGN",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "1de80820bdfdd66ea4114d2275c97d712ccd544f",
+  "execution_head_policy": "VERIFY_LIVE_AT_USE",
+  "objective": "Design and publish a documentation-only Project Foundation Contract capability and a LAB-to-Symphonie brief exchange contract, with schemas, examples and registry traceability.",
+  "allowed_actions": [
+    "CREATE_DOCUMENTATION_ONLY_FOUNDATION_PACKAGE",
+    "CREATE_JSON_SCHEMAS",
+    "CREATE_NON_OPERATIONAL_EXAMPLES",
+    "CREATE_REGISTRY_DELTA",
+    "UPDATE_FOUNDATION_LIBRARY_REGISTRY",
+    "UPDATE_REGISTRY_INDEX",
+    "COMMIT_AND_PUSH_TO_MAIN"
+  ],
+  "forbidden_actions": [
+    "SYMPHONIE_INTEGRATION",
+    "RUNTIME_EXECUTION",
+    "PRODUCT_CHANGES",
+    "AWS_ACTIONS",
+    "INFRASTRUCTURE_CHANGES",
+    "AUTONOMOUS_AUTHORITY",
+    "ACTIVATING_ANY_CANDIDATE_CAPABILITY"
+  ],
+  "deliverables": [
+    "foundation-library/project-contracts/PROJECT-FOUNDATION-CONTRACT-001/MANIFEST.json",
+    "foundation-library/project-contracts/PROJECT-FOUNDATION-CONTRACT-001/ARCHITECTURE.md",
+    "foundation-library/project-contracts/PROJECT-FOUNDATION-CONTRACT-001/PROJECT_FOUNDATION_CONTRACT.schema.json",
+    "foundation-library/project-contracts/PROJECT-FOUNDATION-CONTRACT-001/LAB_TO_SYMPHONIE_BRIEF.schema.json",
+    "foundation-library/project-contracts/PROJECT-FOUNDATION-CONTRACT-001/PROJECT_FOUNDATION_CONTRACT.example.json",
+    "foundation-library/project-contracts/PROJECT-FOUNDATION-CONTRACT-001/LAB_TO_SYMPHONIE_BRIEF.example.json",
+    "registry/deltas/project-foundation-contract-128.json"
+  ],
+  "validation_requirements": [
+    "VALID_JSON",
+    "SCHEMA_SELF_CONSISTENCY",
+    "EXAMPLE_TO_SCHEMA_ALIGNMENT",
+    "AUTHORITY_EFFECT_NONE",
+    "INTEGRATION_STATUS_NOT_INTEGRATED",
+    "NO_RUNTIME_OR_PRODUCT_EFFECT",
+    "REMOTE_HEAD_VERIFIED"
+  ],
+  "consumption_criterion": "CONSUMED_AFTER_ALL_DOCUMENTARY_ARTIFACTS_AND_REGISTRY_REFERENCES_ARE_PUBLISHED_AND_THE_FINAL_REMOTE_HEAD_IS_VERIFIED",
+  "post_consumption_authority": "NONE"
+}
