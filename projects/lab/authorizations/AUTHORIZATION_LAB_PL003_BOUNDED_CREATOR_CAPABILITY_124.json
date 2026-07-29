@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_BOUNDED_CREATOR_CAPABILITY_124",
+  "project_id": "lab",
+  "status": "GRANTED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-29",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "1f1954d35538c1be1c18cb0004c2a5056979179b",
+  "execution_head_policy": "VERIFY_LIVE_AT_USE",
+  "objective": "Locate and use an already-existing non-root bounded IAM administrative identity, with ephemeral MFA-backed credentials when applicable, to create only the PL003 setup role, its dedicated permission boundary and its exact inline role policy.",
+  "required_creator_class": {
+    "already_exists": true,
+    "root": false,
+    "sts_identity_verifiable": true,
+    "temporary_credentials_and_mfa_when_applicable": true,
+    "exact_operations_only": true,
+    "self_permission_change_required": false,
+    "general_administrative_privileges_allowed": false
+  },
+  "no_creator_available_result": "BLOCKED_NO_EXISTING_BOUNDED_CREATOR_CAPABILITY",
+  "target_resources": {
+    "role_name": "PL003BoundedSimulationSetupOperator",
+    "boundary_name": "PL003BoundedSimulationSetupBoundary124",
+    "role_inline_policy_name": "PL003BoundedSimulationSetupRolePolicy124",
+    "future_bootstrap_inline_policy_name": "PL003AtomicSimulationOnly125",
+    "create_role_maximum_session_duration_seconds": 3600,
+    "assume_role_duration_seconds": 900
+  },
+  "role_effective_permissions": {
+    "resource": "EXACT_BOOTSTRAP_USER_ARN_ONLY",
+    "actions": [
+      "iam:ListUserPolicies",
+      "iam:GetUserPolicy",
+      "iam:PutUserPolicy",
+      "iam:DeleteUserPolicy"
+    ],
+    "same_document_required_for_boundary_and_inline_role_policy": true
+  },
+  "authorized_creator_operations": {
+    "collision_preflight": [
+      "iam:GetPolicy_EXACT_BOUNDARY",
+      "iam:GetRole_EXACT_ROLE",
+      "iam:ListRolePolicies_ONLY_IF_ROLE_EXISTS",
+      "iam:GetRolePolicy_ONLY_IF_EXACT_POLICY_EXISTS"
+    ],
+    "creation_maximum": {
+      "iam:CreatePolicy": 1,
+      "iam:CreateRole": 1,
+      "iam:PutRolePolicy": 1
+    },
+    "verification": [
+      "iam:GetPolicy",
+      "iam:GetPolicyVersion",
+      "iam:GetRole",
+      "iam:ListRolePolicies",
+      "iam:GetRolePolicy"
+    ],
+    "compensating_cleanup_maximum": {
+      "iam:DeleteRolePolicy": 1,
+      "iam:DeleteRole": 1,
+      "iam:DeletePolicy": 1
+    },
+    "sts": [
+      "sts:GetCallerIdentity",
+      "sts:AssumeRole_MAXIMUM_ONE_DURATION_900",
+      "sts:GetCallerIdentity_FROM_ROLE_MAXIMUM_ONE"
+    ],
+    "bootstrap_baseline": [
+      "iam:ListUserPolicies",
+      "iam:GetUserPolicy_ONLY_IF_EXACT_PL003AtomicSimulationOnly125_APPEARS"
+    ]
+  },
+  "creator_selection_rule": "SELECT_ONLY_AN_EXISTING_IDENTITY_THAT_CAN_BE_CLASSIFIED_LOCALLY_AS_BOUNDED_NON_ROOT_NON_GENERAL_ADMINISTRATIVE_WITHOUT_CREATING_OR_MODIFYING_ITS_PERMISSIONS",
+  "collision_rule": "STOP_WITHOUT_MODIFICATION_IF_ANY_EXACT_TARGET_RESOURCE_EXISTS_OR_IF_EITHER_COLLISION_READ_RETURNS_ACCESS_DENIED",
+  "compensation_order": [
+    "DELETE_EXACT_ROLE_INLINE_POLICY_IF_CREATED",
+    "DELETE_EXACT_ROLE_IF_CREATED",
+    "DELETE_EXACT_BOUNDARY_IF_CREATED_AND_UNASSOCIATED"
+  ],
+  "forbidden_actions": [
+    "REUSE_AUTHORIZATIONS_118_119_120_121_122_OR_123",
+    "ROOT",
+    "CREATE_OR_MODIFY_CREATOR_IDENTITY",
+    "GRANT_PERMISSIONS_TO_BOOTSTRAP",
+    "CREATE_USERS_GROUPS_OR_ACCESS_KEYS",
+    "ADMINISTRATOR_ACCESS",
+    "IAM_FULL_ACCESS",
+    "POWER_USER_ACCESS",
+    "IAM_ACTION_WILDCARD",
+    "IAM_PASS_ROLE",
+    "MODIFY_EXISTING_IAM_RESOURCES",
+    "PUT_OR_DELETE_POLICY_ON_BOOTSTRAP_USER",
+    "IAM_SIMULATE_PRINCIPAL_POLICY",
+    "TERRAFORM",
+    "PROVISIONING",
+    "PRODUCT_LEADERSHIP_TEST_003",
+    "PRODUCT_LEADERSHIP_ACTIVATION_OR_INTEGRATION",
+    "CREDENTIAL_PERSISTENCE",
+    "PUBLISH_SECRETS_OR_FULL_IDENTIFIERS"
+  ],
+  "stop_conditions": [
+    "HEAD_MISMATCH",
+    "WORKTREE_NOT_CLEAN",
+    "NO_EXISTING_BOUNDED_CREATOR_CAPABILITY",
+    "CREATOR_IS_ROOT",
+    "CREATOR_DEPENDS_ON_GENERAL_ADMINISTRATIVE_PRIVILEGES",
+    "COLLISION_READ_ACCESS_DENIED",
+    "EXISTING_RESOURCE_COLLISION",
+    "DOCUMENT_MISMATCH",
+    "ADDITIONAL_IAM_OPERATION_REQUIRED",
+    "BOUNDARY_CANNOT_BE_ATTACHED_DURING_CREATE_ROLE",
+    "ROLE_CAN_MANAGE_OTHER_IDENTITIES_OR_ITSELF",
+    "MAX_SESSION_DURATION_NOT_3600",
+    "ASSUME_ROLE_DURATION_NOT_900",
+    "BASELINE_READ_DENIED",
+    "COMPENSATION_NOT_VERIFIED",
+    "CREDENTIAL_CLEANUP_FAILED",
+    "UNREDACTABLE_SENSITIVE_INFORMATION"
+  ],
+  "result_classes": [
+    "PASS_BOUNDED_CREATOR_CREATED_AND_VERIFIED_SETUP_ROLE",
+    "BLOCKED_NO_EXISTING_BOUNDED_CREATOR_CAPABILITY",
+    "BLOCKED_CREATOR_COLLISION_READ_ACCESS_DENIED",
+    "BLOCKED_EXISTING_RESOURCE_COLLISION",
+    "BLOCKED_DOCUMENT_MISMATCH",
+    "BLOCKED_CREATION_FAILED_COMPENSATED",
+    "BLOCKED_COMPENSATION_NOT_VERIFIED_ACTIVE_IAM_INCIDENT",
+    "BLOCKED_ASSUME_ROLE_FAILED",
+    "BLOCKED_BASELINE_READ_FAILED",
+    "BLOCKED_FAIL_CLOSED_OTHER"
+  ],
+  "response_contract": [
+    "INITIAL_HEAD",
+    "REDACTED_CREATOR_IDENTITY_AND_CLASSIFICATION",
+    "COLLISION_PREFLIGHT",
+    "DOCUMENT_HASHES",
+    "CREATED_RESOURCES",
+    "COMPENSATION_RESULT_IF_APPLICABLE",
+    "ROLE_CONFIGURATION",
+    "ASSUME_ROLE_RESULT",
+    "BASELINE_RESULT",
+    "CALLS_AND_MUTATIONS",
+    "FINAL_AWS_STATE",
+    "VALIDATIONS",
+    "PUBLISHED_FILES",
+    "COMMIT_AND_FINAL_REMOTE_HEAD",
+    "SINGLE_NEXT_RECOMMENDED_ACTION"
+  ],
+  "consumption_criterion": "CONSUMED_AFTER_A_TERMINAL_RESULT_IS_PUBLISHED_CREDENTIALS_ARE_CLEARED_ZERO_UNAUTHORIZED_MUTATIONS_ARE_ATTESTED_AND_FINAL_REMOTE_HEAD_IS_VERIFIED",
+  "post_consumption_authority": "NONE"
+}
