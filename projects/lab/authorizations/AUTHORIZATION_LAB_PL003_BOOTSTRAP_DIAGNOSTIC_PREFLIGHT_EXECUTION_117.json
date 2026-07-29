@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_BOOTSTRAP_DIAGNOSTIC_PREFLIGHT_EXECUTION_117",
+  "project_id": "lab",
+  "status": "GRANTED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-29",
+  "expected_parent_head": "cbd5ba61eee7d6c4080253e1a0cdc4aed629a5a1",
+  "execution_head_policy": "VERIFY_LIVE_AT_USE",
+  "brief": "projects/lab/briefs/CODEX_PL003_BOOTSTRAP_DIAGNOSTIC_PREFLIGHT_EXECUTION_117.json",
+  "objective": "Execute one read-only diagnostic preflight to classify the ATTEMPT-004 bootstrap simulation failure while preserving sanitized AWS error metadata.",
+  "authorized_actions": [
+    "VERIFY_HEAD_AND_WORKTREE",
+    "ESTABLISH_ONE_EPHEMERAL_MFA_SESSION",
+    "STS_GET_CALLER_IDENTITY",
+    "IAM_SIMULATE_PRINCIPAL_POLICY",
+    "SANITIZED_ERROR_CAPTURE",
+    "CLEAR_EPHEMERAL_CREDENTIALS",
+    "PUBLISH_REDACTED_EVIDENCE"
+  ],
+  "forbidden_actions": [
+    "IAM_MUTATION",
+    "AWS_RESOURCE_MUTATION",
+    "TERRAFORM",
+    "PRODUCT_LEADERSHIP_TEST_003",
+    "PRODUCT_LEADERSHIP_ACTIVATION_OR_INTEGRATION",
+    "ROOT_OR_ADMINISTRATOR_ACCESS",
+    "SECRET_PERSISTENCE"
+  ],
+  "consumption_criterion": "Consumed only after the single diagnostic execution is completed and redacted evidence is published, or after a fail-closed blocked attempt is recorded.",
+  "post_consumption_authority": "NONE"
+}
