@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "PL003-ACTION-RESOURCE-CONTEXT-MATRIX-FREEZE-130",
+  "project_id": "lab",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_ACTION_RESOURCE_CONTEXT_MATRIX_FREEZE_130",
+  "status": "DOCUMENTARY_MATRIX_FREEZE_COMPLETE_PROVIDER_AUXILIARY_GAP_OPEN",
+  "added": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_ACTION_RESOURCE_CONTEXT_MATRIX_FREEZE_130.json",
+    "projects/lab/test-designs/PL003_LEAST_PRIVILEGE_EFFECTIVE_PERMISSION_GATE_001/ACTION_RESOURCE_CONTEXT_MATRIX.json",
+    "projects/lab/analyses/PL003_TERRAFORM_PERMISSION_MATRIX_FREEZE_001.json"
+  ],
+  "state_effect": {
+    "normative_resource_inventory": "FROZEN_49_CREATES",
+    "normative_action_resource_context_matrix": "FROZEN",
+    "provider_auxiliary_matrix": "OPEN_INSUFFICIENT_EVIDENCE",
+    "least_privilege_gate_execution_ready": false,
+    "aws_calls": 0,
+    "terraform_executed": false,
+    "provisioning_executed": false,
+    "test_003_executed": false,
+    "product_leadership_active": false,
+    "product_leadership_integrated": false,
+    "authority_after_publication": "NONE"
+  },
+  "single_next_action": "SEPARATELY_AUTHORIZE_DOCUMENTARY_PROVIDER_6_56_0_AUXILIARY_CALL_MAPPING_FOR_THE_15_RESOURCE_TYPES"
+}
