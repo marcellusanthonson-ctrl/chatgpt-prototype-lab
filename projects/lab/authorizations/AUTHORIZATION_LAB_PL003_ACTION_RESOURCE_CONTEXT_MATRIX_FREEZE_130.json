@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_PL003_ACTION_RESOURCE_CONTEXT_MATRIX_FREEZE_130",
   "project_id": "lab",
-  "status": "GRANTED",
+  "status": "CONSUMED",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-07-29",
   "approval_source": "USER_INSTRUCTION_CONTINUE_AFTER_RECOMMENDED_MATRIX_FREEZE",
@@ -34,6 +34,18 @@
     "projects/lab/analyses/PL003_TERRAFORM_PERMISSION_MATRIX_FREEZE_001.json",
     "registry/deltas/pl003-action-resource-context-matrix-freeze-130.json"
   ],
+  "execution_result": {
+    "resource_inventory": "FROZEN_49_CREATES",
+    "normative_action_resource_context_matrix": "FROZEN",
+    "provider_auxiliary_call_matrix": "INSUFFICIENT_EVIDENCE_REQUIRES_SEPARATE_DOCUMENTARY_MAPPING",
+    "aws_calls": 0,
+    "terraform_executed": false,
+    "provisioning_executed": false,
+    "test_003_executed": false,
+    "read_only_effective_permission_gate_execution_authorized": false
+  },
+  "consumed_at": "2026-07-29",
+  "consumption_reason": "THE_STATIC_RESOURCE_INVENTORY_NORMATIVE_MUTATION_MATRIX_CONTEXT_KEYS_PROVIDER_AUXILIARY_GAP_AND_REGISTRY_DELTA_WERE_PUBLISHED_WITHOUT_AWS_OR_RUNTIME_EFFECT",
   "consumption_criterion": "CONSUMED_AFTER_THE_STATIC_RESOURCE_AND_NORMATIVE_PERMISSION_MATRIX_PROVIDER_AUXILIARY_GAP_AND_REGISTRY_DELTA_ARE_PUBLISHED_AND_REMOTE_HEAD_IS_VERIFIED",
   "post_consumption_authority": "NONE"
 }
