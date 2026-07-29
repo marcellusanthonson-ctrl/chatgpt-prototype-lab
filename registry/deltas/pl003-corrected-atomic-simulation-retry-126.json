@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "PL003-CORRECTED-ATOMIC-SIMULATION-RETRY-126",
+  "project_id": "lab",
+  "effective_at": "2026-07-29",
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_PL003_CORRECTED_ATOMIC_SIMULATION_RETRY_126",
+    "path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_CORRECTED_ATOMIC_SIMULATION_RETRY_126.json",
+    "status": "CONSUMED"
+  },
+  "implementation": {
+    "script": "projects/lab/scripts/Invoke-PL003CorrectedAtomicSimulationRetry126.ps1",
+    "synthetic_test": "projects/lab/scripts/tests/Invoke-PL003CorrectedAtomicSimulationRetry126.Tests.ps1",
+    "directed_result": "PASS",
+    "directed_case_count": 20,
+    "baseline_empty": true,
+    "empty_baseline_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "session_isolation": "PASS",
+    "synthetic_grant_and_rollback": "PASS",
+    "delete_first_finally": true,
+    "temporary_policy_name": "PL003AtomicSimulationOnly126",
+    "temporary_policy_sha256": "1b867434be93a7e8851e7adb5beeb304e315ebd640ab83c8fcd12d36593e8e74"
+  },
+  "evidence": {
+    "id": "EVD-LAB-PL003-CORRECTED-ATOMIC-SIMULATION-RETRY-126-ATTEMPT-001",
+    "path": "projects/lab/evidence/EVD-LAB-PL003-CORRECTED-ATOMIC-SIMULATION-RETRY-126-ATTEMPT-001.json",
+    "result": "BLOCKED_SIMULATION_CALL_FAILED",
+    "aws_error_code": "AccessDenied",
+    "rollback_verified": true
+  },
+  "state_effect": {
+    "bootstrap_identity_verified_redacted": true,
+    "assume_role_900_succeeded": true,
+    "role_identity_verified_redacted": true,
+    "baseline_policy_count": 0,
+    "baseline_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "temporary_grant_succeeded": true,
+    "simulation_call_succeeded": false,
+    "simulation_aws_error_code": "AccessDenied",
+    "simulated_action_executed": false,
+    "rollback_verified": true,
+    "final_sha256_matches_baseline": true,
+    "temporary_policy_absent_final": true,
+    "current_blocker": "SIMULATION_ACCESS_DENIED_AFTER_TEMPORARY_GRANT",
+    "active_execution_authority": "NONE",
+    "aws_calls": {
+      "sts": 4,
+      "iam": 5,
+      "other": 0
+    },
+    "iam_mutations": {
+      "temporary_grant": 1,
+      "rollback": 1,
+      "persistent": 0,
+      "unexpected": 0
+    },
+    "bootstrap_user_final_state_matches_baseline": true,
+    "terraform_executed": false,
+    "provisioning_executed": false,
+    "product_leadership_test_003_executed": false,
+    "product_leadership_active": false,
+    "product_leadership_integrated": false,
+    "credentials_cleared": true,
+    "temporary_files_cleared": true
+  },
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_126_CONSUMPTION"
+}

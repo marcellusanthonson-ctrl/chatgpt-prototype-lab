@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "continuity_id": "LAB-CONTINUITY-PL003-MANUAL-SETUP-ATOMIC-SIMULATION-CYCLE-125-BLOCKED",
+  "continuity_id": "LAB-CONTINUITY-PL003-CORRECTED-ATOMIC-SIMULATION-RETRY-126-BLOCKED",
   "project_id": "lab",
-  "status": "CURRENT_BLOCKED_AUTH125_SESSION_CONSUMED_AFTER_LOCAL_PRE_GRANT_FAILURE",
+  "status": "CURRENT_BLOCKED_SIMULATION_ACCESS_DENIED_AFTER_TEMPORARY_GRANT_ROLLBACK_VERIFIED",
   "created_at": "2026-07-29",
   "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "canonical_branch": "main",
@@ -235,6 +235,45 @@
     "product_leadership_test_003_executions": 0,
     "credentials_cleared": true
   },
+  "latest_authorization_126_attempt": {
+    "authorization_id": "AUTHORIZATION_LAB_PL003_CORRECTED_ATOMIC_SIMULATION_RETRY_126",
+    "status": "CONSUMED_BLOCKED_SIMULATION_CALL_FAILED_ROLLBACK_VERIFIED",
+    "failure_code": "BLOCKED_SIMULATION_CALL_FAILED",
+    "aws_error_code": "AccessDenied",
+    "directed_suite": "PASS_20_CASES",
+    "bootstrap_identity_verified_redacted": true,
+    "assume_role_900_succeeded": true,
+    "role_identity_verified_redacted": true,
+    "baseline_policy_count": 0,
+    "baseline_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "temporary_grant_succeeded": true,
+    "simulation_call_succeeded": false,
+    "simulated_action_executed": false,
+    "rollback_verified": true,
+    "final_policy_count": 0,
+    "final_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "final_hash_equals_baseline": true,
+    "final_set_equals_baseline": true,
+    "temporary_policy_absent_final": true,
+    "session_isolation": "PASS",
+    "evidence": "projects/lab/evidence/EVD-LAB-PL003-CORRECTED-ATOMIC-SIMULATION-RETRY-126-ATTEMPT-001.json",
+    "aws_calls": {
+      "sts": 4,
+      "iam": 5,
+      "other": 0
+    },
+    "iam_mutations": {
+      "temporary_grant": 1,
+      "rollback": 1,
+      "persistent": 0,
+      "unexpected": 0
+    },
+    "terraform_executions": 0,
+    "provisioning_executions": 0,
+    "product_leadership_test_003_executions": 0,
+    "credentials_cleared": true,
+    "temporary_files_cleared": true
+  },
   "verified_facts": [
     {
       "fact": "The static AWS Terraform package passed fmt, init with backend disabled, validate, and a local refresh-false plan using temporary assumed-role credentials.",
@@ -328,6 +367,13 @@
         "projects/lab/evidence/EVD-LAB-PL003-MANUAL-SETUP-125-HUMAN-ASSERTION.json",
         "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_MANUAL_SETUP_EVIDENCE_AND_ATOMIC_SIMULATION_CYCLE_125.json"
       ]
+    },
+    {
+      "fact": "Authorization 126 applied the exact temporary policy, but the single simulation returned AccessDenied; DeleteUserPolicy executed first in finally and the final empty hash and policy set exactly matched baseline with zero persistent mutation.",
+      "source_refs": [
+        "projects/lab/evidence/EVD-LAB-PL003-CORRECTED-ATOMIC-SIMULATION-RETRY-126-ATTEMPT-001.json",
+        "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_CORRECTED_ATOMIC_SIMULATION_RETRY_126.json"
+      ]
     }
   ],
   "architecture": {
@@ -362,6 +408,7 @@
     "authorization_123": "CONSUMED_BLOCKED_BOUNDARY_COLLISION_PREFLIGHT_ACCESS_DENIED",
     "authorization_124": "CONSUMED_BLOCKED_NO_EXISTING_BOUNDED_CREATOR_CAPABILITY",
     "authorization_125": "CONSUMED_BLOCKED_LOCAL_EMPTY_BASELINE_HASH_FAILURE_BEFORE_GRANT",
+    "authorization_126": "CONSUMED_BLOCKED_SIMULATION_CALL_FAILED_ROLLBACK_VERIFIED",
     "active_aws_execution_authority": "NONE",
     "terraform_apply_authorized": false,
     "terraform_destroy_authorized": false,
@@ -403,7 +450,9 @@
     "Authorization 124 performed zero AWS calls, zero mutations and zero bootstrap-user changes.",
     "Authorization 125 partially verified the manual setup by assuming the exact role for 900 seconds and reading the bootstrap inline-policy baseline.",
     "Authorization 125 stopped on a local empty-baseline hash defect before PutUserPolicy, simulation or mutation, then cleared all credentials without opening a second MFA session.",
-    "The empty-baseline hash defect was reproduced and fixed locally; 19 synthetic cases now pass."
+    "The empty-baseline hash defect was reproduced and fixed locally; 19 synthetic cases now pass.",
+    "Authorization 126 passed 20 directed cases, verified empty baseline hashing and session isolation, and successfully applied the exact temporary policy.",
+    "The single authorization 126 simulation returned AccessDenied; mandatory rollback executed first in finally and restored the exact empty baseline with zero persistent mutation."
   ],
   "operational_estimate": {
     "active_work_to_functional_validation": "4_TO_6_HOURS",
@@ -423,8 +472,8 @@
     },
     {
       "id": "PEND-LAB-032",
-      "item": "Retry the corrected atomic temporary simulation cycle using the partially verified manually created setup role.",
-      "status": "OPEN_BLOCKED_AUTH125_SESSION_CONSUMED_AFTER_LOCAL_PRE_GRANT_FAILURE_NO_ACTIVE_EXECUTION_AUTHORITY"
+      "item": "Resolve or discriminate the simulation AccessDenied observed immediately after a successful temporary grant while preserving atomic rollback.",
+      "status": "OPEN_BLOCKED_SIMULATION_ACCESS_DENIED_AFTER_TEMPORARY_GRANT_ROLLBACK_VERIFIED_NO_ACTIVE_EXECUTION_AUTHORITY"
     },
     {
       "item": "Configure a low AWS budget alert before any resource creation.",
@@ -472,6 +521,6 @@
     "ATTACHMENT_MANIFEST.json",
     "START_PROMPT.md"
   ],
-  "single_next_action": "Separately authorize one retry of the corrected atomic simulation cycle with a new single MFA session.",
-  "authority_effect": "NONE_AFTER_AUTHORIZATION_125_CONSUMPTION"
+  "single_next_action": "Separately authorize one propagation-aware atomic retry with bounded pre-simulation stabilization.",
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_126_CONSUMPTION"
 }

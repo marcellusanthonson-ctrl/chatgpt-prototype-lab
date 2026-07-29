@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "id": "PEND-LAB-032",
   "project_id": "lab",
-  "status": "OPEN_BLOCKED_AUTH125_SESSION_CONSUMED_AFTER_LOCAL_PRE_GRANT_FAILURE_NO_ACTIVE_EXECUTION_AUTHORITY",
+  "status": "OPEN_BLOCKED_SIMULATION_ACCESS_DENIED_AFTER_TEMPORARY_GRANT_ROLLBACK_VERIFIED_NO_ACTIVE_EXECUTION_AUTHORITY",
   "type": "PL003_AWS_PROVISIONING_OPERATOR_PERMISSION_BOUNDARY",
   "subject": "Resolve the confirmed lack of authorization for iam:SimulatePrincipalPolicy before any AWS provisioning or Product Leadership Test 003 execution",
   "priority": "HIGH",
@@ -21,7 +21,7 @@
     "Authorization 118 used one GetSessionToken, one GetCallerIdentity and one SimulatePrincipalPolicy call, with zero other AWS calls and zero mutations.",
     "All authorization 118 temporary credentials were cleared."
   ],
-  "stop_condition": "AUTH125_SINGLE_MFA_SESSION_CONSUMED_AFTER_LOCAL_EMPTY_BASELINE_HASH_FAILURE",
+  "stop_condition": "SIMULATION_ACCESS_DENIED_AFTER_TEMPORARY_GRANT",
   "authorization_112_status": "GRANTED_NOT_CONSUMED_BLOCKED_NO_ACTIVE_EXECUTION_AUTHORITY",
   "authorization_113_status": "GRANTED_NOT_CONSUMED_BLOCKED_NO_ACTIVE_EXECUTION_AUTHORITY",
   "authorization_114_status": "NOT_RESUMABLE_WITHOUT_NEW_EXPLICIT_AUTHORIZATION",
@@ -173,8 +173,41 @@
     "execution_evidence_ref": "projects/lab/evidence/EVD-LAB-PL003-MANUAL-SETUP-ATOMIC-SIMULATION-125-ATTEMPT-001.json",
     "human_assertion_evidence_ref": "projects/lab/evidence/EVD-LAB-PL003-MANUAL-SETUP-125-HUMAN-ASSERTION.json"
   },
+  "authorization_126_corrected_atomic_retry_attempt": {
+    "status": "CONSUMED_BLOCKED_SIMULATION_CALL_FAILED_ROLLBACK_VERIFIED",
+    "bootstrap_identity_verified_redacted": true,
+    "assume_role_900_succeeded": true,
+    "role_identity_verified_redacted": true,
+    "baseline_policy_count": 0,
+    "baseline_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "temporary_policy_absent_at_baseline": true,
+    "temporary_grant_succeeded": true,
+    "simulation_aws_error_code": "AccessDenied",
+    "simulated_action_executed": false,
+    "delete_was_first_finally_aws_operation": true,
+    "rollback_verified": true,
+    "final_policy_count": 0,
+    "final_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "final_set_equals_baseline": true,
+    "temporary_policy_absent_final": true,
+    "session_isolation": "PASS",
+    "aws_calls": {
+      "sts": 4,
+      "iam": 5,
+      "other": 0
+    },
+    "iam_mutations": {
+      "temporary_grant": 1,
+      "rollback": 1,
+      "persistent": 0,
+      "unexpected": 0
+    },
+    "credentials_cleared": true,
+    "temporary_files_cleared": true,
+    "evidence_ref": "projects/lab/evidence/EVD-LAB-PL003-CORRECTED-ATOMIC-SIMULATION-RETRY-126-ATTEMPT-001.json"
+  },
   "required_resolution": [
-    "Separately authorize one retry of the corrected atomic simulation cycle using the manually created bounded setup role.",
+    "Separately authorize a propagation-aware atomic retry with an explicit bounded stabilization interval or exact effective-policy verification before the single simulation.",
     "Retain CreateRole MaxSessionDuration 3600 and every operational AssumeRole request at 900 seconds.",
     "Preserve MFA-backed ephemeral credentials and existing permission boundaries.",
     "Require a successful pre-mutation simulation gate before any IAM or infrastructure mutation.",
@@ -189,6 +222,7 @@
     "REUSE_AUTHORIZATION_123",
     "REUSE_AUTHORIZATION_124",
     "REUSE_AUTHORIZATION_125",
+    "REUSE_AUTHORIZATION_126",
     "START_A_NEW_MFA_SESSION_WITHOUT_NEW_EXPLICIT_AUTHORIZATION",
     "EXECUTE_AWS_IAM_OR_TERRAFORM_WITHOUT_NEW_EXPLICIT_AUTHORIZATION",
     "EXECUTE_PRODUCT_LEADERSHIP_TEST_003",
@@ -197,5 +231,5 @@
     "PUBLISH_CREDENTIALS_TOKENS_MFA_CODES_SECRETS_OR_FULL_ACCOUNT_ID"
   ],
   "active_execution_authority": "NONE",
-  "next_action": "SEPARATELY_AUTHORIZE_ONE_RETRY_OF_THE_CORRECTED_ATOMIC_SIMULATION_CYCLE_WITH_A_NEW_SINGLE_MFA_SESSION"
+  "next_action": "SEPARATELY_AUTHORIZE_ONE_PROPAGATION_AWARE_ATOMIC_RETRY_WITH_BOUNDED_PRE_SIMULATION_STABILIZATION"
 }

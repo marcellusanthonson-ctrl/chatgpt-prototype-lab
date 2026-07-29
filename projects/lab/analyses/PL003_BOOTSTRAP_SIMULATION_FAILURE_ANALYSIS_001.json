@@ -155,6 +155,28 @@
     "human_assertion_evidence_ref": "projects/lab/evidence/EVD-LAB-PL003-MANUAL-SETUP-125-HUMAN-ASSERTION.json",
     "credentials_cleared": true
   },
-  "required_resolution": "Separately authorize one retry of the corrected atomic simulation cycle; authorization 125's only MFA session is consumed after partially verifying the manually created role and stopping before any grant or mutation.",
+  "authorization_126_result": {
+    "authorization_id": "AUTHORIZATION_LAB_PL003_CORRECTED_ATOMIC_SIMULATION_RETRY_126",
+    "status": "CONSUMED_BLOCKED_SIMULATION_CALL_FAILED_ROLLBACK_VERIFIED",
+    "bootstrap_identity_verified_redacted": true,
+    "assume_role_900_succeeded": true,
+    "role_identity_verified_redacted": true,
+    "baseline_empty": true,
+    "baseline_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "temporary_grant_succeeded": true,
+    "simulation_aws_error_code": "AccessDenied",
+    "simulated_action_executed": false,
+    "rollback_verified": true,
+    "final_sha256_matches_baseline": true,
+    "temporary_policy_absent_final": true,
+    "session_isolation": "PASS",
+    "aws_calls": 9,
+    "iam_mutations": 2,
+    "persistent_mutations": 0,
+    "bootstrap_user_final_state_matches_baseline": true,
+    "evidence_ref": "projects/lab/evidence/EVD-LAB-PL003-CORRECTED-ATOMIC-SIMULATION-RETRY-126-ATTEMPT-001.json",
+    "credentials_cleared": true
+  },
+  "required_resolution": "Separately authorize one propagation-aware atomic retry with an explicit bounded stabilization interval or exact effective-policy verification before the single simulation; authorization 126 is consumed and rollback is verified.",
   "active_execution_authority": "NONE"
 }
