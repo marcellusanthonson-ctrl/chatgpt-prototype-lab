@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_PL003_TEMPORARY_SIMULATION_PERMISSION_119",
   "project_id": "lab",
-  "status": "GRANTED",
+  "status": "CONSUMED",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-07-29",
   "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
@@ -97,6 +97,41 @@
     "script": "projects/lab/scripts/Invoke-PL003TemporarySimulationPermission119.ps1",
     "synthetic_tests": "projects/lab/scripts/tests/Invoke-PL003TemporarySimulationPermission119.Tests.ps1"
   },
-  "consumption_criterion": "CONSUMED_AFTER_REDACTED_BASELINE_GRANT_SIMULATION_AND_ROLLBACK_EVIDENCE_IS_PUBLISHED_TEMPORARY_CREDENTIALS_ARE_CLEARED_AND_FINAL_REMOTE_HEAD_IS_VERIFIED",
+  "execution_result": {
+    "status": "BLOCKED_FAIL_CLOSED_OTHER",
+    "failure_code": "BASELINE_INLINE_POLICY_LIST_FAILED",
+    "principal_verified_redacted": true,
+    "baseline_captured": false,
+    "temporary_policy_grant_attempted": false,
+    "temporary_policy_removal_required": false,
+    "temporary_policy_created_by_execution": false,
+    "simulation_executed": false,
+    "rollback_result": "NOT_APPLICABLE_NO_GRANT_ATTEMPTED_ZERO_MUTATIONS",
+    "evidence": "projects/lab/evidence/EVD-LAB-PL003-TEMPORARY-SIMULATION-PERMISSION-119-ATTEMPT-001.json",
+    "aws_calls": {
+      "sts_get_session_token": 1,
+      "sts_get_caller_identity": 1,
+      "iam_list_user_policies": 1,
+      "iam_get_user_policy": 0,
+      "iam_simulate_principal_policy": 0,
+      "other_aws": 0
+    },
+    "iam_mutations": {
+      "grant_attempts": 0,
+      "grant_successes": 0,
+      "removal_attempts": 0,
+      "removal_successes": 0,
+      "unexpected": 0
+    },
+    "aws_resources_created": 0,
+    "terraform_executions": 0,
+    "product_leadership_test_003_executions": 0,
+    "product_leadership_active": false,
+    "product_leadership_integrated": false,
+    "ephemeral_credentials_cleared": true
+  },
+  "consumed_at": "2026-07-29",
+  "consumption_reason": "SINGLE_AUTHORIZED_STS_SESSION_REACHED_THE_MINIMUM_BASELINE_READ_AND_FAILED_CLOSED_BEFORE_ANY_POLICY_GRANT_SIMULATION_OR_MUTATION",
+  "consumption_criterion": "CONSUMED_AFTER_EITHER_THE_FULL_TEMPORARY_PERMISSION_LIFECYCLE_OR_A_TERMINAL_FAIL_CLOSED_ATTEMPT_IS_PUBLISHED_TEMPORARY_CREDENTIALS_ARE_CLEARED_AND_FINAL_REMOTE_HEAD_IS_VERIFIED",
   "post_consumption_authority": "NONE"
 }

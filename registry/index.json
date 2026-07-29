@@ -9,8 +9,8 @@
     "ideas": 5,
     "integrations": 6,
     "experiments": 8,
-    "authorizations": 69,
-    "evidence": 48,
+    "authorizations": 70,
+    "evidence": 49,
     "unincorporated": 0,
     "proposals": 3,
     "sessions": 1,
@@ -51,7 +51,8 @@
       "registry/deltas/pl003-aws-one-time-iam-bootstrap-authorization-114.json",
       "registry/deltas/pl003-aws-one-time-iam-bootstrap-114a.json",
       "registry/deltas/pl003-attempt-004-documentary-reconciliation-115.json",
-      "registry/deltas/pl003-bootstrap-diagnostic-execution-118.json"
+      "registry/deltas/pl003-bootstrap-diagnostic-execution-118.json",
+      "registry/deltas/pl003-temporary-simulation-permission-119.json"
     ],
     "evidence": "registry/evidence.json",
     "evidence_deltas": [
@@ -62,7 +63,8 @@
       "registry/deltas/pl003-aws-provisioned-preflight-blocked-112-attempt-002.json",
       "registry/deltas/pl003-aws-bounded-provisioning-operator-113-blocked.json",
       "registry/deltas/pl003-attempt-004-documentary-reconciliation-115.json",
-      "registry/deltas/pl003-bootstrap-diagnostic-execution-118.json"
+      "registry/deltas/pl003-bootstrap-diagnostic-execution-118.json",
+      "registry/deltas/pl003-temporary-simulation-permission-119.json"
     ],
     "current_state": "CURRENT_STATE.json",
     "current_state_deltas": [
@@ -78,7 +80,8 @@
       "registry/deltas/pl003-aws-one-time-iam-bootstrap-authorization-114.json",
       "registry/deltas/pl003-aws-one-time-iam-bootstrap-114a.json",
       "registry/deltas/pl003-attempt-004-documentary-reconciliation-115.json",
-      "registry/deltas/pl003-bootstrap-diagnostic-execution-118.json"
+      "registry/deltas/pl003-bootstrap-diagnostic-execution-118.json",
+      "registry/deltas/pl003-temporary-simulation-permission-119.json"
     ],
     "pattern_deltas": ["registry/deltas/livhavn-surgical-visual-patch-093.json"],
     "error_deltas": ["registry/deltas/livhavn-surgical-visual-patch-093.json"],
@@ -125,12 +128,12 @@
     "decision_path": "decisions/DEC-LAB-022.json",
     "error": "ERR-LAB-007",
     "pattern": "PAT-LAB-009",
-    "authorization": "AUTHORIZATION_LAB_PL003_CODEX_BOOTSTRAP_DIAGNOSTIC_EXECUTION_118",
-    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_CODEX_BOOTSTRAP_DIAGNOSTIC_EXECUTION_118.json",
-    "evidence": "EVD-LAB-PL003-AWS-DIAGNOSTIC-PREFLIGHT-118-ATTEMPT-003",
-    "evidence_path": "projects/lab/evidence/EVD-LAB-PL003-AWS-DIAGNOSTIC-PREFLIGHT-118-ATTEMPT-003.json",
-    "current_state_delta": "PL003-BOOTSTRAP-DIAGNOSTIC-EXECUTION-118",
-    "current_state_delta_path": "registry/deltas/pl003-bootstrap-diagnostic-execution-118.json",
+    "authorization": "AUTHORIZATION_LAB_PL003_TEMPORARY_SIMULATION_PERMISSION_119",
+    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_TEMPORARY_SIMULATION_PERMISSION_119.json",
+    "evidence": "EVD-LAB-PL003-TEMPORARY-SIMULATION-PERMISSION-119-ATTEMPT-001",
+    "evidence_path": "projects/lab/evidence/EVD-LAB-PL003-TEMPORARY-SIMULATION-PERMISSION-119-ATTEMPT-001.json",
+    "current_state_delta": "PL003-TEMPORARY-SIMULATION-PERMISSION-119",
+    "current_state_delta_path": "registry/deltas/pl003-temporary-simulation-permission-119.json",
     "experiment": "EXP-LAB-003",
     "proposal": "PROP-LAB-003",
     "session": "SES-2026-06-28-001",

@@ -51,6 +51,18 @@
     "aws_mutations": 0,
     "credentials_cleared": true
   },
-  "required_resolution": "A separate explicit authorization must decide whether to grant only iam:SimulatePrincipalPolicy to the expected bootstrap principal or select another bounded supported principal; authorization 118 grants no permission mutation.",
+  "authorization_119_result": {
+    "authorization_id": "AUTHORIZATION_LAB_PL003_TEMPORARY_SIMULATION_PERMISSION_119",
+    "status": "CONSUMED_BLOCKED_FAIL_CLOSED_OTHER",
+    "failure_code": "BASELINE_INLINE_POLICY_LIST_FAILED",
+    "principal_verified_redacted": true,
+    "baseline_read_attempts": 1,
+    "temporary_permission_grant_attempts": 0,
+    "simulations": 0,
+    "iam_mutations": 0,
+    "evidence_ref": "projects/lab/evidence/EVD-LAB-PL003-TEMPORARY-SIMULATION-PERMISSION-119-ATTEMPT-001.json",
+    "ephemeral_credentials_cleared": true
+  },
+  "required_resolution": "A separate explicit authorization must provide a bounded principal or mechanism capable of reading the target inline-policy baseline and performing an atomic temporary grant and rollback; authorization 119 is consumed and did not attempt the grant.",
   "active_execution_authority": "NONE"
 }

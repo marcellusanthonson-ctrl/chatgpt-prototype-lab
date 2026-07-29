@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "id": "PEND-LAB-032",
   "project_id": "lab",
-  "status": "OPEN_BLOCKED_SIMULATION_ACTION_NOT_AUTHORIZED_NO_ACTIVE_EXECUTION_AUTHORITY",
+  "status": "OPEN_BLOCKED_BASELINE_INLINE_POLICY_LIST_FAILED_NO_ACTIVE_EXECUTION_AUTHORITY",
   "type": "PL003_AWS_PROVISIONING_OPERATOR_PERMISSION_BOUNDARY",
   "subject": "Resolve the confirmed lack of authorization for iam:SimulatePrincipalPolicy before any AWS provisioning or Product Leadership Test 003 execution",
   "priority": "HIGH",
@@ -21,7 +21,7 @@
     "Authorization 118 used one GetSessionToken, one GetCallerIdentity and one SimulatePrincipalPolicy call, with zero other AWS calls and zero mutations.",
     "All authorization 118 temporary credentials were cleared."
   ],
-  "stop_condition": "SIMULATION_ACTION_NOT_AUTHORIZED",
+  "stop_condition": "BASELINE_INLINE_POLICY_LIST_FAILED",
   "authorization_112_status": "GRANTED_NOT_CONSUMED_BLOCKED_NO_ACTIVE_EXECUTION_AUTHORITY",
   "authorization_113_status": "GRANTED_NOT_CONSUMED_BLOCKED_NO_ACTIVE_EXECUTION_AUTHORITY",
   "authorization_114_status": "NOT_RESUMABLE_WITHOUT_NEW_EXPLICIT_AUTHORIZATION",
@@ -49,14 +49,29 @@
     "aws_mutations": 0,
     "ephemeral_credentials_cleared": true
   },
+  "authorization_119_temporary_permission_attempt": {
+    "status": "CONSUMED_BLOCKED_FAIL_CLOSED_OTHER",
+    "failure_code": "BASELINE_INLINE_POLICY_LIST_FAILED",
+    "principal_verified_redacted": true,
+    "sts_get_session_token_calls": 1,
+    "sts_get_caller_identity_calls": 1,
+    "iam_list_user_policies_calls": 1,
+    "iam_simulate_principal_policy_calls": 0,
+    "temporary_permission_grant_attempts": 0,
+    "temporary_permission_removal_attempts": 0,
+    "aws_mutations": 0,
+    "ephemeral_credentials_cleared": true,
+    "evidence_ref": "projects/lab/evidence/EVD-LAB-PL003-TEMPORARY-SIMULATION-PERMISSION-119-ATTEMPT-001.json"
+  },
   "required_resolution": [
-    "Decide whether to grant only iam:SimulatePrincipalPolicy to the expected bootstrap principal or select another bounded supported principal under a separate explicit authorization.",
+    "Provide a separately authorized bounded principal or mechanism that can first read the target inline-policy baseline and can guarantee both the exact temporary grant and its removal.",
     "Preserve MFA-backed ephemeral credentials and existing permission boundaries.",
     "Require a successful pre-mutation simulation gate before any IAM or infrastructure mutation.",
     "Keep Product Leadership Test 003 inactive until separately authorized after the AWS preflight is valid."
   ],
   "forbidden_resolution": [
     "REUSE_AUTHORIZATION_114A",
+    "REUSE_AUTHORIZATION_118_OR_119",
     "START_A_NEW_MFA_SESSION_WITHOUT_NEW_EXPLICIT_AUTHORIZATION",
     "EXECUTE_AWS_IAM_OR_TERRAFORM_WITHOUT_NEW_EXPLICIT_AUTHORIZATION",
     "EXECUTE_PRODUCT_LEADERSHIP_TEST_003",
@@ -65,5 +80,5 @@
     "PUBLISH_CREDENTIALS_TOKENS_MFA_CODES_SECRETS_OR_FULL_ACCOUNT_ID"
   ],
   "active_execution_authority": "NONE",
-  "next_action": "DECIDE_AND_SEPARATELY_AUTHORIZE_A_MINIMUM_SIMULATION_PERMISSION_PATH_WITHOUT_REUSING_118"
+  "next_action": "SEPARATELY_AUTHORIZE_A_BOUNDED_BASELINE_READ_AND_ATOMIC_TEMPORARY_PERMISSION_PATH_WITHOUT_REUSING_118_OR_119"
 }

@@ -1,0 +1,110 @@
+{
+    "schema_version":  "1.0.0",
+    "evidence_id":  "EVD-LAB-PL003-TEMPORARY-SIMULATION-PERMISSION-119-ATTEMPT-001",
+    "attempt_id":  "ATTEMPT-001",
+    "authorization_id":  "AUTHORIZATION_LAB_PL003_TEMPORARY_SIMULATION_PERMISSION_119",
+    "project_id":  "lab",
+    "kind":  "REDACTED_TEMPORARY_IAM_PERMISSION_LIFECYCLE_EVIDENCE",
+    "status":  "BLOCKED",
+    "executed_at":  "2026-07-29T13:13:12Z",
+    "repository":  "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "branch_mode":  "DETACHED_HEAD",
+    "execution_head":  "b15b432063ff7226b1514e394d1a804c159d3b54",
+    "prechecks":  {
+                      "head":  "PASS",
+                      "worktree":  "PASS",
+                      "authorization_118_consumed":  "PASS",
+                      "active_execution_authority_before_119":  "NONE",
+                      "aws_cli":  "PASS",
+                      "cli_history_disabled":  "PASS",
+                      "inherited_temporary_credentials_absent":  "PASS",
+                      "reusable_temporary_profiles_absent":  "PASS",
+                      "bootstrap_profile":  "PASS",
+                      "region":  "PASS",
+                      "mfa_reference":  "PASS",
+                      "synthetic_classifier_and_lifecycle":  "PASS",
+                      "rollback_implementation":  "PASS"
+                  },
+    "principal":  {
+                      "expected_bootstrap_principal_match":  true,
+                      "principal_type":  "IAM_USER",
+                      "principal_identifier":  "REDACTED",
+                      "full_arn_included":  false,
+                      "full_account_id_included":  false
+                  },
+    "baseline":  {
+                     "source_denial_evidence":  "projects/lab/evidence/EVD-LAB-PL003-AWS-DIAGNOSTIC-PREFLIGHT-118-ATTEMPT-003.json",
+                     "prior_simulation_classification":  "SIMULATION_ACTION_NOT_AUTHORIZED",
+                     "inline_policy_set":  null,
+                     "temporary_policy_absent":  false
+                 },
+    "grant":  {
+                  "mechanism":  "INLINE_USER_POLICY",
+                  "policy_name":  "PL003TemporarySimulationOnly119",
+                  "policy_document_sha256":  "bb1e517f6e58f8cf50789c2418444f695a4fd6ca0a705ccd7937de4119b2bd22",
+                  "authorized_action":  "iam:SimulatePrincipalPolicy",
+                  "additional_actions":  0,
+                  "mutation_attempted":  false,
+                  "mutation_succeeded":  false,
+                  "effective_document_verified":  false,
+                  "sanitized_call_metadata":  null
+              },
+    "simulation":  {
+                       "tested_action":  "iam:CreatePolicy",
+                       "tested_resource_shape":  "IAM_POLICY_PL003_SETUP_BOUNDARY",
+                       "positive_call_attempted":  false,
+                       "positive_call_without_access_denied":  false,
+                       "evaluation_decision":  null,
+                       "sanitized_call_metadata":  null
+                   },
+    "rollback":  {
+                     "removal_attempted":  false,
+                     "removal_succeeded":  false,
+                     "temporary_policy_absent":  false,
+                     "final_inline_policy_set":  null,
+                     "final_configuration_matches_baseline":  false,
+                     "negative_call_attempted":  false,
+                     "negative_call_access_denied":  false,
+                     "sanitized_removal_metadata":  null,
+                     "sanitized_negative_call_metadata":  null
+                 },
+    "aws_calls":  {
+                      "sts_get_session_token":  1,
+                      "sts_get_caller_identity":  1,
+                      "iam_list_user_policies":  1,
+                      "iam_get_user_policy":  0,
+                      "iam_simulate_principal_policy":  0,
+                      "other_iam_reads":  0,
+                      "other_aws":  0
+                  },
+    "iam_mutations":  {
+                          "grant_attempts":  0,
+                          "grant_successes":  0,
+                          "removal_attempts":  0,
+                          "removal_successes":  0,
+                          "unexpected":  0
+                      },
+    "zero_other_mutation_attestation":  {
+                                            "aws_infrastructure_mutations":  0,
+                                            "terraform_executions":  0,
+                                            "product_leadership_test_003_executions":  0,
+                                            "product_leadership_active":  false,
+                                            "product_leadership_integrated":  false,
+                                            "aws_resources_created":  0
+                                        },
+    "ephemeral_credentials_cleared":  true,
+    "temporary_policy_file_removed":  true,
+    "failure_code":  "BASELINE_INLINE_POLICY_LIST_FAILED",
+    "result":  "BLOCKED_FAIL_CLOSED_OTHER",
+    "redaction":  {
+                      "full_account_id_included":  false,
+                      "full_principal_arns_included":  false,
+                      "access_keys_included":  false,
+                      "secret_access_keys_included":  false,
+                      "session_tokens_included":  false,
+                      "mfa_codes_included":  false,
+                      "request_ids_included":  false,
+                      "raw_stdout_or_stderr_persisted":  false
+                  },
+    "post_attempt_authority":  "NONE"
+}

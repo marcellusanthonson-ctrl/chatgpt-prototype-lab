@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "continuity_id": "LAB-CONTINUITY-PL003-BOOTSTRAP-DIAGNOSTIC-118-COMPLETE",
+  "continuity_id": "LAB-CONTINUITY-PL003-TEMPORARY-SIMULATION-PERMISSION-119-BLOCKED",
   "project_id": "lab",
-  "status": "CURRENT_BLOCKED_SIMULATION_ACTION_NOT_AUTHORIZED",
+  "status": "CURRENT_BLOCKED_BASELINE_INLINE_POLICY_LIST_FAILED",
   "created_at": "2026-07-29",
   "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "canonical_branch": "main",
@@ -69,6 +69,26 @@
     "product_leadership_test_003_executions": 0,
     "ephemeral_credentials_cleared": true
   },
+  "latest_authorization_119_attempt": {
+    "authorization_id": "AUTHORIZATION_LAB_PL003_TEMPORARY_SIMULATION_PERMISSION_119",
+    "status": "CONSUMED_BLOCKED_FAIL_CLOSED_OTHER",
+    "failure_code": "BASELINE_INLINE_POLICY_LIST_FAILED",
+    "principal_verified_redacted": true,
+    "evidence": "projects/lab/evidence/EVD-LAB-PL003-TEMPORARY-SIMULATION-PERMISSION-119-ATTEMPT-001.json",
+    "aws_calls": {
+      "sts_get_session_token": 1,
+      "sts_get_caller_identity": 1,
+      "iam_list_user_policies": 1,
+      "iam_simulate_principal_policy": 0,
+      "other_aws": 0
+    },
+    "temporary_permission_grant_attempts": 0,
+    "temporary_permission_removal_attempts": 0,
+    "iam_mutations": 0,
+    "terraform_executions": 0,
+    "product_leadership_test_003_executions": 0,
+    "ephemeral_credentials_cleared": true
+  },
   "verified_facts": [
     {
       "fact": "The static AWS Terraform package passed fmt, init with backend disabled, validate, and a local refresh-false plan using temporary assumed-role credentials.",
@@ -112,6 +132,13 @@
         "projects/lab/evidence/EVD-LAB-PL003-AWS-DIAGNOSTIC-PREFLIGHT-118-ATTEMPT-003.json",
         "projects/lab/analyses/PL003_BOOTSTRAP_SIMULATION_FAILURE_ANALYSIS_001.json"
       ]
+    },
+    {
+      "fact": "Authorization 119 verified the expected bootstrap principal but failed closed when the minimum inline-policy baseline read failed, before any temporary grant, simulation or IAM mutation.",
+      "source_refs": [
+        "projects/lab/evidence/EVD-LAB-PL003-TEMPORARY-SIMULATION-PERMISSION-119-ATTEMPT-001.json",
+        "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_TEMPORARY_SIMULATION_PERMISSION_119.json"
+      ]
     }
   ],
   "architecture": {
@@ -139,6 +166,7 @@
     "authorization_114a": "CONSUMED",
     "authorization_117": "CONSUMED",
     "authorization_118": "CONSUMED",
+    "authorization_119": "CONSUMED_BLOCKED_FAIL_CLOSED_OTHER",
     "active_aws_execution_authority": "NONE",
     "terraform_apply_authorized": false,
     "terraform_destroy_authorized": false,
@@ -163,7 +191,9 @@
     "Authorization 113 verified the read-only plan session and preserved the plan role unchanged, but stopped before IAM mutation because no bounded temporary IAM setup principal was available and root security could not be verified read-only.",
     "Authorization 118 reconciled the preserved local ATTEMPT-003 and ATTEMPT-004 captures without overwriting the canonical ATTEMPT-004 summary.",
     "Authorization 118 completed one read-only diagnostic and classified iam:SimulatePrincipalPolicy as SIMULATION_ACTION_NOT_AUTHORIZED.",
-    "Authorization 118 executed three AWS calls, zero mutations, no Terraform and no Product Leadership Test 003, then cleared all ephemeral credentials."
+    "Authorization 118 executed three AWS calls, zero mutations, no Terraform and no Product Leadership Test 003, then cleared all ephemeral credentials.",
+    "Authorization 119 verified the expected bootstrap principal and attempted one minimum baseline read, then stopped before grant because ListUserPolicies failed.",
+    "Authorization 119 executed one GetSessionToken, one GetCallerIdentity and one IAM baseline read, with zero simulations, zero mutations, zero resources, no Terraform and no Product Leadership Test 003, then cleared all ephemeral credentials."
   ],
   "operational_estimate": {
     "active_work_to_functional_validation": "4_TO_6_HOURS",
@@ -183,8 +213,8 @@
     },
     {
       "id": "PEND-LAB-032",
-      "item": "Decide whether to grant only iam:SimulatePrincipalPolicy to the expected bootstrap principal or select another bounded supported principal.",
-      "status": "OPEN_BLOCKED_SIMULATION_ACTION_NOT_AUTHORIZED_NO_ACTIVE_EXECUTION_AUTHORITY"
+      "item": "Provide a bounded principal or mechanism that can read the target inline-policy baseline and guarantee an atomic exact temporary grant and removal.",
+      "status": "OPEN_BLOCKED_BASELINE_INLINE_POLICY_LIST_FAILED_NO_ACTIVE_EXECUTION_AUTHORITY"
     },
     {
       "item": "Configure a low AWS budget alert before any resource creation.",
@@ -232,6 +262,6 @@
     "ATTACHMENT_MANIFEST.json",
     "START_PROMPT.md"
   ],
-  "single_next_action": "Decide and separately authorize a minimum simulation-permission path without reusing authorization 118.",
-  "authority_effect": "NONE_AFTER_AUTHORIZATION_118_CONSUMPTION"
+  "single_next_action": "Separately authorize a bounded baseline-read and atomic temporary-permission path without reusing authorization 118 or 119.",
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_119_CONSUMPTION"
 }
