@@ -1,0 +1,157 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lab.local/schemas/project-foundation-contract.schema.json",
+  "title": "Project Foundation Contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "contract_id",
+    "project_identity",
+    "product_intent",
+    "users_and_core_flows",
+    "scope_and_non_goals",
+    "rules",
+    "quality_baseline",
+    "architecture_boundaries",
+    "failure_modes",
+    "validation_and_evidence",
+    "rollback_and_recovery",
+    "authority_and_stop_conditions"
+  ],
+  "properties": {
+    "schema_version": {"const": "0.1.0"},
+    "contract_id": {"type": "string", "minLength": 3},
+    "status": {"enum": ["DRAFT", "PROPOSED", "APPROVED", "SUPERSEDED"]},
+    "project_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["project_id", "name", "canonical_repository", "canonical_branch", "risk_tier"],
+      "properties": {
+        "project_id": {"type": "string"},
+        "name": {"type": "string"},
+        "canonical_repository": {"type": "string"},
+        "canonical_branch": {"type": "string"},
+        "risk_tier": {"enum": ["LOW", "MODERATE", "HIGH", "CRITICAL"]}
+      }
+    },
+    "product_intent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["problem", "target_users", "value_proposition", "success_definition"],
+      "properties": {
+        "problem": {"type": "string"},
+        "target_users": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+        "value_proposition": {"type": "string"},
+        "success_definition": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+      }
+    },
+    "users_and_core_flows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["flow_id", "actor", "preconditions", "action", "expected_effects", "forbidden_effects"],
+        "properties": {
+          "flow_id": {"type": "string"},
+          "actor": {"type": "string"},
+          "preconditions": {"type": "array", "items": {"type": "string"}},
+          "action": {"type": "string"},
+          "expected_effects": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+          "forbidden_effects": {"type": "array", "items": {"type": "string"}}
+        }
+      },
+      "minItems": 1
+    },
+    "scope_and_non_goals": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["in_scope", "out_of_scope", "non_goals"],
+      "properties": {
+        "in_scope": {"type": "array", "items": {"type": "string"}},
+        "out_of_scope": {"type": "array", "items": {"type": "string"}},
+        "non_goals": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "rules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["rule_id", "class", "statement", "severity", "verification_required", "source_refs"],
+        "properties": {
+          "rule_id": {"type": "string"},
+          "class": {"enum": ["INVARIANT", "GUARDRAIL", "RECOMMENDED_PATTERN", "REJECTED_PATTERN", "HYPOTHESIS", "CONTEXTUAL_CONSTRAINT"]},
+          "statement": {"type": "string"},
+          "severity": {"enum": ["LOW", "MEDIUM", "HIGH", "CRITICAL"]},
+          "verification_required": {"type": "boolean"},
+          "required_evidence": {"type": "array", "items": {"type": "string"}},
+          "source_refs": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+          "failure_effect": {"enum": ["ADVISORY", "BLOCK_PHASE", "BLOCK_RELEASE", "REQUIRE_HUMAN_DECISION"]}
+        }
+      }
+    },
+    "quality_baseline": {"type": "object"},
+    "architecture_boundaries": {
+      "type": "object",
+      "required": ["system_boundaries", "data_ownership", "security_boundaries", "observability_requirements", "three_state_verification"],
+      "properties": {
+        "system_boundaries": {"type": "array", "items": {"type": "string"}},
+        "data_ownership": {"type": "array", "items": {"type": "string"}},
+        "security_boundaries": {"type": "array", "items": {"type": "string"}},
+        "observability_requirements": {"type": "array", "items": {"type": "string"}},
+        "three_state_verification": {
+          "type": "object",
+          "required": ["configured", "effective", "behavior_verified"],
+          "properties": {
+            "configured": {"type": "string"},
+            "effective": {"type": "string"},
+            "behavior_verified": {"type": "string"}
+          }
+        }
+      }
+    },
+    "failure_modes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["failure_id", "description", "impact", "detection", "mitigation"],
+        "properties": {
+          "failure_id": {"type": "string"},
+          "description": {"type": "string"},
+          "impact": {"type": "string"},
+          "detection": {"type": "array", "items": {"type": "string"}},
+          "mitigation": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "validation_and_evidence": {
+      "type": "object",
+      "required": ["required_gates", "acceptance_evidence", "result_classes"],
+      "properties": {
+        "required_gates": {"type": "array", "items": {"type": "string"}},
+        "acceptance_evidence": {"type": "array", "items": {"type": "string"}},
+        "result_classes": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "rollback_and_recovery": {
+      "type": "object",
+      "required": ["baseline_required", "rollback_required", "final_state_reconciliation_required"],
+      "properties": {
+        "baseline_required": {"type": "boolean"},
+        "rollback_required": {"type": "boolean"},
+        "final_state_reconciliation_required": {"type": "boolean"},
+        "recovery_requirements": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "authority_and_stop_conditions": {
+      "type": "object",
+      "required": ["authority_effect", "execution_authorized", "stop_conditions"],
+      "properties": {
+        "authority_effect": {"const": "NONE"},
+        "execution_authorized": {"const": false},
+        "stop_conditions": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+      }
+    }
+  }
+}
