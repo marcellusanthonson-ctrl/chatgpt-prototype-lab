@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_CORRECTED_ATOMIC_SIMULATION_RETRY_126",
+  "project_id": "lab",
+  "status": "GRANTED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-29",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "1d37c89c3c1b0eceb69d24a541cf5e5ac443d2d1",
+  "execution_head_policy": "VERIFY_LIVE_AT_USE",
+  "objective": "Retry the corrected atomic temporary iam:SimulatePrincipalPolicy permission cycle using one new bootstrap MFA session and the already partially verified PL003BoundedSimulationSetupOperator, with empty-baseline hashing, strict session isolation and mandatory rollback.",
+  "target": {
+    "bootstrap_user": "EXACT_PREVIOUSLY_VERIFIED_BOOTSTRAP_USER",
+    "role_name": "PL003BoundedSimulationSetupOperator",
+    "temporary_bootstrap_policy_name": "PL003AtomicSimulationOnly126",
+    "assume_role_duration_seconds": 900
+  },
+  "temporary_policy": {
+    "mechanism": "INLINE_USER_POLICY",
+    "name": "PL003AtomicSimulationOnly126",
+    "document": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Sid": "AtomicPL003SimulationOnly126",
+          "Effect": "Allow",
+          "Action": "iam:SimulatePrincipalPolicy",
+          "Resource": "*"
+        }
+      ]
+    },
+    "additional_actions_allowed": 0
+  },
+  "required_local_validations": [
+    "EMPTY_BASELINE",
+    "EMPTY_BASELINE_SHA256",
+    "BOOTSTRAP_AND_ROLE_SESSION_ISOLATION",
+    "SYNTHETIC_GRANT_AND_ROLLBACK",
+    "DELETE_USER_POLICY_FIRST_FINALLY_AWS_OPERATION",
+    "MINIMUM_19_SYNTHETIC_CASES_PASS"
+  ],
+  "atomic_sequence": [
+    "START_EXACTLY_ONE_NEW_BOOTSTRAP_MFA_SESSION",
+    "VERIFY_BOOTSTRAP_IDENTITY_REDACTED",
+    "ASSUME_EXACT_ROLE_ONCE_FOR_900_SECONDS",
+    "VERIFY_ASSUMED_ROLE_IDENTITY_REDACTED",
+    "LIST_BOOTSTRAP_INLINE_POLICIES_BASELINE",
+    "CONFIRM_PL003AtomicSimulationOnly126_ABSENT",
+    "COMPUTE_AND_RECORD_EMPTY_BASELINE_SHA256",
+    "PUT_EXACT_TEMPORARY_INLINE_POLICY_ONCE_FROM_ROLE_SESSION",
+    "SIMULATE_PRINCIPAL_POLICY_ONCE_FROM_BOOTSTRAP_SESSION",
+    "DO_NOT_EXECUTE_SIMULATED_ACTION",
+    "DELETE_USER_POLICY_AS_FIRST_FINALLY_AWS_OPERATION_AFTER_PUT",
+    "LIST_BOOTSTRAP_INLINE_POLICIES_FINAL",
+    "CONFIRM_TEMPORARY_POLICY_ABSENT",
+    "CONFIRM_FINAL_HASH_EQUALS_BASELINE_HASH",
+    "CONFIRM_FINAL_INLINE_POLICY_SET_EQUALS_BASELINE",
+    "CLEAR_ALL_TEMPORARY_CREDENTIALS_AND_FILES"
+  ],
+  "session_separation": {
+    "bootstrap_session": [
+      "STS_GET_CALLER_IDENTITY",
+      "STS_ASSUME_ROLE",
+      "IAM_SIMULATE_PRINCIPAL_POLICY"
+    ],
+    "assumed_role_session": [
+      "STS_GET_CALLER_IDENTITY",
+      "IAM_LIST_USER_POLICIES_BASELINE",
+      "IAM_PUT_EXACT_TEMPORARY_USER_POLICY",
+      "IAM_DELETE_EXACT_TEMPORARY_USER_POLICY",
+      "IAM_LIST_USER_POLICIES_FINAL"
+    ],
+    "credential_mixing_allowed": false
+  },
+  "call_limits": {
+    "sts_get_session_token": 1,
+    "sts_get_caller_identity_bootstrap": 1,
+    "sts_assume_role": 1,
+    "sts_get_caller_identity_role": 1,
+    "iam_list_user_policies": 2,
+    "iam_put_user_policy": 1,
+    "iam_simulate_principal_policy": 1,
+    "iam_delete_user_policy": 1,
+    "other_aws": 0
+  },
+  "rollback_contract": {
+    "delete_after_put": true,
+    "delete_is_first_finally_aws_operation": true,
+    "final_list_required": true,
+    "temporary_policy_absence_required": true,
+    "final_hash_must_equal_baseline_hash": true,
+    "final_set_must_equal_baseline": true,
+    "active_iam_incident_if_not_verified": true
+  },
+  "forbidden_actions": [
+    "TERRAFORM",
+    "PROVISIONING",
+    "PRODUCT_LEADERSHIP_TEST_003",
+    "PRODUCT_LEADERSHIP_ACTIVATION_OR_INTEGRATION",
+    "MODIFY_ROLE_TRUST_BOUNDARY_OR_ROLE_POLICY",
+    "CREATE_IDENTITIES_OR_ACCESS_KEYS",
+    "ANY_OTHER_IAM_ACTION",
+    "PERSIST_CREDENTIALS",
+    "EXECUTE_THE_SIMULATED_ACTION",
+    "LEAVE_TEMPORARY_POLICY_PRESENT",
+    "PUBLISH_SECRETS_OR_FULL_IDENTIFIERS",
+    "REUSE_AUTHORIZATIONS_118_119_120_121_122_123_124_OR_125"
+  ],
+  "stop_conditions": [
+    "HEAD_MISMATCH",
+    "WORKTREE_NOT_CLEAN",
+    "INHERITED_CREDENTIALS_PRESENT",
+    "LOCAL_DIRECTED_SUITE_FAILURE",
+    "BOOTSTRAP_IDENTITY_MISMATCH",
+    "ASSUME_ROLE_FAILED",
+    "ASSUMED_ROLE_IDENTITY_MISMATCH",
+    "BASELINE_READ_FAILED",
+    "EXISTING_TEMPORARY_POLICY_COLLISION",
+    "EMPTY_BASELINE_HASH_MISMATCH",
+    "TEMPORARY_GRANT_FAILED",
+    "SIMULATION_CALL_FAILED",
+    "ROLLBACK_DELETE_FAILED",
+    "FINAL_LIST_FAILED",
+    "TEMPORARY_POLICY_STILL_PRESENT",
+    "FINAL_HASH_MISMATCH",
+    "FINAL_INLINE_POLICY_SET_CHANGED",
+    "CREDENTIAL_OR_TEMPORARY_FILE_CLEANUP_FAILED",
+    "UNEXPECTED_AWS_OPERATION_OR_MUTATION",
+    "UNREDACTABLE_SENSITIVE_INFORMATION"
+  ],
+  "result_classes": [
+    "PASS_CORRECTED_ATOMIC_SIMULATION_COMPLETED_AND_ROLLED_BACK",
+    "BLOCKED_ASSUME_ROLE_FAILED",
+    "BLOCKED_BASELINE_READ_FAILED",
+    "BLOCKED_EXISTING_TEMPORARY_POLICY_COLLISION",
+    "BLOCKED_EMPTY_BASELINE_HASH_MISMATCH",
+    "BLOCKED_TEMPORARY_GRANT_FAILED",
+    "BLOCKED_SIMULATION_CALL_FAILED",
+    "BLOCKED_ROLLBACK_NOT_VERIFIED_ACTIVE_IAM_INCIDENT",
+    "BLOCKED_FAIL_CLOSED_OTHER"
+  ],
+  "response_contract": [
+    "INITIAL_HEAD",
+    "PRE_AWS_PRECHECKS",
+    "DIRECTED_SYNTHETIC_SUITE",
+    "REDACTED_BOOTSTRAP_IDENTITY",
+    "ASSUME_ROLE_RESULT",
+    "REDACTED_ASSUMED_ROLE_IDENTITY",
+    "BASELINE_RESULT",
+    "EMPTY_BASELINE_HASH",
+    "TEMPORARY_GRANT_RESULT",
+    "READ_ONLY_SIMULATION_RESULT",
+    "ROLLBACK_RESULT",
+    "FINAL_BASELINE_HASH_AND_POLICY_SET",
+    "CALLS_AND_MUTATIONS",
+    "FINAL_AWS_AND_PRODUCT_STATE",
+    "VALIDATIONS",
+    "PUBLISHED_FILES_COMMIT_AND_FINAL_REMOTE_HEAD",
+    "SINGLE_NEXT_RECOMMENDED_ACTION"
+  ],
+  "consumption_criterion": "CONSUMED_AFTER_A_TERMINAL_CORRECTED_ATOMIC_RESULT_IS_PUBLISHED_ROLLBACK_AND_FINAL_HASH_ARE_VERIFIED_CREDENTIALS_AND_TEMPORARY_FILES_ARE_CLEARED_AND_FINAL_REMOTE_HEAD_IS_VERIFIED",
+  "post_consumption_authority": "NONE"
+}
