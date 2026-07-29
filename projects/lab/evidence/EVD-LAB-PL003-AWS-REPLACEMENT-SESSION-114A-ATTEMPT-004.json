@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A-ATTEMPT-004",
+  "attempt_id": "ATTEMPT-004",
+  "project_id": "lab",
+  "kind": "REDACTED_AWS_REPLACEMENT_SESSION_AND_IAM_BOOTSTRAP_EXECUTION_EVIDENCE",
+  "status": "BLOCKED_FAIL_CLOSED",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_AWS_ONE_TIME_IAM_BOOTSTRAP_114A",
+  "documentary_reconciliation_authorization_id": "AUTHORIZATION_LAB_PL003_ATTEMPT_004_DOCUMENTARY_RECONCILIATION_115",
+  "parent_authorization_id": "AUTHORIZATION_LAB_PL003_AWS_ONE_TIME_IAM_BOOTSTRAP_114",
+  "related_authorization_id": "AUTHORIZATION_LAB_PL003_AWS_BOUNDED_PROVISIONING_OPERATOR_113",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "replacement_session": {
+    "started": true,
+    "count": 1,
+    "mfa_backed": true,
+    "temporary_credentials_printed": false,
+    "temporary_credentials_persisted": false,
+    "retained_after_attempt": false
+  },
+  "pre_mutation_gate": {
+    "bootstrap_simulation_completed": false,
+    "all_required_setup_and_teardown_actions_allowed": false,
+    "aws_mutations_before_gate": 0
+  },
+  "aws_effects": {
+    "iam_mutations": 0,
+    "infrastructure_mutations": 0,
+    "terraform_executed": false
+  },
+  "product_leadership_effects": {
+    "test_003_executed": false,
+    "active": false,
+    "integrated": false
+  },
+  "authorization_effects": {
+    "authorization_114a_status": "CONSUMED",
+    "authorization_114a_post_consumption_authority": "NONE",
+    "authorization_113_resumed": false,
+    "authorization_112_resumed": false
+  },
+  "failure_code": "BOOTSTRAP_SIMULATION_UNAVAILABLE_OR_DENIED",
+  "result": "BLOCKED_FAIL_CLOSED",
+  "redaction": {
+    "full_account_id_included": false,
+    "full_principal_arns_included": false,
+    "credentials_tokens_mfa_codes_or_secrets_included": false
+  },
+  "source_basis": "Jonathan Martínez supplied the bounded factual outcome for canonical documentary reconciliation on 2026-07-29.",
+  "next_execution_requires_new_explicit_authorization": true,
+  "runtime_effect": "NONE",
+  "product_effect": "NONE"
+}
