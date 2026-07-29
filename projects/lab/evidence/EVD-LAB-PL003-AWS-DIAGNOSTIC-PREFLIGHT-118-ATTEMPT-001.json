@@ -1,0 +1,77 @@
+{
+    "schema_version":  "1.0.0",
+    "evidence_id":  "EVD-LAB-PL003-AWS-DIAGNOSTIC-PREFLIGHT-118-ATTEMPT-001",
+    "attempt_id":  "ATTEMPT-001",
+    "authorization_id":  "AUTHORIZATION_LAB_PL003_CODEX_BOOTSTRAP_DIAGNOSTIC_EXECUTION_118",
+    "project_id":  "lab",
+    "kind":  "REDACTED_AWS_BOOTSTRAP_DIAGNOSTIC_PREFLIGHT_EVIDENCE",
+    "status":  "BLOCKED_BEFORE_MFA",
+    "executed_at":  "2026-07-29T12:17:35Z",
+    "repository":  "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "branch_mode":  "DETACHED_HEAD",
+    "execution_head":  "5df6630f3da32b0a0c3d8c13b4487396a5c8a5b9",
+    "original_checkout":  {
+                              "status":  "OUTDATED_WITH_TWO_UNTRACKED_LOCAL_EVIDENCE_FILES",
+                              "local_evidence_preserved_outside_repository":  true,
+                              "treated_as_canonical_before_reconciliation":  false
+                          },
+    "isolated_worktree":  {
+                              "clean_before_execution":  true,
+                              "external_preservation_used_as_configuration_or_operational_input":  false
+                          },
+    "execution_surface":  {
+                              "interactive_mfa_input_available":  false,
+                              "aws_calls_before_surface_block":  0
+                          },
+    "prechecks":  {
+                      "head":  "PASS",
+                      "worktree":  "PASS",
+                      "aws_cli":  "PASS",
+                      "cli_history_disabled":  "PASS",
+                      "inherited_temporary_credentials_absent":  "PASS",
+                      "reusable_temporary_profiles_absent":  "PASS",
+                      "bootstrap_profile":  "PASS",
+                      "mfa_reference":  "PASS",
+                      "synthetic_classifier":  "PASS"
+                  },
+    "diagnostic":  {
+                       "tested_action":  "iam:CreatePolicy",
+                       "tested_resource_shape":  "IAM_POLICY_PL003_SETUP_BOUNDARY",
+                       "context_key_names":  [
+                                                 "aws:MultiFactorAuthPresent",
+                                                 "aws:RequestTag/Project",
+                                                 "aws:RequestTag/Authorization",
+                                                 "aws:RequestTag/Temporary"
+                                             ],
+                       "sanitized_call_metadata":  null,
+                       "classification":  null
+                   },
+    "aws_calls":  {
+                      "sts_get_session_token":  0,
+                      "sts_get_caller_identity":  0,
+                      "iam_simulate_principal_policy":  0,
+                      "other_aws":  0
+                  },
+    "zero_mutation_attestation":  {
+                                      "iam_mutations":  0,
+                                      "infrastructure_mutations":  0,
+                                      "terraform_executions":  0,
+                                      "product_leadership_test_003_executions":  0,
+                                      "product_leadership_active":  false,
+                                      "product_leadership_integrated":  false
+                                  },
+    "ephemeral_credentials_cleared":  true,
+    "failure_code":  "SECURE_INTERACTIVE_MFA_PROMPT_UNAVAILABLE",
+    "result":  "BLOCKED_FAIL_CLOSED",
+    "redaction":  {
+                      "full_account_id_included":  false,
+                      "full_principal_arns_included":  false,
+                      "access_keys_included":  false,
+                      "secret_access_keys_included":  false,
+                      "session_tokens_included":  false,
+                      "mfa_codes_included":  false,
+                      "request_ids_included":  false,
+                      "raw_stdout_or_stderr_persisted":  false
+                  },
+    "post_attempt_authority":  "NONE"
+}

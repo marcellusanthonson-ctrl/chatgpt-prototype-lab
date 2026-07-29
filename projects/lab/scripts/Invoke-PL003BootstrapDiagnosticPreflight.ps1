@@ -11,6 +11,10 @@ param(
     [string]$ExpectedHead,
 
     [Parameter(ParameterSetName = 'Operational')]
+    [ValidateRange(1, 999)]
+    [int]$AttemptNumber = 1,
+
+    [Parameter(ParameterSetName = 'Operational')]
     [string]$EvidencePath
 )
 
@@ -353,11 +357,14 @@ function Write-PL003Evidence {
 function Invoke-PL003OperationalDiagnostic {
     param(
         [Parameter(Mandatory)][string]$ExpectedExecutionHead,
+        [Parameter(Mandatory)][int]$OperationalAttemptNumber,
         [AllowNull()][string]$RequestedEvidencePath
     )
 
     $repositoryRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..\..')).Path
-    $defaultEvidencePath = Join-Path $repositoryRoot 'projects\lab\evidence\EVD-LAB-PL003-AWS-DIAGNOSTIC-PREFLIGHT-118-ATTEMPT-001.json'
+    $attemptId = 'ATTEMPT-{0:D3}' -f $OperationalAttemptNumber
+    $evidenceBaseName = 'EVD-LAB-PL003-AWS-DIAGNOSTIC-PREFLIGHT-118'
+    $defaultEvidencePath = Join-Path $repositoryRoot "projects\lab\evidence\$evidenceBaseName-$attemptId.json"
     $targetEvidencePath = if ([string]::IsNullOrWhiteSpace($RequestedEvidencePath)) {
         $defaultEvidencePath
     } else {
@@ -372,8 +379,8 @@ function Invoke-PL003OperationalDiagnostic {
 
     $result = [ordered]@{
         schema_version = '1.0.0'
-        evidence_id = 'EVD-LAB-PL003-AWS-DIAGNOSTIC-PREFLIGHT-118-ATTEMPT-001'
-        attempt_id = 'ATTEMPT-001'
+        evidence_id = "$evidenceBaseName-$attemptId"
+        attempt_id = $attemptId
         authorization_id = 'AUTHORIZATION_LAB_PL003_CODEX_BOOTSTRAP_DIAGNOSTIC_EXECUTION_118'
         project_id = 'lab'
         kind = 'REDACTED_AWS_BOOTSTRAP_DIAGNOSTIC_PREFLIGHT_EVIDENCE'
@@ -651,7 +658,13 @@ function Invoke-PL003OperationalDiagnostic {
         $result.result = 'PASS_CLASSIFIED'
     } catch {
         $message = [string]$_.Exception.Message
-        if ($message -match '^[A-Z0-9_]+$') {
+        if (
+            $result.aws_calls.sts_get_session_token -eq 0 -and
+            $result.prechecks.mfa_reference -eq 'PASS' -and
+            $message -notmatch '^[A-Z0-9_]+$'
+        ) {
+            $result.failure_code = 'SECURE_INTERACTIVE_MFA_PROMPT_UNAVAILABLE'
+        } elseif ($message -match '^[A-Z0-9_]+$') {
             $result.failure_code = $message
         } else {
             $result.failure_code = 'UNEXPECTED_DIAGNOSTIC_FAILURE'
@@ -696,11 +709,14 @@ function Invoke-PL003OperationalDiagnostic {
         evidence_path = $targetEvidencePath.Substring($repositoryRoot.Length + 1).Replace('\', '/')
         secrets_printed = $false
     }
-    $summary | ConvertTo-Json -Depth 6
+    $operationalExitCode = 1
     if ($result.result -eq 'PASS_CLASSIFIED') {
-        return 0
+        $operationalExitCode = 0
     }
-    return 1
+    return [pscustomobject]@{
+        ExitCode = $operationalExitCode
+        Summary = $summary
+    }
 }
 
 if ($MyInvocation.InvocationName -eq '.') {
@@ -716,7 +732,9 @@ if ($SyntheticClassifierTest -or -not $OperationalRun) {
     exit 1
 }
 
-$exitCode = Invoke-PL003OperationalDiagnostic `
+$outcome = Invoke-PL003OperationalDiagnostic `
     -ExpectedExecutionHead $ExpectedHead `
+    -OperationalAttemptNumber $AttemptNumber `
     -RequestedEvidencePath $EvidencePath
-exit $exitCode
+$outcome.Summary | ConvertTo-Json -Depth 6
+exit $outcome.ExitCode
