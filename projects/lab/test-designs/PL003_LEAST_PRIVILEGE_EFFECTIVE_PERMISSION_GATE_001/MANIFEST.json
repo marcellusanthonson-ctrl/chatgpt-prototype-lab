@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "test_design_id": "PL003_LEAST_PRIVILEGE_EFFECTIVE_PERMISSION_GATE_001",
+  "project_id": "lab",
+  "status": "DOCUMENTED_NOT_AUTHORIZED_FOR_EXECUTION",
+  "purpose": "Determine whether the intended bounded provisioning principal has effective permission for the exact preflight action-resource-context matrix before any IAM or infrastructure mutation.",
+  "gate_type": "READ_ONLY_EFFECTIVE_PERMISSION_SIMULATION",
+  "principal_under_test": "INTENDED_BOUNDED_PL003_PROVISIONING_OPERATOR_NOT_BOOTSTRAP_USER",
+  "required_inputs": [
+    "EXACT_PRINCIPAL_ARN_REDACTED_IN_REPORTING",
+    "EXACT_PERMISSIONS_BOUNDARY_DOCUMENT_AND_ARN",
+    "EXACT_IDENTITY_POLICIES",
+    "EXACT_TERRAFORM_PLAN_ACTION_RESOURCE_MATRIX",
+    "REQUIRED_CONTEXT_KEYS_AND_VALUES",
+    "ORGANIZATIONS_SCP_OR_RCP_APPLICABILITY_STATUS",
+    "SESSION_POLICY_STATUS"
+  ],
+  "required_action_matrix_domains": [
+    "IAM_BOUNDARY_AND_ROLE_OPERATIONS",
+    "S3_OBJECT_LOCK_PREFLIGHT",
+    "SECRETS_MANAGER_AND_KMS_PREFLIGHT",
+    "CLOUDTRAIL_PREFLIGHT",
+    "READ_ONLY_IDENTITY_AND_CONFIGURATION_VERIFICATION"
+  ],
+  "execution_contract": {
+    "aws_calls": "READ_ONLY_ONLY",
+    "simulator": "iam:SimulatePrincipalPolicy",
+    "simulation_target": "INTENDED_BOUNDED_PROVISIONING_OPERATOR",
+    "exact_action_resource_pairs_required": true,
+    "context_entries_required_when_policy_uses_conditions": true,
+    "permissions_boundary_detail_required": true,
+    "evaluation_decision_details_required": true,
+    "organizations_policy_scope_must_be_declared": true,
+    "mutations_allowed": 0,
+    "terraform_allowed": false,
+    "provisioning_allowed": false,
+    "product_leadership_test_003_allowed": false
+  },
+  "pass_conditions": [
+    "EVERY_REQUIRED_ACTION_RESOURCE_PAIR_RETURNS_ALLOWED",
+    "NO_EXPLICIT_DENY",
+    "PERMISSIONS_BOUNDARY_DECISION_DETAIL_DOES_NOT_DENY",
+    "ALL_REQUIRED_CONTEXT_KEYS_ARE_SUPPLIED",
+    "NO_UNMODELED_ACTION_IS_REQUIRED_BY_THE_PLAN",
+    "SIMULATION_EVIDENCE_IS_COMPLETE_REDACTED_AND_REPRODUCIBLE"
+  ],
+  "blocked_conditions": [
+    "ANY_IMPLICIT_DENY",
+    "ANY_EXPLICIT_DENY",
+    "MISSING_CONTEXT_KEY",
+    "PRINCIPAL_OR_BOUNDARY_MISMATCH",
+    "SCP_OR_RCP_SCOPE_UNKNOWN",
+    "PLAN_ACTION_MATRIX_INCOMPLETE",
+    "SIMULATOR_LIMITATION_MAKES_RESULT_NON_DISCRIMINATING",
+    "ANY_MUTATION_REQUIRED_TO_COMPLETE_GATE"
+  ],
+  "result_classes": [
+    "PASS_EFFECTIVE_PERMISSION_MATRIX_READY_FOR_SEPARATE_PROVISIONING_DECISION",
+    "BLOCKED_IDENTITY_POLICY_ALLOW_MISSING_OR_NONMATCHING",
+    "BLOCKED_PERMISSIONS_BOUNDARY_NONALLOW",
+    "BLOCKED_ORGANIZATIONS_POLICY_SCOPE_UNRESOLVED",
+    "BLOCKED_CONTEXT_INCOMPLETE",
+    "BLOCKED_ACTION_RESOURCE_MATRIX_INCOMPLETE",
+    "BLOCKED_SIMULATOR_LIMITATION_REQUIRES_ALTERNATIVE_READ_ONLY_EVIDENCE",
+    "BLOCKED_FAIL_CLOSED_OTHER"
+  ],
+  "authority_semantics": {
+    "passing_gate_authorizes_provisioning": false,
+    "passing_gate_authorizes_test_003": false,
+    "separate_human_authorization_required_after_pass": true,
+    "post_execution_authority": "NONE"
+  },
+  "single_next_action": "SEPARATELY_AUTHORIZE_EXECUTION_OF_THIS_READ_ONLY_GATE_AFTER_FREEZING_THE_EXACT_ACTION_RESOURCE_CONTEXT_MATRIX"
+}
