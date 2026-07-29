@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "analysis_id": "PL003_BOOTSTRAP_SIMULATION_FAILURE_ANALYSIS_001",
+  "project_id": "lab",
+  "source_attempt": "ATTEMPT-004",
+  "source_authorization": "AUTHORIZATION_LAB_PL003_AWS_ONE_TIME_IAM_BOOTSTRAP_114A",
+  "status": "COMPLETE_STATIC_ANALYSIS",
+  "observed_failure_code": "BOOTSTRAP_SIMULATION_UNAVAILABLE_OR_DENIED",
+  "facts": [
+    "One replacement MFA-backed session was established in ATTEMPT-004.",
+    "No IAM or infrastructure mutations occurred.",
+    "The failure occurred during the pre-mutation bootstrap simulation gate.",
+    "Invoke-AwsJson redirects AWS CLI stderr to null and replaces every nonzero exit with a synthesized AWS_CALL_FAILED service-operation code.",
+    "The bootstrap simulation loop catches every exception and replaces it with BOOTSTRAP_SIMULATION_UNAVAILABLE_OR_DENIED."
+  ],
+  "root_cause_verdict": {
+    "classification": "MODIFIED",
+    "original_interpretation": "Simulation unavailable or IAM denied.",
+    "reconciled_interpretation": "The exact AWS-side cause is not recoverable from the recorded evidence because the script suppresses stderr and collapses all simulation failures into one generic code.",
+    "primary_confirmed_cause": "SCRIPT_ERROR_CLASSIFICATION_TOO_BROAD",
+    "aws_side_cause": "INSUFFICIENT_EVIDENCE_TO_DISCRIMINATE",
+    "confidence": "HIGH_FOR_DIAGNOSTIC_OBSERVABILITY_DEFECT_LOW_FOR_AWS_SIDE_CAUSE"
+  },
+  "candidate_causes": [
+    {"id":"SCRIPT_ERROR_CLASSIFICATION_TOO_BROAD","verdict":"CONFIRMED","basis":"All exceptions in the simulation loop are replaced by one generic failure code."},
+    {"id":"SIMULATION_ACTION_NOT_AUTHORIZED","verdict":"INSUFFICIENT_EVIDENCE","basis":"AccessDenied is plausible but stderr and AWS error metadata were discarded."},
+    {"id":"SIMULATION_INPUT_INVALID","verdict":"INSUFFICIENT_EVIDENCE","basis":"Context entry, action or resource validation errors would be collapsed identically."},
+    {"id":"PRINCIPAL_ARN_RESOLUTION_FAILED","verdict":"INSUFFICIENT_EVIDENCE","basis":"The IAM user ARN passed STS shape validation, but AWS response details are absent."},
+    {"id":"SIMULATION_TARGET_PRINCIPAL_UNSUPPORTED","verdict":"INSUFFICIENT_EVIDENCE","basis":"No preserved AWS error proves or excludes this cause."},
+    {"id":"SCP_ORGANIZATION_RESTRICTION_POSSIBLE","verdict":"INSUFFICIENT_EVIDENCE","basis":"The static repository does not contain current Organizations/SCP state."},
+    {"id":"TOOLING_OR_ENVIRONMENT_FAILURE","verdict":"INSUFFICIENT_EVIDENCE","basis":"CLI parsing, invocation and environment failures share the same collapsed path."}
+  ],
+  "security_effect": {
+    "fail_closed_preserved": true,
+    "mutations_before_failure": 0,
+    "credentials_or_secrets_recorded": false,
+    "product_leadership_test_003_executed": false
+  },
+  "required_resolution": "A separately authorized read-only diagnostic must preserve sanitized AWS CLI exit code, error type, request identifier suffix or hash, operation, action under test and input-validation category before mapping to a governed failure code.",
+  "active_execution_authority": "NONE"
+}
