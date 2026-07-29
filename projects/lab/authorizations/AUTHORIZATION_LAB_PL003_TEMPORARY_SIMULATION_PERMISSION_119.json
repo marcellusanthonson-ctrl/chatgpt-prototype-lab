@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_TEMPORARY_SIMULATION_PERMISSION_119",
+  "project_id": "lab",
+  "status": "GRANTED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-29",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "0bb2c34084d8237efc4ec3be1b7754cde75e4da1",
+  "execution_head_policy": "VERIFY_LIVE_AT_USE",
+  "mode": "BOUNDED_TEMPORARY_IAM_PERMISSION_AND_READ_ONLY_VERIFICATION",
+  "objective": "Grant the exact previously verified bootstrap principal only iam:SimulatePrincipalPolicy, verify one read-only simulation can be invoked without AccessDenied, remove the temporary grant immediately, and prove rollback.",
+  "target_principal": {
+    "selection": "EXACT_BOOTSTRAP_PRINCIPAL_VERIFIED_BY_AUTHORIZATION_118",
+    "switching_principals_allowed": false,
+    "full_arn_or_account_id_persistence_allowed": false
+  },
+  "temporary_policy": {
+    "preferred_mechanism": "INLINE_USER_POLICY",
+    "name": "PL003TemporarySimulationOnly119",
+    "allowed_action": "iam:SimulatePrincipalPolicy",
+    "additional_actions_allowed": 0,
+    "resource": "*",
+    "existing_policy_modification_allowed": false
+  },
+  "authorized_actions": [
+    "START_AT_MOST_ONE_EPHEMERAL_MFA_SESSION",
+    "STS_GET_SESSION_TOKEN_MAXIMUM_ONE_CALL",
+    "STS_GET_CALLER_IDENTITY_MAXIMUM_ONE_CALL",
+    "MINIMUM_IAM_READS_FOR_BASELINE_EFFECTIVE_DOCUMENT_AND_ROLLBACK",
+    "PUT_EXACTLY_ONE_TEMPORARY_INLINE_POLICY_WITH_ONLY_IAM_SIMULATE_PRINCIPAL_POLICY",
+    "IAM_SIMULATE_PRINCIPAL_POLICY_MAXIMUM_TWO_CALLS",
+    "DELETE_THE_EXACT_TEMPORARY_INLINE_POLICY_IMMEDIATELY",
+    "VERIFY_FINAL_CONFIGURATION_EQUIVALENT_TO_BASELINE",
+    "CLEAR_EPHEMERAL_PROCESS_CREDENTIALS",
+    "PUBLISH_REDACTED_EVIDENCE",
+    "UPDATE_MINIMUM_AUTHORIZATION_ANALYSIS_PENDING_STATE_INDEX_AND_CONTINUITY_RECORDS",
+    "COMMIT_AND_PUSH_DIRECTLY_TO_MAIN",
+    "VERIFY_FINAL_REMOTE_HEAD"
+  ],
+  "call_limits": {
+    "sts_get_session_token": 1,
+    "sts_get_caller_identity": 1,
+    "iam_reads": "MINIMUM_STRICT",
+    "iam_simulate_principal_policy": 2,
+    "iam_grant_mutations": 1,
+    "iam_removal_mutations": 1,
+    "other_aws": 0
+  },
+  "rollback_contract": {
+    "delete_in_finally_after_successful_grant": true,
+    "verify_temporary_policy_absent": true,
+    "verify_final_inline_policy_set_matches_baseline": true,
+    "stop_if_rollback_not_verified": true
+  },
+  "forbidden_actions": [
+    "MODIFY_EXISTING_POLICY",
+    "CREATE_MANAGED_POLICY_UNLESS_INLINE_POLICY_IS_TECHNICALLY_INCOMPATIBLE",
+    "GRANT_IAM_SIMULATE_CUSTOM_POLICY",
+    "GRANT_ANY_ADDITIONAL_ACTION",
+    "SWITCH_PRINCIPAL",
+    "CREATE_OR_MODIFY_PRINCIPAL_TRUST_POLICY_ACCESS_KEY_OR_PERMISSION_BOUNDARY",
+    "ROOT_OR_ADMINISTRATOR_ACCESS",
+    "AWS_INFRASTRUCTURE_MUTATION",
+    "TERRAFORM",
+    "PRODUCT_LEADERSHIP_TEST_003",
+    "PRODUCT_LEADERSHIP_ACTIVATION_OR_INTEGRATION",
+    "CREDENTIAL_OR_SECRET_PERSISTENCE",
+    "REUSE_AUTHORIZATION_118"
+  ],
+  "stop_conditions": [
+    "REMOTE_HEAD_MISMATCH",
+    "WORKTREE_NOT_CLEAN",
+    "PREEXISTING_TEMPORARY_CREDENTIALS",
+    "REUSABLE_TEMPORARY_PROFILE_CREDENTIALS",
+    "CLI_HISTORY_ENABLED",
+    "ROLLBACK_NOT_GUARANTEED_BY_IMPLEMENTATION",
+    "BOOTSTRAP_PRINCIPAL_MISMATCH",
+    "EXISTING_POLICY_COLLISION",
+    "EFFECTIVE_POLICY_DOCUMENT_DIFFERS_FROM_AUTHORIZED_DOCUMENT",
+    "UNEXPECTED_MUTATION_REQUIRED",
+    "ROLLBACK_NOT_VERIFIED",
+    "CREDENTIAL_CLEANUP_NOT_GUARANTEED",
+    "UNREDACTABLE_SENSITIVE_INFORMATION"
+  ],
+  "result_classes": [
+    "PASS_TEMPORARY_SIMULATION_PERMISSION_VERIFIED_AND_REMOVED",
+    "BLOCKED_PERMISSION_GRANT_NOT_AUTHORIZED",
+    "BLOCKED_PRINCIPAL_MISMATCH",
+    "BLOCKED_EXISTING_POLICY_COLLISION",
+    "BLOCKED_SIMULATION_STILL_ACCESS_DENIED",
+    "BLOCKED_ROLLBACK_NOT_VERIFIED",
+    "BLOCKED_FAIL_CLOSED_OTHER"
+  ],
+  "implementation": {
+    "script": "projects/lab/scripts/Invoke-PL003TemporarySimulationPermission119.ps1",
+    "synthetic_tests": "projects/lab/scripts/tests/Invoke-PL003TemporarySimulationPermission119.Tests.ps1"
+  },
+  "consumption_criterion": "CONSUMED_AFTER_REDACTED_BASELINE_GRANT_SIMULATION_AND_ROLLBACK_EVIDENCE_IS_PUBLISHED_TEMPORARY_CREDENTIALS_ARE_CLEARED_AND_FINAL_REMOTE_HEAD_IS_VERIFIED",
+  "post_consumption_authority": "NONE"
+}
