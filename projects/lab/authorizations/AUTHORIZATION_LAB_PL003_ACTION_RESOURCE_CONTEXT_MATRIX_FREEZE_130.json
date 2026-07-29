@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_ACTION_RESOURCE_CONTEXT_MATRIX_FREEZE_130",
+  "project_id": "lab",
+  "status": "GRANTED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-29",
+  "approval_source": "USER_INSTRUCTION_CONTINUE_AFTER_RECOMMENDED_MATRIX_FREEZE",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "719b2ef4ead91ecb3b03b9d3bd7529590ac1428d",
+  "execution_head_policy": "VERIFY_LIVE_AT_USE",
+  "objective": "Freeze the Terraform preflight normative action-resource-context matrix and explicitly separate unverified AWS provider auxiliary calls before any read-only effective-permission gate execution.",
+  "allowed_actions": [
+    "READ_STATIC_TERRAFORM_PACKAGE",
+    "FREEZE_RESOURCE_INVENTORY",
+    "FREEZE_NORMATIVE_MUTATION_MATRIX",
+    "IDENTIFY_PROVIDER_AUXILIARY_CALL_GAP",
+    "DEFINE_FAIL_CLOSED_COMPLETENESS_RULE",
+    "CREATE_REGISTRY_DELTA",
+    "COMMIT_AND_PUSH_DOCUMENTATION"
+  ],
+  "forbidden_actions": [
+    "AWS_API_CALLS",
+    "IAM_MUTATIONS",
+    "TERRAFORM_INIT_PLAN_APPLY_OR_DESTROY",
+    "PROVISIONING",
+    "PRODUCT_LEADERSHIP_TEST_003",
+    "PRODUCT_LEADERSHIP_ACTIVATION_OR_INTEGRATION",
+    "GRANTING_READ_ONLY_GATE_EXECUTION_AUTHORITY"
+  ],
+  "deliverables": [
+    "projects/lab/test-designs/PL003_LEAST_PRIVILEGE_EFFECTIVE_PERMISSION_GATE_001/ACTION_RESOURCE_CONTEXT_MATRIX.json",
+    "projects/lab/analyses/PL003_TERRAFORM_PERMISSION_MATRIX_FREEZE_001.json",
+    "registry/deltas/pl003-action-resource-context-matrix-freeze-130.json"
+  ],
+  "consumption_criterion": "CONSUMED_AFTER_THE_STATIC_RESOURCE_AND_NORMATIVE_PERMISSION_MATRIX_PROVIDER_AUXILIARY_GAP_AND_REGISTRY_DELTA_ARE_PUBLISHED_AND_REMOTE_HEAD_IS_VERIFIED",
+  "post_consumption_authority": "NONE"
+}
