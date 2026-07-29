@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-07-28",
+  "updated_at": "2026-07-29",
   "counts": {
     "projects": 7,
     "decisions": 22,
@@ -9,8 +9,8 @@
     "ideas": 5,
     "integrations": 6,
     "experiments": 8,
-    "authorizations": 67,
-    "evidence": 42,
+    "authorizations": 68,
+    "evidence": 43,
     "unincorporated": 0,
     "proposals": 3,
     "sessions": 1,
@@ -49,7 +49,8 @@
       "registry/deltas/pl003-aws-bounded-provisioning-operator-113.json",
       "registry/deltas/pl003-aws-bounded-provisioning-operator-113-blocked.json",
       "registry/deltas/pl003-aws-one-time-iam-bootstrap-authorization-114.json",
-      "registry/deltas/pl003-aws-one-time-iam-bootstrap-114a.json"
+      "registry/deltas/pl003-aws-one-time-iam-bootstrap-114a.json",
+      "registry/deltas/pl003-attempt-004-documentary-reconciliation-115.json"
     ],
     "evidence": "registry/evidence.json",
     "evidence_deltas": [
@@ -58,7 +59,8 @@
       "registry/deltas/product-leadership-test-003-documentary-sync-104.json",
       "registry/deltas/pl003-aws-provisioned-preflight-blocked-112.json",
       "registry/deltas/pl003-aws-provisioned-preflight-blocked-112-attempt-002.json",
-      "registry/deltas/pl003-aws-bounded-provisioning-operator-113-blocked.json"
+      "registry/deltas/pl003-aws-bounded-provisioning-operator-113-blocked.json",
+      "registry/deltas/pl003-attempt-004-documentary-reconciliation-115.json"
     ],
     "current_state": "CURRENT_STATE.json",
     "current_state_deltas": [
@@ -72,7 +74,8 @@
       "registry/deltas/pl003-aws-bounded-provisioning-operator-113.json",
       "registry/deltas/pl003-aws-bounded-provisioning-operator-113-blocked.json",
       "registry/deltas/pl003-aws-one-time-iam-bootstrap-authorization-114.json",
-      "registry/deltas/pl003-aws-one-time-iam-bootstrap-114a.json"
+      "registry/deltas/pl003-aws-one-time-iam-bootstrap-114a.json",
+      "registry/deltas/pl003-attempt-004-documentary-reconciliation-115.json"
     ],
     "pattern_deltas": ["registry/deltas/livhavn-surgical-visual-patch-093.json"],
     "error_deltas": ["registry/deltas/livhavn-surgical-visual-patch-093.json"],
@@ -118,12 +121,12 @@
     "decision_path": "decisions/DEC-LAB-022.json",
     "error": "ERR-LAB-007",
     "pattern": "PAT-LAB-009",
-    "authorization": "AUTHORIZATION_LAB_PL003_AWS_ONE_TIME_IAM_BOOTSTRAP_114A",
-    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_AWS_ONE_TIME_IAM_BOOTSTRAP_114A.json",
-    "evidence": "EVD-LAB-PL003-AWS-BOUNDED-PROVISIONING-OPERATOR-113",
-    "evidence_path": "projects/lab/evidence/EVD-LAB-PL003-AWS-BOUNDED-PROVISIONING-OPERATOR-113.json",
-    "current_state_delta": "PL003-AWS-ONE-TIME-IAM-BOOTSTRAP-114A",
-    "current_state_delta_path": "registry/deltas/pl003-aws-one-time-iam-bootstrap-114a.json",
+    "authorization": "AUTHORIZATION_LAB_PL003_ATTEMPT_004_DOCUMENTARY_RECONCILIATION_115",
+    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_ATTEMPT_004_DOCUMENTARY_RECONCILIATION_115.json",
+    "evidence": "EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A-ATTEMPT-004",
+    "evidence_path": "projects/lab/evidence/EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A-ATTEMPT-004.json",
+    "current_state_delta": "PL003-ATTEMPT-004-DOCUMENTARY-RECONCILIATION-115",
+    "current_state_delta_path": "registry/deltas/pl003-attempt-004-documentary-reconciliation-115.json",
     "experiment": "EXP-LAB-003",
     "proposal": "PROP-LAB-003",
     "session": "SES-2026-06-28-001",
