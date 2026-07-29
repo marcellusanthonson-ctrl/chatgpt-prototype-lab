@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "brief_id": "CODEX_PL003_BOOTSTRAP_DIAGNOSTIC_PREFLIGHT_EXECUTION_117",
+  "project_id": "lab",
+  "status": "PROPOSED_NOT_AUTHORIZED",
+  "source_analysis": "projects/lab/analyses/PL003_BOOTSTRAP_SIMULATION_FAILURE_ANALYSIS_001.json",
+  "source_design": "projects/lab/preflight-designs/PL003_BOOTSTRAP_DIAGNOSTIC_PREFLIGHT_001.json",
+  "executor": "CODEX_BOUNDED_EXECUTOR_ONLY",
+  "objective": "Execute one read-only diagnostic preflight that preserves sanitized AWS error metadata and discriminates the ATTEMPT-004 bootstrap simulation failure.",
+  "required_future_authorization": true,
+  "allowed_actions_when_and_only_when_separately_authorized": [
+    "VERIFY_HEAD_AND_WORKTREE",
+    "ESTABLISH_ONE_EPHEMERAL_MFA_SESSION_IF_EXPLICITLY_ALLOWED",
+    "STS_GET_CALLER_IDENTITY",
+    "IAM_SIMULATE_PRINCIPAL_POLICY",
+    "SANITIZED_ERROR_CAPTURE",
+    "CLEAR_EPHEMERAL_CREDENTIALS",
+    "PUBLISH_REDACTED_EVIDENCE"
+  ],
+  "forbidden_actions": [
+    "IAM_MUTATION",
+    "AWS_RESOURCE_MUTATION",
+    "TERRAFORM",
+    "PRODUCT_LEADERSHIP_TEST_003",
+    "PRODUCT_LEADERSHIP_ACTIVATION_OR_INTEGRATION",
+    "ROOT_OR_ADMINISTRATOR_ACCESS",
+    "SECRET_PERSISTENCE"
+  ],
+  "stop_conditions": [
+    "HEAD_MISMATCH",
+    "MISSING_EXPLICIT_EXECUTION_AUTHORIZATION",
+    "PREEXISTING_TEMPORARY_CREDENTIALS",
+    "MUTATION_PERMISSION_REQUIRED",
+    "ROOT_OR_GENERAL_ADMIN_REQUIRED",
+    "SANITIZED_DIAGNOSTIC_CAPTURE_UNAVAILABLE",
+    "CREDENTIAL_CLEANUP_NOT_GUARANTEED"
+  ],
+  "deliverables": [
+    "REDACTED_DIAGNOSTIC_EVIDENCE",
+    "EXACT_FAILURE_CLASSIFICATION_OR_INSUFFICIENT_EVIDENCE",
+    "ZERO_MUTATION_ATTESTATION",
+    "POST_EXECUTION_AUTHORITY_NONE"
+  ],
+  "execution_authorized": false
+}
