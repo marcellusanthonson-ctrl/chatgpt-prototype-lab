@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_PL003_IMPLICIT_DENY_RECONCILIATION_AND_LEAST_PRIVILEGE_GATE_129",
   "project_id": "lab",
-  "status": "GRANTED",
+  "status": "CONSUMED",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-07-29",
   "approval_source": "USER_INSTRUCTION_CONTINUE_DOCUMENTARY_RECONCILIATION_AND_DETERMINE_NEXT_LEAST_PRIVILEGE_GATE",
@@ -32,6 +32,20 @@
     "projects/lab/test-designs/PL003_LEAST_PRIVILEGE_EFFECTIVE_PERMISSION_GATE_001/MANIFEST.json",
     "registry/deltas/pl003-implicit-deny-reconciliation-129.json"
   ],
+  "execution_result": {
+    "status": "COMPLETED_DOCUMENTARY_RECONCILIATION",
+    "implicit_deny_classification": "SIMULATION_MECHANISM_VALID_ACTION_NOT_ALLOWED_IN_EVALUATED_CONTEXT",
+    "causality_status": "INSUFFICIENT_EVIDENCE_FOR_SINGLE_CAUSE",
+    "selected_next_gate": "PL003_LEAST_PRIVILEGE_EFFECTIVE_PERMISSION_GATE_001",
+    "aws_calls": 0,
+    "iam_mutations": 0,
+    "terraform_executions": 0,
+    "provisioning_executions": 0,
+    "product_leadership_test_003_executions": 0,
+    "active_execution_authority": "NONE"
+  },
+  "consumed_at": "2026-07-29",
+  "consumption_reason": "DOCUMENTARY_RECONCILIATION_AND_READ_ONLY_LEAST_PRIVILEGE_GATE_DESIGN_PUBLISHED_WITHOUT_RUNTIME_OR_EXECUTION_AUTHORITY",
   "consumption_criterion": "CONSUMED_AFTER_DOCUMENTARY_RECONCILIATION_GATE_DESIGN_AND_DELTA_ARE_PUBLISHED_AND_REMOTE_HEAD_IS_VERIFIED",
   "post_consumption_authority": "NONE"
 }
