@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "analysis_id": "PL003_TERRAFORM_PERMISSION_MATRIX_FREEZE_001",
+  "project_id": "lab",
+  "status": "COMPLETE_WITH_PROVIDER_AUXILIARY_GAP",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_ACTION_RESOURCE_CONTEXT_MATRIX_FREEZE_130",
+  "subject": "Freeze the exact least-privilege simulation input before executing the read-only effective-permission gate.",
+  "observed_facts": [
+    "The validated Terraform plan contains exactly 49 create operations and zero update, delete or replace operations.",
+    "The static package declares one IAM permissions boundary, nine roles, nine inline role policies, three KMS keys, three KMS aliases, three Object-Lock-enabled S3 buckets and their configuration resources, one empty Secrets Manager container with a resource policy, and one CloudTrail trail.",
+    "The provider uses mandatory default tags on taggable resources.",
+    "The HCL defines the intended state but does not by itself prove every provider read-after-create, waiter, tagging, existence-check or normalization API call.",
+    "Authorization 127 proved that successful invocation of the IAM simulator and an allowed result for a simulated action are distinct conditions."
+  ],
+  "classification": {
+    "normative_resource_inventory": "CONFIRMED_AND_FROZEN",
+    "normative_mutation_actions": "FROZEN_FROM_STATIC_CONFIGURATION_WITH_RESOURCE_TEMPLATES",
+    "policy_context_keys": "FROZEN_FOR_KNOWN_PROJECT_CONSTRAINTS",
+    "provider_auxiliary_api_matrix": "INSUFFICIENT_EVIDENCE",
+    "full_gate_input_ready": false
+  },
+  "reasoning": [
+    "A least-privilege gate that simulates only obvious create actions can produce a misleading PASS while Terraform later fails on a required read, tag, waiter or configuration API call.",
+    "Therefore the simulation matrix must include both normative mutations and all provider auxiliary calls for the pinned provider behavior.",
+    "Because the prior plan was executed with refresh=false and its detailed plan and trace were intentionally deleted, the repository currently lacks authoritative evidence for the auxiliary call set.",
+    "Fail-closed treatment is required: no read-only gate execution should be authorized until the auxiliary matrix is mapped from the provider 6.56.0 primary source or a separately authorized non-mutating trace method."
+  ],
+  "selected_resolution": {
+    "matrix_path": "projects/lab/test-designs/PL003_LEAST_PRIVILEGE_EFFECTIVE_PERMISSION_GATE_001/ACTION_RESOURCE_CONTEXT_MATRIX.json",
+    "current_matrix_status": "FROZEN_NORMATIVE_MATRIX_PROVIDER_AUXILIARY_TRACE_REQUIRED",
+    "next_gate_before_effective_permission_simulation": "PROVIDER_AUXILIARY_CALL_DISCOVERY_GATE",
+    "discovery_methods_allowed_for_future_consideration": [
+      "PINNED_PROVIDER_6_56_0_PRIMARY_SOURCE_MAPPING",
+      "LOCAL_PROVIDER_SCHEMA_AND_SOURCE_INSPECTION",
+      "SEPARATELY_AUTHORIZED_READ_ONLY_OR_DRY_RUN_TRACE_WITH_ZERO_MUTATIONS"
+    ],
+    "preferred_method": "PINNED_PROVIDER_PRIMARY_SOURCE_MAPPING_FIRST_THEN_READ_ONLY_TRACE_ONLY_IF_UNRESOLVED"
+  },
+  "future_pass_conditions": [
+    "Every provider action is mapped to an exact resource template or documented wildcard necessity.",
+    "Every policy condition key needed by the intended boundary or identity policy is supplied.",
+    "Read-after-create and tagging actions are included.",
+    "Organizations SCP/RCP applicability and session-policy status are declared.",
+    "No mutation is required to discover the matrix.",
+    "The resulting matrix is reproducible and version-pinned."
+  ],
+  "forbidden_inferences": [
+    "STATIC_HCL_ALONE_PROVES_COMPLETE_PROVIDER_API_SET",
+    "THE_CURRENT_MATRIX_IS_READY_FOR_EXECUTION",
+    "A_FUTURE_SIMULATION_PASS_AUTHORIZES_PROVISIONING",
+    "A_FUTURE_SIMULATION_PASS_AUTHORIZES_TEST_003"
+  ],
+  "authority_effect": {
+    "aws_calls_authorized": false,
+    "read_only_gate_execution_authorized": false,
+    "terraform_authorized": false,
+    "provisioning_authorized": false,
+    "test_003_authorized": false,
+    "post_consumption_authority": "NONE"
+  },
+  "single_next_action": "SEPARATELY_AUTHORIZE_DOCUMENTARY_MAPPING_OF_HASHICORP_AWS_PROVIDER_6_56_0_AUXILIARY_CALLS_FOR_THE_15_RESOURCE_TYPES_BEFORE_EXECUTING_ANY_AWS_SIMULATION_GATE"
+}
