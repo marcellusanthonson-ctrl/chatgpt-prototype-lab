@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
-  "continuity_id": "LAB-CONTINUITY-PL003-AWS-BOUNDED-PROVISIONING-OPERATOR-113-BLOCKED",
+  "continuity_id": "LAB-CONTINUITY-PL003-BOOTSTRAP-DIAGNOSTIC-118-COMPLETE",
   "project_id": "lab",
-  "status": "CURRENT_BLOCKED_FAIL_CLOSED",
-  "created_at": "2026-07-28",
+  "status": "CURRENT_BLOCKED_SIMULATION_ACTION_NOT_AUTHORIZED",
+  "created_at": "2026-07-29",
   "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "canonical_branch": "main",
   "head_policy": "VERIFY_LIVE_AT_USE",
@@ -52,6 +52,23 @@
       "ROOT_SECURITY_STATE_CANNOT_BE_VERIFIED_READ_ONLY"
     ]
   },
+  "latest_authorization_118_diagnostic": {
+    "authorization_id": "AUTHORIZATION_LAB_PL003_CODEX_BOOTSTRAP_DIAGNOSTIC_EXECUTION_118",
+    "status": "CONSUMED_DIAGNOSTIC_COMPLETE",
+    "classification": "SIMULATION_ACTION_NOT_AUTHORIZED",
+    "aws_error_code": "AccessDenied",
+    "evidence": "projects/lab/evidence/EVD-LAB-PL003-AWS-DIAGNOSTIC-PREFLIGHT-118-ATTEMPT-003.json",
+    "aws_calls": {
+      "sts_get_session_token": 1,
+      "sts_get_caller_identity": 1,
+      "iam_simulate_principal_policy": 1,
+      "other_aws": 0
+    },
+    "aws_mutations": 0,
+    "terraform_executions": 0,
+    "product_leadership_test_003_executions": 0,
+    "ephemeral_credentials_cleared": true
+  },
   "verified_facts": [
     {
       "fact": "The static AWS Terraform package passed fmt, init with backend disabled, validate, and a local refresh-false plan using temporary assumed-role credentials.",
@@ -88,6 +105,13 @@
       "source_refs": [
         "projects/lab/evidence/EVD-LAB-AWS-TERRAFORM-PLAN-111C.json"
       ]
+    },
+    {
+      "fact": "Authorization 118 classified the first historical bootstrap simulation failure as SIMULATION_ACTION_NOT_AUTHORIZED using sanitized AccessDenied metadata.",
+      "source_refs": [
+        "projects/lab/evidence/EVD-LAB-PL003-AWS-DIAGNOSTIC-PREFLIGHT-118-ATTEMPT-003.json",
+        "projects/lab/analyses/PL003_BOOTSTRAP_SIMULATION_FAILURE_ANALYSIS_001.json"
+      ]
     }
   ],
   "architecture": {
@@ -112,10 +136,13 @@
     "authorization_111E": "GRANTED_FOR_CONTINUITY_PUBLICATION_ONLY",
     "authorization_112": "GRANTED_NOT_CONSUMED",
     "authorization_113": "GRANTED_NOT_CONSUMED_BLOCKED_BEFORE_IAM_MUTATION",
-    "active_aws_execution_authority": "GRANTED_NOT_CONSUMED_BLOCKED_BY_IAM_PERMISSION_GATE",
-    "terraform_apply_authorized": true,
-    "terraform_destroy_authorized": true,
-    "aws_resource_provisioning_authorized": true,
+    "authorization_114a": "CONSUMED",
+    "authorization_117": "CONSUMED",
+    "authorization_118": "CONSUMED",
+    "active_aws_execution_authority": "NONE",
+    "terraform_apply_authorized": false,
+    "terraform_destroy_authorized": false,
+    "aws_resource_provisioning_authorized": false,
     "test_003_execution_authorized": false,
     "runtime_authorized": false,
     "integration_authorized": false,
@@ -133,7 +160,10 @@
     "Authorization 112 execution attempt 001 stopped before AWS access because the approved profile did not point to the bounded plan operator role.",
     "PEND-LAB-031 was resolved after execution attempt 002 verified STS as an assumed-role session of PL003PreflightPlanOperator.",
     "Execution attempt 002 stopped at the IAM security gate because the role has no permission boundary and only the read-only plan policy.",
-    "Authorization 113 verified the read-only plan session and preserved the plan role unchanged, but stopped before IAM mutation because no bounded temporary IAM setup principal was available and root security could not be verified read-only."
+    "Authorization 113 verified the read-only plan session and preserved the plan role unchanged, but stopped before IAM mutation because no bounded temporary IAM setup principal was available and root security could not be verified read-only.",
+    "Authorization 118 reconciled the preserved local ATTEMPT-003 and ATTEMPT-004 captures without overwriting the canonical ATTEMPT-004 summary.",
+    "Authorization 118 completed one read-only diagnostic and classified iam:SimulatePrincipalPolicy as SIMULATION_ACTION_NOT_AUTHORIZED.",
+    "Authorization 118 executed three AWS calls, zero mutations, no Terraform and no Product Leadership Test 003, then cleared all ephemeral credentials."
   ],
   "operational_estimate": {
     "active_work_to_functional_validation": "4_TO_6_HOURS",
@@ -153,8 +183,8 @@
     },
     {
       "id": "PEND-LAB-032",
-      "item": "Provide a temporary MFA-backed bounded IAM setup role capable of executing authorization 113 and reading current root security state.",
-      "status": "OPEN_AUTHORIZED_EXECUTION_BLOCKED_BY_MISSING_TEMPORARY_SETUP_PRINCIPAL"
+      "item": "Decide whether to grant only iam:SimulatePrincipalPolicy to the expected bootstrap principal or select another bounded supported principal.",
+      "status": "OPEN_BLOCKED_SIMULATION_ACTION_NOT_AUTHORIZED_NO_ACTIVE_EXECUTION_AUTHORITY"
     },
     {
       "item": "Configure a low AWS budget alert before any resource creation.",
@@ -202,6 +232,6 @@
     "ATTACHMENT_MANIFEST.json",
     "START_PROMPT.md"
   ],
-  "single_next_action": "Provide a temporary MFA-backed bounded IAM setup role capable of executing authorization 113 without modifying PL003PreflightPlanOperator or using persistent bootstrap credentials.",
-  "authority_effect": "AUTHORIZATIONS_112_AND_113_REMAIN_GRANTED_NOT_CONSUMED"
+  "single_next_action": "Decide and separately authorize a minimum simulation-permission path without reusing authorization 118.",
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_118_CONSUMPTION"
 }

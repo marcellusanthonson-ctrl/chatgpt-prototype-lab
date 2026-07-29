@@ -1,52 +1,55 @@
 # Continuidad actual — LAB / Product Leadership Test 003
 
-Fecha: 2026-07-28
+Fecha: 2026-07-29
 Repositorio canónico: `marcellusanthonson-ctrl/chatgpt-prototype-lab`
 Rama: `main`
-HEAD de ejecución 113: `1e486969b2f292da5313946d4d4aa9bea720f270`
+Política de HEAD: `VERIFY_LIVE_AT_USE`
 
 ## Resultado vigente
 
-La autorización 113 quedó bloqueada de forma fail-closed antes de cualquier
-mutación IAM.
+La autorización 118 completó el diagnóstico AWS read-only mínimo y clasificó
+el fallo histórico como `SIMULATION_ACTION_NOT_AUTHORIZED`.
 
-La sesión `pl003-plan-operator` fue verificada por STS como assumed-role de
-`PL003PreflightPlanOperator`. El rol conservó únicamente
-`PL003PreflightPlanReadOnly`, cero políticas inline y la huella baseline
-registrada. No fue modificado.
+La llamada `iam:SimulatePrincipalPolicy` devolvió metadatos sanitizados de
+`AccessDenied`. La identidad bootstrap esperada fue verificada previamente por
+STS. No se persistieron `stdout`, `stderr`, IDs completos, ARN completos,
+credenciales, tokens ni códigos MFA.
 
-El rol objetivo `PL003PreflightProvisioningOperator` y el perfil
-`pl003-provisioning-operator` no existen. Los únicos perfiles locales son
-`pl003-bootstrap` y `pl003-plan-operator`. La sesión de plan no puede leer el
-principal bootstrap ni mutar IAM. Usar credenciales bootstrap persistentes o
-privilegios administrativos generales violaría 113.
+## Llamadas y efectos
 
-`iam:GetAccountSummary` también fue denegado. El estado actual de MFA root y
-access keys root no quedó verificado.
-
-## Efectos
-
-- Llamadas AWS read-only: 9.
-- Mutaciones AWS: 0.
-- Roles, policies, boundaries y perfiles creados o modificados: 0.
-- Terraform y recursos PL003: no ejecutados.
+- `sts:GetSessionToken`: 1.
+- `sts:GetCallerIdentity`: 1.
+- `iam:SimulatePrincipalPolicy`: 1.
+- Otras llamadas AWS: 0.
+- Mutaciones IAM: 0.
+- Mutaciones de infraestructura: 0.
+- Terraform: no ejecutado.
 - Product Leadership Test 003: no ejecutado.
 - Product Leadership: inactivo y no integrado.
+- Credenciales efímeras: eliminadas.
 
-## Autoridad y pendientes
+## Evidencia reconciliada
 
-- Autorización 113: `GRANTED_NOT_CONSUMED_BLOCKED_BEFORE_IAM_MUTATION`.
-- Autorización 112: `GRANTED_NOT_CONSUMED_BLOCKED_AT_IAM_SECURITY_GATE`.
-- `PEND-LAB-032`: permanece abierto.
+- El resumen canónico `ATTEMPT-004` conserva precedencia y no fue modificado.
+- Las capturas locales `ATTEMPT-003` y `ATTEMPT-004` fueron preservadas fuera
+  del repositorio antes de publicarse con identidades propias de soporte.
+- La comparación no encontró contradicciones materiales.
+
+## Autoridad y pendiente
+
+- Autorización 118: `CONSUMED`.
+- Autoridad AWS activa: `NONE`.
+- `PEND-LAB-032`: `OPEN_BLOCKED_SIMULATION_ACTION_NOT_AUTHORIZED_NO_ACTIVE_EXECUTION_AUTHORITY`.
 
 ## Evidencia
 
-- `projects/lab/evidence/EVD-LAB-PL003-AWS-BOUNDED-PROVISIONING-OPERATOR-113.json`
-- `projects/lab/evidence/EVD-LAB-PL003-AWS-ROOT-SECURITY-VISIBILITY-113.json`
+- `projects/lab/evidence/EVD-LAB-PL003-AWS-DIAGNOSTIC-PREFLIGHT-118-ATTEMPT-003.json`
+- `projects/lab/analyses/PL003_BOOTSTRAP_SIMULATION_FAILURE_ANALYSIS_001.json`
+- `projects/lab/reconciliations/REC-LAB-PL003-ATTEMPT-004-EVIDENCE-COLLISION-001.json`
 - `projects/lab/pending/PEND-LAB-032.json`
 
 ## Siguiente acción única
 
-Proveer un rol temporal, MFA-backed y delimitado de configuración IAM capaz de
-ejecutar 113, sin modificar `PL003PreflightPlanOperator` ni usar credenciales
-bootstrap persistentes.
+Decidir y autorizar separadamente una vía mínima para permitir
+`iam:SimulatePrincipalPolicy` al principal bootstrap esperado o seleccionar
+otro principal delimitado compatible, sin reutilizar la autorización 118.

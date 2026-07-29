@@ -1,0 +1,92 @@
+{
+    "schema_version":  "1.0.0",
+    "evidence_id":  "EVD-LAB-PL003-AWS-DIAGNOSTIC-PREFLIGHT-118-ATTEMPT-003",
+    "attempt_id":  "ATTEMPT-003",
+    "authorization_id":  "AUTHORIZATION_LAB_PL003_CODEX_BOOTSTRAP_DIAGNOSTIC_EXECUTION_118",
+    "project_id":  "lab",
+    "kind":  "REDACTED_AWS_BOOTSTRAP_DIAGNOSTIC_PREFLIGHT_EVIDENCE",
+    "status":  "DIAGNOSTIC_COMPLETE",
+    "executed_at":  "2026-07-29T12:22:10Z",
+    "repository":  "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "branch_mode":  "DETACHED_HEAD",
+    "execution_head":  "1ea1e547a4a9ef1f284759ed0188da6bef4c1e59",
+    "original_checkout":  {
+                              "status":  "OUTDATED_WITH_TWO_UNTRACKED_LOCAL_EVIDENCE_FILES",
+                              "local_evidence_preserved_outside_repository":  true,
+                              "treated_as_canonical_before_reconciliation":  false
+                          },
+    "isolated_worktree":  {
+                              "clean_before_execution":  true,
+                              "external_preservation_used_as_configuration_or_operational_input":  false
+                          },
+    "prechecks":  {
+                      "head":  "PASS",
+                      "worktree":  "PASS",
+                      "aws_cli":  "PASS",
+                      "cli_history_disabled":  "PASS",
+                      "inherited_temporary_credentials_absent":  "PASS",
+                      "reusable_temporary_profiles_absent":  "PASS",
+                      "bootstrap_profile":  "PASS",
+                      "mfa_reference":  "PASS",
+                      "synthetic_classifier":  "PASS"
+                  },
+    "diagnostic":  {
+                       "tested_action":  "iam:CreatePolicy",
+                       "tested_resource_shape":  "IAM_POLICY_PL003_SETUP_BOUNDARY",
+                       "context_key_names":  [
+                                                 "aws:MultiFactorAuthPresent",
+                                                 "aws:RequestTag/Project",
+                                                 "aws:RequestTag/Authorization",
+                                                 "aws:RequestTag/Temporary"
+                                             ],
+                       "sanitized_call_metadata":  {
+                                                       "exit_code":  254,
+                                                       "service":  "iam",
+                                                       "operation":  "SimulatePrincipalPolicy",
+                                                       "aws_error_code":  "AccessDenied",
+                                                       "exception_class":  "AWS_CLI_SERVICE_ERROR",
+                                                       "http_status":  null,
+                                                       "stderr_captured_in_memory":  true,
+                                                       "stdout_captured_in_memory":  true,
+                                                       "stderr_persisted":  false,
+                                                       "stdout_persisted":  false
+                                                   },
+                       "classification":  "SIMULATION_ACTION_NOT_AUTHORIZED"
+                   },
+    "aws_calls":  {
+                      "sts_get_session_token":  1,
+                      "sts_get_caller_identity":  1,
+                      "iam_simulate_principal_policy":  1,
+                      "other_aws":  0
+                  },
+    "zero_mutation_attestation":  {
+                                      "iam_mutations":  0,
+                                      "infrastructure_mutations":  0,
+                                      "terraform_executions":  0,
+                                      "product_leadership_test_003_executions":  0,
+                                      "product_leadership_active":  false,
+                                      "product_leadership_integrated":  false
+                                  },
+    "ephemeral_credentials_cleared":  true,
+    "post_execution_validation":  {
+                                      "process_credential_variable_count":  0,
+                                      "reusable_temporary_profile_count":  0,
+                                      "cli_history_enabled":  false,
+                                      "diagnostic_process_exited":  true,
+                                      "secret_scan":  "PASS",
+                                      "json_parse":  "PASS"
+                                  },
+    "failure_code":  null,
+    "result":  "PASS_CLASSIFIED",
+    "redaction":  {
+                      "full_account_id_included":  false,
+                      "full_principal_arns_included":  false,
+                      "access_keys_included":  false,
+                      "secret_access_keys_included":  false,
+                      "session_tokens_included":  false,
+                      "mfa_codes_included":  false,
+                      "request_ids_included":  false,
+                      "raw_stdout_or_stderr_persisted":  false
+                  },
+    "post_attempt_authority":  "NONE"
+}

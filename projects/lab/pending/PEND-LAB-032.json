@@ -2,9 +2,9 @@
   "schema_version": "1.0.0",
   "id": "PEND-LAB-032",
   "project_id": "lab",
-  "status": "OPEN_BLOCKED_NO_ACTIVE_EXECUTION_AUTHORITY",
+  "status": "OPEN_BLOCKED_SIMULATION_ACTION_NOT_AUTHORIZED_NO_ACTIVE_EXECUTION_AUTHORITY",
   "type": "PL003_AWS_PROVISIONING_OPERATOR_PERMISSION_BOUNDARY",
-  "subject": "Resolve bootstrap simulation availability or denial under a newly authorized bounded path before any AWS provisioning or Product Leadership Test 003 execution",
+  "subject": "Resolve the confirmed lack of authorization for iam:SimulatePrincipalPolicy before any AWS provisioning or Product Leadership Test 003 execution",
   "priority": "HIGH",
   "source_execution": "projects/lab/test-executions/PRODUCT-LEADERSHIP-TEST-003-AWS-PREFLIGHT-EXECUTION-002/MANIFEST.json",
   "source_evidence": "projects/lab/evidence/EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A-ATTEMPT-004.json",
@@ -16,9 +16,12 @@
     "No AWS infrastructure mutation occurred.",
     "Terraform was not executed.",
     "Product Leadership Test 003 was not executed.",
-    "Product Leadership remains inactive and not integrated."
+    "Product Leadership remains inactive and not integrated.",
+    "Authorization 118 classified the historical bootstrap simulation failure as SIMULATION_ACTION_NOT_AUTHORIZED.",
+    "Authorization 118 used one GetSessionToken, one GetCallerIdentity and one SimulatePrincipalPolicy call, with zero other AWS calls and zero mutations.",
+    "All authorization 118 temporary credentials were cleared."
   ],
-  "stop_condition": "BOOTSTRAP_SIMULATION_UNAVAILABLE_OR_DENIED",
+  "stop_condition": "SIMULATION_ACTION_NOT_AUTHORIZED",
   "authorization_112_status": "GRANTED_NOT_CONSUMED_BLOCKED_NO_ACTIVE_EXECUTION_AUTHORITY",
   "authorization_113_status": "GRANTED_NOT_CONSUMED_BLOCKED_NO_ACTIVE_EXECUTION_AUTHORITY",
   "authorization_114_status": "NOT_RESUMABLE_WITHOUT_NEW_EXPLICIT_AUTHORIZATION",
@@ -35,9 +38,19 @@
     "product_leadership_test_003_executed": false,
     "evidence_ref": "projects/lab/evidence/EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A-ATTEMPT-004.json"
   },
+  "authorization_118_diagnostic": {
+    "status": "DIAGNOSTIC_COMPLETE_AUTHORIZATION_CONSUMED",
+    "classification": "SIMULATION_ACTION_NOT_AUTHORIZED",
+    "evidence_ref": "projects/lab/evidence/EVD-LAB-PL003-AWS-DIAGNOSTIC-PREFLIGHT-118-ATTEMPT-003.json",
+    "sts_get_session_token_calls": 1,
+    "sts_get_caller_identity_calls": 1,
+    "iam_simulate_principal_policy_calls": 1,
+    "other_aws_calls": 0,
+    "aws_mutations": 0,
+    "ephemeral_credentials_cleared": true
+  },
   "required_resolution": [
-    "Determine the exact read-only cause of bootstrap simulation being unavailable or denied.",
-    "Design a bounded successor authorization that does not reuse authorization 114A.",
+    "Decide whether to grant only iam:SimulatePrincipalPolicy to the expected bootstrap principal or select another bounded supported principal under a separate explicit authorization.",
     "Preserve MFA-backed ephemeral credentials and existing permission boundaries.",
     "Require a successful pre-mutation simulation gate before any IAM or infrastructure mutation.",
     "Keep Product Leadership Test 003 inactive until separately authorized after the AWS preflight is valid."
@@ -52,5 +65,5 @@
     "PUBLISH_CREDENTIALS_TOKENS_MFA_CODES_SECRETS_OR_FULL_ACCOUNT_ID"
   ],
   "active_execution_authority": "NONE",
-  "next_action": "OBTAIN_NEW_EXPLICIT_AUTHORIZATION_FOR_READ_ONLY_ROOT_CAUSE_ANALYSIS_AND_SUCCESSOR_PREFLIGHT_DESIGN"
+  "next_action": "DECIDE_AND_SEPARATELY_AUTHORIZE_A_MINIMUM_SIMULATION_PERMISSION_PATH_WITHOUT_REUSING_118"
 }

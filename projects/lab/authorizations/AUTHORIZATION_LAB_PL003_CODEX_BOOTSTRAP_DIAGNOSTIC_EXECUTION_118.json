@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_PL003_CODEX_BOOTSTRAP_DIAGNOSTIC_EXECUTION_118",
   "project_id": "lab",
-  "status": "GRANTED",
+  "status": "CONSUMED",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-07-29",
   "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
@@ -96,6 +96,28 @@
     "supporting_local_captures_change_state_automatically": false,
     "reconciliation_ref": "projects/lab/reconciliations/REC-LAB-PL003-ATTEMPT-004-EVIDENCE-COLLISION-001.json"
   },
+  "execution_result": {
+    "status": "DIAGNOSTIC_COMPLETE",
+    "classification": "SIMULATION_ACTION_NOT_AUTHORIZED",
+    "aws_error_code": "AccessDenied",
+    "diagnostic_evidence": "projects/lab/evidence/EVD-LAB-PL003-AWS-DIAGNOSTIC-PREFLIGHT-118-ATTEMPT-003.json",
+    "pre_mfa_attempt_evidence": [
+      "projects/lab/evidence/EVD-LAB-PL003-AWS-DIAGNOSTIC-PREFLIGHT-118-ATTEMPT-001.json",
+      "projects/lab/evidence/EVD-LAB-PL003-AWS-DIAGNOSTIC-PREFLIGHT-118-ATTEMPT-002.json"
+    ],
+    "aws_calls": {
+      "sts_get_session_token": 1,
+      "sts_get_caller_identity": 1,
+      "iam_simulate_principal_policy": 1,
+      "other_aws": 0
+    },
+    "aws_mutations": 0,
+    "terraform_executions": 0,
+    "product_leadership_test_003_executions": 0,
+    "ephemeral_credentials_cleared": true
+  },
+  "consumed_at": "2026-07-29",
+  "consumption_reason": "MINIMUM_READ_ONLY_DIAGNOSTIC_COMPLETED_WITH_SIMULATION_ACTION_NOT_AUTHORIZED_ZERO_MUTATIONS_AND_CREDENTIAL_CLEANUP",
   "consumption_criterion": "CONSUMED_AFTER_RECONCILIATION_AND_MINIMUM_READ_ONLY_DIAGNOSTIC_EVIDENCE_ARE_PUBLISHED_ALL_EPHEMERAL_CREDENTIALS_ARE_CLEARED_ZERO_MUTATIONS_ARE_ATTESTED_AND_FINAL_REMOTE_HEAD_IS_VERIFIED",
   "post_consumption_authority": "NONE"
 }

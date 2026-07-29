@@ -6,7 +6,7 @@
   "authorization": {
     "id": "AUTHORIZATION_LAB_PL003_CODEX_BOOTSTRAP_DIAGNOSTIC_EXECUTION_118",
     "path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_CODEX_BOOTSTRAP_DIAGNOSTIC_EXECUTION_118.json",
-    "status": "GRANTED"
+    "status": "CONSUMED"
   },
   "implementation": {
     "diagnostic_script": "projects/lab/scripts/Invoke-PL003BootstrapDiagnosticPreflight.ps1",
@@ -34,16 +34,49 @@
     "path": "projects/lab/reconciliations/REC-LAB-PL003-ATTEMPT-004-EVIDENCE-COLLISION-001.json",
     "result": "COMPLETE_NO_MATERIAL_CONTRADICTION"
   },
+  "diagnostic_evidence": [
+    {
+      "id": "EVD-LAB-PL003-AWS-DIAGNOSTIC-PREFLIGHT-118-ATTEMPT-001",
+      "path": "projects/lab/evidence/EVD-LAB-PL003-AWS-DIAGNOSTIC-PREFLIGHT-118-ATTEMPT-001.json",
+      "status": "BLOCKED_BEFORE_MFA",
+      "aws_calls": 0
+    },
+    {
+      "id": "EVD-LAB-PL003-AWS-DIAGNOSTIC-PREFLIGHT-118-ATTEMPT-002",
+      "path": "projects/lab/evidence/EVD-LAB-PL003-AWS-DIAGNOSTIC-PREFLIGHT-118-ATTEMPT-002.json",
+      "status": "BLOCKED_BEFORE_MFA",
+      "aws_calls": 0
+    },
+    {
+      "id": "EVD-LAB-PL003-AWS-DIAGNOSTIC-PREFLIGHT-118-ATTEMPT-003",
+      "path": "projects/lab/evidence/EVD-LAB-PL003-AWS-DIAGNOSTIC-PREFLIGHT-118-ATTEMPT-003.json",
+      "status": "DIAGNOSTIC_COMPLETE",
+      "classification": "SIMULATION_ACTION_NOT_AUTHORIZED",
+      "aws_calls": {
+        "sts_get_session_token": 1,
+        "sts_get_caller_identity": 1,
+        "iam_simulate_principal_policy": 1,
+        "other_aws": 0
+      }
+    }
+  ],
   "state_effect": {
     "canonical_attempt_004_summary_modified": false,
     "material_contradictions": "NONE",
-    "active_execution_authority": "AUTHORIZATION_LAB_PL003_CODEX_BOOTSTRAP_DIAGNOSTIC_EXECUTION_118",
-    "aws_calls": 0,
+    "diagnostic_classification": "SIMULATION_ACTION_NOT_AUTHORIZED",
+    "current_blocker": "SIMULATION_ACTION_NOT_AUTHORIZED",
+    "active_execution_authority": "NONE",
+    "aws_calls": {
+      "sts_get_session_token": 1,
+      "sts_get_caller_identity": 1,
+      "iam_simulate_principal_policy": 1,
+      "other_aws": 0
+    },
     "aws_mutations": 0,
     "terraform_executed": false,
     "product_leadership_test_003_executed": false,
     "product_leadership_active": false,
     "product_leadership_integrated": false
   },
-  "authority_effect": "READ_ONLY_DIAGNOSTIC_EXECUTION_118_REMAINS_GRANTED_UNTIL_CONSUMPTION_CRITERION"
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_118_CONSUMPTION"
 }
