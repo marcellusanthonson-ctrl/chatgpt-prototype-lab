@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.0.0",
+  "reconciliation_id": "REC-LAB-PL003-ATTEMPT-004-EVIDENCE-COLLISION-001",
+  "project_id": "lab",
+  "authorization_ref": "AUTHORIZATION_LAB_PL003_CODEX_BOOTSTRAP_DIAGNOSTIC_EXECUTION_118",
+  "status": "COMPLETE_NO_MATERIAL_CONTRADICTION",
+  "effective_at": "2026-07-29",
+  "scope": "PL003_ATTEMPT_003_AND_004_LOCAL_EVIDENCE_PROVENANCE_RECONCILIATION",
+  "source_checkout": {
+    "path_published": false,
+    "head": "46f90d197f31934856e4fa1f55b1cfd87109d4d6",
+    "state": "OUTDATED_WITH_TWO_UNTRACKED_LOCAL_EVIDENCE_FILES",
+    "files_preserved_outside_repository_before_reconciliation": true,
+    "files_treated_as_canonical_before_reconciliation": false
+  },
+  "attempt_004_documents": {
+    "canonical_summary": {
+      "id": "EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A-ATTEMPT-004",
+      "path": "projects/lab/evidence/EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A-ATTEMPT-004.json",
+      "sha256": "cbf1c9e91a569e73c117ad6c5d2d318d85370117bcb4b8cf79122c10918e5c98",
+      "role": "CANONICAL_DOCUMENTARY_SUMMARY"
+    },
+    "preserved_local_capture": {
+      "original_id": "EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A-ATTEMPT-004",
+      "published_id": "EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A-ATTEMPT-004-LOCAL-CAPTURE",
+      "published_path": "projects/lab/evidence/EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A-ATTEMPT-004-LOCAL-CAPTURE.json",
+      "original_sha256": "619de231b7c9e6808d7a5e799ca99fc1f4f8a957bee4af529d27e3874c0a0ab9",
+      "published_capture_sha256": "f2a2a815f9abbd5d0fece0587157f2b05ef7d08ea28d9761377c86eccaddff42",
+      "role": "PRIMARY_LOCAL_CAPTURE_PRESERVED_AFTER_EXECUTION",
+      "original_preserved_intact": true
+    },
+    "hashes_distinct": true,
+    "overwrite_performed": false
+  },
+  "field_comparison": [
+    {
+      "field": "attempt_id",
+      "canonical_summary": "ATTEMPT-004",
+      "local_capture": "ATTEMPT-004",
+      "classification": "SEMANTICALLY_EQUIVALENT"
+    },
+    {
+      "field": "authorization_id",
+      "canonical_summary": "AUTHORIZATION_LAB_PL003_AWS_ONE_TIME_IAM_BOOTSTRAP_114A",
+      "local_capture": "AUTHORIZATION_LAB_PL003_AWS_ONE_TIME_IAM_BOOTSTRAP_114A",
+      "classification": "SEMANTICALLY_EQUIVALENT"
+    },
+    {
+      "field": "status_and_result",
+      "canonical_summary": "BLOCKED_FAIL_CLOSED",
+      "local_capture": "BLOCKED_AFTER_MFA_BEFORE_AWS_MUTATION_AND_BLOCKED",
+      "classification": "SEMANTICALLY_EQUIVALENT"
+    },
+    {
+      "field": "replacement_session_started",
+      "canonical_summary": true,
+      "local_capture": true,
+      "classification": "SEMANTICALLY_EQUIVALENT"
+    },
+    {
+      "field": "replacement_session_count",
+      "canonical_summary": 1,
+      "local_capture": 1,
+      "classification": "SEMANTICALLY_EQUIVALENT"
+    },
+    {
+      "field": "mfa_backed",
+      "canonical_summary": true,
+      "local_capture": true,
+      "classification": "SEMANTICALLY_EQUIVALENT"
+    },
+    {
+      "field": "bootstrap_simulation_completed",
+      "canonical_summary": false,
+      "local_capture": false,
+      "classification": "SEMANTICALLY_EQUIVALENT"
+    },
+    {
+      "field": "failure_code",
+      "canonical_summary": "BOOTSTRAP_SIMULATION_UNAVAILABLE_OR_DENIED",
+      "local_capture": "BOOTSTRAP_SIMULATION_UNAVAILABLE_OR_DENIED",
+      "classification": "SEMANTICALLY_EQUIVALENT"
+    },
+    {
+      "field": "sts_calls",
+      "canonical_summary": "NOT_ENUMERATED",
+      "local_capture": {
+        "get_session_token": 1,
+        "other": 1
+      },
+      "classification": "ADDITIONAL_PRIMARY_DETAIL"
+    },
+    {
+      "field": "iam_simulation_calls",
+      "canonical_summary": "NOT_ENUMERATED",
+      "local_capture": 0,
+      "classification": "ADDITIONAL_PRIMARY_DETAIL"
+    },
+    {
+      "field": "iam_mutations",
+      "canonical_summary": 0,
+      "local_capture": 0,
+      "classification": "SEMANTICALLY_EQUIVALENT"
+    },
+    {
+      "field": "infrastructure_mutations",
+      "canonical_summary": 0,
+      "local_capture": 0,
+      "classification": "SEMANTICALLY_EQUIVALENT"
+    },
+    {
+      "field": "terraform",
+      "canonical_summary": false,
+      "local_capture": false,
+      "classification": "SEMANTICALLY_EQUIVALENT"
+    },
+    {
+      "field": "product_leadership_test_003",
+      "canonical_summary": false,
+      "local_capture": false,
+      "classification": "SEMANTICALLY_EQUIVALENT"
+    },
+    {
+      "field": "product_leadership_active",
+      "canonical_summary": false,
+      "local_capture": false,
+      "classification": "SEMANTICALLY_EQUIVALENT"
+    },
+    {
+      "field": "product_leadership_integrated",
+      "canonical_summary": false,
+      "local_capture": false,
+      "classification": "SEMANTICALLY_EQUIVALENT"
+    },
+    {
+      "field": "credential_persistence",
+      "canonical_summary": "NOT_PERSISTED_AND_NOT_RETAINED",
+      "local_capture": "PROCESS_MEMORY_ONLY_CLEARED_AT_END",
+      "classification": "SEMANTICALLY_EQUIVALENT"
+    },
+    {
+      "field": "post_consumption_authority",
+      "canonical_summary": "NONE",
+      "local_capture": "NOT_EXPLICITLY_RESTATED",
+      "classification": "ADDITIONAL_DOCUMENTARY_DETAIL"
+    },
+    {
+      "field": "source_and_provenance",
+      "canonical_summary": "HUMAN_SUPPLIED_DOCUMENTARY_RECONCILIATION",
+      "local_capture": "LOCAL_PRIMARY_OR_POTENTIALLY_PRIMARY_EXECUTION_CAPTURE",
+      "classification": "ADDITIONAL_PRIMARY_DETAIL"
+    }
+  ],
+  "material_contradictions": [],
+  "material_contradiction_result": "NONE",
+  "attempt_003_disposition": {
+    "canonical_variant_found": false,
+    "published_id": "EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A-ATTEMPT-003-LOCAL-CAPTURE",
+    "published_path": "projects/lab/evidence/EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A-ATTEMPT-003-LOCAL-CAPTURE.json",
+    "original_sha256": "8bbc70199eea83bd1e9bf15c3f0022272563e714551fffff925f28a14bf5097d",
+    "published_capture_sha256": "a2c6aeac222987dfe4167ca0b691c11d2fb38496524cd46e4728adbc1a01dd01",
+    "role": "PRIMARY_LOCAL_CAPTURE_PRESERVED_AFTER_EXECUTION",
+    "state_effect": "NONE_WITHOUT_EXPLICIT_RECONCILIATION",
+    "contains_secrets": false
+  },
+  "precedence": {
+    "canonical_state_owner": "EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A-ATTEMPT-004",
+    "supporting_capture": "EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A-ATTEMPT-004-LOCAL-CAPTURE",
+    "additional_capture_detail_changes_state_automatically": false
+  },
+  "redaction": {
+    "local_files_scanned": true,
+    "secrets_found": false,
+    "redaction_required": false
+  },
+  "result": "BOTH_VARIANTS_PRESERVED_WITHOUT_OVERWRITE_CANONICAL_SUMMARY_RETAINS_PRECEDENCE",
+  "authority_effect": "NONE"
+}

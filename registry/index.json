@@ -9,13 +9,13 @@
     "ideas": 5,
     "integrations": 6,
     "experiments": 8,
-    "authorizations": 68,
-    "evidence": 43,
+    "authorizations": 69,
+    "evidence": 45,
     "unincorporated": 0,
     "proposals": 3,
     "sessions": 1,
     "reassessments": 5,
-    "reconciliations": 6,
+    "reconciliations": 7,
     "test_designs": 6,
     "test_executions": 5,
     "source_packages": 2,
@@ -50,7 +50,8 @@
       "registry/deltas/pl003-aws-bounded-provisioning-operator-113-blocked.json",
       "registry/deltas/pl003-aws-one-time-iam-bootstrap-authorization-114.json",
       "registry/deltas/pl003-aws-one-time-iam-bootstrap-114a.json",
-      "registry/deltas/pl003-attempt-004-documentary-reconciliation-115.json"
+      "registry/deltas/pl003-attempt-004-documentary-reconciliation-115.json",
+      "registry/deltas/pl003-bootstrap-diagnostic-execution-118.json"
     ],
     "evidence": "registry/evidence.json",
     "evidence_deltas": [
@@ -60,7 +61,8 @@
       "registry/deltas/pl003-aws-provisioned-preflight-blocked-112.json",
       "registry/deltas/pl003-aws-provisioned-preflight-blocked-112-attempt-002.json",
       "registry/deltas/pl003-aws-bounded-provisioning-operator-113-blocked.json",
-      "registry/deltas/pl003-attempt-004-documentary-reconciliation-115.json"
+      "registry/deltas/pl003-attempt-004-documentary-reconciliation-115.json",
+      "registry/deltas/pl003-bootstrap-diagnostic-execution-118.json"
     ],
     "current_state": "CURRENT_STATE.json",
     "current_state_deltas": [
@@ -90,7 +92,8 @@
       "projects/lab/reconciliations/REC-LAB-PRODUCT-LEADERSHIP-EXECUTION-002-001.json",
       "projects/lab/reconciliations/REC-LAB-PRODUCT-LEADERSHIP-EXTERNAL-AUDIT-002-002.json",
       "projects/lab/reconciliations/REC-LAB-CLAUDE-AUDIT-TEST-003-003.json",
-      "projects/lab/reconciliations/REC-LAB-PRODUCT-LEADERSHIP-TEST-003-STATE-SYNC-004.json"
+      "projects/lab/reconciliations/REC-LAB-PRODUCT-LEADERSHIP-TEST-003-STATE-SYNC-004.json",
+      "projects/lab/reconciliations/REC-LAB-PL003-ATTEMPT-004-EVIDENCE-COLLISION-001.json"
     ],
     "test_designs": "projects/lab/test-designs/index.json",
     "test_design_deltas": [
@@ -121,18 +124,18 @@
     "decision_path": "decisions/DEC-LAB-022.json",
     "error": "ERR-LAB-007",
     "pattern": "PAT-LAB-009",
-    "authorization": "AUTHORIZATION_LAB_PL003_ATTEMPT_004_DOCUMENTARY_RECONCILIATION_115",
-    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_ATTEMPT_004_DOCUMENTARY_RECONCILIATION_115.json",
-    "evidence": "EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A-ATTEMPT-004",
-    "evidence_path": "projects/lab/evidence/EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A-ATTEMPT-004.json",
+    "authorization": "AUTHORIZATION_LAB_PL003_CODEX_BOOTSTRAP_DIAGNOSTIC_EXECUTION_118",
+    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_CODEX_BOOTSTRAP_DIAGNOSTIC_EXECUTION_118.json",
+    "evidence": "EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A-ATTEMPT-004-LOCAL-CAPTURE",
+    "evidence_path": "projects/lab/evidence/EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A-ATTEMPT-004-LOCAL-CAPTURE.json",
     "current_state_delta": "PL003-ATTEMPT-004-DOCUMENTARY-RECONCILIATION-115",
     "current_state_delta_path": "registry/deltas/pl003-attempt-004-documentary-reconciliation-115.json",
     "experiment": "EXP-LAB-003",
     "proposal": "PROP-LAB-003",
     "session": "SES-2026-06-28-001",
     "reassessment": "REA-LAB-006",
-    "reconciliation": "REC-LAB-PRODUCT-LEADERSHIP-TEST-003-STATE-SYNC-004",
-    "reconciliation_path": "projects/lab/reconciliations/REC-LAB-PRODUCT-LEADERSHIP-TEST-003-STATE-SYNC-004.json",
+    "reconciliation": "REC-LAB-PL003-ATTEMPT-004-EVIDENCE-COLLISION-001",
+    "reconciliation_path": "projects/lab/reconciliations/REC-LAB-PL003-ATTEMPT-004-EVIDENCE-COLLISION-001.json",
     "test_design": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003",
     "pending": "PEND-LAB-032",
     "test_execution": "PRODUCT-LEADERSHIP-TEST-003-AWS-PREFLIGHT-EXECUTION-002",

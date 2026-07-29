@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "PL003-BOOTSTRAP-DIAGNOSTIC-EXECUTION-118",
+  "project_id": "lab",
+  "effective_at": "2026-07-29",
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_PL003_CODEX_BOOTSTRAP_DIAGNOSTIC_EXECUTION_118",
+    "path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_CODEX_BOOTSTRAP_DIAGNOSTIC_EXECUTION_118.json",
+    "status": "GRANTED"
+  },
+  "supporting_evidence": [
+    {
+      "id": "EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A-ATTEMPT-003-LOCAL-CAPTURE",
+      "path": "projects/lab/evidence/EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A-ATTEMPT-003-LOCAL-CAPTURE.json",
+      "role": "PRIMARY_LOCAL_CAPTURE_PRESERVED_AFTER_EXECUTION",
+      "canonical_authority": "SUPPORTING_EVIDENCE_ONLY"
+    },
+    {
+      "id": "EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A-ATTEMPT-004-LOCAL-CAPTURE",
+      "path": "projects/lab/evidence/EVD-LAB-PL003-AWS-REPLACEMENT-SESSION-114A-ATTEMPT-004-LOCAL-CAPTURE.json",
+      "role": "PRIMARY_LOCAL_CAPTURE_PRESERVED_AFTER_EXECUTION",
+      "canonical_authority": "SUPPORTING_EVIDENCE_ONLY"
+    }
+  ],
+  "reconciliation": {
+    "id": "REC-LAB-PL003-ATTEMPT-004-EVIDENCE-COLLISION-001",
+    "path": "projects/lab/reconciliations/REC-LAB-PL003-ATTEMPT-004-EVIDENCE-COLLISION-001.json",
+    "result": "COMPLETE_NO_MATERIAL_CONTRADICTION"
+  },
+  "state_effect": {
+    "canonical_attempt_004_summary_modified": false,
+    "material_contradictions": "NONE",
+    "active_execution_authority": "AUTHORIZATION_LAB_PL003_CODEX_BOOTSTRAP_DIAGNOSTIC_EXECUTION_118",
+    "aws_calls": 0,
+    "aws_mutations": 0,
+    "terraform_executed": false,
+    "product_leadership_test_003_executed": false,
+    "product_leadership_active": false,
+    "product_leadership_integrated": false
+  },
+  "authority_effect": "READ_ONLY_DIAGNOSTIC_EXECUTION_118_REMAINS_GRANTED_UNTIL_CONSUMPTION_CRITERION"
+}
