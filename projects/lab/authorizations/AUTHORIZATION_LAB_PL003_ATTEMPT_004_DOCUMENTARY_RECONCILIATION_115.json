@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_ATTEMPT_004_DOCUMENTARY_RECONCILIATION_115",
+  "project_id": "lab",
+  "status": "CONSUMED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-29",
+  "historical_parent_head": "46f90d197f31934856e4fa1f55b1cfd87109d4d6",
+  "execution_head_policy": "VERIFY_LIVE_AT_USE",
+  "objective": "Register and publish the redacted canonical reconciliation of PL003 ATTEMPT-004 without executing AWS, IAM mutation, Terraform, or Product Leadership Test 003.",
+  "authorized_actions": [
+    "REGISTER_REDACTED_ATTEMPT_004_EVIDENCE",
+    "MARK_AUTHORIZATION_114A_CONSUMED",
+    "REGISTER_BOOTSTRAP_SIMULATION_UNAVAILABLE_OR_DENIED",
+    "UPDATE_ONLY_REQUIRED_CANONICAL_STATE_INDEX_PENDING_AND_CONTINUITY_REFERENCES",
+    "VALIDATE_AND_PUBLISH_DOCUMENTARY_RECONCILIATION"
+  ],
+  "forbidden_actions": [
+    "EXECUTE_ANY_AWS_COMMAND",
+    "START_OR_REUSE_ANY_MFA_SESSION",
+    "EXECUTE_IAM_SIMULATION_OR_MUTATION",
+    "EXECUTE_TERRAFORM",
+    "EXECUTE_PRODUCT_LEADERSHIP_TEST_003",
+    "ACTIVATE_OR_INTEGRATE_PRODUCT_LEADERSHIP",
+    "EXPAND_AUTHORIZATIONS_112_113_114_OR_114A",
+    "PUBLISH_CREDENTIALS_TOKENS_MFA_CODES_SECRETS_FULL_ACCOUNT_ID_OR_UNNECESSARY_FULL_ARNS"
+  ],
+  "required_effect": {
+    "authorization_114a_status": "CONSUMED",
+    "attempt_004_status": "BLOCKED_FAIL_CLOSED",
+    "current_blocker": "BOOTSTRAP_SIMULATION_UNAVAILABLE_OR_DENIED",
+    "aws_iam_mutations": 0,
+    "aws_infrastructure_mutations": 0,
+    "terraform_executed": false,
+    "product_leadership_test_003_executed": false,
+    "product_leadership_active": false,
+    "product_leadership_integrated": false,
+    "active_execution_authority": "NONE"
+  },
+  "consumption_criterion": "Consumed on verified remote publication of the complete ATTEMPT-004 documentary reconciliation.",
+  "consumption_effect": "NO_EXECUTION_AUTHORITY_REMAINS",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "aws_effect": "NONE"
+}
