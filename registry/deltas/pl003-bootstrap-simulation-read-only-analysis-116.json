@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "PL003-BOOTSTRAP-SIMULATION-READ-ONLY-ANALYSIS-116",
+  "project_id": "lab",
+  "effective_at": "2026-07-29",
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_PL003_BOOTSTRAP_SIMULATION_FAILURE_READ_ONLY_ANALYSIS_116",
+    "status": "CONSUMED",
+    "path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_BOOTSTRAP_SIMULATION_FAILURE_READ_ONLY_ANALYSIS_116.json"
+  },
+  "analysis": "projects/lab/analyses/PL003_BOOTSTRAP_SIMULATION_FAILURE_ANALYSIS_001.json",
+  "preflight_design": "projects/lab/preflight-designs/PL003_BOOTSTRAP_DIAGNOSTIC_PREFLIGHT_001.json",
+  "successor_brief": "projects/lab/briefs/CODEX_PL003_BOOTSTRAP_DIAGNOSTIC_PREFLIGHT_EXECUTION_117.json",
+  "state_effect": {
+    "confirmed_diagnostic_defect": "SCRIPT_ERROR_CLASSIFICATION_TOO_BROAD",
+    "aws_side_root_cause": "INSUFFICIENT_EVIDENCE_TO_DISCRIMINATE",
+    "authorization_114a": "CONSUMED",
+    "aws_calls_under_116": 0,
+    "iam_mutations": 0,
+    "terraform_executed": false,
+    "product_leadership_test_003_executed": false,
+    "active_execution_authority": "NONE"
+  },
+  "single_next_action": "DECIDE_WHETHER_TO_GRANT_ONE_READ_ONLY_DIAGNOSTIC_PREFLIGHT_EXECUTION_117"
+}
