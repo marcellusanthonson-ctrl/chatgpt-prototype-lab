@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_CREATE_BOUNDED_SETUP_ROLE_COMPATIBILITY_123",
+  "project_id": "lab",
+  "status": "GRANTED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-29",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "2167580e2b1447a448d0c4b24256601e24fb27a0",
+  "execution_head_policy": "VERIFY_LIVE_AT_USE",
+  "objective": "Create one dedicated permission boundary and PL003BoundedSimulationSetupOperator with exact bootstrap-user-and-MFA trust, an exact minimum inline role policy, CreateRole MaxSessionDuration 3600, one operational AssumeRole request for 900 seconds, complete read-only verification, and no modification of the bootstrap user.",
+  "authorized_aws_mutations": [
+    "CREATE_ONE_DEDICATED_PERMISSION_BOUNDARY_MANAGED_POLICY",
+    "CREATE_ROLE_PL003BoundedSimulationSetupOperator",
+    "PUT_ONE_MINIMUM_INLINE_ROLE_POLICY",
+    "COMPENSATING_DELETE_ONLY_FOR_PARTIAL_ARTIFACTS_CREATED_BY_THIS_EXECUTION_IF_TERMINAL_FAILURE_OCCURS"
+  ],
+  "authorized_verification": [
+    "SYNTHETIC_DOCUMENT_AND_IMPLEMENTATION_TESTS",
+    "STS_GET_SESSION_TOKEN_ONCE_FOR_CREATOR_MFA_SESSION",
+    "STS_GET_CALLER_IDENTITY_ONCE_FOR_CREATOR_REDACTED_VERIFICATION",
+    "IAM_GET_POLICY_EXACT_BOUNDARY_COLLISION_PREFLIGHT",
+    "IAM_GET_ROLE_EXACT_ROLE_COLLISION_PREFLIGHT",
+    "MINIMUM_IAM_READS_TO_VERIFY_CREATED_BOUNDARY_ROLE_TRUST_AND_INLINE_ROLE_POLICY",
+    "ASSUME_ROLE_ONCE_FOR_EXACTLY_900_SECONDS",
+    "STS_GET_CALLER_IDENTITY_ONCE_FROM_ASSUMED_ROLE",
+    "LIST_BOOTSTRAP_INLINE_POLICIES_BASELINE_ONCE_FROM_ASSUMED_ROLE",
+    "CLEAR_ALL_EPHEMERAL_CREDENTIALS",
+    "PUBLISH_REDACTED_EVIDENCE_AND_CANONICAL_CONTINUITY",
+    "COMMIT_PUSH_AND_VERIFY_FINAL_REMOTE_HEAD"
+  ],
+  "required_role": {
+    "name": "PL003BoundedSimulationSetupOperator",
+    "create_role_maximum_session_duration_seconds": 3600,
+    "assume_role_duration_seconds": 900,
+    "trust": "EXACT_BOOTSTRAP_USER_AND_MFA_ONLY",
+    "permission_boundary": "PL003BoundedSimulationSetupBoundary122",
+    "inline_policy": "PL003BoundedSimulationSetupRolePolicy122",
+    "allowed_actions_on_exact_bootstrap_user": [
+      "iam:ListUserPolicies",
+      "iam:GetUserPolicy",
+      "iam:PutUserPolicy",
+      "iam:DeleteUserPolicy"
+    ]
+  },
+  "call_limits": {
+    "sts_get_session_token": 1,
+    "sts_get_caller_identity_creator": 1,
+    "sts_assume_role": 1,
+    "sts_get_caller_identity_role": 1,
+    "iam_collision_reads": 2,
+    "iam_creation_mutations": 3,
+    "iam_verification_reads": "MINIMUM_STRICT",
+    "iam_list_bootstrap_user_policies": 1,
+    "bootstrap_user_mutations": 0,
+    "iam_simulate_principal_policy": 0,
+    "other_aws": 0
+  },
+  "rollback_contract": {
+    "scope": "ONLY_ARTIFACTS_CREATED_BY_AUTHORIZATION_123",
+    "order_after_partial_failure": [
+      "DELETE_ROLE_POLICY_IF_CREATED",
+      "DELETE_ROLE_IF_CREATED",
+      "DELETE_BOUNDARY_POLICY_IF_CREATED"
+    ],
+    "do_not_delete_preexisting_artifacts": true,
+    "fail_closed_if_cleanup_cannot_be_completed": true
+  },
+  "forbidden_actions": [
+    "PUT_OR_DELETE_POLICY_ON_BOOTSTRAP_USER",
+    "IAM_SIMULATE_PRINCIPAL_POLICY",
+    "ROOT",
+    "ADMINISTRATOR_ACCESS",
+    "IAM_FULL_ACCESS",
+    "POWER_USER_ACCESS",
+    "CREATE_ACCESS_KEY",
+    "ANY_OTHER_MANAGED_POLICY",
+    "IAM_ACTION_WILDCARD",
+    "PERMISSIONS_ON_OTHER_IDENTITIES",
+    "IAM_PASS_ROLE",
+    "TERRAFORM",
+    "PROVISIONING",
+    "PRODUCT_LEADERSHIP_TEST_003",
+    "PRODUCT_LEADERSHIP_ACTIVATION_OR_INTEGRATION",
+    "CREDENTIAL_OR_SECRET_PERSISTENCE",
+    "REUSE_AUTHORIZATIONS_118_119_120_121_OR_122"
+  ],
+  "stop_conditions": [
+    "REMOTE_HEAD_MISMATCH",
+    "WORKTREE_NOT_CLEAN",
+    "INHERITED_EXECUTION_AUTHORITY_DETECTED",
+    "PREEXISTING_TEMPORARY_CREDENTIALS",
+    "REUSABLE_TEMPORARY_PROFILE_CREDENTIALS",
+    "CLI_HISTORY_ENABLED",
+    "LOCAL_TEST_OR_DOCUMENT_VALIDATION_FAILURE",
+    "CREATOR_PRINCIPAL_MISMATCH",
+    "ROLE_OR_BOUNDARY_COLLISION",
+    "EFFECTIVE_DOCUMENT_OR_DURATION_MISMATCH",
+    "UNEXPECTED_PERMISSION_OR_IDENTITY_SCOPE",
+    "ASSUME_ROLE_OR_ROLE_IDENTITY_VERIFICATION_FAILURE",
+    "BOOTSTRAP_BASELINE_READ_FAILURE",
+    "CREDENTIAL_CLEANUP_FAILURE",
+    "UNEXPECTED_MUTATION",
+    "UNREDACTABLE_SENSITIVE_INFORMATION",
+    "PARTIAL_RESOURCE_CLEANUP_FAILURE"
+  ],
+  "implementation": {
+    "script": "projects/lab/scripts/Invoke-PL003CreateBoundedSetupRoleCompatibility123.ps1",
+    "synthetic_tests": "projects/lab/scripts/tests/Invoke-PL003CreateBoundedSetupRoleCompatibility123.Tests.ps1"
+  },
+  "response_contract": [
+    "INITIAL_HEAD",
+    "REDACTED_CREATOR_IDENTITY",
+    "DOCUMENT_NAMES_AND_HASHES",
+    "SYNTHETIC_AND_DOCUMENT_VALIDATION",
+    "COLLISION_PREFLIGHT",
+    "BOUNDARY_CREATION_RESULT",
+    "ROLE_AND_INLINE_POLICY_CREATION_RESULT",
+    "TRUST_BOUNDARY_PERMISSION_AND_PRIVILEGE_VALIDATION",
+    "ASSUME_ROLE_RESULT",
+    "ASSUMED_ROLE_CALLER_IDENTITY_RESULT",
+    "BOOTSTRAP_INLINE_POLICY_BASELINE_RESULT",
+    "EXACT_CALLS_MUTATIONS_AND_ZERO_BOOTSTRAP_CHANGES",
+    "VALIDATIONS_FILES_COMMIT_AND_FINAL_REMOTE_HEAD",
+    "SINGLE_NEXT_RECOMMENDED_ACTION"
+  ],
+  "consumption_criterion": "CONSUMED_AFTER_A_TERMINAL_EXECUTION_RESULT_IS_PUBLISHED_ALL_EPHEMERAL_CREDENTIALS_ARE_CLEARED_BOOTSTRAP_USER_MUTATIONS_REMAIN_ZERO_AND_FINAL_REMOTE_HEAD_IS_VERIFIED",
+  "post_consumption_authority": "NONE"
+}
