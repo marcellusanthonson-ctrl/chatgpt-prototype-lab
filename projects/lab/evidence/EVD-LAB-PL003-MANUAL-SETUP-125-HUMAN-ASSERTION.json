@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-PL003-MANUAL-SETUP-125-HUMAN-ASSERTION",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_MANUAL_SETUP_EVIDENCE_AND_ATOMIC_SIMULATION_CYCLE_125",
+  "project_id": "lab",
+  "kind": "HUMAN_ASSERTION_PENDING_PROGRAMMATIC_VERIFICATION",
+  "status": "PENDING_PROGRAMMATIC_VERIFICATION",
+  "asserted_by": "Jonathan Martínez",
+  "asserted_at": "2026-07-29",
+  "assertions": {
+    "role_name": "PL003BoundedSimulationSetupOperator",
+    "boundary_name": "PL003BoundedSimulationSetupBoundary125",
+    "inline_role_policy_name": "PL003BoundedSimulationSetupRolePolicy125",
+    "maximum_session_duration_seconds": 3600,
+    "trust": "EXACT_BOOTSTRAP_USER_WITH_MFA",
+    "attached_normal_managed_policy_count": 0,
+    "manual_bootstrap_mutations": 0
+  },
+  "verification_status": {
+    "role_assumable_by_exact_bootstrap_with_mfa": "PENDING",
+    "assume_role_duration_900": "PENDING",
+    "role_identity": "PENDING",
+    "role_can_list_bootstrap_inline_policies": "PENDING",
+    "role_can_apply_and_remove_exact_temporary_policy": "PENDING",
+    "trust_document_direct_read": "NOT_AUTHORIZED_BY_125",
+    "boundary_document_direct_read": "NOT_AUTHORIZED_BY_125",
+    "inline_role_policy_direct_read": "NOT_AUTHORIZED_BY_125",
+    "attached_managed_policies_direct_read": "NOT_AUTHORIZED_BY_125",
+    "manual_bootstrap_mutation_count_direct_verification": "NOT_INDEPENDENTLY_VERIFIABLE_BY_125"
+  },
+  "claim_limit": "HUMAN_ASSERTION_ONLY_UNTIL_SUPPORTED_BY_AUTHORIZATION_125_PROGRAMMATIC_RESULTS",
+  "authority_effect": "NONE"
+}

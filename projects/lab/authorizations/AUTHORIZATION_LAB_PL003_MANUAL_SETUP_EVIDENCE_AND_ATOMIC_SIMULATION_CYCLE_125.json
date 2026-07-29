@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_MANUAL_SETUP_EVIDENCE_AND_ATOMIC_SIMULATION_CYCLE_125",
+  "project_id": "lab",
+  "status": "GRANTED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-29",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "e44af74834d954aaa39b624ee999cb7e8de36545",
+  "execution_head_policy": "VERIFY_LIVE_AT_USE",
+  "objective": "Record the manual PL003 setup assertion as pending programmatic verification, then execute one isolated MFA-backed atomic temporary iam:SimulatePrincipalPolicy permission cycle through the manually created bounded setup role with mandatory rollback and zero persistent bootstrap changes.",
+  "manual_setup_assertion_evidence": "projects/lab/evidence/EVD-LAB-PL003-MANUAL-SETUP-125-HUMAN-ASSERTION.json",
+  "target": {
+    "bootstrap_user": "EXACT_PREVIOUSLY_VERIFIED_BOOTSTRAP_USER",
+    "role_name": "PL003BoundedSimulationSetupOperator",
+    "boundary_name": "PL003BoundedSimulationSetupBoundary125",
+    "role_inline_policy_name": "PL003BoundedSimulationSetupRolePolicy125",
+    "temporary_bootstrap_policy_name": "PL003AtomicSimulationOnly125",
+    "role_maximum_session_duration_seconds": 3600,
+    "assume_role_duration_seconds": 900
+  },
+  "temporary_policy": {
+    "mechanism": "INLINE_USER_POLICY",
+    "name": "PL003AtomicSimulationOnly125",
+    "document": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Sid": "AtomicPL003SimulationOnly125",
+          "Effect": "Allow",
+          "Action": "iam:SimulatePrincipalPolicy",
+          "Resource": "*"
+        }
+      ]
+    },
+    "additional_actions_allowed": 0
+  },
+  "session_separation": {
+    "bootstrap_session": [
+      "STS_GET_CALLER_IDENTITY",
+      "STS_ASSUME_ROLE",
+      "IAM_SIMULATE_PRINCIPAL_POLICY"
+    ],
+    "assumed_role_session": [
+      "STS_GET_CALLER_IDENTITY",
+      "IAM_LIST_USER_POLICIES_BASELINE_AND_FINAL",
+      "IAM_PUT_EXACT_TEMPORARY_USER_POLICY",
+      "IAM_DELETE_EXACT_TEMPORARY_USER_POLICY",
+      "IAM_GET_EXACT_TEMPORARY_USER_POLICY_FOR_FINAL_ABSENCE"
+    ],
+    "credential_mixing_allowed": false
+  },
+  "atomic_sequence": [
+    "RUN_SYNTHETIC_TESTS",
+    "START_ONE_BOOTSTRAP_MFA_SESSION",
+    "VERIFY_BOOTSTRAP_IDENTITY_REDACTED",
+    "ASSUME_EXACT_ROLE_ONCE_FOR_900_SECONDS",
+    "VERIFY_ASSUMED_ROLE_IDENTITY_REDACTED",
+    "LIST_BOOTSTRAP_INLINE_POLICIES_BASELINE",
+    "CONFIRM_PL003AtomicSimulationOnly125_ABSENT",
+    "PUT_EXACT_TEMPORARY_INLINE_POLICY_ONCE_FROM_ROLE",
+    "SIMULATE_PRINCIPAL_POLICY_ONCE_FROM_BOOTSTRAP_WITHOUT_EXECUTING_SIMULATED_ACTION",
+    "DELETE_USER_POLICY_AS_FIRST_FINALLY_AWS_OPERATION_AFTER_ANY_PUT_ATTEMPT",
+    "GET_USER_POLICY_FINAL_EXPECT_NO_SUCH_ENTITY",
+    "LIST_USER_POLICIES_FINAL_AND_COMPARE_TO_BASELINE",
+    "CLEAR_ALL_TEMPORARY_CREDENTIALS"
+  ],
+  "call_limits": {
+    "sts_get_session_token": 1,
+    "sts_get_caller_identity_bootstrap": 1,
+    "sts_assume_role": 1,
+    "sts_get_caller_identity_role": 1,
+    "iam_list_user_policies": 2,
+    "iam_get_user_policy": 1,
+    "iam_put_user_policy": 1,
+    "iam_simulate_principal_policy": 1,
+    "iam_delete_user_policy": 1,
+    "other_aws": 0
+  },
+  "rollback_contract": {
+    "delete_after_any_put_attempt": true,
+    "delete_is_first_finally_aws_operation": true,
+    "final_exact_name_absence_required": true,
+    "final_inline_policy_set_must_equal_baseline": true,
+    "stop_as_active_iam_incident_if_not_verified": true
+  },
+  "forbidden_actions": [
+    "TERRAFORM",
+    "PROVISIONING",
+    "PRODUCT_LEADERSHIP_TEST_003",
+    "PRODUCT_LEADERSHIP_ACTIVATION_OR_INTEGRATION",
+    "MODIFY_ROLE_TRUST_BOUNDARY_OR_ROLE_POLICY",
+    "CREATE_IDENTITIES_OR_ACCESS_KEYS",
+    "ANY_OTHER_IAM_ACTION",
+    "PERSIST_CREDENTIALS",
+    "EXECUTE_THE_SIMULATED_ACTION",
+    "LEAVE_TEMPORARY_BOOTSTRAP_POLICY_PRESENT",
+    "PUBLISH_SECRETS_OR_FULL_IDENTIFIERS",
+    "REUSE_AUTHORIZATIONS_118_119_120_121_122_123_OR_124"
+  ],
+  "stop_conditions": [
+    "HEAD_MISMATCH",
+    "WORKTREE_NOT_CLEAN",
+    "LOCAL_SYNTHETIC_TEST_FAILURE",
+    "PREEXISTING_TEMPORARY_CREDENTIALS",
+    "BOOTSTRAP_IDENTITY_MISMATCH",
+    "ASSUME_ROLE_FAILED",
+    "ASSUMED_ROLE_IDENTITY_MISMATCH",
+    "BASELINE_READ_FAILED",
+    "EXISTING_TEMPORARY_POLICY_COLLISION",
+    "TEMPORARY_POLICY_GRANT_FAILED",
+    "SIMULATION_CALL_FAILED",
+    "ROLLBACK_DELETE_FAILED",
+    "FINAL_POLICY_ABSENCE_NOT_VERIFIED",
+    "FINAL_INLINE_POLICY_SET_DIFFERS_FROM_BASELINE",
+    "CREDENTIAL_CLEANUP_FAILED",
+    "UNEXPECTED_AWS_OPERATION_OR_MUTATION",
+    "UNREDACTABLE_SENSITIVE_INFORMATION"
+  ],
+  "result_classes": [
+    "PASS_MANUAL_SETUP_VERIFIED_ATOMIC_SIMULATION_COMPLETED_AND_ROLLED_BACK",
+    "BLOCKED_ASSUME_ROLE_FAILED",
+    "BLOCKED_BASELINE_READ_FAILED",
+    "BLOCKED_EXISTING_TEMPORARY_POLICY_COLLISION",
+    "BLOCKED_TEMPORARY_GRANT_FAILED",
+    "BLOCKED_SIMULATION_CALL_FAILED",
+    "BLOCKED_ROLLBACK_NOT_VERIFIED_ACTIVE_IAM_INCIDENT",
+    "BLOCKED_FAIL_CLOSED_OTHER"
+  ],
+  "response_contract": [
+    "INITIAL_HEAD",
+    "MANUAL_SETUP_ASSERTION_RECORD",
+    "SYNTHETIC_TEST_RESULT",
+    "REDACTED_BOOTSTRAP_IDENTITY",
+    "ASSUME_ROLE_RESULT",
+    "REDACTED_ASSUMED_ROLE_IDENTITY",
+    "BASELINE_RESULT",
+    "TEMPORARY_GRANT_RESULT",
+    "READ_ONLY_SIMULATION_RESULT",
+    "ROLLBACK_RESULT",
+    "FINAL_BOOTSTRAP_POLICY_STATE",
+    "CALLS_AND_MUTATIONS",
+    "FINAL_AWS_AND_PRODUCT_STATE",
+    "VALIDATIONS",
+    "PUBLISHED_FILES_COMMIT_AND_FINAL_REMOTE_HEAD",
+    "SINGLE_NEXT_RECOMMENDED_ACTION"
+  ],
+  "consumption_criterion": "CONSUMED_AFTER_A_TERMINAL_ATOMIC_RESULT_AND_MANUAL_SETUP_VERIFICATION_STATUS_ARE_PUBLISHED_ROLLBACK_IS_VERIFIED_CREDENTIALS_ARE_CLEARED_AND_FINAL_REMOTE_HEAD_IS_VERIFIED",
+  "post_consumption_authority": "NONE"
+}
