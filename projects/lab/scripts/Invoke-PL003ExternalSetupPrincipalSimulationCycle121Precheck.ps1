@@ -226,38 +226,38 @@ function Invoke-PL003ExternalSetupPrincipalSimulationCycle121Precheck {
         }
         external_principal = [ordered]@{
             expected_setup_profile_present = $false
-            selected = false
-            identity_verified = false
+            selected = $false
+            identity_verified = $false
             redacted_identifier = 'NONE'
             privilege_classification = 'NO_BOUNDED_EXTERNAL_SETUP_PRINCIPAL'
             read_only_plan_operator_present = $false
-            read_only_plan_operator_compatible = false
+            read_only_plan_operator_compatible = $false
             canonical_permission_evidence = 'projects/lab/evidence/EVD-LAB-PL003-AWS-BOUNDED-PROVISIONING-OPERATOR-113.json'
         }
         bootstrap_principal = [ordered]@{
-            session_started = false
-            identity_verified = false
+            session_started = $false
+            identity_verified = $false
             redacted_identifier = 'NOT_EXECUTED'
         }
         baseline = [ordered]@{
-            executed = false
-            temporary_policy_absence_verified = false
+            executed = $false
+            temporary_policy_absence_verified = $false
         }
         grant = [ordered]@{
-            attempted = false
-            succeeded = false
+            attempted = $false
+            succeeded = $false
         }
         simulation = [ordered]@{
-            attempted = false
-            completed_without_access_denied = false
+            attempted = $false
+            completed_without_access_denied = $false
         }
         rollback = [ordered]@{
-            required = false
-            attempted = false
-            verified = false
+            required = $false
+            attempted = $false
+            verified = $false
         }
         final_state = [ordered]@{
-            temporary_policy_created_by_121 = false
+            temporary_policy_created_by_121 = $false
             persistent_iam_mutations = 0
             aws_resources_created = 0
             terraform_executions = 0
