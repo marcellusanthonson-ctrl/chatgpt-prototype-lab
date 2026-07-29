@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_ATOMIC_SIMULATION_PERMISSION_CYCLE_120",
+  "project_id": "lab",
+  "status": "GRANTED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-29",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "c3d6e17b3625dea0ff35a0b33496aeb5ae711ca2",
+  "execution_head_policy": "VERIFY_LIVE_AT_USE",
+  "mode": "ATOMIC_TEMPORARY_IAM_PERMISSION_CYCLE",
+  "objective": "Execute a minimum atomic cycle consisting of exact-name baseline, exact temporary iam:SimulatePrincipalPolicy grant, one read-only simulation, mandatory immediate rollback, final absence verification, publication and consumption.",
+  "target_principal": "EXACT_REDACTED_BOOTSTRAP_PRINCIPAL_VERIFIED_BY_AUTHORIZATIONS_118_AND_119",
+  "temporary_policy": {
+    "mechanism": "INLINE_USER_POLICY",
+    "name": "PL003AtomicSimulationOnly120",
+    "allowed_action": "iam:SimulatePrincipalPolicy",
+    "additional_actions_allowed": 0,
+    "resource": "*"
+  },
+  "atomic_sequence": [
+    "GET_USER_POLICY_EXACT_NAME_BASELINE_EXPECT_NO_SUCH_ENTITY",
+    "PUT_USER_POLICY_EXACT_DOCUMENT",
+    "GET_USER_POLICY_VERIFY_EXACT_EFFECTIVE_DOCUMENT",
+    "SIMULATE_PRINCIPAL_POLICY_ONE_READ_ONLY_CALL",
+    "DELETE_USER_POLICY_AS_FIRST_FINALLY_AWS_OPERATION_AFTER_ANY_PUT_ATTEMPT",
+    "GET_USER_POLICY_EXACT_NAME_FINAL_EXPECT_NO_SUCH_ENTITY"
+  ],
+  "call_limits": {
+    "sts_get_session_token": 1,
+    "sts_get_caller_identity": 1,
+    "iam_get_user_policy": 3,
+    "iam_put_user_policy": 1,
+    "iam_simulate_principal_policy": 1,
+    "iam_delete_user_policy": 1,
+    "other_aws": 0
+  },
+  "forbidden_actions": [
+    "ANY_ADDITIONAL_IAM_PERMISSION",
+    "ANY_PERSISTENT_MUTATION",
+    "PROVISIONING",
+    "TERRAFORM",
+    "PRODUCT_LEADERSHIP_TEST_003",
+    "PRODUCT_LEADERSHIP_ACTIVATION_OR_INTEGRATION",
+    "ROOT_OR_GENERAL_ADMINISTRATIVE_ACCESS",
+    "CREDENTIAL_PERSISTENCE",
+    "PRINCIPAL_SWITCH"
+  ],
+  "rollback_contract": {
+    "delete_in_finally_after_any_put_attempt": true,
+    "delete_before_any_other_post_failure_aws_action": true,
+    "final_exact_name_absence_required": true,
+    "fail_closed_if_absence_not_verified": true
+  },
+  "implementation": {
+    "script": "projects/lab/scripts/Invoke-PL003AtomicSimulationPermissionCycle120.ps1",
+    "synthetic_tests": "projects/lab/scripts/tests/Invoke-PL003AtomicSimulationPermissionCycle120.Tests.ps1"
+  },
+  "response_contract": [
+    "INITIAL_HEAD",
+    "VERIFIED_REDACTED_PRINCIPAL",
+    "BASELINE_RESULT",
+    "TEMPORARY_GRANT_RESULT",
+    "EFFECTIVE_POLICY_VALIDATION",
+    "READ_ONLY_SIMULATION_RESULT",
+    "ROLLBACK_RESULT",
+    "FINAL_STATE",
+    "AWS_CALLS_AND_MUTATIONS",
+    "VALIDATIONS",
+    "FILES_COMMIT_AND_FINAL_REMOTE_HEAD",
+    "SINGLE_NEXT_RECOMMENDED_ACTION"
+  ],
+  "consumption_criterion": "CONSUMED_AFTER_A_TERMINAL_ATOMIC_CYCLE_RESULT_IS_PUBLISHED_CREDENTIALS_ARE_CLEARED_AND_FINAL_REMOTE_HEAD_IS_VERIFIED",
+  "post_consumption_authority": "NONE"
+}
