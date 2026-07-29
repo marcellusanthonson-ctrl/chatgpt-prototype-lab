@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "package_id": "PROJECT-FOUNDATION-CONTRACT-001",
+  "version": "0.1.0",
+  "status": "DOCUMENTED_AND_VALIDATED_NOT_INTEGRATED",
+  "kind": "TRANSVERSAL_PROJECT_CONTRACT_CAPABILITY",
+  "owner": "LAB",
+  "intended_consumer": "SYMPHONIE",
+  "purpose": "Provide a canonical, evidence-aware and risk-proportional project contract that Symphonie can parse into phase briefs without transferring execution authority.",
+  "artifacts": {
+    "architecture": "ARCHITECTURE.md",
+    "project_contract_schema": "PROJECT_FOUNDATION_CONTRACT.schema.json",
+    "bridge_schema": "LAB_TO_SYMPHONIE_BRIEF.schema.json",
+    "project_contract_example": "PROJECT_FOUNDATION_CONTRACT.example.json",
+    "bridge_example": "LAB_TO_SYMPHONIE_BRIEF.example.json"
+  },
+  "core_model": [
+    "PROJECT_IDENTITY",
+    "PRODUCT_INTENT",
+    "USERS_AND_CORE_FLOWS",
+    "SCOPE_AND_NON_GOALS",
+    "INVARIANTS",
+    "QUALITY_BASELINE",
+    "ARCHITECTURE_BOUNDARIES",
+    "FAILURE_MODES",
+    "VALIDATION_AND_EVIDENCE",
+    "ROLLBACK_AND_RECOVERY",
+    "AUTHORITY_AND_STOP_CONDITIONS"
+  ],
+  "separation_of_ownership": {
+    "lab": "Schemas, transversal rules, validated patterns, rejected patterns, evidence standards and contract interpretation semantics.",
+    "symphonie": "Context resolution, phase planning, brief generation, gate orchestration and evidence reconciliation.",
+    "project_repository": "Project-specific contract instance, architecture, implementation, tests, runtime evidence and operational state."
+  },
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "integration_status": "NOT_INTEGRATED",
+  "product_effect": "NONE",
+  "first_pilot": "NOT_SELECTED",
+  "authorization": "AUTHORIZATION_LAB_PROJECT_FOUNDATION_CONTRACT_AND_LAB_TO_SYMPHONIE_BRIEF_128"
+}
