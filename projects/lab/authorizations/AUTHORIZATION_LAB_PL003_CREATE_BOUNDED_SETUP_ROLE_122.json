@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_CREATE_BOUNDED_SETUP_ROLE_122",
+  "project_id": "lab",
+  "status": "GRANTED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-29",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "6bb202a5ea349672e92179aecb8c13962d5d9af8",
+  "execution_head_policy": "VERIFY_LIVE_AT_USE",
+  "objective": "Create one dedicated permission boundary and PL003BoundedSimulationSetupOperator with an exact bootstrap-user-and-MFA trust policy, a minimum inline role policy, a maximum session duration of exactly 900 seconds, and read-only verification without modifying the bootstrap user.",
+  "authorized_aws_mutations": [
+    "CREATE_ONE_DEDICATED_PERMISSION_BOUNDARY_MANAGED_POLICY",
+    "CREATE_ROLE_PL003BoundedSimulationSetupOperator",
+    "PUT_ONE_MINIMUM_INLINE_ROLE_POLICY"
+  ],
+  "authorized_verification": [
+    "ASSUME_ROLE_ONCE_FOR_900_SECONDS",
+    "STS_GET_CALLER_IDENTITY_REDACTED",
+    "LIST_BOOTSTRAP_INLINE_POLICIES_BASELINE",
+    "GET_BOOTSTRAP_INLINE_POLICY_ONLY_IF_REQUIRED_BY_BASELINE"
+  ],
+  "required_role": {
+    "name": "PL003BoundedSimulationSetupOperator",
+    "maximum_session_duration_seconds": 900,
+    "trust": "EXACT_BOOTSTRAP_USER_AND_MFA_ONLY",
+    "permission_boundary": "DEDICATED_EXACT_BOUNDARY",
+    "inline_policy": "MINIMUM_BOOTSTRAP_INLINE_POLICY_MANAGEMENT_ONLY"
+  },
+  "forbidden_actions": [
+    "PUT_OR_DELETE_POLICY_ON_BOOTSTRAP_USER",
+    "IAM_SIMULATE_PRINCIPAL_POLICY",
+    "ROOT",
+    "ADMINISTRATOR_ACCESS",
+    "IAM_FULL_ACCESS",
+    "POWER_USER_ACCESS",
+    "CREATE_ACCESS_KEY",
+    "ANY_OTHER_MANAGED_POLICY",
+    "IAM_ACTION_WILDCARD",
+    "PERMISSIONS_ON_OTHER_USERS",
+    "IAM_PASS_ROLE",
+    "TERRAFORM",
+    "PROVISIONING",
+    "PRODUCT_LEADERSHIP_TEST_003",
+    "PRODUCT_LEADERSHIP_ACTIVATION_OR_INTEGRATION"
+  ],
+  "pre_mutation_compatibility_requirement": {
+    "role_max_session_duration_must_equal_seconds": 900,
+    "silent_relaxation_allowed": false,
+    "fail_closed_if_aws_api_cannot_represent_requirement": true
+  },
+  "consumption_criterion": "CONSUMED_AFTER_A_TERMINAL_RESULT_IS_PUBLISHED_ZERO_UNAUTHORIZED_MUTATIONS_ARE_ATTESTED_AND_FINAL_REMOTE_HEAD_IS_VERIFIED",
+  "post_consumption_authority": "NONE"
+}
