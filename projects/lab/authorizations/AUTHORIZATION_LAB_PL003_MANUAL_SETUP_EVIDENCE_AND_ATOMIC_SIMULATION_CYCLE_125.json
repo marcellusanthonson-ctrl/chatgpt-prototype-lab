@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_PL003_MANUAL_SETUP_EVIDENCE_AND_ATOMIC_SIMULATION_CYCLE_125",
   "project_id": "lab",
-  "status": "GRANTED",
+  "status": "CONSUMED",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-07-29",
   "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
@@ -128,6 +128,49 @@
     "BLOCKED_ROLLBACK_NOT_VERIFIED_ACTIVE_IAM_INCIDENT",
     "BLOCKED_FAIL_CLOSED_OTHER"
   ],
+  "execution_result": {
+    "status": "CONSUMED_BLOCKED_LOCAL_EMPTY_BASELINE_HASH_FAILURE_BEFORE_GRANT",
+    "reported_failure_code": "BLOCKED_FAIL_CLOSED_OTHER",
+    "diagnosed_local_cause": "LOCAL_EMPTY_BASELINE_HASH_PARAMETER_BINDING_FAILURE",
+    "bootstrap_identity_verified_redacted": true,
+    "assume_role_attempted": true,
+    "assume_role_duration_seconds": 900,
+    "assume_role_succeeded": true,
+    "role_identity_verified_redacted": true,
+    "baseline_list_succeeded": true,
+    "baseline_policy_count": 0,
+    "temporary_policy_absence_confirmed": true,
+    "temporary_grant_attempted": false,
+    "simulation_attempted": false,
+    "rollback_required": false,
+    "rollback_attempted": false,
+    "execution_evidence": "projects/lab/evidence/EVD-LAB-PL003-MANUAL-SETUP-ATOMIC-SIMULATION-125-ATTEMPT-001.json",
+    "human_assertion_evidence": "projects/lab/evidence/EVD-LAB-PL003-MANUAL-SETUP-125-HUMAN-ASSERTION.json",
+    "aws_calls": {
+      "sts_get_session_token": 1,
+      "sts_get_caller_identity_bootstrap": 1,
+      "sts_assume_role": 1,
+      "sts_get_caller_identity_role": 1,
+      "iam_list_user_policies": 1,
+      "other_aws": 0
+    },
+    "aws_mutations": 0,
+    "bootstrap_user_changes": 0,
+    "persistent_mutations": 0,
+    "terraform_executions": 0,
+    "provisioning_executions": 0,
+    "product_leadership_test_003_executions": 0,
+    "product_leadership_active": false,
+    "product_leadership_integrated": false,
+    "credentials_cleared": true,
+    "second_mfa_session_used": false,
+    "post_failure_regression_fix": {
+      "status": "PASS",
+      "synthetic_case_count": 19,
+      "aws_calls": 0,
+      "mutations": 0
+    }
+  },
   "response_contract": [
     "INITIAL_HEAD",
     "MANUAL_SETUP_ASSERTION_RECORD",
@@ -146,6 +189,8 @@
     "PUBLISHED_FILES_COMMIT_AND_FINAL_REMOTE_HEAD",
     "SINGLE_NEXT_RECOMMENDED_ACTION"
   ],
+  "consumed_at": "2026-07-29",
+  "consumption_reason": "THE_SINGLE_AUTHORIZED_MFA_SESSION_VERIFIED_BOOTSTRAP_ROLE_ASSUMPTION_AND_EMPTY_BASELINE_THEN_STOPPED_ON_A_LOCAL_EMPTY_BASELINE_HASH_DEFECT_BEFORE_PUT_SIMULATION_OR_MUTATION_CREDENTIALS_WERE_CLEARED_AND_THE_DEFECT_WAS_FIXED_LOCALLY_WITHOUT_A_SECOND_SESSION",
   "consumption_criterion": "CONSUMED_AFTER_A_TERMINAL_ATOMIC_RESULT_AND_MANUAL_SETUP_VERIFICATION_STATUS_ARE_PUBLISHED_ROLLBACK_IS_VERIFIED_CREDENTIALS_ARE_CLEARED_AND_FINAL_REMOTE_HEAD_IS_VERIFIED",
   "post_consumption_authority": "NONE"
 }

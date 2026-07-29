@@ -134,6 +134,27 @@
     "bootstrap_user_changes": 0,
     "evidence_ref": "projects/lab/evidence/EVD-LAB-PL003-BOUNDED-CREATOR-CAPABILITY-124-ATTEMPT-001.json"
   },
-  "required_resolution": "Provide an already-existing bounded creator capability or separately authorize creation of one with only the exact PL003 collision, setup, verification and compensating-cleanup operations; authorization 124 found no eligible existing local identity and is consumed.",
+  "authorization_125_result": {
+    "authorization_id": "AUTHORIZATION_LAB_PL003_MANUAL_SETUP_EVIDENCE_AND_ATOMIC_SIMULATION_CYCLE_125",
+    "status": "CONSUMED_BLOCKED_LOCAL_EMPTY_BASELINE_HASH_FAILURE_BEFORE_GRANT",
+    "manual_setup_verification": "PARTIAL",
+    "bootstrap_identity_verified_redacted": true,
+    "assume_role_900_succeeded": true,
+    "role_identity_verified_redacted": true,
+    "baseline_list_succeeded": true,
+    "temporary_policy_absence_confirmed": true,
+    "temporary_grant_attempted": false,
+    "simulation_attempted": false,
+    "rollback_required": false,
+    "diagnosed_local_cause": "LOCAL_EMPTY_BASELINE_HASH_PARAMETER_BINDING_FAILURE",
+    "post_fix_synthetic_result": "PASS_19_CASES",
+    "aws_calls": 5,
+    "iam_mutations": 0,
+    "bootstrap_user_changes": 0,
+    "execution_evidence_ref": "projects/lab/evidence/EVD-LAB-PL003-MANUAL-SETUP-ATOMIC-SIMULATION-125-ATTEMPT-001.json",
+    "human_assertion_evidence_ref": "projects/lab/evidence/EVD-LAB-PL003-MANUAL-SETUP-125-HUMAN-ASSERTION.json",
+    "credentials_cleared": true
+  },
+  "required_resolution": "Separately authorize one retry of the corrected atomic simulation cycle; authorization 125's only MFA session is consumed after partially verifying the manually created role and stopping before any grant or mutation.",
   "active_execution_authority": "NONE"
 }

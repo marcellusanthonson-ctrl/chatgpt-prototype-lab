@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "PL003-MANUAL-SETUP-ATOMIC-SIMULATION-CYCLE-125",
+  "project_id": "lab",
+  "effective_at": "2026-07-29",
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_PL003_MANUAL_SETUP_EVIDENCE_AND_ATOMIC_SIMULATION_CYCLE_125",
+    "path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_MANUAL_SETUP_EVIDENCE_AND_ATOMIC_SIMULATION_CYCLE_125.json",
+    "status": "CONSUMED"
+  },
+  "implementation": {
+    "script": "projects/lab/scripts/Invoke-PL003ManualSetupAtomicSimulationCycle125.ps1",
+    "synthetic_test": "projects/lab/scripts/tests/Invoke-PL003ManualSetupAtomicSimulationCycle125.Tests.ps1",
+    "pre_execution_synthetic_result": "PASS_18_CASES",
+    "post_fix_synthetic_result": "PASS_19_CASES",
+    "temporary_policy_name": "PL003AtomicSimulationOnly125",
+    "temporary_policy_sha256": "5543995ea41a6f50b17cfaefdf3c616b67f3bd056f0bc041da0a1994bc450b94",
+    "assume_role_duration_seconds": 900,
+    "regression_fix": "ALLOW_EMPTY_STRING_SHA256_INPUT"
+  },
+  "evidence": [
+    {
+      "id": "EVD-LAB-PL003-MANUAL-SETUP-125-HUMAN-ASSERTION",
+      "path": "projects/lab/evidence/EVD-LAB-PL003-MANUAL-SETUP-125-HUMAN-ASSERTION.json",
+      "status": "PARTIALLY_PROGRAMMATICALLY_VERIFIED"
+    },
+    {
+      "id": "EVD-LAB-PL003-MANUAL-SETUP-ATOMIC-SIMULATION-125-ATTEMPT-001",
+      "path": "projects/lab/evidence/EVD-LAB-PL003-MANUAL-SETUP-ATOMIC-SIMULATION-125-ATTEMPT-001.json",
+      "result": "BLOCKED_FAIL_CLOSED_OTHER",
+      "diagnosed_local_cause": "LOCAL_EMPTY_BASELINE_HASH_PARAMETER_BINDING_FAILURE"
+    }
+  ],
+  "state_effect": {
+    "manual_setup_verification": "PARTIAL",
+    "bootstrap_identity_verified_redacted": true,
+    "assume_role_900_succeeded": true,
+    "role_identity_verified_redacted": true,
+    "baseline_list_succeeded": true,
+    "temporary_policy_absence_confirmed": true,
+    "temporary_grant_attempted": false,
+    "simulation_attempted": false,
+    "rollback_required": false,
+    "active_execution_authority": "NONE",
+    "aws_calls": {
+      "sts": 4,
+      "iam": 1,
+      "other": 0
+    },
+    "iam_mutations": 0,
+    "bootstrap_user_changes": 0,
+    "persistent_mutations": 0,
+    "terraform_executed": false,
+    "provisioning_executed": false,
+    "product_leadership_test_003_executed": false,
+    "product_leadership_active": false,
+    "product_leadership_integrated": false,
+    "credentials_cleared": true
+  },
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_125_CONSUMPTION"
+}

@@ -7,62 +7,66 @@ Política de HEAD: `VERIFY_LIVE_AT_USE`
 
 ## Resultado vigente
 
-La autorización 124 validó localmente los documentos exactos para la boundary
-`PL003BoundedSimulationSetupBoundary124`, el rol
-`PL003BoundedSimulationSetupOperator` y su inline policy
-`PL003BoundedSimulationSetupRolePolicy124`.
+La autorización 125 registró la declaración humana sobre el setup manual y la
+verificó parcialmente mediante una única sesión MFA:
 
-El inventario local redactado encontró dos perfiles configurados y cero
-identidades creadoras elegibles. El bootstrap está excluido porque 123 comprobó
-`iam:GetPolicy=AccessDenied`; el plan operator existente continúa siendo
-read-only e incompatible.
+- identidad bootstrap exacta verificada;
+- `AssumeRole` al rol exacto durante 900 segundos exitoso;
+- identidad asumida exacta verificada;
+- `ListUserPolicies` sobre bootstrap exitoso;
+- baseline vacío y `PL003AtomicSimulationOnly125` ausente.
 
-La ejecución se detuvo antes de abrir MFA, consultar AWS, ejecutar collision
-preflight, crear recursos, asumir el rol o leer el baseline bootstrap.
+Después del baseline, el script se detuvo por un defecto local al calcular el
+SHA-256 de una cadena vacía. El fallo ocurrió antes de `PutUserPolicy`, la
+simulación o cualquier mutación. No aplicaba rollback.
+
+El defecto fue reproducido y corregido localmente permitiendo el hash de
+baselines vacíos. La suite corregida pasa 19 casos, pero 125 permitía una sola
+sesión MFA y quedó consumida sin una segunda ejecución.
 
 ## Llamadas y efectos
 
-- Llamadas AWS: 0.
+- Llamadas AWS: 5 (STS: 4; IAM read-only: 1; otras: 0).
+- `PutUserPolicy`: 0.
+- `SimulatePrincipalPolicy`: 0.
+- `DeleteUserPolicy`: 0.
 - Mutaciones IAM: 0.
 - Cambios sobre el usuario bootstrap: 0.
 - Mutaciones persistentes: 0.
-- Recursos AWS creados: 0.
-- Compensación: no aplicable.
 - Terraform: no ejecutado.
 - Provisioning: no ejecutado.
 - Product Leadership Test 003: no ejecutado.
 - Product Leadership: inactivo y no integrado.
-- Credenciales efímeras: ausentes.
+- Credenciales efímeras: eliminadas.
 
-## Documentos preparados
+## Setup manual: verificación parcial
 
 - Rol: `PL003BoundedSimulationSetupOperator`.
-- `CreateRole.MaxSessionDuration`: 3600 segundos.
-- `AssumeRole.DurationSeconds`: 900 segundos.
-- Trust SHA-256: `cb08e67527ad19a13856401db156bc13f8886f1a6b169ef4b0c8837635bc4d73`.
-- Boundary: `PL003BoundedSimulationSetupBoundary124`.
-- Boundary SHA-256: `6c0f33a25fe4027477bb903c8944f5868ea7863d1e9089c899778133cdeeea0b`.
-- Role policy: `PL003BoundedSimulationSetupRolePolicy124`.
-- Role policy SHA-256: `6c0f33a25fe4027477bb903c8944f5868ea7863d1e9089c899778133cdeeea0b`.
-- Trust: usuario bootstrap exacto y MFA.
-- Permisos: cuatro acciones de inline policies sobre el usuario bootstrap exacto.
-- `iam:*`, `iam:PassRole` y permisos sobre otras identidades: ausentes.
+- `AssumeRole.DurationSeconds=900`: verificado.
+- Trust bootstrap exacto con MFA: sustentado indirectamente por el AssumeRole exitoso.
+- Capacidad `ListUserPolicies`: verificada.
+- Boundary `PL003BoundedSimulationSetupBoundary125`: lectura directa no autorizada.
+- Inline role policy `PL003BoundedSimulationSetupRolePolicy125`: lectura directa no autorizada.
+- `MaxSessionDuration=3600`: no leído directamente.
+- Attached managed policies normales `0`: afirmación humana no leída directamente.
+- Mutaciones manuales bootstrap `0`: afirmación humana no verificable independientemente por 125.
+- Capacidad `PutUserPolicy`/`DeleteUserPolicy`: no ejecutada por el fallo local previo.
 
 ## Autoridad y pendiente
 
-- Autorizaciones 118–124: `CONSUMED`.
+- Autorizaciones 118–125: `CONSUMED`.
 - Autoridad AWS activa: `NONE`.
-- `PEND-LAB-032`: `OPEN_BLOCKED_NO_EXISTING_BOUNDED_CREATOR_CAPABILITY_NO_ACTIVE_EXECUTION_AUTHORITY`.
+- `PEND-LAB-032`: `OPEN_BLOCKED_AUTH125_SESSION_CONSUMED_AFTER_LOCAL_PRE_GRANT_FAILURE_NO_ACTIVE_EXECUTION_AUTHORITY`.
 
 ## Evidencia
 
-- `projects/lab/evidence/EVD-LAB-PL003-BOUNDED-CREATOR-CAPABILITY-124-ATTEMPT-001.json`
-- `projects/lab/authorizations/AUTHORIZATION_LAB_PL003_BOUNDED_CREATOR_CAPABILITY_124.json`
+- `projects/lab/evidence/EVD-LAB-PL003-MANUAL-SETUP-125-HUMAN-ASSERTION.json`
+- `projects/lab/evidence/EVD-LAB-PL003-MANUAL-SETUP-ATOMIC-SIMULATION-125-ATTEMPT-001.json`
+- `projects/lab/authorizations/AUTHORIZATION_LAB_PL003_MANUAL_SETUP_EVIDENCE_AND_ATOMIC_SIMULATION_CYCLE_125.json`
 - `projects/lab/analyses/PL003_BOOTSTRAP_SIMULATION_FAILURE_ANALYSIS_001.json`
 - `projects/lab/pending/PEND-LAB-032.json`
 
 ## Siguiente acción única
 
-Autorizar separadamente la creación de una capacidad creadora exacta y
-delimitada, o suministrar un principal ya existente que cumpla íntegramente la
-clase requerida.
+Autorizar separadamente un único reintento del ciclo atómico corregido con una
+nueva sesión MFA.

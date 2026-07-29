@@ -4,7 +4,7 @@
   "authorization_id": "AUTHORIZATION_LAB_PL003_MANUAL_SETUP_EVIDENCE_AND_ATOMIC_SIMULATION_CYCLE_125",
   "project_id": "lab",
   "kind": "HUMAN_ASSERTION_PENDING_PROGRAMMATIC_VERIFICATION",
-  "status": "PENDING_PROGRAMMATIC_VERIFICATION",
+  "status": "PARTIALLY_PROGRAMMATICALLY_VERIFIED",
   "asserted_by": "Jonathan Martínez",
   "asserted_at": "2026-07-29",
   "assertions": {
@@ -17,17 +17,18 @@
     "manual_bootstrap_mutations": 0
   },
   "verification_status": {
-    "role_assumable_by_exact_bootstrap_with_mfa": "PENDING",
-    "assume_role_duration_900": "PENDING",
-    "role_identity": "PENDING",
-    "role_can_list_bootstrap_inline_policies": "PENDING",
-    "role_can_apply_and_remove_exact_temporary_policy": "PENDING",
+    "role_assumable_by_exact_bootstrap_with_mfa": "PASS_INDIRECT_EXACT_BOOTSTRAP_MFA_SESSION_ASSUMED_ROLE",
+    "assume_role_duration_900": "PASS_REQUEST_SUCCEEDED",
+    "role_identity": "PASS_REDACTED_EXPECTED_ASSUMED_ROLE",
+    "role_can_list_bootstrap_inline_policies": "PASS",
+    "role_can_apply_and_remove_exact_temporary_policy": "NOT_EXECUTED_LOCAL_FAILURE_BEFORE_GRANT",
     "trust_document_direct_read": "NOT_AUTHORIZED_BY_125",
     "boundary_document_direct_read": "NOT_AUTHORIZED_BY_125",
     "inline_role_policy_direct_read": "NOT_AUTHORIZED_BY_125",
     "attached_managed_policies_direct_read": "NOT_AUTHORIZED_BY_125",
     "manual_bootstrap_mutation_count_direct_verification": "NOT_INDEPENDENTLY_VERIFIABLE_BY_125"
   },
-  "claim_limit": "HUMAN_ASSERTION_ONLY_UNTIL_SUPPORTED_BY_AUTHORIZATION_125_PROGRAMMATIC_RESULTS",
+  "claim_limit": "ONLY_THE_ROLE_ASSUMPTION_IDENTITY_DURATION_AND_LIST_BASELINE_CAPABILITIES_WERE_PROGRAMMATICALLY_SUPPORTED_BY_AUTHORIZATION_125",
+  "programmatic_evidence": "projects/lab/evidence/EVD-LAB-PL003-MANUAL-SETUP-ATOMIC-SIMULATION-125-ATTEMPT-001.json",
   "authority_effect": "NONE"
 }

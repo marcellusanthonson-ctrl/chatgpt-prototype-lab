@@ -1,0 +1,138 @@
+{
+    "schema_version":  "1.0.0",
+    "evidence_id":  "EVD-LAB-PL003-MANUAL-SETUP-ATOMIC-SIMULATION-125-ATTEMPT-001",
+    "authorization_id":  "AUTHORIZATION_LAB_PL003_MANUAL_SETUP_EVIDENCE_AND_ATOMIC_SIMULATION_CYCLE_125",
+    "project_id":  "lab",
+    "kind":  "REDACTED_MANUAL_SETUP_ATOMIC_SIMULATION_CYCLE_EVIDENCE",
+    "status":  "BLOCKED",
+    "executed_at":  "2026-07-29T20:59:23Z",
+    "repository":  "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "branch_mode":  "DETACHED_HEAD",
+    "execution_head":  "8bc00f56a9560298aa6c8b3610de5ee32b19e2a4",
+    "prechecks":  {
+                      "head":  "PASS",
+                      "worktree":  "PASS",
+                      "authorization_125_registered_granted":  "PASS",
+                      "authorizations_118_119_120_121_122_123_124_consumed":  "PASS",
+                      "inherited_execution_authority":  "NONE",
+                      "synthetic_cycle":  "PASS",
+                      "sanitized_classifier":  "PASS",
+                      "aws_cli":  "PASS",
+                      "cli_history_disabled":  "PASS",
+                      "inherited_temporary_credentials_absent":  "PASS",
+                      "reusable_temporary_profiles_absent":  "PASS"
+                  },
+    "manual_setup_assertion":  {
+                                   "source":  "projects/lab/evidence/EVD-LAB-PL003-MANUAL-SETUP-125-HUMAN-ASSERTION.json",
+                                   "initial_status":  "PENDING_PROGRAMMATIC_VERIFICATION",
+                                   "role_name":  "PL003BoundedSimulationSetupOperator",
+                                   "boundary_name":  "PL003BoundedSimulationSetupBoundary125",
+                                   "role_policy_name":  "PL003BoundedSimulationSetupRolePolicy125",
+                                   "role_maximum_session_seconds_asserted":  3600,
+                                   "attached_normal_managed_policy_count_asserted":  0,
+                                   "manual_bootstrap_mutations_asserted":  0
+                               },
+    "bootstrap_identity":  {
+                               "verified":  true,
+                               "redacted_identifier":  "IAM_USER:\u003cREDACTED_ACCOUNT_ID\u003e:pl003-bootstrap-operator"
+                           },
+    "assume_role":  {
+                        "attempted":  true,
+                        "duration_seconds":  900,
+                        "succeeded":  true
+                    },
+    "role_identity":  {
+                          "verified":  true,
+                          "redacted_identifier":  "ASSUMED_ROLE:\u003cREDACTED_ACCOUNT_ID\u003e:PL003BoundedSimulationSetupOperator/PL003Authorization125"
+                      },
+    "baseline":  {
+                     "list_attempted":  true,
+                     "temporary_policy_absent":  true,
+                     "policy_name_count":  0,
+                     "sorted_policy_names_sha256":  null
+                 },
+    "temporary_grant":  {
+                            "policy_name":  "PL003AtomicSimulationOnly125",
+                            "document_sha256":  "5543995ea41a6f50b17cfaefdf3c616b67f3bd056f0bc041da0a1994bc450b94",
+                            "put_attempted":  false,
+                            "put_succeeded":  false
+                        },
+    "simulation":  {
+                       "attempted":  false,
+                       "tested_action":  "iam:CreatePolicy",
+                       "simulated_action_executed":  false,
+                       "call_succeeded":  false,
+                       "evaluation_decision":  null,
+                       "classification":  null
+                   },
+    "rollback":  {
+                     "required":  false,
+                     "delete_was_first_finally_aws_operation":  false,
+                     "delete_attempted":  false,
+                     "delete_succeeded":  false,
+                     "final_get_user_policy_attempted":  false,
+                     "exact_policy_absent":  false,
+                     "final_list_user_policies_attempted":  false,
+                     "final_set_equals_baseline":  false,
+                     "verified":  false
+                 },
+    "aws_calls":  {
+                      "sts_get_session_token":  1,
+                      "sts_get_caller_identity_bootstrap":  1,
+                      "sts_assume_role":  1,
+                      "sts_get_caller_identity_role":  1,
+                      "iam_list_user_policies_baseline":  1,
+                      "iam_put_user_policy":  0,
+                      "iam_simulate_principal_policy":  0,
+                      "iam_delete_user_policy":  0,
+                      "iam_get_user_policy_final":  0,
+                      "iam_list_user_policies_final":  0,
+                      "other_aws":  0
+                  },
+    "mutations":  {
+                      "temporary_grant_attempts":  0,
+                      "temporary_grant_successes":  0,
+                      "rollback_attempts":  0,
+                      "rollback_successes":  0,
+                      "persistent_at_completion":  0,
+                      "unexpected":  0
+                  },
+    "final_state":  {
+                        "bootstrap_inline_policy_set_restored":  false,
+                        "temporary_policy_absent":  false,
+                        "role_modified":  false,
+                        "trust_modified":  false,
+                        "boundary_modified":  false,
+                        "role_policy_modified":  false,
+                        "identities_or_access_keys_created":  0,
+                        "infrastructure_mutations":  0,
+                        "terraform_executions":  0,
+                        "provisioning_executions":  0,
+                        "product_leadership_test_003_executions":  0,
+                        "product_leadership_active":  false,
+                        "product_leadership_integrated":  false
+                    },
+    "credentials_cleared":  true,
+    "failure_code":  "BLOCKED_FAIL_CLOSED_OTHER",
+    "post_execution_local_diagnosis":  {
+                                             "classification":  "LOCAL_EMPTY_BASELINE_HASH_PARAMETER_BINDING_FAILURE",
+                                             "reproduced_without_aws":  true,
+                                             "exception_class":  "ParameterBindingValidationException",
+                                             "failure_position":  "AFTER_SUCCESSFUL_BASELINE_BEFORE_PUT_USER_POLICY",
+                                             "aws_calls_during_diagnosis":  0,
+                                             "mutations_during_diagnosis":  0,
+                                             "regression_fix":  "ALLOW_EMPTY_STRING_SHA256_INPUT",
+                                             "post_fix_synthetic_cases":  19,
+                                             "post_fix_synthetic_result":  "PASS",
+                                             "authorization_125_second_mfa_session_used":  false
+                                         },
+    "failure_metadata":  null,
+    "result":  "BLOCKED_FAIL_CLOSED_OTHER",
+    "redaction":  {
+                      "full_account_id_included":  false,
+                      "full_arns_included":  false,
+                      "credentials_tokens_or_mfa_codes_included":  false,
+                      "raw_aws_output_included":  false
+                  },
+    "post_attempt_authority":  "NONE"
+}

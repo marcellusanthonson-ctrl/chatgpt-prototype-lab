@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "continuity_id": "LAB-CONTINUITY-PL003-BOUNDED-CREATOR-CAPABILITY-124-BLOCKED",
+  "continuity_id": "LAB-CONTINUITY-PL003-MANUAL-SETUP-ATOMIC-SIMULATION-CYCLE-125-BLOCKED",
   "project_id": "lab",
-  "status": "CURRENT_BLOCKED_NO_EXISTING_BOUNDED_CREATOR_CAPABILITY",
+  "status": "CURRENT_BLOCKED_AUTH125_SESSION_CONSUMED_AFTER_LOCAL_PRE_GRANT_FAILURE",
   "created_at": "2026-07-29",
   "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "canonical_branch": "main",
@@ -203,6 +203,38 @@
     "product_leadership_test_003_executions": 0,
     "credentials_cleared": true
   },
+  "latest_authorization_125_attempt": {
+    "authorization_id": "AUTHORIZATION_LAB_PL003_MANUAL_SETUP_EVIDENCE_AND_ATOMIC_SIMULATION_CYCLE_125",
+    "status": "CONSUMED_BLOCKED_LOCAL_EMPTY_BASELINE_HASH_FAILURE_BEFORE_GRANT",
+    "manual_setup_assertion_status": "PARTIALLY_PROGRAMMATICALLY_VERIFIED",
+    "bootstrap_identity_verified_redacted": true,
+    "assume_role_duration_seconds": 900,
+    "assume_role_succeeded": true,
+    "role_identity_verified_redacted": true,
+    "baseline_list_succeeded": true,
+    "baseline_policy_count": 0,
+    "temporary_policy_absence_confirmed": true,
+    "temporary_grant_attempted": false,
+    "simulation_attempted": false,
+    "rollback_required": false,
+    "diagnosed_local_cause": "LOCAL_EMPTY_BASELINE_HASH_PARAMETER_BINDING_FAILURE",
+    "post_fix_synthetic_result": "PASS_19_CASES",
+    "second_mfa_session_used": false,
+    "execution_evidence": "projects/lab/evidence/EVD-LAB-PL003-MANUAL-SETUP-ATOMIC-SIMULATION-125-ATTEMPT-001.json",
+    "human_assertion_evidence": "projects/lab/evidence/EVD-LAB-PL003-MANUAL-SETUP-125-HUMAN-ASSERTION.json",
+    "aws_calls": {
+      "sts": 4,
+      "iam": 1,
+      "other": 0
+    },
+    "iam_mutations": 0,
+    "bootstrap_user_changes": 0,
+    "persistent_mutations": 0,
+    "terraform_executions": 0,
+    "provisioning_executions": 0,
+    "product_leadership_test_003_executions": 0,
+    "credentials_cleared": true
+  },
   "verified_facts": [
     {
       "fact": "The static AWS Terraform package passed fmt, init with backend disabled, validate, and a local refresh-false plan using temporary assumed-role credentials.",
@@ -288,6 +320,14 @@
         "projects/lab/evidence/EVD-LAB-PL003-BOUNDED-CREATOR-CAPABILITY-124-ATTEMPT-001.json",
         "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_BOUNDED_CREATOR_CAPABILITY_124.json"
       ]
+    },
+    {
+      "fact": "Authorization 125 verified the bootstrap identity, assumed the manually created setup role for 900 seconds, verified the assumed-role identity and read an empty bootstrap inline-policy baseline, then stopped on a local empty-baseline hash defect before any grant, simulation or mutation.",
+      "source_refs": [
+        "projects/lab/evidence/EVD-LAB-PL003-MANUAL-SETUP-ATOMIC-SIMULATION-125-ATTEMPT-001.json",
+        "projects/lab/evidence/EVD-LAB-PL003-MANUAL-SETUP-125-HUMAN-ASSERTION.json",
+        "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_MANUAL_SETUP_EVIDENCE_AND_ATOMIC_SIMULATION_CYCLE_125.json"
+      ]
     }
   ],
   "architecture": {
@@ -321,6 +361,7 @@
     "authorization_122": "CONSUMED_BLOCKED_ROLE_MAX_SESSION_DURATION_900_NOT_REPRESENTABLE",
     "authorization_123": "CONSUMED_BLOCKED_BOUNDARY_COLLISION_PREFLIGHT_ACCESS_DENIED",
     "authorization_124": "CONSUMED_BLOCKED_NO_EXISTING_BOUNDED_CREATOR_CAPABILITY",
+    "authorization_125": "CONSUMED_BLOCKED_LOCAL_EMPTY_BASELINE_HASH_FAILURE_BEFORE_GRANT",
     "active_aws_execution_authority": "NONE",
     "terraform_apply_authorized": false,
     "terraform_destroy_authorized": false,
@@ -359,7 +400,10 @@
     "Authorization 123 executed two STS calls and one IAM read, with zero mutations, zero bootstrap-user changes, no Terraform, no provisioning and no Product Leadership Test 003, then cleared all ephemeral credentials.",
     "Authorization 124 validated nine local cases and fixed the boundary and role-policy names to the 124 contract.",
     "Authorization 124 found two local profiles and zero eligible bounded creators, then stopped before MFA, collision reads, creation or any AWS service call.",
-    "Authorization 124 performed zero AWS calls, zero mutations and zero bootstrap-user changes."
+    "Authorization 124 performed zero AWS calls, zero mutations and zero bootstrap-user changes.",
+    "Authorization 125 partially verified the manual setup by assuming the exact role for 900 seconds and reading the bootstrap inline-policy baseline.",
+    "Authorization 125 stopped on a local empty-baseline hash defect before PutUserPolicy, simulation or mutation, then cleared all credentials without opening a second MFA session.",
+    "The empty-baseline hash defect was reproduced and fixed locally; 19 synthetic cases now pass."
   ],
   "operational_estimate": {
     "active_work_to_functional_validation": "4_TO_6_HOURS",
@@ -379,8 +423,8 @@
     },
     {
       "id": "PEND-LAB-032",
-      "item": "Provide an already-existing bounded creator principal or separately authorize creation of one for the exact PL003 setup operations.",
-      "status": "OPEN_BLOCKED_NO_EXISTING_BOUNDED_CREATOR_CAPABILITY_NO_ACTIVE_EXECUTION_AUTHORITY"
+      "item": "Retry the corrected atomic temporary simulation cycle using the partially verified manually created setup role.",
+      "status": "OPEN_BLOCKED_AUTH125_SESSION_CONSUMED_AFTER_LOCAL_PRE_GRANT_FAILURE_NO_ACTIVE_EXECUTION_AUTHORITY"
     },
     {
       "item": "Configure a low AWS budget alert before any resource creation.",
@@ -428,6 +472,6 @@
     "ATTACHMENT_MANIFEST.json",
     "START_PROMPT.md"
   ],
-  "single_next_action": "Separately authorize creation of an exact bounded creator capability or supply an already-existing eligible principal.",
-  "authority_effect": "NONE_AFTER_AUTHORIZATION_124_CONSUMPTION"
+  "single_next_action": "Separately authorize one retry of the corrected atomic simulation cycle with a new single MFA session.",
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_125_CONSUMPTION"
 }

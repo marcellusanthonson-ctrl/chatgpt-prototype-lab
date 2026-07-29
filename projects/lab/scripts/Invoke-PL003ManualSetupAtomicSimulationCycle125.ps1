@@ -49,7 +49,7 @@ $script:CredentialEnvironmentNames125 = @(
 )
 
 function Get-PL003125Sha256 {
-    param([Parameter(Mandatory)][string]$Text)
+    param([Parameter(Mandatory)][AllowEmptyString()][string]$Text)
 
     $sha = [Security.Cryptography.SHA256]::Create()
     try {
@@ -137,6 +137,12 @@ function Test-PL003ManualSetupAtomicSimulationCycle125 {
     if ($script:AssumeRoleDurationSeconds125 -ne 900) {
         $failures.Add('assume-role-duration')
     }
+    if (
+        (Get-PL003125Sha256 -Text '') -cne
+        'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+    ) {
+        $failures.Add('empty-baseline-hash')
+    }
     $success = Invoke-PL003125SyntheticLifecycle `
         -PutAttempted $true `
         -PutSucceeded $true `
@@ -187,7 +193,7 @@ function Test-PL003ManualSetupAtomicSimulationCycle125 {
 
     return [ordered]@{
         result = if ($failures.Count -eq 0) { 'PASS' } else { 'FAIL' }
-        case_count = 8 + [int]$classifier.case_count
+        case_count = 9 + [int]$classifier.case_count
         failed_case_count = $failures.Count
         failed_cases = @($failures)
         classifier_result = $classifier.result
