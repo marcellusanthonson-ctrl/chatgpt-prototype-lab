@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_PL003_BOOTSTRAP_DIAGNOSTIC_PREFLIGHT_EXECUTION_117",
   "project_id": "lab",
-  "status": "GRANTED",
+  "status": "CONSUMED",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-07-29",
   "expected_parent_head": "cbd5ba61eee7d6c4080253e1a0cdc4aed629a5a1",
@@ -27,6 +27,10 @@
     "ROOT_OR_ADMINISTRATOR_ACCESS",
     "SECRET_PERSISTENCE"
   ],
-  "consumption_criterion": "Consumed only after the single diagnostic execution is completed and redacted evidence is published, or after a fail-closed blocked attempt is recorded.",
+  "consumed_at": "2026-07-29",
+  "consumption_reason": "BLOCKED_FAIL_CLOSED_BEFORE_AWS_EXECUTION",
+  "execution_evidence": "projects/lab/evidence/EVD-LAB-PL003-BOOTSTRAP-DIAGNOSTIC-PREFLIGHT-117-ATTEMPT-001.json",
+  "result": "AWS_EXECUTION_SURFACE_UNAVAILABLE_IN_CURRENT_CONVERSATION",
+  "aws_calls_executed": 0,
   "post_consumption_authority": "NONE"
 }
