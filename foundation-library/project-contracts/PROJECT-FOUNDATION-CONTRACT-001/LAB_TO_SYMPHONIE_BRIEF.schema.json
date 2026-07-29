@@ -1,0 +1,20 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://lab.local/schemas/lab-to-symphonie-brief.schema.json",
+  "title":"LAB to Symphonie Brief",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["schema_version","brief_id","project_contract_ref","resolved_context","evaluation","mandatory_gates","phase_inputs","evidence_requirements","authority_boundary"],
+  "properties":{
+    "schema_version":{"const":"0.1.0"},
+    "brief_id":{"type":"string"},
+    "status":{"enum":["DRAFT","PROPOSED","APPROVED_FOR_PLANNING","SUPERSEDED"]},
+    "project_contract_ref":{"type":"object","required":["contract_id","repository","path","version_or_commit"],"properties":{"contract_id":{"type":"string"},"repository":{"type":"string"},"path":{"type":"string"},"version_or_commit":{"type":"string"}}},
+    "resolved_context":{"type":"object","required":["applicable_rules","applicable_patterns","rejected_patterns","open_assumptions","source_refs"],"properties":{"applicable_rules":{"type":"array","items":{"type":"string"}},"applicable_patterns":{"type":"array","items":{"type":"string"}},"rejected_patterns":{"type":"array","items":{"type":"string"}},"open_assumptions":{"type":"array","items":{"type":"string"}},"source_refs":{"type":"array","items":{"type":"string"},"minItems":1}}},
+    "evaluation":{"type":"object","required":["outcome","findings","uncertainty","required_modifications","next_phase_effect"],"properties":{"outcome":{"enum":["COMPLIANT","COMPLIANT_WITH_REQUIRED_MODIFICATIONS","INSUFFICIENT_SPECIFICATION","ARCHITECTURALLY_UNSAFE","CONTRADICTS_PROJECT_INVARIANT","UNPROVEN_HIGH_RISK_ASSUMPTION"]},"findings":{"type":"array","items":{"type":"string"}},"uncertainty":{"type":"array","items":{"type":"string"}},"required_modifications":{"type":"array","items":{"type":"string"}},"next_phase_effect":{"enum":["ALLOW_PLANNING","ALLOW_PLANNING_WITH_GATES","BLOCK_PLANNING","REQUIRE_HUMAN_DECISION"]}}},
+    "mandatory_gates":{"type":"array","items":{"type":"object","required":["gate_id","phase","condition","required_evidence","failure_effect"],"properties":{"gate_id":{"type":"string"},"phase":{"type":"string"},"condition":{"type":"string"},"required_evidence":{"type":"array","items":{"type":"string"}},"failure_effect":{"enum":["ADVISORY","BLOCK_PHASE","BLOCK_RELEASE","REQUIRE_HUMAN_DECISION"]}}}},
+    "phase_inputs":{"type":"object","required":["discovery","product","ux_ui","architecture","implementation","validation","release"],"properties":{"discovery":{"type":"array","items":{"type":"string"}},"product":{"type":"array","items":{"type":"string"}},"ux_ui":{"type":"array","items":{"type":"string"}},"architecture":{"type":"array","items":{"type":"string"}},"implementation":{"type":"array","items":{"type":"string"}},"validation":{"type":"array","items":{"type":"string"}},"release":{"type":"array","items":{"type":"string"}}}},
+    "evidence_requirements":{"type":"object","required":["configured","effective","behavior_verified","rollback_verified"],"properties":{"configured":{"type":"array","items":{"type":"string"}},"effective":{"type":"array","items":{"type":"string"}},"behavior_verified":{"type":"array","items":{"type":"string"}},"rollback_verified":{"type":"array","items":{"type":"string"}}}},
+    "authority_boundary":{"type":"object","required":["authority_effect","planning_only","runtime_authorized","integration_authorized","product_changes_authorized"],"properties":{"authority_effect":{"const":"NONE"},"planning_only":{"const":true},"runtime_authorized":{"const":false},"integration_authorized":{"const":false},"product_changes_authorized":{"const":false}}}
+  }
+}
