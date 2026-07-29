@@ -1,0 +1,182 @@
+{
+  "schema_version": "1.0.0",
+  "matrix_id": "PL003_ACTION_RESOURCE_CONTEXT_MATRIX_001",
+  "project_id": "lab",
+  "status": "FROZEN_NORMATIVE_MATRIX_PROVIDER_AUXILIARY_TRACE_REQUIRED",
+  "source_head": "719b2ef4ead91ecb3b03b9d3bd7529590ac1428d",
+  "terraform_version": "1.15.8",
+  "aws_provider_observed_version": "6.56.0",
+  "region": "sa-east-1",
+  "source_paths": [
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/aws-preflight/terraform/iam.tf",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/aws-preflight/terraform/kms.tf",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/aws-preflight/terraform/s3.tf",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/aws-preflight/terraform/secrets.tf",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/aws-preflight/terraform/cloudtrail.tf",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/aws-preflight/terraform/locals.tf",
+    "projects/lab/evidence/EVD-LAB-AWS-TERRAFORM-PLAN-111C.json"
+  ],
+  "resource_inventory": {
+    "total_create": 49,
+    "types": {
+      "aws_cloudtrail": 1,
+      "aws_iam_policy": 1,
+      "aws_iam_role": 9,
+      "aws_iam_role_policy": 9,
+      "aws_kms_alias": 3,
+      "aws_kms_key": 3,
+      "aws_s3_bucket": 3,
+      "aws_s3_bucket_object_lock_configuration": 3,
+      "aws_s3_bucket_ownership_controls": 3,
+      "aws_s3_bucket_policy": 3,
+      "aws_s3_bucket_public_access_block": 3,
+      "aws_s3_bucket_server_side_encryption_configuration": 3,
+      "aws_s3_bucket_versioning": 3,
+      "aws_secretsmanager_secret": 1,
+      "aws_secretsmanager_secret_policy": 1
+    }
+  },
+  "name_templates": {
+    "prefix": "pl003-preflight",
+    "permissions_boundary": "arn:aws:iam::<ACCOUNT_ID>:policy/pl003-preflight-subject-boundary",
+    "roles": [
+      "arn:aws:iam::<ACCOUNT_ID>:role/pl003-preflight-package-generator",
+      "arn:aws:iam::<ACCOUNT_ID>:role/pl003-preflight-baseline-generator",
+      "arn:aws:iam::<ACCOUNT_ID>:role/pl003-preflight-normalization-operator",
+      "arn:aws:iam::<ACCOUNT_ID>:role/pl003-preflight-evaluator-1",
+      "arn:aws:iam::<ACCOUNT_ID>:role/pl003-preflight-evaluator-2",
+      "arn:aws:iam::<ACCOUNT_ID>:role/pl003-preflight-evaluator-3",
+      "arn:aws:iam::<ACCOUNT_ID>:role/pl003-preflight-randomization-custodian",
+      "arn:aws:iam::<ACCOUNT_ID>:role/pl003-preflight-claude-auditor",
+      "arn:aws:iam::<ACCOUNT_ID>:role/pl003-preflight-controller"
+    ],
+    "buckets": [
+      "arn:aws:s3:::pl003-preflight-artifacts-<ACCOUNT_ID>-<NAME_SUFFIX>",
+      "arn:aws:s3:::pl003-preflight-audit-<ACCOUNT_ID>-<NAME_SUFFIX>",
+      "arn:aws:s3:::pl003-preflight-custody-<ACCOUNT_ID>-<NAME_SUFFIX>"
+    ],
+    "kms_aliases": [
+      "alias/pl003-preflight-artifacts",
+      "alias/pl003-preflight-audit",
+      "alias/pl003-preflight-custodian"
+    ],
+    "secret": "arn:aws:secretsmanager:sa-east-1:<ACCOUNT_ID>:secret:/pl003/preflight/randomization-mapping-*",
+    "trail": "arn:aws:cloudtrail:sa-east-1:<ACCOUNT_ID>:trail/pl003-preflight-trail"
+  },
+  "mandatory_tags": {
+    "Project": "PRODUCT-LEADERSHIP-TEST-003",
+    "Environment": "PREFLIGHT",
+    "DataClass": "SYNTHETIC-NON-TEST",
+    "Owner": "LAB",
+    "Disposable": "true",
+    "ManagedBy": "Terraform"
+  },
+  "normative_mutation_matrix": [
+    {
+      "domain": "IAM_BOUNDARY",
+      "actions": ["iam:CreatePolicy"],
+      "resources": ["arn:aws:iam::<ACCOUNT_ID>:policy/pl003-preflight-subject-boundary"],
+      "required_context": {"aws:RequestedRegion": "sa-east-1", "aws:TagKeys": ["Project", "Environment", "DataClass", "Owner", "Disposable", "ManagedBy"]},
+      "count": 1
+    },
+    {
+      "domain": "IAM_ROLES",
+      "actions": ["iam:CreateRole"],
+      "resources": ["NINE_EXACT_ROLE_ARNS_FROM_name_templates.roles"],
+      "required_context": {"iam:PermissionsBoundary": "arn:aws:iam::<ACCOUNT_ID>:policy/pl003-preflight-subject-boundary", "aws:TagKeys": ["Project", "Environment", "DataClass", "Owner", "Disposable", "ManagedBy"]},
+      "count": 9
+    },
+    {
+      "domain": "IAM_INLINE_ROLE_POLICIES",
+      "actions": ["iam:PutRolePolicy"],
+      "resources": ["NINE_EXACT_ROLE_ARNS_FROM_name_templates.roles"],
+      "required_context": {},
+      "count": 9
+    },
+    {
+      "domain": "KMS_KEYS",
+      "actions": ["kms:CreateKey", "kms:EnableKeyRotation"],
+      "resources": ["*", "THREE_CREATED_KEY_ARNS"],
+      "required_context": {"aws:RequestedRegion": "sa-east-1", "aws:TagKeys": ["Project", "Environment", "DataClass", "Owner", "Disposable", "ManagedBy"]},
+      "count": 3
+    },
+    {
+      "domain": "KMS_ALIASES",
+      "actions": ["kms:CreateAlias"],
+      "resources": ["THREE_CREATED_KEY_ARNS", "arn:aws:kms:sa-east-1:<ACCOUNT_ID>:alias/pl003-preflight-*"],
+      "required_context": {"aws:RequestedRegion": "sa-east-1"},
+      "count": 3
+    },
+    {
+      "domain": "S3_BUCKET_CREATION",
+      "actions": ["s3:CreateBucket", "s3:PutBucketTagging"],
+      "resources": ["THREE_EXACT_BUCKET_ARNS_FROM_name_templates.buckets"],
+      "required_context": {"aws:RequestedRegion": "sa-east-1", "aws:TagKeys": ["Project", "Environment", "DataClass", "Owner", "Disposable", "ManagedBy"]},
+      "count": 3
+    },
+    {
+      "domain": "S3_BUCKET_CONFIGURATION",
+      "actions": [
+        "s3:PutBucketOwnershipControls",
+        "s3:PutBucketPublicAccessBlock",
+        "s3:PutBucketVersioning",
+        "s3:PutBucketObjectLockConfiguration",
+        "s3:PutEncryptionConfiguration",
+        "s3:PutBucketPolicy"
+      ],
+      "resources": ["THREE_EXACT_BUCKET_ARNS_FROM_name_templates.buckets"],
+      "required_context": {"aws:RequestedRegion": "sa-east-1"},
+      "count_by_action": 3
+    },
+    {
+      "domain": "SECRETS_MANAGER",
+      "actions": ["secretsmanager:CreateSecret", "secretsmanager:PutResourcePolicy"],
+      "resources": ["*", "arn:aws:secretsmanager:sa-east-1:<ACCOUNT_ID>:secret:/pl003/preflight/randomization-mapping-*"],
+      "required_context": {"aws:RequestedRegion": "sa-east-1", "aws:TagKeys": ["Project", "Environment", "DataClass", "Owner", "Disposable", "ManagedBy"]},
+      "count": 1
+    },
+    {
+      "domain": "CLOUDTRAIL",
+      "actions": ["cloudtrail:CreateTrail", "cloudtrail:PutEventSelectors", "cloudtrail:StartLogging", "cloudtrail:AddTags"],
+      "resources": ["arn:aws:cloudtrail:sa-east-1:<ACCOUNT_ID>:trail/pl003-preflight-trail"],
+      "required_context": {"aws:RequestedRegion": "sa-east-1", "aws:TagKeys": ["Project", "Environment", "DataClass", "Owner", "Disposable", "ManagedBy"]},
+      "count": 1
+    }
+  ],
+  "policy_context_matrix": [
+    {"key": "iam:PermissionsBoundary", "required_for": ["iam:CreateRole"], "value": "EXACT_BOUNDARY_ARN"},
+    {"key": "aws:RequestedRegion", "required_for": ["ALL_REGIONAL_ACTIONS"], "value": "sa-east-1"},
+    {"key": "aws:TagKeys", "required_for": ["TAGGED_CREATE_OR_TAG_ACTIONS"], "value": ["Project", "Environment", "DataClass", "Owner", "Disposable", "ManagedBy"]},
+    {"key": "aws:RequestTag/Project", "required_for": ["TAGGED_CREATE_OR_TAG_ACTIONS"], "value": "PRODUCT-LEADERSHIP-TEST-003"},
+    {"key": "aws:RequestTag/Environment", "required_for": ["TAGGED_CREATE_OR_TAG_ACTIONS"], "value": "PREFLIGHT"},
+    {"key": "aws:RequestTag/DataClass", "required_for": ["TAGGED_CREATE_OR_TAG_ACTIONS"], "value": "SYNTHETIC-NON-TEST"},
+    {"key": "aws:RequestTag/Owner", "required_for": ["TAGGED_CREATE_OR_TAG_ACTIONS"], "value": "LAB"},
+    {"key": "aws:RequestTag/Disposable", "required_for": ["TAGGED_CREATE_OR_TAG_ACTIONS"], "value": "true"},
+    {"key": "aws:RequestTag/ManagedBy", "required_for": ["TAGGED_CREATE_OR_TAG_ACTIONS"], "value": "Terraform"}
+  ],
+  "read_after_create_and_provider_auxiliary_actions": {
+    "status": "UNVERIFIED_REQUIRES_PROVIDER_TRACE_OR_PRIMARY_SOURCE_MAPPING",
+    "known_candidate_domains": [
+      "IAM_GET_LIST_AND_POLICY_VERSION_READS",
+      "KMS_DESCRIBE_POLICY_ROTATION_AND_TAG_READS",
+      "S3_GET_BUCKET_CONFIGURATION_READS",
+      "SECRETS_MANAGER_DESCRIBE_POLICY_AND_TAG_READS",
+      "CLOUDTRAIL_DESCRIBE_STATUS_SELECTOR_AND_TAG_READS"
+    ],
+    "gate_effect": "BLOCK_EXECUTION_UNTIL_EVERY_AUXILIARY_ACTION_RESOURCE_PAIR_IS_FROZEN"
+  },
+  "simulation_scope": {
+    "principal": "INTENDED_BOUNDED_PL003_PROVISIONING_OPERATOR",
+    "permissions_boundary_required": true,
+    "identity_policy_required": true,
+    "session_policy_status_required": true,
+    "scp_rcp_applicability_required": true,
+    "mutations": 0,
+    "terraform": false,
+    "provisioning": false,
+    "test_003": false
+  },
+  "completeness_verdict": "STATIC_NORMATIVE_MATRIX_FROZEN_PROVIDER_AUXILIARY_MATRIX_INCOMPLETE",
+  "next_required_artifact": "AWS_PROVIDER_6_56_0_AUXILIARY_CALL_MATRIX_WITH_PRIMARY_SOURCE_OR_READ_ONLY_TRACE_EVIDENCE",
+  "authority_effect": "NONE"
+}
