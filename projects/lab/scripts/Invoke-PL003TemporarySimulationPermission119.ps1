@@ -21,8 +21,20 @@ param(
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
+$requestedOperationalRun119 = [bool]$OperationalRun
+$requestedSyntheticTest119 = [bool]$SyntheticTest
+$requestedExpectedHead119 = $ExpectedHead
+$requestedAttemptNumber119 = $AttemptNumber
+$requestedEvidencePath119 = $EvidencePath
+
 $diagnosticScript = Join-Path $PSScriptRoot 'Invoke-PL003BootstrapDiagnosticPreflight.ps1'
 . $diagnosticScript
+
+$OperationalRun = $requestedOperationalRun119
+$SyntheticTest = $requestedSyntheticTest119
+$ExpectedHead = $requestedExpectedHead119
+$AttemptNumber = $requestedAttemptNumber119
+$EvidencePath = $requestedEvidencePath119
 
 $script:AuthorizationId119 = 'AUTHORIZATION_LAB_PL003_TEMPORARY_SIMULATION_PERMISSION_119'
 $script:TemporaryPolicyName119 = 'PL003TemporarySimulationOnly119'
