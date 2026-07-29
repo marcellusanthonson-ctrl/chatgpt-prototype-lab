@@ -1,0 +1,121 @@
+{
+    "schema_version":  "1.0.0",
+    "evidence_id":  "EVD-LAB-PL003-BOUNDED-CREATOR-CAPABILITY-124-ATTEMPT-001",
+    "authorization_id":  "AUTHORIZATION_LAB_PL003_BOUNDED_CREATOR_CAPABILITY_124",
+    "project_id":  "lab",
+    "kind":  "REDACTED_LOCAL_BOUNDED_CREATOR_CAPABILITY_PREFLIGHT_EVIDENCE",
+    "status":  "BLOCKED",
+    "executed_at":  "2026-07-29T15:57:34Z",
+    "repository":  "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "branch_mode":  "DETACHED_HEAD",
+    "execution_head":  "7ab5ba35e8943eb57c43e3c179f788dcdca901f2",
+    "prechecks":  {
+                      "head":  "PASS",
+                      "worktree":  "PASS",
+                      "authorization_124_registered_granted":  "PASS",
+                      "authorizations_118_119_120_121_122_123_consumed":  "PASS",
+                      "inherited_execution_authority":  "NONE",
+                      "synthetic_documents":  "PASS",
+                      "target_names_fixed":  "PASS",
+                      "aws_cli_local_configuration":  "PASS",
+                      "cli_history_disabled":  "PASS",
+                      "inherited_temporary_credentials_absent":  "PASS",
+                      "reusable_temporary_profiles_absent":  "PASS"
+                  },
+    "documents":  {
+                      "role_name":  "PL003BoundedSimulationSetupOperator",
+                      "boundary_name":  "PL003BoundedSimulationSetupBoundary124",
+                      "role_policy_name":  "PL003BoundedSimulationSetupRolePolicy124",
+                      "future_bootstrap_policy_name":  "PL003AtomicSimulationOnly125",
+                      "create_role_maximum_session_seconds":  3600,
+                      "assume_role_duration_seconds":  900,
+                      "trust_sha256":  "cb08e67527ad19a13856401db156bc13f8886f1a6b169ef4b0c8837635bc4d73",
+                      "boundary_sha256":  "6c0f33a25fe4027477bb903c8944f5868ea7863d1e9089c899778133cdeeea0b",
+                      "role_policy_sha256":  "6c0f33a25fe4027477bb903c8944f5868ea7863d1e9089c899778133cdeeea0b",
+                      "exact_four_actions_on_bootstrap_only":  true,
+                      "iam_wildcard_absent":  true,
+                      "iam_pass_role_absent":  true
+                  },
+    "creator_inventory":  {
+                              "local_profile_count":  2,
+                              "profiles":  [
+                                               {
+                                                   "redacted_id":  "LOCAL_PROFILE_001",
+                                                   "classification":  "BOOTSTRAP_EXCLUDED_GET_POLICY_ACCESS_DENIED_BY_AUTHORIZATION_123",
+                                                   "role_profile":  false,
+                                                   "mfa_reference_configured":  true,
+                                                   "long_term_source_credential_reference_present":  true,
+                                                   "reusable_session_token_present":  false,
+                                                   "eligible_creator":  false
+                                               },
+                                               {
+                                                   "redacted_id":  "LOCAL_PROFILE_002",
+                                                   "classification":  "KNOWN_READ_ONLY_PLAN_OPERATOR_INCOMPATIBLE",
+                                                   "role_profile":  true,
+                                                   "mfa_reference_configured":  true,
+                                                   "long_term_source_credential_reference_present":  false,
+                                                   "reusable_session_token_present":  false,
+                                                   "eligible_creator":  false
+                                               }
+                                           ],
+                              "eligible_creator_count":  0,
+                              "selected_creator":  "NONE",
+                              "inventory_source":  "LOCAL_AWS_CONFIGURATION_ONLY"
+                          },
+    "collision_preflight":  {
+                                "executed":  false,
+                                "result":  "NOT_EXECUTED_NO_CREATOR_SELECTED"
+                            },
+    "resources":  {
+                      "boundary_created":  false,
+                      "role_created":  false,
+                      "role_policy_created":  false
+                  },
+    "compensation":  {
+                         "required":  false,
+                         "attempted":  false,
+                         "result":  "NOT_APPLICABLE"
+                     },
+    "assume_role":  {
+                        "attempted":  false,
+                        "duration_seconds":  900,
+                        "result":  "NOT_EXECUTED"
+                    },
+    "baseline":  {
+                     "attempted":  false,
+                     "result":  "NOT_EXECUTED"
+                 },
+    "aws_calls":  {
+                      "sts":  0,
+                      "iam":  0,
+                      "other":  0
+                  },
+    "mutations":  {
+                      "create_policy":  0,
+                      "create_role":  0,
+                      "put_role_policy":  0,
+                      "compensating":  0,
+                      "bootstrap_user_changes":  0,
+                      "unexpected":  0
+                  },
+    "final_aws_state":  {
+                            "resources_created":  0,
+                            "persistent_mutations":  0,
+                            "terraform_executions":  0,
+                            "provisioning_executions":  0,
+                            "product_leadership_test_003_executions":  0,
+                            "product_leadership_active":  false,
+                            "product_leadership_integrated":  false
+                        },
+    "credentials_cleared":  true,
+    "result":  "BLOCKED_NO_EXISTING_BOUNDED_CREATOR_CAPABILITY",
+    "failure_code":  "BLOCKED_NO_EXISTING_BOUNDED_CREATOR_CAPABILITY",
+    "redaction":  {
+                      "profile_names_included":  false,
+                      "full_account_id_included":  false,
+                      "full_arns_included":  false,
+                      "credentials_tokens_or_mfa_codes_included":  false,
+                      "raw_aws_configuration_included":  false
+                  },
+    "post_attempt_authority":  "NONE"
+}

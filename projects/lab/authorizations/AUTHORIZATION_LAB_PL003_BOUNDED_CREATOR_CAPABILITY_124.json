@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_PL003_BOUNDED_CREATOR_CAPABILITY_124",
   "project_id": "lab",
-  "status": "GRANTED",
+  "status": "CONSUMED",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-07-29",
   "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
@@ -131,6 +131,42 @@
     "BLOCKED_BASELINE_READ_FAILED",
     "BLOCKED_FAIL_CLOSED_OTHER"
   ],
+  "execution_result": {
+    "status": "CONSUMED_BLOCKED_NO_EXISTING_BOUNDED_CREATOR_CAPABILITY",
+    "failure_code": "BLOCKED_NO_EXISTING_BOUNDED_CREATOR_CAPABILITY",
+    "synthetic_result": "PASS",
+    "synthetic_case_count": 9,
+    "local_profile_count": 2,
+    "eligible_creator_count": 0,
+    "selected_creator": "NONE",
+    "creator_classifications": [
+      "BOOTSTRAP_EXCLUDED_GET_POLICY_ACCESS_DENIED_BY_AUTHORIZATION_123",
+      "KNOWN_READ_ONLY_PLAN_OPERATOR_INCOMPATIBLE"
+    ],
+    "collision_preflight_executed": false,
+    "boundary_created": false,
+    "role_created": false,
+    "role_policy_created": false,
+    "compensation_required": false,
+    "assume_role_attempted": false,
+    "bootstrap_baseline_attempted": false,
+    "evidence": "projects/lab/evidence/EVD-LAB-PL003-BOUNDED-CREATOR-CAPABILITY-124-ATTEMPT-001.json",
+    "aws_calls": {
+      "sts": 0,
+      "iam": 0,
+      "other": 0
+    },
+    "aws_mutations": 0,
+    "bootstrap_user_changes": 0,
+    "persistent_mutations": 0,
+    "aws_resources_created": 0,
+    "terraform_executions": 0,
+    "provisioning_executions": 0,
+    "product_leadership_test_003_executions": 0,
+    "product_leadership_active": false,
+    "product_leadership_integrated": false,
+    "credentials_cleared": true
+  },
   "response_contract": [
     "INITIAL_HEAD",
     "REDACTED_CREATOR_IDENTITY_AND_CLASSIFICATION",
@@ -148,6 +184,8 @@
     "COMMIT_AND_FINAL_REMOTE_HEAD",
     "SINGLE_NEXT_RECOMMENDED_ACTION"
   ],
+  "consumed_at": "2026-07-29",
+  "consumption_reason": "LOCAL_ONLY_INVENTORY_FOUND_NO_EXISTING_CREATOR_IDENTITY_SATISFYING_THE_BOUNDED_NON_ROOT_NON_ADMINISTRATIVE_CLASS_AND_STOPPED_BEFORE_MFA_OR_ANY_AWS_SERVICE_CALL",
   "consumption_criterion": "CONSUMED_AFTER_A_TERMINAL_RESULT_IS_PUBLISHED_CREDENTIALS_ARE_CLEARED_ZERO_UNAUTHORIZED_MUTATIONS_ARE_ATTESTED_AND_FINAL_REMOTE_HEAD_IS_VERIFIED",
   "post_consumption_authority": "NONE"
 }

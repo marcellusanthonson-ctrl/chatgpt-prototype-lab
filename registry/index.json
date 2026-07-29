@@ -9,8 +9,8 @@
     "ideas": 5,
     "integrations": 6,
     "experiments": 8,
-    "authorizations": 74,
-    "evidence": 53,
+    "authorizations": 75,
+    "evidence": 54,
     "unincorporated": 0,
     "proposals": 3,
     "sessions": 1,
@@ -56,7 +56,8 @@
       "registry/deltas/pl003-atomic-simulation-permission-cycle-120.json",
       "registry/deltas/pl003-external-setup-principal-simulation-cycle-121.json",
       "registry/deltas/pl003-create-bounded-setup-role-122.json",
-      "registry/deltas/pl003-create-bounded-setup-role-compatibility-123.json"
+      "registry/deltas/pl003-create-bounded-setup-role-compatibility-123.json",
+      "registry/deltas/pl003-bounded-creator-capability-124.json"
     ],
     "evidence": "registry/evidence.json",
     "evidence_deltas": [
@@ -72,7 +73,8 @@
       "registry/deltas/pl003-atomic-simulation-permission-cycle-120.json",
       "registry/deltas/pl003-external-setup-principal-simulation-cycle-121.json",
       "registry/deltas/pl003-create-bounded-setup-role-122.json",
-      "registry/deltas/pl003-create-bounded-setup-role-compatibility-123.json"
+      "registry/deltas/pl003-create-bounded-setup-role-compatibility-123.json",
+      "registry/deltas/pl003-bounded-creator-capability-124.json"
     ],
     "current_state": "CURRENT_STATE.json",
     "current_state_deltas": [
@@ -93,7 +95,8 @@
       "registry/deltas/pl003-atomic-simulation-permission-cycle-120.json",
       "registry/deltas/pl003-external-setup-principal-simulation-cycle-121.json",
       "registry/deltas/pl003-create-bounded-setup-role-122.json",
-      "registry/deltas/pl003-create-bounded-setup-role-compatibility-123.json"
+      "registry/deltas/pl003-create-bounded-setup-role-compatibility-123.json",
+      "registry/deltas/pl003-bounded-creator-capability-124.json"
     ],
     "pattern_deltas": ["registry/deltas/livhavn-surgical-visual-patch-093.json"],
     "error_deltas": ["registry/deltas/livhavn-surgical-visual-patch-093.json"],
@@ -140,12 +143,12 @@
     "decision_path": "decisions/DEC-LAB-022.json",
     "error": "ERR-LAB-007",
     "pattern": "PAT-LAB-009",
-    "authorization": "AUTHORIZATION_LAB_PL003_CREATE_BOUNDED_SETUP_ROLE_COMPATIBILITY_123",
-    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_CREATE_BOUNDED_SETUP_ROLE_COMPATIBILITY_123.json",
-    "evidence": "EVD-LAB-PL003-CREATE-BOUNDED-SETUP-ROLE-COMPATIBILITY-123-ATTEMPT-001",
-    "evidence_path": "projects/lab/evidence/EVD-LAB-PL003-CREATE-BOUNDED-SETUP-ROLE-COMPATIBILITY-123-ATTEMPT-001.json",
-    "current_state_delta": "PL003-CREATE-BOUNDED-SETUP-ROLE-COMPATIBILITY-123",
-    "current_state_delta_path": "registry/deltas/pl003-create-bounded-setup-role-compatibility-123.json",
+    "authorization": "AUTHORIZATION_LAB_PL003_BOUNDED_CREATOR_CAPABILITY_124",
+    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_BOUNDED_CREATOR_CAPABILITY_124.json",
+    "evidence": "EVD-LAB-PL003-BOUNDED-CREATOR-CAPABILITY-124-ATTEMPT-001",
+    "evidence_path": "projects/lab/evidence/EVD-LAB-PL003-BOUNDED-CREATOR-CAPABILITY-124-ATTEMPT-001.json",
+    "current_state_delta": "PL003-BOUNDED-CREATOR-CAPABILITY-124",
+    "current_state_delta_path": "registry/deltas/pl003-bounded-creator-capability-124.json",
     "experiment": "EXP-LAB-003",
     "proposal": "PROP-LAB-003",
     "session": "SES-2026-06-28-001",

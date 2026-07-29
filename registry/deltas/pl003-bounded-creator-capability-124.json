@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "PL003-BOUNDED-CREATOR-CAPABILITY-124",
+  "project_id": "lab",
+  "effective_at": "2026-07-29",
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_PL003_BOUNDED_CREATOR_CAPABILITY_124",
+    "path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_BOUNDED_CREATOR_CAPABILITY_124.json",
+    "status": "CONSUMED"
+  },
+  "implementation": {
+    "precheck_script": "projects/lab/scripts/Invoke-PL003BoundedCreatorCapability124Precheck.ps1",
+    "synthetic_test": "projects/lab/scripts/tests/Invoke-PL003BoundedCreatorCapability124.Tests.ps1",
+    "synthetic_result": "PASS",
+    "synthetic_case_count": 9,
+    "role_name": "PL003BoundedSimulationSetupOperator",
+    "boundary_name": "PL003BoundedSimulationSetupBoundary124",
+    "role_policy_name": "PL003BoundedSimulationSetupRolePolicy124",
+    "future_bootstrap_policy_name": "PL003AtomicSimulationOnly125",
+    "trust_sha256": "cb08e67527ad19a13856401db156bc13f8886f1a6b169ef4b0c8837635bc4d73",
+    "boundary_sha256": "6c0f33a25fe4027477bb903c8944f5868ea7863d1e9089c899778133cdeeea0b",
+    "role_policy_sha256": "6c0f33a25fe4027477bb903c8944f5868ea7863d1e9089c899778133cdeeea0b"
+  },
+  "evidence": {
+    "id": "EVD-LAB-PL003-BOUNDED-CREATOR-CAPABILITY-124-ATTEMPT-001",
+    "path": "projects/lab/evidence/EVD-LAB-PL003-BOUNDED-CREATOR-CAPABILITY-124-ATTEMPT-001.json",
+    "result": "BLOCKED_NO_EXISTING_BOUNDED_CREATOR_CAPABILITY"
+  },
+  "state_effect": {
+    "local_profile_count": 2,
+    "eligible_creator_count": 0,
+    "selected_creator": "NONE",
+    "collision_preflight_executed": false,
+    "role_created": false,
+    "boundary_created": false,
+    "role_policy_applied": false,
+    "assume_role_attempted": false,
+    "bootstrap_baseline_reads_executed": false,
+    "current_blocker": "NO_EXISTING_BOUNDED_CREATOR_CAPABILITY",
+    "active_execution_authority": "NONE",
+    "aws_calls": {
+      "sts": 0,
+      "iam": 0,
+      "other": 0
+    },
+    "iam_mutations": 0,
+    "bootstrap_user_changes": 0,
+    "persistent_mutations": 0,
+    "aws_resources_created": 0,
+    "terraform_executed": false,
+    "provisioning_executed": false,
+    "product_leadership_test_003_executed": false,
+    "product_leadership_active": false,
+    "product_leadership_integrated": false,
+    "credentials_cleared": true
+  },
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_124_CONSUMPTION"
+}

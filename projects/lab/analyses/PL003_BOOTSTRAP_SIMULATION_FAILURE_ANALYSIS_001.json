@@ -119,6 +119,21 @@
     "evidence_ref": "projects/lab/evidence/EVD-LAB-PL003-CREATE-BOUNDED-SETUP-ROLE-COMPATIBILITY-123-ATTEMPT-001.json",
     "credentials_cleared": true
   },
-  "required_resolution": "Provide a separately authorized bounded creator principal or capability that can perform authorization 123's exact collision reads, creation, verification and compensating cleanup operations; the bootstrap principal was verified but iam:GetPolicy was denied before any mutation.",
+  "authorization_124_result": {
+    "authorization_id": "AUTHORIZATION_LAB_PL003_BOUNDED_CREATOR_CAPABILITY_124",
+    "status": "CONSUMED_BLOCKED_NO_EXISTING_BOUNDED_CREATOR_CAPABILITY",
+    "local_profile_count": 2,
+    "eligible_creator_count": 0,
+    "selected_creator": "NONE",
+    "collision_preflight_executed": false,
+    "role_created": false,
+    "boundary_created": false,
+    "role_policy_applied": false,
+    "aws_calls": 0,
+    "iam_mutations": 0,
+    "bootstrap_user_changes": 0,
+    "evidence_ref": "projects/lab/evidence/EVD-LAB-PL003-BOUNDED-CREATOR-CAPABILITY-124-ATTEMPT-001.json"
+  },
+  "required_resolution": "Provide an already-existing bounded creator capability or separately authorize creation of one with only the exact PL003 collision, setup, verification and compensating-cleanup operations; authorization 124 found no eligible existing local identity and is consumed.",
   "active_execution_authority": "NONE"
 }
