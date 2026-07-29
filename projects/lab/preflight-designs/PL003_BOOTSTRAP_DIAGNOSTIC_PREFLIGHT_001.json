@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0.0",
+  "preflight_design_id": "PL003_BOOTSTRAP_DIAGNOSTIC_PREFLIGHT_001",
+  "project_id": "lab",
+  "status": "DESIGNED_NOT_AUTHORIZED_FOR_EXECUTION",
+  "purpose": "Discriminate the exact failure class of the ATTEMPT-004 bootstrap simulation gate without mutations.",
+  "execution_model": "READ_ONLY_FAIL_CLOSED",
+  "prerequisites": [
+    "NEW_EXPLICIT_EXECUTION_AUTHORIZATION",
+    "VERIFY_LIVE_HEAD",
+    "NO_REUSABLE_TEMPORARY_CREDENTIALS",
+    "EPHEMERAL_MFA_SESSION_ONLY_IF_SEPARATELY_AUTHORIZED",
+    "SANITIZED_DIAGNOSTIC_CAPTURE_ENABLED"
+  ],
+  "ordered_steps": [
+    "Verify repository HEAD, branch and authorization identity.",
+    "Verify no inherited AWS credential environment or persisted temporary profile.",
+    "Establish identity only under a separately authorized ephemeral session.",
+    "Run one control simulation with a known read-only action and exact principal ARN.",
+    "Run bootstrap checks sequentially and stop at the first non-allowed or API error.",
+    "Capture exit code and sanitized AWS error class before governance mapping.",
+    "Classify the result without mutations.",
+    "Clear process credentials and publish redacted evidence."
+  ],
+  "per_call_capture": [
+    "service",
+    "operation",
+    "tested_action",
+    "resource_shape_hash",
+    "context_key_names",
+    "cli_exit_code",
+    "aws_error_code",
+    "aws_error_message_category",
+    "request_id_hash",
+    "evaluation_decision",
+    "missing_context_values"
+  ],
+  "failure_classes": [
+    "SIMULATION_API_UNAVAILABLE",
+    "SIMULATION_ACTION_NOT_AUTHORIZED",
+    "SIMULATION_TARGET_PRINCIPAL_UNSUPPORTED",
+    "SIMULATION_INPUT_INVALID",
+    "PRINCIPAL_ARN_RESOLUTION_FAILED",
+    "BOUNDARY_OR_SESSION_POLICY_RESTRICTION",
+    "SCP_ORGANIZATION_RESTRICTION_POSSIBLE",
+    "TOOLING_OR_ENVIRONMENT_FAILURE",
+    "INSUFFICIENT_EVIDENCE_TO_DISCRIMINATE"
+  ],
+  "minimum_future_permissions": [
+    "sts:GetCallerIdentity",
+    "iam:SimulatePrincipalPolicy"
+  ],
+  "conditional_future_permissions": [
+    "organizations:DescribeOrganization",
+    "organizations:ListPoliciesForTarget",
+    "organizations:DescribePolicy"
+  ],
+  "forbidden_effects": [
+    "IAM_MUTATION",
+    "INFRASTRUCTURE_MUTATION",
+    "TERRAFORM",
+    "TEST_003_EXECUTION",
+    "PRODUCT_LEADERSHIP_ACTIVATION_OR_INTEGRATION",
+    "ROOT_USE",
+    "GENERAL_ADMINISTRATION"
+  ],
+  "success_condition": "One exact, evidence-backed failure class is identified or the result is explicitly INSUFFICIENT_EVIDENCE without any mutation.",
+  "post_execution_authority": "NONE"
+}
