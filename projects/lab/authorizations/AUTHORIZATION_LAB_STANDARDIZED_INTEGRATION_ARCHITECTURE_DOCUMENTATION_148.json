@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_STANDARDIZED_INTEGRATION_ARCHITECTURE_DOCUMENTATION_148",
+  "project_id": "lab",
+  "status": "CONSUMED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-30",
+  "approval_source": "Explicit instruction to document the points discussed and continue.",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "historical_parent_head": "f09260c9ec683d25ef11fae304a563d24c3a4afe",
+  "allowed_actions": [
+    "DOCUMENT_STANDARDIZED_INTEGRATION_FACTORY",
+    "DOCUMENT_PROVIDER_NEUTRAL_OPERATIONAL_TRUST_STANDARD",
+    "DOCUMENT_AWS_REFERENCE_PROFILE",
+    "DOCUMENT_TECHNOLOGY_NEUTRALITY_POLICY",
+    "COMMIT_AND_PUSH_DOCUMENTARY_FILES"
+  ],
+  "forbidden_actions": [
+    "EXECUTE_SSE_TEST",
+    "EXECUTE_PRODUCT_LEADERSHIP_TEST_003",
+    "EXECUTE_AWS_OR_TERRAFORM",
+    "PROVISION_INFRASTRUCTURE",
+    "SELECT_GLOBAL_STACK",
+    "SELECT_PRODUCTION_PROVIDER",
+    "IMPLEMENT_RUNTIME_RESOLVER",
+    "ACTIVATE_OR_INTEGRATE_ANY_CANDIDATE_PACKAGE"
+  ],
+  "result_files": [
+    "architecture/integrations/STANDARDIZED_INTEGRATION_FACTORY_001.json",
+    "architecture/integrations/PORTABLE_OPERATIONAL_TRUST_STANDARD_001.json",
+    "architecture/integrations/provider-profiles/AWS_OPERATIONAL_TRUST_REFERENCE_PROFILE_001.json",
+    "architecture/integrations/TECHNOLOGY_NEUTRALITY_AND_CONFIDENCE_POLICY_001.json"
+  ],
+  "consumption_criterion": "CONSUMED_AFTER_DOCUMENTARY_FILES_ARE_PUBLISHED_AND_REMOTE_HEAD_VERIFIED",
+  "post_consumption_authority": "NONE"
+}
