@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "SSE-TEST-FINAL-DESIGN-REVIEW-146",
+  "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_SSE_TEST_FINAL_DESIGN_REVIEW_146.json",
+  "state_transition": {
+    "from": "SSE_TEST_DESIGN_EXPANDED_NO_EXECUTION_AUTHORITY",
+    "to": "SSE_TEST_FINAL_REVIEW_COMPLETE_READY_FOR_SEPARATE_EXECUTION_AND_AUDIT_AUTHORIZATION"
+  },
+  "test_contract": {
+    "fixtures": 32,
+    "arms": 3,
+    "minimum_outputs": 96,
+    "test_executed": false,
+    "external_audit_executed": false,
+    "sse_active": false,
+    "sse_integrated": false,
+    "architecture_or_stack_selected": false
+  },
+  "active_execution_authority": "NONE",
+  "authority_effect": "NONE"
+}
