@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_FINAL_DESIGN_REVIEW_143",
+  "status": "CONSUMED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-30",
+  "consumed_at": "2026-07-30",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "purpose": "Perform the final documentary review of Product Leadership Test 003, align the run matrix and scoring gates with the LAB-governance extension, and close the proposed repository-only execution package without executing the test.",
+  "allowed_actions": [
+    "REVIEW_RUN_MATRIX",
+    "REVIEW_SCORING_AND_GATES",
+    "ALIGN_FIXTURE_AND_OUTPUT_COUNTS",
+    "ADD_GOVERNANCE_COST_AND_NEGATIVE_TRANSFER_GATES",
+    "ALIGN_PROPOSED_EXECUTION_BRIEF",
+    "PUBLISH_FINAL_DESIGN_REVIEW",
+    "COMMIT_AND_PUSH_DOCUMENTARY_CHANGES"
+  ],
+  "forbidden_actions": [
+    "EXECUTE_TEST_003",
+    "GENERATE_TEST_CORPUS",
+    "SCORE_OUTPUTS",
+    "ACTIVATE_OR_INTEGRATE_PRODUCT_LEADERSHIP",
+    "GRANT_PRODUCT_LEADERSHIP_GOVERNANCE_AUTHORITY",
+    "AWS_CALLS",
+    "TERRAFORM",
+    "PRODUCT_OR_RUNTIME_CHANGES"
+  ],
+  "consumption_criterion": "Final-reviewed matrix, gates, manifest, proposed execution brief and review report are published and the remote HEAD is verified.",
+  "result": {
+    "fixture_total": 52,
+    "arm_count": 4,
+    "minimum_future_outputs": 112,
+    "run_matrix_aligned": true,
+    "scoring_and_gates_aligned": true,
+    "test_executed": false,
+    "corpus_generated": false,
+    "product_leadership_active": false,
+    "execution_authority_remaining": "NONE"
+  },
+  "authority_effect_after_consumption": "NONE"
+}
