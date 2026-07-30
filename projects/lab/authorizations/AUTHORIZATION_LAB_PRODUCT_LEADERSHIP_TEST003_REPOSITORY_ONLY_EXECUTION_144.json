@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_REPOSITORY_ONLY_EXECUTION_144",
+  "status": "GRANTED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-30",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "a52d71fad6b19c329d7f3429516b71e0e4071141",
+  "brief_ref": "projects/lab/briefs/CODEX_PRODUCT_LEADERSHIP_TEST003_REPOSITORY_ONLY_EXECUTION_001.json",
+  "scope": {
+    "fixture_count": 52,
+    "arm_count": 4,
+    "minimum_output_count": 112,
+    "domains": ["PRODUCT_AND_PROJECT_DECISIONS", "LAB_GOVERNANCE_DECISIONS"]
+  },
+  "allowed_actions": [
+    "EXECUTE_THE_REFERENCED_REPOSITORY_ONLY_TEST_BRIEF",
+    "GENERATE_AND_SCORE_AUTHORIZED_TEST_OUTPUTS",
+    "CREATE_PROVENANCE_HASH_COST_AND_AUDIT_EVIDENCE",
+    "COMMIT_PUSH_AND_VERIFY_TEST_EVIDENCE"
+  ],
+  "forbidden_actions": [
+    "AWS_OR_INFRASTRUCTURE_ACTIONS",
+    "EXTERNAL_DATABASE_USE",
+    "PRODUCT_OR_RUNTIME_INTEGRATION",
+    "ACTIVATE_PRODUCT_LEADERSHIP",
+    "GRANT_PRODUCT_LEADERSHIP_GOVERNANCE_AUTHORITY",
+    "ALTER_FROZEN_TEST_INPUTS_OR_OUTPUTS",
+    "UNBLIND_BEFORE_SCORE_FREEZE",
+    "DEPLOY_OR_RELEASE"
+  ],
+  "stop_conditions": [
+    "REMOTE_HEAD_MISMATCH",
+    "UNCONTROLLED_WORKTREE",
+    "INPUT_HASH_MISMATCH",
+    "NONREPRODUCIBLE_MODEL_OR_TOOL_ACCESS",
+    "SCORER_CALIBRATION_INCOMPLETE",
+    "BLINDING_FAILURE",
+    "INCOMPLETE_OUTPUT_PROVENANCE_OR_COST_MEASUREMENT",
+    "POST_FREEZE_MUTATION",
+    "AUTHORITY_SCOPE_AMBIGUOUS"
+  ],
+  "consumption_criterion": "Complete authorized evidence is committed, pushed and remotely verified.",
+  "success_effect": "READY_FOR_EXTERNAL_READ_ONLY_AUDIT_AND_HUMAN_DECISION_ONLY",
+  "authority_effect_after_consumption": "NONE"
+}
