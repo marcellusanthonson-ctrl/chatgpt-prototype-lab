@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0.0",
+  "instantiation_report_id": "INTEGRATION_FACTORY_M1_TEMPLATE_INSTANTIATION_REPORT_001",
+  "project_id": "lab",
+  "migration_phase": "M1_SCHEMA_AND_TEMPLATE_VALIDATION",
+  "status": "BLOCKED_MISSING_EXECUTABLE_TEMPLATE_AND_OVERLAY_FILES",
+  "recorded_at": "2026-07-30",
+  "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M1_SCHEMA_TEMPLATE_VALIDATION_151.json",
+  "execution_baseline_head": "833e1cf2eff86144e8633f45cfbcf3eac9203888",
+  "catalog_ref": {
+    "path": "architecture/integrations/templates/INTEGRATION_TEMPLATE_CATALOG_001.json",
+    "git_blob_sha": "552f44ea5695ab2d3197d8ad70e715a69c3d916e"
+  },
+  "catalog_inventory": {
+    "common_template_count": 13,
+    "criterion_module_overlay_count": 3,
+    "track_template_count": {
+      "FAST_TRACK": 3,
+      "FULL_TRACK": 6
+    },
+    "authorization_template_count": 5
+  },
+  "artifact_existence_checks": {
+    "representative_common_template_path": "architecture/integrations/templates/INTEGRATION_INTAKE.template.json",
+    "representative_common_template_fetch_result": "NOT_FOUND_404",
+    "representative_profile_overlay_path": "architecture/integrations/templates/ACTIVATION_DISCRIMINATION.overlay.json",
+    "representative_profile_overlay_fetch_result": "NOT_FOUND_404",
+    "code_search_result": "TEMPLATE_AND_OVERLAY_NAMES_RESOLVE_ONLY_TO_TEMPLATE_CATALOG",
+    "conclusion": "EXECUTABLE_TEMPLATE_AND_OVERLAY_ARTIFACTS_NOT_ESTABLISHED"
+  },
+  "instantiation_mode": "DOCUMENTARY_COMPATIBILITY_MAPPING_ONLY",
+  "generated_files": 0,
+  "module_instantiation_assessment": [
+    {
+      "module_id": "EVIDENCE_AND_CLAIMS",
+      "profile": "CRITERION_MODULE",
+      "track_candidate": "FAST_TRACK",
+      "required_overlays": [
+        "ACTIVATION_DISCRIMINATION.overlay.json",
+        "NEGATIVE_TRANSFER.overlay.json",
+        "TOKEN_AND_LATENCY.overlay.json"
+      ],
+      "source_mapping": {
+        "activation": "RESOLVABLE_FROM_CURRENT_SIGNAL_MAP",
+        "source_refs": "RESOLVABLE_FROM_CURRENT_SELECTOR",
+        "result_boundaries": "RESOLVABLE_FROM_CURRENT_RESULT_CONTRACT",
+        "authority_effect": "EXPLICIT_NONE",
+        "runtime_effect": "EXPLICIT_NONE",
+        "rollback": "MISSING_MODULE_SPECIFIC_CONTRACT",
+        "test_and_scoring": "MISSING_MODULE_SPECIFIC_CONTRACT"
+      },
+      "status": "SEMANTIC_MAPPING_POSSIBLE_TEMPLATE_INSTANTIATION_NOT_RUN"
+    },
+    {
+      "module_id": "DESIGN_CRITERION",
+      "profile": "CRITERION_MODULE",
+      "track_candidate": "FAST_TRACK",
+      "required_overlays": [
+        "ACTIVATION_DISCRIMINATION.overlay.json",
+        "NEGATIVE_TRANSFER.overlay.json",
+        "TOKEN_AND_LATENCY.overlay.json"
+      ],
+      "source_mapping": {
+        "activation": "RESOLVABLE_FROM_CURRENT_SIGNAL_MAP",
+        "source_refs": "RESOLVABLE_FROM_CURRENT_SELECTOR",
+        "result_boundaries": "RESOLVABLE_FROM_CURRENT_RESULT_CONTRACT",
+        "minimum_visual_foundation": "RESOLVABLE_FROM_CURRENT_LAYER_CONTRACT",
+        "authority_effect": "EXPLICIT_NONE",
+        "runtime_effect": "EXPLICIT_NONE",
+        "rollback": "MISSING_MODULE_SPECIFIC_CONTRACT",
+        "test_and_scoring": "MISSING_MODULE_SPECIFIC_CONTRACT"
+      },
+      "status": "SEMANTIC_MAPPING_POSSIBLE_TEMPLATE_INSTANTIATION_NOT_RUN"
+    },
+    {
+      "module_id": "WEB_ACCESSIBILITY",
+      "profile": "CRITERION_MODULE",
+      "track_candidate": "FAST_TRACK",
+      "required_overlays": [
+        "ACTIVATION_DISCRIMINATION.overlay.json",
+        "NEGATIVE_TRANSFER.overlay.json",
+        "TOKEN_AND_LATENCY.overlay.json"
+      ],
+      "source_mapping": {
+        "activation": "RESOLVABLE_FROM_CURRENT_SIGNAL_MAP",
+        "source_refs": "RESOLVABLE_FROM_CURRENT_SELECTOR",
+        "result_boundaries": "RESOLVABLE_FROM_CURRENT_RESULT_CONTRACT",
+        "accessibility_states": "RESOLVABLE_FROM_CURRENT_RESULT_CONTRACT",
+        "authority_effect": "EXPLICIT_NONE",
+        "runtime_effect": "EXPLICIT_NONE",
+        "rollback": "MISSING_MODULE_SPECIFIC_CONTRACT",
+        "test_and_scoring": "MISSING_MODULE_SPECIFIC_CONTRACT"
+      },
+      "status": "SEMANTIC_MAPPING_POSSIBLE_TEMPLATE_INSTANTIATION_NOT_RUN"
+    },
+    {
+      "module_id": "CONTEXTUAL_VISUAL_PREFERENCE",
+      "profile": "CRITERION_MODULE",
+      "track_candidate": "FAST_TRACK",
+      "required_overlays": [
+        "ACTIVATION_DISCRIMINATION.overlay.json",
+        "NEGATIVE_TRANSFER.overlay.json",
+        "TOKEN_AND_LATENCY.overlay.json"
+      ],
+      "source_mapping": {
+        "activation": "RESOLVABLE_FROM_CONJUNCTIVE_SIGNAL_GROUPS",
+        "source_refs": "RESOLVABLE_FROM_CURRENT_SELECTOR",
+        "context_boundary": "RESOLVABLE_FROM_CURRENT_COMPOSITION_RULES",
+        "human_decision_boundary": "RESOLVABLE_FROM_STABLE_CRITERION_SOURCE",
+        "authority_effect": "EXPLICIT_NONE",
+        "runtime_effect": "EXPLICIT_NONE",
+        "rollback": "MISSING_MODULE_SPECIFIC_CONTRACT",
+        "test_and_scoring": "MISSING_MODULE_SPECIFIC_CONTRACT"
+      },
+      "status": "SEMANTIC_MAPPING_POSSIBLE_TEMPLATE_INSTANTIATION_NOT_RUN"
+    }
+  ],
+  "composition_preservation_assessment": {
+    "declared_order_available": true,
+    "six_composition_rules_available": true,
+    "exclusion_block_available": true,
+    "empty_set_abstention_available": true,
+    "template_fields_for_ordering_and_exclusion_materialized": false,
+    "status": "SOURCE_INFORMATION_SUFFICIENT_BUT_NO_RENDERABLE_TEMPLATE_EXISTS"
+  },
+  "generation_rule_review": {
+    "authority_effect_none_by_default": "PASS",
+    "runtime_effect_none_by_default": "PASS",
+    "implementation_authorized_false_by_default": "PASS",
+    "human_review_before_granted_authorization": "PASS",
+    "unknown_evidence_not_filled_with_assumptions": "PASS",
+    "provider_neutral_core": "PASS",
+    "provider_specific_values_confined_to_overlays": "NOT_APPLICABLE_TO_CRITERION_MODULES"
+  },
+  "exit_criteria": {
+    "ALL_COMMON_SCHEMAS_VALID": "BLOCKED_BY_SCHEMA_REPORT",
+    "ALL_PROFILE_OVERLAYS_RESOLVE": "BLOCKED",
+    "NO_AUTHORITY_INFERENCE": "PASS"
+  },
+  "negative_findings": [
+    "CATALOG_ENTRY_IS_NOT_AN_EXECUTABLE_TEMPLATE",
+    "PROFILE_OVERLAY_NAMES_EXIST_BUT_OVERLAY_FILES_ARE_NOT_MATERIALIZED",
+    "FOUR_MODULE_PACKAGES_CANNOT_BE_REPRODUCIBLY_GENERATED_FROM_CURRENT_FILES",
+    "NO_TEMPLATE_OUTPUT_MAY_BE_CLAIMED_AS_VALIDATED"
+  ],
+  "required_resolution": [
+    "Materialize the thirteen common templates with explicit unresolved-field behavior.",
+    "Materialize the three CRITERION_MODULE overlays.",
+    "Materialize the required authorization templates only as draft generators with no automatic grant.",
+    "Generate four isolated candidate module packages.",
+    "Validate the generated packages against executable schemas and compare them with the M0 baseline."
+  ],
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "active_selector_modified": false,
+  "shadow_registry_created": false
+}
