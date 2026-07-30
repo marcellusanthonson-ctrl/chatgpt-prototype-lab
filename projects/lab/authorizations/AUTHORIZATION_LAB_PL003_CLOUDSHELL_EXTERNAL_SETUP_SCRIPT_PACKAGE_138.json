@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_CLOUDSHELL_EXTERNAL_SETUP_SCRIPT_PACKAGE_138",
+  "project_id": "lab",
+  "status": "GRANTED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-30",
+  "approval_source": "USER_INSTRUCTION_HAGAMOSLO_AFTER_RECOMMENDATION_TO_PREPARE_SINGLE_CLOUDSHELL_SCRIPT",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "6cfd2a589b6eed231904a85f64a980ed7ac29234",
+  "execution_head_policy": "VERIFY_LIVE_AT_USE",
+  "objective": "Prepare and publish a single fail-closed AWS CloudShell script and operator instructions for the already-authorized external creation attempt 137, without executing the script or making AWS calls.",
+  "allowed_actions": [
+    "READ_AUTHORIZATION_137_AND_CANONICAL_DESIGN_136",
+    "PREPARE_BASH_CLOUDSHELL_SCRIPT",
+    "INCLUDE_CALLER_PRECHECKS_AND_HUMAN_CONFIRMATION",
+    "INCLUDE_EXACT_COLLISION_COMPARISON",
+    "INCLUDE_EXACT_IAM_DOCUMENTS",
+    "INCLUDE_REVERSE_ORDER_ROLLBACK",
+    "INCLUDE_REDACTED_RESULT_OUTPUT",
+    "PREPARE_OPERATOR_INSTRUCTIONS",
+    "CREATE_REGISTRY_DELTA",
+    "COMMIT_AND_PUSH_DOCUMENTATION_AND_SCRIPT"
+  ],
+  "forbidden_actions": [
+    "EXECUTE_SCRIPT",
+    "AWS_API_CALLS",
+    "IAM_MUTATIONS",
+    "ASSUME_SETUP_ROLE",
+    "CREATE_OR_MODIFY_GATE_OPERATOR",
+    "IAM_SIMULATION",
+    "TERRAFORM",
+    "PROVISIONING",
+    "PRODUCT_LEADERSHIP_TEST_003",
+    "CONSUME_AUTHORIZATION_137"
+  ],
+  "deliverables": [
+    "projects/lab/scripts/Invoke-PL003ExternalSetupPrincipal137CloudShell.sh",
+    "projects/lab/briefs/PL003_EXTERNAL_SETUP_PRINCIPAL_137_CLOUDSHELL_INSTRUCTIONS.md",
+    "registry/deltas/pl003-cloudshell-external-setup-script-package-138.json"
+  ],
+  "consumption_criterion": "CONSUMED_AFTER_SCRIPT_INSTRUCTIONS_AND_DELTA_ARE_PUBLISHED_AND_REMOTE_HEAD_IS_VERIFIED",
+  "post_consumption_authority": "NONE_FOR_SCRIPT_PACKAGE_138_AUTHORIZATION_137_REMAINS_SEPARATELY_GRANTED"
+}
