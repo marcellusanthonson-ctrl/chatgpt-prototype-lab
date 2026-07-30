@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_PL003_PROVIDER_AUXILIARY_CALL_MAPPING_131",
   "project_id": "lab",
-  "status": "GRANTED",
+  "status": "CONSUMED",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-07-29",
   "approval_source": "USER_INSTRUCTION_CONTINUE_AFTER_PROVIDER_AUXILIARY_MAPPING_RECOMMENDATION",
@@ -33,6 +33,18 @@
     "projects/lab/analyses/PL003_PROVIDER_AUXILIARY_CALL_MAPPING_001.json",
     "registry/deltas/pl003-provider-auxiliary-call-mapping-131.json"
   ],
+  "execution_result": {
+    "status": "DOCUMENTARY_SOURCE_MAP_COMPLETE_WITH_S3_LEGACY_RUNTIME_SURFACE_CAUTION",
+    "provider": "hashicorp/aws@v6.56.0",
+    "resource_types_mapped": 15,
+    "aws_calls": 0,
+    "terraform_executions": 0,
+    "provisioning_executions": 0,
+    "test_003_executions": 0,
+    "authority_effect": "NONE"
+  },
+  "consumed_at": "2026-07-29",
+  "consumption_reason": "PRIMARY_SOURCE_PROVIDER_CALL_MAP_ANALYSIS_AND_DELTA_PUBLISHED_WITHOUT_RUNTIME_OR_AWS_EXECUTION",
   "consumption_criterion": "CONSUMED_AFTER_SOURCE_MAPPED_CALLS_LIMITATIONS_GATE_EFFECT_AND_REGISTRY_DELTA_ARE_PUBLISHED_AND_REMOTE_HEAD_IS_VERIFIED",
   "post_consumption_authority": "NONE"
 }
