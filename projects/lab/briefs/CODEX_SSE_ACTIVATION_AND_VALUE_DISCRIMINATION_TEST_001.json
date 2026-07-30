@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0.0",
+  "brief_id": "CODEX_SSE_ACTIVATION_AND_VALUE_DISCRIMINATION_TEST_001",
+  "project_id": "lab",
+  "status": "FINAL_REVIEW_COMPLETE_PROPOSED_NOT_AUTHORIZED_FOR_EXECUTION",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "head_policy": "VERIFY_LIVE_AT_USE_AND_PIN_EXECUTION_HEAD",
+  "objective": "Execute the expanded Software Solution Engineering activation and value discrimination test across software-solution and LAB-governance domains with frozen inputs, blinded scoring, cost measurement, read-only external audit and no package activation or integration.",
+  "execution_model": {
+    "coordinator": "CHATGPT",
+    "bounded_executor": "CODEX",
+    "external_auditor": "READ_ONLY_INDEPENDENT_AUDITOR",
+    "human_decision_gate": "JONATHAN_MARTINEZ"
+  },
+  "inputs": [
+    "projects/lab/test-designs/SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json",
+    "projects/lab/test-designs/SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/LAB_GOVERNANCE_EXTENSION_001.json",
+    "projects/lab/test-designs/SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/RUN_MATRIX.json",
+    "projects/lab/test-designs/SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/SCORING_AND_GATES.json",
+    "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/MANIFEST.json",
+    "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/FIXTURES.json"
+  ],
+  "frozen_test_contract": {
+    "base_fixture_count": 20,
+    "governance_fixture_count": 12,
+    "fixture_count": 32,
+    "arm_count": 3,
+    "minimum_output_count": 96,
+    "hash_algorithm": "SHA-256",
+    "freeze_before_generation": true,
+    "no_post_freeze_mutation": true
+  },
+  "required_phases": [
+    "PREFLIGHT_AND_HEAD_PINNING",
+    "ISOLATED_WORKTREE_CREATION",
+    "INPUT_HASH_FREEZE",
+    "SCORER_CALIBRATION",
+    "ARM_ASSIGNMENT_AND_BLINDING",
+    "OUTPUT_GENERATION",
+    "OUTPUT_ANONYMIZATION_AND_PROVENANCE",
+    "MANIFEST_AND_HASH_FREEZE",
+    "SEPARATE_SCORING",
+    "COST_AND_NEGATIVE_TRANSFER_ANALYSIS",
+    "READ_ONLY_EXTERNAL_AUDIT_PACKAGE",
+    "HUMAN_DECISION_REPORT",
+    "PUBLICATION_AND_AUTHORIZATION_CONSUMPTION"
+  ],
+  "required_controls": [
+    "NO_PACKAGE_ACTIVATION_OR_INTEGRATION",
+    "NO_ARCHITECTURE_OR_STACK_SELECTION",
+    "NO_RUNTIME_PRODUCT_SYMPHONIE_RAG_OR_EMBEDDING_CHANGE",
+    "NO_CROSS_ARM_LEAKAGE",
+    "NO_SCORER_ARM_IDENTITY_BEFORE_SCORE_FREEZE",
+    "PER_OUTPUT_MODEL_SOURCE_TOKEN_TIME_AND_RETRY_PROVENANCE",
+    "CURRENT_PRIMARY_SOURCES_FOR_VOLATILE_SECURITY_CLAIMS",
+    "NEGATIVE_TRANSFER_AND_OVERPROCESSING_CLASSIFICATION",
+    "DIFF_JSON_AND_HASH_VALIDATION"
+  ],
+  "allowed_actions_when_separately_authorized": [
+    "READ_AND_FREEZE_CANONICAL_INPUTS",
+    "CREATE_ISOLATED_WORKTREES_OR_BRANCHES",
+    "GENERATE_96_OR_MORE_AUTHORIZED_OUTPUTS",
+    "ANONYMIZE_AND_HASH_OUTPUTS",
+    "RUN_CALIBRATED_BLINDED_SCORING",
+    "MEASURE_COST_AND_NEGATIVE_TRANSFER",
+    "PREPARE_READ_ONLY_AUDIT_PACKAGE",
+    "COMMIT_AND_PUSH_TEST_EVIDENCE"
+  ],
+  "forbidden_actions": [
+    "ACTIVATE_OR_INTEGRATE_SSE",
+    "SELECT_OR_MODIFY_ARCHITECTURE_STACK_OR_INFRASTRUCTURE",
+    "MODIFY_PRODUCT_RUNTIME_OR_SYMPHONIE",
+    "CREATE_OR_USE_EXTERNAL_DATABASE",
+    "AWS_TERRAFORM_OR_PROVISIONING",
+    "MODIFY_FROZEN_FIXTURES_PROMPTS_OR_OUTPUTS",
+    "UNBLIND_BEFORE_SCORE_FREEZE",
+    "CLAIM_PASS_BEFORE_SCORING_AUDIT_AND_HUMAN_DECISION"
+  ],
+  "stop_conditions": [
+    "REMOTE_HEAD_MISMATCH",
+    "DIRTY_OR_UNCONTROLLED_WORKTREE",
+    "INPUT_HASH_MISMATCH",
+    "MISSING_FIXTURE_OR_ARM_CONTRACT",
+    "MODEL_OR_TOOL_ACCESS_NOT_REPRODUCIBLE",
+    "SCORER_CALIBRATION_INCOMPLETE",
+    "ARM_LEAKAGE_OR_BLINDING_FAILURE",
+    "OUTPUT_COUNT_PROVENANCE_OR_COST_INCOMPLETE",
+    "POST_FREEZE_MUTATION",
+    "AUTHORITY_ABSENT_OR_SCOPE_AMBIGUOUS"
+  ],
+  "success_semantics": {
+    "test_execution_complete": true,
+    "sse_activation_authorized": false,
+    "sse_integration_authorized": false,
+    "architecture_or_stack_authorized": false,
+    "next_effect": "ELIGIBLE_FOR_EXTERNAL_AUDIT_AND_HUMAN_PROMOTION_DECISION_ONLY"
+  },
+  "execution_authority": "NONE_UNTIL_SEPARATE_EXPLICIT_AUTHORIZATION"
+}
