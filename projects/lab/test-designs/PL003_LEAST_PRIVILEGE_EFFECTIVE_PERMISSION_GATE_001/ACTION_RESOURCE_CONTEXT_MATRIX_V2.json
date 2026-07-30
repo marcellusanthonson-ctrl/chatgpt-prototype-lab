@@ -1,0 +1,43 @@
+{
+  "schema_version": "2.0.0",
+  "matrix_id": "PL003_ACTION_RESOURCE_CONTEXT_MATRIX_002",
+  "project_id": "lab",
+  "status": "FUSED_DOCUMENTARY_MATRIX_READY_FOR_SEPARATE_READ_ONLY_GATE_AUTHORIZATION",
+  "supersedes_for_gate_design": "PL003_ACTION_RESOURCE_CONTEXT_MATRIX_001",
+  "source_head": "45766730e758fe81a3f6fb43d20634b23e393883",
+  "terraform_version": "1.15.8",
+  "aws_provider_version": "6.56.0",
+  "region": "sa-east-1",
+  "principal_under_test": "INTENDED_BOUNDED_PL003_PROVISIONING_OPERATOR",
+  "resource_inventory": {"create":49,"types":15},
+  "action_groups": [
+    {"domain":"IDENTITY","classification":"CONFIRMED_GLOBAL","actions":["sts:GetCallerIdentity"],"resources":["*"],"contexts":{}},
+    {"domain":"IAM_POLICY","classification":"CONFIRMED","actions":["iam:CreatePolicy","iam:GetPolicy","iam:GetPolicyVersion"],"conditional_actions":["iam:TagPolicy"],"resources":["arn:aws:iam::<ACCOUNT_ID>:policy/pl003-preflight-subject-boundary"],"contexts":{"aws:TagKeys":["Project","Environment","DataClass","Owner","Disposable","ManagedBy"]}},
+    {"domain":"IAM_ROLE","classification":"CONFIRMED","actions":["iam:CreateRole","iam:GetRole","iam:ListRolePolicies","iam:ListAttachedRolePolicies"],"conditional_actions":["iam:TagRole"],"resources":["NINE_EXACT_ROLE_ARNS"],"contexts":{"iam:PermissionsBoundary":"EXACT_BOUNDARY_ARN","aws:TagKeys":["Project","Environment","DataClass","Owner","Disposable","ManagedBy"]}},
+    {"domain":"IAM_INLINE_POLICY","classification":"CONFIRMED","actions":["iam:PutRolePolicy","iam:GetRolePolicy"],"resources":["NINE_EXACT_ROLE_ARNS"],"contexts":{}},
+    {"domain":"KMS_KEY","classification":"CONFIRMED","actions":["kms:CreateKey","kms:EnableKeyRotation","kms:DescribeKey","kms:GetKeyPolicy","kms:GetKeyRotationStatus","kms:ListResourceTags"],"resources":["*","THREE_CREATED_KEY_ARNS"],"contexts":{"aws:RequestedRegion":"sa-east-1","aws:TagKeys":["Project","Environment","DataClass","Owner","Disposable","ManagedBy"]}},
+    {"domain":"KMS_ALIAS","classification":"CONFIRMED","actions":["kms:CreateAlias","kms:ListAliases"],"resources":["THREE_CREATED_KEY_ARNS","arn:aws:kms:sa-east-1:<ACCOUNT_ID>:alias/pl003-preflight-*","*"],"contexts":{"aws:RequestedRegion":"sa-east-1"}},
+    {"domain":"S3_BUCKET_CREATE_AND_LEGACY_REFRESH","classification":"CONFIRMED","actions":["s3:CreateBucket","s3:HeadBucket","s3:GetBucketPolicy","s3:GetBucketAcl","s3:GetBucketCors","s3:GetBucketWebsite","s3:GetBucketVersioning","s3:GetBucketAccelerateConfiguration","s3:GetBucketRequestPayment","s3:GetBucketLogging","s3:GetBucketLifecycleConfiguration","s3:GetReplicationConfiguration","s3:GetEncryptionConfiguration","s3:GetObjectLockConfiguration","s3:GetBucketLocation"],"conditional_actions":["s3:TagResource","s3:PutBucketTagging"],"resources":["THREE_EXACT_BUCKET_ARNS"],"contexts":{"aws:RequestedRegion":"sa-east-1","aws:TagKeys":["Project","Environment","DataClass","Owner","Disposable","ManagedBy"]}},
+    {"domain":"S3_DEDICATED_CONFIGURATIONS","classification":"CONFIRMED","actions":["s3:PutBucketOwnershipControls","s3:GetBucketOwnershipControls","s3:PutBucketPublicAccessBlock","s3:GetBucketPublicAccessBlock","s3:PutBucketVersioning","s3:GetBucketVersioning","s3:PutBucketObjectLockConfiguration","s3:GetObjectLockConfiguration","s3:PutEncryptionConfiguration","s3:GetEncryptionConfiguration","s3:PutBucketPolicy","s3:GetBucketPolicy"],"resources":["THREE_EXACT_BUCKET_ARNS"],"contexts":{"aws:RequestedRegion":"sa-east-1"}},
+    {"domain":"SECRETS_MANAGER","classification":"CONFIRMED","actions":["secretsmanager:CreateSecret","secretsmanager:DescribeSecret","secretsmanager:PutResourcePolicy","secretsmanager:GetResourcePolicy"],"resources":["*","arn:aws:secretsmanager:sa-east-1:<ACCOUNT_ID>:secret:/pl003/preflight/randomization-mapping-*"],"contexts":{"aws:RequestedRegion":"sa-east-1","aws:TagKeys":["Project","Environment","DataClass","Owner","Disposable","ManagedBy"]}},
+    {"domain":"CLOUDTRAIL","classification":"CONFIRMED","actions":["cloudtrail:CreateTrail","cloudtrail:StartLogging","cloudtrail:PutEventSelectors","cloudtrail:GetTrail","cloudtrail:GetTrailStatus","cloudtrail:GetEventSelectors","cloudtrail:ListTags"],"conditional_actions":["cloudtrail:PutInsightSelectors"],"resources":["arn:aws:cloudtrail:sa-east-1:<ACCOUNT_ID>:trail/pl003-preflight-trail","*"],"contexts":{"aws:RequestedRegion":"sa-east-1","aws:TagKeys":["Project","Environment","DataClass","Owner","Disposable","ManagedBy"]}}
+  ],
+  "global_context_entries": [
+    {"key":"iam:PermissionsBoundary","value":"EXACT_BOUNDARY_ARN"},
+    {"key":"aws:RequestedRegion","value":"sa-east-1"},
+    {"key":"aws:TagKeys","value":["Project","Environment","DataClass","Owner","Disposable","ManagedBy"]},
+    {"key":"aws:RequestTag/Project","value":"PRODUCT-LEADERSHIP-TEST-003"},
+    {"key":"aws:RequestTag/Environment","value":"PREFLIGHT"},
+    {"key":"aws:RequestTag/DataClass","value":"SYNTHETIC-NON-TEST"},
+    {"key":"aws:RequestTag/Owner","value":"LAB"},
+    {"key":"aws:RequestTag/Disposable","value":"true"},
+    {"key":"aws:RequestTag/ManagedBy","value":"Terraform"}
+  ],
+  "pre_execution_required_declarations": ["EXACT_PRINCIPAL_ARN","EXACT_BOUNDARY_ARN_AND_DOCUMENT","EXACT_IDENTITY_POLICIES","SESSION_POLICY_STATUS","SCP_RCP_APPLICABILITY","ACCOUNT_ID_REDACTED_IN_REPORTING","NAME_SUFFIX"],
+  "pass_conditions": ["EVERY_CONFIRMED_ACTION_RESOURCE_CONTEXT_PAIR_ALLOWED","NO_EXPLICIT_DENY","NO_IMPLICIT_DENY","ALL_CONTEXT_KEYS_SUPPLIED","BOUNDARY_DETAIL_ALLOWS","SCP_RCP_SCOPE_RESOLVED","NO_UNMODELED_REQUIRED_ACTION"],
+  "blocked_conditions": ["ANY_DENY","ANY_UNKNOWN_CONTEXT","PRINCIPAL_OR_POLICY_MISMATCH","SCP_RCP_UNKNOWN","SIMULATOR_LIMITATION_NON_DISCRIMINATING","ANY_MUTATION_REQUIRED"],
+  "limitations": ["RUNTIME_RETRY_COUNTS_NOT_FROZEN","SERVICE_INTERNAL_DEPENDENCIES_MAY_NOT_BE_REPRESENTABLE","CONDITIONAL_PARTITION_FALLBACKS_ARE_NOT_PASS_REQUIREMENTS_UNLESS_RUNTIME_CONTEXT_APPLIES"],
+  "authority_semantics": {"gate_execution_authorized":false,"provisioning_authorized":false,"terraform_authorized":false,"test_003_authorized":false,"pass_requires_separate_human_authorization":true,"post_execution_authority":"NONE"},
+  "source_refs": ["PL003_ACTION_RESOURCE_CONTEXT_MATRIX_001","PL003_PROVIDER_AUXILIARY_CALL_MAP_001","hashicorp/terraform-provider-aws@v6.56.0"],
+  "authority_effect": "NONE"
+}
