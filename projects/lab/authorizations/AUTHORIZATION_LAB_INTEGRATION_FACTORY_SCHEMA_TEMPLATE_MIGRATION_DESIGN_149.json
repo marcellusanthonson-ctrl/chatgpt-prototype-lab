@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_INTEGRATION_FACTORY_SCHEMA_TEMPLATE_MIGRATION_DESIGN_149",
+  "project_id": "lab",
+  "status": "CONSUMED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-30",
+  "approval_source": "Direct ChatGPT instruction: Perfecto, continuamos.",
+  "interpretation": "Bounded authorization to perform the previously recommended documentary action: design schemas, reusable templates and a migration plan for the standardized integration factory.",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "historical_parent_head": "1ea50e4859f46f89c90e9c69a9fdb723cae6cf6f",
+  "head_policy": "VERIFY_LIVE_AT_USE",
+  "allowed_actions": [
+    "CREATE_DOCUMENTARY_SCHEMA_SET",
+    "CREATE_DOCUMENTARY_TEMPLATE_CATALOG",
+    "CREATE_STATIC_SELECTOR_MIGRATION_PLAN",
+    "CREATE_AUTHORIZATION_AND_DELTA_RECORDS",
+    "COMMIT_AND_PUSH_ONLY_THESE_DOCUMENTARY_ARTIFACTS"
+  ],
+  "forbidden_actions": [
+    "IMPLEMENT_FACTORY",
+    "IMPLEMENT_RUNTIME_RESOLVER",
+    "MODIFY_ACTIVE_MODULE_SELECTOR",
+    "CREATE_ACTIVE_INTEGRATION_REGISTRY",
+    "CHANGE_CHATGPT_RUNTIME_BEHAVIOR",
+    "ACTIVATE_OR_INTEGRATE_ANY_CANDIDATE_PACKAGE",
+    "EXECUTE_SSE_TEST",
+    "EXECUTE_PRODUCT_LEADERSHIP_TEST_003",
+    "RUN_AWS_OR_TERRAFORM",
+    "SELECT_GLOBAL_STACK_OR_PRODUCTION_PROVIDER"
+  ],
+  "consumed_by": [
+    "architecture/integrations/schemas/INTEGRATION_PACKAGE_SCHEMA_SET_001.json",
+    "architecture/integrations/templates/INTEGRATION_TEMPLATE_CATALOG_001.json",
+    "architecture/integrations/STATIC_SELECTOR_TO_INTEGRATION_FACTORY_MIGRATION_PLAN_001.json",
+    "registry/deltas/integration-factory-schema-template-migration-design-149.json"
+  ],
+  "consumption_criterion": "CONSUMED_AFTER_DOCUMENTARY_ARTIFACTS_AND_DELTA_ARE_PUBLISHED_AND_REMOTE_HEAD_IS_VERIFIED",
+  "post_consumption_authority": "NONE",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE"
+}
