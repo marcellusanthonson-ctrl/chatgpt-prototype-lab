@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "design_id": "PL003_EFFECTIVE_PERMISSION_GATE_OPERATOR_001",
   "project_id": "lab",
-  "status": "DOCUMENTED_NOT_CREATED_NOT_CONFIGURED",
+  "status": "EXECUTION_135_BLOCKED_NO_ELIGIBLE_BOUNDED_CREATOR",
   "source_authorization": "AUTHORIZATION_LAB_PL003_EFFECTIVE_PERMISSION_GATE_OPERATOR_DOCUMENTARY_DESIGN_134",
   "source_block": "EVD-LAB-PL003-READ-ONLY-EFFECTIVE-PERMISSION-GATE-133-ATTEMPT-001",
   "purpose": "Provide one dedicated temporary-session caller for the PL003 effective-permission gate while keeping the provisioning operator exclusively as the simulation target.",
@@ -204,5 +204,15 @@
     "product_resources_allowed": false,
     "test_003_allowed": false
   },
-  "authority_effect": "NONE"
+  "latest_execution": {
+    "authorization": "AUTHORIZATION_LAB_PL003_EFFECTIVE_PERMISSION_GATE_OPERATOR_CREATION_AND_VERIFICATION_135",
+    "classification": "BLOCKED_NO_ELIGIBLE_BOUNDED_CREATOR",
+    "eligible_bounded_creator_count": 0,
+    "aws_calls": 0,
+    "aws_mutations": 0,
+    "resources_created": 0,
+    "compatibility_session_executed": false,
+    "evidence": "projects/lab/evidence/EVD-LAB-PL003-EFFECTIVE-PERMISSION-GATE-OPERATOR-135-ATTEMPT-001.json"
+  },
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_135_CONSUMPTION"
 }

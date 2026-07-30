@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-PL003-EFFECTIVE-PERMISSION-GATE-OPERATOR-135-ATTEMPT-001",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_EFFECTIVE_PERMISSION_GATE_OPERATOR_CREATION_AND_VERIFICATION_135",
+  "project_id": "lab",
+  "kind": "REDACTED_LOCAL_BOUNDED_CREATOR_PREFLIGHT_EVIDENCE",
+  "status": "BLOCKED",
+  "executed_at": "2026-07-30T03:21:13Z",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch_mode": "DETACHED_HEAD",
+  "initial_head": "672b826614817d7b5f1b8453178f603ee023f1ba",
+  "execution_head": "672b826614817d7b5f1b8453178f603ee023f1ba",
+  "prechecks": {
+    "remote_head_exact": true,
+    "authorization_commit_only_descendant_of_expected_parent": true,
+    "expected_parent_head": "553eac05deb5e6a6bf75e3fd93a0401d17201c1b",
+    "worktree_clean": true,
+    "detached_at_exact_head": true,
+    "authorization_135_registered_granted": true,
+    "authorizations_115_through_134_consumed": true,
+    "historical_authorization_113_state": "GRANTED_BLOCKED_NOT_RESUMABLE_AS_AUTHORITY_FOR_135",
+    "historical_authorization_114_state": "GRANTED_BLOCKED_NOT_RESUMABLE_AS_AUTHORITY_FOR_135",
+    "parallel_or_implicit_execution_authority": "NONE",
+    "inherited_aws_environment_variables": 0,
+    "preexisting_temporary_aws_credentials": 0,
+    "untracked_sensitive_temporary_files": 0
+  },
+  "authorized_design": {
+    "path": "projects/lab/test-designs/PL003_EFFECTIVE_PERMISSION_GATE_OPERATOR_001/DESIGN.json",
+    "git_blob_sha1": "ac308e21c7d74cb7d0fbf1bfede3196bdb4280b0",
+    "semantic_normalization": "RECURSIVE_OBJECT_KEY_SORT_ARRAY_ORDER_PRESERVED_COMPACT_UTF8_JSON",
+    "semantic_sha256": "5a46a0c78d1b8b508c8dac231edbc0ca6efa5a076a6775563e5900d9d7c01416"
+  },
+  "creator_inventory": {
+    "inventory_source": "LOCAL_AWS_CONFIGURATION_ONLY_NO_AWS_SERVICE_CALLS",
+    "local_profile_count": 2,
+    "eligible_bounded_creator_count": 0,
+    "selected_creator": "NONE",
+    "profiles": [
+      {
+        "redacted_id": "LOCAL_PROFILE_001",
+        "classification": "BOOTSTRAP_PERSISTENT_CREDENTIAL_SOURCE_DIRECT_MUTATION_FORBIDDEN_BY_AUTHORIZATION_135",
+        "role_profile": false,
+        "persistent_access_key_fields_present": true,
+        "eligible_creator": false
+      },
+      {
+        "redacted_id": "LOCAL_PROFILE_002",
+        "classification": "KNOWN_READ_ONLY_PLAN_OPERATOR_LACKS_AUTHORIZATION_135_EXACT_MUTATION_SURFACE",
+        "role_profile": true,
+        "source_profile_is_bootstrap": true,
+        "expected_plan_operator_role": true,
+        "eligible_creator": false
+      }
+    ],
+    "creator_identity": "NOT_ESTABLISHED_NO_ELIGIBLE_BOUNDED_CREATOR_SESSION",
+    "creator_session_class": "NOT_ESTABLISHED",
+    "mfa_prompt_opened": false,
+    "temporary_session_established": false
+  },
+  "collision_baseline": {
+    "aws_read_attempted": false,
+    "boundary": "NOT_READ_NO_ELIGIBLE_CREATOR",
+    "role": "NOT_READ_NO_ELIGIBLE_CREATOR",
+    "read_only_identity_policy": "NOT_READ_NO_ELIGIBLE_CREATOR",
+    "bootstrap_assume_role_policy": "NOT_READ_NO_ELIGIBLE_CREATOR"
+  },
+  "document_hashes": {
+    "trust_canonical": "NOT_COMPUTED_ACCOUNT_SCOPED_DOCUMENT_NOT_INSTANTIATED_AFTER_EARLY_PRECHECK_BLOCK",
+    "trust_observed": "NOT_READ",
+    "boundary_canonical": "NOT_INSTANTIATED_AFTER_EARLY_PRECHECK_BLOCK",
+    "boundary_observed": "NOT_READ",
+    "identity_policy_canonical": "NOT_INSTANTIATED_AFTER_EARLY_PRECHECK_BLOCK",
+    "identity_policy_observed": "NOT_READ",
+    "bootstrap_assume_permission_canonical": "NOT_COMPUTED_ACCOUNT_SCOPED_DOCUMENT_NOT_INSTANTIATED_AFTER_EARLY_PRECHECK_BLOCK",
+    "bootstrap_assume_permission_observed": "NOT_READ"
+  },
+  "resources": {
+    "preexisting_exact_resources_preserved": "UNKNOWN_NOT_READ_NO_ELIGIBLE_CREATOR",
+    "resources_created": 0,
+    "resources_modified": 0,
+    "resources_deleted": 0,
+    "collision_mismatch_detected": false,
+    "collision_state": "NOT_READ_NO_ELIGIBLE_CREATOR"
+  },
+  "compatibility_session": {
+    "attempted": false,
+    "assume_role_calls": 0,
+    "duration_seconds": 900,
+    "get_caller_identity_calls": 0,
+    "result": "NOT_EXECUTED_NO_ELIGIBLE_CREATOR"
+  },
+  "aws_calls": {
+    "sts_read": 0,
+    "iam_read": 0,
+    "iam_mutation": 0,
+    "organizations": 0,
+    "other": 0
+  },
+  "mutation_sequence": {
+    "first_mutation": "NONE",
+    "bootstrap_changes": 0,
+    "boundary_changes": 0,
+    "role_changes": 0,
+    "identity_policy_changes": 0,
+    "persistent_mutations": 0,
+    "unexpected_mutations": 0
+  },
+  "rollback": {
+    "required": false,
+    "attempted": false,
+    "result": "NOT_APPLICABLE_NO_MUTATION",
+    "final_baseline_equivalence": "PROVABLE_BY_ZERO_AWS_CALLS_AND_ZERO_MUTATIONS"
+  },
+  "forbidden_execution_counts": {
+    "persistent_credentials_created": 0,
+    "simulations": 0,
+    "effective_permission_gate": 0,
+    "terraform": 0,
+    "provisioning": 0,
+    "product_leadership_test_003": 0,
+    "product_leadership_activation_or_integration": 0
+  },
+  "cleanup": {
+    "temporary_credentials_created": false,
+    "temporary_credentials_cleared": true,
+    "temporary_variables_created": false,
+    "temporary_variables_cleared": true,
+    "temporary_files_created": false,
+    "temporary_files_cleared": true
+  },
+  "validation": {
+    "changed_json_parse": "PASS",
+    "authorization_state_invariants": "PASS_AUTHORIZATIONS_115_THROUGH_134_CONSUMED",
+    "call_and_mutation_invariants": "PASS_ZERO",
+    "sensitive_shape_scan": "PASS_ZERO_FINDINGS",
+    "git_diff_check": "PASS",
+    "repository_validator": "EXPECTED_KNOWN_FAIL_PEND_LAB_030_WINDOWSPATH_DIV_LIST"
+  },
+  "publication_head_recording": "FINAL_REMOTE_HEAD_REPORTED_AFTER_PUSH_AND_NOT_EMBEDDED_IN_SELF_REFERENTIAL_PUBLICATION_COMMIT",
+  "classification": "BLOCKED_NO_ELIGIBLE_BOUNDED_CREATOR",
+  "classification_detail": "NO_LOCAL_PROFILE_SATISFIES_THE_EXACT_TEMPORARY_BOUNDED_CREATOR_CONTRACT_WITHOUT_USING_PERSISTENT_BOOTSTRAP_CREDENTIALS_DIRECTLY_OR_AN_INCOMPATIBLE_READ_ONLY_PLAN_OPERATOR",
+  "redaction": {
+    "profile_names_included": false,
+    "full_account_id_included": false,
+    "full_arns_included": false,
+    "credentials_tokens_or_mfa_codes_included": false,
+    "raw_aws_configuration_included": false
+  },
+  "post_attempt_authority": "NONE"
+}

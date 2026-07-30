@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "brief_id": "CODEX_PL003_EFFECTIVE_PERMISSION_GATE_OPERATOR_CREATION_001",
   "project_id": "lab",
-  "status": "AUTHORIZED_BY_135_NOT_EXECUTED",
+  "status": "EXECUTION_135_BLOCKED_NO_ELIGIBLE_BOUNDED_CREATOR",
   "purpose": "Create and configure the dedicated PL003EffectivePermissionGateOperator caller path exactly as documented, without executing the effective-permission gate in the same authorization.",
   "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "branch": "main",
@@ -97,5 +97,13 @@
     "CREDENTIAL_CLEANUP_ATTESTATION",
     "FINAL_CLASSIFICATION"
   ],
-  "authority_effect": "AUTHORIZED_ONLY_BY_UNCONSUMED_135"
+  "authorization_135_result": {
+    "classification": "BLOCKED_NO_ELIGIBLE_BOUNDED_CREATOR",
+    "eligible_bounded_creator_count": 0,
+    "aws_calls": 0,
+    "aws_mutations": 0,
+    "resources_created": 0,
+    "evidence": "projects/lab/evidence/EVD-LAB-PL003-EFFECTIVE-PERMISSION-GATE-OPERATOR-135-ATTEMPT-001.json"
+  },
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_135_CONSUMPTION"
 }

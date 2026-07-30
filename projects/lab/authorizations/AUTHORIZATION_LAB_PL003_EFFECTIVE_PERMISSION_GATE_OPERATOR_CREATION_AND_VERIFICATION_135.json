@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_PL003_EFFECTIVE_PERMISSION_GATE_OPERATOR_CREATION_AND_VERIFICATION_135",
   "project_id": "lab",
-  "status": "GRANTED",
+  "status": "CONSUMED",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-07-30",
   "approval_source": "USER_INSTRUCTION_CONTINUE_AFTER_GATE_OPERATOR_DOCUMENTARY_DESIGN_134",
@@ -103,6 +103,28 @@
     "CREDENTIAL_AND_TEMPORARY_FILE_CLEANUP_ATTESTATION",
     "FINAL_CLASSIFICATION"
   ],
+  "execution_result": {
+    "status": "BLOCKED_NO_ELIGIBLE_BOUNDED_CREATOR",
+    "local_profile_count": 2,
+    "eligible_bounded_creator_count": 0,
+    "creator_session_established": false,
+    "collision_reads_executed": false,
+    "first_mutation": "NONE",
+    "compatibility_session_executed": false,
+    "aws_calls": 0,
+    "aws_mutations": 0,
+    "resources_created": 0,
+    "persistent_credentials_created": 0,
+    "simulations": 0,
+    "terraform_executions": 0,
+    "provisioning_executions": 0,
+    "product_leadership_test_003_executions": 0,
+    "credentials_cleared": true,
+    "temporary_files_cleared": true,
+    "evidence": "projects/lab/evidence/EVD-LAB-PL003-EFFECTIVE-PERMISSION-GATE-OPERATOR-135-ATTEMPT-001.json"
+  },
+  "consumed_at": "2026-07-30",
+  "consumption_reason": "LOCAL_PROFILE_INVENTORY_FOUND_ZERO_ELIGIBLE_TEMPORARY_BOUNDED_CREATORS_AND_STOPPED_BEFORE_MFA_AWS_COLLISION_READS_OR_MUTATION",
   "consumption_criterion": "CONSUMED_AFTER_ONE_ATTEMPT_RESULT_OR_PRECHECK_BLOCK_IS_REDACTED_VALIDATED_COMMITTED_PUSHED_AND_REMOTE_HEAD_VERIFIED_WITH_POST_ATTEMPT_AUTHORITY_NONE",
   "post_consumption_authority": "NONE"
 }

@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "PL003-EFFECTIVE-PERMISSION-GATE-OPERATOR-135",
+  "project_id": "lab",
+  "effective_at": "2026-07-30",
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_PL003_EFFECTIVE_PERMISSION_GATE_OPERATOR_CREATION_AND_VERIFICATION_135",
+    "path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_EFFECTIVE_PERMISSION_GATE_OPERATOR_CREATION_AND_VERIFICATION_135.json",
+    "status": "CONSUMED"
+  },
+  "evidence": {
+    "id": "EVD-LAB-PL003-EFFECTIVE-PERMISSION-GATE-OPERATOR-135-ATTEMPT-001",
+    "path": "projects/lab/evidence/EVD-LAB-PL003-EFFECTIVE-PERMISSION-GATE-OPERATOR-135-ATTEMPT-001.json",
+    "classification": "BLOCKED_NO_ELIGIBLE_BOUNDED_CREATOR"
+  },
+  "state_effect": {
+    "local_profile_count": 2,
+    "eligible_bounded_creator_count": 0,
+    "creator_session_established": false,
+    "collision_reads_executed": false,
+    "compatibility_session_executed": false,
+    "aws_calls": 0,
+    "aws_mutations": 0,
+    "resources_created": 0,
+    "persistent_credentials_created": 0,
+    "simulations": 0,
+    "terraform_executed": false,
+    "provisioning_executed": false,
+    "product_leadership_test_003_executed": false,
+    "active_execution_authority": "NONE"
+  },
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_135_CONSUMPTION"
+}
