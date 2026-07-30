@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "STANDARDIZED-INTEGRATION-ARCHITECTURE-DOCUMENTATION-148",
+  "project_id": "lab",
+  "created_at": "2026-07-30",
+  "authorization_id": "AUTHORIZATION_LAB_STANDARDIZED_INTEGRATION_ARCHITECTURE_DOCUMENTATION_148",
+  "authorization_status": "CONSUMED",
+  "changes": [
+    "STANDARDIZED_INTEGRATION_FACTORY_001_DOCUMENTED",
+    "PORTABLE_OPERATIONAL_TRUST_STANDARD_001_DOCUMENTED",
+    "AWS_REFERENCE_PROFILE_SEPARATED_FROM_PROVIDER_SELECTION",
+    "TECHNOLOGY_NEUTRALITY_POLICY_DOCUMENTED",
+    "GLOBAL_PREFERRED_STACK_REMAINS_NONE"
+  ],
+  "state_effects": {
+    "runtime": "NONE",
+    "integration": "NONE",
+    "infrastructure": "NONE",
+    "provider_selection": "NONE",
+    "stack_selection": "NONE",
+    "sse_test_execution": "NOT_STARTED"
+  },
+  "next_recommended_action": "DESIGN_THE_STANDARD_SCHEMAS_TEMPLATES_AND_MIGRATION_PLAN_WITHOUT_IMPLEMENTING_THE_RUNTIME_RESOLVER",
+  "authority_effect": "NONE"
+}
