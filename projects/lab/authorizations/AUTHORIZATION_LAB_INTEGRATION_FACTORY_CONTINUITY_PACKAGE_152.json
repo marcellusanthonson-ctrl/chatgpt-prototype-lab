@@ -2,9 +2,10 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_INTEGRATION_FACTORY_CONTINUITY_PACKAGE_152",
   "project_id": "lab",
-  "status": "GRANTED",
+  "status": "CONSUMED",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-07-30T17:19:00-04:00",
+  "consumed_at": "2026-07-30T17:19:00-04:00",
   "approval_source": "Quería un protocolo de continuidad para seguir el desarrollo en una nueva conversación.",
   "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "branch": "main",
@@ -38,10 +39,20 @@
     "projects/lab/continuity/CURRENT_CONTINUITY.md",
     "projects/lab/continuity/ATTACHMENT_MANIFEST.json",
     "projects/lab/continuity/START_PROMPT.md",
-    "projects/lab/continuity/archive/2026-07-30-product-leadership-test003-repository-only/"
+    "projects/lab/continuity/archive/2026-07-30-product-leadership-test003-repository-only/",
+    "registry/deltas/integration-factory-continuity-package-152.json"
   ],
+  "result": {
+    "superseded_package_archived": true,
+    "current_package_replaced": true,
+    "runtime_effect": "NONE",
+    "integration_effect": "NONE",
+    "m1a_executed": false,
+    "sse_test_executed": false,
+    "aws_or_terraform_executed": false
+  },
   "consumption_criterion": "Consumed after the superseded package is archived, all four CURRENT files are published, the bounded delta is registered and the remote HEAD is verified.",
-  "authority_effect": "DOCUMENTARY_CONTINUITY_ONLY",
+  "authority_effect": "NONE_AFTER_CONSUMPTION",
   "runtime_effect": "NONE",
   "integration_effect": "NONE",
   "post_consumption_authority": "NONE"
