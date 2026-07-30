@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0.0",
+  "architecture_id": "STANDARDIZED_INTEGRATION_FACTORY_001",
+  "project_id": "lab",
+  "status": "DOCUMENTED_PROPOSED_NOT_IMPLEMENTED",
+  "created_at": "2026-07-30",
+  "approved_by": "Jonathan Martínez",
+  "objective": "Standardize and accelerate the incorporation of new integrations without weakening evidence, authority, rollback, testing or traceability controls.",
+  "principles": [
+    "PROVIDER_NEUTRAL",
+    "TECHNOLOGY_NEUTRAL",
+    "PROFILE_BASED",
+    "MINIMUM_SUFFICIENT_GATES",
+    "NO_AUTOMATIC_AUTHORITY",
+    "NO_AUTOMATIC_INTEGRATION",
+    "ROLLBACK_REQUIRED",
+    "TEST_BEFORE_PROMOTION"
+  ],
+  "integration_profiles": [
+    "CRITERION_MODULE",
+    "KNOWLEDGE_SOURCE",
+    "TOOL_CONNECTOR",
+    "EXECUTION_CAPABILITY",
+    "RUNTIME_INTEGRATION",
+    "INFRASTRUCTURE_PROVIDER"
+  ],
+  "lifecycle": [
+    "IDEA",
+    "CANDIDATE",
+    "CONTRACT_COMPLETE",
+    "TEST_READY",
+    "TEST_AUTHORIZED",
+    "TESTED",
+    "AUDIT_READY",
+    "AUDITED",
+    "PROPOSED",
+    "AUTHORIZED",
+    "ACTIVE",
+    "SUSPENDED",
+    "REMOVED",
+    "REJECTED"
+  ],
+  "standard_artifacts": [
+    "INTEGRATION_INTAKE.json",
+    "MANIFEST.json",
+    "ACTIVATION_CONTRACT.json",
+    "INPUT_CONTRACT.json",
+    "RESULT_CONTRACT.json",
+    "COMPOSITION_CONTRACT.json",
+    "CONFLICTS.json",
+    "MISUSE_RISKS.json",
+    "FIXTURES.json",
+    "TEST_DESIGN.json",
+    "SCORING_AND_GATES.json",
+    "ROLLBACK.json",
+    "VALIDATION_EVIDENCE.json"
+  ],
+  "tracks": {
+    "FAST_TRACK": {
+      "eligible_when": ["DOCUMENTARY_ONLY", "AUTHORITY_EFFECT_NONE", "RUNTIME_EFFECT_NONE", "LOW_RISK", "TRIVIAL_ROLLBACK"],
+      "required_steps": ["INTAKE", "CONTRACT_VALIDATION", "SMALL_DISCRIMINATING_TEST", "HUMAN_APPROVAL"]
+    },
+    "FULL_TRACK": {
+      "required_when_any": ["INFRASTRUCTURE", "WRITE_ACTIONS", "SENSITIVE_DATA", "SECURITY_BOUNDARY", "RUNTIME", "IRREVERSIBILITY", "EXTERNAL_DEPENDENCY"],
+      "required_steps": ["INTAKE", "ARCHITECTURE_REVIEW", "RISK_REVIEW", "OPERATIONAL_TRUST_PREFLIGHT_WHEN_REQUIRED", "FULL_TEST", "EXTERNAL_AUDIT", "HUMAN_DECISION", "BOUNDED_PILOT"]
+    }
+  },
+  "common_gates": [
+    "CONTRACT_VALID",
+    "SOURCE_TRACEABLE",
+    "AUTHORITY_EFFECT_DECLARED",
+    "RUNTIME_EFFECT_DECLARED",
+    "ROLLBACK_DEFINED",
+    "NO_HIDDEN_DEPENDENCY",
+    "NO_CANONICAL_OWNERSHIP_VIOLATION",
+    "NO_AUTOMATIC_AUTHORITY"
+  ],
+  "automation_allowed": [
+    "SCAFFOLD_FILES",
+    "VALIDATE_JSON",
+    "VERIFY_REFERENCES",
+    "CALCULATE_HASHES",
+    "COUNT_FIXTURES",
+    "DETECT_DUPLICATES",
+    "GENERATE_DRAFT_TEST_MATRIX",
+    "GENERATE_DRAFT_BRIEFS",
+    "VERIFY_ROLLBACK_DECLARATION"
+  ],
+  "automation_forbidden": [
+    "APPROVE",
+    "GRANT_AUTHORITY",
+    "PROMOTE_TO_ACTIVE",
+    "SELECT_GLOBAL_STACK",
+    "SELECT_PRODUCTION_PROVIDER",
+    "INTEGRATE_WITHOUT_EXPLICIT_AUTHORIZATION"
+  ],
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "implementation_authorized": false
+}
