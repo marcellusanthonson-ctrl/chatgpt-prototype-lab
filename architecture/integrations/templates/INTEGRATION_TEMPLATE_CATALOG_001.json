@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0.0",
+  "template_catalog_id": "INTEGRATION_TEMPLATE_CATALOG_001",
+  "project_id": "lab",
+  "status": "DOCUMENTED_NOT_IMPLEMENTED",
+  "created_at": "2026-07-30",
+  "objective": "Define reusable generation templates that reduce manual work while preserving explicit authority and profile-specific controls.",
+  "common_templates": [
+    "INTEGRATION_INTAKE.template.json",
+    "MANIFEST.template.json",
+    "ACTIVATION_CONTRACT.template.json",
+    "INPUT_CONTRACT.template.json",
+    "RESULT_CONTRACT.template.json",
+    "COMPOSITION_CONTRACT.template.json",
+    "CONFLICTS.template.json",
+    "MISUSE_RISKS.template.json",
+    "FIXTURES.template.json",
+    "TEST_DESIGN.template.json",
+    "SCORING_AND_GATES.template.json",
+    "ROLLBACK.template.json",
+    "VALIDATION_EVIDENCE.template.json"
+  ],
+  "profile_overlays": {
+    "CRITERION_MODULE": ["ACTIVATION_DISCRIMINATION.overlay.json", "NEGATIVE_TRANSFER.overlay.json", "TOKEN_AND_LATENCY.overlay.json"],
+    "KNOWLEDGE_SOURCE": ["PROVENANCE_AND_FRESHNESS.overlay.json", "CANONICAL_OWNERSHIP.overlay.json", "STALE_REMOVAL.overlay.json"],
+    "TOOL_CONNECTOR": ["PERMISSION_SCOPE.overlay.json", "READ_WRITE_SEPARATION.overlay.json", "REVOCATION.overlay.json"],
+    "EXECUTION_CAPABILITY": ["BOUNDED_EXECUTOR.overlay.json", "STOP_CONDITIONS.overlay.json", "OUTPUT_PROVENANCE.overlay.json"],
+    "RUNTIME_INTEGRATION": ["FAILURE_MODES.overlay.json", "OBSERVABILITY.overlay.json", "RECOVERY.overlay.json"],
+    "INFRASTRUCTURE_PROVIDER": ["PORTABLE_OPERATIONAL_TRUST.overlay.json", "COST_AND_RETENTION.overlay.json", "TEARDOWN.overlay.json"]
+  },
+  "track_templates": {
+    "FAST_TRACK": ["FAST_TRACK_GATE_SET.template.json", "SMALL_DISCRIMINATING_TEST.template.json", "DOCUMENTARY_AUTHORIZATION.template.json"],
+    "FULL_TRACK": ["FULL_TRACK_GATE_SET.template.json", "RISK_REVIEW.template.json", "OPERATIONAL_TRUST_PREFLIGHT.template.json", "FULL_TEST.template.json", "EXTERNAL_AUDIT.template.json", "BOUNDED_PILOT.template.json"]
+  },
+  "authorization_templates": [
+    "DOCUMENTARY_DESIGN_AUTHORIZATION.template.json",
+    "TEST_EXECUTION_AUTHORIZATION.template.json",
+    "READ_ONLY_EXTERNAL_AUDIT_AUTHORIZATION.template.json",
+    "INTEGRATION_AUTHORIZATION.template.json",
+    "SUSPENSION_OR_ROLLBACK_AUTHORIZATION.template.json"
+  ],
+  "generation_rules": [
+    "GENERATE_ONLY_FROM_APPROVED_PROFILE_AND_TRACK_CLASSIFICATION",
+    "INSERT_LIVE_HEAD_POLICY_WITHOUT_STORING_HEAD_AS_CURRENT_TRUTH",
+    "SET_AUTHORITY_EFFECT_NONE_BY_DEFAULT",
+    "SET_RUNTIME_EFFECT_NONE_UNLESS_EXPLICITLY_CLASSIFIED",
+    "SET_IMPLEMENTATION_AUTHORIZED_FALSE_BY_DEFAULT",
+    "REQUIRE_HUMAN_REVIEW_BEFORE_ANY_AUTHORIZATION_STATUS_GRANTED",
+    "DO_NOT_FILL_UNKNOWN_EVIDENCE_WITH_ASSUMPTIONS",
+    "MARK_UNRESOLVED_FIELDS_EXPLICITLY",
+    "USE_PROVIDER_NEUTRAL_FIELDS_IN_CORE_TEMPLATES",
+    "PLACE_PROVIDER_SPECIFIC_VALUES_ONLY_IN_ADAPTER_OVERLAYS"
+  ],
+  "expected_reuse_targets": {
+    "generated_artifact_ratio_minimum": 0.70,
+    "reused_fixture_ratio_target": 0.60,
+    "implicit_authorizations_allowed": 0,
+    "packages_without_rollback_allowed": 0
+  },
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "implementation_authorized": false
+}
