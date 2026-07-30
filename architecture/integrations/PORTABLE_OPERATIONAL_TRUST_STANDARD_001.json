@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0.0",
+  "standard_id": "PORTABLE_OPERATIONAL_TRUST_STANDARD_001",
+  "project_id": "lab",
+  "status": "DOCUMENTED_PROPOSED_NOT_IMPLEMENTED",
+  "created_at": "2026-07-30",
+  "purpose": "Determine whether the execution environment required by a functional test can operate safely, traceably, reproducibly, reversibly and with least privilege before the functional test is allowed to proceed.",
+  "position_in_process": "AFTER_RISK_AND_EXECUTION_CLASSIFICATION_BEFORE_FUNCTIONAL_TEST",
+  "activation": {
+    "required_when_any": [
+      "EXTERNAL_INFRASTRUCTURE",
+      "CLOUD_RESOURCES",
+      "WRITE_ACTIONS",
+      "CREDENTIALS_OR_SECRETS",
+      "PERSISTENT_STATE",
+      "IDENTITY_OR_PERMISSION_BOUNDARY",
+      "OPERATIONAL_AUDITABILITY",
+      "METERED_COST",
+      "TEARDOWN_REQUIRED",
+      "HARD_TO_REVERSE_COMPONENT"
+    ],
+    "not_required_when_all": ["REPOSITORY_ONLY", "DOCUMENTARY_OR_PROMPT_TEST", "NO_EXTERNAL_WRITES", "NO_RUNTIME_OR_INFRASTRUCTURE"]
+  },
+  "provider_neutral_capabilities": [
+    "VERIFIABLE_IDENTITY",
+    "LEAST_PRIVILEGE",
+    "CONTROLLED_OR_EPHEMERAL_CREDENTIALS",
+    "AUDITABLE_OPERATIONS",
+    "RECONCILIABLE_STATE",
+    "DATA_AND_SECRET_PROTECTION",
+    "DECLARATIVE_REPRODUCIBILITY",
+    "TEARDOWN_OR_BASELINE_RESTORATION",
+    "COST_AND_RETENTION_LIMITS",
+    "REDACTED_HASHED_EVIDENCE"
+  ],
+  "gates": [
+    "IDENTITY_VERIFIED",
+    "LEAST_PRIVILEGE_VERIFIED",
+    "NO_UNAPPROVED_PERMISSION_EXPANSION",
+    "TRACEABILITY_VERIFIED",
+    "REPRODUCIBLE_PLAN_VERIFIED",
+    "COST_GUARD_VERIFIED",
+    "ROLLBACK_VERIFIED",
+    "ZERO_UNEXPECTED_PERSISTENT_RESOURCES",
+    "NO_SECRET_OR_SENSITIVE_DATA_EXPOSURE"
+  ],
+  "zero_tolerance_events": [
+    "ROOT_OR_EQUIVALENT_SUPERUSER_REQUIRED_FOR_ORDINARY_EXECUTION",
+    "PERSISTENT_CREDENTIAL_EXPOSURE",
+    "UNAPPROVED_PERMISSION_EXPANSION",
+    "UNTRACEABLE_MUTATION",
+    "ROLLBACK_FAILURE",
+    "UNBOUNDED_COST",
+    "REAL_DATA_REQUIRED_WITHOUT_AUTHORIZATION"
+  ],
+  "states": ["NOT_REQUIRED", "REQUIRED_NOT_DESIGNED", "DESIGNED", "AUTHORIZED", "IN_PROGRESS", "PASS", "BLOCKED", "FAIL", "EXPIRED"],
+  "functional_test_rule": "FUNCTIONAL_TEST_MAY_PROCEED_ONLY_WHEN_PREFLIGHT_IS_NOT_REQUIRED_OR_HAS_PASS_AND_SEPARATE_FUNCTIONAL_TEST_AUTHORITY_EXISTS",
+  "evidence_levels": {
+    "LEVEL_0_DOCUMENTARY": "Contracts and adapters designed only.",
+    "LEVEL_1_SINGLE_ENVIRONMENT": "Validated in one real reference environment.",
+    "LEVEL_2_CROSS_PROVIDER": "Validated in at least two materially different providers or environments.",
+    "LEVEL_3_PORTABILITY_CONFIRMED": "Essential invariants and normalized results confirmed across multiple environments."
+  },
+  "provider_selection_effect": "NONE",
+  "production_stack_selection_effect": "NONE",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE"
+}
