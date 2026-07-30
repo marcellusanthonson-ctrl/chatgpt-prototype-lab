@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.2.0",
   "package_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001",
-  "status": "DESIGN_EXPANDED_READY_FOR_SEPARATE_EXECUTION_AND_AUDIT_AUTHORIZATION",
-  "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_GOVERNANCE_EXTENSION_142",
+  "status": "FINAL_DESIGN_REVIEW_COMPLETE_READY_FOR_SEPARATE_EXECUTION_AUTHORIZATION",
+  "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_FINAL_DESIGN_REVIEW_143",
   "source_package": "PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001",
   "successor_pending": "PEND-LAB-024",
   "files": [
@@ -11,18 +11,22 @@
     "RUN_MATRIX.json",
     "SCORING_AND_GATES.json",
     "GOVERNANCE_EXTENSION_001.json",
+    "FINAL_DESIGN_REVIEW_001.json",
     "README.md"
   ],
-  "file_count": 6,
+  "file_count": 7,
   "fixture_source": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/FIXTURES.json",
   "base_fixture_count": 40,
   "governance_fixture_count": 12,
   "fixture_count": 52,
   "arm_count": 4,
   "minimum_future_outputs": 112,
+  "output_formula": "52_BASELINE + 52_PACKAGE + 4_POSITIVE_CONTROL + 4_NEGATIVE_CONTROL",
   "governance_domains": ["PRODUCT_AND_PROJECT_DECISIONS", "LAB_GOVERNANCE_DECISIONS"],
-  "new_measurements": [
+  "measurements": [
+    "ACTIVATION_PRECISION",
     "ACTIVATION_RECALL",
+    "FALSE_POSITIVE_ACTIVATION",
     "FALSE_NEGATIVE_ACTIVATION",
     "NEGATIVE_TRANSFER",
     "DOCUMENTATION_OVERHEAD",
@@ -30,8 +34,18 @@
     "LATENCY_COST",
     "AUTHORIZATION_PROPORTIONALITY",
     "COST_OF_OPPORTUNITY_RECOGNITION",
+    "REVERSIBILITY_AND_STOP_RULE_QUALITY",
     "NET_DECISION_VALUE"
   ],
+  "final_review": {
+    "run_matrix_aligned": true,
+    "scoring_and_gates_aligned": true,
+    "calibration_required": true,
+    "domain_stratification_required": true,
+    "cost_measurement_required": true,
+    "negative_transfer_gate_required": true,
+    "external_read_only_audit_required": true
+  },
   "test_executed": false,
   "corpus_generated": false,
   "provider_selected": false,
@@ -41,5 +55,6 @@
   "product_effect": "NONE",
   "runtime_effect": "NONE",
   "governance_authority_effect": "NONE",
-  "next_authorized_action": "NONE_AFTER_CONSUMPTION"
+  "next_action": "REVIEW_AND_SEPARATELY_AUTHORIZE_CODEX_PRODUCT_LEADERSHIP_TEST003_REPOSITORY_ONLY_EXECUTION_001",
+  "execution_authority": "NONE"
 }
