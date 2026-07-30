@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_INTERNAL_TEST003_RECONCILIATION_141",
+  "project_id": "lab",
+  "status": "GRANTED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-30",
+  "approval_source": "USER_REQUEST_EXECUTE_RECONCILIATION_WITHOUT_CODEX",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "699c371bebca9cc4c680ab7a17119355065f3a93",
+  "execution_head_policy": "VERIFY_LIVE_AT_USE",
+  "objective": "Reconcile Product Leadership Test 003 from AWS-dependent preflight to a repository-only internal functional test strategy, revoke obsolete AWS execution authorities 137 and 139, preserve AWS as optional future hardening, and publish an exact proposed execution brief without executing Test 003 or integrating Product Leadership.",
+  "allowed_actions": [
+    "READ_CANONICAL_PRODUCT_LEADERSHIP_AND_PL003_SOURCES",
+    "REASSESS_AWS_REQUIREMENT_VERSUS_OPTIONAL_HARDENING",
+    "CREATE_FORMAL_RECONCILIATION_RECORD",
+    "REVOKE_AUTHORIZATION_137_WITH_REASON",
+    "REVOKE_AUTHORIZATION_139_WITH_REASON",
+    "PREPARE_REPOSITORY_ONLY_TEST003_EXECUTION_BRIEF",
+    "UPDATE_CURRENT_CONTINUITY_PACKAGE",
+    "CREATE_REGISTRY_DELTA",
+    "VALIDATE_JSON_REFERENCES_AND_STATES",
+    "COMMIT_AND_PUSH_DOCUMENTATION"
+  ],
+  "forbidden_actions": [
+    "AWS_CALLS_OR_MUTATIONS",
+    "ENABLE_IAM_IDENTITY_CENTER_OR_AWS_ORGANIZATIONS",
+    "CREATE_IAM_USER_ROLE_POLICY_OR_ACCESS_KEY",
+    "EXECUTE_AUTHORIZATION_137_SCRIPT",
+    "EXECUTE_PRODUCT_LEADERSHIP_TEST_003",
+    "GENERATE_TEST003_OUTPUT_CORPUS",
+    "ACTIVATE_OR_INTEGRATE_PRODUCT_LEADERSHIP",
+    "TERRAFORM",
+    "PROVISIONING",
+    "CREATE_RUNTIME_OR_DATABASE",
+    "TREAT_RECONCILIATION_OR_BRIEF_AS_EXECUTION_AUTHORITY"
+  ],
+  "deliverables": [
+    "projects/lab/reconciliations/REC-LAB-PRODUCT-LEADERSHIP-TEST003-REPOSITORY-ONLY-STRATEGY-005.json",
+    "projects/lab/briefs/CODEX_PRODUCT_LEADERSHIP_TEST003_REPOSITORY_ONLY_EXECUTION_001.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_TEMPORARY_SETUP_PRINCIPAL_EXTERNAL_CREATION_137.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_HUMAN_ADMIN_IDENTITY_CENTER_BOOTSTRAP_139.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.md",
+    "projects/lab/continuity/ATTACHMENT_MANIFEST.json",
+    "projects/lab/continuity/START_PROMPT.md",
+    "registry/deltas/product-leadership-test003-repository-only-reconciliation-141.json"
+  ],
+  "consumption_criterion": "CONSUMED_AFTER_RECONCILIATION_BRIEF_REVOCATIONS_CONTINUITY_AND_DELTA_ARE_PUBLISHED_AND_REMOTE_HEAD_VERIFIED",
+  "post_consumption_authority": "NONE"
+}
