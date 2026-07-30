@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "PL003-HUMAN-ADMIN-IDENTITY-CENTER-BOOTSTRAP-139",
+  "project_id": "lab",
+  "kind": "AUTHORIZATION_DELTA",
+  "status": "REGISTERED",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_HUMAN_ADMIN_IDENTITY_CENTER_BOOTSTRAP_139",
+  "source_instruction": "USER_INSTRUCTION_CONTINUAMOS_AFTER_IDENTITY_CENTER_PRECHECK",
+  "scope": "Enable IAM Identity Center from root only as a security bootstrap, create one human administrative identity, assign access only to the current AWS account, require MFA, verify non-root access, and terminate the root session.",
+  "non_authorizations": [
+    "EXECUTE_AUTHORIZATION_137_SCRIPT",
+    "CREATE_PL003_TEMPORARY_SETUP_PRINCIPAL",
+    "CREATE_OR_MODIFY_GATE_OPERATOR",
+    "CREATE_ACCESS_KEYS",
+    "TERRAFORM",
+    "PROVISIONING",
+    "PRODUCT_LEADERSHIP_TEST_003"
+  ],
+  "authority_effect": "NONE_BEYOND_AUTHORIZATION_139"
+}
