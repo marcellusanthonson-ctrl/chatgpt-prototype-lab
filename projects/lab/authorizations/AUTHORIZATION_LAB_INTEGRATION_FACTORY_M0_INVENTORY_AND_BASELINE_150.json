@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_INTEGRATION_FACTORY_M0_INVENTORY_AND_BASELINE_150",
+  "project_id": "lab",
+  "status": "CONSUMED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-30",
+  "approval_source": "Perfecto, continuamos.",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "2ffb53ce7010717bafa14bc334c787934a615cfd",
+  "subject": "M0_INVENTORY_AND_BASELINE",
+  "objective": "Inventory the active criterion selector modules, signals, composition rules, exclusions and acceptance fixtures without changing selector behavior or creating a shadow registry.",
+  "allowed_actions": [
+    "READ_CANONICAL_SELECTOR_AND_FIXTURES",
+    "DOCUMENT_CURRENT_MODULE_INVENTORY",
+    "DOCUMENT_CURRENT_SIGNAL_MAP",
+    "DOCUMENT_CURRENT_COMPOSITION_RULES",
+    "DOCUMENT_HASHED_BASELINE_FIXTURES",
+    "COMMIT_AND_PUSH_BOUNDED_DOCUMENTARY_ARTIFACTS"
+  ],
+  "forbidden_actions": [
+    "MODIFY_MODULE_SELECTOR",
+    "MODIFY_ACCEPTANCE_FIXTURES",
+    "CREATE_SHADOW_INTEGRATION_REGISTRY",
+    "IMPLEMENT_RESOLVER",
+    "CHANGE_CHATGPT_BEHAVIOR",
+    "ACTIVATE_OR_INTEGRATE_ANY_CANDIDATE",
+    "RUN_AWS_OR_TERRAFORM",
+    "SELECT_STACK_OR_PROVIDER",
+    "RUNTIME_OR_PRODUCT_CHANGES"
+  ],
+  "required_outputs": [
+    "architecture/integrations/migration/M0/CURRENT_MODULE_INVENTORY.json",
+    "architecture/integrations/migration/M0/CURRENT_SIGNAL_MAP.json",
+    "architecture/integrations/migration/M0/CURRENT_COMPOSITION_RULES.json",
+    "architecture/integrations/migration/M0/BASELINE_FIXTURES.json"
+  ],
+  "consumption_criterion": "Consumed after all four M0 documentary artifacts and the bounded delta are published and the remote HEAD is verified.",
+  "authority_effect": "DOCUMENTARY_M0_ONLY",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE",
+  "post_consumption_authority": "NONE"
+}
