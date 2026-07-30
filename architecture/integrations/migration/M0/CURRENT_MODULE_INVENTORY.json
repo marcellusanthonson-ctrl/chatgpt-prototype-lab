@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "inventory_id": "CURRENT_MODULE_INVENTORY_001",
+  "migration_phase": "M0_INVENTORY_AND_BASELINE",
+  "status": "DOCUMENTED_BASELINE",
+  "recorded_at": "2026-07-30",
+  "source": {
+    "path": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json",
+    "selector_id": "CHATGPT-CRITERION-SELECTOR-001",
+    "selector_version": "1.0.0",
+    "git_blob_sha": "301ba432907758fc49a9b3c86a83fc762eac4607"
+  },
+  "input_contract": {
+    "required": ["task_family", "requested_output"],
+    "optional": ["project_id", "artifact_type", "claim_types", "interaction_surface", "human_preference_owner", "risk_signals"]
+  },
+  "modules": [
+    {
+      "id": "EVIDENCE_AND_CLAIMS",
+      "activation_form": "ACTIVATE_ANY",
+      "signal_count": 8,
+      "source_ref_count": 5,
+      "profile_candidate": "CRITERION_MODULE",
+      "migration_target_status": "SHADOW_ONLY"
+    },
+    {
+      "id": "DESIGN_CRITERION",
+      "activation_form": "ACTIVATE_ANY",
+      "signal_count": 8,
+      "source_ref_count": 2,
+      "profile_candidate": "CRITERION_MODULE",
+      "migration_target_status": "SHADOW_ONLY"
+    },
+    {
+      "id": "WEB_ACCESSIBILITY",
+      "activation_form": "ACTIVATE_ANY",
+      "signal_count": 9,
+      "source_ref_count": 2,
+      "profile_candidate": "CRITERION_MODULE",
+      "migration_target_status": "SHADOW_ONLY"
+    },
+    {
+      "id": "CONTEXTUAL_VISUAL_PREFERENCE",
+      "activation_form": "ACTIVATE_ALL_OR_ALTERNATIVE_ALL",
+      "signal_count": 4,
+      "source_ref_count": 2,
+      "profile_candidate": "CRITERION_MODULE",
+      "migration_target_status": "SHADOW_ONLY"
+    }
+  ],
+  "counts": {
+    "modules": 4,
+    "declared_activation_signal_occurrences": 29,
+    "distinct_activation_signals": 27,
+    "composition_rules": 6,
+    "exclusion_blocks": 1,
+    "excluded_task_signals": 4,
+    "fixture_count": 13
+  },
+  "findings": [
+    "MODULE_DEFINITIONS_ACTIVATION_RULES_SOURCE_REFS_COMPOSITION_AND_EXCLUSIONS_ARE_COLOCATED_IN_ONE_SELECTOR",
+    "ALL_CURRENT_MODULES_HAVE_EXPLICIT_SOURCE_REFS",
+    "NO_MODULE_HAS_AUTHORITY_EFFECT",
+    "CONTEXTUAL_VISUAL_PREFERENCE_IS_THE_ONLY_CONJUNCTIVE_ACTIVATION_MODULE",
+    "CURRENT_SELECTOR_IS_DOCUMENTARY_AND_DETERMINISTIC"
+  ],
+  "hidden_rule_review": {
+    "result": "NO_HIDDEN_RULES_FOUND_IN_SELECTOR_OR_STABLE_CRITERION_SOURCE",
+    "reviewed_refs": [
+      "project-sources/chatgpt/08_CRITERION_LAYER.md",
+      "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json",
+      "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/ACCEPTANCE_FIXTURES.json"
+    ]
+  },
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "active_selector_modified": false
+}
