@@ -1,13 +1,19 @@
 {
-  "schema_version": "1.0.0",
-  "manifest_id": "LAB-CONTINUITY-ATTACHMENTS-PRODUCT-LEADERSHIP-TEST003-REPOSITORY-ONLY",
+  "schema_version": "1.1.0",
+  "manifest_id": "LAB-CONTINUITY-ATTACHMENTS-INTEGRATION-FACTORY-M1-20260730",
   "status": "CURRENT",
   "project_id": "lab",
-  "required_read_order": ["projects/lab/reports/PRODUCT_LEADERSHIP_INTEGRATION_CURRENT_STATE_2026-07-30.md", "CURRENT_CONTINUITY.json", "CURRENT_CONTINUITY.md", "START_PROMPT.md"],
+  "created_at": "2026-07-30T17:19:00-04:00",
+  "required_read_order": [
+    "CURRENT_CONTINUITY.json",
+    "CURRENT_CONTINUITY.md",
+    "ATTACHMENT_MANIFEST.json",
+    "START_PROMPT.md"
+  ],
   "attachments": [
-    {"path": "projects/lab/reports/PRODUCT_LEADERSHIP_INTEGRATION_CURRENT_STATE_2026-07-30.md", "role": "COMPLETE_CURRENT_STATE_REPORT", "required": true},
     {"path": "projects/lab/continuity/CURRENT_CONTINUITY.json", "role": "CANONICAL_STRUCTURED_CONTINUITY", "required": true},
-    {"path": "projects/lab/continuity/CURRENT_CONTINUITY.md", "role": "HUMAN_READABLE_VIEW", "required": true},
+    {"path": "projects/lab/continuity/CURRENT_CONTINUITY.md", "role": "HUMAN_READABLE_CONTINUITY", "required": true},
+    {"path": "projects/lab/continuity/ATTACHMENT_MANIFEST.json", "role": "READ_ORDER_AND_REFERENCE_MANIFEST", "required": true},
     {"path": "projects/lab/continuity/START_PROMPT.md", "role": "FIRST_MESSAGE_FOR_NEW_CONVERSATION", "required": true}
   ],
   "repository_sources_not_duplicated_as_attachments": [
@@ -18,12 +24,24 @@
     "registry/index.json",
     "registry/projects.json",
     "projects/lab/PROJECT_STATE.json",
-    "projects/lab/reconciliations/REC-LAB-PRODUCT-LEADERSHIP-TEST003-REPOSITORY-ONLY-STRATEGY-005.json",
-    "projects/lab/briefs/CODEX_PRODUCT_LEADERSHIP_TEST003_REPOSITORY_ONLY_EXECUTION_001.json",
-    "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_TEMPORARY_SETUP_PRINCIPAL_EXTERNAL_CREATION_137.json",
-    "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_HUMAN_ADMIN_IDENTITY_CENTER_BOOTSTRAP_139.json",
-    "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_INTERNAL_TEST003_RECONCILIATION_141.json"
+    "architecture/integrations/STANDARDIZED_INTEGRATION_FACTORY_001.json",
+    "architecture/integrations/PORTABLE_OPERATIONAL_TRUST_STANDARD_001.json",
+    "architecture/integrations/provider-profiles/AWS_OPERATIONAL_TRUST_REFERENCE_PROFILE_001.json",
+    "architecture/integrations/TECHNOLOGY_NEUTRALITY_AND_CONFIDENCE_POLICY_001.json",
+    "architecture/integrations/schemas/INTEGRATION_PACKAGE_SCHEMA_SET_001.json",
+    "architecture/integrations/templates/INTEGRATION_TEMPLATE_CATALOG_001.json",
+    "architecture/integrations/STATIC_SELECTOR_TO_INTEGRATION_FACTORY_MIGRATION_PLAN_001.json",
+    "architecture/integrations/migration/M0/CURRENT_MODULE_INVENTORY.json",
+    "architecture/integrations/migration/M0/CURRENT_SIGNAL_MAP.json",
+    "architecture/integrations/migration/M0/CURRENT_COMPOSITION_RULES.json",
+    "architecture/integrations/migration/M0/BASELINE_FIXTURES.json",
+    "architecture/integrations/migration/M1/SCHEMA_VALIDATION_REPORT.json",
+    "architecture/integrations/migration/M1/TEMPLATE_INSTANTIATION_REPORT.json",
+    "projects/lab/pending/PEND-LAB-033.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_SSE_TEST_EXECUTION_AND_READ_ONLY_AUDIT_147.json",
+    "projects/lab/briefs/CODEX_SSE_ACTIVATION_AND_VALUE_DISCRIMINATION_TEST_001.json"
   ],
+  "archived_package": "projects/lab/continuity/archive/2026-07-30-product-leadership-test003-repository-only/",
   "missing_attachments": [],
   "authority_effect": "NONE"
 }
