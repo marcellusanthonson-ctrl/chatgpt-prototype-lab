@@ -1,8 +1,16 @@
 # Estado del proyecto LAB
 
-La fuente estructurada es `PROJECT_STATE.json`.
+La fuente estructurada efectiva se resuelve desde `PROJECT_STATE.json` junto con los deltas aplicables descubiertos en `registry/index.json`. El snapshot base se preserva sin reescritura; el delta vigente para M1 PASS es `integration-factory-m1-pass-state-continuity-reconciliation-154`.
 
-El LAB mantiene gobierno v2, la capa selectiva `CHATGPT-CRITERION-LAYER-001@1.1.0` y el estándar `MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001@1.1.1`.
+El LAB mantiene gobierno v2, la capa selectiva `CHATGPT-CRITERION-LAYER-001@1.1.0`, el estándar `MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001@1.1.1` y la fábrica estandarizada de integraciones neutral respecto de proveedor y tecnología.
+
+## Fábrica de integraciones — M1 PASS
+
+La autorización `153` completó M1A y quedó consumida. El resultado mecánico es `M1_PASS`: 10 schemas, 13 templates, 3 overlays, 5 templates de autorización `DRAFT`, cuatro paquetes aislados, 10 verificaciones de meta-schema y 40 validaciones de paquetes. `PEND-LAB-033` está `COMPLETED_M1_PASS`.
+
+La autorización `154` reconcilió el estado efectivo mediante `CURRENT_STATE.json`, `registry/index.json`, el delta 154, esta vista humana y el paquete de continuidad. El snapshot base `PROJECT_STATE.json` se preservó sin reescritura para evitar pérdida histórica y queda complementado por el delta aplicable. La autorización quedó consumida al publicarse el resultado. M2 y el shadow registry no están autorizados. No hubo cambio del selector, runtime, integración, SSE, AWS, Terraform, stack global ni proveedor de producción.
+
+## Historial preservado
 
 ## Resultado 052 revisión 2
 
@@ -38,57 +46,3 @@ La autorización `062` convierte el `README.md` raíz en el mapa conceptual y op
 ## Ejecución full RAG 071 y auditoría externa
 
 La ejecución sintética `EXP-LAB-002` conserva 180 documentos, 42 fixtures y 30 runs. Los controles, aislamiento, canary, freeze, métricas y gates permanecen validados. Ningún candidato fue viable bajo las condiciones sintéticas probadas.
-
-La auditoría externa `AUDIT-CLAUDE-FULL-RAG-EXECUTION-071-001`, registrada como `EVD-LAB-AUD-004` y reevaluada en `REA-LAB-005`, confirmó los 12 claims. El dictamen de reconciliación es `CONFIRMED`: `FULL_RAG_AUTHORITY_FIRST_SIMULATION` fue `NON_VIABLE_UNDER_SYNTHETIC_TESTED_CONDITIONS`.
-
-El Markdown de la ejecución fue corregido para coincidir con el JSON, las métricas y los gates. No cambió ningún resultado numérico. El brazo probado usó `embeddings=false`, `provider=NONE`, `budget_k=2` y recuperación predominantemente léxica con contribución semántica limitada. Este resultado no refuta toda la clase arquitectónica authority-first.
-
-`PEND-LAB-018` está `COMPLETED_EXTERNAL_AUDIT_DELIVERED_AND_RECONCILED`.
-
-## Análisis causal y diseño 074
-
-La autorización `074` publicó `FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-002` sin ejecutar pruebas. El análisis atribuye exactamente 48 eventos críticos a ocho fixtures estables en las seis configuraciones: 12 `BINDING_NEGATIVE_OMITTED` y 36 `UNSUPPORTED_CONCLUSION`.
-
-La inspección directa distingue los decoys declarados de los desplazadores observados. Ningún decoy declarado del fixture fue seleccionado en esos 48 eventos; los falsos positivos fueron documentos canónicos de otros fixtures con vocabulario genérico compartido y alta autoridad. `budget_k=2` contribuyó, pero los segundos negativos vinculantes estaban en posiciones 13 y 11, por lo que aumentar k modestamente no basta y puede empeorar precisión y safe refusal.
-
-La ausencia de embeddings densos sigue como `POSSIBLE_NOT_DISCRIMINATED`, no como causa arquitectónica demostrada. El paquete futuro aísla representación, k, reserva negativa, retrieval, ranking y safe refusal mediante nueve brazos, once celdas operativas y un mínimo de 66 runs futuros.
-
-`PEND-LAB-019` está `COMPLETED_DOCUMENTARY_FAILURE_ANALYSIS_AND_NEXT_TEST_DESIGN_PUBLISHED`. El diseño quedó ejecutado posteriormente bajo la autorización separada `075`.
-
-## Ejecución discriminante 075 y auditoría externa 076/077
-
-La autorización `075` ejecutó exactamente una vez `FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-002`. El paquete reproducible contiene 280 documentos sintéticos, 84 fixtures y 66 runs distribuidos entre nueve brazos, once celdas operativas y seis configuraciones.
-
-La auditoría externa estrictamente read-only autorizada por `076` revisó 107 archivos y reprodujo 66 runs. El paquete original de 19 archivos quedó importado sin alterar como `AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001`; su dictamen es `AUDIT_CONFIRMS_EXECUTION_MODIFIES_INTERPRETATION`.
-
-La reconciliación `077`, evidenciada por `EVD-LAB-AUD-005` y adjudicada en `REA-LAB-006`, conserva el resultado de ejecución `TEST_VALID_DISCRIMINATING_RESULTS_PUBLISHED` y fija la interpretación en `VALID_DISCRIMINATING_SYNTHETIC_RESULTS_WITH_QUALIFIED_CAUSAL_ATTRIBUTIONS`. Se confirmaron controles, aislamiento, integridad y reproducción. Retrieval y safe refusal siguen apoyados como causas primarias bajo las condiciones sintéticas probadas.
-
-La atribución causal queda acotada por tres hallazgos no invalidantes: el archivo de hashes de diseño no enumeró fuentes; el brazo C-RANK alteró ranking y representación conjuntamente, por lo que su resultado nulo no aísla una refutación causal de ranking; y cinco de catorce hipótesis reportadas eran históricas, compuestas o codificadas, frente a nueve hipótesis frescas. La auditoría también registró una observación menor sobre el log estático del selector. Ningún hallazgo revierte o invalida la ejecución.
-
-`PEND-LAB-020` permanece `COMPLETED_REPRODUCIBLE_EXECUTION_PUBLISHED_EXTERNAL_AUDIT_REQUIRED`. `PEND-LAB-021` está `COMPLETED_EXTERNAL_AUDIT_DELIVERED_AND_RECONCILED`. La reconciliación creó `PEND-LAB-022` para una decisión documental posterior, resuelta en la transición siguiente. No se seleccionaron proveedor, arquitectura o implementación; no hubo aprobación de implementación ni efectos de producto, runtime, Symphonie, despliegue o repositorios externos.
-
-## Decisión y plan posterior a la auditoría 078 revisión 2
-
-La revisión 2 de la autorización `078` corrigió el conflicto con la decisión histórica `DEC-LAB-016` y publicó la nueva decisión canónica `DEC-LAB-021`. La decisión exige remediación prospectiva de trazabilidad, un diseño C-RANK que varíe exclusivamente ranking, diseños frescos para cinco hipótesis calificadas y un gate de evidencia previo a arquitectura.
-
-`FULL-RAG-POST-AUDIT-REMEDIATION-PLAN-001` define seis fases ordenadas: remediación de trazabilidad, diseño C-RANK aislado, diseño de cinco contrastes frescos, propuesta delimitada de ejecución, auditoría externa posterior y reevaluación de readiness arquitectónico. Cada fase declara inputs, outputs, dependencias, criterios de entrada y salida, stop conditions, autorización futura y efectos no autorizados.
-
-Las cinco hipótesis son `H-DECLARED-DECOYS` e `H-SYNONYM-EXPANSION` con procedencia histórica, `H-AUTHORITY-FILTERING` con procedencia hardcoded, y `H-PREDOMINANTLY-LEXICAL` e `H-CROSS-FIXTURE-DISTRACTORS` con procedencia compuesta. Cada una conserva evidencia favorable y contraria, evidencia faltante, criterio de cierre y límite de claim.
-
-`ARCHITECTURE_DECISION_GATE` permanece `NOT_READY`. Requiere trazabilidad remediada, resultado C-RANK aislado, cinco resultados frescos, reproducción e aislamiento aprobados, límites de claims aprobados y auditoría externa posterior. Una comparación con proveedores reales requiere autorización futura separada.
-
-`PEND-LAB-022` está `COMPLETED_DOCUMENTARY_DECISIONS_AND_REMEDIATION_PLAN_PUBLISHED`. Su único sucesor es `PEND-LAB-023`, que propone trazabilidad prospectiva y diseños frescos, pero no autoriza modificar históricos, ejecutar pruebas, generar corpus, seleccionar proveedor o arquitectura, implementar ni cambiar producto o runtime.
-
-No se modificaron diseño 002, ejecución 002, harness, resultados, EXP-LAB-003, EVD-LAB-EXP-003, auditoría 076, EVD-LAB-AUD-005, REA-LAB-006 ni autorizaciones 070–077.
-
-## Reconciliación RAG, ECR y Product Leadership 079
-
-La línea Full RAG queda cerrada como baseline de investigación documentado. Su interpretación reconciliada se preserva, pero `RAG_RESOLVED = NO`, `RAG_ARCHITECTURE_SELECTED = NO`, `RAG_PROVIDER_SELECTED = NO` y `RAG_IMPLEMENTATION_APPROVED = NO`. El cierre no reescribe evidencia histórica. `PEND-LAB-023` queda `SUPERSEDED_BEFORE_EXECUTION`.
-
-ECR se registra como `PROPOSED_TRANSVERSAL_EVIDENTIAL_CONTROL_CAPABILITY`. Su propósito futuro es controlar procedencia, aplicabilidad, autoridad, contradicciones y lineage antes de la acción. No existe implementación, runtime, proveedor, stack o arquitectura seleccionada. Symphonie es el primer consumidor previsto.
-
-El paquete `PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001` permanece `CANDIDATE_REQUIRES_DISCRIMINATING_TESTS`, no integrado, inactivo y sin consumo automático. Incluye 40 fixtures y un contrato de activación selectivo. La referencia histórica 064 es evidencia externa y no autoridad reutilizable.
-
-El diseño `PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001` compara baseline y paquete mediante evaluación cegada, controles positivo y negativo y gates de precisión, falsa activación, autoridad, evidencia inventada, reapertura y valor incremental. No se ejecutó. `PEND-LAB-024` conserva la única propuesta de ejecución y auditoría futuras.
-
-No existe autorización activa reutilizable. El HEAD propio se verifica en vivo y nunca se almacena como estado canónico vigente.

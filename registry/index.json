@@ -9,8 +9,8 @@
     "ideas": 5,
     "integrations": 6,
     "experiments": 8,
-    "authorizations": 81,
-    "evidence": 60,
+    "authorizations": 83,
+    "evidence": 62,
     "unincorporated": 0,
     "proposals": 3,
     "sessions": 1,
@@ -31,7 +31,9 @@
   "registries": {
     "projects": "registry/projects.json",
     "decisions": "registry/decisions.json",
-    "decision_deltas": ["registry/deltas/symphonie-phases-0-3-brief-architecture-094.json"],
+    "decision_deltas": [
+      "registry/deltas/symphonie-phases-0-3-brief-architecture-094.json"
+    ],
     "errors": "registry/errors.json",
     "patterns": "registry/patterns.json",
     "ideas": "registry/ideas.json",
@@ -63,7 +65,9 @@
       "registry/deltas/pl003-propagation-aware-atomic-simulation-retry-127.json",
       "registry/deltas/pl003-read-only-effective-permission-gate-133.json",
       "registry/deltas/pl003-effective-permission-gate-operator-design-134.json",
-      "registry/deltas/pl003-effective-permission-gate-operator-135.json"
+      "registry/deltas/pl003-effective-permission-gate-operator-135.json",
+      "registry/deltas/integration-factory-m1a-executable-materialization-153.json",
+      "registry/deltas/integration-factory-m1-pass-state-continuity-reconciliation-154.json"
     ],
     "evidence": "registry/evidence.json",
     "evidence_deltas": [
@@ -85,7 +89,9 @@
       "registry/deltas/pl003-corrected-atomic-simulation-retry-126.json",
       "registry/deltas/pl003-propagation-aware-atomic-simulation-retry-127.json",
       "registry/deltas/pl003-read-only-effective-permission-gate-133.json",
-      "registry/deltas/pl003-effective-permission-gate-operator-135.json"
+      "registry/deltas/pl003-effective-permission-gate-operator-135.json",
+      "registry/deltas/integration-factory-m1a-executable-materialization-153.json",
+      "registry/deltas/integration-factory-m1-pass-state-continuity-reconciliation-154.json"
     ],
     "current_state": "CURRENT_STATE.json",
     "current_state_deltas": [
@@ -113,10 +119,16 @@
       "registry/deltas/pl003-propagation-aware-atomic-simulation-retry-127.json",
       "registry/deltas/pl003-read-only-effective-permission-gate-133.json",
       "registry/deltas/pl003-effective-permission-gate-operator-design-134.json",
-      "registry/deltas/pl003-effective-permission-gate-operator-135.json"
+      "registry/deltas/pl003-effective-permission-gate-operator-135.json",
+      "registry/deltas/integration-factory-m1a-executable-materialization-153.json",
+      "registry/deltas/integration-factory-m1-pass-state-continuity-reconciliation-154.json"
     ],
-    "pattern_deltas": ["registry/deltas/livhavn-surgical-visual-patch-093.json"],
-    "error_deltas": ["registry/deltas/livhavn-surgical-visual-patch-093.json"],
+    "pattern_deltas": [
+      "registry/deltas/livhavn-surgical-visual-patch-093.json"
+    ],
+    "error_deltas": [
+      "registry/deltas/livhavn-surgical-visual-patch-093.json"
+    ],
     "unincorporated": "registry/unincorporated.json",
     "proposals": "registry/proposals.json",
     "sessions": "registry/sessions.json",
@@ -162,12 +174,12 @@
     "decision_path": "decisions/DEC-LAB-022.json",
     "error": "ERR-LAB-007",
     "pattern": "PAT-LAB-009",
-    "authorization": "AUTHORIZATION_LAB_PL003_EFFECTIVE_PERMISSION_GATE_OPERATOR_CREATION_AND_VERIFICATION_135",
-    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_EFFECTIVE_PERMISSION_GATE_OPERATOR_CREATION_AND_VERIFICATION_135.json",
-    "evidence": "EVD-LAB-PL003-EFFECTIVE-PERMISSION-GATE-OPERATOR-135-ATTEMPT-001",
-    "evidence_path": "projects/lab/evidence/EVD-LAB-PL003-EFFECTIVE-PERMISSION-GATE-OPERATOR-135-ATTEMPT-001.json",
-    "current_state_delta": "PL003-EFFECTIVE-PERMISSION-GATE-OPERATOR-135",
-    "current_state_delta_path": "registry/deltas/pl003-effective-permission-gate-operator-135.json",
+    "authorization": "AUTHORIZATION_LAB_M1_PASS_STATE_REGISTRY_AND_CONTINUITY_RECONCILIATION_154",
+    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_M1_PASS_STATE_REGISTRY_AND_CONTINUITY_RECONCILIATION_154.json",
+    "evidence": "EVD-LAB-M1-PASS-STATE-REGISTRY-CONTINUITY-RECONCILIATION-154",
+    "evidence_path": "projects/lab/evidence/EVD-LAB-M1-PASS-STATE-REGISTRY-CONTINUITY-RECONCILIATION-154.json",
+    "current_state_delta": "integration-factory-m1-pass-state-continuity-reconciliation-154",
+    "current_state_delta_path": "registry/deltas/integration-factory-m1-pass-state-continuity-reconciliation-154.json",
     "experiment": "EXP-LAB-003",
     "proposal": "PROP-LAB-003",
     "session": "SES-2026-06-28-001",

@@ -2,10 +2,20 @@
 
 La fuente estructurada es `CURRENT_STATE.json`.
 
-- Versión: 2.5.35.
-- Fase: `MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_HUMAN_BASELINE_APPROVED`.
+- Versión: 2.5.39.
+- Estado vigente: `INTEGRATION_FACTORY_M1_PASS_AWAITING_SEPARATE_M2_HUMAN_DECISION`.
 - HEAD propio: `VERIFY_LIVE_AT_USE`.
-- Autorización activa reutilizable: ninguna.
+- Autorización activa reutilizable para la línea de integración: ninguna.
+
+## Fábrica estandarizada de integraciones
+
+M0 está preservado. M1A fue ejecutado y publicado bajo la autorización `153`; M1 pasó sus seis criterios mecánicos. Se materializaron 10 schemas, 13 templates, 3 overlays, 5 templates de autorización `DRAFT` y cuatro paquetes aislados con 56 artefactos. La validación registró 10 checks de meta-schema, 40 validaciones de paquetes y el digest reproducible `048c2e7995986ca061ce66ce65a1a33f532a8ab17819ea057a0ff979a12ee55d`.
+
+`PEND-LAB-033` está `COMPLETED_M1_PASS`. Las autorizaciones `153` y `154` están consumidas.
+
+M2 y el shadow registry no están autorizados. No hubo modificación del selector, runtime, integración, SSE, AWS, Terraform, stack global ni proveedor de producción. La siguiente transición requiere una decisión humana separada sobre la entrada a M2.
+
+## Historial y líneas preservadas
 
 ## Base visual mínima impecable
 
@@ -38,33 +48,3 @@ No se modificaron Symphonie, el piloto o Capability. No se creó V03, no se ejec
 ## Ejecución full RAG discriminante 075 y auditoría 076/077
 
 `FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-EXECUTION-002` publicó 66 runs reproducibles sobre corpus exclusivamente sintético. El resultado es `TEST_VALID_DISCRIMINATING_RESULTS_PUBLISHED`, con controles positivo y negativo aprobados, aislamiento sin fugas y reproducción `PASS_EXACT`.
-
-La auditoría externa read-only autorizada por `076` revisó 107 archivos y reprodujo los 66 runs. Su paquete original contiene 19 archivos y quedó preservado sin alterar. `EVD-LAB-AUD-005` y `REA-LAB-006` registran el dictamen `AUDIT_CONFIRMS_EXECUTION_MODIFIES_INTERPRETATION`.
-
-La ejecución permanece válida y no fue revertida. La interpretación reconciliada es `VALID_DISCRIMINATING_SYNTHETIC_RESULTS_WITH_QUALIFIED_CAUSAL_ATTRIBUTIONS`: retrieval y safe refusal conservan apoyo causal bajo las condiciones sintéticas, mientras ranking no quedó aislado porque C-RANK cambió conjuntamente ranking y representación. La ausencia de fuentes en los hashes de diseño y la mezcla de nueve hipótesis frescas con cinco históricas, compuestas o codificadas son limitaciones no invalidantes.
-
-`PEND-LAB-020` permanece completado. `PEND-LAB-021` está `COMPLETED_EXTERNAL_AUDIT_DELIVERED_AND_RECONCILED`. La auditoría creó `PEND-LAB-022` para resolver documentalmente sus remediaciones; esa transición se cerró mediante la autorización posterior descrita abajo. No se seleccionaron proveedor, arquitectura o implementación, y no hubo aprobación ni efecto de producto o runtime.
-
-## Decisión y plan posterior a la auditoría 078 revisión 2
-
-`DEC-LAB-021` aprueba cuatro decisiones documentales: remediar prospectivamente la trazabilidad criptográfica del diseño, diseñar un contraste C-RANK que varíe sólo ranking, reemplazar con contrastes frescos las cinco hipótesis calificadas por la auditoría y mantener el gate previo a arquitectura en `NOT_READY`.
-
-`FULL-RAG-POST-AUDIT-REMEDIATION-PLAN-001` ordena seis fases: trazabilidad, diseño C-RANK aislado, diseños para cinco hipótesis, propuesta de ejecución delimitada, auditoría externa posterior y reevaluación de readiness arquitectónico. El plan no ejecuta ninguna fase y exige autorizaciones separadas.
-
-Las cinco hipótesis son `H-DECLARED-DECOYS`, `H-SYNONYM-EXPANSION`, `H-AUTHORITY-FILTERING`, `H-PREDOMINANTLY-LEXICAL` y `H-CROSS-FIXTURE-DISTRACTORS`. `PEND-LAB-022` está `COMPLETED_DOCUMENTARY_DECISIONS_AND_REMEDIATION_PLAN_PUBLISHED`; su único sucesor es `PEND-LAB-023`, que permanece como propuesta sin autoridad.
-
-No se modificaron el diseño 002, la ejecución 002, el harness ni los resultados históricos. No se ejecutaron pruebas ni se generó corpus. No se seleccionaron proveedor, arquitectura o implementación; no hubo aprobación ni efecto de producto o runtime.
-
-## Cierre RAG, ECR y Product Leadership 079
-
-La línea experimental Full RAG queda `CLOSED_AS_DOCUMENTED_RESEARCH_BASELINE` por `SUPERSEDED_FOR_FUTURE_ARCHITECTURAL_DEVELOPMENT_BY_ECR_DIRECTION`. Este cierre no resuelve RAG ni selecciona arquitectura, proveedor o implementación. `DEC-LAB-021`, los diseños, ejecuciones, harness, resultados, auditorías y `FULL-RAG-POST-AUDIT-REMEDIATION-PLAN-001` permanecen intactos. `PEND-LAB-023` queda `SUPERSEDED_BEFORE_EXECUTION`.
-
-`ECR-CAPABILITY-001` queda `PROPOSED_TRANSVERSAL_EVIDENTIAL_CONTROL_CAPABILITY`, sin implementación, runtime, stack, proveedor o arquitectura seleccionados. LAB conserva gobierno y Symphonie es el primer consumidor previsto mediante una interfaz futura documentada.
-
-`PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001` queda `CANDIDATE_REQUIRES_DISCRIMINATING_TESTS`, desactivado, no integrado y sin consumo automático. La autorización histórica 064 se registra únicamente como evidencia externa `APPROVED_IN_PRIOR_CONVERSATION_NOT_CANONICALLY_EXECUTED`; no se reutiliza como autoridad.
-
-`PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001` especifica 40 fixtures, baseline sin paquete, condición con paquete, evaluación cegada y controles. No se ejecutó. `PEND-LAB-024` propone separadamente su futura ejecución y auditoría externa.
-
-## Siguiente transición
-
-No existe una siguiente transición visual pendiente para este baseline. Cualquier uso productivo o externo de la marca requiere aprobación jurídica separada. La transición experimental propuesta es autorizar separadamente la ejecución sintética delimitada de `PEND-LAB-024`; la propuesta no concede autoridad. Después del consumo de `079`, `NEXT_AUTHORIZED_ACTION = NONE_AFTER_CONSUMPTION`.

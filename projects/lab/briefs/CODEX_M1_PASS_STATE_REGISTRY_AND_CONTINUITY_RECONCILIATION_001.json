@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "M1_PASS_STATE_REGISTRY_AND_CONTINUITY_RECONCILIATION",
+  "brief_id": "CODEX_M1_PASS_STATE_REGISTRY_AND_CONTINUITY_RECONCILIATION_001",
+  "status": "EXECUTED_AND_PUBLISHED",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "d43ac2fc5d668e0a0afe7d9f95096a611149617b",
+  "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_M1_PASS_STATE_REGISTRY_AND_CONTINUITY_RECONCILIATION_154.json",
+  "executor": "ChatGPT_WITH_GITHUB_CONNECTOR",
+  "executor_authority": "BOUNDED_DOCUMENTARY_EXECUTOR_ONLY",
+  "objective": "Reconcile current structured state, registry discovery and continuity with the verified M1_PASS result, preserving unrelated history and creating no M2, runtime, selector, integration, SSE, AWS, Terraform or provider effects.",
+  "execution_order": [
+    "Verify live main HEAD.",
+    "Read START_HERE.md and mandatory canonical sources.",
+    "Verify authorization 154 approval and parent HEAD.",
+    "Verify the M1A evidence chain.",
+    "Archive the previous CURRENT continuity package by exact blob reuse.",
+    "Reconcile structured JSON state and Markdown views.",
+    "Reconcile registry/index.json.",
+    "Generate the new CURRENT continuity package.",
+    "Generate evidence and delta 154.",
+    "Validate resulting JSON and authority boundaries.",
+    "Publish to main and verify remote HEAD."
+  ],
+  "canonical_result_preserved": {
+    "m1_classification": "M1_PASS",
+    "authorization_153": "CONSUMED",
+    "pend_lab_033": "COMPLETED_M1_PASS",
+    "m2_authorized": false,
+    "shadow_registry_created": false,
+    "active_selector_modified": false,
+    "runtime_effect": "NONE",
+    "integration_effect": "NONE",
+    "sse_test_147": "UNCHANGED_SEPARATE_AUTHORIZATION_GRANTED_NOT_STARTED",
+    "global_preferred_stack": "NONE",
+    "production_provider": "NONE"
+  },
+  "required_outputs": [
+    "Authorization 154 record.",
+    "This brief.",
+    "Exact archive of the previous CURRENT continuity package.",
+    "Reconciled CURRENT_STATE JSON and Markdown.",
+    "Reconciled PROJECT_STATE JSON and Markdown.",
+    "Reconciled registry/index.json.",
+    "New CURRENT continuity package.",
+    "Evidence record 154.",
+    "Registry delta 154."
+  ],
+  "acceptance_checks": [
+    "Parent HEAD equals the authorized expected parent.",
+    "Every changed path is explicitly authorized.",
+    "All changed JSON parses.",
+    "Delta 153 and delta 154 are discoverable from registry/index.json.",
+    "The previous continuity package is archived using the original blob SHAs.",
+    "The new continuity package declares M1_PASS and M2 not authorized.",
+    "M1A validation digest remains unchanged.",
+    "The legacy repository-validator crash is recorded and not fixed.",
+    "No M2, shadow registry, selector, runtime, integration, SSE, AWS, Terraform, provider or product effect exists."
+  ],
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_154_CONSUMPTION",
+  "runtime_effect": "NONE"
+}

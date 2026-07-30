@@ -1,105 +1,81 @@
 # Continuidad actual — Fábrica estandarizada de integraciones
 
-Fecha: 2026-07-30T17:19:00-04:00  
+Fecha: 2026-07-30T18:21:00-04:00  
 Repositorio: `marcellusanthonson-ctrl/chatgpt-prototype-lab`  
 Rama: `main`  
 Política HEAD: `VERIFY_LIVE_AT_USE`  
-HEAD padre verificado durante la generación: `fb9c0d22fba7e45fc4f22f4a296e4df2c892a47c` — referencia histórica; verificar nuevamente en la nueva conversación.
+HEAD padre verificado durante la generación: `d43ac2fc5d668e0a0afe7d9f95096a611149617b` — referencia histórica; verificar nuevamente al usar el repositorio.
 
-## Primera lectura obligatoria
+## Estado vigente
 
-1. Verificar el HEAD remoto vigente de `main`.
-2. Leer `project-sources/chatgpt/START_HERE.md`.
-3. Seguir exactamente el orden indicado allí.
-4. Leer después `CURRENT_CONTINUITY.json`, este archivo y `ATTACHMENT_MANIFEST.json`.
+La fábrica estandarizada conserva un núcleo neutral respecto de proveedor y tecnología. No existe un stack global preferido ni un proveedor de producción seleccionado. AWS continúa siendo únicamente un entorno de validación de referencia reemplazable, y el preflight de confianza operacional se aplica de forma proporcional al riesgo.
 
-## Línea de desarrollo vigente
+M0 permanece preservado con:
 
-Se documentó una fábrica estandarizada para acelerar nuevas integraciones sin debilitar gobierno, evidencia, rollback, pruebas ni trazabilidad.
+- cuatro módulos;
+- 27 señales de activación distintas;
+- seis reglas de composición;
+- un bloque de exclusión;
+- abstención para conjunto vacío;
+- 13 referencias de fixtures congeladas.
 
-La arquitectura tiene estas restricciones aprobadas:
+## Resultado M1A y M1
 
-- núcleo neutral respecto de proveedor y tecnología;
-- stack seleccionado por proyecto, no stack global obligatorio;
-- posibilidad futura de stacks preferidos solo cuando exista evidencia acumulada entre proyectos;
-- AWS utilizado como entorno de validación de referencia, nunca como dependencia obligatoria ni selección automática de producción;
-- `PORTABLE_OPERATIONAL_TRUST_PREFLIGHT` condicional antes de una prueba funcional cuando existan infraestructura, escrituras, credenciales, persistencia, costes, límites de seguridad o teardown;
-- una prueba o auditoría no crea autorización, activación ni integración.
+La autorización `153` materializó:
 
-## Trabajo completado
+- 10 schemas ejecutables;
+- 13 templates comunes;
+- 3 overlays de `CRITERION_MODULE`;
+- 5 templates de autorización exclusivamente `DRAFT`;
+- cuatro paquetes aislados con 56 artefactos.
 
-- `STANDARDIZED_INTEGRATION_FACTORY_001` documentado, no implementado.
-- `PORTABLE_OPERATIONAL_TRUST_STANDARD_001` documentado.
-- `AWS_OPERATIONAL_TRUST_REFERENCE_PROFILE_001` documentado como adaptador reemplazable.
-- Política de neutralidad tecnológica y futuro registro de confianza documentados.
-- Catálogo de schemas, catálogo de templates y plan de migración documentados.
-- M0 completado con cuatro módulos, 27 señales distintas, seis reglas de composición, un bloque de exclusión y 13 fixtures congelados mediante Git blob SHA.
-- M1 ejecutado y cerrado como bloqueado con evidencia.
+La validación registró 10 verificaciones contra meta-schema, 40 validaciones de paquetes y 958 archivos JSON analizados. Dos ejecuciones produjeron el mismo digest:
 
-## Estado M1
-
-Los archivos `INTEGRATION_PACKAGE_SCHEMA_SET_001.json` e `INTEGRATION_TEMPLATE_CATALOG_001.json` son catálogos descriptivos. Todavía no existen los artefactos ejecutables que nombran.
-
-Resultado:
+`048c2e7995986ca061ce66ce65a1a33f532a8ab17819ea057a0ff979a12ee55d`
 
 ```text
-ALL_COMMON_SCHEMAS_VALID = BLOCKED
-ALL_PROFILE_OVERLAYS_RESOLVE = BLOCKED
+ALL_COMMON_SCHEMAS_VALID = PASS
+ALL_PROFILE_OVERLAYS_RESOLVE = PASS
 NO_AUTHORITY_INFERENCE = PASS
-M1 = BLOCKED
-M2 = NOT_READY_AND_NOT_AUTHORIZED
+M0_BASELINE_PRESERVED = PASS
+ACTIVE_SELECTOR_UNCHANGED = PASS
+NO_RUNTIME_EFFECT = PASS
+M1 = PASS
 ```
 
-Pendiente canónico: `projects/lab/pending/PEND-LAB-033.json`.
+`PEND-LAB-033` está `COMPLETED_M1_PASS`. La autorización `153` está consumida.
 
-La resolución exige:
+## Reconciliación 154
 
-- seleccionar y declarar un dialecto JSON Schema ejecutable;
-- materializar 10 schemas comunes;
-- materializar 13 templates comunes;
-- materializar 3 overlays de `CRITERION_MODULE`;
-- conservar templates de autorización solo como borradores incapaces de conceder autoridad;
-- generar cuatro paquetes aislados para los módulos actuales;
-- ejecutar validación mecánica reproducible y repetir M1 antes de M2.
+La autorización `154` sincronizó:
 
-## SSE: línea separada
+- `CURRENT_STATE.json` y su vista Markdown;
+- el estado efectivo del proyecto mediante el delta 154 y `projects/lab/PROJECT_STATE.md`; el snapshot base `PROJECT_STATE.json` se preservó sin reescritura;
+- `registry/index.json`;
+- el paquete CURRENT de continuidad.
 
-`AUTHORIZATION_LAB_SSE_TEST_EXECUTION_AND_READ_ONLY_AUDIT_147` continúa en estado `GRANTED`, pero la prueba no ha comenzado.
+El paquete anterior, que describía M1 bloqueado, fue archivado mediante reutilización exacta de sus blobs en:
 
-Contrato SSE:
+`projects/lab/continuity/archive/2026-07-30-integration-factory-m1-blocked/`
 
-- 32 fixtures;
-- 3 brazos;
-- mínimo 96 outputs;
-- scoring ciego y auditoría externa read-only;
-- SSE permanece inactivo y no integrado.
+La reconciliación no modificó M0, M1, M1A, `PEND-LAB-033`, el snapshot base `PROJECT_STATE.json`, el selector, el comportamiento de ChatGPT ni el validador legado.
 
-Esta autorización no desbloquea M1, no autoriza M1A, no permite seleccionar stack o infraestructura y no permite activar ni integrar SSE.
+## Autoridad actual
 
-## Autoridad
+- Autorización 153: `CONSUMED`.
+- Autorización 154: `CONSUMED`.
+- M2: no autorizado.
+- Shadow registry: no creado y no autorizado.
+- Selector y runtime resolver: sin autorización.
+- Integración o activación de módulos: sin autorización.
+- AWS, Terraform y provisioning: sin autorización para esta línea.
+- Stack global y proveedor de producción: ninguno.
+- SSE 147: autorización separada `GRANTED_NOT_STARTED`; no habilita activación ni integración.
 
-- Autorizaciones 148–151: consumidas en sus alcances documentales.
-- Autorización 147: concedida para la prueba SSE separada, todavía no iniciada.
-- M1A: no autorizado.
-- M2 y registro shadow: no autorizados.
-- Selector activo, comportamiento de ChatGPT y runtime: sin autorización de modificación.
-- AWS, Terraform, provisioning, selección de stack o proveedor: no autorizados para esta línea.
+## Divergencia preservada
 
-## Divergencias que el nuevo modelo debe reconocer
-
-`CURRENT_STATE.json`, `PROJECT_STATE.json` y varios punteros de `registry/index.json` están detrás de los deltas recientes 147–152. Deben leerse como bases canónicas complementadas por los registros y deltas posteriores, no como inventario exhaustivo de la situación actual.
-
-No debe confundirse la autorización SSE 147 con autoridad para continuar la migración de la fábrica.
-
-## Riesgos
-
-- declarar ejecutables simples catálogos descriptivos;
-- comenzar M2 antes de un M1 mecánicamente validado;
-- acoplar el estándar portable a AWS u otro proveedor;
-- imponer un stack global sin evidencia entre proyectos;
-- mezclar resultados SSE con la migración de la fábrica;
-- convertir generación, prueba o auditoría en autoridad implícita.
+El validador legado `scripts/validate_repository.py` conserva un fallo preexistente cuando trata entradas array de registry deltas como rutas. La autorización 154 no lo corrigió y no lo presenta como `PASS`.
 
 ## Siguiente acción única
 
-Preparar y someter a autorización explícita un brief Codex delimitado para `M1A_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_MATERIALIZATION`, con validación mecánica reproducible y prohibición de modificar el selector activo, crear el registro shadow, comenzar M2 o producir efectos de runtime.
+Jonathan Martínez debe decidir separadamente si se entra a M2. `M1_PASS` no crea autoridad para diseñar o construir el shadow registry.

@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-M1-PASS-STATE-REGISTRY-CONTINUITY-RECONCILIATION-154",
+  "project_id": "lab",
+  "status": "VALIDATED_DOCUMENTARY_RECONCILIATION_COMPLETE",
+  "recorded_at": "2026-07-30T18:21:00-04:00",
+  "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_M1_PASS_STATE_REGISTRY_AND_CONTINUITY_RECONCILIATION_154.json",
+  "brief_ref": "projects/lab/briefs/CODEX_M1_PASS_STATE_REGISTRY_AND_CONTINUITY_RECONCILIATION_001.json",
+  "execution_parent_head": "d43ac2fc5d668e0a0afe7d9f95096a611149617b",
+  "source_m1a_validation": "architecture/integrations/migration/M1A/VALIDATION_RESULTS.json",
+  "source_m1a_evidence": "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M1A-153.json",
+  "observations": {
+    "m1_classification": "M1_PASS",
+    "authorization_153": "CONSUMED",
+    "pend_lab_033": "COMPLETED_M1_PASS",
+    "registry_index_reconciled": true,
+    "current_state_reconciled": true,
+    "project_state_reconciled": "EFFECTIVE_VIA_DELTA_AND_MARKDOWN_VIEW",
+    "continuity_package_replaced": true,
+    "previous_continuity_archived_exactly": true,
+    "m2_authorized": false,
+    "shadow_registry_created": false,
+    "selector_modified": false,
+    "runtime_effect": "NONE",
+    "integration_effect": "NONE",
+    "project_state_base_snapshot_modified": false
+  },
+  "preserved_m1a_metrics": {
+    "schemas": 10,
+    "templates": 13,
+    "overlays": 3,
+    "draft_only_authorization_templates": 5,
+    "isolated_packages": 4,
+    "package_artifacts": 56,
+    "schema_meta_validations": 10,
+    "package_instance_validations": 40,
+    "repository_json_files_parsed": 958,
+    "normalized_digest": "048c2e7995986ca061ce66ce65a1a33f532a8ab17819ea057a0ff979a12ee55d"
+  },
+  "archived_continuity_blobs": {
+    "CURRENT_CONTINUITY.json": "ebc4f0ec0bf459654b9e5e730c60eccd99c491ab",
+    "CURRENT_CONTINUITY.md": "08a813c87e3d76565086a2441bd0d569ecf40f0f",
+    "ATTACHMENT_MANIFEST.json": "ef370320e927eab2ef6d7ccfc12f08812e6f544c",
+    "START_PROMPT.md": "6e868868392da6868634efcd70e38fb15baaeaad"
+  },
+  "divergences": [
+    "PREEXISTING_NON_BLOCKING: scripts/validate_repository.py has the previously recorded crash when array-valued registry-delta entries are treated as filesystem paths. It was not modified or treated as PASS.",
+    "PROJECT_STATE.json was preserved as an unchanged base snapshot; effective state is reconciled through registry delta 154 and PROJECT_STATE.md."
+  ],
+  "claims_not_created": [
+    "M2_AUTHORIZED",
+    "SHADOW_REGISTRY_CREATED",
+    "ACTIVE_SELECTOR_CHANGED",
+    "RUNTIME_RESOLVER_IMPLEMENTED",
+    "MODULE_ACTIVATED_OR_INTEGRATED",
+    "SSE_TEST_147_EXECUTED",
+    "AWS_OR_TERRAFORM_EXECUTED",
+    "GLOBAL_STACK_SELECTED",
+    "PRODUCTION_PROVIDER_SELECTED"
+  ],
+  "authority_effect": "NONE_AFTER_CONSUMPTION",
+  "runtime_effect": "NONE"
+}
