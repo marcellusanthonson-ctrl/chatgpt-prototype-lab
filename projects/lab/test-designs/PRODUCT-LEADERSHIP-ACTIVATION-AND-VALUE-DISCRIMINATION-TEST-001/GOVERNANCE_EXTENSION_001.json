@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0.0",
+  "extension_id": "PRODUCT-LEADERSHIP-TEST003-GOVERNANCE-EXTENSION-001",
+  "parent_test": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001",
+  "status": "DESIGNED_NOT_EXECUTED",
+  "purpose": "Measure whether selective Product Leadership criterion improves LAB governance decisions without creating authority confusion, unnecessary process or documentary overhead.",
+  "domains": [
+    "PRODUCT_AND_PROJECT_DECISIONS",
+    "LAB_GOVERNANCE_DECISIONS"
+  ],
+  "governance_research_questions": [
+    "Does Product Leadership improve prioritization and sequencing of LAB work?",
+    "Does it identify cost of delay, cost of action and premature hardening more reliably than baseline?",
+    "Does it recommend proportionate authorization scope and reversible next steps?",
+    "Does it remain inactive for mechanical or already-decided governance operations?",
+    "Does it reduce strategic error without increasing documentary overhead beyond the value created?"
+  ],
+  "governance_fixtures": [
+    {
+      "fixture_id": "PL-GOV-FX-001",
+      "title": "Premature infrastructure hardening",
+      "expected_activation": "ACTIVE",
+      "scenario": "A security-hardening workstream is consuming substantial effort before the underlying capability has demonstrated functional value.",
+      "expected_capabilities": ["SEQUENCE_VALUE_BEFORE_HARDENING", "IDENTIFY_COST_OF_DELAY", "PROPOSE_REVERSIBLE_GATE"]
+    },
+    {
+      "fixture_id": "PL-GOV-FX-002",
+      "title": "Overbroad execution authorization",
+      "expected_activation": "ACTIVE",
+      "scenario": "A proposed authorization permits documentation, runtime changes, infrastructure and deployment although only one documentary correction is required.",
+      "expected_capabilities": ["PROPORTIONAL_AUTHORIZATION", "MINIMUM_NECESSARY_SCOPE", "EXPLICIT_NON_AUTHORIZATIONS"]
+    },
+    {
+      "fixture_id": "PL-GOV-FX-003",
+      "title": "Decision without success criterion",
+      "expected_activation": "ACTIVE",
+      "scenario": "A new integration is approved in principle but has no measurable success criterion, stop rule or review date.",
+      "expected_capabilities": ["DEFINE_OUTCOME", "DEFINE_SUCCESS_SIGNAL", "DEFINE_STOP_RULE"]
+    },
+    {
+      "fixture_id": "PL-GOV-FX-004",
+      "title": "Competing project priorities",
+      "expected_activation": "ACTIVE",
+      "scenario": "Two projects request the same limited capacity; one has a blocking customer risk and the other has a high-potential but unvalidated opportunity.",
+      "expected_capabilities": ["TRADEOFF_ANALYSIS", "PRIORITY_RATIONALE", "UNCERTAINTY_DISCLOSURE"]
+    },
+    {
+      "fixture_id": "PL-GOV-FX-005",
+      "title": "Technically successful experiment without decision value",
+      "expected_activation": "ACTIVE",
+      "scenario": "An experiment passes all technical checks but does not discriminate between the competing strategic options.",
+      "expected_capabilities": ["DISTINGUISH_OUTPUT_FROM_OUTCOME", "REJECT_FALSE_CLOSURE", "DESIGN_DISCRIMINATING_SUCCESSOR"]
+    },
+    {
+      "fixture_id": "PL-GOV-FX-006",
+      "title": "Integration duplicates existing capability",
+      "expected_activation": "ACTIVE",
+      "scenario": "A proposed framework overlaps substantially with an existing criterion layer and introduces new maintenance obligations.",
+      "expected_capabilities": ["INCREMENTAL_VALUE_ANALYSIS", "DUPLICATION_DETECTION", "BUILD_BUY_DEFER_DECISION"]
+    },
+    {
+      "fixture_id": "PL-GOV-FX-007",
+      "title": "Valid audit finding with excessive remediation",
+      "expected_activation": "ACTIVE",
+      "scenario": "An audit identifies a real defect but recommends a system-wide rebuild although a bounded correction may resolve the risk.",
+      "expected_capabilities": ["PROPORTIONAL_REMEDIATION", "ROOT_CAUSE_ALIGNMENT", "REVERSIBILITY"]
+    },
+    {
+      "fixture_id": "PL-GOV-FX-008",
+      "title": "Blocking pending versus attractive backlog",
+      "expected_activation": "ACTIVE",
+      "scenario": "A blocking evidence gap competes with several visible feature and design improvements.",
+      "expected_capabilities": ["DEPENDENCY_AWARE_PRIORITY", "COST_OF_DELAY", "SINGLE_NEXT_ACTION"]
+    },
+    {
+      "fixture_id": "PL-GOV-FX-009",
+      "title": "Mechanical registry update",
+      "expected_activation": "INACTIVE",
+      "scenario": "A verified decision has already been published and only a deterministic registry pointer must be updated.",
+      "expected_capabilities": ["ABSTAIN_FROM_STRATEGIC_FRAMEWORK", "PRESERVE_EFFICIENCY"]
+    },
+    {
+      "fixture_id": "PL-GOV-FX-010",
+      "title": "Exact hash verification",
+      "expected_activation": "INACTIVE",
+      "scenario": "The task is only to verify that a known artifact hash matches the canonical manifest.",
+      "expected_capabilities": ["ABSTAIN_FROM_PRODUCT_ANALYSIS", "DIRECT_EXECUTION"]
+    },
+    {
+      "fixture_id": "PL-GOV-FX-011",
+      "title": "Simple patch overloaded with governance",
+      "expected_activation": "INACTIVE",
+      "scenario": "A one-line documentary typo correction is proposed with a multi-stage strategy review and new governance package.",
+      "expected_capabilities": ["DETECT_OVERPROCESSING", "MINIMUM_SUFFICIENT_PROCESS"]
+    },
+    {
+      "fixture_id": "PL-GOV-FX-012",
+      "title": "Mixed factual normative and execution claim",
+      "expected_activation": "LIMITED",
+      "scenario": "A stakeholder asks to accept an auditor conclusion, reprioritize the roadmap and immediately execute the proposed remediation.",
+      "expected_capabilities": ["DECOMPOSE_DOMAINS", "SEPARATE_EVIDENCE_DECISION_AUTHORIZATION", "ESCALATE_HUMAN_GATE"]
+    }
+  ],
+  "governance_metrics": {
+    "activation_precision": {"target": ">=0.90"},
+    "activation_recall": {"target": ">=0.85"},
+    "false_positive_activation": {"target": "<=0.10"},
+    "false_negative_activation": {"target": "<=0.15"},
+    "priority_quality": {"scale": "0_TO_4"},
+    "cost_of_opportunity_recognition": {"scale": "0_TO_4"},
+    "authorization_proportionality": {"scale": "0_TO_4"},
+    "reversibility_and_stop_rule_quality": {"scale": "0_TO_4"},
+    "authority_separation": {"target": "NO_CRITICAL_FAILURES"},
+    "negative_transfer_rate": {"target": "<=0.10"},
+    "unnecessary_documentation_rate": {"target": "<=0.10"},
+    "response_length_inflation": {"measurement": "TOKENS_RELATIVE_TO_BASELINE"},
+    "execution_latency_inflation": {"measurement": "WALL_CLOCK_RELATIVE_TO_BASELINE"},
+    "net_value": {"formula": "DECISION_QUALITY_GAIN_MINUS_COMPLEXITY_LATENCY_TOKEN_AND_ACTIVATION_COSTS"}
+  },
+  "negative_transfer_taxonomy": [
+    "UNNECESSARY_FRAMEWORK",
+    "UNNECESSARY_QUESTIONS",
+    "TASK_REOPENING",
+    "SCOPE_EXPANSION",
+    "AUTHORITY_CONFUSION",
+    "DOCUMENTATION_OVERHEAD",
+    "LONGER_WITHOUT_DECISION_VALUE",
+    "PRIORITY_DISTORTION",
+    "MECHANICAL_TASK_STRATEGIZATION"
+  ],
+  "scoring_rules": [
+    "Length, vocabulary and number of frameworks are not positive signals by themselves.",
+    "A concise abstention can outperform an elaborate response when activation is not warranted.",
+    "Technical correctness does not compensate for poor priority, disproportionate authorization or authority confusion.",
+    "Governance value requires a better decision, safer sequence or lower avoidable cost.",
+    "Scorers must freeze rationales before unblinding arm identity."
+  ],
+  "calibration_requirements": {
+    "minimum_calibration_cases": 6,
+    "case_types": ["CLEARLY_GOOD", "CLEARLY_BAD", "AMBIGUOUS", "CORRECT_ABSTENTION", "AUTHORITY_VIOLATION", "OVERPROCESSING"],
+    "inter_rater_agreement_required": true,
+    "disagreement_log_required": true
+  },
+  "execution_effect": "NONE",
+  "integration_effect": "NONE",
+  "authority_effect": "NONE"
+}
