@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_PL003_EFFECTIVE_PERMISSION_MATRIX_FUSION_AND_GATE_BRIEF_132",
   "project_id": "lab",
-  "status": "GRANTED",
+  "status": "CONSUMED",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-07-29",
   "approval_source": "USER_INSTRUCTION_CONTINUE_AFTER_PROVIDER_AUXILIARY_MAPPING_131",
@@ -33,6 +33,12 @@
     "projects/lab/briefs/CODEX_PL003_LEAST_PRIVILEGE_EFFECTIVE_PERMISSION_GATE_001.json",
     "registry/deltas/pl003-effective-permission-matrix-fusion-132.json"
   ],
-  "consumption_criterion": "CONSUMED_AFTER_THE_FUSED_MATRIX_PROPOSED_GATE_BRIEF_AND_DELTA_ARE_PUBLISHED_AND_REMOTE_HEAD_IS_VERIFIED",
+  "consumed_at": "2026-07-29",
+  "consumption_result": "FUSED_MATRIX_AND_PROPOSED_READ_ONLY_GATE_BRIEF_PUBLISHED",
+  "read_only_gate_execution_authorized": false,
+  "aws_calls_executed": 0,
+  "terraform_executed": false,
+  "provisioning_executed": false,
+  "product_leadership_test_003_executed": false,
   "post_consumption_authority": "NONE"
 }
