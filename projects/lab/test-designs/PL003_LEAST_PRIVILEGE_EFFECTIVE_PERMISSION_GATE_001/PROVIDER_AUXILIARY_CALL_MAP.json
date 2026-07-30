@@ -1,0 +1,182 @@
+{
+  "schema_version": "1.0.0",
+  "map_id": "PL003_PROVIDER_AUXILIARY_CALL_MAP_001",
+  "project_id": "lab",
+  "provider": {
+    "source": "hashicorp/terraform-provider-aws",
+    "tag": "v6.56.0",
+    "analysis_mode": "PRIMARY_SOURCE_STATIC_CODE_REVIEW",
+    "aws_calls_executed": 0,
+    "terraform_executed": false
+  },
+  "status": "DOCUMENTARY_SOURCE_MAP_COMPLETE_WITH_S3_LEGACY_RUNTIME_SURFACE_CAUTION",
+  "classification_semantics": {
+    "CONFIRMED": "Direct provider source call or directly invoked read helper confirmed at v6.56.0.",
+    "CONDITIONAL": "Call occurs only when configuration, partition fallback, tags, policy, rotation, logging or selectors require it.",
+    "UNRESOLVED": "Exact runtime count or retry cardinality cannot be proven without execution trace."
+  },
+  "resource_maps": [
+    {
+      "terraform_type": "aws_iam_policy",
+      "count": 1,
+      "source_path": "internal/service/iam/policy.go",
+      "confirmed_calls": ["iam:CreatePolicy", "iam:GetPolicy", "iam:GetPolicyVersion"],
+      "conditional_calls": ["iam:TagPolicy"],
+      "notes": "Create includes tags in the standard path; a partition fallback can retry without tags and then tag separately. Post-create read fetches policy and default policy version."
+    },
+    {
+      "terraform_type": "aws_iam_role",
+      "count": 9,
+      "source_path": "internal/service/iam/role.go",
+      "confirmed_calls": ["iam:CreateRole", "iam:GetRole", "iam:ListRolePolicies", "iam:ListAttachedRolePolicies"],
+      "conditional_calls": ["iam:TagRole", "iam:PutRolePolicy", "iam:AttachRolePolicy"],
+      "notes": "The PL003 role resources use permissions boundaries and tags. Separate aws_iam_role_policy resources manage inline policies, but role refresh still enumerates inline and attached policies."
+    },
+    {
+      "terraform_type": "aws_iam_role_policy",
+      "count": 9,
+      "source_path": "internal/service/iam/role_policy.go",
+      "confirmed_calls": ["iam:PutRolePolicy", "iam:GetRolePolicy"],
+      "conditional_calls": [],
+      "notes": "Inline policy creation is followed by an exact policy read."
+    },
+    {
+      "terraform_type": "aws_kms_key",
+      "count": 3,
+      "source_path": "internal/service/kms/key.go",
+      "confirmed_calls": ["kms:CreateKey", "kms:DescribeKey", "kms:GetKeyPolicy", "kms:GetKeyRotationStatus", "kms:ListResourceTags"],
+      "conditional_calls": ["kms:EnableKeyRotation"],
+      "notes": "All three keys enable rotation, so EnableKeyRotation is required for this configuration. Provider waits for IAM, policy and tag propagation and may repeat reads."
+    },
+    {
+      "terraform_type": "aws_kms_alias",
+      "count": 3,
+      "source_path": "internal/service/kms/alias.go",
+      "confirmed_calls": ["kms:CreateAlias", "kms:ListAliases"],
+      "conditional_calls": [],
+      "notes": "Alias refresh resolves the alias through paginated ListAliases rather than a direct GetAlias operation."
+    },
+    {
+      "terraform_type": "aws_s3_bucket",
+      "count": 3,
+      "source_path": "internal/service/s3/bucket.go",
+      "confirmed_calls": [
+        "s3:CreateBucket", "s3:HeadBucket", "s3:GetBucketPolicy", "s3:GetBucketAcl",
+        "s3:GetBucketCors", "s3:GetBucketWebsite", "s3:GetBucketVersioning",
+        "s3:GetBucketAccelerateConfiguration", "s3:GetBucketRequestPayment", "s3:GetBucketLogging",
+        "s3:GetBucketLifecycleConfiguration", "s3:GetReplicationConfiguration",
+        "s3:GetEncryptionConfiguration", "s3:GetObjectLockConfiguration", "s3:GetBucketLocation"
+      ],
+      "conditional_calls": ["s3:TagResource", "s3:PutBucketTagging"],
+      "notes": "Critical legacy-resource finding: post-create refresh reads a broad bucket configuration surface even when dedicated resources manage those settings. These read permissions are part of the real provider requirement. Tag-on-create may fall back to a separate tag write."
+    },
+    {
+      "terraform_type": "aws_s3_bucket_object_lock_configuration",
+      "count": 3,
+      "source_path": "internal/service/s3/bucket_object_lock_configuration.go",
+      "confirmed_calls": ["s3:PutObjectLockConfiguration", "s3:GetObjectLockConfiguration"],
+      "conditional_calls": [],
+      "notes": "Create waits through repeated GetObjectLockConfiguration reads until visible."
+    },
+    {
+      "terraform_type": "aws_s3_bucket_ownership_controls",
+      "count": 3,
+      "source_path": "internal/service/s3/bucket_ownership_controls.go",
+      "confirmed_calls": ["s3:PutBucketOwnershipControls", "s3:GetBucketOwnershipControls"],
+      "conditional_calls": [],
+      "notes": "Exact retry cardinality remains runtime-dependent."
+    },
+    {
+      "terraform_type": "aws_s3_bucket_policy",
+      "count": 3,
+      "source_path": "internal/service/s3/bucket_policy.go",
+      "confirmed_calls": ["s3:PutBucketPolicy", "s3:GetBucketPolicy"],
+      "conditional_calls": [],
+      "notes": "Policy creation is followed by read-back and propagation handling."
+    },
+    {
+      "terraform_type": "aws_s3_bucket_public_access_block",
+      "count": 3,
+      "source_path": "internal/service/s3/bucket_public_access_block.go",
+      "confirmed_calls": ["s3:PutBucketPublicAccessBlock", "s3:GetBucketPublicAccessBlock"],
+      "conditional_calls": [],
+      "notes": "Exact retry cardinality remains runtime-dependent."
+    },
+    {
+      "terraform_type": "aws_s3_bucket_server_side_encryption_configuration",
+      "count": 3,
+      "source_path": "internal/service/s3/bucket_server_side_encryption_configuration.go",
+      "confirmed_calls": ["s3:PutEncryptionConfiguration", "s3:GetEncryptionConfiguration"],
+      "conditional_calls": [],
+      "notes": "The IAM action name used by AWS is s3:PutEncryptionConfiguration although the SDK operation is PutBucketEncryption."
+    },
+    {
+      "terraform_type": "aws_s3_bucket_versioning",
+      "count": 3,
+      "source_path": "internal/service/s3/bucket_versioning.go",
+      "confirmed_calls": ["s3:PutBucketVersioning", "s3:GetBucketVersioning"],
+      "conditional_calls": [],
+      "notes": "Versioning must become visible before Object Lock configuration proceeds."
+    },
+    {
+      "terraform_type": "aws_secretsmanager_secret",
+      "count": 1,
+      "source_path": "internal/service/secretsmanager/secret.go",
+      "confirmed_calls": ["secretsmanager:CreateSecret", "secretsmanager:DescribeSecret", "secretsmanager:GetResourcePolicy"],
+      "conditional_calls": ["secretsmanager:PutResourcePolicy"],
+      "notes": "The PL003 secret has no inline policy argument in this resource, but refresh still reads its resource policy. Tags are supplied on create."
+    },
+    {
+      "terraform_type": "aws_secretsmanager_secret_policy",
+      "count": 1,
+      "source_path": "internal/service/secretsmanager/secret_policy.go",
+      "confirmed_calls": ["secretsmanager:PutResourcePolicy", "secretsmanager:GetResourcePolicy"],
+      "conditional_calls": [],
+      "notes": "Create waits until GetResourcePolicy can retrieve the policy."
+    },
+    {
+      "terraform_type": "aws_cloudtrail",
+      "count": 1,
+      "source_path": "internal/service/cloudtrail/trail.go",
+      "confirmed_calls": [
+        "cloudtrail:CreateTrail", "cloudtrail:StartLogging", "cloudtrail:PutEventSelectors",
+        "cloudtrail:GetTrail", "cloudtrail:GetTrailStatus", "cloudtrail:GetEventSelectors", "cloudtrail:ListTags"
+      ],
+      "conditional_calls": ["cloudtrail:PutInsightSelectors"],
+      "notes": "PL003 uses advanced event selectors and logging enabled. The provider creates, starts logging, sets selectors and performs several read-backs."
+    }
+  ],
+  "global_auxiliary_requirements": [
+    "sts:GetCallerIdentity may be required by provider configuration and account-ID resolution before resource operations.",
+    "Retry and waiter loops can repeat confirmed read calls without changing the required IAM action set.",
+    "Default tags are passed on create where supported; fallback tag APIs remain conditional and partition-dependent.",
+    "The effective-permission gate must simulate both mutation actions and all confirmed post-create/read actions."
+  ],
+  "unresolved_runtime_dimensions": [
+    "EXACT_CALL_COUNTS_AND_RETRY_COUNTS",
+    "PARTITION_FALLBACK_BRANCHES_NOT_EXPECTED_IN_STANDARD_AWS_PARTITION",
+    "PROVIDER_CONFIGURATION_IDENTITY_CALLS_BEYOND_STS_GET_CALLER_IDENTITY",
+    "SERVICE_INTERNAL_AUTHORIZATION_DEPENDENCIES_NOT_REPRESENTABLE_BY_SIMULATE_PRINCIPAL_POLICY"
+  ],
+  "gate_effect": {
+    "previous_matrix_complete": false,
+    "source_action_set_mapped": true,
+    "runtime_cardinality_complete": false,
+    "read_only_gate_ready_for_design_update": true,
+    "read_only_gate_execution_authorized": false,
+    "provisioning_authorized": false,
+    "test_003_authorized": false
+  },
+  "source_refs": [
+    "hashicorp/terraform-provider-aws@v6.56.0:internal/service/iam/policy.go",
+    "hashicorp/terraform-provider-aws@v6.56.0:internal/service/iam/role.go",
+    "hashicorp/terraform-provider-aws@v6.56.0:internal/service/iam/role_policy.go",
+    "hashicorp/terraform-provider-aws@v6.56.0:internal/service/kms/key.go",
+    "hashicorp/terraform-provider-aws@v6.56.0:internal/service/kms/alias.go",
+    "hashicorp/terraform-provider-aws@v6.56.0:internal/service/s3/*.go",
+    "hashicorp/terraform-provider-aws@v6.56.0:internal/service/secretsmanager/secret.go",
+    "hashicorp/terraform-provider-aws@v6.56.0:internal/service/secretsmanager/secret_policy.go",
+    "hashicorp/terraform-provider-aws@v6.56.0:internal/service/cloudtrail/trail.go"
+  ],
+  "authority_effect": "NONE"
+}
