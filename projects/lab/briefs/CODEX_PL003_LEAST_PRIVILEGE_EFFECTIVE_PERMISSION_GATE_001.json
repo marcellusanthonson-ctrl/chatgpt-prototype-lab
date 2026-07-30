@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0.0",
+  "brief_id": "CODEX_PL003_LEAST_PRIVILEGE_EFFECTIVE_PERMISSION_GATE_001",
+  "project_id": "lab",
+  "status": "PROPOSED_NOT_AUTHORIZED_FOR_EXECUTION",
+  "purpose": "Execute a future read-only effective-permission simulation for the intended bounded PL003 provisioning operator against the complete fused action-resource-context matrix before any provisioning decision.",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head_policy": "SET_TO_LIVE_MAIN_HEAD_IN_FUTURE_SEPARATE_AUTHORIZATION",
+  "required_authorization": "NEW_EXPLICIT_JONATHAN_MARTINEZ_AUTHORIZATION",
+  "inputs": {
+    "matrix": "projects/lab/test-designs/PL003_LEAST_PRIVILEGE_EFFECTIVE_PERMISSION_GATE_001/ACTION_RESOURCE_CONTEXT_MATRIX_V2.json",
+    "principal": "EXACT_INTENDED_BOUNDED_PL003_PROVISIONING_OPERATOR_ARN",
+    "permissions_boundary": "EXACT_BOUNDARY_ARN_AND_DOCUMENT",
+    "identity_policies": "EXACT_EFFECTIVE_IDENTITY_POLICY_SET",
+    "session_policy_status": "DECLARED_EXACTLY",
+    "organizations_scope": "SCP_AND_RCP_APPLICABILITY_RESOLVED",
+    "region": "sa-east-1",
+    "account_id_reporting": "REDACTED",
+    "name_suffix": "EXACT_VALUE_REQUIRED"
+  },
+  "allowed_runtime_actions_after_future_authorization": [
+    "sts:GetCallerIdentity",
+    "iam:GetPolicy",
+    "iam:GetPolicyVersion",
+    "iam:GetRole",
+    "iam:ListRolePolicies",
+    "iam:GetRolePolicy",
+    "iam:ListAttachedRolePolicies",
+    "iam:SimulatePrincipalPolicy"
+  ],
+  "simulation_contract": {
+    "target_principal": "INTENDED_BOUNDED_PL003_PROVISIONING_OPERATOR_NOT_BOOTSTRAP_USER",
+    "matrix_pairs": "EVERY_CONFIRMED_ACTION_RESOURCE_CONTEXT_PAIR_IN_MATRIX_V2",
+    "conditional_pairs": "INCLUDE_ONLY_WHEN_DECLARED_RUNTIME_CONTEXT_MAKES_BRANCH_APPLICABLE",
+    "mutations_allowed": 0,
+    "terraform_allowed": false,
+    "provisioning_allowed": false,
+    "test_003_allowed": false,
+    "product_leadership_activation_allowed": false,
+    "simulation_results_required": ["EvalActionName","EvalResourceName","EvalDecision","MatchedStatements","MissingContextValues","PermissionsBoundaryDecisionDetail","OrganizationsDecisionDetail_WHEN_AVAILABLE"]
+  },
+  "prechecks": [
+    "VERIFY_LIVE_MAIN_HEAD",
+    "READ_START_HERE_AND_CANONICAL_ORDER",
+    "VERIFY_NEW_AUTHORIZATION_GRANTED_AND_UNCONSUMED",
+    "VERIFY_PRINCIPAL_BOUNDARY_AND_POLICY_IDENTITIES",
+    "VERIFY_ZERO_INHERITED_AWS_CREDENTIALS_BEFORE_EXPLICIT_SESSION",
+    "VERIFY_SCP_RCP_SCOPE_RESOLVED",
+    "VERIFY_MATRIX_HASH_AND_FILE_SHA",
+    "VERIFY_REPORT_REDACTION"
+  ],
+  "stop_conditions": [
+    "EXPECTED_PARENT_HEAD_MISMATCH",
+    "PRINCIPAL_BOUNDARY_OR_POLICY_MISMATCH",
+    "SCP_RCP_SCOPE_UNKNOWN",
+    "MISSING_CONTEXT_VALUE",
+    "ANY_MUTATION_REQUIRED",
+    "SIMULATOR_LIMITATION_PREVENTS_DISCRIMINATION",
+    "CREDENTIAL_OR_SECRET_EXPOSURE_RISK"
+  ],
+  "result_classes": [
+    "PASS_EFFECTIVE_PERMISSION_MATRIX_READY_FOR_SEPARATE_PROVISIONING_DECISION",
+    "BLOCKED_IDENTITY_POLICY_ALLOW_MISSING_OR_NONMATCHING",
+    "BLOCKED_PERMISSIONS_BOUNDARY_NONALLOW",
+    "BLOCKED_ORGANIZATIONS_POLICY_SCOPE_UNRESOLVED",
+    "BLOCKED_CONTEXT_INCOMPLETE",
+    "BLOCKED_ACTION_RESOURCE_MATRIX_INCOMPLETE",
+    "BLOCKED_SIMULATOR_LIMITATION_REQUIRES_ALTERNATIVE_READ_ONLY_EVIDENCE",
+    "BLOCKED_FAIL_CLOSED_OTHER"
+  ],
+  "pass_semantics": {
+    "provisioning_authorized": false,
+    "terraform_authorized": false,
+    "test_003_authorized": false,
+    "next_effect": "ONLY_ELIGIBLE_FOR_SEPARATE_HUMAN_PROVISIONING_DECISION",
+    "post_execution_authority": "NONE"
+  },
+  "required_outputs": [
+    "REDACTED_PRINCIPAL_AND_POLICY_BASELINE",
+    "MATRIX_HASH",
+    "PAIR_COUNT_BY_SERVICE",
+    "DECISION_PER_ACTION_RESOURCE_PAIR",
+    "MISSING_CONTEXT_VALUES",
+    "BOUNDARY_AND_ORGANIZATIONS_DECISION_DETAILS",
+    "AWS_CALL_COUNTS",
+    "ZERO_MUTATION_ATTESTATION",
+    "CREDENTIAL_CLEANUP_ATTESTATION",
+    "FINAL_CLASSIFICATION"
+  ],
+  "authority_effect": "NONE_UNTIL_SEPARATELY_AUTHORIZED"
+}
