@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "test_design_id": "SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001",
+  "status": "SPECIFIED_NOT_EXECUTED",
+  "fixture_contract": {
+    "base_fixtures": 20,
+    "lab_governance_fixtures": 12,
+    "total_fixtures": 32,
+    "domains": ["SOFTWARE_SOLUTION_DECISIONS", "LAB_GOVERNANCE_DECISIONS"]
+  },
+  "cells": [
+    {"cell_id":"SSE-CELL-01","arm":"BASELINE_A","fixture_scope":"ALL_32_FIXTURES","outputs":32,"blinded_evaluation":true},
+    {"cell_id":"SSE-CELL-02","arm":"BASELINE_B","fixture_scope":"ALL_32_FIXTURES","outputs":32,"blinded_evaluation":true},
+    {"cell_id":"SSE-CELL-03","arm":"CANDIDATE","fixture_scope":"ALL_32_FIXTURES","outputs":32,"blinded_evaluation":true}
+  ],
+  "minimum_future_outputs": 96,
+  "execution_order": "SEEDED_RANDOM_INTERLEAVING_STRATIFIED_BY_DOMAIN_AND_EXPECTED_ACTIVATION",
+  "seed_policy": "PREDECLARE_AND_FREEZE_BEFORE_GENERATION",
+  "repetitions": 1,
+  "configuration_freeze": ["MODEL","REASONING_LEVEL","SYSTEM_PROMPT","ARM_CONTEXT","TOOLS","TOKEN_LIMITS","RETRIES","TIMEOUTS","DATE"],
+  "required_measurements": ["INPUT_TOKENS","OUTPUT_TOKENS","WALL_CLOCK_DURATION","RETRY_COUNT","FAILURE_CLASSIFICATION"],
+  "blinding": {
+    "generator_sees_arm": true,
+    "scorer_sees_arm": false,
+    "scorer_sees_expected_activation": false,
+    "output_ids_randomized": true,
+    "unblinding_after": "ALL_SCORES_AND_RATIONALES_FROZEN"
+  },
+  "future_repeatability_requirement": "AT_LEAST_ONE_SEPARATE_REPRODUCTION_BEFORE_INTEGRATION_DECISION",
+  "execution_authorized": false
+}
