@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "PRODUCT-LEADERSHIP-TEST003-REPOSITORY-ONLY-RECONCILIATION-141",
+  "project_id": "lab",
+  "created_at": "2026-07-30",
+  "authorization": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_INTERNAL_TEST003_RECONCILIATION_141",
+  "changes": [
+    "Created repository-only Test 003 reconciliation record.",
+    "Created proposed repository-only execution brief.",
+    "Revoked AWS authorization 137.",
+    "Revoked IAM Identity Center bootstrap authorization 139.",
+    "Updated CURRENT continuity package."
+  ],
+  "facts": {
+    "aws_required_for_functional_test": false,
+    "database_required": false,
+    "test003_executed": false,
+    "product_leadership_integrated": false,
+    "identity_center_enabled": false,
+    "aws_organizations_created": false,
+    "script_137_executed": false
+  },
+  "next_action": "REVIEW_AND_SEPARATELY_AUTHORIZE_CODEX_PRODUCT_LEADERSHIP_TEST003_REPOSITORY_ONLY_EXECUTION_001",
+  "authority_effect": "NONE"
+}
