@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_CURRENT_STATE_REPORT_AND_CONTINUITY_140",
+  "project_id": "lab",
+  "status": "GRANTED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-30",
+  "approval_source": "USER_REQUEST_COMPLETE_PRODUCT_LEADERSHIP_STATE_REPORT_AND_CONTINUITY",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "9ab0356d27126ff81276f3240df1a94a6ffc531d",
+  "execution_head_policy": "VERIFY_LIVE_AT_USE",
+  "objective": "Publish a complete current-state report for the Product Leadership integration and replace the LAB CURRENT continuity package so a new conversation can resume from verified canonical sources.",
+  "allowed_actions": [
+    "READ_CANONICAL_STATE_AND_APPLICABLE_PL003_SOURCES",
+    "CLASSIFY_FUNCTIONAL_INTEGRATION_VERSUS_OPTIONAL_AWS_HARDENING",
+    "DOCUMENT_AUTHORIZATIONS_137_138_139_AND_THEIR_CURRENT_STATUS",
+    "DOCUMENT_TEST_003_NOT_EXECUTED_AND_PRODUCT_LEADERSHIP_NOT_INTEGRATED",
+    "CREATE_PRODUCT_LEADERSHIP_CURRENT_STATE_REPORT",
+    "REPLACE_CURRENT_CONTINUITY_JSON_MD_ATTACHMENT_MANIFEST_AND_START_PROMPT",
+    "CREATE_REGISTRY_DELTA",
+    "VALIDATE_JSON_AND_REFERENCES",
+    "COMMIT_AND_PUSH_DOCUMENTATION"
+  ],
+  "forbidden_actions": [
+    "AWS_CALLS_OR_MUTATIONS",
+    "ENABLE_IAM_IDENTITY_CENTER_OR_AWS_ORGANIZATIONS",
+    "CREATE_IAM_USER_ROLE_POLICY_OR_ACCESS_KEY",
+    "EXECUTE_AUTHORIZATION_137_SCRIPT",
+    "TERRAFORM",
+    "PROVISIONING",
+    "EXECUTE_PRODUCT_LEADERSHIP_TEST_003",
+    "ACTIVATE_OR_INTEGRATE_PRODUCT_LEADERSHIP",
+    "CREATE_RUNTIME_OR_DATABASE",
+    "TREAT_REPORT_OR_CONTINUITY_AS_EXECUTION_AUTHORITY"
+  ],
+  "deliverables": [
+    "projects/lab/reports/PRODUCT_LEADERSHIP_INTEGRATION_CURRENT_STATE_2026-07-30.md",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.md",
+    "projects/lab/continuity/ATTACHMENT_MANIFEST.json",
+    "projects/lab/continuity/START_PROMPT.md",
+    "registry/deltas/product-leadership-current-state-and-continuity-140.json"
+  ],
+  "consumption_criterion": "CONSUMED_AFTER_REPORT_CONTINUITY_PACKAGE_AND_DELTA_ARE_PUBLISHED_AND_REMOTE_HEAD_VERIFIED",
+  "post_consumption_authority": "NONE"
+}
