@@ -1,0 +1,208 @@
+{
+  "schema_version": "1.0.0",
+  "design_id": "PL003_EFFECTIVE_PERMISSION_GATE_OPERATOR_001",
+  "project_id": "lab",
+  "status": "DOCUMENTED_NOT_CREATED_NOT_CONFIGURED",
+  "source_authorization": "AUTHORIZATION_LAB_PL003_EFFECTIVE_PERMISSION_GATE_OPERATOR_DOCUMENTARY_DESIGN_134",
+  "source_block": "EVD-LAB-PL003-READ-ONLY-EFFECTIVE-PERMISSION-GATE-133-ATTEMPT-001",
+  "purpose": "Provide one dedicated temporary-session caller for the PL003 effective-permission gate while keeping the provisioning operator exclusively as the simulation target.",
+  "separation_of_duties": {
+    "source_principal": "IAM_USER:<REDACTED_ACCOUNT_ID>:pl003-bootstrap-operator",
+    "source_principal_role": "MAY_ASSUME_GATE_OPERATOR_ONLY_WITH_MFA_AFTER_SEPARATE_AUTHORIZATION",
+    "caller_role": "PL003EffectivePermissionGateOperator",
+    "caller_role_arn_template": "arn:aws:iam::<ACCOUNT_ID>:role/PL003EffectivePermissionGateOperator",
+    "simulation_target": "arn:aws:iam::<ACCOUNT_ID>:role/PL003PreflightProvisioningOperator",
+    "forbidden_simulation_targets": [
+      "IAM_USER:<ACCOUNT_ID>:pl003-bootstrap-operator",
+      "arn:aws:iam::<ACCOUNT_ID>:role/PL003PreflightPlanOperator",
+      "arn:aws:iam::<ACCOUNT_ID>:role/PL003BoundedSimulationSetupOperator",
+      "arn:aws:iam::<ACCOUNT_ID>:role/PL003EffectivePermissionGateOperator"
+    ]
+  },
+  "role_configuration": {
+    "role_name": "PL003EffectivePermissionGateOperator",
+    "path": "/",
+    "max_session_duration_seconds": 3600,
+    "authorized_session_duration_seconds": 900,
+    "persistent_access_keys": "PROHIBITED",
+    "console_access": "PROHIBITED",
+    "session_name": "PL003EffectivePermissionGate",
+    "source_identity_required": true,
+    "source_identity_value": "pl003-gate-operator",
+    "required_tags": {
+      "Project": "PRODUCT-LEADERSHIP-TEST-003",
+      "Environment": "PREFLIGHT",
+      "Purpose": "EFFECTIVE-PERMISSION-GATE",
+      "AccessClass": "READ-ONLY",
+      "Owner": "LAB",
+      "Disposable": "true"
+    }
+  },
+  "trust_policy": {
+    "version": "2012-10-17",
+    "statements": [
+      {
+        "sid": "BootstrapAssumeGateOperatorWithMFAOnly",
+        "effect": "Allow",
+        "principal": {
+          "AWS": "arn:aws:iam::<ACCOUNT_ID>:user/pl003-bootstrap-operator"
+        },
+        "action": "sts:AssumeRole",
+        "condition": {
+          "Bool": {
+            "aws:MultiFactorAuthPresent": "true"
+          },
+          "NumericLessThanEquals": {
+            "aws:MultiFactorAuthAge": "300"
+          },
+          "StringEquals": {
+            "sts:SourceIdentity": "pl003-gate-operator"
+          }
+        }
+      }
+    ],
+    "wildcard_principals": false,
+    "service_principals": false,
+    "role_chaining_principals": false
+  },
+  "permissions_boundary": {
+    "name": "PL003EffectivePermissionGateOperatorBoundary",
+    "arn_template": "arn:aws:iam::<ACCOUNT_ID>:policy/PL003EffectivePermissionGateOperatorBoundary",
+    "version": "2012-10-17",
+    "allow_actions": [
+      "sts:GetCallerIdentity",
+      "iam:GetRole",
+      "iam:ListRolePolicies",
+      "iam:GetRolePolicy",
+      "iam:ListAttachedRolePolicies",
+      "iam:GetPolicy",
+      "iam:GetPolicyVersion",
+      "iam:SimulatePrincipalPolicy",
+      "organizations:DescribeOrganization"
+    ],
+    "allow_resources": "*",
+    "explicit_deny_categories": [
+      "iam:Create*",
+      "iam:Update*",
+      "iam:Delete*",
+      "iam:Put*",
+      "iam:Attach*",
+      "iam:Detach*",
+      "iam:Add*",
+      "iam:Remove*",
+      "iam:PassRole",
+      "iam:SetDefaultPolicyVersion",
+      "iam:Tag*",
+      "iam:Untag*",
+      "organizations:Create*",
+      "organizations:Update*",
+      "organizations:Delete*",
+      "organizations:Move*",
+      "organizations:Attach*",
+      "organizations:Detach*",
+      "sts:AssumeRole"
+    ],
+    "notes": [
+      "The role session cannot assume another role.",
+      "The boundary does not authorize any resource mutation.",
+      "SimulatePrincipalPolicy requires Resource star in the caller policy because IAM does not provide resource-level scoping for the simulator API permission itself."
+    ]
+  },
+  "identity_policy": {
+    "name": "PL003EffectivePermissionGateOperatorReadOnly",
+    "type": "INLINE_OR_MANAGED_EXACT_DOCUMENT_TO_BE_SELECTED_BEFORE_CREATION",
+    "version": "2012-10-17",
+    "statements": [
+      {
+        "sid": "ReadCallerIdentity",
+        "effect": "Allow",
+        "actions": ["sts:GetCallerIdentity"],
+        "resources": ["*"]
+      },
+      {
+        "sid": "ReadPL003TargetAndPolicies",
+        "effect": "Allow",
+        "actions": [
+          "iam:GetRole",
+          "iam:ListRolePolicies",
+          "iam:GetRolePolicy",
+          "iam:ListAttachedRolePolicies",
+          "iam:GetPolicy",
+          "iam:GetPolicyVersion"
+        ],
+        "resources": ["*"]
+      },
+      {
+        "sid": "SimulateOnly",
+        "effect": "Allow",
+        "actions": ["iam:SimulatePrincipalPolicy"],
+        "resources": ["*"]
+      },
+      {
+        "sid": "ResolveOrganizationsMembership",
+        "effect": "Allow",
+        "actions": ["organizations:DescribeOrganization"],
+        "resources": ["*"]
+      }
+    ],
+    "mutation_actions": 0,
+    "write_services": []
+  },
+  "source_principal_assume_permission": {
+    "required_change": "A SEPARATELY AUTHORIZED POLICY MUST ALLOW ONLY sts:AssumeRole ON THE EXACT GATE OPERATOR ARN WITH MFA AND SOURCE IDENTITY CONDITIONS",
+    "target_resource": "arn:aws:iam::<ACCOUNT_ID>:role/PL003EffectivePermissionGateOperator",
+    "must_not_allow": [
+      "ASSUME_ANY_OTHER_ROLE",
+      "IAM_MUTATION",
+      "PASS_ROLE",
+      "PERSISTENT_CREDENTIAL_CREATION"
+    ]
+  },
+  "temporary_session_protocol": {
+    "preconditions": [
+      "REMOTE_HEAD_EXACT",
+      "CREATION_AUTHORIZATION_GRANTED_AND_UNCONSUMED",
+      "ZERO_INHERITED_AWS_CREDENTIALS",
+      "ROLE_TRUST_BOUNDARY_AND_POLICY_HASHES_MATCH_CANONICAL_DESIGN",
+      "MFA_DEVICE_PRESENT",
+      "SOURCE_IDENTITY_EXACT"
+    ],
+    "sequence": [
+      "CLEAR_AWS_ENVIRONMENT_CREDENTIALS",
+      "OBTAIN_ONE_MFA_BACKED_BOOTSTRAP_SESSION_WHEN_REQUIRED",
+      "ASSUME_PL003EffectivePermissionGateOperator_FOR_900_SECONDS_WITH_SOURCE_IDENTITY",
+      "VERIFY_STS_GET_CALLER_IDENTITY_REDACTED",
+      "RUN_ONLY_AUTHORIZED_READS_AND_SIMULATION",
+      "CLEAR_ROLE_SESSION_CREDENTIALS_AND_ALL_TEMPORARY_FILES"
+    ],
+    "maximum_sessions": 1,
+    "maximum_assume_role_calls": 1,
+    "session_extension": "PROHIBITED",
+    "credential_persistence": "PROHIBITED"
+  },
+  "fail_closed_conditions": [
+    "ROLE_ABSENT",
+    "TRUST_DOCUMENT_MISMATCH",
+    "BOUNDARY_ABSENT_OR_HASH_MISMATCH",
+    "IDENTITY_POLICY_ABSENT_OR_HASH_MISMATCH",
+    "SOURCE_PRINCIPAL_ASSUME_SCOPE_BROADER_THAN_EXACT_ROLE",
+    "MFA_NOT_PRESENT",
+    "SOURCE_IDENTITY_MISMATCH",
+    "ANY_WRITE_PERMISSION_OBSERVED",
+    "ANY_PERSISTENT_CREDENTIAL_OBSERVED",
+    "ORGANIZATIONS_SCOPE_UNRESOLVED_FOR_GATE_EXECUTION"
+  ],
+  "future_creation_scope": {
+    "resources_to_create_or_configure": [
+      "ONE_CUSTOMER_MANAGED_PERMISSIONS_BOUNDARY_POLICY",
+      "ONE_IAM_ROLE",
+      "ONE_EXACT_READ_ONLY_IDENTITY_POLICY_OR_INLINE_POLICY",
+      "ONE_EXACT_SOURCE_PRINCIPAL_ASSUME_ROLE_GRANT"
+    ],
+    "runtime_gate_execution_in_same_authorization": false,
+    "terraform_allowed": false,
+    "product_resources_allowed": false,
+    "test_003_allowed": false
+  },
+  "authority_effect": "NONE"
+}
