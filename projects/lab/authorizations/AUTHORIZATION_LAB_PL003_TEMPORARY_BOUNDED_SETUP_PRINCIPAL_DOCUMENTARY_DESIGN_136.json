@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_PL003_TEMPORARY_BOUNDED_SETUP_PRINCIPAL_DOCUMENTARY_DESIGN_136",
   "project_id": "lab",
-  "status": "GRANTED",
+  "status": "CONSUMED",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-07-30",
   "approval_source": "USER_INSTRUCTION_CONTINUE_AFTER_AUTHORIZATION_135_BOUNDED_CREATOR_BLOCK",
@@ -37,6 +37,25 @@
     "projects/lab/briefs/CODEX_PL003_TEMPORARY_BOUNDED_SETUP_PRINCIPAL_CREATION_AND_USE_001.json",
     "registry/deltas/pl003-temporary-bounded-setup-principal-design-136.json"
   ],
+  "execution_result": {
+    "status": "DOCUMENTARY_DESIGN_PUBLISHED",
+    "setup_role": "PL003TemporaryGateOperatorSetup",
+    "setup_boundary": "PL003TemporaryGateOperatorSetupBoundary",
+    "setup_identity_policy": "PL003TemporaryGateOperatorSetupExactMutation",
+    "session_duration_seconds": 900,
+    "one_use": true,
+    "mandatory_decommission": true,
+    "creation_dependency": "OUT_OF_BAND_AUTHORIZED_HUMAN_OR_EXTERNAL_SECURITY_CUSTODIAN",
+    "aws_calls": 0,
+    "aws_mutations": 0,
+    "terraform_executions": 0,
+    "provisioning_executions": 0,
+    "product_leadership_test_003_executions": 0,
+    "future_creation_authorized": false,
+    "future_use_authorized": false
+  },
+  "consumed_at": "2026-07-30",
+  "consumption_reason": "DESIGN_FUTURE_BRIEF_AND_REGISTRY_DELTA_PUBLISHED",
   "consumption_criterion": "CONSUMED_AFTER_DESIGN_FUTURE_BRIEF_AND_DELTA_ARE_PUBLISHED_AND_REMOTE_HEAD_IS_VERIFIED",
   "post_consumption_authority": "NONE"
 }
