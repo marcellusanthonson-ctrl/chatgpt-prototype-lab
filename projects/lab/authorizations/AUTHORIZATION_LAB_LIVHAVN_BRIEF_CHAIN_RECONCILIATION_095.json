@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_LIVHAVN_BRIEF_CHAIN_RECONCILIATION_095",
+  "project_id": "lab",
+  "title": "Apply the four-brief architecture to the LivHavn pilot",
+  "status": "CONSUMED_ON_VERIFIED_REMOTE_DOCUMENTARY_PUBLICATION",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-30",
+  "consumed_at": "2026-07-30",
+  "approval_source": "Direct user instruction: Aplica la acción sugerida.",
+  "repositories": [
+    "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "marcellusanthonson-ctrl/symphonie"
+  ],
+  "branches": ["main"],
+  "expected_parent_heads": {
+    "lab": "59a44b742e8bee9517f387ad299635853d1907c5",
+    "symphonie": "afab733baaedb605fbfa194f0e6ad914f712d6dc"
+  },
+  "scope": "DOCUMENTARY_RECONCILIATION_ONLY",
+  "allowed_actions": [
+    "RECONSTRUCT_LIVHAVN_EXISTING_BRIEF_INFORMATION",
+    "CREATE_PRODUCT_BRIEF",
+    "CREATE_ARCHITECTURE_SCOPE_PACKAGE",
+    "CREATE_UX_UI_DESIGN_BRIEF",
+    "CREATE_BRIEF_CHAIN_MANIFEST",
+    "PRESERVE_HISTORICAL_BRIEFS",
+    "REGISTER_AUTHORIZATION_AND_DISCOVERY_DELTA",
+    "COMMIT",
+    "PUSH",
+    "VERIFY_REMOTE"
+  ],
+  "forbidden_actions": [
+    "CREATE_CODEX_EXECUTION_BRIEF",
+    "RUN_CODEX",
+    "GENERATE_IMAGES",
+    "GENERATE_OR_MODIFY_HTML",
+    "MODIFY_VISUAL_CANDIDATES",
+    "MODIFY_PRODUCT_CODE",
+    "RUNTIME",
+    "INSTALL_DEPENDENCIES",
+    "INTEGRATE_SKILLS",
+    "DEPLOY",
+    "RELEASE",
+    "DECLARE_PRODUCT_BRIEF_APPROVED",
+    "DECLARE_ARCHITECTURE_APPROVED",
+    "DECLARE_UX_UI_DESIGN_APPROVED"
+  ],
+  "published_artifacts": [
+    "marcellusanthonson-ctrl/symphonie:pilotos/SYMPHONIE-PILOT-LIVHAVN-001/phase-1/LIVHAVN_PRODUCT_BRIEF_001.json",
+    "marcellusanthonson-ctrl/symphonie:pilotos/SYMPHONIE-PILOT-LIVHAVN-001/phase-2/LIVHAVN_ARCHITECTURE_SCOPE_PACKAGE_001.json",
+    "marcellusanthonson-ctrl/symphonie:pilotos/SYMPHONIE-PILOT-LIVHAVN-001/phase-3/LIVHAVN_UX_UI_DESIGN_BRIEF_001.json",
+    "marcellusanthonson-ctrl/symphonie:pilotos/SYMPHONIE-PILOT-LIVHAVN-001/briefs/LIVHAVN_BRIEF_CHAIN_MANIFEST_001.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_LIVHAVN_BRIEF_CHAIN_RECONCILIATION_095.json",
+    "registry/deltas/livhavn-brief-chain-reconciliation-095.json"
+  ],
+  "consumption_criterion": "CONSUMED_ON_VERIFIED_REMOTE_DOCUMENTARY_PUBLICATION",
+  "authority_effect": "NONE_AFTER_CONSUMPTION",
+  "product_effect": "NONE",
+  "runtime_effect": "NONE"
+}
