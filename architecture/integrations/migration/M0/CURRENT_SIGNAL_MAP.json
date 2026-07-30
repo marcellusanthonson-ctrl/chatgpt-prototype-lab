@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "signal_map_id": "CURRENT_SIGNAL_MAP_001",
+  "migration_phase": "M0_INVENTORY_AND_BASELINE",
+  "status": "DOCUMENTED_BASELINE",
+  "recorded_at": "2026-07-30",
+  "source_path": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json",
+  "signals": {
+    "EVIDENCE_AND_CLAIMS": [
+      "TASK_ANALYSIS",
+      "TASK_AUDIT",
+      "TASK_TECHNICAL_REVIEW",
+      "TASK_STATUS_REPORT",
+      "CLAIM_FACTUAL",
+      "CLAIM_LEGAL_OR_STANDARD",
+      "CLAIM_ACCESSIBILITY",
+      "CLAIM_VALIDATION"
+    ],
+    "DESIGN_CRITERION": [
+      "TASK_UI",
+      "TASK_UX",
+      "TASK_VISUAL_DESIGN",
+      "TASK_HTML",
+      "TASK_WEB_INTERFACE",
+      "TASK_DESIGN_BRIEF",
+      "TASK_PROTOTYPE",
+      "TASK_COMPONENT_REVIEW"
+    ],
+    "WEB_ACCESSIBILITY": [
+      "TASK_UI",
+      "TASK_UX",
+      "TASK_HTML",
+      "TASK_WEB_INTERFACE",
+      "TASK_FORM",
+      "TASK_INTERACTIVE_CONTROL",
+      "TASK_RESPONSIVE",
+      "TASK_MOTION",
+      "CLAIM_ACCESSIBILITY"
+    ],
+    "CONTEXTUAL_VISUAL_PREFERENCE": {
+      "activate_all": [
+        "TASK_VISUAL_DIRECTION",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ],
+      "activate_alternative_all": [
+        "TASK_VISUAL_DIRECTION",
+        "PROJECT_SYMPHONIE"
+      ]
+    }
+  },
+  "shared_signal_map": {
+    "TASK_UI": ["DESIGN_CRITERION", "WEB_ACCESSIBILITY"],
+    "TASK_UX": ["DESIGN_CRITERION", "WEB_ACCESSIBILITY"],
+    "TASK_HTML": ["DESIGN_CRITERION", "WEB_ACCESSIBILITY"],
+    "TASK_WEB_INTERFACE": ["DESIGN_CRITERION", "WEB_ACCESSIBILITY"],
+    "CLAIM_ACCESSIBILITY": ["EVIDENCE_AND_CLAIMS", "WEB_ACCESSIBILITY"]
+  },
+  "exclusion_signals": {
+    "TASK_CASUAL_CONVERSATION": ["DESIGN_CRITERION", "WEB_ACCESSIBILITY", "CONTEXTUAL_VISUAL_PREFERENCE"],
+    "TASK_TRANSLATION_ONLY": ["DESIGN_CRITERION", "WEB_ACCESSIBILITY", "CONTEXTUAL_VISUAL_PREFERENCE"],
+    "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE": ["DESIGN_CRITERION", "WEB_ACCESSIBILITY", "CONTEXTUAL_VISUAL_PREFERENCE"],
+    "TASK_SIMPLE_ARITHMETIC": ["DESIGN_CRITERION", "WEB_ACCESSIBILITY", "CONTEXTUAL_VISUAL_PREFERENCE"]
+  },
+  "signal_semantics": {
+    "single_signal_default": "ACTIVATE_ANY",
+    "conjunctive_activation": "ALL_DECLARED_SIGNALS_REQUIRED",
+    "alternative_conjunctive_activation": "EITHER_COMPLETE_SIGNAL_GROUP_MAY_MATCH",
+    "no_match": "EMPTY_MODULE_SET"
+  },
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "active_selector_modified": false
+}
