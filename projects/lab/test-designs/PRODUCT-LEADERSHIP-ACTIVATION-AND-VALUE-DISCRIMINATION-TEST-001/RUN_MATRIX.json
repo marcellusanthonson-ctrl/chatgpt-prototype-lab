@@ -1,26 +1,45 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "test_design_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001",
-  "status": "SPECIFIED_NOT_EXECUTED",
+  "status": "FINAL_REVIEW_COMPLETE_NOT_EXECUTED",
+  "fixture_inventory": {
+    "product_and_project_fixtures": 40,
+    "lab_governance_fixtures": 12,
+    "total_fixtures": 52,
+    "governance_extension_ref": "GOVERNANCE_EXTENSION_001.json"
+  },
   "cells": [
     {
       "cell_id": "PL-CELL-01",
       "arm": "PL-ARM-BASELINE",
-      "fixture_scope": "ALL_40_FIXTURES",
-      "outputs": 40,
-      "blinded_evaluation": true
+      "fixture_scope": "ALL_52_FIXTURES",
+      "outputs": 52,
+      "domain_distribution": {
+        "PRODUCT_AND_PROJECT_DECISIONS": 40,
+        "LAB_GOVERNANCE_DECISIONS": 12
+      },
+      "blinded_evaluation": true,
+      "measure_tokens": true,
+      "measure_wall_clock": true
     },
     {
       "cell_id": "PL-CELL-02",
       "arm": "PL-ARM-PACKAGE",
-      "fixture_scope": "ALL_40_FIXTURES",
-      "outputs": 40,
-      "blinded_evaluation": true
+      "fixture_scope": "ALL_52_FIXTURES",
+      "outputs": 52,
+      "domain_distribution": {
+        "PRODUCT_AND_PROJECT_DECISIONS": 40,
+        "LAB_GOVERNANCE_DECISIONS": 12
+      },
+      "blinded_evaluation": true,
+      "measure_tokens": true,
+      "measure_wall_clock": true
     },
     {
       "cell_id": "PL-CELL-03",
       "arm": "PL-ARM-POSITIVE-CONTROL",
       "fixture_scope": "FOUR_PINNED_POSITIVE_FIXTURES",
+      "fixture_ids": ["PL-FX-001", "PL-FX-002", "PL-FX-003", "PL-FX-007"],
       "outputs": 4,
       "blinded_evaluation": true
     },
@@ -28,14 +47,38 @@
       "cell_id": "PL-CELL-04",
       "arm": "PL-ARM-NEGATIVE-CONTROL",
       "fixture_scope": "FOUR_PINNED_NEGATIVE_FIXTURES",
+      "fixture_ids": ["PL-FX-011", "PL-FX-017", "PL-FX-028", "PL-FX-030"],
       "outputs": 4,
       "blinded_evaluation": true
     }
   ],
-  "minimum_future_outputs": 88,
-  "execution_order": "SEEDED_RANDOM_INTERLEAVING",
-  "seed_policy": "PREDECLARE_AND_FREEZE_BEFORE_GENERATION",
+  "minimum_future_outputs": 112,
+  "output_formula": "52_BASELINE + 52_PACKAGE + 4_POSITIVE_CONTROL + 4_NEGATIVE_CONTROL",
+  "execution_order": "SEEDED_RANDOM_INTERLEAVING_WITH_DOMAIN_STRATIFICATION",
+  "stratification": {
+    "required": true,
+    "dimensions": ["DOMAIN", "EXPECTED_ACTIVATION", "FIXTURE_CATEGORY"],
+    "rule": "No arm may receive a materially different ordering distribution across product and governance domains."
+  },
+  "seed_policy": "PREDECLARE_HASH_AND_FREEZE_BEFORE_GENERATION",
   "repetitions": 1,
   "future_repeatability_requirement": "AT_LEAST_ONE_SEPARATE_REPRODUCTION_BEFORE_INTEGRATION_DECISION",
-  "execution_authorized": false
+  "pre_generation_freeze": [
+    "FIXTURE_SET",
+    "PROMPT_TEMPLATES",
+    "MODEL_AND_REASONING_CONFIGURATION",
+    "TOOL_ACCESS",
+    "TOKEN_LIMITS",
+    "RETRY_POLICY",
+    "TIMEOUT_POLICY",
+    "SEED",
+    "ARM_ASSIGNMENT"
+  ],
+  "calibration_precondition": {
+    "minimum_cases": 6,
+    "required_before_main_scoring": true,
+    "scorer_agreement_and_disagreement_log_required": true
+  },
+  "execution_authorized": false,
+  "test_executed": false
 }
