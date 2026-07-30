@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "SSE-TEST-EXECUTION-AND-READ-ONLY-AUDIT-147",
+  "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_SSE_TEST_EXECUTION_AND_READ_ONLY_AUDIT_147.json",
+  "state_transition": {
+    "from": "SSE_FINAL_DESIGN_REVIEW_COMPLETE_NO_EXECUTION_AUTHORITY",
+    "to": "SSE_TEST_EXECUTION_AND_READ_ONLY_AUDIT_AUTHORIZED_NOT_STARTED"
+  },
+  "test_contract": {
+    "fixtures": 32,
+    "arms": 3,
+    "minimum_outputs": 96,
+    "sse_active": false,
+    "sse_integrated": false,
+    "architecture_or_stack_selection_authorized": false,
+    "infrastructure_changes_authorized": false
+  },
+  "active_execution_authority": "AUTHORIZATION_LAB_SSE_TEST_EXECUTION_AND_READ_ONLY_AUDIT_147",
+  "authority_effect": "BOUNDED_TEST_EXECUTION_AND_READ_ONLY_AUDIT_ONLY"
+}
