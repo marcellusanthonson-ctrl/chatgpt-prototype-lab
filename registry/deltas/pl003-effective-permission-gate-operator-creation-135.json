@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "pl003-effective-permission-gate-operator-creation-135",
+  "project_id": "lab",
+  "kind": "AUTHORIZATION_DELTA",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_EFFECTIVE_PERMISSION_GATE_OPERATOR_CREATION_AND_VERIFICATION_135",
+  "status": "GRANTED",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "43ff8d267bb98ee777126af7eb0616708b673e13",
+  "authorized_brief": "projects/lab/briefs/CODEX_PL003_EFFECTIVE_PERMISSION_GATE_OPERATOR_CREATION_001.json",
+  "design": "projects/lab/test-designs/PL003_EFFECTIVE_PERMISSION_GATE_OPERATOR_001/DESIGN.json",
+  "scope": "Create and verify only the dedicated read-only gate caller path; do not execute the permission gate or any PL003 provisioning or test.",
+  "authority_after_consumption": "NONE",
+  "created_at": "2026-07-30"
+}
