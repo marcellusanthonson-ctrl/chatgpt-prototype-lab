@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "composition_baseline_id": "CURRENT_COMPOSITION_RULES_001",
+  "migration_phase": "M0_INVENTORY_AND_BASELINE",
+  "status": "DOCUMENTED_BASELINE",
+  "recorded_at": "2026-07-30",
+  "source_path": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json",
+  "declared_order": [
+    "EVIDENCE_AND_CLAIMS",
+    "DESIGN_CRITERION",
+    "WEB_ACCESSIBILITY",
+    "CONTEXTUAL_VISUAL_PREFERENCE"
+  ],
+  "composition_rules": [
+    {
+      "id": "CR-001",
+      "rule": "EVALUATE_ALL_MODULES_IN_DECLARED_ORDER",
+      "type": "ORDERING"
+    },
+    {
+      "id": "CR-002",
+      "rule": "ACTIVATE_A_MODULE_ONLY_WHEN_ITS_SIGNAL_RULE_MATCHES",
+      "type": "ACTIVATION_BOUNDARY"
+    },
+    {
+      "id": "CR-003",
+      "rule": "EVIDENCE_AND_CLAIMS_PRECEDES_RECOMMENDATION",
+      "type": "PRECEDENCE"
+    },
+    {
+      "id": "CR-004",
+      "rule": "WEB_ACCESSIBILITY_CONSTRAINS_INTERFACE_OUTPUT_WITHOUT_SELECTING_AN_AESTHETIC",
+      "type": "CONSTRAINT_WITHOUT_OWNERSHIP"
+    },
+    {
+      "id": "CR-005",
+      "rule": "CONTEXTUAL_VISUAL_PREFERENCE_NEVER_BECOMES_A_UNIVERSAL_STYLE",
+      "type": "CONTEXT_BOUNDARY"
+    },
+    {
+      "id": "CR-006",
+      "rule": "NO_MATCH_RETURNS_EMPTY_MODULE_SET",
+      "type": "ABSTENTION"
+    }
+  ],
+  "exclusions": [
+    {
+      "when_any": [
+        "TASK_CASUAL_CONVERSATION",
+        "TASK_TRANSLATION_ONLY",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE",
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "exclude": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY",
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ]
+    }
+  ],
+  "inferred_invariants_from_stable_source": [
+    "MODULE_SOURCES_ARE_REFERENCED_NOT_COPIED",
+    "RESULTS_REMAIN_BOUNDED_BY_RESULT_CONTRACT",
+    "DESIGN_CRITERION_REQUIRES_MINIMUM_IMPECCABLE_VISUAL_FOUNDATION_FOR_RENDERED_INTERFACE_WORK",
+    "ACCESSIBILITY_STATIC_PASS_DOES_NOT_ESTABLISH_CONFORMANCE",
+    "HUMAN_VISUAL_DIRECTION_DECISION_REMAINS_WITH_JONATHAN_MARTINEZ"
+  ],
+  "migration_preservation_requirements": [
+    "DECLARED_MODULE_ORDER_MUST_REMAIN_EQUIVALENT_DURING_SHADOW_PHASE",
+    "ALL_SIX_COMPOSITION_RULES_MUST_BE_REPRESENTED",
+    "EXCLUSION_BEHAVIOR_MUST_REMAIN_EQUIVALENT",
+    "EMPTY_SET_ABSTENTION_MUST_REMAIN_VALID",
+    "NO_AUTHORITY_OR_RUNTIME_EFFECT_MAY_BE_INTRODUCED"
+  ],
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "active_selector_modified": false
+}
