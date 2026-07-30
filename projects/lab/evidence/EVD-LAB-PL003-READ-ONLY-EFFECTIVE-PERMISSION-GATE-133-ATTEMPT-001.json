@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-PL003-READ-ONLY-EFFECTIVE-PERMISSION-GATE-133-ATTEMPT-001",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_READ_ONLY_EFFECTIVE_PERMISSION_GATE_EXECUTION_133",
+  "project_id": "lab",
+  "kind": "REDACTED_READ_ONLY_EFFECTIVE_PERMISSION_GATE_PRECHECK_EVIDENCE",
+  "status": "BLOCKED",
+  "executed_at": "2026-07-30T02:22:40Z",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch_mode": "DETACHED_HEAD",
+  "initial_head": "356b429f9c2c1bd5d961f3c11651c32ec5627b86",
+  "execution_head": "356b429f9c2c1bd5d961f3c11651c32ec5627b86",
+  "prechecks": {
+    "remote_head_exact": true,
+    "authorization_commit_only_descendant_of_expected_parent": true,
+    "expected_parent_head": "a37ddfc8350a6106f99b8516825f9ab1551d7836",
+    "worktree_clean": true,
+    "detached_at_exact_head": true,
+    "inherited_aws_credentials": 0,
+    "preexisting_temporary_aws_variables": 0,
+    "authorization_133_registered_granted": true,
+    "authorizations_115_through_132_consumed": true,
+    "historical_authorization_113_state": "GRANTED_BLOCKED_NOT_RESUMABLE_AS_AUTHORITY_FOR_133",
+    "historical_authorization_114_state": "GRANTED_BLOCKED_NOT_RESUMABLE_AS_AUTHORITY_FOR_133",
+    "parallel_or_implicit_execution_authority": "NONE"
+  },
+  "matrix": {
+    "path": "projects/lab/test-designs/PL003_LEAST_PRIVILEGE_EFFECTIVE_PERMISSION_GATE_001/ACTION_RESOURCE_CONTEXT_MATRIX_V2.json",
+    "matrix_id": "PL003_ACTION_RESOURCE_CONTEXT_MATRIX_002",
+    "git_blob_sha1": "bfdb56bc6d6ee6e09620814c57ec54d4b243a7ba",
+    "semantic_normalization": "RECURSIVE_OBJECT_KEY_SORT_ARRAY_ORDER_PRESERVED_COMPACT_UTF8_JSON",
+    "semantic_sha256": "db7274c9c4dc5399a3426daba8816316ca5a543f4b48cd603d1659d251cfe131",
+    "confirmed_pair_count": 195,
+    "pair_count_method": "CARTESIAN_ACTION_RESOURCE_EXPANSION_WITH_NINE_EXACT_ROLE_ARNS_THREE_CREATED_KEY_ARNS_AND_THREE_EXACT_BUCKET_ARNS_EXPANDED_BY_DECLARED_CARDINALITY",
+    "pairs_by_service": {
+      "sts": 1,
+      "iam": 57,
+      "kms": 34,
+      "s3": 81,
+      "secretsmanager": 8,
+      "cloudtrail": 14
+    },
+    "conditional_actions": {
+      "included": [],
+      "excluded": [
+        {
+          "action": "iam:TagPolicy",
+          "potential_pair_count": 1,
+          "justification": "MATRIX_MARKS_CONDITIONAL_AND_NO_AUTHORIZED_RUNTIME_BRANCH_WAS_ESTABLISHED"
+        },
+        {
+          "action": "iam:TagRole",
+          "potential_pair_count": 9,
+          "justification": "MATRIX_MARKS_CONDITIONAL_AND_NO_AUTHORIZED_RUNTIME_BRANCH_WAS_ESTABLISHED"
+        },
+        {
+          "action": "s3:TagResource",
+          "potential_pair_count": 3,
+          "justification": "MATRIX_MARKS_CONDITIONAL_AND_NO_AUTHORIZED_RUNTIME_BRANCH_WAS_ESTABLISHED"
+        },
+        {
+          "action": "s3:PutBucketTagging",
+          "potential_pair_count": 3,
+          "justification": "MATRIX_MARKS_CONDITIONAL_AND_NO_AUTHORIZED_RUNTIME_BRANCH_WAS_ESTABLISHED"
+        },
+        {
+          "action": "cloudtrail:PutInsightSelectors",
+          "potential_pair_count": 2,
+          "justification": "MATRIX_MARKS_CONDITIONAL_AND_NO_AUTHORIZED_RUNTIME_BRANCH_WAS_ESTABLISHED"
+        }
+      ],
+      "excluded_potential_pair_count": 18,
+      "claim_limit": "EXCLUDED_FROM_CONFIRMED_PAIR_COUNT_NOT_PROVEN_UNNECESSARY_FOR_ANY_FUTURE_RUNTIME"
+    }
+  },
+  "session_precheck": {
+    "local_profile_count": 2,
+    "eligible_explicit_temporary_read_only_session_count": 0,
+    "observed_profile_classes": [
+      "BOOTSTRAP_PROFILE_FORBIDDEN_BY_AUTHORIZATION_133",
+      "PLAN_OPERATOR_PROFILE_FORBIDDEN_BY_AUTHORIZATION_133"
+    ],
+    "bootstrap_operator_used": false,
+    "plan_operator_used": false,
+    "bounded_setup_operator_used": false,
+    "temporary_session_established": false,
+    "mfa_prompt_opened": false,
+    "failure_code": "NO_ELIGIBLE_EXPLICIT_TEMPORARY_READ_ONLY_SESSION_PRINCIPAL"
+  },
+  "identity": {
+    "get_caller_identity_attempted": false,
+    "redacted_identifier": "NOT_ESTABLISHED_NO_ELIGIBLE_SESSION"
+  },
+  "target_role": {
+    "required_name": "PL003PreflightProvisioningOperator",
+    "existence_read_attempted": false,
+    "existence_result": "NOT_READ_NO_ELIGIBLE_SESSION",
+    "arn_redacted": "NOT_READ",
+    "trust_policy": "NOT_READ",
+    "permissions_boundary": "NOT_READ",
+    "attached_identity_policies": "NOT_READ",
+    "inline_policy_names_and_documents": "NOT_READ",
+    "session_policy_status": "NOT_ESTABLISHED",
+    "maximum_session_duration": "NOT_READ",
+    "relevant_tags": "NOT_READ",
+    "contract_discrepancies": [
+      "NO_ELIGIBLE_CALLER_SESSION_TO_PERFORM_AUTHORIZED_READS"
+    ]
+  },
+  "organizations_scope": {
+    "describe_organization_attempted": false,
+    "account_membership": "UNRESOLVED_NOT_REACHED_AFTER_EARLIER_FAIL_CLOSED_STOP",
+    "scp_applicability": "UNRESOLVED",
+    "rcp_applicability": "UNRESOLVED"
+  },
+  "context": {
+    "construction_attempted": false,
+    "missing_context_values": [],
+    "result": "NOT_REACHED_AFTER_SESSION_PRECHECK_BLOCK"
+  },
+  "simulation": {
+    "attempted": false,
+    "call_count": 0,
+    "target": "NOT_USED",
+    "expected_pair_count": 195,
+    "evaluated_pair_count": 0,
+    "pair_results": [],
+    "not_executed_reason": "NO_ELIGIBLE_EXPLICIT_TEMPORARY_READ_ONLY_SESSION_PRINCIPAL"
+  },
+  "aws_calls": {
+    "sts": 0,
+    "iam": 0,
+    "organizations": 0,
+    "other": 0
+  },
+  "mutations": {
+    "aws": 0,
+    "iam": 0,
+    "persistent": 0,
+    "unexpected": 0
+  },
+  "forbidden_execution_counts": {
+    "terraform": 0,
+    "provisioning": 0,
+    "product_leadership_test_003": 0,
+    "product_leadership_activation_or_integration": 0
+  },
+  "cleanup": {
+    "temporary_credentials_created": false,
+    "temporary_credentials_cleared": true,
+    "temporary_variables_created": false,
+    "temporary_variables_cleared": true,
+    "temporary_files_created": false,
+    "temporary_files_cleared": true
+  },
+  "classification": "BLOCKED_FAIL_CLOSED_OTHER",
+  "classification_detail": "NO_ELIGIBLE_EXPLICIT_TEMPORARY_READ_ONLY_SESSION_PRINCIPAL_WITHOUT_USING_AN_AUTHORIZATION_133_FORBIDDEN_IDENTITY",
+  "redaction": {
+    "full_account_id_included": false,
+    "full_arns_included": false,
+    "credentials_tokens_or_mfa_codes_included": false,
+    "raw_aws_configuration_included": false
+  },
+  "post_attempt_authority": "NONE"
+}

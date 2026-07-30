@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_PL003_READ_ONLY_EFFECTIVE_PERMISSION_GATE_EXECUTION_133",
   "project_id": "lab",
-  "status": "GRANTED",
+  "status": "CONSUMED",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-07-29",
   "approval_source": "USER_INSTRUCTION_CONTINUE_AFTER_EFFECTIVE_PERMISSION_MATRIX_FUSION_132",
@@ -96,6 +96,27 @@
     "product_leadership_activation_authorized": false,
     "only_next_effect": "ELIGIBLE_FOR_SEPARATE_HUMAN_PROVISIONING_DECISION"
   },
+  "execution_result": {
+    "status": "BLOCKED_FAIL_CLOSED_OTHER",
+    "failure_code": "NO_ELIGIBLE_EXPLICIT_TEMPORARY_READ_ONLY_SESSION_PRINCIPAL",
+    "matrix_git_blob_sha1": "bfdb56bc6d6ee6e09620814c57ec54d4b243a7ba",
+    "matrix_semantic_sha256": "db7274c9c4dc5399a3426daba8816316ca5a543f4b48cd603d1659d251cfe131",
+    "confirmed_pair_count": 195,
+    "eligible_session_principal_count": 0,
+    "temporary_session_established": false,
+    "target_role_read_attempted": false,
+    "organizations_describe_attempted": false,
+    "simulation_attempted": false,
+    "aws_calls": 0,
+    "aws_mutations": 0,
+    "terraform_executions": 0,
+    "provisioning_executions": 0,
+    "product_leadership_test_003_executions": 0,
+    "credentials_cleared": true,
+    "evidence": "projects/lab/evidence/EVD-LAB-PL003-READ-ONLY-EFFECTIVE-PERMISSION-GATE-133-ATTEMPT-001.json"
+  },
+  "consumed_at": "2026-07-30",
+  "consumption_reason": "NO_ELIGIBLE_EXPLICIT_TEMPORARY_READ_ONLY_SESSION_PRINCIPAL_EXISTED_WITHOUT_USING_AN_IDENTITY_FORBIDDEN_BY_AUTHORIZATION_133_SO_THE_ATTEMPT_STOPPED_BEFORE_AWS_AND_PUBLISHED_ZERO_MUTATION_EVIDENCE",
   "consumption_criterion": "CONSUMED_AFTER_ONE_ATTEMPT_RESULT_IS_REDACTED_VALIDATED_COMMITTED_PUSHED_AND_REMOTE_HEAD_VERIFIED_OR_AFTER_A_PRECHECK_BLOCK_IS_PUBLISHED_WITH_ZERO_AWS_MUTATION",
   "post_consumption_authority": "NONE"
 }

@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "continuity_id": "LAB-CONTINUITY-PL003-PROPAGATION-AWARE-ATOMIC-SIMULATION-RETRY-127-PASS",
+  "continuity_id": "LAB-CONTINUITY-PL003-READ-ONLY-EFFECTIVE-PERMISSION-GATE-133-BLOCKED",
   "project_id": "lab",
-  "status": "CURRENT_SIMULATION_CALL_CAPABILITY_RESOLVED_IMPLICIT_DENY_REQUIRES_DOCUMENTARY_RECONCILIATION",
+  "status": "CURRENT_GATE_133_BLOCKED_BEFORE_AWS_NO_ELIGIBLE_READ_ONLY_SESSION",
   "created_at": "2026-07-29",
   "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "canonical_branch": "main",
@@ -321,6 +321,35 @@
     "credentials_cleared": true,
     "temporary_files_cleared": true
   },
+  "latest_authorization_133_attempt": {
+    "authorization_id": "AUTHORIZATION_LAB_PL003_READ_ONLY_EFFECTIVE_PERMISSION_GATE_EXECUTION_133",
+    "status": "CONSUMED_BLOCKED_FAIL_CLOSED_OTHER",
+    "classification": "BLOCKED_FAIL_CLOSED_OTHER",
+    "failure_code": "NO_ELIGIBLE_EXPLICIT_TEMPORARY_READ_ONLY_SESSION_PRINCIPAL",
+    "expected_pair_count": 195,
+    "evaluated_pair_count": 0,
+    "conditional_pair_count_excluded": 18,
+    "matrix_git_blob_sha1": "bfdb56bc6d6ee6e09620814c57ec54d4b243a7ba",
+    "matrix_semantic_sha256": "db7274c9c4dc5399a3426daba8816316ca5a543f4b48cd603d1659d251cfe131",
+    "local_profile_count": 2,
+    "eligible_session_principal_count": 0,
+    "session_started": false,
+    "mfa_requested": false,
+    "target_role_read": false,
+    "simulation_attempted": false,
+    "evidence": "projects/lab/evidence/EVD-LAB-PL003-READ-ONLY-EFFECTIVE-PERMISSION-GATE-133-ATTEMPT-001.json",
+    "aws_calls": {
+      "sts": 0,
+      "iam": 0,
+      "organizations": 0,
+      "other": 0
+    },
+    "aws_mutations": 0,
+    "terraform_executions": 0,
+    "provisioning_executions": 0,
+    "product_leadership_test_003_executions": 0,
+    "credentials_cleared": true
+  },
   "verified_facts": [
     {
       "fact": "The static AWS Terraform package passed fmt, init with backend disabled, validate, and a local refresh-false plan using temporary assumed-role credentials.",
@@ -428,6 +457,13 @@
         "projects/lab/evidence/EVD-LAB-PL003-PROPAGATION-AWARE-ATOMIC-SIMULATION-RETRY-127-ATTEMPT-001.json",
         "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_PROPAGATION_AWARE_ATOMIC_SIMULATION_RETRY_127.json"
       ]
+    },
+    {
+      "fact": "Authorization 133 froze a 195-pair effective-permission matrix, excluded 18 explicitly conditional pairs, then failed closed before AWS because neither configured profile was an eligible explicitly authorized read-only gate session principal.",
+      "source_refs": [
+        "projects/lab/evidence/EVD-LAB-PL003-READ-ONLY-EFFECTIVE-PERMISSION-GATE-133-ATTEMPT-001.json",
+        "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_READ_ONLY_EFFECTIVE_PERMISSION_GATE_EXECUTION_133.json"
+      ]
     }
   ],
   "architecture": {
@@ -464,6 +500,7 @@
     "authorization_125": "CONSUMED_BLOCKED_LOCAL_EMPTY_BASELINE_HASH_FAILURE_BEFORE_GRANT",
     "authorization_126": "CONSUMED_BLOCKED_SIMULATION_CALL_FAILED_ROLLBACK_VERIFIED",
     "authorization_127": "CONSUMED_PASS_PROPAGATION_AWARE_SIMULATION_COMPLETED_AND_POLICY_REMOVED",
+    "authorization_133": "CONSUMED_BLOCKED_FAIL_CLOSED_OTHER",
     "active_aws_execution_authority": "NONE",
     "terraform_apply_authorized": false,
     "terraform_destroy_authorized": false,
@@ -510,7 +547,10 @@
     "The single authorization 126 simulation returned AccessDenied; mandatory rollback executed first in finally and restored the exact empty baseline with zero persistent mutation.",
     "Authorization 127 passed 28 directed cases, read and semantically verified the exact temporary policy, and retained sufficient session margin.",
     "Authorization 127 completed 120.003 monotonic seconds with zero AWS calls during stabilization, then its single simulation API call succeeded and returned implicitDeny.",
-    "Authorization 127 executed DeleteUserPolicy first in finally and restored the exact empty baseline with zero persistent mutation; neither propagation nor structural denial was declared confirmed."
+    "Authorization 127 executed DeleteUserPolicy first in finally and restored the exact empty baseline with zero persistent mutation; neither propagation nor structural denial was declared confirmed.",
+    "Authorization 133 froze and validated the complete 195-pair matrix plus 18 excluded conditional pairs.",
+    "Authorization 133 found two configured local profiles but zero eligible explicitly authorized read-only gate session principals and stopped before MFA or AWS.",
+    "Authorization 133 executed zero AWS calls, zero simulations, zero mutations, no Terraform, no provisioning and no Product Leadership Test 003."
   ],
   "operational_estimate": {
     "active_work_to_functional_validation": "4_TO_6_HOURS",
@@ -579,6 +619,6 @@
     "ATTACHMENT_MANIFEST.json",
     "START_PROMPT.md"
   ],
-  "single_next_action": "Separately authorize documentary reconciliation of the implicitDeny result and selection of the next least-privilege preflight gate.",
-  "authority_effect": "NONE_AFTER_AUTHORIZATION_127_CONSUMPTION"
+  "single_next_action": "Separately authorize creation or configuration of a dedicated read-only gate session principal that is not an identity forbidden by authorization 133.",
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_133_CONSUMPTION"
 }

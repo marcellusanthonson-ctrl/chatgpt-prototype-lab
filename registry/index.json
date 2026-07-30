@@ -9,8 +9,8 @@
     "ideas": 5,
     "integrations": 6,
     "experiments": 8,
-    "authorizations": 78,
-    "evidence": 58,
+    "authorizations": 79,
+    "evidence": 59,
     "unincorporated": 0,
     "proposals": 3,
     "sessions": 1,
@@ -60,7 +60,8 @@
       "registry/deltas/pl003-bounded-creator-capability-124.json",
       "registry/deltas/pl003-manual-setup-atomic-simulation-cycle-125.json",
       "registry/deltas/pl003-corrected-atomic-simulation-retry-126.json",
-      "registry/deltas/pl003-propagation-aware-atomic-simulation-retry-127.json"
+      "registry/deltas/pl003-propagation-aware-atomic-simulation-retry-127.json",
+      "registry/deltas/pl003-read-only-effective-permission-gate-133.json"
     ],
     "evidence": "registry/evidence.json",
     "evidence_deltas": [
@@ -80,7 +81,8 @@
       "registry/deltas/pl003-bounded-creator-capability-124.json",
       "registry/deltas/pl003-manual-setup-atomic-simulation-cycle-125.json",
       "registry/deltas/pl003-corrected-atomic-simulation-retry-126.json",
-      "registry/deltas/pl003-propagation-aware-atomic-simulation-retry-127.json"
+      "registry/deltas/pl003-propagation-aware-atomic-simulation-retry-127.json",
+      "registry/deltas/pl003-read-only-effective-permission-gate-133.json"
     ],
     "current_state": "CURRENT_STATE.json",
     "current_state_deltas": [
@@ -105,7 +107,8 @@
       "registry/deltas/pl003-bounded-creator-capability-124.json",
       "registry/deltas/pl003-manual-setup-atomic-simulation-cycle-125.json",
       "registry/deltas/pl003-corrected-atomic-simulation-retry-126.json",
-      "registry/deltas/pl003-propagation-aware-atomic-simulation-retry-127.json"
+      "registry/deltas/pl003-propagation-aware-atomic-simulation-retry-127.json",
+      "registry/deltas/pl003-read-only-effective-permission-gate-133.json"
     ],
     "pattern_deltas": ["registry/deltas/livhavn-surgical-visual-patch-093.json"],
     "error_deltas": ["registry/deltas/livhavn-surgical-visual-patch-093.json"],
@@ -152,12 +155,12 @@
     "decision_path": "decisions/DEC-LAB-022.json",
     "error": "ERR-LAB-007",
     "pattern": "PAT-LAB-009",
-    "authorization": "AUTHORIZATION_LAB_PL003_PROPAGATION_AWARE_ATOMIC_SIMULATION_RETRY_127",
-    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_PROPAGATION_AWARE_ATOMIC_SIMULATION_RETRY_127.json",
-    "evidence": "EVD-LAB-PL003-PROPAGATION-AWARE-ATOMIC-SIMULATION-RETRY-127-ATTEMPT-001",
-    "evidence_path": "projects/lab/evidence/EVD-LAB-PL003-PROPAGATION-AWARE-ATOMIC-SIMULATION-RETRY-127-ATTEMPT-001.json",
-    "current_state_delta": "PL003-PROPAGATION-AWARE-ATOMIC-SIMULATION-RETRY-127",
-    "current_state_delta_path": "registry/deltas/pl003-propagation-aware-atomic-simulation-retry-127.json",
+    "authorization": "AUTHORIZATION_LAB_PL003_READ_ONLY_EFFECTIVE_PERMISSION_GATE_EXECUTION_133",
+    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_READ_ONLY_EFFECTIVE_PERMISSION_GATE_EXECUTION_133.json",
+    "evidence": "EVD-LAB-PL003-READ-ONLY-EFFECTIVE-PERMISSION-GATE-133-ATTEMPT-001",
+    "evidence_path": "projects/lab/evidence/EVD-LAB-PL003-READ-ONLY-EFFECTIVE-PERMISSION-GATE-133-ATTEMPT-001.json",
+    "current_state_delta": "PL003-READ-ONLY-EFFECTIVE-PERMISSION-GATE-133",
+    "current_state_delta_path": "registry/deltas/pl003-read-only-effective-permission-gate-133.json",
     "experiment": "EXP-LAB-003",
     "proposal": "PROP-LAB-003",
     "session": "SES-2026-06-28-001",

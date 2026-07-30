@@ -41,5 +41,13 @@
     "PRODUCT_LEADERSHIP_TEST_003_IS_AUTHORIZED"
   ],
   "selected_next_gate": "PL003_LEAST_PRIVILEGE_EFFECTIVE_PERMISSION_GATE_001",
+  "authorization_133_result": {
+    "classification": "BLOCKED_FAIL_CLOSED_OTHER",
+    "failure_code": "NO_ELIGIBLE_EXPLICIT_TEMPORARY_READ_ONLY_SESSION_PRINCIPAL",
+    "simulation_attempted": false,
+    "aws_calls": 0,
+    "aws_mutations": 0,
+    "effect_on_prior_reconciliation": "UNCHANGED_GATE_REMAINS_UNEXECUTED"
+  },
   "authority_effect": "NONE"
 }

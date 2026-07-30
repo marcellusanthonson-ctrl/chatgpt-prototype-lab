@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "PL003-READ-ONLY-EFFECTIVE-PERMISSION-GATE-133",
+  "project_id": "lab",
+  "effective_at": "2026-07-30",
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_PL003_READ_ONLY_EFFECTIVE_PERMISSION_GATE_EXECUTION_133",
+    "path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_READ_ONLY_EFFECTIVE_PERMISSION_GATE_EXECUTION_133.json",
+    "status": "CONSUMED"
+  },
+  "evidence": {
+    "id": "EVD-LAB-PL003-READ-ONLY-EFFECTIVE-PERMISSION-GATE-133-ATTEMPT-001",
+    "path": "projects/lab/evidence/EVD-LAB-PL003-READ-ONLY-EFFECTIVE-PERMISSION-GATE-133-ATTEMPT-001.json",
+    "classification": "BLOCKED_FAIL_CLOSED_OTHER",
+    "failure_code": "NO_ELIGIBLE_EXPLICIT_TEMPORARY_READ_ONLY_SESSION_PRINCIPAL"
+  },
+  "matrix": {
+    "id": "PL003_ACTION_RESOURCE_CONTEXT_MATRIX_002",
+    "git_blob_sha1": "bfdb56bc6d6ee6e09620814c57ec54d4b243a7ba",
+    "semantic_sha256": "db7274c9c4dc5399a3426daba8816316ca5a543f4b48cd603d1659d251cfe131",
+    "confirmed_pair_count": 195,
+    "evaluated_pair_count": 0
+  },
+  "state_effect": {
+    "eligible_read_only_session_principal_count": 0,
+    "temporary_session_established": false,
+    "target_role_read_attempted": false,
+    "organizations_scope_resolved": false,
+    "simulation_attempted": false,
+    "aws_calls": 0,
+    "aws_mutations": 0,
+    "terraform_executed": false,
+    "provisioning_executed": false,
+    "product_leadership_test_003_executed": false,
+    "credentials_cleared": true,
+    "active_execution_authority": "NONE"
+  },
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_133_CONSUMPTION"
+}

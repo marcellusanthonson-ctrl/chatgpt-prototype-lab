@@ -2,7 +2,7 @@
   "schema_version": "1.1.0",
   "brief_id": "CODEX_PL003_LEAST_PRIVILEGE_EFFECTIVE_PERMISSION_GATE_001",
   "project_id": "lab",
-  "status": "READY_FOR_EXECUTION_ONLY_UNDER_AUTHORIZATION_133",
+  "status": "EXECUTION_133_BLOCKED_BEFORE_AWS_NO_ELIGIBLE_READ_ONLY_SESSION",
   "purpose": "Execute one fail-closed read-only effective-permission simulation for the intended bounded PL003 provisioning operator against the complete fused action-resource-context matrix before any provisioning decision.",
   "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "branch": "main",
@@ -109,5 +109,13 @@
     "CREDENTIAL_CLEANUP_ATTESTATION",
     "FINAL_CLASSIFICATION"
   ],
-  "authority_effect": "READ_ONLY_GATE_ONLY_WHILE_AUTHORIZATION_133_IS_GRANTED_AND_UNCONSUMED"
+  "authorization_133_result": {
+    "classification": "BLOCKED_FAIL_CLOSED_OTHER",
+    "failure_code": "NO_ELIGIBLE_EXPLICIT_TEMPORARY_READ_ONLY_SESSION_PRINCIPAL",
+    "aws_calls": 0,
+    "aws_mutations": 0,
+    "simulation_attempted": false,
+    "evidence": "projects/lab/evidence/EVD-LAB-PL003-READ-ONLY-EFFECTIVE-PERMISSION-GATE-133-ATTEMPT-001.json"
+  },
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_133_CONSUMPTION"
 }

@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "test_design_id": "PL003_LEAST_PRIVILEGE_EFFECTIVE_PERMISSION_GATE_001",
   "project_id": "lab",
-  "status": "DOCUMENTED_NOT_AUTHORIZED_FOR_EXECUTION",
+  "status": "EXECUTION_133_BLOCKED_BEFORE_AWS_NO_ELIGIBLE_READ_ONLY_SESSION",
   "purpose": "Determine whether the intended bounded provisioning principal has effective permission for the exact preflight action-resource-context matrix before any IAM or infrastructure mutation.",
   "gate_type": "READ_ONLY_EFFECTIVE_PERMISSION_SIMULATION",
   "principal_under_test": "INTENDED_BOUNDED_PL003_PROVISIONING_OPERATOR_NOT_BOOTSTRAP_USER",
@@ -70,5 +70,15 @@
     "separate_human_authorization_required_after_pass": true,
     "post_execution_authority": "NONE"
   },
-  "single_next_action": "SEPARATELY_AUTHORIZE_EXECUTION_OF_THIS_READ_ONLY_GATE_AFTER_FREEZING_THE_EXACT_ACTION_RESOURCE_CONTEXT_MATRIX"
+  "latest_execution": {
+    "authorization": "AUTHORIZATION_LAB_PL003_READ_ONLY_EFFECTIVE_PERMISSION_GATE_EXECUTION_133",
+    "classification": "BLOCKED_FAIL_CLOSED_OTHER",
+    "failure_code": "NO_ELIGIBLE_EXPLICIT_TEMPORARY_READ_ONLY_SESSION_PRINCIPAL",
+    "confirmed_pair_count": 195,
+    "evaluated_pair_count": 0,
+    "aws_calls": 0,
+    "aws_mutations": 0,
+    "evidence": "projects/lab/evidence/EVD-LAB-PL003-READ-ONLY-EFFECTIVE-PERMISSION-GATE-133-ATTEMPT-001.json"
+  },
+  "single_next_action": "SEPARATELY_AUTHORIZE_CREATION_OR_CONFIGURATION_OF_A_DEDICATED_READ_ONLY_GATE_SESSION_PRINCIPAL_NOT_FORBIDDEN_BY_AUTHORIZATION_133"
 }
