@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "SSE-TEST-GOVERNANCE-EXTENSION-145",
+  "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_SSE_TEST_GOVERNANCE_EXTENSION_145.json",
+  "test_design_ref": "projects/lab/test-designs/SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json",
+  "extension_ref": "projects/lab/test-designs/SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/LAB_GOVERNANCE_EXTENSION_001.json",
+  "state_transition": {"from":"SSE_TEST_DESIGNED_20_FIXTURES","to":"SSE_TEST_EXPANDED_32_FIXTURES_NOT_EXECUTED"},
+  "execution_authority": "NONE",
+  "integration_effect": "NONE",
+  "authority_effect": "NONE"
+}
