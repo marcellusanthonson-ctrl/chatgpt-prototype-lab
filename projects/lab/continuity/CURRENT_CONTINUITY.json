@@ -1,116 +1,22 @@
 {
   "schema_version": "1.0.0",
-  "continuity_id": "LAB-CONTINUITY-PRODUCT-LEADERSHIP-INTERNAL-TEST-003-RECONCILIATION",
+  "continuity_id": "LAB-CONTINUITY-PRODUCT-LEADERSHIP-TEST003-REPOSITORY-ONLY-RECONCILED",
   "project_id": "lab",
-  "status": "CURRENT_AWS_PAUSED_INTERNAL_REPOSITORY_BASED_TEST_RECONCILIATION_REQUIRED",
+  "status": "CURRENT_REPOSITORY_ONLY_TEST003_STRATEGY_RECONCILED_AWAITING_EXECUTION_AUTHORIZATION",
   "created_at": "2026-07-30",
   "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "canonical_branch": "main",
   "head_policy": "VERIFY_LIVE_AT_USE",
   "entrypoint": "project-sources/chatgpt/START_HERE.md",
-  "required_reading_order": [
-    "VERIFY_LIVE_HEAD_OF_MAIN",
-    "project-sources/chatgpt/START_HERE.md",
-    "LAB_CONTRACT.md",
-    "METHODOLOGY.md",
-    "CURRENT_STATE.json",
-    "registry/index.json",
-    "registry/projects.json",
-    "projects/lab/PROJECT_STATE.json",
-    "projects/lab/reports/PRODUCT_LEADERSHIP_INTEGRATION_CURRENT_STATE_2026-07-30.md",
-    "projects/lab/continuity/CURRENT_CONTINUITY.json",
-    "projects/lab/continuity/CURRENT_CONTINUITY.md",
-    "projects/lab/continuity/ATTACHMENT_MANIFEST.json"
-  ],
+  "required_reading_order": ["VERIFY_LIVE_HEAD_OF_MAIN", "project-sources/chatgpt/START_HERE.md", "LAB_CONTRACT.md", "METHODOLOGY.md", "CURRENT_STATE.json", "registry/index.json", "registry/projects.json", "projects/lab/PROJECT_STATE.json", "projects/lab/reconciliations/REC-LAB-PRODUCT-LEADERSHIP-TEST003-REPOSITORY-ONLY-STRATEGY-005.json", "projects/lab/briefs/CODEX_PRODUCT_LEADERSHIP_TEST003_REPOSITORY_ONLY_EXECUTION_001.json", "projects/lab/continuity/CURRENT_CONTINUITY.json", "projects/lab/continuity/CURRENT_CONTINUITY.md", "projects/lab/continuity/ATTACHMENT_MANIFEST.json"],
   "subject": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003",
-  "facts": [
-    "GitHub repositories remain the canonical documentary source of truth.",
-    "Product Leadership does not require an external database or AWS to operate inside ChatGPT and repositories.",
-    "Test 003 has not been executed.",
-    "Product Leadership remains inactive and not integrated.",
-    "AWS was introduced as optional experimental control and hardening infrastructure, not as the functional runtime or database of Product Leadership.",
-    "The recent AWS path tested IAM, MFA, temporary sessions, rollback and permission boundaries, not Product Leadership value.",
-    "IAM Identity Center was not enabled and AWS Organizations was not created.",
-    "No recent AWS mutations, Terraform, provisioning or Test 003 execution occurred."
-  ],
-  "architectural_reassessment": {
-    "classification": "MODIFIED",
-    "conclusion": "AWS_IS_OPTIONAL_HARDENING_NOT_FUNCTIONAL_PREREQUISITE",
-    "functional_test_path": "CHATGPT_CODEX_PRIVATE_GITHUB_REPOSITORIES_FIXTURES_HASHES_COMMITS_BLIND_EVALUATION_READ_ONLY_AUDIT",
-    "future_optional_path": "AWS_EXTERNAL_CUSTODY_IMMUTABILITY_SECRETS_CLOUDTRAIL_AND_MULTI_OPERATOR_AUTOMATION_AFTER_VALUE_IS_PROVEN"
-  },
-  "test_003": {
-    "design_status": "DESIGN_READY_REQUIRES_RECONCILIATION",
-    "fixture_count": 40,
-    "arm_count": 4,
-    "minimum_future_outputs": 88,
-    "executed": false,
-    "corpus_generated": false,
-    "implementation_selected": false,
-    "implementation_approved": false,
-    "product_effect": "NONE",
-    "runtime_effect": "NONE"
-  },
-  "aws_route": {
-    "status": "PAUSE_RECOMMENDED_PENDING_FORMAL_RECONCILIATION",
-    "iam_identity_center_enabled": false,
-    "aws_organizations_created": false,
-    "terraform_executed": false,
-    "provisioning_executed": false,
-    "test_003_executed": false,
-    "script_137_executed": false,
-    "recent_mutations": 0
-  },
-  "authorizations": {
-    "137": {
-      "status": "GRANTED_NOT_CONSUMED_BUT_PAUSE_RECOMMENDED",
-      "purpose": "External creation of temporary bounded setup principal",
-      "not_authorized": ["CODEX_USE", "GATE_EXECUTION", "TERRAFORM", "TEST_003"]
-    },
-    "138": {
-      "status": "CONSUMED",
-      "result": "CLOUDSHELL_SCRIPT_PACKAGE_PUBLISHED_NOT_EXECUTED"
-    },
-    "139": {
-      "status": "GRANTED_BUT_MATERIALLY_BLOCKED_BY_UNPLANNED_ORGANIZATIONS_AND_BILLING_CONDITION",
-      "result": "NO_AWS_MUTATION",
-      "instruction": "DO_NOT_EXECUTE_OR_REUSE_WITHOUT_FORMAL_RECONCILIATION"
-    },
-    "140": {
-      "status": "CONSUMED_AFTER_CONTINUITY_PUBLICATION",
-      "purpose": "Current-state report and continuity only",
-      "execution_authority_effect": "NONE"
-    }
-  },
-  "completed_work": [
-    "Product Leadership candidate package and Test 003 design prepared.",
-    "AWS preflight IaC, IAM matrices and security controls documented.",
-    "Propagation-aware IAM simulation completed with rollback and no persistent mutation.",
-    "195-pair effective-permission matrix prepared.",
-    "Dedicated gate caller and disposable setup principal designed.",
-    "CloudShell external setup script prepared but not executed.",
-    "Functional-versus-hardening architectural distinction documented."
-  ],
-  "pending": [
-    "Formally reconcile Test 003 to an internal repository-based execution.",
-    "Pause or revoke AWS authorizations 137 and 139 as part of that reconciliation.",
-    "Prepare an exact bounded brief for the four-arm functional execution.",
-    "Freeze fixtures and output naming before execution.",
-    "Define blind evaluation and external read-only audit procedure.",
-    "Execute Test 003 only under a new explicit authorization.",
-    "Decide on AWS hardening only after functional value is demonstrated."
-  ],
-  "risks": [
-    "Confusing IAM validation with Product Leadership value validation.",
-    "Continuing infrastructure work before proving functional value.",
-    "Treating AWS or a database as a prerequisite when repositories are canonical.",
-    "Executing 137 from root or general administration.",
-    "Enabling AWS Organizations or changing billing without explicit decision.",
-    "Reusing consumed or materially incompatible authorizations.",
-    "Treating this continuity package as execution authority."
-  ],
-  "active_execution_authority": "NONE_FOR_TEST_003_AND_NONE_USABLE_FOR_AWS_WITHOUT_RECONCILIATION",
-  "single_next_action": "RECONCILE_TEST_003_AS_INTERNAL_REPOSITORY_BASED_EXECUTION_AND_PREPARE_EXACT_BRIEF_WITH_AWS_PAUSED",
-  "report": "projects/lab/reports/PRODUCT_LEADERSHIP_INTEGRATION_CURRENT_STATE_2026-07-30.md",
+  "facts": ["GitHub repositories remain canonical.", "No external database or AWS is required for functional operation inside ChatGPT and repositories.", "Test 003 remains unexecuted.", "Product Leadership remains inactive and not integrated.", "AWS is paused as optional future hardening."],
+  "reconciliation": {"id": "REC-LAB-PRODUCT-LEADERSHIP-TEST003-REPOSITORY-ONLY-STRATEGY-005", "status": "RECONCILED", "verdict": "MODIFIED", "adopted_strategy": "REPOSITORY_ONLY_INTERNAL_FUNCTIONAL_TEST", "aws_disposition": "OPTIONAL_FUTURE_HARDENING"},
+  "test_003": {"design_ready": true, "fixture_count": 40, "arm_count": 4, "minimum_future_outputs": 88, "executed": false, "corpus_generated": false, "execution_brief": "projects/lab/briefs/CODEX_PRODUCT_LEADERSHIP_TEST003_REPOSITORY_ONLY_EXECUTION_001.json", "brief_status": "PROPOSED_NOT_AUTHORIZED_FOR_EXECUTION"},
+  "authorizations": {"137": "REVOKED_BY_141", "138": "CONSUMED_SCRIPT_NOT_EXECUTED", "139": "REVOKED_BY_141", "140": "CONSUMED", "141": "CONSUMED_AFTER_RECONCILIATION_PUBLICATION"},
+  "aws_route": {"status": "PAUSED_OPTIONAL_FUTURE_HARDENING", "identity_center_enabled": false, "aws_organizations_created": false, "script_137_executed": false, "terraform_executed": false, "resources_created_by_137_or_139": 0},
+  "pending": ["Review and separately authorize the repository-only Test 003 brief.", "Execute Test 003 only under a new explicit authorization.", "Conduct blinded scoring and read-only external audit.", "Make a human adoption decision after evidence."],
+  "active_execution_authority": "NONE",
+  "single_next_action": "REVIEW_AND_SEPARATELY_AUTHORIZE_CODEX_PRODUCT_LEADERSHIP_TEST003_REPOSITORY_ONLY_EXECUTION_001",
   "authority_effect": "NONE"
 }
