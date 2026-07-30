@@ -1,25 +1,27 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "brief_id": "CODEX_PL003_LEAST_PRIVILEGE_EFFECTIVE_PERMISSION_GATE_001",
   "project_id": "lab",
-  "status": "PROPOSED_NOT_AUTHORIZED_FOR_EXECUTION",
-  "purpose": "Execute a future read-only effective-permission simulation for the intended bounded PL003 provisioning operator against the complete fused action-resource-context matrix before any provisioning decision.",
+  "status": "READY_FOR_EXECUTION_ONLY_UNDER_AUTHORIZATION_133",
+  "purpose": "Execute one fail-closed read-only effective-permission simulation for the intended bounded PL003 provisioning operator against the complete fused action-resource-context matrix before any provisioning decision.",
   "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "branch": "main",
-  "expected_parent_head_policy": "SET_TO_LIVE_MAIN_HEAD_IN_FUTURE_SEPARATE_AUTHORIZATION",
-  "required_authorization": "NEW_EXPLICIT_JONATHAN_MARTINEZ_AUTHORIZATION",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_READ_ONLY_EFFECTIVE_PERMISSION_GATE_EXECUTION_133",
+  "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_READ_ONLY_EFFECTIVE_PERMISSION_GATE_EXECUTION_133.json",
+  "expected_parent_head_policy": "EXACT_HEAD_FROM_AUTHORIZATION_133_AND_VERIFY_LIVE_AT_USE",
   "inputs": {
     "matrix": "projects/lab/test-designs/PL003_LEAST_PRIVILEGE_EFFECTIVE_PERMISSION_GATE_001/ACTION_RESOURCE_CONTEXT_MATRIX_V2.json",
-    "principal": "EXACT_INTENDED_BOUNDED_PL003_PROVISIONING_OPERATOR_ARN",
-    "permissions_boundary": "EXACT_BOUNDARY_ARN_AND_DOCUMENT",
-    "identity_policies": "EXACT_EFFECTIVE_IDENTITY_POLICY_SET",
-    "session_policy_status": "DECLARED_EXACTLY",
-    "organizations_scope": "SCP_AND_RCP_APPLICABILITY_RESOLVED",
+    "principal_role_name": "PL003PreflightProvisioningOperator",
+    "principal_arn": "RESOLVE_READ_ONLY_AND_REDACT_ACCOUNT_ID_IN_REPORTING",
+    "permissions_boundary": "RESOLVE_EXACT_ARN_DOCUMENT_VERSION_AND_HASH_READ_ONLY",
+    "identity_policies": "RESOLVE_EXACT_ATTACHED_AND_INLINE_POLICY_SET_READ_ONLY",
+    "session_policy_status": "NONE_UNLESS_EXPLICITLY_RECORDED_AND_HASHED",
+    "organizations_scope": "RESOLVE_FROM_SIMULATION_DETAILS_AND_AUTHORIZED_READ_ONLY_ORGANIZATIONS_METADATA_OR_BLOCK",
     "region": "sa-east-1",
     "account_id_reporting": "REDACTED",
-    "name_suffix": "EXACT_VALUE_REQUIRED"
+    "name_suffix": "RESOLVE_FROM_FROZEN_PLAN_INPUT_OR_BLOCK"
   },
-  "allowed_runtime_actions_after_future_authorization": [
+  "allowed_runtime_actions": [
     "sts:GetCallerIdentity",
     "iam:GetPolicy",
     "iam:GetPolicyVersion",
@@ -27,33 +29,51 @@
     "iam:ListRolePolicies",
     "iam:GetRolePolicy",
     "iam:ListAttachedRolePolicies",
-    "iam:SimulatePrincipalPolicy"
+    "iam:SimulatePrincipalPolicy",
+    "organizations:DescribeOrganization"
   ],
   "simulation_contract": {
-    "target_principal": "INTENDED_BOUNDED_PL003_PROVISIONING_OPERATOR_NOT_BOOTSTRAP_USER",
+    "target_principal": "EXACT_IAM_ROLE_PL003PreflightProvisioningOperator_NOT_BOOTSTRAP_NOT_PLAN_OPERATOR_NOT_SETUP_OPERATOR",
     "matrix_pairs": "EVERY_CONFIRMED_ACTION_RESOURCE_CONTEXT_PAIR_IN_MATRIX_V2",
     "conditional_pairs": "INCLUDE_ONLY_WHEN_DECLARED_RUNTIME_CONTEXT_MAKES_BRANCH_APPLICABLE",
+    "pagination_required": true,
     "mutations_allowed": 0,
     "terraform_allowed": false,
     "provisioning_allowed": false,
     "test_003_allowed": false,
     "product_leadership_activation_allowed": false,
-    "simulation_results_required": ["EvalActionName","EvalResourceName","EvalDecision","MatchedStatements","MissingContextValues","PermissionsBoundaryDecisionDetail","OrganizationsDecisionDetail_WHEN_AVAILABLE"]
+    "simulation_results_required": [
+      "EvalActionName",
+      "EvalResourceName",
+      "EvalDecision",
+      "MatchedStatements",
+      "MissingContextValues",
+      "PermissionsBoundaryDecisionDetail",
+      "OrganizationsDecisionDetail_WHEN_RETURNED"
+    ]
   },
   "prechecks": [
-    "VERIFY_LIVE_MAIN_HEAD",
+    "VERIFY_LIVE_MAIN_HEAD_EQUALS_AUTHORIZATION_133_EXPECTED_EXECUTION_HEAD",
     "READ_START_HERE_AND_CANONICAL_ORDER",
-    "VERIFY_NEW_AUTHORIZATION_GRANTED_AND_UNCONSUMED",
-    "VERIFY_PRINCIPAL_BOUNDARY_AND_POLICY_IDENTITIES",
+    "VERIFY_AUTHORIZATION_133_GRANTED_AND_UNCONSUMED",
     "VERIFY_ZERO_INHERITED_AWS_CREDENTIALS_BEFORE_EXPLICIT_SESSION",
-    "VERIFY_SCP_RCP_SCOPE_RESOLVED",
-    "VERIFY_MATRIX_HASH_AND_FILE_SHA",
+    "VERIFY_TARGET_ROLE_EXISTS",
+    "VERIFY_TARGET_ROLE_IS_NOT_BOOTSTRAP_PLAN_OR_SETUP_ROLE",
+    "VERIFY_EXACT_BOUNDARY_ARN_DOCUMENT_VERSION_AND_HASH",
+    "VERIFY_EXACT_ATTACHED_AND_INLINE_POLICY_SET_AND_HASHES",
+    "VERIFY_SESSION_POLICY_STATUS",
+    "VERIFY_SCP_RCP_SCOPE_OR_FAIL_CLOSED",
+    "VERIFY_MATRIX_FILE_SHA_AND_SEMANTIC_HASH",
+    "VERIFY_NAME_SUFFIX_AND_RESOURCE_TEMPLATES",
     "VERIFY_REPORT_REDACTION"
   ],
   "stop_conditions": [
-    "EXPECTED_PARENT_HEAD_MISMATCH",
+    "EXPECTED_EXECUTION_HEAD_MISMATCH",
+    "TARGET_ROLE_ABSENT",
+    "TARGET_ROLE_IDENTITY_MISMATCH",
     "PRINCIPAL_BOUNDARY_OR_POLICY_MISMATCH",
     "SCP_RCP_SCOPE_UNKNOWN",
+    "NAME_SUFFIX_OR_RESOURCE_TEMPLATE_UNRESOLVED",
     "MISSING_CONTEXT_VALUE",
     "ANY_MUTATION_REQUIRED",
     "SIMULATOR_LIMITATION_PREVENTS_DISCRIMINATION",
@@ -61,8 +81,9 @@
   ],
   "result_classes": [
     "PASS_EFFECTIVE_PERMISSION_MATRIX_READY_FOR_SEPARATE_PROVISIONING_DECISION",
+    "BLOCKED_TARGET_ROLE_ABSENT",
     "BLOCKED_IDENTITY_POLICY_ALLOW_MISSING_OR_NONMATCHING",
-    "BLOCKED_PERMISSIONS_BOUNDARY_NONALLOW",
+    "BLOCKED_PERMISSIONS_BOUNDARY_NONALLOW_OR_MISMATCH",
     "BLOCKED_ORGANIZATIONS_POLICY_SCOPE_UNRESOLVED",
     "BLOCKED_CONTEXT_INCOMPLETE",
     "BLOCKED_ACTION_RESOURCE_MATRIX_INCOMPLETE",
@@ -77,8 +98,8 @@
     "post_execution_authority": "NONE"
   },
   "required_outputs": [
-    "REDACTED_PRINCIPAL_AND_POLICY_BASELINE",
-    "MATRIX_HASH",
+    "REDACTED_PRINCIPAL_BOUNDARY_AND_POLICY_BASELINE",
+    "MATRIX_FILE_SHA_AND_SEMANTIC_HASH",
     "PAIR_COUNT_BY_SERVICE",
     "DECISION_PER_ACTION_RESOURCE_PAIR",
     "MISSING_CONTEXT_VALUES",
@@ -88,5 +109,5 @@
     "CREDENTIAL_CLEANUP_ATTESTATION",
     "FINAL_CLASSIFICATION"
   ],
-  "authority_effect": "NONE_UNTIL_SEPARATELY_AUTHORIZED"
+  "authority_effect": "READ_ONLY_GATE_ONLY_WHILE_AUTHORIZATION_133_IS_GRANTED_AND_UNCONSUMED"
 }
