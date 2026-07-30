@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_SSE_TEST_GOVERNANCE_EXTENSION_145",
+  "status": "CONSUMED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-30",
+  "consumed_at": "2026-07-30",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "purpose": "Expand the Software Solution Engineering discriminating test with a distinct LAB-governance domain and measures for proportionality, cost, reversibility, abstention and negative transfer.",
+  "allowed_actions": ["CREATE_LAB_GOVERNANCE_EXTENSION","UPDATE_SSE_TEST_MANIFEST","REGISTER_DOCUMENTARY_DELTA","COMMIT_AND_PUSH_DOCUMENTARY_CHANGES"],
+  "forbidden_actions": ["EXECUTE_SSE_TEST","EXECUTE_EXTERNAL_AUDIT","ACTIVATE_OR_INTEGRATE_SSE","SELECT_ARCHITECTURE_OR_STACK","MODIFY_RUNTIME_OR_PRODUCT","AWS_OR_INFRASTRUCTURE_MUTATIONS"],
+  "result": {"base_fixtures":20,"governance_fixtures":12,"fixture_total":32,"test_executed":false,"package_active":false,"package_integrated":false,"execution_authority_remaining":"NONE"},
+  "authority_effect_after_consumption": "NONE"
+}
