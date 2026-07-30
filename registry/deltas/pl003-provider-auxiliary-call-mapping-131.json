@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "PL003-PROVIDER-AUXILIARY-CALL-MAPPING-131",
+  "project_id": "lab",
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_PL003_PROVIDER_AUXILIARY_CALL_MAPPING_131",
+    "status": "GRANTED_PENDING_CONSUMPTION"
+  },
+  "added": {
+    "analysis": "projects/lab/analyses/PL003_PROVIDER_AUXILIARY_CALL_MAPPING_001.json",
+    "provider_auxiliary_call_map": "projects/lab/test-designs/PL003_LEAST_PRIVILEGE_EFFECTIVE_PERMISSION_GATE_001/PROVIDER_AUXILIARY_CALL_MAP.json"
+  },
+  "result": {
+    "status": "DOCUMENTARY_SOURCE_MAP_COMPLETE_WITH_S3_LEGACY_RUNTIME_SURFACE_CAUTION",
+    "provider": "hashicorp/aws@v6.56.0",
+    "resource_types_mapped": 15,
+    "aws_calls": 0,
+    "terraform_executions": 0,
+    "provisioning_executions": 0,
+    "test_003_executions": 0,
+    "authority_effect": "NONE"
+  },
+  "next_action": "MERGE_SOURCE_CONFIRMED_CALLS_INTO_GATE_MATRIX_AND_PREPARE_EXACT_READ_ONLY_EXECUTION_BRIEF",
+  "source_refs": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_PROVIDER_AUXILIARY_CALL_MAPPING_131.json",
+    "projects/lab/analyses/PL003_PROVIDER_AUXILIARY_CALL_MAPPING_001.json",
+    "projects/lab/test-designs/PL003_LEAST_PRIVILEGE_EFFECTIVE_PERMISSION_GATE_001/PROVIDER_AUXILIARY_CALL_MAP.json"
+  ]
+}
