@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "PRODUCT-LEADERSHIP-TEST003-REPOSITORY-ONLY-EXECUTION-144",
+  "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_REPOSITORY_ONLY_EXECUTION_144.json",
+  "state_transition": {
+    "from": "FINAL_DESIGN_REVIEW_COMPLETE_NO_EXECUTION_AUTHORITY",
+    "to": "REPOSITORY_ONLY_TEST003_EXECUTION_AUTHORIZED_NOT_STARTED"
+  },
+  "test_contract": {
+    "fixtures": 52,
+    "arms": 4,
+    "minimum_outputs": 112,
+    "aws_required": false,
+    "external_database_required": false,
+    "product_leadership_active": false,
+    "product_leadership_integrated": false
+  },
+  "active_execution_authority": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_REPOSITORY_ONLY_EXECUTION_144",
+  "authority_effect": "EXECUTION_ONLY_WITHIN_REFERENCED_BRIEF"
+}
