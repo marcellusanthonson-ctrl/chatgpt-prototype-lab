@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "reconciliation_id": "REC-LAB-PRODUCT-LEADERSHIP-TEST003-REPOSITORY-ONLY-STRATEGY-005",
+  "project_id": "lab",
+  "subject": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003",
+  "status": "RECONCILED_REPOSITORY_ONLY_FUNCTIONAL_TEST_AWS_OPTIONAL_FUTURE_HARDENING",
+  "authorized_by": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_INTERNAL_TEST003_RECONCILIATION_141",
+  "reconciled_at": "2026-07-30",
+  "prior_strategy": {
+    "classification": "HYBRID_AWS_PROVISIONED_PREFLIGHT_BEFORE_FUNCTIONAL_TEST",
+    "purpose": "Use AWS IAM, S3 Object Lock, KMS, Secrets Manager and CloudTrail as external execution-control and evidence-custody infrastructure.",
+    "observed_effect": "Extensive validation of IAM sessions, least privilege, rollback and simulation prerequisites, while Product Leadership Test 003 remained unexecuted."
+  },
+  "reassessment": {
+    "domain": "MIXED_FACTUAL_NORMATIVE_EXECUTION",
+    "factual_findings": [
+      "The Product Leadership integration is intended to operate inside ChatGPT with GitHub repositories as canonical sources.",
+      "No external database is required for canonical persistence or functional operation.",
+      "The Test 003 design predates provider, architecture and implementation selection and does not intrinsically require AWS.",
+      "AWS work validated security infrastructure prerequisites rather than the functional value of Product Leadership.",
+      "Test 003, Terraform provisioning and Product Leadership integration have not been executed."
+    ],
+    "technical_verdict": "MODIFIED",
+    "previous_conclusion": "AWS provisioned preflight was treated as a prerequisite to Test 003.",
+    "revised_conclusion": "AWS is not a functional prerequisite for Test 003 or for operating Product Leadership inside ChatGPT and repositories; it is optional future hardening for external custody, immutability, secrets and recurrent automation.",
+    "human_decision": "PROCEED_WITH_REPOSITORY_ONLY_INTERNAL_FUNCTIONAL_TEST_STRATEGY"
+  },
+  "adopted_strategy": {
+    "canonical_storage": "PRIVATE_GITHUB_REPOSITORIES",
+    "database_required": false,
+    "aws_required_for_functional_test": false,
+    "execution_model": "CHATGPT_COORDINATION_CODEX_BOUNDED_EXECUTION_REPOSITORY_EVIDENCE_EXTERNAL_READ_ONLY_AUDIT",
+    "test_assets": {
+      "fixtures": 40,
+      "experimental_arms": 4,
+      "minimum_outputs": 88
+    },
+    "integrity_controls": [
+      "PINNED_REMOTE_HEAD",
+      "CLEAN_WORKTREE_OR_ISOLATED_WORKTREE",
+      "FROZEN_FIXTURE_AND_PROMPT_HASHES",
+      "ARM_BLINDING_AND_OUTPUT_ANONYMIZATION",
+      "PER_OUTPUT_PROVENANCE",
+      "MANIFEST_SHA256",
+      "SEPARATE_SCORING_AND_EXECUTION_ROLES",
+      "READ_ONLY_EXTERNAL_AUDIT",
+      "NO_POST_FREEZE_OUTPUT_MUTATION",
+      "COMMITS_AS_AUDITABLE_EVIDENCE"
+    ],
+    "authority_boundary": "A separate explicit authorization is required to execute Test 003, generate outputs, score results, activate or integrate Product Leadership."
+  },
+  "aws_disposition": {
+    "status": "PAUSED_OPTIONAL_FUTURE_HARDENING",
+    "authorization_137": "REVOKED_BY_RECONCILIATION_141",
+    "authorization_139": "REVOKED_BY_RECONCILIATION_141",
+    "identity_center_enabled": false,
+    "aws_organizations_created": false,
+    "cloudshell_script_137_executed": false,
+    "terraform_executed": false,
+    "aws_resources_created_by_137_or_139": 0,
+    "future_reentry_condition": "Only after Test 003 demonstrates value or a separate external-custody requirement is approved."
+  },
+  "test003_current_state": {
+    "design_ready": true,
+    "test_executed": false,
+    "corpus_generated": false,
+    "product_leadership_active": false,
+    "product_leadership_integrated": false,
+    "execution_authority": "NONE"
+  },
+  "next_action": "REVIEW_AND_SEPARATELY_AUTHORIZE_CODEX_PRODUCT_LEADERSHIP_TEST003_REPOSITORY_ONLY_EXECUTION_001"
+}
