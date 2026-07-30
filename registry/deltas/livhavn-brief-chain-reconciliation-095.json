@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "LIVHAVN-BRIEF-CHAIN-RECONCILIATION-DELTA-095",
+  "updated_at": "2026-07-30",
+  "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_LIVHAVN_BRIEF_CHAIN_RECONCILIATION_095.json",
+  "decision_ref": "decisions/DEC-LAB-022.json",
+  "project_id": "symphonie",
+  "records": [
+    {
+      "id": "LIVHAVN-PRODUCT-BRIEF-001",
+      "repository": "marcellusanthonson-ctrl/symphonie",
+      "path": "pilotos/SYMPHONIE-PILOT-LIVHAVN-001/phase-1/LIVHAVN_PRODUCT_BRIEF_001.json",
+      "kind": "PRODUCT_BRIEF",
+      "status": "PENDING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "LIVHAVN-ARCHITECTURE-SCOPE-PACKAGE-001",
+      "repository": "marcellusanthonson-ctrl/symphonie",
+      "path": "pilotos/SYMPHONIE-PILOT-LIVHAVN-001/phase-2/LIVHAVN_ARCHITECTURE_SCOPE_PACKAGE_001.json",
+      "kind": "ARCHITECTURE_SCOPE_PACKAGE",
+      "status": "PENDING_PRODUCT_BRIEF_AND_HUMAN_APPROVAL"
+    },
+    {
+      "id": "LIVHAVN-UX-UI-DESIGN-BRIEF-001",
+      "repository": "marcellusanthonson-ctrl/symphonie",
+      "path": "pilotos/SYMPHONIE-PILOT-LIVHAVN-001/phase-3/LIVHAVN_UX_UI_DESIGN_BRIEF_001.json",
+      "kind": "UX_UI_DESIGN_BRIEF",
+      "status": "PENDING_PARENT_GATES_AND_HUMAN_APPROVAL"
+    },
+    {
+      "id": "LIVHAVN-BRIEF-CHAIN-MANIFEST-001",
+      "repository": "marcellusanthonson-ctrl/symphonie",
+      "path": "pilotos/SYMPHONIE-PILOT-LIVHAVN-001/briefs/LIVHAVN_BRIEF_CHAIN_MANIFEST_001.json",
+      "kind": "BRIEF_CHAIN_MANIFEST",
+      "status": "PUBLISHED"
+    }
+  ],
+  "state_effect": {
+    "brief_chain_applied": true,
+    "parent_gates_pending": true,
+    "codex_execution_brief_created": false,
+    "codex_execution_authorized": false,
+    "image_generation_authorized": false,
+    "html_generation_authorized": false,
+    "active_execution_authority": "NONE"
+  }
+}
