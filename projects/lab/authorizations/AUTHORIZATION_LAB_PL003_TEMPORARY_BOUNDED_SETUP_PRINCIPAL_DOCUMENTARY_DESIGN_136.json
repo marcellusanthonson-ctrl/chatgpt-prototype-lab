@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_TEMPORARY_BOUNDED_SETUP_PRINCIPAL_DOCUMENTARY_DESIGN_136",
+  "project_id": "lab",
+  "status": "GRANTED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-30",
+  "approval_source": "USER_INSTRUCTION_CONTINUE_AFTER_AUTHORIZATION_135_BOUNDED_CREATOR_BLOCK",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "64abd5a1ae44a52d0c0291c7aef11dc03068b58d",
+  "execution_head_policy": "VERIFY_LIVE_AT_USE",
+  "objective": "Design documentary-only a disposable temporary bounded setup principal with only the exact mutation and rollback surface required to create and verify PL003EffectivePermissionGateOperator under a later separate authorization.",
+  "allowed_actions": [
+    "READ_CANONICAL_EVIDENCE_135",
+    "DESIGN_DISPOSABLE_SETUP_ROLE",
+    "DESIGN_TRUST_BOUNDARY_IDENTITY_AND_SESSION_POLICIES",
+    "DEFINE_EXACT_MUTATION_AND_ROLLBACK_SURFACE",
+    "DEFINE_ONE_USE_LIFECYCLE_AND_MANDATORY_DECOMMISSION",
+    "PREPARE_FUTURE_CREATION_AND_USE_BRIEF",
+    "CREATE_REGISTRY_DELTA",
+    "COMMIT_AND_PUSH_DOCUMENTATION"
+  ],
+  "forbidden_actions": [
+    "AWS_API_CALLS",
+    "IAM_MUTATIONS",
+    "CREATE_OR_CONFIGURE_ANY_AWS_PRINCIPAL",
+    "CREATE_ACCESS_KEYS",
+    "TERRAFORM",
+    "PROVISIONING",
+    "EXECUTE_EFFECTIVE_PERMISSION_GATE",
+    "PRODUCT_LEADERSHIP_TEST_003",
+    "GRANT_FUTURE_EXECUTION_AUTHORITY"
+  ],
+  "deliverables": [
+    "projects/lab/test-designs/PL003_TEMPORARY_BOUNDED_SETUP_PRINCIPAL_001/DESIGN.json",
+    "projects/lab/briefs/CODEX_PL003_TEMPORARY_BOUNDED_SETUP_PRINCIPAL_CREATION_AND_USE_001.json",
+    "registry/deltas/pl003-temporary-bounded-setup-principal-design-136.json"
+  ],
+  "consumption_criterion": "CONSUMED_AFTER_DESIGN_FUTURE_BRIEF_AND_DELTA_ARE_PUBLISHED_AND_REMOTE_HEAD_IS_VERIFIED",
+  "post_consumption_authority": "NONE"
+}
