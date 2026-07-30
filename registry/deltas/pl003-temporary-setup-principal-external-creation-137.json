@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "pl003-temporary-setup-principal-external-creation-137",
+  "project_id": "lab",
+  "status": "GRANTED_PENDING_EXTERNAL_EXECUTION",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_TEMPORARY_SETUP_PRINCIPAL_EXTERNAL_CREATION_137",
+  "source_head": "4f4f3339c495f061b30872f2fce62616e281cba8",
+  "objective": "Authorize only the out-of-band human or external security custodian creation and verification of PL003TemporaryGateOperatorSetup and its exact boundary, identity policy and bootstrap assume-role grant.",
+  "authorized_executor_class": [
+    "HUMAN_FROM_ALREADY_AUTHORIZED_ADMIN_CONTEXT",
+    "EXTERNAL_SECURITY_CUSTODIAN"
+  ],
+  "codex_execution_authorized": false,
+  "aws_mutation_authorized": true,
+  "authorized_resources": [
+    "PL003TemporaryGateOperatorSetupBoundary",
+    "PL003TemporaryGateOperatorSetup",
+    "PL003TemporaryGateOperatorSetupExactMutation",
+    "PL003AssumeTemporaryGateOperatorSetup"
+  ],
+  "forbidden": [
+    "CODEX_CREATES_OR_USES_SETUP_ROLE",
+    "ROOT",
+    "GENERAL_ADMINISTRATOR_AUTOMATION",
+    "PERSISTENT_BOOTSTRAP_CREDENTIAL_MUTATION_BY_CODEX",
+    "CREATE_IAM_USER_ACCESS_KEY_OR_CONSOLE_PROFILE",
+    "CREATE_OR_MODIFY_PL003EffectivePermissionGateOperator",
+    "MODIFY_PL003PreflightProvisioningOperator",
+    "SIMULATE_PRINCIPAL_POLICY",
+    "EFFECTIVE_PERMISSION_GATE",
+    "TERRAFORM",
+    "PROVISIONING",
+    "PRODUCT_LEADERSHIP_TEST_003"
+  ],
+  "pass_effect": "ELIGIBLE_FOR_SEPARATE_CODEX_ONE_USE_SETUP_SESSION_AUTHORIZATION",
+  "post_execution_authority": "NONE"
+}
