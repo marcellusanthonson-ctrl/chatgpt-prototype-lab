@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "manifest_id": "LAB-CONTINUITY-ATTACHMENTS-PRODUCT-LEADERSHIP-TEST003-REPOSITORY-ONLY",
+  "status": "ARCHIVED",
+  "project_id": "lab",
+  "archived_at": "2026-07-30T17:19:00-04:00",
+  "archive_reason": "REPLACED_BY_INTEGRATION_FACTORY_M1_CONTINUITY",
+  "required_read_order": ["CURRENT_CONTINUITY.json", "CURRENT_CONTINUITY.md", "START_PROMPT.md"],
+  "attachments": [
+    {"path": "CURRENT_CONTINUITY.json", "role": "ARCHIVED_STRUCTURED_CONTINUITY", "required": true},
+    {"path": "CURRENT_CONTINUITY.md", "role": "ARCHIVED_HUMAN_READABLE_VIEW", "required": true},
+    {"path": "START_PROMPT.md", "role": "ARCHIVED_FIRST_MESSAGE", "required": true}
+  ],
+  "authority_effect": "NONE"
+}
