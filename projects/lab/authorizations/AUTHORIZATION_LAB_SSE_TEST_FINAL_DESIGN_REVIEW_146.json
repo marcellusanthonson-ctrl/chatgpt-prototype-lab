@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_SSE_TEST_FINAL_DESIGN_REVIEW_146",
+  "status": "CONSUMED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-30",
+  "consumed_at": "2026-07-30",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "purpose": "Complete the documentary final review of the expanded Software Solution Engineering discrimination test by defining its run matrix, minimum outputs, scoring, gates and proposed execution brief.",
+  "allowed_actions": [
+    "CREATE_RUN_MATRIX",
+    "CREATE_SCORING_AND_GATES",
+    "CREATE_PROPOSED_EXECUTION_BRIEF",
+    "CREATE_FINAL_DESIGN_REVIEW",
+    "UPDATE_TEST_MANIFEST",
+    "COMMIT_AND_PUSH_DOCUMENTARY_CHANGES"
+  ],
+  "forbidden_actions": [
+    "EXECUTE_SSE_TEST",
+    "EXECUTE_EXTERNAL_AUDIT",
+    "ACTIVATE_OR_INTEGRATE_SSE",
+    "SELECT_OR_MODIFY_ARCHITECTURE_STACK_OR_INFRASTRUCTURE",
+    "PRODUCT_RUNTIME_SYMPHONIE_RAG_OR_EMBEDDING_CHANGE"
+  ],
+  "result": {
+    "fixtures": 32,
+    "arms": 3,
+    "minimum_future_outputs": 96,
+    "test_executed": false,
+    "external_audit_executed": false,
+    "sse_active": false,
+    "sse_integrated": false,
+    "execution_authority_remaining": "NONE"
+  },
+  "authority_effect_after_consumption": "NONE"
+}
