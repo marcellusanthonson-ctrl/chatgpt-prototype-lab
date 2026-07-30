@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_GOVERNANCE_EXTENSION_142",
+  "status": "CONSUMED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-30",
+  "consumed_at": "2026-07-30",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "purpose": "Expand Product Leadership Test 003 with a distinct LAB-governance domain, selective-activation metrics, negative-transfer and cost measurements, scoring calibration, and aligned repository-only execution brief.",
+  "allowed_actions": [
+    "CREATE_GOVERNANCE_TEST_EXTENSION",
+    "UPDATE_TEST_DESIGN",
+    "UPDATE_TEST_MANIFEST",
+    "ALIGN_PROPOSED_EXECUTION_BRIEF",
+    "COMMIT_AND_PUSH_DOCUMENTARY_CHANGES"
+  ],
+  "forbidden_actions": [
+    "EXECUTE_TEST_003",
+    "GENERATE_TEST_CORPUS",
+    "ACTIVATE_OR_INTEGRATE_PRODUCT_LEADERSHIP",
+    "GRANT_PRODUCT_LEADERSHIP_GOVERNANCE_AUTHORITY",
+    "AWS_CALLS",
+    "TERRAFORM",
+    "PRODUCT_OR_RUNTIME_CHANGES"
+  ],
+  "consumption_criterion": "Expanded design, governance fixtures and aligned proposed execution brief are published and remote HEAD is verified.",
+  "result": {
+    "governance_fixtures_added": 12,
+    "fixture_total": 52,
+    "minimum_future_outputs": 112,
+    "test_executed": false,
+    "corpus_generated": false,
+    "product_leadership_active": false,
+    "execution_authority_remaining": "NONE"
+  },
+  "authority_effect_after_consumption": "NONE"
+}
