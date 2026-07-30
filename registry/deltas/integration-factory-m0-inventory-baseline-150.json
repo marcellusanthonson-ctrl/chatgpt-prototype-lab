@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "integration-factory-m0-inventory-baseline-150",
+  "recorded_at": "2026-07-30",
+  "project_id": "lab",
+  "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M0_INVENTORY_AND_BASELINE_150.json",
+  "source_instruction": "Perfecto, continuamos.",
+  "changes": [
+    {
+      "path": "architecture/integrations/migration/M0/CURRENT_MODULE_INVENTORY.json",
+      "operation": "CREATE",
+      "result": "DOCUMENTED_BASELINE"
+    },
+    {
+      "path": "architecture/integrations/migration/M0/CURRENT_SIGNAL_MAP.json",
+      "operation": "CREATE",
+      "result": "DOCUMENTED_BASELINE"
+    },
+    {
+      "path": "architecture/integrations/migration/M0/CURRENT_COMPOSITION_RULES.json",
+      "operation": "CREATE",
+      "result": "DOCUMENTED_BASELINE"
+    },
+    {
+      "path": "architecture/integrations/migration/M0/BASELINE_FIXTURES.json",
+      "operation": "CREATE",
+      "result": "DOCUMENTED_HASHED_BASELINE"
+    },
+    {
+      "path": "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M0_INVENTORY_AND_BASELINE_150.json",
+      "operation": "CREATE",
+      "result": "CONSUMED"
+    }
+  ],
+  "m0_result": {
+    "modules_accounted": 4,
+    "distinct_activation_signals": 27,
+    "composition_rules": 6,
+    "exclusion_blocks": 1,
+    "fixtures_accounted": 13,
+    "selector_blob_sha": "301ba432907758fc49a9b3c86a83fc762eac4607",
+    "fixture_blob_sha": "de4793dedc9646e388bdce5ccd1807da8a711845",
+    "exit_criteria": {
+      "ALL_CURRENT_MODULES_ACCOUNTED": "PASS",
+      "NO_HIDDEN_RULES": "PASS_WITHIN_REVIEWED_SELECTOR_AND_STABLE_CRITERION_SOURCE",
+      "BASELINE_HASHED": "PASS_GIT_BLOB_SHA"
+    }
+  },
+  "not_changed": [
+    "ACTIVE_MODULE_SELECTOR",
+    "ACCEPTANCE_FIXTURES",
+    "CHATGPT_BEHAVIOR",
+    "RUNTIME",
+    "INTEGRATION_STATUS",
+    "STACK_OR_PROVIDER_SELECTION"
+  ],
+  "status_after": {
+    "migration_phase": "M0_COMPLETE",
+    "next_phase": "M1_SCHEMA_AND_TEMPLATE_VALIDATION",
+    "m1_authorized": false,
+    "shadow_registry_created": false,
+    "runtime_effect": "NONE",
+    "active_execution_authority": "NONE"
+  },
+  "authority_effect": "NONE_AFTER_CONSUMPTION"
+}
