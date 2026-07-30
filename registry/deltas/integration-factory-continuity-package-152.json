@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "integration-factory-continuity-package-152",
+  "recorded_at": "2026-07-30T17:19:00-04:00",
+  "project_id": "lab",
+  "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_CONTINUITY_PACKAGE_152.json",
+  "source_instruction": "Quería un protocolo de continuidad para seguir el desarrollo en una nueva conversación.",
+  "changes": [
+    {
+      "path": "projects/lab/continuity/archive/2026-07-30-product-leadership-test003-repository-only/",
+      "operation": "CREATE_ARCHIVE_PACKAGE",
+      "result": "ARCHIVED_SUPERSEDED_CONTINUITY"
+    },
+    {
+      "path": "projects/lab/continuity/CURRENT_CONTINUITY.json",
+      "operation": "UPDATE",
+      "result": "CURRENT_INTEGRATION_FACTORY_M1_BLOCKED"
+    },
+    {
+      "path": "projects/lab/continuity/CURRENT_CONTINUITY.md",
+      "operation": "UPDATE",
+      "result": "CURRENT_HUMAN_READABLE_VIEW"
+    },
+    {
+      "path": "projects/lab/continuity/ATTACHMENT_MANIFEST.json",
+      "operation": "UPDATE",
+      "result": "CURRENT_READ_ORDER_AND_REFERENCE_MANIFEST"
+    },
+    {
+      "path": "projects/lab/continuity/START_PROMPT.md",
+      "operation": "UPDATE",
+      "result": "CURRENT_NEW_CONVERSATION_PROMPT"
+    }
+  ],
+  "state_after": {
+    "primary_line": "STANDARDIZED_INTEGRATION_FACTORY",
+    "migration_phase": "M1_BLOCKED",
+    "blocking_pending": "PEND-LAB-033",
+    "next_action": "PREPARE_AND_EXPLICITLY_AUTHORIZE_BOUNDED_CODEX_M1A_BRIEF",
+    "m1a_authorized": false,
+    "m2_authorized": false,
+    "shadow_registry_created": false,
+    "active_selector_modified": false,
+    "runtime_effect": "NONE",
+    "sse_test_147": "GRANTED_NOT_STARTED_SEPARATE_LINE",
+    "aws_role": "REFERENCE_VALIDATION_ENVIRONMENT_ONLY",
+    "global_preferred_stack": "NONE"
+  },
+  "not_executed": [
+    "M1A",
+    "M2",
+    "SSE_TEST_147",
+    "AWS",
+    "TERRAFORM",
+    "PROVISIONING",
+    "RUNTIME_RESOLVER",
+    "SELECTOR_CHANGE",
+    "CANDIDATE_ACTIVATION_OR_INTEGRATION"
+  ],
+  "authority_effect": "NONE_AFTER_CONSUMPTION"
+}
