@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "pl003-read-only-effective-permission-gate-authorization-133",
+  "project_id": "lab",
+  "record_type": "AUTHORIZATION_DELTA",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_READ_ONLY_EFFECTIVE_PERMISSION_GATE_EXECUTION_133",
+  "status": "GRANTED_PENDING_EXECUTION",
+  "brief": "projects/lab/briefs/CODEX_PL003_LEAST_PRIVILEGE_EFFECTIVE_PERMISSION_GATE_001.json",
+  "matrix": "projects/lab/test-designs/PL003_LEAST_PRIVILEGE_EFFECTIVE_PERMISSION_GATE_001/ACTION_RESOURCE_CONTEXT_MATRIX_V2.json",
+  "scope": "ONE_FAIL_CLOSED_READ_ONLY_EFFECTIVE_PERMISSION_GATE",
+  "allowed_effects": [
+    "READ_ONLY_IDENTITY_POLICY_BOUNDARY_DISCOVERY",
+    "READ_ONLY_ORGANIZATIONS_SCOPE_DISCOVERY_WHEN_AVAILABLE",
+    "IAM_SIMULATE_PRINCIPAL_POLICY"
+  ],
+  "forbidden_effects": [
+    "IAM_MUTATION",
+    "TERRAFORM",
+    "PROVISIONING",
+    "PRODUCT_LEADERSHIP_TEST_003",
+    "PRODUCT_LEADERSHIP_ACTIVATION_OR_INTEGRATION"
+  ],
+  "known_historical_constraint": "PL003PreflightProvisioningOperator_DID_NOT_EXIST_DURING_AUTHORIZATION_113_AND_MUST_BE_VERIFIED_LIVE",
+  "post_execution_authority": "NONE",
+  "source_refs": [
+    "projects/lab/evidence/EVD-LAB-PL003-AWS-BOUNDED-PROVISIONING-OPERATOR-113.json",
+    "projects/lab/test-designs/PL003_LEAST_PRIVILEGE_EFFECTIVE_PERMISSION_GATE_001/ACTION_RESOURCE_CONTEXT_MATRIX_V2.json",
+    "projects/lab/briefs/CODEX_PL003_LEAST_PRIVILEGE_EFFECTIVE_PERMISSION_GATE_001.json"
+  ],
+  "authority_effect": "ONLY_AS_DEFINED_BY_AUTHORIZATION_133"
+}
