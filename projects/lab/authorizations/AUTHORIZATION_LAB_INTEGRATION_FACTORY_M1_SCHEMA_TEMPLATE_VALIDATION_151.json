@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_INTEGRATION_FACTORY_M1_SCHEMA_TEMPLATE_VALIDATION_151",
+  "project_id": "lab",
+  "status": "CONSUMED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-30",
+  "approval_source": "Perfecto, continuamos.",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "833e1cf2eff86144e8633f45cfbcf3eac9203888",
+  "subject": "M1_SCHEMA_AND_TEMPLATE_VALIDATION",
+  "objective": "Validate the documented integration package schema set and template catalog against the four current criterion modules, recording exact incompatibilities before any shadow registry is created.",
+  "allowed_actions": [
+    "READ_M0_BASELINE_AND_CURRENT_CRITERION_PACKAGE",
+    "READ_SCHEMA_SET_AND_TEMPLATE_CATALOG",
+    "VERIFY_REFERENCED_SCHEMA_TEMPLATE_AND_OVERLAY_ARTIFACT_EXISTENCE",
+    "MAP_CURRENT_MODULES_TO_REQUIRED_SCHEMA_FIELDS",
+    "EVALUATE_PROFILE_OVERLAY_RESOLUTION",
+    "EVALUATE_AUTHORITY_INFERENCE_BOUNDARIES",
+    "PUBLISH_SCHEMA_VALIDATION_REPORT",
+    "PUBLISH_TEMPLATE_INSTANTIATION_REPORT",
+    "REGISTER_EXACT_PENDING_BLOCKER_IF_REQUIRED",
+    "COMMIT_AND_PUSH_BOUNDED_DOCUMENTARY_ARTIFACTS"
+  ],
+  "forbidden_actions": [
+    "CREATE_OR_MODIFY_ACTIVE_MODULE_SELECTOR",
+    "CREATE_SHADOW_INTEGRATION_REGISTRY",
+    "IMPLEMENT_RESOLVER",
+    "CREATE_RUNTIME_BEHAVIOR",
+    "MATERIALIZE_EXECUTABLE_SCHEMA_TEMPLATE_OR_OVERLAY_FILES_OUTSIDE_THE_VALIDATION_REPORTS",
+    "ACTIVATE_OR_INTEGRATE_ANY_CANDIDATE",
+    "RUN_AWS_OR_TERRAFORM",
+    "SELECT_STACK_OR_PROVIDER",
+    "RUNTIME_OR_PRODUCT_CHANGES"
+  ],
+  "required_outputs": [
+    "architecture/integrations/migration/M1/SCHEMA_VALIDATION_REPORT.json",
+    "architecture/integrations/migration/M1/TEMPLATE_INSTANTIATION_REPORT.json",
+    "projects/lab/pending/PEND-LAB-033.json"
+  ],
+  "result_classification": "BLOCKED_MISSING_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_ARTIFACTS",
+  "consumption_criterion": "Consumed after the two M1 validation reports, exact pending blocker and bounded delta are published and the remote HEAD is verified.",
+  "authority_effect": "DOCUMENTARY_M1_VALIDATION_ONLY",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE",
+  "post_consumption_authority": "NONE"
+}
