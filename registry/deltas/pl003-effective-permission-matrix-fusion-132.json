@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "PL003_EFFECTIVE_PERMISSION_MATRIX_FUSION_132",
+  "project_id": "lab",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_EFFECTIVE_PERMISSION_MATRIX_FUSION_AND_GATE_BRIEF_132",
+  "status": "DOCUMENTARY_FUSION_COMPLETE_GATE_EXECUTION_NOT_AUTHORIZED",
+  "changes": [
+    {
+      "type": "TEST_DESIGN_ARTIFACT_ADDED",
+      "path": "projects/lab/test-designs/PL003_LEAST_PRIVILEGE_EFFECTIVE_PERMISSION_GATE_001/ACTION_RESOURCE_CONTEXT_MATRIX_V2.json",
+      "effect": "FUSES_NORMATIVE_AND_PROVIDER_CONFIRMED_ACTIONS_RESOURCES_AND_CONTEXTS"
+    },
+    {
+      "type": "PROPOSED_BRIEF_ADDED",
+      "path": "projects/lab/briefs/CODEX_PL003_LEAST_PRIVILEGE_EFFECTIVE_PERMISSION_GATE_001.json",
+      "effect": "PREPARES_BOUNDED_READ_ONLY_GATE_WITHOUT_EXECUTION_AUTHORITY"
+    }
+  ],
+  "verified_boundaries": {
+    "aws_calls": 0,
+    "iam_mutations": 0,
+    "terraform_executed": false,
+    "provisioning_executed": false,
+    "test_003_executed": false,
+    "product_leadership_active_or_integrated": false,
+    "read_only_gate_execution_authorized": false
+  },
+  "result": "MATRIX_FUSED_AND_BRIEF_READY_FOR_SEPARATE_HUMAN_AUTHORIZATION",
+  "single_next_action": "SEPARATELY_AUTHORIZE_THE_PROPOSED_READ_ONLY_EFFECTIVE_PERMISSION_GATE_AFTER_LIVE_HEAD_AND_EXACT_PRINCIPAL_POLICY_INPUTS_ARE_VERIFIED",
+  "authority_effect": "NONE"
+}
