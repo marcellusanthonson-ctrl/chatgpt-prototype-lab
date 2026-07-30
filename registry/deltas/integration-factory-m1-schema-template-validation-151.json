@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "integration-factory-m1-schema-template-validation-151",
+  "recorded_at": "2026-07-30",
+  "project_id": "lab",
+  "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M1_SCHEMA_TEMPLATE_VALIDATION_151.json",
+  "source_instruction": "Perfecto, continuamos.",
+  "context_interpretation": "Execute only M1 schema and template validation against the four current criterion modules, without creating a shadow registry or modifying active behavior.",
+  "changes": [
+    {
+      "path": "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M1_SCHEMA_TEMPLATE_VALIDATION_151.json",
+      "operation": "CREATE",
+      "result": "CONSUMED"
+    },
+    {
+      "path": "architecture/integrations/migration/M1/SCHEMA_VALIDATION_REPORT.json",
+      "operation": "CREATE",
+      "result": "BLOCKED_MISSING_EXECUTABLE_SCHEMA_FILES"
+    },
+    {
+      "path": "architecture/integrations/migration/M1/TEMPLATE_INSTANTIATION_REPORT.json",
+      "operation": "CREATE",
+      "result": "BLOCKED_MISSING_EXECUTABLE_TEMPLATE_AND_OVERLAY_FILES"
+    },
+    {
+      "path": "projects/lab/pending/PEND-LAB-033.json",
+      "operation": "CREATE",
+      "result": "OPEN"
+    }
+  ],
+  "m1_result": {
+    "descriptor_json_syntax": "PASS",
+    "current_modules_semantically_mappable": 4,
+    "generated_module_packages": 0,
+    "machine_schema_validations": 0,
+    "common_schema_files_materialized": false,
+    "common_template_files_materialized": false,
+    "criterion_module_overlays_materialized": false,
+    "exit_criteria": {
+      "ALL_COMMON_SCHEMAS_VALID": "BLOCKED",
+      "ALL_PROFILE_OVERLAYS_RESOLVE": "BLOCKED",
+      "NO_AUTHORITY_INFERENCE": "PASS"
+    }
+  },
+  "verified_gap": {
+    "schema_set_role": "DESCRIPTOR_CATALOG_ONLY",
+    "template_catalog_role": "DESCRIPTOR_CATALOG_ONLY",
+    "representative_schema_fetch": "NOT_FOUND_404",
+    "representative_template_fetch": "NOT_FOUND_404",
+    "representative_overlay_fetch": "NOT_FOUND_404"
+  },
+  "not_changed": [
+    "ACTIVE_MODULE_SELECTOR",
+    "ACCEPTANCE_FIXTURES",
+    "CHATGPT_BEHAVIOR",
+    "RUNTIME",
+    "INTEGRATION_STATUS",
+    "SHADOW_REGISTRY",
+    "STACK_OR_PROVIDER_SELECTION"
+  ],
+  "status_after": {
+    "migration_phase": "M1_BLOCKED",
+    "blocking_pending": "PEND-LAB-033",
+    "next_phase": "M1A_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_MATERIALIZATION",
+    "m2_authorized": false,
+    "shadow_registry_created": false,
+    "runtime_effect": "NONE",
+    "active_execution_authority": "NONE"
+  },
+  "authority_effect": "NONE_AFTER_CONSUMPTION"
+}
