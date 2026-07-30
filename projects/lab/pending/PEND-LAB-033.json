@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "id": "PEND-LAB-033",
+  "project_id": "lab",
+  "status": "OPEN",
+  "type": "INTEGRATION_FACTORY_M1_EXECUTABLE_ARTIFACT_GAP",
+  "subject": "Materialize executable schemas, templates and CRITERION_MODULE overlays before M1 can pass or M2 shadow registry work can begin",
+  "priority": "HIGH",
+  "created_at": "2026-07-30",
+  "source_authorization": "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M1_SCHEMA_TEMPLATE_VALIDATION_151.json",
+  "source_reports": [
+    "architecture/integrations/migration/M1/SCHEMA_VALIDATION_REPORT.json",
+    "architecture/integrations/migration/M1/TEMPLATE_INSTANTIATION_REPORT.json"
+  ],
+  "verified_facts": [
+    "M0 inventory and baseline are complete.",
+    "INTEGRATION_PACKAGE_SCHEMA_SET_001 is a descriptor catalog and does not materialize the ten declared executable schema files.",
+    "INTEGRATION_TEMPLATE_CATALOG_001 is a descriptor catalog and does not materialize the declared common templates or CRITERION_MODULE overlays.",
+    "A representative executable schema path returned NOT_FOUND_404.",
+    "A representative common template path returned NOT_FOUND_404.",
+    "A representative CRITERION_MODULE overlay path returned NOT_FOUND_404.",
+    "The four current modules are semantically mappable but cannot be reproducibly instantiated or machine validated from the current files.",
+    "No authority inference was detected.",
+    "The active selector, current fixtures and ChatGPT behavior were not modified."
+  ],
+  "block_effect": {
+    "m1_exit": "BLOCKED",
+    "m2_shadow_registry": "NOT_AUTHORIZED_AND_NOT_READY",
+    "runtime": "UNCHANGED",
+    "integration_status": "UNCHANGED"
+  },
+  "required_resolution": [
+    "Define the executable JSON Schema dialect using repository-compatible conventions.",
+    "Create the ten common executable schema artifacts declared by INTEGRATION_PACKAGE_SCHEMA_SET_001.",
+    "Create the thirteen common executable template artifacts declared by INTEGRATION_TEMPLATE_CATALOG_001.",
+    "Create the three CRITERION_MODULE overlay artifacts.",
+    "Create draft-only authorization templates that cannot grant authority automatically.",
+    "Generate four isolated module package instances with unresolved fields explicitly marked.",
+    "Rerun M1 machine validation and record all divergences before M2."
+  ],
+  "forbidden_until_resolved": [
+    "DECLARE_M1_PASS",
+    "CREATE_SHADOW_INTEGRATION_REGISTRY",
+    "BEGIN_M2",
+    "MODIFY_ACTIVE_SELECTOR",
+    "IMPLEMENT_RUNTIME_RESOLVER",
+    "PROMOTE_ANY_MODULE_BY_MIGRATION"
+  ],
+  "recommended_successor_action": "M1A_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_MATERIALIZATION",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE"
+}
