@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_EFFECTIVE_PERMISSION_GATE_OPERATOR_CREATION_AND_VERIFICATION_135",
+  "project_id": "lab",
+  "status": "GRANTED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-30",
+  "approval_source": "USER_INSTRUCTION_CONTINUE_AFTER_GATE_OPERATOR_DOCUMENTARY_DESIGN_134",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "553eac05deb5e6a6bf75e3fd93a0401d17201c1b",
+  "execution_head_policy": "VERIFY_LIVE_AT_USE_AND_REQUIRE_AUTHORIZATION_135_COMMIT_TO_BE_THE_ONLY_DESCENDANT_OF_EXPECTED_PARENT_BEFORE_EXECUTION_OR_STOP",
+  "objective": "Create and verify exactly the dedicated PL003EffectivePermissionGateOperator caller path documented by PL003_EFFECTIVE_PERMISSION_GATE_OPERATOR_001, without executing the effective-permission gate, Terraform, provisioning or Product Leadership Test 003.",
+  "authorized_design": "projects/lab/test-designs/PL003_EFFECTIVE_PERMISSION_GATE_OPERATOR_001/DESIGN.json",
+  "authorized_brief": "projects/lab/briefs/CODEX_PL003_EFFECTIVE_PERMISSION_GATE_OPERATOR_CREATION_001.json",
+  "allowed_actions": [
+    "VERIFY_REMOTE_HEAD_AND_CANONICAL_ORDER",
+    "VERIFY_ZERO_INHERITED_AWS_CREDENTIALS",
+    "ESTABLISH_ONE_EXPLICIT_TEMPORARY_BOUNDED_CREATOR_SESSION",
+    "READ_COLLISION_BASELINE_FOR_EXACT_ROLE_BOUNDARY_AND_POLICY_NAMES",
+    "CREATE_EXACT_CUSTOMER_MANAGED_BOUNDARY_PL003EffectivePermissionGateOperatorBoundary",
+    "CREATE_EXACT_ROLE_PL003EffectivePermissionGateOperator_WITH_CANONICAL_TRUST_TAGS_AND_MAX_SESSION_DURATION_3600",
+    "ATTACH_EXACT_BOUNDARY_TO_GATE_OPERATOR_ROLE",
+    "CREATE_OR_ATTACH_EXACT_READ_ONLY_IDENTITY_POLICY_PL003EffectivePermissionGateOperatorReadOnly",
+    "ADD_EXACT_BOOTSTRAP_ASSUME_ROLE_PERMISSION_FOR_ONLY_THE_GATE_OPERATOR_WITH_MFA_AND_SOURCE_IDENTITY_CONDITIONS",
+    "READ_BACK_AND_COMPARE_SEMANTIC_HASHES",
+    "EXECUTE_ONE_900_SECOND_MFA_ASSUME_ROLE_COMPATIBILITY_SESSION",
+    "EXECUTE_STS_GET_CALLER_IDENTITY_ONLY_INSIDE_COMPATIBILITY_SESSION",
+    "ROLL_BACK_ALL_CHANGES_IF_ANY_POST_MUTATION_CHECK_FAILS",
+    "REDACT_VALIDATE_COMMIT_AND_PUSH_RESULT",
+    "CLEAR_ALL_TEMPORARY_CREDENTIALS_AND_FILES"
+  ],
+  "forbidden_actions": [
+    "IAM_USER_CREATION",
+    "ACCESS_KEY_CREATION",
+    "CONSOLE_PROFILE_CREATION",
+    "ADMINISTRATIVE_OR_WILDCARD_WRITE_GRANT",
+    "MODIFY_PL003PreflightProvisioningOperator",
+    "EXECUTE_IAM_SIMULATE_PRINCIPAL_POLICY",
+    "EXECUTE_EFFECTIVE_PERMISSION_MATRIX_GATE",
+    "TERRAFORM_INIT_PLAN_APPLY_OR_DESTROY",
+    "PL003_RESOURCE_PROVISIONING",
+    "PRODUCT_LEADERSHIP_TEST_003",
+    "PRODUCT_LEADERSHIP_ACTIVATION_OR_INTEGRATION",
+    "PERSISTENT_CREDENTIALS",
+    "PUBLICATION_OF_UNREDACTED_ACCOUNT_IDS_ARNS_CREDENTIALS_TOKENS_OR_MFA_CODES"
+  ],
+  "creator_contract": {
+    "required": "ONE_EXPLICIT_TEMPORARY_BOUNDED_CREATOR_SESSION",
+    "general_administrative_identity_allowed": false,
+    "persistent_bootstrap_credentials_for_mutation_allowed": false,
+    "exact_mutation_surface_only": true,
+    "no_eligible_creator_effect": "CONSUME_BLOCKED_NO_ELIGIBLE_BOUNDED_CREATOR_WITH_ZERO_MUTATION"
+  },
+  "resource_contract": {
+    "boundary_name": "PL003EffectivePermissionGateOperatorBoundary",
+    "role_name": "PL003EffectivePermissionGateOperator",
+    "identity_policy_name": "PL003EffectivePermissionGateOperatorReadOnly",
+    "source_principal": "pl003-bootstrap-operator",
+    "source_identity": "pl003-gate-operator",
+    "mfa_required": true,
+    "mfa_max_age_seconds": 300,
+    "role_max_session_duration_seconds": 3600,
+    "compatibility_session_duration_seconds": 900
+  },
+  "collision_policy": {
+    "absent": "CREATE",
+    "present_and_semantically_exact": "PRESERVE_AND_VERIFY",
+    "present_and_nonmatching": "BLOCK_WITHOUT_MODIFICATION"
+  },
+  "rollback_contract": {
+    "mandatory_after_any_failure_following_first_mutation": true,
+    "reverse_order": true,
+    "final_baseline_equivalence_required": true,
+    "rollback_failure_result": "BLOCKED_FAIL_CLOSED_OTHER"
+  },
+  "allowed_result_classes": [
+    "PASS_GATE_OPERATOR_CREATED_AND_VERIFIED_NOT_EXECUTED",
+    "BLOCKED_EXISTING_RESOURCE_MISMATCH",
+    "BLOCKED_NO_ELIGIBLE_BOUNDED_CREATOR",
+    "BLOCKED_BOOTSTRAP_ASSUME_SCOPE_CANNOT_BE_SAFELY_BOUNDED",
+    "BLOCKED_MFA_OR_SOURCE_IDENTITY_REQUIREMENT_NOT_SATISFIABLE",
+    "BLOCKED_ROLLBACK_NOT_PROVABLE",
+    "BLOCKED_FAIL_CLOSED_OTHER"
+  ],
+  "pass_semantics": {
+    "effective_permission_gate_authorized": false,
+    "terraform_authorized": false,
+    "provisioning_authorized": false,
+    "test_003_authorized": false,
+    "only_next_effect": "ELIGIBLE_FOR_SEPARATE_READ_ONLY_EFFECTIVE_PERMISSION_GATE_AUTHORIZATION"
+  },
+  "required_evidence": [
+    "REDACTED_CREATOR_IDENTITY_AND_SESSION_CLASS",
+    "PREEXISTENCE_AND_COLLISION_BASELINE",
+    "CANONICAL_AND_OBSERVED_TRUST_BOUNDARY_AND_POLICY_SEMANTIC_HASHES",
+    "AWS_READ_AND_MUTATION_CALL_COUNTS",
+    "ROLLBACK_PATH_AND_RESULT",
+    "FINAL_ROLE_CONFIGURATION",
+    "COMPATIBILITY_SESSION_RESULT",
+    "ZERO_PERSISTENT_CREDENTIAL_ATTESTATION",
+    "ZERO_SIMULATION_TERRAFORM_PROVISIONING_AND_TEST003_ATTESTATION",
+    "CREDENTIAL_AND_TEMPORARY_FILE_CLEANUP_ATTESTATION",
+    "FINAL_CLASSIFICATION"
+  ],
+  "consumption_criterion": "CONSUMED_AFTER_ONE_ATTEMPT_RESULT_OR_PRECHECK_BLOCK_IS_REDACTED_VALIDATED_COMMITTED_PUSHED_AND_REMOTE_HEAD_VERIFIED_WITH_POST_ATTEMPT_AUTHORITY_NONE",
+  "post_consumption_authority": "NONE"
+}
