@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "package_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001",
-  "status": "DESIGN_READY_FOR_SEPARATE_EXECUTION_AND_AUDIT_AUTHORIZATION",
-  "authorization_id": "AUTHORIZATION_LAB_SYMPHONIE_MINIMUM_COMPLETE_WORKFLOW_ECR_PRODUCT_LEADERSHIP_RECONCILIATION_079",
+  "status": "DESIGN_EXPANDED_READY_FOR_SEPARATE_EXECUTION_AND_AUDIT_AUTHORIZATION",
+  "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_GOVERNANCE_EXTENSION_142",
   "source_package": "PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001",
   "successor_pending": "PEND-LAB-024",
   "files": [
@@ -10,13 +10,28 @@
     "TEST_DESIGN.json",
     "RUN_MATRIX.json",
     "SCORING_AND_GATES.json",
+    "GOVERNANCE_EXTENSION_001.json",
     "README.md"
   ],
-  "file_count": 5,
+  "file_count": 6,
   "fixture_source": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/FIXTURES.json",
-  "fixture_count": 40,
+  "base_fixture_count": 40,
+  "governance_fixture_count": 12,
+  "fixture_count": 52,
   "arm_count": 4,
-  "minimum_future_outputs": 88,
+  "minimum_future_outputs": 112,
+  "governance_domains": ["PRODUCT_AND_PROJECT_DECISIONS", "LAB_GOVERNANCE_DECISIONS"],
+  "new_measurements": [
+    "ACTIVATION_RECALL",
+    "FALSE_NEGATIVE_ACTIVATION",
+    "NEGATIVE_TRANSFER",
+    "DOCUMENTATION_OVERHEAD",
+    "TOKEN_COST",
+    "LATENCY_COST",
+    "AUTHORIZATION_PROPORTIONALITY",
+    "COST_OF_OPPORTUNITY_RECOGNITION",
+    "NET_DECISION_VALUE"
+  ],
   "test_executed": false,
   "corpus_generated": false,
   "provider_selected": false,
@@ -25,5 +40,6 @@
   "implementation_approved": false,
   "product_effect": "NONE",
   "runtime_effect": "NONE",
+  "governance_authority_effect": "NONE",
   "next_authorized_action": "NONE_AFTER_CONSUMPTION"
 }
