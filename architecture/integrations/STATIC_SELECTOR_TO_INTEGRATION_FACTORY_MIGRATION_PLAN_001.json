@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "migration_plan_id": "STATIC_SELECTOR_TO_INTEGRATION_FACTORY_MIGRATION_PLAN_001",
+  "project_id": "lab",
+  "status": "DOCUMENTED_NOT_AUTHORIZED_FOR_IMPLEMENTATION",
+  "created_at": "2026-07-30",
+  "source": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json",
+  "target": "STANDARDIZED_INTEGRATION_FACTORY_001",
+  "objective": "Migrate from a fixed selector containing module definitions and composition rules into a registry-based, profile-driven and provider-neutral integration process without changing current behavior until separately authorized.",
+  "migration_principles": [
+    "PRESERVE_CURRENT_BEHAVIOR_FIRST",
+    "NO_BIG_BANG_REPLACEMENT",
+    "DUAL_REPRESENTATION_BEFORE_CUTOVER",
+    "NO_RUNTIME_EFFECT_DURING_DOCUMENTARY_MIGRATION",
+    "NO_MODULE_PROMOTION_BY_MIGRATION",
+    "NO_STACK_OR_PROVIDER_SELECTION",
+    "ROLLBACK_TO_STATIC_SELECTOR_AVAILABLE_UNTIL_POST_CUTOVER_VALIDATION"
+  ],
+  "phases": [
+    {
+      "phase": "M0_INVENTORY_AND_BASELINE",
+      "deliverables": ["CURRENT_MODULE_INVENTORY.json", "CURRENT_SIGNAL_MAP.json", "CURRENT_COMPOSITION_RULES.json", "BASELINE_FIXTURES.json"],
+      "exit_criteria": ["ALL_CURRENT_MODULES_ACCOUNTED", "NO_HIDDEN_RULES", "BASELINE_HASHED"]
+    },
+    {
+      "phase": "M1_SCHEMA_AND_TEMPLATE_VALIDATION",
+      "deliverables": ["SCHEMA_VALIDATION_REPORT.json", "TEMPLATE_INSTANTIATION_REPORT.json"],
+      "exit_criteria": ["ALL_COMMON_SCHEMAS_VALID", "ALL_PROFILE_OVERLAYS_RESOLVE", "NO_AUTHORITY_INFERENCE"]
+    },
+    {
+      "phase": "M2_SHADOW_REGISTRY",
+      "deliverables": ["SHADOW_INTEGRATION_REGISTRY.json", "MODULE_ADAPTER_PACKAGES"],
+      "exit_criteria": ["STATIC_AND_SHADOW_CATALOGS_EQUIVALENT", "NO_ACTIVE_SELECTOR_CHANGE"]
+    },
+    {
+      "phase": "M3_DUAL_EVALUATION",
+      "deliverables": ["DUAL_SELECTOR_TEST_DESIGN.json", "EQUIVALENCE_RESULTS.json", "DIVERGENCE_LOG.json"],
+      "exit_criteria": ["ACTIVATION_EQUIVALENCE_THRESHOLD_MET", "ALL_DIVERGENCES_CLASSIFIED", "NO_UNEXPLAINED_NEGATIVE_TRANSFER"]
+    },
+    {
+      "phase": "M4_HUMAN_CUTOVER_DECISION",
+      "deliverables": ["CUTOVER_DECISION_PACKAGE.json", "ROLLBACK_READINESS.json"],
+      "exit_criteria": ["EXPLICIT_HUMAN_DECISION", "SEPARATE_IMPLEMENTATION_AUTHORIZATION", "ROLLBACK_VERIFIED"]
+    },
+    {
+      "phase": "M5_BOUNDED_CUTOVER_AND_OBSERVATION",
+      "deliverables": ["CUTOVER_EVIDENCE.json", "POST_CUTOVER_VALIDATION.json", "STATIC_SELECTOR_RETIREMENT_PROPOSAL.json"],
+      "exit_criteria": ["BEHAVIORAL_GATES_PASS", "NO_AUTHORITY_OR_RUNTIME REGRESSION", "HUMAN_RETIREMENT_DECISION"]
+    }
+  ],
+  "initial_module_mapping": [
+    {"current_module": "EVIDENCE_AND_CLAIMS", "profile": "CRITERION_MODULE", "target_status": "SHADOW_ONLY"},
+    {"current_module": "DESIGN_CRITERION", "profile": "CRITERION_MODULE", "target_status": "SHADOW_ONLY"},
+    {"current_module": "WEB_ACCESSIBILITY", "profile": "CRITERION_MODULE", "target_status": "SHADOW_ONLY"},
+    {"current_module": "CONTEXTUAL_VISUAL_PREFERENCE", "profile": "CRITERION_MODULE", "target_status": "SHADOW_ONLY"}
+  ],
+  "acceptance_gates": [
+    "SCHEMA_PASS",
+    "REFERENCE_PASS",
+    "STATIC_SHADOW_CATALOG_EQUIVALENCE",
+    "ACTIVATION_EQUIVALENCE",
+    "COMPOSITION_EQUIVALENCE",
+    "NO_AUTHORITY_DRIFT",
+    "NO_RUNTIME_DRIFT",
+    "ROLLBACK_READY",
+    "HUMAN_CUTOVER_APPROVED"
+  ],
+  "forbidden_during_current_action": [
+    "MODIFY_MODULE_SELECTOR",
+    "CREATE_ACTIVE_REGISTRY",
+    "IMPLEMENT_RESOLVER",
+    "CHANGE_CHATGPT_BEHAVIOR",
+    "ACTIVATE_SSE_OR_PRODUCT_LEADERSHIP",
+    "RUN_AWS_OR_TERRAFORM",
+    "SELECT_STACK_OR_PROVIDER"
+  ],
+  "current_next_boundary": "DOCUMENTARY_DESIGN_COMPLETE_AWAITING_SEPARATE_IMPLEMENTATION_AND_VALIDATION_AUTHORIZATION",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "implementation_authorized": false
+}
