@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "PL003_TEMPORARY_BOUNDED_SETUP_PRINCIPAL_DESIGN_136",
+  "project_id": "lab",
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_PL003_TEMPORARY_BOUNDED_SETUP_PRINCIPAL_DOCUMENTARY_DESIGN_136",
+    "status": "CONSUMED_AFTER_PUBLICATION"
+  },
+  "registered_artifacts": [
+    {
+      "id": "PL003_TEMPORARY_BOUNDED_SETUP_PRINCIPAL_001",
+      "status": "DOCUMENTED_NOT_CREATED_NOT_CONFIGURED",
+      "path": "projects/lab/test-designs/PL003_TEMPORARY_BOUNDED_SETUP_PRINCIPAL_001/DESIGN.json"
+    },
+    {
+      "id": "CODEX_PL003_TEMPORARY_BOUNDED_SETUP_PRINCIPAL_CREATION_AND_USE_001",
+      "status": "PROPOSED_NOT_AUTHORIZED_FOR_EXECUTION",
+      "path": "projects/lab/briefs/CODEX_PL003_TEMPORARY_BOUNDED_SETUP_PRINCIPAL_CREATION_AND_USE_001.json"
+    }
+  ],
+  "canonical_facts": {
+    "authorization_135_consumed": true,
+    "eligible_bounded_creator_observed": false,
+    "setup_role_creation_requires_out_of_band_authorized_human_or_external_custodian": true,
+    "codex_may_not_create_setup_role_using_general_admin_or_persistent_bootstrap_credentials": true,
+    "setup_role_use_is_single_session_and_decommission_required": true,
+    "aws_calls": 0,
+    "aws_mutations": 0,
+    "terraform": false,
+    "provisioning": false,
+    "test_003": false,
+    "future_execution_authorized": false,
+    "authority_remaining": "NONE"
+  },
+  "next_recommended_action": "SEPARATELY_AUTHORIZE_OUT_OF_BAND_HUMAN_OR_EXTERNAL_CUSTODIAN_CREATION_OF_EXACT_TEMPORARY_SETUP_ROLE_THEN_ONE_USE_CODEX_SESSION_AND_MANDATORY_DECOMMISSION"
+}
