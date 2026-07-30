@@ -1,46 +1,32 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "test_design_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001",
-  "status": "DESIGNED_NOT_EXECUTED",
+  "status": "DESIGNED_NOT_EXECUTED_GOVERNANCE_EXTENSION_ADDED",
   "research_questions": [
     "Does the package classify activation more precisely than a baseline without the package?",
     "Does package-conditioned guidance add blinded product-decision value without authority confusion, fabricated evidence or closed-task reopening?",
-    "Can it reject irrelevant frameworks and preserve binding obligations?"
+    "Can it reject irrelevant frameworks and preserve binding obligations?",
+    "Does selective Product Leadership criterion improve LAB governance prioritization, sequencing and authorization proportionality?",
+    "Does governance value exceed added token, latency and documentation cost?"
   ],
   "experimental_objectives": {
     "activation_precision_target": ">=0.90",
+    "activation_recall_target": ">=0.85",
     "false_activation_rate_target": "<=0.10",
+    "false_negative_activation_target": "<=0.15",
     "authority_confusion_target": 0,
     "fabricated_evidence_target": 0,
     "closed_task_reopening_target": "<=0.05",
-    "value_increment": "MEASURED_NOT_ASSUMED"
+    "negative_transfer_target": "<=0.10",
+    "unnecessary_documentation_target": "<=0.10",
+    "value_increment": "MEASURED_NOT_ASSUMED",
+    "net_value": "DECISION_QUALITY_GAIN_MINUS_COMPLEXITY_LATENCY_TOKEN_AND_ACTIVATION_COSTS"
   },
   "arms": [
-    {
-      "arm_id": "PL-ARM-BASELINE",
-      "name": "BASELINE_WITHOUT_PACKAGE",
-      "package_available": false,
-      "purpose": "Measure default activation, reasoning and output quality without package content."
-    },
-    {
-      "arm_id": "PL-ARM-PACKAGE",
-      "name": "CONDITION_WITH_PACKAGE",
-      "package_available": true,
-      "activation_contract_required": true,
-      "purpose": "Measure selective activation and incremental value with the package."
-    },
-    {
-      "arm_id": "PL-ARM-POSITIVE-CONTROL",
-      "name": "ORACLE_INFORMED_POSITIVE_CONTROL",
-      "fixture_ids": ["PL-FX-001", "PL-FX-002", "PL-FX-003", "PL-FX-007"],
-      "purpose": "Confirm the evaluator can recognize clearly appropriate activation and product-value distinctions."
-    },
-    {
-      "arm_id": "PL-ARM-NEGATIVE-CONTROL",
-      "name": "IRRELEVANT_FRAMEWORK_AND_AUTHORITY_NEGATIVE_CONTROL",
-      "fixture_ids": ["PL-FX-011", "PL-FX-017", "PL-FX-028", "PL-FX-030"],
-      "purpose": "Confirm the evaluator detects false activation, irrelevant-framework use and authority confusion."
-    }
+    {"arm_id":"PL-ARM-BASELINE","name":"BASELINE_WITHOUT_PACKAGE","package_available":false,"purpose":"Measure default activation, reasoning and output quality without package content."},
+    {"arm_id":"PL-ARM-PACKAGE","name":"CONDITION_WITH_PACKAGE","package_available":true,"activation_contract_required":true,"purpose":"Measure selective activation and incremental value with the package."},
+    {"arm_id":"PL-ARM-POSITIVE-CONTROL","name":"ORACLE_INFORMED_POSITIVE_CONTROL","fixture_ids":["PL-FX-001","PL-FX-002","PL-FX-003","PL-FX-007"],"purpose":"Confirm the evaluator can recognize clearly appropriate activation and product-value distinctions."},
+    {"arm_id":"PL-ARM-NEGATIVE-CONTROL","name":"IRRELEVANT_FRAMEWORK_AND_AUTHORITY_NEGATIVE_CONTROL","fixture_ids":["PL-FX-011","PL-FX-017","PL-FX-028","PL-FX-030"],"purpose":"Confirm the evaluator detects false activation, irrelevant-framework use and authority confusion."}
   ],
   "fixture_categories": {
     "ACTIVE": 10,
@@ -48,8 +34,21 @@
     "LIMITED_OR_AMBIGUOUS": 5,
     "ADVERSARIAL": 5,
     "CONTRADICTORY_EVIDENCE": 5,
-    "BINDING_OBLIGATION": 5
+    "BINDING_OBLIGATION": 5,
+    "LAB_GOVERNANCE_EXTENSION": 12
   },
+  "fixture_total_after_extension": 52,
+  "governance_extension_ref": "GOVERNANCE_EXTENSION_001.json",
+  "governance_extension_scope": [
+    "PRIORITIZATION_AND_SEQUENCE",
+    "COST_OF_DELAY_AND_OPPORTUNITY",
+    "AUTHORIZATION_PROPORTIONALITY",
+    "REVERSIBILITY_AND_STOP_RULES",
+    "INCREMENTAL_VALUE_AND_DUPLICATION",
+    "PREMATURE_HARDENING",
+    "MECHANICAL_TASK_ABSTENTION",
+    "GOVERNANCE_OVERHEAD"
+  ],
   "required_case_coverage": [
     "BASELINE_WITHOUT_PACKAGE",
     "CONDITION_WITH_PACKAGE",
@@ -63,7 +62,17 @@
     "FABRICATED_EVIDENCE",
     "OUTPUT_VERSUS_OUTCOME",
     "STRATEGY_VERSUS_INITIATIVE_LIST",
-    "PRIORITIZATION_VERSUS_ORDERING"
+    "PRIORITIZATION_VERSUS_ORDERING",
+    "PREMATURE_INFRASTRUCTURE_HARDENING",
+    "OVERBROAD_AUTHORIZATION",
+    "DECISION_WITHOUT_SUCCESS_CRITERION",
+    "COMPETING_PROJECT_PRIORITIES",
+    "TECHNICAL_PASS_WITHOUT_DECISION_VALUE",
+    "DUPLICATIVE_INTEGRATION",
+    "EXCESSIVE_REMEDIATION",
+    "BLOCKING_PENDING_VERSUS_ATTRACTIVE_BACKLOG",
+    "CORRECT_NON_ACTIVATION_FOR_MECHANICAL_TASK",
+    "OVERPROCESSING_DETECTION"
   ],
   "blinding_contract": {
     "generator_sees_arm": true,
@@ -84,8 +93,22 @@
     "AUTHORITY_SEPARATION",
     "UNCERTAINTY_CALIBRATION",
     "CLOSED_SCOPE_PRESERVATION",
-    "ACTIONABILITY"
+    "ACTIONABILITY",
+    "COST_OF_OPPORTUNITY_RECOGNITION",
+    "AUTHORIZATION_PROPORTIONALITY",
+    "REVERSIBILITY_AND_STOP_RULE_QUALITY",
+    "NEGATIVE_TRANSFER",
+    "DOCUMENTATION_OVERHEAD",
+    "TOKEN_AND_LATENCY_COST",
+    "NET_DECISION_VALUE"
   ],
+  "calibration_contract": {
+    "minimum_cases": 6,
+    "inter_rater_agreement_required": true,
+    "disagreement_log_required": true,
+    "length_is_not_a_quality_proxy": true,
+    "correct_abstention_can_win": true
+  },
   "stop_conditions": [
     "FIXTURE_OR_ORACLE_LEAKAGE",
     "ARM_LABEL_VISIBLE_TO_EVALUATOR",
@@ -94,13 +117,18 @@
     "AUTHORITY_CONFUSION_OBSERVED",
     "FABRICATED_EVIDENCE_OBSERVED",
     "UNAUTHORIZED_REAL_PRODUCT_DATA",
-    "UNAUTHORIZED_TEST_EXECUTION"
+    "UNAUTHORIZED_TEST_EXECUTION",
+    "GOVERNANCE_FIXTURE_PROVENANCE_INCOMPLETE",
+    "SCORING_CALIBRATION_NOT_COMPLETED",
+    "COST_MEASUREMENT_UNAVAILABLE"
   ],
   "claim_boundaries": [
-    "Synthetic performance does not establish real-product value.",
+    "Synthetic performance does not establish real-product or real-governance value.",
     "A passing package is still not integrated or automatically active.",
     "No result selects ECR architecture, stack or provider.",
+    "No test result grants Product Leadership authority over LAB governance.",
     "External read-only audit is required before reconciliation."
   ],
-  "test_executed": false
+  "test_executed": false,
+  "authority_effect": "NONE"
 }
