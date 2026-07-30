@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "validation_id": "INTEGRATION_FACTORY_M1A_VALIDATION_001",
+  "project_id": "lab",
+  "status": "PASS",
+  "recorded_at": "2026-07-30T17:39:00-04:00",
+  "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_M1A_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_MATERIALIZATION_153.json",
+  "brief_ref": "projects/lab/briefs/CODEX_M1A_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_MATERIALIZATION_001.json",
+  "execution_parent_head": "babcbf5427dfc555a93cc65ba99b34e9452e8a25",
+  "command": "python scripts/validate_integration_factory_m1a.py --check",
+  "dialect": "https://json-schema.org/draft/2020-12/schema",
+  "counts": {
+    "common_executable_schemas": 10,
+    "common_executable_templates": 13,
+    "criterion_module_overlays": 3,
+    "draft_only_authorization_templates": 5,
+    "isolated_generated_module_packages": 4,
+    "generated_package_artifacts": 56,
+    "schema_meta_validations": 10,
+    "package_schema_instance_validations": 40,
+    "repository_json_files_parsed": 958
+  },
+  "reproducibility": {
+    "first_normalized_digest": "048c2e7995986ca061ce66ce65a1a33f532a8ab17819ea057a0ff979a12ee55d",
+    "second_normalized_digest": "048c2e7995986ca061ce66ce65a1a33f532a8ab17819ea057a0ff979a12ee55d",
+    "equivalent": true
+  },
+  "m0_baseline": {
+    "module_count": true,
+    "distinct_activation_signals": true,
+    "composition_rule_count": true,
+    "exclusion_block_count": true,
+    "empty_set_abstention": true,
+    "fixture_count": true,
+    "selector_blob_sha": true,
+    "fixture_blob_sha": true
+  },
+  "authority_and_runtime_boundary": {
+    "authority_inference": "NONE_DETECTED",
+    "runtime_effect": "NONE",
+    "automatic_activation": false,
+    "implementation_authorized": false,
+    "generated_authorization_statuses": [
+      "DRAFT"
+    ],
+    "global_stack_selected": false,
+    "production_provider_selected": false,
+    "shadow_registry_created": false,
+    "m2_started": false,
+    "active_selector_modified": false
+  },
+  "m1_exit_criteria": {
+    "ALL_COMMON_SCHEMAS_VALID": "PASS",
+    "ALL_PROFILE_OVERLAYS_RESOLVE": "PASS",
+    "NO_AUTHORITY_INFERENCE": "PASS",
+    "M0_BASELINE_PRESERVED": "PASS",
+    "ACTIVE_SELECTOR_UNCHANGED": "PASS",
+    "NO_RUNTIME_EFFECT": "PASS"
+  },
+  "m1_classification": "M1_PASS",
+  "authorization_consumption_boundary": "CONSUMED_WHEN_BOUNDED_RESULT_COMMIT_IS_PUSHED_AND_REMOTE_HEAD_VERIFIED",
+  "failures": [],
+  "divergences": [
+    "PREEXISTING_NON_BLOCKING: scripts/validate_repository.py crashes at the authorized parent because schemas/validation/registries.py treats array-valued registry delta entries as filesystem paths; M1A uses its bounded Draft 2020-12 validator and does not modify that unrelated validator."
+  ],
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "overlay_id": "TOKEN_AND_LATENCY",
+  "status": "EXECUTABLE_OVERLAY",
+  "profile": "CRITERION_MODULE",
+  "applies_to": "VALIDATION_EVIDENCE.json",
+  "operations": [
+    {
+      "operation": "SET",
+      "path": [
+        "profile_controls",
+        "token_and_latency"
+      ],
+      "value": {
+        "status": "NOT_MEASURED_M1A_REPOSITORY_ONLY",
+        "runtime_measurement_authorized": false,
+        "future_test_contract_required": true
+      }
+    }
+  ],
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false
+}

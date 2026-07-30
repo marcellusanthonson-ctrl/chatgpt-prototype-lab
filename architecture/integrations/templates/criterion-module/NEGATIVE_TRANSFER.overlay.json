@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "overlay_id": "NEGATIVE_TRANSFER",
+  "status": "EXECUTABLE_OVERLAY",
+  "profile": "CRITERION_MODULE",
+  "applies_to": "MISUSE_RISKS.json",
+  "operations": [
+    {
+      "operation": "SET",
+      "path": [
+        "profile_controls",
+        "negative_transfer"
+      ],
+      "value": {
+        "required": true,
+        "forbidden_module_contamination": {
+          "$source": "negative_fixture_refs"
+        },
+        "failure_retention": "MACHINE_READABLE"
+      }
+    }
+  ],
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false
+}

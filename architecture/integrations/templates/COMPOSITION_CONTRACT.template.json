@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "template_id": "COMPOSITION_CONTRACT",
+  "status": "EXECUTABLE_TEMPLATE",
+  "profile": "COMMON",
+  "target_artifact": "COMPOSITION_CONTRACT.json",
+  "schema_ref": "architecture/integrations/schemas/composition-contract.schema.json",
+  "render": {
+    "schema_version": "1.0.0",
+    "artifact_type": "COMPOSITION_CONTRACT",
+    "authority_effect": "NONE",
+    "runtime_effect": "NONE",
+    "automatic_activation": false,
+    "implementation_authorized": false,
+    "precedence_class": {
+      "$source": "precedence_class"
+    },
+    "compatible_with": {
+      "$source": "compatible_with"
+    },
+    "conflicts_with": {
+      "$source": "conflicts_with"
+    },
+    "supersedes": [],
+    "maximum_role": {
+      "$source": "maximum_role"
+    },
+    "conflict_keys": [],
+    "composition_rules": {
+      "$source": "composition_rules"
+    },
+    "exclusions": {
+      "$source": "exclusions"
+    },
+    "empty_set_abstention": true
+  },
+  "unresolved_policy": {
+    "representation": "STRUCTURED_UNRESOLVED_OBJECT",
+    "inference_forbidden": true,
+    "silent_default_forbidden": true
+  },
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false
+}

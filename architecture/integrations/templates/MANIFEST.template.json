@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "template_id": "MANIFEST",
+  "status": "EXECUTABLE_TEMPLATE",
+  "profile": "COMMON",
+  "target_artifact": "MANIFEST.json",
+  "schema_ref": "architecture/integrations/schemas/integration-manifest.schema.json",
+  "render": {
+    "schema_version": "1.0.0",
+    "artifact_type": "MANIFEST",
+    "authority_effect": "NONE",
+    "runtime_effect": "NONE",
+    "automatic_activation": false,
+    "implementation_authorized": false,
+    "integration_id": {
+      "$source": "integration_id"
+    },
+    "module_id": {
+      "$source": "module_id"
+    },
+    "version": {
+      "$source": "version"
+    },
+    "status": "CANDIDATE",
+    "profile": "CRITERION_MODULE",
+    "producer": {
+      "$source": "producer"
+    },
+    "consumer": "CHATGPT_PROJECT",
+    "contract_refs": {
+      "$source": "contract_refs"
+    },
+    "evidence_refs": {
+      "$source": "evidence_refs"
+    },
+    "compatibility": {
+      "$source": "compatibility"
+    },
+    "rollback_ref": "ROLLBACK.json"
+  },
+  "unresolved_policy": {
+    "representation": "STRUCTURED_UNRESOLVED_OBJECT",
+    "inference_forbidden": true,
+    "silent_default_forbidden": true
+  },
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false
+}

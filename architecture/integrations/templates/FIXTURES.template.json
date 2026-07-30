@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "template_id": "FIXTURES",
+  "status": "EXECUTABLE_TEMPLATE",
+  "profile": "COMMON",
+  "target_artifact": "FIXTURES.json",
+  "schema_ref": null,
+  "render": {
+    "schema_version": "1.0.0",
+    "artifact_type": "FIXTURES",
+    "authority_effect": "NONE",
+    "runtime_effect": "NONE",
+    "automatic_activation": false,
+    "implementation_authorized": false,
+    "module_id": {
+      "$source": "module_id"
+    },
+    "baseline_fixture_blob_sha": {
+      "$source": "fixture_blob_sha"
+    },
+    "all_baseline_fixture_refs": {
+      "$source": "all_fixture_refs"
+    },
+    "applicable_fixture_refs": {
+      "$source": "applicable_fixture_refs"
+    },
+    "negative_transfer_fixture_refs": {
+      "$source": "negative_fixture_refs"
+    },
+    "fixture_source_ref": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/ACCEPTANCE_FIXTURES.json"
+  },
+  "unresolved_policy": {
+    "representation": "STRUCTURED_UNRESOLVED_OBJECT",
+    "inference_forbidden": true,
+    "silent_default_forbidden": true
+  },
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false
+}

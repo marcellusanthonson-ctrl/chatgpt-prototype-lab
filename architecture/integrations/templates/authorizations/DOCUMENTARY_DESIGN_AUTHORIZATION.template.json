@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0.0",
+  "template_id": "DOCUMENTARY_DESIGN_AUTHORIZATION",
+  "status": "EXECUTABLE_DRAFT_GENERATOR",
+  "render": {
+    "schema_version": "1.0.0",
+    "authorization_id": {
+      "status": "UNRESOLVED",
+      "reason": "NOT_ESTABLISHED_BY_CANONICAL_SOURCES",
+      "required_resolution": "SUPPLY_AUTHORIZATION_ID_THROUGH_A_SEPARATE_GOVERNED_SOURCE",
+      "source_refs": [
+        "projects/lab/authorizations/AUTHORIZATION_LAB_M1A_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_MATERIALIZATION_153.json"
+      ]
+    },
+    "project_id": {
+      "status": "UNRESOLVED",
+      "reason": "NOT_ESTABLISHED_BY_CANONICAL_SOURCES",
+      "required_resolution": "SUPPLY_PROJECT_ID_THROUGH_A_SEPARATE_GOVERNED_SOURCE",
+      "source_refs": [
+        "projects/lab/authorizations/AUTHORIZATION_LAB_M1A_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_MATERIALIZATION_153.json"
+      ]
+    },
+    "status": "DRAFT",
+    "approved_by": {
+      "status": "UNRESOLVED",
+      "reason": "NOT_ESTABLISHED_BY_CANONICAL_SOURCES",
+      "required_resolution": "SUPPLY_APPROVED_BY_THROUGH_A_SEPARATE_GOVERNED_SOURCE",
+      "source_refs": [
+        "projects/lab/authorizations/AUTHORIZATION_LAB_M1A_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_MATERIALIZATION_153.json"
+      ]
+    },
+    "approved_at": {
+      "status": "UNRESOLVED",
+      "reason": "NOT_ESTABLISHED_BY_CANONICAL_SOURCES",
+      "required_resolution": "SUPPLY_APPROVED_AT_THROUGH_A_SEPARATE_GOVERNED_SOURCE",
+      "source_refs": [
+        "projects/lab/authorizations/AUTHORIZATION_LAB_M1A_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_MATERIALIZATION_153.json"
+      ]
+    },
+    "repository": {
+      "status": "UNRESOLVED",
+      "reason": "NOT_ESTABLISHED_BY_CANONICAL_SOURCES",
+      "required_resolution": "SUPPLY_REPOSITORY_THROUGH_A_SEPARATE_GOVERNED_SOURCE",
+      "source_refs": [
+        "projects/lab/authorizations/AUTHORIZATION_LAB_M1A_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_MATERIALIZATION_153.json"
+      ]
+    },
+    "branch": {
+      "status": "UNRESOLVED",
+      "reason": "NOT_ESTABLISHED_BY_CANONICAL_SOURCES",
+      "required_resolution": "SUPPLY_BRANCH_THROUGH_A_SEPARATE_GOVERNED_SOURCE",
+      "source_refs": [
+        "projects/lab/authorizations/AUTHORIZATION_LAB_M1A_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_MATERIALIZATION_153.json"
+      ]
+    },
+    "objective": {
+      "status": "UNRESOLVED",
+      "reason": "NOT_ESTABLISHED_BY_CANONICAL_SOURCES",
+      "required_resolution": "SUPPLY_OBJECTIVE_THROUGH_A_SEPARATE_GOVERNED_SOURCE",
+      "source_refs": [
+        "projects/lab/authorizations/AUTHORIZATION_LAB_M1A_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_MATERIALIZATION_153.json"
+      ]
+    },
+    "allowed_actions": [],
+    "forbidden_actions": [
+      "AUTOMATIC_GRANT",
+      "AUTOMATIC_ACTIVATION"
+    ],
+    "authority_effect": "NONE_UNTIL_SEPARATE_VALID_HUMAN_AUTHORIZATION",
+    "runtime_effect": "NONE",
+    "automatic_activation": false,
+    "implementation_authorized": false
+  },
+  "generation_guards": [
+    "STATUS_MUST_BEGIN_DRAFT_OR_PROPOSED",
+    "APPROVED_BY_MUST_REMAIN_UNRESOLVED",
+    "GENERATION_CANNOT_GRANT_AUTHORITY",
+    "COMMIT_PUSH_TEST_OR_AUDIT_CANNOT_CHANGE_STATUS_AUTOMATICALLY"
+  ],
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false
+}

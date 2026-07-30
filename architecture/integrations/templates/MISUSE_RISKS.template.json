@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "template_id": "MISUSE_RISKS",
+  "status": "EXECUTABLE_TEMPLATE",
+  "profile": "COMMON",
+  "target_artifact": "MISUSE_RISKS.json",
+  "schema_ref": null,
+  "render": {
+    "schema_version": "1.0.0",
+    "artifact_type": "MISUSE_RISKS",
+    "authority_effect": "NONE",
+    "runtime_effect": "NONE",
+    "automatic_activation": false,
+    "implementation_authorized": false,
+    "module_id": {
+      "$source": "module_id"
+    },
+    "risks": {
+      "$source": "misuse_risks"
+    },
+    "zero_tolerance_events": [
+      "AUTHORITY_INFERENCE",
+      "AUTOMATIC_ACTIVATION",
+      "RUNTIME_OR_SELECTOR_MUTATION"
+    ],
+    "source_refs": {
+      "$source": "source_refs"
+    }
+  },
+  "unresolved_policy": {
+    "representation": "STRUCTURED_UNRESOLVED_OBJECT",
+    "inference_forbidden": true,
+    "silent_default_forbidden": true
+  },
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false
+}

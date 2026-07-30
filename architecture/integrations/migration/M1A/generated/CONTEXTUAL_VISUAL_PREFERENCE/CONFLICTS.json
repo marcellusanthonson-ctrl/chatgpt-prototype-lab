@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_type": "CONFLICTS",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false,
+  "module_id": "CONTEXTUAL_VISUAL_PREFERENCE",
+  "known_conflicts": [],
+  "unassessed_conflicts": {
+    "status": "UNRESOLVED",
+    "reason": "NOT_ESTABLISHED_BY_CANONICAL_SOURCES",
+    "required_resolution": "SUPPLY_CONFLICTS_WITH_THROUGH_A_SEPARATE_GOVERNED_SOURCE",
+    "source_refs": [
+      "architecture/integrations/migration/M0/CURRENT_COMPOSITION_RULES.json"
+    ]
+  },
+  "conflict_resolution": "FAIL_CLOSED_AND_REQUIRE_SEPARATE_HUMAN_DECISION",
+  "source_refs": [
+    "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json",
+    "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/RESULT_CONTRACT.json",
+    "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/CONTRACT.json",
+    "foundation-library/visual-preferences/jonathan-martinez.visual-preference-profile.json",
+    "foundation-library/visual-protocols/high-fidelity-visual-protocol.json"
+  ]
+}

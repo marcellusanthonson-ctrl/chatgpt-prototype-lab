@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "template_id": "VALIDATION_EVIDENCE",
+  "status": "EXECUTABLE_TEMPLATE",
+  "profile": "COMMON",
+  "target_artifact": "VALIDATION_EVIDENCE.json",
+  "schema_ref": null,
+  "render": {
+    "schema_version": "1.0.0",
+    "artifact_type": "VALIDATION_EVIDENCE",
+    "authority_effect": "NONE",
+    "runtime_effect": "NONE",
+    "automatic_activation": false,
+    "implementation_authorized": false,
+    "module_id": {
+      "$source": "module_id"
+    },
+    "status": "VALIDATED_ISOLATED_CANDIDATE_NOT_AUTHORIZED",
+    "schema_validations": {
+      "$source": "schema_validations"
+    },
+    "baseline_refs": [
+      "architecture/integrations/migration/M0/CURRENT_MODULE_INVENTORY.json",
+      "architecture/integrations/migration/M0/CURRENT_SIGNAL_MAP.json",
+      "architecture/integrations/migration/M0/CURRENT_COMPOSITION_RULES.json",
+      "architecture/integrations/migration/M0/BASELINE_FIXTURES.json"
+    ],
+    "failures": [],
+    "divergences": [],
+    "test_authorized": false,
+    "integration_authorized": false
+  },
+  "unresolved_policy": {
+    "representation": "STRUCTURED_UNRESOLVED_OBJECT",
+    "inference_forbidden": true,
+    "silent_default_forbidden": true
+  },
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false
+}

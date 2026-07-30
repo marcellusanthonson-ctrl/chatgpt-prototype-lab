@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "template_id": "ROLLBACK",
+  "status": "EXECUTABLE_TEMPLATE",
+  "profile": "COMMON",
+  "target_artifact": "ROLLBACK.json",
+  "schema_ref": "architecture/integrations/schemas/rollback.schema.json",
+  "render": {
+    "schema_version": "1.0.0",
+    "artifact_type": "ROLLBACK",
+    "authority_effect": "NONE",
+    "runtime_effect": "NONE",
+    "automatic_activation": false,
+    "implementation_authorized": false,
+    "trigger_conditions": [
+      "ANY_VALIDATION_FAILURE",
+      "ANY_BASELINE_DIVERGENCE",
+      "ANY_AUTHORITY_OR_RUNTIME_DRIFT",
+      "HUMAN_REJECTION"
+    ],
+    "steps": [
+      "DISCARD_ISOLATED_GENERATED_PACKAGE",
+      "RETAIN_UNMODIFIED_STATIC_SELECTOR",
+      "RETAIN_MACHINE_READABLE_FAILURE_EVIDENCE"
+    ],
+    "baseline_verification": [
+      "VERIFY_SELECTOR_GIT_BLOB_SHA",
+      "VERIFY_ACCEPTANCE_FIXTURE_GIT_BLOB_SHA",
+      "VERIFY_M0_COUNTS_AND_COMPOSITION"
+    ],
+    "evidence_retention": "RETAIN_ALL_FAILURES_AND_DIVERGENCES_IN_M1A_VALIDATION_RESULTS",
+    "authority_required": true
+  },
+  "unresolved_policy": {
+    "representation": "STRUCTURED_UNRESOLVED_OBJECT",
+    "inference_forbidden": true,
+    "silent_default_forbidden": true
+  },
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false
+}

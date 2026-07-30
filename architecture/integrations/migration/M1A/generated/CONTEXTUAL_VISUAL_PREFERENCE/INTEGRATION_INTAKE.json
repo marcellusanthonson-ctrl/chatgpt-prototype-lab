@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_type": "INTEGRATION_INTAKE",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false,
+  "integration_id": "CRITERION_MODULE_CONTEXTUAL_VISUAL_PREFERENCE_CANDIDATE_001",
+  "profile": "CRITERION_MODULE",
+  "problem": {
+    "status": "UNRESOLVED",
+    "reason": "NOT_ESTABLISHED_BY_CANONICAL_SOURCES",
+    "required_resolution": "SUPPLY_PROBLEM_THROUGH_A_SEPARATE_GOVERNED_SOURCE",
+    "source_refs": [
+      "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json",
+      "architecture/integrations/migration/M0/CURRENT_MODULE_INVENTORY.json"
+    ]
+  },
+  "producer": {
+    "status": "UNRESOLVED",
+    "reason": "NOT_ESTABLISHED_BY_CANONICAL_SOURCES",
+    "required_resolution": "SUPPLY_PRODUCER_THROUGH_A_SEPARATE_GOVERNED_SOURCE",
+    "source_refs": [
+      "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json",
+      "architecture/integrations/migration/M0/CURRENT_MODULE_INVENTORY.json"
+    ]
+  },
+  "consumer": "CHATGPT_PROJECT",
+  "value_hypothesis": {
+    "status": "UNRESOLVED",
+    "reason": "NOT_ESTABLISHED_BY_CANONICAL_SOURCES",
+    "required_resolution": "SUPPLY_VALUE_HYPOTHESIS_THROUGH_A_SEPARATE_GOVERNED_SOURCE",
+    "source_refs": [
+      "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json",
+      "architecture/integrations/migration/M0/CURRENT_MODULE_INVENTORY.json"
+    ]
+  },
+  "risk_signals": [
+    "AUTHORITY_INFERENCE",
+    "NEGATIVE_TRANSFER",
+    "SELECTOR_OR_RUNTIME_DRIFT"
+  ],
+  "rollback_strategy": "DISCARD_ISOLATED_CANDIDATE_AND_RETAIN_STATIC_SELECTOR",
+  "source_refs": [
+    "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json",
+    "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/RESULT_CONTRACT.json",
+    "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/CONTRACT.json",
+    "foundation-library/visual-preferences/jonathan-martinez.visual-preference-profile.json",
+    "foundation-library/visual-protocols/high-fidelity-visual-protocol.json"
+  ]
+}

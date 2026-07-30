@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "template_id": "INTEGRATION_INTAKE",
+  "status": "EXECUTABLE_TEMPLATE",
+  "profile": "COMMON",
+  "target_artifact": "INTEGRATION_INTAKE.json",
+  "schema_ref": "architecture/integrations/schemas/integration-intake.schema.json",
+  "render": {
+    "schema_version": "1.0.0",
+    "artifact_type": "INTEGRATION_INTAKE",
+    "authority_effect": "NONE",
+    "runtime_effect": "NONE",
+    "automatic_activation": false,
+    "implementation_authorized": false,
+    "integration_id": {
+      "$source": "integration_id"
+    },
+    "profile": "CRITERION_MODULE",
+    "problem": {
+      "$source": "problem"
+    },
+    "producer": {
+      "$source": "producer"
+    },
+    "consumer": "CHATGPT_PROJECT",
+    "value_hypothesis": {
+      "$source": "value_hypothesis"
+    },
+    "risk_signals": {
+      "$source": "risk_signals"
+    },
+    "rollback_strategy": "DISCARD_ISOLATED_CANDIDATE_AND_RETAIN_STATIC_SELECTOR",
+    "source_refs": {
+      "$source": "source_refs"
+    }
+  },
+  "unresolved_policy": {
+    "representation": "STRUCTURED_UNRESOLVED_OBJECT",
+    "inference_forbidden": true,
+    "silent_default_forbidden": true
+  },
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false
+}

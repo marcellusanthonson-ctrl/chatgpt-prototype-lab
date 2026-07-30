@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_type": "MANIFEST",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false,
+  "integration_id": "CRITERION_MODULE_EVIDENCE_AND_CLAIMS_CANDIDATE_001",
+  "module_id": "EVIDENCE_AND_CLAIMS",
+  "version": {
+    "status": "UNRESOLVED",
+    "reason": "NOT_ESTABLISHED_BY_CANONICAL_SOURCES",
+    "required_resolution": "SUPPLY_MODULE_VERSION_THROUGH_A_SEPARATE_GOVERNED_SOURCE",
+    "source_refs": [
+      "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json",
+      "architecture/integrations/migration/M0/CURRENT_MODULE_INVENTORY.json"
+    ]
+  },
+  "status": "CANDIDATE",
+  "profile": "CRITERION_MODULE",
+  "producer": {
+    "status": "UNRESOLVED",
+    "reason": "NOT_ESTABLISHED_BY_CANONICAL_SOURCES",
+    "required_resolution": "SUPPLY_PRODUCER_THROUGH_A_SEPARATE_GOVERNED_SOURCE",
+    "source_refs": [
+      "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json",
+      "architecture/integrations/migration/M0/CURRENT_MODULE_INVENTORY.json"
+    ]
+  },
+  "consumer": "CHATGPT_PROJECT",
+  "contract_refs": [
+    "ACTIVATION_CONTRACT.json",
+    "INPUT_CONTRACT.json",
+    "RESULT_CONTRACT.json",
+    "COMPOSITION_CONTRACT.json",
+    "CONFLICTS.json",
+    "MISUSE_RISKS.json",
+    "FIXTURES.json",
+    "TEST_DESIGN.json",
+    "SCORING_AND_GATES.json",
+    "ROLLBACK.json",
+    "VALIDATION_EVIDENCE.json",
+    "OPERATIONAL_TRUST_PREFLIGHT.json"
+  ],
+  "evidence_refs": [
+    "architecture/integrations/migration/M0/CURRENT_MODULE_INVENTORY.json",
+    "architecture/integrations/migration/M0/CURRENT_SIGNAL_MAP.json",
+    "architecture/integrations/migration/M0/CURRENT_COMPOSITION_RULES.json",
+    "architecture/integrations/migration/M0/BASELINE_FIXTURES.json"
+  ],
+  "compatibility": {
+    "compatible_with": [
+      "DESIGN_CRITERION",
+      "WEB_ACCESSIBILITY"
+    ],
+    "conflicts_with": {
+      "status": "UNRESOLVED",
+      "reason": "NOT_ESTABLISHED_BY_CANONICAL_SOURCES",
+      "required_resolution": "SUPPLY_CONFLICTS_WITH_THROUGH_A_SEPARATE_GOVERNED_SOURCE",
+      "source_refs": [
+        "architecture/integrations/migration/M0/CURRENT_COMPOSITION_RULES.json"
+      ]
+    }
+  },
+  "rollback_ref": "ROLLBACK.json"
+}

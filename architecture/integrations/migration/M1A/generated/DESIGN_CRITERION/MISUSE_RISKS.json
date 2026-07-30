@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_type": "MISUSE_RISKS",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false,
+  "module_id": "DESIGN_CRITERION",
+  "risks": [
+    "ACTIVATION_OUTSIDE_EXPLICIT_SIGNAL_RULE",
+    "PREFERENCE_OR_HEURISTIC_PRESENTED_AS_STANDARD",
+    "TECHNICAL_RESULT_PRESENTED_AS_AUTHORIZATION"
+  ],
+  "zero_tolerance_events": [
+    "AUTHORITY_INFERENCE",
+    "AUTOMATIC_ACTIVATION",
+    "RUNTIME_OR_SELECTOR_MUTATION"
+  ],
+  "source_refs": [
+    "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json",
+    "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/RESULT_CONTRACT.json",
+    "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/CONTRACT.json",
+    "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/PRINCIPLES.json#DKP-001..DKP-012",
+    "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/HEURISTIC.md"
+  ],
+  "profile_controls": {
+    "negative_transfer": {
+      "required": true,
+      "forbidden_module_contamination": [
+        "CRIT-FIX-001",
+        "CRIT-FIX-006"
+      ],
+      "failure_retention": "MACHINE_READABLE"
+    }
+  }
+}

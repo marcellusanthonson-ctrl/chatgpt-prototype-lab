@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_type": "SCORING_AND_GATES",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false,
+  "dimensions": [
+    {
+      "status": "UNRESOLVED",
+      "reason": "NOT_ESTABLISHED_BY_CANONICAL_SOURCES",
+      "required_resolution": "SUPPLY_SCORING_DIMENSIONS_THROUGH_A_SEPARATE_GOVERNED_SOURCE",
+      "source_refs": [
+        "architecture/integrations/migration/M0/BASELINE_FIXTURES.json"
+      ]
+    }
+  ],
+  "penalties": [
+    {
+      "status": "UNRESOLVED",
+      "reason": "NOT_ESTABLISHED_BY_CANONICAL_SOURCES",
+      "required_resolution": "SUPPLY_SCORING_PENALTIES_THROUGH_A_SEPARATE_GOVERNED_SOURCE",
+      "source_refs": [
+        "architecture/integrations/migration/M0/BASELINE_FIXTURES.json"
+      ]
+    }
+  ],
+  "thresholds": {
+    "status": "UNRESOLVED",
+    "reason": "NOT_ESTABLISHED_BY_CANONICAL_SOURCES",
+    "required_resolution": "SUPPLY_SCORING_THRESHOLDS_THROUGH_A_SEPARATE_GOVERNED_SOURCE",
+    "source_refs": [
+      "architecture/integrations/migration/M0/BASELINE_FIXTURES.json"
+    ]
+  },
+  "zero_tolerance_events": [
+    "AUTHORITY_INFERENCE",
+    "SELECTOR_DRIFT",
+    "RUNTIME_EFFECT",
+    "M0_BASELINE_DIVERGENCE"
+  ],
+  "aggregation": {
+    "status": "UNRESOLVED",
+    "reason": "NOT_ESTABLISHED_BY_CANONICAL_SOURCES",
+    "required_resolution": "SUPPLY_AGGREGATION_THROUGH_A_SEPARATE_GOVERNED_SOURCE",
+    "source_refs": [
+      "architecture/integrations/migration/M0/BASELINE_FIXTURES.json"
+    ]
+  },
+  "promotion_rules": [
+    "TECHNICAL_PASS_DOES_NOT_AUTHORIZE_TEST_EXECUTION",
+    "TESTED_DOES_NOT_IMPLY_AUTHORIZED",
+    "AUDITED_DOES_NOT_IMPLY_INTEGRATED",
+    "SEPARATE_HUMAN_AUTHORIZATION_REQUIRED"
+  ]
+}

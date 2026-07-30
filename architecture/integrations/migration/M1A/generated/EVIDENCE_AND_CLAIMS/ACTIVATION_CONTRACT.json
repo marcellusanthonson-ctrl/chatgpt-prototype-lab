@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_type": "ACTIVATION_CONTRACT",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false,
+  "module_id": "EVIDENCE_AND_CLAIMS",
+  "active_when": {
+    "mode": "ANY",
+    "signals": [
+      "TASK_ANALYSIS",
+      "TASK_AUDIT",
+      "TASK_TECHNICAL_REVIEW",
+      "TASK_STATUS_REPORT",
+      "CLAIM_FACTUAL",
+      "CLAIM_LEGAL_OR_STANDARD",
+      "CLAIM_ACCESSIBILITY",
+      "CLAIM_VALIDATION"
+    ]
+  },
+  "inactive_when": {
+    "mode": "NO_ACTIVATION_RULE_MATCH_OR_APPLICABLE_EXCLUSION",
+    "exclusion_signals": []
+  },
+  "limited_when": {
+    "status": "UNRESOLVED",
+    "reason": "NOT_ESTABLISHED_BY_CANONICAL_SOURCES",
+    "required_resolution": "SUPPLY_LIMITED_WHEN_THROUGH_A_SEPARATE_GOVERNED_SOURCE",
+    "source_refs": [
+      "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json"
+    ]
+  },
+  "fail_closed_when": [
+    "SOURCE_REFERENCE_MISSING",
+    "ACTIVATION_INPUT_INCOMPLETE",
+    "AUTHORITY_INFERENCE_ATTEMPT"
+  ],
+  "profile_controls": {
+    "activation_discrimination": {
+      "required": true,
+      "positive_fixture_refs": [
+        "CRIT-FIX-003",
+        "CRIT-FIX-004",
+        "CRIT-FIX-007",
+        "CRIT-FIX-008",
+        "CRIT-FIX-013"
+      ],
+      "negative_fixture_refs": [],
+      "empty_set_preserved": true
+    }
+  }
+}

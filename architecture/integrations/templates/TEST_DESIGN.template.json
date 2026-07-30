@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0.0",
+  "template_id": "TEST_DESIGN",
+  "status": "EXECUTABLE_TEMPLATE",
+  "profile": "COMMON",
+  "target_artifact": "TEST_DESIGN.json",
+  "schema_ref": "architecture/integrations/schemas/test-design.schema.json",
+  "render": {
+    "schema_version": "1.0.0",
+    "artifact_type": "TEST_DESIGN",
+    "authority_effect": "NONE",
+    "runtime_effect": "NONE",
+    "automatic_activation": false,
+    "implementation_authorized": false,
+    "test_id": {
+      "$source": "test_id"
+    },
+    "status": "DRAFT_NOT_AUTHORIZED",
+    "arms": {
+      "$source": "test_arms"
+    },
+    "fixture_families": [
+      "ACTIVATION_DISCRIMINATION",
+      "NEGATIVE_TRANSFER",
+      "BASELINE_PRESERVATION"
+    ],
+    "minimum_outputs": {
+      "$source": "minimum_outputs"
+    },
+    "blinding": {
+      "$source": "blinding"
+    },
+    "telemetry": [
+      "NORMALIZED_RESULT_DIGEST",
+      "FAILURE_AND_DIVERGENCE_LOG",
+      "TOKEN_AND_LATENCY_PLACEHOLDER_WITHOUT_RUNTIME_MEASUREMENT"
+    ],
+    "stop_conditions": [
+      "BASELINE_HASH_MISMATCH",
+      "AUTHORITY_INFERENCE",
+      "RUNTIME_EFFECT_DETECTED",
+      "MISSING_REFERENCE"
+    ]
+  },
+  "unresolved_policy": {
+    "representation": "STRUCTURED_UNRESOLVED_OBJECT",
+    "inference_forbidden": true,
+    "silent_default_forbidden": true
+  },
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false
+}

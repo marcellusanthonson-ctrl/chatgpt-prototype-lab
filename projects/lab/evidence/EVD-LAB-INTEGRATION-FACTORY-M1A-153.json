@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-INTEGRATION-FACTORY-M1A-153",
+  "project_id": "lab",
+  "status": "VALIDATED_M1_PASS",
+  "recorded_at": "2026-07-30T17:39:00-04:00",
+  "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_M1A_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_MATERIALIZATION_153.json",
+  "brief_ref": "projects/lab/briefs/CODEX_M1A_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_MATERIALIZATION_001.json",
+  "execution_parent_head": "babcbf5427dfc555a93cc65ba99b34e9452e8a25",
+  "validation_result_ref": "architecture/integrations/migration/M1A/VALIDATION_RESULTS.json",
+  "observations": {
+    "schemas_materialized": 10,
+    "templates_materialized": 13,
+    "overlays_materialized": 3,
+    "authorization_templates_materialized": 5,
+    "isolated_packages_generated": 4,
+    "schema_meta_validations": 10,
+    "package_instance_validations": 40,
+    "reproducibility": true,
+    "m0_baseline_preserved": true
+  },
+  "m1_classification": "M1_PASS",
+  "authorization_consumption": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_OF_BOUNDED_RESULT",
+  "failures": [],
+  "divergences": [
+    "PREEXISTING_NON_BLOCKING: scripts/validate_repository.py crashes at the authorized parent because schemas/validation/registries.py treats array-valued registry delta entries as filesystem paths; M1A uses its bounded Draft 2020-12 validator and does not modify that unrelated validator."
+  ],
+  "claims_not_created": [
+    "M2_AUTHORIZED",
+    "SHADOW_REGISTRY_CREATED",
+    "ACTIVE_SELECTOR_CHANGED",
+    "RUNTIME_RESOLVER_IMPLEMENTED",
+    "MODULE_ACTIVATED_OR_INTEGRATED",
+    "GLOBAL_STACK_SELECTED",
+    "PRODUCTION_PROVIDER_SELECTED",
+    "SSE_TEST_147_EXECUTED"
+  ],
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false
+}

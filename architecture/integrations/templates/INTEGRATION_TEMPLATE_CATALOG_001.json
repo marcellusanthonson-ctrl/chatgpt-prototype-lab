@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "template_catalog_id": "INTEGRATION_TEMPLATE_CATALOG_001",
   "project_id": "lab",
-  "status": "DOCUMENTED_NOT_IMPLEMENTED",
+  "status": "EXECUTABLE_ARTIFACTS_MATERIALIZED_VALIDATED",
   "created_at": "2026-07-30",
   "objective": "Define reusable generation templates that reduce manual work while preserving explicit authority and profile-specific controls.",
   "common_templates": [
@@ -21,16 +21,51 @@
     "VALIDATION_EVIDENCE.template.json"
   ],
   "profile_overlays": {
-    "CRITERION_MODULE": ["ACTIVATION_DISCRIMINATION.overlay.json", "NEGATIVE_TRANSFER.overlay.json", "TOKEN_AND_LATENCY.overlay.json"],
-    "KNOWLEDGE_SOURCE": ["PROVENANCE_AND_FRESHNESS.overlay.json", "CANONICAL_OWNERSHIP.overlay.json", "STALE_REMOVAL.overlay.json"],
-    "TOOL_CONNECTOR": ["PERMISSION_SCOPE.overlay.json", "READ_WRITE_SEPARATION.overlay.json", "REVOCATION.overlay.json"],
-    "EXECUTION_CAPABILITY": ["BOUNDED_EXECUTOR.overlay.json", "STOP_CONDITIONS.overlay.json", "OUTPUT_PROVENANCE.overlay.json"],
-    "RUNTIME_INTEGRATION": ["FAILURE_MODES.overlay.json", "OBSERVABILITY.overlay.json", "RECOVERY.overlay.json"],
-    "INFRASTRUCTURE_PROVIDER": ["PORTABLE_OPERATIONAL_TRUST.overlay.json", "COST_AND_RETENTION.overlay.json", "TEARDOWN.overlay.json"]
+    "CRITERION_MODULE": [
+      "ACTIVATION_DISCRIMINATION.overlay.json",
+      "NEGATIVE_TRANSFER.overlay.json",
+      "TOKEN_AND_LATENCY.overlay.json"
+    ],
+    "KNOWLEDGE_SOURCE": [
+      "PROVENANCE_AND_FRESHNESS.overlay.json",
+      "CANONICAL_OWNERSHIP.overlay.json",
+      "STALE_REMOVAL.overlay.json"
+    ],
+    "TOOL_CONNECTOR": [
+      "PERMISSION_SCOPE.overlay.json",
+      "READ_WRITE_SEPARATION.overlay.json",
+      "REVOCATION.overlay.json"
+    ],
+    "EXECUTION_CAPABILITY": [
+      "BOUNDED_EXECUTOR.overlay.json",
+      "STOP_CONDITIONS.overlay.json",
+      "OUTPUT_PROVENANCE.overlay.json"
+    ],
+    "RUNTIME_INTEGRATION": [
+      "FAILURE_MODES.overlay.json",
+      "OBSERVABILITY.overlay.json",
+      "RECOVERY.overlay.json"
+    ],
+    "INFRASTRUCTURE_PROVIDER": [
+      "PORTABLE_OPERATIONAL_TRUST.overlay.json",
+      "COST_AND_RETENTION.overlay.json",
+      "TEARDOWN.overlay.json"
+    ]
   },
   "track_templates": {
-    "FAST_TRACK": ["FAST_TRACK_GATE_SET.template.json", "SMALL_DISCRIMINATING_TEST.template.json", "DOCUMENTARY_AUTHORIZATION.template.json"],
-    "FULL_TRACK": ["FULL_TRACK_GATE_SET.template.json", "RISK_REVIEW.template.json", "OPERATIONAL_TRUST_PREFLIGHT.template.json", "FULL_TEST.template.json", "EXTERNAL_AUDIT.template.json", "BOUNDED_PILOT.template.json"]
+    "FAST_TRACK": [
+      "FAST_TRACK_GATE_SET.template.json",
+      "SMALL_DISCRIMINATING_TEST.template.json",
+      "DOCUMENTARY_AUTHORIZATION.template.json"
+    ],
+    "FULL_TRACK": [
+      "FULL_TRACK_GATE_SET.template.json",
+      "RISK_REVIEW.template.json",
+      "OPERATIONAL_TRUST_PREFLIGHT.template.json",
+      "FULL_TEST.template.json",
+      "EXTERNAL_AUDIT.template.json",
+      "BOUNDED_PILOT.template.json"
+    ]
   },
   "authorization_templates": [
     "DOCUMENTARY_DESIGN_AUTHORIZATION.template.json",
@@ -52,12 +87,49 @@
     "PLACE_PROVIDER_SPECIFIC_VALUES_ONLY_IN_ADAPTER_OVERLAYS"
   ],
   "expected_reuse_targets": {
-    "generated_artifact_ratio_minimum": 0.70,
-    "reused_fixture_ratio_target": 0.60,
+    "generated_artifact_ratio_minimum": 0.7,
+    "reused_fixture_ratio_target": 0.6,
     "implicit_authorizations_allowed": 0,
     "packages_without_rollback_allowed": 0
   },
   "authority_effect": "NONE",
   "runtime_effect": "NONE",
-  "implementation_authorized": false
+  "implementation_authorized": false,
+  "executable_paths": {
+    "common_templates": [
+      "architecture/integrations/templates/INTEGRATION_INTAKE.template.json",
+      "architecture/integrations/templates/MANIFEST.template.json",
+      "architecture/integrations/templates/ACTIVATION_CONTRACT.template.json",
+      "architecture/integrations/templates/INPUT_CONTRACT.template.json",
+      "architecture/integrations/templates/RESULT_CONTRACT.template.json",
+      "architecture/integrations/templates/COMPOSITION_CONTRACT.template.json",
+      "architecture/integrations/templates/CONFLICTS.template.json",
+      "architecture/integrations/templates/MISUSE_RISKS.template.json",
+      "architecture/integrations/templates/FIXTURES.template.json",
+      "architecture/integrations/templates/TEST_DESIGN.template.json",
+      "architecture/integrations/templates/SCORING_AND_GATES.template.json",
+      "architecture/integrations/templates/ROLLBACK.template.json",
+      "architecture/integrations/templates/VALIDATION_EVIDENCE.template.json"
+    ],
+    "criterion_module_overlays": [
+      "architecture/integrations/templates/criterion-module/ACTIVATION_DISCRIMINATION.overlay.json",
+      "architecture/integrations/templates/criterion-module/NEGATIVE_TRANSFER.overlay.json",
+      "architecture/integrations/templates/criterion-module/TOKEN_AND_LATENCY.overlay.json"
+    ],
+    "draft_only_authorization_templates": [
+      "architecture/integrations/templates/authorizations/DOCUMENTARY_DESIGN_AUTHORIZATION.template.json",
+      "architecture/integrations/templates/authorizations/TEST_EXECUTION_AUTHORIZATION.template.json",
+      "architecture/integrations/templates/authorizations/READ_ONLY_EXTERNAL_AUDIT_AUTHORIZATION.template.json",
+      "architecture/integrations/templates/authorizations/INTEGRATION_AUTHORIZATION.template.json",
+      "architecture/integrations/templates/authorizations/SUSPENSION_OR_ROLLBACK_AUTHORIZATION.template.json"
+    ]
+  },
+  "materialization": {
+    "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_M1A_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_MATERIALIZATION_153.json",
+    "common_template_count": 13,
+    "criterion_module_overlay_count": 3,
+    "authorization_template_count": 5,
+    "runtime_effect": "NONE",
+    "implementation_authorized": false
+  }
 }

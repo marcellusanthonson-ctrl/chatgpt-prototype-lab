@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_type": "INPUT_CONTRACT",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false,
+  "required_inputs": [
+    "task_family",
+    "requested_output"
+  ],
+  "optional_inputs": [
+    "project_id",
+    "artifact_type",
+    "claim_types",
+    "interaction_surface",
+    "human_preference_owner",
+    "risk_signals"
+  ],
+  "forbidden_inputs": [
+    "IMPLICIT_AUTHORIZATION",
+    "UNDECLARED_PROVIDER_SPECIFIC_CORE_VALUE",
+    "UNREFERENCED_MATERIAL_CLAIM"
+  ],
+  "minimum_context_rule": "ONLY_EXPLICIT_INPUTS_AND_REFERENCED_CANONICAL_SOURCES"
+}

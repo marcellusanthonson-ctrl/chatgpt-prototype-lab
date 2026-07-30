@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_type": "COMPOSITION_CONTRACT",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false,
+  "precedence_class": 3,
+  "compatible_with": [
+    "CONTEXTUAL_VISUAL_PREFERENCE",
+    "DESIGN_CRITERION",
+    "EVIDENCE_AND_CLAIMS"
+  ],
+  "conflicts_with": {
+    "status": "UNRESOLVED",
+    "reason": "NOT_ESTABLISHED_BY_CANONICAL_SOURCES",
+    "required_resolution": "SUPPLY_CONFLICTS_WITH_THROUGH_A_SEPARATE_GOVERNED_SOURCE",
+    "source_refs": [
+      "architecture/integrations/migration/M0/CURRENT_COMPOSITION_RULES.json"
+    ]
+  },
+  "supersedes": [],
+  "maximum_role": "ACCESSIBILITY_CONSTRAINT_WITHOUT_AESTHETIC_SELECTION",
+  "conflict_keys": [],
+  "composition_rules": [
+    "EVALUATE_ALL_MODULES_IN_DECLARED_ORDER",
+    "ACTIVATE_A_MODULE_ONLY_WHEN_ITS_SIGNAL_RULE_MATCHES",
+    "EVIDENCE_AND_CLAIMS_PRECEDES_RECOMMENDATION",
+    "WEB_ACCESSIBILITY_CONSTRAINS_INTERFACE_OUTPUT_WITHOUT_SELECTING_AN_AESTHETIC",
+    "CONTEXTUAL_VISUAL_PREFERENCE_NEVER_BECOMES_A_UNIVERSAL_STYLE",
+    "NO_MATCH_RETURNS_EMPTY_MODULE_SET"
+  ],
+  "exclusions": [
+    {
+      "when_any": [
+        "TASK_CASUAL_CONVERSATION",
+        "TASK_TRANSLATION_ONLY",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE",
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "exclude": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY",
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ]
+    }
+  ],
+  "empty_set_abstention": true
+}

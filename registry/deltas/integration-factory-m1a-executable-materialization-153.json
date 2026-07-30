@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "integration-factory-m1a-executable-materialization-153",
+  "recorded_at": "2026-07-30T17:39:00-04:00",
+  "project_id": "lab",
+  "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_M1A_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_MATERIALIZATION_153.json",
+  "authorization_status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+  "brief_ref": "projects/lab/briefs/CODEX_M1A_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_MATERIALIZATION_001.json",
+  "changes": [
+    "M1A_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_MATERIALIZATION",
+    "FOUR_ISOLATED_CRITERION_MODULE_CANDIDATE_PACKAGES_GENERATED",
+    "M1_MECHANICALLY_RERUN",
+    "PEND_LAB_033_CLOSED_ONLY_AFTER_ALL_GATES_PASS"
+  ],
+  "state_after": {
+    "migration_phase": "M1_PASS",
+    "blocking_pending": null,
+    "m2_authorized": false,
+    "shadow_registry_created": false,
+    "active_selector_modified": false,
+    "runtime_effect": "NONE",
+    "integration_effect": "NONE",
+    "sse_test_147": "UNCHANGED_SEPARATE_AUTHORIZATION",
+    "global_preferred_stack": "NONE",
+    "production_provider": "NONE"
+  },
+  "validation_result_ref": "architecture/integrations/migration/M1A/VALIDATION_RESULTS.json",
+  "evidence_ref": "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M1A-153.json",
+  "failures": [],
+  "divergences": [
+    "PREEXISTING_NON_BLOCKING: scripts/validate_repository.py crashes at the authorized parent because schemas/validation/registries.py treats array-valued registry delta entries as filesystem paths; M1A uses its bounded Draft 2020-12 validator and does not modify that unrelated validator."
+  ],
+  "next_action": "SEPARATE_HUMAN_DECISION_AND_AUTHORIZATION_REQUIRED_BEFORE_ANY_M2_WORK",
+  "authority_effect": "NONE_AFTER_CONSUMPTION",
+  "runtime_effect": "NONE"
+}

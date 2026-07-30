@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "template_id": "SCORING_AND_GATES",
+  "status": "EXECUTABLE_TEMPLATE",
+  "profile": "COMMON",
+  "target_artifact": "SCORING_AND_GATES.json",
+  "schema_ref": "architecture/integrations/schemas/scoring-and-gates.schema.json",
+  "render": {
+    "schema_version": "1.0.0",
+    "artifact_type": "SCORING_AND_GATES",
+    "authority_effect": "NONE",
+    "runtime_effect": "NONE",
+    "automatic_activation": false,
+    "implementation_authorized": false,
+    "dimensions": {
+      "$source": "scoring_dimensions"
+    },
+    "penalties": {
+      "$source": "scoring_penalties"
+    },
+    "thresholds": {
+      "$source": "scoring_thresholds"
+    },
+    "zero_tolerance_events": [
+      "AUTHORITY_INFERENCE",
+      "SELECTOR_DRIFT",
+      "RUNTIME_EFFECT",
+      "M0_BASELINE_DIVERGENCE"
+    ],
+    "aggregation": {
+      "$source": "aggregation"
+    },
+    "promotion_rules": [
+      "TECHNICAL_PASS_DOES_NOT_AUTHORIZE_TEST_EXECUTION",
+      "TESTED_DOES_NOT_IMPLY_AUTHORIZED",
+      "AUDITED_DOES_NOT_IMPLY_INTEGRATED",
+      "SEPARATE_HUMAN_AUTHORIZATION_REQUIRED"
+    ]
+  },
+  "unresolved_policy": {
+    "representation": "STRUCTURED_UNRESOLVED_OBJECT",
+    "inference_forbidden": true,
+    "silent_default_forbidden": true
+  },
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false
+}

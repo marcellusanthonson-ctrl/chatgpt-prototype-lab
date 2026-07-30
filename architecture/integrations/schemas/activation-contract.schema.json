@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lab.local/architecture/integrations/schemas/activation-contract.schema.json",
+  "title": "ACTIVATION_CONTRACT",
+  "description": "Executable provider-neutral M1A contract. Structured UNRESOLVED values are permitted only where canonical sources do not establish a value.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "artifact_type",
+    "authority_effect",
+    "runtime_effect",
+    "automatic_activation",
+    "implementation_authorized",
+    "active_when",
+    "inactive_when",
+    "limited_when",
+    "fail_closed_when"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "artifact_type": {
+      "const": "ACTIVATION_CONTRACT"
+    },
+    "authority_effect": {
+      "const": "NONE"
+    },
+    "runtime_effect": {
+      "const": "NONE"
+    },
+    "automatic_activation": {
+      "const": false
+    },
+    "implementation_authorized": {
+      "const": false
+    },
+    "module_id": {
+      "enum": [
+        "EVIDENCE_AND_CLAIMS",
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY",
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ]
+    },
+    "active_when": {
+      "type": "object",
+      "minProperties": 2
+    },
+    "inactive_when": {
+      "type": "object",
+      "minProperties": 1
+    },
+    "limited_when": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "$ref": "#/$defs/unresolved"
+        }
+      ]
+    },
+    "fail_closed_when": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "$defs": {
+    "unresolved": {
+      "type": "object",
+      "required": [
+        "status",
+        "reason",
+        "required_resolution",
+        "source_refs"
+      ],
+      "properties": {
+        "status": {
+          "const": "UNRESOLVED"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "required_resolution": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": true,
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false
+}

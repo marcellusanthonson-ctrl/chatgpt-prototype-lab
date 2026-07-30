@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_type": "TEST_DESIGN",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false,
+  "test_id": "DRAFT_CONTEXTUAL_VISUAL_PREFERENCE_ACTIVATION_DISCRIMINATION_001",
+  "status": "DRAFT_NOT_AUTHORIZED",
+  "arms": [
+    {
+      "status": "UNRESOLVED",
+      "reason": "NOT_ESTABLISHED_BY_CANONICAL_SOURCES",
+      "required_resolution": "SUPPLY_TEST_ARMS_THROUGH_A_SEPARATE_GOVERNED_SOURCE",
+      "source_refs": [
+        "architecture/integrations/migration/M0/BASELINE_FIXTURES.json"
+      ]
+    }
+  ],
+  "fixture_families": [
+    "ACTIVATION_DISCRIMINATION",
+    "NEGATIVE_TRANSFER",
+    "BASELINE_PRESERVATION"
+  ],
+  "minimum_outputs": {
+    "status": "UNRESOLVED",
+    "reason": "NOT_ESTABLISHED_BY_CANONICAL_SOURCES",
+    "required_resolution": "SUPPLY_MINIMUM_OUTPUTS_THROUGH_A_SEPARATE_GOVERNED_SOURCE",
+    "source_refs": [
+      "architecture/integrations/migration/M0/BASELINE_FIXTURES.json"
+    ]
+  },
+  "blinding": {
+    "status": "UNRESOLVED",
+    "reason": "NOT_ESTABLISHED_BY_CANONICAL_SOURCES",
+    "required_resolution": "SUPPLY_BLINDING_THROUGH_A_SEPARATE_GOVERNED_SOURCE",
+    "source_refs": [
+      "architecture/integrations/migration/M0/BASELINE_FIXTURES.json"
+    ]
+  },
+  "telemetry": [
+    "NORMALIZED_RESULT_DIGEST",
+    "FAILURE_AND_DIVERGENCE_LOG",
+    "TOKEN_AND_LATENCY_PLACEHOLDER_WITHOUT_RUNTIME_MEASUREMENT"
+  ],
+  "stop_conditions": [
+    "BASELINE_HASH_MISMATCH",
+    "AUTHORITY_INFERENCE",
+    "RUNTIME_EFFECT_DETECTED",
+    "MISSING_REFERENCE"
+  ]
+}

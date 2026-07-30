@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "template_id": "ACTIVATION_CONTRACT",
+  "status": "EXECUTABLE_TEMPLATE",
+  "profile": "COMMON",
+  "target_artifact": "ACTIVATION_CONTRACT.json",
+  "schema_ref": "architecture/integrations/schemas/activation-contract.schema.json",
+  "render": {
+    "schema_version": "1.0.0",
+    "artifact_type": "ACTIVATION_CONTRACT",
+    "authority_effect": "NONE",
+    "runtime_effect": "NONE",
+    "automatic_activation": false,
+    "implementation_authorized": false,
+    "module_id": {
+      "$source": "module_id"
+    },
+    "active_when": {
+      "$source": "active_when"
+    },
+    "inactive_when": {
+      "$source": "inactive_when"
+    },
+    "limited_when": {
+      "$source": "limited_when"
+    },
+    "fail_closed_when": [
+      "SOURCE_REFERENCE_MISSING",
+      "ACTIVATION_INPUT_INCOMPLETE",
+      "AUTHORITY_INFERENCE_ATTEMPT"
+    ]
+  },
+  "unresolved_policy": {
+    "representation": "STRUCTURED_UNRESOLVED_OBJECT",
+    "inference_forbidden": true,
+    "silent_default_forbidden": true
+  },
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false
+}

@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "id": "PEND-LAB-033",
   "project_id": "lab",
-  "status": "OPEN",
+  "status": "COMPLETED_M1_PASS",
   "type": "INTEGRATION_FACTORY_M1_EXECUTABLE_ARTIFACT_GAP",
   "subject": "Materialize executable schemas, templates and CRITERION_MODULE overlays before M1 can pass or M2 shadow registry work can begin",
   "priority": "HIGH",
@@ -48,5 +48,11 @@
   ],
   "recommended_successor_action": "M1A_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_MATERIALIZATION",
   "authority_effect": "NONE",
-  "runtime_effect": "NONE"
+  "runtime_effect": "NONE",
+  "closed_at": "2026-07-30T17:39:00-04:00",
+  "closed_by_authorization": "projects/lab/authorizations/AUTHORIZATION_LAB_M1A_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_MATERIALIZATION_153.json",
+  "resolution_evidence": "architecture/integrations/migration/M1A/VALIDATION_RESULTS.json",
+  "m1_classification": "M1_PASS",
+  "m2_authorized": false,
+  "shadow_registry_authorized": false
 }

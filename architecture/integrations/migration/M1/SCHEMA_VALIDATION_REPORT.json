@@ -2,219 +2,55 @@
   "schema_version": "1.0.0",
   "validation_report_id": "INTEGRATION_FACTORY_M1_SCHEMA_VALIDATION_REPORT_001",
   "project_id": "lab",
-  "migration_phase": "M1_SCHEMA_AND_TEMPLATE_VALIDATION",
-  "status": "BLOCKED_MISSING_EXECUTABLE_SCHEMA_FILES",
-  "recorded_at": "2026-07-30",
-  "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M1_SCHEMA_TEMPLATE_VALIDATION_151.json",
-  "execution_baseline_head": "833e1cf2eff86144e8633f45cfbcf3eac9203888",
-  "inputs": [
-    {
-      "path": "architecture/integrations/schemas/INTEGRATION_PACKAGE_SCHEMA_SET_001.json",
-      "git_blob_sha": "fd1e49798ccd87ba03069bea121069e82549fb34",
-      "role": "SCHEMA_DESCRIPTOR_CATALOG"
-    },
-    {
-      "path": "architecture/integrations/templates/INTEGRATION_TEMPLATE_CATALOG_001.json",
-      "git_blob_sha": "552f44ea5695ab2d3197d8ad70e715a69c3d916e",
-      "role": "TEMPLATE_DESCRIPTOR_CATALOG"
-    },
-    {
-      "path": "architecture/integrations/migration/M0/CURRENT_MODULE_INVENTORY.json",
-      "git_blob_sha": "8dd8a5c6fe8b6feadd439353ebbf11343b3add40",
-      "role": "MODULE_BASELINE"
-    },
-    {
-      "path": "architecture/integrations/migration/M0/CURRENT_SIGNAL_MAP.json",
-      "git_blob_sha": "195a5148f16127114eaa1974ac37cd3ef86eb9ec",
-      "role": "SIGNAL_BASELINE"
-    },
-    {
-      "path": "architecture/integrations/migration/M0/CURRENT_COMPOSITION_RULES.json",
-      "git_blob_sha": "40d3d83d1b42eab6082d64936afd78f71780750b",
-      "role": "COMPOSITION_BASELINE"
-    },
-    {
-      "path": "architecture/integrations/migration/M0/BASELINE_FIXTURES.json",
-      "git_blob_sha": "cb32509cae7ac06943b1af3f35e40de4607761ff",
-      "role": "FIXTURE_BASELINE"
-    },
-    {
-      "path": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/CONTRACT.json",
-      "git_blob_sha": "1814d29d0bcdc94421c409658a39a1f665ae828b",
-      "role": "CURRENT_LAYER_CONTRACT"
-    },
-    {
-      "path": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/RESULT_CONTRACT.json",
-      "git_blob_sha": "82abe8a267cd2dee10e1a5e7ecceea0655f96bd3",
-      "role": "CURRENT_RESULT_CONTRACT"
-    }
+  "migration_phase": "M1_SCHEMA_AND_TEMPLATE_VALIDATION_RERUN_AFTER_M1A",
+  "status": "PASS_ALL_EXECUTABLE_SCHEMAS_VALID",
+  "recorded_at": "2026-07-30T17:39:00-04:00",
+  "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_M1A_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_MATERIALIZATION_153.json",
+  "execution_baseline_head": "babcbf5427dfc555a93cc65ba99b34e9452e8a25",
+  "executable_dialect": "https://json-schema.org/draft/2020-12/schema",
+  "schema_files": [
+    "architecture/integrations/schemas/integration-intake.schema.json",
+    "architecture/integrations/schemas/integration-manifest.schema.json",
+    "architecture/integrations/schemas/activation-contract.schema.json",
+    "architecture/integrations/schemas/input-contract.schema.json",
+    "architecture/integrations/schemas/result-contract.schema.json",
+    "architecture/integrations/schemas/composition-contract.schema.json",
+    "architecture/integrations/schemas/test-design.schema.json",
+    "architecture/integrations/schemas/scoring-and-gates.schema.json",
+    "architecture/integrations/schemas/rollback.schema.json",
+    "architecture/integrations/schemas/operational-trust-preflight.schema.json"
   ],
-  "descriptor_validation": {
-    "json_syntax": "PASS_FOR_ALL_REVIEWED_DESCRIPTOR_AND_BASELINE_FILES",
-    "declared_common_schema_count": 10,
-    "declared_profile_count": 6,
-    "criterion_module_count": 4,
-    "cross_schema_invariant_count": 10,
-    "validation_level_count": 7
+  "mechanical_validation": {
+    "json_parse": "PASS",
+    "declared_schema_count": 10,
+    "materialized_schema_count": 10,
+    "meta_schema_validations": 10,
+    "package_instance_validations": 40,
+    "cross_references": "PASS",
+    "unresolved_representation": "PASS",
+    "second_run_equivalence": "PASS"
   },
-  "artifact_existence_checks": {
-    "schema_catalog_exists": true,
-    "representative_executable_schema_path": "architecture/integrations/schemas/integration-intake.schema.json",
-    "representative_executable_schema_fetch_result": "NOT_FOUND_404",
-    "code_search_result": "SCHEMA_NAME_RESOLVES_ONLY_TO_DESCRIPTOR_CATALOG",
-    "conclusion": "EXECUTABLE_JSON_SCHEMA_ARTIFACTS_NOT_ESTABLISHED"
-  },
-  "module_schema_compatibility": [
-    {
-      "module_id": "EVIDENCE_AND_CLAIMS",
-      "profile": "CRITERION_MODULE",
-      "resolvable_from_current_sources": [
-        "integration_id",
-        "profile",
-        "consumer",
-        "active_when",
-        "source_refs",
-        "authority_effect",
-        "runtime_effect",
-        "result_boundaries"
-      ],
-      "not_explicitly_available_per_module": [
-        "producer",
-        "module_version",
-        "value_hypothesis",
-        "rollback_strategy",
-        "inactive_when",
-        "limited_when",
-        "fail_closed_when",
-        "automatic_activation",
-        "compatibility",
-        "conflicts",
-        "test_design",
-        "scoring_thresholds"
-      ],
-      "status": "PROVISIONALLY_MAPPABLE_NOT_SCHEMA_VALIDATED"
-    },
-    {
-      "module_id": "DESIGN_CRITERION",
-      "profile": "CRITERION_MODULE",
-      "resolvable_from_current_sources": [
-        "integration_id",
-        "profile",
-        "consumer",
-        "active_when",
-        "source_refs",
-        "authority_effect",
-        "runtime_effect",
-        "minimum_visual_foundation_dependency",
-        "result_boundaries"
-      ],
-      "not_explicitly_available_per_module": [
-        "producer",
-        "module_version",
-        "value_hypothesis",
-        "rollback_strategy",
-        "inactive_when",
-        "limited_when",
-        "fail_closed_when",
-        "automatic_activation",
-        "compatibility",
-        "conflicts",
-        "test_design",
-        "scoring_thresholds"
-      ],
-      "status": "PROVISIONALLY_MAPPABLE_NOT_SCHEMA_VALIDATED"
-    },
-    {
-      "module_id": "WEB_ACCESSIBILITY",
-      "profile": "CRITERION_MODULE",
-      "resolvable_from_current_sources": [
-        "integration_id",
-        "profile",
-        "consumer",
-        "active_when",
-        "source_refs",
-        "authority_effect",
-        "runtime_effect",
-        "accessibility_claim_boundaries",
-        "result_states"
-      ],
-      "not_explicitly_available_per_module": [
-        "producer",
-        "module_version",
-        "value_hypothesis",
-        "rollback_strategy",
-        "inactive_when",
-        "limited_when",
-        "fail_closed_when",
-        "automatic_activation",
-        "compatibility",
-        "conflicts",
-        "test_design",
-        "scoring_thresholds"
-      ],
-      "status": "PROVISIONALLY_MAPPABLE_NOT_SCHEMA_VALIDATED"
-    },
-    {
-      "module_id": "CONTEXTUAL_VISUAL_PREFERENCE",
-      "profile": "CRITERION_MODULE",
-      "resolvable_from_current_sources": [
-        "integration_id",
-        "profile",
-        "consumer",
-        "active_when",
-        "source_refs",
-        "authority_effect",
-        "runtime_effect",
-        "context_boundary",
-        "human_decision_boundary"
-      ],
-      "not_explicitly_available_per_module": [
-        "producer",
-        "module_version",
-        "value_hypothesis",
-        "rollback_strategy",
-        "inactive_when",
-        "limited_when",
-        "fail_closed_when",
-        "automatic_activation",
-        "compatibility",
-        "conflicts",
-        "test_design",
-        "scoring_thresholds"
-      ],
-      "status": "PROVISIONALLY_MAPPABLE_NOT_SCHEMA_VALIDATED"
-    }
-  ],
-  "cross_schema_invariant_review": {
-    "AUTHORITY_EFFECT_MUST_BE_EXPLICIT": "PASS_DOCUMENTARY",
-    "RUNTIME_EFFECT_MUST_BE_EXPLICIT": "PASS_DOCUMENTARY",
-    "AUTOMATIC_AUTHORITY_MUST_BE_FALSE": "PASS_DOCUMENTARY",
-    "ROLLBACK_REQUIRED_BEFORE_TEST_READY": "NOT_TESTABLE_WITHOUT_ROLLBACK_INSTANCES",
-    "PRODUCER_CONSUMER_AND_VERSION_REQUIRED": "PARTIAL_CURRENT_MODULES_LACK_PER_MODULE_PRODUCER_AND_VERSION",
-    "SOURCE_REFS_REQUIRED_FOR_MATERIAL_CLAIMS": "PASS_CURRENT_SELECTOR",
-    "PROVIDER_ADAPTER_CANNOT_DEFINE_PORTABLE_STANDARD": "NOT_APPLICABLE_TO_CURRENT_CRITERION_MODULES",
-    "GLOBAL_STACK_SELECTION_FORBIDDEN": "PASS_DOCUMENTARY",
-    "TESTED_DOES_NOT_IMPLY_AUTHORIZED": "PASS_DOCUMENTARY",
-    "AUDITED_DOES_NOT_IMPLY_INTEGRATED": "PASS_DOCUMENTARY"
-  },
-  "execution_checks": {
-    "json_schema_dialect_resolved": false,
-    "machine_validatable_schema_files_present": false,
-    "schema_instance_validation_executed": false,
-    "cross_reference_validator_executed": false,
-    "reason": "THE_SCHEMA_SET_IS_A_DESCRIPTOR_CATALOG_AND_DOES_NOT_YET MATERIALIZE_THE_DECLARED_SCHEMA_FILES"
+  "m0_baseline_preservation": {
+    "module_count": true,
+    "distinct_activation_signals": true,
+    "composition_rule_count": true,
+    "exclusion_block_count": true,
+    "empty_set_abstention": true,
+    "fixture_count": true,
+    "selector_blob_sha": true,
+    "fixture_blob_sha": true
   },
   "exit_criteria": {
-    "ALL_COMMON_SCHEMAS_VALID": "BLOCKED",
-    "ALL_PROFILE_OVERLAYS_RESOLVE": "BLOCKED_PENDING_TEMPLATE_REPORT",
-    "NO_AUTHORITY_INFERENCE": "PASS"
+    "ALL_COMMON_SCHEMAS_VALID": "PASS",
+    "ALL_PROFILE_OVERLAYS_RESOLVE": "PASS",
+    "NO_AUTHORITY_INFERENCE": "PASS",
+    "M0_BASELINE_PRESERVED": "PASS",
+    "ACTIVE_SELECTOR_UNCHANGED": "PASS",
+    "NO_RUNTIME_EFFECT": "PASS"
   },
-  "required_resolution": [
-    "Select and declare the executable JSON Schema dialect compatible with repository conventions.",
-    "Materialize the ten declared common schema files.",
-    "Materialize the common templates and CRITERION_MODULE overlays.",
-    "Create four generated module instances using only explicit values or unresolved markers.",
-    "Run machine validation and rerun M1 before M2."
+  "failures": [],
+  "divergences": [
+    "PREEXISTING_NON_BLOCKING: scripts/validate_repository.py crashes at the authorized parent because schemas/validation/registries.py treats array-valued registry delta entries as filesystem paths; M1A uses its bounded Draft 2020-12 validator and does not modify that unrelated validator."
   ],
   "authority_effect": "NONE",
   "runtime_effect": "NONE",

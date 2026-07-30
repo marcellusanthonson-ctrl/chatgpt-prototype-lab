@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_type": "RESULT_CONTRACT",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false,
+  "result_envelope": [
+    "activated_modules",
+    "applicable_source_refs",
+    "basis_classes",
+    "claim_limits"
+  ],
+  "allowed_claims": [
+    "DESIGN_CRITERION_RECOMMENDATION",
+    "SCOPED_VISUAL_TECHNICAL_RESULT"
+  ],
+  "required_uncertainties": [
+    "MATERIAL_UNCERTAINTY",
+    "UNEXECUTED_TEST_LAYER",
+    "UNRESOLVED_CANONICAL_VALUE"
+  ],
+  "evidence_requirements": [
+    "SOURCE_REFS_FOR_MATERIAL_CLAIMS",
+    "SEPARATE_EVIDENCE_FROM_AUTHORIZATION"
+  ]
+}

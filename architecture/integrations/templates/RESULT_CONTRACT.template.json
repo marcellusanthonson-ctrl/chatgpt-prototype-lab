@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "template_id": "RESULT_CONTRACT",
+  "status": "EXECUTABLE_TEMPLATE",
+  "profile": "COMMON",
+  "target_artifact": "RESULT_CONTRACT.json",
+  "schema_ref": "architecture/integrations/schemas/result-contract.schema.json",
+  "render": {
+    "schema_version": "1.0.0",
+    "artifact_type": "RESULT_CONTRACT",
+    "authority_effect": "NONE",
+    "runtime_effect": "NONE",
+    "automatic_activation": false,
+    "implementation_authorized": false,
+    "result_envelope": {
+      "$source": "result_envelope"
+    },
+    "allowed_claims": {
+      "$source": "allowed_claims"
+    },
+    "required_uncertainties": {
+      "$source": "required_uncertainties"
+    },
+    "evidence_requirements": {
+      "$source": "evidence_requirements"
+    }
+  },
+  "unresolved_policy": {
+    "representation": "STRUCTURED_UNRESOLVED_OBJECT",
+    "inference_forbidden": true,
+    "silent_default_forbidden": true
+  },
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false
+}

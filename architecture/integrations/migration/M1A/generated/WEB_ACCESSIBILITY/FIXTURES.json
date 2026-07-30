@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_type": "FIXTURES",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false,
+  "module_id": "WEB_ACCESSIBILITY",
+  "baseline_fixture_blob_sha": "de4793dedc9646e388bdce5ccd1807da8a711845",
+  "all_baseline_fixture_refs": [
+    "CRIT-FIX-001",
+    "CRIT-FIX-002",
+    "CRIT-FIX-003",
+    "CRIT-FIX-004",
+    "CRIT-FIX-005",
+    "CRIT-FIX-006",
+    "CRIT-FIX-007",
+    "CRIT-FIX-008",
+    "CRIT-FIX-009",
+    "CRIT-FIX-010",
+    "CRIT-FIX-011",
+    "CRIT-FIX-012",
+    "CRIT-FIX-013"
+  ],
+  "applicable_fixture_refs": [
+    "CRIT-FIX-002",
+    "CRIT-FIX-005",
+    "CRIT-FIX-007",
+    "CRIT-FIX-008",
+    "CRIT-FIX-009",
+    "CRIT-FIX-011",
+    "CRIT-FIX-012",
+    "CRIT-FIX-013"
+  ],
+  "negative_transfer_fixture_refs": [
+    "CRIT-FIX-001",
+    "CRIT-FIX-006"
+  ],
+  "fixture_source_ref": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/ACCEPTANCE_FIXTURES.json"
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_type": "ACTIVATION_CONTRACT",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false,
+  "module_id": "WEB_ACCESSIBILITY",
+  "active_when": {
+    "mode": "ANY",
+    "signals": [
+      "TASK_UI",
+      "TASK_UX",
+      "TASK_HTML",
+      "TASK_WEB_INTERFACE",
+      "TASK_FORM",
+      "TASK_INTERACTIVE_CONTROL",
+      "TASK_RESPONSIVE",
+      "TASK_MOTION",
+      "CLAIM_ACCESSIBILITY"
+    ]
+  },
+  "inactive_when": {
+    "mode": "NO_ACTIVATION_RULE_MATCH_OR_APPLICABLE_EXCLUSION",
+    "exclusion_signals": [
+      "TASK_CASUAL_CONVERSATION",
+      "TASK_TRANSLATION_ONLY",
+      "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE",
+      "TASK_SIMPLE_ARITHMETIC"
+    ]
+  },
+  "limited_when": {
+    "status": "UNRESOLVED",
+    "reason": "NOT_ESTABLISHED_BY_CANONICAL_SOURCES",
+    "required_resolution": "SUPPLY_LIMITED_WHEN_THROUGH_A_SEPARATE_GOVERNED_SOURCE",
+    "source_refs": [
+      "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json"
+    ]
+  },
+  "fail_closed_when": [
+    "SOURCE_REFERENCE_MISSING",
+    "ACTIVATION_INPUT_INCOMPLETE",
+    "AUTHORITY_INFERENCE_ATTEMPT"
+  ],
+  "profile_controls": {
+    "activation_discrimination": {
+      "required": true,
+      "positive_fixture_refs": [
+        "CRIT-FIX-002",
+        "CRIT-FIX-005",
+        "CRIT-FIX-007",
+        "CRIT-FIX-008",
+        "CRIT-FIX-009",
+        "CRIT-FIX-011",
+        "CRIT-FIX-012",
+        "CRIT-FIX-013"
+      ],
+      "negative_fixture_refs": [
+        "CRIT-FIX-001",
+        "CRIT-FIX-006"
+      ],
+      "empty_set_preserved": true
+    }
+  }
+}

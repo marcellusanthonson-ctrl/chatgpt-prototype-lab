@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "template_id": "CONFLICTS",
+  "status": "EXECUTABLE_TEMPLATE",
+  "profile": "COMMON",
+  "target_artifact": "CONFLICTS.json",
+  "schema_ref": null,
+  "render": {
+    "schema_version": "1.0.0",
+    "artifact_type": "CONFLICTS",
+    "authority_effect": "NONE",
+    "runtime_effect": "NONE",
+    "automatic_activation": false,
+    "implementation_authorized": false,
+    "module_id": {
+      "$source": "module_id"
+    },
+    "known_conflicts": [],
+    "unassessed_conflicts": {
+      "$source": "conflicts_with"
+    },
+    "conflict_resolution": "FAIL_CLOSED_AND_REQUIRE_SEPARATE_HUMAN_DECISION",
+    "source_refs": {
+      "$source": "source_refs"
+    }
+  },
+  "unresolved_policy": {
+    "representation": "STRUCTURED_UNRESOLVED_OBJECT",
+    "inference_forbidden": true,
+    "silent_default_forbidden": true
+  },
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false
+}

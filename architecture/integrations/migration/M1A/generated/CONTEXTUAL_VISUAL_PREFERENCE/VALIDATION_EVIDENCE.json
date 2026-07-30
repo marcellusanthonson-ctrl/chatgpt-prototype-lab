@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_type": "VALIDATION_EVIDENCE",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false,
+  "module_id": "CONTEXTUAL_VISUAL_PREFERENCE",
+  "status": "VALIDATED_ISOLATED_CANDIDATE_NOT_AUTHORIZED",
+  "schema_validations": [
+    "activation-contract.schema.json",
+    "composition-contract.schema.json",
+    "input-contract.schema.json",
+    "integration-intake.schema.json",
+    "integration-manifest.schema.json",
+    "operational-trust-preflight.schema.json",
+    "result-contract.schema.json",
+    "rollback.schema.json",
+    "scoring-and-gates.schema.json",
+    "test-design.schema.json"
+  ],
+  "baseline_refs": [
+    "architecture/integrations/migration/M0/CURRENT_MODULE_INVENTORY.json",
+    "architecture/integrations/migration/M0/CURRENT_SIGNAL_MAP.json",
+    "architecture/integrations/migration/M0/CURRENT_COMPOSITION_RULES.json",
+    "architecture/integrations/migration/M0/BASELINE_FIXTURES.json"
+  ],
+  "failures": [],
+  "divergences": [],
+  "test_authorized": false,
+  "integration_authorized": false,
+  "profile_controls": {
+    "token_and_latency": {
+      "status": "NOT_MEASURED_M1A_REPOSITORY_ONLY",
+      "runtime_measurement_authorized": false,
+      "future_test_contract_required": true
+    }
+  }
+}

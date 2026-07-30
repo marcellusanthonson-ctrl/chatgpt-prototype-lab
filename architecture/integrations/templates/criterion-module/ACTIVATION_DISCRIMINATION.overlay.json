@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "overlay_id": "ACTIVATION_DISCRIMINATION",
+  "status": "EXECUTABLE_OVERLAY",
+  "profile": "CRITERION_MODULE",
+  "applies_to": "ACTIVATION_CONTRACT.json",
+  "operations": [
+    {
+      "operation": "SET",
+      "path": [
+        "profile_controls",
+        "activation_discrimination"
+      ],
+      "value": {
+        "required": true,
+        "positive_fixture_refs": {
+          "$source": "applicable_fixture_refs"
+        },
+        "negative_fixture_refs": {
+          "$source": "negative_fixture_refs"
+        },
+        "empty_set_preserved": true
+      }
+    }
+  ],
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false
+}

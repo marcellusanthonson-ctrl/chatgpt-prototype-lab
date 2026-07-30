@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "template_id": "INPUT_CONTRACT",
+  "status": "EXECUTABLE_TEMPLATE",
+  "profile": "COMMON",
+  "target_artifact": "INPUT_CONTRACT.json",
+  "schema_ref": "architecture/integrations/schemas/input-contract.schema.json",
+  "render": {
+    "schema_version": "1.0.0",
+    "artifact_type": "INPUT_CONTRACT",
+    "authority_effect": "NONE",
+    "runtime_effect": "NONE",
+    "automatic_activation": false,
+    "implementation_authorized": false,
+    "required_inputs": {
+      "$source": "required_inputs"
+    },
+    "optional_inputs": {
+      "$source": "optional_inputs"
+    },
+    "forbidden_inputs": [
+      "IMPLICIT_AUTHORIZATION",
+      "UNDECLARED_PROVIDER_SPECIFIC_CORE_VALUE",
+      "UNREFERENCED_MATERIAL_CLAIM"
+    ],
+    "minimum_context_rule": "ONLY_EXPLICIT_INPUTS_AND_REFERENCED_CANONICAL_SOURCES"
+  },
+  "unresolved_policy": {
+    "representation": "STRUCTURED_UNRESOLVED_OBJECT",
+    "inference_forbidden": true,
+    "silent_default_forbidden": true
+  },
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_type": "OPERATIONAL_TRUST_PREFLIGHT",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false,
+  "required": false,
+  "reference_environment": "REPOSITORY_ONLY_LOCAL_VALIDATION",
+  "portable_capabilities": [
+    "DECLARATIVE_REPRODUCIBILITY",
+    "TEARDOWN_OR_BASELINE_RESTORATION",
+    "REDACTED_HASHED_EVIDENCE"
+  ],
+  "provider_adapter": "NONE",
+  "gates": [
+    "M0_BASELINE_PRESERVED",
+    "NO_RUNTIME_EFFECT"
+  ],
+  "teardown": [
+    "DISCARD_ISOLATED_GENERATED_PACKAGE"
+  ],
+  "normalized_result": "NOT_REQUIRED"
+}
