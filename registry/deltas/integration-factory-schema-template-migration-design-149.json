@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "INTEGRATION-FACTORY-SCHEMA-TEMPLATE-MIGRATION-DESIGN-149",
+  "project_id": "lab",
+  "created_at": "2026-07-30",
+  "authorization_id": "AUTHORIZATION_LAB_INTEGRATION_FACTORY_SCHEMA_TEMPLATE_MIGRATION_DESIGN_149",
+  "authorization_status": "CONSUMED",
+  "changes": [
+    {
+      "type": "CREATE",
+      "path": "architecture/integrations/schemas/INTEGRATION_PACKAGE_SCHEMA_SET_001.json",
+      "effect": "Defines the provider-neutral schema set and cross-schema invariants."
+    },
+    {
+      "type": "CREATE",
+      "path": "architecture/integrations/templates/INTEGRATION_TEMPLATE_CATALOG_001.json",
+      "effect": "Defines common templates, profile overlays, track templates and generation safeguards."
+    },
+    {
+      "type": "CREATE",
+      "path": "architecture/integrations/STATIC_SELECTOR_TO_INTEGRATION_FACTORY_MIGRATION_PLAN_001.json",
+      "effect": "Defines a phased shadow-first migration preserving current behavior and rollback."
+    },
+    {
+      "type": "CREATE",
+      "path": "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_SCHEMA_TEMPLATE_MIGRATION_DESIGN_149.json",
+      "effect": "Records and consumes the bounded documentary authorization."
+    }
+  ],
+  "verified_non_effects": [
+    "NO_FACTORY_IMPLEMENTATION",
+    "NO_RUNTIME_RESOLVER",
+    "NO_ACTIVE_SELECTOR_CHANGE",
+    "NO_ACTIVE_REGISTRY",
+    "NO_CANDIDATE_ACTIVATION_OR_INTEGRATION",
+    "NO_SSE_OR_PRODUCT_LEADERSHIP_TEST_EXECUTION",
+    "NO_AWS_OR_TERRAFORM",
+    "NO_STACK_OR_PROVIDER_SELECTION"
+  ],
+  "resulting_state": {
+    "schema_design": "DOCUMENTED",
+    "template_design": "DOCUMENTED",
+    "migration_plan": "DOCUMENTED_NOT_AUTHORIZED_FOR_IMPLEMENTATION",
+    "implementation_authorized": false,
+    "active_execution_authority": "NONE_FROM_AUTHORIZATION_149"
+  },
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE"
+}
