@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_PL003_EFFECTIVE_PERMISSION_GATE_OPERATOR_DOCUMENTARY_DESIGN_134",
   "project_id": "lab",
-  "status": "GRANTED",
+  "status": "CONSUMED",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-07-30",
   "approval_source": "USER_INSTRUCTION_CONTINUE_WITH_RECOMMENDED_DEDICATED_GATE_OPERATOR_DESIGN",
@@ -37,6 +37,24 @@
     "projects/lab/briefs/CODEX_PL003_EFFECTIVE_PERMISSION_GATE_OPERATOR_CREATION_001.json",
     "registry/deltas/pl003-effective-permission-gate-operator-design-134.json"
   ],
+  "execution_result": {
+    "status": "DOCUMENTARY_DESIGN_PUBLISHED",
+    "dedicated_role": "PL003EffectivePermissionGateOperator",
+    "trust_source": "IAM_USER:<REDACTED_ACCOUNT_ID>:pl003-bootstrap-operator_WITH_MFA_AND_SOURCE_IDENTITY",
+    "simulation_target": "PL003PreflightProvisioningOperator",
+    "permissions_boundary": "PL003EffectivePermissionGateOperatorBoundary",
+    "identity_policy": "PL003EffectivePermissionGateOperatorReadOnly",
+    "authorized_session_duration_seconds": 900,
+    "aws_calls": 0,
+    "aws_mutations": 0,
+    "terraform_executions": 0,
+    "provisioning_executions": 0,
+    "product_leadership_test_003_executions": 0,
+    "future_creation_authorized": false,
+    "future_gate_execution_authorized": false
+  },
+  "consumed_at": "2026-07-30",
+  "consumption_reason": "DESIGN_FUTURE_CREATION_BRIEF_AND_REGISTRY_DELTA_PUBLISHED",
   "consumption_criterion": "CONSUMED_AFTER_DESIGN_FUTURE_BRIEF_AND_DELTA_ARE_PUBLISHED_AND_REMOTE_HEAD_IS_VERIFIED",
   "post_consumption_authority": "NONE"
 }
