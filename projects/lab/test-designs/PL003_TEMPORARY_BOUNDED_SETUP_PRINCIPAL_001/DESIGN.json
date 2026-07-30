@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0.0",
+  "design_id": "PL003_TEMPORARY_BOUNDED_SETUP_PRINCIPAL_001",
+  "project_id": "lab",
+  "status": "DOCUMENTED_NOT_CREATED_NOT_CONFIGURED",
+  "source_authorization": "AUTHORIZATION_LAB_PL003_TEMPORARY_BOUNDED_SETUP_PRINCIPAL_DOCUMENTARY_DESIGN_136",
+  "source_block": "EVD-LAB-PL003-EFFECTIVE-PERMISSION-GATE-OPERATOR-135-ATTEMPT-001",
+  "purpose": "Provide one disposable MFA-backed setup caller whose only allowed lifecycle is to create, verify and if needed roll back the exact PL003EffectivePermissionGateOperator path, then become unusable.",
+  "principal_model": {
+    "source_principal": "IAM_USER:<ACCOUNT_ID>:pl003-bootstrap-operator",
+    "setup_role": "PL003TemporaryGateOperatorSetup",
+    "setup_role_arn_template": "arn:aws:iam::<ACCOUNT_ID>:role/PL003TemporaryGateOperatorSetup",
+    "final_target_role": "PL003EffectivePermissionGateOperator",
+    "setup_role_is_simulation_target": false,
+    "setup_role_is_persistent_operator": false
+  },
+  "session_contract": {
+    "max_role_session_duration_seconds": 3600,
+    "authorized_session_duration_seconds": 900,
+    "maximum_assume_role_calls": 1,
+    "required_mfa": true,
+    "mfa_max_age_seconds": 300,
+    "required_source_identity": "pl003-temporary-gate-setup",
+    "session_name": "PL003TemporaryGateOperatorSetup",
+    "persistent_credentials": "PROHIBITED",
+    "console_access": "PROHIBITED",
+    "role_chaining": "PROHIBITED"
+  },
+  "trust_policy_contract": {
+    "principal": "arn:aws:iam::<ACCOUNT_ID>:user/pl003-bootstrap-operator",
+    "action": "sts:AssumeRole",
+    "conditions": {
+      "aws:MultiFactorAuthPresent": "true",
+      "aws:MultiFactorAuthAge_max": 300,
+      "sts:SourceIdentity": "pl003-temporary-gate-setup"
+    },
+    "wildcards": false
+  },
+  "permissions_boundary": {
+    "name": "PL003TemporaryGateOperatorSetupBoundary",
+    "note": "Boundary limits maximum permissions and does not grant them.",
+    "allow_actions": [
+      "sts:GetCallerIdentity",
+      "iam:GetPolicy",
+      "iam:GetPolicyVersion",
+      "iam:ListPolicyVersions",
+      "iam:GetRole",
+      "iam:ListRolePolicies",
+      "iam:GetRolePolicy",
+      "iam:ListAttachedRolePolicies",
+      "iam:ListRoleTags",
+      "iam:GetUserPolicy",
+      "iam:ListUserPolicies",
+      "iam:CreatePolicy",
+      "iam:DeletePolicy",
+      "iam:CreateRole",
+      "iam:DeleteRole",
+      "iam:PutRolePermissionsBoundary",
+      "iam:DeleteRolePermissionsBoundary",
+      "iam:PutRolePolicy",
+      "iam:DeleteRolePolicy",
+      "iam:PutUserPolicy",
+      "iam:DeleteUserPolicy"
+    ],
+    "resource_scope": "ONLY_EXACT_PL003_GATE_OPERATOR_BOUNDARY_ROLE_POLICY_AND_BOOTSTRAP_INLINE_GRANT_ARNS_OR_NAMES",
+    "explicit_denies": [
+      "iam:CreateUser",
+      "iam:DeleteUser",
+      "iam:CreateAccessKey",
+      "iam:UpdateAccessKey",
+      "iam:DeleteAccessKey",
+      "iam:CreateLoginProfile",
+      "iam:UpdateLoginProfile",
+      "iam:DeleteLoginProfile",
+      "iam:AttachRolePolicy",
+      "iam:DetachRolePolicy",
+      "iam:AttachUserPolicy",
+      "iam:DetachUserPolicy",
+      "iam:PassRole",
+      "iam:UpdateAssumeRolePolicy",
+      "iam:UpdateRole",
+      "iam:UpdateRoleDescription",
+      "iam:Tag*",
+      "iam:Untag*",
+      "sts:AssumeRole"
+    ]
+  },
+  "identity_policy": {
+    "name": "PL003TemporaryGateOperatorSetupExactMutation",
+    "allow_scope": [
+      "READ_EXACT_COLLISION_BASELINE",
+      "CREATE_EXACT_GATE_OPERATOR_BOUNDARY_POLICY",
+      "CREATE_EXACT_GATE_OPERATOR_ROLE_WITH_BOUNDARY_TRUST_TAGS_AND_MAX_DURATION",
+      "PUT_EXACT_GATE_OPERATOR_INLINE_READ_ONLY_POLICY",
+      "PUT_EXACT_BOOTSTRAP_INLINE_ASSUME_ROLE_GRANT",
+      "READ_BACK_EXACT_CREATED_CONFIGURATION",
+      "DELETE_ONLY_RESOURCES_OR_INLINE_POLICIES_CREATED_BY_SAME_ATTEMPT_FOR_ROLLBACK"
+    ],
+    "resource_constraints": {
+      "boundary_policy": "arn:aws:iam::<ACCOUNT_ID>:policy/PL003EffectivePermissionGateOperatorBoundary",
+      "gate_role": "arn:aws:iam::<ACCOUNT_ID>:role/PL003EffectivePermissionGateOperator",
+      "bootstrap_user": "arn:aws:iam::<ACCOUNT_ID>:user/pl003-bootstrap-operator",
+      "allowed_inline_role_policy_name": "PL003EffectivePermissionGateOperatorReadOnly",
+      "allowed_inline_user_policy_name": "PL003AssumeEffectivePermissionGateOperator"
+    },
+    "condition_requirements": [
+      "iam:PermissionsBoundary_EQUALS_EXACT_GATE_BOUNDARY_ON_CREATE_ROLE",
+      "aws:RequestTag_KEYS_AND_VALUES_EQUAL_CANONICAL_SET_WHERE_SUPPORTED",
+      "NO_RESOURCE_NAME_OR_ARN_OUTSIDE_EXACT_CONTRACT"
+    ],
+    "general_administration": false
+  },
+  "creation_dependency": {
+    "problem": "The setup role cannot create itself without a pre-existing creator.",
+    "accepted_bootstrap_paths_for_future_authorization": [
+      "HUMAN_MANUAL_CONSOLE_CREATION_OF_SETUP_ROLE_FROM_ALREADY_AUTHORIZED_ADMIN_CONTEXT",
+      "EXTERNAL_SECURITY_CUSTODIAN_CREATES_EXACT_SETUP_ROLE",
+      "ONE_TIME_EXISTING_BOUNDED_CREATOR_IS_PROVIDED_OUT_OF_BAND"
+    ],
+    "not_accepted": [
+      "DIRECT_AUTOMATED_MUTATION_WITH_PERSISTENT_BOOTSTRAP_ACCESS_KEYS",
+      "GENERAL_ADMINISTRATOR_USED_BY_CODEX",
+      "ROOT",
+      "PLAN_OPERATOR_ESCALATION"
+    ]
+  },
+  "one_use_lifecycle": {
+    "states": [
+      "ABSENT",
+      "CREATED_UNVERIFIED",
+      "VERIFIED_READY",
+      "SESSION_ACTIVE",
+      "TARGET_CREATED_OR_VERIFIED",
+      "SESSION_TERMINATED",
+      "SETUP_ROLE_DISABLED_OR_DELETED"
+    ],
+    "success_terminal_state": "SETUP_ROLE_DISABLED_OR_DELETED_AFTER_GATE_OPERATOR_VERIFICATION",
+    "failure_terminal_state": "BASELINE_RESTORED_AND_SETUP_ROLE_DISABLED_OR_DELETED",
+    "reuse_prohibited": true,
+    "decommission_required_before_pass": true
+  },
+  "rollback_contract": {
+    "delete_only_attempt_created_objects": true,
+    "restore_bootstrap_inline_policy_exact_baseline": true,
+    "reverse_order": true,
+    "baseline_equivalence_required": true,
+    "setup_role_decommission_even_after_success": true
+  },
+  "future_execution_boundaries": {
+    "setup_role_creation_authorized": false,
+    "setup_role_use_authorized": false,
+    "gate_operator_creation_authorized": false,
+    "effective_permission_gate_authorized": false,
+    "terraform_authorized": false,
+    "provisioning_authorized": false,
+    "test_003_authorized": false
+  },
+  "authority_effect": "NONE"
+}
