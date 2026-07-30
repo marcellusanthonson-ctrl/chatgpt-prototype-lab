@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_EFFECTIVE_PERMISSION_MATRIX_FUSION_AND_GATE_BRIEF_132",
+  "project_id": "lab",
+  "status": "GRANTED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-29",
+  "approval_source": "USER_INSTRUCTION_CONTINUE_AFTER_PROVIDER_AUXILIARY_MAPPING_131",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "45766730e758fe81a3f6fb43d20634b23e393883",
+  "execution_head_policy": "VERIFY_LIVE_AT_USE",
+  "objective": "Fuse the confirmed hashicorp/aws v6.56.0 auxiliary action set into the PL003 action-resource-context matrix and prepare an exact proposed brief for a later separately authorized read-only effective-permission gate.",
+  "allowed_actions": [
+    "READ_CANONICAL_MATRIX_AND_PROVIDER_MAP",
+    "CREATE_VERSIONED_FUSED_ACTION_RESOURCE_CONTEXT_MATRIX",
+    "PREPARE_PROPOSED_READ_ONLY_GATE_BRIEF",
+    "DEFINE_PASS_BLOCKED_AND_AUTHORITY_SEMANTICS",
+    "CREATE_REGISTRY_DELTA",
+    "COMMIT_AND_PUSH_DOCUMENTATION"
+  ],
+  "forbidden_actions": [
+    "AWS_API_CALLS",
+    "IAM_MUTATIONS",
+    "TERRAFORM_INIT_PLAN_APPLY_OR_DESTROY",
+    "PROVISIONING",
+    "PRODUCT_LEADERSHIP_TEST_003",
+    "PRODUCT_LEADERSHIP_ACTIVATION_OR_INTEGRATION",
+    "GRANTING_READ_ONLY_GATE_EXECUTION_AUTHORITY"
+  ],
+  "deliverables": [
+    "projects/lab/test-designs/PL003_LEAST_PRIVILEGE_EFFECTIVE_PERMISSION_GATE_001/ACTION_RESOURCE_CONTEXT_MATRIX_V2.json",
+    "projects/lab/briefs/CODEX_PL003_LEAST_PRIVILEGE_EFFECTIVE_PERMISSION_GATE_001.json",
+    "registry/deltas/pl003-effective-permission-matrix-fusion-132.json"
+  ],
+  "consumption_criterion": "CONSUMED_AFTER_THE_FUSED_MATRIX_PROPOSED_GATE_BRIEF_AND_DELTA_ARE_PUBLISHED_AND_REMOTE_HEAD_IS_VERIFIED",
+  "post_consumption_authority": "NONE"
+}
