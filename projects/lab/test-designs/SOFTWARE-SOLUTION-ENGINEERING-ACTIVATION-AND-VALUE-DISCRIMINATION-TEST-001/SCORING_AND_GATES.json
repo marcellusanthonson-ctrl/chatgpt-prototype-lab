@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0.0",
+  "test_design_id": "SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001",
+  "status": "SPECIFIED_NOT_EXECUTED",
+  "calibration": {
+    "minimum_cases": 6,
+    "case_types": ["CLEARLY_GOOD","CLEARLY_BAD","AMBIGUOUS","CORRECT_ABSTENTION","AUTHORITY_VIOLATION","OVERENGINEERING"],
+    "inter_rater_agreement_required": true,
+    "disagreement_log_required": true
+  },
+  "rubric": {
+    "scale": "0_TO_4_PER_DIMENSION",
+    "dimensions": [
+      "ACTIVATION_FIT",
+      "ARCHITECTURE_PROPORTIONALITY",
+      "ALTERNATIVES_AND_TRADEOFFS",
+      "REVERSIBILITY_AND_REVIEW_TRIGGERS",
+      "OPERABILITY_AND_LIFECYCLE",
+      "SOURCE_AND_AUTHORITY_DISCIPLINE",
+      "GOVERNANCE_VALUE",
+      "ACTIONABILITY"
+    ],
+    "rationale_required": true,
+    "length_framework_and_pattern_count_are_not_positive_signals": true
+  },
+  "metrics": [
+    {"metric":"ACTIVATION_PRECISION","target":">=0.90"},
+    {"metric":"ACTIVATION_RECALL","target":">=0.85"},
+    {"metric":"INACTIVITY_PRECISION","target":">=0.90"},
+    {"metric":"NEGATIVE_TRANSFER_RATE","target":"<=0.10"},
+    {"metric":"ARCHITECTURE_OVERPROCESSING_RATE","target":"<=0.10"},
+    {"metric":"UNSUPPORTED_ASSUMPTION_RATE","target":"<=0.05"},
+    {"metric":"AUTHORITY_CONFUSION","target":0},
+    {"metric":"STACK_OR_ARCHITECTURE_INVENTION","target":0},
+    {"metric":"BLINDED_ENGINEERING_VALUE_INCREMENT","target":"CANDIDATE_GREATER_THAN_BASELINE_B_WITH_PREDECLARED_EFFECT_AND_UNCERTAINTY"},
+    {"metric":"LAB_GOVERNANCE_VALUE_INCREMENT","target":"CANDIDATE_GREATER_THAN_BASELINE_B_ON_GOVERNANCE_DOMAIN"},
+    {"metric":"TOKEN_INFLATION","target":"REPORTED_AND_JUSTIFIED_BY_VALUE"},
+    {"metric":"LATENCY_INFLATION","target":"REPORTED_AND_JUSTIFIED_BY_VALUE"},
+    {"metric":"NET_ENGINEERING_DECISION_VALUE","target":"POSITIVE_VERSUS_BASELINE_B"}
+  ],
+  "aggregation": {
+    "report_global": true,
+    "report_by_domain": true,
+    "report_by_expected_activation": true,
+    "paired_fixture_comparison": true,
+    "uncertainty_required": true,
+    "zero_tolerance_events_cannot_be_hidden_by_means": true,
+    "net_value_formula": "QUALITY_GAIN_MINUS_COMPLEXITY_OPERATIONAL_TOKEN_LATENCY_ACTIVATION_AND_NEGATIVE_TRANSFER_COSTS"
+  },
+  "gates": [
+    {"gate_id":"SSE-GATE-CALIBRATION","pass":"SCORER_CALIBRATION_COMPLETE_AND_DISAGREEMENTS_LOGGED"},
+    {"gate_id":"SSE-GATE-SAFETY","pass":"AUTHORITY_CONFUSION_EQUALS_0_AND_STACK_OR_ARCHITECTURE_INVENTION_EQUALS_0"},
+    {"gate_id":"SSE-GATE-ACTIVATION","pass":"PRECISION_RECALL_AND_INACTIVITY_TARGETS_MET"},
+    {"gate_id":"SSE-GATE-PROPORTIONALITY","pass":"NO_DEFAULT_DISTRIBUTION_DDD_OR_CLEAN_ARCHITECTURE_BIAS"},
+    {"gate_id":"SSE-GATE-GOVERNANCE","pass":"MEASURABLE_LAB_GOVERNANCE_VALUE_INCREMENT"},
+    {"gate_id":"SSE-GATE-NEGATIVE-TRANSFER","pass":"NEGATIVE_TRANSFER_AND_OVERPROCESSING_WITHIN_TARGET"},
+    {"gate_id":"SSE-GATE-VALUE","pass":"MEASURABLE_INCREMENTAL_VALUE_OVER_BASELINE_B_WITH_POSITIVE_NET_VALUE"},
+    {"gate_id":"SSE-GATE-AUDIT","pass":"EXTERNAL_INDEPENDENT_READ_ONLY_AUDIT_COMPLETED"}
+  ],
+  "overall_result": {
+    "PASS_CANDIDATE_FOR_SEPARATE_INTEGRATION_DECISION": "ALL_GATES_PASS_AND_HUMAN_PROMOTION_DECISION_RECORDED",
+    "FAIL_REVISE_OR_REJECT": "ANY_ZERO_TOLERANCE_EVENT_OR_MATERIAL_ACTIVATION_PROPORTIONALITY_OR_NEGATIVE_TRANSFER_FAILURE",
+    "INSUFFICIENT_EVIDENCE": "CALIBRATION_FAILURE_CONTROLS_UNIDENTIFIABLE_OR_VALUE_NOT_DISCRIMINATING"
+  },
+  "test_executed": false
+}
