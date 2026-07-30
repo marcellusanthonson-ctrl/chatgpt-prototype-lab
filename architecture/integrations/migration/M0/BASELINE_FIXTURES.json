@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "baseline_fixture_id": "BASELINE_FIXTURES_001",
+  "migration_phase": "M0_INVENTORY_AND_BASELINE",
+  "status": "DOCUMENTED_HASHED_BASELINE",
+  "recorded_at": "2026-07-30",
+  "source": {
+    "path": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/ACCEPTANCE_FIXTURES.json",
+    "fixture_set_id": "CHATGPT-CRITERION-FIXTURES-001",
+    "fixture_version": "1.1.0",
+    "git_blob_sha": "de4793dedc9646e388bdce5ccd1807da8a711845",
+    "hash_type": "GIT_BLOB_SHA"
+  },
+  "policy": {
+    "synthetic": true,
+    "real_client_data": false,
+    "real_product_data": false,
+    "external_network_required": false
+  },
+  "fixture_count": 13,
+  "fixture_ids": [
+    "CRIT-FIX-001",
+    "CRIT-FIX-002",
+    "CRIT-FIX-003",
+    "CRIT-FIX-004",
+    "CRIT-FIX-005",
+    "CRIT-FIX-006",
+    "CRIT-FIX-007",
+    "CRIT-FIX-008",
+    "CRIT-FIX-009",
+    "CRIT-FIX-010",
+    "CRIT-FIX-011",
+    "CRIT-FIX-012",
+    "CRIT-FIX-013"
+  ],
+  "coverage": {
+    "empty_module_set": ["CRIT-FIX-001", "CRIT-FIX-006"],
+    "evidence_only": ["CRIT-FIX-003", "CRIT-FIX-004"],
+    "design_and_accessibility": ["CRIT-FIX-002", "CRIT-FIX-009", "CRIT-FIX-011", "CRIT-FIX-012"],
+    "evidence_design_accessibility": ["CRIT-FIX-007", "CRIT-FIX-013"],
+    "evidence_and_accessibility": ["CRIT-FIX-008"],
+    "contextual_visual_preference": ["CRIT-FIX-005", "CRIT-FIX-010"],
+    "negative_transfer_controls": ["CRIT-FIX-001", "CRIT-FIX-006"],
+    "claim_bounding": ["CRIT-FIX-003", "CRIT-FIX-004", "CRIT-FIX-007", "CRIT-FIX-008", "CRIT-FIX-013"],
+    "structural_visual_correction": ["CRIT-FIX-011", "CRIT-FIX-012"]
+  },
+  "baseline_rules": [
+    "FIXTURE_IDS_AND_SIGNAL_SETS_MUST_BE_UNIQUE",
+    "EXPECTED_MODULE_ORDER_FOLLOWS_DECLARED_SELECTOR_ORDER",
+    "FORBIDDEN_MODULES_MUST_NOT_APPEAR",
+    "ORACLE_TEXT_IS_PRESERVED_AS_BEHAVIORAL_INTENT",
+    "SHADOW_REGISTRY_MUST_MATCH_ALL_13_BASELINE_OUTCOMES_BEFORE_DUAL_EVALUATION"
+  ],
+  "exit_criteria": {
+    "all_current_modules_accounted": true,
+    "no_hidden_rules": true,
+    "baseline_hashed": true
+  },
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "fixtures_modified": false
+}
