@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "analysis_id": "PL003_PROVIDER_AUXILIARY_CALL_MAPPING_001",
+  "project_id": "lab",
+  "status": "COMPLETED_DOCUMENTARY_MAPPING_NO_EXECUTION",
+  "provider": "hashicorp/aws@v6.56.0",
+  "scope": "FIFTEEN_RESOURCE_TYPES_FROM_THE_VALIDATED_49_RESOURCE_PREFLIGHT_PLAN",
+  "findings": [
+    {
+      "id": "F1",
+      "classification": "CONFIRMED",
+      "statement": "The provider requires post-create and refresh permissions beyond the obvious Terraform create mutations."
+    },
+    {
+      "id": "F2",
+      "classification": "CONFIRMED",
+      "statement": "aws_s3_bucket is the dominant permission-expansion source because its legacy refresh path reads policy, ACL, CORS, website, versioning, acceleration, request payment, logging, lifecycle, replication, encryption, Object Lock and location."
+    },
+    {
+      "id": "F3",
+      "classification": "CONFIRMED",
+      "statement": "IAM policy, IAM role, KMS key, KMS alias, Secrets Manager secret and CloudTrail resources all perform mandatory read-back or enumeration calls after create."
+    },
+    {
+      "id": "F4",
+      "classification": "MODIFIED",
+      "statement": "The provider auxiliary gap is no longer an unknown action-set gap; it is now primarily an exact runtime cardinality and environment-branch gap."
+    },
+    {
+      "id": "F5",
+      "classification": "CONFIRMED",
+      "statement": "No AWS or Terraform execution is required to include the source-confirmed action set in the effective-permission gate."
+    }
+  ],
+  "gate_reconciliation": {
+    "action_set_status": "SOURCE_MAPPED_FOR_GATE_INPUT",
+    "runtime_call_count_status": "UNRESOLVED_NOT_REQUIRED_FOR_IAM_ACTION_SET_SIMULATION",
+    "required_update": "Merge all confirmed mutation and post-create/read actions into the exact action-resource-context matrix before executing the read-only gate.",
+    "critical_resource_specific_rule": "Model aws_s3_bucket legacy read actions for each of the three exact bucket ARNs even when dedicated resources own the configurations.",
+    "pass_semantics": "A gate PASS requires every source-confirmed action-resource-context pair to evaluate allowed, with no missing context, no explicit deny and no unresolved Organizations scope.",
+    "authority_effect": "NONE"
+  },
+  "limitations": [
+    "Static source review does not prove exact API call counts because retry loops and eventual-consistency waiters are runtime-dependent.",
+    "Source review cannot establish SCP or RCP applicability in the target AWS organization.",
+    "SimulatePrincipalPolicy cannot reproduce every service-internal validation or cross-service resource-policy behavior.",
+    "Conditional partition fallback calls are retained as fail-closed considerations but are not expected in the standard AWS partition used by the plan."
+  ],
+  "next_recommended_action": "DOCUMENTARILY_MERGE_THE_SOURCE_CONFIRMED_PROVIDER_CALL_SET_INTO_THE_GATE_ACTION_RESOURCE_CONTEXT_MATRIX_AND_PREPARE_THE_EXACT_READ_ONLY_EXECUTION_BRIEF",
+  "forbidden_without_new_authorization": [
+    "AWS_CALLS",
+    "TERRAFORM",
+    "PROVISIONING",
+    "PRODUCT_LEADERSHIP_TEST_003"
+  ],
+  "source_map": "projects/lab/test-designs/PL003_LEAST_PRIVILEGE_EFFECTIVE_PERMISSION_GATE_001/PROVIDER_AUXILIARY_CALL_MAP.json",
+  "authorization": "AUTHORIZATION_LAB_PL003_PROVIDER_AUXILIARY_CALL_MAPPING_131"
+}
