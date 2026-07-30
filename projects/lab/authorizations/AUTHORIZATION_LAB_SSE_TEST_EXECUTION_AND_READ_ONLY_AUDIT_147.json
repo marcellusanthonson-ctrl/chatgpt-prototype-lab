@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_SSE_TEST_EXECUTION_AND_READ_ONLY_AUDIT_147",
+  "status": "GRANTED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-30",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "7229b7960338283afaff4a7f6cd0c2e2a583111d",
+  "brief_ref": "projects/lab/briefs/CODEX_SSE_ACTIVATION_AND_VALUE_DISCRIMINATION_TEST_001.json",
+  "purpose": "Execute the frozen Software Solution Engineering activation and value discrimination test and complete an independent external read-only audit without activating or integrating SSE.",
+  "test_contract": {
+    "fixture_count": 32,
+    "arm_count": 3,
+    "minimum_output_count": 96,
+    "domains": ["SOFTWARE_SOLUTION_DECISIONS", "LAB_GOVERNANCE_DECISIONS"]
+  },
+  "allowed_actions": [
+    "VERIFY_AND_PIN_REMOTE_HEAD",
+    "CREATE_ISOLATED_WORKTREES_OR_BRANCHES",
+    "FREEZE_AND_HASH_CANONICAL_INPUTS",
+    "CALIBRATE_SCORERS",
+    "GENERATE_AUTHORIZED_TEST_OUTPUTS",
+    "ANONYMIZE_HASH_AND_RECORD_PROVENANCE",
+    "RUN_BLINDED_SCORING",
+    "MEASURE_TOKEN_TIME_COST_AND_NEGATIVE_TRANSFER",
+    "PREPARE_AND_COMPLETE_EXTERNAL_READ_ONLY_AUDIT",
+    "PUBLISH_TEST_AUDIT_AND_HUMAN_DECISION_EVIDENCE",
+    "COMMIT_AND_PUSH_BOUNDED_EVIDENCE"
+  ],
+  "forbidden_actions": [
+    "ACTIVATE_OR_INTEGRATE_SSE",
+    "SELECT_OR_MODIFY_ARCHITECTURE_STACK_OR_INFRASTRUCTURE",
+    "AWS_TERRAFORM_OR_PROVISIONING",
+    "CREATE_OR_USE_EXTERNAL_DATABASE",
+    "MODIFY_PRODUCT_RUNTIME_SYMPHONIE_RAG_OR_EMBEDDINGS",
+    "MODIFY_FROZEN_FIXTURES_PROMPTS_OR_OUTPUTS",
+    "UNBLIND_BEFORE_SCORE_FREEZE",
+    "CLAIM_PROMOTION_OR_INTEGRATION_BEFORE_HUMAN_DECISION"
+  ],
+  "stop_conditions": [
+    "REMOTE_HEAD_MISMATCH",
+    "DIRTY_OR_UNCONTROLLED_WORKTREE",
+    "INPUT_HASH_MISMATCH",
+    "MODEL_OR_TOOL_ACCESS_NOT_REPRODUCIBLE",
+    "SCORER_CALIBRATION_INCOMPLETE",
+    "ARM_LEAKAGE_OR_BLINDING_FAILURE",
+    "OUTPUT_COUNT_PROVENANCE_OR_COST_INCOMPLETE",
+    "POST_FREEZE_MUTATION",
+    "AUTHORITY_OR_SCOPE_AMBIGUOUS"
+  ],
+  "consumption_criterion": "Complete test, scoring, independent read-only audit and bounded evidence are published and verified remotely; authorization is then marked CONSUMED.",
+  "authority_effect": "EXECUTION_AND_READ_ONLY_AUDIT_ONLY_WITHIN_REFERENCED_BRIEF",
+  "sse_activation_authorized": false,
+  "sse_integration_authorized": false
+}
