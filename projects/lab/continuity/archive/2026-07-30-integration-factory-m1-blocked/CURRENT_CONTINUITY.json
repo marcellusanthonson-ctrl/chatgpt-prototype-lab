@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.1.0",
+  "continuity_id": "LAB-CONTINUITY-INTEGRATION-FACTORY-M1-BLOCKED-20260730",
+  "project_id": "lab",
+  "status": "CURRENT_INTEGRATION_FACTORY_M1_BLOCKED_AWAITING_M1A_AUTHORIZATION",
+  "created_at": "2026-07-30T17:19:00-04:00",
+  "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "canonical_branch": "main",
+  "head_policy": "VERIFY_LIVE_AT_USE",
+  "verified_generation_parent_head": "fb9c0d22fba7e45fc4f22f4a296e4df2c892a47c",
+  "entrypoint": "project-sources/chatgpt/START_HERE.md",
+  "required_reading_order": [
+    "VERIFY_LIVE_HEAD_OF_MAIN",
+    "project-sources/chatgpt/START_HERE.md",
+    "LAB_CONTRACT.md",
+    "METHODOLOGY.md",
+    "CURRENT_STATE.json",
+    "registry/index.json",
+    "registry/projects.json",
+    "projects/lab/PROJECT_STATE.json",
+    "architecture/integrations/STANDARDIZED_INTEGRATION_FACTORY_001.json",
+    "architecture/integrations/PORTABLE_OPERATIONAL_TRUST_STANDARD_001.json",
+    "architecture/integrations/provider-profiles/AWS_OPERATIONAL_TRUST_REFERENCE_PROFILE_001.json",
+    "architecture/integrations/TECHNOLOGY_NEUTRALITY_AND_CONFIDENCE_POLICY_001.json",
+    "architecture/integrations/schemas/INTEGRATION_PACKAGE_SCHEMA_SET_001.json",
+    "architecture/integrations/templates/INTEGRATION_TEMPLATE_CATALOG_001.json",
+    "architecture/integrations/STATIC_SELECTOR_TO_INTEGRATION_FACTORY_MIGRATION_PLAN_001.json",
+    "architecture/integrations/migration/M0/CURRENT_MODULE_INVENTORY.json",
+    "architecture/integrations/migration/M0/CURRENT_SIGNAL_MAP.json",
+    "architecture/integrations/migration/M0/CURRENT_COMPOSITION_RULES.json",
+    "architecture/integrations/migration/M0/BASELINE_FIXTURES.json",
+    "architecture/integrations/migration/M1/SCHEMA_VALIDATION_REPORT.json",
+    "architecture/integrations/migration/M1/TEMPLATE_INSTANTIATION_REPORT.json",
+    "projects/lab/pending/PEND-LAB-033.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_SSE_TEST_EXECUTION_AND_READ_ONLY_AUDIT_147.json",
+    "projects/lab/briefs/CODEX_SSE_ACTIVATION_AND_VALUE_DISCRIMINATION_TEST_001.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.md",
+    "projects/lab/continuity/ATTACHMENT_MANIFEST.json"
+  ],
+  "subject": "STANDARDIZED_INTEGRATION_FACTORY_AND_PORTABLE_OPERATIONAL_TRUST",
+  "facts": [
+    {
+      "claim": "The standardized integration factory is documented but not implemented.",
+      "source_refs": ["architecture/integrations/STANDARDIZED_INTEGRATION_FACTORY_001.json"]
+    },
+    {
+      "claim": "The architecture is provider-neutral and technology-neutral; no global preferred stack or production provider is selected.",
+      "source_refs": ["architecture/integrations/TECHNOLOGY_NEUTRALITY_AND_CONFIDENCE_POLICY_001.json", "architecture/integrations/STANDARDIZED_INTEGRATION_FACTORY_001.json"]
+    },
+    {
+      "claim": "AWS is a replaceable reference validation environment, not a production dependency or mandatory system.",
+      "source_refs": ["architecture/integrations/provider-profiles/AWS_OPERATIONAL_TRUST_REFERENCE_PROFILE_001.json", "architecture/integrations/PORTABLE_OPERATIONAL_TRUST_STANDARD_001.json"]
+    },
+    {
+      "claim": "Operational trust preflight is a conditional gate before functional testing when infrastructure, writes, credentials, persistent state, security boundaries, costs or teardown are involved.",
+      "source_refs": ["architecture/integrations/PORTABLE_OPERATIONAL_TRUST_STANDARD_001.json", "architecture/integrations/STANDARDIZED_INTEGRATION_FACTORY_001.json"]
+    },
+    {
+      "claim": "M0 inventory and baseline are complete: four current modules, 27 distinct activation signals, six composition rules, one exclusion block and 13 hashed fixtures.",
+      "source_refs": ["architecture/integrations/migration/M0/CURRENT_MODULE_INVENTORY.json", "architecture/integrations/migration/M0/CURRENT_SIGNAL_MAP.json", "architecture/integrations/migration/M0/CURRENT_COMPOSITION_RULES.json", "architecture/integrations/migration/M0/BASELINE_FIXTURES.json"]
+    },
+    {
+      "claim": "M1 is blocked because the schema and template files currently present are descriptor catalogs; the declared executable schemas, templates and CRITERION_MODULE overlays are not materialized.",
+      "source_refs": ["architecture/integrations/migration/M1/SCHEMA_VALIDATION_REPORT.json", "architecture/integrations/migration/M1/TEMPLATE_INSTANTIATION_REPORT.json", "projects/lab/pending/PEND-LAB-033.json"]
+    },
+    {
+      "claim": "No shadow registry, active selector change, runtime resolver, ChatGPT behavior change, stack selection, provider selection, AWS execution or Terraform execution occurred in M0 or M1.",
+      "source_refs": ["registry/deltas/integration-factory-m0-inventory-baseline-150.json", "registry/deltas/integration-factory-m1-schema-template-validation-151.json"]
+    },
+    {
+      "claim": "The SSE value-discrimination test is a separate line with authorization 147 granted but not started; it does not unblock M1 and does not authorize SSE activation or integration.",
+      "source_refs": ["projects/lab/authorizations/AUTHORIZATION_LAB_SSE_TEST_EXECUTION_AND_READ_ONLY_AUDIT_147.json", "registry/deltas/sse-test-execution-and-read-only-audit-147.json"]
+    }
+  ],
+  "approved_design_constraints": [
+    "STANDARDIZE_THE_PROCESS_NOT_A_GLOBAL_TECHNOLOGY_STACK",
+    "PROJECT_SPECIFIC_STACK_SELECTION_UNTIL_CROSS_PROJECT_EVIDENCE_SUPPORTS_PREFERENCES",
+    "PROVIDER_NEUTRAL_PORTABLE_CORE_WITH_REPLACEABLE_ADAPTERS",
+    "AWS_AS_REFERENCE_VALIDATION_ENVIRONMENT_ONLY",
+    "OPERATIONAL_TRUST_PREFLIGHT_BEFORE_FUNCTIONAL_TEST_WHEN_RISK_CLASS_REQUIRES_IT",
+    "NO_AUTOMATIC_AUTHORITY_OR_INTEGRATION",
+    "TESTED_DOES_NOT_IMPLY_AUTHORIZED",
+    "AUDITED_DOES_NOT_IMPLY_INTEGRATED"
+  ],
+  "completed_work": [
+    "Documented STANDARDIZED_INTEGRATION_FACTORY_001.",
+    "Documented PORTABLE_OPERATIONAL_TRUST_STANDARD_001.",
+    "Documented AWS_OPERATIONAL_TRUST_REFERENCE_PROFILE_001.",
+    "Documented TECHNOLOGY_NEUTRALITY_AND_CONFIDENCE_POLICY_001.",
+    "Documented schema set, template catalog and migration plan.",
+    "Completed M0 inventory and hashed baseline.",
+    "Executed M1 validation and recorded the exact executable-artifact gap."
+  ],
+  "authorizations": {
+    "147": {
+      "status": "GRANTED_NOT_STARTED",
+      "scope": "SSE_TEST_EXECUTION_AND_INDEPENDENT_READ_ONLY_AUDIT_ONLY",
+      "separate_from_current_migration_line": true,
+      "activation_or_integration_authorized": false
+    },
+    "148": "CONSUMED_DOCUMENTARY_ARCHITECTURE",
+    "149": "CONSUMED_SCHEMA_TEMPLATE_MIGRATION_DESIGN",
+    "150": "CONSUMED_M0_INVENTORY_AND_BASELINE",
+    "151": "CONSUMED_M1_VALIDATION_BLOCKED",
+    "152": "CONSUMED_ON_PUBLICATION_OF_THIS_CONTINUITY_PACKAGE"
+  },
+  "current_line_authority": {
+    "m1a_execution_authorized": false,
+    "m2_authorized": false,
+    "shadow_registry_authorized": false,
+    "selector_change_authorized": false,
+    "runtime_resolver_authorized": false
+  },
+  "pending": [
+    {
+      "id": "PEND-LAB-033",
+      "status": "OPEN_HIGH_PRIORITY",
+      "required_resolution": [
+        "Declare an executable JSON Schema dialect compatible with repository conventions.",
+        "Materialize ten common executable schema files.",
+        "Materialize thirteen common executable templates.",
+        "Materialize three CRITERION_MODULE overlays.",
+        "Create draft-only authorization templates that cannot grant authority automatically.",
+        "Generate four isolated current-module package instances with unresolved fields marked explicitly.",
+        "Run machine validation and rerun M1 before M2."
+      ],
+      "source_refs": ["projects/lab/pending/PEND-LAB-033.json"]
+    },
+    {
+      "id": "SSE_TEST_147",
+      "status": "AUTHORIZED_NOT_STARTED_SEPARATE_LINE",
+      "note": "May be executed only under its frozen brief and does not replace or unblock M1A.",
+      "source_refs": ["projects/lab/authorizations/AUTHORIZATION_LAB_SSE_TEST_EXECUTION_AND_READ_ONLY_AUDIT_147.json"]
+    }
+  ],
+  "errors": [],
+  "risks": [
+    "Treating descriptor catalogs as executable schemas or templates.",
+    "Starting M2 before M1 passes machine validation.",
+    "Coupling the portable standard to AWS or another provider.",
+    "Creating a global preferred stack before sufficient cross-project evidence exists.",
+    "Mixing the SSE value test with the integration-factory migration and misattributing results.",
+    "Interpreting generated artifacts, tests or audits as automatic authorization or integration."
+  ],
+  "canonical_divergences": [
+    "CURRENT_STATE.json, PROJECT_STATE.json and registry/index.json remain materially behind the recent 147-152 deltas; the new conversation must resolve recent deltas and applicable records rather than treating their older latest pointers as exhaustive.",
+    "Authorization 147 remains GRANTED for a separate SSE test line, while the integration-factory migration line has no authority for M1A or M2."
+  ],
+  "forbidden_until_new_authorization": [
+    "EXECUTE_M1A",
+    "DECLARE_M1_PASS",
+    "CREATE_SHADOW_INTEGRATION_REGISTRY",
+    "BEGIN_M2",
+    "MODIFY_ACTIVE_SELECTOR_OR_CHATGPT_BEHAVIOR",
+    "IMPLEMENT_RUNTIME_RESOLVER",
+    "ACTIVATE_OR_INTEGRATE_ANY_CANDIDATE",
+    "RUN_AWS_TERRAFORM_OR_PROVISIONING_FOR_THIS_LINE",
+    "SELECT_GLOBAL_STACK_OR_PRODUCTION_PROVIDER"
+  ],
+  "single_next_action": "PREPARE_AND_EXPLICITLY_AUTHORIZE_A_BOUNDED_CODEX_M1A_BRIEF_FOR_EXECUTABLE_SCHEMA_TEMPLATE_AND_CRITERION_MODULE_OVERLAY_MATERIALIZATION_WITH_MACHINE_REPRODUCIBLE_VALIDATION",
+  "first_phrase_for_new_conversation": "Continúa ChatGPT Prototype LAB reconstruyendo primero el estado desde `marcellusanthonson-ctrl/chatgpt-prototype-lab`, rama `main`, entrypoint `project-sources/chatgpt/START_HERE.md`; verifica el HEAD remoto vigente y sigue exactamente su orden de lectura. Después lee el paquete `projects/lab/continuity/CURRENT_CONTINUITY.json`, `CURRENT_CONTINUITY.md` y `ATTACHMENT_MANIFEST.json`, y continúa desde M1 bloqueado sin ejecutar M1A, M2, SSE, AWS ni cambios de runtime hasta identificar una autorización explícita vigente para la línea correspondiente.",
+  "authority_effect": "NONE_AFTER_CONTINUITY_PUBLICATION"
+}
