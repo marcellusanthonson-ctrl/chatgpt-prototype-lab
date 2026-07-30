@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_PL003_PROVIDER_AUXILIARY_CALL_MAPPING_131",
+  "project_id": "lab",
+  "status": "GRANTED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-29",
+  "approval_source": "USER_INSTRUCTION_CONTINUE_AFTER_PROVIDER_AUXILIARY_MAPPING_RECOMMENDATION",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "8ca7b43014baf44dda14d378d50574c437c3137f",
+  "execution_head_policy": "VERIFY_LIVE_AT_USE",
+  "objective": "Map documentary provider auxiliary AWS calls for hashicorp/aws v6.56.0 across the 15 PL003 preflight resource types without executing Terraform or AWS.",
+  "allowed_actions": [
+    "READ_PROVIDER_SOURCE_AT_EXACT_TAG_V6_56_0",
+    "MAP_CREATE_AND_POST_CREATE_READ_CALLS",
+    "CLASSIFY_CONFIRMED_CONDITIONAL_AND_UNRESOLVED_CALLS",
+    "ASSESS_EFFECTIVE_PERMISSION_GATE_COMPLETENESS",
+    "CREATE_REGISTRY_DELTA",
+    "COMMIT_AND_PUSH_DOCUMENTATION"
+  ],
+  "forbidden_actions": [
+    "AWS_API_CALLS",
+    "IAM_MUTATIONS",
+    "TERRAFORM_INIT_PLAN_APPLY_OR_DESTROY",
+    "PROVISIONING",
+    "PRODUCT_LEADERSHIP_TEST_003",
+    "PRODUCT_LEADERSHIP_ACTIVATION_OR_INTEGRATION",
+    "GRANTING_GATE_EXECUTION_AUTHORITY"
+  ],
+  "deliverables": [
+    "projects/lab/test-designs/PL003_LEAST_PRIVILEGE_EFFECTIVE_PERMISSION_GATE_001/PROVIDER_AUXILIARY_CALL_MAP.json",
+    "projects/lab/analyses/PL003_PROVIDER_AUXILIARY_CALL_MAPPING_001.json",
+    "registry/deltas/pl003-provider-auxiliary-call-mapping-131.json"
+  ],
+  "consumption_criterion": "CONSUMED_AFTER_SOURCE_MAPPED_CALLS_LIMITATIONS_GATE_EFFECT_AND_REGISTRY_DELTA_ARE_PUBLISHED_AND_REMOTE_HEAD_IS_VERIFIED",
+  "post_consumption_authority": "NONE"
+}
