@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "integration-factory-m5-stage-aware-validator-remediation-authorization-162",
+  "project_id": "lab",
+  "recorded_at": "2026-07-31T14:40:00-04:00",
+  "parent_head": "904fce42638b717699afe3ffef639545c990ec55",
+  "decision": {
+    "id": "DEC-LAB-028",
+    "status": "APPROVED",
+    "selected_option": "AUTHORIZE_BOUNDED_STAGE_AWARE_VALIDATOR_REMEDIATION",
+    "canonical_path": "decisions/DEC-LAB-028.json"
+  },
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162",
+    "status": "GRANTED",
+    "stage_2_status": "AUTHORIZED_NOT_STARTED",
+    "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162.json"
+  },
+  "pending": {
+    "id": "PEND-LAB-039",
+    "status": "RESOLVED_AUTHORIZE_BOUNDED_STAGE_AWARE_VALIDATOR_REMEDIATION",
+    "canonical_path": "projects/lab/pending/PEND-LAB-039.json"
+  },
+  "error": {
+    "id": "ERR-LAB-009",
+    "status": "OPEN_BLOCKING_M5_CUTOVER_REMEDIATION_AUTHORIZED_NOT_STARTED",
+    "canonical_path": "errors/ERR-LAB-009.json"
+  },
+  "brief": {
+    "id": "CODEX_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_001",
+    "status": "AUTHORIZED_NOT_STARTED",
+    "canonical_path": "projects/lab/briefs/CODEX_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_001.json"
+  },
+  "boundaries": {
+    "static_selector": "AUTHORITATIVE_UNCHANGED",
+    "shadow_registry": "INACTIVE_UNCHANGED",
+    "active_pointer": "ABSENT",
+    "operational_rollback_drill": "NOT_AUTHORIZED",
+    "m5_retry_or_cutover": "NOT_AUTHORIZED",
+    "product_leadership": "FUTURE_PRIORITY_1_OUT_OF_SCOPE",
+    "intelligent_application_construction": "FUTURE_PRIORITY_2_OUT_OF_SCOPE",
+    "software_solution_engineering": "DEFERRED_OUT_OF_SCOPE",
+    "runtime_effect": "NONE",
+    "integration_effect": "NONE"
+  },
+  "next_action": "CODEX_EXECUTES_AUTHORIZATION_162_FROM_THE_VERIFIED_STAGE_1_REMOTE_HEAD",
+  "authority_effect": "BOUNDED_STAGE_2_VALIDATOR_REMEDIATION_ONLY"
+}
