@@ -3,7 +3,7 @@
   "authorization_id": "AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162",
   "project_id": "lab",
   "status": "GRANTED",
-  "publication_status": "AMENDMENT_1_PUBLISHED_ATTEMPT_001_BLOCKED_PREEXECUTION_BASELINE_DRIFT",
+  "publication_status": "AMENDMENT_1_DOCUMENTARY_BASELINE_CORRECTION_COMPLETED_AWAITING_RESTART",
   "prepared_at": "2026-07-31T14:40:00-04:00",
   "prepared_by": "CHATGPT",
   "approved_by": "Jonathan Martínez",
@@ -31,7 +31,7 @@
   },
   "stage_2": {
     "executor": "CODEX",
-    "status": "ATTEMPT_001_BLOCKED_PREEXECUTION_BASELINE_DRIFT",
+    "status": "DOCUMENTARY_BASELINE_CORRECTION_COMPLETED_AWAITING_RESTART",
     "objective": "Create and validate successor validators that distinguish semantic equivalence from volatile metadata and validate authorization lifecycle by stage, without modifying historical validators or executing the operational rollback drill, M5 retry, cutover or candidate-capability work.",
     "execution_started": true,
     "attempt_count": 1,
@@ -40,7 +40,26 @@
     "result_published": false,
     "consumed": false,
     "block_reason": "INITIAL_GENERAL_VALIDATOR_REPORTED_342_INSTEAD_OF_EXACT_335_DUE_TO_SEVEN_STAGE_1_DOCUMENTARY_FINDINGS",
-    "restart_condition": "EXACT_335_BASELINE_AND_BOTH_CANONICAL_DIGESTS_RESTORED_BY_SEPARATE_DOCUMENTARY_CORRECTION"
+    "restart_condition": "EXACT_335_BASELINE_AND_BOTH_CANONICAL_DIGESTS_RESTORED_BY_SEPARATE_DOCUMENTARY_CORRECTION",
+    "documentary_baseline_correction": {
+      "correction_id": "AUTHORIZATION_162_AMENDMENT_1_DOCUMENTARY_BASELINE_CORRECTION",
+      "verified_parent_head": "e373cb4121ad686c69c9c100e7b9ce07fda2703b",
+      "classification": "DOCUMENTARY_BASELINE_CORRECTION_PASS",
+      "initial_general_validator_count": 342,
+      "initial_added_finding_count": 7,
+      "final_general_validator_count": 335,
+      "final_exit_code": 1,
+      "structured_inventory_digest": "cb54594bdbe3b2d7a5e473fdcb4a98e02cc7a5840966e4f0a5286c277f6226ab",
+      "raw_ordered_message_digest": "00310f685ddb2ec849aa848eb9c78dbad17e08f199993259ce3057f904e2fd95",
+      "added_historical_findings": 0,
+      "removed_historical_findings": 0,
+      "modified_historical_findings": 0,
+      "stage_1_documentary_findings_removed": 7,
+      "semantic_replay_executed": false,
+      "lifecycle_tests_executed": false,
+      "authorization_consumed": false,
+      "publication_effect": "EFFECTIVE_ON_VERIFIED_REMOTE_PUBLICATION"
+    }
   },
   "attempts": [
     {

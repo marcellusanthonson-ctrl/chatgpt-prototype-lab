@@ -2,8 +2,9 @@
   "schema_version": "1.0.0",
   "brief_id": "CODEX_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_001",
   "task_id": "LAB-M5-STAGE-AWARE-VALIDATOR-REMEDIATION-162",
+  "project_id": "lab",
   "title": "Remediate ERR-LAB-009 with semantic replay and stage-aware successor validators",
-  "status": "AUTHORIZED_NOT_STARTED",
+  "status": "READY",
   "parent_briefs": [
     "projects/lab/briefs/CODEX_INTEGRATION_FACTORY_M5_READINESS_AND_VALIDATOR_REMEDIATION_001.json",
     "projects/lab/briefs/CODEX_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_001.json"
@@ -12,9 +13,68 @@
   "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162.json",
   "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "branch": "main",
+  "repositories": [
+    {
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "head_policy": "VERIFY_LIVE_AT_USE"
+    }
+  ],
   "expected_parent_head": null,
   "expected_parent_policy": "USE_VERIFIED_FINAL_REMOTE_MAIN_HEAD_AFTER_STAGE_1_PUBLICATION",
   "technical_executor": "CODEX",
+  "authority": {
+    "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162.json",
+    "authorization_status": "GRANTED",
+    "amendment": "AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162_AMENDMENT_1",
+    "approved_by": "Jonathan Martínez",
+    "technical_executor": "CODEX",
+    "permissions": {
+      "documentary_baseline_correction_in_this_execution": true,
+      "commit": true,
+      "push": true,
+      "semantic_replay_in_this_execution": false,
+      "stage_aware_tests_in_this_execution": false
+    },
+    "prohibitions": [
+      "NO_SEMANTIC_REPLAY_IN_DOCUMENTARY_CORRECTION_EXECUTION",
+      "NO_STAGE_AWARE_TEST_EXECUTION_IN_DOCUMENTARY_CORRECTION_EXECUTION",
+      "NO_OPERATIONAL_ROLLBACK_DRILL",
+      "NO_M5_RETRY_OR_CUTOVER",
+      "NO_ACTIVE_POINTER",
+      "NO_RUNTIME_OR_INTEGRATION_EFFECT",
+      "NO_CANDIDATE_CAPABILITY_WORK",
+      "NO_AWS_OR_TERRAFORM",
+      "NO_EXTERNAL_REPOSITORY_CHANGE"
+    ]
+  },
+  "scope": {
+    "allowed_paths": [
+      "decisions/DEC-LAB-028.json",
+      "registry/decisions.json",
+      "registry/index.json",
+      "projects/lab/briefs/CODEX_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_001.json",
+      "projects/lab/authorizations/AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162.json"
+    ],
+    "immutable_paths": [
+      "schemas/**",
+      "scripts/**",
+      "architecture/integrations/migration/M3/**",
+      "architecture/integrations/migration/M5/readiness-161/**",
+      "architecture/integrations/migration/M5/execution-160/**",
+      "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json",
+      "architecture/integrations/migration/M2/SHADOW_INTEGRATION_REGISTRY.json",
+      "architecture/integrations/migration/M2/module-adapters/**"
+    ],
+    "actions": [
+      "NORMALIZE_DEC_LAB_028_AGAINST_DECISION_SCHEMA",
+      "REGISTER_DEC_LAB_028_GLOBALLY",
+      "RECONCILE_REGISTRY_INDEX_DECISION_METADATA",
+      "NORMALIZE_BRIEF_162_AGAINST_BRIEF_SCHEMA",
+      "RECORD_DOCUMENTARY_BASELINE_CORRECTION_WITHOUT_CONSUMING_AUTHORIZATION_162"
+    ],
+    "stage_2_restart": "SEPARATE_EXECUTION_FROM_VERIFIED_REMOTE_HEAD_AFTER_DOCUMENTARY_CORRECTION"
+  },
   "objective": "Resolve only the validator lifecycle incompatibility classified in ERR-LAB-009 by creating successor validators that distinguish semantic equivalence from explicitly enumerated volatile metadata and validate authorization state by lifecycle stage. Preserve all historical validators, outputs and evidence. Do not execute the operational rollback drill, retry M5, create an active pointer, perform cutover, or test candidate capabilities.",
   "preserved_parent_content": [
     "STATIC_SELECTOR_REMAINS_AUTHORITATIVE",
@@ -196,33 +256,36 @@
     "SCOPE_EXPANSION"
   ],
   "commit_message": "test(lab): remediate M5 stage-aware validators",
-  "response_contract": [
-    "RESULT",
-    "VERIFIED_INITIAL_PARENT_HEAD",
-    "HUMAN_DECISION_RECORD",
-    "AUTHORIZATION_162_STATUS",
-    "HISTORICAL_VALIDATOR_AND_OUTPUT_IMMUTABILITY",
-    "SEMANTIC_REPLAY_RESULT",
-    "VOLATILE_METADATA_ALLOWLIST",
-    "LIFECYCLE_VALIDATION_RESULT",
-    "POSITIVE_TEST_RESULTS",
-    "NEGATIVE_TEST_RESULTS",
-    "GENERAL_VALIDATOR_BASELINE_RESULT",
-    "ERR_LAB_009_STATUS",
-    "M5_RETRY_AUTHORIZATION_STATUS",
-    "PRODUCT_LEADERSHIP_BOUNDARY",
-    "INTELLIGENT_APPLICATION_CONSTRUCTION_BOUNDARY",
-    "SSE_BOUNDARY",
-    "AUTHORITY_RUNTIME_AND_INTEGRATION_BOUNDARIES",
-    "FILES_CREATED",
-    "FILES_MODIFIED",
-    "COMMIT_SHA",
-    "VERIFIED_FINAL_REMOTE_HEAD",
-    "AUTHORIZATION_162_CONSUMPTION",
-    "PEND_LAB_039_STATUS",
-    "PEND_LAB_040_STATUS",
-    "SINGLE_NEXT_ACTION"
-  ],
+  "response_contract": {
+    "format": "ORDERED_FIELDS",
+    "required_fields": [
+      "RESULT",
+      "VERIFIED_INITIAL_PARENT_HEAD",
+      "HUMAN_DECISION_RECORD",
+      "AUTHORIZATION_162_STATUS",
+      "HISTORICAL_VALIDATOR_AND_OUTPUT_IMMUTABILITY",
+      "SEMANTIC_REPLAY_RESULT",
+      "VOLATILE_METADATA_ALLOWLIST",
+      "LIFECYCLE_VALIDATION_RESULT",
+      "POSITIVE_TEST_RESULTS",
+      "NEGATIVE_TEST_RESULTS",
+      "GENERAL_VALIDATOR_BASELINE_RESULT",
+      "ERR_LAB_009_STATUS",
+      "M5_RETRY_AUTHORIZATION_STATUS",
+      "PRODUCT_LEADERSHIP_BOUNDARY",
+      "INTELLIGENT_APPLICATION_CONSTRUCTION_BOUNDARY",
+      "SSE_BOUNDARY",
+      "AUTHORITY_RUNTIME_AND_INTEGRATION_BOUNDARIES",
+      "FILES_CREATED",
+      "FILES_MODIFIED",
+      "COMMIT_SHA",
+      "VERIFIED_FINAL_REMOTE_HEAD",
+      "AUTHORIZATION_162_CONSUMPTION",
+      "PEND_LAB_039_STATUS",
+      "PEND_LAB_040_STATUS",
+      "SINGLE_NEXT_ACTION"
+    ]
+  },
   "authority_effect": "BOUNDED_CODEX_EXECUTION_ONLY",
   "runtime_effect": "NONE",
   "integration_effect": "NONE"

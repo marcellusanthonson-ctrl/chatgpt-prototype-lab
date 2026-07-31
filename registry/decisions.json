@@ -1,6 +1,6 @@
 {
   "schema_version": "1.3.0",
-  "updated_at": "2026-07-25",
+  "updated_at": "2026-07-31",
   "records": [
     {
       "id": "DEC-LAB-001",
@@ -359,6 +359,18 @@
         "PRODUCT_OR_RUNTIME_CHANGE",
         "DEPLOYMENT"
       ]
+    },
+    {
+      "id": "DEC-LAB-028",
+      "title": "Authorize bounded stage-aware remediation of the M5 rollback-drill validators",
+      "status": "APPROVED",
+      "approval_state": "APPROVED",
+      "project_scope": [
+        "lab"
+      ],
+      "canonical_path": "decisions/DEC-LAB-028.json",
+      "updated_at": "2026-07-31",
+      "approved_by": "Jonathan Martínez"
     }
   ]
 }

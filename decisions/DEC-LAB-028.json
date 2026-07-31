@@ -1,13 +1,20 @@
 {
   "schema_version": "1.0.0",
   "id": "DEC-LAB-028",
+  "project": "lab",
+  "project_scope": [
+    "lab"
+  ],
   "project_id": "lab",
   "title": "Authorize bounded stage-aware remediation of the M5 rollback-drill validators",
   "status": "APPROVED",
+  "approval_state": "APPROVED",
+  "effective_date": "2026-07-31",
   "publication_status": "PUBLISHED",
   "decision_type": "HUMAN_M5_VALIDATOR_REMEDIATION_GATE",
   "approved_by": "Jonathan Martínez",
-  "approved_at": "2026-07-31T14:40:00-04:00",
+  "approved_at": "2026-07-31",
+  "approval_evidence": "Perfecto, continuamos.",
   "approval_source": "Perfecto, continuamos.",
   "approval_context": "Jonathan Martínez continued immediately after receiving the independently verified recommendation and exact bounded decision text for PEND-LAB-039.",
   "resolved_pending": "PEND-LAB-039",
@@ -58,6 +65,8 @@
     "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-160.json",
     "projects/lab/authorizations/AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162.json"
   ],
+  "supersedes": [],
+  "superseded_by": null,
   "authority_effect": "NORMATIVE_DECISION_AND_BOUNDED_AUTHORIZATION_GRANT",
   "runtime_effect": "NONE",
   "integration_effect": "NONE"
