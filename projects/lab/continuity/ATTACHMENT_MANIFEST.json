@@ -1,19 +1,51 @@
 {
   "schema_version": "1.2.0",
-  "manifest_id": "LAB-CONTINUITY-ATTACHMENTS-M5-READINESS-REMEDIATED-20260731",
+  "manifest_id": "LAB-CONTINUITY-ATTACHMENTS-M5-AUTHORIZATION-160-GRANTED-20260731",
   "status": "CURRENT",
   "project_id": "lab",
-  "created_at": "2026-07-31T12:51:22-04:00",
-  "required_read_order": ["CURRENT_CONTINUITY.json", "CURRENT_CONTINUITY.md", "ATTACHMENT_MANIFEST.json", "START_PROMPT.md"],
-  "attachments": [
-    {"path": "projects/lab/continuity/CURRENT_CONTINUITY.json", "role": "CANONICAL_STRUCTURED_CONTINUITY", "required": true},
-    {"path": "projects/lab/continuity/CURRENT_CONTINUITY.md", "role": "HUMAN_READABLE_CONTINUITY", "required": true},
-    {"path": "projects/lab/continuity/ATTACHMENT_MANIFEST.json", "role": "READ_ORDER_AND_REFERENCE_MANIFEST", "required": true},
-    {"path": "projects/lab/continuity/START_PROMPT.md", "role": "FIRST_MESSAGE_FOR_NEW_CONVERSATION", "required": true}
+  "created_at": "2026-07-31T13:14:00-04:00",
+  "required_read_order": [
+    "CURRENT_CONTINUITY.json",
+    "CURRENT_CONTINUITY.md",
+    "ATTACHMENT_MANIFEST.json",
+    "START_PROMPT.md"
   ],
-  "repository_sources_not_duplicated_as_attachments": ["architecture/integrations/migration/M5/readiness-161/VALIDATION_RESULTS.json", "projects/lab/pending/PEND-LAB-038.json", "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-READINESS-REMEDIATION-161.json", "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160.json"],
-  "archived_package": "projects/lab/continuity/archive/m5-readiness-stage-2-preexecution-f1cb216c34285ba57a6f17e6eb6c817ceb568c79/",
-  "archived_package_integrity": {"CURRENT_CONTINUITY.json": "63cfcbd6d6af4c020bb44b8bf789d2a76093eb14", "CURRENT_CONTINUITY.md": "f96deb8e0aa3b365c248aa3a453990f4f3e30942", "ATTACHMENT_MANIFEST.json": "890b2e07429934107c1e25cc8567f555fe746cb1", "START_PROMPT.md": "228cadade686d5e9f262ee7fbc066e08ec7c67d2"},
+  "attachments": [
+    {
+      "path": "projects/lab/continuity/CURRENT_CONTINUITY.json",
+      "role": "CANONICAL_STRUCTURED_CONTINUITY",
+      "required": true
+    },
+    {
+      "path": "projects/lab/continuity/CURRENT_CONTINUITY.md",
+      "role": "HUMAN_READABLE_CONTINUITY",
+      "required": true
+    },
+    {
+      "path": "projects/lab/continuity/ATTACHMENT_MANIFEST.json",
+      "role": "READ_ORDER_AND_REFERENCE_MANIFEST",
+      "required": true
+    },
+    {
+      "path": "projects/lab/continuity/START_PROMPT.md",
+      "role": "FIRST_MESSAGE_FOR_NEW_CONVERSATION",
+      "required": true
+    }
+  ],
+  "repository_sources_not_duplicated_as_attachments": [
+    "decisions/DEC-LAB-027.json",
+    "projects/lab/pending/PEND-LAB-038.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160.json",
+    "projects/lab/briefs/CODEX_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_001.json",
+    "architecture/integrations/migration/M5/readiness-161/VALIDATION_RESULTS.json"
+  ],
+  "archived_package": "projects/lab/continuity/archive/m5-cutover-preauthorization-3d2377edbb468047c177af2411b2c7ce964b9951/",
+  "archived_package_integrity": {
+    "CURRENT_CONTINUITY.json": "b60fb0cd029f7f6523b5eba97054361ca0ff804e",
+    "CURRENT_CONTINUITY.md": "dca111629a327c1830ad834bb125e81bc960bb51",
+    "ATTACHMENT_MANIFEST.json": "70c8bf29eea489cbd9df68b92081fd30c756c062",
+    "START_PROMPT.md": "37be3f9ce6d824296b4f31fd245086d456b2c32c"
+  },
   "missing_attachments": [],
-  "authority_effect": "NONE_AFTER_AUTHORIZATION_161_CONSUMPTION"
+  "authority_effect": "BOUNDED_AUTHORIZATION_160_STAGE_2_ONLY"
 }
