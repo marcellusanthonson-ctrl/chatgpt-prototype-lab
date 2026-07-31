@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0.0",
+  "report_id": "STATIC_SHADOW_EQUIVALENCE_REPORT_001",
+  "status": "PASS",
+  "recorded_at": "2026-07-30T21:21:00-04:00",
+  "static_source": {
+    "path": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json",
+    "git_blob_sha": "301ba432907758fc49a9b3c86a83fc762eac4607"
+  },
+  "shadow_source": "architecture/integrations/migration/M2/SHADOW_INTEGRATION_REGISTRY.json",
+  "comparison": {
+    "module_set": {
+      "static": 4,
+      "shadow": 4,
+      "equivalent": true
+    },
+    "module_order": {
+      "equivalent": true
+    },
+    "activation_operators": {
+      "equivalent": true
+    },
+    "activation_rule_distinct_signals": {
+      "static": 23,
+      "shadow": 23,
+      "equivalent": true
+    },
+    "exclusion_signals": {
+      "static": 4,
+      "shadow": 4,
+      "equivalent": true
+    },
+    "selector_signal_universe": {
+      "static": 27,
+      "shadow": 27,
+      "equivalent": true
+    },
+    "composition_rules": {
+      "static": 6,
+      "shadow": 6,
+      "equivalent": true
+    },
+    "exclusion_blocks": {
+      "static": 1,
+      "shadow": 1,
+      "equivalent": true
+    },
+    "empty_set_abstention": {
+      "equivalent": true
+    },
+    "fixture_references": {
+      "static": 13,
+      "shadow": 13,
+      "equivalent": true
+    },
+    "source_refs": {
+      "equivalent": true
+    }
+  },
+  "divergences": [],
+  "semantic_qualification": "M0 counted the four exclusion signals inside its 27-signal selector universe. This report preserves that baseline while separately exposing 23 activation-rule signals and 4 exclusion signals.",
+  "active_selector_modified": false,
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE"
+}

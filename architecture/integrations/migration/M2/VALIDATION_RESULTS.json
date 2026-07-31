@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "validation_id": "INTEGRATION_FACTORY_M2_VALIDATION_001",
+  "migration_phase": "M2_SHADOW_REGISTRY",
+  "recorded_at": "2026-07-30T21:21:00-04:00",
+  "classification": "M2_PASS",
+  "command": "python scripts/validate_integration_factory_m2.py --root . --check",
+  "gates": {
+    "STATIC_AND_SHADOW_MODULE_SET_EQUIVALENT": true,
+    "STATIC_AND_SHADOW_MODULE_ORDER_EQUIVALENT": true,
+    "ACTIVATION_OPERATORS_EQUIVALENT": true,
+    "ALL_27_SELECTOR_SIGNALS_PRESERVED": true,
+    "ALL_6_COMPOSITION_RULES_PRESERVED": true,
+    "EXCLUSION_BLOCK_PRESERVED": true,
+    "EMPTY_SET_ABSTENTION_PRESERVED": true,
+    "ALL_13_FIXTURE_REFERENCES_PRESERVED": true,
+    "SOURCE_REFERENCES_PRESERVED": true,
+    "M1A_BASELINE_UNCHANGED": true,
+    "NO_AUTHORITY_DRIFT": true,
+    "NO_ACTIVE_SELECTOR_CHANGE": true,
+    "NO_RUNTIME_OR_INTEGRATION_EFFECT": true,
+    "SECOND_RUN_EQUIVALENCE": true
+  },
+  "normalized_digest_run_1": "e1a881640a544e483a1e47d52d72782b966ffc1e32cf6ff6c3afa03d54df6359",
+  "normalized_digest_run_2": "e1a881640a544e483a1e47d52d72782b966ffc1e32cf6ff6c3afa03d54df6359",
+  "deterministic": true,
+  "static_selector": {
+    "path": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json",
+    "git_blob_sha": "301ba432907758fc49a9b3c86a83fc762eac4607",
+    "modified": false
+  },
+  "m1a_baseline": {
+    "normalized_digest": "048c2e7995986ca061ce66ce65a1a33f532a8ab17819ea057a0ff979a12ee55d",
+    "unchanged": true
+  },
+  "counts": {
+    "modules": 4,
+    "adapters": 4,
+    "shadow_registry_entries": 4,
+    "activation_rule_signal_occurrences": 29,
+    "activation_rule_distinct_signals": 23,
+    "exclusion_signals": 4,
+    "selector_signal_universe": 27,
+    "composition_rules": 6,
+    "exclusion_blocks": 1,
+    "fixture_references": 13
+  },
+  "semantic_note": "The M0 label '27 distinct activation signals' comprises 23 distinct module activation-rule signals plus 4 distinct exclusion signals; M2 preserves the complete 27-signal selector universe without reclassification.",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE"
+}

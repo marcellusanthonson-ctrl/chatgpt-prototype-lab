@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-INTEGRATION-FACTORY-M2-155",
+  "project_id": "lab",
+  "status": "VALIDATED_M2_PASS",
+  "recorded_at": "2026-07-30T21:21:00-04:00",
+  "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M2_SHADOW_REGISTRY_MATERIALIZATION_AND_EQUIVALENCE_VALIDATION_155.json",
+  "brief_ref": "projects/lab/briefs/CODEX_INTEGRATION_FACTORY_M2_SHADOW_REGISTRY_MATERIALIZATION_AND_EQUIVALENCE_VALIDATION_001.json",
+  "execution_parent_head": "9e5dc65cd076e4bd65e6cfd61f8fb44ecb42e8bb",
+  "observations": {
+    "m2_classification": "M2_PASS",
+    "shadow_registry_created": true,
+    "shadow_registry_status": "SHADOW_ONLY_NOT_ACTIVE",
+    "module_adapters": 4,
+    "static_shadow_equivalence": true,
+    "selector_modified": false,
+    "runtime_effect": "NONE",
+    "integration_effect": "NONE",
+    "m3_authorized": false,
+    "active_registry_created": false
+  },
+  "validation": {
+    "path": "architecture/integrations/migration/M2/VALIDATION_RESULTS.json",
+    "normalized_digest": "e1a881640a544e483a1e47d52d72782b966ffc1e32cf6ff6c3afa03d54df6359",
+    "repeated_digest_match": true,
+    "all_gates_pass": true
+  },
+  "preserved_baseline": {
+    "selector_blob": "301ba432907758fc49a9b3c86a83fc762eac4607",
+    "m1a_digest": "048c2e7995986ca061ce66ce65a1a33f532a8ab17819ea057a0ff979a12ee55d",
+    "modules": 4,
+    "selector_signal_universe": 27,
+    "activation_rule_distinct_signals": 23,
+    "exclusion_signals": 4,
+    "composition_rules": 6,
+    "exclusion_blocks": 1,
+    "fixture_references": 13
+  },
+  "divergences": [
+    "SEMANTIC_NON_BLOCKING: M0's 27 distinct activation signals consist of 23 module activation-rule signals plus 4 exclusion signals; M2 preserves the full 27-signal selector universe.",
+    "DOCUMENTARY_ADAPTATION: CURRENT_STATE.json and PROJECT_STATE.json remain preserved base snapshots; effective M2 state is resolved through registry delta 155, registry/index.json, Markdown views and the CURRENT continuity package.",
+    "EXECUTOR_ADAPTATION: The proposed Codex executor was replaced by ChatGPT with the GitHub connector and local deterministic validation under the user's direct continuation approval."
+  ],
+  "claims_not_created": [
+    "M3_AUTHORIZED",
+    "ACTIVE_REGISTRY_CREATED",
+    "SELECTOR_CHANGED",
+    "RUNTIME_RESOLVER_IMPLEMENTED",
+    "MODULE_ACTIVATED_OR_INTEGRATED",
+    "SSE_TEST_147_EXECUTED",
+    "AWS_OR_TERRAFORM_EXECUTED",
+    "GLOBAL_STACK_SELECTED",
+    "PRODUCTION_PROVIDER_SELECTED"
+  ],
+  "authority_effect": "NONE_AFTER_CONSUMPTION",
+  "runtime_effect": "NONE"
+}

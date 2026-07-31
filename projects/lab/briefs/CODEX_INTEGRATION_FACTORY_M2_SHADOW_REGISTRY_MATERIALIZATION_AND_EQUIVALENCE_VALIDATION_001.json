@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "INTEGRATION_FACTORY_M2_SHADOW_REGISTRY_MATERIALIZATION_AND_EQUIVALENCE_VALIDATION",
+  "brief_id": "CODEX_INTEGRATION_FACTORY_M2_SHADOW_REGISTRY_MATERIALIZATION_AND_EQUIVALENCE_VALIDATION_001",
+  "status": "EXECUTED_CONSUMED",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "9e5dc65cd076e4bd65e6cfd61f8fb44ecb42e8bb",
+  "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M2_SHADOW_REGISTRY_MATERIALIZATION_AND_EQUIVALENCE_VALIDATION_155.json",
+  "executor_actual": "CHATGPT_WITH_GITHUB_CONNECTOR_AND_LOCAL_DETERMINISTIC_VALIDATION",
+  "objective": "Generate a non-active shadow representation of the four current criterion modules and prove or disprove exact static-shadow catalog equivalence without changing the selector, runtime, integrations or ChatGPT behavior.",
+  "required_equivalence": {
+    "module_ids": 4,
+    "module_order": "EXACT",
+    "selector_signal_universe": 27,
+    "activation_rule_distinct_signals": 23,
+    "exclusion_signals": 4,
+    "activation_operators": "EXACT",
+    "composition_rules": 6,
+    "exclusion_blocks": 1,
+    "empty_set_abstention": true,
+    "fixture_references": 13,
+    "source_refs": "PRESERVED",
+    "authority_effect": "NONE",
+    "runtime_effect": "NONE",
+    "active_selector_change": false
+  },
+  "result_contract": {
+    "all_gates_pass": "M2_PASS",
+    "any_gate_fails": "M2_BLOCKED_WITH_DOCUMENTED_DIVERGENCES",
+    "partial_or_qualified_pass_allowed": false,
+    "m3_authority_created": false
+  },
+  "execution_result": {
+    "classification": "M2_PASS",
+    "normalized_digest": "e1a881640a544e483a1e47d52d72782b966ffc1e32cf6ff6c3afa03d54df6359",
+    "deterministic": true
+  },
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_155_CONSUMPTION",
+  "runtime_effect": "NONE"
+}

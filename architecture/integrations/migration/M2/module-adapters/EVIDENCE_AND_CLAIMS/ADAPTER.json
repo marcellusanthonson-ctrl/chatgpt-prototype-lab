@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_type": "M2_MODULE_ADAPTER",
+  "adapter_id": "M2-ADAPTER-EVIDENCE_AND_CLAIMS-001",
+  "module_id": "EVIDENCE_AND_CLAIMS",
+  "profile": "CRITERION_MODULE",
+  "status": "SHADOW_ONLY",
+  "registry_order": 1,
+  "automatic_activation": false,
+  "implementation_authorized": false,
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE",
+  "source_selector": {
+    "path": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json",
+    "selector_id": "CHATGPT-CRITERION-SELECTOR-001",
+    "selector_version": "1.0.0",
+    "git_blob_sha": "301ba432907758fc49a9b3c86a83fc762eac4607"
+  },
+  "m1a_package": {
+    "manifest_path": "architecture/integrations/migration/M1A/generated/EVIDENCE_AND_CLAIMS/MANIFEST.json",
+    "manifest_git_blob_sha": "eb991f84cd21e17e9cfca963c3deebdcdcf0aca4",
+    "status": "CANDIDATE_REFERENCE_ONLY",
+    "normalized_validation_digest": "048c2e7995986ca061ce66ce65a1a33f532a8ab17819ea057a0ff979a12ee55d"
+  },
+  "generated_from": [
+    {
+      "path": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json",
+      "git_blob_sha": "301ba432907758fc49a9b3c86a83fc762eac4607"
+    },
+    {
+      "path": "architecture/integrations/migration/M0/CURRENT_MODULE_INVENTORY.json",
+      "git_blob_sha": "8dd8a5c6fe8b6feadd439353ebbf11343b3add40"
+    },
+    {
+      "path": "architecture/integrations/migration/M0/CURRENT_SIGNAL_MAP.json",
+      "git_blob_sha": "195a5148f16127114eaa1974ac37cd3ef86eb9ec"
+    },
+    {
+      "path": "architecture/integrations/migration/M0/CURRENT_COMPOSITION_RULES.json",
+      "git_blob_sha": "40d3d83d1b42eab6082d64936afd78f71780750b"
+    },
+    {
+      "path": "architecture/integrations/migration/M0/BASELINE_FIXTURES.json",
+      "git_blob_sha": "cb32509cae7ac06943b1af3f35e40de4607761ff"
+    },
+    {
+      "path": "architecture/integrations/migration/M1A/generated/EVIDENCE_AND_CLAIMS/MANIFEST.json",
+      "git_blob_sha": "eb991f84cd21e17e9cfca963c3deebdcdcf0aca4"
+    }
+  ],
+  "activation_contract": {
+    "activate_any": [
+      "TASK_ANALYSIS",
+      "TASK_AUDIT",
+      "TASK_TECHNICAL_REVIEW",
+      "TASK_STATUS_REPORT",
+      "CLAIM_FACTUAL",
+      "CLAIM_LEGAL_OR_STANDARD",
+      "CLAIM_ACCESSIBILITY",
+      "CLAIM_VALIDATION"
+    ]
+  },
+  "source_refs": [
+    "LAB_CONTRACT.md#3-clases-de-informacion",
+    "project-sources/chatgpt/05_EPISTEMIC_INDEPENDENCE.md",
+    "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/PRINCIPLES.json#DKP-013",
+    "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/PRINCIPLES.json#DKP-016",
+    "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/PRINCIPLES.json#DKP-018"
+  ],
+  "composition_rule_ids": [
+    "CR-001",
+    "CR-002",
+    "CR-003",
+    "CR-006"
+  ],
+  "exclusion_relationships": [
+    {
+      "when_any": [
+        "TASK_CASUAL_CONVERSATION",
+        "TASK_TRANSLATION_ONLY",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE",
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "effect": "NOT_EXCLUDED"
+    }
+  ],
+  "baseline_fixture_source": {
+    "path": "architecture/integrations/migration/M0/BASELINE_FIXTURES.json",
+    "fixture_ids": [
+      "CRIT-FIX-001",
+      "CRIT-FIX-002",
+      "CRIT-FIX-003",
+      "CRIT-FIX-004",
+      "CRIT-FIX-005",
+      "CRIT-FIX-006",
+      "CRIT-FIX-007",
+      "CRIT-FIX-008",
+      "CRIT-FIX-009",
+      "CRIT-FIX-010",
+      "CRIT-FIX-011",
+      "CRIT-FIX-012",
+      "CRIT-FIX-013"
+    ]
+  },
+  "unresolved_values_policy": {
+    "version": "PRESERVE_M1A_STRUCTURED_UNRESOLVED",
+    "producer": "PRESERVE_M1A_STRUCTURED_UNRESOLVED",
+    "conflicts": "PRESERVE_M1A_STRUCTURED_UNRESOLVED"
+  },
+  "rollback": {
+    "strategy": "DELETE_SHADOW_ARTIFACTS_AND_CONTINUE_USING_STATIC_SELECTOR",
+    "active_selector_unchanged": true
+  }
+}

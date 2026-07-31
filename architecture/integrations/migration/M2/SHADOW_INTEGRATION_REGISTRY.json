@@ -1,0 +1,129 @@
+{
+  "schema_version": "1.0.0",
+  "registry_id": "SHADOW_INTEGRATION_REGISTRY_001",
+  "migration_phase": "M2_SHADOW_REGISTRY",
+  "status": "SHADOW_ONLY_NOT_ACTIVE",
+  "created_at": "2026-07-30T21:21:00-04:00",
+  "automatic_activation": false,
+  "implementation_authorized": false,
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE",
+  "active_selector": {
+    "path": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json",
+    "selector_id": "CHATGPT-CRITERION-SELECTOR-001",
+    "selector_version": "1.0.0",
+    "git_blob_sha": "301ba432907758fc49a9b3c86a83fc762eac4607",
+    "modified": false,
+    "remains_authoritative": true
+  },
+  "m1a_baseline": {
+    "validation_path": "architecture/integrations/migration/M1A/VALIDATION_RESULTS.json",
+    "normalized_digest": "048c2e7995986ca061ce66ce65a1a33f532a8ab17819ea057a0ff979a12ee55d",
+    "unchanged": true
+  },
+  "entries": [
+    {
+      "order": 1,
+      "module_id": "EVIDENCE_AND_CLAIMS",
+      "profile": "CRITERION_MODULE",
+      "status": "SHADOW_ONLY",
+      "adapter_path": "architecture/integrations/migration/M2/module-adapters/EVIDENCE_AND_CLAIMS/ADAPTER.json",
+      "m1a_manifest_path": "architecture/integrations/migration/M1A/generated/EVIDENCE_AND_CLAIMS/MANIFEST.json",
+      "automatic_activation": false,
+      "authority_effect": "NONE",
+      "runtime_effect": "NONE"
+    },
+    {
+      "order": 2,
+      "module_id": "DESIGN_CRITERION",
+      "profile": "CRITERION_MODULE",
+      "status": "SHADOW_ONLY",
+      "adapter_path": "architecture/integrations/migration/M2/module-adapters/DESIGN_CRITERION/ADAPTER.json",
+      "m1a_manifest_path": "architecture/integrations/migration/M1A/generated/DESIGN_CRITERION/MANIFEST.json",
+      "automatic_activation": false,
+      "authority_effect": "NONE",
+      "runtime_effect": "NONE"
+    },
+    {
+      "order": 3,
+      "module_id": "WEB_ACCESSIBILITY",
+      "profile": "CRITERION_MODULE",
+      "status": "SHADOW_ONLY",
+      "adapter_path": "architecture/integrations/migration/M2/module-adapters/WEB_ACCESSIBILITY/ADAPTER.json",
+      "m1a_manifest_path": "architecture/integrations/migration/M1A/generated/WEB_ACCESSIBILITY/MANIFEST.json",
+      "automatic_activation": false,
+      "authority_effect": "NONE",
+      "runtime_effect": "NONE"
+    },
+    {
+      "order": 4,
+      "module_id": "CONTEXTUAL_VISUAL_PREFERENCE",
+      "profile": "CRITERION_MODULE",
+      "status": "SHADOW_ONLY",
+      "adapter_path": "architecture/integrations/migration/M2/module-adapters/CONTEXTUAL_VISUAL_PREFERENCE/ADAPTER.json",
+      "m1a_manifest_path": "architecture/integrations/migration/M1A/generated/CONTEXTUAL_VISUAL_PREFERENCE/MANIFEST.json",
+      "automatic_activation": false,
+      "authority_effect": "NONE",
+      "runtime_effect": "NONE"
+    }
+  ],
+  "composition": {
+    "declared_module_order": [
+      "EVIDENCE_AND_CLAIMS",
+      "DESIGN_CRITERION",
+      "WEB_ACCESSIBILITY",
+      "CONTEXTUAL_VISUAL_PREFERENCE"
+    ],
+    "rules": [
+      "EVALUATE_ALL_MODULES_IN_DECLARED_ORDER",
+      "ACTIVATE_A_MODULE_ONLY_WHEN_ITS_SIGNAL_RULE_MATCHES",
+      "EVIDENCE_AND_CLAIMS_PRECEDES_RECOMMENDATION",
+      "WEB_ACCESSIBILITY_CONSTRAINS_INTERFACE_OUTPUT_WITHOUT_SELECTING_AN_AESTHETIC",
+      "CONTEXTUAL_VISUAL_PREFERENCE_NEVER_BECOMES_A_UNIVERSAL_STYLE",
+      "NO_MATCH_RETURNS_EMPTY_MODULE_SET"
+    ],
+    "exclusions": [
+      {
+        "when_any": [
+          "TASK_CASUAL_CONVERSATION",
+          "TASK_TRANSLATION_ONLY",
+          "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE",
+          "TASK_SIMPLE_ARITHMETIC"
+        ],
+        "exclude": [
+          "DESIGN_CRITERION",
+          "WEB_ACCESSIBILITY",
+          "CONTEXTUAL_VISUAL_PREFERENCE"
+        ]
+      }
+    ],
+    "empty_set_abstention": "NO_MATCH_RETURNS_EMPTY_MODULE_SET"
+  },
+  "baseline_fixtures": {
+    "source_path": "architecture/integrations/migration/M0/BASELINE_FIXTURES.json",
+    "fixture_ids": [
+      "CRIT-FIX-001",
+      "CRIT-FIX-002",
+      "CRIT-FIX-003",
+      "CRIT-FIX-004",
+      "CRIT-FIX-005",
+      "CRIT-FIX-006",
+      "CRIT-FIX-007",
+      "CRIT-FIX-008",
+      "CRIT-FIX-009",
+      "CRIT-FIX-010",
+      "CRIT-FIX-011",
+      "CRIT-FIX-012",
+      "CRIT-FIX-013"
+    ],
+    "fixture_count": 13
+  },
+  "non_operational_contract": [
+    "NO_EXECUTABLE_RESOLVER",
+    "NO_ACTIVE_SELECTION_INTERFACE",
+    "NOT_AN_ACTIVE_CRITERION_LAYER_DEPENDENCY",
+    "NO_MODULE_PROMOTION",
+    "NO_CHATGPT_BEHAVIOR_CHANGE"
+  ]
+}

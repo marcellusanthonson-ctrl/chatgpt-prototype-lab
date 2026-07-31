@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0.0",
+  "manifest_id": "INTEGRATION_FACTORY_M2_CHANGED_FILES_155",
+  "recorded_at": "2026-07-30T21:21:00-04:00",
+  "authorization_ref": "AUTHORIZATION_LAB_INTEGRATION_FACTORY_M2_SHADOW_REGISTRY_MATERIALIZATION_AND_EQUIVALENCE_VALIDATION_155",
+  "files": [
+    {
+      "path": "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M2_SHADOW_REGISTRY_MATERIALIZATION_AND_EQUIVALENCE_VALIDATION_155.json",
+      "operation": "CREATE"
+    },
+    {
+      "path": "projects/lab/briefs/CODEX_INTEGRATION_FACTORY_M2_SHADOW_REGISTRY_MATERIALIZATION_AND_EQUIVALENCE_VALIDATION_001.json",
+      "operation": "CREATE"
+    },
+    {
+      "path": "architecture/integrations/migration/M2/README.md",
+      "operation": "CREATE"
+    },
+    {
+      "path": "architecture/integrations/migration/M2/SHADOW_INTEGRATION_REGISTRY.json",
+      "operation": "CREATE"
+    },
+    {
+      "path": "architecture/integrations/migration/M2/STATIC_SHADOW_EQUIVALENCE_REPORT.json",
+      "operation": "CREATE"
+    },
+    {
+      "path": "architecture/integrations/migration/M2/VALIDATION_RESULTS.json",
+      "operation": "CREATE"
+    },
+    {
+      "path": "architecture/integrations/migration/M2/module-adapters/EVIDENCE_AND_CLAIMS/ADAPTER.json",
+      "operation": "CREATE"
+    },
+    {
+      "path": "architecture/integrations/migration/M2/module-adapters/DESIGN_CRITERION/ADAPTER.json",
+      "operation": "CREATE"
+    },
+    {
+      "path": "architecture/integrations/migration/M2/module-adapters/WEB_ACCESSIBILITY/ADAPTER.json",
+      "operation": "CREATE"
+    },
+    {
+      "path": "architecture/integrations/migration/M2/module-adapters/CONTEXTUAL_VISUAL_PREFERENCE/ADAPTER.json",
+      "operation": "CREATE"
+    },
+    {
+      "path": "scripts/validate_integration_factory_m2.py",
+      "operation": "CREATE"
+    },
+    {
+      "path": "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M2-155.json",
+      "operation": "CREATE"
+    },
+    {
+      "path": "registry/deltas/integration-factory-m2-shadow-registry-155.json",
+      "operation": "CREATE"
+    },
+    {
+      "path": "projects/lab/continuity/archive/2026-07-30-integration-factory-m1-pass/CURRENT_CONTINUITY.json",
+      "operation": "CREATE"
+    },
+    {
+      "path": "projects/lab/continuity/archive/2026-07-30-integration-factory-m1-pass/CURRENT_CONTINUITY.md",
+      "operation": "CREATE"
+    },
+    {
+      "path": "projects/lab/continuity/archive/2026-07-30-integration-factory-m1-pass/ATTACHMENT_MANIFEST.json",
+      "operation": "CREATE"
+    },
+    {
+      "path": "projects/lab/continuity/archive/2026-07-30-integration-factory-m1-pass/START_PROMPT.md",
+      "operation": "CREATE"
+    },
+    {
+      "path": "architecture/integrations/migration/M2/CHANGED_FILES.json",
+      "operation": "CREATE"
+    },
+    {
+      "path": "registry/index.json",
+      "operation": "MODIFY"
+    },
+    {
+      "path": "CURRENT_STATE.md",
+      "operation": "MODIFY"
+    },
+    {
+      "path": "projects/lab/PROJECT_STATE.md",
+      "operation": "MODIFY"
+    },
+    {
+      "path": "projects/lab/continuity/CURRENT_CONTINUITY.json",
+      "operation": "MODIFY"
+    },
+    {
+      "path": "projects/lab/continuity/CURRENT_CONTINUITY.md",
+      "operation": "MODIFY"
+    },
+    {
+      "path": "projects/lab/continuity/ATTACHMENT_MANIFEST.json",
+      "operation": "MODIFY"
+    },
+    {
+      "path": "projects/lab/continuity/START_PROMPT.md",
+      "operation": "MODIFY"
+    }
+  ],
+  "counts": {
+    "created": 18,
+    "modified": 7,
+    "total": 25
+  }
+}

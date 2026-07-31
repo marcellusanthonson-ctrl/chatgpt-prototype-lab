@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "integration-factory-m2-shadow-registry-155",
+  "project_id": "lab",
+  "recorded_at": "2026-07-30T21:21:00-04:00",
+  "authorization_id": "AUTHORIZATION_LAB_INTEGRATION_FACTORY_M2_SHADOW_REGISTRY_MATERIALIZATION_AND_EQUIVALENCE_VALIDATION_155",
+  "evidence_id": "EVD-LAB-INTEGRATION-FACTORY-M2-155",
+  "status": "M2_PASS",
+  "state_changes": {
+    "integration_factory_migration_phase": "M2_PASS_AWAITING_SEPARATE_HUMAN_DECISION_FOR_M3",
+    "m2_authorized": "CONSUMED",
+    "shadow_registry_created": true,
+    "shadow_registry_status": "SHADOW_ONLY_NOT_ACTIVE",
+    "module_adapters_created": 4,
+    "static_shadow_catalogs_equivalent": true,
+    "active_selector_modified": false,
+    "runtime_effect": "NONE",
+    "integration_effect": "NONE",
+    "m3_authorized": false,
+    "active_registry_authorized": false
+  },
+  "source_refs": [
+    "architecture/integrations/migration/M2/SHADOW_INTEGRATION_REGISTRY.json",
+    "architecture/integrations/migration/M2/STATIC_SHADOW_EQUIVALENCE_REPORT.json",
+    "architecture/integrations/migration/M2/VALIDATION_RESULTS.json",
+    "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M2-155.json"
+  ],
+  "single_next_action": "JONATHAN_MARTINEZ_MAKES_A_SEPARATE_HUMAN_DECISION_ON_ENTRY_TO_M3_DUAL_EVALUATION",
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_155_CONSUMPTION",
+  "runtime_effect": "NONE"
+}
