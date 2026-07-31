@@ -1,0 +1,3 @@
+Continúa ChatGPT Prototype LAB reconstruyendo primero el estado desde `marcellusanthonson-ctrl/chatgpt-prototype-lab`, rama `main`, entrypoint `project-sources/chatgpt/START_HERE.md`; verifica el HEAD remoto vigente y sigue exactamente su orden de lectura. Después lee el paquete CURRENT y continúa desde `M2_PASS` sin iniciar M3, activar el shadow registry, modificar el selector, ejecutar SSE, AWS o Terraform, ni producir efectos de runtime o integración hasta identificar una autorización explícita vigente.
+
+M2 está `PASS`: existe un shadow registry no activo y cuatro adaptadores equivalentes al selector estático. El selector, runtime e integraciones permanecen sin cambios. M3 no está autorizado.

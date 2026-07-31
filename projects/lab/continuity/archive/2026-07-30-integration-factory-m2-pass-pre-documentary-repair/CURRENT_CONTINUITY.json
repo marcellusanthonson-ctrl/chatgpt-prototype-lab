@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.2.0",
+  "continuity_id": "LAB-CONTINUITY-INTEGRATION-FACTORY-M2-PASS-20260730",
+  "project_id": "lab",
+  "status": "CURRENT_INTEGRATION_FACTORY_M2_PASS_AWAITING_SEPARATE_HUMAN_DECISION_FOR_M3",
+  "created_at": "2026-07-30T21:21:00-04:00",
+  "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "canonical_branch": "main",
+  "head_policy": "VERIFY_LIVE_AT_USE",
+  "verified_generation_parent_head": "9e5dc65cd076e4bd65e6cfd61f8fb44ecb42e8bb",
+  "verified_generation_parent_head_role": "AUTHORIZATION_155_EXECUTION_PARENT_HISTORICAL",
+  "entrypoint": "project-sources/chatgpt/START_HERE.md",
+  "required_reading_order": [
+    "VERIFY_LIVE_HEAD_OF_MAIN",
+    "project-sources/chatgpt/START_HERE.md",
+    "LAB_CONTRACT.md",
+    "METHODOLOGY.md",
+    "CURRENT_STATE.json",
+    "registry/index.json",
+    "registry/projects.json",
+    "projects/lab/PROJECT_STATE.json",
+    "architecture/integrations/STATIC_SELECTOR_TO_INTEGRATION_FACTORY_MIGRATION_PLAN_001.json",
+    "architecture/integrations/migration/M2/SHADOW_INTEGRATION_REGISTRY.json",
+    "architecture/integrations/migration/M2/STATIC_SHADOW_EQUIVALENCE_REPORT.json",
+    "architecture/integrations/migration/M2/VALIDATION_RESULTS.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M2_SHADOW_REGISTRY_MATERIALIZATION_AND_EQUIVALENCE_VALIDATION_155.json",
+    "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M2-155.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_SSE_TEST_EXECUTION_AND_READ_ONLY_AUDIT_147.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.md",
+    "projects/lab/continuity/ATTACHMENT_MANIFEST.json"
+  ],
+  "facts": [
+    {
+      "claim": "M2 created one non-active shadow registry and four SHADOW_ONLY adapters.",
+      "source_refs": [
+        "architecture/integrations/migration/M2/SHADOW_INTEGRATION_REGISTRY.json"
+      ]
+    },
+    {
+      "claim": "Static and shadow catalogs are equivalent for module set, order, activation operators, selector signal universe, composition, exclusions, abstention, fixtures and source references.",
+      "source_refs": [
+        "architecture/integrations/migration/M2/STATIC_SHADOW_EQUIVALENCE_REPORT.json"
+      ]
+    },
+    {
+      "claim": "Two deterministic validation runs produced the same digest.",
+      "source_refs": [
+        "architecture/integrations/migration/M2/VALIDATION_RESULTS.json"
+      ]
+    },
+    {
+      "claim": "The active selector remains unchanged and authoritative; runtime and integration effects are NONE.",
+      "source_refs": [
+        "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M2-155.json"
+      ]
+    }
+  ],
+  "approved_design_constraints": [
+    "SHADOW_ONLY_NOT_ACTIVE",
+    "STATIC_SELECTOR_REMAINS_AUTHORITATIVE",
+    "NO_RUNTIME_EFFECT",
+    "NO_INTEGRATION_EFFECT",
+    "NO_AUTOMATIC_AUTHORITY",
+    "PROVIDER_AND_TECHNOLOGY_NEUTRAL",
+    "M3_REQUIRES_SEPARATE_HUMAN_DECISION_AND_AUTHORIZATION"
+  ],
+  "completed_work": [
+    "Generated four module adapters by reference to selector, M0 and M1A inputs.",
+    "Generated SHADOW_INTEGRATION_REGISTRY.json.",
+    "Validated exact static-shadow catalog equivalence twice.",
+    "Recorded M2_PASS, evidence and registry delta.",
+    "Archived the previous M1_PASS continuity package."
+  ],
+  "authorizations": {
+    "147": {
+      "status": "GRANTED_NOT_STARTED",
+      "scope": "SSE_SEPARATE_LINE",
+      "activation_or_integration_authorized": false
+    },
+    "153": "CONSUMED_M1A_AND_M1_PASS",
+    "154": "CONSUMED_STATE_RECONCILIATION",
+    "155": "CONSUMED_M2_SHADOW_REGISTRY_AND_EQUIVALENCE_VALIDATION"
+  },
+  "current_line_authority": {
+    "m3_authorized": false,
+    "dual_evaluation_authorized": false,
+    "active_registry_authorized": false,
+    "selector_change_authorized": false,
+    "runtime_resolver_authorized": false,
+    "integration_authorized": false,
+    "aws_authorized": false,
+    "terraform_authorized": false,
+    "provider_selection_authorized": false
+  },
+  "pending": [
+    {
+      "id": "M3_ENTRY_DECISION",
+      "status": "AWAITING_SEPARATE_HUMAN_DECISION",
+      "required_resolution": [
+        "Decide whether to proceed to M3 dual evaluation.",
+        "If approved, prepare a separate bounded authorization with the live parent HEAD.",
+        "Do not infer M3 authority from M2_PASS."
+      ],
+      "source_refs": [
+        "registry/deltas/integration-factory-m2-shadow-registry-155.json"
+      ]
+    }
+  ],
+  "errors": [],
+  "divergences": [
+    "M0's 27-signal label includes 23 module activation-rule signals and 4 exclusion signals; M2 preserves the complete selector universe.",
+    "CURRENT_STATE.json and PROJECT_STATE.json remain preserved base snapshots; effective state is supplied through delta 155, registry discovery, Markdown views and this CURRENT package.",
+    "The legacy repository validator's pre-existing array-valued registry-delta path crash was not modified."
+  ],
+  "forbidden_until_new_authorization": [
+    "BEGIN_M3",
+    "EXECUTE_DUAL_SELECTOR_EVALUATION",
+    "CREATE_OR_ENABLE_ACTIVE_REGISTRY",
+    "MODIFY_MODULE_SELECTOR_OR_CHATGPT_BEHAVIOR",
+    "IMPLEMENT_RUNTIME_RESOLVER",
+    "ACTIVATE_OR_INTEGRATE_ANY_MODULE",
+    "EXECUTE_SSE_TEST_147_UNDER_THIS_LINE",
+    "RUN_AWS_TERRAFORM_OR_PROVISIONING_FOR_THIS_LINE",
+    "SELECT_GLOBAL_STACK_OR_PRODUCTION_PROVIDER"
+  ],
+  "single_next_action": "JONATHAN_MARTINEZ_MAKES_A_SEPARATE_HUMAN_DECISION_ON_ENTRY_TO_M3_DUAL_EVALUATION",
+  "first_phrase_for_new_conversation": "Continúa ChatGPT Prototype LAB reconstruyendo primero el estado desde `marcellusanthonson-ctrl/chatgpt-prototype-lab`, rama `main`, entrypoint `project-sources/chatgpt/START_HERE.md`; verifica el HEAD remoto vigente y sigue exactamente su orden de lectura. Después lee el paquete CURRENT y continúa desde `M2_PASS` sin iniciar M3, activar el shadow registry, modificar el selector, ejecutar SSE, AWS o Terraform, ni producir efectos de runtime o integración hasta identificar una autorización explícita vigente.",
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_155_CONSUMPTION",
+  "runtime_effect": "NONE"
+}
