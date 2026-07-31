@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.2.0",
+  "continuity_id": "LAB-CONTINUITY-INTEGRATION-FACTORY-M3-BLOCKED-20260731",
+  "project_id": "lab",
+  "status": "CURRENT_M3_BLOCKED_AWAITING_DIVERGENCE_REMEDIATION_DECISION",
+  "created_at": "2026-07-31T08:14:28-04:00",
+  "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "canonical_branch": "main",
+  "head_policy": "VERIFY_LIVE_AT_USE",
+  "verified_execution_parent_head": "ce5c86ee59013f335cc541d0066f9513c0de0872",
+  "entrypoint": "project-sources/chatgpt/START_HERE.md",
+  "required_reading_order": ["VERIFY_LIVE_HEAD_OF_MAIN", "project-sources/chatgpt/START_HERE.md", "LAB_CONTRACT.md", "METHODOLOGY.md", "CURRENT_STATE.json", "registry/index.json", "registry/projects.json", "projects/lab/PROJECT_STATE.json", "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M3-157.json", "architecture/integrations/migration/M3/VALIDATION_RESULTS.json", "architecture/integrations/migration/M3/DIVERGENCE_LOG.json", "projects/lab/pending/PEND-LAB-035.json", "projects/lab/continuity/CURRENT_CONTINUITY.json"],
+  "facts": [
+    {"claim": "M3 used exactly 420 deterministic synthetic cases.", "source_refs": ["architecture/integrations/migration/M3/TEST_CORPUS.json"]},
+    {"claim": "Static and shadow results match exactly in 420 of 420 cases across two unchanged runs.", "source_refs": ["architecture/integrations/migration/M3/EQUIVALENCE_RESULTS.json"]},
+    {"claim": "Both evaluators pass 12 of 13 canonical fixture oracles.", "source_refs": ["architecture/integrations/migration/M3/VALIDATION_RESULTS.json"]},
+    {"claim": "CRIT-FIX-008 and its reversed variant are classified baseline oracle regressions.", "source_refs": ["architecture/integrations/migration/M3/DIVERGENCE_LOG.json"]},
+    {"claim": "Frozen M2/M1A inputs remain unchanged and no runtime or integration effect occurred.", "source_refs": ["architecture/integrations/migration/M3/VALIDATION_RESULTS.json"]}
+  ],
+  "result": {
+    "classification": "M3_BLOCKED_WITH_CLASSIFIED_DIVERGENCES",
+    "corpus_cases": 420,
+    "static_shadow_exact_matches": 420,
+    "baseline_oracle_passes_per_evaluator": 12,
+    "classified_divergences": 2,
+    "negative_transfer": "NONE_DETECTED_STATIC_SHADOW",
+    "repeated_digest": "9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329"
+  },
+  "authorizations": {"147": "GRANTED_NOT_STARTED_SEPARATE_LINE", "153": "CONSUMED", "154": "CONSUMED", "155": "CONSUMED", "156": "CONSUMED", "157": "CONSUMED_ON_VERIFIED_STAGE_2_REMOTE_PUBLICATION"},
+  "current_line_authority": {"m3_remediation_authorized": false, "m4_authorized": false, "cutover_authorized": false, "active_registry_authorized": false, "selector_change_authorized": false, "runtime_authorized": false, "integration_authorized": false, "aws_authorized": false, "terraform_authorized": false},
+  "pending": [{"id": "PEND-LAB-035", "status": "M3_BLOCKED_AWAITING_DIVERGENCE_REMEDIATION_DECISION", "effect_until_resolution": "M3_REMEDIATION_M4_AND_CUTOVER_BLOCKED", "source_refs": ["projects/lab/pending/PEND-LAB-035.json"]}],
+  "errors": [],
+  "divergences": ["M3-BASELINE-008: BASELINE_ORACLE_REGRESSION", "M3-REVERSED-008: BASELINE_ORACLE_REGRESSION", "Historical M2 executor variance remains recorded without retroactive authorization."],
+  "forbidden": ["MODIFY_FROZEN_M3_INPUTS", "EXECUTE_M3_REMEDIATION_WITHOUT_SEPARATE_AUTHORIZATION", "BEGIN_M4", "EXECUTE_CUTOVER", "ACTIVATE_SHADOW_REGISTRY", "CHANGE_SELECTOR", "CHANGE_RUNTIME_OR_INTEGRATIONS", "RUN_AWS_OR_TERRAFORM"],
+  "single_next_action": "JONATHAN_MARTINEZ_DECIDES_TREATMENT_OF_CLASSIFIED_M3_DIVERGENCES",
+  "first_phrase_for_new_conversation": "Continúa ChatGPT Prototype LAB reconstruyendo el estado desde main y PEND-LAB-035; M3 quedó bloqueado con dos regresiones clasificadas contra CRIT-FIX-008, sin transferencia negativa estático-shadow.",
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_157_CONSUMPTION",
+  "runtime_effect": "NONE"
+}
