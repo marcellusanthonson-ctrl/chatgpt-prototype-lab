@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "drill_id": "INTEGRATION_FACTORY_PRE_ACTIVATION_ROLLBACK_DRILL_160",
+  "executed_at": "2026-07-31T13:53:17-04:00",
+  "authorization": "AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160",
+  "verified_parent_head": "e60cfe4b90b58a2e54c4ddfe671267afc2a1bcaa",
+  "classification": "FAIL_CLOSED_BEFORE_POINTER_MUTATION",
+  "commands": [
+    {"command": "git fetch origin main", "exit_code": 0, "result": "PASS"},
+    {"command": "git rev-parse refs/remotes/origin/main", "exit_code": 0, "stdout": "e60cfe4b90b58a2e54c4ddfe671267afc2a1bcaa", "result": "PASS"},
+    {"command": "git hash-object project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json", "exit_code": 0, "stdout": "301ba432907758fc49a9b3c86a83fc762eac4607", "result": "PASS"},
+    {"command": "git hash-object architecture/integrations/migration/M2/SHADOW_INTEGRATION_REGISTRY.json", "exit_code": 0, "stdout": "a067cd9f95b98aa1599d21e3a0ff35fa56ac3a78", "result": "PASS"},
+    {"command": "python -B scripts/validate_integration_factory_m3_remediation_158.py --check", "exit_code": 1, "result": "FAIL", "failure": "PUBLISHED_REMEDIATION_OUTPUTS_DIFFER_FROM_FRESH_EXECUTION", "mismatches": ["FIXTURE_ORACLE_REMEDIATION.json", "EQUIVALENCE_RESULTS.json", "VALIDATION_RESULTS.json"]},
+    {"command": "python -B scripts/validate_integration_factory_m5_readiness_161.py --check", "exit_code": 1, "result": "FAIL", "failure": "AUTHORIZATION_160_BOUNDARY_MISMATCH"}
+  ],
+  "success_criteria": {
+    "static_pointer_selected": false,
+    "static_blob_exact": true,
+    "candidate_not_active": true,
+    "no_partial_pointer": true,
+    "general_validation_recorded": true,
+    "bounded_validation_passed": false
+  },
+  "pointer_pre_state": "ABSENT_STATIC_SELECTOR_AUTHORITATIVE",
+  "pointer_post_state": "ABSENT_STATIC_SELECTOR_AUTHORITATIVE",
+  "cleanup": {"temp_pointer_removed": true, "candidate_copy_removed": true, "owned_lock_released": true, "persistent_mutations": 0},
+  "failure_refs": ["ERR-LAB-009"],
+  "cutover_allowed": false,
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}

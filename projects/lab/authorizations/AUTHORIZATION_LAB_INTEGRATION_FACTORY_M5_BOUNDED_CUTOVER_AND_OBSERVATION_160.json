@@ -2,8 +2,8 @@
   "schema_version": "1.2.0",
   "authorization_id": "AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160",
   "project_id": "lab",
-  "status": "GRANTED",
-  "publication_status": "STAGE_1_DOCUMENTARY_GATE_PUBLISHED_STAGE_2_AUTHORIZED_NOT_STARTED",
+  "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+  "publication_status": "STAGE_2_FAIL_CLOSED_RESULT_PUBLISHED_CONSUMPTION_EFFECTIVE_ON_VERIFIED_REMOTE_HEAD",
   "prepared_at": "2026-07-31T12:51:22-04:00",
   "prepared_by": "CODEX",
   "approved_by": "Jonathan Martínez",
@@ -30,8 +30,14 @@
   },
   "stage_2": {
     "executor": "CODEX",
-    "status": "AUTHORIZED_NOT_STARTED",
-    "objective": "Freeze the exact 335 historical general-validator findings, execute the pre-activation operational rollback drill, and only after a PASS execute the single-pointer bounded M5 cutover and exact observation plan with immediate fail-closed rollback."
+    "status": "EXECUTED_FAIL_CLOSED_ROLLBACK_DRILL_FAILED_NO_CUTOVER",
+    "objective": "Freeze the exact 335 historical general-validator findings, execute the pre-activation operational rollback drill, and only after a PASS execute the single-pointer bounded M5 cutover and exact observation plan with immediate fail-closed rollback.",
+    "started_at": "2026-07-31T13:30:00-04:00",
+    "completed_at": "2026-07-31T13:53:17-04:00",
+    "result_classification": "M5_BOUNDED_CUTOVER_ROLLED_BACK_WITH_CLASSIFIED_FAILURES",
+    "cutover_executed": false,
+    "observation_executed": false,
+    "failure_ref": "errors/ERR-LAB-009.json"
   },
   "authority": {
     "commit": true,

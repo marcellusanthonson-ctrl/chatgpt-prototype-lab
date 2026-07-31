@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0.0",
+  "id": "PEND-LAB-039",
+  "project_id": "lab",
+  "status": "AWAITING_HUMAN_REMEDIATION_DECISION_FOR_ROLLBACK_DRILL_VALIDATOR_INCOMPATIBILITY",
+  "type": "INTEGRATION_FACTORY_M5_FAIL_CLOSED_REMEDIATION_GATE",
+  "priority": "HIGH",
+  "created_at": "2026-07-31T13:53:17-04:00",
+  "decision_owner": "Jonathan Martínez",
+  "automatic_approval": false,
+  "subject": "Decide whether to authorize a bounded stage-aware remediation of the mandatory rollback-drill validators",
+  "source_authorization": "AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160",
+  "execution_classification": "M5_BOUNDED_CUTOVER_ROLLED_BACK_WITH_CLASSIFIED_FAILURES",
+  "failure_ref": "errors/ERR-LAB-009.json",
+  "current_authority": "HUMAN_REVIEW_ONLY_NO_REMEDIATION_OR_CUTOVER_AUTHORITY",
+  "effect_until_resolution": "STATIC_SELECTOR_REMAINS_AUTHORITATIVE_CANDIDATE_INACTIVE_NO_ACTIVE_POINTER",
+  "next_transition": "JONATHAN_MARTINEZ_DECIDES_WHETHER_TO_AUTHORIZE_BOUNDED_VALIDATOR_REMEDIATION",
+  "source_refs": ["architecture/integrations/migration/M5/execution-160/ROLLBACK_DRILL_RESULTS.json", "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-160.json"],
+  "authority_effect": "NONE_UNTIL_NEW_EXPLICIT_HUMAN_DECISION_AND_AUTHORIZATION",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}

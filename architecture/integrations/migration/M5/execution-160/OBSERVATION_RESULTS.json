@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "observation_id": "INTEGRATION_FACTORY_M5_OBSERVATION_160",
+  "status": "NOT_EXECUTED_ROLLBACK_DRILL_FAILED_NO_CUTOVER",
+  "required_iterations": 2,
+  "required_cases_per_iteration": 420,
+  "required_oracles_per_evaluator": "13/13",
+  "expected_behavioral_digest": "9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329",
+  "executed_iterations": 0,
+  "executed_cases": 0,
+  "divergences": 0,
+  "reason": "MANDATORY_ROLLBACK_DRILL_DID_NOT_PASS",
+  "partial_pass_claimed": false,
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}

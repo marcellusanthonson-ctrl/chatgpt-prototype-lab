@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "validator": "M5_EXECUTION_160",
+  "classification": "M5_BOUNDED_CUTOVER_ROLLED_BACK_WITH_CLASSIFIED_FAILURES",
+  "verified_initial_parent_head": "e60cfe4b90b58a2e54c4ddfe671267afc2a1bcaa",
+  "stage_1_documentary_reconciliation": "PASS_FOUR_AUTHORIZED_FILES_ONLY",
+  "general_validator_baseline": "PASS_EXACT_335_REPRODUCIBLE",
+  "general_validator_inventory_digest": "cb54594bdbe3b2d7a5e473fdcb4a98e02cc7a5840966e4f0a5286c277f6226ab",
+  "rollback_drill": "FAIL_CLOSED",
+  "static_blob": "301ba432907758fc49a9b3c86a83fc762eac4607",
+  "candidate_blob": "a067cd9f95b98aa1599d21e3a0ff35fa56ac3a78",
+  "cutover": "NOT_EXECUTED",
+  "observation": "NOT_EXECUTED",
+  "active_pointer_exists": false,
+  "partial_state": false,
+  "global_repository_pass_claimed": false,
+  "product_leadership_effect": "NONE_OUT_OF_SCOPE",
+  "intelligent_application_construction_effect": "NONE_OUT_OF_SCOPE",
+  "software_solution_engineering_effect": "NONE_OUT_OF_SCOPE",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE",
+  "failure_refs": [
+    "errors/ERR-LAB-009.json"
+  ],
+  "general_validator_delta": "PASS_ZERO_ADDED_ZERO_REMOVED_ZERO_CHANGED",
+  "final_general_validator_count": 335,
+  "raw_ordered_message_digest": "00310f685ddb2ec849aa848eb9c78dbad17e08f199993259ce3057f904e2fd95"
+}

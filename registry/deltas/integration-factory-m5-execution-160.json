@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "integration-factory-m5-execution-160",
+  "project_id": "lab",
+  "recorded_at": "2026-07-31T13:53:17-04:00",
+  "parent_head": "e60cfe4b90b58a2e54c4ddfe671267afc2a1bcaa",
+  "authorization": {"id": "AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160", "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION", "stage_2_status": "EXECUTED_FAIL_CLOSED_ROLLBACK_DRILL_FAILED_NO_CUTOVER", "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160.json"},
+  "execution": {"classification": "M5_BOUNDED_CUTOVER_ROLLED_BACK_WITH_CLASSIFIED_FAILURES", "general_validator_baseline": "EXACT_335_REPRODUCIBLE", "rollback_drill": "FAIL_CLOSED", "cutover": "NOT_EXECUTED", "observation": "NOT_EXECUTED", "active_pointer_created": false},
+  "error": {"id": "ERR-LAB-009", "status": "OPEN_BLOCKING_M5_CUTOVER", "canonical_path": "errors/ERR-LAB-009.json"},
+  "evidence": {"id": "EVD-LAB-INTEGRATION-FACTORY-M5-160", "status": "PUBLISHED_FAIL_CLOSED", "canonical_path": "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-160.json"},
+  "pending": {"id": "PEND-LAB-039", "status": "AWAITING_HUMAN_REMEDIATION_DECISION_FOR_ROLLBACK_DRILL_VALIDATOR_INCOMPATIBILITY", "canonical_path": "projects/lab/pending/PEND-LAB-039.json"},
+  "boundaries": {"static_selector": "AUTHORITATIVE_UNCHANGED", "shadow_registry": "INACTIVE_UNCHANGED", "product_leadership": "OUT_OF_SCOPE_UNTOUCHED", "intelligent_application_construction": "OUT_OF_SCOPE_UNTOUCHED", "software_solution_engineering": "OUT_OF_SCOPE_UNTOUCHED", "runtime_effect": "NONE", "integration_effect": "NONE"},
+  "authority_effect": "AUTHORIZATION_160_CONSUMED_AFTER_VERIFIED_REMOTE_PUBLICATION"
+}

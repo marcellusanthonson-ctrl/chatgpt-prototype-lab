@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "INTEGRATION_FACTORY_M5_EXECUTION_160",
+  "classification": "M5_BOUNDED_CUTOVER_ROLLED_BACK_WITH_CLASSIFIED_FAILURES",
+  "created": [
+    "architecture/integrations/migration/M5/execution-160/CHANGED_FILES.json",
+    "architecture/integrations/migration/M5/execution-160/CUTOVER_RESULTS.json",
+    "architecture/integrations/migration/M5/execution-160/GENERAL_VALIDATOR_BASELINE.json",
+    "architecture/integrations/migration/M5/execution-160/OBSERVATION_RESULTS.json",
+    "architecture/integrations/migration/M5/execution-160/README.md",
+    "architecture/integrations/migration/M5/execution-160/ROLLBACK_DRILL_RESULTS.json",
+    "architecture/integrations/migration/M5/execution-160/VALIDATION_RESULTS.json",
+    "errors/ERR-LAB-009.json",
+    "projects/lab/continuity/archive/m5-cutover-stage-2-preexecution-e60cfe4b90b58a2e54c4ddfe671267afc2a1bcaa/ATTACHMENT_MANIFEST.json",
+    "projects/lab/continuity/archive/m5-cutover-stage-2-preexecution-e60cfe4b90b58a2e54c4ddfe671267afc2a1bcaa/CURRENT_CONTINUITY.json",
+    "projects/lab/continuity/archive/m5-cutover-stage-2-preexecution-e60cfe4b90b58a2e54c4ddfe671267afc2a1bcaa/CURRENT_CONTINUITY.md",
+    "projects/lab/continuity/archive/m5-cutover-stage-2-preexecution-e60cfe4b90b58a2e54c4ddfe671267afc2a1bcaa/START_PROMPT.md",
+    "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-160.json",
+    "projects/lab/pending/PEND-LAB-039.json",
+    "registry/deltas/integration-factory-m5-execution-160.json",
+    "scripts/execute_integration_factory_m5_160.py",
+    "scripts/validate_integration_factory_m5_160.py"
+  ],
+  "modified": [
+    "CURRENT_STATE.md",
+    "projects/lab/PENDING.json",
+    "projects/lab/PROJECT_STATE.md",
+    "projects/lab/ROADMAP.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160.json",
+    "projects/lab/briefs/CODEX_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_001.json",
+    "projects/lab/continuity/ATTACHMENT_MANIFEST.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.md",
+    "projects/lab/continuity/START_PROMPT.md",
+    "registry/authorizations.json",
+    "registry/errors.json",
+    "registry/index.json"
+  ],
+  "forbidden_or_immutable_paths_modified": [],
+  "active_pointer_created": false,
+  "persistent_operational_mutation_count": 0
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-INTEGRATION-FACTORY-M5-160",
+  "project_id": "lab",
+  "recorded_at": "2026-07-31T13:53:17-04:00",
+  "authorization_id": "AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160",
+  "verified_parent_head": "e60cfe4b90b58a2e54c4ddfe671267afc2a1bcaa",
+  "classification": "M5_BOUNDED_CUTOVER_ROLLED_BACK_WITH_CLASSIFIED_FAILURES",
+  "stage_1_reconciliation": "PASS_FOUR_AUTHORIZED_DOCUMENTARY_FILES_ONLY",
+  "general_validator": {"baseline_count": 335, "reproduction_count": 335, "same_ordered_inventory": true, "inventory_digest": "cb54594bdbe3b2d7a5e473fdcb4a98e02cc7a5840966e4f0a5286c277f6226ab", "global_repository_pass": false},
+  "rollback_drill": {"result": "FAIL_CLOSED_BEFORE_POINTER_MUTATION", "validator_158": "FAIL_HISTORICAL_OUTPUT_MISMATCH", "validator_161": "FAIL_AUTHORIZATION_160_BOUNDARY_MISMATCH"},
+  "immutable_blobs": {"static_selector": "301ba432907758fc49a9b3c86a83fc762eac4607", "shadow_registry": "a067cd9f95b98aa1599d21e3a0ff35fa56ac3a78"},
+  "boundaries": {"cutover_executed": false, "observation_executed": false, "rollback_operationally_required": false, "active_pointer_created": false, "static_selector_authoritative": true, "candidate_active": false, "product_leadership_tested": false, "intelligent_application_construction_tested": false, "software_solution_engineering_tested": false, "runtime_effect": "NONE", "integration_effect": "NONE"},
+  "failure_ref": "errors/ERR-LAB-009.json",
+  "source_refs": ["architecture/integrations/migration/M5/execution-160/GENERAL_VALIDATOR_BASELINE.json", "architecture/integrations/migration/M5/execution-160/ROLLBACK_DRILL_RESULTS.json", "architecture/integrations/migration/M5/execution-160/VALIDATION_RESULTS.json"],
+  "authority_effect": "AUTHORIZATION_160_CONSUMED_BY_FAIL_CLOSED_STAGE_2_PUBLICATION"
+}

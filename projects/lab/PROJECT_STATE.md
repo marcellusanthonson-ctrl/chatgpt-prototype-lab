@@ -113,3 +113,11 @@ La etapa 2 de la autorización 161 se ejecutó desde `f1cb216c34285ba57a6f17e6eb
 Los contratos exactos están publicados en `architecture/integrations/migration/M5/readiness-161/`. La simulación temporal cubre 14 casos, pasa dos veces con digest idéntico `1296f6a49601b3fc7d50db047b6602cd3a5da5fee261287f6cfb4584afbfcef1` y no deja activación parcial persistente.
 
 La clasificación es `M5_READINESS_REMEDIATION_PASS_AWAITING_NEW_HUMAN_CUTOVER_DECISION`. `PEND-LAB-038` queda como única siguiente decisión. La autorización 160 sigue propuesta, no concedida y no ejecutable. El selector estático permanece autoritativo, el shadow registry inactivo y no existe efecto de runtime o integración.
+
+## Ejecución M5 160 detenida antes del cutover
+
+Codex ejecutó la etapa 2 desde `e60cfe4b90b58a2e54c4ddfe671267afc2a1bcaa`. La reconciliación inicial quedó limitada a los cuatro registros autorizados y el baseline general se reprodujo exactamente con 335 hallazgos históricos.
+
+El rollback drill obligatorio resultó `FAIL_CLOSED_BEFORE_POINTER_MUTATION`: fallaron los checks canónicos 158 y 161 por incompatibilidades post-concesión clasificadas en `ERR-LAB-009`. Por la condición de parada, no se creó el puntero, no hubo cutover, observación ni rollback operacional.
+
+La clasificación final es `M5_BOUNDED_CUTOVER_ROLLED_BACK_WITH_CLASSIFIED_FAILURES`. `PEND-LAB-039` espera decisión humana. El selector estático sigue autoritativo, el shadow registry inactivo, y Product Leadership, Intelligent Application Construction y SSE permanecen sin pruebas, adaptación, activación o integración.

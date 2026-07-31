@@ -131,3 +131,11 @@ Los validadores 158 y 159 pasan en sus commits canónicos. Los 14 casos de inyec
 Clasificación: `M5_READINESS_REMEDIATION_PASS_AWAITING_NEW_HUMAN_CUTOVER_DECISION`. La autorización 160 permanece `PROPOSED_NOT_GRANTED_NOT_EXECUTABLE`; `PEND-LAB-038` espera revisión humana. El selector estático sigue autoritativo, el shadow registry sigue inactivo y no hubo M5, cutover, rollback operacional, registro activo, runtime o integración.
 
 Product Leadership e Intelligent Application Construction conservan prioridad futura; Software Solution Engineering permanece diferido. Ninguna de las tres capacidades fue probada, adaptada, activada o integrada.
+
+## Fábrica de integraciones — ejecución M5 160 fail-closed
+
+La etapa 2 de la autorización 160 se inició desde el HEAD remoto verificado `e60cfe4b90b58a2e54c4ddfe671267afc2a1bcaa`. El inventario histórico del validador general quedó congelado y reproducido exactamente en 335 hallazgos; no existe PASS global del repositorio.
+
+El rollback drill obligatorio falló antes de crear o modificar el puntero: el validador 158 rechazó sus salidas históricas frente a una ejecución fresca y el validador 161 rechazó la frontera post-concesión de la autorización 160. `ERR-LAB-009` registra el fallo. No hubo cutover, observación ni rollback operacional.
+
+Clasificación: `M5_BOUNDED_CUTOVER_ROLLED_BACK_WITH_CLASSIFIED_FAILURES`. El selector estático permanece autoritativo, el shadow registry inactivo y no existe puntero activo. `PEND-LAB-039` espera una decisión humana separada sobre una posible remediación acotada de validadores. Product Leadership, Intelligent Application Construction y SSE permanecieron fuera de alcance y sin cambios.

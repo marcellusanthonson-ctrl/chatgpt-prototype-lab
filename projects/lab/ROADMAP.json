@@ -296,6 +296,27 @@
       "runtime_effect": "NONE",
       "integration_effect": "NONE",
       "next_gate": "JONATHAN_MARTINEZ_REVIEWS_PEND_LAB_038"
+    },
+    {
+      "order": 27,
+      "item": "INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION",
+      "status": "EXECUTED_FAIL_CLOSED_ROLLBACK_DRILL_FAILED_NO_CUTOVER",
+      "authorization": "AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160",
+      "decision": "DEC-LAB-027",
+      "source_pending": "PEND-LAB-038",
+      "result_pending": "PEND-LAB-039",
+      "failure_ref": "ERR-LAB-009",
+      "m5_authorization_status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "historical_general_validator_baseline_required": 335,
+      "pre_activation_rollback_drill_required": true,
+      "cutover_condition": "ROLLBACK_DRILL_PASS",
+      "static_selector_status": "AUTHORITATIVE_UNCHANGED",
+      "shadow_registry_status": "INACTIVE",
+      "future_integration_priority": ["PRODUCT_LEADERSHIP", "INTELLIGENT_APPLICATION_CONSTRUCTION"],
+      "deferred_capability": "SOFTWARE_SOLUTION_ENGINEERING",
+      "runtime_effect": "NONE",
+      "integration_effect": "NONE",
+      "next_gate": "HUMAN_REMEDIATION_DECISION_FOR_PEND_LAB_039"
     }
   ]
 }

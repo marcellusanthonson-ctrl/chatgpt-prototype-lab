@@ -1,29 +1,19 @@
-# Continuidad actual — autorización M5 160 concedida
+# Continuidad actual — ejecución M5 160 detenida de forma cerrada
 
-Fecha: 2026-07-31T13:14:00-04:00
+Fecha: 2026-07-31T13:53:17-04:00
 
 Repositorio: `marcellusanthonson-ctrl/chatgpt-prototype-lab`
 
 Rama: `main`
 
-Política HEAD: `VERIFY_LIVE_AT_USE`
+La etapa 2 de la autorización 160 comenzó desde el HEAD remoto exacto `e60cfe4b90b58a2e54c4ddfe671267afc2a1bcaa`. La reconciliación documental inicial quedó limitada a los cuatro registros autorizados. El validador general produjo y reprodujo el mismo inventario exacto de 335 hallazgos históricos; esto no es un PASS global del repositorio.
 
-## Estado
+El rollback drill obligatorio falló antes de cualquier mutación del puntero. El validador 158 rechazó la comparación con sus salidas históricas inmutables y el validador 161 rechazó el estado post-concesión de la autorización 160. El fallo está registrado como `ERR-LAB-009`.
 
-`DEC-LAB-027` resolvió `PEND-LAB-038` seleccionando `GRANT_AUTHORIZATION_160_WITH_EXACT_PARENT`.
+No se creó `architecture/integrations/active/INTEGRATION_FACTORY_RESOLUTION_POINTER.json`, no hubo cutover, no se ejecutó observación y no fue necesario un rollback operacional. El selector estático permanece autoritativo; el shadow registry sigue inactivo.
 
-La autorización 160 está concedida exclusivamente a Codex para ejecutar la etapa M5 acotada. La ejecución técnica todavía no ha comenzado. El primer gate obligatorio es congelar el inventario exacto de los 335 hallazgos históricos del validador general; ese validador termina sin crash, pero el repositorio completo no tiene un PASS global.
-
-Después debe ejecutarse el pre-activation operational rollback drill. Un fallo detiene la ejecución sin cutover. Solo un PASS permite la mutación atómica de un único puntero gobernado y dos iteraciones exactas sobre los 420 casos.
-
-El selector estático permanece autoritativo, el shadow registry inactivo y no existe todavía puntero activo. Retirar el selector estático no está autorizado.
-
-Product Leadership e Intelligent Application Construction conservan prioridad futura. SSE está diferido. Ninguna capacidad candidata está autorizada para pruebas, adaptación, activación o integración dentro de M5.
-
-## Divergencias documentales de etapa 1
-
-`registry/index.json`, `registry/authorizations.json`, `projects/lab/PENDING.json` y `projects/lab/ROADMAP.json` todavía reflejan el estado anterior. La decisión, autorización, `PEND-LAB-038`, índice de decisiones, delta y continuidad CURRENT ya están publicados. Codex debe reconciliar esas cuatro vistas dentro de la etapa 2 antes de congelar la baseline y ejecutar el rollback drill.
+Product Leadership e Intelligent Application Construction conservan prioridad futura, y SSE permanece diferido. Ninguna de esas capacidades fue probada, adaptada, activada o integrada.
 
 ## Siguiente acción única
 
-Codex ejecuta la autorización 160 desde el HEAD remoto final producido por esta publicación documental, verificándolo antes de cualquier modificación.
+Jonathan Martínez decide `PEND-LAB-039` y, si corresponde, emite una decisión y autorización separadas para remediar de forma acotada los validadores del drill.

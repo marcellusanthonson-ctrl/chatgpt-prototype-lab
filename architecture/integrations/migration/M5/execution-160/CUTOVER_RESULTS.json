@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "INTEGRATION_FACTORY_M5_CUTOVER_160",
+  "status": "NOT_EXECUTED_ROLLBACK_DRILL_FAILED",
+  "classification": "M5_BOUNDED_CUTOVER_ROLLED_BACK_WITH_CLASSIFIED_FAILURES",
+  "prerequisite_drill": "FAIL_CLOSED_BEFORE_POINTER_MUTATION",
+  "pointer_path": "architecture/integrations/active/INTEGRATION_FACTORY_RESOLUTION_POINTER.json",
+  "pointer_created": false,
+  "pointer_transition": "NONE",
+  "persistent_mutation_count": 0,
+  "static_selector_retired": false,
+  "static_selector_authoritative": true,
+  "candidate_active": false,
+  "rollback_operationally_required": false,
+  "rollback_result": "NOT_APPLICABLE_NO_CUTOVER_OCCURRED",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}

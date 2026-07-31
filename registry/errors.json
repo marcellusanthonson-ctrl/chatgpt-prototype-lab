@@ -113,6 +113,16 @@
       "canonical_path": "errors/ERR-LAB-008.json",
       "updated_at": "2026-07-31",
       "resolution_ref": "AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_READINESS_AND_VALIDATOR_REMEDIATION_161"
+    },
+    {
+      "id": "ERR-LAB-009",
+      "title": "Mandatory M5 rollback drill validators are incompatible with the authorized post-grant execution state",
+      "project_scope": ["lab"],
+      "severity": "HIGH",
+      "status": "OPEN_BLOCKING_M5_CUTOVER",
+      "lifecycle_state": "CONTAINED_FAIL_CLOSED",
+      "canonical_path": "errors/ERR-LAB-009.json",
+      "updated_at": "2026-07-31"
     }
   ]
 }
