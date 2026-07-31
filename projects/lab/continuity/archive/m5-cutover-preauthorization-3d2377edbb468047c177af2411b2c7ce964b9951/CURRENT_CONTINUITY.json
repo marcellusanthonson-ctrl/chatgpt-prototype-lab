@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.2.0",
+  "continuity_id": "LAB-CONTINUITY-M5-READINESS-REMEDIATED-20260731",
+  "project_id": "lab",
+  "status": "CURRENT_M5_READINESS_REMEDIATION_PASS_AWAITING_NEW_HUMAN_CUTOVER_DECISION",
+  "created_at": "2026-07-31T12:51:22-04:00",
+  "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "canonical_branch": "main",
+  "head_policy": "VERIFY_LIVE_AT_USE",
+  "verified_stage_2_parent_head": "f1cb216c34285ba57a6f17e6eb6c817ceb568c79",
+  "entrypoint": "project-sources/chatgpt/START_HERE.md",
+  "required_reading_order": ["VERIFY_LIVE_HEAD_OF_MAIN", "project-sources/chatgpt/START_HERE.md", "LAB_CONTRACT.md", "METHODOLOGY.md", "CURRENT_STATE.json", "registry/index.json", "registry/projects.json", "projects/lab/PROJECT_STATE.json", "decisions/DEC-LAB-026.json", "projects/lab/pending/PEND-LAB-038.json", "projects/lab/continuity/CURRENT_CONTINUITY.json"],
+  "classification": "M5_READINESS_REMEDIATION_PASS_AWAITING_NEW_HUMAN_CUTOVER_DECISION",
+  "facts": [
+    {"claim": "ERR-LAB-008 is corrected and its focused regression passes 8/8; the general validator completes without crash with 335 historical out-of-scope findings classified.", "source_refs": ["errors/ERR-LAB-008.json", "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-READINESS-REMEDIATION-161.json"]},
+    {"claim": "Fourteen sandbox cases pass in two identical complete runs without persistent partial activation.", "source_refs": ["architecture/integrations/migration/M5/readiness-161/READINESS_SIMULATION_RESULTS.json"]},
+    {"claim": "Authorization 160 remains proposed, not granted and not executable.", "source_refs": ["projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160.json"]}
+  ],
+  "authorizations": {"160": "PROPOSED_NOT_GRANTED_NOT_EXECUTABLE", "161": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"},
+  "pending": [{"id": "PEND-LAB-037", "status": "RESOLVED_RETURN_FOR_REMEDIATION"}, {"id": "PEND-LAB-038", "status": "AWAITING_HUMAN_REVIEW_OF_M5_READINESS_REMEDIATION"}],
+  "active_boundaries": {"static_selector": "AUTHORITATIVE_UNCHANGED", "shadow_registry": "INACTIVE_UNCHANGED", "m5_authorized": false, "cutover_executed": false, "operational_rollback_executed": false, "active_registry_created": false, "runtime_effect": "NONE", "integration_effect": "NONE"},
+  "future_integration_priority": ["PRODUCT_LEADERSHIP", "INTELLIGENT_APPLICATION_CONSTRUCTION"],
+  "deferred_capability": "SOFTWARE_SOLUTION_ENGINEERING",
+  "forbidden": ["GRANT_OR_EXECUTE_AUTHORIZATION_160", "EXECUTE_M5_CUTOVER_OR_OPERATIONAL_ROLLBACK", "CREATE_OR_ACTIVATE_ACTIVE_REGISTRY", "CHANGE_SELECTOR_SHADOW_REGISTRY_OR_M2_ADAPTERS", "TEST_ADAPT_ACTIVATE_OR_INTEGRATE_PRODUCT_LEADERSHIP_IAC_OR_SSE", "RUN_AWS_OR_TERRAFORM"],
+  "single_next_action": "JONATHAN_MARTINEZ_REVIEWS_PEND_LAB_038_AND_RECORDS_EXACTLY_ONE_HUMAN_DECISION",
+  "first_phrase_for_new_conversation": "Continúa ChatGPT Prototype LAB desde el HEAD remoto vigente de main. Readiness 161 pasó sin ejecutar M5; revisa PEND-LAB-038 y no infieras grant de la autorización 160.",
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_161_CONSUMPTION",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}
