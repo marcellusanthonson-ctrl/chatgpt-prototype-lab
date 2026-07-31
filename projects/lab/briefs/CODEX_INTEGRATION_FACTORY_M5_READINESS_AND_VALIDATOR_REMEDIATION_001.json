@@ -3,13 +3,13 @@
   "brief_id": "CODEX_INTEGRATION_FACTORY_M5_READINESS_AND_VALIDATOR_REMEDIATION_001",
   "task_id": "LAB-INTEGRATION-FACTORY-M5-READINESS-161",
   "title": "Repair the general validator and prove M5 operational readiness without cutover",
-  "status": "COMPLETE_AUTHORIZED_NOT_STARTED",
+  "status": "COMPLETED_PASS_PUBLISHED",
   "parent_brief": "projects/lab/briefs/CODEX_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_001.json",
   "decision_ref": "decisions/DEC-LAB-026.json",
   "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_READINESS_AND_VALIDATOR_REMEDIATION_161.json",
   "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "branch": "main",
-  "expected_parent_head": null,
+  "expected_parent_head": "f1cb216c34285ba57a6f17e6eb6c817ceb568c79",
   "expected_parent_policy": "USE_VERIFIED_FINAL_REMOTE_MAIN_HEAD_AFTER_STAGE_1_PUBLICATION",
   "technical_executor": "CODEX",
   "objective": "Produce a reproducible PASS or classified block for M5 readiness by repairing ERR-LAB-008, specifying exact operational contracts, and exercising only sandboxed atomic-cutover simulations. Do not execute M5 or any candidate-capability tests.",
@@ -201,7 +201,9 @@
     "PEND_LAB_038_STATUS",
     "SINGLE_NEXT_ACTION"
   ],
-  "authority_effect": "BOUNDED_BY_AUTHORIZATION_161",
+  "execution_result": "M5_READINESS_REMEDIATION_PASS_AWAITING_NEW_HUMAN_CUTOVER_DECISION",
+  "evidence_ref": "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-READINESS-REMEDIATION-161.json",
+  "authority_effect": "NONE_AFTER_VERIFIED_REMOTE_PUBLICATION",
   "runtime_effect": "NONE",
   "integration_effect": "NONE"
 }

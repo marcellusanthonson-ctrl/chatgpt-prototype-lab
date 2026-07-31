@@ -105,3 +105,11 @@ La preparación verificó `DOCUMENTARY_AND_SOURCE_ROLLBACK_READY_OPERATIONAL_ROL
 `ERR-LAB-008` registra el crash del validador general sobre deltas array como `OPEN_CONTAINED_NOT_REPAIRED`; la validación acotada 159 pasa sin reparar ese componente. La autorización 160 está `PROPOSED`, con `approved_by: null` y sin efecto de autoridad.
 
 `PEND-LAB-036` queda completado. `PEND-LAB-037` está `AWAITING_HUMAN_CUTOVER_DECISION`. No hubo cutover, M5, activación, cambio de selector, runtime, integración, AWS ni Terraform.
+
+## Readiness M5 y remediación del validador 161
+
+La etapa 2 de la autorización 161 se ejecutó desde `f1cb216c34285ba57a6f17e6eb6c817ceb568c79`. La regresión de `ERR-LAB-008` pasa 8/8 y el validador general ya completa sin excepción, aunque mantiene 335 hallazgos históricos fuera del alcance autorizado.
+
+Los contratos exactos están publicados en `architecture/integrations/migration/M5/readiness-161/`. La simulación temporal cubre 14 casos, pasa dos veces con digest idéntico `1296f6a49601b3fc7d50db047b6602cd3a5da5fee261287f6cfb4584afbfcef1` y no deja activación parcial persistente.
+
+La clasificación es `M5_READINESS_REMEDIATION_PASS_AWAITING_NEW_HUMAN_CUTOVER_DECISION`. `PEND-LAB-038` queda como única siguiente decisión. La autorización 160 sigue propuesta, no concedida y no ejecutable. El selector estático permanece autoritativo, el shadow registry inactivo y no existe efecto de runtime o integración.

@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-INTEGRATION-FACTORY-M5-READINESS-REMEDIATION-161",
+  "project_id": "lab",
+  "recorded_at": "2026-07-31T12:51:22-04:00",
+  "authorization_id": "AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_READINESS_AND_VALIDATOR_REMEDIATION_161",
+  "verified_parent_head": "f1cb216c34285ba57a6f17e6eb6c817ceb568c79",
+  "classification": "M5_READINESS_REMEDIATION_PASS_AWAITING_NEW_HUMAN_CUTOVER_DECISION",
+  "err_lab_008": {"reproduced_exception": "TypeError_WINDOWS_PATH_DIVIDED_BY_LIST", "repair": "ARRAY_PATH_COLLECTIONS_VALIDATED_BUT_NOT_LOADED_AS_SCALAR_REGISTRIES", "focused_tests": "PASS_8_OF_8", "general_validator": "COMPLETED_WITHOUT_CRASH_335_PREEXISTING_OUT_OF_SCOPE_FINDINGS_CLASSIFIED"},
+  "bounded_validators": {"158": "PASS_AT_CANONICAL_COMMIT_1e7271e667ab163cd62849d0df897a61c02c025e", "159": "PASS_AT_CANONICAL_COMMIT_91fa349b86e3007dd4cdb953716acb9e48ea51c5"},
+  "simulation": {"case_count": 14, "complete_runs": 2, "run_1_digest": "1296f6a49601b3fc7d50db047b6602cd3a5da5fee261287f6cfb4584afbfcef1", "run_2_digest": "1296f6a49601b3fc7d50db047b6602cd3a5da5fee261287f6cfb4584afbfcef1", "runs_identical": true, "every_failure_static_intact": true},
+  "immutable_blobs": {"static_selector": "301ba432907758fc49a9b3c86a83fc762eac4607", "shadow_registry": "a067cd9f95b98aa1599d21e3a0ff35fa56ac3a78"},
+  "boundaries": {"m5_executed": false, "operational_rollback_executed": false, "active_registry_created": false, "product_leadership_tested": false, "intelligent_application_construction_tested": false, "software_solution_engineering_tested": false, "runtime_effect": "NONE", "integration_effect": "NONE"},
+  "source_refs": ["architecture/integrations/migration/M5/readiness-161/VALIDATION_RESULTS.json", "architecture/integrations/migration/M5/readiness-161/READINESS_SIMULATION_RESULTS.json", "scripts/test_validate_repository_delta_paths_161.py"],
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_161_CONSUMPTION"
+}

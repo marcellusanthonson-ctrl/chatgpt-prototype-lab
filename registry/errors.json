@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1.0",
-  "updated_at": "2026-07-17",
+  "updated_at": "2026-07-31",
   "records": [
     {
       "id": "ERR-LAB-001",
@@ -92,6 +92,27 @@
       "lifecycle_state": "CORRECTED",
       "canonical_path": "errors/ERR-LAB-006.json",
       "updated_at": "2026-07-17"
+    },
+    {
+      "id": "ERR-LAB-007",
+      "title": "Localized visual substitution expanded into unauthorized creative revision",
+      "project_scope": ["lab", "symphonie"],
+      "severity": "HIGH",
+      "status": "CONTAINED",
+      "lifecycle_state": "CONTAINED",
+      "canonical_path": "errors/ERR-LAB-007.json",
+      "updated_at": "2026-07-26"
+    },
+    {
+      "id": "ERR-LAB-008",
+      "title": "General LAB validator crashes when array-valued registry delta fields are interpreted as scalar paths",
+      "project_scope": ["lab"],
+      "severity": "MEDIUM",
+      "status": "CORRECTED_VALIDATED",
+      "lifecycle_state": "RESOLVED_VALIDATED",
+      "canonical_path": "errors/ERR-LAB-008.json",
+      "updated_at": "2026-07-31",
+      "resolution_ref": "AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_READINESS_AND_VALIDATOR_REMEDIATION_161"
     }
   ]
 }

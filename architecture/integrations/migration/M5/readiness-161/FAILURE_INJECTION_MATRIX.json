@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "matrix_id": "INTEGRATION_FACTORY_M5_FAILURE_INJECTION_161",
+  "environment": "DISPOSABLE_TEMPORARY_DIRECTORY_ONLY",
+  "cases": [
+    {"id":"STATIC_TO_CANDIDATE_SUCCESS","expected":"CANDIDATE_CONFIRMED_THEN_SANDBOX_RESET"},
+    {"id":"CANDIDATE_TO_STATIC_SUCCESS","expected":"STATIC_INTACT"},
+    {"id":"FAIL_BEFORE_PREPARATION","expected":"STATIC_INTACT"},
+    {"id":"FAIL_DURING_PREPARATION","expected":"STATIC_INTACT"},
+    {"id":"FAIL_BEFORE_POINTER_SWITCH","expected":"STATIC_INTACT"},
+    {"id":"FAIL_IMMEDIATELY_AFTER_POINTER_SWITCH","expected":"STATIC_INTACT"},
+    {"id":"INTERRUPTION_DURING_VALIDATION","expected":"STATIC_INTACT"},
+    {"id":"IDEMPOTENT_ROLLBACK","expected":"STATIC_INTACT_AFTER_TWO_CALLS"},
+    {"id":"DOUBLE_EXECUTION","expected":"DETERMINISTIC_IDEMPOTENT_CONFIRMATION"},
+    {"id":"INVALID_INITIAL_STATE","expected":"REVERTED_TO_STATIC"},
+    {"id":"UNEXPECTED_BLOB","expected":"REVERTED_TO_STATIC"},
+    {"id":"LOCK_OCCUPIED","expected":"NO_MUTATION_LOCK_REJECTED"},
+    {"id":"CLEANUP","expected":"NO_TEMP_CANDIDATE_OR_LOCK"},
+    {"id":"NO_PERSISTENT_PARTIAL_ACTIVATION","expected":"UNREFERENCED_PARTIAL_DISCARDED_STATIC_INTACT"}
+  ],
+  "failure_invariant": "EVERY_INJECTED_FAILURE_ENDS_STATIC_INTACT",
+  "canonical_effect": "NONE",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}

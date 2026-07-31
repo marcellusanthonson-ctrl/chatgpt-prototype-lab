@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "integration-factory-m5-readiness-remediation-161",
+  "project_id": "lab",
+  "recorded_at": "2026-07-31T12:51:22-04:00",
+  "parent_head": "f1cb216c34285ba57a6f17e6eb6c817ceb568c79",
+  "decision_id": "DEC-LAB-026",
+  "authorization_id": "AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_READINESS_AND_VALIDATOR_REMEDIATION_161",
+  "evidence_id": "EVD-LAB-INTEGRATION-FACTORY-M5-READINESS-REMEDIATION-161",
+  "resolved_error": "ERR-LAB-008",
+  "state_changes": {"integration_factory_migration_phase": "M5_READINESS_REMEDIATION_PASS_AWAITING_NEW_HUMAN_CUTOVER_DECISION", "authorization_161": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION", "authorization_160": "PROPOSED_NOT_GRANTED_NOT_EXECUTABLE", "pend_lab_037": "RESOLVED_RETURN_FOR_REMEDIATION", "pend_lab_038": "AWAITING_HUMAN_REVIEW_OF_M5_READINESS_REMEDIATION", "static_selector": "AUTHORITATIVE_UNCHANGED", "shadow_registry": "INACTIVE_UNCHANGED", "m5_executed": false, "runtime_effect": "NONE", "integration_effect": "NONE"},
+  "future_priority": ["PRODUCT_LEADERSHIP", "INTELLIGENT_APPLICATION_CONSTRUCTION"],
+  "deferred": "SOFTWARE_SOLUTION_ENGINEERING",
+  "single_next_action": "JONATHAN_MARTINEZ_REVIEWS_PEND_LAB_038_AND_RECORDS_EXACTLY_ONE_HUMAN_DECISION"
+}

@@ -1,0 +1,197 @@
+{
+  "schema_version": "1.0.0",
+  "runs": [
+    {
+      "schema_version": "1.0.0",
+      "case_count": 14,
+      "cases": [
+        {
+          "case": "STATIC_TO_CANDIDATE_SUCCESS",
+          "result": "PASS",
+          "outcome": "CANDIDATE_CONFIRMED",
+          "final_state": "STATIC_INTACT"
+        },
+        {
+          "case": "CANDIDATE_TO_STATIC_SUCCESS",
+          "result": "PASS",
+          "outcome": "PASS",
+          "final_state": "STATIC_INTACT"
+        },
+        {
+          "case": "FAIL_BEFORE_PREPARATION",
+          "result": "PASS",
+          "outcome": "INJECTED_FAILURE_REVERTED",
+          "final_state": "STATIC_INTACT"
+        },
+        {
+          "case": "FAIL_DURING_PREPARATION",
+          "result": "PASS",
+          "outcome": "INJECTED_FAILURE_REVERTED",
+          "final_state": "STATIC_INTACT"
+        },
+        {
+          "case": "FAIL_BEFORE_POINTER_SWITCH",
+          "result": "PASS",
+          "outcome": "INJECTED_FAILURE_REVERTED",
+          "final_state": "STATIC_INTACT"
+        },
+        {
+          "case": "FAIL_IMMEDIATELY_AFTER_POINTER_SWITCH",
+          "result": "PASS",
+          "outcome": "INJECTED_FAILURE_REVERTED",
+          "final_state": "STATIC_INTACT"
+        },
+        {
+          "case": "INTERRUPTION_DURING_VALIDATION",
+          "result": "PASS",
+          "outcome": "INJECTED_FAILURE_REVERTED",
+          "final_state": "STATIC_INTACT"
+        },
+        {
+          "case": "IDEMPOTENT_ROLLBACK",
+          "result": "PASS",
+          "outcome": "STATIC_TWICE",
+          "final_state": "STATIC_INTACT"
+        },
+        {
+          "case": "DOUBLE_EXECUTION",
+          "result": "PASS",
+          "outcome": "CANDIDATE_CONFIRMED+CANDIDATE_CONFIRMED",
+          "final_state": "STATIC_INTACT"
+        },
+        {
+          "case": "INVALID_INITIAL_STATE",
+          "result": "PASS",
+          "outcome": "INVALID_INITIAL_STATE_REVERTED",
+          "final_state": "STATIC_INTACT"
+        },
+        {
+          "case": "UNEXPECTED_BLOB",
+          "result": "PASS",
+          "outcome": "INVALID_INITIAL_STATE_REVERTED",
+          "final_state": "STATIC_INTACT"
+        },
+        {
+          "case": "LOCK_OCCUPIED",
+          "result": "PASS",
+          "outcome": "LOCK_REJECTED",
+          "final_state": "STATIC_INTACT"
+        },
+        {
+          "case": "CLEANUP",
+          "result": "PASS",
+          "outcome": "CLEAN",
+          "final_state": "STATIC_INTACT"
+        },
+        {
+          "case": "NO_PERSISTENT_PARTIAL_ACTIVATION",
+          "result": "PASS",
+          "outcome": "PARTIAL_DISCARDED",
+          "final_state": "STATIC_INTACT"
+        }
+      ],
+      "normalized_digest": "1296f6a49601b3fc7d50db047b6602cd3a5da5fee261287f6cfb4584afbfcef1",
+      "classification": "PASS",
+      "canonical_effect": "NONE",
+      "runtime_effect": "NONE",
+      "integration_effect": "NONE"
+    },
+    {
+      "schema_version": "1.0.0",
+      "case_count": 14,
+      "cases": [
+        {
+          "case": "STATIC_TO_CANDIDATE_SUCCESS",
+          "result": "PASS",
+          "outcome": "CANDIDATE_CONFIRMED",
+          "final_state": "STATIC_INTACT"
+        },
+        {
+          "case": "CANDIDATE_TO_STATIC_SUCCESS",
+          "result": "PASS",
+          "outcome": "PASS",
+          "final_state": "STATIC_INTACT"
+        },
+        {
+          "case": "FAIL_BEFORE_PREPARATION",
+          "result": "PASS",
+          "outcome": "INJECTED_FAILURE_REVERTED",
+          "final_state": "STATIC_INTACT"
+        },
+        {
+          "case": "FAIL_DURING_PREPARATION",
+          "result": "PASS",
+          "outcome": "INJECTED_FAILURE_REVERTED",
+          "final_state": "STATIC_INTACT"
+        },
+        {
+          "case": "FAIL_BEFORE_POINTER_SWITCH",
+          "result": "PASS",
+          "outcome": "INJECTED_FAILURE_REVERTED",
+          "final_state": "STATIC_INTACT"
+        },
+        {
+          "case": "FAIL_IMMEDIATELY_AFTER_POINTER_SWITCH",
+          "result": "PASS",
+          "outcome": "INJECTED_FAILURE_REVERTED",
+          "final_state": "STATIC_INTACT"
+        },
+        {
+          "case": "INTERRUPTION_DURING_VALIDATION",
+          "result": "PASS",
+          "outcome": "INJECTED_FAILURE_REVERTED",
+          "final_state": "STATIC_INTACT"
+        },
+        {
+          "case": "IDEMPOTENT_ROLLBACK",
+          "result": "PASS",
+          "outcome": "STATIC_TWICE",
+          "final_state": "STATIC_INTACT"
+        },
+        {
+          "case": "DOUBLE_EXECUTION",
+          "result": "PASS",
+          "outcome": "CANDIDATE_CONFIRMED+CANDIDATE_CONFIRMED",
+          "final_state": "STATIC_INTACT"
+        },
+        {
+          "case": "INVALID_INITIAL_STATE",
+          "result": "PASS",
+          "outcome": "INVALID_INITIAL_STATE_REVERTED",
+          "final_state": "STATIC_INTACT"
+        },
+        {
+          "case": "UNEXPECTED_BLOB",
+          "result": "PASS",
+          "outcome": "INVALID_INITIAL_STATE_REVERTED",
+          "final_state": "STATIC_INTACT"
+        },
+        {
+          "case": "LOCK_OCCUPIED",
+          "result": "PASS",
+          "outcome": "LOCK_REJECTED",
+          "final_state": "STATIC_INTACT"
+        },
+        {
+          "case": "CLEANUP",
+          "result": "PASS",
+          "outcome": "CLEAN",
+          "final_state": "STATIC_INTACT"
+        },
+        {
+          "case": "NO_PERSISTENT_PARTIAL_ACTIVATION",
+          "result": "PASS",
+          "outcome": "PARTIAL_DISCARDED",
+          "final_state": "STATIC_INTACT"
+        }
+      ],
+      "normalized_digest": "1296f6a49601b3fc7d50db047b6602cd3a5da5fee261287f6cfb4584afbfcef1",
+      "classification": "PASS",
+      "canonical_effect": "NONE",
+      "runtime_effect": "NONE",
+      "integration_effect": "NONE"
+    }
+  ],
+  "runs_identical": true,
+  "combined_digest": "6cd7da4ad0eba03a230fca00a7c4bcbe7958fdf722b8ba48228c08a25be3c1f3"
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "plan_id": "INTEGRATION_FACTORY_M5_OBSERVATION_PLAN_161",
+  "status": "PROPOSED_NOT_EXECUTED",
+  "corpus": {"path": "architecture/integrations/migration/M3/fixtures/INTEGRATION_FACTORY_M3_FIXTURE_CORPUS.json", "case_count": 420, "iterations": 2, "expected_behavioral_digest": "9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329"},
+  "behavioral_equivalence": {"required_matches": "420/420_PER_ITERATION", "allowed_divergences": 0, "oracles": "13/13_PER_EVALUATOR", "determinism": "IDENTICAL_NORMALIZED_DIGESTS"},
+  "gates": {"authority": ["NO_SELF_GRANT", "NO_POLICY_OVERRIDE", "ABSTENTION_PRESERVED"], "runtime": ["NO_UNBOUNDED_EFFECT", "ONLY_GRANTED_POINTER_PATH_MUTABLE"], "integration": ["NO_CAPABILITY_ACTIVATION", "NO_EXTERNAL_REPOSITORY_CHANGE", "STATIC_ROLLBACK_AVAILABLE"]},
+  "partial_state_detection": ["pointer_schema_invalid", "unknown_pointer_target", "pointer_blob_mismatch", "temp_pointer_referenced", "candidate_active_without_confirmation", "lock_and_pointer_owner_mismatch"],
+  "immediate_rollback_conditions": ["ANY_BEHAVIOR_DIVERGENCE", "ANY_AUTHORITY_DRIFT", "ANY_RUNTIME_SCOPE_BREACH", "ANY_INTEGRATION_SCOPE_BREACH", "ANY_PARTIAL_STATE", "ANY_BLOB_MISMATCH", "OBSERVATION_INTERRUPTION"],
+  "final_classifications": ["M5_BOUNDED_CUTOVER_PASS_AWAITING_HUMAN_STATIC_RETIREMENT_DECISION", "M5_BOUNDED_CUTOVER_ROLLED_BACK_WITH_CLASSIFIED_FAILURES"],
+  "partial_pass_allowed": false,
+  "execution_status": "NOT_EXECUTED"
+}

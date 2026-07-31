@@ -22,9 +22,11 @@
   "rollback_readiness_ref": "architecture/integrations/migration/M4/ROLLBACK_READINESS.json",
   "proposed_authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160.json",
   "successor_authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_READINESS_AND_VALIDATOR_REMEDIATION_161.json",
+  "stage_2_completion": "M5_READINESS_REMEDIATION_PASS_AWAITING_NEW_HUMAN_CUTOVER_DECISION",
+  "successor_pending": "PEND-LAB-038",
   "effect_until_stage_2_completion": "STATIC_SELECTOR_REMAINS_AUTHORITATIVE_SHADOW_REGISTRY_INACTIVE_M5_NOT_AUTHORIZED",
-  "current_authority": "AUTHORIZATION_161_STAGE_2_ONLY_NO_M5_CUTOVER_AUTHORITY",
-  "next_transition": "CODEX_EXECUTES_AUTHORIZATION_161_STAGE_2_FROM_THE_VERIFIED_STAGE_1_REMOTE_HEAD",
+  "current_authority": "NONE_AFTER_AUTHORIZATION_161_CONSUMPTION",
+  "next_transition": "JONATHAN_MARTINEZ_REVIEWS_PEND_LAB_038",
   "future_integration_priority": [
     "PRODUCT_LEADERSHIP",
     "INTELLIGENT_APPLICATION_CONSTRUCTION"

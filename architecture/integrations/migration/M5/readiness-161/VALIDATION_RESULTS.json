@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0.0",
+  "validator": "M5_READINESS_161",
+  "classification": "PASS",
+  "failure_count": 0,
+  "failures": [],
+  "complete_run_count": 2,
+  "run_1_digest": "1296f6a49601b3fc7d50db047b6602cd3a5da5fee261287f6cfb4584afbfcef1",
+  "run_2_digest": "1296f6a49601b3fc7d50db047b6602cd3a5da5fee261287f6cfb4584afbfcef1",
+  "runs_identical": true,
+  "combined_digest": "6cd7da4ad0eba03a230fca00a7c4bcbe7958fdf722b8ba48228c08a25be3c1f3",
+  "err_lab_008_regression": "PASS_8_OF_8",
+  "general_validator": "COMPLETED_WITHOUT_CRASH_FAIL_335_PREEXISTING_OUT_OF_SCOPE_FINDINGS",
+  "bounded_validator_158": "PASS_AT_CANONICAL_COMMIT_1e7271e667ab163cd62849d0df897a61c02c025e",
+  "bounded_validator_159": "PASS_AT_CANONICAL_COMMIT_91fa349b86e3007dd4cdb953716acb9e48ea51c5",
+  "static_selector_blob": "301ba432907758fc49a9b3c86a83fc762eac4607",
+  "shadow_registry_blob": "a067cd9f95b98aa1599d21e3a0ff35fa56ac3a78",
+  "rollback_operationally_executed": false,
+  "m5_executed": false,
+  "canonical_effect": "DOCUMENTARY_OUTPUTS_ONLY",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}

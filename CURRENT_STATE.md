@@ -119,3 +119,15 @@ Las referencias vigentes de descubrimiento y estado de la criterion layer se rec
 `ERR-LAB-008` está `OPEN_CONTAINED_NOT_REPAIRED`: el validador general interpreta campos array de deltas como paths escalares. Este defecto no invalida M3 ni el PASS del validador acotado 159 y requiere autorización separada para reparación.
 
 La autorización 160 y su brief están preparados, pero la autorización permanece `PROPOSED`, no concedida y no ejecutable. `PEND-LAB-036` queda completado y `PEND-LAB-037` espera la decisión humana de Jonathan Martínez. No hubo cutover, M5, activación, selector, runtime, integración, AWS ni Terraform.
+
+## Fábrica de integraciones — readiness M5 remediado
+
+`DEC-LAB-026` resolvió `PEND-LAB-037` como `RETURN_FOR_REMEDIATION`. Codex ejecutó la etapa 2 de la autorización 161 desde el parent remoto verificado `f1cb216c34285ba57a6f17e6eb6c817ceb568c79`.
+
+`ERR-LAB-008` fue reproducido y corregido mínimamente. La regresión dedicada pasa 8/8. El validador general completa sin crash y reporta 335 observaciones históricas fuera de alcance, conservadas y clasificadas.
+
+Los validadores 158 y 159 pasan en sus commits canónicos. Los 14 casos de inyección pasan en dos ejecuciones completas idénticas con digest `1296f6a49601b3fc7d50db047b6602cd3a5da5fee261287f6cfb4584afbfcef1`; todo fallo termina con estado estático intacto.
+
+Clasificación: `M5_READINESS_REMEDIATION_PASS_AWAITING_NEW_HUMAN_CUTOVER_DECISION`. La autorización 160 permanece `PROPOSED_NOT_GRANTED_NOT_EXECUTABLE`; `PEND-LAB-038` espera revisión humana. El selector estático sigue autoritativo, el shadow registry sigue inactivo y no hubo M5, cutover, rollback operacional, registro activo, runtime o integración.
+
+Product Leadership e Intelligent Application Construction conservan prioridad futura; Software Solution Engineering permanece diferido. Ninguna de las tres capacidades fue probada, adaptada, activada o integrada.

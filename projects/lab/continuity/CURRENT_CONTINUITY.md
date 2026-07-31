@@ -1,6 +1,6 @@
-# Continuidad actual — M5 readiness autorizado, no iniciado
+# Continuidad actual — readiness M5 remediado
 
-Fecha: 2026-07-31T12:22:00-04:00
+Fecha: 2026-07-31T12:51:22-04:00
 
 Repositorio: `marcellusanthonson-ctrl/chatgpt-prototype-lab`
 
@@ -10,25 +10,14 @@ Política HEAD: `VERIFY_LIVE_AT_USE`
 
 ## Estado
 
-Jonathan Martínez resolvió `PEND-LAB-037` como `RETURN_FOR_REMEDIATION`. `DEC-LAB-026` no aprueba cutover ni concede M5.
+La etapa 2 de la autorización 161 partió del HEAD remoto verificado `f1cb216c34285ba57a6f17e6eb6c817ceb568c79` y obtuvo `M5_READINESS_REMEDIATION_PASS_AWAITING_NEW_HUMAN_CUTOVER_DECISION`.
 
-La autorización 161 está concedida únicamente para que Codex repare `ERR-LAB-008`, defina contratos operativos exactos de readiness M5 y ejecute simulaciones aisladas de atomicidad y rollback. La etapa técnica no ha comenzado.
+`ERR-LAB-008` está `CORRECTED_VALIDATED`; 8/8 regresiones pasan y el validador general termina sin crash. Sus 335 hallazgos históricos fuera de alcance permanecen explícitamente clasificados. Los validadores 158 y 159 pasan en sus baselines canónicos.
 
-La autorización 160 permanece `PROPOSED`, no concedida y no ejecutable. El selector estático sigue autoritativo y el shadow registry sigue inactivo.
+Los contratos de resolución activa, cutover atómico, rollback drill y observación están completos. La simulación temporal pasó 14/14 casos dos veces con digest idéntico `1296f6a49601b3fc7d50db047b6602cd3a5da5fee261287f6cfb4584afbfcef1`. No se ejecutó rollback operacional, M5 ni cutover.
 
-## Prioridad futura
-
-Después de validar la base de Integration Factory, el orden preferido es:
-
-1. Product Leadership.
-2. Intelligent Application Construction.
-
-Software Solution Engineering queda diferido. Ninguna de estas capacidades está autorizada para prueba, adaptación, activación o integración dentro de la autorización 161.
-
-## Límites
-
-No existe autorización para cutover, M5, registro activo, cambio de selector, retiro del selector estático, runtime, integración, AWS o Terraform.
+La autorización 160 sigue `PROPOSED_NOT_GRANTED_NOT_EXECUTABLE`. El selector estático permanece autoritativo y el shadow registry inactivo. Product Leadership e Intelligent Application Construction son prioridad futura; SSE está diferido. Ninguna capacidad candidata fue probada o integrada.
 
 ## Siguiente acción única
 
-Codex ejecuta la etapa 2 de la autorización 161 desde el HEAD remoto final producido por esta publicación documental.
+Jonathan Martínez revisa `PEND-LAB-038` y registra exactamente una decisión humana nueva. No se infiere grant ni autoridad de ejecución.

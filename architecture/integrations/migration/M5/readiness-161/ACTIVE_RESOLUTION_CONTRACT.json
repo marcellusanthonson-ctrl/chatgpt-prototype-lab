@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "contract_id": "INTEGRATION_FACTORY_ACTIVE_RESOLUTION_CONTRACT_161",
+  "status": "PROPOSED_NOT_ACTIVE",
+  "resolver_component": "GOVERNED_INTEGRATION_FACTORY_RESOLUTION_POINTER",
+  "inputs": ["validated_request_context", "canonical_authority_context", "selected_resolution_target"],
+  "output": {"type": "EXACTLY_ONE_RESOLUTION_RESULT_OR_ABSTENTION", "authority_increase_allowed": false},
+  "representations": {
+    "authoritative": {"id": "STATIC", "path": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json", "blob": "301ba432907758fc49a9b3c86a83fc762eac4607", "current": true},
+    "candidate": {"id": "CANDIDATE", "path": "architecture/integrations/migration/M2/SHADOW_INTEGRATION_REGISTRY.json", "blob": "a067cd9f95b98aa1599d21e3a0ff35fa56ac3a78", "current": false, "active": false}
+  },
+  "governed_pointer": {"id": "integration_factory_resolution_target", "cardinality": 1, "allowed_values": ["STATIC", "CANDIDATE"], "current_value": "STATIC", "canonical_path_if_later_authorized": "architecture/integrations/active/INTEGRATION_FACTORY_RESOLUTION_POINTER.json", "exists_now": false},
+  "mutable_paths_if_later_granted": ["architecture/integrations/active/INTEGRATION_FACTORY_RESOLUTION_POINTER.json"],
+  "states": ["STATIC_AUTHORITATIVE", "CANDIDATE_PREPARED_NOT_ACTIVE", "CANDIDATE_ACTIVE_UNCONFIRMED", "CANDIDATE_ACTIVE_CONFIRMED", "REVERTING_TO_STATIC", "FAILED_CLOSED_STATIC"],
+  "invariants": ["EXACTLY_ONE_POINTER_VALUE", "STATIC_IS_ROLLBACK_TARGET", "BLOBS_MATCH_APPROVED_BASELINE", "NO_AUTHORITY_EXPANSION", "NO_PARTIAL_PERSISTENT_ACTIVATION", "ABSTAIN_ON_AMBIGUITY"],
+  "abstention": {"result": "ABSTAIN_FAIL_CLOSED_STATIC", "triggers": ["missing_input", "ambiguous_authority", "unknown_target", "blob_mismatch", "invalid_state"]},
+  "authority_limits": ["NO_SELF_GRANT", "NO_POLICY_OVERRIDE", "NO_RUNTIME_BEFORE_AUTHORIZATION_160_GRANT", "NO_CAPABILITY_ACTIVATION_BY_RESOLUTION"],
+  "hidden_dependencies": "PROHIBITED_ALL_DEPENDENCIES_MUST_BE_EXPLICIT_AND_BLOB_PINNED",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}

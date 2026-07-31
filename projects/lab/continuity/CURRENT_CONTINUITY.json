@@ -1,85 +1,30 @@
 {
   "schema_version": "1.2.0",
-  "continuity_id": "LAB-CONTINUITY-M5-READINESS-AUTHORIZED-20260731",
+  "continuity_id": "LAB-CONTINUITY-M5-READINESS-REMEDIATED-20260731",
   "project_id": "lab",
-  "status": "CURRENT_M5_READINESS_REMEDIATION_AUTHORIZED_NOT_STARTED_AWAITING_CODEX",
-  "created_at": "2026-07-31T12:22:00-04:00",
+  "status": "CURRENT_M5_READINESS_REMEDIATION_PASS_AWAITING_NEW_HUMAN_CUTOVER_DECISION",
+  "created_at": "2026-07-31T12:51:22-04:00",
   "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "canonical_branch": "main",
   "head_policy": "VERIFY_LIVE_AT_USE",
-  "stage_1_parent_head": "91fa349b86e3007dd4cdb953716acb9e48ea51c5",
-  "stage_2_expected_parent_policy": "VERIFY_THE_FINAL_REMOTE_MAIN_HEAD_AFTER_STAGE_1_PUBLICATION",
+  "verified_stage_2_parent_head": "f1cb216c34285ba57a6f17e6eb6c817ceb568c79",
   "entrypoint": "project-sources/chatgpt/START_HERE.md",
-  "required_reading_order": [
-    "VERIFY_LIVE_HEAD_OF_MAIN",
-    "project-sources/chatgpt/START_HERE.md",
-    "LAB_CONTRACT.md",
-    "METHODOLOGY.md",
-    "CURRENT_STATE.json",
-    "registry/index.json",
-    "registry/projects.json",
-    "projects/lab/PROJECT_STATE.json",
-    "decisions/DEC-LAB-026.json",
-    "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_READINESS_AND_VALIDATOR_REMEDIATION_161.json",
-    "projects/lab/briefs/CODEX_INTEGRATION_FACTORY_M5_READINESS_AND_VALIDATOR_REMEDIATION_001.json",
-    "projects/lab/pending/PEND-LAB-037.json",
-    "errors/ERR-LAB-008.json",
-    "projects/lab/continuity/CURRENT_CONTINUITY.json"
-  ],
+  "required_reading_order": ["VERIFY_LIVE_HEAD_OF_MAIN", "project-sources/chatgpt/START_HERE.md", "LAB_CONTRACT.md", "METHODOLOGY.md", "CURRENT_STATE.json", "registry/index.json", "registry/projects.json", "projects/lab/PROJECT_STATE.json", "decisions/DEC-LAB-026.json", "projects/lab/pending/PEND-LAB-038.json", "projects/lab/continuity/CURRENT_CONTINUITY.json"],
+  "classification": "M5_READINESS_REMEDIATION_PASS_AWAITING_NEW_HUMAN_CUTOVER_DECISION",
   "facts": [
-    {"claim": "M3 remains M3_REMEDIATED_PASS_EXACT_DUAL_EQUIVALENCE over 420 cases with 13/13 baseline oracles for both evaluators and zero divergences.", "source_refs": ["projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M3-REMEDIATION-158.json"]},
-    {"claim": "M4 preparation passed, but no human cutover approval or M5 grant exists.", "source_refs": ["architecture/integrations/migration/M4/VALIDATION_RESULTS.json", "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160.json"]},
-    {"claim": "Jonathan Martínez selected RETURN_FOR_REMEDIATION and authorized a bounded validator and M5-readiness remediation stage.", "source_refs": ["decisions/DEC-LAB-026.json", "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_READINESS_AND_VALIDATOR_REMEDIATION_161.json"]},
-    {"claim": "ERR-LAB-008 remains open until Codex reproduces, minimally repairs, and validates the general repository validator.", "source_refs": ["errors/ERR-LAB-008.json"]},
-    {"claim": "The preferred future candidate integration order is Product Leadership followed by Intelligent Application Construction; SSE is deferred.", "source_refs": ["decisions/DEC-LAB-026.json"]}
+    {"claim": "ERR-LAB-008 is corrected and its focused regression passes 8/8; the general validator completes without crash with 335 historical out-of-scope findings classified.", "source_refs": ["errors/ERR-LAB-008.json", "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-READINESS-REMEDIATION-161.json"]},
+    {"claim": "Fourteen sandbox cases pass in two identical complete runs without persistent partial activation.", "source_refs": ["architecture/integrations/migration/M5/readiness-161/READINESS_SIMULATION_RESULTS.json"]},
+    {"claim": "Authorization 160 remains proposed, not granted and not executable.", "source_refs": ["projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160.json"]}
   ],
-  "decision": {"id": "DEC-LAB-026", "status": "APPROVED", "selected_option": "RETURN_FOR_REMEDIATION"},
-  "authorizations": {
-    "159": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "160": "PROPOSED_NOT_GRANTED_NOT_EXECUTABLE",
-    "161": "GRANTED_STAGE_2_AUTHORIZED_NOT_STARTED"
-  },
-  "current_line_authority": {
-    "m5_readiness_remediation_authorized": true,
-    "technical_executor": "CODEX",
-    "m5_authorized": false,
-    "cutover_authorized": false,
-    "active_registry_authorized": false,
-    "selector_change_authorized": false,
-    "static_selector_retirement_authorized": false,
-    "runtime_authorized": false,
-    "integration_authorized": false,
-    "product_leadership_test_or_integration_authorized": false,
-    "intelligent_application_construction_test_or_integration_authorized": false,
-    "software_solution_engineering_test_or_integration_authorized": false,
-    "aws_authorized": false,
-    "terraform_authorized": false
-  },
-  "future_integration_priority": [
-    "PRODUCT_LEADERSHIP",
-    "INTELLIGENT_APPLICATION_CONSTRUCTION"
-  ],
+  "authorizations": {"160": "PROPOSED_NOT_GRANTED_NOT_EXECUTABLE", "161": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"},
+  "pending": [{"id": "PEND-LAB-037", "status": "RESOLVED_RETURN_FOR_REMEDIATION"}, {"id": "PEND-LAB-038", "status": "AWAITING_HUMAN_REVIEW_OF_M5_READINESS_REMEDIATION"}],
+  "active_boundaries": {"static_selector": "AUTHORITATIVE_UNCHANGED", "shadow_registry": "INACTIVE_UNCHANGED", "m5_authorized": false, "cutover_executed": false, "operational_rollback_executed": false, "active_registry_created": false, "runtime_effect": "NONE", "integration_effect": "NONE"},
+  "future_integration_priority": ["PRODUCT_LEADERSHIP", "INTELLIGENT_APPLICATION_CONSTRUCTION"],
   "deferred_capability": "SOFTWARE_SOLUTION_ENGINEERING",
-  "pending": [
-    {"id": "PEND-LAB-037", "status": "RESOLVED_RETURN_FOR_REMEDIATION", "selected_option": "RETURN_FOR_REMEDIATION"},
-    {"id": "PEND-LAB-038", "status": "NOT_YET_CREATED_STAGE_2_OUTPUT"}
-  ],
-  "temporary_documentary_divergences": [
-    "Global pending, roadmap, registry base files, Markdown state views, and authorization/error registries remain to be reconciled by authorization 161 stage 2.",
-    "Authorization 160 and the M5 brief remain deliberately unchanged and non-executable until Codex regenerates them from validated readiness artifacts."
-  ],
-  "forbidden": [
-    "GRANT_OR_EXECUTE_AUTHORIZATION_160",
-    "EXECUTE_OPERATIONAL_ROLLBACK_DRILL_OR_M5_CUTOVER",
-    "CREATE_OR_ACTIVATE_ACTIVE_REGISTRY",
-    "CHANGE_SELECTOR_SHADOW_REGISTRY_M2_ADAPTERS_RUNTIME_OR_INTEGRATIONS",
-    "RETIRE_STATIC_SELECTOR",
-    "TEST_ADAPT_ACTIVATE_OR_INTEGRATE_PRODUCT_LEADERSHIP_IAC_OR_SSE",
-    "RUN_AWS_OR_TERRAFORM"
-  ],
-  "single_next_action": "EXECUTE_AUTHORIZATION_161_STAGE_2_IN_CODEX_USING_THE_CANONICAL_BRIEF_FROM_THE_VERIFIED_STAGE_1_REMOTE_HEAD",
-  "first_phrase_for_new_conversation": "Continúa ChatGPT Prototype LAB desde el HEAD remoto vigente de main. DEC-LAB-026 resolvió PEND-LAB-037 como RETURN_FOR_REMEDIATION y la autorización 161 concede únicamente la reparación del validador y la preparación/simulación aislada de readiness M5 a Codex. No concedas ni ejecutes M5. Product Leadership e Intelligent Application Construction son la prioridad futura; SSE está diferido.",
-  "authority_effect": "BOUNDED_AUTHORIZATION_161_STAGE_2_ONLY",
+  "forbidden": ["GRANT_OR_EXECUTE_AUTHORIZATION_160", "EXECUTE_M5_CUTOVER_OR_OPERATIONAL_ROLLBACK", "CREATE_OR_ACTIVATE_ACTIVE_REGISTRY", "CHANGE_SELECTOR_SHADOW_REGISTRY_OR_M2_ADAPTERS", "TEST_ADAPT_ACTIVATE_OR_INTEGRATE_PRODUCT_LEADERSHIP_IAC_OR_SSE", "RUN_AWS_OR_TERRAFORM"],
+  "single_next_action": "JONATHAN_MARTINEZ_REVIEWS_PEND_LAB_038_AND_RECORDS_EXACTLY_ONE_HUMAN_DECISION",
+  "first_phrase_for_new_conversation": "Continúa ChatGPT Prototype LAB desde el HEAD remoto vigente de main. Readiness 161 pasó sin ejecutar M5; revisa PEND-LAB-038 y no infieras grant de la autorización 160.",
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_161_CONSUMPTION",
   "runtime_effect": "NONE",
   "integration_effect": "NONE"
 }

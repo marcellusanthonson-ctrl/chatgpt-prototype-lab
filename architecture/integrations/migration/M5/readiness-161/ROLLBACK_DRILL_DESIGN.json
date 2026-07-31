@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "drill_id": "INTEGRATION_FACTORY_PRE_ACTIVATION_ROLLBACK_DRILL_161",
+  "execution_status": "DESIGNED_NOT_EXECUTED",
+  "required_later_authority": "EXPLICIT_GRANTED_AUTHORIZATION_160",
+  "working_directory": "REPOSITORY_ROOT",
+  "baseline": {"branch": "main", "selector_path": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json", "selector_blob": "301ba432907758fc49a9b3c86a83fc762eac4607", "candidate_path": "architecture/integrations/migration/M2/SHADOW_INTEGRATION_REGISTRY.json", "candidate_blob": "a067cd9f95b98aa1599d21e3a0ff35fa56ac3a78"},
+  "commands_if_later_granted": ["git fetch origin main", "git rev-parse refs/remotes/origin/main", "git hash-object project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json", "git hash-object architecture/integrations/migration/M2/SHADOW_INTEGRATION_REGISTRY.json", "python -B scripts/validate_integration_factory_m3_remediation_158.py --check", "python -B scripts/validate_integration_factory_m5_readiness_161.py --check"],
+  "trigger": "PRE_ACTIVATION_MANDATORY_DRILL_OR_ANY_LATER_CUTOVER_GATE_FAILURE",
+  "rollback_target": "STATIC_SELECTOR_EXACT_BLOB",
+  "success_criteria": ["STATIC_POINTER_SELECTED", "STATIC_BLOB_EXACT", "CANDIDATE_NOT_ACTIVE", "NO_PARTIAL_POINTER", "GENERAL_AND_BOUNDED_VALIDATION_RECORDED"],
+  "cleanup": ["REMOVE_UNREFERENCED_TEMP_POINTER", "REMOVE_PREPARED_CANDIDATE_COPY", "RELEASE_OWNED_LOCK", "PRESERVE_EVIDENCE"],
+  "evidence": ["command_transcript", "pre_and_post_pointer", "blob_checks", "validation_results", "cleanup_inventory"],
+  "stop_conditions": ["AUTHORIZATION_160_NOT_GRANTED", "REMOTE_HEAD_MISMATCH", "STATIC_BLOB_MISMATCH", "CANDIDATE_BLOB_MISMATCH", "LOCK_OWNERSHIP_UNCERTAIN", "ANY_RUNTIME_OR_INTEGRATION_EFFECT_OUTSIDE_GRANT"],
+  "operational_rollback_executed_by_161": false
+}

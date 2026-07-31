@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-07-25",
+  "updated_at": "2026-07-31",
   "records": [
     {
       "id": "AUTH-LAB-GOVERNANCE-V2-013",
@@ -1098,6 +1098,26 @@
       "runtime_authorized": false,
       "implementation_selection_authorized": false,
       "architecture_selection_authorized": false,
+      "product_changes_authorized": false
+    },
+    {
+      "id": "AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_READINESS_AND_VALIDATOR_REMEDIATION_161",
+      "state_key": "integration_factory_m5_readiness_and_validator_remediation_161",
+      "project_id": "lab",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "approved_by": "Jonathan Martínez",
+      "scope": "VALIDATOR_REPAIR_M5_READINESS_CONTRACTS_AND_SANDBOX_SIMULATION_ONLY",
+      "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_READINESS_AND_VALIDATOR_REMEDIATION_161.json",
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "expected_parent_head": "f1cb216c34285ba57a6f17e6eb6c817ceb568c79",
+      "updated_at": "2026-07-31",
+      "commit_authorized": true,
+      "push_authorized": true,
+      "source_file_update_authorized": true,
+      "runtime_authorized": false,
+      "integration_authorized": false,
+      "m5_authorized": false,
       "product_changes_authorized": false
     }
   ]
