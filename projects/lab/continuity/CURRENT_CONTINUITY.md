@@ -1,6 +1,6 @@
-# Continuidad actual — M4 preparado, decisión humana pendiente
+# Continuidad actual — M5 readiness autorizado, no iniciado
 
-Fecha: 2026-07-31T11:15:02-04:00
+Fecha: 2026-07-31T12:22:00-04:00
 
 Repositorio: `marcellusanthonson-ctrl/chatgpt-prototype-lab`
 
@@ -10,16 +10,25 @@ Política HEAD: `VERIFY_LIVE_AT_USE`
 
 ## Estado
 
-M3 permanece `M3_REMEDIATED_PASS_EXACT_DUAL_EQUIVALENCE`: 420/420 coincidencias, 13/13 oráculos por evaluador y cero divergencias.
+Jonathan Martínez resolvió `PEND-LAB-037` como `RETURN_FOR_REMEDIATION`. `DEC-LAB-026` no aprueba cutover ni concede M5.
 
-La preparación M4 fue completada y validada. El paquete ofrece exactamente cuatro opciones humanas y no selecciona, recomienda ni infiere ninguna. La clasificación de rollback es `DOCUMENTARY_AND_SOURCE_ROLLBACK_READY_OPERATIONAL_ROLLBACK_NOT_EXECUTED`.
+La autorización 161 está concedida únicamente para que Codex repare `ERR-LAB-008`, defina contratos operativos exactos de readiness M5 y ejecute simulaciones aisladas de atomicidad y rollback. La etapa técnica no ha comenzado.
 
-`ERR-LAB-008` está `OPEN_CONTAINED_NOT_REPAIRED`. La autorización 160 está `PROPOSED`, no concedida y no ejecutable.
+La autorización 160 permanece `PROPOSED`, no concedida y no ejecutable. El selector estático sigue autoritativo y el shadow registry sigue inactivo.
+
+## Prioridad futura
+
+Después de validar la base de Integration Factory, el orden preferido es:
+
+1. Product Leadership.
+2. Intelligent Application Construction.
+
+Software Solution Engineering queda diferido. Ninguna de estas capacidades está autorizada para prueba, adaptación, activación o integración dentro de la autorización 161.
 
 ## Límites
 
-El selector estático sigue autoritativo y el shadow registry sigue inactivo. No hubo cutover, M5, activación, cambio de selector, runtime, integración, AWS ni Terraform. El retiro del selector estático no está autorizado.
+No existe autorización para cutover, M5, registro activo, cambio de selector, retiro del selector estático, runtime, integración, AWS o Terraform.
 
 ## Siguiente acción única
 
-Jonathan Martínez selecciona exactamente una opción de `PEND-LAB-037` después de revisar `CUTOVER_DECISION_PACKAGE.json` y `ROLLBACK_READINESS.json`.
+Codex ejecuta la etapa 2 de la autorización 161 desde el HEAD remoto final producido por esta publicación documental.
