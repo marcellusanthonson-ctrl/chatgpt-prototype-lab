@@ -57,3 +57,14 @@ M2 conserva un registro `SHADOW_ONLY_NOT_ACTIVE` y cuatro adaptadores equivalent
 La autorización 156 reparó exclusivamente integridad documental: preservó el alcance completo aprobado de 155, creó un brief sucesor completo, restauró estas vistas sin pérdida histórica y registró la sustitución de Codex por ChatGPT durante M2 como `UNAUTHORIZED_EXECUTOR_VARIANCE` sin autoridad retroactiva.
 
 `PEND-LAB-034` permanece `AWAITING_SEPARATE_HUMAN_DECISION` y bloquea M3. No existe autoridad para rerun de M2, evaluación dual, registro activo, cambios del selector, runtime, integración, SSE, AWS, Terraform o selección de proveedor.
+
+
+## Fábrica de integraciones — decisión de entrada M3 preparada
+
+`DEC-LAB-023` acepta el resultado reproducible `M2_PASS` como baseline suficiente para preparar M3, sin autorización retroactiva y sin requerir un rerun de M2 por Codex.
+
+`PEND-LAB-034` queda cerrado. La autorización 157 está publicada únicamente como `PROPOSED`; el brief asociado permanece `DRAFT_AWAITING_AUTHORIZATION_157`.
+
+M3 no está autorizado ni iniciado. No existen corpus, evaluadores, resultados, divergencias o evidencia M3. El selector estático sigue autoritativo y el registro sombra continúa no activo.
+
+Estado efectivo: `M2_BASELINE_ACCEPTED_M3_AUTHORIZATION_PROPOSED_NOT_GRANTED`.

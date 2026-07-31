@@ -1,0 +1,3 @@
+Continúa ChatGPT Prototype LAB reconstruyendo primero el estado desde `marcellusanthonson-ctrl/chatgpt-prototype-lab`, rama `main`, entrypoint `project-sources/chatgpt/START_HERE.md`; verifica el HEAD remoto vigente y sigue exactamente su orden de lectura. Después lee el paquete CURRENT y continúa desde M2 técnico PASS con integridad documental reconciliada. No inicies M3, no actives el shadow registry y no modifiques selector, runtime o integraciones hasta que Jonathan Martínez resuelva `PEND-LAB-034`.
+
+La variación de ejecutor de M2 quedó registrada sin autorización retroactiva. Las dos salidas humanas permitidas son aceptar el resultado reproducible como baseline suficiente para M3 o exigir un rerun acotado de M2 por Codex.

@@ -67,3 +67,16 @@ El contenido anterior se conserva byte por byte como vista histórica del parent
 - Runtime, integración, selector activo, SSE, AWS y Terraform: sin efectos bajo esta línea.
 
 La siguiente acción única es que Jonathan Martínez resuelva `PEND-LAB-034` seleccionando una de sus dos salidas permitidas.
+
+
+## M2 aceptado como baseline; autorización M3 propuesta
+
+`DEC-LAB-023` registra la decisión humana de aceptar el resultado técnico reproducible de M2 como baseline suficiente para una futura evaluación M3. La decisión no concede autorización retroactiva a la ejecución 155 y no elimina ni reclasifica la variación histórica de ejecutor.
+
+`PEND-LAB-034` está `COMPLETED_BASELINE_ACCEPTED_FOR_M3_WITHOUT_RETROACTIVE_AUTHORIZATION`.
+
+La autorización `AUTHORIZATION_LAB_INTEGRATION_FACTORY_M3_DUAL_SELECTOR_EVALUATION_AND_EQUIVALENCE_VALIDATION_157` está `PROPOSED`, no `GRANTED`. Su brief está publicado como `DRAFT_AWAITING_AUTHORIZATION_157`.
+
+No se creó corpus M3, no se implementaron evaluadores, no se ejecutó evaluación dual y no existe resultado M3. El shadow registry continúa `SHADOW_ONLY_NOT_ACTIVE`; el selector, runtime e integraciones permanecen sin cambios.
+
+La siguiente acción única es que Jonathan Martínez apruebe o rechace explícitamente la autorización 157. Una aprobación deberá confirmar el ejecutor técnico; ninguna sustitución de Codex se inferirá.
