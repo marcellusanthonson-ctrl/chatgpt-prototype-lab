@@ -80,3 +80,14 @@ La autorización `AUTHORIZATION_LAB_INTEGRATION_FACTORY_M3_DUAL_SELECTOR_EVALUAT
 No se creó corpus M3, no se implementaron evaluadores, no se ejecutó evaluación dual y no existe resultado M3. El shadow registry continúa `SHADOW_ONLY_NOT_ACTIVE`; el selector, runtime e integraciones permanecen sin cambios.
 
 La siguiente acción única es que Jonathan Martínez apruebe o rechace explícitamente la autorización 157. Una aprobación deberá confirmar el ejecutor técnico; ninguna sustitución de Codex se inferirá.
+
+
+## M3 autorizado; ejecución técnica pendiente en Codex
+
+La autorización `AUTHORIZATION_LAB_INTEGRATION_FACTORY_M3_DUAL_SELECTOR_EVALUATION_AND_EQUIVALENCE_VALIDATION_157` está `GRANTED` desde `2026-07-31T07:32:00-04:00`, con parent de concesión `557c35bd78f8224ffc2dbe58506c0445983c44d2` y Codex como ejecutor técnico confirmado.
+
+La etapa 1 está publicada como `M3_AUTHORIZED_NOT_STARTED`. No existe todavía corpus M3, evaluadores, resultados, divergencias ni evidencia M3.
+
+Permanecen prohibidos M4, cutover, activación del shadow registry, cambios del selector, runtime, integraciones, AWS y Terraform.
+
+La siguiente acción única es ejecutar la etapa 2 en Codex desde el HEAD remoto verificado posterior a esta publicación.
