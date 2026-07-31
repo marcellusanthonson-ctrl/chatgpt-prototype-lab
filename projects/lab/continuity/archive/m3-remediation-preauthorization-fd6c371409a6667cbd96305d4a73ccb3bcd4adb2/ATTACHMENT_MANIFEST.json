@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.2.0",
+  "manifest_id": "LAB-CONTINUITY-ATTACHMENTS-INTEGRATION-FACTORY-M3-BLOCKED-20260731",
+  "status": "CURRENT",
+  "project_id": "lab",
+  "created_at": "2026-07-31T08:14:28-04:00",
+  "required_read_order": ["CURRENT_CONTINUITY.json", "CURRENT_CONTINUITY.md", "ATTACHMENT_MANIFEST.json", "START_PROMPT.md"],
+  "attachments": [
+    {"path": "projects/lab/continuity/CURRENT_CONTINUITY.json", "role": "CANONICAL_STRUCTURED_CONTINUITY", "required": true},
+    {"path": "projects/lab/continuity/CURRENT_CONTINUITY.md", "role": "HUMAN_READABLE_CONTINUITY", "required": true},
+    {"path": "projects/lab/continuity/ATTACHMENT_MANIFEST.json", "role": "READ_ORDER_AND_REFERENCE_MANIFEST", "required": true},
+    {"path": "projects/lab/continuity/START_PROMPT.md", "role": "FIRST_MESSAGE_FOR_NEW_CONVERSATION", "required": true}
+  ],
+  "repository_sources_not_duplicated_as_attachments": ["project-sources/chatgpt/START_HERE.md", "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M3-157.json", "architecture/integrations/migration/M3/VALIDATION_RESULTS.json", "architecture/integrations/migration/M3/DIVERGENCE_LOG.json", "projects/lab/pending/PEND-LAB-035.json"],
+  "archived_package": "projects/lab/continuity/archive/m3-stage-2-preexecution-ce5c86ee59013f335cc541d0066f9513c0de0872/",
+  "archived_blobs": {"CURRENT_CONTINUITY.json": "21644bbd4eecba585160ad9973db1dce49124402", "CURRENT_CONTINUITY.md": "816bd4fa17a8e2d2f6cd100ad62197c6615b0e6e", "ATTACHMENT_MANIFEST.json": "204ba78c5af4ccb01a6db1d0f7b612a67cee40c2", "START_PROMPT.md": "5d59db29c83f394a11331925c64b06545442a8cc"},
+  "missing_attachments": [],
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_157_CONSUMPTION"
+}
