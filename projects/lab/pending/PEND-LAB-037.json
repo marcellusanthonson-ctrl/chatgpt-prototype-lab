@@ -2,32 +2,42 @@
   "schema_version": "1.0.0",
   "id": "PEND-LAB-037",
   "project_id": "lab",
-  "status": "AWAITING_HUMAN_CUTOVER_DECISION",
+  "status": "RESOLVED_RETURN_FOR_REMEDIATION",
   "type": "INTEGRATION_FACTORY_M4_HUMAN_CUTOVER_DECISION",
   "priority": "HIGH",
   "subject": "Jonathan Martínez selects exactly one M4 outcome after reviewing the decision and rollback-readiness package",
   "created_at": "2026-07-31T11:15:02-04:00",
+  "resolved_at": "2026-07-31T12:22:00-04:00",
   "decision_owner": "Jonathan Martínez",
   "automatic_approval": false,
-  "selected_option": null,
+  "selected_option": "RETURN_FOR_REMEDIATION",
   "allowed_options": [
     "APPROVE_BOUNDED_M5_CUTOVER",
     "DEFER_M5_RETAIN_STATIC_SELECTOR",
     "REJECT_CUTOVER_CLOSE_MIGRATION",
     "RETURN_FOR_REMEDIATION"
   ],
+  "decision_ref": "decisions/DEC-LAB-026.json",
   "decision_package_ref": "architecture/integrations/migration/M4/CUTOVER_DECISION_PACKAGE.json",
   "rollback_readiness_ref": "architecture/integrations/migration/M4/ROLLBACK_READINESS.json",
   "proposed_authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160.json",
-  "effect_until_resolution": "STATIC_SELECTOR_REMAINS_AUTHORITATIVE_SHADOW_REGISTRY_INACTIVE_M5_NOT_AUTHORIZED",
-  "current_authority": "HUMAN_CUTOVER_DECISION_ONLY_NO_M5_EXECUTION_AUTHORITY",
-  "next_transition": "JONATHAN_MARTINEZ_SELECTS_ONE_ALLOWED_OPTION",
+  "successor_authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_READINESS_AND_VALIDATOR_REMEDIATION_161.json",
+  "effect_until_stage_2_completion": "STATIC_SELECTOR_REMAINS_AUTHORITATIVE_SHADOW_REGISTRY_INACTIVE_M5_NOT_AUTHORIZED",
+  "current_authority": "AUTHORIZATION_161_STAGE_2_ONLY_NO_M5_CUTOVER_AUTHORITY",
+  "next_transition": "CODEX_EXECUTES_AUTHORIZATION_161_STAGE_2_FROM_THE_VERIFIED_STAGE_1_REMOTE_HEAD",
+  "future_integration_priority": [
+    "PRODUCT_LEADERSHIP",
+    "INTELLIGENT_APPLICATION_CONSTRUCTION"
+  ],
+  "deferred_capability": "SOFTWARE_SOLUTION_ENGINEERING",
   "source_refs": [
     "decisions/DEC-LAB-025.json",
+    "decisions/DEC-LAB-026.json",
     "architecture/integrations/migration/M4/CUTOVER_DECISION_PACKAGE.json",
-    "architecture/integrations/migration/M4/ROLLBACK_READINESS.json"
+    "architecture/integrations/migration/M4/ROLLBACK_READINESS.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_READINESS_AND_VALIDATOR_REMEDIATION_161.json"
   ],
-  "authority_effect": "NONE_UNTIL_HUMAN_DECISION_AND_SEPARATE_AUTHORIZATION",
+  "authority_effect": "RETURN_FOR_REMEDIATION_DECISION_RECORDED_STAGE_2_BOUNDED_AUTHORITY_SEPARATE",
   "runtime_effect": "NONE",
   "integration_effect": "NONE"
 }
