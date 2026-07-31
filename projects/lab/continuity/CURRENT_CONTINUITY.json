@@ -77,8 +77,15 @@
     "runtime_effect": "NONE_BEFORE_STAGE_2_ROLLBACK_DRILL_PASS",
     "integration_effect": "NONE_BEFORE_STAGE_2_SINGLE_POINTER_MUTATION"
   },
+  "stage_1_known_divergences": [
+    "registry/index.json latest decision and authorization fields remain at DEC-LAB-026 and authorization 161 until authorized stage 2 reconciliation",
+    "registry/authorizations.json remains unreconciled with the granted authorization 160 until stage 2",
+    "projects/lab/PENDING.json and projects/lab/ROADMAP.json remain unreconciled with DEC-LAB-027 until stage 2",
+    "the canonical decision, authorization, PEND-LAB-038, decision index, delta and CURRENT continuity are already published and authoritative for this gate"
+  ],
   "stage_2_mandatory_first_gates": [
     "VERIFY_FINAL_STAGE_1_REMOTE_HEAD",
+    "RECONCILE_STAGE_1_REGISTRY_PENDING_AND_ROADMAP_DIVERGENCES_WITHIN_AUTHORIZED_PATHS",
     "FREEZE_EXACT_335_HISTORICAL_GENERAL_VALIDATOR_FINDINGS",
     "EXECUTE_PRE_ACTIVATION_OPERATIONAL_ROLLBACK_DRILL",
     "STOP_WITHOUT_CUTOVER_IF_DRILL_FAILS"
@@ -98,7 +105,7 @@
     "MODIFY_EXTERNAL_REPOSITORIES"
   ],
   "single_next_action": "CODEX_EXECUTES_AUTHORIZATION_160_FROM_THE_VERIFIED_STAGE_1_REMOTE_HEAD",
-  "first_phrase_for_new_conversation": "Continúa ChatGPT Prototype LAB desde el HEAD remoto vigente de main. DEC-LAB-027 concedió la autorización 160; Codex debe comenzar congelando los 335 hallazgos históricos y ejecutando el rollback drill antes de cualquier cutover.",
+  "first_phrase_for_new_conversation": "Continúa ChatGPT Prototype LAB desde el HEAD remoto vigente de main. DEC-LAB-027 concedió la autorización 160; Codex debe reconciliar primero las divergencias documentales de etapa 1, congelar los 335 hallazgos históricos y ejecutar el rollback drill antes de cualquier cutover.",
   "authority_effect": "BOUNDED_AUTHORIZATION_160_STAGE_2_ONLY",
   "runtime_effect": "NONE_UNTIL_AUTHORIZED_STAGE_2_AFTER_ROLLBACK_DRILL_PASS",
   "integration_effect": "NONE_UNTIL_AUTHORIZED_STAGE_2_SINGLE_POINTER_MUTATION"
