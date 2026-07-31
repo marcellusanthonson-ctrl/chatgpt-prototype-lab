@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0.0",
+  "brief_id": "CODEX_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_001",
+  "task_id": "LAB-INTEGRATION-FACTORY-M5-160",
+  "title": "Execute a bounded M5 cutover and observation only after explicit human approval and grant",
+  "status": "COMPLETE_AWAITING_EXPLICIT_HUMAN_GRANT_OF_AUTHORIZATION_160",
+  "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160.json",
+  "human_decision_ref": "projects/lab/pending/PEND-LAB-037.json",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": null,
+  "technical_executor": "CODEX",
+  "brief_complete": true,
+  "explicit_human_grant_required": true,
+  "execution_authorized": false,
+  "objective": "If and only if Jonathan Martínez first selects APPROVE_BOUNDED_M5_CUTOVER and explicitly grants authorization 160, execute a pre-activation rollback drill, a bounded cutover, immediate observation gates, and rollback on any failure while preserving the static selector until a later human retirement decision.",
+  "mandatory_preconditions": [
+    "VERIFY_LIVE_HEAD_OF_MAIN",
+    "PEND_LAB_037_HUMAN_DECISION_IS_APPROVE_BOUNDED_M5_CUTOVER",
+    "AUTHORIZATION_160_STATUS_IS_GRANTED",
+    "APPROVED_BY_IS_JONATHAN_MARTINEZ",
+    "PRE_ACTIVATION_ROLLBACK_DRILL_PASSES",
+    "STATIC_SELECTOR_ROLLBACK_SOURCE_REMAINS_EXACT"
+  ],
+  "required_sequence_if_later_granted": [
+    "ARCHIVE_PREEXECUTION_CONTINUITY",
+    "EXECUTE_AND_RECORD_PRE_ACTIVATION_ROLLBACK_DRILL",
+    "PERFORM_ONLY_THE_GRANTED_BOUNDED_CUTOVER",
+    "RUN_BEHAVIORAL_AUTHORITY_AND_RUNTIME_OBSERVATION_GATES",
+    "ROLL_BACK_IMMEDIATELY_ON_ANY_GATE_FAILURE",
+    "PRESERVE_STATIC_SELECTOR",
+    "PUBLISH_CUTOVER_EVIDENCE_AND_POST_CUTOVER_VALIDATION",
+    "CREATE_ONLY_A_PROPOSAL_FOR_STATIC_SELECTOR_RETIREMENT",
+    "AWAIT_LATER_HUMAN_RETIREMENT_DECISION"
+  ],
+  "required_outputs_if_later_granted": [
+    "PRE_ACTIVATION_ROLLBACK_DRILL_EVIDENCE",
+    "CUTOVER_EVIDENCE.json",
+    "POST_CUTOVER_VALIDATION.json",
+    "STATIC_SELECTOR_RETIREMENT_PROPOSAL.json",
+    "CHANGED_FILES.json",
+    "RECONCILED_STATE_AND_CONTINUITY"
+  ],
+  "acceptance_checks_if_later_granted": [
+    "ROLLBACK_DRILL_PASSES_BEFORE_ACTIVATION",
+    "M3_BEHAVIORAL_EQUIVALENCE_GATES_REMAIN_PASSING",
+    "NO_AUTHORITY_DRIFT",
+    "NO_UNBOUNDED_RUNTIME_OR_INTEGRATION_EFFECT",
+    "STATIC_SELECTOR_REMAINS_AVAILABLE",
+    "ANY_GATE_FAILURE_CAUSES_IMMEDIATE_ROLLBACK",
+    "STATIC_SELECTOR_RETIREMENT_REMAINS_UNAUTHORIZED"
+  ],
+  "stop_conditions": [
+    "AUTHORIZATION_160_IS_NOT_EXPLICITLY_GRANTED",
+    "PEND_LAB_037_DOES_NOT_RECORD_APPROVE_BOUNDED_M5_CUTOVER",
+    "LIVE_HEAD_DIFFERS_FROM_LATER_GRANTED_BASELINE",
+    "ROLLBACK_DRILL_FAILS",
+    "STATIC_SELECTOR_OR_FIXTURE_BLOB_DIFFERS",
+    "ANY_BEHAVIORAL_AUTHORITY_RUNTIME_OR_INTEGRATION_GATE_FAILS",
+    "SCOPE_REQUIRES_AWS_TERRAFORM_REAL_DATA_PRODUCTION_CREDENTIALS_OR_EXTERNAL_REPOSITORY_CHANGES"
+  ],
+  "forbidden_actions": [
+    "INFER_OR_SELF_GRANT_AUTHORIZATION_160",
+    "EXECUTE_BEFORE_EXPLICIT_HUMAN_GRANT",
+    "RETIRE_OR_DELETE_STATIC_SELECTOR",
+    "CONTINUE_AFTER_ANY_GATE_FAILURE",
+    "EXPAND_CUTOVER_SCOPE",
+    "RUN_AWS_OR_TERRAFORM",
+    "USE_REAL_DATA_OR_PRODUCTION_CREDENTIALS"
+  ],
+  "source_refs": [
+    "architecture/integrations/migration/M4/CUTOVER_DECISION_PACKAGE.json",
+    "architecture/integrations/migration/M4/ROLLBACK_READINESS.json",
+    "projects/lab/pending/PEND-LAB-037.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160.json",
+    "architecture/integrations/STATIC_SELECTOR_TO_INTEGRATION_FACTORY_MIGRATION_PLAN_001.json"
+  ],
+  "response_contract_if_later_granted": [
+    "RESULT",
+    "VERIFIED_INITIAL_PARENT_HEAD",
+    "ROLLBACK_DRILL_RESULT",
+    "BOUNDED_CUTOVER_RESULT",
+    "OBSERVATION_GATES",
+    "ROLLBACK_STATUS",
+    "STATIC_SELECTOR_STATUS",
+    "FILES_CHANGED",
+    "COMMIT_SHA",
+    "VERIFIED_FINAL_REMOTE_HEAD",
+    "AUTHORIZATION_160_CONSUMPTION",
+    "SINGLE_NEXT_ACTION"
+  ],
+  "authority_effect": "NONE_UNTIL_EXPLICIT_HUMAN_GRANT",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}

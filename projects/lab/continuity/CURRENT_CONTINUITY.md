@@ -1,6 +1,6 @@
-# Continuidad actual — M4 preparación autorizada
+# Continuidad actual — M4 preparado, decisión humana pendiente
 
-Fecha: 2026-07-31T10:34:00-04:00
+Fecha: 2026-07-31T11:15:02-04:00
 
 Repositorio: `marcellusanthonson-ctrl/chatgpt-prototype-lab`
 
@@ -10,16 +10,16 @@ Política HEAD: `VERIFY_LIVE_AT_USE`
 
 ## Estado
 
-M3 permanece `M3_REMEDIATED_PASS_EXACT_DUAL_EQUIVALENCE`.
+M3 permanece `M3_REMEDIATED_PASS_EXACT_DUAL_EQUIVALENCE`: 420/420 coincidencias, 13/13 oráculos por evaluador y cero divergencias.
 
-Jonathan Martínez aprobó `DEC-LAB-025` y concedió la autorización 159 para preparar el paquete humano de decisión M4, verificar rollback a nivel documental y de fuentes, reconciliar las referencias vigentes de la criterion layer a `1.1.1`, registrar el defecto histórico del validador general y preparar una propuesta M5 no ejecutable.
+La preparación M4 fue completada y validada. El paquete ofrece exactamente cuatro opciones humanas y no selecciona, recomienda ni infiere ninguna. La clasificación de rollback es `DOCUMENTARY_AND_SOURCE_ROLLBACK_READY_OPERATIONAL_ROLLBACK_NOT_EXECUTED`.
 
-La etapa 2 está `AUTHORIZED_NOT_STARTED` y su ejecutor técnico es Codex.
+`ERR-LAB-008` está `OPEN_CONTAINED_NOT_REPAIRED`. La autorización 160 está `PROPOSED`, no concedida y no ejecutable.
 
 ## Límites
 
-La preparación de M4 no constituye una decisión humana de cutover. No existe autorización para M5, activación del shadow registry, cambios del selector, runtime, integraciones, retiro del selector estático, AWS o Terraform.
+El selector estático sigue autoritativo y el shadow registry sigue inactivo. No hubo cutover, M5, activación, cambio de selector, runtime, integración, AWS ni Terraform. El retiro del selector estático no está autorizado.
 
 ## Siguiente acción única
 
-Ejecutar la etapa 2 de la autorización 159 en Codex desde el HEAD remoto verificado posterior a esta publicación.
+Jonathan Martínez selecciona exactamente una opción de `PEND-LAB-037` después de revisar `CUTOVER_DECISION_PACKAGE.json` y `ROLLBACK_READINESS.json`.

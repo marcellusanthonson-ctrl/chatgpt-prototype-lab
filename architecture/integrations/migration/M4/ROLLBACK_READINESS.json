@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "rollback_readiness_id": "INTEGRATION_FACTORY_M4_ROLLBACK_READINESS_001",
+  "classification": "DOCUMENTARY_AND_SOURCE_ROLLBACK_READY_OPERATIONAL_ROLLBACK_NOT_EXECUTED",
+  "verified_at": "2026-07-31T11:15:02-04:00",
+  "checks": {
+    "STATIC_SELECTOR_PATH_EXISTS": true,
+    "STATIC_SELECTOR_BLOB_UNCHANGED": true,
+    "STATIC_SELECTOR_REMAINS_CURRENT_AUTHORITATIVE_REPRESENTATION": true,
+    "SHADOW_REGISTRY_REMAINS_INACTIVE": true,
+    "M3_REMEDIATED_EXACT_EQUIVALENCE_CONFIRMED": true,
+    "STATIC_SELECTOR_RETIREMENT_NOT_AUTHORIZED": true,
+    "ROLLBACK_SOURCE_AND_FIXTURES_PRESERVED": true,
+    "M5_PRE_ACTIVATION_ROLLBACK_DRILL_REQUIRED": true
+  },
+  "source_blobs": {
+    "fixture_1_1_1": "db53d11e4a45e8f98a9b6aa540a2c7459723601b",
+    "static_selector": "301ba432907758fc49a9b3c86a83fc762eac4607",
+    "shadow_registry": "a067cd9f95b98aa1599d21e3a0ff35fa56ac3a78"
+  },
+  "m3_baseline": {
+    "classification": "M3_REMEDIATED_PASS_EXACT_DUAL_EQUIVALENCE",
+    "case_count": 420,
+    "static_shadow_exact_matches": 420,
+    "divergences": 0,
+    "behavioral_digest": "9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329"
+  },
+  "operational_rollback_executed": false,
+  "production_rollback_verified": false,
+  "cutover_approved": false,
+  "m5_requirement": "PRE_ACTIVATION_ROLLBACK_DRILL_REQUIRED",
+  "rollback_trigger_if_m5_is_later_granted": "ANY_PRE_ACTIVATION_OR_OBSERVATION_GATE_FAILURE",
+  "rollback_target": "STATIC_SELECTOR_REMAINS_AUTHORITATIVE",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}

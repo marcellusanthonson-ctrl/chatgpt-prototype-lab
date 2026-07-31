@@ -264,6 +264,22 @@
       "pending": "PEND-LAB-024",
       "authority_effect": "NONE",
       "next_gate": "SEPARATE_EXPLICIT_AUTHORIZATION"
+    },
+    {
+      "order": 25,
+      "item": "INTEGRATION_FACTORY_M4_HUMAN_CUTOVER_DECISION",
+      "status": "M4_PREPARATION_COMPLETE_AWAITING_HUMAN_CUTOVER_DECISION",
+      "authorization": "AUTHORIZATION_LAB_INTEGRATION_FACTORY_M4_HUMAN_CUTOVER_DECISION_PREPARATION_AND_DOCUMENTARY_RECONCILIATION_159",
+      "evidence": "EVD-LAB-INTEGRATION-FACTORY-M4-PREPARATION-159",
+      "source_pending": "PEND-LAB-036",
+      "human_decision_pending": "PEND-LAB-037",
+      "rollback_readiness": "DOCUMENTARY_AND_SOURCE_ROLLBACK_READY_OPERATIONAL_ROLLBACK_NOT_EXECUTED",
+      "m5_authorization_proposal": "AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160",
+      "m5_authorization_status": "PROPOSED_NOT_GRANTED",
+      "human_cutover_decision_made": false,
+      "runtime_effect": "NONE",
+      "integration_effect": "NONE",
+      "next_gate": "JONATHAN_MARTINEZ_SELECTS_ONE_PEND_LAB_037_OPTION"
     }
   ]
 }

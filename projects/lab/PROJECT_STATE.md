@@ -2,7 +2,7 @@
 
 La fuente estructurada efectiva se resuelve desde `PROJECT_STATE.json` junto con los deltas aplicables descubiertos en `registry/index.json`. El snapshot base se preserva sin reescritura; el delta vigente para M1 PASS es `integration-factory-m1-pass-state-continuity-reconciliation-154`.
 
-El LAB mantiene gobierno v2, la capa selectiva `CHATGPT-CRITERION-LAYER-001@1.1.0`, el estándar `MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001@1.1.1` y la fábrica estandarizada de integraciones neutral respecto de proveedor y tecnología.
+El LAB mantiene gobierno v2, la capa selectiva `CHATGPT-CRITERION-LAYER-001@1.1.1`, el estándar `MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001@1.1.1` y la fábrica estandarizada de integraciones neutral respecto de proveedor y tecnología.
 
 ## Fábrica de integraciones — M1 PASS
 
@@ -95,3 +95,13 @@ La autorización 158 preservó el fixture histórico 1.1.0 con blob `de4793dedc9
 El rerun aditivo de 420 casos produce 13/13 oráculos PASS en ambos evaluadores, 420/420 equivalencias exactas, cero divergencias y digest conductual sin cambios `9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329` en dos corridas.
 
 Estado efectivo: `M3_REMEDIATED_PASS_AWAITING_SEPARATE_HUMAN_DECISION_FOR_M4`. `PEND-LAB-036` mantiene M4 y cutover bloqueados. No hubo modificación del selector, shadow registry, adapters M2, runtime o integraciones.
+
+## Fábrica de integraciones — M4 preparado, decisión humana pendiente
+
+Codex completó la etapa 2 de la autorización 159 desde `928b9829b48cf4e1411b98e608a3a01c52b1b11e`. El paquete M4 conserva el resultado `M3_REMEDIATED_PASS_EXACT_DUAL_EQUIVALENCE`, ofrece exactamente cuatro opciones humanas y no selecciona, recomienda ni infiere ninguna.
+
+La preparación verificó `DOCUMENTARY_AND_SOURCE_ROLLBACK_READY_OPERATIONAL_ROLLBACK_NOT_EXECUTED`. El selector estático permanece autoritativo, el shadow registry permanece inactivo y el retiro del selector estático no está autorizado. Antes de cualquier activación M5 se exige `PRE_ACTIVATION_ROLLBACK_DRILL_REQUIRED`.
+
+`ERR-LAB-008` registra el crash del validador general sobre deltas array como `OPEN_CONTAINED_NOT_REPAIRED`; la validación acotada 159 pasa sin reparar ese componente. La autorización 160 está `PROPOSED`, con `approved_by: null` y sin efecto de autoridad.
+
+`PEND-LAB-036` queda completado. `PEND-LAB-037` está `AWAITING_HUMAN_CUTOVER_DECISION`. No hubo cutover, M5, activación, cambio de selector, runtime, integración, AWS ni Terraform.

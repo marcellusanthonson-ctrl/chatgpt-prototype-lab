@@ -1,0 +1,3 @@
+Continúa ChatGPT Prototype LAB reconstruyendo primero el estado desde `marcellusanthonson-ctrl/chatgpt-prototype-lab`, rama `main`, entrypoint `project-sources/chatgpt/START_HERE.md`; verifica el HEAD remoto vigente y sigue exactamente su orden de lectura.
+
+La autorización 159 está `GRANTED` y la preparación M4 está `AUTHORIZED_NOT_STARTED`, con Codex como ejecutor técnico. Lee `decisions/DEC-LAB-025.json`, `projects/lab/pending/PEND-LAB-036.json`, la autorización 159 y su brief. No tomes una decisión humana de cutover, no concedas ni ejecutes M5 y no actives ni modifiques selector, registry, runtime o integraciones.

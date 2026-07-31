@@ -1,1 +1,41 @@
-{"schema_version":"1.0.0","delta_id":"integration-factory-m4-preparation-authorization-159","project_id":"lab","recorded_at":"2026-07-31T10:34:00-04:00","decision_id":"DEC-LAB-025","authorization_id":"AUTHORIZATION_LAB_INTEGRATION_FACTORY_M4_HUMAN_CUTOVER_DECISION_PREPARATION_AND_DOCUMENTARY_RECONCILIATION_159","status":"M4_PREPARATION_AUTHORIZED_NOT_STARTED","state_changes":{"integration_factory_migration_phase":"M4_PREPARATION_AUTHORIZED_NOT_STARTED_AWAITING_CODEX","pend_lab_036":"M4_PREPARATION_AUTHORIZED_NOT_STARTED","technical_executor":"CODEX","cutover_authorized":false,"m5_authorized":false,"runtime_effect":"NONE","integration_effect":"NONE"},"source_refs":["decisions/DEC-LAB-025.json","projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M4_HUMAN_CUTOVER_DECISION_PREPARATION_AND_DOCUMENTARY_RECONCILIATION_159.json","projects/lab/briefs/CODEX_INTEGRATION_FACTORY_M4_HUMAN_CUTOVER_DECISION_PREPARATION_001.json","projects/lab/pending/PEND-LAB-036.json"],"single_next_action":"EXECUTE_AUTHORIZATION_159_STAGE_2_IN_CODEX_FROM_VERIFIED_STAGE_1_HEAD","authority_effect":"BOUNDED_M4_PREPARATION_AUTHORITY_GRANTED_TO_CODEX_ONLY","runtime_effect":"NONE"}
+{
+  "schema_version": "1.0.0",
+  "delta_id": "integration-factory-m4-preparation-authorization-159",
+  "project_id": "lab",
+  "recorded_at": "2026-07-31T11:15:02-04:00",
+  "decision_id": "DEC-LAB-025",
+  "authorization_id": "AUTHORIZATION_LAB_INTEGRATION_FACTORY_M4_HUMAN_CUTOVER_DECISION_PREPARATION_AND_DOCUMENTARY_RECONCILIATION_159",
+  "evidence_id": "EVD-LAB-INTEGRATION-FACTORY-M4-PREPARATION-159",
+  "error_id": "ERR-LAB-008",
+  "proposed_authorization_id": "AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160",
+  "status": "M4_PREPARATION_COMPLETE_AWAITING_HUMAN_CUTOVER_DECISION",
+  "state_changes": {
+    "integration_factory_migration_phase": "M4_PREPARATION_COMPLETE_AWAITING_HUMAN_CUTOVER_DECISION",
+    "authorization_159": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "pend_lab_036": "COMPLETED_M4_PREPARATION_PACKAGE_PUBLISHED",
+    "pend_lab_037": "AWAITING_HUMAN_CUTOVER_DECISION",
+    "criterion_layer_version": "1.1.1",
+    "rollback_readiness": "DOCUMENTARY_AND_SOURCE_ROLLBACK_READY_OPERATIONAL_ROLLBACK_NOT_EXECUTED",
+    "general_validator_error": "ERR_LAB_008_OPEN_CONTAINED_NOT_REPAIRED",
+    "authorization_160": "PROPOSED_NOT_GRANTED",
+    "human_cutover_decision_made": false,
+    "m5_authorized": false,
+    "cutover_executed": false,
+    "active_selector_modified": false,
+    "shadow_registry_modified": false,
+    "runtime_effect": "NONE",
+    "integration_effect": "NONE"
+  },
+  "source_refs": [
+    "architecture/integrations/migration/M4/CUTOVER_DECISION_PACKAGE.json",
+    "architecture/integrations/migration/M4/ROLLBACK_READINESS.json",
+    "architecture/integrations/migration/M4/VALIDATION_RESULTS.json",
+    "errors/ERR-LAB-008.json",
+    "projects/lab/pending/PEND-LAB-037.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160.json"
+  ],
+  "single_next_action": "JONATHAN_MARTINEZ_SELECTS_ONE_PEND_LAB_037_CUTOVER_OPTION",
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_159_CONSUMPTION",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}

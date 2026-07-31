@@ -107,3 +107,15 @@ La autorización 158 preservó byte por byte el fixture 1.1.0, corrigió únicam
 El rerun aditivo ejecutó exactamente 420 casos dos veces. Ambos evaluadores pasan 13/13 oráculos, coinciden en 420/420 resultados y mantienen el digest conductual histórico `9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329`. No existen divergencias ni transferencia negativa.
 
 La clasificación es `M3_REMEDIATED_PASS_EXACT_DUAL_EQUIVALENCE`. `PEND-LAB-035` queda completado y `PEND-LAB-036` espera una decisión humana separada sobre si preparar M4. M4, cutover, activación, selector, runtime e integraciones permanecen sin autorización.
+
+## M4 preparado — decisión humana de cutover pendiente
+
+La etapa 2 de la autorización 159 fue ejecutada por Codex desde el parent verificado `928b9829b48cf4e1411b98e608a3a01c52b1b11e`. El paquete M4 contiene exactamente cuatro opciones humanas y no selecciona, recomienda ni infiere ninguna.
+
+La preparación pasa su validador acotado. La clasificación de rollback es `DOCUMENTARY_AND_SOURCE_ROLLBACK_READY_OPERATIONAL_ROLLBACK_NOT_EXECUTED`; el selector estático permanece autoritativo y el shadow registry permanece inactivo. No se ejecutó rollback operacional o de producción.
+
+Las referencias vigentes de descubrimiento y estado de la criterion layer se reconciliaron a `CHATGPT-CRITERION-LAYER-001@1.1.1`. Los archivos históricos, de archivo y evidencia no fueron reescritos.
+
+`ERR-LAB-008` está `OPEN_CONTAINED_NOT_REPAIRED`: el validador general interpreta campos array de deltas como paths escalares. Este defecto no invalida M3 ni el PASS del validador acotado 159 y requiere autorización separada para reparación.
+
+La autorización 160 y su brief están preparados, pero la autorización permanece `PROPOSED`, no concedida y no ejecutable. `PEND-LAB-036` queda completado y `PEND-LAB-037` espera la decisión humana de Jonathan Martínez. No hubo cutover, M5, activación, selector, runtime, integración, AWS ni Terraform.

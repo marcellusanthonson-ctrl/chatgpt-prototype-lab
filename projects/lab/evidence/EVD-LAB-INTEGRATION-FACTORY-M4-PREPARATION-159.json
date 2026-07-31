@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-INTEGRATION-FACTORY-M4-PREPARATION-159",
+  "project_id": "lab",
+  "status": "VALIDATED_M4_PREPARATION_AWAITING_HUMAN_CUTOVER_DECISION",
+  "recorded_at": "2026-07-31T11:15:02-04:00",
+  "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M4_HUMAN_CUTOVER_DECISION_PREPARATION_AND_DOCUMENTARY_RECONCILIATION_159.json",
+  "decision_ref": "decisions/DEC-LAB-025.json",
+  "execution_parent_head": "928b9829b48cf4e1411b98e608a3a01c52b1b11e",
+  "technical_executor": "CODEX",
+  "result": {
+    "classification": "M4_PREPARATION_COMPLETE_AWAITING_HUMAN_CUTOVER_DECISION",
+    "decision_selected": false,
+    "cutover_executed": false,
+    "m5_authorized": false,
+    "m5_executed": false,
+    "rollback_readiness": "DOCUMENTARY_AND_SOURCE_ROLLBACK_READY_OPERATIONAL_ROLLBACK_NOT_EXECUTED",
+    "criterion_layer_current_version": "1.1.1",
+    "general_validator_error": "ERR-LAB-008_OPEN_CONTAINED_NOT_REPAIRED"
+  },
+  "m3_baseline": {
+    "classification": "M3_REMEDIATED_PASS_EXACT_DUAL_EQUIVALENCE",
+    "commit": "1e7271e667ab163cd62849d0df897a61c02c025e",
+    "case_count": 420,
+    "baseline_oracle_passes_per_evaluator": 13,
+    "static_shadow_exact_matches": 420,
+    "divergences": 0,
+    "behavioral_digest": "9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329"
+  },
+  "immutable_blobs": {
+    "fixture": "db53d11e4a45e8f98a9b6aa540a2c7459723601b",
+    "selector": "301ba432907758fc49a9b3c86a83fc762eac4607",
+    "shadow_registry": "a067cd9f95b98aa1599d21e3a0ff35fa56ac3a78"
+  },
+  "source_refs": [
+    "architecture/integrations/migration/M4/CUTOVER_DECISION_PACKAGE.json",
+    "architecture/integrations/migration/M4/ROLLBACK_READINESS.json",
+    "architecture/integrations/migration/M4/VALIDATION_RESULTS.json",
+    "errors/ERR-LAB-008.json",
+    "projects/lab/pending/PEND-LAB-037.json"
+  ],
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_159_CONSUMPTION",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}

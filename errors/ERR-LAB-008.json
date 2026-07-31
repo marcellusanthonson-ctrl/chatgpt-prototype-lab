@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ERR-LAB-008",
+  "title": "General LAB validator crashes when array-valued registry delta fields are interpreted as scalar paths",
+  "project_id": "lab",
+  "status": "OPEN_CONTAINED_NOT_REPAIRED",
+  "lifecycle_state": "OPEN_CONTAINED_NOT_REPAIRED",
+  "severity": "MEDIUM",
+  "detected_at": "2026-07-31T10:05:03-04:00",
+  "registered_at": "2026-07-31T11:15:02-04:00",
+  "component": "GENERAL_LAB_VALIDATOR",
+  "failure_mode": "ARRAY_VALUED_REGISTRY_DELTA_FIELDS_INTERPRETED_AS_SCALAR_PATHS",
+  "observed_exception_class": "TypeError",
+  "containment": "Use authorization-scoped bounded validators while preserving disclosure; do not claim the general validator passed.",
+  "repair_authorized": false,
+  "repair_performed": false,
+  "effect_on_m3_result": "NONE_BOUNDED_VALIDATOR_158_PASSED_ALL_GATES",
+  "effect_on_m4_preparation": "DISCLOSED_DOES_NOT_BLOCK_BOUNDED_M4_VALIDATOR",
+  "next_action": "SEPARATE_VALIDATOR_REPAIR_AUTHORIZATION",
+  "source_refs": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M4_HUMAN_CUTOVER_DECISION_PREPARATION_AND_DOCUMENTARY_RECONCILIATION_159.json",
+    "architecture/integrations/migration/M3/remediation-158/VALIDATION_RESULTS.json",
+    "scripts/validate_integration_factory_m4_preparation_159.py"
+  ],
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE"
+}

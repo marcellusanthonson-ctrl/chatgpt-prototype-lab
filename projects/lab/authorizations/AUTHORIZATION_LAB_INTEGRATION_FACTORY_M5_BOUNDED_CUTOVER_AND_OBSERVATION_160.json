@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160",
+  "project_id": "lab",
+  "status": "PROPOSED",
+  "publication_status": "PROPOSED_NOT_GRANTED_NOT_EXECUTABLE",
+  "prepared_at": "2026-07-31T11:15:02-04:00",
+  "prepared_by": "CODEX",
+  "approved_by": null,
+  "approved_at": null,
+  "approval_source": null,
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "head_policy": "VERIFY_LIVE_AT_USE_IF_LATER_GRANTED",
+  "subject": "INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION",
+  "migration_phase": "M5_PROPOSAL",
+  "human_decision_ref": "PEND-LAB-037",
+  "human_decision_path": "projects/lab/pending/PEND-LAB-037.json",
+  "technical_executor": "CODEX",
+  "technical_executor_confirmed": false,
+  "authority_effect": "NONE_UNTIL_EXPLICIT_HUMAN_GRANT",
+  "execution_authorized": false,
+  "grant_inferred": false,
+  "must_require_pre_activation_rollback_drill": true,
+  "must_preserve_static_selector_until_post_cutover_human_retirement_decision": true,
+  "required_prior_gates": [
+    "PEND_LAB_037_RESOLVED_BY_JONATHAN_MARTINEZ_AS_APPROVE_BOUNDED_M5_CUTOVER",
+    "AUTHORIZATION_160_EXPLICITLY_GRANTED_BY_JONATHAN_MARTINEZ",
+    "LIVE_MAIN_HEAD_VERIFIED_AT_USE",
+    "PRE_ACTIVATION_ROLLBACK_DRILL_REQUIRED"
+  ],
+  "proposed_scope": [
+    "EXECUTE_PRE_ACTIVATION_ROLLBACK_DRILL",
+    "PERFORM_BOUNDED_CUTOVER",
+    "OBSERVE_BEHAVIORAL_AND_AUTHORITY_GATES",
+    "PRESERVE_STATIC_SELECTOR_AS_IMMEDIATE_ROLLBACK_TARGET",
+    "ROLL_BACK_IMMEDIATELY_ON_ANY_GATE_FAILURE",
+    "PUBLISH_CUTOVER_AND_POST_CUTOVER_EVIDENCE"
+  ],
+  "mandatory_constraints": {
+    "static_selector_preserved": true,
+    "static_selector_retirement_authorized": false,
+    "immediate_rollback_on_gate_failure": true,
+    "post_cutover_human_retirement_decision_required": true,
+    "active_registry_creation_before_grant": false,
+    "runtime_effect_before_grant": "NONE",
+    "integration_effect_before_grant": "NONE"
+  },
+  "forbidden_without_separate_explicit_grant": [
+    "EXECUTE_M5",
+    "ACTIVATE_SHADOW_REGISTRY",
+    "CHANGE_SELECTOR_OR_RUNTIME",
+    "RETIRE_STATIC_SELECTOR",
+    "CLAIM_CUTOVER_APPROVED",
+    "RUN_AWS_OR_TERRAFORM",
+    "USE_REAL_DATA_OR_PRODUCTION_CREDENTIALS"
+  ],
+  "consumption_rule_if_later_granted": "CONSUMED_ONLY_AFTER_BOUNDED_M5_RESULT_IS_COMMITTED_PUSHED_AND_REMOTE_HEAD_VERIFIED",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}

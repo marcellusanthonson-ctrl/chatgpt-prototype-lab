@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "package_id": "INTEGRATION_FACTORY_M4_CUTOVER_DECISION_PACKAGE_001",
+  "project_id": "lab",
+  "status": "AWAITING_HUMAN_CUTOVER_DECISION",
+  "prepared_at": "2026-07-31T11:15:02-04:00",
+  "decision_owner": "Jonathan Martínez",
+  "decision_ref": "decisions/DEC-LAB-025.json",
+  "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M4_HUMAN_CUTOVER_DECISION_PREPARATION_AND_DOCUMENTARY_RECONCILIATION_159.json",
+  "source_pending": "PEND-LAB-036",
+  "human_decision_pending": "PEND-LAB-037",
+  "selected_option": null,
+  "recommendation": null,
+  "decision_inferred": false,
+  "options": [
+    {"id": "APPROVE_BOUNDED_M5_CUTOVER", "effect": "Allows Jonathan Martínez to separately grant authorization 160; does not itself execute M5."},
+    {"id": "DEFER_M5_RETAIN_STATIC_SELECTOR", "effect": "Keeps the static selector authoritative and the shadow registry inactive."},
+    {"id": "REJECT_CUTOVER_CLOSE_MIGRATION", "effect": "Closes the migration without activating the shadow registry."},
+    {"id": "RETURN_FOR_REMEDIATION", "effect": "Requires a separately authorized remediation before another M4 decision."}
+  ],
+  "m3_evidence": {
+    "classification": "M3_REMEDIATED_PASS_EXACT_DUAL_EQUIVALENCE",
+    "commit": "1e7271e667ab163cd62849d0df897a61c02c025e",
+    "case_count": 420,
+    "baseline_oracle_passes_static": 13,
+    "baseline_oracle_passes_shadow": 13,
+    "static_shadow_exact_matches": 420,
+    "divergences": 0,
+    "behavioral_digest": "9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329"
+  },
+  "preconditions_if_human_approves_bounded_m5": [
+    "EXPLICIT_HUMAN_GRANT_OF_AUTHORIZATION_160",
+    "PRE_ACTIVATION_ROLLBACK_DRILL_REQUIRED",
+    "STATIC_SELECTOR_PRESERVED_DURING_BOUNDED_CUTOVER",
+    "IMMEDIATE_ROLLBACK_ON_ANY_GATE_FAILURE",
+    "POST_CUTOVER_HUMAN_DECISION_REQUIRED_BEFORE_STATIC_SELECTOR_RETIREMENT"
+  ],
+  "authority_effect": "NONE_UNTIL_EXPLICIT_HUMAN_DECISION_AND_SEPARATE_GRANT",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE",
+  "cutover_effect": "NONE"
+}
