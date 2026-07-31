@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0.0",
+  "id": "DEC-LAB-028",
+  "project_id": "lab",
+  "title": "Authorize bounded stage-aware remediation of the M5 rollback-drill validators",
+  "status": "APPROVED",
+  "publication_status": "PUBLISHED",
+  "decision_type": "HUMAN_M5_VALIDATOR_REMEDIATION_GATE",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-31T14:40:00-04:00",
+  "approval_source": "Perfecto, continuamos.",
+  "approval_context": "Jonathan Martínez continued immediately after receiving the independently verified recommendation and exact bounded decision text for PEND-LAB-039.",
+  "resolved_pending": "PEND-LAB-039",
+  "selected_option": "AUTHORIZE_BOUNDED_STAGE_AWARE_VALIDATOR_REMEDIATION",
+  "grant_parent_head": "904fce42638b717699afe3ffef639545c990ec55",
+  "decision": {
+    "authorization_162_granted": true,
+    "validator_successor_creation_authorized": true,
+    "sandbox_replay_authorized": true,
+    "historical_validator_or_evidence_mutation_authorized": false,
+    "operational_rollback_drill_authorized": false,
+    "m5_retry_authorized": false,
+    "cutover_authorized": false,
+    "active_pointer_authorized": false,
+    "static_selector_retirement_authorized": false
+  },
+  "required_outcomes": [
+    "PRESERVE_VALIDATORS_158_AND_161_AND_THEIR_HISTORICAL_OUTPUTS",
+    "CREATE_A_SEMANTIC_M3_REPLAY_SUCCESSOR_VALIDATOR",
+    "CREATE_A_STAGE_AWARE_AUTHORIZATION_LIFECYCLE_SUCCESSOR_VALIDATOR",
+    "EXECUTE_POSITIVE_AND_NEGATIVE_SANDBOX_TESTS",
+    "VERIFY_EXACT_335_GENERAL_VALIDATOR_FINDINGS_WITH_ZERO_DELTA",
+    "PREPARE_ANY_FUTURE_M5_RETRY_AUTHORIZATION_AS_PROPOSED_NOT_GRANTED_NOT_EXECUTABLE"
+  ],
+  "future_integration_priority": [
+    "PRODUCT_LEADERSHIP",
+    "INTELLIGENT_APPLICATION_CONSTRUCTION"
+  ],
+  "deferred_capability": "SOFTWARE_SOLUTION_ENGINEERING",
+  "non_authorizations": [
+    "NO_OPERATIONAL_ROLLBACK_DRILL",
+    "NO_M5_RETRY_OR_CUTOVER",
+    "NO_ACTIVE_POINTER",
+    "NO_STATIC_SELECTOR_RETIREMENT",
+    "NO_RUNTIME_OR_INTEGRATION_EFFECT",
+    "NO_PRODUCT_LEADERSHIP_TEST_ADAPTATION_ACTIVATION_OR_INTEGRATION",
+    "NO_INTELLIGENT_APPLICATION_CONSTRUCTION_TEST_ADAPTATION_ACTIVATION_OR_INTEGRATION",
+    "NO_SOFTWARE_SOLUTION_ENGINEERING_TEST_ADAPTATION_ACTIVATION_OR_INTEGRATION",
+    "NO_AWS_OR_TERRAFORM",
+    "NO_REAL_DATA_OR_PRODUCTION_CREDENTIALS",
+    "NO_EXTERNAL_REPOSITORY_CHANGE"
+  ],
+  "source_refs": [
+    "projects/lab/pending/PEND-LAB-039.json",
+    "errors/ERR-LAB-009.json",
+    "architecture/integrations/migration/M5/execution-160/ROLLBACK_DRILL_RESULTS.json",
+    "architecture/integrations/migration/M5/execution-160/VALIDATION_RESULTS.json",
+    "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-160.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162.json"
+  ],
+  "authority_effect": "NORMATIVE_DECISION_AND_BOUNDED_AUTHORIZATION_GRANT",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}
