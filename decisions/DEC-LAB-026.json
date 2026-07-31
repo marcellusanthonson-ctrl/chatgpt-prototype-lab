@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "id": "DEC-LAB-026",
+  "project_id": "lab",
+  "title": "Return M5 for readiness remediation and prioritize Product Leadership plus Intelligent Application Construction",
+  "status": "APPROVED",
+  "publication_status": "PUBLISHED",
+  "decision_type": "HUMAN_GATE_AND_FUTURE_INTEGRATION_PRIORITY",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-31T12:22:00-04:00",
+  "approval_sources": [
+    "Entiendo. Continuamos con las pruebas restantes para concretar posteriormente la integración de Product Lead Ships y SSE.",
+    "De preferencia, tenemos que integrar.Product Leadership / Intelligent Application Construction;",
+    "Perfecto, continuamos."
+  ],
+  "resolved_pending": "PEND-LAB-037",
+  "selected_option": "RETURN_FOR_REMEDIATION",
+  "decision": {
+    "cutover_approved": false,
+    "authorization_160_granted": false,
+    "m5_authorized": false,
+    "readiness_remediation_required": true,
+    "validator_repair_required": true,
+    "future_integration_priority": [
+      "PRODUCT_LEADERSHIP",
+      "INTELLIGENT_APPLICATION_CONSTRUCTION"
+    ],
+    "deferred_capability": "SOFTWARE_SOLUTION_ENGINEERING"
+  },
+  "rationale": [
+    "The current M5 proposal does not yet delimit the active resolver, exact mutable paths, atomic pointer transition, failure recovery, observation corpus, or reproducible operational rollback procedure with sufficient precision.",
+    "ERR-LAB-008 must be repaired and validated before relying on the general repository validator for a cutover gate.",
+    "Product Leadership and Intelligent Application Construction are the preferred first candidate capabilities after the Integration Factory foundation is proven, but neither is authorized for testing, adaptation, activation, or integration by this decision."
+  ],
+  "consequences": [
+    "PEND-LAB-037 is resolved as RETURN_FOR_REMEDIATION.",
+    "A bounded authorization may repair ERR-LAB-008 and prepare and simulate M5 readiness without canonical activation.",
+    "Authorization 160 remains PROPOSED, not granted, and not executable.",
+    "Software Solution Engineering is deferred and remains a separate inactive candidate."
+  ],
+  "non_authorizations": [
+    "NO_M5_CUTOVER",
+    "NO_ACTIVE_REGISTRY",
+    "NO_SELECTOR_CHANGE",
+    "NO_RUNTIME_OR_INTEGRATION_EFFECT",
+    "NO_STATIC_SELECTOR_RETIREMENT",
+    "NO_PRODUCT_LEADERSHIP_TEST_OR_INTEGRATION",
+    "NO_INTELLIGENT_APPLICATION_CONSTRUCTION_TEST_OR_INTEGRATION",
+    "NO_SSE_TEST_OR_INTEGRATION",
+    "NO_AWS_OR_TERRAFORM"
+  ],
+  "source_refs": [
+    "architecture/integrations/migration/M4/CUTOVER_DECISION_PACKAGE.json",
+    "architecture/integrations/migration/M4/ROLLBACK_READINESS.json",
+    "projects/lab/pending/PEND-LAB-037.json",
+    "errors/ERR-LAB-008.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160.json"
+  ],
+  "authority_effect": "NORMATIVE_DECISION_ONLY",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}
