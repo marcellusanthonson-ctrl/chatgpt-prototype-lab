@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.2.0",
+  "continuity_id": "LAB-CONTINUITY-INTEGRATION-FACTORY-M4-PREPARATION-COMPLETE-20260731",
+  "project_id": "lab",
+  "status": "CURRENT_M4_PREPARATION_COMPLETE_AWAITING_HUMAN_CUTOVER_DECISION",
+  "created_at": "2026-07-31T11:15:02-04:00",
+  "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "canonical_branch": "main",
+  "head_policy": "VERIFY_LIVE_AT_USE",
+  "execution_parent_head": "928b9829b48cf4e1411b98e608a3a01c52b1b11e",
+  "entrypoint": "project-sources/chatgpt/START_HERE.md",
+  "required_reading_order": [
+    "VERIFY_LIVE_HEAD_OF_MAIN",
+    "project-sources/chatgpt/START_HERE.md",
+    "LAB_CONTRACT.md",
+    "METHODOLOGY.md",
+    "CURRENT_STATE.json",
+    "registry/index.json",
+    "registry/projects.json",
+    "projects/lab/PROJECT_STATE.json",
+    "architecture/integrations/migration/M4/CUTOVER_DECISION_PACKAGE.json",
+    "architecture/integrations/migration/M4/ROLLBACK_READINESS.json",
+    "projects/lab/pending/PEND-LAB-037.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json"
+  ],
+  "facts": [
+    {"claim": "M3 remains M3_REMEDIATED_PASS_EXACT_DUAL_EQUIVALENCE over 420 cases with 13/13 baseline oracles for both evaluators and zero divergences.", "source_refs": ["projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M3-REMEDIATION-158.json"]},
+    {"claim": "M4 preparation passed its bounded validator and contains no selected, recommended, or inferred cutover option.", "source_refs": ["architecture/integrations/migration/M4/VALIDATION_RESULTS.json", "architecture/integrations/migration/M4/CUTOVER_DECISION_PACKAGE.json"]},
+    {"claim": "Rollback readiness is documentary and source-level only; no operational or production rollback was executed.", "source_refs": ["architecture/integrations/migration/M4/ROLLBACK_READINESS.json"]},
+    {"claim": "The current criterion-layer discovery reference is 1.1.1.", "source_refs": ["registry/index.json", "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MANIFEST.json"]},
+    {"claim": "ERR-LAB-008 is open, contained, and not repaired; bounded validator 159 passed independently.", "source_refs": ["errors/ERR-LAB-008.json"]}
+  ],
+  "decision": {"id": "DEC-LAB-025", "status": "APPROVED", "effect": "M4_PREPARATION_ONLY"},
+  "authorizations": {
+    "159": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "160": "PROPOSED_NOT_GRANTED_NOT_EXECUTABLE"
+  },
+  "current_line_authority": {
+    "human_cutover_decision_made": false,
+    "m5_authorized": false,
+    "cutover_authorized": false,
+    "active_registry_authorized": false,
+    "selector_change_authorized": false,
+    "static_selector_retirement_authorized": false,
+    "runtime_authorized": false,
+    "integration_authorized": false,
+    "aws_authorized": false,
+    "terraform_authorized": false
+  },
+  "pending": [
+    {"id": "PEND-LAB-036", "status": "COMPLETED_M4_PREPARATION_PACKAGE_PUBLISHED"},
+    {"id": "PEND-LAB-037", "status": "AWAITING_HUMAN_CUTOVER_DECISION", "selected_option": null}
+  ],
+  "forbidden": [
+    "INFER_OR_MAKE_HUMAN_CUTOVER_DECISION",
+    "GRANT_OR_EXECUTE_AUTHORIZATION_160",
+    "ACTIVATE_SHADOW_REGISTRY",
+    "CHANGE_SELECTOR_OR_RUNTIME",
+    "RETIRE_STATIC_SELECTOR",
+    "RUN_AWS_OR_TERRAFORM"
+  ],
+  "single_next_action": "JONATHAN_MARTINEZ_SELECTS_EXACTLY_ONE_PEND_LAB_037_CUTOVER_OPTION",
+  "first_phrase_for_new_conversation": "Continúa ChatGPT Prototype LAB desde el HEAD remoto verificado de main. M4 está preparado sin opción seleccionada; revisa CUTOVER_DECISION_PACKAGE.json y ROLLBACK_READINESS.json, y solicita a Jonathan Martínez una única decisión para PEND-LAB-037. No concedas ni ejecutes M5.",
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_159_CONSUMPTION",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}
