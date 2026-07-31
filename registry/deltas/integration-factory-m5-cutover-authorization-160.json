@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "integration-factory-m5-cutover-authorization-160",
+  "project_id": "lab",
+  "recorded_at": "2026-07-31T13:14:00-04:00",
+  "parent_head": "3d2377edbb468047c177af2411b2c7ce964b9951",
+  "decision": {
+    "id": "DEC-LAB-027",
+    "status": "APPROVED",
+    "selected_option": "GRANT_AUTHORIZATION_160_WITH_EXACT_PARENT",
+    "canonical_path": "decisions/DEC-LAB-027.json"
+  },
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160",
+    "status": "GRANTED",
+    "stage_2_status": "AUTHORIZED_NOT_STARTED",
+    "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160.json"
+  },
+  "pending": {
+    "id": "PEND-LAB-038",
+    "status": "RESOLVED_GRANT_AUTHORIZATION_160_WITH_EXACT_PARENT",
+    "canonical_path": "projects/lab/pending/PEND-LAB-038.json"
+  },
+  "readiness_boundary": {
+    "classification": "M5_READINESS_REMEDIATION_PASS_AWAITING_NEW_HUMAN_CUTOVER_DECISION",
+    "general_validator": "COMPLETED_WITHOUT_CRASH_FAIL_335_PREEXISTING_OUT_OF_SCOPE_FINDINGS",
+    "global_repository_pass": false,
+    "rollback_drill_executed": false,
+    "m5_executed": false
+  },
+  "future_integration_priority": [
+    "PRODUCT_LEADERSHIP",
+    "INTELLIGENT_APPLICATION_CONSTRUCTION"
+  ],
+  "deferred_capability": "SOFTWARE_SOLUTION_ENGINEERING",
+  "authority_effect": "AUTHORIZATION_160_STAGE_2_ONLY",
+  "runtime_effect": "NONE_UNTIL_STAGE_2",
+  "integration_effect": "NONE_UNTIL_STAGE_2"
+}
