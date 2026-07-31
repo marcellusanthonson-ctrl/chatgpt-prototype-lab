@@ -2,21 +2,43 @@
   "schema_version": "1.0.0",
   "id": "PEND-LAB-038",
   "project_id": "lab",
-  "status": "AWAITING_HUMAN_REVIEW_OF_M5_READINESS_REMEDIATION",
+  "status": "RESOLVED_GRANT_AUTHORIZATION_160_WITH_EXACT_PARENT",
   "type": "INTEGRATION_FACTORY_M5_READINESS_HUMAN_GATE",
   "priority": "HIGH",
   "created_at": "2026-07-31T12:51:22-04:00",
+  "resolved_at": "2026-07-31T13:14:00-04:00",
   "decision_owner": "Jonathan Martínez",
   "automatic_approval": false,
   "subject": "Review the completed readiness-161 package and decide whether to issue a new explicit cutover decision and grant",
   "readiness_classification": "M5_READINESS_REMEDIATION_PASS_AWAITING_NEW_HUMAN_CUTOVER_DECISION",
-  "allowed_options": ["GRANT_AUTHORIZATION_160_WITH_EXACT_PARENT", "DEFER_M5_RETAIN_STATIC_SELECTOR", "REJECT_CUTOVER_CLOSE_MIGRATION", "RETURN_FOR_FURTHER_REMEDIATION"],
-  "authorization_160_status": "PROPOSED_NOT_GRANTED_NOT_EXECUTABLE",
-  "effect_until_resolution": "STATIC_SELECTOR_REMAINS_AUTHORITATIVE_SHADOW_REGISTRY_INACTIVE_M5_NOT_AUTHORIZED",
-  "source_refs": ["decisions/DEC-LAB-026.json", "architecture/integrations/migration/M5/readiness-161/VALIDATION_RESULTS.json", "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-READINESS-REMEDIATION-161.json"],
-  "future_integration_priority": ["PRODUCT_LEADERSHIP", "INTELLIGENT_APPLICATION_CONSTRUCTION"],
+  "allowed_options": [
+    "GRANT_AUTHORIZATION_160_WITH_EXACT_PARENT",
+    "DEFER_M5_RETAIN_STATIC_SELECTOR",
+    "REJECT_CUTOVER_CLOSE_MIGRATION",
+    "RETURN_FOR_FURTHER_REMEDIATION"
+  ],
+  "selected_option": "GRANT_AUTHORIZATION_160_WITH_EXACT_PARENT",
+  "decision_ref": "decisions/DEC-LAB-027.json",
+  "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160.json",
+  "grant_parent_head": "3d2377edbb468047c177af2411b2c7ce964b9951",
+  "authorization_160_status": "GRANTED_STAGE_2_AUTHORIZED_NOT_STARTED",
+  "general_validator_boundary": "COMPLETED_WITHOUT_CRASH_FAIL_335_PREEXISTING_OUT_OF_SCOPE_FINDINGS_MUST_BE_FROZEN_BEFORE_STAGE_2_MUTATION",
+  "effect_until_stage_2": "STATIC_SELECTOR_REMAINS_AUTHORITATIVE_SHADOW_REGISTRY_INACTIVE_NO_CUTOVER_EXECUTED",
+  "current_authority": "AUTHORIZATION_160_STAGE_2_ONLY",
+  "next_transition": "CODEX_EXECUTES_AUTHORIZATION_160_FROM_THE_VERIFIED_STAGE_1_REMOTE_HEAD",
+  "future_integration_priority": [
+    "PRODUCT_LEADERSHIP",
+    "INTELLIGENT_APPLICATION_CONSTRUCTION"
+  ],
   "deferred_capability": "SOFTWARE_SOLUTION_ENGINEERING",
-  "authority_effect": "HUMAN_DECISION_ONLY_NO_M5_EXECUTION_AUTHORITY",
-  "runtime_effect": "NONE",
-  "integration_effect": "NONE"
+  "source_refs": [
+    "decisions/DEC-LAB-026.json",
+    "decisions/DEC-LAB-027.json",
+    "architecture/integrations/migration/M5/readiness-161/VALIDATION_RESULTS.json",
+    "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-READINESS-REMEDIATION-161.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160.json"
+  ],
+  "authority_effect": "HUMAN_DECISION_RESOLVED_BOUNDED_STAGE_2_AUTHORITY_SEPARATE",
+  "runtime_effect": "NONE_UNTIL_STAGE_2_AFTER_ROLLBACK_DRILL_PASS",
+  "integration_effect": "NONE_UNTIL_STAGE_2_SINGLE_POINTER_MUTATION"
 }
