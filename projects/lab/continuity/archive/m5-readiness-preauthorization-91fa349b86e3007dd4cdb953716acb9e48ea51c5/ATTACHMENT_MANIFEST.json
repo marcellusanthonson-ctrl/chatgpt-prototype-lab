@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.2.0",
+  "manifest_id": "LAB-CONTINUITY-ATTACHMENTS-INTEGRATION-FACTORY-M4-PREPARATION-COMPLETE-20260731",
+  "status": "CURRENT",
+  "project_id": "lab",
+  "created_at": "2026-07-31T11:15:02-04:00",
+  "required_read_order": ["CURRENT_CONTINUITY.json", "CURRENT_CONTINUITY.md", "ATTACHMENT_MANIFEST.json", "START_PROMPT.md"],
+  "attachments": [
+    {"path": "projects/lab/continuity/CURRENT_CONTINUITY.json", "role": "CANONICAL_STRUCTURED_CONTINUITY", "required": true},
+    {"path": "projects/lab/continuity/CURRENT_CONTINUITY.md", "role": "HUMAN_READABLE_CONTINUITY", "required": true},
+    {"path": "projects/lab/continuity/ATTACHMENT_MANIFEST.json", "role": "READ_ORDER_AND_REFERENCE_MANIFEST", "required": true},
+    {"path": "projects/lab/continuity/START_PROMPT.md", "role": "FIRST_MESSAGE_FOR_NEW_CONVERSATION", "required": true}
+  ],
+  "repository_sources_not_duplicated_as_attachments": [
+    "architecture/integrations/migration/M4/CUTOVER_DECISION_PACKAGE.json",
+    "architecture/integrations/migration/M4/ROLLBACK_READINESS.json",
+    "architecture/integrations/migration/M4/VALIDATION_RESULTS.json",
+    "projects/lab/pending/PEND-LAB-037.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160.json"
+  ],
+  "archived_package": "projects/lab/continuity/archive/m4-preparation-stage-2-preexecution-928b9829b48cf4e1411b98e608a3a01c52b1b11e/",
+  "archived_package_integrity": "EXACT_STAGE_1_CURRENT_BLOBS_VERIFIED_BY_BOUNDED_VALIDATOR_159",
+  "missing_attachments": [],
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_159_CONSUMPTION"
+}
