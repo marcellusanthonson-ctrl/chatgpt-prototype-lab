@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "id": "DEC-LAB-027",
+  "project_id": "lab",
+  "title": "Grant bounded M5 cutover authorization after readiness remediation",
+  "status": "APPROVED",
+  "publication_status": "PUBLISHED",
+  "decision_type": "HUMAN_M5_CUTOVER_GATE",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-31T13:14:00-04:00",
+  "approval_source": "Continuemos.",
+  "approval_context": "Jonathan Martínez continued immediately after receiving the independently qualified recommendation to select GRANT_AUTHORIZATION_160_WITH_EXACT_PARENT and the exact bounded grant text.",
+  "resolved_pending": "PEND-LAB-038",
+  "selected_option": "GRANT_AUTHORIZATION_160_WITH_EXACT_PARENT",
+  "grant_parent_head": "3d2377edbb468047c177af2411b2c7ce964b9951",
+  "decision": {
+    "authorization_160_granted": true,
+    "pre_activation_operational_rollback_drill_authorized": true,
+    "bounded_m5_cutover_authorized": "CONDITIONAL_ON_ROLLBACK_DRILL_PASS",
+    "observation_authorized": true,
+    "static_selector_retirement_authorized": false,
+    "general_validator_global_pass_claimed": false,
+    "historical_validator_findings_baseline_required": 335
+  },
+  "required_execution_order": [
+    "VERIFY_STAGE_1_REMOTE_HEAD",
+    "FREEZE_EXACT_335_HISTORICAL_GENERAL_VALIDATOR_FINDINGS",
+    "EXECUTE_PRE_ACTIVATION_OPERATIONAL_ROLLBACK_DRILL",
+    "STOP_WITHOUT_CUTOVER_IF_DRILL_FAILS",
+    "VERIFY_STATIC_AND_CANDIDATE_BLOBS",
+    "EXECUTE_SINGLE_POINTER_ATOMIC_CUTOVER",
+    "RUN_TWO_ITERATIONS_OF_420_CASE_OBSERVATION",
+    "ROLL_BACK_IMMEDIATELY_ON_ANY_GATE_FAILURE",
+    "PUBLISH_EVIDENCE_AND_AWAIT_SEPARATE_HUMAN_STATIC_RETIREMENT_DECISION"
+  ],
+  "future_integration_priority": [
+    "PRODUCT_LEADERSHIP",
+    "INTELLIGENT_APPLICATION_CONSTRUCTION"
+  ],
+  "deferred_capability": "SOFTWARE_SOLUTION_ENGINEERING",
+  "non_authorizations": [
+    "NO_STATIC_SELECTOR_RETIREMENT",
+    "NO_PRODUCT_LEADERSHIP_TEST_ADAPTATION_ACTIVATION_OR_INTEGRATION",
+    "NO_INTELLIGENT_APPLICATION_CONSTRUCTION_TEST_ADAPTATION_ACTIVATION_OR_INTEGRATION",
+    "NO_SOFTWARE_SOLUTION_ENGINEERING_TEST_ADAPTATION_ACTIVATION_OR_INTEGRATION",
+    "NO_AWS_OR_TERRAFORM",
+    "NO_REAL_DATA_OR_PRODUCTION_CREDENTIALS",
+    "NO_EXTERNAL_REPOSITORY_CHANGE",
+    "NO_GLOBAL_REPOSITORY_PASS_CLAIM"
+  ],
+  "source_refs": [
+    "projects/lab/pending/PEND-LAB-038.json",
+    "architecture/integrations/migration/M5/readiness-161/VALIDATION_RESULTS.json",
+    "architecture/integrations/migration/M5/readiness-161/ROLLBACK_DRILL_DESIGN.json",
+    "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-READINESS-REMEDIATION-161.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160.json"
+  ],
+  "authority_effect": "NORMATIVE_DECISION_AND_BOUNDED_AUTHORIZATION_GRANT",
+  "runtime_effect": "NONE_UNTIL_AUTHORIZED_STAGE_2_EXECUTION",
+  "integration_effect": "NONE_UNTIL_AUTHORIZED_STAGE_2_EXECUTION"
+}
