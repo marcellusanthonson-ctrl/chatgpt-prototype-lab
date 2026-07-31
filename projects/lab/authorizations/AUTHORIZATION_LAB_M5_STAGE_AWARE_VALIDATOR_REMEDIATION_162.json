@@ -3,7 +3,7 @@
   "authorization_id": "AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162",
   "project_id": "lab",
   "status": "GRANTED",
-  "publication_status": "STAGE_1_DOCUMENTARY_GATE_PUBLISHED_STAGE_2_AUTHORIZED_NOT_STARTED",
+  "publication_status": "AMENDMENT_1_PUBLISHED_ATTEMPT_001_BLOCKED_PREEXECUTION_BASELINE_DRIFT",
   "prepared_at": "2026-07-31T14:40:00-04:00",
   "prepared_by": "CHATGPT",
   "approved_by": "Jonathan Martínez",
@@ -13,30 +13,86 @@
   "resolved_pending_ref": "projects/lab/pending/PEND-LAB-039.json",
   "execution_authorized": true,
   "grant_inferred": false,
-  "authority_effect": "BOUNDED_STAGE_2_VALIDATOR_REMEDIATION_ONLY",
+  "authority_effect": "BOUNDED_STAGE_2_VALIDATOR_REMEDIATION_WITH_DOCUMENTARY_BASELINE_CORRECTION_AMENDMENT_1",
   "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "branch": "main",
   "head_policy": "VERIFY_LIVE_AT_USE",
   "grant_parent_head": "904fce42638b717699afe3ffef639545c990ec55",
   "stage_2_expected_parent_head": null,
-  "stage_2_expected_parent_policy": "USE_THE_VERIFIED_FINAL_REMOTE_MAIN_HEAD_CREATED_BY_STAGE_1_PUBLICATION",
+  "stage_2_expected_parent_policy": "USE_THE_VERIFIED_FINAL_REMOTE_MAIN_HEAD_AFTER_DOCUMENTARY_BASELINE_CORRECTION",
+  "restart_parent_policy": "USE_VERIFIED_REMOTE_HEAD_AFTER_DOCUMENTARY_BASELINE_CORRECTION",
   "technical_executor": "CODEX",
   "codex_autonomous_authority": "NO",
   "subject": "M5_STAGE_AWARE_VALIDATOR_REMEDIATION",
   "stage_1": {
     "executor": "CHATGPT",
     "scope": "PUBLISH_DECISION_AUTHORIZATION_BRIEF_DELTA_PENDING_DECISION_INDEX_AND_CONTINUITY_ONLY",
-    "status": "COMPLETED_BY_VERIFIED_REMOTE_PUBLICATION_WHEN_MAIN_IS_FAST_FORWARDED"
+    "status": "COMPLETED_BY_VERIFIED_REMOTE_PUBLICATION"
   },
   "stage_2": {
     "executor": "CODEX",
-    "status": "AUTHORIZED_NOT_STARTED",
-    "objective": "Create and validate successor validators that distinguish semantic equivalence from volatile metadata and validate authorization lifecycle by stage, without modifying historical validators or executing the operational rollback drill, M5 retry, cutover or candidate-capability work."
+    "status": "ATTEMPT_001_BLOCKED_PREEXECUTION_BASELINE_DRIFT",
+    "objective": "Create and validate successor validators that distinguish semantic equivalence from volatile metadata and validate authorization lifecycle by stage, without modifying historical validators or executing the operational rollback drill, M5 retry, cutover or candidate-capability work.",
+    "execution_started": true,
+    "attempt_count": 1,
+    "semantic_replay_executed": false,
+    "lifecycle_tests_executed": false,
+    "result_published": false,
+    "consumed": false,
+    "block_reason": "INITIAL_GENERAL_VALIDATOR_REPORTED_342_INSTEAD_OF_EXACT_335_DUE_TO_SEVEN_STAGE_1_DOCUMENTARY_FINDINGS",
+    "restart_condition": "EXACT_335_BASELINE_AND_BOTH_CANONICAL_DIGESTS_RESTORED_BY_SEPARATE_DOCUMENTARY_CORRECTION"
   },
+  "attempts": [
+    {
+      "attempt_id": "ATTEMPT-001",
+      "verified_parent_head": "d1ac748a2a47ad13b4bc647779f08ffbabe1d0a5",
+      "classification": "BLOCKED_PREEXECUTION_BASELINE_DRIFT",
+      "initial_general_validator_count": 342,
+      "required_general_validator_count": 335,
+      "files_created": 0,
+      "files_modified": 0,
+      "commit_created": false,
+      "remote_head_changed": false,
+      "semantic_replay_executed": false,
+      "lifecycle_validation_executed": false
+    }
+  ],
+  "amendments": [
+    {
+      "amendment_id": "AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162_AMENDMENT_1",
+      "approved_by": "Jonathan Martínez",
+      "approved_at": "2026-07-31T15:20:00-04:00",
+      "approval_source": "Perfecto, continuamos.",
+      "expected_parent_head": "d1ac748a2a47ad13b4bc647779f08ffbabe1d0a5",
+      "objective": "Correct only the seven stage-1 documentary findings and restore the exact 335-finding baseline before restarting stage 2.",
+      "documentary_baseline_correction_authorized": true,
+      "stage_2_semantic_replay_authorized_in_same_commit": false,
+      "stage_2_restart_after_correction": "CONDITIONAL_ON_EXACT_335_BASELINE_AND_BOTH_DIGESTS",
+      "allowed_paths": [
+        "decisions/DEC-LAB-028.json",
+        "registry/decisions.json",
+        "registry/index.json",
+        "projects/lab/briefs/CODEX_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_001.json",
+        "projects/lab/authorizations/AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162.json"
+      ],
+      "required_initial_result": {
+        "finding_count": 342,
+        "new_finding_count": 7
+      },
+      "required_final_result": {
+        "finding_count": 335,
+        "structured_inventory_digest": "cb54594bdbe3b2d7a5e473fdcb4a98e02cc7a5840966e4f0a5286c277f6226ab",
+        "raw_ordered_message_digest": "00310f685ddb2ec849aa848eb9c78dbad17e08f199993259ce3057f904e2fd95"
+      },
+      "commit_message": "fix(lab): restore authorization 162 validation baseline",
+      "consumption_effect": "NONE_AUTHORIZATION_162_REMAINS_GRANTED_NOT_CONSUMED"
+    }
+  ],
   "authority": {
     "commit": true,
     "push": true,
     "source_file_update": true,
+    "documentary_baseline_correction": true,
     "successor_validator_creation": true,
     "sandbox_replay": true,
     "positive_and_negative_test_execution": true,
@@ -59,6 +115,9 @@
     "external_repository_change": false
   },
   "allowed_paths": [
+    "decisions/DEC-LAB-028.json",
+    "registry/decisions.json",
+    "registry/index.json",
     "architecture/integrations/migration/M5/validator-remediation-162/**",
     "scripts/validate_integration_factory_m3_semantic_replay_162.py",
     "scripts/validate_integration_factory_stage_aware_lifecycle_162.py",
@@ -70,7 +129,6 @@
     "projects/lab/PENDING.json",
     "projects/lab/ROADMAP.json",
     "projects/lab/decisions/index.json",
-    "registry/index.json",
     "registry/authorizations.json",
     "registry/errors.json",
     "registry/evidence.json",
@@ -105,13 +163,13 @@
   "required_prior_gates": [
     "DEC_LAB_028_APPROVED",
     "AUTHORIZATION_162_STATUS_GRANTED",
-    "LIVE_MAIN_HEAD_EQUALS_VERIFIED_STAGE_1_REMOTE_HEAD",
+    "LIVE_MAIN_HEAD_EQUALS_VERIFIED_RESTART_PARENT_HEAD",
+    "DOCUMENTARY_BASELINE_CORRECTION_RESTORES_EXACT_335_AND_BOTH_DIGESTS",
     "AUTHORIZATION_160_IS_CONSUMED_FAIL_CLOSED_AND_NOT_REUSABLE",
     "ERR_LAB_009_OPEN_BLOCKING_M5_CUTOVER",
     "STATIC_SELECTOR_AUTHORITATIVE",
     "SHADOW_REGISTRY_INACTIVE",
-    "ACTIVE_POINTER_ABSENT",
-    "EXACT_335_GENERAL_VALIDATOR_BASELINE_REPRODUCIBLE"
+    "ACTIVE_POINTER_ABSENT"
   ],
   "semantic_replay_requirements": {
     "case_count": 420,
