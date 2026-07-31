@@ -91,3 +91,11 @@ La etapa 1 está publicada como `M3_AUTHORIZED_NOT_STARTED`. No existe todavía 
 Permanecen prohibidos M4, cutover, activación del shadow registry, cambios del selector, runtime, integraciones, AWS y Terraform.
 
 La siguiente acción única es ejecutar la etapa 2 en Codex desde el HEAD remoto verificado posterior a esta publicación.
+
+## M3 ejecutado; bloqueado con divergencias clasificadas
+
+Codex ejecutó la etapa 2 de la autorización 157 desde `ce5c86ee59013f335cc541d0066f9513c0de0872`. El corpus contiene exactamente 420 casos sintéticos deterministas y ambos evaluadores independientes coinciden en 420 de 420 resultados, con digest repetido `9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329`.
+
+Cada evaluador pasa 12 de los 13 oráculos canónicos. `CRIT-FIX-008` y su variante de orden inverso seleccionan además `DESIGN_CRITERION` porque `TASK_WEB_INTERFACE` lo activa en ambas representaciones congeladas. Las dos divergencias están clasificadas como `BASELINE_ORACLE_REGRESSION`; no existe transferencia negativa estático-shadow.
+
+La clasificación exacta es `M3_BLOCKED_WITH_CLASSIFIED_DIVERGENCES`. `PEND-LAB-035` espera una decisión humana separada sobre remediación. M3 remediation, M4 y cutover permanecen bloqueados. Selector, shadow registry, adapters, fixtures, runtime e integraciones permanecen sin cambios.

@@ -79,3 +79,11 @@ No se ha generado el corpus de 420 casos ni se han implementado o ejecutado los 
 M4, cutover, activación, cambios del selector, AWS y Terraform continúan sin autorización.
 
 Estado efectivo: `M3_AUTHORIZED_NOT_STARTED_AWAITING_CODEX_EXECUTION`.
+
+## Fábrica de integraciones — M3 bloqueado con divergencias clasificadas
+
+La etapa 2 de la autorización 157 ejecutó dos evaluadores operativamente independientes sobre 420 casos sintéticos deterministas. Los resultados estático y shadow coinciden exactamente en 420/420 casos y las dos corridas sin cambios comparten digest `9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329`.
+
+Ambos evaluadores pasan 12/13 fixtures canónicas. `CRIT-FIX-008` y su reverso activan `DESIGN_CRITERION` mediante `TASK_WEB_INTERFACE`, aunque el oracle congelado omite ese módulo. Las divergencias se clasifican `BASELINE_ORACLE_REGRESSION`; no hay transferencia negativa introducida por el shadow registry.
+
+Estado efectivo: `M3_BLOCKED_AWAITING_DIVERGENCE_REMEDIATION_DECISION`. `PEND-LAB-035` bloquea remediación, M4 y cutover hasta una decisión humana separada. No hubo cambio del selector, activación, runtime, integración, AWS o Terraform.

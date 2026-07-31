@@ -1,0 +1,5225 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "INTEGRATION_FACTORY_M3_DUAL_SELECTOR_CORPUS_001",
+  "status": "DETERMINISTIC_SYNTHETIC",
+  "generation_algorithm": "DECLARED_ORDER_SIGNAL_UNIVERSE_AND_LEXICOGRAPHIC_COMBINATIONS_V1",
+  "synthetic_only": true,
+  "real_client_data": false,
+  "real_product_data": false,
+  "external_network_required": false,
+  "frozen_baseline": {
+    "source_path": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/ACCEPTANCE_FIXTURES.json",
+    "git_blob_sha": "de4793dedc9646e388bdce5ccd1807da8a711845",
+    "fixture_set_id": "CHATGPT-CRITERION-FIXTURES-001",
+    "fixture_count": 13,
+    "fixtures_preserved_semantically_with_original_oracles": true
+  },
+  "signal_universe": [
+    "TASK_ANALYSIS",
+    "TASK_AUDIT",
+    "TASK_TECHNICAL_REVIEW",
+    "TASK_STATUS_REPORT",
+    "CLAIM_FACTUAL",
+    "CLAIM_LEGAL_OR_STANDARD",
+    "CLAIM_ACCESSIBILITY",
+    "CLAIM_VALIDATION",
+    "TASK_UI",
+    "TASK_UX",
+    "TASK_VISUAL_DESIGN",
+    "TASK_HTML",
+    "TASK_WEB_INTERFACE",
+    "TASK_DESIGN_BRIEF",
+    "TASK_PROTOTYPE",
+    "TASK_COMPONENT_REVIEW",
+    "TASK_FORM",
+    "TASK_INTERACTIVE_CONTROL",
+    "TASK_RESPONSIVE",
+    "TASK_MOTION",
+    "TASK_VISUAL_DIRECTION",
+    "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ",
+    "PROJECT_SYMPHONIE",
+    "TASK_CASUAL_CONVERSATION",
+    "TASK_TRANSLATION_ONLY",
+    "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE",
+    "TASK_SIMPLE_ARITHMETIC"
+  ],
+  "signal_universe_count": 27,
+  "case_count": 420,
+  "category_counts": {
+    "FROZEN_BASELINE_FIXTURE": 13,
+    "REVERSED_BASELINE_VARIANT": 13,
+    "EMPTY_SIGNAL_SET": 1,
+    "SIGNAL_SINGLETON": 27,
+    "UNORDERED_SIGNAL_PAIR": 351,
+    "CONJUNCTIVE_CLAUSE_WITH_EXCLUSION": 8,
+    "ALL_FOUR_MODULES_POSITIVE": 1,
+    "ALL_FOUR_MODULES_WITH_EXCLUSION": 4,
+    "UNKNOWN_SIGNAL_SENTINEL": 1,
+    "DUPLICATE_SIGNAL_NORMALIZATION": 1
+  },
+  "case_ids_unique": true,
+  "cases": [
+    {
+      "case_id": "M3-BASELINE-001",
+      "category": "FROZEN_BASELINE_FIXTURE",
+      "input_signals": [
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "source_fixture_id": "CRIT-FIX-001",
+      "task_family": "TASK_SIMPLE_ARITHMETIC",
+      "oracle": "No criterion contamination.",
+      "expected_modules": [],
+      "forbidden_modules": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY",
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ]
+    },
+    {
+      "case_id": "M3-BASELINE-002",
+      "category": "FROZEN_BASELINE_FIXTURE",
+      "input_signals": [
+        "TASK_UI",
+        "TASK_DESIGN_BRIEF"
+      ],
+      "source_fixture_id": "CRIT-FIX-002",
+      "task_family": "TASK_UI",
+      "oracle": "Design and accessibility apply; no personal style is inferred.",
+      "expected_modules": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY"
+      ],
+      "forbidden_modules": [
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ]
+    },
+    {
+      "case_id": "M3-BASELINE-003",
+      "category": "FROZEN_BASELINE_FIXTURE",
+      "input_signals": [
+        "TASK_AUDIT",
+        "CLAIM_FACTUAL"
+      ],
+      "source_fixture_id": "CRIT-FIX-003",
+      "task_family": "TASK_AUDIT",
+      "oracle": "Claims are evidence-governed.",
+      "expected_modules": [
+        "EVIDENCE_AND_CLAIMS"
+      ],
+      "forbidden_modules": [
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ]
+    },
+    {
+      "case_id": "M3-BASELINE-004",
+      "category": "FROZEN_BASELINE_FIXTURE",
+      "input_signals": [
+        "TASK_TECHNICAL_REVIEW",
+        "CLAIM_LEGAL_OR_STANDARD"
+      ],
+      "source_fixture_id": "CRIT-FIX-004",
+      "task_family": "TASK_TECHNICAL_REVIEW",
+      "oracle": "Source class and live verification are required.",
+      "expected_modules": [
+        "EVIDENCE_AND_CLAIMS"
+      ],
+      "forbidden_modules": [
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ]
+    },
+    {
+      "case_id": "M3-BASELINE-005",
+      "category": "FROZEN_BASELINE_FIXTURE",
+      "input_signals": [
+        "TASK_VISUAL_DESIGN",
+        "TASK_VISUAL_DIRECTION",
+        "TASK_UI",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ],
+      "source_fixture_id": "CRIT-FIX-005",
+      "task_family": "TASK_VISUAL_DESIGN",
+      "oracle": "Preference is contextual and accessibility does not select aesthetics.",
+      "expected_modules": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY",
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ],
+      "forbidden_modules": []
+    },
+    {
+      "case_id": "M3-BASELINE-006",
+      "category": "FROZEN_BASELINE_FIXTURE",
+      "input_signals": [
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ],
+      "source_fixture_id": "CRIT-FIX-006",
+      "task_family": "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE",
+      "oracle": "Unrelated writing remains uncontaminated.",
+      "expected_modules": [],
+      "forbidden_modules": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY",
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ]
+    },
+    {
+      "case_id": "M3-BASELINE-007",
+      "category": "FROZEN_BASELINE_FIXTURE",
+      "input_signals": [
+        "TASK_HTML",
+        "TASK_WEB_INTERFACE",
+        "CLAIM_VALIDATION"
+      ],
+      "source_fixture_id": "CRIT-FIX-007",
+      "task_family": "TASK_HTML",
+      "oracle": "Static validation claims remain bounded.",
+      "expected_modules": [
+        "EVIDENCE_AND_CLAIMS",
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY"
+      ],
+      "forbidden_modules": []
+    },
+    {
+      "case_id": "M3-BASELINE-008",
+      "category": "FROZEN_BASELINE_FIXTURE",
+      "input_signals": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_WEB_INTERFACE"
+      ],
+      "source_fixture_id": "CRIT-FIX-008",
+      "task_family": "TASK_ACCESSIBILITY_CLAIM",
+      "oracle": "Without full evidence the result must include AT_NOT_RUN and WCAG_CONFORMANCE_NOT_ESTABLISHED.",
+      "expected_modules": [
+        "EVIDENCE_AND_CLAIMS",
+        "WEB_ACCESSIBILITY"
+      ],
+      "forbidden_modules": []
+    },
+    {
+      "case_id": "M3-BASELINE-009",
+      "category": "FROZEN_BASELINE_FIXTURE",
+      "input_signals": [
+        "TASK_RESPONSIVE",
+        "TASK_UI"
+      ],
+      "source_fixture_id": "CRIT-FIX-009",
+      "task_family": "TASK_RESPONSIVE",
+      "oracle": "Zoom, reflow, text resizing and keyboard boundaries enter acceptance criteria.",
+      "expected_modules": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY"
+      ],
+      "forbidden_modules": []
+    },
+    {
+      "case_id": "M3-BASELINE-010",
+      "category": "FROZEN_BASELINE_FIXTURE",
+      "input_signals": [
+        "TASK_VISUAL_DIRECTION",
+        "PROJECT_SYMPHONIE"
+      ],
+      "source_fixture_id": "CRIT-FIX-010",
+      "task_family": "TASK_VISUAL_DIRECTION",
+      "oracle": "Symphonie visual direction may consult contextual preference without creating global identity.",
+      "expected_modules": [
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ],
+      "forbidden_modules": []
+    },
+    {
+      "case_id": "M3-BASELINE-011",
+      "category": "FROZEN_BASELINE_FIXTURE",
+      "input_signals": [
+        "TASK_UI",
+        "TASK_HTML",
+        "KNOWN_CORRECTABLE_VISUAL_DEFECT"
+      ],
+      "source_fixture_id": "CRIT-FIX-011",
+      "task_family": "TASK_RENDERED_UI_WITH_KNOWN_DEFECT",
+      "oracle": "The agent must not deliver PASS; it must diagnose, correct or reconstruct, and revalidate within scope.",
+      "expected_modules": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY"
+      ],
+      "forbidden_modules": []
+    },
+    {
+      "case_id": "M3-BASELINE-012",
+      "category": "FROZEN_BASELINE_FIXTURE",
+      "input_signals": [
+        "TASK_VISUAL_DESIGN",
+        "TASK_WEB_INTERFACE",
+        "STRUCTURAL_GEOMETRY_FAILURE"
+      ],
+      "source_fixture_id": "CRIT-FIX-012",
+      "task_family": "TASK_STRUCTURAL_VISUAL_DEFECT",
+      "oracle": "Structural root cause requires component reconstruction rather than accumulated offsets, clipping or decoration.",
+      "expected_modules": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY"
+      ],
+      "forbidden_modules": []
+    },
+    {
+      "case_id": "M3-BASELINE-013",
+      "category": "FROZEN_BASELINE_FIXTURE",
+      "input_signals": [
+        "TASK_HTML",
+        "TASK_WEB_INTERFACE",
+        "CLAIM_VALIDATION"
+      ],
+      "source_fixture_id": "CRIT-FIX-013",
+      "task_family": "TASK_TECHNICAL_FOUNDATION_PASS",
+      "oracle": "A technical foundation pass remains awaiting human visual review and does not establish WCAG conformance or product readiness.",
+      "expected_modules": [
+        "EVIDENCE_AND_CLAIMS",
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY"
+      ],
+      "forbidden_modules": []
+    },
+    {
+      "case_id": "M3-REVERSED-001",
+      "category": "REVERSED_BASELINE_VARIANT",
+      "input_signals": [
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "source_fixture_id": "CRIT-FIX-001",
+      "paired_case_id": "M3-BASELINE-001",
+      "oracle": "No criterion contamination.",
+      "expected_modules": [],
+      "forbidden_modules": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY",
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ]
+    },
+    {
+      "case_id": "M3-REVERSED-002",
+      "category": "REVERSED_BASELINE_VARIANT",
+      "input_signals": [
+        "TASK_DESIGN_BRIEF",
+        "TASK_UI"
+      ],
+      "source_fixture_id": "CRIT-FIX-002",
+      "paired_case_id": "M3-BASELINE-002",
+      "oracle": "Design and accessibility apply; no personal style is inferred.",
+      "expected_modules": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY"
+      ],
+      "forbidden_modules": [
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ]
+    },
+    {
+      "case_id": "M3-REVERSED-003",
+      "category": "REVERSED_BASELINE_VARIANT",
+      "input_signals": [
+        "CLAIM_FACTUAL",
+        "TASK_AUDIT"
+      ],
+      "source_fixture_id": "CRIT-FIX-003",
+      "paired_case_id": "M3-BASELINE-003",
+      "oracle": "Claims are evidence-governed.",
+      "expected_modules": [
+        "EVIDENCE_AND_CLAIMS"
+      ],
+      "forbidden_modules": [
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ]
+    },
+    {
+      "case_id": "M3-REVERSED-004",
+      "category": "REVERSED_BASELINE_VARIANT",
+      "input_signals": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "TASK_TECHNICAL_REVIEW"
+      ],
+      "source_fixture_id": "CRIT-FIX-004",
+      "paired_case_id": "M3-BASELINE-004",
+      "oracle": "Source class and live verification are required.",
+      "expected_modules": [
+        "EVIDENCE_AND_CLAIMS"
+      ],
+      "forbidden_modules": [
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ]
+    },
+    {
+      "case_id": "M3-REVERSED-005",
+      "category": "REVERSED_BASELINE_VARIANT",
+      "input_signals": [
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ",
+        "TASK_UI",
+        "TASK_VISUAL_DIRECTION",
+        "TASK_VISUAL_DESIGN"
+      ],
+      "source_fixture_id": "CRIT-FIX-005",
+      "paired_case_id": "M3-BASELINE-005",
+      "oracle": "Preference is contextual and accessibility does not select aesthetics.",
+      "expected_modules": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY",
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ],
+      "forbidden_modules": []
+    },
+    {
+      "case_id": "M3-REVERSED-006",
+      "category": "REVERSED_BASELINE_VARIANT",
+      "input_signals": [
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ],
+      "source_fixture_id": "CRIT-FIX-006",
+      "paired_case_id": "M3-BASELINE-006",
+      "oracle": "Unrelated writing remains uncontaminated.",
+      "expected_modules": [],
+      "forbidden_modules": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY",
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ]
+    },
+    {
+      "case_id": "M3-REVERSED-007",
+      "category": "REVERSED_BASELINE_VARIANT",
+      "input_signals": [
+        "CLAIM_VALIDATION",
+        "TASK_WEB_INTERFACE",
+        "TASK_HTML"
+      ],
+      "source_fixture_id": "CRIT-FIX-007",
+      "paired_case_id": "M3-BASELINE-007",
+      "oracle": "Static validation claims remain bounded.",
+      "expected_modules": [
+        "EVIDENCE_AND_CLAIMS",
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY"
+      ],
+      "forbidden_modules": []
+    },
+    {
+      "case_id": "M3-REVERSED-008",
+      "category": "REVERSED_BASELINE_VARIANT",
+      "input_signals": [
+        "TASK_WEB_INTERFACE",
+        "CLAIM_ACCESSIBILITY"
+      ],
+      "source_fixture_id": "CRIT-FIX-008",
+      "paired_case_id": "M3-BASELINE-008",
+      "oracle": "Without full evidence the result must include AT_NOT_RUN and WCAG_CONFORMANCE_NOT_ESTABLISHED.",
+      "expected_modules": [
+        "EVIDENCE_AND_CLAIMS",
+        "WEB_ACCESSIBILITY"
+      ],
+      "forbidden_modules": []
+    },
+    {
+      "case_id": "M3-REVERSED-009",
+      "category": "REVERSED_BASELINE_VARIANT",
+      "input_signals": [
+        "TASK_UI",
+        "TASK_RESPONSIVE"
+      ],
+      "source_fixture_id": "CRIT-FIX-009",
+      "paired_case_id": "M3-BASELINE-009",
+      "oracle": "Zoom, reflow, text resizing and keyboard boundaries enter acceptance criteria.",
+      "expected_modules": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY"
+      ],
+      "forbidden_modules": []
+    },
+    {
+      "case_id": "M3-REVERSED-010",
+      "category": "REVERSED_BASELINE_VARIANT",
+      "input_signals": [
+        "PROJECT_SYMPHONIE",
+        "TASK_VISUAL_DIRECTION"
+      ],
+      "source_fixture_id": "CRIT-FIX-010",
+      "paired_case_id": "M3-BASELINE-010",
+      "oracle": "Symphonie visual direction may consult contextual preference without creating global identity.",
+      "expected_modules": [
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ],
+      "forbidden_modules": []
+    },
+    {
+      "case_id": "M3-REVERSED-011",
+      "category": "REVERSED_BASELINE_VARIANT",
+      "input_signals": [
+        "KNOWN_CORRECTABLE_VISUAL_DEFECT",
+        "TASK_HTML",
+        "TASK_UI"
+      ],
+      "source_fixture_id": "CRIT-FIX-011",
+      "paired_case_id": "M3-BASELINE-011",
+      "oracle": "The agent must not deliver PASS; it must diagnose, correct or reconstruct, and revalidate within scope.",
+      "expected_modules": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY"
+      ],
+      "forbidden_modules": []
+    },
+    {
+      "case_id": "M3-REVERSED-012",
+      "category": "REVERSED_BASELINE_VARIANT",
+      "input_signals": [
+        "STRUCTURAL_GEOMETRY_FAILURE",
+        "TASK_WEB_INTERFACE",
+        "TASK_VISUAL_DESIGN"
+      ],
+      "source_fixture_id": "CRIT-FIX-012",
+      "paired_case_id": "M3-BASELINE-012",
+      "oracle": "Structural root cause requires component reconstruction rather than accumulated offsets, clipping or decoration.",
+      "expected_modules": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY"
+      ],
+      "forbidden_modules": []
+    },
+    {
+      "case_id": "M3-REVERSED-013",
+      "category": "REVERSED_BASELINE_VARIANT",
+      "input_signals": [
+        "CLAIM_VALIDATION",
+        "TASK_WEB_INTERFACE",
+        "TASK_HTML"
+      ],
+      "source_fixture_id": "CRIT-FIX-013",
+      "paired_case_id": "M3-BASELINE-013",
+      "oracle": "A technical foundation pass remains awaiting human visual review and does not establish WCAG conformance or product readiness.",
+      "expected_modules": [
+        "EVIDENCE_AND_CLAIMS",
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY"
+      ],
+      "forbidden_modules": []
+    },
+    {
+      "case_id": "M3-EMPTY-001",
+      "category": "EMPTY_SIGNAL_SET",
+      "input_signals": [],
+      "expected_modules": []
+    },
+    {
+      "case_id": "M3-SINGLE-001",
+      "category": "SIGNAL_SINGLETON",
+      "input_signals": [
+        "TASK_ANALYSIS"
+      ],
+      "singleton_signal": "TASK_ANALYSIS"
+    },
+    {
+      "case_id": "M3-SINGLE-002",
+      "category": "SIGNAL_SINGLETON",
+      "input_signals": [
+        "TASK_AUDIT"
+      ],
+      "singleton_signal": "TASK_AUDIT"
+    },
+    {
+      "case_id": "M3-SINGLE-003",
+      "category": "SIGNAL_SINGLETON",
+      "input_signals": [
+        "TASK_TECHNICAL_REVIEW"
+      ],
+      "singleton_signal": "TASK_TECHNICAL_REVIEW"
+    },
+    {
+      "case_id": "M3-SINGLE-004",
+      "category": "SIGNAL_SINGLETON",
+      "input_signals": [
+        "TASK_STATUS_REPORT"
+      ],
+      "singleton_signal": "TASK_STATUS_REPORT"
+    },
+    {
+      "case_id": "M3-SINGLE-005",
+      "category": "SIGNAL_SINGLETON",
+      "input_signals": [
+        "CLAIM_FACTUAL"
+      ],
+      "singleton_signal": "CLAIM_FACTUAL"
+    },
+    {
+      "case_id": "M3-SINGLE-006",
+      "category": "SIGNAL_SINGLETON",
+      "input_signals": [
+        "CLAIM_LEGAL_OR_STANDARD"
+      ],
+      "singleton_signal": "CLAIM_LEGAL_OR_STANDARD"
+    },
+    {
+      "case_id": "M3-SINGLE-007",
+      "category": "SIGNAL_SINGLETON",
+      "input_signals": [
+        "CLAIM_ACCESSIBILITY"
+      ],
+      "singleton_signal": "CLAIM_ACCESSIBILITY"
+    },
+    {
+      "case_id": "M3-SINGLE-008",
+      "category": "SIGNAL_SINGLETON",
+      "input_signals": [
+        "CLAIM_VALIDATION"
+      ],
+      "singleton_signal": "CLAIM_VALIDATION"
+    },
+    {
+      "case_id": "M3-SINGLE-009",
+      "category": "SIGNAL_SINGLETON",
+      "input_signals": [
+        "TASK_UI"
+      ],
+      "singleton_signal": "TASK_UI"
+    },
+    {
+      "case_id": "M3-SINGLE-010",
+      "category": "SIGNAL_SINGLETON",
+      "input_signals": [
+        "TASK_UX"
+      ],
+      "singleton_signal": "TASK_UX"
+    },
+    {
+      "case_id": "M3-SINGLE-011",
+      "category": "SIGNAL_SINGLETON",
+      "input_signals": [
+        "TASK_VISUAL_DESIGN"
+      ],
+      "singleton_signal": "TASK_VISUAL_DESIGN"
+    },
+    {
+      "case_id": "M3-SINGLE-012",
+      "category": "SIGNAL_SINGLETON",
+      "input_signals": [
+        "TASK_HTML"
+      ],
+      "singleton_signal": "TASK_HTML"
+    },
+    {
+      "case_id": "M3-SINGLE-013",
+      "category": "SIGNAL_SINGLETON",
+      "input_signals": [
+        "TASK_WEB_INTERFACE"
+      ],
+      "singleton_signal": "TASK_WEB_INTERFACE"
+    },
+    {
+      "case_id": "M3-SINGLE-014",
+      "category": "SIGNAL_SINGLETON",
+      "input_signals": [
+        "TASK_DESIGN_BRIEF"
+      ],
+      "singleton_signal": "TASK_DESIGN_BRIEF"
+    },
+    {
+      "case_id": "M3-SINGLE-015",
+      "category": "SIGNAL_SINGLETON",
+      "input_signals": [
+        "TASK_PROTOTYPE"
+      ],
+      "singleton_signal": "TASK_PROTOTYPE"
+    },
+    {
+      "case_id": "M3-SINGLE-016",
+      "category": "SIGNAL_SINGLETON",
+      "input_signals": [
+        "TASK_COMPONENT_REVIEW"
+      ],
+      "singleton_signal": "TASK_COMPONENT_REVIEW"
+    },
+    {
+      "case_id": "M3-SINGLE-017",
+      "category": "SIGNAL_SINGLETON",
+      "input_signals": [
+        "TASK_FORM"
+      ],
+      "singleton_signal": "TASK_FORM"
+    },
+    {
+      "case_id": "M3-SINGLE-018",
+      "category": "SIGNAL_SINGLETON",
+      "input_signals": [
+        "TASK_INTERACTIVE_CONTROL"
+      ],
+      "singleton_signal": "TASK_INTERACTIVE_CONTROL"
+    },
+    {
+      "case_id": "M3-SINGLE-019",
+      "category": "SIGNAL_SINGLETON",
+      "input_signals": [
+        "TASK_RESPONSIVE"
+      ],
+      "singleton_signal": "TASK_RESPONSIVE"
+    },
+    {
+      "case_id": "M3-SINGLE-020",
+      "category": "SIGNAL_SINGLETON",
+      "input_signals": [
+        "TASK_MOTION"
+      ],
+      "singleton_signal": "TASK_MOTION"
+    },
+    {
+      "case_id": "M3-SINGLE-021",
+      "category": "SIGNAL_SINGLETON",
+      "input_signals": [
+        "TASK_VISUAL_DIRECTION"
+      ],
+      "singleton_signal": "TASK_VISUAL_DIRECTION"
+    },
+    {
+      "case_id": "M3-SINGLE-022",
+      "category": "SIGNAL_SINGLETON",
+      "input_signals": [
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ],
+      "singleton_signal": "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+    },
+    {
+      "case_id": "M3-SINGLE-023",
+      "category": "SIGNAL_SINGLETON",
+      "input_signals": [
+        "PROJECT_SYMPHONIE"
+      ],
+      "singleton_signal": "PROJECT_SYMPHONIE"
+    },
+    {
+      "case_id": "M3-SINGLE-024",
+      "category": "SIGNAL_SINGLETON",
+      "input_signals": [
+        "TASK_CASUAL_CONVERSATION"
+      ],
+      "singleton_signal": "TASK_CASUAL_CONVERSATION"
+    },
+    {
+      "case_id": "M3-SINGLE-025",
+      "category": "SIGNAL_SINGLETON",
+      "input_signals": [
+        "TASK_TRANSLATION_ONLY"
+      ],
+      "singleton_signal": "TASK_TRANSLATION_ONLY"
+    },
+    {
+      "case_id": "M3-SINGLE-026",
+      "category": "SIGNAL_SINGLETON",
+      "input_signals": [
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ],
+      "singleton_signal": "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+    },
+    {
+      "case_id": "M3-SINGLE-027",
+      "category": "SIGNAL_SINGLETON",
+      "input_signals": [
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "singleton_signal": "TASK_SIMPLE_ARITHMETIC"
+    },
+    {
+      "case_id": "M3-PAIR-001",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_ANALYSIS",
+        "TASK_AUDIT"
+      ],
+      "unordered_pair": [
+        "TASK_ANALYSIS",
+        "TASK_AUDIT"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-002",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_ANALYSIS",
+        "TASK_TECHNICAL_REVIEW"
+      ],
+      "unordered_pair": [
+        "TASK_ANALYSIS",
+        "TASK_TECHNICAL_REVIEW"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-003",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_ANALYSIS",
+        "TASK_STATUS_REPORT"
+      ],
+      "unordered_pair": [
+        "TASK_ANALYSIS",
+        "TASK_STATUS_REPORT"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-004",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_ANALYSIS",
+        "CLAIM_FACTUAL"
+      ],
+      "unordered_pair": [
+        "TASK_ANALYSIS",
+        "CLAIM_FACTUAL"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-005",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_ANALYSIS",
+        "CLAIM_LEGAL_OR_STANDARD"
+      ],
+      "unordered_pair": [
+        "TASK_ANALYSIS",
+        "CLAIM_LEGAL_OR_STANDARD"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-006",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_ANALYSIS",
+        "CLAIM_ACCESSIBILITY"
+      ],
+      "unordered_pair": [
+        "TASK_ANALYSIS",
+        "CLAIM_ACCESSIBILITY"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-007",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_ANALYSIS",
+        "CLAIM_VALIDATION"
+      ],
+      "unordered_pair": [
+        "TASK_ANALYSIS",
+        "CLAIM_VALIDATION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-008",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_ANALYSIS",
+        "TASK_UI"
+      ],
+      "unordered_pair": [
+        "TASK_ANALYSIS",
+        "TASK_UI"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-009",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_ANALYSIS",
+        "TASK_UX"
+      ],
+      "unordered_pair": [
+        "TASK_ANALYSIS",
+        "TASK_UX"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-010",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_ANALYSIS",
+        "TASK_VISUAL_DESIGN"
+      ],
+      "unordered_pair": [
+        "TASK_ANALYSIS",
+        "TASK_VISUAL_DESIGN"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-011",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_ANALYSIS",
+        "TASK_HTML"
+      ],
+      "unordered_pair": [
+        "TASK_ANALYSIS",
+        "TASK_HTML"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-012",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_ANALYSIS",
+        "TASK_WEB_INTERFACE"
+      ],
+      "unordered_pair": [
+        "TASK_ANALYSIS",
+        "TASK_WEB_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-013",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_ANALYSIS",
+        "TASK_DESIGN_BRIEF"
+      ],
+      "unordered_pair": [
+        "TASK_ANALYSIS",
+        "TASK_DESIGN_BRIEF"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-014",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_ANALYSIS",
+        "TASK_PROTOTYPE"
+      ],
+      "unordered_pair": [
+        "TASK_ANALYSIS",
+        "TASK_PROTOTYPE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-015",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_ANALYSIS",
+        "TASK_COMPONENT_REVIEW"
+      ],
+      "unordered_pair": [
+        "TASK_ANALYSIS",
+        "TASK_COMPONENT_REVIEW"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-016",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_ANALYSIS",
+        "TASK_FORM"
+      ],
+      "unordered_pair": [
+        "TASK_ANALYSIS",
+        "TASK_FORM"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-017",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_ANALYSIS",
+        "TASK_INTERACTIVE_CONTROL"
+      ],
+      "unordered_pair": [
+        "TASK_ANALYSIS",
+        "TASK_INTERACTIVE_CONTROL"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-018",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_ANALYSIS",
+        "TASK_RESPONSIVE"
+      ],
+      "unordered_pair": [
+        "TASK_ANALYSIS",
+        "TASK_RESPONSIVE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-019",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_ANALYSIS",
+        "TASK_MOTION"
+      ],
+      "unordered_pair": [
+        "TASK_ANALYSIS",
+        "TASK_MOTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-020",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_ANALYSIS",
+        "TASK_VISUAL_DIRECTION"
+      ],
+      "unordered_pair": [
+        "TASK_ANALYSIS",
+        "TASK_VISUAL_DIRECTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-021",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_ANALYSIS",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ],
+      "unordered_pair": [
+        "TASK_ANALYSIS",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-022",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_ANALYSIS",
+        "PROJECT_SYMPHONIE"
+      ],
+      "unordered_pair": [
+        "TASK_ANALYSIS",
+        "PROJECT_SYMPHONIE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-023",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_ANALYSIS",
+        "TASK_CASUAL_CONVERSATION"
+      ],
+      "unordered_pair": [
+        "TASK_ANALYSIS",
+        "TASK_CASUAL_CONVERSATION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-024",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_ANALYSIS",
+        "TASK_TRANSLATION_ONLY"
+      ],
+      "unordered_pair": [
+        "TASK_ANALYSIS",
+        "TASK_TRANSLATION_ONLY"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-025",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_ANALYSIS",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ],
+      "unordered_pair": [
+        "TASK_ANALYSIS",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-026",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_ANALYSIS",
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "unordered_pair": [
+        "TASK_ANALYSIS",
+        "TASK_SIMPLE_ARITHMETIC"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-027",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_AUDIT",
+        "TASK_TECHNICAL_REVIEW"
+      ],
+      "unordered_pair": [
+        "TASK_AUDIT",
+        "TASK_TECHNICAL_REVIEW"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-028",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_AUDIT",
+        "TASK_STATUS_REPORT"
+      ],
+      "unordered_pair": [
+        "TASK_AUDIT",
+        "TASK_STATUS_REPORT"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-029",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_AUDIT",
+        "CLAIM_FACTUAL"
+      ],
+      "unordered_pair": [
+        "TASK_AUDIT",
+        "CLAIM_FACTUAL"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-030",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_AUDIT",
+        "CLAIM_LEGAL_OR_STANDARD"
+      ],
+      "unordered_pair": [
+        "TASK_AUDIT",
+        "CLAIM_LEGAL_OR_STANDARD"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-031",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_AUDIT",
+        "CLAIM_ACCESSIBILITY"
+      ],
+      "unordered_pair": [
+        "TASK_AUDIT",
+        "CLAIM_ACCESSIBILITY"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-032",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_AUDIT",
+        "CLAIM_VALIDATION"
+      ],
+      "unordered_pair": [
+        "TASK_AUDIT",
+        "CLAIM_VALIDATION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-033",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_AUDIT",
+        "TASK_UI"
+      ],
+      "unordered_pair": [
+        "TASK_AUDIT",
+        "TASK_UI"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-034",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_AUDIT",
+        "TASK_UX"
+      ],
+      "unordered_pair": [
+        "TASK_AUDIT",
+        "TASK_UX"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-035",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_AUDIT",
+        "TASK_VISUAL_DESIGN"
+      ],
+      "unordered_pair": [
+        "TASK_AUDIT",
+        "TASK_VISUAL_DESIGN"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-036",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_AUDIT",
+        "TASK_HTML"
+      ],
+      "unordered_pair": [
+        "TASK_AUDIT",
+        "TASK_HTML"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-037",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_AUDIT",
+        "TASK_WEB_INTERFACE"
+      ],
+      "unordered_pair": [
+        "TASK_AUDIT",
+        "TASK_WEB_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-038",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_AUDIT",
+        "TASK_DESIGN_BRIEF"
+      ],
+      "unordered_pair": [
+        "TASK_AUDIT",
+        "TASK_DESIGN_BRIEF"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-039",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_AUDIT",
+        "TASK_PROTOTYPE"
+      ],
+      "unordered_pair": [
+        "TASK_AUDIT",
+        "TASK_PROTOTYPE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-040",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_AUDIT",
+        "TASK_COMPONENT_REVIEW"
+      ],
+      "unordered_pair": [
+        "TASK_AUDIT",
+        "TASK_COMPONENT_REVIEW"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-041",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_AUDIT",
+        "TASK_FORM"
+      ],
+      "unordered_pair": [
+        "TASK_AUDIT",
+        "TASK_FORM"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-042",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_AUDIT",
+        "TASK_INTERACTIVE_CONTROL"
+      ],
+      "unordered_pair": [
+        "TASK_AUDIT",
+        "TASK_INTERACTIVE_CONTROL"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-043",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_AUDIT",
+        "TASK_RESPONSIVE"
+      ],
+      "unordered_pair": [
+        "TASK_AUDIT",
+        "TASK_RESPONSIVE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-044",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_AUDIT",
+        "TASK_MOTION"
+      ],
+      "unordered_pair": [
+        "TASK_AUDIT",
+        "TASK_MOTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-045",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_AUDIT",
+        "TASK_VISUAL_DIRECTION"
+      ],
+      "unordered_pair": [
+        "TASK_AUDIT",
+        "TASK_VISUAL_DIRECTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-046",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_AUDIT",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ],
+      "unordered_pair": [
+        "TASK_AUDIT",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-047",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_AUDIT",
+        "PROJECT_SYMPHONIE"
+      ],
+      "unordered_pair": [
+        "TASK_AUDIT",
+        "PROJECT_SYMPHONIE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-048",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_AUDIT",
+        "TASK_CASUAL_CONVERSATION"
+      ],
+      "unordered_pair": [
+        "TASK_AUDIT",
+        "TASK_CASUAL_CONVERSATION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-049",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_AUDIT",
+        "TASK_TRANSLATION_ONLY"
+      ],
+      "unordered_pair": [
+        "TASK_AUDIT",
+        "TASK_TRANSLATION_ONLY"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-050",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_AUDIT",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ],
+      "unordered_pair": [
+        "TASK_AUDIT",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-051",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_AUDIT",
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "unordered_pair": [
+        "TASK_AUDIT",
+        "TASK_SIMPLE_ARITHMETIC"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-052",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_STATUS_REPORT"
+      ],
+      "unordered_pair": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_STATUS_REPORT"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-053",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_TECHNICAL_REVIEW",
+        "CLAIM_FACTUAL"
+      ],
+      "unordered_pair": [
+        "TASK_TECHNICAL_REVIEW",
+        "CLAIM_FACTUAL"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-054",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_TECHNICAL_REVIEW",
+        "CLAIM_LEGAL_OR_STANDARD"
+      ],
+      "unordered_pair": [
+        "TASK_TECHNICAL_REVIEW",
+        "CLAIM_LEGAL_OR_STANDARD"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-055",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_TECHNICAL_REVIEW",
+        "CLAIM_ACCESSIBILITY"
+      ],
+      "unordered_pair": [
+        "TASK_TECHNICAL_REVIEW",
+        "CLAIM_ACCESSIBILITY"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-056",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_TECHNICAL_REVIEW",
+        "CLAIM_VALIDATION"
+      ],
+      "unordered_pair": [
+        "TASK_TECHNICAL_REVIEW",
+        "CLAIM_VALIDATION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-057",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_UI"
+      ],
+      "unordered_pair": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_UI"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-058",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_UX"
+      ],
+      "unordered_pair": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_UX"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-059",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_VISUAL_DESIGN"
+      ],
+      "unordered_pair": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_VISUAL_DESIGN"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-060",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_HTML"
+      ],
+      "unordered_pair": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_HTML"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-061",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_WEB_INTERFACE"
+      ],
+      "unordered_pair": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_WEB_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-062",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_DESIGN_BRIEF"
+      ],
+      "unordered_pair": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_DESIGN_BRIEF"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-063",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_PROTOTYPE"
+      ],
+      "unordered_pair": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_PROTOTYPE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-064",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_COMPONENT_REVIEW"
+      ],
+      "unordered_pair": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_COMPONENT_REVIEW"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-065",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_FORM"
+      ],
+      "unordered_pair": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_FORM"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-066",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_INTERACTIVE_CONTROL"
+      ],
+      "unordered_pair": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_INTERACTIVE_CONTROL"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-067",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_RESPONSIVE"
+      ],
+      "unordered_pair": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_RESPONSIVE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-068",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_MOTION"
+      ],
+      "unordered_pair": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_MOTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-069",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_VISUAL_DIRECTION"
+      ],
+      "unordered_pair": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_VISUAL_DIRECTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-070",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_TECHNICAL_REVIEW",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ],
+      "unordered_pair": [
+        "TASK_TECHNICAL_REVIEW",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-071",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_TECHNICAL_REVIEW",
+        "PROJECT_SYMPHONIE"
+      ],
+      "unordered_pair": [
+        "TASK_TECHNICAL_REVIEW",
+        "PROJECT_SYMPHONIE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-072",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_CASUAL_CONVERSATION"
+      ],
+      "unordered_pair": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_CASUAL_CONVERSATION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-073",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_TRANSLATION_ONLY"
+      ],
+      "unordered_pair": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_TRANSLATION_ONLY"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-074",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ],
+      "unordered_pair": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-075",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "unordered_pair": [
+        "TASK_TECHNICAL_REVIEW",
+        "TASK_SIMPLE_ARITHMETIC"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-076",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_STATUS_REPORT",
+        "CLAIM_FACTUAL"
+      ],
+      "unordered_pair": [
+        "TASK_STATUS_REPORT",
+        "CLAIM_FACTUAL"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-077",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_STATUS_REPORT",
+        "CLAIM_LEGAL_OR_STANDARD"
+      ],
+      "unordered_pair": [
+        "TASK_STATUS_REPORT",
+        "CLAIM_LEGAL_OR_STANDARD"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-078",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_STATUS_REPORT",
+        "CLAIM_ACCESSIBILITY"
+      ],
+      "unordered_pair": [
+        "TASK_STATUS_REPORT",
+        "CLAIM_ACCESSIBILITY"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-079",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_STATUS_REPORT",
+        "CLAIM_VALIDATION"
+      ],
+      "unordered_pair": [
+        "TASK_STATUS_REPORT",
+        "CLAIM_VALIDATION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-080",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_STATUS_REPORT",
+        "TASK_UI"
+      ],
+      "unordered_pair": [
+        "TASK_STATUS_REPORT",
+        "TASK_UI"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-081",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_STATUS_REPORT",
+        "TASK_UX"
+      ],
+      "unordered_pair": [
+        "TASK_STATUS_REPORT",
+        "TASK_UX"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-082",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_STATUS_REPORT",
+        "TASK_VISUAL_DESIGN"
+      ],
+      "unordered_pair": [
+        "TASK_STATUS_REPORT",
+        "TASK_VISUAL_DESIGN"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-083",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_STATUS_REPORT",
+        "TASK_HTML"
+      ],
+      "unordered_pair": [
+        "TASK_STATUS_REPORT",
+        "TASK_HTML"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-084",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_STATUS_REPORT",
+        "TASK_WEB_INTERFACE"
+      ],
+      "unordered_pair": [
+        "TASK_STATUS_REPORT",
+        "TASK_WEB_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-085",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_STATUS_REPORT",
+        "TASK_DESIGN_BRIEF"
+      ],
+      "unordered_pair": [
+        "TASK_STATUS_REPORT",
+        "TASK_DESIGN_BRIEF"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-086",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_STATUS_REPORT",
+        "TASK_PROTOTYPE"
+      ],
+      "unordered_pair": [
+        "TASK_STATUS_REPORT",
+        "TASK_PROTOTYPE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-087",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_STATUS_REPORT",
+        "TASK_COMPONENT_REVIEW"
+      ],
+      "unordered_pair": [
+        "TASK_STATUS_REPORT",
+        "TASK_COMPONENT_REVIEW"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-088",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_STATUS_REPORT",
+        "TASK_FORM"
+      ],
+      "unordered_pair": [
+        "TASK_STATUS_REPORT",
+        "TASK_FORM"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-089",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_STATUS_REPORT",
+        "TASK_INTERACTIVE_CONTROL"
+      ],
+      "unordered_pair": [
+        "TASK_STATUS_REPORT",
+        "TASK_INTERACTIVE_CONTROL"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-090",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_STATUS_REPORT",
+        "TASK_RESPONSIVE"
+      ],
+      "unordered_pair": [
+        "TASK_STATUS_REPORT",
+        "TASK_RESPONSIVE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-091",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_STATUS_REPORT",
+        "TASK_MOTION"
+      ],
+      "unordered_pair": [
+        "TASK_STATUS_REPORT",
+        "TASK_MOTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-092",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_STATUS_REPORT",
+        "TASK_VISUAL_DIRECTION"
+      ],
+      "unordered_pair": [
+        "TASK_STATUS_REPORT",
+        "TASK_VISUAL_DIRECTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-093",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_STATUS_REPORT",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ],
+      "unordered_pair": [
+        "TASK_STATUS_REPORT",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-094",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_STATUS_REPORT",
+        "PROJECT_SYMPHONIE"
+      ],
+      "unordered_pair": [
+        "TASK_STATUS_REPORT",
+        "PROJECT_SYMPHONIE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-095",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_STATUS_REPORT",
+        "TASK_CASUAL_CONVERSATION"
+      ],
+      "unordered_pair": [
+        "TASK_STATUS_REPORT",
+        "TASK_CASUAL_CONVERSATION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-096",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_STATUS_REPORT",
+        "TASK_TRANSLATION_ONLY"
+      ],
+      "unordered_pair": [
+        "TASK_STATUS_REPORT",
+        "TASK_TRANSLATION_ONLY"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-097",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_STATUS_REPORT",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ],
+      "unordered_pair": [
+        "TASK_STATUS_REPORT",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-098",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_STATUS_REPORT",
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "unordered_pair": [
+        "TASK_STATUS_REPORT",
+        "TASK_SIMPLE_ARITHMETIC"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-099",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_FACTUAL",
+        "CLAIM_LEGAL_OR_STANDARD"
+      ],
+      "unordered_pair": [
+        "CLAIM_FACTUAL",
+        "CLAIM_LEGAL_OR_STANDARD"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-100",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_FACTUAL",
+        "CLAIM_ACCESSIBILITY"
+      ],
+      "unordered_pair": [
+        "CLAIM_FACTUAL",
+        "CLAIM_ACCESSIBILITY"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-101",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_FACTUAL",
+        "CLAIM_VALIDATION"
+      ],
+      "unordered_pair": [
+        "CLAIM_FACTUAL",
+        "CLAIM_VALIDATION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-102",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_FACTUAL",
+        "TASK_UI"
+      ],
+      "unordered_pair": [
+        "CLAIM_FACTUAL",
+        "TASK_UI"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-103",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_FACTUAL",
+        "TASK_UX"
+      ],
+      "unordered_pair": [
+        "CLAIM_FACTUAL",
+        "TASK_UX"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-104",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_FACTUAL",
+        "TASK_VISUAL_DESIGN"
+      ],
+      "unordered_pair": [
+        "CLAIM_FACTUAL",
+        "TASK_VISUAL_DESIGN"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-105",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_FACTUAL",
+        "TASK_HTML"
+      ],
+      "unordered_pair": [
+        "CLAIM_FACTUAL",
+        "TASK_HTML"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-106",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_FACTUAL",
+        "TASK_WEB_INTERFACE"
+      ],
+      "unordered_pair": [
+        "CLAIM_FACTUAL",
+        "TASK_WEB_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-107",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_FACTUAL",
+        "TASK_DESIGN_BRIEF"
+      ],
+      "unordered_pair": [
+        "CLAIM_FACTUAL",
+        "TASK_DESIGN_BRIEF"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-108",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_FACTUAL",
+        "TASK_PROTOTYPE"
+      ],
+      "unordered_pair": [
+        "CLAIM_FACTUAL",
+        "TASK_PROTOTYPE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-109",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_FACTUAL",
+        "TASK_COMPONENT_REVIEW"
+      ],
+      "unordered_pair": [
+        "CLAIM_FACTUAL",
+        "TASK_COMPONENT_REVIEW"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-110",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_FACTUAL",
+        "TASK_FORM"
+      ],
+      "unordered_pair": [
+        "CLAIM_FACTUAL",
+        "TASK_FORM"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-111",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_FACTUAL",
+        "TASK_INTERACTIVE_CONTROL"
+      ],
+      "unordered_pair": [
+        "CLAIM_FACTUAL",
+        "TASK_INTERACTIVE_CONTROL"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-112",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_FACTUAL",
+        "TASK_RESPONSIVE"
+      ],
+      "unordered_pair": [
+        "CLAIM_FACTUAL",
+        "TASK_RESPONSIVE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-113",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_FACTUAL",
+        "TASK_MOTION"
+      ],
+      "unordered_pair": [
+        "CLAIM_FACTUAL",
+        "TASK_MOTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-114",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_FACTUAL",
+        "TASK_VISUAL_DIRECTION"
+      ],
+      "unordered_pair": [
+        "CLAIM_FACTUAL",
+        "TASK_VISUAL_DIRECTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-115",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_FACTUAL",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ],
+      "unordered_pair": [
+        "CLAIM_FACTUAL",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-116",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_FACTUAL",
+        "PROJECT_SYMPHONIE"
+      ],
+      "unordered_pair": [
+        "CLAIM_FACTUAL",
+        "PROJECT_SYMPHONIE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-117",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_FACTUAL",
+        "TASK_CASUAL_CONVERSATION"
+      ],
+      "unordered_pair": [
+        "CLAIM_FACTUAL",
+        "TASK_CASUAL_CONVERSATION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-118",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_FACTUAL",
+        "TASK_TRANSLATION_ONLY"
+      ],
+      "unordered_pair": [
+        "CLAIM_FACTUAL",
+        "TASK_TRANSLATION_ONLY"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-119",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_FACTUAL",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ],
+      "unordered_pair": [
+        "CLAIM_FACTUAL",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-120",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_FACTUAL",
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "unordered_pair": [
+        "CLAIM_FACTUAL",
+        "TASK_SIMPLE_ARITHMETIC"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-121",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "CLAIM_ACCESSIBILITY"
+      ],
+      "unordered_pair": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "CLAIM_ACCESSIBILITY"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-122",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "CLAIM_VALIDATION"
+      ],
+      "unordered_pair": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "CLAIM_VALIDATION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-123",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "TASK_UI"
+      ],
+      "unordered_pair": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "TASK_UI"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-124",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "TASK_UX"
+      ],
+      "unordered_pair": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "TASK_UX"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-125",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "TASK_VISUAL_DESIGN"
+      ],
+      "unordered_pair": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "TASK_VISUAL_DESIGN"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-126",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "TASK_HTML"
+      ],
+      "unordered_pair": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "TASK_HTML"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-127",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "TASK_WEB_INTERFACE"
+      ],
+      "unordered_pair": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "TASK_WEB_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-128",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "TASK_DESIGN_BRIEF"
+      ],
+      "unordered_pair": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "TASK_DESIGN_BRIEF"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-129",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "TASK_PROTOTYPE"
+      ],
+      "unordered_pair": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "TASK_PROTOTYPE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-130",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "TASK_COMPONENT_REVIEW"
+      ],
+      "unordered_pair": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "TASK_COMPONENT_REVIEW"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-131",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "TASK_FORM"
+      ],
+      "unordered_pair": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "TASK_FORM"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-132",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "TASK_INTERACTIVE_CONTROL"
+      ],
+      "unordered_pair": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "TASK_INTERACTIVE_CONTROL"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-133",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "TASK_RESPONSIVE"
+      ],
+      "unordered_pair": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "TASK_RESPONSIVE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-134",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "TASK_MOTION"
+      ],
+      "unordered_pair": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "TASK_MOTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-135",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "TASK_VISUAL_DIRECTION"
+      ],
+      "unordered_pair": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "TASK_VISUAL_DIRECTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-136",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ],
+      "unordered_pair": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-137",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "PROJECT_SYMPHONIE"
+      ],
+      "unordered_pair": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "PROJECT_SYMPHONIE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-138",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "TASK_CASUAL_CONVERSATION"
+      ],
+      "unordered_pair": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "TASK_CASUAL_CONVERSATION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-139",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "TASK_TRANSLATION_ONLY"
+      ],
+      "unordered_pair": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "TASK_TRANSLATION_ONLY"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-140",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ],
+      "unordered_pair": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-141",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "unordered_pair": [
+        "CLAIM_LEGAL_OR_STANDARD",
+        "TASK_SIMPLE_ARITHMETIC"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-142",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_ACCESSIBILITY",
+        "CLAIM_VALIDATION"
+      ],
+      "unordered_pair": [
+        "CLAIM_ACCESSIBILITY",
+        "CLAIM_VALIDATION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-143",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_UI"
+      ],
+      "unordered_pair": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_UI"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-144",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_UX"
+      ],
+      "unordered_pair": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_UX"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-145",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_VISUAL_DESIGN"
+      ],
+      "unordered_pair": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_VISUAL_DESIGN"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-146",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_HTML"
+      ],
+      "unordered_pair": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_HTML"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-147",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_WEB_INTERFACE"
+      ],
+      "unordered_pair": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_WEB_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-148",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_DESIGN_BRIEF"
+      ],
+      "unordered_pair": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_DESIGN_BRIEF"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-149",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_PROTOTYPE"
+      ],
+      "unordered_pair": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_PROTOTYPE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-150",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_COMPONENT_REVIEW"
+      ],
+      "unordered_pair": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_COMPONENT_REVIEW"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-151",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_FORM"
+      ],
+      "unordered_pair": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_FORM"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-152",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_INTERACTIVE_CONTROL"
+      ],
+      "unordered_pair": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_INTERACTIVE_CONTROL"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-153",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_RESPONSIVE"
+      ],
+      "unordered_pair": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_RESPONSIVE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-154",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_MOTION"
+      ],
+      "unordered_pair": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_MOTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-155",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_VISUAL_DIRECTION"
+      ],
+      "unordered_pair": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_VISUAL_DIRECTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-156",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_ACCESSIBILITY",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ],
+      "unordered_pair": [
+        "CLAIM_ACCESSIBILITY",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-157",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_ACCESSIBILITY",
+        "PROJECT_SYMPHONIE"
+      ],
+      "unordered_pair": [
+        "CLAIM_ACCESSIBILITY",
+        "PROJECT_SYMPHONIE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-158",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_CASUAL_CONVERSATION"
+      ],
+      "unordered_pair": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_CASUAL_CONVERSATION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-159",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_TRANSLATION_ONLY"
+      ],
+      "unordered_pair": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_TRANSLATION_ONLY"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-160",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ],
+      "unordered_pair": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-161",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "unordered_pair": [
+        "CLAIM_ACCESSIBILITY",
+        "TASK_SIMPLE_ARITHMETIC"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-162",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_VALIDATION",
+        "TASK_UI"
+      ],
+      "unordered_pair": [
+        "CLAIM_VALIDATION",
+        "TASK_UI"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-163",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_VALIDATION",
+        "TASK_UX"
+      ],
+      "unordered_pair": [
+        "CLAIM_VALIDATION",
+        "TASK_UX"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-164",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_VALIDATION",
+        "TASK_VISUAL_DESIGN"
+      ],
+      "unordered_pair": [
+        "CLAIM_VALIDATION",
+        "TASK_VISUAL_DESIGN"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-165",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_VALIDATION",
+        "TASK_HTML"
+      ],
+      "unordered_pair": [
+        "CLAIM_VALIDATION",
+        "TASK_HTML"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-166",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_VALIDATION",
+        "TASK_WEB_INTERFACE"
+      ],
+      "unordered_pair": [
+        "CLAIM_VALIDATION",
+        "TASK_WEB_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-167",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_VALIDATION",
+        "TASK_DESIGN_BRIEF"
+      ],
+      "unordered_pair": [
+        "CLAIM_VALIDATION",
+        "TASK_DESIGN_BRIEF"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-168",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_VALIDATION",
+        "TASK_PROTOTYPE"
+      ],
+      "unordered_pair": [
+        "CLAIM_VALIDATION",
+        "TASK_PROTOTYPE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-169",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_VALIDATION",
+        "TASK_COMPONENT_REVIEW"
+      ],
+      "unordered_pair": [
+        "CLAIM_VALIDATION",
+        "TASK_COMPONENT_REVIEW"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-170",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_VALIDATION",
+        "TASK_FORM"
+      ],
+      "unordered_pair": [
+        "CLAIM_VALIDATION",
+        "TASK_FORM"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-171",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_VALIDATION",
+        "TASK_INTERACTIVE_CONTROL"
+      ],
+      "unordered_pair": [
+        "CLAIM_VALIDATION",
+        "TASK_INTERACTIVE_CONTROL"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-172",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_VALIDATION",
+        "TASK_RESPONSIVE"
+      ],
+      "unordered_pair": [
+        "CLAIM_VALIDATION",
+        "TASK_RESPONSIVE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-173",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_VALIDATION",
+        "TASK_MOTION"
+      ],
+      "unordered_pair": [
+        "CLAIM_VALIDATION",
+        "TASK_MOTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-174",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_VALIDATION",
+        "TASK_VISUAL_DIRECTION"
+      ],
+      "unordered_pair": [
+        "CLAIM_VALIDATION",
+        "TASK_VISUAL_DIRECTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-175",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_VALIDATION",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ],
+      "unordered_pair": [
+        "CLAIM_VALIDATION",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-176",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_VALIDATION",
+        "PROJECT_SYMPHONIE"
+      ],
+      "unordered_pair": [
+        "CLAIM_VALIDATION",
+        "PROJECT_SYMPHONIE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-177",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_VALIDATION",
+        "TASK_CASUAL_CONVERSATION"
+      ],
+      "unordered_pair": [
+        "CLAIM_VALIDATION",
+        "TASK_CASUAL_CONVERSATION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-178",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_VALIDATION",
+        "TASK_TRANSLATION_ONLY"
+      ],
+      "unordered_pair": [
+        "CLAIM_VALIDATION",
+        "TASK_TRANSLATION_ONLY"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-179",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_VALIDATION",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ],
+      "unordered_pair": [
+        "CLAIM_VALIDATION",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-180",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "CLAIM_VALIDATION",
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "unordered_pair": [
+        "CLAIM_VALIDATION",
+        "TASK_SIMPLE_ARITHMETIC"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-181",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_UI",
+        "TASK_UX"
+      ],
+      "unordered_pair": [
+        "TASK_UI",
+        "TASK_UX"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-182",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_UI",
+        "TASK_VISUAL_DESIGN"
+      ],
+      "unordered_pair": [
+        "TASK_UI",
+        "TASK_VISUAL_DESIGN"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-183",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_UI",
+        "TASK_HTML"
+      ],
+      "unordered_pair": [
+        "TASK_UI",
+        "TASK_HTML"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-184",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_UI",
+        "TASK_WEB_INTERFACE"
+      ],
+      "unordered_pair": [
+        "TASK_UI",
+        "TASK_WEB_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-185",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_UI",
+        "TASK_DESIGN_BRIEF"
+      ],
+      "unordered_pair": [
+        "TASK_UI",
+        "TASK_DESIGN_BRIEF"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-186",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_UI",
+        "TASK_PROTOTYPE"
+      ],
+      "unordered_pair": [
+        "TASK_UI",
+        "TASK_PROTOTYPE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-187",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_UI",
+        "TASK_COMPONENT_REVIEW"
+      ],
+      "unordered_pair": [
+        "TASK_UI",
+        "TASK_COMPONENT_REVIEW"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-188",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_UI",
+        "TASK_FORM"
+      ],
+      "unordered_pair": [
+        "TASK_UI",
+        "TASK_FORM"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-189",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_UI",
+        "TASK_INTERACTIVE_CONTROL"
+      ],
+      "unordered_pair": [
+        "TASK_UI",
+        "TASK_INTERACTIVE_CONTROL"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-190",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_UI",
+        "TASK_RESPONSIVE"
+      ],
+      "unordered_pair": [
+        "TASK_UI",
+        "TASK_RESPONSIVE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-191",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_UI",
+        "TASK_MOTION"
+      ],
+      "unordered_pair": [
+        "TASK_UI",
+        "TASK_MOTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-192",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_UI",
+        "TASK_VISUAL_DIRECTION"
+      ],
+      "unordered_pair": [
+        "TASK_UI",
+        "TASK_VISUAL_DIRECTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-193",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_UI",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ],
+      "unordered_pair": [
+        "TASK_UI",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-194",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_UI",
+        "PROJECT_SYMPHONIE"
+      ],
+      "unordered_pair": [
+        "TASK_UI",
+        "PROJECT_SYMPHONIE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-195",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_UI",
+        "TASK_CASUAL_CONVERSATION"
+      ],
+      "unordered_pair": [
+        "TASK_UI",
+        "TASK_CASUAL_CONVERSATION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-196",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_UI",
+        "TASK_TRANSLATION_ONLY"
+      ],
+      "unordered_pair": [
+        "TASK_UI",
+        "TASK_TRANSLATION_ONLY"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-197",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_UI",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ],
+      "unordered_pair": [
+        "TASK_UI",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-198",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_UI",
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "unordered_pair": [
+        "TASK_UI",
+        "TASK_SIMPLE_ARITHMETIC"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-199",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_UX",
+        "TASK_VISUAL_DESIGN"
+      ],
+      "unordered_pair": [
+        "TASK_UX",
+        "TASK_VISUAL_DESIGN"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-200",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_UX",
+        "TASK_HTML"
+      ],
+      "unordered_pair": [
+        "TASK_UX",
+        "TASK_HTML"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-201",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_UX",
+        "TASK_WEB_INTERFACE"
+      ],
+      "unordered_pair": [
+        "TASK_UX",
+        "TASK_WEB_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-202",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_UX",
+        "TASK_DESIGN_BRIEF"
+      ],
+      "unordered_pair": [
+        "TASK_UX",
+        "TASK_DESIGN_BRIEF"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-203",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_UX",
+        "TASK_PROTOTYPE"
+      ],
+      "unordered_pair": [
+        "TASK_UX",
+        "TASK_PROTOTYPE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-204",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_UX",
+        "TASK_COMPONENT_REVIEW"
+      ],
+      "unordered_pair": [
+        "TASK_UX",
+        "TASK_COMPONENT_REVIEW"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-205",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_UX",
+        "TASK_FORM"
+      ],
+      "unordered_pair": [
+        "TASK_UX",
+        "TASK_FORM"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-206",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_UX",
+        "TASK_INTERACTIVE_CONTROL"
+      ],
+      "unordered_pair": [
+        "TASK_UX",
+        "TASK_INTERACTIVE_CONTROL"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-207",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_UX",
+        "TASK_RESPONSIVE"
+      ],
+      "unordered_pair": [
+        "TASK_UX",
+        "TASK_RESPONSIVE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-208",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_UX",
+        "TASK_MOTION"
+      ],
+      "unordered_pair": [
+        "TASK_UX",
+        "TASK_MOTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-209",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_UX",
+        "TASK_VISUAL_DIRECTION"
+      ],
+      "unordered_pair": [
+        "TASK_UX",
+        "TASK_VISUAL_DIRECTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-210",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_UX",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ],
+      "unordered_pair": [
+        "TASK_UX",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-211",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_UX",
+        "PROJECT_SYMPHONIE"
+      ],
+      "unordered_pair": [
+        "TASK_UX",
+        "PROJECT_SYMPHONIE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-212",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_UX",
+        "TASK_CASUAL_CONVERSATION"
+      ],
+      "unordered_pair": [
+        "TASK_UX",
+        "TASK_CASUAL_CONVERSATION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-213",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_UX",
+        "TASK_TRANSLATION_ONLY"
+      ],
+      "unordered_pair": [
+        "TASK_UX",
+        "TASK_TRANSLATION_ONLY"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-214",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_UX",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ],
+      "unordered_pair": [
+        "TASK_UX",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-215",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_UX",
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "unordered_pair": [
+        "TASK_UX",
+        "TASK_SIMPLE_ARITHMETIC"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-216",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_VISUAL_DESIGN",
+        "TASK_HTML"
+      ],
+      "unordered_pair": [
+        "TASK_VISUAL_DESIGN",
+        "TASK_HTML"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-217",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_VISUAL_DESIGN",
+        "TASK_WEB_INTERFACE"
+      ],
+      "unordered_pair": [
+        "TASK_VISUAL_DESIGN",
+        "TASK_WEB_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-218",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_VISUAL_DESIGN",
+        "TASK_DESIGN_BRIEF"
+      ],
+      "unordered_pair": [
+        "TASK_VISUAL_DESIGN",
+        "TASK_DESIGN_BRIEF"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-219",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_VISUAL_DESIGN",
+        "TASK_PROTOTYPE"
+      ],
+      "unordered_pair": [
+        "TASK_VISUAL_DESIGN",
+        "TASK_PROTOTYPE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-220",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_VISUAL_DESIGN",
+        "TASK_COMPONENT_REVIEW"
+      ],
+      "unordered_pair": [
+        "TASK_VISUAL_DESIGN",
+        "TASK_COMPONENT_REVIEW"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-221",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_VISUAL_DESIGN",
+        "TASK_FORM"
+      ],
+      "unordered_pair": [
+        "TASK_VISUAL_DESIGN",
+        "TASK_FORM"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-222",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_VISUAL_DESIGN",
+        "TASK_INTERACTIVE_CONTROL"
+      ],
+      "unordered_pair": [
+        "TASK_VISUAL_DESIGN",
+        "TASK_INTERACTIVE_CONTROL"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-223",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_VISUAL_DESIGN",
+        "TASK_RESPONSIVE"
+      ],
+      "unordered_pair": [
+        "TASK_VISUAL_DESIGN",
+        "TASK_RESPONSIVE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-224",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_VISUAL_DESIGN",
+        "TASK_MOTION"
+      ],
+      "unordered_pair": [
+        "TASK_VISUAL_DESIGN",
+        "TASK_MOTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-225",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_VISUAL_DESIGN",
+        "TASK_VISUAL_DIRECTION"
+      ],
+      "unordered_pair": [
+        "TASK_VISUAL_DESIGN",
+        "TASK_VISUAL_DIRECTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-226",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_VISUAL_DESIGN",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ],
+      "unordered_pair": [
+        "TASK_VISUAL_DESIGN",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-227",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_VISUAL_DESIGN",
+        "PROJECT_SYMPHONIE"
+      ],
+      "unordered_pair": [
+        "TASK_VISUAL_DESIGN",
+        "PROJECT_SYMPHONIE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-228",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_VISUAL_DESIGN",
+        "TASK_CASUAL_CONVERSATION"
+      ],
+      "unordered_pair": [
+        "TASK_VISUAL_DESIGN",
+        "TASK_CASUAL_CONVERSATION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-229",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_VISUAL_DESIGN",
+        "TASK_TRANSLATION_ONLY"
+      ],
+      "unordered_pair": [
+        "TASK_VISUAL_DESIGN",
+        "TASK_TRANSLATION_ONLY"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-230",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_VISUAL_DESIGN",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ],
+      "unordered_pair": [
+        "TASK_VISUAL_DESIGN",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-231",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_VISUAL_DESIGN",
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "unordered_pair": [
+        "TASK_VISUAL_DESIGN",
+        "TASK_SIMPLE_ARITHMETIC"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-232",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_HTML",
+        "TASK_WEB_INTERFACE"
+      ],
+      "unordered_pair": [
+        "TASK_HTML",
+        "TASK_WEB_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-233",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_HTML",
+        "TASK_DESIGN_BRIEF"
+      ],
+      "unordered_pair": [
+        "TASK_HTML",
+        "TASK_DESIGN_BRIEF"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-234",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_HTML",
+        "TASK_PROTOTYPE"
+      ],
+      "unordered_pair": [
+        "TASK_HTML",
+        "TASK_PROTOTYPE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-235",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_HTML",
+        "TASK_COMPONENT_REVIEW"
+      ],
+      "unordered_pair": [
+        "TASK_HTML",
+        "TASK_COMPONENT_REVIEW"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-236",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_HTML",
+        "TASK_FORM"
+      ],
+      "unordered_pair": [
+        "TASK_HTML",
+        "TASK_FORM"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-237",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_HTML",
+        "TASK_INTERACTIVE_CONTROL"
+      ],
+      "unordered_pair": [
+        "TASK_HTML",
+        "TASK_INTERACTIVE_CONTROL"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-238",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_HTML",
+        "TASK_RESPONSIVE"
+      ],
+      "unordered_pair": [
+        "TASK_HTML",
+        "TASK_RESPONSIVE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-239",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_HTML",
+        "TASK_MOTION"
+      ],
+      "unordered_pair": [
+        "TASK_HTML",
+        "TASK_MOTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-240",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_HTML",
+        "TASK_VISUAL_DIRECTION"
+      ],
+      "unordered_pair": [
+        "TASK_HTML",
+        "TASK_VISUAL_DIRECTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-241",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_HTML",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ],
+      "unordered_pair": [
+        "TASK_HTML",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-242",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_HTML",
+        "PROJECT_SYMPHONIE"
+      ],
+      "unordered_pair": [
+        "TASK_HTML",
+        "PROJECT_SYMPHONIE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-243",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_HTML",
+        "TASK_CASUAL_CONVERSATION"
+      ],
+      "unordered_pair": [
+        "TASK_HTML",
+        "TASK_CASUAL_CONVERSATION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-244",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_HTML",
+        "TASK_TRANSLATION_ONLY"
+      ],
+      "unordered_pair": [
+        "TASK_HTML",
+        "TASK_TRANSLATION_ONLY"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-245",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_HTML",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ],
+      "unordered_pair": [
+        "TASK_HTML",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-246",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_HTML",
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "unordered_pair": [
+        "TASK_HTML",
+        "TASK_SIMPLE_ARITHMETIC"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-247",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_WEB_INTERFACE",
+        "TASK_DESIGN_BRIEF"
+      ],
+      "unordered_pair": [
+        "TASK_WEB_INTERFACE",
+        "TASK_DESIGN_BRIEF"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-248",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_WEB_INTERFACE",
+        "TASK_PROTOTYPE"
+      ],
+      "unordered_pair": [
+        "TASK_WEB_INTERFACE",
+        "TASK_PROTOTYPE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-249",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_WEB_INTERFACE",
+        "TASK_COMPONENT_REVIEW"
+      ],
+      "unordered_pair": [
+        "TASK_WEB_INTERFACE",
+        "TASK_COMPONENT_REVIEW"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-250",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_WEB_INTERFACE",
+        "TASK_FORM"
+      ],
+      "unordered_pair": [
+        "TASK_WEB_INTERFACE",
+        "TASK_FORM"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-251",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_WEB_INTERFACE",
+        "TASK_INTERACTIVE_CONTROL"
+      ],
+      "unordered_pair": [
+        "TASK_WEB_INTERFACE",
+        "TASK_INTERACTIVE_CONTROL"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-252",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_WEB_INTERFACE",
+        "TASK_RESPONSIVE"
+      ],
+      "unordered_pair": [
+        "TASK_WEB_INTERFACE",
+        "TASK_RESPONSIVE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-253",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_WEB_INTERFACE",
+        "TASK_MOTION"
+      ],
+      "unordered_pair": [
+        "TASK_WEB_INTERFACE",
+        "TASK_MOTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-254",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_WEB_INTERFACE",
+        "TASK_VISUAL_DIRECTION"
+      ],
+      "unordered_pair": [
+        "TASK_WEB_INTERFACE",
+        "TASK_VISUAL_DIRECTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-255",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_WEB_INTERFACE",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ],
+      "unordered_pair": [
+        "TASK_WEB_INTERFACE",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-256",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_WEB_INTERFACE",
+        "PROJECT_SYMPHONIE"
+      ],
+      "unordered_pair": [
+        "TASK_WEB_INTERFACE",
+        "PROJECT_SYMPHONIE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-257",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_WEB_INTERFACE",
+        "TASK_CASUAL_CONVERSATION"
+      ],
+      "unordered_pair": [
+        "TASK_WEB_INTERFACE",
+        "TASK_CASUAL_CONVERSATION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-258",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_WEB_INTERFACE",
+        "TASK_TRANSLATION_ONLY"
+      ],
+      "unordered_pair": [
+        "TASK_WEB_INTERFACE",
+        "TASK_TRANSLATION_ONLY"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-259",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_WEB_INTERFACE",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ],
+      "unordered_pair": [
+        "TASK_WEB_INTERFACE",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-260",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_WEB_INTERFACE",
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "unordered_pair": [
+        "TASK_WEB_INTERFACE",
+        "TASK_SIMPLE_ARITHMETIC"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-261",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_DESIGN_BRIEF",
+        "TASK_PROTOTYPE"
+      ],
+      "unordered_pair": [
+        "TASK_DESIGN_BRIEF",
+        "TASK_PROTOTYPE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-262",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_DESIGN_BRIEF",
+        "TASK_COMPONENT_REVIEW"
+      ],
+      "unordered_pair": [
+        "TASK_DESIGN_BRIEF",
+        "TASK_COMPONENT_REVIEW"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-263",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_DESIGN_BRIEF",
+        "TASK_FORM"
+      ],
+      "unordered_pair": [
+        "TASK_DESIGN_BRIEF",
+        "TASK_FORM"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-264",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_DESIGN_BRIEF",
+        "TASK_INTERACTIVE_CONTROL"
+      ],
+      "unordered_pair": [
+        "TASK_DESIGN_BRIEF",
+        "TASK_INTERACTIVE_CONTROL"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-265",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_DESIGN_BRIEF",
+        "TASK_RESPONSIVE"
+      ],
+      "unordered_pair": [
+        "TASK_DESIGN_BRIEF",
+        "TASK_RESPONSIVE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-266",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_DESIGN_BRIEF",
+        "TASK_MOTION"
+      ],
+      "unordered_pair": [
+        "TASK_DESIGN_BRIEF",
+        "TASK_MOTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-267",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_DESIGN_BRIEF",
+        "TASK_VISUAL_DIRECTION"
+      ],
+      "unordered_pair": [
+        "TASK_DESIGN_BRIEF",
+        "TASK_VISUAL_DIRECTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-268",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_DESIGN_BRIEF",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ],
+      "unordered_pair": [
+        "TASK_DESIGN_BRIEF",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-269",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_DESIGN_BRIEF",
+        "PROJECT_SYMPHONIE"
+      ],
+      "unordered_pair": [
+        "TASK_DESIGN_BRIEF",
+        "PROJECT_SYMPHONIE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-270",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_DESIGN_BRIEF",
+        "TASK_CASUAL_CONVERSATION"
+      ],
+      "unordered_pair": [
+        "TASK_DESIGN_BRIEF",
+        "TASK_CASUAL_CONVERSATION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-271",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_DESIGN_BRIEF",
+        "TASK_TRANSLATION_ONLY"
+      ],
+      "unordered_pair": [
+        "TASK_DESIGN_BRIEF",
+        "TASK_TRANSLATION_ONLY"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-272",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_DESIGN_BRIEF",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ],
+      "unordered_pair": [
+        "TASK_DESIGN_BRIEF",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-273",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_DESIGN_BRIEF",
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "unordered_pair": [
+        "TASK_DESIGN_BRIEF",
+        "TASK_SIMPLE_ARITHMETIC"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-274",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_PROTOTYPE",
+        "TASK_COMPONENT_REVIEW"
+      ],
+      "unordered_pair": [
+        "TASK_PROTOTYPE",
+        "TASK_COMPONENT_REVIEW"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-275",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_PROTOTYPE",
+        "TASK_FORM"
+      ],
+      "unordered_pair": [
+        "TASK_PROTOTYPE",
+        "TASK_FORM"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-276",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_PROTOTYPE",
+        "TASK_INTERACTIVE_CONTROL"
+      ],
+      "unordered_pair": [
+        "TASK_PROTOTYPE",
+        "TASK_INTERACTIVE_CONTROL"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-277",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_PROTOTYPE",
+        "TASK_RESPONSIVE"
+      ],
+      "unordered_pair": [
+        "TASK_PROTOTYPE",
+        "TASK_RESPONSIVE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-278",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_PROTOTYPE",
+        "TASK_MOTION"
+      ],
+      "unordered_pair": [
+        "TASK_PROTOTYPE",
+        "TASK_MOTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-279",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_PROTOTYPE",
+        "TASK_VISUAL_DIRECTION"
+      ],
+      "unordered_pair": [
+        "TASK_PROTOTYPE",
+        "TASK_VISUAL_DIRECTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-280",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_PROTOTYPE",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ],
+      "unordered_pair": [
+        "TASK_PROTOTYPE",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-281",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_PROTOTYPE",
+        "PROJECT_SYMPHONIE"
+      ],
+      "unordered_pair": [
+        "TASK_PROTOTYPE",
+        "PROJECT_SYMPHONIE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-282",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_PROTOTYPE",
+        "TASK_CASUAL_CONVERSATION"
+      ],
+      "unordered_pair": [
+        "TASK_PROTOTYPE",
+        "TASK_CASUAL_CONVERSATION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-283",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_PROTOTYPE",
+        "TASK_TRANSLATION_ONLY"
+      ],
+      "unordered_pair": [
+        "TASK_PROTOTYPE",
+        "TASK_TRANSLATION_ONLY"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-284",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_PROTOTYPE",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ],
+      "unordered_pair": [
+        "TASK_PROTOTYPE",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-285",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_PROTOTYPE",
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "unordered_pair": [
+        "TASK_PROTOTYPE",
+        "TASK_SIMPLE_ARITHMETIC"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-286",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_COMPONENT_REVIEW",
+        "TASK_FORM"
+      ],
+      "unordered_pair": [
+        "TASK_COMPONENT_REVIEW",
+        "TASK_FORM"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-287",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_COMPONENT_REVIEW",
+        "TASK_INTERACTIVE_CONTROL"
+      ],
+      "unordered_pair": [
+        "TASK_COMPONENT_REVIEW",
+        "TASK_INTERACTIVE_CONTROL"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-288",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_COMPONENT_REVIEW",
+        "TASK_RESPONSIVE"
+      ],
+      "unordered_pair": [
+        "TASK_COMPONENT_REVIEW",
+        "TASK_RESPONSIVE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-289",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_COMPONENT_REVIEW",
+        "TASK_MOTION"
+      ],
+      "unordered_pair": [
+        "TASK_COMPONENT_REVIEW",
+        "TASK_MOTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-290",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_COMPONENT_REVIEW",
+        "TASK_VISUAL_DIRECTION"
+      ],
+      "unordered_pair": [
+        "TASK_COMPONENT_REVIEW",
+        "TASK_VISUAL_DIRECTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-291",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_COMPONENT_REVIEW",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ],
+      "unordered_pair": [
+        "TASK_COMPONENT_REVIEW",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-292",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_COMPONENT_REVIEW",
+        "PROJECT_SYMPHONIE"
+      ],
+      "unordered_pair": [
+        "TASK_COMPONENT_REVIEW",
+        "PROJECT_SYMPHONIE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-293",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_COMPONENT_REVIEW",
+        "TASK_CASUAL_CONVERSATION"
+      ],
+      "unordered_pair": [
+        "TASK_COMPONENT_REVIEW",
+        "TASK_CASUAL_CONVERSATION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-294",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_COMPONENT_REVIEW",
+        "TASK_TRANSLATION_ONLY"
+      ],
+      "unordered_pair": [
+        "TASK_COMPONENT_REVIEW",
+        "TASK_TRANSLATION_ONLY"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-295",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_COMPONENT_REVIEW",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ],
+      "unordered_pair": [
+        "TASK_COMPONENT_REVIEW",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-296",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_COMPONENT_REVIEW",
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "unordered_pair": [
+        "TASK_COMPONENT_REVIEW",
+        "TASK_SIMPLE_ARITHMETIC"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-297",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_FORM",
+        "TASK_INTERACTIVE_CONTROL"
+      ],
+      "unordered_pair": [
+        "TASK_FORM",
+        "TASK_INTERACTIVE_CONTROL"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-298",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_FORM",
+        "TASK_RESPONSIVE"
+      ],
+      "unordered_pair": [
+        "TASK_FORM",
+        "TASK_RESPONSIVE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-299",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_FORM",
+        "TASK_MOTION"
+      ],
+      "unordered_pair": [
+        "TASK_FORM",
+        "TASK_MOTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-300",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_FORM",
+        "TASK_VISUAL_DIRECTION"
+      ],
+      "unordered_pair": [
+        "TASK_FORM",
+        "TASK_VISUAL_DIRECTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-301",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_FORM",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ],
+      "unordered_pair": [
+        "TASK_FORM",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-302",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_FORM",
+        "PROJECT_SYMPHONIE"
+      ],
+      "unordered_pair": [
+        "TASK_FORM",
+        "PROJECT_SYMPHONIE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-303",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_FORM",
+        "TASK_CASUAL_CONVERSATION"
+      ],
+      "unordered_pair": [
+        "TASK_FORM",
+        "TASK_CASUAL_CONVERSATION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-304",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_FORM",
+        "TASK_TRANSLATION_ONLY"
+      ],
+      "unordered_pair": [
+        "TASK_FORM",
+        "TASK_TRANSLATION_ONLY"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-305",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_FORM",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ],
+      "unordered_pair": [
+        "TASK_FORM",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-306",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_FORM",
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "unordered_pair": [
+        "TASK_FORM",
+        "TASK_SIMPLE_ARITHMETIC"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-307",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_INTERACTIVE_CONTROL",
+        "TASK_RESPONSIVE"
+      ],
+      "unordered_pair": [
+        "TASK_INTERACTIVE_CONTROL",
+        "TASK_RESPONSIVE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-308",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_INTERACTIVE_CONTROL",
+        "TASK_MOTION"
+      ],
+      "unordered_pair": [
+        "TASK_INTERACTIVE_CONTROL",
+        "TASK_MOTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-309",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_INTERACTIVE_CONTROL",
+        "TASK_VISUAL_DIRECTION"
+      ],
+      "unordered_pair": [
+        "TASK_INTERACTIVE_CONTROL",
+        "TASK_VISUAL_DIRECTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-310",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_INTERACTIVE_CONTROL",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ],
+      "unordered_pair": [
+        "TASK_INTERACTIVE_CONTROL",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-311",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_INTERACTIVE_CONTROL",
+        "PROJECT_SYMPHONIE"
+      ],
+      "unordered_pair": [
+        "TASK_INTERACTIVE_CONTROL",
+        "PROJECT_SYMPHONIE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-312",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_INTERACTIVE_CONTROL",
+        "TASK_CASUAL_CONVERSATION"
+      ],
+      "unordered_pair": [
+        "TASK_INTERACTIVE_CONTROL",
+        "TASK_CASUAL_CONVERSATION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-313",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_INTERACTIVE_CONTROL",
+        "TASK_TRANSLATION_ONLY"
+      ],
+      "unordered_pair": [
+        "TASK_INTERACTIVE_CONTROL",
+        "TASK_TRANSLATION_ONLY"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-314",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_INTERACTIVE_CONTROL",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ],
+      "unordered_pair": [
+        "TASK_INTERACTIVE_CONTROL",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-315",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_INTERACTIVE_CONTROL",
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "unordered_pair": [
+        "TASK_INTERACTIVE_CONTROL",
+        "TASK_SIMPLE_ARITHMETIC"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-316",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_RESPONSIVE",
+        "TASK_MOTION"
+      ],
+      "unordered_pair": [
+        "TASK_RESPONSIVE",
+        "TASK_MOTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-317",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_RESPONSIVE",
+        "TASK_VISUAL_DIRECTION"
+      ],
+      "unordered_pair": [
+        "TASK_RESPONSIVE",
+        "TASK_VISUAL_DIRECTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-318",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_RESPONSIVE",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ],
+      "unordered_pair": [
+        "TASK_RESPONSIVE",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-319",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_RESPONSIVE",
+        "PROJECT_SYMPHONIE"
+      ],
+      "unordered_pair": [
+        "TASK_RESPONSIVE",
+        "PROJECT_SYMPHONIE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-320",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_RESPONSIVE",
+        "TASK_CASUAL_CONVERSATION"
+      ],
+      "unordered_pair": [
+        "TASK_RESPONSIVE",
+        "TASK_CASUAL_CONVERSATION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-321",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_RESPONSIVE",
+        "TASK_TRANSLATION_ONLY"
+      ],
+      "unordered_pair": [
+        "TASK_RESPONSIVE",
+        "TASK_TRANSLATION_ONLY"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-322",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_RESPONSIVE",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ],
+      "unordered_pair": [
+        "TASK_RESPONSIVE",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-323",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_RESPONSIVE",
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "unordered_pair": [
+        "TASK_RESPONSIVE",
+        "TASK_SIMPLE_ARITHMETIC"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-324",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_MOTION",
+        "TASK_VISUAL_DIRECTION"
+      ],
+      "unordered_pair": [
+        "TASK_MOTION",
+        "TASK_VISUAL_DIRECTION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-325",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_MOTION",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ],
+      "unordered_pair": [
+        "TASK_MOTION",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-326",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_MOTION",
+        "PROJECT_SYMPHONIE"
+      ],
+      "unordered_pair": [
+        "TASK_MOTION",
+        "PROJECT_SYMPHONIE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-327",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_MOTION",
+        "TASK_CASUAL_CONVERSATION"
+      ],
+      "unordered_pair": [
+        "TASK_MOTION",
+        "TASK_CASUAL_CONVERSATION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-328",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_MOTION",
+        "TASK_TRANSLATION_ONLY"
+      ],
+      "unordered_pair": [
+        "TASK_MOTION",
+        "TASK_TRANSLATION_ONLY"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-329",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_MOTION",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ],
+      "unordered_pair": [
+        "TASK_MOTION",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-330",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_MOTION",
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "unordered_pair": [
+        "TASK_MOTION",
+        "TASK_SIMPLE_ARITHMETIC"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-331",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_VISUAL_DIRECTION",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ],
+      "unordered_pair": [
+        "TASK_VISUAL_DIRECTION",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-332",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_VISUAL_DIRECTION",
+        "PROJECT_SYMPHONIE"
+      ],
+      "unordered_pair": [
+        "TASK_VISUAL_DIRECTION",
+        "PROJECT_SYMPHONIE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-333",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_VISUAL_DIRECTION",
+        "TASK_CASUAL_CONVERSATION"
+      ],
+      "unordered_pair": [
+        "TASK_VISUAL_DIRECTION",
+        "TASK_CASUAL_CONVERSATION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-334",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_VISUAL_DIRECTION",
+        "TASK_TRANSLATION_ONLY"
+      ],
+      "unordered_pair": [
+        "TASK_VISUAL_DIRECTION",
+        "TASK_TRANSLATION_ONLY"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-335",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_VISUAL_DIRECTION",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ],
+      "unordered_pair": [
+        "TASK_VISUAL_DIRECTION",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-336",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_VISUAL_DIRECTION",
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "unordered_pair": [
+        "TASK_VISUAL_DIRECTION",
+        "TASK_SIMPLE_ARITHMETIC"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-337",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ",
+        "PROJECT_SYMPHONIE"
+      ],
+      "unordered_pair": [
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ",
+        "PROJECT_SYMPHONIE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-338",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ",
+        "TASK_CASUAL_CONVERSATION"
+      ],
+      "unordered_pair": [
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ",
+        "TASK_CASUAL_CONVERSATION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-339",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ",
+        "TASK_TRANSLATION_ONLY"
+      ],
+      "unordered_pair": [
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ",
+        "TASK_TRANSLATION_ONLY"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-340",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ],
+      "unordered_pair": [
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-341",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ",
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "unordered_pair": [
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ",
+        "TASK_SIMPLE_ARITHMETIC"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-342",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "PROJECT_SYMPHONIE",
+        "TASK_CASUAL_CONVERSATION"
+      ],
+      "unordered_pair": [
+        "PROJECT_SYMPHONIE",
+        "TASK_CASUAL_CONVERSATION"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-343",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "PROJECT_SYMPHONIE",
+        "TASK_TRANSLATION_ONLY"
+      ],
+      "unordered_pair": [
+        "PROJECT_SYMPHONIE",
+        "TASK_TRANSLATION_ONLY"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-344",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "PROJECT_SYMPHONIE",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ],
+      "unordered_pair": [
+        "PROJECT_SYMPHONIE",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-345",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "PROJECT_SYMPHONIE",
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "unordered_pair": [
+        "PROJECT_SYMPHONIE",
+        "TASK_SIMPLE_ARITHMETIC"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-346",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_CASUAL_CONVERSATION",
+        "TASK_TRANSLATION_ONLY"
+      ],
+      "unordered_pair": [
+        "TASK_CASUAL_CONVERSATION",
+        "TASK_TRANSLATION_ONLY"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-347",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_CASUAL_CONVERSATION",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ],
+      "unordered_pair": [
+        "TASK_CASUAL_CONVERSATION",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-348",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_CASUAL_CONVERSATION",
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "unordered_pair": [
+        "TASK_CASUAL_CONVERSATION",
+        "TASK_SIMPLE_ARITHMETIC"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-349",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_TRANSLATION_ONLY",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ],
+      "unordered_pair": [
+        "TASK_TRANSLATION_ONLY",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-350",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_TRANSLATION_ONLY",
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "unordered_pair": [
+        "TASK_TRANSLATION_ONLY",
+        "TASK_SIMPLE_ARITHMETIC"
+      ]
+    },
+    {
+      "case_id": "M3-PAIR-351",
+      "category": "UNORDERED_SIGNAL_PAIR",
+      "input_signals": [
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE",
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "unordered_pair": [
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE",
+        "TASK_SIMPLE_ARITHMETIC"
+      ]
+    },
+    {
+      "case_id": "M3-CONJ-EXCL-001",
+      "category": "CONJUNCTIVE_CLAUSE_WITH_EXCLUSION",
+      "input_signals": [
+        "TASK_VISUAL_DIRECTION",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ",
+        "TASK_CASUAL_CONVERSATION"
+      ],
+      "activation_operator": "ALL",
+      "activation_clause": [
+        "TASK_VISUAL_DIRECTION",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ],
+      "exclusion_signal": "TASK_CASUAL_CONVERSATION",
+      "expected_modules": [],
+      "forbidden_modules": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY",
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ]
+    },
+    {
+      "case_id": "M3-CONJ-EXCL-002",
+      "category": "CONJUNCTIVE_CLAUSE_WITH_EXCLUSION",
+      "input_signals": [
+        "TASK_VISUAL_DIRECTION",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ",
+        "TASK_TRANSLATION_ONLY"
+      ],
+      "activation_operator": "ALL",
+      "activation_clause": [
+        "TASK_VISUAL_DIRECTION",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ],
+      "exclusion_signal": "TASK_TRANSLATION_ONLY",
+      "expected_modules": [],
+      "forbidden_modules": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY",
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ]
+    },
+    {
+      "case_id": "M3-CONJ-EXCL-003",
+      "category": "CONJUNCTIVE_CLAUSE_WITH_EXCLUSION",
+      "input_signals": [
+        "TASK_VISUAL_DIRECTION",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ],
+      "activation_operator": "ALL",
+      "activation_clause": [
+        "TASK_VISUAL_DIRECTION",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ],
+      "exclusion_signal": "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE",
+      "expected_modules": [],
+      "forbidden_modules": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY",
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ]
+    },
+    {
+      "case_id": "M3-CONJ-EXCL-004",
+      "category": "CONJUNCTIVE_CLAUSE_WITH_EXCLUSION",
+      "input_signals": [
+        "TASK_VISUAL_DIRECTION",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ",
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "activation_operator": "ALL",
+      "activation_clause": [
+        "TASK_VISUAL_DIRECTION",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ],
+      "exclusion_signal": "TASK_SIMPLE_ARITHMETIC",
+      "expected_modules": [],
+      "forbidden_modules": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY",
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ]
+    },
+    {
+      "case_id": "M3-CONJ-EXCL-005",
+      "category": "CONJUNCTIVE_CLAUSE_WITH_EXCLUSION",
+      "input_signals": [
+        "TASK_VISUAL_DIRECTION",
+        "PROJECT_SYMPHONIE",
+        "TASK_CASUAL_CONVERSATION"
+      ],
+      "activation_operator": "ALTERNATIVE_ALL",
+      "activation_clause": [
+        "TASK_VISUAL_DIRECTION",
+        "PROJECT_SYMPHONIE"
+      ],
+      "exclusion_signal": "TASK_CASUAL_CONVERSATION",
+      "expected_modules": [],
+      "forbidden_modules": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY",
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ]
+    },
+    {
+      "case_id": "M3-CONJ-EXCL-006",
+      "category": "CONJUNCTIVE_CLAUSE_WITH_EXCLUSION",
+      "input_signals": [
+        "TASK_VISUAL_DIRECTION",
+        "PROJECT_SYMPHONIE",
+        "TASK_TRANSLATION_ONLY"
+      ],
+      "activation_operator": "ALTERNATIVE_ALL",
+      "activation_clause": [
+        "TASK_VISUAL_DIRECTION",
+        "PROJECT_SYMPHONIE"
+      ],
+      "exclusion_signal": "TASK_TRANSLATION_ONLY",
+      "expected_modules": [],
+      "forbidden_modules": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY",
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ]
+    },
+    {
+      "case_id": "M3-CONJ-EXCL-007",
+      "category": "CONJUNCTIVE_CLAUSE_WITH_EXCLUSION",
+      "input_signals": [
+        "TASK_VISUAL_DIRECTION",
+        "PROJECT_SYMPHONIE",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ],
+      "activation_operator": "ALTERNATIVE_ALL",
+      "activation_clause": [
+        "TASK_VISUAL_DIRECTION",
+        "PROJECT_SYMPHONIE"
+      ],
+      "exclusion_signal": "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE",
+      "expected_modules": [],
+      "forbidden_modules": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY",
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ]
+    },
+    {
+      "case_id": "M3-CONJ-EXCL-008",
+      "category": "CONJUNCTIVE_CLAUSE_WITH_EXCLUSION",
+      "input_signals": [
+        "TASK_VISUAL_DIRECTION",
+        "PROJECT_SYMPHONIE",
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "activation_operator": "ALTERNATIVE_ALL",
+      "activation_clause": [
+        "TASK_VISUAL_DIRECTION",
+        "PROJECT_SYMPHONIE"
+      ],
+      "exclusion_signal": "TASK_SIMPLE_ARITHMETIC",
+      "expected_modules": [],
+      "forbidden_modules": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY",
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ]
+    },
+    {
+      "case_id": "M3-ALL-MODULES-001",
+      "category": "ALL_FOUR_MODULES_POSITIVE",
+      "input_signals": [
+        "TASK_AUDIT",
+        "TASK_UI",
+        "TASK_VISUAL_DIRECTION",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ"
+      ],
+      "expected_modules": [
+        "EVIDENCE_AND_CLAIMS",
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY",
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ]
+    },
+    {
+      "case_id": "M3-ALL-MODULES-EXCL-001",
+      "category": "ALL_FOUR_MODULES_WITH_EXCLUSION",
+      "input_signals": [
+        "TASK_AUDIT",
+        "TASK_UI",
+        "TASK_VISUAL_DIRECTION",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ",
+        "TASK_CASUAL_CONVERSATION"
+      ],
+      "exclusion_signal": "TASK_CASUAL_CONVERSATION",
+      "expected_modules": [
+        "EVIDENCE_AND_CLAIMS"
+      ],
+      "forbidden_modules": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY",
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ]
+    },
+    {
+      "case_id": "M3-ALL-MODULES-EXCL-002",
+      "category": "ALL_FOUR_MODULES_WITH_EXCLUSION",
+      "input_signals": [
+        "TASK_AUDIT",
+        "TASK_UI",
+        "TASK_VISUAL_DIRECTION",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ",
+        "TASK_TRANSLATION_ONLY"
+      ],
+      "exclusion_signal": "TASK_TRANSLATION_ONLY",
+      "expected_modules": [
+        "EVIDENCE_AND_CLAIMS"
+      ],
+      "forbidden_modules": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY",
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ]
+    },
+    {
+      "case_id": "M3-ALL-MODULES-EXCL-003",
+      "category": "ALL_FOUR_MODULES_WITH_EXCLUSION",
+      "input_signals": [
+        "TASK_AUDIT",
+        "TASK_UI",
+        "TASK_VISUAL_DIRECTION",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ",
+        "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE"
+      ],
+      "exclusion_signal": "TASK_CREATIVE_WRITING_WITHOUT_INTERFACE",
+      "expected_modules": [
+        "EVIDENCE_AND_CLAIMS"
+      ],
+      "forbidden_modules": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY",
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ]
+    },
+    {
+      "case_id": "M3-ALL-MODULES-EXCL-004",
+      "category": "ALL_FOUR_MODULES_WITH_EXCLUSION",
+      "input_signals": [
+        "TASK_AUDIT",
+        "TASK_UI",
+        "TASK_VISUAL_DIRECTION",
+        "HUMAN_PREFERENCE_OWNER_JONATHAN_MARTINEZ",
+        "TASK_SIMPLE_ARITHMETIC"
+      ],
+      "exclusion_signal": "TASK_SIMPLE_ARITHMETIC",
+      "expected_modules": [
+        "EVIDENCE_AND_CLAIMS"
+      ],
+      "forbidden_modules": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY",
+        "CONTEXTUAL_VISUAL_PREFERENCE"
+      ]
+    },
+    {
+      "case_id": "M3-UNKNOWN-001",
+      "category": "UNKNOWN_SIGNAL_SENTINEL",
+      "input_signals": [
+        "M3_UNKNOWN_SIGNAL_SENTINEL"
+      ],
+      "expected_modules": []
+    },
+    {
+      "case_id": "M3-DUPLICATE-001",
+      "category": "DUPLICATE_SIGNAL_NORMALIZATION",
+      "input_signals": [
+        "TASK_UI",
+        "TASK_UI"
+      ],
+      "paired_case_id": "M3-SINGLE-009",
+      "expected_modules": [
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY"
+      ]
+    }
+  ],
+  "corpus_digest": "554aa9058002de5c0287918774fb7036493b70c58c508414b793c315ce211093",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE"
+}

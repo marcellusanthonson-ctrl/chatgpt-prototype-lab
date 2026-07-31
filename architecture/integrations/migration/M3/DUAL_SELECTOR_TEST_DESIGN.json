@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "design_id": "INTEGRATION_FACTORY_M3_DUAL_SELECTOR_TEST_DESIGN_001",
+  "authorization_id": "AUTHORIZATION_LAB_INTEGRATION_FACTORY_M3_DUAL_SELECTOR_EVALUATION_AND_EQUIVALENCE_VALIDATION_157",
+  "execution_parent_head": "ce5c86ee59013f335cc541d0066f9513c0de0872",
+  "objective": "Prove or disprove exact behavioral equivalence without activating either representation.",
+  "frozen_inputs": {
+    "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json": {
+      "expected_git_blob_sha": "301ba432907758fc49a9b3c86a83fc762eac4607",
+      "observed_git_blob_sha": "301ba432907758fc49a9b3c86a83fc762eac4607",
+      "sha256": "b23bf32a0d95859784a8d096adfbfd324ad0f3f494ac473d99b1624468adc8c5"
+    },
+    "architecture/integrations/migration/M2/SHADOW_INTEGRATION_REGISTRY.json": {
+      "expected_git_blob_sha": "a067cd9f95b98aa1599d21e3a0ff35fa56ac3a78",
+      "observed_git_blob_sha": "a067cd9f95b98aa1599d21e3a0ff35fa56ac3a78",
+      "sha256": "3afb47bbf1c36feb8e8ba01d9f6b697a8cb0ac18f0f3d960a8b26eee41ccf0bc"
+    },
+    "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/ACCEPTANCE_FIXTURES.json": {
+      "expected_git_blob_sha": "de4793dedc9646e388bdce5ccd1807da8a711845",
+      "observed_git_blob_sha": "de4793dedc9646e388bdce5ccd1807da8a711845",
+      "sha256": "0ed6fc4be794011b5a0ecf70114d20752ecfb6ad816f4a0a8ac20df5694058c8"
+    }
+  },
+  "m2_digest": "e1a881640a544e483a1e47d52d72782b966ffc1e32cf6ff6c3afa03d54df6359",
+  "m1a_digest": "048c2e7995986ca061ce66ce65a1a33f532a8ab17819ea057a0ff979a12ee55d",
+  "corpus": {
+    "case_count": 420,
+    "category_counts": {
+      "FROZEN_BASELINE_FIXTURE": 13,
+      "REVERSED_BASELINE_VARIANT": 13,
+      "EMPTY_SIGNAL_SET": 1,
+      "SIGNAL_SINGLETON": 27,
+      "UNORDERED_SIGNAL_PAIR": 351,
+      "CONJUNCTIVE_CLAUSE_WITH_EXCLUSION": 8,
+      "ALL_FOUR_MODULES_POSITIVE": 1,
+      "ALL_FOUR_MODULES_WITH_EXCLUSION": 4,
+      "UNKNOWN_SIGNAL_SENTINEL": 1,
+      "DUPLICATE_SIGNAL_NORMALIZATION": 1
+    },
+    "corpus_digest": "554aa9058002de5c0287918774fb7036493b70c58c508414b793c315ce211093"
+  },
+  "independent_evaluators": {
+    "static": {
+      "script": "scripts/integration_factory_m3_static_evaluator.py",
+      "resolution_source": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json",
+      "forbidden_resolution_sources": [
+        "architecture/integrations/migration/M2/SHADOW_INTEGRATION_REGISTRY.json",
+        "M2_ADAPTERS"
+      ]
+    },
+    "shadow": {
+      "script": "scripts/integration_factory_m3_shadow_evaluator.py",
+      "resolution_sources": [
+        "architecture/integrations/migration/M2/SHADOW_INTEGRATION_REGISTRY.json",
+        "FOUR_M2_ADAPTERS"
+      ],
+      "forbidden_resolution_sources": [
+        "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json"
+      ]
+    },
+    "shared_resolution_function": false,
+    "shared_code": "NONE",
+    "shared_normalized_schema_reporting_and_hashing_only": true
+  },
+  "runs": 2,
+  "pass_rule": "ALL_GATES_TRUE_AND_ZERO_BEHAVIORAL_DIVERGENCES",
+  "pass_classification": "M3_PASS_EXACT_DUAL_EQUIVALENCE",
+  "blocked_classification": "M3_BLOCKED_WITH_CLASSIFIED_DIVERGENCES",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}

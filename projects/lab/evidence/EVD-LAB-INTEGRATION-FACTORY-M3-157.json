@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-INTEGRATION-FACTORY-M3-157",
+  "project_id": "lab",
+  "status": "VALIDATED_M3_BLOCKED_WITH_CLASSIFIED_DIVERGENCES",
+  "recorded_at": "2026-07-31T08:14:28-04:00",
+  "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M3_DUAL_SELECTOR_EVALUATION_AND_EQUIVALENCE_VALIDATION_157.json",
+  "brief_ref": "projects/lab/briefs/CODEX_INTEGRATION_FACTORY_M3_DUAL_SELECTOR_EVALUATION_001.json",
+  "execution_parent_head": "ce5c86ee59013f335cc541d0066f9513c0de0872",
+  "technical_executor": "CODEX",
+  "observations": {
+    "m3_classification": "M3_BLOCKED_WITH_CLASSIFIED_DIVERGENCES",
+    "synthetic_case_count": 420,
+    "static_shadow_exact_matches": 420,
+    "static_baseline_oracle_passes": 12,
+    "shadow_baseline_oracle_passes": 12,
+    "behavioral_divergence_count": 2,
+    "divergence_case_ids": ["M3-BASELINE-008", "M3-REVERSED-008"],
+    "divergence_category": "BASELINE_ORACLE_REGRESSION",
+    "static_shadow_negative_transfer": "NONE_DETECTED",
+    "second_run_digest_match": true
+  },
+  "reproducibility": {
+    "corpus_digest": "554aa9058002de5c0287918774fb7036493b70c58c508414b793c315ce211093",
+    "static_run_digest_1": "9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329",
+    "static_run_digest_2": "9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329",
+    "shadow_run_digest_1": "9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329",
+    "shadow_run_digest_2": "9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329"
+  },
+  "frozen_baseline": {
+    "selector_blob": "301ba432907758fc49a9b3c86a83fc762eac4607",
+    "shadow_registry_blob": "a067cd9f95b98aa1599d21e3a0ff35fa56ac3a78",
+    "fixture_blob": "de4793dedc9646e388bdce5ccd1807da8a711845",
+    "m2_digest": "e1a881640a544e483a1e47d52d72782b966ffc1e32cf6ff6c3afa03d54df6359",
+    "m1a_digest": "048c2e7995986ca061ce66ce65a1a33f532a8ab17819ea057a0ff979a12ee55d",
+    "unchanged": true
+  },
+  "divergence_explanation": "TASK_WEB_INTERFACE activates DESIGN_CRITERION in the frozen static selector and the frozen shadow adapter, while CRIT-FIX-008 omits that module from its frozen expected_modules oracle.",
+  "source_refs": [
+    "architecture/integrations/migration/M3/VALIDATION_RESULTS.json",
+    "architecture/integrations/migration/M3/EQUIVALENCE_RESULTS.json",
+    "architecture/integrations/migration/M3/DIVERGENCE_LOG.json",
+    "architecture/integrations/migration/M3/STATIC_SELECTOR_RESULTS.json",
+    "architecture/integrations/migration/M3/SHADOW_SELECTOR_RESULTS.json"
+  ],
+  "claims_not_created": ["M3_PASS", "M3_REMEDIATION_AUTHORIZED", "M4_AUTHORIZED", "CUTOVER_AUTHORIZED", "ACTIVE_REGISTRY_CREATED", "SELECTOR_CHANGED", "RUNTIME_OR_INTEGRATION_EFFECT"],
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_157_CONSUMPTION",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}

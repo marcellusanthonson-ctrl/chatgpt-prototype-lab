@@ -1,0 +1,3 @@
+Continúa ChatGPT Prototype LAB reconstruyendo primero el estado desde `marcellusanthonson-ctrl/chatgpt-prototype-lab`, rama `main`, entrypoint `project-sources/chatgpt/START_HERE.md`; verifica el HEAD remoto vigente y sigue exactamente su orden de lectura. Después lee el paquete CURRENT: la autorización 157 está `GRANTED`, M3 está `AUTHORIZED_NOT_STARTED` y Codex es el ejecutor técnico confirmado.
+
+La siguiente acción es ejecutar en Codex la etapa 2 usando `projects/lab/briefs/CODEX_INTEGRATION_FACTORY_M3_DUAL_SELECTOR_EVALUATION_001.json`. No ejecutes M4, cutover, activación del shadow registry, cambios del selector, runtime, integraciones, AWS ni Terraform.

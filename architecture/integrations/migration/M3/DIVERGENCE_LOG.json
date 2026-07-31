@@ -1,0 +1,269 @@
+{
+  "schema_version": "1.0.0",
+  "log_id": "INTEGRATION_FACTORY_M3_DIVERGENCE_LOG_001",
+  "classification": "CLASSIFIED_DIVERGENCES",
+  "behavioral_divergence_count": 2,
+  "divergences": [
+    {
+      "divergence_id": "M3-DIV-001",
+      "case_id": "M3-BASELINE-008",
+      "category": "BASELINE_ORACLE_REGRESSION",
+      "severity": "M3_BLOCKING",
+      "static_result": {
+        "case_id": "M3-BASELINE-008",
+        "input_signals": [
+          "CLAIM_ACCESSIBILITY",
+          "TASK_WEB_INTERFACE"
+        ],
+        "selected_modules_in_order": [
+          "EVIDENCE_AND_CLAIMS",
+          "DESIGN_CRITERION",
+          "WEB_ACCESSIBILITY"
+        ],
+        "excluded_modules": [],
+        "matched_activation_semantics": [
+          {
+            "module_id": "EVIDENCE_AND_CLAIMS",
+            "matches": [
+              {
+                "operator": "ANY",
+                "matched_signals": [
+                  "CLAIM_ACCESSIBILITY"
+                ]
+              }
+            ]
+          },
+          {
+            "module_id": "DESIGN_CRITERION",
+            "matches": [
+              {
+                "operator": "ANY",
+                "matched_signals": [
+                  "TASK_WEB_INTERFACE"
+                ]
+              }
+            ]
+          },
+          {
+            "module_id": "WEB_ACCESSIBILITY",
+            "matches": [
+              {
+                "operator": "ANY",
+                "matched_signals": [
+                  "TASK_WEB_INTERFACE",
+                  "CLAIM_ACCESSIBILITY"
+                ]
+              }
+            ]
+          }
+        ],
+        "empty_set_abstention": false,
+        "unknown_signals": [],
+        "result_digest": "36acf5e2b5d1cc9658565e9e0da07f7ed69a551545c06b7f84b6d7e40d8370e2"
+      },
+      "shadow_result": {
+        "case_id": "M3-BASELINE-008",
+        "input_signals": [
+          "CLAIM_ACCESSIBILITY",
+          "TASK_WEB_INTERFACE"
+        ],
+        "selected_modules_in_order": [
+          "EVIDENCE_AND_CLAIMS",
+          "DESIGN_CRITERION",
+          "WEB_ACCESSIBILITY"
+        ],
+        "excluded_modules": [],
+        "matched_activation_semantics": [
+          {
+            "module_id": "EVIDENCE_AND_CLAIMS",
+            "matches": [
+              {
+                "operator": "ANY",
+                "matched_signals": [
+                  "CLAIM_ACCESSIBILITY"
+                ]
+              }
+            ]
+          },
+          {
+            "module_id": "DESIGN_CRITERION",
+            "matches": [
+              {
+                "operator": "ANY",
+                "matched_signals": [
+                  "TASK_WEB_INTERFACE"
+                ]
+              }
+            ]
+          },
+          {
+            "module_id": "WEB_ACCESSIBILITY",
+            "matches": [
+              {
+                "operator": "ANY",
+                "matched_signals": [
+                  "TASK_WEB_INTERFACE",
+                  "CLAIM_ACCESSIBILITY"
+                ]
+              }
+            ]
+          }
+        ],
+        "empty_set_abstention": false,
+        "unknown_signals": [],
+        "result_digest": "36acf5e2b5d1cc9658565e9e0da07f7ed69a551545c06b7f84b6d7e40d8370e2"
+      },
+      "canonical_expectation": {
+        "expected_modules": [
+          "EVIDENCE_AND_CLAIMS",
+          "WEB_ACCESSIBILITY"
+        ],
+        "forbidden_modules": [],
+        "source_fixture_id": "CRIT-FIX-008",
+        "oracle": "Without full evidence the result must include AT_NOT_RUN and WCAG_CONFORMANCE_NOT_ESTABLISHED."
+      },
+      "technical_explanation": "TASK_WEB_INTERFACE activates DESIGN_CRITERION in both frozen representations, while the frozen CRIT-FIX-008 oracle omits that module.",
+      "negative_transfer": false,
+      "m4_blocking_effect": "M3_REMEDIATION_M4_AND_CUTOVER_BLOCKED",
+      "source_refs": [
+        "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/ACCEPTANCE_FIXTURES.json",
+        "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json",
+        "architecture/integrations/migration/M2/SHADOW_INTEGRATION_REGISTRY.json",
+        "architecture/integrations/migration/M3/TEST_CORPUS.json"
+      ]
+    },
+    {
+      "divergence_id": "M3-DIV-002",
+      "case_id": "M3-REVERSED-008",
+      "category": "BASELINE_ORACLE_REGRESSION",
+      "severity": "M3_BLOCKING",
+      "static_result": {
+        "case_id": "M3-REVERSED-008",
+        "input_signals": [
+          "TASK_WEB_INTERFACE",
+          "CLAIM_ACCESSIBILITY"
+        ],
+        "selected_modules_in_order": [
+          "EVIDENCE_AND_CLAIMS",
+          "DESIGN_CRITERION",
+          "WEB_ACCESSIBILITY"
+        ],
+        "excluded_modules": [],
+        "matched_activation_semantics": [
+          {
+            "module_id": "EVIDENCE_AND_CLAIMS",
+            "matches": [
+              {
+                "operator": "ANY",
+                "matched_signals": [
+                  "CLAIM_ACCESSIBILITY"
+                ]
+              }
+            ]
+          },
+          {
+            "module_id": "DESIGN_CRITERION",
+            "matches": [
+              {
+                "operator": "ANY",
+                "matched_signals": [
+                  "TASK_WEB_INTERFACE"
+                ]
+              }
+            ]
+          },
+          {
+            "module_id": "WEB_ACCESSIBILITY",
+            "matches": [
+              {
+                "operator": "ANY",
+                "matched_signals": [
+                  "TASK_WEB_INTERFACE",
+                  "CLAIM_ACCESSIBILITY"
+                ]
+              }
+            ]
+          }
+        ],
+        "empty_set_abstention": false,
+        "unknown_signals": [],
+        "result_digest": "c09007ab0f52e8c134046961423862c463a3b0f866e57ae0b4a0966436333ba6"
+      },
+      "shadow_result": {
+        "case_id": "M3-REVERSED-008",
+        "input_signals": [
+          "TASK_WEB_INTERFACE",
+          "CLAIM_ACCESSIBILITY"
+        ],
+        "selected_modules_in_order": [
+          "EVIDENCE_AND_CLAIMS",
+          "DESIGN_CRITERION",
+          "WEB_ACCESSIBILITY"
+        ],
+        "excluded_modules": [],
+        "matched_activation_semantics": [
+          {
+            "module_id": "EVIDENCE_AND_CLAIMS",
+            "matches": [
+              {
+                "operator": "ANY",
+                "matched_signals": [
+                  "CLAIM_ACCESSIBILITY"
+                ]
+              }
+            ]
+          },
+          {
+            "module_id": "DESIGN_CRITERION",
+            "matches": [
+              {
+                "operator": "ANY",
+                "matched_signals": [
+                  "TASK_WEB_INTERFACE"
+                ]
+              }
+            ]
+          },
+          {
+            "module_id": "WEB_ACCESSIBILITY",
+            "matches": [
+              {
+                "operator": "ANY",
+                "matched_signals": [
+                  "TASK_WEB_INTERFACE",
+                  "CLAIM_ACCESSIBILITY"
+                ]
+              }
+            ]
+          }
+        ],
+        "empty_set_abstention": false,
+        "unknown_signals": [],
+        "result_digest": "c09007ab0f52e8c134046961423862c463a3b0f866e57ae0b4a0966436333ba6"
+      },
+      "canonical_expectation": {
+        "expected_modules": [
+          "EVIDENCE_AND_CLAIMS",
+          "WEB_ACCESSIBILITY"
+        ],
+        "forbidden_modules": [],
+        "source_fixture_id": "CRIT-FIX-008",
+        "oracle": "Without full evidence the result must include AT_NOT_RUN and WCAG_CONFORMANCE_NOT_ESTABLISHED."
+      },
+      "technical_explanation": "TASK_WEB_INTERFACE activates DESIGN_CRITERION in both frozen representations, while the frozen CRIT-FIX-008 oracle omits that module.",
+      "negative_transfer": false,
+      "m4_blocking_effect": "M3_REMEDIATION_M4_AND_CUTOVER_BLOCKED",
+      "source_refs": [
+        "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/ACCEPTANCE_FIXTURES.json",
+        "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json",
+        "architecture/integrations/migration/M2/SHADOW_INTEGRATION_REGISTRY.json",
+        "architecture/integrations/migration/M3/TEST_CORPUS.json"
+      ]
+    }
+  ],
+  "silent_normalization": false,
+  "frozen_inputs_modified_to_force_pass": false,
+  "m4_blocked": true,
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE"
+}

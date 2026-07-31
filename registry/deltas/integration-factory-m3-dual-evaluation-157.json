@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "integration-factory-m3-dual-evaluation-157",
+  "project_id": "lab",
+  "recorded_at": "2026-07-31T08:14:28-04:00",
+  "authorization_id": "AUTHORIZATION_LAB_INTEGRATION_FACTORY_M3_DUAL_SELECTOR_EVALUATION_AND_EQUIVALENCE_VALIDATION_157",
+  "evidence_id": "EVD-LAB-INTEGRATION-FACTORY-M3-157",
+  "status": "M3_BLOCKED_WITH_CLASSIFIED_DIVERGENCES",
+  "state_changes": {
+    "integration_factory_migration_phase": "M3_BLOCKED_AWAITING_DIVERGENCE_REMEDIATION_DECISION",
+    "authorization_157": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "corpus_case_count": 420,
+    "static_shadow_exact_matches": 420,
+    "baseline_oracle_passes_per_evaluator": 12,
+    "classified_divergences": 2,
+    "static_shadow_negative_transfer": false,
+    "active_selector_modified": false,
+    "shadow_registry_modified": false,
+    "runtime_effect": "NONE",
+    "integration_effect": "NONE",
+    "m4_authorized": false,
+    "cutover_authorized": false
+  },
+  "source_refs": ["architecture/integrations/migration/M3/VALIDATION_RESULTS.json", "architecture/integrations/migration/M3/DIVERGENCE_LOG.json", "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M3-157.json", "projects/lab/pending/PEND-LAB-035.json"],
+  "single_next_action": "JONATHAN_MARTINEZ_DECIDES_TREATMENT_OF_CLASSIFIED_M3_DIVERGENCES",
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_157_CONSUMPTION",
+  "runtime_effect": "NONE"
+}

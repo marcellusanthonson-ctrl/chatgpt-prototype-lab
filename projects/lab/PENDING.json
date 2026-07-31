@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1.0",
   "project_id": "lab",
-  "updated_at": "2026-07-25",
+  "updated_at": "2026-07-31",
   "records": [
     {
       "id": "PEND-LAB-001",
@@ -216,7 +216,10 @@
       "artifact_sha256": "13cab2709775e9c2923b85c2557988c57ce57987dac0fcb1aedc0e347660b405",
       "geometry_configuration_count": 206,
       "capture_count": 16,
-      "device_scale_factors": [1, 2],
+      "device_scale_factors": [
+        1,
+        2
+      ],
       "authorization_id": "AUTHORIZATION_LAB_FUNCTIONAL_ICONOGRAPHY_RECONCILIATION_056",
       "repository_validation_unblock_authorization_id": "AUTHORIZATION_LAB_TRAILING_WHITESPACE_UNBLOCK_057",
       "previous_candidate": {
@@ -568,7 +571,7 @@
       "id": "PEND-LAB-025",
       "status": "AWAITING_REAL_HUMAN_VISUAL_CALIBRATION_DECISION",
       "type": "LIVHAVN_VISUAL_CALIBRATION_HUMAN_GATE",
-      "subject": "Jonathan Martínez reviews the exact LivHavn direction LIVHAVN-VD-01 and records one real visual calibration decision without initiating expansion or Phase 4",
+      "subject": "Jonathan MartÃ­nez reviews the exact LivHavn direction LIVHAVN-VD-01 and records one real visual calibration decision without initiating expansion or Phase 4",
       "priority": "HIGH",
       "authorization_required": false,
       "repository_write_after_decision_requires_separate_authorization": true,
@@ -586,6 +589,40 @@
         "projects/lab/evidence/EVD-LAB-SYMPHONIE-LIVHAVN-PILOT-083.json",
         "projects/symphonie/continuity/CURRENT_CONTINUITY.json"
       ]
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "PEND-LAB-035",
+      "project_id": "lab",
+      "status": "M3_BLOCKED_AWAITING_DIVERGENCE_REMEDIATION_DECISION",
+      "type": "INTEGRATION_FACTORY_M3_DIVERGENCE_REMEDIATION_HUMAN_DECISION",
+      "priority": "HIGH",
+      "subject": "Decide treatment of classified M3 divergences",
+      "created_at": "2026-07-31T08:14:28-04:00",
+      "decision_owner": "Jonathan MartÃ­nez",
+      "authorization_required": true,
+      "facts": {
+        "m3_classification": "M3_BLOCKED_WITH_CLASSIFIED_DIVERGENCES",
+        "static_shadow_exact_matches": 420,
+        "static_shadow_case_count": 420,
+        "baseline_oracle_passes_per_evaluator": 12,
+        "classified_divergence_count": 2,
+        "root_fixture": "CRIT-FIX-008",
+        "category": "BASELINE_ORACLE_REGRESSION",
+        "static_shadow_negative_transfer": false,
+        "frozen_inputs_unchanged": true
+      },
+      "effect_until_resolution": "M3_REMEDIATION_M4_AND_CUTOVER_BLOCKED",
+      "allowed_human_scope": "DECIDE_WHETHER_AND_HOW_TO_AUTHORIZE_A_SEPARATE_M3_REMEDIATION",
+      "current_authority": "NONE_FOR_REMEDIATION_M4_OR_CUTOVER",
+      "automatic_approval": false,
+      "source_refs": [
+        "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M3-157.json",
+        "architecture/integrations/migration/M3/DIVERGENCE_LOG.json",
+        "architecture/integrations/migration/M3/VALIDATION_RESULTS.json"
+      ],
+      "authority_effect": "NONE",
+      "runtime_effect": "NONE"
     }
   ]
 }

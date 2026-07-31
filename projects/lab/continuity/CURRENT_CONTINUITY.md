@@ -1,26 +1,25 @@
-# Continuidad actual — M3 autorizado, no iniciado
+# Continuidad actual — M3 bloqueado con divergencias clasificadas
 
-Fecha: 2026-07-31T07:32:00-04:00  
-Repositorio: `marcellusanthonson-ctrl/chatgpt-prototype-lab`  
-Rama: `main`  
+Fecha: 2026-07-31T08:14:28-04:00
+
+Repositorio: `marcellusanthonson-ctrl/chatgpt-prototype-lab`
+
+Rama: `main`
+
 Política HEAD: `VERIFY_LIVE_AT_USE`
 
-## Estado vigente
+## Resultado M3
 
-M2 conserva `M2_PASS`, digest `e1a881640a544e483a1e47d52d72782b966ffc1e32cf6ff6c3afa03d54df6359` y selector estático sin cambios (`301ba432907758fc49a9b3c86a83fc762eac4607`). El shadow registry sigue `SHADOW_ONLY_NOT_ACTIVE`.
+Codex ejecutó la etapa 2 de la autorización 157 sobre exactamente 420 casos sintéticos. Los evaluadores estático y shadow coinciden en 420/420 casos y sus dos corridas comparten digest `9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329`.
 
-`DEC-LAB-023` y el cierre de `PEND-LAB-034` permanecen vigentes, sin autorización retroactiva para la variación histórica del ejecutor M2.
+Ambos pasan 12/13 oráculos canónicos. `CRIT-FIX-008` y su variante inversa activan adicionalmente `DESIGN_CRITERION` mediante `TASK_WEB_INTERFACE`. Las dos divergencias son `BASELINE_ORACLE_REGRESSION`. No hubo transferencia negativa introducida por el shadow.
 
-## Autorización 157
-
-La autorización 157 está `GRANTED`. Jonathan Martínez confirmó a **Codex** como ejecutor técnico y autorizó sus dos etapas, commits y pushes.
-
-El gate documental de etapa 1 queda `M3_AUTHORIZED_NOT_STARTED`. Todavía no se generó el corpus de 420 casos, no se crearon evaluadores y no existe resultado M3.
+Clasificación: `M3_BLOCKED_WITH_CLASSIFIED_DIVERGENCES`.
 
 ## Límites
 
-No se autorizaron M4, cutover, activación del shadow registry, cambios del selector, runtime, integraciones, AWS ni Terraform. ChatGPT no puede sustituir a Codex sin una autorización explícita separada.
+Los inputs congelados permanecen intactos. No se activó el shadow registry ni se modificaron selector, runtime o integraciones. M3 remediation, M4, cutover, AWS y Terraform no están autorizados.
 
 ## Siguiente acción única
 
-Ejecutar en Codex la etapa 2 de la autorización 157 usando el brief canónico y el HEAD remoto verificado posterior a esta publicación.
+Jonathan Martínez decide el tratamiento de las divergencias clasificadas en `PEND-LAB-035`.
