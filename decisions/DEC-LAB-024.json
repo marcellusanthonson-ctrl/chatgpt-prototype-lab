@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "id": "DEC-LAB-024",
+  "title": "Resolve the M3 baseline-oracle inconsistency through bounded fixture remediation",
+  "status": "APPROVED",
+  "publication_status": "PUBLISHED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-31T09:23:00-04:00",
+  "approval_source": "Continuemos con la autorización.",
+  "accepted_scope_source": "The immediately preceding bounded authorization proposal for CRIT-FIX-008 oracle remediation, UTF-8 documentary repair, a Codex rerun of M3, and explicit exclusion of M4, cutover, registry activation, selector changes, runtime, integrations, AWS and Terraform.",
+  "project_scope": [
+    "lab"
+  ],
+  "subject": "PEND-LAB-035",
+  "decision": {
+    "pending_resolution": "AUTHORIZE_BOUNDED_M3_FIXTURE_ORACLE_AND_UTF8_REMEDIATION",
+    "root_cause_classification": "PREEXISTING_BASELINE_FIXTURE_ORACLE_INCONSISTENCY_DISCOVERED_BY_M3",
+    "root_fixture": "CRIT-FIX-008",
+    "required_fixture_change": {
+      "field": "expected_modules",
+      "old": [
+        "EVIDENCE_AND_CLAIMS",
+        "WEB_ACCESSIBILITY"
+      ],
+      "new": [
+        "EVIDENCE_AND_CLAIMS",
+        "DESIGN_CRITERION",
+        "WEB_ACCESSIBILITY"
+      ]
+    },
+    "fixture_signals_change_authorized": false,
+    "fixture_oracle_text_change_authorized": false,
+    "selector_change_authorized": false,
+    "shadow_registry_change_authorized": false,
+    "m2_adapter_change_authorized": false,
+    "historical_fixture_preservation_required": true,
+    "utf8_documentary_repair_required": true,
+    "m3_rerun_required": true,
+    "technical_executor": "CODEX",
+    "m4_authorized": false,
+    "cutover_authorized": false
+  },
+  "factual_basis": {
+    "m3_result": "M3_BLOCKED_WITH_CLASSIFIED_DIVERGENCES",
+    "m3_case_count": 420,
+    "static_shadow_exact_matches": 420,
+    "static_shadow_negative_transfer": false,
+    "baseline_oracle_passes_per_evaluator": 12,
+    "divergence_case_ids": [
+      "M3-BASELINE-008",
+      "M3-REVERSED-008"
+    ],
+    "single_root_cause": true,
+    "selector_rule": "TASK_WEB_INTERFACE activates DESIGN_CRITERION",
+    "historical_fixture_blob": "de4793dedc9646e388bdce5ccd1807da8a711845",
+    "selector_blob": "301ba432907758fc49a9b3c86a83fc762eac4607",
+    "shadow_registry_blob": "a067cd9f95b98aa1599d21e3a0ff35fa56ac3a78",
+    "m3_commit": "fd6c371409a6667cbd96305d4a73ccb3bcd4adb2",
+    "m3_commit_utf8_corruption_detected": true,
+    "known_corrupted_paths": [
+      "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M3_DUAL_SELECTOR_EVALUATION_AND_EQUIVALENCE_VALIDATION_157.json",
+      "projects/lab/PENDING.json"
+    ]
+  },
+  "rationale": [
+    "The static and shadow representations are behaviorally equivalent in all 420 cases.",
+    "The frozen selector explicitly activates DESIGN_CRITERION for TASK_WEB_INTERFACE.",
+    "CRIT-FIX-008 omits DESIGN_CRITERION despite containing TASK_WEB_INTERFACE.",
+    "Changing the selector or shadow representation would alter proven equivalent behavior to satisfy an inconsistent oracle.",
+    "The correct remediation is to repair and version the fixture oracle, preserve the prior baseline, and rerun the same discriminating evaluation.",
+    "The UTF-8 corruption introduced by the M3 publication is a separate documentary-integrity defect and must be repaired without semantic changes."
+  ],
+  "consequences": [
+    "PEND-LAB-035 moves to M3_REMEDIATION_AUTHORIZED_NOT_STARTED.",
+    "Authorization 158 may be published as GRANTED with Codex as the bounded technical executor.",
+    "Historical M0, M1A, M2 and original M3 artifacts remain immutable evidence.",
+    "A new additive remediation result must be published instead of rewriting the original M3 result.",
+    "M4 and cutover remain blocked until a successful remediation result and a separate human decision."
+  ],
+  "non_authorizations": [
+    "NO_MODULE_SELECTOR_CHANGE",
+    "NO_SHADOW_REGISTRY_CHANGE",
+    "NO_M2_ADAPTER_CHANGE",
+    "NO_RUNTIME_RESOLVER",
+    "NO_ACTIVE_REGISTRY",
+    "NO_CHATGPT_BEHAVIOR_CHANGE",
+    "NO_MODULE_ACTIVATION_OR_INTEGRATION",
+    "NO_M4",
+    "NO_CUTOVER",
+    "NO_STATIC_SELECTOR_RETIREMENT",
+    "NO_SSE_EXECUTION",
+    "NO_AWS",
+    "NO_TERRAFORM",
+    "NO_PROVISIONING",
+    "NO_STACK_OR_PROVIDER_SELECTION",
+    "NO_EXTERNAL_REPOSITORY_CHANGE"
+  ],
+  "source_refs": [
+    "projects/lab/pending/PEND-LAB-035.json",
+    "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M3-157.json",
+    "architecture/integrations/migration/M3/VALIDATION_RESULTS.json",
+    "architecture/integrations/migration/M3/DIVERGENCE_LOG.json",
+    "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/ACCEPTANCE_FIXTURES.json",
+    "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json",
+    "LAB_CONTRACT.md",
+    "METHODOLOGY.md"
+  ],
+  "authority_effect": "NORMATIVE_DECISION_SUPPORTING_AUTHORIZATION_158_ONLY",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}
