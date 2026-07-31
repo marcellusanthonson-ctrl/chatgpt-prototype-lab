@@ -316,7 +316,27 @@
       "deferred_capability": "SOFTWARE_SOLUTION_ENGINEERING",
       "runtime_effect": "NONE",
       "integration_effect": "NONE",
-      "next_gate": "HUMAN_REMEDIATION_DECISION_FOR_PEND_LAB_039"
+      "next_gate": "STAGE_AWARE_VALIDATOR_REMEDIATION_UNDER_AUTHORIZATION_162"
+    },
+    {
+      "order": 28,
+      "item": "M5_ATTEMPT_002_AND_ACTIVE_AUTHORIZATION_REGISTRY_SEMANTICS_RECONCILIATION",
+      "status": "PASS_WITH_CONTROLLED_335_TO_333_BASELINE_TRANSITION_AWAITING_ATTEMPT_003",
+      "authorization": "AUTHORIZATION_LAB_M5_ATTEMPT_002_AND_ACTIVE_AUTHORIZATION_REGISTRY_SEMANTICS_RECONCILIATION_163",
+      "amendment": "AUTHORIZATION_LAB_M5_ATTEMPT_002_AND_ACTIVE_AUTHORIZATION_REGISTRY_SEMANTICS_RECONCILIATION_163_AMENDMENT_1",
+      "active_technical_authorization": "AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162",
+      "authorization_162_status": "GRANTED_NOT_CONSUMED_AWAITING_ATTEMPT_003",
+      "historical_baseline": "335_IMMUTABLE",
+      "successor_baseline": "333_ONLY_TWO_AUTHORIZED_REGISTRY_FINDINGS_REMOVED",
+      "err_lab_009": "OPEN_BLOCKING_M5_CUTOVER_ATTEMPT_002_BLOCKED_AWAITING_ATTEMPT_003",
+      "pend_lab_039": "RESOLVED",
+      "pend_lab_040": "ABSENT",
+      "static_selector_status": "AUTHORITATIVE_UNCHANGED",
+      "shadow_registry_status": "INACTIVE_UNCHANGED",
+      "active_pointer": "ABSENT",
+      "runtime_effect": "NONE",
+      "integration_effect": "NONE",
+      "next_gate": "EXECUTE_ATTEMPT_003_UNDER_AUTHORIZATION_162_FROM_NEW_VERIFIED_REMOTE_HEAD"
     }
   ]
 }

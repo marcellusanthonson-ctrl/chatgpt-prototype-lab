@@ -9,8 +9,8 @@
         "ideas": 5,
         "integrations": 6,
         "experiments": 8,
-        "authorizations": 90,
-        "evidence": 69,
+        "authorizations": 91,
+        "evidence": 70,
         "unincorporated": 0,
         "proposals": 3,
         "sessions": 1,
@@ -83,7 +83,8 @@
             "registry/deltas/integration-factory-m5-readiness-authorization-161.json",
             "registry/deltas/integration-factory-m5-readiness-remediation-161.json",
             "registry/deltas/integration-factory-m5-cutover-authorization-160.json",
-            "registry/deltas/integration-factory-m5-execution-160.json"
+            "registry/deltas/integration-factory-m5-execution-160.json",
+            "registry/deltas/integration-factory-m5-attempt-002-active-authorization-semantics-reconciliation-163.json"
         ],
         "evidence": "registry/evidence.json",
         "evidence_deltas": [
@@ -115,7 +116,8 @@
             "registry/deltas/integration-factory-m4-preparation-authorization-159.json",
             "registry/deltas/integration-factory-m5-readiness-remediation-161.json",
             "registry/deltas/integration-factory-m5-cutover-authorization-160.json",
-            "registry/deltas/integration-factory-m5-execution-160.json"
+            "registry/deltas/integration-factory-m5-execution-160.json",
+            "registry/deltas/integration-factory-m5-attempt-002-active-authorization-semantics-reconciliation-163.json"
         ],
         "current_state": "CURRENT_STATE.json",
         "current_state_deltas": [
@@ -155,7 +157,8 @@
             "registry/deltas/integration-factory-m4-preparation-authorization-159.json",
             "registry/deltas/integration-factory-m5-readiness-authorization-161.json",
             "registry/deltas/integration-factory-m5-readiness-remediation-161.json",
-            "registry/deltas/integration-factory-m5-execution-160.json"
+            "registry/deltas/integration-factory-m5-execution-160.json",
+            "registry/deltas/integration-factory-m5-attempt-002-active-authorization-semantics-reconciliation-163.json"
         ],
         "pattern_deltas": [
             "registry/deltas/livhavn-surgical-visual-patch-093.json"
@@ -163,7 +166,8 @@
         "error_deltas": [
             "registry/deltas/livhavn-surgical-visual-patch-093.json",
             "registry/deltas/integration-factory-m4-preparation-authorization-159.json",
-            "registry/deltas/integration-factory-m5-execution-160.json"
+            "registry/deltas/integration-factory-m5-execution-160.json",
+            "registry/deltas/integration-factory-m5-attempt-002-active-authorization-semantics-reconciliation-163.json"
         ],
         "unincorporated": "registry/unincorporated.json",
         "proposals": "registry/proposals.json",
@@ -216,12 +220,12 @@
         "decision_path": "decisions/DEC-LAB-028.json",
         "error": "ERR-LAB-009",
         "pattern": "PAT-LAB-009",
-        "authorization": "AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160",
-        "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160.json",
-        "evidence": "EVD-LAB-INTEGRATION-FACTORY-M5-160",
-        "evidence_path": "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-160.json",
-        "current_state_delta": "integration-factory-m5-execution-160",
-        "current_state_delta_path": "registry/deltas/integration-factory-m5-execution-160.json",
+        "authorization": "AUTHORIZATION_LAB_M5_ATTEMPT_002_AND_ACTIVE_AUTHORIZATION_REGISTRY_SEMANTICS_RECONCILIATION_163",
+        "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_M5_ATTEMPT_002_AND_ACTIVE_AUTHORIZATION_REGISTRY_SEMANTICS_RECONCILIATION_163.json",
+        "evidence": "EVD-LAB-M5-ACTIVE-AUTHORIZATION-REGISTRY-RECONCILIATION-163",
+        "evidence_path": "projects/lab/evidence/EVD-LAB-M5-ACTIVE-AUTHORIZATION-REGISTRY-RECONCILIATION-163.json",
+        "current_state_delta": "integration-factory-m5-attempt-002-active-authorization-semantics-reconciliation-163",
+        "current_state_delta_path": "registry/deltas/integration-factory-m5-attempt-002-active-authorization-semantics-reconciliation-163.json",
         "experiment": "EXP-LAB-003",
         "proposal": "PROP-LAB-003",
         "session": "SES-2026-06-28-001",

@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "integration-factory-m5-attempt-002-active-authorization-semantics-reconciliation-163",
+  "project_id": "lab",
+  "recorded_at": "2026-07-31T17:05:00-04:00",
+  "parent_head": "8ff2b228c55b11fa59bf1ae08c669a488f7b09e4",
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_M5_ATTEMPT_002_AND_ACTIVE_AUTHORIZATION_REGISTRY_SEMANTICS_RECONCILIATION_163",
+    "amendment_id": "AUTHORIZATION_LAB_M5_ATTEMPT_002_AND_ACTIVE_AUTHORIZATION_REGISTRY_SEMANTICS_RECONCILIATION_163_AMENDMENT_1",
+    "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_M5_ATTEMPT_002_AND_ACTIVE_AUTHORIZATION_REGISTRY_SEMANTICS_RECONCILIATION_163.json"
+  },
+  "execution": {
+    "id": "AUTHORIZATION_163_AMENDMENT_1_EXECUTION_ATTEMPT_002",
+    "result": "M5_ACTIVE_AUTHORIZATION_REGISTRY_RECONCILIATION_PASS_WITH_CONTROLLED_335_TO_333_BASELINE_TRANSITION_AWAITING_ATTEMPT_003"
+  },
+  "baseline_transition": {
+    "historical_path": "architecture/integrations/migration/M5/execution-160/GENERAL_VALIDATOR_BASELINE.json",
+    "historical_finding_count": 335,
+    "successor_path": "architecture/integrations/migration/M5/documentary-reconciliation-163/GENERAL_VALIDATOR_SUCCESSOR_BASELINE.json",
+    "successor_finding_count": 333,
+    "successor_structured_inventory_digest": "e6448fbe63ffc0b2f4d90636b8560345eed5db461b3090e3bd0137afd0acda7b",
+    "successor_raw_ordered_message_digest": "f2cd173455fe57b24be1da685575febff11f04e0d946d68854d8099c3feb15ce",
+    "removed_stable_ids": [
+      "GVF-714B283984E90E5D",
+      "GVF-C8069FAE89C311D4"
+    ],
+    "added_finding_count": 0,
+    "modified_finding_count": 0
+  },
+  "registry_changes": {
+    "consumed_records_added": [
+      "AUTHORIZATION_LAB_M1A_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_MATERIALIZATION_153",
+      "AUTHORIZATION_LAB_M1_PASS_STATE_REGISTRY_AND_CONTINUITY_RECONCILIATION_154",
+      "AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160",
+      "AUTHORIZATION_LAB_M5_ATTEMPT_002_AND_ACTIVE_AUTHORIZATION_REGISTRY_SEMANTICS_RECONCILIATION_163"
+    ],
+    "consumed_transition_added": [
+      "integration_factory_m5_readiness_and_validator_remediation_161",
+      "integration_factory_m5_bounded_cutover_and_observation_160",
+      "integration_factory_m5_attempt_002_active_authorization_semantics_reconciliation_163"
+    ],
+    "active_authorization_added": "AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162",
+    "active_authorization_removed": "AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160"
+  },
+  "authorization_162": {
+    "status": "GRANTED_NOT_CONSUMED_AWAITING_ATTEMPT_003",
+    "attempt_count": 2,
+    "attempt_003_started": false,
+    "consumption_effect": "NONE"
+  },
+  "error": {
+    "id": "ERR-LAB-009",
+    "status": "OPEN_BLOCKING_M5_CUTOVER",
+    "remediation_status": "ATTEMPT_002_BLOCKED_AWAITING_ATTEMPT_003"
+  },
+  "pending": {
+    "id": "PEND-LAB-039",
+    "status": "RESOLVED_AUTHORIZE_BOUNDED_STAGE_AWARE_VALIDATOR_REMEDIATION",
+    "pend_lab_040": "ABSENT"
+  },
+  "evidence": "projects/lab/evidence/EVD-LAB-M5-ACTIVE-AUTHORIZATION-REGISTRY-RECONCILIATION-163.json",
+  "next_action": "EXECUTE_ATTEMPT_003_UNDER_AUTHORIZATION_162_FROM_NEW_VERIFIED_REMOTE_HEAD",
+  "authority_effect": "DOCUMENTARY_RECONCILIATION_ONLY",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}

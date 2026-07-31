@@ -139,3 +139,13 @@ La etapa 2 de la autorización 160 se inició desde el HEAD remoto verificado `e
 El rollback drill obligatorio falló antes de crear o modificar el puntero: el validador 158 rechazó sus salidas históricas frente a una ejecución fresca y el validador 161 rechazó la frontera post-concesión de la autorización 160. `ERR-LAB-009` registra el fallo. No hubo cutover, observación ni rollback operacional.
 
 Clasificación: `M5_BOUNDED_CUTOVER_ROLLED_BACK_WITH_CLASSIFIED_FAILURES`. El selector estático permanece autoritativo, el shadow registry inactivo y no existe puntero activo. `PEND-LAB-039` espera una decisión humana separada sobre una posible remediación acotada de validadores. Product Leadership, Intelligent Application Construction y SSE permanecieron fuera de alcance y sin cambios.
+
+## Reconciliación del registro de autorizaciones y baseline sucesor 333
+
+La autorización 163 y su enmienda 1 documentaron los dos intentos documentales bloqueados y ATTEMPT-002 de la autorización 162. ATTEMPT-002 quedó clasificado como `BLOCKED_PREEXECUTION_ACTIVE_AUTHORIZATION_REGISTRY_SEMANTICS`, sin replay, pruebas, commit o efecto remoto.
+
+Se repararon exclusivamente `GVF-714B283984E90E5D` y `GVF-C8069FAE89C311D4`. El baseline histórico execution-160 permanece inmutable en 335 hallazgos; el artefacto sucesor contiene exactamente 333, sin hallazgos añadidos o modificados.
+
+Las autorizaciones 153, 154, 160, 161 y 163 tienen correspondencia consumida exacta entre `registry/authorizations.json.records` y `CURRENT_STATE.json.authorization_state`. La autorización 160 ya no está activa. La autorización 162 permanece `GRANTED`, no consumida y únicamente en `active_authorizations`, a la espera de ATTEMPT-003.
+
+`ERR-LAB-009` continúa `OPEN_BLOCKING_M5_CUTOVER`, `PEND-LAB-039` permanece resuelto y `PEND-LAB-040` está ausente. El selector estático sigue autoritativo, el shadow registry inactivo y el puntero activo ausente. No hubo runtime, integración, AWS, Terraform ni trabajo sobre Product Leadership, Intelligent Application Construction o SSE.

@@ -1,11 +1,11 @@
 {
   "schema_version": "2.5.0",
   "document_id": "lab.current-state",
-  "version": "2.5.39",
-  "status": "INTEGRATION_FACTORY_M1_PASS_AWAITING_SEPARATE_M2_HUMAN_DECISION",
-  "updated_at": "2026-07-30",
+  "version": "2.5.40",
+  "status": "M5_ACTIVE_AUTHORIZATION_REGISTRY_RECONCILED_AWAITING_ATTEMPT_003",
+  "updated_at": "2026-07-31",
   "active_project": "lab",
-  "current_phase": "INTEGRATION_FACTORY_M1_PASS_AWAITING_SEPARATE_M2_HUMAN_DECISION",
+  "current_phase": "M5_STAGE_AWARE_VALIDATOR_REMEDIATION_AUTHORIZATION_162_GRANTED_AWAITING_ATTEMPT_003",
   "methodology": {
     "version": "2.1",
     "path": "METHODOLOGY.md"
@@ -213,7 +213,10 @@
     "symphonie_all_phases_validation_gap_and_maintainability_reconciliation_082": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_IN_BOTH_REPOSITORIES",
     "symphonie_livhavn_synthetic_full_workflow_pilot_083": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_AWAITING_HUMAN_VISUAL_CALIBRATION_DECISION",
     "integration_factory_m1a_153": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "m1_pass_state_registry_continuity_reconciliation_154": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+    "m1_pass_state_registry_continuity_reconciliation_154": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "integration_factory_m5_readiness_and_validator_remediation_161": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "integration_factory_m5_bounded_cutover_and_observation_160": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "integration_factory_m5_attempt_002_active_authorization_semantics_reconciliation_163": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
   },
   "verified_external_heads": {
     "symphonie": "31dd1345026240c83b015feef34d6f7f2d2147b7",
@@ -243,8 +246,8 @@
     "SYMPHONIE_LIVHAVN_MONOLITHIC_VISUAL_CALIBRATION_083_READY_WITH_BOUNDED_GAPS",
     "INTEGRATION_FACTORY_M1_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_VALIDATION_PASS"
   ],
-  "next_authorized_action": "NONE_AFTER_AUTHORIZATION_154_CONSUMPTION",
-  "next_recommended_transition": "JONATHAN_MARTINEZ_DECIDES_WHETHER_TO_AUTHORIZE_M2_SHADOW_REGISTRY_DESIGN",
+  "next_authorized_action": "EXECUTE_ATTEMPT_003_UNDER_AUTHORIZATION_162_FROM_NEW_VERIFIED_REMOTE_HEAD",
+  "next_recommended_transition": "SEMANTIC_REPLAY_AND_STAGE_AWARE_SANDBOX_VALIDATION_ONLY_UNDER_AUTHORIZATION_162",
   "continuity_read_order": [
     "LAB_CONTRACT.md",
     "METHODOLOGY.md",
@@ -487,7 +490,7 @@
     "authority_effect": "NONE_AFTER_CONSUMPTION"
   },
   "integration_factory_migration": {
-    "status": "M1_PASS_AWAITING_SEPARATE_HUMAN_DECISION_FOR_M2",
+    "status": "M5_ACTIVE_AUTHORIZATION_REGISTRY_RECONCILED_AWAITING_ATTEMPT_003",
     "architecture": "PROVIDER_AND_TECHNOLOGY_NEUTRAL",
     "global_preferred_stack": "NONE",
     "production_provider": "NONE",
@@ -539,6 +542,23 @@
       "authorization": "AUTHORIZATION_LAB_M1_PASS_STATE_REGISTRY_AND_CONTINUITY_RECONCILIATION_154",
       "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
       "authority_after_consumption": "NONE_FOR_M2_SELECTOR_RUNTIME_INTEGRATION_SSE_AWS_TERRAFORM_OR_PROVIDER_SELECTION"
+    },
+    "m5_active_authorization_registry_reconciliation_163": {
+      "authorization": "AUTHORIZATION_LAB_M5_ATTEMPT_002_AND_ACTIVE_AUTHORIZATION_REGISTRY_SEMANTICS_RECONCILIATION_163",
+      "amendment": "AUTHORIZATION_LAB_M5_ATTEMPT_002_AND_ACTIVE_AUTHORIZATION_REGISTRY_SEMANTICS_RECONCILIATION_163_AMENDMENT_1",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "historical_baseline": "335_IMMUTABLE",
+      "successor_baseline": 333,
+      "authorized_removed_stable_ids": [
+        "GVF-714B283984E90E5D",
+        "GVF-C8069FAE89C311D4"
+      ],
+      "authorization_162": "GRANTED_NOT_CONSUMED_AWAITING_ATTEMPT_003",
+      "attempt_003_started": false,
+      "semantic_replay_executed": false,
+      "stage_aware_tests_executed": false,
+      "runtime_effect": "NONE",
+      "integration_effect": "NONE"
     }
   }
 }

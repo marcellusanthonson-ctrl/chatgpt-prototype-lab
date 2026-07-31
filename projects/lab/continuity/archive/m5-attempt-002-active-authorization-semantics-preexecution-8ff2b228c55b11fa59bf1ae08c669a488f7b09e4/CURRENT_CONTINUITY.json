@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.2.0",
+  "continuity_id": "LAB-CONTINUITY-M5-STAGE-AWARE-VALIDATOR-REMEDIATION-162-GRANTED-20260731",
+  "project_id": "lab",
+  "status": "CURRENT_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162_GRANTED_NOT_STARTED_AWAITING_CODEX",
+  "created_at": "2026-07-31T14:40:00-04:00",
+  "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "canonical_branch": "main",
+  "head_policy": "VERIFY_LIVE_AT_USE",
+  "grant_parent_head": "904fce42638b717699afe3ffef639545c990ec55",
+  "stage_2_expected_parent_policy": "USE_THE_VERIFIED_FINAL_REMOTE_MAIN_HEAD_CREATED_BY_STAGE_1_PUBLICATION",
+  "entrypoint": "project-sources/chatgpt/START_HERE.md",
+  "required_reading_order": [
+    "VERIFY_LIVE_HEAD_OF_MAIN",
+    "project-sources/chatgpt/START_HERE.md",
+    "LAB_CONTRACT.md",
+    "METHODOLOGY.md",
+    "CURRENT_STATE.json",
+    "registry/index.json",
+    "registry/projects.json",
+    "projects/lab/PROJECT_STATE.json",
+    "decisions/DEC-LAB-028.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162.json",
+    "projects/lab/pending/PEND-LAB-039.json",
+    "errors/ERR-LAB-009.json",
+    "projects/lab/briefs/CODEX_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_001.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json"
+  ],
+  "decision": {
+    "id": "DEC-LAB-028",
+    "status": "APPROVED",
+    "selected_option": "AUTHORIZE_BOUNDED_STAGE_AWARE_VALIDATOR_REMEDIATION"
+  },
+  "facts": [
+    {
+      "claim": "Authorization 160 was consumed by a fail-closed execution that reproduced the exact 335-finding baseline and stopped before pointer mutation, cutover or observation.",
+      "source_refs": [
+        "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160.json",
+        "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-160.json"
+      ]
+    },
+    {
+      "claim": "ERR-LAB-009 isolates incompatibility between historical validators and the post-grant lifecycle state; no defect in the candidate selector or rollback mechanism was demonstrated by execution 160.",
+      "source_refs": [
+        "errors/ERR-LAB-009.json",
+        "architecture/integrations/migration/M5/execution-160/ROLLBACK_DRILL_RESULTS.json"
+      ]
+    },
+    {
+      "claim": "DEC-LAB-028 grants authorization 162 only for successor-validator creation and sandbox replay; it does not authorize the operational drill, M5 retry or cutover.",
+      "source_refs": [
+        "decisions/DEC-LAB-028.json",
+        "projects/lab/authorizations/AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162.json"
+      ]
+    }
+  ],
+  "authorizations": {
+    "160": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_EXECUTED_FAIL_CLOSED",
+    "161": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "162": "GRANTED_STAGE_2_AUTHORIZED_NOT_STARTED"
+  },
+  "pending": [
+    {
+      "id": "PEND-LAB-039",
+      "status": "RESOLVED_AUTHORIZE_BOUNDED_STAGE_AWARE_VALIDATOR_REMEDIATION"
+    }
+  ],
+  "active_boundaries": {
+    "static_selector": "AUTHORITATIVE_UNCHANGED",
+    "shadow_registry": "INACTIVE_UNCHANGED",
+    "active_pointer_exists": false,
+    "operational_rollback_drill_authorized": false,
+    "m5_retry_authorized": false,
+    "cutover_authorized": false,
+    "static_selector_retirement_authorized": false,
+    "runtime_effect": "NONE",
+    "integration_effect": "NONE"
+  },
+  "stage_2_mandatory_first_gates": [
+    "VERIFY_FINAL_STAGE_1_REMOTE_HEAD",
+    "RECONCILE_STAGE_1_REGISTRY_PENDING_ROADMAP_ERROR_AND_STATE_VIEW_DIVERGENCES_WITHIN_AUTHORIZED_PATHS",
+    "VERIFY_HISTORICAL_VALIDATORS_AND_OUTPUTS_ARE_UNCHANGED",
+    "REPRODUCE_EXACT_335_GENERAL_VALIDATOR_BASELINE_WITH_ZERO_DELTA",
+    "EXECUTE_SEMANTIC_REPLAY_AND_STAGE_AWARE_VALIDATOR_TESTS_ONLY"
+  ],
+  "stage_1_known_divergences": [
+    "registry/index.json latest decision authorization pending evidence and delta fields remain at execution 160 until authorized stage 2 reconciliation",
+    "registry/authorizations.json remains unreconciled with granted authorization 162 until stage 2",
+    "registry/errors.json retains ERR-LAB-009 without the remediation-authorized-not-started transition until stage 2",
+    "projects/lab/PENDING.json and projects/lab/ROADMAP.json remain unreconciled with DEC-LAB-028 until stage 2",
+    "CURRENT_STATE.md and projects/lab/PROJECT_STATE.md remain at the execution-160 fail-closed view until stage 2",
+    "the canonical decision authorization brief PEND-LAB-039 decision index delta and CURRENT continuity are already published and authoritative for this gate"
+  ],
+  "future_integration_priority": [
+    "PRODUCT_LEADERSHIP",
+    "INTELLIGENT_APPLICATION_CONSTRUCTION"
+  ],
+  "deferred_capability": "SOFTWARE_SOLUTION_ENGINEERING",
+  "forbidden": [
+    "MODIFY_HISTORICAL_VALIDATORS_158_OR_161_OR_THEIR_OUTPUTS",
+    "EXECUTE_OPERATIONAL_ROLLBACK_DRILL",
+    "RETRY_M5_OR_EXECUTE_CUTOVER",
+    "CREATE_OR_UPDATE_ACTIVE_POINTER",
+    "RETIRE_STATIC_SELECTOR",
+    "MODIFY_STATIC_SELECTOR_SHADOW_REGISTRY_OR_M2_ADAPTERS",
+    "CLAIM_GLOBAL_REPOSITORY_PASS",
+    "TEST_ADAPT_ACTIVATE_OR_INTEGRATE_PRODUCT_LEADERSHIP_IAC_OR_SSE",
+    "RUN_AWS_OR_TERRAFORM",
+    "USE_REAL_DATA_OR_PRODUCTION_CREDENTIALS",
+    "MODIFY_EXTERNAL_REPOSITORIES"
+  ],
+  "single_next_action": "CODEX_EXECUTES_AUTHORIZATION_162_FROM_THE_VERIFIED_STAGE_1_REMOTE_HEAD",
+  "first_phrase_for_new_conversation": "Continúa ChatGPT Prototype LAB desde el HEAD remoto vigente de main. DEC-LAB-028 resolvió PEND-LAB-039 y concedió la autorización 162 exclusivamente para crear y probar validadores sucesores stage-aware en sandbox; no existe autoridad para ejecutar el rollback drill operacional, reintentar M5 o realizar cutover.",
+  "authority_effect": "BOUNDED_AUTHORIZATION_162_STAGE_2_ONLY",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}

@@ -121,3 +121,11 @@ Codex ejecutó la etapa 2 desde `e60cfe4b90b58a2e54c4ddfe671267afc2a1bcaa`. La r
 El rollback drill obligatorio resultó `FAIL_CLOSED_BEFORE_POINTER_MUTATION`: fallaron los checks canónicos 158 y 161 por incompatibilidades post-concesión clasificadas en `ERR-LAB-009`. Por la condición de parada, no se creó el puntero, no hubo cutover, observación ni rollback operacional.
 
 La clasificación final es `M5_BOUNDED_CUTOVER_ROLLED_BACK_WITH_CLASSIFIED_FAILURES`. `PEND-LAB-039` espera decisión humana. El selector estático sigue autoritativo, el shadow registry inactivo, y Product Leadership, Intelligent Application Construction y SSE permanecen sin pruebas, adaptación, activación o integración.
+
+## Autorización 163 — reconciliación documental completada
+
+La enmienda 1 autorizó la transición controlada del baseline histórico de 335 al baseline sucesor de 333. Solo fueron retirados `GVF-714B283984E90E5D` y `GVF-C8069FAE89C311D4`; todos los demás hallazgos históricos se preservaron sin modificaciones y no se añadió ninguno.
+
+El registro separa ahora las autorizaciones consumidas de las activas. Las autorizaciones 153, 154, 160, 161 y 163 están consumidas con transición exacta. La autorización 162 permanece `GRANTED_NOT_CONSUMED_AWAITING_ATTEMPT_003`, exclusivamente en `active_authorizations`.
+
+ATTEMPT-003 no comenzó. `ERR-LAB-009` sigue abierto y bloquea M5 cutover. `PEND-LAB-039` está resuelto y `PEND-LAB-040` no existe. El selector estático, el shadow registry inactivo y la ausencia del puntero activo permanecen sin cambios, sin efecto de runtime o integración.

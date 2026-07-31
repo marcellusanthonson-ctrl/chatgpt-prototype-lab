@@ -11,10 +11,11 @@
   "failure_mode": "VALIDATOR_158_HISTORICAL_OUTPUT_COMPARISON_AND_VALIDATOR_161_PRE_GRANT_BOUNDARY_ASSERTION_FAIL_AFTER_AUTHORIZATION_160_GRANT",
   "containment": "Stopped before pointer creation, cutover and observation; static selector remains authoritative and candidate remains inactive.",
   "root_cause": "The mandated 158 check compares fresh execution against immutable historical outputs, while the mandated 161 check still asserts authorization 160 is proposed and not granted.",
-  "repair_authorized": false,
+  "repair_authorized": true,
   "repair_performed": false,
+  "remediation_status": "ATTEMPT_002_BLOCKED_AWAITING_ATTEMPT_003",
   "effect_on_m5": "CUTOVER_AND_OBSERVATION_NOT_EXECUTED",
-  "next_action": "HUMAN_ISSUES_SEPARATE_BOUNDED_REMEDIATION_DECISION_AND_AUTHORIZATION_FOR_STAGE_AWARE_DRILL_VALIDATION",
+  "next_action": "EXECUTE_ATTEMPT_003_UNDER_ACTIVE_AUTHORIZATION_162_FROM_THE_NEW_VERIFIED_REMOTE_HEAD",
   "source_refs": [
     "architecture/integrations/migration/M5/readiness-161/ROLLBACK_DRILL_DESIGN.json",
     "architecture/integrations/migration/M5/execution-160/ROLLBACK_DRILL_RESULTS.json",

@@ -122,7 +122,10 @@
       "status": "OPEN_BLOCKING_M5_CUTOVER",
       "lifecycle_state": "CONTAINED_FAIL_CLOSED",
       "canonical_path": "errors/ERR-LAB-009.json",
-      "updated_at": "2026-07-31"
+      "updated_at": "2026-07-31",
+      "repair_authorized": true,
+      "repair_performed": false,
+      "remediation_status": "ATTEMPT_002_BLOCKED_AWAITING_ATTEMPT_003"
     }
   ]
 }

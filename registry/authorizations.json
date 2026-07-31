@@ -3,12 +3,12 @@
   "updated_at": "2026-07-31",
   "active_authorizations": [
     {
-      "id": "AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160",
-      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-      "stage_2_status": "EXECUTED_FAIL_CLOSED_ROLLBACK_DRILL_FAILED_NO_CUTOVER",
-      "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160.json",
-      "exact_parent_head": "e60cfe4b90b58a2e54c4ddfe671267afc2a1bcaa",
-      "consumption_condition": "RESULT_COMMITTED_PUSHED_AND_FINAL_REMOTE_MAIN_HEAD_VERIFIED"
+      "id": "AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162",
+      "status": "GRANTED",
+      "stage_2_status": "GRANTED_NOT_CONSUMED_AWAITING_ATTEMPT_003",
+      "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162.json",
+      "restart_parent_policy": "USE_VERIFIED_REMOTE_HEAD_AFTER_AUTHORIZATION_163_PUBLICATION",
+      "consumed": false
     }
   ],
   "records": [
@@ -1129,6 +1129,58 @@
       "integration_authorized": false,
       "m5_authorized": false,
       "product_changes_authorized": false
+    },
+    {
+      "id": "AUTHORIZATION_LAB_M1A_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_MATERIALIZATION_153",
+      "state_key": "integration_factory_m1a_153",
+      "project_id": "lab",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "approved_by": "Jonathan Martínez",
+      "scope": "M1A_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_MATERIALIZATION",
+      "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_M1A_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_MATERIALIZATION_153.json",
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "expected_parent_head": "babcbf5427dfc555a93cc65ba99b34e9452e8a25",
+      "updated_at": "2026-07-31"
+    },
+    {
+      "id": "AUTHORIZATION_LAB_M1_PASS_STATE_REGISTRY_AND_CONTINUITY_RECONCILIATION_154",
+      "state_key": "m1_pass_state_registry_continuity_reconciliation_154",
+      "project_id": "lab",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "approved_by": "Jonathan Martínez",
+      "scope": "M1_PASS_STATE_REGISTRY_AND_CONTINUITY_RECONCILIATION",
+      "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_M1_PASS_STATE_REGISTRY_AND_CONTINUITY_RECONCILIATION_154.json",
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "expected_parent_head": "d43ac2fc5d668e0a0afe7d9f95096a611149617b",
+      "updated_at": "2026-07-31"
+    },
+    {
+      "id": "AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160",
+      "state_key": "integration_factory_m5_bounded_cutover_and_observation_160",
+      "project_id": "lab",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "approved_by": "Jonathan Martínez",
+      "scope": "INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_EXECUTED_FAIL_CLOSED",
+      "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160.json",
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "expected_parent_head": "e60cfe4b90b58a2e54c4ddfe671267afc2a1bcaa",
+      "updated_at": "2026-07-31"
+    },
+    {
+      "id": "AUTHORIZATION_LAB_M5_ATTEMPT_002_AND_ACTIVE_AUTHORIZATION_REGISTRY_SEMANTICS_RECONCILIATION_163",
+      "state_key": "integration_factory_m5_attempt_002_active_authorization_semantics_reconciliation_163",
+      "project_id": "lab",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "approved_by": "Jonathan Martínez",
+      "scope": "BOUNDED_DOCUMENTARY_BASELINE_TRANSITION_AND_REGISTRY_RECONCILIATION",
+      "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_M5_ATTEMPT_002_AND_ACTIVE_AUTHORIZATION_REGISTRY_SEMANTICS_RECONCILIATION_163.json",
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "expected_parent_head": "8ff2b228c55b11fa59bf1ae08c669a488f7b09e4",
+      "updated_at": "2026-07-31"
     }
   ]
 }
