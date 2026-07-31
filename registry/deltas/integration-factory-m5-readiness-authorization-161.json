@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "integration-factory-m5-readiness-authorization-161",
+  "project_id": "lab",
+  "created_at": "2026-07-31T12:22:00-04:00",
+  "source_parent_head": "91fa349b86e3007dd4cdb953716acb9e48ea51c5",
+  "decision": {
+    "id": "DEC-LAB-026",
+    "path": "decisions/DEC-LAB-026.json",
+    "status": "APPROVED",
+    "selected_option": "RETURN_FOR_REMEDIATION"
+  },
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_READINESS_AND_VALIDATOR_REMEDIATION_161",
+    "path": "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_READINESS_AND_VALIDATOR_REMEDIATION_161.json",
+    "status": "GRANTED",
+    "stage_2": "AUTHORIZED_NOT_STARTED",
+    "technical_executor": "CODEX"
+  },
+  "pending_update": {
+    "id": "PEND-LAB-037",
+    "status": "RESOLVED_RETURN_FOR_REMEDIATION",
+    "successor_pending": "PEND-LAB-038_TO_BE_CREATED_BY_STAGE_2"
+  },
+  "future_integration_priority": [
+    "PRODUCT_LEADERSHIP",
+    "INTELLIGENT_APPLICATION_CONSTRUCTION"
+  ],
+  "deferred_capability": "SOFTWARE_SOLUTION_ENGINEERING",
+  "authority_boundaries": {
+    "m5_cutover": false,
+    "runtime": false,
+    "integration": false,
+    "candidate_capability_tests": false,
+    "aws": false,
+    "terraform": false
+  },
+  "current_state_effect": "M5_READINESS_REMEDIATION_AUTHORIZED_NOT_STARTED_AWAITING_CODEX",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}
