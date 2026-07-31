@@ -1,14 +1,15 @@
 {
   "schema_version": "1.0.0",
   "layer_id": "CHATGPT-CRITERION-LAYER-001",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "status": "INTEGRATED_DOCUMENTARY_SELECTIVE",
-  "updated_at": "2026-07-21",
+  "updated_at": "2026-07-31",
   "files": [
     "CONTRACT.json",
     "MODULE_SELECTOR.json",
     "RESULT_CONTRACT.json",
     "ACCEPTANCE_FIXTURES.json",
+    "history/ACCEPTANCE_FIXTURES.v1.1.0.json",
     "VALIDATION_EVIDENCE.json",
     "MANIFEST.json"
   ],
@@ -17,6 +18,7 @@
     "selector": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json",
     "result_contract": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/RESULT_CONTRACT.json",
     "fixtures": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/ACCEPTANCE_FIXTURES.json",
+    "fixtures_history_1_1_0": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/history/ACCEPTANCE_FIXTURES.v1.1.0.json",
     "validation": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/VALIDATION_EVIDENCE.json"
   },
   "sources": {

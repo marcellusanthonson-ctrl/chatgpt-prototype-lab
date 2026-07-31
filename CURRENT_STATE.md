@@ -99,3 +99,11 @@ Codex ejecutó la etapa 2 de la autorización 157 desde `ce5c86ee59013f335cc541d
 Cada evaluador pasa 12 de los 13 oráculos canónicos. `CRIT-FIX-008` y su variante de orden inverso seleccionan además `DESIGN_CRITERION` porque `TASK_WEB_INTERFACE` lo activa en ambas representaciones congeladas. Las dos divergencias están clasificadas como `BASELINE_ORACLE_REGRESSION`; no existe transferencia negativa estático-shadow.
 
 La clasificación exacta es `M3_BLOCKED_WITH_CLASSIFIED_DIVERGENCES`. `PEND-LAB-035` espera una decisión humana separada sobre remediación. M3 remediation, M4 y cutover permanecen bloqueados. Selector, shadow registry, adapters, fixtures, runtime e integraciones permanecen sin cambios.
+
+## M3 remediado — equivalencia dual exacta
+
+La autorización 158 preservó byte por byte el fixture 1.1.0, corrigió únicamente `CRIT-FIX-008.expected_modules`, publicó el fixture 1.1.1 y reparó siete campos de texto dañados por la conversión UTF-8 del commit M3 original.
+
+El rerun aditivo ejecutó exactamente 420 casos dos veces. Ambos evaluadores pasan 13/13 oráculos, coinciden en 420/420 resultados y mantienen el digest conductual histórico `9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329`. No existen divergencias ni transferencia negativa.
+
+La clasificación es `M3_REMEDIATED_PASS_EXACT_DUAL_EQUIVALENCE`. `PEND-LAB-035` queda completado y `PEND-LAB-036` espera una decisión humana separada sobre si preparar M4. M4, cutover, activación, selector, runtime e integraciones permanecen sin autorización.

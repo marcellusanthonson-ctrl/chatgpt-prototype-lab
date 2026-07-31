@@ -87,3 +87,11 @@ La etapa 2 de la autorización 157 ejecutó dos evaluadores operativamente indep
 Ambos evaluadores pasan 12/13 fixtures canónicas. `CRIT-FIX-008` y su reverso activan `DESIGN_CRITERION` mediante `TASK_WEB_INTERFACE`, aunque el oracle congelado omite ese módulo. Las divergencias se clasifican `BASELINE_ORACLE_REGRESSION`; no hay transferencia negativa introducida por el shadow registry.
 
 Estado efectivo: `M3_BLOCKED_AWAITING_DIVERGENCE_REMEDIATION_DECISION`. `PEND-LAB-035` bloquea remediación, M4 y cutover hasta una decisión humana separada. No hubo cambio del selector, activación, runtime, integración, AWS o Terraform.
+
+## Fábrica de integraciones — M3 remediado PASS
+
+La autorización 158 preservó el fixture histórico 1.1.0 con blob `de4793dedc9646e388bdce5ccd1807da8a711845`, publicó la versión 1.1.1 con la única corrección aprobada de `CRIT-FIX-008.expected_modules` y reparó exclusivamente la corrupción UTF-8 introducida por el commit M3.
+
+El rerun aditivo de 420 casos produce 13/13 oráculos PASS en ambos evaluadores, 420/420 equivalencias exactas, cero divergencias y digest conductual sin cambios `9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329` en dos corridas.
+
+Estado efectivo: `M3_REMEDIATED_PASS_AWAITING_SEPARATE_HUMAN_DECISION_FOR_M4`. `PEND-LAB-036` mantiene M4 y cutover bloqueados. No hubo modificación del selector, shadow registry, adapters M2, runtime o integraciones.

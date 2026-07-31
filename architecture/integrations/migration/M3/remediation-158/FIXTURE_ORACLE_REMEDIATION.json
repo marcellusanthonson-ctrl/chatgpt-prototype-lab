@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "remediation_id": "M3_FIXTURE_ORACLE_AND_UTF8_REMEDIATION_158",
+  "classification": "M3_REMEDIATED_PASS_EXACT_DUAL_EQUIVALENCE",
+  "historical_fixture_blob": "de4793dedc9646e388bdce5ccd1807da8a711845",
+  "historical_fixture_path": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/history/ACCEPTANCE_FIXTURES.v1.1.0.json",
+  "current_fixture_blob": "db53d11e4a45e8f98a9b6aa540a2c7459723601b",
+  "fixture_version_change": {
+    "from": "1.1.0",
+    "to": "1.1.1"
+  },
+  "fixture_diff_paths": [
+    "fixtures/7/expected_modules",
+    "version"
+  ],
+  "crit_fix_008_expected_modules": {
+    "from": [
+      "EVIDENCE_AND_CLAIMS",
+      "WEB_ACCESSIBILITY"
+    ],
+    "to": [
+      "EVIDENCE_AND_CLAIMS",
+      "DESIGN_CRITERION",
+      "WEB_ACCESSIBILITY"
+    ]
+  },
+  "utf8_repair": {
+    "defect_commit": "fd6c371409a6667cbd96305d4a73ccb3bcd4adb2",
+    "comparison_parent": "ce5c86ee59013f335cc541d0066f9513c0de0872",
+    "repaired_paths": [
+      "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M3_DUAL_SELECTOR_EVALUATION_AND_EQUIVALENCE_VALIDATION_157.json",
+      "projects/lab/PENDING.json"
+    ],
+    "repaired_string_fields": 7,
+    "remaining_m3_introduced_mojibake_paths": []
+  },
+  "selector_effect": "NONE",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}

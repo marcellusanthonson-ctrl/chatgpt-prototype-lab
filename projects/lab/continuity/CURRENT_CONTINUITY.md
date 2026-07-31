@@ -1,6 +1,6 @@
-# Continuidad actual — remediación M3 autorizada, no iniciada
+# Continuidad actual — M3 remediado PASS
 
-Fecha: 2026-07-31T09:23:00-04:00
+Fecha: 2026-07-31T10:05:03-04:00
 
 Repositorio: `marcellusanthonson-ctrl/chatgpt-prototype-lab`
 
@@ -8,35 +8,18 @@ Rama: `main`
 
 Política HEAD: `VERIFY_LIVE_AT_USE`
 
-## Decisión
+## Resultado
 
-`DEC-LAB-024` resuelve `PEND-LAB-035` mediante una remediación acotada. El defecto raíz es una inconsistencia preexistente de `CRIT-FIX-008`: contiene `TASK_WEB_INTERFACE`, que activa `DESIGN_CRITERION`, pero su `expected_modules` omite ese módulo.
+La autorización 158 preservó exactamente el fixture 1.1.0, corrigió únicamente `CRIT-FIX-008.expected_modules`, publicó el fixture 1.1.1 y reparó la corrupción UTF-8 introducida por el commit M3 original.
 
-La variante de orden inverso reproduce la misma causa; no constituye una segunda causa independiente. El selector y el shadow registry permanecen equivalentes en 420/420 casos y no existe transferencia negativa estático-shadow.
+El rerun aditivo ejecutó 420 casos dos veces. Ambos evaluadores pasan 13/13 oráculos y coinciden en 420/420 resultados. El digest conductual `9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329` permanece idéntico al M3 histórico. Divergencias: cero.
 
-## Autorización 158
+Clasificación: `M3_REMEDIATED_PASS_EXACT_DUAL_EQUIVALENCE`.
 
-La autorización 158 está `GRANTED` con Codex como único ejecutor técnico. Autoriza:
+## Límites
 
-- preservar exactamente el fixture histórico 1.1.0;
-- corregir únicamente `CRIT-FIX-008.expected_modules`;
-- subir la versión del fixture a 1.1.1;
-- reparar exclusivamente la corrupción UTF-8 introducida por el commit M3;
-- ejecutar una evaluación M3 aditiva de 420 casos, dos veces;
-- publicar el resultado y reconciliar estado, registros y continuidad.
-
-No autoriza cambios del selector, shadow registry, adaptadores M2, runtime, integraciones, M4, cutover, AWS o Terraform.
-
-## Estado de ejecución
-
-La remediación todavía no comenzó. El fixture, los textos corruptos y los resultados M3 históricos permanecen sin modificar en esta etapa documental.
-
-`PEND-LAB-035` está `M3_REMEDIATION_AUTHORIZED_NOT_STARTED`.
-
-## Divergencias documentales temporales
-
-`registry/index.json`, `projects/lab/PENDING.json` y las vistas Markdown de estado serán reconciliados durante la etapa 2 autorizada. La corrupción UTF-8 también permanece pendiente de esa ejecución.
+No se modificaron selector, shadow registry, adapters M2 ni resultados M3 históricos. No hubo activación, runtime o integración. M4 y cutover siguen sin autorización.
 
 ## Siguiente acción única
 
-Ejecutar la etapa 2 de la autorización 158 en Codex desde el HEAD remoto verificado posterior a esta publicación.
+Jonathan Martínez decide en `PEND-LAB-036` si autoriza preparar un paquete humano de decisión de cutover M4.

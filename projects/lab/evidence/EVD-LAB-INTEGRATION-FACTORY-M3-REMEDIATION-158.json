@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-INTEGRATION-FACTORY-M3-REMEDIATION-158",
+  "project_id": "lab",
+  "status": "VALIDATED_M3_REMEDIATED_PASS_EXACT_DUAL_EQUIVALENCE",
+  "recorded_at": "2026-07-31T10:05:03-04:00",
+  "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M3_ORACLE_AND_UTF8_REMEDIATION_158.json",
+  "decision_ref": "decisions/DEC-LAB-024.json",
+  "execution_parent_head": "c37cd23afcf841fc1f35e4f437c933a32d657a22",
+  "technical_executor": "CODEX",
+  "result": {
+    "classification": "M3_REMEDIATED_PASS_EXACT_DUAL_EQUIVALENCE",
+    "case_count": 420,
+    "static_baseline_oracle_passes": 13,
+    "shadow_baseline_oracle_passes": 13,
+    "static_shadow_exact_matches": 420,
+    "divergence_count": 0,
+    "negative_transfer": "NONE_DETECTED",
+    "second_run_digest_match": true
+  },
+  "fixture_remediation": {
+    "historical_version": "1.1.0",
+    "historical_blob": "de4793dedc9646e388bdce5ccd1807da8a711845",
+    "current_version": "1.1.1",
+    "current_blob": "db53d11e4a45e8f98a9b6aa540a2c7459723601b",
+    "changed_fixture": "CRIT-FIX-008",
+    "changed_semantic_field": "expected_modules",
+    "other_fixture_changes": 0
+  },
+  "reproducibility": {
+    "corpus_digest": "741973abbcfdd1e478a59cc5ee371a5f3f5c592c06cd997a82f24bf517d3a210",
+    "static_run_digest_1": "9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329",
+    "static_run_digest_2": "9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329",
+    "shadow_run_digest_1": "9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329",
+    "shadow_run_digest_2": "9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329",
+    "historical_m3_behavioral_digest": "9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329",
+    "behavior_unchanged": true
+  },
+  "utf8_repair": {
+    "repaired_paths": [
+      "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M3_DUAL_SELECTOR_EVALUATION_AND_EQUIVALENCE_VALIDATION_157.json",
+      "projects/lab/PENDING.json"
+    ],
+    "repaired_string_fields": 7,
+    "semantic_change": false,
+    "m3_introduced_mojibake_remaining": 0
+  },
+  "immutable_baseline_unchanged": true,
+  "source_refs": [
+    "architecture/integrations/migration/M3/remediation-158/VALIDATION_RESULTS.json",
+    "architecture/integrations/migration/M3/remediation-158/EQUIVALENCE_RESULTS.json",
+    "architecture/integrations/migration/M3/remediation-158/DIVERGENCE_LOG.json",
+    "architecture/integrations/migration/M3/remediation-158/FIXTURE_ORACLE_REMEDIATION.json"
+  ],
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_158_CONSUMPTION",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}

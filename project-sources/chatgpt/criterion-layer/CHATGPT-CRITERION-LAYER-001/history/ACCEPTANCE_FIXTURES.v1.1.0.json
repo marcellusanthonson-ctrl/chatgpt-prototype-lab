@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "fixture_set_id": "CHATGPT-CRITERION-FIXTURES-001",
-  "version": "1.1.1",
+  "version": "1.1.0",
   "status": "VALIDATED",
   "policy": {
     "synthetic": true,
@@ -126,7 +126,6 @@
       ],
       "expected_modules": [
         "EVIDENCE_AND_CLAIMS",
-        "DESIGN_CRITERION",
         "WEB_ACCESSIBILITY"
       ],
       "forbidden_modules": [],

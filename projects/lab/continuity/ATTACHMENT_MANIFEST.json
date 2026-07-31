@@ -1,1 +1,19 @@
-{"schema_version":"1.2.0","manifest_id":"LAB-CONTINUITY-ATTACHMENTS-INTEGRATION-FACTORY-M3-REMEDIATION-AUTHORIZED-20260731","status":"CURRENT","project_id":"lab","created_at":"2026-07-31T09:23:00-04:00","required_read_order":["CURRENT_CONTINUITY.json","CURRENT_CONTINUITY.md","ATTACHMENT_MANIFEST.json","START_PROMPT.md"],"attachments":[{"path":"projects/lab/continuity/CURRENT_CONTINUITY.json","role":"CANONICAL_STRUCTURED_CONTINUITY","required":true},{"path":"projects/lab/continuity/CURRENT_CONTINUITY.md","role":"HUMAN_READABLE_CONTINUITY","required":true},{"path":"projects/lab/continuity/ATTACHMENT_MANIFEST.json","role":"READ_ORDER_AND_REFERENCE_MANIFEST","required":true},{"path":"projects/lab/continuity/START_PROMPT.md","role":"FIRST_MESSAGE_FOR_NEW_CONVERSATION","required":true}],"repository_sources_not_duplicated_as_attachments":["project-sources/chatgpt/START_HERE.md","decisions/DEC-LAB-024.json","projects/lab/pending/PEND-LAB-035.json","projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M3_ORACLE_AND_UTF8_REMEDIATION_158.json","projects/lab/briefs/CODEX_INTEGRATION_FACTORY_M3_ORACLE_AND_UTF8_REMEDIATION_001.json","projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M3-157.json","architecture/integrations/migration/M3/VALIDATION_RESULTS.json","architecture/integrations/migration/M3/DIVERGENCE_LOG.json"],"archived_package":"projects/lab/continuity/archive/m3-remediation-preauthorization-fd6c371409a6667cbd96305d4a73ccb3bcd4adb2/","archived_blobs":{"CURRENT_CONTINUITY.json":"439ca256638ce0706b7e6c9a8881e23e876450dd","CURRENT_CONTINUITY.md":"c28313f6ac27fda7659f144adbd29daea8ef1591","ATTACHMENT_MANIFEST.json":"fcc217e0b76d0843faf40537603a97eadea79d19","START_PROMPT.md":"922e55b55ac4475a9870a76b798e3d43896b2f7d"},"missing_attachments":[],"authority_effect":"BOUNDED_M3_REMEDIATION_AUTHORITY_GRANTED_TO_CODEX_ONLY"}
+{
+  "schema_version": "1.2.0",
+  "manifest_id": "LAB-CONTINUITY-ATTACHMENTS-INTEGRATION-FACTORY-M3-REMEDIATED-PASS-20260731",
+  "status": "CURRENT",
+  "project_id": "lab",
+  "created_at": "2026-07-31T10:05:03-04:00",
+  "required_read_order": ["CURRENT_CONTINUITY.json", "CURRENT_CONTINUITY.md", "ATTACHMENT_MANIFEST.json", "START_PROMPT.md"],
+  "attachments": [
+    {"path": "projects/lab/continuity/CURRENT_CONTINUITY.json", "role": "CANONICAL_STRUCTURED_CONTINUITY", "required": true},
+    {"path": "projects/lab/continuity/CURRENT_CONTINUITY.md", "role": "HUMAN_READABLE_CONTINUITY", "required": true},
+    {"path": "projects/lab/continuity/ATTACHMENT_MANIFEST.json", "role": "READ_ORDER_AND_REFERENCE_MANIFEST", "required": true},
+    {"path": "projects/lab/continuity/START_PROMPT.md", "role": "FIRST_MESSAGE_FOR_NEW_CONVERSATION", "required": true}
+  ],
+  "repository_sources_not_duplicated_as_attachments": ["project-sources/chatgpt/START_HERE.md", "decisions/DEC-LAB-024.json", "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M3-REMEDIATION-158.json", "architecture/integrations/migration/M3/remediation-158/VALIDATION_RESULTS.json", "projects/lab/pending/PEND-LAB-036.json"],
+  "archived_package": "projects/lab/continuity/archive/m3-remediation-stage-2-preexecution-c37cd23afcf841fc1f35e4f437c933a32d657a22/",
+  "archived_blobs": {"CURRENT_CONTINUITY.json": "c6f1893e7b06737ed8b99b30d0a047901d294760", "CURRENT_CONTINUITY.md": "f56167c77f836f77357610fca05535f1fd7931ea", "ATTACHMENT_MANIFEST.json": "9dcdf223da1116af64c0c7cb35970799fa431699", "START_PROMPT.md": "8b8fb09cf7bec17b9ab536299cf07074517ac0c4"},
+  "missing_attachments": [],
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_158_CONSUMPTION"
+}

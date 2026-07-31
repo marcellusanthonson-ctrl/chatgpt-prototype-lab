@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "integration-factory-m3-remediation-158",
+  "project_id": "lab",
+  "recorded_at": "2026-07-31T10:05:03-04:00",
+  "authorization_id": "AUTHORIZATION_LAB_INTEGRATION_FACTORY_M3_ORACLE_AND_UTF8_REMEDIATION_158",
+  "evidence_id": "EVD-LAB-INTEGRATION-FACTORY-M3-REMEDIATION-158",
+  "status": "M3_REMEDIATED_PASS_EXACT_DUAL_EQUIVALENCE",
+  "state_changes": {
+    "integration_factory_migration_phase": "M3_REMEDIATED_PASS_AWAITING_SEPARATE_HUMAN_DECISION_FOR_M4",
+    "authorization_158": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "fixture_version": "1.1.1",
+    "historical_fixture_preserved": true,
+    "utf8_repair_completed": true,
+    "corpus_case_count": 420,
+    "static_shadow_exact_matches": 420,
+    "baseline_oracle_passes_per_evaluator": 13,
+    "divergences": 0,
+    "behavioral_digest_unchanged": true,
+    "active_selector_modified": false,
+    "shadow_registry_modified": false,
+    "runtime_effect": "NONE",
+    "integration_effect": "NONE",
+    "m4_authorized": false,
+    "cutover_authorized": false
+  },
+  "source_refs": [
+    "architecture/integrations/migration/M3/remediation-158/VALIDATION_RESULTS.json",
+    "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M3-REMEDIATION-158.json",
+    "projects/lab/pending/PEND-LAB-036.json"
+  ],
+  "single_next_action": "JONATHAN_MARTINEZ_DECIDES_WHETHER_TO_PREPARE_M4_HUMAN_CUTOVER_DECISION_PACKAGE",
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_158_CONSUMPTION",
+  "runtime_effect": "NONE"
+}
