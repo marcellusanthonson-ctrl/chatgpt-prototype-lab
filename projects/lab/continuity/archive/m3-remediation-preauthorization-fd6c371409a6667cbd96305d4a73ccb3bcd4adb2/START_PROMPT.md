@@ -1,0 +1,3 @@
+Continúa ChatGPT Prototype LAB reconstruyendo primero el estado desde `marcellusanthonson-ctrl/chatgpt-prototype-lab`, rama `main`, entrypoint `project-sources/chatgpt/START_HERE.md`; verifica el HEAD remoto vigente y sigue exactamente su orden de lectura.
+
+M3 quedó `M3_BLOCKED_WITH_CLASSIFIED_DIVERGENCES`: los evaluadores coinciden 420/420, pero `CRIT-FIX-008` y su reverso incumplen el oracle congelado al activar también `DESIGN_CRITERION`. Lee `projects/lab/pending/PEND-LAB-035.json`. No ejecutes remediación, M4, cutover, activación, cambios del selector, runtime, integraciones, AWS ni Terraform sin autorización separada.
