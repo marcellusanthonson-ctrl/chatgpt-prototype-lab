@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.2.0",
+  "continuity_id": "LAB-CONTINUITY-M5-EXECUTION-160-FAIL-CLOSED-20260731",
+  "project_id": "lab",
+  "status": "CURRENT_M5_EXECUTION_160_FAIL_CLOSED_AWAITING_HUMAN_REMEDIATION_DECISION",
+  "created_at": "2026-07-31T13:53:17-04:00",
+  "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "canonical_branch": "main",
+  "head_policy": "VERIFY_LIVE_AT_USE",
+  "grant_parent_head": "3d2377edbb468047c177af2411b2c7ce964b9951",
+  "stage_2_expected_parent_policy": "USE_THE_VERIFIED_FINAL_REMOTE_MAIN_HEAD_CREATED_BY_STAGE_1_PUBLICATION",
+  "entrypoint": "project-sources/chatgpt/START_HERE.md",
+  "required_reading_order": [
+    "VERIFY_LIVE_HEAD_OF_MAIN",
+    "project-sources/chatgpt/START_HERE.md",
+    "LAB_CONTRACT.md",
+    "METHODOLOGY.md",
+    "CURRENT_STATE.json",
+    "registry/index.json",
+    "registry/projects.json",
+    "projects/lab/PROJECT_STATE.json",
+    "decisions/DEC-LAB-027.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160.json",
+    "projects/lab/pending/PEND-LAB-038.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json"
+  ],
+  "decision": {
+    "id": "DEC-LAB-027",
+    "status": "APPROVED",
+    "selected_option": "GRANT_AUTHORIZATION_160_WITH_EXACT_PARENT"
+  },
+  "facts": [
+    {
+      "claim": "Readiness 161 passed its bounded gates and the 14 sandbox cases passed twice with identical digests without persistent partial activation.",
+      "source_refs": [
+        "architecture/integrations/migration/M5/readiness-161/VALIDATION_RESULTS.json",
+        "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-READINESS-REMEDIATION-161.json"
+      ]
+    },
+    {
+      "claim": "The general validator completes without crashing but still reports exactly 335 preexisting out-of-scope findings; this is not a global repository PASS.",
+      "source_refs": [
+        "architecture/integrations/migration/M5/readiness-161/VALIDATION_RESULTS.json"
+      ]
+    },
+    {
+      "claim": "Authorization 160 stage 2 reproduced the exact 335-finding baseline, then failed closed in the mandatory rollback drill before any pointer mutation, cutover or observation.",
+      "source_refs": [
+        "decisions/DEC-LAB-027.json",
+        "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160.json"
+      ]
+    }
+  ],
+  "authorizations": {
+    "160": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_EXECUTED_FAIL_CLOSED",
+    "161": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+  },
+  "pending": [
+    {
+      "id": "PEND-LAB-037",
+      "status": "RESOLVED_RETURN_FOR_REMEDIATION"
+    },
+    {
+      "id": "PEND-LAB-038",
+      "status": "RESOLVED_GRANT_AUTHORIZATION_160_WITH_EXACT_PARENT"
+    },
+    {
+      "id": "PEND-LAB-039",
+      "status": "AWAITING_HUMAN_REMEDIATION_DECISION_FOR_ROLLBACK_DRILL_VALIDATOR_INCOMPATIBILITY"
+    }
+  ],
+  "active_boundaries": {
+    "static_selector": "AUTHORITATIVE_UNCHANGED",
+    "shadow_registry": "INACTIVE_UNCHANGED",
+    "m5_authorized": false,
+    "m5_started": true,
+    "cutover_executed": false,
+    "operational_rollback_drill_executed": true,
+    "active_pointer_exists": false,
+    "static_selector_retirement_authorized": false,
+    "runtime_effect": "NONE",
+    "integration_effect": "NONE"
+  },
+  "stage_2_mandatory_first_gates": [
+    "COMPLETED_STAGE_1_RECONCILIATION",
+    "COMPLETED_EXACT_335_BASELINE",
+    "EXECUTED_ROLLBACK_DRILL_FAIL_CLOSED",
+    "STOPPED_WITHOUT_CUTOVER"
+  ],
+  "future_integration_priority": [
+    "PRODUCT_LEADERSHIP",
+    "INTELLIGENT_APPLICATION_CONSTRUCTION"
+  ],
+  "deferred_capability": "SOFTWARE_SOLUTION_ENGINEERING",
+  "forbidden": [
+    "RETIRE_STATIC_SELECTOR",
+    "MODIFY_STATIC_SELECTOR_SHADOW_REGISTRY_OR_M2_ADAPTERS",
+    "CLAIM_GLOBAL_REPOSITORY_PASS",
+    "TEST_ADAPT_ACTIVATE_OR_INTEGRATE_PRODUCT_LEADERSHIP_IAC_OR_SSE",
+    "RUN_AWS_OR_TERRAFORM",
+    "USE_REAL_DATA_OR_PRODUCTION_CREDENTIALS",
+    "MODIFY_EXTERNAL_REPOSITORIES"
+  ],
+  "single_next_action": "JONATHAN_MARTINEZ_DECIDES_PEND_LAB_039_AND_IF_DESIRED_ISSUES_SEPARATE_BOUNDED_VALIDATOR_REMEDIATION_AUTHORIZATION",
+  "first_phrase_for_new_conversation": "Continúa ChatGPT Prototype LAB desde el HEAD remoto vigente de main. La autorización 160 fue consumida por una ejecución fail-closed: el rollback drill obligatorio falló antes del cutover y PEND-LAB-039 espera una decisión humana de remediación.",
+  "authority_effect": "NONE_AWAITING_NEW_HUMAN_DECISION",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE",
+  "stage_2_result": {
+    "classification": "M5_BOUNDED_CUTOVER_ROLLED_BACK_WITH_CLASSIFIED_FAILURES",
+    "baseline": "EXACT_335_REPRODUCIBLE",
+    "rollback_drill": "FAIL_CLOSED",
+    "cutover": "NOT_EXECUTED",
+    "observation": "NOT_EXECUTED",
+    "failure_ref": "ERR-LAB-009"
+  }
+}
