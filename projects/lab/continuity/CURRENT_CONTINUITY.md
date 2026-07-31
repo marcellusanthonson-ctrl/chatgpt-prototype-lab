@@ -20,6 +20,10 @@ El selector estático permanece autoritativo, el shadow registry inactivo y no e
 
 Product Leadership e Intelligent Application Construction conservan prioridad futura. SSE está diferido. Ninguna capacidad candidata está autorizada para pruebas, adaptación, activación o integración dentro de M5.
 
+## Divergencias documentales de etapa 1
+
+`registry/index.json`, `registry/authorizations.json`, `projects/lab/PENDING.json` y `projects/lab/ROADMAP.json` todavía reflejan el estado anterior. La decisión, autorización, `PEND-LAB-038`, índice de decisiones, delta y continuidad CURRENT ya están publicados. Codex debe reconciliar esas cuatro vistas dentro de la etapa 2 antes de congelar la baseline y ejecutar el rollback drill.
+
 ## Siguiente acción única
 
 Codex ejecuta la autorización 160 desde el HEAD remoto final producido por esta publicación documental, verificándolo antes de cualquier modificación.
