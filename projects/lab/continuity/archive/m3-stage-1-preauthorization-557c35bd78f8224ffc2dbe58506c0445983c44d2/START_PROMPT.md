@@ -1,0 +1,3 @@
+Continúa ChatGPT Prototype LAB reconstruyendo primero el estado desde `marcellusanthonson-ctrl/chatgpt-prototype-lab`, rama `main`, entrypoint `project-sources/chatgpt/START_HERE.md`; verifica el HEAD remoto vigente y sigue exactamente su orden de lectura. Después lee el paquete CURRENT: M2 está PASS y aceptado como baseline suficiente, `PEND-LAB-034` está cerrado y la autorización 157 está publicada como `PROPOSED`.
+
+No ejecutes M3, no generes el corpus de 420 casos, no crees evaluadores, no actives el shadow registry y no modifiques selector, runtime o integraciones hasta identificar una concesión explícita de la autorización 157 que confirme el ejecutor técnico.

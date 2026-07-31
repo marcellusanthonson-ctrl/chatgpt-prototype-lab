@@ -68,3 +68,14 @@ La autorización 156 reparó exclusivamente integridad documental: preservó el 
 M3 no está autorizado ni iniciado. No existen corpus, evaluadores, resultados, divergencias o evidencia M3. El selector estático sigue autoritativo y el registro sombra continúa no activo.
 
 Estado efectivo: `M2_BASELINE_ACCEPTED_M3_AUTHORIZATION_PROPOSED_NOT_GRANTED`.
+
+
+## Fábrica de integraciones — M3 autorizado, no iniciado
+
+La autorización 157 está `GRANTED` con Codex como ejecutor técnico confirmado y parent de concesión `557c35bd78f8224ffc2dbe58506c0445983c44d2`. La etapa documental 1 establece `M3_AUTHORIZED_NOT_STARTED`.
+
+No se ha generado el corpus de 420 casos ni se han implementado o ejecutado los evaluadores. El selector estático y el shadow registry permanecen congelados; no existe efecto de runtime o integración.
+
+M4, cutover, activación, cambios del selector, AWS y Terraform continúan sin autorización.
+
+Estado efectivo: `M3_AUTHORIZED_NOT_STARTED_AWAITING_CODEX_EXECUTION`.

@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.2.0",
+  "continuity_id": "LAB-CONTINUITY-INTEGRATION-FACTORY-M2-BASELINE-ACCEPTED-M3-PROPOSAL-20260730",
+  "project_id": "lab",
+  "status": "CURRENT_M2_BASELINE_ACCEPTED_M3_AUTHORIZATION_PROPOSED_NOT_GRANTED",
+  "created_at": "2026-07-30T22:56:00-04:00",
+  "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "canonical_branch": "main",
+  "head_policy": "VERIFY_LIVE_AT_USE",
+  "verified_generation_parent_head": "2be9f16532493f55ffaaf8c82c3fb442c933bdaa",
+  "verified_generation_parent_head_role": "DECISION_023_AND_AUTHORIZATION_157_PROPOSAL_PUBLICATION_PARENT_HISTORICAL",
+  "entrypoint": "project-sources/chatgpt/START_HERE.md",
+  "required_reading_order": [
+    "VERIFY_LIVE_HEAD_OF_MAIN",
+    "project-sources/chatgpt/START_HERE.md",
+    "LAB_CONTRACT.md",
+    "METHODOLOGY.md",
+    "CURRENT_STATE.json",
+    "registry/index.json",
+    "registry/projects.json",
+    "projects/lab/PROJECT_STATE.json",
+    "decisions/DEC-LAB-023.json",
+    "projects/lab/pending/PEND-LAB-034.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M3_DUAL_SELECTOR_EVALUATION_AND_EQUIVALENCE_VALIDATION_157.json",
+    "projects/lab/briefs/CODEX_INTEGRATION_FACTORY_M3_DUAL_SELECTOR_EVALUATION_001.json",
+    "architecture/integrations/migration/M2/VALIDATION_RESULTS.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.md",
+    "projects/lab/continuity/ATTACHMENT_MANIFEST.json"
+  ],
+  "facts": [
+    {
+      "claim": "M2 remains technically M2_PASS with deterministic digest and unchanged selector.",
+      "source_refs": [
+        "architecture/integrations/migration/M2/VALIDATION_RESULTS.json"
+      ]
+    },
+    {
+      "claim": "DEC-LAB-023 accepts the reproducible M2 result as sufficient baseline for preparing M3 without retroactive executor authorization.",
+      "source_refs": [
+        "decisions/DEC-LAB-023.json"
+      ]
+    },
+    {
+      "claim": "PEND-LAB-034 is closed by the accepted-baseline resolution.",
+      "source_refs": [
+        "projects/lab/pending/PEND-LAB-034.json"
+      ]
+    },
+    {
+      "claim": "Authorization 157 is published as PROPOSED and does not authorize M3 execution.",
+      "source_refs": [
+        "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M3_DUAL_SELECTOR_EVALUATION_AND_EQUIVALENCE_VALIDATION_157.json"
+      ]
+    },
+    {
+      "claim": "The M3 brief is published as a non-executable draft.",
+      "source_refs": [
+        "projects/lab/briefs/CODEX_INTEGRATION_FACTORY_M3_DUAL_SELECTOR_EVALUATION_001.json"
+      ]
+    }
+  ],
+  "completed_work": [
+    "Published DEC-LAB-023.",
+    "Closed PEND-LAB-034 without retroactive executor authorization.",
+    "Published authorization 157 as a proposal only.",
+    "Published the complete M3 execution brief as a draft.",
+    "Archived the previous CURRENT continuity package using exact blobs.",
+    "Reconciled registry discovery and human-readable state."
+  ],
+  "authorizations": {
+    "147": {
+      "status": "GRANTED_NOT_STARTED",
+      "scope": "SSE_SEPARATE_LINE"
+    },
+    "153": "CONSUMED_M1A_AND_M1_PASS",
+    "154": "CONSUMED_STATE_RECONCILIATION",
+    "155": "CONSUMED_M2_SHADOW_REGISTRY_AND_EQUIVALENCE_VALIDATION",
+    "156": "CONSUMED_M2_DOCUMENTARY_INTEGRITY_RECONCILIATION",
+    "157": "PROPOSED_NOT_GRANTED_NOT_EXECUTABLE"
+  },
+  "current_line_authority": {
+    "m2_rerun_authorized": false,
+    "m3_authorized": false,
+    "m3_test_design_authorized": false,
+    "m3_corpus_generation_authorized": false,
+    "dual_evaluation_authorized": false,
+    "active_registry_authorized": false,
+    "selector_change_authorized": false,
+    "runtime_resolver_authorized": false,
+    "integration_authorized": false,
+    "aws_authorized": false,
+    "terraform_authorized": false,
+    "provider_selection_authorized": false
+  },
+  "pending": [
+    {
+      "id": "AUTHORIZATION_157_HUMAN_DECISION",
+      "status": "AWAITING_EXPLICIT_GRANT_OR_REJECTION",
+      "subject": "Decide whether to grant bounded M3 dual-selector evaluation authorization 157",
+      "effect_until_resolution": "M3_EXECUTION_BLOCKED",
+      "source_refs": [
+        "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M3_DUAL_SELECTOR_EVALUATION_AND_EQUIVALENCE_VALIDATION_157.json"
+      ]
+    }
+  ],
+  "errors": [],
+  "divergences": [
+    "The historical M2 executor variance remains recorded without retroactive authorization.",
+    "CURRENT_STATE.json and PROJECT_STATE.json remain preserved base snapshots; effective state is supplied by registry deltas and Markdown views.",
+    "projects/lab/decisions/index.json retains the pre-existing absence of DEC-LAB-022; this unrelated historical index omission was not repaired under the M3 preparation scope.",
+    "The legacy repository validator's pre-existing array-valued registry-delta path crash remains outside scope."
+  ],
+  "forbidden_until_new_authorization": [
+    "RERUN_M2",
+    "BEGIN_M3",
+    "GENERATE_M3_CORPUS",
+    "CREATE_M3_EVALUATORS",
+    "EXECUTE_DUAL_SELECTOR_EVALUATION",
+    "CREATE_OR_ENABLE_ACTIVE_REGISTRY",
+    "MODIFY_MODULE_SELECTOR_OR_CHATGPT_BEHAVIOR",
+    "IMPLEMENT_RUNTIME_RESOLVER",
+    "ACTIVATE_OR_INTEGRATE_ANY_MODULE",
+    "BEGIN_M4_OR_CUTOVER",
+    "EXECUTE_SSE_TEST_147_UNDER_THIS_LINE",
+    "RUN_AWS_TERRAFORM_OR_PROVISIONING_FOR_THIS_LINE",
+    "SELECT_GLOBAL_STACK_OR_PRODUCTION_PROVIDER"
+  ],
+  "single_next_action": "JONATHAN_MARTINEZ_EXPLICITLY_GRANTS_OR_REJECTS_AUTHORIZATION_157_AND_CONFIRMS_THE_TECHNICAL_EXECUTOR",
+  "first_phrase_for_new_conversation": "Continúa ChatGPT Prototype LAB reconstruyendo primero el estado desde `marcellusanthonson-ctrl/chatgpt-prototype-lab`, rama `main`, entrypoint `project-sources/chatgpt/START_HERE.md`; verifica el HEAD remoto vigente y sigue exactamente su orden de lectura. Después lee el paquete CURRENT: M2 está PASS y aceptado como baseline, PEND-LAB-034 está cerrado y la autorización 157 está publicada como PROPOSED, pero no ejecutes M3 hasta una concesión explícita que confirme el ejecutor técnico.",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE"
+}
