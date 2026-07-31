@@ -1,0 +1,207 @@
+{
+  "schema_version": "1.0.0",
+  "brief_id": "CODEX_INTEGRATION_FACTORY_M5_READINESS_AND_VALIDATOR_REMEDIATION_001",
+  "task_id": "LAB-INTEGRATION-FACTORY-M5-READINESS-161",
+  "title": "Repair the general validator and prove M5 operational readiness without cutover",
+  "status": "COMPLETE_AUTHORIZED_NOT_STARTED",
+  "parent_brief": "projects/lab/briefs/CODEX_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_001.json",
+  "decision_ref": "decisions/DEC-LAB-026.json",
+  "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_READINESS_AND_VALIDATOR_REMEDIATION_161.json",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": null,
+  "expected_parent_policy": "USE_VERIFIED_FINAL_REMOTE_MAIN_HEAD_AFTER_STAGE_1_PUBLICATION",
+  "technical_executor": "CODEX",
+  "objective": "Produce a reproducible PASS or classified block for M5 readiness by repairing ERR-LAB-008, specifying exact operational contracts, and exercising only sandboxed atomic-cutover simulations. Do not execute M5 or any candidate-capability tests.",
+  "preserved_parent_content": [
+    "STATIC_SELECTOR_REMAINS_AVAILABLE_AS_ROLLBACK_TARGET",
+    "PRE_ACTIVATION_ROLLBACK_DRILL_REQUIRED_BEFORE_ANY_LATER_CUTOVER",
+    "IMMEDIATE_ROLLBACK_ON_ANY_GATE_FAILURE",
+    "STATIC_SELECTOR_RETIREMENT_REQUIRES_LATER_HUMAN_DECISION",
+    "AUTHORIZATION_160_REMAINS_PROPOSED_UNTIL_EXPLICIT_HUMAN_GRANT"
+  ],
+  "approved_additions": [
+    "ERR_LAB_008_MINIMAL_REPAIR_AND_REGRESSION",
+    "EXACT_ACTIVE_RESOLUTION_CONTRACT",
+    "EXACT_ATOMIC_CUTOVER_CONTRACT",
+    "EXACT_ROLLBACK_DRILL_DESIGN",
+    "EXACT_OBSERVATION_PLAN",
+    "SANDBOX_FAILURE_INJECTION_AND_TWO_RUN_DETERMINISM",
+    "FUTURE_PRIORITY_PRODUCT_LEADERSHIP_THEN_INTELLIGENT_APPLICATION_CONSTRUCTION",
+    "SSE_DEFERRED"
+  ],
+  "required_reading": [
+    "project-sources/chatgpt/START_HERE.md",
+    "LAB_CONTRACT.md",
+    "METHODOLOGY.md",
+    "CURRENT_STATE.json",
+    "registry/index.json",
+    "registry/projects.json",
+    "projects/lab/PROJECT_STATE.json",
+    "decisions/DEC-LAB-026.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_READINESS_AND_VALIDATOR_REMEDIATION_161.json",
+    "projects/lab/pending/PEND-LAB-037.json",
+    "errors/ERR-LAB-008.json",
+    "architecture/integrations/migration/M4/CUTOVER_DECISION_PACKAGE.json",
+    "architecture/integrations/migration/M4/ROLLBACK_READINESS.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160.json",
+    "projects/lab/briefs/CODEX_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_001.json",
+    "architecture/integrations/STATIC_SELECTOR_TO_INTEGRATION_FACTORY_MIGRATION_PLAN_001.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json"
+  ],
+  "preflight": [
+    "VERIFY_LIVE_REMOTE_MAIN_HEAD_EQUALS_THE_STAGE_1_HEAD_SUPPLIED_IN_THE_TRANSFER_PROMPT",
+    "CONFIRM_AUTHORIZATION_161_GRANTED_AND_STAGE_2_AUTHORIZED_NOT_STARTED",
+    "CONFIRM_PEND_LAB_037_RESOLVED_RETURN_FOR_REMEDIATION",
+    "CONFIRM_AUTHORIZATION_160_PROPOSED_NOT_GRANTED_NOT_EXECUTABLE",
+    "CONFIRM_STATIC_SELECTOR_AUTHORITATIVE_AND_SHADOW_REGISTRY_INACTIVE",
+    "ARCHIVE_CURRENT_CONTINUITY_BY_EXACT_CONTENT_AND_BLOB_BEFORE_REPLACEMENT"
+  ],
+  "baseline": {
+    "m3_classification": "M3_REMEDIATED_PASS_EXACT_DUAL_EQUIVALENCE",
+    "m3_commit": "1e7271e667ab163cd62849d0df897a61c02c025e",
+    "case_count": 420,
+    "oracles_per_evaluator": "13/13",
+    "exact_equivalence": "420/420",
+    "divergences": 0,
+    "behavioral_digest": "9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329",
+    "fixture_blob": "db53d11e4a45e8f98a9b6aa540a2c7459723601b",
+    "static_selector_blob": "301ba432907758fc49a9b3c86a83fc762eac4607",
+    "shadow_registry_blob": "a067cd9f95b98aa1599d21e3a0ff35fa56ac3a78"
+  },
+  "validator_repair": {
+    "requirements": [
+      "Reproduce ERR-LAB-008 before editing.",
+      "Identify the exact array-versus-scalar path handling defect.",
+      "Apply the minimum correction to scripts/validate_repository.py without rewriting historical deltas.",
+      "Create scripts/test_validate_repository_delta_paths_161.py covering scalar path, valid path list, empty list, duplicates, invalid types, nonexistent paths, and mixed scalar/array records.",
+      "Run the focused regression tests, the complete general validator, bounded validator 158, bounded validator 159, JSON parsing, and duplicate-key checks.",
+      "Resolve ERR-LAB-008 only if the general validator completes without crash and every regression gate passes."
+    ]
+  },
+  "operational_contracts": {
+    "output_root": "architecture/integrations/migration/M5/readiness-161",
+    "required_files": [
+      "README.md",
+      "ACTIVE_RESOLUTION_CONTRACT.json",
+      "ATOMIC_CUTOVER_CONTRACT.json",
+      "ROLLBACK_DRILL_DESIGN.json",
+      "OBSERVATION_PLAN.json",
+      "FAILURE_INJECTION_MATRIX.json",
+      "READINESS_SIMULATION_RESULTS.json",
+      "VALIDATION_RESULTS.json",
+      "CHANGED_FILES.json"
+    ],
+    "requirements": [
+      "Define the exact resolver component, inputs, outputs, candidate and authoritative representations, governed selection pointer, mutable paths, states, invariants, abstention, authority limits, and hidden-dependency prohibition.",
+      "Define an atomic protocol that validates blobs and rollback target, prepares and verifies the candidate, changes one governed pointer, validates immediately, confirms or reverts, and cannot persist a partially activated state.",
+      "Specify valid and prohibited transitions, concurrency control, interruption handling, partial-write handling, recovery, and required evidence.",
+      "Design but do not execute the operational rollback drill, with exact commands, paths, baseline, trigger, target, success criteria, cleanup, evidence, and stop conditions.",
+      "Define an exact observation corpus or iteration count, expected digest, behavioral equivalence metrics, authority/runtime/integration gates, partial-state detection, immediate rollback conditions, and final classifications."
+    ]
+  },
+  "sandbox_simulation": {
+    "required_scripts": [
+      "scripts/simulate_integration_factory_atomic_cutover_161.py",
+      "scripts/validate_integration_factory_m5_readiness_161.py"
+    ],
+    "required_cases": [
+      "STATIC_TO_CANDIDATE_SUCCESS",
+      "CANDIDATE_TO_STATIC_SUCCESS",
+      "FAIL_BEFORE_PREPARATION",
+      "FAIL_DURING_PREPARATION",
+      "FAIL_BEFORE_POINTER_SWITCH",
+      "FAIL_IMMEDIATELY_AFTER_POINTER_SWITCH",
+      "INTERRUPTION_DURING_VALIDATION",
+      "IDEMPOTENT_ROLLBACK",
+      "DOUBLE_EXECUTION",
+      "INVALID_INITIAL_STATE",
+      "UNEXPECTED_BLOB",
+      "LOCK_OCCUPIED",
+      "CLEANUP",
+      "NO_PERSISTENT_PARTIAL_ACTIVATION"
+    ],
+    "requirements": [
+      "Execute only in a temporary directory or sandbox with zero canonical, runtime, or integration effect.",
+      "Every injected failure must end with an intact static state.",
+      "Run the complete simulation twice and require identical normalized results and digests."
+    ]
+  },
+  "m5_proposal_regeneration": [
+    "Update authorization 160 and the M5 brief with exact component, paths, atomic protocol, rollback drill, observation plan, gates, stop conditions, result classifications, and changed-files contract.",
+    "Keep authorization 160 status PROPOSED, approved_by null, execution_authorized false, and authority_effect NONE_UNTIL_EXPLICIT_HUMAN_GRANT.",
+    "Keep the M5 brief non-executable and set its expected parent only when a later explicit grant is published."
+  ],
+  "canonical_closure": [
+    "Create PEND-LAB-038 as AWAITING_HUMAN_REVIEW_OF_M5_READINESS_REMEDIATION.",
+    "Update decisions, errors, authorizations, pending, roadmap, registry, Markdown state views, evidence, delta, changed-files manifest, and the complete CURRENT continuity package.",
+    "Record Product Leadership then Intelligent Application Construction as future integration priority; keep SSE deferred.",
+    "Mark authorization 161 CONSUMED only after commit, push, and final remote HEAD verification."
+  ],
+  "pass_gates": [
+    "GENERAL_VALIDATOR_COMPLETES_WITHOUT_CRASH",
+    "ALL_ERR_LAB_008_REGRESSION_TESTS_PASS",
+    "BOUNDED_VALIDATORS_158_AND_159_PASS",
+    "ALL_OPERATIONAL_CONTRACTS_ARE_EXACT_AND_REFERENCE_VALID",
+    "ALL_REQUIRED_SANDBOX_FAILURE_CASES_PASS",
+    "TWO_COMPLETE_SIMULATION_RUNS_HAVE_IDENTICAL_NORMALIZED_DIGESTS",
+    "NO_CANONICAL_ACTIVE_SELECTOR_SHADOW_REGISTRY_OR_M2_ADAPTER_MODIFICATION",
+    "NO_RUNTIME_OR_INTEGRATION_EFFECT",
+    "AUTHORIZATION_160_REMAINS_PROPOSED_NOT_GRANTED_NOT_EXECUTABLE",
+    "PRODUCT_LEADERSHIP_IAC_AND_SSE_REMAIN_INACTIVE_AND_UNTESTED_IN_THIS_SCOPE"
+  ],
+  "result_contract": {
+    "pass": "M5_READINESS_REMEDIATION_PASS_AWAITING_NEW_HUMAN_CUTOVER_DECISION",
+    "block": "M5_READINESS_REMEDIATION_BLOCKED_WITH_CLASSIFIED_FAILURES",
+    "partial_pass_allowed": false
+  },
+  "forbidden_actions": [
+    "GRANT_OR_EXECUTE_AUTHORIZATION_160",
+    "EXECUTE_OPERATIONAL_ROLLBACK_DRILL",
+    "EXECUTE_M5_OR_CUTOVER",
+    "CREATE_OR_ACTIVATE_AN_ACTIVE_REGISTRY",
+    "MODIFY_MODULE_SELECTOR_OR_SHADOW_REGISTRY_OR_M2_ADAPTERS",
+    "CHANGE_CHATGPT_BEHAVIOR_RUNTIME_OR_INTEGRATIONS",
+    "RETIRE_STATIC_SELECTOR",
+    "TEST_ADAPT_ACTIVATE_OR_INTEGRATE_PRODUCT_LEADERSHIP",
+    "TEST_ADAPT_ACTIVATE_OR_INTEGRATE_INTELLIGENT_APPLICATION_CONSTRUCTION",
+    "TEST_ADAPT_ACTIVATE_OR_INTEGRATE_SOFTWARE_SOLUTION_ENGINEERING",
+    "RUN_AWS_OR_TERRAFORM",
+    "USE_REAL_DATA_OR_PRODUCTION_CREDENTIALS",
+    "MODIFY_EXTERNAL_REPOSITORIES",
+    "SILENTLY_EXPAND_SCOPE"
+  ],
+  "commit_message": "test(lab): remediate M5 readiness and validator",
+  "response_contract": [
+    "RESULT",
+    "VERIFIED_INITIAL_PARENT_HEAD",
+    "HUMAN_DECISION_RECORD",
+    "AUTHORIZATION_161_STATUS",
+    "ERR_LAB_008_REPRODUCTION",
+    "ERR_LAB_008_REPAIR",
+    "GENERAL_VALIDATOR_RESULT",
+    "REGRESSION_TEST_RESULTS",
+    "ACTIVE_RESOLUTION_CONTRACT",
+    "ATOMIC_CUTOVER_CONTRACT",
+    "ROLLBACK_DRILL_DESIGN",
+    "OBSERVATION_PLAN",
+    "FAILURE_INJECTION_RESULTS",
+    "M5_READINESS_CLASSIFICATION",
+    "AUTHORIZATION_160_STATUS",
+    "PRODUCT_LEADERSHIP_BOUNDARY",
+    "INTELLIGENT_APPLICATION_CONSTRUCTION_BOUNDARY",
+    "SSE_BOUNDARY",
+    "AUTHORITY_RUNTIME_AND_INTEGRATION_BOUNDARIES",
+    "FILES_CREATED",
+    "FILES_MODIFIED",
+    "COMMIT_SHA",
+    "VERIFIED_FINAL_REMOTE_HEAD",
+    "AUTHORIZATION_161_CONSUMPTION",
+    "PEND_LAB_037_STATUS",
+    "PEND_LAB_038_STATUS",
+    "SINGLE_NEXT_ACTION"
+  ],
+  "authority_effect": "BOUNDED_BY_AUTHORIZATION_161",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}
