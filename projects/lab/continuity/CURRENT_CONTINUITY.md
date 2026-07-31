@@ -1,19 +1,23 @@
-# Continuidad actual — ejecución M5 160 detenida de forma cerrada
+# Continuidad actual — remediación stage-aware de validadores 162 autorizada
 
-Fecha: 2026-07-31T13:53:17-04:00
+Fecha: 2026-07-31T14:40:00-04:00
 
 Repositorio: `marcellusanthonson-ctrl/chatgpt-prototype-lab`
 
 Rama: `main`
 
-La etapa 2 de la autorización 160 comenzó desde el HEAD remoto exacto `e60cfe4b90b58a2e54c4ddfe671267afc2a1bcaa`. La reconciliación documental inicial quedó limitada a los cuatro registros autorizados. El validador general produjo y reprodujo el mismo inventario exacto de 335 hallazgos históricos; esto no es un PASS global del repositorio.
+`DEC-LAB-028` resolvió `PEND-LAB-039` y concedió la autorización 162 exclusivamente para remediar `ERR-LAB-009` mediante validadores sucesores sensibles a la etapa del ciclo de autorización y un replay semántico en sandbox.
 
-El rollback drill obligatorio falló antes de cualquier mutación del puntero. El validador 158 rechazó la comparación con sus salidas históricas inmutables y el validador 161 rechazó el estado post-concesión de la autorización 160. El fallo está registrado como `ERR-LAB-009`.
+La autorización 160 permanece consumida por la ejecución fail-closed anterior. El selector estático sigue autoritativo, el shadow registry permanece inactivo y no existe puntero activo. No se autorizaron el rollback drill operacional, un reintento M5, cutover, runtime o integración.
 
-No se creó `architecture/integrations/active/INTEGRATION_FACTORY_RESOLUTION_POINTER.json`, no hubo cutover, no se ejecutó observación y no fue necesario un rollback operacional. El selector estático permanece autoritativo; el shadow registry sigue inactivo.
+La etapa 2 debe preservar sin cambios los validadores 158 y 161, sus outputs históricos, los paquetes M3, readiness-161 y execution-160. Debe reproducir el baseline exacto de 335 hallazgos sin delta, ejecutar 420/420 casos con 13/13 oráculos y cero divergencias, clasificar cada diferencia de outputs y ejecutar todas las pruebas positivas y negativas del brief.
 
-Product Leadership e Intelligent Application Construction conservan prioridad futura, y SSE permanece diferido. Ninguna de esas capacidades fue probada, adaptada, activada o integrada.
+Product Leadership e Intelligent Application Construction conservan prioridad futura. SSE permanece diferido. Ninguna capacidad candidata se prueba o integra en esta autorización.
+
+## Divergencias documentales de etapa 1
+
+Los registros agregados, roadmap, pending agregado, registro de errores y vistas generales de estado permanecen en la etapa execution-160 hasta que Codex los reconcilie dentro de la etapa 2 autorizada. La decisión 028, la autorización 162, el brief, el delta, `PEND-LAB-039`, el índice de decisiones y este paquete CURRENT ya son canónicos para el gate.
 
 ## Siguiente acción única
 
-Jonathan Martínez decide `PEND-LAB-039` y, si corresponde, emite una decisión y autorización separadas para remediar de forma acotada los validadores del drill.
+Codex ejecuta la autorización 162 desde el HEAD remoto final producido por esta publicación documental, verificándolo antes de cualquier modificación.
