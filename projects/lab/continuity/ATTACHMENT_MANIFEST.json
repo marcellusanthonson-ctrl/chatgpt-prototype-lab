@@ -1,9 +1,9 @@
 {
   "schema_version": "1.2.0",
-  "manifest_id": "LAB-CONTINUITY-ATTACHMENTS-M5-EXECUTION-160-FAIL-CLOSED-20260731",
+  "manifest_id": "LAB-CONTINUITY-ATTACHMENTS-M5-STAGE-AWARE-VALIDATOR-REMEDIATION-162-GRANTED-20260731",
   "status": "CURRENT",
   "project_id": "lab",
-  "created_at": "2026-07-31T13:53:17-04:00",
+  "created_at": "2026-07-31T14:40:00-04:00",
   "required_read_order": [
     "CURRENT_CONTINUITY.json",
     "CURRENT_CONTINUITY.md",
@@ -33,19 +33,20 @@
     }
   ],
   "repository_sources_not_duplicated_as_attachments": [
-    "errors/ERR-LAB-009.json",
+    "decisions/DEC-LAB-028.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162.json",
+    "projects/lab/briefs/CODEX_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_001.json",
     "projects/lab/pending/PEND-LAB-039.json",
-    "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160.json",
-    "projects/lab/briefs/CODEX_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_001.json",
-    "architecture/integrations/migration/M5/execution-160/VALIDATION_RESULTS.json"
+    "errors/ERR-LAB-009.json",
+    "registry/deltas/integration-factory-m5-stage-aware-validator-remediation-authorization-162.json"
   ],
-  "archived_package": "projects/lab/continuity/archive/m5-cutover-stage-2-preexecution-e60cfe4b90b58a2e54c4ddfe671267afc2a1bcaa/",
+  "archived_package": "projects/lab/continuity/archive/m5-validator-remediation-stage-1-preexecution-904fce42638b717699afe3ffef639545c990ec55/",
   "archived_package_integrity": {
-    "CURRENT_CONTINUITY.json": "91f7621b06bad50c7847fc7092afcaaecdc9da1c",
-    "CURRENT_CONTINUITY.md": "1f5f47dd672546bf70000d787ac6659136da31a1",
-    "ATTACHMENT_MANIFEST.json": "5ae8af2dc99a9ac1b114a4d471f3ca9becec2021",
-    "START_PROMPT.md": "d49c6827c689dbc222013f4bb6de8cfd99f0df63"
+    "CURRENT_CONTINUITY.json": "3b537d17466ab00a9248ed582e4e73c0be0e43c9",
+    "CURRENT_CONTINUITY.md": "8f4ae2d0dd90aa25f4180b73c4795dbaa3129524",
+    "ATTACHMENT_MANIFEST.json": "8a5d24391875b98cab90ea0c89465dbe88187583",
+    "START_PROMPT.md": "8096953818dec8d20aec88a6043977aab9e951d5"
   },
   "missing_attachments": [],
-  "authority_effect": "NONE_AWAITING_NEW_HUMAN_DECISION"
+  "authority_effect": "BOUNDED_AUTHORIZATION_162_STAGE_2_ONLY"
 }
