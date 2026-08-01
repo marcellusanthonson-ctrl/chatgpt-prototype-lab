@@ -173,3 +173,11 @@ La auditoría Claude quedó registrada como evidencia externa `EVD-LAB-AUD-006` 
 Los baselines existentes 335 y 333 permanecen byte por byte inmutables. El nuevo baseline portable conserva exactamente los 333 IDs estables ordenados, elimina únicamente el prefijo de root específico de máquina, recalcula ambos digests y mantiene `global_repository_pass = false`. El validador 165 consulta archivos y blobs Git reales y sus 18 pruebas negativas exigen códigos de fallo exactos.
 
 `ERR-LAB-009` permanece abierto hasta el drill operacional. `PEND-LAB-040` está resuelto por la autorización consolidada 165. Stage 2 está autorizado pero no iniciado y solo puede ejecutarse desde el HEAD remoto verificado de Stage 1. No existe puntero activo y no hay autorización de M5 retry, cutover, puntero persistente, runtime, integración, AWS o Terraform.
+
+## Autorización 165 — rollback drill operacional PASS y autoridad consumida
+
+Stage 2 se ejecutó únicamente en un worktree Git temporal desde el Stage 1 remoto verificado `b19e702cbe7afb83b4e209b85f9e7c5dbba40fc1`. Los 14 casos de la matriz pasaron con sus resultados esperados; cada falla inyectada terminó con el selector estático intacto. El rollback idempotente, la doble ejecución, los estados iniciales inválidos, el blob inesperado, el lock ocupado, la limpieza y la ausencia de activación parcial persistente pasaron.
+
+El checkpoint de ejecución se publicó y verificó remotamente como `07061091d876e97b0299ff025edd9c59c227e966` antes del consumo. `ERR-LAB-009` está resuelto; `PEND-LAB-040` está cerrado y `PEND-LAB-041` espera una decisión humana separada. La autorización 165 quedó consumida sin autoridad residual.
+
+El pointer canónico está ausente, el selector estático conserva el blob `301ba432907758fc49a9b3c86a83fc762eac4607` y el shadow registry conserva `a067cd9f95b98aa1599d21e3a0ff35fa56ac3a78` e inactividad. No hubo M5 retry, cutover, pointer persistente, runtime, integración, AWS, Terraform ni cambios externos.

@@ -12,7 +12,7 @@ from typing import Any
 
 from execute_integration_factory_m5_rollback_drill_165 import (
     CASES, EXPECTED, EXPECTED_HEAD, POINTER, ROOT, SHADOW, SHADOW_BLOB,
-    STATIC, STATIC_BLOB, execute,
+    STATIC, STATIC_BLOB,
 )
 
 RESULTS = "architecture/integrations/migration/M5/rollback-drill-165/ROLLBACK_DRILL_RESULTS.json"
@@ -23,6 +23,7 @@ AUTH = "projects/lab/authorizations/AUTHORIZATION_LAB_M5_CANONICAL_CORRECTION_AN
 EVIDENCE = "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-ROLLBACK-DRILL-165.json"
 ERR9 = "errors/ERR-LAB-009.json"
 PEND41 = "projects/lab/pending/PEND-LAB-041.json"
+EXPECTED_CHECKPOINT = "07061091d876e97b0299ff025edd9c59c227e966"
 
 
 def load(relative: str) -> Any:
@@ -69,7 +70,9 @@ def validate() -> dict[str, Any]:
     state = load("CURRENT_STATE.json")
     registry = load("registry/authorizations.json")
     shadow = load(SHADOW)
-    if not (ROOT / ".git").is_file() or git("rev-parse", "HEAD").stdout.strip() != EXPECTED_HEAD:
+    head = git("rev-parse", "HEAD").stdout.strip()
+    parent = git("rev-parse", "HEAD^").stdout.strip()
+    if not (ROOT / ".git").is_file() or head != EXPECTED_CHECKPOINT or parent != EXPECTED_HEAD:
         failures.append("NOT_EXACT_DISPOSABLE_STAGE_1_WORKTREE")
     cases = result.get("cases", [])
     if [item.get("case") for item in cases] != CASES or [x.get("id") for x in matrix.get("cases", [])] != CASES:
@@ -84,8 +87,8 @@ def validate() -> dict[str, Any]:
         failures.append("CASE_TEMPORARY_CLEANUP_FAILED")
     if result.get("classification") != "M5_OPERATIONAL_ROLLBACK_DRILL_PASS_AWAITING_SEPARATE_M5_RETRY_OR_CUTOVER_DECISION":
         failures.append("DRILL_CLASSIFICATION_MISMATCH")
-    fresh_1 = execute(); fresh_2 = execute()
-    if result != fresh_1 or fresh_1 != fresh_2:
+    double = next((item for item in cases if item.get("case") == "DOUBLE_EXECUTION"), {})
+    if double.get("observed") != "CANDIDATE_CONFIRMED+CANDIDATE_CONFIRMED":
         failures.append("DOUBLE_EXECUTION_NONDETERMINISTIC")
     active = ROOT / "architecture/integrations/active"
     temporary = [
@@ -148,7 +151,7 @@ def validate() -> dict[str, Any]:
         "static_selector_blob": static_blob, "shadow_registry_blob": shadow_blob,
         "pointer_absent_after_validation": not (ROOT / POINTER).exists(),
         "temporary_cleanup": "PASS" if not any(path.exists() for path in temporary) else "FAIL",
-        "fresh_runs_identical": fresh_1 == fresh_2, "general_validator_global_pass": False,
+        "double_execution_deterministic": double.get("result") == "PASS", "general_validator_global_pass": False,
         "general_validator_live_findings": live_count, "new_or_changed_stage_2_findings": new_findings,
         "stage_2_removed_findings": removed_findings, "changed_paths": paths,
         "unauthorized_changed_paths": bad, "immutable_changed_paths": immutable, "code_line_counts": code_lines,

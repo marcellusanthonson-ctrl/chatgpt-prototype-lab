@@ -1,14 +1,13 @@
 {
   "schema_version": "1.2.0",
-  "continuity_id": "LAB-CONTINUITY-M5-ROLLBACK-DRILL-165-PASS-20260731",
+  "continuity_id": "LAB-CONTINUITY-M5-CANONICAL-CORRECTION-165-STAGE-1-20260731",
   "project_id": "lab",
-  "status": "M5_OPERATIONAL_ROLLBACK_DRILL_PASS_AWAITING_SEPARATE_M5_RETRY_OR_CUTOVER_DECISION",
-  "created_at": "2026-07-31T23:59:00-04:00",
+  "status": "M5_CANONICAL_CORRECTION_PASS_ROLLBACK_DRILL_165_AUTHORIZED_AWAITING_STAGE_2",
+  "created_at": "2026-07-31T23:30:00-04:00",
   "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "canonical_branch": "main",
   "head_policy": "VERIFY_LIVE_AT_USE",
-  "verified_initial_parent_head": "b19e702cbe7afb83b4e209b85f9e7c5dbba40fc1",
-  "verified_stage_2_execution_remote_head": "07061091d876e97b0299ff025edd9c59c227e966",
+  "verified_initial_parent_head": "524f7ea0de65e818c8772ea7d46c3c7c8b8ade07",
   "entrypoint": "project-sources/chatgpt/START_HERE.md",
   "required_reading_order": [
     "VERIFY_LIVE_HEAD_OF_MAIN",
@@ -40,10 +39,6 @@
     "projects/lab/reassessments/REA-LAB-007.json",
     "architecture/integrations/migration/M5/canonical-reconciliation-165/GENERAL_VALIDATOR_PORTABLE_BASELINE.json",
     "scripts/validate_integration_factory_m5_canonical_state_165.py",
-    "architecture/integrations/migration/M5/rollback-drill-165/ROLLBACK_DRILL_RESULTS.json",
-    "architecture/integrations/migration/M5/rollback-drill-165/VALIDATION_RESULTS.json",
-    "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-ROLLBACK-DRILL-165.json",
-    "projects/lab/pending/PEND-LAB-041.json",
     "projects/lab/continuity/CURRENT_CONTINUITY.json"
   ],
   "facts": [
@@ -91,14 +86,6 @@
         "projects/lab/reassessments/REA-LAB-007.json",
         "architecture/integrations/migration/M5/canonical-reconciliation-165/GENERAL_VALIDATOR_PORTABLE_BASELINE.json"
       ]
-    },
-    {
-      "claim": "Authorization 165 Stage 2 executed all 14 operational rollback cases in a disposable worktree; every injected failure ended static intact, temporary artifacts were cleaned, and the verified execution publication preceded authorization consumption.",
-      "source_refs": [
-        "architecture/integrations/migration/M5/rollback-drill-165/ROLLBACK_DRILL_RESULTS.json",
-        "architecture/integrations/migration/M5/rollback-drill-165/VALIDATION_RESULTS.json",
-        "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-ROLLBACK-DRILL-165.json"
-      ]
     }
   ],
   "authorizations": {
@@ -109,7 +96,7 @@
     "162": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_AFTER_ATTEMPT_003_PASS",
     "163": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "164": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_WITH_AMENDMENT_1",
-    "165": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_NO_RESIDUAL_AUTHORITY"
+    "165": "GRANTED_STAGE_1_CONSUMED_STAGE_2_GRANTED_NOT_STARTED"
   },
   "baseline_transition": {
     "historical_count": 335,
@@ -131,20 +118,16 @@
     },
     {
       "id": "PEND-LAB-040",
-      "status": "RESOLVED_CONSOLIDATED_AUTHORIZATION_165_EXECUTED_PASS",
-      "future_drill_authorization": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
-    },
-    {
-      "id": "PEND-LAB-041",
-      "status": "AWAITING_HUMAN_DECISION_FOR_SEPARATE_M5_RETRY_OR_CUTOVER_AUTHORIZATION"
+      "status": "RESOLVED_AUTHORIZE_CONSOLIDATED_CANONICAL_CORRECTION_AND_CONDITIONAL_ROLLBACK_DRILL",
+      "future_drill_authorization": "GRANTED_STAGE_2_NOT_STARTED_AWAITING_VERIFIED_STAGE_1_REMOTE_HEAD"
     }
   ],
   "active_boundaries": {
     "static_selector": "AUTHORITATIVE_UNCHANGED",
     "shadow_registry": "INACTIVE_UNCHANGED",
     "active_pointer_exists": false,
-    "operational_rollback_drill_authorized": false,
-    "operational_rollback_drill_result": "PASS_14_OF_14_AUTHORIZATION_CONSUMED",
+    "operational_rollback_drill_authorized": true,
+    "operational_rollback_drill_condition": "STAGE_2_ONLY_AFTER_VERIFIED_STAGE_1_REMOTE_PUBLICATION_IN_DISPOSABLE_WORKTREE",
     "m5_retry_authorized": false,
     "cutover_authorized": false,
     "static_selector_retirement_authorized": false,
@@ -166,9 +149,9 @@
     "RUN_AWS_OR_TERRAFORM",
     "MODIFY_EXTERNAL_REPOSITORIES"
   ],
-  "single_next_action": "JONATHAN_MARTINEZ_DECIDES_WHETHER_TO_AUTHORIZE_A_SEPARATE_M5_RETRY_OR_CUTOVER_ATTEMPT",
-  "first_phrase_for_new_conversation": "Continua ChatGPT Prototype LAB desde el HEAD remoto vigente de main. La autorizacion 165 esta consumida despues del rollback drill PASS 14/14 y no deja autoridad residual. ERR-LAB-009 esta resuelto; PEND-LAB-041 espera una decision humana separada sobre M5 retry o cutover.",
-  "authority_effect": "NONE_AFTER_AUTHORIZATION_165_CONSUMPTION",
+  "single_next_action": "EXECUTE_STAGE_2_OPERATIONAL_ROLLBACK_DRILL_UNDER_AUTHORIZATION_165_FROM_VERIFIED_STAGE_1_REMOTE_HEAD",
+  "first_phrase_for_new_conversation": "Continua ChatGPT Prototype LAB desde el HEAD remoto vigente de main. Stage 1 de la autorizacion 165 paso y esta consumido; Stage 2 esta autorizado pero no iniciado hasta verificar ese HEAD remoto. El replay semantico 420/420 de ATTEMPT-003 se preserva, mientras el lifecycle 5/5 queda clasificado como validacion de fixtures sinteticos. ERR-LAB-009 sigue abierto hasta el drill.",
+  "authority_effect": "AUTHORIZATION_165_STAGE_1_CONSUMED_STAGE_2_GRANTED_NOT_STARTED_NO_RETRY_OR_CUTOVER_AUTHORITY",
   "runtime_effect": "NONE",
   "integration_effect": "NONE"
 }

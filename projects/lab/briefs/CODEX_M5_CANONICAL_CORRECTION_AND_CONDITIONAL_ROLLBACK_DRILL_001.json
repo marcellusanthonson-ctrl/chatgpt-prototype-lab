@@ -4,7 +4,7 @@
   "task_id": "LAB-M5-CANONICAL-CORRECTION-AND-CONDITIONAL-ROLLBACK-DRILL-165",
   "project_id": "lab",
   "title": "Correct canonical M5 state and conditionally execute the operational rollback drill",
-  "status": "READY",
+  "status": "CONSUMED",
   "objective": "Correct the bounded ATTEMPT-003 documentary defects, validate real canonical state, publish a portable 333-finding baseline, and execute the 14-case rollback drill only after verified Stage 1 remote publication.",
   "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_M5_CANONICAL_CORRECTION_AND_CONDITIONAL_OPERATIONAL_ROLLBACK_DRILL_165.json",
   "repositories": [
@@ -17,7 +17,7 @@
   ],
   "current_execution_id": null,
   "authority": {
-    "authorization_status": "GRANTED_STAGE_1_CONSUMED_STAGE_2_EXECUTED_PASS_AWAITING_VERIFIED_REMOTE_PUBLICATION",
+    "authorization_status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "approved_by": "Jonathan Martínez",
     "technical_executor": "CODEX",
     "commit": true,
@@ -37,7 +37,7 @@
     "stage_2_allowed_paths_ref": "AUTHORIZATION_165_COMPLETE.json#stage_2_allowed_paths",
     "immutable_paths_ref": "AUTHORIZATION_165_COMPLETE.json#immutable_paths",
     "forbidden_actions_ref": "AUTHORIZATION_165_COMPLETE.json#forbidden_actions",
-    "next_stage_id": "STAGE_2_CONDITIONAL_PRE_ACTIVATION_OPERATIONAL_ROLLBACK_DRILL",
+    "next_stage_id": null,
     "authorization_reusable": false
   },
   "stage_1": {
@@ -53,11 +53,13 @@
     "portable_baseline": "333_EXACT_ORDERED_STABLE_IDS_PORTABLE_GLOBAL_PASS_FALSE"
   },
   "stage_2": {
-    "status": "EXECUTED_PASS_AWAITING_VERIFIED_REMOTE_PUBLICATION",
-    "result": "M5_OPERATIONAL_ROLLBACK_DRILL_PASS_AWAITING_VERIFIED_REMOTE_PUBLICATION",
+    "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "result": "M5_OPERATIONAL_ROLLBACK_DRILL_PASS_AWAITING_SEPARATE_M5_RETRY_OR_CUTOVER_DECISION",
     "verified_parent_head": "b19e702cbe7afb83b4e209b85f9e7c5dbba40fc1",
     "case_result": "14_OF_14_PASS",
     "cleanup_result": "PASS_NO_TEMP_CANDIDATE_LOCK_POINTER_OR_PARTIAL_ACTIVATION",
+    "execution_publication_commit": "07061091d876e97b0299ff025edd9c59c227e966",
+    "verified_execution_remote_head": "07061091d876e97b0299ff025edd9c59c227e966",
     "environment": "DISPOSABLE_TEMPORARY_GIT_WORKTREE_ONLY",
     "required_case_count": 14,
     "required_invariant": "EVERY_INJECTED_FAILURE_ENDS_STATIC_INTACT"
@@ -102,8 +104,10 @@
     "fields_ref": "AUTHORIZATION_165_COMPLETE.json#response_contract"
   },
   "authorization_reusable": false,
-  "next_execution_under_this_brief": "STAGE_2_ONLY_AFTER_VERIFIED_STAGE_1_REMOTE_PUBLICATION",
-  "authority_effect": "BOUNDED_TWO_STAGE_CODEX_EXECUTION_ONLY",
+  "execution_result": "M5_OPERATIONAL_ROLLBACK_DRILL_PASS_AWAITING_SEPARATE_M5_RETRY_OR_CUTOVER_DECISION",
+  "terminal_state": "AUTHORIZATION_165_CONSUMED_NO_RESIDUAL_AUTHORITY",
+  "next_execution_under_this_brief": "NONE",
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_165_CONSUMPTION",
   "runtime_effect": "NONE",
   "integration_effect": "NONE"
 }

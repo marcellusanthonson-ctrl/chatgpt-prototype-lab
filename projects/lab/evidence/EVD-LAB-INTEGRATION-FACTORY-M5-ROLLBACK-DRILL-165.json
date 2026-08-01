@@ -3,7 +3,7 @@
   "evidence_id": "EVD-LAB-INTEGRATION-FACTORY-M5-ROLLBACK-DRILL-165",
   "project_id": "lab",
   "kind": "INTEGRATION_FACTORY_M5_PRE_ACTIVATION_OPERATIONAL_ROLLBACK_DRILL",
-  "status": "EXECUTED_PASS_AWAITING_VERIFIED_REMOTE_PUBLICATION",
+  "status": "M5_OPERATIONAL_ROLLBACK_DRILL_PASS_AWAITING_SEPARATE_M5_RETRY_OR_CUTOVER_DECISION",
   "authorization_id": "AUTHORIZATION_LAB_M5_CANONICAL_CORRECTION_AND_CONDITIONAL_OPERATIONAL_ROLLBACK_DRILL_165",
   "verified_stage_1_parent_head": "b19e702cbe7afb83b4e209b85f9e7c5dbba40fc1",
   "environment": "DISPOSABLE_TEMPORARY_GIT_WORKTREE_ONLY",
@@ -25,6 +25,11 @@
     "occupied_lock": "NO_MUTATION_LOCK_REJECTED",
     "temporary_cleanup": "PASS",
     "partial_activation_persisted": false
+  },
+  "publication": {
+    "execution_commit": "07061091d876e97b0299ff025edd9c59c227e966",
+    "verified_execution_remote_head": "07061091d876e97b0299ff025edd9c59c227e966",
+    "authorization_consumption": "EFFECTIVE_AFTER_VERIFIED_EXECUTION_REMOTE_PUBLICATION"
   },
   "boundaries": {
     "canonical_pointer_pre_state": "ABSENT",

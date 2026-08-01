@@ -1,11 +1,11 @@
 {
   "schema_version": "2.5.0",
   "document_id": "lab.current-state",
-  "version": "2.5.43",
-  "status": "M5_CANONICAL_CORRECTION_PASS_ROLLBACK_DRILL_165_AUTHORIZED_AWAITING_STAGE_2",
+  "version": "2.5.44",
+  "status": "M5_OPERATIONAL_ROLLBACK_DRILL_PASS_AWAITING_SEPARATE_M5_RETRY_OR_CUTOVER_DECISION",
   "updated_at": "2026-07-31",
   "active_project": "lab",
-  "current_phase": "M5_CANONICAL_CORRECTION_PASS_ROLLBACK_DRILL_165_AUTHORIZED_AWAITING_STAGE_2",
+  "current_phase": "M5_OPERATIONAL_ROLLBACK_DRILL_PASS_AWAITING_SEPARATE_M5_RETRY_OR_CUTOVER_DECISION",
   "methodology": {
     "version": "2.1",
     "path": "METHODOLOGY.md"
@@ -145,9 +145,7 @@
     "DEC-LAB-020",
     "DEC-LAB-021"
   ],
-  "open_errors": [
-    "ERR-LAB-009"
-  ],
+  "open_errors": [],
   "validated_patterns": [
     "PAT-LAB-001",
     "PAT-LAB-002",
@@ -223,7 +221,7 @@
     "integration_factory_m5_attempt_002_active_authorization_semantics_reconciliation_163": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "integration_factory_m5_canonical_open_error_decision_baseline_reconciliation_164": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "integration_factory_m5_stage_aware_validator_remediation_162": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "integration_factory_m5_canonical_correction_and_conditional_rollback_drill_165": "GRANTED_STAGE_1_CONSUMED_STAGE_2_GRANTED_NOT_STARTED"
+    "integration_factory_m5_canonical_correction_and_conditional_rollback_drill_165": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
   },
   "verified_external_heads": {
     "symphonie": "31dd1345026240c83b015feef34d6f7f2d2147b7",
@@ -253,8 +251,8 @@
     "SYMPHONIE_LIVHAVN_MONOLITHIC_VISUAL_CALIBRATION_083_READY_WITH_BOUNDED_GAPS",
     "INTEGRATION_FACTORY_M1_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_VALIDATION_PASS"
   ],
-  "next_authorized_action": "EXECUTE_STAGE_2_OPERATIONAL_ROLLBACK_DRILL_UNDER_AUTHORIZATION_165_FROM_VERIFIED_STAGE_1_REMOTE_HEAD",
-  "next_recommended_transition": "EXECUTE_CONDITIONAL_STAGE_2_WITHOUT_ADDITIONAL_HUMAN_APPROVAL",
+  "next_authorized_action": "NONE_AFTER_AUTHORIZATION_165_CONSUMPTION",
+  "next_recommended_transition": "JONATHAN_MARTINEZ_DECIDES_WHETHER_TO_AUTHORIZE_A_SEPARATE_M5_RETRY_OR_CUTOVER_ATTEMPT",
   "continuity_read_order": [
     "LAB_CONTRACT.md",
     "METHODOLOGY.md",
@@ -497,7 +495,7 @@
     "authority_effect": "NONE_AFTER_CONSUMPTION"
   },
   "integration_factory_migration": {
-    "status": "M5_CANONICAL_CORRECTION_PASS_ROLLBACK_DRILL_165_AUTHORIZED_AWAITING_STAGE_2",
+    "status": "M5_OPERATIONAL_ROLLBACK_DRILL_PASS_AWAITING_SEPARATE_M5_RETRY_OR_CUTOVER_DECISION",
     "architecture": "PROVIDER_AND_TECHNOLOGY_NEUTRAL",
     "global_preferred_stack": "NONE",
     "production_provider": "NONE",
@@ -592,9 +590,12 @@
     },
     "m5_canonical_correction_and_conditional_rollback_drill_165": {
       "authorization": "AUTHORIZATION_LAB_M5_CANONICAL_CORRECTION_AND_CONDITIONAL_OPERATIONAL_ROLLBACK_DRILL_165",
-      "status": "M5_CANONICAL_CORRECTION_PASS_ROLLBACK_DRILL_165_AUTHORIZED_AWAITING_STAGE_2",
+      "status": "M5_OPERATIONAL_ROLLBACK_DRILL_PASS_AWAITING_SEPARATE_M5_RETRY_OR_CUTOVER_DECISION",
       "stage_1": "CONSUMED_ON_VERIFIED_STAGE_1_REMOTE_PUBLICATION",
-      "stage_2": "GRANTED_NOT_STARTED_AWAITING_VERIFIED_STAGE_1_REMOTE_HEAD",
+      "stage_2": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "verified_stage_1_parent_head": "b19e702cbe7afb83b4e209b85f9e7c5dbba40fc1",
+      "stage_2_execution_publication_commit": "07061091d876e97b0299ff025edd9c59c227e966",
+      "rollback_drill_result": "14_OF_14_PASS_EVERY_INJECTED_FAILURE_ENDED_STATIC_INTACT",
       "verified_initial_parent_head": "4fba07c03faa1c4e5d9419476064c2945f06734f",
       "external_audit": "AUDIT-CLAUDE-M5-ATTEMPT-003-001",
       "external_audit_evidence": "EVD-LAB-AUD-006",
@@ -603,9 +604,10 @@
       "original_lifecycle_validation": "SYNTHETIC_FIXTURES_ONLY_NOT_CURRENT_CANONICAL_REPOSITORY_STATE",
       "real_canonical_state_validation": "PASS",
       "portable_general_validator_baseline": "333_EXACT_ORDERED_STABLE_IDS_GLOBAL_PASS_FALSE",
-      "err_lab_009": "OPEN_AWAITING_OPERATIONAL_ROLLBACK_DRILL",
+      "err_lab_009": "RESOLVED",
       "pend_lab_039": "TERMINAL_NO_FURTHER_AUTHORITY",
-      "pend_lab_040": "RESOLVED_BY_AUTHORIZATION_165",
+      "pend_lab_040": "RESOLVED_AUTHORIZATION_165_EXECUTED_PASS",
+      "pend_lab_041": "AWAITING_HUMAN_DECISION_FOR_SEPARATE_M5_RETRY_OR_CUTOVER_AUTHORIZATION",
       "m5_retry_authorized": false,
       "cutover_authorized": false,
       "persistent_active_pointer_authorized": false,

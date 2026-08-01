@@ -153,3 +153,9 @@ La auditoría `AUDIT-CLAUDE-M5-ATTEMPT-003-001` se registró como evidencia exte
 El baseline histórico 335 y el sucesor 333 permanecen inmutables. El baseline portable 165 conserva 333 hallazgos e IDs estables en el mismo orden, sin ruta absoluta ni identidad de máquina, con digests nuevos y `global_repository_pass = false`. El nuevo validador canónico verifica archivos y blobs reales.
 
 `PEND-LAB-040` quedó resuelto por la autorización consolidada 165. Stage 2 permanece autorizado y no iniciado hasta verificar la publicación remota de Stage 1. `ERR-LAB-009` sigue abierto; no hay autorización de retry, cutover, puntero persistente, runtime, integración, AWS o Terraform.
+
+## Rollback drill M5 165 — PASS 14/14
+
+Stage 2 se ejecutó en el worktree temporal exigido desde `b19e702cbe7afb83b4e209b85f9e7c5dbba40fc1`. El checkpoint `07061091d876e97b0299ff025edd9c59c227e966` fue publicado y verificado antes del cierre canónico. Los 14 casos pasaron, todos los fallos inyectados terminaron en estado estático intacto y no quedó pointer, lock, copia candidata temporal ni activación parcial.
+
+La autorización 165 está consumida; `ERR-LAB-009` está resuelto y `PEND-LAB-041` es el único sucesor de esta línea. No existe autorización para M5 retry o cutover. El selector estático sigue autoritativo, el shadow registry sigue inactivo y no hubo efecto de runtime, integración, AWS, Terraform o repositorio externo.

@@ -27,17 +27,21 @@
     "negative_tests": "18_OF_18_EXACT_FAILURE_CODES"
   },
   "stage_2": {
-    "status": "EXECUTED_PASS_AWAITING_VERIFIED_REMOTE_PUBLICATION",
+    "status": "PASS_CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "verified_stage_1_parent_head": "b19e702cbe7afb83b4e209b85f9e7c5dbba40fc1",
     "case_result": "14_OF_14_PASS",
     "failure_invariant": "PASS_EVERY_INJECTED_FAILURE_ENDED_STATIC_INTACT",
     "pointer_pre_and_post": "ABSENT",
     "temporary_cleanup": "PASS",
     "static_selector_blob": "301ba432907758fc49a9b3c86a83fc762eac4607",
-    "shadow_registry_blob": "a067cd9f95b98aa1599d21e3a0ff35fa56ac3a78"
+    "shadow_registry_blob": "a067cd9f95b98aa1599d21e3a0ff35fa56ac3a78",
+    "execution_publication_commit": "07061091d876e97b0299ff025edd9c59c227e966",
+    "verified_execution_remote_head": "07061091d876e97b0299ff025edd9c59c227e966"
   },
-  "open_errors": ["ERR-LAB-009"],
-  "active_authorization": "AUTHORIZATION_LAB_M5_CANONICAL_CORRECTION_AND_CONDITIONAL_OPERATIONAL_ROLLBACK_DRILL_165",
+  "open_errors": [],
+  "resolved_errors": ["ERR-LAB-009"],
+  "successor_pending": "PEND-LAB-041",
+  "active_authorization": null,
   "m5_retry_authorized": false,
   "cutover_authorized": false,
   "active_pointer_authorized": false,

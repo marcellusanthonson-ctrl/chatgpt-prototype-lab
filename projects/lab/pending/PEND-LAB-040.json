@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "id": "PEND-LAB-040",
   "project_id": "lab",
-  "status": "RESOLVED_AUTHORIZE_CONSOLIDATED_CANONICAL_CORRECTION_AND_CONDITIONAL_ROLLBACK_DRILL",
+  "status": "RESOLVED_CONSOLIDATED_AUTHORIZATION_165_EXECUTED_PASS",
   "type": "INTEGRATION_FACTORY_M5_NEW_ROLLBACK_DRILL_AUTHORIZATION_GATE",
   "priority": "HIGH",
   "created_at": "2026-07-31T22:10:00-04:00",
@@ -18,14 +18,16 @@
   "selected_option": "AUTHORIZE_CONSOLIDATED_CANONICAL_CORRECTION_AND_CONDITIONAL_ROLLBACK_DRILL",
   "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_M5_CANONICAL_CORRECTION_AND_CONDITIONAL_OPERATIONAL_ROLLBACK_DRILL_165.json",
   "future_drill_authorization": {
-    "status": "GRANTED_STAGE_2_NOT_STARTED_AWAITING_VERIFIED_STAGE_1_REMOTE_HEAD",
+    "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "operational_rollback_drill_authorized": true,
     "m5_retry_authorized": false,
     "cutover_authorized": false,
     "active_pointer_authorized": false
   },
-  "current_authority": "AUTHORIZATION_165_STAGE_2_ONLY_AFTER_VERIFIED_STAGE_1_REMOTE_PUBLICATION",
-  "next_transition": "EXECUTE_STAGE_2_OPERATIONAL_ROLLBACK_DRILL_UNDER_AUTHORIZATION_165_FROM_VERIFIED_STAGE_1_REMOTE_HEAD",
+  "execution_result": "M5_OPERATIONAL_ROLLBACK_DRILL_PASS_AWAITING_SEPARATE_M5_RETRY_OR_CUTOVER_DECISION",
+  "execution_publication_commit": "07061091d876e97b0299ff025edd9c59c227e966",
+  "current_authority": "NONE_AFTER_AUTHORIZATION_165_CONSUMPTION",
+  "next_transition": "JONATHAN_MARTINEZ_DECIDES_WHETHER_TO_AUTHORIZE_A_SEPARATE_M5_RETRY_OR_CUTOVER_ATTEMPT",
   "source_refs": [
     "architecture/integrations/migration/M5/validator-remediation-162/VALIDATION_RESULTS.json",
     "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-STAGE-AWARE-VALIDATOR-REMEDIATION-162.json",
@@ -35,7 +37,7 @@
   "static_selector": "AUTHORITATIVE_UNCHANGED",
   "shadow_registry": "INACTIVE_UNCHANGED",
   "active_pointer": "ABSENT",
-  "authority_effect": "BOUNDED_STAGE_2_DRILL_AUTHORITY_NO_RETRY_CUTOVER_OR_PERSISTENT_POINTER",
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_165_CONSUMPTION",
   "runtime_effect": "NONE",
   "integration_effect": "NONE"
 }

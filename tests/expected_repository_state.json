@@ -2,7 +2,7 @@
     "schema_version":  "2.5.0",
     "methodology_version":  "2.1",
     "active_project":  "lab",
-    "current_phase":  "M5_CANONICAL_CORRECTION_PASS_ROLLBACK_DRILL_165_AUTHORIZED_AWAITING_STAGE_2",
+    "current_phase":  "M5_OPERATIONAL_ROLLBACK_DRILL_PASS_AWAITING_SEPARATE_M5_RETRY_OR_CUTOVER_DECISION",
     "project_statuses":  {
                              "lab":  "active",
                              "mammothskills":  "active_pipeline_validated_phase_a",
@@ -36,7 +36,7 @@
                                "DEC-LAB-021"
                            ],
     "open_errors":  [
-                        "ERR-LAB-009"
+
                     ],
     "validated_patterns":  [
                                "PAT-LAB-001",
@@ -58,7 +58,7 @@
                             "integrations":  6,
                             "experiments":  8,
                             "authorizations":  93,
-                            "evidence":  73,
+                            "evidence":  74,
                             "unincorporated":  0,
                             "proposals":  3,
                             "sessions":  1,
@@ -145,6 +145,6 @@
                                 "integration_factory_m5_attempt_002_active_authorization_semantics_reconciliation_163":  "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
                                 "integration_factory_m5_canonical_open_error_decision_baseline_reconciliation_164":  "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
                                 "integration_factory_m5_stage_aware_validator_remediation_162":  "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-                                "integration_factory_m5_canonical_correction_and_conditional_rollback_drill_165":  "GRANTED_STAGE_1_CONSUMED_STAGE_2_GRANTED_NOT_STARTED"
+                                "integration_factory_m5_canonical_correction_and_conditional_rollback_drill_165":  "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
                             }
 }

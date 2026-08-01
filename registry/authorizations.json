@@ -1,17 +1,7 @@
 {
   "schema_version": "1.0.0",
   "updated_at": "2026-07-31",
-  "active_authorizations": [
-    {
-      "id": "AUTHORIZATION_LAB_M5_CANONICAL_CORRECTION_AND_CONDITIONAL_OPERATIONAL_ROLLBACK_DRILL_165",
-      "status": "GRANTED",
-      "stage_1_status": "CONSUMED_ON_VERIFIED_STAGE_1_REMOTE_PUBLICATION",
-      "stage_2_status": "EXECUTED_PASS_AWAITING_VERIFIED_REMOTE_PUBLICATION",
-      "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_M5_CANONICAL_CORRECTION_AND_CONDITIONAL_OPERATIONAL_ROLLBACK_DRILL_165.json",
-      "expected_parent_head": "4fba07c03faa1c4e5d9419476064c2945f06734f",
-      "consumed": false
-    }
-  ],
+  "active_authorizations": [],
   "records": [
     {
       "id": "AUTH-LAB-GOVERNANCE-V2-013",
@@ -1209,6 +1199,23 @@
       "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
       "branch": "main",
       "expected_parent_head": "524f7ea0de65e818c8772ea7d46c3c7c8b8ade07",
+      "updated_at": "2026-07-31"
+    },
+    {
+      "id": "AUTHORIZATION_LAB_M5_CANONICAL_CORRECTION_AND_CONDITIONAL_OPERATIONAL_ROLLBACK_DRILL_165",
+      "state_key": "integration_factory_m5_canonical_correction_and_conditional_rollback_drill_165",
+      "project_id": "lab",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "stage_1_status": "CONSUMED_ON_VERIFIED_STAGE_1_REMOTE_PUBLICATION",
+      "stage_2_status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "approved_by": "Jonathan Martínez",
+      "scope": "CANONICAL_CORRECTION_AND_PRE_ACTIVATION_OPERATIONAL_ROLLBACK_DRILL_PASS",
+      "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_M5_CANONICAL_CORRECTION_AND_CONDITIONAL_OPERATIONAL_ROLLBACK_DRILL_165.json",
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "expected_parent_head": "4fba07c03faa1c4e5d9419476064c2945f06734f",
+      "stage_1_commit": "b19e702cbe7afb83b4e209b85f9e7c5dbba40fc1",
+      "stage_2_execution_commit": "07061091d876e97b0299ff025edd9c59c227e966",
       "updated_at": "2026-07-31"
     }
   ]

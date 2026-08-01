@@ -1,9 +1,9 @@
 {
   "schema_version": "1.2.0",
-  "manifest_id": "LAB-CONTINUITY-ATTACHMENTS-M5-ROLLBACK-DRILL-165-PASS-20260731",
+  "manifest_id": "LAB-CONTINUITY-ATTACHMENTS-M5-CANONICAL-CORRECTION-165-STAGE-1-20260731",
   "status": "CURRENT",
   "project_id": "lab",
-  "created_at": "2026-07-31T23:59:00-04:00",
+  "created_at": "2026-07-31T23:30:00-04:00",
   "required_read_order": [
     "CURRENT_CONTINUITY.json",
     "CURRENT_CONTINUITY.md",
@@ -59,21 +59,15 @@
     "scripts/validate_repository_portable_baseline_165.py",
     "scripts/validate_integration_factory_m5_canonical_state_165.py",
     "scripts/test_integration_factory_m5_canonical_state_165.py",
-    "registry/deltas/integration-factory-m5-canonical-correction-and-conditional-rollback-drill-165.json",
-    "architecture/integrations/migration/M5/rollback-drill-165/ROLLBACK_DRILL_RESULTS.json",
-    "architecture/integrations/migration/M5/rollback-drill-165/VALIDATION_RESULTS.json",
-    "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-ROLLBACK-DRILL-165.json",
-    "projects/lab/pending/PEND-LAB-041.json",
-    "scripts/execute_integration_factory_m5_rollback_drill_165.py",
-    "scripts/validate_integration_factory_m5_rollback_drill_165.py"
+    "registry/deltas/integration-factory-m5-canonical-correction-and-conditional-rollback-drill-165.json"
   ],
-  "archived_package": "projects/lab/continuity/archive/m5-rollback-drill-165-preexecution-b19e702cbe7afb83b4e209b85f9e7c5dbba40fc1/",
+  "archived_package": "projects/lab/continuity/archive/m5-canonical-correction-165-preexecution-4fba07c03faa1c4e5d9419476064c2945f06734f/",
   "archived_package_integrity": {
-    "ATTACHMENT_MANIFEST.json": "6c89429a433f685714ed421330bc850650132ebf",
-    "CURRENT_CONTINUITY.json": "d4ea0923622c7dd7bb9c87cd1519bff457c9e597",
-    "CURRENT_CONTINUITY.md": "1bf25c5ca8dd55d9d1fb3951de7baf42941ca67b",
-    "START_PROMPT.md": "953ef9cb1120d3057f5806fd5a4cc452bdda6999"
+    "ATTACHMENT_MANIFEST.json": "f4a1747a871f07abcc21bcee11dc6a0f1aef7e1c",
+    "CURRENT_CONTINUITY.json": "79b52d3c3bf14d6521a438042367c0da17a2b9d6",
+    "CURRENT_CONTINUITY.md": "0040f3d631ae19e45330a81b536a2d33afd097f7",
+    "START_PROMPT.md": "8364a17ca25c363740084e823a843d98665b2876"
   },
   "missing_attachments": [],
-  "authority_effect": "NONE_AFTER_AUTHORIZATION_165_CONSUMPTION"
+  "authority_effect": "AUTHORIZATION_165_STAGE_1_CONSUMED_STAGE_2_GRANTED_NOT_STARTED_NO_RETRY_OR_CUTOVER_AUTHORITY"
 }
