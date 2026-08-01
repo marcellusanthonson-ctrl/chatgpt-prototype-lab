@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.0.0",
+  "drill_id": "INTEGRATION_FACTORY_M5_OPERATIONAL_ROLLBACK_DRILL_165",
+  "authorization": "AUTHORIZATION_LAB_M5_CANONICAL_CORRECTION_AND_CONDITIONAL_OPERATIONAL_ROLLBACK_DRILL_165",
+  "verified_stage_1_head": "b19e702cbe7afb83b4e209b85f9e7c5dbba40fc1",
+  "environment": "DISPOSABLE_TEMPORARY_GIT_WORKTREE_ONLY",
+  "case_count": 14,
+  "cases": [
+    {
+      "case": "STATIC_TO_CANDIDATE_SUCCESS",
+      "expected": "CANDIDATE_CONFIRMED_THEN_SANDBOX_RESET",
+      "result": "PASS",
+      "observed": "CANDIDATE_CONFIRMED",
+      "final_state": "STATIC_INTACT",
+      "temporary_cleanup": "PASS"
+    },
+    {
+      "case": "CANDIDATE_TO_STATIC_SUCCESS",
+      "expected": "STATIC_INTACT",
+      "result": "PASS",
+      "observed": "STATIC_INTACT",
+      "final_state": "STATIC_INTACT",
+      "temporary_cleanup": "PASS"
+    },
+    {
+      "case": "FAIL_BEFORE_PREPARATION",
+      "expected": "STATIC_INTACT",
+      "result": "PASS",
+      "observed": "INJECTED_FAILURE_REVERTED",
+      "final_state": "STATIC_INTACT",
+      "temporary_cleanup": "PASS"
+    },
+    {
+      "case": "FAIL_DURING_PREPARATION",
+      "expected": "STATIC_INTACT",
+      "result": "PASS",
+      "observed": "INJECTED_FAILURE_REVERTED",
+      "final_state": "STATIC_INTACT",
+      "temporary_cleanup": "PASS"
+    },
+    {
+      "case": "FAIL_BEFORE_POINTER_SWITCH",
+      "expected": "STATIC_INTACT",
+      "result": "PASS",
+      "observed": "INJECTED_FAILURE_REVERTED",
+      "final_state": "STATIC_INTACT",
+      "temporary_cleanup": "PASS"
+    },
+    {
+      "case": "FAIL_IMMEDIATELY_AFTER_POINTER_SWITCH",
+      "expected": "STATIC_INTACT",
+      "result": "PASS",
+      "observed": "INJECTED_FAILURE_REVERTED",
+      "final_state": "STATIC_INTACT",
+      "temporary_cleanup": "PASS"
+    },
+    {
+      "case": "INTERRUPTION_DURING_VALIDATION",
+      "expected": "STATIC_INTACT",
+      "result": "PASS",
+      "observed": "INJECTED_FAILURE_REVERTED",
+      "final_state": "STATIC_INTACT",
+      "temporary_cleanup": "PASS"
+    },
+    {
+      "case": "IDEMPOTENT_ROLLBACK",
+      "expected": "STATIC_INTACT_AFTER_TWO_CALLS",
+      "result": "PASS",
+      "observed": "STATIC_INTACT_AFTER_TWO_CALLS",
+      "final_state": "STATIC_INTACT",
+      "temporary_cleanup": "PASS"
+    },
+    {
+      "case": "DOUBLE_EXECUTION",
+      "expected": "DETERMINISTIC_IDEMPOTENT_CONFIRMATION",
+      "result": "PASS",
+      "observed": "CANDIDATE_CONFIRMED+CANDIDATE_CONFIRMED",
+      "final_state": "STATIC_INTACT",
+      "temporary_cleanup": "PASS"
+    },
+    {
+      "case": "INVALID_INITIAL_STATE",
+      "expected": "REVERTED_TO_STATIC",
+      "result": "PASS",
+      "observed": "INVALID_INITIAL_STATE_REVERTED",
+      "final_state": "STATIC_INTACT",
+      "temporary_cleanup": "PASS"
+    },
+    {
+      "case": "UNEXPECTED_BLOB",
+      "expected": "REVERTED_TO_STATIC",
+      "result": "PASS",
+      "observed": "INVALID_INITIAL_STATE_REVERTED",
+      "final_state": "STATIC_INTACT",
+      "temporary_cleanup": "PASS"
+    },
+    {
+      "case": "LOCK_OCCUPIED",
+      "expected": "NO_MUTATION_LOCK_REJECTED",
+      "result": "PASS",
+      "observed": "LOCK_REJECTED_NO_MUTATION",
+      "final_state": "STATIC_INTACT",
+      "temporary_cleanup": "PASS"
+    },
+    {
+      "case": "CLEANUP",
+      "expected": "NO_TEMP_CANDIDATE_OR_LOCK",
+      "result": "PASS",
+      "observed": "NO_TEMP_CANDIDATE_OR_LOCK",
+      "final_state": "STATIC_INTACT",
+      "temporary_cleanup": "PASS"
+    },
+    {
+      "case": "NO_PERSISTENT_PARTIAL_ACTIVATION",
+      "expected": "UNREFERENCED_PARTIAL_DISCARDED_STATIC_INTACT",
+      "result": "PASS",
+      "observed": "UNREFERENCED_PARTIAL_DISCARDED_STATIC_INTACT",
+      "final_state": "STATIC_INTACT",
+      "temporary_cleanup": "PASS"
+    }
+  ],
+  "pointer_pre_state": {
+    "pointer": "ABSENT",
+    "static_blob": "301ba432907758fc49a9b3c86a83fc762eac4607",
+    "shadow_blob": "a067cd9f95b98aa1599d21e3a0ff35fa56ac3a78"
+  },
+  "pointer_post_state": {
+    "pointer": "ABSENT",
+    "static_blob": "301ba432907758fc49a9b3c86a83fc762eac4607",
+    "shadow_blob": "a067cd9f95b98aa1599d21e3a0ff35fa56ac3a78"
+  },
+  "failure_invariant": "EVERY_INJECTED_FAILURE_ENDS_STATIC_INTACT",
+  "persistent_pointer": false,
+  "m5_retry": false,
+  "cutover": false,
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE",
+  "aws_effect": "NONE",
+  "terraform_effect": "NONE",
+  "normalized_digest": "a3446e99d1b1055e9c42e26be186f175e9c29601ff7cf164e147cfd7c91921b4",
+  "classification": "M5_OPERATIONAL_ROLLBACK_DRILL_PASS_AWAITING_SEPARATE_M5_RETRY_OR_CUTOVER_DECISION"
+}

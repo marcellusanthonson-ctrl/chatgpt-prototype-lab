@@ -27,7 +27,14 @@
     "negative_tests": "18_OF_18_EXACT_FAILURE_CODES"
   },
   "stage_2": {
-    "status": "GRANTED_NOT_STARTED_AWAITING_VERIFIED_STAGE_1_REMOTE_HEAD"
+    "status": "EXECUTED_PASS_AWAITING_VERIFIED_REMOTE_PUBLICATION",
+    "verified_stage_1_parent_head": "b19e702cbe7afb83b4e209b85f9e7c5dbba40fc1",
+    "case_result": "14_OF_14_PASS",
+    "failure_invariant": "PASS_EVERY_INJECTED_FAILURE_ENDED_STATIC_INTACT",
+    "pointer_pre_and_post": "ABSENT",
+    "temporary_cleanup": "PASS",
+    "static_selector_blob": "301ba432907758fc49a9b3c86a83fc762eac4607",
+    "shadow_registry_blob": "a067cd9f95b98aa1599d21e3a0ff35fa56ac3a78"
   },
   "open_errors": ["ERR-LAB-009"],
   "active_authorization": "AUTHORIZATION_LAB_M5_CANONICAL_CORRECTION_AND_CONDITIONAL_OPERATIONAL_ROLLBACK_DRILL_165",

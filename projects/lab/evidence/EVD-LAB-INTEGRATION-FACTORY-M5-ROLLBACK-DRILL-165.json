@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-INTEGRATION-FACTORY-M5-ROLLBACK-DRILL-165",
+  "project_id": "lab",
+  "kind": "INTEGRATION_FACTORY_M5_PRE_ACTIVATION_OPERATIONAL_ROLLBACK_DRILL",
+  "status": "EXECUTED_PASS_AWAITING_VERIFIED_REMOTE_PUBLICATION",
+  "authorization_id": "AUTHORIZATION_LAB_M5_CANONICAL_CORRECTION_AND_CONDITIONAL_OPERATIONAL_ROLLBACK_DRILL_165",
+  "verified_stage_1_parent_head": "b19e702cbe7afb83b4e209b85f9e7c5dbba40fc1",
+  "environment": "DISPOSABLE_TEMPORARY_GIT_WORKTREE_ONLY",
+  "execution": {
+    "result_path": "architecture/integrations/migration/M5/rollback-drill-165/ROLLBACK_DRILL_RESULTS.json",
+    "case_count": 14,
+    "passed_cases": 14,
+    "expected_outcomes": "14_OF_14_EXACT",
+    "normalized_digest": "a3446e99d1b1055e9c42e26be186f175e9c29601ff7cf164e147cfd7c91921b4",
+    "classification": "M5_OPERATIONAL_ROLLBACK_DRILL_PASS_AWAITING_SEPARATE_M5_RETRY_OR_CUTOVER_DECISION"
+  },
+  "invariants": {
+    "every_injected_failure_ends_static_intact": true,
+    "positive_case_resets_to_static": true,
+    "idempotent_rollback": "PASS",
+    "double_execution": "DETERMINISTIC",
+    "invalid_initial_state": "REVERTED_TO_STATIC",
+    "unexpected_blob": "REVERTED_TO_STATIC",
+    "occupied_lock": "NO_MUTATION_LOCK_REJECTED",
+    "temporary_cleanup": "PASS",
+    "partial_activation_persisted": false
+  },
+  "boundaries": {
+    "canonical_pointer_pre_state": "ABSENT",
+    "canonical_pointer_post_state": "ABSENT",
+    "static_selector_blob": "301ba432907758fc49a9b3c86a83fc762eac4607",
+    "static_selector": "AUTHORITATIVE_UNCHANGED",
+    "shadow_registry_blob": "a067cd9f95b98aa1599d21e3a0ff35fa56ac3a78",
+    "shadow_registry": "INACTIVE_UNCHANGED",
+    "m5_retry": "NOT_EXECUTED_NOT_AUTHORIZED",
+    "cutover": "NOT_EXECUTED_NOT_AUTHORIZED",
+    "persistent_active_pointer": "ABSENT_NOT_AUTHORIZED",
+    "runtime_effect": "NONE",
+    "integration_effect": "NONE",
+    "aws_effect": "NONE",
+    "terraform_effect": "NONE",
+    "external_repository_effect": "NONE"
+  }
+}

@@ -229,7 +229,12 @@
   },
   "stage_2": {
     "id": "STAGE_2_CONDITIONAL_PRE_ACTIVATION_OPERATIONAL_ROLLBACK_DRILL",
-    "status": "GRANTED_NOT_STARTED_AWAITING_VERIFIED_STAGE_1_REMOTE_HEAD",
+    "status": "EXECUTED_PASS_AWAITING_VERIFIED_REMOTE_PUBLICATION",
+    "result": "M5_OPERATIONAL_ROLLBACK_DRILL_PASS_AWAITING_VERIFIED_REMOTE_PUBLICATION",
+    "verified_parent_head": "b19e702cbe7afb83b4e209b85f9e7c5dbba40fc1",
+    "executed_case_count": 14,
+    "passed_case_count": 14,
+    "failure_invariant_result": "PASS_EVERY_INJECTED_FAILURE_ENDED_STATIC_INTACT",
     "expected_parent_policy": "USE_VERIFIED_STAGE_1_REMOTE_MAIN_HEAD",
     "environment": "DISPOSABLE_TEMPORARY_GIT_WORKTREE_ONLY",
     "canonical_checkout_mutation": false,
