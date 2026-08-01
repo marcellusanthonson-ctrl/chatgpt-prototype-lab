@@ -1285,7 +1285,7 @@
     {
       "amendment_id": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166_AMENDMENT_2_STAGE_AWARE_CANONICAL_STATE_VALIDATOR_SUCCESSOR",
       "revision": 2,
-      "status": "GRANTED_STAGE_1_5A_PUBLICATION_PENDING_REMOTE_VERIFICATION",
+      "status": "CONSUMED_ON_VERIFIED_STAGE_1_5B_REMOTE_PUBLICATION",
       "approved_by": "Jonathan Martínez",
       "approved_at": "2026-08-01T11:34:00-04:00",
       "approval_source": "Apruebo la Enmienda 2 — Revisión 2 de la autorización 166.",
@@ -1337,8 +1337,8 @@
         "code_changes_permitted": false,
         "remote_verification_required": true
       },
-      "stage_1_5a_remote_verified": false,
-      "stage_1_5a_remote_head": null,
+      "stage_1_5a_remote_verified": true,
+      "stage_1_5a_remote_head": "4d5464f08cecec9f8a3de2298f02643dd47e1317",
       "consumption": "ON_VERIFIED_STAGE_1_5B_REMOTE_PUBLICATION",
       "fail_closed": "NO_STAGE_2_NO_POINTER_NO_LOCK_NO_RUNTIME_NO_INTEGRATION"
     }
@@ -1401,13 +1401,14 @@
   },
   "stage_1_5a": {
     "id": "STAGE_1_5A_SUCCESSOR_IMPLEMENTATION_AND_PUBLICATION",
-    "status": "PUBLICATION_PENDING_REMOTE_VERIFICATION",
+    "status": "CONSUMED_ON_VERIFIED_STAGE_1_5A_REMOTE_PUBLICATION",
+    "verified_remote_head": "4d5464f08cecec9f8a3de2298f02643dd47e1317",
     "profile": "STAGE_1_5A_PENDING_REMOTE",
     "commit_message": "fix(lab): publish stage-aware canonical state validator successor 166"
   },
   "stage_1_5b": {
     "id": "STAGE_1_5B_REMOTE_VERIFICATION_FINALIZATION_AND_STAGE_2_HANDOFF",
-    "status": "GRANTED_NOT_STARTED",
+    "status": "CONSUMED_ON_VERIFIED_STAGE_1_5B_REMOTE_PUBLICATION",
     "profile": "STAGE_1_5B_FINALIZED",
     "commit_message": "chore(lab): finalize stage-aware validator successor 166"
   },

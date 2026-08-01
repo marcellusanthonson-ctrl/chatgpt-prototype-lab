@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "result_id": "M5_CUTOVER_166_STAGE_1_5B_FINALIZATION_RESULTS_001",
+  "authorization_id": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166",
+  "amendment_id": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166_AMENDMENT_2_STAGE_AWARE_CANONICAL_STATE_VALIDATOR_SUCCESSOR",
+  "revision": 2,
+  "classification": "PASS_EFFECTIVE_ON_VERIFIED_STAGE_1_5B_REMOTE_PUBLICATION",
+  "verified_stage_1_5a_remote_head": "4d5464f08cecec9f8a3de2298f02643dd47e1317",
+  "stage_1_5a_profile": "STAGE_1_5A_PENDING_REMOTE_PASS",
+  "stage_1_5b_profile": "STAGE_1_5B_FINALIZED_PASS",
+  "successor_validator": "scripts/validate_integration_factory_m5_canonical_state_166.py",
+  "successor_suite": {
+    "classification": "PASS",
+    "positive_profiles": "3_OF_3",
+    "negative_boundaries": "18_OF_18_EXACT_FAILURE_CODES",
+    "metamorphic_boundaries": "7_OF_7"
+  },
+  "general_validator": {
+    "finding_count": 329,
+    "exit_code": 1,
+    "exact_ordered_inventory": true,
+    "added_findings": [],
+    "removed_findings": [],
+    "modified_findings": [],
+    "structured_inventory_digest": "7014f40da42487c7de502c6e209e10b751b8f1718e4c148663c2511ba2bc705b",
+    "raw_ordered_message_digest": "3b724dbb28e9922e1e658bb07d9c5cdbbbe33167553e62398b43c88056af258d",
+    "global_repository_pass": false
+  },
+  "canonical_transition": {
+    "status": "M5_BOUNDED_CUTOVER_166_STAGE_AWARE_VALIDATOR_SUCCESSOR_PUBLISHED_AWAITING_STAGE_2",
+    "authorization_state": "GRANTED_STAGE_1_AND_STAGE_1_5_CONSUMED_STAGE_2_GRANTED_NOT_STARTED",
+    "amendment_2": "CONSUMED_ON_VERIFIED_STAGE_1_5B_REMOTE_PUBLICATION",
+    "stage_2": "GRANTED_NOT_STARTED_AWAITING_VERIFIED_STAGE_1_5B_REMOTE_HEAD",
+    "stage_2_parent_policy": "USE_VERIFIED_STAGE_1_5B_REMOTE_MAIN_HEAD",
+    "brief_stage_1_5_status": "READY_FOR_STAGE_2_FROM_VERIFIED_STAGE_1_5B_FINALIZATION_HEAD",
+    "next_action": "EXECUTE_STAGE_2_BOUNDED_M5_CUTOVER_FROM_VERIFIED_STAGE_1_5B_REMOTE_HEAD"
+  },
+  "stage_2_gate_7": "python scripts/validate_integration_factory_m5_canonical_state_166.py --profile STAGE_1_5B_FINALIZED",
+  "pointer": "ABSENT",
+  "lock": "NOT_ACQUIRED",
+  "static_selector": "UNCHANGED_301ba432907758fc49a9b3c86a83fc762eac4607",
+  "candidate": "SHADOW_ONLY_NOT_ACTIVE_a067cd9f95b98aa1599d21e3a0ff35fa56ac3a78",
+  "stage_2_started": false,
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE",
+  "verified_stage_1_5b_remote_head": "VERIFY_LIVE_AFTER_PUBLICATION"
+}

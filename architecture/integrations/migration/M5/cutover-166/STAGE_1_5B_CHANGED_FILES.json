@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "manifest_id": "M5_CUTOVER_166_STAGE_1_5B_CHANGED_FILES_001",
+  "verified_parent_head": "4d5464f08cecec9f8a3de2298f02643dd47e1317",
+  "created": [
+    "architecture/integrations/migration/M5/cutover-166/STAGE_1_5B_CHANGED_FILES.json",
+    "architecture/integrations/migration/M5/cutover-166/STAGE_1_5B_FINALIZATION_RESULTS.json",
+    "projects/lab/evidence/EVD-LAB-M5-CUTOVER-166-STAGE-1-5-VALIDATOR-SUCCESSOR.json"
+  ],
+  "modified": [
+    "CURRENT_STATE.json",
+    "CURRENT_STATE.md",
+    "projects/lab/PENDING.json",
+    "projects/lab/PROJECT_STATE.json",
+    "projects/lab/PROJECT_STATE.md",
+    "projects/lab/ROADMAP.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166.json",
+    "projects/lab/briefs/CODEX_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_001.json",
+    "projects/lab/continuity/ATTACHMENT_MANIFEST.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.md",
+    "projects/lab/continuity/START_PROMPT.md",
+    "projects/lab/pending/PEND-LAB-041.json",
+    "registry/authorizations.json",
+    "registry/evidence.json",
+    "registry/index.json",
+    "tests/expected_repository_state.json"
+  ],
+  "created_count": 3,
+  "modified_count": 17,
+  "total_count": 20,
+  "code_files_modified": [],
+  "immutable_paths_changed": [],
+  "unauthorized_paths_changed": [],
+  "stage_2_files_created": [],
+  "stage_2_started": false
+}

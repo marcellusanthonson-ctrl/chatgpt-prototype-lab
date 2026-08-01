@@ -1,9 +1,9 @@
 {
   "schema_version": "1.2.0",
-  "manifest_id": "LAB-CONTINUITY-ATTACHMENTS-M5-CUTOVER-166-STAGE-1-20260801",
+  "manifest_id": "LAB-CONTINUITY-ATTACHMENTS-M5-CUTOVER-166-STAGE-1-5-20260801",
   "status": "CURRENT",
   "project_id": "lab",
-  "created_at": "2026-08-01T09:48:00-04:00",
+  "created_at": "2026-08-01T11:34:00-04:00",
   "required_read_order": [
     "CURRENT_CONTINUITY.json",
     "CURRENT_CONTINUITY.md",
@@ -70,7 +70,14 @@
     "projects/lab/briefs/CODEX_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_001.json",
     "architecture/integrations/migration/M5/cutover-166/PRE_CUTOVER_GENERAL_VALIDATOR_BASELINE.json",
     "architecture/integrations/migration/M5/cutover-166/INITIAL_VERIFICATION_RESULTS.json",
-    "registry/deltas/integration-factory-m5-bounded-cutover-observation-and-automatic-rollback-166.json"
+    "registry/deltas/integration-factory-m5-bounded-cutover-observation-and-automatic-rollback-166.json",
+    "scripts/validate_integration_factory_m5_canonical_state_166.py",
+    "scripts/test_integration_factory_m5_canonical_state_166.py",
+    "architecture/integrations/migration/M5/cutover-166/STAGE_1_5A_VALIDATOR_SUCCESSOR_RESULTS.json",
+    "architecture/integrations/migration/M5/cutover-166/STAGE_1_5A_CHANGED_FILES.json",
+    "architecture/integrations/migration/M5/cutover-166/STAGE_1_5B_FINALIZATION_RESULTS.json",
+    "architecture/integrations/migration/M5/cutover-166/STAGE_1_5B_CHANGED_FILES.json",
+    "projects/lab/evidence/EVD-LAB-M5-CUTOVER-166-STAGE-1-5-VALIDATOR-SUCCESSOR.json"
   ],
   "archived_package": "projects/lab/continuity/archive/m5-cutover-166-stage-1-prepublication-3a7470255f367212fc373fb7eefd9fe112c39f12/",
   "archived_package_integrity": {
@@ -80,5 +87,5 @@
     "START_PROMPT.md": "c3d8c2df315f6ef05a8fbab2a3628863d8af19f1"
   },
   "missing_attachments": [],
-  "authority_effect": "AUTHORIZATION_166_STAGE_2_CONDITIONAL_ONLY"
+  "authority_effect": "AUTHORIZATION_166_STAGE_2_GRANTED_NOT_STARTED_ONLY_FROM_VERIFIED_STAGE_1_5B_REMOTE_HEAD"
 }

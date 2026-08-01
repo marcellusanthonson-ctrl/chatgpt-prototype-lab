@@ -1,8 +1,12 @@
-# Continuidad actual — autorización 166 Stage 1, cutover concedido
+# Continuidad actual — autorización 166 Stage 1.5 finalizado, Stage 2 no iniciado
 
-Fecha: 2026-08-01T09:48:00-04:00
+Fecha: 2026-08-01T11:34:00-04:00
 
-La autorización 166 con Amendment 1 fija el corpus `architecture/integrations/migration/M3/remediation-158/TEST_CORPUS.json@009065769f524f17f3ffdf137fb0213ee30fb150`, preserva el selector estático como fallback inmutable y concede Stage 2 únicamente desde el Stage 1 remoto verificado. El baseline pre-cutover congela 329 hallazgos con `global_repository_pass = false`.
+La autorización 166 con Amendment 1 y la Enmienda 2 Revisión 2 fija el corpus `architecture/integrations/migration/M3/remediation-158/TEST_CORPUS.json@009065769f524f17f3ffdf137fb0213ee30fb150`, preserva el selector estático como fallback inmutable y publica el sucesor canónico `scripts/validate_integration_factory_m5_canonical_state_166.py`. Stage 1.5A fue publicado y verificado remotamente como `4d5464f08cecec9f8a3de2298f02643dd47e1317` antes de la finalización.
+
+Los perfiles explícitos `PRE_AMENDMENT_166`, `STAGE_1_5A_PENDING_REMOTE` y `STAGE_1_5B_FINALIZED` pasan 3/3; las fronteras negativas pasan 18/18 con códigos exactos y las pruebas metamórficas pasan 7/7. El baseline pre-cutover conserva exactamente 329 hallazgos, delta cero y `global_repository_pass = false`.
+
+Stage 1 y Stage 1.5 quedan consumidos con la publicación remota verificada de Stage 1.5B. Stage 2 permanece concedido, no iniciado y no consumido, y solo podrá comenzar desde el HEAD remoto verificado de Stage 1.5B con el perfil `STAGE_1_5B_FINALIZED`. El selector estático permanece intacto; el candidate está inactivo, el pointer ausente y el lock no fue adquirido. No hubo efecto de runtime o integración.
 
 ## Historial preservado
 
@@ -22,4 +26,4 @@ Stage 2 se ejecutó exclusivamente en un worktree temporal desde `b19e702cbe7afb
 
 ## Siguiente acción única
 
-Jonathan Martínez decide si desea emitir una autorización separada para un futuro M5 retry o cutover.
+Ejecutar Stage 2 bajo la autorización 166 únicamente desde el HEAD remoto verificado de Stage 1.5B, en una entrega posterior y sin reutilizar ningún parent anterior.

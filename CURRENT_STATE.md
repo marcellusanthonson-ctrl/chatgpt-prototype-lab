@@ -187,3 +187,11 @@ El pointer canónico está ausente, el selector estático conserva el blob `301b
 La autorización 166 y su Amendment 1 corrigen únicamente la referencia del corpus a `architecture/integrations/migration/M3/remediation-158/TEST_CORPUS.json` con blob `009065769f524f17f3ffdf137fb0213ee30fb150`. El corpus determinista sintético conserva 420 casos; la equivalencia publicada permanece 420/420, 13/13 por evaluador, cero divergencias y digest `9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329`.
 
 El baseline pre-cutover congela 329 hallazgos con `global_repository_pass = false`. `PEND-LAB-041` quedó resuelto autorizando el cutover acotado. El selector estático y el candidate registry permanecen inmutables; el pointer sigue ausente hasta Stage 2.
+
+## Autorización 166 — Stage 1.5 finalizado, Stage 2 no iniciado
+
+La Enmienda 2 Revisión 2 publicó el sucesor canónico `scripts/validate_integration_factory_m5_canonical_state_166.py` con tres perfiles explícitos y cerrados. El commit remoto de Stage 1.5A `4d5464f08cecec9f8a3de2298f02643dd47e1317` fue verificado antes de la finalización.
+
+La suite pasa 3/3 perfiles positivos, 18/18 fronteras negativas con códigos exactos y 7/7 pruebas metamórficas. El inventario general permanece exactamente en 329 hallazgos, delta cero y `global_repository_pass = false`. El validador 165, su suite, el baseline pre-cutover, el selector estático, el candidate y el corpus permanecen intactos.
+
+Stage 1 y Stage 1.5 quedan consumidos al verificarse la publicación remota de Stage 1.5B. Stage 2 permanece concedido, no iniciado y no consumido, con parent `USE_VERIFIED_STAGE_1_5B_REMOTE_MAIN_HEAD`. El pointer está ausente, el candidate inactivo y no se adquirió lock ni hubo efecto de runtime o integración.

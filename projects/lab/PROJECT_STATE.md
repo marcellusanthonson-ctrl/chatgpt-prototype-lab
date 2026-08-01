@@ -163,3 +163,11 @@ La autorización 165 está consumida; `ERR-LAB-009` está resuelto y `PEND-LAB-0
 ## M5 cutover 166 — Stage 1
 
 La autorización 166 con Amendment 1 está publicada para el cutover atómico acotado. El corpus canónico es `architecture/integrations/migration/M3/remediation-158/TEST_CORPUS.json@009065769f524f17f3ffdf137fb0213ee30fb150`; el baseline pre-cutover contiene 329 hallazgos y no declara PASS global. Stage 2 queda concedido y no iniciado hasta verificar el commit remoto de Stage 1.
+
+## Sucesor canónico 166 — Stage 1.5 finalizado
+
+La Enmienda 2 Revisión 2 publicó y verificó el sucesor canónico `scripts/validate_integration_factory_m5_canonical_state_166.py`. Sus tres perfiles positivos pasan 3/3, las fronteras negativas pasan 18/18 con códigos exactos y las pruebas metamórficas pasan 7/7. El inventario general continúa exactamente en 329 hallazgos, delta cero y sin PASS global.
+
+Stage 1.5A fue publicado y verificado como `4d5464f08cecec9f8a3de2298f02643dd47e1317`; Stage 1.5B finaliza el handoff documental. Stage 1 y Stage 1.5 quedan consumidos únicamente con publicación remota verificada de Stage 1.5B. Stage 2 permanece concedido, no iniciado y no consumido, y su parent será exclusivamente el HEAD remoto verificado de Stage 1.5B.
+
+El selector estático permanece intacto, el candidate continúa shadow-only e inactivo, el pointer está ausente y no se adquirió lock. No hubo efecto de runtime, integración, AWS, Terraform ni repositorios externos.

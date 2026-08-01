@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-M5-CUTOVER-166-STAGE-1-5-VALIDATOR-SUCCESSOR",
+  "project_id": "lab",
+  "kind": "INTEGRATION_FACTORY_M5_STAGE_AWARE_CANONICAL_STATE_VALIDATOR_SUCCESSOR",
+  "status": "M5_CUTOVER_166_STAGE_1_5_STAGE_AWARE_VALIDATOR_SUCCESSOR_PUBLISHED_STAGE_2_GRANTED_NOT_STARTED",
+  "authorization_id": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166",
+  "amendment_id": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166_AMENDMENT_2_STAGE_AWARE_CANONICAL_STATE_VALIDATOR_SUCCESSOR",
+  "amendment_revision": 2,
+  "verified_parent_head": "40398bcdabbc16f6607c344748308fc6051c9aad",
+  "verified_stage_1_5a_remote_head": "4d5464f08cecec9f8a3de2298f02643dd47e1317",
+  "implementation": {
+    "validator": "scripts/validate_integration_factory_m5_canonical_state_166.py",
+    "test": "scripts/test_integration_factory_m5_canonical_state_166.py",
+    "profiles": [
+      "PRE_AMENDMENT_166",
+      "STAGE_1_5A_PENDING_REMOTE",
+      "STAGE_1_5B_FINALIZED"
+    ],
+    "positive_tests": "3_OF_3_PASS",
+    "negative_tests": "18_OF_18_PASS_EXACT_FAILURE_CODES",
+    "metamorphic_tests": "7_OF_7_PASS",
+    "code_line_limit": "PASS_BOTH_AT_MOST_280"
+  },
+  "validation": {
+    "historical_validator_165": "INTACT_REPRODUCES_CURRENT_STATE_TRANSITION_MISMATCH",
+    "historical_test_165": "PASS_18_OF_18",
+    "portable_baseline": "333_EXACT_GLOBAL_PASS_FALSE",
+    "pre_cutover_baseline": "329_EXACT_ZERO_DELTA_GLOBAL_PASS_FALSE",
+    "corpus": "420_CASES_EXACT",
+    "behavioral_digest": "9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329"
+  },
+  "boundaries": {
+    "static_selector_blob": "301ba432907758fc49a9b3c86a83fc762eac4607",
+    "candidate_blob": "a067cd9f95b98aa1599d21e3a0ff35fa56ac3a78",
+    "candidate_status": "SHADOW_ONLY_NOT_ACTIVE",
+    "pointer": "ABSENT",
+    "lock": "NOT_ACQUIRED",
+    "stage_2": "GRANTED_NOT_STARTED_NOT_CONSUMED",
+    "runtime_effect": "NONE",
+    "integration_effect": "NONE",
+    "external_repository_effect": "NONE"
+  },
+  "publication": {
+    "stage_1_5b_commit_message": "chore(lab): finalize stage-aware validator successor 166",
+    "verified_stage_1_5b_remote_head": "VERIFY_LIVE_AFTER_PUBLICATION",
+    "amendment_consumption_effective_on": "VERIFIED_STAGE_1_5B_REMOTE_PUBLICATION"
+  }
+}

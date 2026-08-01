@@ -4,7 +4,7 @@
   "task_id": "LAB-M5-CUTOVER-166",
   "project_id": "lab",
   "status": "READY",
-  "stage_1_5_status": "STAGE_1_5A_PUBLICATION_PENDING_REMOTE_VERIFICATION",
+  "stage_1_5_status": "READY_FOR_STAGE_2_FROM_VERIFIED_STAGE_1_5B_FINALIZATION_HEAD",
   "objective": "Publish and remotely finalize the explicit-profile authorization-166 canonical-state validator successor before any Stage 2 execution, then preserve the original bounded atomic cutover, observation and rollback scope for a later execution from the verified Stage 1.5B remote HEAD.",
   "repositories": [
     {
@@ -12,12 +12,14 @@
       "branch": "main",
       "verified_initial_head": "3a7470255f367212fc373fb7eefd9fe112c39f12",
       "stage_1_5_parent_head": "40398bcdabbc16f6607c344748308fc6051c9aad",
+      "verified_stage_1_5a_remote_head": "4d5464f08cecec9f8a3de2298f02643dd47e1317",
       "stage_2_parent_policy": "USE_VERIFIED_STAGE_1_5B_REMOTE_MAIN_HEAD"
     }
   ],
   "authority": {
     "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166.json",
-    "authorization_status": "GRANTED_STAGE_1_CONSUMED_STAGE_1_5A_PENDING_REMOTE_VERIFICATION_STAGE_1_5B_GRANTED_NOT_STARTED_STAGE_2_GRANTED_NOT_STARTED",
+    "authorization_status": "GRANTED_STAGE_1_AND_STAGE_1_5_CONSUMED_STAGE_2_GRANTED_NOT_STARTED",
+    "amendment_2_status": "CONSUMED_ON_VERIFIED_STAGE_1_5B_REMOTE_PUBLICATION",
     "amendment_ref": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166_AMENDMENT_1_CANONICAL_M3_CORPUS_REFERENCE_CORRECTION",
     "amendment_2_ref": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166_AMENDMENT_2_STAGE_AWARE_CANONICAL_STATE_VALIDATOR_SUCCESSOR",
     "amendment_2_revision": 2,
@@ -30,6 +32,9 @@
     "stage_1_5b": "REMOTE_VERIFICATION_FINALIZATION_AND_STAGE_2_HANDOFF",
     "stage_2": "BOUNDED_ATOMIC_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK",
     "stage_2_execution_in_current_delivery": "PROHIBITED",
+    "stage_1_5a_remote_verification": "PASS_4d5464f08cecec9f8a3de2298f02643dd47e1317",
+    "stage_1_5b_finalization": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "stage_2_gate_7": "python scripts/validate_integration_factory_m5_canonical_state_166.py --profile STAGE_1_5B_FINALIZED",
     "canonical_validator_successor": "scripts/validate_integration_factory_m5_canonical_state_166.py",
     "canonical_validator_successor_test": "scripts/test_integration_factory_m5_canonical_state_166.py",
     "explicit_profiles": [
