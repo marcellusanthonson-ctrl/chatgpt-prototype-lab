@@ -21,25 +21,31 @@
     }
   ],
   "expected_parent_head": null,
-  "expected_parent_policy": "USE_VERIFIED_FINAL_REMOTE_MAIN_HEAD_AFTER_AUTHORIZATION_163_AMENDMENT_1_PUBLICATION",
+  "expected_parent_policy": "USE_VERIFIED_REMOTE_HEAD_AFTER_AUTHORIZATION_164_PUBLICATION",
+  "current_execution_id": "ATTEMPT-003",
   "technical_executor": "CODEX",
   "authority": {
     "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162.json",
     "authorization_status": "GRANTED",
-    "amendment": "AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162_AMENDMENT_1",
+    "amendment": "AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162_AMENDMENT_3_ATTEMPT_003_CANONICAL_EXECUTION_AND_CLOSURE",
     "documentary_prerequisite": "AUTHORIZATION_LAB_M5_ATTEMPT_002_AND_ACTIVE_AUTHORIZATION_REGISTRY_SEMANTICS_RECONCILIATION_163_AMENDMENT_1",
     "approved_by": "Jonathan Martínez",
     "technical_executor": "CODEX",
     "permissions": {
-      "documentary_baseline_correction_in_this_execution": true,
+      "documentary_baseline_correction_in_this_execution": false,
       "commit": true,
       "push": true,
-      "semantic_replay_in_this_execution": false,
-      "stage_aware_tests_in_this_execution": false
+      "semantic_replay_in_this_execution": true,
+      "stage_aware_tests_in_this_execution": true,
+      "positive_and_negative_tests_in_this_execution": true,
+      "operational_rollback_drill": false,
+      "m5_retry": false,
+      "cutover": false,
+      "active_pointer": false,
+      "runtime": false,
+      "integration": false
     },
     "prohibitions": [
-      "NO_SEMANTIC_REPLAY_IN_DOCUMENTARY_CORRECTION_EXECUTION",
-      "NO_STAGE_AWARE_TEST_EXECUTION_IN_DOCUMENTARY_CORRECTION_EXECUTION",
       "NO_OPERATIONAL_ROLLBACK_DRILL",
       "NO_M5_RETRY_OR_CUTOVER",
       "NO_ACTIVE_POINTER",
@@ -48,19 +54,45 @@
       "NO_AWS_OR_TERRAFORM",
       "NO_EXTERNAL_REPOSITORY_CHANGE"
     ],
-    "active_authorization_registry_rule": "AUTHORIZATION_162_MUST_REMAIN_ONLY_IN_ACTIVE_AUTHORIZATIONS_WHILE_GRANTED_AND_MUST_NOT_BE_ADDED_TO_RECORDS_OR_GIVEN_A_CONSUMED_CURRENT_STATE_TRANSITION"
+    "active_authorization_registry_rule": "AUTHORIZATION_162_MOVES_FROM_ACTIVE_AUTHORIZATIONS_TO_CONSUMED_RECORDS_ONLY_AFTER_EXECUTED_ATTEMPT_003_COMMIT_PUSH_AND_VERIFIED_REMOTE_PUBLICATION"
   },
   "scope": {
     "allowed_paths": [
       "decisions/DEC-LAB-028.json",
       "registry/decisions.json",
       "registry/index.json",
+      "architecture/integrations/migration/M5/validator-remediation-162/**",
+      "scripts/validate_integration_factory_m3_semantic_replay_162.py",
+      "scripts/validate_integration_factory_stage_aware_lifecycle_162.py",
+      "scripts/test_integration_factory_stage_aware_validators_162.py",
+      "errors/ERR-LAB-009.json",
+      "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-STAGE-AWARE-VALIDATOR-REMEDIATION-162.json",
+      "projects/lab/pending/PEND-LAB-039.json",
+      "projects/lab/pending/PEND-LAB-040.json",
+      "projects/lab/PENDING.json",
+      "projects/lab/ROADMAP.json",
+      "projects/lab/decisions/index.json",
+      "registry/authorizations.json",
+      "registry/errors.json",
+      "registry/evidence.json",
+      "registry/deltas/integration-factory-m5-stage-aware-validator-remediation-authorization-162.json",
+      "registry/deltas/integration-factory-m5-stage-aware-validator-remediation-162.json",
+      "CURRENT_STATE.md",
+      "projects/lab/PROJECT_STATE.md",
       "projects/lab/briefs/CODEX_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_001.json",
-      "projects/lab/authorizations/AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162.json"
+      "projects/lab/authorizations/AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162.json",
+      "projects/lab/continuity/CURRENT_CONTINUITY.json",
+      "projects/lab/continuity/CURRENT_CONTINUITY.md",
+      "projects/lab/continuity/ATTACHMENT_MANIFEST.json",
+      "projects/lab/continuity/START_PROMPT.md",
+      "projects/lab/continuity/archive/**",
+      "CURRENT_STATE.json",
+      "projects/lab/PROJECT_STATE.json"
     ],
     "immutable_paths": [
       "schemas/**",
-      "scripts/**",
+      "scripts/validate_integration_factory_m3_remediation_158.py",
+      "scripts/validate_integration_factory_m5_readiness_161.py",
       "architecture/integrations/migration/M3/**",
       "architecture/integrations/migration/M5/readiness-161/**",
       "architecture/integrations/migration/M5/execution-160/**",
@@ -75,16 +107,19 @@
       "NORMALIZE_BRIEF_162_AGAINST_BRIEF_SCHEMA",
       "RECORD_DOCUMENTARY_BASELINE_CORRECTION_WITHOUT_CONSUMING_AUTHORIZATION_162"
     ],
-    "stage_2_restart": "ATTEMPT_003_SEPARATE_EXECUTION_FROM_VERIFIED_REMOTE_HEAD_AFTER_AUTHORIZATION_163_PUBLICATION",
+    "stage_2_restart": "ATTEMPT_003_EXECUTED_FROM_VERIFIED_REMOTE_HEAD_AFTER_AUTHORIZATION_164_PUBLICATION",
     "next_attempt_id": "ATTEMPT-003",
-    "attempt_003_started": false,
+    "attempt_003_started": true,
     "required_general_validator_baseline": {
       "path": "architecture/integrations/migration/M5/documentary-reconciliation-163/GENERAL_VALIDATOR_SUCCESSOR_BASELINE.json",
       "finding_count": 333,
       "authorized_removed_stable_ids": [
         "GVF-714B283984E90E5D",
         "GVF-C8069FAE89C311D4"
-      ]
+      ],
+      "exit_code": 1,
+      "structured_inventory_digest": "e6448fbe63ffc0b2f4d90636b8560345eed5db461b3090e3bd0137afd0acda7b",
+      "raw_ordered_message_digest": "f2cd173455fe57b24be1da685575febff11f04e0d946d68854d8099c3feb15ce"
     }
   },
   "objective": "Resolve only the validator lifecycle incompatibility classified in ERR-LAB-009 by creating successor validators that distinguish semantic equivalence from explicitly enumerated volatile metadata and validate authorization state by lifecycle stage. Preserve all historical validators, outputs and evidence. Do not execute the operational rollback drill, retry M5, create an active pointer, perform cutover, or test candidate capabilities.",
@@ -140,9 +175,23 @@
     "ARCHIVE_CURRENT_CONTINUITY_BY_EXACT_CONTENT_AND_BLOB_BEFORE_REPLACEMENT"
   ],
   "baseline": {
-    "general_validator_finding_count": 335,
-    "structured_inventory_digest": "cb54594bdbe3b2d7a5e473fdcb4a98e02cc7a5840966e4f0a5286c277f6226ab",
-    "raw_ordered_message_digest": "00310f685ddb2ec849aa848eb9c78dbad17e08f199993259ce3057f904e2fd95",
+    "general_validator_finding_count": 333,
+    "structured_inventory_digest": "e6448fbe63ffc0b2f4d90636b8560345eed5db461b3090e3bd0137afd0acda7b",
+    "raw_ordered_message_digest": "f2cd173455fe57b24be1da685575febff11f04e0d946d68854d8099c3feb15ce",
+    "operational_general_validator_baseline": {
+      "path": "architecture/integrations/migration/M5/documentary-reconciliation-163/GENERAL_VALIDATOR_SUCCESSOR_BASELINE.json",
+      "finding_count": 333,
+      "exit_code": 1,
+      "structured_inventory_digest": "e6448fbe63ffc0b2f4d90636b8560345eed5db461b3090e3bd0137afd0acda7b",
+      "raw_ordered_message_digest": "f2cd173455fe57b24be1da685575febff11f04e0d946d68854d8099c3feb15ce"
+    },
+    "historical_general_validator_baseline": {
+      "path": "architecture/integrations/migration/M5/execution-160/GENERAL_VALIDATOR_BASELINE.json",
+      "finding_count": 335,
+      "exit_code": 1,
+      "structured_inventory_digest": "cb54594bdbe3b2d7a5e473fdcb4a98e02cc7a5840966e4f0a5286c277f6226ab",
+      "raw_ordered_message_digest": "00310f685ddb2ec849aa848eb9c78dbad17e08f199993259ce3057f904e2fd95"
+    },
     "m3_case_count": 420,
     "oracles_per_evaluator": "13/13",
     "exact_equivalence": "420/420",
@@ -218,6 +267,10 @@
     "Update decisions, errors, authorizations, pending, roadmap, registry, Markdown state views, evidence, deltas and the complete CURRENT continuity package.",
     "Prepare any future rollback-drill or M5 retry authorization as PROPOSED_NOT_GRANTED_NOT_EXECUTABLE.",
     "Mark authorization 162 CONSUMED only after commit, push and final remote HEAD verification."
+  ],
+  "historical_execution_restrictions": [
+    "NO_SEMANTIC_REPLAY_IN_DOCUMENTARY_CORRECTION_EXECUTION",
+    "NO_STAGE_AWARE_TEST_EXECUTION_IN_DOCUMENTARY_CORRECTION_EXECUTION"
   ],
   "acceptance_checks": [
     "HISTORICAL_VALIDATORS_158_AND_161_AND_OUTPUTS_UNCHANGED",

@@ -12,14 +12,17 @@
   "containment": "Stopped before pointer creation, cutover and observation; static selector remains authoritative and candidate remains inactive.",
   "root_cause": "The mandated 158 check compares fresh execution against immutable historical outputs, while the mandated 161 check still asserts authorization 160 is proposed and not granted.",
   "repair_authorized": true,
-  "repair_performed": false,
-  "remediation_status": "ATTEMPT_002_BLOCKED_AWAITING_ATTEMPT_003",
-  "effect_on_m5": "CUTOVER_AND_OBSERVATION_NOT_EXECUTED",
-  "next_action": "EXECUTE_ATTEMPT_003_UNDER_ACTIVE_AUTHORIZATION_162_FROM_THE_NEW_VERIFIED_REMOTE_HEAD",
+  "repair_performed": true,
+  "remediation_status": "STAGE_AWARE_VALIDATOR_REMEDIATION_PASS_AWAITING_NEW_DRILL_AUTHORIZATION",
+  "effect_on_m5": "OPERATIONAL_DRILL_NOT_EXECUTED_CUTOVER_REMAINS_BLOCKED",
+  "next_action": "AWAIT_HUMAN_DECISION_FOR_NEW_M5_ROLLBACK_DRILL_AUTHORIZATION",
   "source_refs": [
     "architecture/integrations/migration/M5/readiness-161/ROLLBACK_DRILL_DESIGN.json",
     "architecture/integrations/migration/M5/execution-160/ROLLBACK_DRILL_RESULTS.json",
-    "architecture/integrations/migration/M5/execution-160/VALIDATION_RESULTS.json"
+    "architecture/integrations/migration/M5/execution-160/VALIDATION_RESULTS.json",
+    "architecture/integrations/migration/M5/validator-remediation-162/VALIDATION_RESULTS.json",
+    "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-STAGE-AWARE-VALIDATOR-REMEDIATION-162.json",
+    "projects/lab/pending/PEND-LAB-040.json"
   ],
   "authority_effect": "NONE",
   "runtime_effect": "NONE",

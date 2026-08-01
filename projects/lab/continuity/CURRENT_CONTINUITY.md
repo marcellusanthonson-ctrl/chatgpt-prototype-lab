@@ -1,15 +1,15 @@
-# Continuidad actual — error abierto, decisión y fixture reconciliados
+# Continuidad actual — remediación stage-aware PASS
 
-Fecha: 2026-07-31T18:15:00-04:00
+Fecha: 2026-07-31T22:10:00-04:00
 
-El intento `AUTHORIZATION_164_EXECUTION_ATTEMPT_001` fue bloqueado antes de publicación porque el fixture esperado conservaba `open_errors: []` mientras el candidato de estado contenía `ERR-LAB-009`. Las mutaciones candidatas fueron revertidas; no hubo commit ni cambio remoto.
+Codex ejecutó ATTEMPT-003 de la autorización 162 desde el parent remoto verificado `524f7ea0de65e818c8772ea7d46c3c7c8b8ade07`. El replay semántico pasó 420/420 casos, con 13/13 oráculos por evaluador, cero divergencias y digest conductual `9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329`.
 
-La enmienda 1 autorizó exclusivamente cambiar `tests/expected_repository_state.json.open_errors` a `ERR-LAB-009` y repetir el alcance documental original. `CURRENT_STATE.json` registra el mismo error abierto. Todos los demás campos del fixture permanecen inmutables.
+La validación stage-aware pasó los cinco estados requeridos. Las pruebas positivas pasaron 4/4 y las negativas bloquearon 12/12 como se esperaba. El validador general conserva exactamente 333 hallazgos, exit code 1, ambos digests sucesores y delta cero; no se declara PASS global del repositorio.
 
-`DEC-LAB-028` conserva el baseline histórico de 335 como evidencia inmutable y reconoce el baseline sucesor de 333 como operativo para ATTEMPT-003. La autorización 164 y su enmienda 1 están consumidas con la publicación remota verificada. La autorización 162 permanece `GRANTED`, no consumida y es la única activa.
+La autorización 162 y su enmienda 3 están consumidas por publicación remota verificada. `ERR-LAB-009` permanece `OPEN_BLOCKING_M5_CUTOVER`. `PEND-LAB-039` permanece resuelto y `PEND-LAB-040` espera una decisión humana; cualquier futura autorización de drill se mantiene `PROPOSED_NOT_GRANTED_NOT_EXECUTABLE`.
 
-ATTEMPT-003 no comenzó. `ERR-LAB-009` permanece `OPEN_BLOCKING_M5_CUTOVER`. El selector estático continúa autoritativo, el shadow registry sigue inactivo y el puntero activo está ausente. No hubo replay semántico, pruebas stage-aware, rollback drill, reintento M5, cutover, runtime, integración, AWS o Terraform.
+El selector estático permanece autoritativo, el shadow registry inactivo y el puntero activo ausente. No se ejecutaron rollback drill operacional, reintento M5, cutover, runtime, integración, AWS, Terraform ni cambios en repositorios externos.
 
 ## Siguiente acción única
 
-Ejecutar ATTEMPT-003 bajo la autorización 162 desde el nuevo HEAD remoto verificado, limitado al replay semántico y a la validación stage-aware en sandbox.
+Jonathan Martínez decide si concede una autorización separada y acotada para un nuevo rollback drill operacional desde el nuevo HEAD remoto verificado.

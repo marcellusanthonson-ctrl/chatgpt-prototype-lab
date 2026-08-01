@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "validator": "STAGE_AWARE_LIFECYCLE_162",
+  "attempt_id": "ATTEMPT-003",
+  "classification": "PASS",
+  "states_required": [
+    "PRE_GRANT",
+    "GRANTED_NOT_STARTED",
+    "EXECUTING",
+    "CONSUMED_PASS",
+    "CONSUMED_FAIL_CLOSED"
+  ],
+  "states_validated": 5,
+  "results": [
+    {
+      "state": "PRE_GRANT",
+      "failures": []
+    },
+    {
+      "state": "GRANTED_NOT_STARTED",
+      "failures": []
+    },
+    {
+      "state": "EXECUTING",
+      "failures": []
+    },
+    {
+      "state": "CONSUMED_PASS",
+      "failures": []
+    },
+    {
+      "state": "CONSUMED_FAIL_CLOSED",
+      "failures": []
+    }
+  ],
+  "authorization_160_consumed_fail_closed_accepted": true,
+  "authorization_160_reusable": false,
+  "active_pointer_created": false,
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}

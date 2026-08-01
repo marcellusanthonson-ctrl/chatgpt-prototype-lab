@@ -135,3 +135,11 @@ ATTEMPT-003 no comenzó. `ERR-LAB-009` sigue abierto y bloquea M5 cutover. `PEND
 El intento `AUTHORIZATION_164_EXECUTION_ATTEMPT_001` fue bloqueado y revertido antes de publicación por la divergencia acotada entre `CURRENT_STATE.json.open_errors` y el fixture esperado. La enmienda 1 autorizó únicamente reconciliar `tests/expected_repository_state.json.open_errors` y repetir el alcance documental original.
 
 `ERR-LAB-009` queda incorporado en ambos estados. `DEC-LAB-028` preserva el baseline histórico de 335 y establece el sucesor de 333 como operativo para ATTEMPT-003. La autorización 162 permanece `GRANTED_NOT_CONSUMED_AWAITING_ATTEMPT_003`; ATTEMPT-003 no comenzó. No hubo replay semántico, pruebas stage-aware, rollback drill, M5, cutover, puntero activo, runtime, integración, AWS o Terraform.
+
+## Remediación M5 stage-aware 162 — ATTEMPT-003 PASS
+
+ATTEMPT-003 pasó el replay semántico de 420 casos con coincidencia total, 13/13 oráculos por evaluador, cero divergencias y digest `9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329`. La validación cubrió los cinco estados requeridos, 4/4 pruebas positivas y 12/12 negativas.
+
+La autorización 162 y su enmienda 3 están consumidas. `ERR-LAB-009` permanece abierto y bloquea el cutover. `PEND-LAB-040` espera una decisión humana separada sobre un nuevo rollback drill, cuya autorización sigue `PROPOSED_NOT_GRANTED_NOT_EXECUTABLE`.
+
+Los baselines 335 histórico y 333 sucesor permanecen inmutables. El selector estático sigue autoritativo, el shadow registry inactivo y el puntero activo ausente. No hubo rollback drill operacional, M5 retry, cutover, runtime, integración, AWS, Terraform o cambio externo.

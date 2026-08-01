@@ -10,7 +10,7 @@
         "integrations": 6,
         "experiments": 8,
         "authorizations": 92,
-        "evidence": 71,
+        "evidence": 72,
         "unincorporated": 0,
         "proposals": 3,
         "sessions": 1,
@@ -38,7 +38,8 @@
             "registry/deltas/integration-factory-m4-preparation-authorization-159.json",
             "registry/deltas/integration-factory-m5-readiness-authorization-161.json",
             "registry/deltas/integration-factory-m5-cutover-authorization-160.json",
-            "registry/deltas/integration-factory-m5-canonical-open-error-decision-baseline-reconciliation-164.json"
+            "registry/deltas/integration-factory-m5-canonical-open-error-decision-baseline-reconciliation-164.json",
+            "registry/deltas/integration-factory-m5-stage-aware-validator-remediation-162.json"
         ],
         "errors": "registry/errors.json",
         "patterns": "registry/patterns.json",
@@ -86,7 +87,8 @@
             "registry/deltas/integration-factory-m5-cutover-authorization-160.json",
             "registry/deltas/integration-factory-m5-execution-160.json",
             "registry/deltas/integration-factory-m5-attempt-002-active-authorization-semantics-reconciliation-163.json",
-            "registry/deltas/integration-factory-m5-canonical-open-error-decision-baseline-reconciliation-164.json"
+            "registry/deltas/integration-factory-m5-canonical-open-error-decision-baseline-reconciliation-164.json",
+            "registry/deltas/integration-factory-m5-stage-aware-validator-remediation-162.json"
         ],
         "evidence": "registry/evidence.json",
         "evidence_deltas": [
@@ -120,7 +122,8 @@
             "registry/deltas/integration-factory-m5-cutover-authorization-160.json",
             "registry/deltas/integration-factory-m5-execution-160.json",
             "registry/deltas/integration-factory-m5-attempt-002-active-authorization-semantics-reconciliation-163.json",
-            "registry/deltas/integration-factory-m5-canonical-open-error-decision-baseline-reconciliation-164.json"
+            "registry/deltas/integration-factory-m5-canonical-open-error-decision-baseline-reconciliation-164.json",
+            "registry/deltas/integration-factory-m5-stage-aware-validator-remediation-162.json"
         ],
         "current_state": "CURRENT_STATE.json",
         "current_state_deltas": [
@@ -171,7 +174,8 @@
             "registry/deltas/livhavn-surgical-visual-patch-093.json",
             "registry/deltas/integration-factory-m4-preparation-authorization-159.json",
             "registry/deltas/integration-factory-m5-execution-160.json",
-            "registry/deltas/integration-factory-m5-attempt-002-active-authorization-semantics-reconciliation-163.json"
+            "registry/deltas/integration-factory-m5-attempt-002-active-authorization-semantics-reconciliation-163.json",
+            "registry/deltas/integration-factory-m5-stage-aware-validator-remediation-162.json"
         ],
         "unincorporated": "registry/unincorporated.json",
         "proposals": "registry/proposals.json",
@@ -205,7 +209,8 @@
             "projects/lab/pending/PEND-LAB-035.json",
             "projects/lab/pending/PEND-LAB-037.json",
             "projects/lab/pending/PEND-LAB-038.json",
-            "projects/lab/pending/PEND-LAB-039.json"
+            "projects/lab/pending/PEND-LAB-039.json",
+            "projects/lab/pending/PEND-LAB-040.json"
         ],
         "test_executions": "projects/lab/test-executions/index.json",
         "source_packages": "registry/source-packages.json",
@@ -224,12 +229,12 @@
         "decision_path": "decisions/DEC-LAB-028.json",
         "error": "ERR-LAB-009",
         "pattern": "PAT-LAB-009",
-        "authorization": "AUTHORIZATION_LAB_M5_CANONICAL_OPEN_ERROR_AND_DECISION_BASELINE_RECONCILIATION_164",
-        "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_M5_CANONICAL_OPEN_ERROR_AND_DECISION_BASELINE_RECONCILIATION_164.json",
-        "evidence": "EVD-LAB-M5-CANONICAL-OPEN-ERROR-DECISION-BASELINE-RECONCILIATION-164",
-        "evidence_path": "projects/lab/evidence/EVD-LAB-M5-CANONICAL-OPEN-ERROR-DECISION-BASELINE-RECONCILIATION-164.json",
-        "current_state_delta": "integration-factory-m5-canonical-open-error-decision-baseline-reconciliation-164",
-        "current_state_delta_path": "registry/deltas/integration-factory-m5-canonical-open-error-decision-baseline-reconciliation-164.json",
+        "authorization": "AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162",
+        "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162.json",
+        "evidence": "EVD-LAB-INTEGRATION-FACTORY-M5-STAGE-AWARE-VALIDATOR-REMEDIATION-162",
+        "evidence_path": "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-STAGE-AWARE-VALIDATOR-REMEDIATION-162.json",
+        "current_state_delta": "integration-factory-m5-stage-aware-validator-remediation-162",
+        "current_state_delta_path": "registry/deltas/integration-factory-m5-stage-aware-validator-remediation-162.json",
         "experiment": "EXP-LAB-003",
         "proposal": "PROP-LAB-003",
         "session": "SES-2026-06-28-001",
@@ -237,7 +242,7 @@
         "reconciliation": "REC-LAB-INTEGRATION-FACTORY-M2-155-DOCUMENTARY-INTEGRITY-001",
         "reconciliation_path": "projects/lab/reconciliations/REC-LAB-INTEGRATION-FACTORY-M2-155-DOCUMENTARY-INTEGRITY-001.json",
         "test_design": "PL003_EFFECTIVE_PERMISSION_GATE_OPERATOR_001",
-        "pending": "PEND-LAB-039",
+        "pending": "PEND-LAB-040",
         "test_execution": "PRODUCT-LEADERSHIP-TEST-003-AWS-PREFLIGHT-EXECUTION-002",
         "external_audit": "CLAUDE_ADVERSARIAL_AUDIT_PRODUCT_LEADERSHIP_PROSPECTIVE_TEST_003_20260727",
         "source_package": "DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001@1.2.0",

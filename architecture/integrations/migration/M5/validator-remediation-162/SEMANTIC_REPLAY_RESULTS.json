@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "validator": "M3_SEMANTIC_REPLAY_SUCCESSOR_162",
+  "attempt_id": "ATTEMPT-003",
+  "classification": "PASS",
+  "temporary_storage": true,
+  "case_count": 420,
+  "exact_match_count": 420,
+  "static_oracles": 13,
+  "shadow_oracles": 13,
+  "semantic_divergence_count": 0,
+  "behavioral_digest": "9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329",
+  "historical_comparisons": {
+    "FIXTURE_ORACLE_REMEDIATION.json": "FIELD_BY_FIELD_EXACT",
+    "STATIC_SELECTOR_RESULTS.json": "FIELD_BY_FIELD_EXACT",
+    "SHADOW_SELECTOR_RESULTS.json": "FIELD_BY_FIELD_EXACT",
+    "EQUIVALENCE_RESULTS.json": "FIELD_BY_FIELD_EXACT",
+    "DIVERGENCE_LOG.json": "FIELD_BY_FIELD_EXACT",
+    "VALIDATION_RESULTS.json": "FIELD_BY_FIELD_EXACT"
+  },
+  "difference_classifications": [
+    "VOLATILE_METADATA",
+    "ORDERING_ONLY",
+    "SEMANTIC_EQUIVALENCE",
+    "SEMANTIC_DIVERGENCE"
+  ],
+  "undeclared_ignored_fields": [],
+  "gates": {
+    "CASE_COUNT_420": true,
+    "EXACT_MATCH_420_OF_420": true,
+    "STATIC_ORACLES_13_OF_13": true,
+    "SHADOW_ORACLES_13_OF_13": true,
+    "ZERO_SEMANTIC_DIVERGENCES": true,
+    "BEHAVIORAL_DIGEST_EXACT": true,
+    "REPEATED_RUNS_EXACT": true,
+    "HISTORICAL_OUTPUTS_FIELD_BY_FIELD_EXACT": true
+  },
+  "result_digest": "50dfdcbd2e788d1d1ad3d6cfa0e0e3996f2fe962601ce49d0f9e88b1e3363d48",
+  "historical_outputs_rewritten": false,
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}

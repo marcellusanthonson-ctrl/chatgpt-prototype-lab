@@ -155,3 +155,11 @@ Las autorizaciones 153, 154, 160, 161 y 163 tienen correspondencia consumida exa
 El primer intento de la autorización 164 fue bloqueado antes de publicación porque el fixture esperado conservaba `open_errors: []`; todas sus mutaciones fueron revertidas. La enmienda 1 autorizó exclusivamente sincronizar ese campo con `ERR-LAB-009` y repetir la ejecución documental.
 
 `CURRENT_STATE.json` y el fixture esperado registran ahora `ERR-LAB-009`. `DEC-LAB-028` conserva el baseline histórico de 335 como evidencia inmutable y reconoce el baseline sucesor de 333 como operativo para ATTEMPT-003. La autorización 162 permanece concedida, no consumida y es la única activa. ATTEMPT-003 no comenzó y no hubo efecto de runtime, integración, AWS o Terraform.
+
+## ATTEMPT-003 — remediación stage-aware PASS
+
+Codex ejecutó ATTEMPT-003 desde `524f7ea0de65e818c8772ea7d46c3c7c8b8ade07`. El replay semántico pasó 420/420 con 13/13 oráculos por evaluador, cero divergencias y el digest conductual exacto. Los cinco estados del ciclo de vida pasaron, junto con 4/4 pruebas positivas y 12/12 negativas.
+
+El validador general conserva exactamente los 333 hallazgos del baseline sucesor, exit code 1 y delta cero; el baseline histórico de 335 permanece inmutable y no se declara PASS global del repositorio. La autorización 162 y su enmienda 3 están consumidas por publicación remota verificada.
+
+`ERR-LAB-009` continúa `OPEN_BLOCKING_M5_CUTOVER`. `PEND-LAB-040` espera la decisión humana sobre una autorización nueva y separada; la propuesta permanece `PROPOSED_NOT_GRANTED_NOT_EXECUTABLE`. No hubo rollback drill operacional, reintento M5, cutover, puntero activo, runtime, integración, AWS o Terraform.

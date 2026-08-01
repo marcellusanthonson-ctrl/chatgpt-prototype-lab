@@ -1,16 +1,7 @@
 {
   "schema_version": "1.0.0",
   "updated_at": "2026-07-31",
-  "active_authorizations": [
-    {
-      "id": "AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162",
-      "status": "GRANTED",
-      "stage_2_status": "GRANTED_NOT_CONSUMED_AWAITING_ATTEMPT_003",
-      "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162.json",
-      "restart_parent_policy": "USE_VERIFIED_REMOTE_HEAD_AFTER_AUTHORIZATION_163_PUBLICATION",
-      "consumed": false
-    }
-  ],
+  "active_authorizations": [],
   "records": [
     {
       "id": "AUTH-LAB-GOVERNANCE-V2-013",
@@ -1194,6 +1185,20 @@
       "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
       "branch": "main",
       "expected_parent_head": "184411a66e96c7b78b255a341dfc3d0ec0c3cf64",
+      "updated_at": "2026-07-31"
+    },
+    {
+      "id": "AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162",
+      "state_key": "integration_factory_m5_stage_aware_validator_remediation_162",
+      "project_id": "lab",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "amendment_3_status": "CONSUMED_WITH_AUTHORIZATION_162_ON_VERIFIED_REMOTE_PUBLICATION",
+      "approved_by": "Jonathan MartÃ­nez",
+      "scope": "BOUNDED_ATTEMPT_003_STAGE_AWARE_VALIDATOR_REMEDIATION_PASS",
+      "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162.json",
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "expected_parent_head": "524f7ea0de65e818c8772ea7d46c3c7c8b8ade07",
       "updated_at": "2026-07-31"
     }
   ]

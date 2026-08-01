@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-INTEGRATION-FACTORY-M5-STAGE-AWARE-VALIDATOR-REMEDIATION-162",
+  "project_id": "lab",
+  "kind": "INTEGRATION_FACTORY_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_EXECUTION",
+  "status": "M5_STAGE_AWARE_VALIDATOR_REMEDIATION_PASS_AWAITING_NEW_DRILL_AUTHORIZATION",
+  "verified_initial_parent_head": "524f7ea0de65e818c8772ea7d46c3c7c8b8ade07",
+  "authorization_id": "AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162",
+  "amendment_id": "AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162_AMENDMENT_3_ATTEMPT_003_CANONICAL_EXECUTION_AND_CLOSURE",
+  "attempt_id": "ATTEMPT-003",
+  "approval_record": {
+    "approved_by": "Jonathan Mart\u00ednez",
+    "approved_at": "2026-07-31T22:10:00-04:00",
+    "approval_source": "Apruebo la enmienda."
+  },
+  "brief_reconciliation": {
+    "expected_parent_policy": "USE_VERIFIED_REMOTE_HEAD_AFTER_AUTHORIZATION_164_PUBLICATION",
+    "current_execution_id": "ATTEMPT-003",
+    "documentary_baseline_correction_in_this_execution": false,
+    "semantic_replay_in_this_execution": true,
+    "stage_aware_tests_in_this_execution": true,
+    "positive_and_negative_tests_in_this_execution": true,
+    "complete_effective_allowlist_published": true,
+    "historical_validators_exactly_immutable": true
+  },
+  "baseline_immutability": {
+    "historical_path": "architecture/integrations/migration/M5/execution-160/GENERAL_VALIDATOR_BASELINE.json",
+    "historical_blob": "94997b3bdd46c2083b6371d93b7bc264a6d5cbd7",
+    "historical_finding_count": 335,
+    "historical_structured_inventory_digest": "cb54594bdbe3b2d7a5e473fdcb4a98e02cc7a5840966e4f0a5286c277f6226ab",
+    "historical_raw_ordered_message_digest": "00310f685ddb2ec849aa848eb9c78dbad17e08f199993259ce3057f904e2fd95",
+    "successor_path": "architecture/integrations/migration/M5/documentary-reconciliation-163/GENERAL_VALIDATOR_SUCCESSOR_BASELINE.json",
+    "successor_blob": "0dec0e8660ab029f33be87c91c5e0ae0342961a1",
+    "successor_finding_count": 333,
+    "successor_structured_inventory_digest": "e6448fbe63ffc0b2f4d90636b8560345eed5db461b3090e3bd0137afd0acda7b",
+    "successor_raw_ordered_message_digest": "f2cd173455fe57b24be1da685575febff11f04e0d946d68854d8099c3feb15ce",
+    "both_unchanged": true
+  },
+  "semantic_replay": {
+    "classification": "PASS",
+    "case_count": 420,
+    "exact_matches": "420/420",
+    "oracles_per_evaluator": "13/13",
+    "semantic_divergences": 0,
+    "behavioral_digest": "9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329",
+    "result_digest": "50dfdcbd2e788d1d1ad3d6cfa0e0e3996f2fe962601ce49d0f9e88b1e3363d48",
+    "historical_outputs_field_by_field": "6_OF_6_EXACT",
+    "historical_outputs_rewritten": false
+  },
+  "volatile_metadata_allowlist": {
+    "path": "architecture/integrations/migration/M5/validator-remediation-162/VOLATILE_METADATA_ALLOWLIST.json",
+    "open_ended_ignored_fields_allowed": false,
+    "undeclared_ignored_fields": 0
+  },
+  "lifecycle_validation": {
+    "classification": "PASS",
+    "states_validated": [
+      "PRE_GRANT",
+      "GRANTED_NOT_STARTED",
+      "EXECUTING",
+      "CONSUMED_PASS",
+      "CONSUMED_FAIL_CLOSED"
+    ],
+    "authorization_160_consumed_fail_closed_accepted": true,
+    "authorization_160_reusable": false
+  },
+  "test_matrix": {
+    "positive_tests": "4/4_PASS",
+    "negative_tests": "12/12_BLOCK_AS_EXPECTED",
+    "partial_pass_allowed": false
+  },
+  "general_validator": {
+    "initial_finding_count": 333,
+    "final_finding_count": 333,
+    "exit_code": 1,
+    "structured_inventory_digest": "e6448fbe63ffc0b2f4d90636b8560345eed5db461b3090e3bd0137afd0acda7b",
+    "raw_ordered_message_digest": "f2cd173455fe57b24be1da685575febff11f04e0d946d68854d8099c3feb15ce",
+    "added_findings": 0,
+    "removed_findings": 0,
+    "modified_findings": 0,
+    "global_repository_pass": false
+  },
+  "code_file_line_counts": {
+    "scripts/validate_integration_factory_m3_semantic_replay_162.py": 138,
+    "scripts/validate_integration_factory_stage_aware_lifecycle_162.py": 134,
+    "scripts/test_integration_factory_stage_aware_validators_162.py": 183,
+    "maximum_allowed": 280,
+    "classification": "PASS"
+  },
+  "canonical_closure": {
+    "authorization_162": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "amendment_3": "CONSUMED_WITH_AUTHORIZATION_162_ON_VERIFIED_REMOTE_PUBLICATION",
+    "err_lab_009": "OPEN_BLOCKING_M5_CUTOVER",
+    "pend_lab_039": "RESOLVED_UNCHANGED",
+    "pend_lab_040": "AWAITING_HUMAN_DECISION_FOR_NEW_M5_ROLLBACK_DRILL_AUTHORIZATION",
+    "future_drill_authorization": "PROPOSED_NOT_GRANTED_NOT_EXECUTABLE"
+  },
+  "boundaries": {
+    "static_selector_blob": "301ba432907758fc49a9b3c86a83fc762eac4607",
+    "static_selector": "AUTHORITATIVE_UNCHANGED",
+    "shadow_registry_blob": "a067cd9f95b98aa1599d21e3a0ff35fa56ac3a78",
+    "shadow_registry": "INACTIVE_UNCHANGED",
+    "active_pointer": "ABSENT",
+    "operational_rollback_drill": "NOT_EXECUTED_NOT_AUTHORIZED",
+    "m5_retry": "NOT_EXECUTED_NOT_AUTHORIZED",
+    "cutover": "NOT_EXECUTED_NOT_AUTHORIZED",
+    "runtime_effect": "NONE",
+    "integration_effect": "NONE",
+    "aws_effect": "NONE",
+    "terraform_effect": "NONE",
+    "external_repository_effect": "NONE"
+  },
+  "publication_commit": "THIS_ATTEMPT_003_PUBLICATION_COMMIT",
+  "verified_final_remote_head": "MUST_EQUAL_THIS_ATTEMPT_003_PUBLICATION_COMMIT"
+}

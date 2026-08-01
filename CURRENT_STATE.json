@@ -1,11 +1,11 @@
 {
   "schema_version": "2.5.0",
   "document_id": "lab.current-state",
-  "version": "2.5.41",
-  "status": "M5_ACTIVE_AUTHORIZATION_REGISTRY_RECONCILED_AWAITING_ATTEMPT_003",
+  "version": "2.5.42",
+  "status": "M5_STAGE_AWARE_VALIDATOR_REMEDIATION_PASS_AWAITING_NEW_DRILL_AUTHORIZATION",
   "updated_at": "2026-07-31",
   "active_project": "lab",
-  "current_phase": "M5_STAGE_AWARE_VALIDATOR_REMEDIATION_AUTHORIZATION_162_GRANTED_AWAITING_ATTEMPT_003",
+  "current_phase": "M5_STAGE_AWARE_VALIDATOR_REMEDIATION_PASS_AWAITING_NEW_DRILL_AUTHORIZATION",
   "methodology": {
     "version": "2.1",
     "path": "METHODOLOGY.md"
@@ -219,7 +219,8 @@
     "integration_factory_m5_readiness_and_validator_remediation_161": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "integration_factory_m5_bounded_cutover_and_observation_160": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "integration_factory_m5_attempt_002_active_authorization_semantics_reconciliation_163": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "integration_factory_m5_canonical_open_error_decision_baseline_reconciliation_164": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+    "integration_factory_m5_canonical_open_error_decision_baseline_reconciliation_164": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "integration_factory_m5_stage_aware_validator_remediation_162": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
   },
   "verified_external_heads": {
     "symphonie": "31dd1345026240c83b015feef34d6f7f2d2147b7",
@@ -249,8 +250,8 @@
     "SYMPHONIE_LIVHAVN_MONOLITHIC_VISUAL_CALIBRATION_083_READY_WITH_BOUNDED_GAPS",
     "INTEGRATION_FACTORY_M1_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_VALIDATION_PASS"
   ],
-  "next_authorized_action": "EXECUTE_ATTEMPT_003_UNDER_AUTHORIZATION_162_FROM_NEW_VERIFIED_REMOTE_HEAD",
-  "next_recommended_transition": "SEMANTIC_REPLAY_AND_STAGE_AWARE_SANDBOX_VALIDATION_ONLY_UNDER_AUTHORIZATION_162",
+  "next_authorized_action": "NONE_AWAITING_HUMAN_DECISION_FOR_NEW_M5_ROLLBACK_DRILL_AUTHORIZATION",
+  "next_recommended_transition": "JONATHAN_MARTINEZ_DECIDES_WHETHER_TO_GRANT_A_SEPARATE_BOUNDED_NEW_M5_ROLLBACK_DRILL_AUTHORIZATION",
   "continuity_read_order": [
     "LAB_CONTRACT.md",
     "METHODOLOGY.md",
@@ -493,7 +494,7 @@
     "authority_effect": "NONE_AFTER_CONSUMPTION"
   },
   "integration_factory_migration": {
-    "status": "M5_ACTIVE_AUTHORIZATION_REGISTRY_RECONCILED_AWAITING_ATTEMPT_003",
+    "status": "M5_STAGE_AWARE_VALIDATOR_REMEDIATION_PASS_AWAITING_NEW_DRILL_AUTHORIZATION",
     "architecture": "PROVIDER_AND_TECHNOLOGY_NEUTRAL",
     "global_preferred_stack": "NONE",
     "production_provider": "NONE",
@@ -556,10 +557,33 @@
         "GVF-714B283984E90E5D",
         "GVF-C8069FAE89C311D4"
       ],
-      "authorization_162": "GRANTED_NOT_CONSUMED_AWAITING_ATTEMPT_003",
-      "attempt_003_started": false,
-      "semantic_replay_executed": false,
-      "stage_aware_tests_executed": false,
+      "authorization_162": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "attempt_003_started": true,
+      "semantic_replay_executed": true,
+      "stage_aware_tests_executed": true,
+      "runtime_effect": "NONE",
+      "integration_effect": "NONE"
+    },
+    "m5_stage_aware_validator_remediation_162": {
+      "authorization": "AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162",
+      "amendment": "AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162_AMENDMENT_3_ATTEMPT_003_CANONICAL_EXECUTION_AND_CLOSURE",
+      "status": "M5_STAGE_AWARE_VALIDATOR_REMEDIATION_PASS_AWAITING_NEW_DRILL_AUTHORIZATION",
+      "attempt": "ATTEMPT-003",
+      "verified_parent_head": "524f7ea0de65e818c8772ea7d46c3c7c8b8ade07",
+      "semantic_replay": "420_OF_420_PASS_ZERO_DIVERGENCES",
+      "oracles_per_evaluator": "13/13",
+      "behavioral_digest": "9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329",
+      "lifecycle_states": "5_OF_5_PASS",
+      "positive_tests": "4_OF_4_PASS",
+      "negative_tests": "12_OF_12_BLOCK_AS_EXPECTED",
+      "general_validator": "333_EXACT_ZERO_DELTA_GLOBAL_PASS_FALSE",
+      "authorization_162": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "err_lab_009": "OPEN_BLOCKING_M5_CUTOVER",
+      "pend_lab_040": "AWAITING_HUMAN_DECISION_FOR_NEW_M5_ROLLBACK_DRILL_AUTHORIZATION",
+      "operational_rollback_drill": "NOT_EXECUTED_NOT_AUTHORIZED",
+      "m5_retry": "NOT_EXECUTED_NOT_AUTHORIZED",
+      "cutover": "NOT_EXECUTED_NOT_AUTHORIZED",
+      "active_pointer": "ABSENT_UNCHANGED",
       "runtime_effect": "NONE",
       "integration_effect": "NONE"
     }

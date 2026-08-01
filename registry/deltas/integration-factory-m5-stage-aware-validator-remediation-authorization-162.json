@@ -12,8 +12,8 @@
   },
   "authorization": {
     "id": "AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162",
-    "status": "GRANTED",
-    "stage_2_status": "AUTHORIZED_NOT_STARTED",
+    "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "stage_2_status": "CONSUMED_PASS_AFTER_ATTEMPT_003",
     "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162.json"
   },
   "pending": {
@@ -23,12 +23,12 @@
   },
   "error": {
     "id": "ERR-LAB-009",
-    "status": "OPEN_BLOCKING_M5_CUTOVER_REMEDIATION_AUTHORIZED_NOT_STARTED",
+    "status": "OPEN_BLOCKING_M5_CUTOVER_REMEDIATION_PASS_AWAITING_NEW_DRILL_AUTHORIZATION",
     "canonical_path": "errors/ERR-LAB-009.json"
   },
   "brief": {
     "id": "CODEX_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_001",
-    "status": "AUTHORIZED_NOT_STARTED",
+    "status": "ATTEMPT_003_PASS_PUBLISHED",
     "canonical_path": "projects/lab/briefs/CODEX_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_001.json"
   },
   "boundaries": {
@@ -43,6 +43,20 @@
     "runtime_effect": "NONE",
     "integration_effect": "NONE"
   },
-  "next_action": "CODEX_EXECUTES_AUTHORIZATION_162_FROM_THE_VERIFIED_STAGE_1_REMOTE_HEAD",
-  "authority_effect": "BOUNDED_STAGE_2_VALIDATOR_REMEDIATION_ONLY"
+  "attempt_003": {
+    "verified_parent_head": "524f7ea0de65e818c8772ea7d46c3c7c8b8ade07",
+    "classification": "M5_STAGE_AWARE_VALIDATOR_REMEDIATION_PASS_AWAITING_NEW_DRILL_AUTHORIZATION",
+    "semantic_replay": "420_OF_420_PASS_ZERO_DIVERGENCES",
+    "lifecycle_validation": "5_OF_5_PASS",
+    "positive_tests": "4_OF_4_PASS",
+    "negative_tests": "12_OF_12_BLOCK_AS_EXPECTED",
+    "general_validator": "333_EXACT_ZERO_DELTA_GLOBAL_PASS_FALSE"
+  },
+  "successor_pending": {
+    "id": "PEND-LAB-040",
+    "status": "AWAITING_HUMAN_DECISION_FOR_NEW_M5_ROLLBACK_DRILL_AUTHORIZATION",
+    "future_drill_authorization": "PROPOSED_NOT_GRANTED_NOT_EXECUTABLE"
+  },
+  "next_action": "JONATHAN_MARTINEZ_DECIDES_WHETHER_TO_GRANT_A_SEPARATE_BOUNDED_NEW_M5_ROLLBACK_DRILL_AUTHORIZATION",
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_162_CONSUMPTION"
 }

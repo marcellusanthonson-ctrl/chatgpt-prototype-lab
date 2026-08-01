@@ -763,6 +763,27 @@
       "authority_effect": "HUMAN_DECISION_RESOLVED_AUTHORIZATION_162_REMAINS_GRANTED_NOT_CONSUMED",
       "runtime_effect": "NONE",
       "integration_effect": "NONE"
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "PEND-LAB-040",
+      "project_id": "lab",
+      "status": "AWAITING_HUMAN_DECISION_FOR_NEW_M5_ROLLBACK_DRILL_AUTHORIZATION",
+      "type": "INTEGRATION_FACTORY_M5_NEW_ROLLBACK_DRILL_AUTHORIZATION_GATE",
+      "priority": "HIGH",
+      "subject": "Decide whether to grant a separate bounded authorization for a new operational M5 rollback drill",
+      "created_at": "2026-07-31T22:10:00-04:00",
+      "decision_owner": "Jonathan Mart\u00ednez",
+      "automatic_approval": false,
+      "source_authorization": "AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162",
+      "source_execution": "ATTEMPT-003",
+      "source_classification": "M5_STAGE_AWARE_VALIDATOR_REMEDIATION_PASS_AWAITING_NEW_DRILL_AUTHORIZATION",
+      "future_drill_authorization_status": "PROPOSED_NOT_GRANTED_NOT_EXECUTABLE",
+      "current_authority": "NONE_AFTER_AUTHORIZATION_162_CONSUMPTION",
+      "next_transition": "JONATHAN_MARTINEZ_DECIDES_WHETHER_TO_GRANT_A_SEPARATE_BOUNDED_NEW_M5_ROLLBACK_DRILL_AUTHORIZATION",
+      "authority_effect": "NONE_PENDING_EXPLICIT_HUMAN_GRANT",
+      "runtime_effect": "NONE",
+      "integration_effect": "NONE"
     }
   ]
 }

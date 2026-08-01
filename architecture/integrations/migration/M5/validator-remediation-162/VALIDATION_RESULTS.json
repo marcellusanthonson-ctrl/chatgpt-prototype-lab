@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0.0",
+  "attempt_id": "ATTEMPT-003",
+  "classification": "PASS",
+  "semantic_replay": "PASS",
+  "lifecycle_validation": "PASS",
+  "positive_tests": "4/4",
+  "negative_tests": "12/12",
+  "general_validator": {
+    "finding_count": 333,
+    "exit_code": 1,
+    "structured_inventory_digest": "e6448fbe63ffc0b2f4d90636b8560345eed5db461b3090e3bd0137afd0acda7b",
+    "raw_ordered_message_digest": "f2cd173455fe57b24be1da685575febff11f04e0d946d68854d8099c3feb15ce",
+    "added_findings": [],
+    "removed_findings": []
+  },
+  "operational_rollback_drill_executed": false,
+  "m5_retry_executed": false,
+  "cutover_executed": false,
+  "active_pointer_created": false,
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}

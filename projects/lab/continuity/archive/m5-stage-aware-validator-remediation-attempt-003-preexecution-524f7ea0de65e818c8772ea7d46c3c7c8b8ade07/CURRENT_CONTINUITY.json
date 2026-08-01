@@ -1,13 +1,13 @@
 {
   "schema_version": "1.2.0",
-  "continuity_id": "LAB-CONTINUITY-M5-STAGE-AWARE-VALIDATOR-REMEDIATION-162-ATTEMPT-003-20260731",
+  "continuity_id": "LAB-CONTINUITY-M5-CANONICAL-OPEN-ERROR-DECISION-BASELINE-RECONCILIATION-164-AMENDMENT-1-20260731",
   "project_id": "lab",
-  "status": "M5_STAGE_AWARE_VALIDATOR_REMEDIATION_PASS_AWAITING_NEW_DRILL_AUTHORIZATION",
-  "created_at": "2026-07-31T22:10:00-04:00",
+  "status": "CURRENT_M5_CANONICAL_OPEN_ERROR_DECISION_AND_EXPECTED_STATE_RECONCILED_AWAITING_ATTEMPT_003",
+  "created_at": "2026-07-31T18:15:00-04:00",
   "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "canonical_branch": "main",
   "head_policy": "VERIFY_LIVE_AT_USE",
-  "verified_initial_parent_head": "524f7ea0de65e818c8772ea7d46c3c7c8b8ade07",
+  "verified_initial_parent_head": "184411a66e96c7b78b255a341dfc3d0ec0c3cf64",
   "entrypoint": "project-sources/chatgpt/START_HERE.md",
   "required_reading_order": [
     "VERIFY_LIVE_HEAD_OF_MAIN",
@@ -29,9 +29,6 @@
     "projects/lab/pending/PEND-LAB-039.json",
     "errors/ERR-LAB-009.json",
     "projects/lab/briefs/CODEX_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_001.json",
-    "architecture/integrations/migration/M5/validator-remediation-162/VALIDATION_RESULTS.json",
-    "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-STAGE-AWARE-VALIDATOR-REMEDIATION-162.json",
-    "projects/lab/pending/PEND-LAB-040.json",
     "projects/lab/continuity/CURRENT_CONTINUITY.json"
   ],
   "facts": [
@@ -64,11 +61,9 @@
       ]
     },
     {
-      "claim": "Authorization 162 ATTEMPT-003 passed semantic replay, lifecycle validation and the complete positive and negative sandbox matrix; authorization 162 is consumed on verified remote publication.",
+      "claim": "Authorization 162 remains granted and not consumed; ATTEMPT-003 has not started.",
       "source_refs": [
-        "projects/lab/authorizations/AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162.json",
-        "architecture/integrations/migration/M5/validator-remediation-162/VALIDATION_RESULTS.json",
-        "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-STAGE-AWARE-VALIDATOR-REMEDIATION-162.json"
+        "projects/lab/authorizations/AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162.json"
       ]
     }
   ],
@@ -77,7 +72,7 @@
     "154": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_REGISTERED",
     "160": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_REGISTERED_NOT_ACTIVE",
     "161": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_STATE_CORRESPONDENCE_REPAIRED",
-    "162": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_AFTER_ATTEMPT_003_PASS",
+    "162": "GRANTED_NOT_CONSUMED_AWAITING_ATTEMPT_003_ACTIVE",
     "163": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "164": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_WITH_AMENDMENT_1"
   },
@@ -98,11 +93,6 @@
     {
       "id": "PEND-LAB-039",
       "status": "RESOLVED_AUTHORIZE_BOUNDED_STAGE_AWARE_VALIDATOR_REMEDIATION"
-    },
-    {
-      "id": "PEND-LAB-040",
-      "status": "AWAITING_HUMAN_DECISION_FOR_NEW_M5_ROLLBACK_DRILL_AUTHORIZATION",
-      "future_drill_authorization": "PROPOSED_NOT_GRANTED_NOT_EXECUTABLE"
     }
   ],
   "active_boundaries": {
@@ -123,7 +113,7 @@
   "deferred_capability": "SOFTWARE_SOLUTION_ENGINEERING",
   "forbidden": [
     "MODIFY_HISTORICAL_VALIDATORS_OR_OUTPUTS",
-    "REUSE_CONSUMED_AUTHORIZATION_162_OR_AMENDMENT_3",
+    "EXECUTE_ATTEMPT_003_IN_AUTHORIZATION_164_OR_AMENDMENT_1",
     "EXECUTE_OPERATIONAL_ROLLBACK_DRILL_M5_RETRY_OR_CUTOVER",
     "CREATE_OR_UPDATE_ACTIVE_POINTER",
     "RETIRE_STATIC_SELECTOR_OR_ACTIVATE_SHADOW_REGISTRY",
@@ -131,9 +121,9 @@
     "RUN_AWS_OR_TERRAFORM",
     "MODIFY_EXTERNAL_REPOSITORIES"
   ],
-  "single_next_action": "JONATHAN_MARTINEZ_DECIDES_WHETHER_TO_GRANT_A_SEPARATE_BOUNDED_NEW_M5_ROLLBACK_DRILL_AUTHORIZATION_FROM_THE_NEW_VERIFIED_REMOTE_HEAD",
-  "first_phrase_for_new_conversation": "Continua ChatGPT Prototype LAB desde el HEAD remoto vigente de main. ATTEMPT-003 de la autorizacion 162 paso el replay semantico 420/420, la validacion de ciclo de vida y las pruebas sandbox; la autorizacion 162 y la enmienda 3 estan consumidas. ERR-LAB-009 sigue abierto y PEND-LAB-040 espera una decision humana separada sobre un nuevo rollback drill.",
-  "authority_effect": "AUTHORIZATION_162_AND_AMENDMENT_3_CONSUMED_NO_ACTIVE_TECHNICAL_AUTHORIZATION",
+  "single_next_action": "EXECUTE_ATTEMPT_003_UNDER_AUTHORIZATION_162_FROM_THE_NEW_VERIFIED_REMOTE_HEAD_LIMITED_TO_SEMANTIC_REPLAY_AND_STAGE_AWARE_SANDBOX_VALIDATION",
+  "first_phrase_for_new_conversation": "Continúa ChatGPT Prototype LAB desde el HEAD remoto vigente de main. La autorización 164 y su enmienda 1 quedaron consumidas al registrar ERR-LAB-009 como error abierto, reconciliar el fixture esperado y establecer el baseline sucesor de 333 como operativo en DEC-LAB-028; la autorización 162 permanece GRANTED y no consumida para ATTEMPT-003, que aún no ha comenzado.",
+  "authority_effect": "AUTHORIZATION_164_AND_AMENDMENT_1_CONSUMED_AUTHORIZATION_162_ACTIVE_BOUNDED_STAGE_2_ONLY",
   "runtime_effect": "NONE",
   "integration_effect": "NONE"
 }

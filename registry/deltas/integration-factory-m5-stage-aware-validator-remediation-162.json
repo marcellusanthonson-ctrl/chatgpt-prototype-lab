@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "integration-factory-m5-stage-aware-validator-remediation-162",
+  "project_id": "lab",
+  "recorded_at": "2026-07-31T22:10:00-04:00",
+  "parent_head": "524f7ea0de65e818c8772ea7d46c3c7c8b8ade07",
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162",
+    "amendment": "AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162_AMENDMENT_3_ATTEMPT_003_CANONICAL_EXECUTION_AND_CLOSURE",
+    "status_before": "GRANTED_NOT_CONSUMED_AWAITING_ATTEMPT_003",
+    "status_after": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+  },
+  "execution": {
+    "attempt_id": "ATTEMPT-003",
+    "classification": "M5_STAGE_AWARE_VALIDATOR_REMEDIATION_PASS_AWAITING_NEW_DRILL_AUTHORIZATION",
+    "semantic_replay": "420_OF_420_PASS_ZERO_DIVERGENCES",
+    "behavioral_digest": "9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329",
+    "lifecycle_states": "5_OF_5_PASS",
+    "positive_tests": "4_OF_4_PASS",
+    "negative_tests": "12_OF_12_BLOCK_AS_EXPECTED"
+  },
+  "general_validator": {
+    "finding_count": 333,
+    "exit_code": 1,
+    "structured_inventory_digest": "e6448fbe63ffc0b2f4d90636b8560345eed5db461b3090e3bd0137afd0acda7b",
+    "raw_ordered_message_digest": "f2cd173455fe57b24be1da685575febff11f04e0d946d68854d8099c3feb15ce",
+    "added_findings": 0,
+    "removed_findings": 0,
+    "modified_findings": 0,
+    "global_repository_pass": false
+  },
+  "state_transition": {
+    "authorization_state_key": "integration_factory_m5_stage_aware_validator_remediation_162",
+    "authorization_state": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "phase": "M5_STAGE_AWARE_VALIDATOR_REMEDIATION_PASS_AWAITING_NEW_DRILL_AUTHORIZATION",
+    "err_lab_009": "OPEN_BLOCKING_M5_CUTOVER",
+    "pend_lab_039": "RESOLVED_UNCHANGED",
+    "pend_lab_040": "AWAITING_HUMAN_DECISION_FOR_NEW_M5_ROLLBACK_DRILL_AUTHORIZATION"
+  },
+  "boundaries": {
+    "operational_rollback_drill": "NOT_EXECUTED_NOT_AUTHORIZED",
+    "m5_retry": "NOT_EXECUTED_NOT_AUTHORIZED",
+    "cutover": "NOT_EXECUTED_NOT_AUTHORIZED",
+    "active_pointer": "ABSENT",
+    "static_selector": "AUTHORITATIVE_UNCHANGED",
+    "shadow_registry": "INACTIVE_UNCHANGED",
+    "runtime_effect": "NONE",
+    "integration_effect": "NONE",
+    "aws_effect": "NONE",
+    "terraform_effect": "NONE",
+    "external_repository_effect": "NONE"
+  },
+  "next_action": "JONATHAN_MARTINEZ_DECIDES_WHETHER_TO_GRANT_A_SEPARATE_BOUNDED_NEW_M5_ROLLBACK_DRILL_AUTHORIZATION"
+}

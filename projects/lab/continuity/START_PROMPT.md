@@ -1,5 +1,9 @@
 Continúa ChatGPT Prototype LAB reconstruyendo primero el estado desde `marcellusanthonson-ctrl/chatgpt-prototype-lab`, rama `main`, entrypoint `project-sources/chatgpt/START_HERE.md`; verifica el HEAD remoto vigente y sigue exactamente su orden de lectura.
 
-La autorización 164 y su enmienda 1 registraron `ERR-LAB-009` en el estado canónico y en el fixture esperado, y reconciliaron `DEC-LAB-028` con el baseline sucesor operativo de 333 hallazgos. El baseline histórico de 335 y el sucesor de 333 permanecen inmutables. La autorización 162 sigue `GRANTED`, no consumida y es la única activa.
+ATTEMPT-003 de la autorización 162 pasó el replay semántico 420/420, la validación de los cinco estados del ciclo de vida y las pruebas sandbox 4/4 positivas y 12/12 negativas. La autorización 162 y su enmienda 3 están consumidas. El baseline histórico de 335 y el sucesor operativo de 333 permanecen inmutables.
 
-ATTEMPT-003 todavía no ha comenzado. Su ejecución separada queda limitada al replay semántico y a los validadores stage-aware en sandbox. No existe autoridad para ejecutar el rollback drill operacional, reintentar M5, crear un puntero activo, realizar cutover, retirar el selector estático, activar el shadow registry ni probar o integrar Product Leadership, Intelligent Application Construction o SSE.
+`ERR-LAB-009` sigue `OPEN_BLOCKING_M5_CUTOVER`. `PEND-LAB-039` sigue resuelto. `PEND-LAB-040` espera una decisión humana separada y cualquier futura autorización de rollback drill permanece `PROPOSED_NOT_GRANTED_NOT_EXECUTABLE`.
+
+El selector estático continúa autoritativo, el shadow registry sigue inactivo y el puntero activo está ausente. No existe autoridad vigente para ejecutar rollback drill operacional, reintento M5, cutover, crear un puntero activo, cambiar runtime o integraciones, ejecutar AWS o Terraform, o modificar repositorios externos.
+
+La siguiente acción única es que Jonathan Martínez decida si concede una autorización separada y acotada para un nuevo rollback drill operacional desde el nuevo HEAD remoto verificado.

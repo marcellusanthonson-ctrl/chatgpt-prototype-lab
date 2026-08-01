@@ -337,6 +337,30 @@
       "runtime_effect": "NONE",
       "integration_effect": "NONE",
       "next_gate": "EXECUTE_ATTEMPT_003_UNDER_AUTHORIZATION_162_FROM_NEW_VERIFIED_REMOTE_HEAD"
+    },
+    {
+      "order": 29,
+      "item": "M5_STAGE_AWARE_VALIDATOR_REMEDIATION_ATTEMPT_003",
+      "status": "M5_STAGE_AWARE_VALIDATOR_REMEDIATION_PASS_AWAITING_NEW_DRILL_AUTHORIZATION",
+      "authorization": "AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162",
+      "amendment": "AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162_AMENDMENT_3_ATTEMPT_003_CANONICAL_EXECUTION_AND_CLOSURE",
+      "attempt": "ATTEMPT-003",
+      "authorization_162_status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "semantic_replay": "420_OF_420_PASS_ZERO_DIVERGENCES",
+      "lifecycle_validation": "5_OF_5_PASS",
+      "positive_tests": "4_OF_4_PASS",
+      "negative_tests": "12_OF_12_BLOCK_AS_EXPECTED",
+      "general_validator": "333_EXACT_ZERO_DELTA_GLOBAL_PASS_FALSE",
+      "err_lab_009": "OPEN_BLOCKING_M5_CUTOVER",
+      "pend_lab_039": "RESOLVED_UNCHANGED",
+      "pend_lab_040": "AWAITING_HUMAN_DECISION_FOR_NEW_M5_ROLLBACK_DRILL_AUTHORIZATION",
+      "future_drill_authorization": "PROPOSED_NOT_GRANTED_NOT_EXECUTABLE",
+      "static_selector_status": "AUTHORITATIVE_UNCHANGED",
+      "shadow_registry_status": "INACTIVE_UNCHANGED",
+      "active_pointer": "ABSENT",
+      "runtime_effect": "NONE",
+      "integration_effect": "NONE",
+      "next_gate": "JONATHAN_MARTINEZ_DECIDES_WHETHER_TO_GRANT_A_SEPARATE_BOUNDED_NEW_M5_ROLLBACK_DRILL_AUTHORIZATION"
     }
   ]
 }

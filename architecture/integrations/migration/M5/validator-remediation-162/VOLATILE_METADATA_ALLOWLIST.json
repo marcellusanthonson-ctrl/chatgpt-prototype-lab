@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0.0",
+  "allowlist_id": "M5-STAGE-AWARE-VALIDATOR-REMEDIATION-162-VOLATILE-METADATA-001",
+  "open_ended_fields_allowed": false,
+  "fields": [
+    {
+      "json_path": "$.execution_metadata.generated_at",
+      "source_path": "sandbox semantic replay execution envelope",
+      "rationale": "Wall-clock generation time does not affect selector behavior."
+    },
+    {
+      "json_path": "$.execution_metadata.temporary_directory",
+      "source_path": "sandbox semantic replay execution envelope",
+      "rationale": "The isolated temporary-storage path is allocated per execution."
+    },
+    {
+      "json_path": "$.execution_metadata.run_id",
+      "source_path": "sandbox semantic replay execution envelope",
+      "rationale": "The run identifier provides traceability but no selection semantics."
+    }
+  ],
+  "undeclared_field_policy": "BLOCK_AS_SEMANTIC_DIVERGENCE",
+  "historical_outputs_rewritten": false
+}

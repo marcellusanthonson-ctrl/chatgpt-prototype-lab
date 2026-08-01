@@ -67,7 +67,10 @@
     "projects/lab/authorizations/AUTHORIZATION_LAB_M5_ATTEMPT_002_AND_ACTIVE_AUTHORIZATION_REGISTRY_SEMANTICS_RECONCILIATION_163.json",
     "projects/lab/evidence/EVD-LAB-M5-ACTIVE-AUTHORIZATION-REGISTRY-RECONCILIATION-163.json",
     "architecture/integrations/migration/M5/documentary-reconciliation-163/GENERAL_VALIDATOR_SUCCESSOR_BASELINE.json",
-    "projects/lab/authorizations/AUTHORIZATION_LAB_M5_CANONICAL_OPEN_ERROR_AND_DECISION_BASELINE_RECONCILIATION_164.json"
+    "projects/lab/authorizations/AUTHORIZATION_LAB_M5_CANONICAL_OPEN_ERROR_AND_DECISION_BASELINE_RECONCILIATION_164.json",
+    "architecture/integrations/migration/M5/validator-remediation-162/VALIDATION_RESULTS.json",
+    "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-STAGE-AWARE-VALIDATOR-REMEDIATION-162.json",
+    "projects/lab/pending/PEND-LAB-040.json"
   ],
   "baseline_reconciliation": {
     "amendment_id": "DEC-LAB-028-AMENDMENT-1-SUCCESSOR-333-BASELINE",
@@ -87,6 +90,20 @@
     "effect": "PRESERVE_HISTORICAL_335_AND_USE_SUCCESSOR_333_FOR_AUTHORIZATION_162_ATTEMPT_003",
     "authorization_162_effect": "NONE_REMAINS_GRANTED_NOT_CONSUMED",
     "attempt_003_effect": "NOT_STARTED"
+  },
+  "remediation_result": {
+    "attempt_id": "ATTEMPT-003",
+    "classification": "M5_STAGE_AWARE_VALIDATOR_REMEDIATION_PASS_AWAITING_NEW_DRILL_AUTHORIZATION",
+    "authorization_162_status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "semantic_replay": "420_OF_420_PASS_ZERO_DIVERGENCES",
+    "lifecycle_validation": "5_OF_5_PASS",
+    "positive_tests": "4_OF_4_PASS",
+    "negative_tests": "12_OF_12_BLOCK_AS_EXPECTED",
+    "general_validator": "333_EXACT_ZERO_DELTA_GLOBAL_PASS_FALSE",
+    "operational_rollback_drill_executed": false,
+    "m5_retry_executed": false,
+    "cutover_executed": false,
+    "next_pending": "PEND-LAB-040"
   },
   "supersedes": [],
   "superseded_by": null,

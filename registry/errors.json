@@ -124,8 +124,9 @@
       "canonical_path": "errors/ERR-LAB-009.json",
       "updated_at": "2026-07-31",
       "repair_authorized": true,
-      "repair_performed": false,
-      "remediation_status": "ATTEMPT_002_BLOCKED_AWAITING_ATTEMPT_003"
+      "repair_performed": true,
+      "remediation_status": "STAGE_AWARE_VALIDATOR_REMEDIATION_PASS_AWAITING_NEW_DRILL_AUTHORIZATION",
+      "next_action": "AWAIT_HUMAN_DECISION_FOR_NEW_M5_ROLLBACK_DRILL_AUTHORIZATION"
     }
   ]
 }
