@@ -3,9 +3,9 @@
   "brief_id": "CODEX_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_001",
   "task_id": "LAB-M5-CUTOVER-166",
   "project_id": "lab",
-  "status": "READY",
-  "stage_1_5_status": "READY_FOR_STAGE_2_FROM_VERIFIED_STAGE_1_5B_FINALIZATION_HEAD",
-  "objective": "Publish and remotely finalize the explicit-profile authorization-166 canonical-state validator successor before any Stage 2 execution, then preserve the original bounded atomic cutover, observation and rollback scope for a later execution from the verified Stage 1.5B remote HEAD.",
+  "status": "CONSUMED",
+  "stage_1_5_status": "COMPLETED_AND_CONSUMED",
+  "objective": "Authorization 166 completed the bounded atomic cutover from the verified Stage 1.5B remote HEAD, confirmed the candidate only through the governed pointer, passed both observation iterations and preserved the static fallback.",
   "repositories": [
     {
       "name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
@@ -18,7 +18,7 @@
   ],
   "authority": {
     "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166.json",
-    "authorization_status": "GRANTED_STAGE_1_AND_STAGE_1_5_CONSUMED_STAGE_2_GRANTED_NOT_STARTED",
+      "authorization_status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "amendment_2_status": "CONSUMED_ON_VERIFIED_STAGE_1_5B_REMOTE_PUBLICATION",
     "amendment_ref": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166_AMENDMENT_1_CANONICAL_M3_CORPUS_REFERENCE_CORRECTION",
     "amendment_2_ref": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166_AMENDMENT_2_STAGE_AWARE_CANONICAL_STATE_VALIDATOR_SUCCESSOR",
@@ -31,9 +31,16 @@
     "stage_1_5a": "SUCCESSOR_IMPLEMENTATION_AND_PUBLICATION",
     "stage_1_5b": "REMOTE_VERIFICATION_FINALIZATION_AND_STAGE_2_HANDOFF",
     "stage_2": "BOUNDED_ATOMIC_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK",
-    "stage_2_execution_in_current_delivery": "PROHIBITED",
+    "stage_2_execution_in_current_delivery": "COMPLETED_PASS",
     "stage_1_5a_remote_verification": "PASS_4d5464f08cecec9f8a3de2298f02643dd47e1317",
     "stage_1_5b_finalization": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "stage_2_execution_parent_head": "4ced6a5f63f833f1526400b70eb531078f1e771a",
+    "stage_2_result": "M5_BOUNDED_CUTOVER_PASS_INTEGRATION_ACTIVE_STATIC_FALLBACK_PRESERVED",
+    "pointer_final_state": "CANDIDATE_ACTIVE_CONFIRMED",
+    "active_target": "CANDIDATE",
+    "fallback_target": "STATIC",
+    "observation_result": "TWO_ITERATIONS_420_OF_420_13_OF_13_ZERO_DIVERGENCES_EXACT_DETERMINISTIC_DIGEST",
+    "automatic_rollback_triggered": false,
     "stage_2_gate_7": "python scripts/validate_integration_factory_m5_canonical_state_166.py --profile STAGE_1_5B_FINALIZED",
     "canonical_validator_successor": "scripts/validate_integration_factory_m5_canonical_state_166.py",
     "canonical_validator_successor_test": "scripts/test_integration_factory_m5_canonical_state_166.py",
@@ -264,5 +271,5 @@
     ]
   },
   "authorization_reusable": false,
-  "current_execution_id": null
+  "current_execution_id": "M5_CUTOVER_166_STAGE_2_COMPLETE_PASS"
 }

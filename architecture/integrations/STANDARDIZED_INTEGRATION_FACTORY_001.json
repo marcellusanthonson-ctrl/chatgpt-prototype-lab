@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "architecture_id": "STANDARDIZED_INTEGRATION_FACTORY_001",
   "project_id": "lab",
-  "status": "DOCUMENTED_PROPOSED_NOT_IMPLEMENTED",
+  "status": "M5_INTEGRATED_ACTIVE_VIA_GOVERNED_POINTER",
   "created_at": "2026-07-30",
   "approved_by": "Jonathan Martínez",
   "objective": "Standardize and accelerate the incorporation of new integrations without weakening evidence, authority, rollback, testing or traceability controls.",
@@ -94,7 +94,21 @@
     "SELECT_PRODUCTION_PROVIDER",
     "INTEGRATE_WITHOUT_EXPLICIT_AUTHORIZATION"
   ],
-  "authority_effect": "NONE",
-  "runtime_effect": "NONE",
-  "implementation_authorized": false
+  "active_resolution": {
+    "pointer": "architecture/integrations/active/INTEGRATION_FACTORY_RESOLUTION_POINTER.json",
+    "state": "CANDIDATE_ACTIVE_CONFIRMED",
+    "active_target": "CANDIDATE",
+    "fallback_target": "STATIC",
+    "candidate": "architecture/integrations/migration/M2/SHADOW_INTEGRATION_REGISTRY.json@a067cd9f95b98aa1599d21e3a0ff35fa56ac3a78",
+    "static_fallback": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json@301ba432907758fc49a9b3c86a83fc762eac4607",
+    "authorization": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166",
+    "evidence": "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-CUTOVER-166.json"
+  },
+  "m5_validation": "TWO_ITERATIONS_420_OF_420_13_OF_13_ZERO_DIVERGENCES_EXACT_DETERMINISTIC_DIGEST",
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_166_CONSUMPTION",
+  "runtime_effect": "BOUNDED_LAB_OBSERVATION_COMPLETE_NO_EXTERNAL_RUNTIME",
+  "integration_effect": "ACTIVE_VIA_SINGLE_GOVERNED_POINTER",
+  "implementation_authorized": false,
+  "implementation_active": true,
+  "static_selector_retirement_authorized": false
 }

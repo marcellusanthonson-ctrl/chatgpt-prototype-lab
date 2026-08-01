@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166",
+  "verified_parent_head": "4ced6a5f63f833f1526400b70eb531078f1e771a",
+  "initial_state": "ABSENT",
+  "transitions": [
+    {
+      "from": "ABSENT",
+      "to": "CANDIDATE_ACTIVE_UNCONFIRMED",
+      "at": "2026-08-01T12:32:45-04:00"
+    },
+    {
+      "from": "CANDIDATE_ACTIVE_UNCONFIRMED",
+      "to": "CANDIDATE_ACTIVE_CONFIRMED",
+      "at": "2026-08-01T12:32:48-04:00"
+    }
+  ],
+  "final_state": "CANDIDATE_ACTIVE_CONFIRMED"
+}

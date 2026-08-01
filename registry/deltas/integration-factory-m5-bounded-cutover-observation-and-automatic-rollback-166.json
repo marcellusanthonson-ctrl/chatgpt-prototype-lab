@@ -24,13 +24,28 @@
     "m3_equivalence": "420_OF_420_13_OF_13_PER_EVALUATOR_ZERO_DIVERGENCES_EXACT_DETERMINISTIC_DIGEST"
   },
   "stage_2": {
-    "status": "GRANTED_NOT_STARTED_AWAITING_VERIFIED_STAGE_1_REMOTE_HEAD"
+    "status": "PASS_CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "execution_parent_head": "4ced6a5f63f833f1526400b70eb531078f1e771a",
+    "classification": "M5_BOUNDED_CUTOVER_PASS_INTEGRATION_ACTIVE_STATIC_FALLBACK_PRESERVED",
+    "pointer_transition": "ABSENT_TO_CANDIDATE_ACTIVE_UNCONFIRMED_TO_CANDIDATE_ACTIVE_CONFIRMED",
+    "active_target": "CANDIDATE",
+    "fallback_target": "STATIC",
+    "observation_iterations": 2,
+    "matches_per_iteration": "420_OF_420",
+    "oracles_per_evaluator": "13_OF_13",
+    "behavioral_divergences": 0,
+    "behavioral_digest": "9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329",
+    "deterministic_normalized_digests": true,
+    "automatic_rollback_triggered": false,
+    "general_validator": "329_EXACT_ZERO_DELTA_GLOBAL_PASS_FALSE",
+    "lock_and_cleanup": "PASS"
   },
-  "active_authorization": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166",
-  "m5_retry_authorized": true,
-  "cutover_authorized": true,
-  "active_pointer_authorized": true,
+  "active_authorization": null,
+  "authorization_166": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+  "m5_retry_authorized": false,
+  "cutover_authorized": false,
+  "active_pointer_authorized": false,
   "static_selector_retirement_authorized": false,
-  "runtime_effect": "NONE_UNTIL_STAGE_2",
-  "integration_effect": "NONE_UNTIL_STAGE_2_SINGLE_POINTER"
+  "runtime_effect": "BOUNDED_LAB_OBSERVATION_COMPLETE_NO_EXTERNAL_RUNTIME",
+  "integration_effect": "M5_INTEGRATED_ACTIVE_VIA_GOVERNED_POINTER"
 }

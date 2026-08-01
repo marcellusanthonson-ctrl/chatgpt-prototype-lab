@@ -1,11 +1,11 @@
 {
   "schema_version": "2.5.0",
   "document_id": "lab.current-state",
-  "version": "2.5.47",
-  "status": "M5_BOUNDED_CUTOVER_166_STAGE_AWARE_VALIDATOR_SUCCESSOR_PUBLISHED_AWAITING_STAGE_2",
+  "version": "2.5.48",
+  "status": "M5_BOUNDED_CUTOVER_PASS_INTEGRATION_ACTIVE_STATIC_FALLBACK_PRESERVED",
   "updated_at": "2026-08-01",
   "active_project": "lab",
-  "current_phase": "M5_BOUNDED_CUTOVER_166_STAGE_AWARE_VALIDATOR_SUCCESSOR_PUBLISHED_AWAITING_STAGE_2",
+  "current_phase": "M5_BOUNDED_CUTOVER_PASS_INTEGRATION_ACTIVE_STATIC_FALLBACK_PRESERVED",
   "methodology": {
     "version": "2.1",
     "path": "METHODOLOGY.md"
@@ -46,6 +46,8 @@
     "m5_portable_general_validator_baseline": "architecture/integrations/migration/M5/canonical-reconciliation-165/GENERAL_VALIDATOR_PORTABLE_BASELINE.json",
     "m5_real_canonical_state_validator": "scripts/validate_integration_factory_m5_canonical_state_166.py",
     "m5_stage_1_5_validator_successor_evidence": "projects/lab/evidence/EVD-LAB-M5-CUTOVER-166-STAGE-1-5-VALIDATOR-SUCCESSOR.json",
+    "m5_cutover_166_evidence": "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-CUTOVER-166.json",
+    "integration_factory_resolution_pointer": "architecture/integrations/active/INTEGRATION_FACTORY_RESOLUTION_POINTER.json",
     "chatgpt_criterion_layer": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MANIFEST.json",
     "minimum_impeccable_visual_foundation": "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MANIFEST.json",
     "ecosystem_entrypoint": "README.md",
@@ -223,7 +225,7 @@
     "integration_factory_m5_canonical_open_error_decision_baseline_reconciliation_164": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "integration_factory_m5_stage_aware_validator_remediation_162": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "integration_factory_m5_canonical_correction_and_conditional_rollback_drill_165": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "integration_factory_m5_bounded_cutover_observation_and_automatic_rollback_166": "GRANTED_STAGE_1_AND_STAGE_1_5_CONSUMED_STAGE_2_GRANTED_NOT_STARTED"
+    "integration_factory_m5_bounded_cutover_observation_and_automatic_rollback_166": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
   },
   "verified_external_heads": {
     "symphonie": "31dd1345026240c83b015feef34d6f7f2d2147b7",
@@ -253,8 +255,8 @@
     "SYMPHONIE_LIVHAVN_MONOLITHIC_VISUAL_CALIBRATION_083_READY_WITH_BOUNDED_GAPS",
     "INTEGRATION_FACTORY_M1_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_VALIDATION_PASS"
   ],
-  "next_authorized_action": "EXECUTE_STAGE_2_BOUNDED_M5_CUTOVER_FROM_VERIFIED_STAGE_1_5B_REMOTE_HEAD",
-  "next_recommended_transition": "STAGE_2_REMAINS_GRANTED_NOT_STARTED_UNTIL_SEPARATELY_EXECUTED",
+  "next_authorized_action": "NONE_AFTER_AUTHORIZATION_166_CONSUMPTION",
+  "next_recommended_transition": "JONATHAN_MARTINEZ_DECIDES_WHETHER_TO_RETAIN_OR_RETIRE_THE_STATIC_FALLBACK",
   "continuity_read_order": [
     "LAB_CONTRACT.md",
     "METHODOLOGY.md",
@@ -497,7 +499,7 @@
     "authority_effect": "NONE_AFTER_CONSUMPTION"
   },
   "integration_factory_migration": {
-    "status": "M5_BOUNDED_CUTOVER_166_GRANTED_AWAITING_EXECUTION",
+    "status": "M5_INTEGRATED_ACTIVE_VIA_GOVERNED_POINTER",
     "architecture": "PROVIDER_AND_TECHNOLOGY_NEUTRAL",
     "global_preferred_stack": "NONE",
     "production_provider": "NONE",
@@ -623,13 +625,13 @@
       "amendment_2": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166_AMENDMENT_2_STAGE_AWARE_CANONICAL_STATE_VALIDATOR_SUCCESSOR",
       "amendment_2_revision": 2,
       "amendment_2_status": "CONSUMED_ON_VERIFIED_STAGE_1_5B_REMOTE_PUBLICATION",
-      "status": "M5_BOUNDED_CUTOVER_166_STAGE_AWARE_VALIDATOR_SUCCESSOR_PUBLISHED_AWAITING_STAGE_2",
+      "status": "M5_BOUNDED_CUTOVER_PASS_INTEGRATION_ACTIVE_STATIC_FALLBACK_PRESERVED",
       "verified_initial_parent_head": "3a7470255f367212fc373fb7eefd9fe112c39f12",
       "stage_1": "CONSUMED_ON_VERIFIED_STAGE_1_REMOTE_PUBLICATION",
       "stage_1_5a": "CONSUMED_ON_VERIFIED_STAGE_1_5A_REMOTE_PUBLICATION",
       "stage_1_5a_remote_head": "4d5464f08cecec9f8a3de2298f02643dd47e1317",
       "stage_1_5b": "CONSUMED_ON_VERIFIED_STAGE_1_5B_REMOTE_PUBLICATION",
-      "stage_2": "GRANTED_NOT_STARTED_AWAITING_VERIFIED_STAGE_1_5B_REMOTE_HEAD",
+      "stage_2": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
       "stage_2_parent_policy": "USE_VERIFIED_STAGE_1_5B_REMOTE_MAIN_HEAD",
       "canonical_validator": "scripts/validate_integration_factory_m5_canonical_state_166.py",
       "stage_2_gate_7": "python scripts/validate_integration_factory_m5_canonical_state_166.py --profile STAGE_1_5B_FINALIZED",
@@ -638,14 +640,20 @@
       "corpus_blob": "009065769f524f17f3ffdf137fb0213ee30fb150",
       "observation_plan": "TWO_ITERATIONS_420_OF_420_13_OF_13_ZERO_DIVERGENCES_EXACT_DIGEST",
       "static_selector": "IMMUTABLE_FALLBACK",
-      "candidate_registry": "INACTIVE_UNCHANGED_UNTIL_POINTER_SWITCH",
-      "active_pointer": "ABSENT_AWAITING_STAGE_2",
-      "m5_retry_authorized": true,
-      "cutover_authorized": true,
-      "persistent_active_pointer_authorized": true,
+      "stage_2_execution_parent_head": "4ced6a5f63f833f1526400b70eb531078f1e771a",
+      "stage_2_result": "M5_BOUNDED_CUTOVER_PASS_INTEGRATION_ACTIVE_STATIC_FALLBACK_PRESERVED",
+      "observation_result": "TWO_ITERATIONS_420_OF_420_13_OF_13_ZERO_DIVERGENCES_EXACT_DETERMINISTIC_DIGEST",
+      "candidate_registry": "ACTIVE_VIA_GOVERNED_POINTER_CONTENT_UNCHANGED",
+      "active_pointer": "CANDIDATE_ACTIVE_CONFIRMED",
+      "active_target": "CANDIDATE",
+      "fallback_target": "STATIC",
+      "lock": "RELEASED",
+      "m5_retry_authorized": false,
+      "cutover_authorized": false,
+      "persistent_active_pointer_authorized": false,
       "static_selector_retirement_authorized": false,
-      "runtime_effect": "NONE_UNTIL_STAGE_2_BOUNDED_OBSERVATION",
-      "integration_effect": "NONE_UNTIL_STAGE_2_SINGLE_POINTER"
+      "runtime_effect": "BOUNDED_LAB_OBSERVATION_COMPLETE_NO_EXTERNAL_RUNTIME",
+      "integration_effect": "M5_INTEGRATED_ACTIVE_VIA_GOVERNED_POINTER"
     }
   }
 }

@@ -1,23 +1,7 @@
 {
   "schema_version": "1.0.0",
   "updated_at": "2026-08-01",
-  "active_authorizations": [
-    {
-      "id": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166",
-      "state_key": "integration_factory_m5_bounded_cutover_observation_and_automatic_rollback_166",
-      "project_id": "lab",
-      "status": "GRANTED_STAGE_1_AND_STAGE_1_5_CONSUMED_STAGE_2_GRANTED_NOT_STARTED",
-      "stage_1_status": "CONSUMED_ON_VERIFIED_STAGE_1_REMOTE_PUBLICATION",
-      "stage_1_5a_status": "CONSUMED_ON_VERIFIED_STAGE_1_5A_REMOTE_PUBLICATION",
-      "stage_1_5a_remote_head": "4d5464f08cecec9f8a3de2298f02643dd47e1317",
-      "stage_1_5b_status": "CONSUMED_ON_VERIFIED_STAGE_1_5B_REMOTE_PUBLICATION",
-      "stage_2_status": "GRANTED_NOT_STARTED_AWAITING_VERIFIED_STAGE_1_5B_REMOTE_HEAD",
-      "amendment_2_revision_2": "CONSUMED_ON_VERIFIED_STAGE_1_5B_REMOTE_PUBLICATION",
-      "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166.json",
-      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
-      "branch": "main"
-    }
-  ],
+  "active_authorizations": [],
   "records": [
     {
       "id": "AUTH-LAB-GOVERNANCE-V2-013",
@@ -1233,6 +1217,23 @@
       "stage_1_commit": "b19e702cbe7afb83b4e209b85f9e7c5dbba40fc1",
       "stage_2_execution_commit": "07061091d876e97b0299ff025edd9c59c227e966",
       "updated_at": "2026-07-31"
+    },
+    {
+      "id": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166",
+      "state_key": "integration_factory_m5_bounded_cutover_observation_and_automatic_rollback_166",
+      "project_id": "lab",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "stage_1_status": "CONSUMED_ON_VERIFIED_STAGE_1_REMOTE_PUBLICATION",
+      "stage_1_5a_status": "CONSUMED_ON_VERIFIED_STAGE_1_5A_REMOTE_PUBLICATION",
+      "stage_1_5a_remote_head": "4d5464f08cecec9f8a3de2298f02643dd47e1317",
+      "stage_1_5b_status": "CONSUMED_ON_VERIFIED_STAGE_1_5B_REMOTE_PUBLICATION",
+      "stage_2_status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "stage_2_execution_parent_head": "4ced6a5f63f833f1526400b70eb531078f1e771a",
+      "result": "M5_BOUNDED_CUTOVER_PASS_INTEGRATION_ACTIVE_STATIC_FALLBACK_PRESERVED",
+      "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166.json",
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "updated_at": "2026-08-01"
     }
   ]
 }

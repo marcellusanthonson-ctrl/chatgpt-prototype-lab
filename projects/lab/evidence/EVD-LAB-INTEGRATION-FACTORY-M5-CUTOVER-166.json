@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-INTEGRATION-FACTORY-M5-CUTOVER-166",
+  "project_id": "lab",
+  "kind": "INTEGRATION_FACTORY_M5_BOUNDED_ATOMIC_CUTOVER_OBSERVATION",
+  "status": "M5_BOUNDED_CUTOVER_PASS_INTEGRATION_ACTIVE_STATIC_FALLBACK_PRESERVED",
+  "authorization_id": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166",
+  "verified_execution_parent_head": "4ced6a5f63f833f1526400b70eb531078f1e771a",
+  "initial_verification": {
+    "classification": "PASS_18_OF_18",
+    "stage_2_gate_7": "python scripts/validate_integration_factory_m5_canonical_state_166.py --profile STAGE_1_5B_FINALIZED",
+    "canonical_state_profile": "PASS",
+    "pre_cutover_general_validator": "329_EXACT_ZERO_DELTA_GLOBAL_PASS_FALSE"
+  },
+  "pointer": {
+    "path": "architecture/integrations/active/INTEGRATION_FACTORY_RESOLUTION_POINTER.json",
+    "pre_state": "ABSENT",
+    "transition": "ABSENT_TO_CANDIDATE_ACTIVE_UNCONFIRMED_TO_CANDIDATE_ACTIVE_CONFIRMED",
+    "final_state": "CANDIDATE_ACTIVE_CONFIRMED",
+    "active_target": "CANDIDATE",
+    "fallback_target": "STATIC"
+  },
+  "observation": {
+    "iterations": 2,
+    "matches": [420, 420],
+    "required_matches_per_iteration": 420,
+    "static_oracles": [13, 13],
+    "candidate_oracles": [13, 13],
+    "behavioral_divergences": [0, 0],
+    "behavioral_digest": "9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329",
+    "deterministic_normalized_digests": true
+  },
+  "boundaries": {
+    "static_selector_blob": "301ba432907758fc49a9b3c86a83fc762eac4607",
+    "candidate_blob": "a067cd9f95b98aa1599d21e3a0ff35fa56ac3a78",
+    "corpus_blob": "009065769f524f17f3ffdf137fb0213ee30fb150",
+    "authority_drift": 0,
+    "runtime_scope_breaches": 0,
+    "integration_scope_breaches": 0,
+    "external_repository_effect": "NONE",
+    "aws_effect": "NONE",
+    "terraform_effect": "NONE"
+  },
+  "cleanup": {
+    "lock": "RELEASED",
+    "temporary_pointer": "REMOVED",
+    "partial_state": "NONE",
+    "automatic_rollback_triggered": false
+  },
+  "general_validator": {
+    "finding_count": 329,
+    "added": 0,
+    "removed": 0,
+    "modified": 0,
+    "structured_inventory_digest": "7014f40da42487c7de502c6e209e10b751b8f1718e4c148663c2511ba2bc705b",
+    "raw_ordered_message_digest": "3b724dbb28e9922e1e658bb07d9c5cdbbbe33167553e62398b43c88056af258d",
+    "global_repository_pass": false
+  },
+  "publication": {
+    "commit_message": "feat(lab): activate governed integration factory pointer",
+    "verified_final_remote_head": "VERIFY_LIVE_AFTER_PUBLICATION",
+    "authorization_consumption_effective_on": "VERIFIED_FINAL_REMOTE_PUBLICATION"
+  }
+}

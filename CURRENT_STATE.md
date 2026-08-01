@@ -195,3 +195,11 @@ La Enmienda 2 Revisión 2 publicó el sucesor canónico `scripts/validate_integr
 La suite pasa 3/3 perfiles positivos, 18/18 fronteras negativas con códigos exactos y 7/7 pruebas metamórficas. El inventario general permanece exactamente en 329 hallazgos, delta cero y `global_repository_pass = false`. El validador 165, su suite, el baseline pre-cutover, el selector estático, el candidate y el corpus permanecen intactos.
 
 Stage 1 y Stage 1.5 quedan consumidos al verificarse la publicación remota de Stage 1.5B. Stage 2 permanece concedido, no iniciado y no consumido, con parent `USE_VERIFIED_STAGE_1_5B_REMOTE_MAIN_HEAD`. El pointer está ausente, el candidate inactivo y no se adquirió lock ni hubo efecto de runtime o integración.
+
+## Autorización 166 — Stage 2 PASS
+
+Stage 2 se ejecutó desde el parent remoto verificado `4ced6a5f63f833f1526400b70eb531078f1e771a`. El pointer gobernado transitó atómicamente de ausencia a `CANDIDATE_ACTIVE_UNCONFIRMED` y luego a `CANDIDATE_ACTIVE_CONFIRMED`; el target activo es `CANDIDATE` y el fallback permanece `STATIC`.
+
+Las dos iteraciones pasaron 420/420 matches, 13/13 oráculos por evaluador, cero divergencias y el digest exacto `9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329`, con digests normalizados deterministas. El inventario general conserva exactamente 329 hallazgos, delta cero y `global_repository_pass = false`.
+
+El selector estático conserva byte-for-byte el blob `301ba432907758fc49a9b3c86a83fc762eac4607`; el candidate conserva `a067cd9f95b98aa1599d21e3a0ff35fa56ac3a78`. El lock fue liberado, los temporales eliminados y no se activó rollback. La autorización 166 queda consumida con la publicación remota verificada. No existe autoridad residual para retirar el selector; `PEND-LAB-042` espera la decisión humana de conservarlo o autorizar separadamente su retiro.

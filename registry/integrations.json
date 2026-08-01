@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-07-22",
+  "updated_at": "2026-08-01",
   "records": [
     {
       "id": "INT-SYM-001",
@@ -43,6 +43,13 @@
       "status": "INTEGRATED",
       "canonical_path": "projects/lab/integrations/INT-LAB-002.json",
       "updated_at": "2026-07-22"
+    },
+    {
+      "id": "INT-LAB-003",
+      "project_id": "lab",
+      "status": "INTEGRATED",
+      "canonical_path": "architecture/integrations/STANDARDIZED_INTEGRATION_FACTORY_001.json",
+      "updated_at": "2026-08-01"
     }
   ]
 }

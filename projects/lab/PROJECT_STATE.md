@@ -171,3 +171,11 @@ La Enmienda 2 Revisión 2 publicó y verificó el sucesor canónico `scripts/val
 Stage 1.5A fue publicado y verificado como `4d5464f08cecec9f8a3de2298f02643dd47e1317`; Stage 1.5B finaliza el handoff documental. Stage 1 y Stage 1.5 quedan consumidos únicamente con publicación remota verificada de Stage 1.5B. Stage 2 permanece concedido, no iniciado y no consumido, y su parent será exclusivamente el HEAD remoto verificado de Stage 1.5B.
 
 El selector estático permanece intacto, el candidate continúa shadow-only e inactivo, el pointer está ausente y no se adquirió lock. No hubo efecto de runtime, integración, AWS, Terraform ni repositorios externos.
+
+## Integration Factory M5 — cutover PASS
+
+Stage 2 de la autorización 166 se ejecutó desde `4ced6a5f63f833f1526400b70eb531078f1e771a`. El único pointer gobernado está en `CANDIDATE_ACTIVE_CONFIRMED`, con target `CANDIDATE` y fallback `STATIC`.
+
+Ambas iteraciones pasaron 420/420, 13/13 oráculos por evaluador, cero divergencias y digest exacto determinista. El selector estático y el candidate permanecen byte-for-byte intactos; el lock y todos los temporales fueron retirados. No hubo AWS, Terraform, datos reales, credenciales de producción ni cambios externos.
+
+La autorización 166 queda consumida con publicación remota verificada y no deja autoridad residual. `PEND-LAB-042` conserva la única siguiente decisión: mantener indefinidamente el selector estático como fallback o autorizar su retiro mediante una ejecución separada.
