@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "project_id": "lab",
-  "updated_at": "2026-07-24",
+  "updated_at": "2026-07-31",
   "records": [
     {
       "id": "AUDIT-CLAUDE-FULL-RAG-EXECUTION-071-001",
@@ -16,6 +16,13 @@
       "canonical_path": "projects/lab/external-audits/AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001/AUDIT_MANIFEST.json",
       "evidence_id": "EVD-LAB-AUD-005",
       "reassessment_id": "REA-LAB-006"
+    },
+    {
+      "id": "AUDIT-CLAUDE-M5-ATTEMPT-003-001",
+      "status": "M5_ATTEMPT_003_AUDIT_REQUIRES_CANONICAL_CORRECTION_BEFORE_OPERATIONAL_DRILL",
+      "canonical_path": "projects/lab/external-audits/AUDIT-CLAUDE-M5-ATTEMPT-003-001/AUDIT_MANIFEST.json",
+      "evidence_id": "EVD-LAB-AUD-006",
+      "reassessment_id": "REA-LAB-007"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "task_id": "LAB-M5-STAGE-AWARE-VALIDATOR-REMEDIATION-162",
   "project_id": "lab",
   "title": "Remediate ERR-LAB-009 with semantic replay and stage-aware successor validators",
-  "status": "READY",
+  "status": "CONSUMED",
   "parent_briefs": [
     "projects/lab/briefs/CODEX_INTEGRATION_FACTORY_M5_READINESS_AND_VALIDATOR_REMEDIATION_001.json",
     "projects/lab/briefs/CODEX_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_001.json"
@@ -22,11 +22,11 @@
   ],
   "expected_parent_head": null,
   "expected_parent_policy": "USE_VERIFIED_REMOTE_HEAD_AFTER_AUTHORIZATION_164_PUBLICATION",
-  "current_execution_id": "ATTEMPT-003",
+  "current_execution_id": null,
   "technical_executor": "CODEX",
   "authority": {
     "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162.json",
-    "authorization_status": "GRANTED",
+    "authorization_status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "amendment": "AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162_AMENDMENT_3_ATTEMPT_003_CANONICAL_EXECUTION_AND_CLOSURE",
     "documentary_prerequisite": "AUTHORIZATION_LAB_M5_ATTEMPT_002_AND_ACTIVE_AUTHORIZATION_REGISTRY_SEMANTICS_RECONCILIATION_163_AMENDMENT_1",
     "approved_by": "Jonathan Martínez",
@@ -108,7 +108,7 @@
       "RECORD_DOCUMENTARY_BASELINE_CORRECTION_WITHOUT_CONSUMING_AUTHORIZATION_162"
     ],
     "stage_2_restart": "ATTEMPT_003_EXECUTED_FROM_VERIFIED_REMOTE_HEAD_AFTER_AUTHORIZATION_164_PUBLICATION",
-    "next_attempt_id": "ATTEMPT-003",
+    "next_attempt_id": null,
     "attempt_003_started": true,
     "required_general_validator_baseline": {
       "path": "architecture/integrations/migration/M5/documentary-reconciliation-163/GENERAL_VALIDATOR_SUCCESSOR_BASELINE.json",
@@ -351,7 +351,11 @@
       "SINGLE_NEXT_ACTION"
     ]
   },
-  "authority_effect": "BOUNDED_CODEX_EXECUTION_ONLY",
+  "execution_result": "M5_STAGE_AWARE_VALIDATOR_REMEDIATION_PASS_AWAITING_NEW_DRILL_AUTHORIZATION",
+  "authorization_reusable": false,
+  "terminal_state": "ATTEMPT_003_COMPLETED_AUTHORIZATION_162_CONSUMED",
+  "next_execution_under_this_brief": "NONE",
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_162_CONSUMPTION",
   "runtime_effect": "NONE",
   "integration_effect": "NONE"
 }

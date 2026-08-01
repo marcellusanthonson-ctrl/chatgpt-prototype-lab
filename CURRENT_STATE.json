@@ -1,11 +1,11 @@
 {
   "schema_version": "2.5.0",
   "document_id": "lab.current-state",
-  "version": "2.5.42",
-  "status": "M5_STAGE_AWARE_VALIDATOR_REMEDIATION_PASS_AWAITING_NEW_DRILL_AUTHORIZATION",
+  "version": "2.5.43",
+  "status": "M5_CANONICAL_CORRECTION_PASS_ROLLBACK_DRILL_165_AUTHORIZED_AWAITING_STAGE_2",
   "updated_at": "2026-07-31",
   "active_project": "lab",
-  "current_phase": "M5_STAGE_AWARE_VALIDATOR_REMEDIATION_PASS_AWAITING_NEW_DRILL_AUTHORIZATION",
+  "current_phase": "M5_CANONICAL_CORRECTION_PASS_ROLLBACK_DRILL_165_AUTHORIZED_AWAITING_STAGE_2",
   "methodology": {
     "version": "2.1",
     "path": "METHODOLOGY.md"
@@ -41,8 +41,10 @@
     "high_fidelity_visual_protocol": "foundation-library/visual-protocols/high-fidelity-visual-protocol.json",
     "visual_preference_benchmark": "foundation-library/visual-preferences/benchmarks/visual-preference-benchmark.manifest.json",
     "contextual_visual_calibration_evidence": "foundation-library/visual-preferences/evidence/EVD-LAB-VIS-001.json",
-    "external_audit_evidence": "projects/lab/evidence/EVD-LAB-AUD-005.json",
-    "external_audit_reassessment": "projects/lab/reassessments/REA-LAB-006.json",
+    "external_audit_evidence": "projects/lab/evidence/EVD-LAB-AUD-006.json",
+    "external_audit_reassessment": "projects/lab/reassessments/REA-LAB-007.json",
+    "m5_portable_general_validator_baseline": "architecture/integrations/migration/M5/canonical-reconciliation-165/GENERAL_VALIDATOR_PORTABLE_BASELINE.json",
+    "m5_real_canonical_state_validator": "scripts/validate_integration_factory_m5_canonical_state_165.py",
     "chatgpt_criterion_layer": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MANIFEST.json",
     "minimum_impeccable_visual_foundation": "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MANIFEST.json",
     "ecosystem_entrypoint": "README.md",
@@ -220,7 +222,8 @@
     "integration_factory_m5_bounded_cutover_and_observation_160": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "integration_factory_m5_attempt_002_active_authorization_semantics_reconciliation_163": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "integration_factory_m5_canonical_open_error_decision_baseline_reconciliation_164": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "integration_factory_m5_stage_aware_validator_remediation_162": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+    "integration_factory_m5_stage_aware_validator_remediation_162": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "integration_factory_m5_canonical_correction_and_conditional_rollback_drill_165": "GRANTED_STAGE_1_CONSUMED_STAGE_2_GRANTED_NOT_STARTED"
   },
   "verified_external_heads": {
     "symphonie": "31dd1345026240c83b015feef34d6f7f2d2147b7",
@@ -250,8 +253,8 @@
     "SYMPHONIE_LIVHAVN_MONOLITHIC_VISUAL_CALIBRATION_083_READY_WITH_BOUNDED_GAPS",
     "INTEGRATION_FACTORY_M1_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_VALIDATION_PASS"
   ],
-  "next_authorized_action": "NONE_AWAITING_HUMAN_DECISION_FOR_NEW_M5_ROLLBACK_DRILL_AUTHORIZATION",
-  "next_recommended_transition": "JONATHAN_MARTINEZ_DECIDES_WHETHER_TO_GRANT_A_SEPARATE_BOUNDED_NEW_M5_ROLLBACK_DRILL_AUTHORIZATION",
+  "next_authorized_action": "EXECUTE_STAGE_2_OPERATIONAL_ROLLBACK_DRILL_UNDER_AUTHORIZATION_165_FROM_VERIFIED_STAGE_1_REMOTE_HEAD",
+  "next_recommended_transition": "EXECUTE_CONDITIONAL_STAGE_2_WITHOUT_ADDITIONAL_HUMAN_APPROVAL",
   "continuity_read_order": [
     "LAB_CONTRACT.md",
     "METHODOLOGY.md",
@@ -494,7 +497,7 @@
     "authority_effect": "NONE_AFTER_CONSUMPTION"
   },
   "integration_factory_migration": {
-    "status": "M5_STAGE_AWARE_VALIDATOR_REMEDIATION_PASS_AWAITING_NEW_DRILL_AUTHORIZATION",
+    "status": "M5_CANONICAL_CORRECTION_PASS_ROLLBACK_DRILL_165_AUTHORIZED_AWAITING_STAGE_2",
     "architecture": "PROVIDER_AND_TECHNOLOGY_NEUTRAL",
     "global_preferred_stack": "NONE",
     "production_provider": "NONE",
@@ -584,6 +587,29 @@
       "m5_retry": "NOT_EXECUTED_NOT_AUTHORIZED",
       "cutover": "NOT_EXECUTED_NOT_AUTHORIZED",
       "active_pointer": "ABSENT_UNCHANGED",
+      "runtime_effect": "NONE",
+      "integration_effect": "NONE"
+    },
+    "m5_canonical_correction_and_conditional_rollback_drill_165": {
+      "authorization": "AUTHORIZATION_LAB_M5_CANONICAL_CORRECTION_AND_CONDITIONAL_OPERATIONAL_ROLLBACK_DRILL_165",
+      "status": "M5_CANONICAL_CORRECTION_PASS_ROLLBACK_DRILL_165_AUTHORIZED_AWAITING_STAGE_2",
+      "stage_1": "CONSUMED_ON_VERIFIED_STAGE_1_REMOTE_PUBLICATION",
+      "stage_2": "GRANTED_NOT_STARTED_AWAITING_VERIFIED_STAGE_1_REMOTE_HEAD",
+      "verified_initial_parent_head": "4fba07c03faa1c4e5d9419476064c2945f06734f",
+      "external_audit": "AUDIT-CLAUDE-M5-ATTEMPT-003-001",
+      "external_audit_evidence": "EVD-LAB-AUD-006",
+      "independent_reassessment": "REA-LAB-007",
+      "semantic_replay": "ATTEMPT_003_PASS_PRESERVED_NOT_REEXECUTED",
+      "original_lifecycle_validation": "SYNTHETIC_FIXTURES_ONLY_NOT_CURRENT_CANONICAL_REPOSITORY_STATE",
+      "real_canonical_state_validation": "PASS",
+      "portable_general_validator_baseline": "333_EXACT_ORDERED_STABLE_IDS_GLOBAL_PASS_FALSE",
+      "err_lab_009": "OPEN_AWAITING_OPERATIONAL_ROLLBACK_DRILL",
+      "pend_lab_039": "TERMINAL_NO_FURTHER_AUTHORITY",
+      "pend_lab_040": "RESOLVED_BY_AUTHORIZATION_165",
+      "m5_retry_authorized": false,
+      "cutover_authorized": false,
+      "persistent_active_pointer_authorized": false,
+      "active_pointer": "ABSENT",
       "runtime_effect": "NONE",
       "integration_effect": "NONE"
     }

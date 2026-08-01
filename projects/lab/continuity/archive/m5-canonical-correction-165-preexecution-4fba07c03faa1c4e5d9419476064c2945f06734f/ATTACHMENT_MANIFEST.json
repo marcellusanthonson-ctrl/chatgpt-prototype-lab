@@ -1,9 +1,9 @@
 {
   "schema_version": "1.2.0",
-  "manifest_id": "LAB-CONTINUITY-ATTACHMENTS-M5-CANONICAL-CORRECTION-165-STAGE-1-20260731",
+  "manifest_id": "LAB-CONTINUITY-ATTACHMENTS-M5-STAGE-AWARE-VALIDATOR-REMEDIATION-162-ATTEMPT-003-20260731",
   "status": "CURRENT",
   "project_id": "lab",
-  "created_at": "2026-07-31T23:30:00-04:00",
+  "created_at": "2026-07-31T22:10:00-04:00",
   "required_read_order": [
     "CURRENT_CONTINUITY.json",
     "CURRENT_CONTINUITY.md",
@@ -48,26 +48,15 @@
     "architecture/integrations/migration/M5/validator-remediation-162/VALIDATION_RESULTS.json",
     "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-STAGE-AWARE-VALIDATOR-REMEDIATION-162.json",
     "projects/lab/pending/PEND-LAB-040.json",
-    "registry/deltas/integration-factory-m5-stage-aware-validator-remediation-162.json",
-    "projects/lab/authorizations/AUTHORIZATION_LAB_M5_CANONICAL_CORRECTION_AND_CONDITIONAL_OPERATIONAL_ROLLBACK_DRILL_165.json",
-    "projects/lab/briefs/CODEX_M5_CANONICAL_CORRECTION_AND_CONDITIONAL_ROLLBACK_DRILL_001.json",
-    "projects/lab/external-audits/AUDIT-CLAUDE-M5-ATTEMPT-003-001/AUDIT_MANIFEST.json",
-    "projects/lab/evidence/EVD-LAB-AUD-006.json",
-    "projects/lab/reassessments/REA-LAB-007.json",
-    "architecture/integrations/migration/M5/canonical-reconciliation-165/GENERAL_VALIDATOR_PORTABLE_BASELINE.json",
-    "architecture/integrations/migration/M5/canonical-reconciliation-165/PORTABLE_BASELINE_DELTA.json",
-    "scripts/validate_repository_portable_baseline_165.py",
-    "scripts/validate_integration_factory_m5_canonical_state_165.py",
-    "scripts/test_integration_factory_m5_canonical_state_165.py",
-    "registry/deltas/integration-factory-m5-canonical-correction-and-conditional-rollback-drill-165.json"
+    "registry/deltas/integration-factory-m5-stage-aware-validator-remediation-162.json"
   ],
-  "archived_package": "projects/lab/continuity/archive/m5-canonical-correction-165-preexecution-4fba07c03faa1c4e5d9419476064c2945f06734f/",
+  "archived_package": "projects/lab/continuity/archive/m5-stage-aware-validator-remediation-attempt-003-preexecution-524f7ea0de65e818c8772ea7d46c3c7c8b8ade07/",
   "archived_package_integrity": {
-    "ATTACHMENT_MANIFEST.json": "f4a1747a871f07abcc21bcee11dc6a0f1aef7e1c",
-    "CURRENT_CONTINUITY.json": "79b52d3c3bf14d6521a438042367c0da17a2b9d6",
-    "CURRENT_CONTINUITY.md": "0040f3d631ae19e45330a81b536a2d33afd097f7",
-    "START_PROMPT.md": "8364a17ca25c363740084e823a843d98665b2876"
+    "ATTACHMENT_MANIFEST.json": "5e893026a6c43f6f5a4242250726fce63982cda8",
+    "CURRENT_CONTINUITY.json": "f1ca12e24350b2b8f5e6b0eb45e3420dfe349129",
+    "CURRENT_CONTINUITY.md": "58ead01b7b4426eb03b9f469f259daf41b96a5cd",
+    "START_PROMPT.md": "495361e346b388d719c65a138bb161177be016d9"
   },
   "missing_attachments": [],
-  "authority_effect": "AUTHORIZATION_165_STAGE_1_CONSUMED_STAGE_2_GRANTED_NOT_STARTED_NO_RETRY_OR_CUTOVER_AUTHORITY"
+  "authority_effect": "AUTHORIZATION_162_AND_AMENDMENT_3_CONSUMED_NO_ACTIVE_TECHNICAL_AUTHORIZATION"
 }

@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-AUD-006",
+  "project_id": "lab",
+  "evidence_type": "INDEPENDENT_EXTERNAL_READ_ONLY_M5_ATTEMPT_003_AUDIT",
+  "status": "VERIFIED_EXTERNAL_EVIDENCE_REGISTERED_AND_INDEPENDENTLY_REASSESSED",
+  "registered_at": "2026-07-31",
+  "source_auditor": "CLAUDE",
+  "audit_mode": "INDEPENDENT_READ_ONLY",
+  "source_head": "4fba07c03faa1c4e5d9419476064c2945f06734f",
+  "audit_package": "AUDIT-CLAUDE-M5-ATTEMPT-003-001",
+  "external_package": {
+    "canonical_manifest": "projects/lab/external-audits/AUDIT-CLAUDE-M5-ATTEMPT-003-001/AUDIT_MANIFEST.json",
+    "canonical_report": "projects/lab/external-audits/AUDIT-CLAUDE-M5-ATTEMPT-003-001/AUDIT_REPORT.md",
+    "source_sha256": "8ecfc0d607a2ecfd1be94fb69a2f846cdbcd94c27ec0de850fad37a5f0a8dd66",
+    "source_size_bytes": 37019,
+    "canonical_lf_sha256": "01de84613451193073de83050b5f3c17fc4986106ae8d97f3cb6b3c10934f13a",
+    "canonical_lf_size_bytes": 36659,
+    "integrity_result": "PASS"
+  },
+  "audit_claim_count": 14,
+  "independent_reassessment": "projects/lab/reassessments/REA-LAB-007.json",
+  "reassessment_result": "MODIFIED",
+  "preserved_result": "ATTEMPT_003_SEMANTIC_REPLAY_PASS_420_OF_420_ZERO_DIVERGENCES",
+  "corrected_interpretation": "ORIGINAL_LIFECYCLE_5_OF_5_PASS_VALIDATED_SYNTHETIC_FIXTURES_AND_DID_NOT_VALIDATE_CURRENT_CANONICAL_REPOSITORY_STATE",
+  "confirmed_corrections": [
+    "APPROVAL_NAME_UTF8_CORRUPTION_IN_TWO_ATTEMPT_003_LOCATIONS",
+    "BRIEF_162_AND_PEND_LAB_039_STALE_AUTHORITY_SURFACE",
+    "EVIDENCE_162_PUBLICATION_PLACEHOLDERS",
+    "SUCCESSOR_BASELINE_MACHINE_SPECIFIC_REPOSITORY_ROOT_PREFIX"
+  ],
+  "authority_effect": "NONE_EVIDENCE_ONLY",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE",
+  "source_refs": [
+    "projects/lab/external-audits/AUDIT-CLAUDE-M5-ATTEMPT-003-001/AUDIT_MANIFEST.json",
+    "projects/lab/external-audits/AUDIT-CLAUDE-M5-ATTEMPT-003-001/AUDIT_REPORT.md",
+    "projects/lab/reassessments/REA-LAB-007.json"
+  ]
+}

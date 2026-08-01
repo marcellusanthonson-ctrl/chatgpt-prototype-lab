@@ -143,3 +143,13 @@ ATTEMPT-003 pasó el replay semántico de 420 casos con coincidencia total, 13/1
 La autorización 162 y su enmienda 3 están consumidas. `ERR-LAB-009` permanece abierto y bloquea el cutover. `PEND-LAB-040` espera una decisión humana separada sobre un nuevo rollback drill, cuya autorización sigue `PROPOSED_NOT_GRANTED_NOT_EXECUTABLE`.
 
 Los baselines 335 histórico y 333 sucesor permanecen inmutables. El selector estático sigue autoritativo, el shadow registry inactivo y el puntero activo ausente. No hubo rollback drill operacional, M5 retry, cutover, runtime, integración, AWS, Terraform o cambio externo.
+
+## Corrección canónica M5 y baseline portable — autorización 165 Stage 1
+
+Stage 1 corrigió solo la corrupción UTF-8 introducida por ATTEMPT-003 en la enmienda 3 de la autorización 162 y su registro, cerró el brief 162 y `PEND-LAB-039`, y completó los campos de publicación de la evidencia 162. La autorización 162 permanece consumida y no reutilizable.
+
+La auditoría `AUDIT-CLAUDE-M5-ATTEMPT-003-001` se registró como evidencia externa sin efecto de autoridad. La reevaluación `REA-LAB-007` preserva el PASS semántico 420/420 y corrige la interpretación del lifecycle 5/5: validó fixtures sintéticos y no el repositorio canónico real.
+
+El baseline histórico 335 y el sucesor 333 permanecen inmutables. El baseline portable 165 conserva 333 hallazgos e IDs estables en el mismo orden, sin ruta absoluta ni identidad de máquina, con digests nuevos y `global_repository_pass = false`. El nuevo validador canónico verifica archivos y blobs reales.
+
+`PEND-LAB-040` quedó resuelto por la autorización consolidada 165. Stage 2 permanece autorizado y no iniciado hasta verificar la publicación remota de Stage 1. `ERR-LAB-009` sigue abierto; no hay autorización de retry, cutover, puntero persistente, runtime, integración, AWS o Terraform.

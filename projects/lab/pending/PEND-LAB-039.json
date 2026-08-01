@@ -16,17 +16,18 @@
   "selected_option": "AUTHORIZE_BOUNDED_STAGE_AWARE_VALIDATOR_REMEDIATION",
   "decision_ref": "decisions/DEC-LAB-028.json",
   "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162.json",
-  "authorization_162_status": "GRANTED_NOT_CONSUMED_AWAITING_ATTEMPT_003",
+  "authorization_162_status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+  "stage_2_result": "M5_STAGE_AWARE_VALIDATOR_REMEDIATION_PASS_AWAITING_NEW_DRILL_AUTHORIZATION",
   "effect_until_stage_2": "STATIC_SELECTOR_REMAINS_AUTHORITATIVE_CANDIDATE_INACTIVE_ACTIVE_POINTER_ABSENT",
-  "current_authority": "AUTHORIZATION_162_STAGE_2_VALIDATOR_REMEDIATION_ONLY",
-  "next_transition": "CODEX_EXECUTES_ATTEMPT_003_UNDER_AUTHORIZATION_162_FROM_THE_VERIFIED_AUTHORIZATION_163_REMOTE_HEAD",
+  "current_authority": "NONE_AFTER_AUTHORIZATION_162_CONSUMPTION",
+  "next_transition": "TERMINAL_NO_FURTHER_EXECUTION_UNDER_AUTHORIZATION_162",
   "source_refs": [
     "architecture/integrations/migration/M5/execution-160/ROLLBACK_DRILL_RESULTS.json",
     "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-160.json",
     "decisions/DEC-LAB-028.json",
     "projects/lab/authorizations/AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162.json"
   ],
-  "authority_effect": "HUMAN_DECISION_RESOLVED_BOUNDED_STAGE_2_AUTHORITY_SEPARATE",
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_162_CONSUMPTION",
   "runtime_effect": "NONE",
   "integration_effect": "NONE"
 }

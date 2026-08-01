@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "reassessment_id": "REA-LAB-007",
+  "project_id": "lab",
+  "status": "ADJUDICATED",
+  "decision_domain": "MIXED",
+  "subject": "Independent reassessment of the Claude audit of M5 authorization 162 ATTEMPT-003",
+  "previous_position": {
+    "semantic_replay": "PASS_420_OF_420_ZERO_DIVERGENCES",
+    "lifecycle_validation": "PASS_5_OF_5",
+    "canonical_state": "M5_STAGE_AWARE_VALIDATOR_REMEDIATION_PASS_AWAITING_NEW_DRILL_AUTHORIZATION"
+  },
+  "trigger": {
+    "authorization_id": "AUTHORIZATION_LAB_M5_CANONICAL_CORRECTION_AND_CONDITIONAL_OPERATIONAL_ROLLBACK_DRILL_165",
+    "external_audit": "AUDIT-CLAUDE-M5-ATTEMPT-003-001",
+    "evidence_id": "EVD-LAB-AUD-006",
+    "reason": "VERIFY_EXTERNAL_CLAIMS_WITHOUT_ACCEPTANCE_BY_OBEDIENCE"
+  },
+  "claims_under_review": [
+    {"claim_id": 1, "verdict": "CONFIRMED", "basis": "Replay code regenerates 420 cases and invokes real evaluators in temporary storage."},
+    {"claim_id": 2, "verdict": "MODIFIED", "basis": "Fresh execution gates the result, while several reported counts are read indirectly from exact historical documents."},
+    {"claim_id": 3, "verdict": "CONFIRMED", "basis": "write_outputs is false and immutable M3 blobs remain unchanged."},
+    {"claim_id": 4, "verdict": "REVERSED", "basis": "Five lifecycle states are synthetic fixtures validated against constants from the same module; the PASS is not a real-state check."},
+    {"claim_id": 5, "verdict": "REVERSED", "basis": "CONSUMED_PASS does not read authorization, registry, state, decision, selector, shadow registry or pointer files."},
+    {"claim_id": 6, "verdict": "CONFIRMED", "basis": "The amendment-3 and corresponding registry approved_by values contain a real double-encoded UTF-8 value."},
+    {"claim_id": 7, "verdict": "REVERSED", "basis": "The encoding defect does not alter the replay result or approval identity, but remains a material documentary regression."},
+    {"claim_id": 8, "verdict": "CONFIRMED", "basis": "Brief 162 and PEND-LAB-039 retain executable-looking authority after authorization consumption."},
+    {"claim_id": 9, "verdict": "MODIFIED", "basis": "Canonical sources fail closed, but stale mandatory-reading artifacts create avoidable authority-reuse risk."},
+    {"claim_id": 10, "verdict": "CONFIRMED", "basis": "Authorization 162 is absent from active authorizations and appears exactly once as consumed, despite stale derived documents."},
+    {"claim_id": 11, "verdict": "CONFIRMED", "basis": "Both immutable baselines retain their expected blobs and counts; the successor contains one machine-specific root prefix."},
+    {"claim_id": 12, "verdict": "CONFIRMED", "basis": "Canonical correction and real-state validation are proportionate; portability must be added without modifying the existing baseline."},
+    {"claim_id": 13, "verdict": "REVERSED", "basis": "A separate corrective cycle is not technically necessary when Stage 2 is gated on a verified published Stage 1."},
+    {"claim_id": 14, "verdict": "CONFIRMED", "basis": "The documented sequence shows repeated corrective cycles without operational activation and a repeated encoding regression."}
+  ],
+  "evidence_supporting_change": [
+    "DIRECT_SOURCE_REVIEW_OF_VALIDATORS_162",
+    "LIVE_CANONICAL_JSON_FIELD_VERIFICATION",
+    "GIT_BLOB_VERIFICATION_OF_SELECTOR_SHADOW_AND_BASELINES",
+    "BYTE_LEVEL_UTF8_VALUE_VERIFICATION",
+    "SUCCESSOR_BASELINE_ABSOLUTE_PREFIX_DETECTION"
+  ],
+  "evidence_against_change": [
+    "SEMANTIC_REPLAY_FRESH_EXECUTION_PATH_IS_REAL",
+    "HISTORICAL_M3_OUTPUTS_AND_BOTH_BASELINES_ARE_UNCHANGED",
+    "CANONICAL_AUTHORIZATION_162_REGISTRY_STATE_IS_ALREADY_CONSUMED_AND_UNAMBIGUOUS",
+    "NO_RUNTIME_INTEGRATION_POINTER_RETRY_OR_CUTOVER_EFFECT_OCCURRED"
+  ],
+  "verification": {
+    "source_sha256_match": true,
+    "source_size_bytes_match": true,
+    "claims_independently_reviewed": 14,
+    "repository_head": "4fba07c03faa1c4e5d9419476064c2945f06734f",
+    "canonical_files_read": true,
+    "git_blobs_read": true,
+    "semantic_replay_reexecuted": false,
+    "reason_not_reexecuted": "PRESERVE_AUTHORIZED_ATTEMPT_003_SEMANTIC_REPLAY_AS_HISTORICAL_PASS"
+  },
+  "technical_determination": "MODIFIED",
+  "reasoning_summary": "The audit correctly identifies real canonical-document, lifecycle-validation and portability defects while preserving the substantive 420-case semantic replay PASS. Its factual core is accepted only where independently reproduced from source files and Git blobs; claims that overstate invalidation or require another independent authorization are reversed.",
+  "confidence": "HIGH",
+  "consequences": [
+    "PRESERVE_ATTEMPT_003_SEMANTIC_REPLAY_PASS",
+    "RECORD_SYNTHETIC_LIFECYCLE_VALIDATION_LIMITATION",
+    "CORRECT_ONLY_TWO_ATTEMPT_003_APPROVAL_NAME_VALUES",
+    "CLOSE_BRIEF_162_AND_PEND_LAB_039",
+    "CLOSE_EVIDENCE_162_PUBLICATION_FIELDS",
+    "CREATE_PORTABLE_333_BASELINE_WITHOUT_MUTATING_EXISTING_BASELINES",
+    "REQUIRE_REAL_CANONICAL_STATE_PASS_BEFORE_STAGE_2"
+  ],
+  "recommended_action": {
+    "action": "EXECUTE_STAGE_2_ONLY_FROM_VERIFIED_STAGE_1_REMOTE_HEAD",
+    "authorization": "AUTHORIZATION_LAB_M5_CANONICAL_CORRECTION_AND_CONDITIONAL_OPERATIONAL_ROLLBACK_DRILL_165",
+    "m5_retry_authorized": false,
+    "cutover_authorized": false
+  },
+  "approval_state": "NOT_REQUIRED"
+}

@@ -163,3 +163,13 @@ Codex ejecutó ATTEMPT-003 desde `524f7ea0de65e818c8772ea7d46c3c7c8b8ade07`. El 
 El validador general conserva exactamente los 333 hallazgos del baseline sucesor, exit code 1 y delta cero; el baseline histórico de 335 permanece inmutable y no se declara PASS global del repositorio. La autorización 162 y su enmienda 3 están consumidas por publicación remota verificada.
 
 `ERR-LAB-009` continúa `OPEN_BLOCKING_M5_CUTOVER`. `PEND-LAB-040` espera la decisión humana sobre una autorización nueva y separada; la propuesta permanece `PROPOSED_NOT_GRANTED_NOT_EXECUTABLE`. No hubo rollback drill operacional, reintento M5, cutover, puntero activo, runtime, integración, AWS o Terraform.
+
+## Autorización 165 — Stage 1 PASS, Stage 2 autorizado y no iniciado
+
+La autorización 165 corrigió exclusivamente las dos instancias de `approved_by` dañadas por ATTEMPT-003, cerró el brief 162 y `PEND-LAB-039` como terminales y no reutilizables, y reemplazó los placeholders de publicación de la evidencia 162 por `4fba07c03faa1c4e5d9419476064c2945f06734f`.
+
+La auditoría Claude quedó registrada como evidencia externa `EVD-LAB-AUD-006` y fue reevaluada independientemente en `REA-LAB-007`. Se preserva el PASS semántico 420/420 de ATTEMPT-003. La interpretación corregida registra que el resultado lifecycle 5/5 validó fixtures sintéticos y no el estado canónico vigente.
+
+Los baselines existentes 335 y 333 permanecen byte por byte inmutables. El nuevo baseline portable conserva exactamente los 333 IDs estables ordenados, elimina únicamente el prefijo de root específico de máquina, recalcula ambos digests y mantiene `global_repository_pass = false`. El validador 165 consulta archivos y blobs Git reales y sus 18 pruebas negativas exigen códigos de fallo exactos.
+
+`ERR-LAB-009` permanece abierto hasta el drill operacional. `PEND-LAB-040` está resuelto por la autorización consolidada 165. Stage 2 está autorizado pero no iniciado y solo puede ejecutarse desde el HEAD remoto verificado de Stage 1. No existe puntero activo y no hay autorización de M5 retry, cutover, puntero persistente, runtime, integración, AWS o Terraform.

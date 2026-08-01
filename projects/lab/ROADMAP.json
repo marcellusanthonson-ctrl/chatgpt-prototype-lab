@@ -361,6 +361,31 @@
       "runtime_effect": "NONE",
       "integration_effect": "NONE",
       "next_gate": "JONATHAN_MARTINEZ_DECIDES_WHETHER_TO_GRANT_A_SEPARATE_BOUNDED_NEW_M5_ROLLBACK_DRILL_AUTHORIZATION"
+    },
+    {
+      "order": 30,
+      "item": "M5_CANONICAL_CORRECTION_AND_CONDITIONAL_OPERATIONAL_ROLLBACK_DRILL_165",
+      "status": "M5_CANONICAL_CORRECTION_PASS_ROLLBACK_DRILL_165_AUTHORIZED_AWAITING_STAGE_2",
+      "authorization": "AUTHORIZATION_LAB_M5_CANONICAL_CORRECTION_AND_CONDITIONAL_OPERATIONAL_ROLLBACK_DRILL_165",
+      "stage_1": "CONSUMED_ON_VERIFIED_STAGE_1_REMOTE_PUBLICATION",
+      "stage_2": "GRANTED_NOT_STARTED_AWAITING_VERIFIED_STAGE_1_REMOTE_HEAD",
+      "external_audit": "AUDIT-CLAUDE-M5-ATTEMPT-003-001",
+      "reassessment": "REA-LAB-007",
+      "semantic_replay": "ATTEMPT_003_PASS_PRESERVED_NOT_REEXECUTED",
+      "original_lifecycle_validation": "SYNTHETIC_FIXTURES_ONLY_NOT_CURRENT_CANONICAL_STATE",
+      "real_canonical_state_validator": "PASS",
+      "portable_baseline": "333_EXACT_ORDERED_STABLE_IDS_GLOBAL_PASS_FALSE",
+      "err_lab_009": "OPEN_AWAITING_OPERATIONAL_ROLLBACK_DRILL",
+      "pend_lab_039": "TERMINAL_NO_FURTHER_AUTHORITY",
+      "pend_lab_040": "RESOLVED_BY_CONSOLIDATED_AUTHORIZATION_165",
+      "static_selector_status": "AUTHORITATIVE_UNCHANGED",
+      "shadow_registry_status": "INACTIVE_UNCHANGED",
+      "active_pointer": "ABSENT",
+      "m5_retry_authorized": false,
+      "cutover_authorized": false,
+      "runtime_effect": "NONE",
+      "integration_effect": "NONE",
+      "next_gate": "EXECUTE_STAGE_2_FROM_VERIFIED_STAGE_1_REMOTE_HEAD"
     }
   ]
 }

@@ -1,9 +1,9 @@
 {
   "schema_version": "1.2.0",
-  "continuity_id": "LAB-CONTINUITY-M5-CANONICAL-CORRECTION-165-STAGE-1-20260731",
+  "continuity_id": "LAB-CONTINUITY-M5-STAGE-AWARE-VALIDATOR-REMEDIATION-162-ATTEMPT-003-20260731",
   "project_id": "lab",
-  "status": "M5_CANONICAL_CORRECTION_PASS_ROLLBACK_DRILL_165_AUTHORIZED_AWAITING_STAGE_2",
-  "created_at": "2026-07-31T23:30:00-04:00",
+  "status": "M5_STAGE_AWARE_VALIDATOR_REMEDIATION_PASS_AWAITING_NEW_DRILL_AUTHORIZATION",
+  "created_at": "2026-07-31T22:10:00-04:00",
   "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "canonical_branch": "main",
   "head_policy": "VERIFY_LIVE_AT_USE",
@@ -32,13 +32,6 @@
     "architecture/integrations/migration/M5/validator-remediation-162/VALIDATION_RESULTS.json",
     "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-STAGE-AWARE-VALIDATOR-REMEDIATION-162.json",
     "projects/lab/pending/PEND-LAB-040.json",
-    "projects/lab/authorizations/AUTHORIZATION_LAB_M5_CANONICAL_CORRECTION_AND_CONDITIONAL_OPERATIONAL_ROLLBACK_DRILL_165.json",
-    "projects/lab/briefs/CODEX_M5_CANONICAL_CORRECTION_AND_CONDITIONAL_ROLLBACK_DRILL_001.json",
-    "projects/lab/external-audits/AUDIT-CLAUDE-M5-ATTEMPT-003-001/AUDIT_MANIFEST.json",
-    "projects/lab/evidence/EVD-LAB-AUD-006.json",
-    "projects/lab/reassessments/REA-LAB-007.json",
-    "architecture/integrations/migration/M5/canonical-reconciliation-165/GENERAL_VALIDATOR_PORTABLE_BASELINE.json",
-    "scripts/validate_integration_factory_m5_canonical_state_165.py",
     "projects/lab/continuity/CURRENT_CONTINUITY.json"
   ],
   "facts": [
@@ -77,15 +70,6 @@
         "architecture/integrations/migration/M5/validator-remediation-162/VALIDATION_RESULTS.json",
         "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-STAGE-AWARE-VALIDATOR-REMEDIATION-162.json"
       ]
-    },
-    {
-      "claim": "Authorization 165 Stage 1 corrected the canonical ATTEMPT-003 lifecycle representation, registered and independently reassessed the external audit, and created a portable 333-finding baseline plus a real-file canonical-state validator.",
-      "source_refs": [
-        "projects/lab/authorizations/AUTHORIZATION_LAB_M5_CANONICAL_CORRECTION_AND_CONDITIONAL_OPERATIONAL_ROLLBACK_DRILL_165.json",
-        "projects/lab/evidence/EVD-LAB-AUD-006.json",
-        "projects/lab/reassessments/REA-LAB-007.json",
-        "architecture/integrations/migration/M5/canonical-reconciliation-165/GENERAL_VALIDATOR_PORTABLE_BASELINE.json"
-      ]
     }
   ],
   "authorizations": {
@@ -95,8 +79,7 @@
     "161": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_STATE_CORRESPONDENCE_REPAIRED",
     "162": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_AFTER_ATTEMPT_003_PASS",
     "163": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "164": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_WITH_AMENDMENT_1",
-    "165": "GRANTED_STAGE_1_CONSUMED_STAGE_2_GRANTED_NOT_STARTED"
+    "164": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_WITH_AMENDMENT_1"
   },
   "baseline_transition": {
     "historical_count": 335,
@@ -114,20 +97,19 @@
   "pending": [
     {
       "id": "PEND-LAB-039",
-      "status": "TERMINAL_NO_FURTHER_EXECUTION_UNDER_AUTHORIZATION_162"
+      "status": "RESOLVED_AUTHORIZE_BOUNDED_STAGE_AWARE_VALIDATOR_REMEDIATION"
     },
     {
       "id": "PEND-LAB-040",
-      "status": "RESOLVED_AUTHORIZE_CONSOLIDATED_CANONICAL_CORRECTION_AND_CONDITIONAL_ROLLBACK_DRILL",
-      "future_drill_authorization": "GRANTED_STAGE_2_NOT_STARTED_AWAITING_VERIFIED_STAGE_1_REMOTE_HEAD"
+      "status": "AWAITING_HUMAN_DECISION_FOR_NEW_M5_ROLLBACK_DRILL_AUTHORIZATION",
+      "future_drill_authorization": "PROPOSED_NOT_GRANTED_NOT_EXECUTABLE"
     }
   ],
   "active_boundaries": {
     "static_selector": "AUTHORITATIVE_UNCHANGED",
     "shadow_registry": "INACTIVE_UNCHANGED",
     "active_pointer_exists": false,
-    "operational_rollback_drill_authorized": true,
-    "operational_rollback_drill_condition": "STAGE_2_ONLY_AFTER_VERIFIED_STAGE_1_REMOTE_PUBLICATION_IN_DISPOSABLE_WORKTREE",
+    "operational_rollback_drill_authorized": false,
     "m5_retry_authorized": false,
     "cutover_authorized": false,
     "static_selector_retirement_authorized": false,
@@ -142,16 +124,16 @@
   "forbidden": [
     "MODIFY_HISTORICAL_VALIDATORS_OR_OUTPUTS",
     "REUSE_CONSUMED_AUTHORIZATION_162_OR_AMENDMENT_3",
-    "EXECUTE_M5_RETRY_OR_CUTOVER",
+    "EXECUTE_OPERATIONAL_ROLLBACK_DRILL_M5_RETRY_OR_CUTOVER",
     "CREATE_OR_UPDATE_ACTIVE_POINTER",
     "RETIRE_STATIC_SELECTOR_OR_ACTIVATE_SHADOW_REGISTRY",
     "TEST_ADAPT_ACTIVATE_OR_INTEGRATE_PRODUCT_LEADERSHIP_IAC_OR_SSE",
     "RUN_AWS_OR_TERRAFORM",
     "MODIFY_EXTERNAL_REPOSITORIES"
   ],
-  "single_next_action": "EXECUTE_STAGE_2_OPERATIONAL_ROLLBACK_DRILL_UNDER_AUTHORIZATION_165_FROM_VERIFIED_STAGE_1_REMOTE_HEAD",
-  "first_phrase_for_new_conversation": "Continua ChatGPT Prototype LAB desde el HEAD remoto vigente de main. Stage 1 de la autorizacion 165 paso y esta consumido; Stage 2 esta autorizado pero no iniciado hasta verificar ese HEAD remoto. El replay semantico 420/420 de ATTEMPT-003 se preserva, mientras el lifecycle 5/5 queda clasificado como validacion de fixtures sinteticos. ERR-LAB-009 sigue abierto hasta el drill.",
-  "authority_effect": "AUTHORIZATION_165_STAGE_1_CONSUMED_STAGE_2_GRANTED_NOT_STARTED_NO_RETRY_OR_CUTOVER_AUTHORITY",
+  "single_next_action": "JONATHAN_MARTINEZ_DECIDES_WHETHER_TO_GRANT_A_SEPARATE_BOUNDED_NEW_M5_ROLLBACK_DRILL_AUTHORIZATION_FROM_THE_NEW_VERIFIED_REMOTE_HEAD",
+  "first_phrase_for_new_conversation": "Continua ChatGPT Prototype LAB desde el HEAD remoto vigente de main. ATTEMPT-003 de la autorizacion 162 paso el replay semantico 420/420, la validacion de ciclo de vida y las pruebas sandbox; la autorizacion 162 y la enmienda 3 estan consumidas. ERR-LAB-009 sigue abierto y PEND-LAB-040 espera una decision humana separada sobre un nuevo rollback drill.",
+  "authority_effect": "AUTHORIZATION_162_AND_AMENDMENT_3_CONSUMED_NO_ACTIVE_TECHNICAL_AUTHORIZATION",
   "runtime_effect": "NONE",
   "integration_effect": "NONE"
 }

@@ -1,7 +1,17 @@
 {
   "schema_version": "1.0.0",
   "updated_at": "2026-07-31",
-  "active_authorizations": [],
+  "active_authorizations": [
+    {
+      "id": "AUTHORIZATION_LAB_M5_CANONICAL_CORRECTION_AND_CONDITIONAL_OPERATIONAL_ROLLBACK_DRILL_165",
+      "status": "GRANTED",
+      "stage_1_status": "CONSUMED_ON_VERIFIED_STAGE_1_REMOTE_PUBLICATION",
+      "stage_2_status": "GRANTED_NOT_STARTED_AWAITING_VERIFIED_STAGE_1_REMOTE_HEAD",
+      "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_M5_CANONICAL_CORRECTION_AND_CONDITIONAL_OPERATIONAL_ROLLBACK_DRILL_165.json",
+      "expected_parent_head": "4fba07c03faa1c4e5d9419476064c2945f06734f",
+      "consumed": false
+    }
+  ],
   "records": [
     {
       "id": "AUTH-LAB-GOVERNANCE-V2-013",
@@ -1193,7 +1203,7 @@
       "project_id": "lab",
       "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
       "amendment_3_status": "CONSUMED_WITH_AUTHORIZATION_162_ON_VERIFIED_REMOTE_PUBLICATION",
-      "approved_by": "Jonathan MartÃ­nez",
+      "approved_by": "Jonathan Martínez",
       "scope": "BOUNDED_ATTEMPT_003_STAGE_AWARE_VALIDATOR_REMEDIATION_PASS",
       "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162.json",
       "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",

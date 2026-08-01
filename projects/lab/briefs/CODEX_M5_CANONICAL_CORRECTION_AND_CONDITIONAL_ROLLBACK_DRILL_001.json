@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "brief_id": "CODEX_M5_CANONICAL_CORRECTION_AND_CONDITIONAL_ROLLBACK_DRILL_001",
+  "task_id": "LAB-M5-CANONICAL-CORRECTION-AND-CONDITIONAL-ROLLBACK-DRILL-165",
+  "project_id": "lab",
+  "title": "Correct canonical M5 state and conditionally execute the operational rollback drill",
+  "status": "READY",
+  "objective": "Correct the bounded ATTEMPT-003 documentary defects, validate real canonical state, publish a portable 333-finding baseline, and execute the 14-case rollback drill only after verified Stage 1 remote publication.",
+  "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_M5_CANONICAL_CORRECTION_AND_CONDITIONAL_OPERATIONAL_ROLLBACK_DRILL_165.json",
+  "repositories": [
+    {
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "head_policy": "VERIFY_LIVE_AT_USE",
+      "expected_stage_1_parent_head": "4fba07c03faa1c4e5d9419476064c2945f06734f"
+    }
+  ],
+  "current_execution_id": null,
+  "authority": {
+    "authorization_status": "GRANTED_STAGE_1_CONSUMED_STAGE_2_GRANTED_NOT_STARTED",
+    "approved_by": "Jonathan Martínez",
+    "technical_executor": "CODEX",
+    "commit": true,
+    "push": true,
+    "stage_2_condition": "VERIFIED_STAGE_1_REMOTE_PUBLICATION",
+    "m5_retry": false,
+    "cutover": false,
+    "persistent_active_pointer": false,
+    "runtime": false,
+    "integration": false,
+    "aws": false,
+    "terraform": false,
+    "external_repository_change": false
+  },
+  "scope": {
+    "stage_1_allowed_paths_ref": "AUTHORIZATION_165_COMPLETE.json#stage_1_allowed_paths",
+    "stage_2_allowed_paths_ref": "AUTHORIZATION_165_COMPLETE.json#stage_2_allowed_paths",
+    "immutable_paths_ref": "AUTHORIZATION_165_COMPLETE.json#immutable_paths",
+    "forbidden_actions_ref": "AUTHORIZATION_165_COMPLETE.json#forbidden_actions",
+    "next_stage_id": "STAGE_2_CONDITIONAL_PRE_ACTIVATION_OPERATIONAL_ROLLBACK_DRILL",
+    "authorization_reusable": false
+  },
+  "stage_1": {
+    "status": "CONSUMED_ON_VERIFIED_STAGE_1_REMOTE_PUBLICATION",
+    "result": "M5_CANONICAL_CORRECTION_PASS_ROLLBACK_DRILL_165_AUTHORIZED_AWAITING_STAGE_2",
+    "verified_initial_parent_head": "4fba07c03faa1c4e5d9419476064c2945f06734f",
+    "audit_source_sha256": "8ecfc0d607a2ecfd1be94fb69a2f846cdbcd94c27ec0de850fad37a5f0a8dd66",
+    "canonical_audit_lf_sha256": "01de84613451193073de83050b5f3c17fc4986106ae8d97f3cb6b3c10934f13a",
+    "semantic_replay_preserved": "420_OF_420_PASS_ZERO_DIVERGENCES_NOT_REEXECUTED",
+    "original_lifecycle_result_limitation": "5_OF_5_PASS_VALIDATED_SYNTHETIC_FIXTURES_NOT_CURRENT_CANONICAL_REPOSITORY_STATE",
+    "real_canonical_state_validator": "PASS",
+    "negative_tests": "18_OF_18_EXACT_FAILURE_CODES",
+    "portable_baseline": "333_EXACT_ORDERED_STABLE_IDS_PORTABLE_GLOBAL_PASS_FALSE"
+  },
+  "stage_2": {
+    "status": "GRANTED_NOT_STARTED_AWAITING_VERIFIED_STAGE_1_REMOTE_HEAD",
+    "environment": "DISPOSABLE_TEMPORARY_GIT_WORKTREE_ONLY",
+    "required_case_count": 14,
+    "required_invariant": "EVERY_INJECTED_FAILURE_ENDS_STATIC_INTACT"
+  },
+  "required_outputs": [
+    "projects/lab/external-audits/AUDIT-CLAUDE-M5-ATTEMPT-003-001/AUDIT_REPORT.md",
+    "projects/lab/external-audits/AUDIT-CLAUDE-M5-ATTEMPT-003-001/AUDIT_MANIFEST.json",
+    "projects/lab/evidence/EVD-LAB-AUD-006.json",
+    "projects/lab/reassessments/REA-LAB-007.json",
+    "architecture/integrations/migration/M5/canonical-reconciliation-165/GENERAL_VALIDATOR_PORTABLE_BASELINE.json",
+    "architecture/integrations/migration/M5/canonical-reconciliation-165/PORTABLE_BASELINE_DELTA.json",
+    "scripts/validate_repository_portable_baseline_165.py",
+    "scripts/validate_integration_factory_m5_canonical_state_165.py",
+    "scripts/test_integration_factory_m5_canonical_state_165.py",
+    "architecture/integrations/migration/M5/rollback-drill-165/**",
+    "scripts/execute_integration_factory_m5_rollback_drill_165.py",
+    "scripts/validate_integration_factory_m5_rollback_drill_165.py",
+    "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-ROLLBACK-DRILL-165.json"
+  ],
+  "acceptance_checks": [
+    "STAGE_1_REMOTE_AND_LOCAL_PARENT_EXACT",
+    "AUTHORIZATION_162_CANONICALLY_CONSUMED_AND_NON_REUSABLE",
+    "APPROVED_BY_EXACT_UTF8",
+    "PORTABLE_BASELINE_EXACT_333",
+    "REAL_CANONICAL_STATE_VALIDATOR_PASS",
+    "ALL_18_NEGATIVE_TESTS_RETURN_EXACT_EXPECTED_CODE",
+    "ALL_CODE_FILES_AT_OR_BELOW_280_PHYSICAL_LINES",
+    "STAGE_1_COMMIT_PUSH_AND_REMOTE_HEAD_VERIFIED_BEFORE_STAGE_2",
+    "STAGE_2_14_OF_14_CASES_AND_CLEANUP_PASS"
+  ],
+  "stop_conditions": [
+    "LIVE_MAIN_HEAD_MISMATCH",
+    "WORKTREE_NOT_CLEAN_AT_STAGE_BOUNDARY",
+    "ANY_IMMUTABLE_OR_UNAUTHORIZED_PATH_WOULD_BE_MODIFIED",
+    "ANY_STAGE_1_VALIDATION_FAILURE",
+    "STAGE_1_REMOTE_PUBLICATION_NOT_VERIFIED",
+    "ANY_STAGE_2_CASE_OR_CLEANUP_FAILURE",
+    "SCOPE_EXPANSION"
+  ],
+  "response_contract": {
+    "format": "45_ORDERED_FIELDS",
+    "fields_ref": "AUTHORIZATION_165_COMPLETE.json#response_contract"
+  },
+  "authorization_reusable": false,
+  "next_execution_under_this_brief": "STAGE_2_ONLY_AFTER_VERIFIED_STAGE_1_REMOTE_PUBLICATION",
+  "authority_effect": "BOUNDED_TWO_STAGE_CODEX_EXECUTION_ONLY",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}

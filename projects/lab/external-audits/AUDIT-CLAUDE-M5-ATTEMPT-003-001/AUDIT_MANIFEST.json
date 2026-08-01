@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "audit_id": "AUDIT-CLAUDE-M5-ATTEMPT-003-001",
+  "audit_mode": "INDEPENDENT_READ_ONLY",
+  "audit_result": "M5_ATTEMPT_003_AUDIT_REQUIRES_CANONICAL_CORRECTION_BEFORE_OPERATIONAL_DRILL",
+  "auditor": "CLAUDE",
+  "authority_effect": "NONE_EVIDENCE_ONLY",
+  "canonical_mutation_by_auditor": false,
+  "registered_at": "2026-07-31",
+  "source_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "source_head": "4fba07c03faa1c4e5d9419476064c2945f06734f",
+  "source_attachment": {
+    "package_path": "evidence/CLAUDE_AUDIT_REPORT.md",
+    "sha256": "8ecfc0d607a2ecfd1be94fb69a2f846cdbcd94c27ec0de850fad37a5f0a8dd66",
+    "size_bytes": 37019
+  },
+  "canonical_report": {
+    "path": "projects/lab/external-audits/AUDIT-CLAUDE-M5-ATTEMPT-003-001/AUDIT_REPORT.md",
+    "normalization": "CRLF_TO_LF_ONLY_NO_TERMINAL_NEWLINE_ADDED",
+    "sha256": "01de84613451193073de83050b5f3c17fc4986106ae8d97f3cb6b3c10934f13a",
+    "size_bytes": 36659
+  },
+  "file_count": 2,
+  "files": [
+    "AUDIT_MANIFEST.json",
+    "AUDIT_REPORT.md"
+  ],
+  "evidence_id": "EVD-LAB-AUD-006",
+  "reassessment_id": "REA-LAB-007",
+  "creates_authorization": false
+}

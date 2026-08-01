@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "integration-factory-m5-canonical-correction-and-conditional-rollback-drill-165",
+  "project_id": "lab",
+  "authorization_id": "AUTHORIZATION_LAB_M5_CANONICAL_CORRECTION_AND_CONDITIONAL_OPERATIONAL_ROLLBACK_DRILL_165",
+  "updated_at": "2026-07-31",
+  "stage_1": {
+    "status": "PASS_CONSUMED_ON_VERIFIED_STAGE_1_REMOTE_PUBLICATION",
+    "canonical_state": "M5_CANONICAL_CORRECTION_PASS_ROLLBACK_DRILL_165_AUTHORIZED_AWAITING_STAGE_2",
+    "external_audit_evidence": "EVD-LAB-AUD-006",
+    "reassessment": "REA-LAB-007",
+    "portable_baseline_findings": 333,
+    "global_repository_pass": false,
+    "general_validator": {
+      "classification": "EXPECTED_GLOBAL_FAIL_WITH_NO_NEW_FINDINGS",
+      "portable_baseline_count": 333,
+      "live_finding_count": 329,
+      "added_findings": [],
+      "removed_findings": [
+        "projects/lab/continuity/START_PROMPT.md: authority boundary missing",
+        "expected-state mismatch for current_phase",
+        "expected-state mismatch for registry_counts",
+        "expected-state mismatch for authorization_state"
+      ]
+    },
+    "real_canonical_state_validator": "PASS",
+    "negative_tests": "18_OF_18_EXACT_FAILURE_CODES"
+  },
+  "stage_2": {
+    "status": "GRANTED_NOT_STARTED_AWAITING_VERIFIED_STAGE_1_REMOTE_HEAD"
+  },
+  "open_errors": ["ERR-LAB-009"],
+  "active_authorization": "AUTHORIZATION_LAB_M5_CANONICAL_CORRECTION_AND_CONDITIONAL_OPERATIONAL_ROLLBACK_DRILL_165",
+  "m5_retry_authorized": false,
+  "cutover_authorized": false,
+  "active_pointer_authorized": false,
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}
