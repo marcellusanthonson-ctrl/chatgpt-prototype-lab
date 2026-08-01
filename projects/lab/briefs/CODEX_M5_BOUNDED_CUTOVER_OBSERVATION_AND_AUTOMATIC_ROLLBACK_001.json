@@ -4,25 +4,39 @@
   "task_id": "LAB-M5-CUTOVER-166",
   "project_id": "lab",
   "status": "READY",
-  "objective": "Publish and remotely verify the bounded authorization and baseline, atomically activate exactly one governed candidate pointer, execute two exact observation iterations, automatically roll back to STATIC on any failure, publish a complete PASS or fail-closed result, and consume authority only after verified remote publication.",
+  "stage_1_5_status": "STAGE_1_5A_PUBLICATION_PENDING_REMOTE_VERIFICATION",
+  "objective": "Publish and remotely finalize the explicit-profile authorization-166 canonical-state validator successor before any Stage 2 execution, then preserve the original bounded atomic cutover, observation and rollback scope for a later execution from the verified Stage 1.5B remote HEAD.",
   "repositories": [
     {
       "name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
       "branch": "main",
       "verified_initial_head": "3a7470255f367212fc373fb7eefd9fe112c39f12",
-      "stage_2_parent_policy": "USE_VERIFIED_STAGE_1_REMOTE_MAIN_HEAD"
+      "stage_1_5_parent_head": "40398bcdabbc16f6607c344748308fc6051c9aad",
+      "stage_2_parent_policy": "USE_VERIFIED_STAGE_1_5B_REMOTE_MAIN_HEAD"
     }
   ],
   "authority": {
     "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166.json",
-    "authorization_status": "GRANTED_STAGE_1_CONSUMED_STAGE_2_GRANTED_NOT_STARTED",
+    "authorization_status": "GRANTED_STAGE_1_CONSUMED_STAGE_1_5A_PENDING_REMOTE_VERIFICATION_STAGE_1_5B_GRANTED_NOT_STARTED_STAGE_2_GRANTED_NOT_STARTED",
     "amendment_ref": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166_AMENDMENT_1_CANONICAL_M3_CORPUS_REFERENCE_CORRECTION",
+    "amendment_2_ref": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166_AMENDMENT_2_STAGE_AWARE_CANONICAL_STATE_VALIDATOR_SUCCESSOR",
+    "amendment_2_revision": 2,
     "technical_executor": "CODEX",
     "codex_autonomous_authority": false
   },
   "scope": {
     "stage_1": "AUTHORIZATION_PUBLICATION_AND_CUTOVER_BASELINE_FREEZE",
+    "stage_1_5a": "SUCCESSOR_IMPLEMENTATION_AND_PUBLICATION",
+    "stage_1_5b": "REMOTE_VERIFICATION_FINALIZATION_AND_STAGE_2_HANDOFF",
     "stage_2": "BOUNDED_ATOMIC_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK",
+    "stage_2_execution_in_current_delivery": "PROHIBITED",
+    "canonical_validator_successor": "scripts/validate_integration_factory_m5_canonical_state_166.py",
+    "canonical_validator_successor_test": "scripts/test_integration_factory_m5_canonical_state_166.py",
+    "explicit_profiles": [
+      "PRE_AMENDMENT_166",
+      "STAGE_1_5A_PENDING_REMOTE",
+      "STAGE_1_5B_FINALIZED"
+    ],
     "single_mutable_integration_pointer": "architecture/integrations/active/INTEGRATION_FACTORY_RESOLUTION_POINTER.json",
     "static_fallback": {
       "path": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json",
@@ -54,6 +68,13 @@
     "architecture/integrations/migration/M5/cutover-166/INITIAL_VERIFICATION_RESULTS.json",
     "architecture/integrations/migration/M5/cutover-166/STAGE_1_CHANGED_FILES.json",
     "registry/deltas/integration-factory-m5-bounded-cutover-observation-and-automatic-rollback-166.json",
+    "scripts/validate_integration_factory_m5_canonical_state_166.py",
+    "scripts/test_integration_factory_m5_canonical_state_166.py",
+    "architecture/integrations/migration/M5/cutover-166/STAGE_1_5A_VALIDATOR_SUCCESSOR_RESULTS.json",
+    "architecture/integrations/migration/M5/cutover-166/STAGE_1_5A_CHANGED_FILES.json",
+    "architecture/integrations/migration/M5/cutover-166/STAGE_1_5B_FINALIZATION_RESULTS.json",
+    "architecture/integrations/migration/M5/cutover-166/STAGE_1_5B_CHANGED_FILES.json",
+    "projects/lab/evidence/EVD-LAB-M5-CUTOVER-166-STAGE-1-5-VALIDATOR-SUCCESSOR.json",
     "architecture/integrations/active/INTEGRATION_FACTORY_RESOLUTION_POINTER.json",
     "architecture/integrations/migration/M5/cutover-166/CUTOVER_RESULTS.json",
     "architecture/integrations/migration/M5/cutover-166/OBSERVATION_RESULTS.json",
@@ -77,6 +98,17 @@
       "architecture/integrations/migration/M5/cutover-166/STAGE_1_CHANGED_FILES.json",
       "registry/deltas/integration-factory-m5-bounded-cutover-observation-and-automatic-rollback-166.json"
     ],
+    "stage_1_5a": [
+      "scripts/validate_integration_factory_m5_canonical_state_166.py",
+      "scripts/test_integration_factory_m5_canonical_state_166.py",
+      "architecture/integrations/migration/M5/cutover-166/STAGE_1_5A_VALIDATOR_SUCCESSOR_RESULTS.json",
+      "architecture/integrations/migration/M5/cutover-166/STAGE_1_5A_CHANGED_FILES.json"
+    ],
+    "stage_1_5b": [
+      "architecture/integrations/migration/M5/cutover-166/STAGE_1_5B_FINALIZATION_RESULTS.json",
+      "architecture/integrations/migration/M5/cutover-166/STAGE_1_5B_CHANGED_FILES.json",
+      "projects/lab/evidence/EVD-LAB-M5-CUTOVER-166-STAGE-1-5-VALIDATOR-SUCCESSOR.json"
+    ],
     "stage_2": [
       "architecture/integrations/active/INTEGRATION_FACTORY_RESOLUTION_POINTER.json",
       "architecture/integrations/migration/M5/cutover-166/CUTOVER_RESULTS.json",
@@ -98,6 +130,12 @@
     "CORRECTED_CORPUS_PATH_BLOB_ID_AND_420_CASES",
     "M3_420_OF_420_13_OF_13_ZERO_DIVERGENCES_EXACT_DETERMINISTIC_DIGEST",
     "STAGE_1_REMOTE_PUBLICATION_VERIFIED",
+    "HISTORICAL_VALIDATOR_165_REPRODUCES_CURRENT_STATE_TRANSITION_MISMATCH",
+    "HISTORICAL_TEST_165_18_OF_18_PASS",
+    "SUCCESSOR_THREE_EXPLICIT_PROFILES_PASS",
+    "SUCCESSOR_NEGATIVE_AND_METAMORPHIC_MATRIX_PASS_WITH_EXACT_CODES",
+    "SUCCESSOR_CODE_FILES_AT_MOST_280_PHYSICAL_LINES",
+    "STAGE_1_5A_AND_STAGE_1_5B_REMOTE_PUBLICATION_VERIFIED",
     "EXACTLY_ONE_GOVERNED_POINTER",
     "STATIC_AND_CANDIDATE_BLOBS_UNCHANGED",
     "TWO_OBSERVATION_ITERATIONS_PASS",
@@ -121,6 +159,11 @@
     "EXTERNAL_REPOSITORY_CHANGE",
     "GLOBAL_REPOSITORY_PASS_CLAIM",
     "SCOPE_EXPANSION"
+    ,"STAGE_2_EXECUTION_DURING_STAGE_1_5_DELIVERY"
+    ,"HISTORICAL_VALIDATOR_165_MODIFICATION"
+    ,"HISTORICAL_TEST_165_MODIFICATION"
+    ,"PRE_CUTOVER_BASELINE_MODIFICATION"
+    ,"POINTER_OR_LOCK_CREATION_DURING_STAGE_1_5"
   ],
   "stop_conditions": [
     "UNEXPECTED_REPOSITORY_BRANCH_OR_HEAD",
@@ -128,9 +171,45 @@
     "CORPUS_REFERENCE_BLOB_ID_COUNT_OR_DIGEST_MISMATCH",
     "IMMUTABLE_OR_UNAUTHORIZED_DELTA",
     "STAGE_1_REMOTE_NOT_VERIFIED",
+    "STAGE_1_5A_REMOTE_NOT_VERIFIED",
+    "SUCCESSOR_PROFILE_TEST_OR_EXACT_FAILURE_CODE_MISMATCH",
+    "GENERAL_VALIDATOR_NOT_EXACTLY_329_WITH_ZERO_DELTA",
     "ANY_POST_SWITCH_GATE_FAILURE_TRIGGERS_AUTOMATIC_ROLLBACK",
     "ROLLBACK_TARGET_VERIFICATION_FAILURE_REQUIRES_HUMAN_REVIEW"
   ],
+  "stage_1_5_response_contract": {
+    "format": "28_ORDERED_FIELDS",
+    "fields": [
+      "RESULT",
+      "VERIFIED_INITIAL_REMOTE_HEAD",
+      "STAGE_1_5A_INITIAL_GATES",
+      "HISTORICAL_VALIDATOR_165_RESULT",
+      "HISTORICAL_TEST_165_RESULT",
+      "PORTABLE_333_RESULT",
+      "PRE_CUTOVER_329_RESULT",
+      "CORPUS_AND_DIGEST_RESULT",
+      "SUCCESSOR_PROFILE_RESULTS",
+      "POSITIVE_TEST_RESULT",
+      "NEGATIVE_TEST_RESULT",
+      "METAMORPHIC_TEST_RESULT",
+      "CODE_LINE_LIMIT_RESULT",
+      "STAGE_1_5A_FILES_CREATED",
+      "STAGE_1_5A_FILES_MODIFIED",
+      "STAGE_1_5A_COMMIT_SHA",
+      "VERIFIED_STAGE_1_5A_REMOTE_HEAD",
+      "STAGE_1_5B_FILES_CREATED",
+      "STAGE_1_5B_FILES_MODIFIED",
+      "STAGE_1_5B_COMMIT_SHA",
+      "VERIFIED_STAGE_1_5B_REMOTE_HEAD",
+      "AMENDMENT_2_STATUS",
+      "STAGE_2_STATUS",
+      "STATIC_CANDIDATE_POINTER_LOCK_RESULT",
+      "GENERAL_VALIDATOR_DELTA",
+      "RUNTIME_AND_INTEGRATION_EFFECT",
+      "WORKTREE_RESULT",
+      "SINGLE_NEXT_ACTION"
+    ]
+  },
   "response_contract": {
     "format": "43_ORDERED_FIELDS",
     "fields": [

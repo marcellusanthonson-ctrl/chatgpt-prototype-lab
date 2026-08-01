@@ -1,11 +1,11 @@
 {
   "schema_version": "2.5.0",
   "document_id": "lab.current-state",
-  "version": "2.5.45",
-  "status": "M5_BOUNDED_CUTOVER_166_GRANTED_AWAITING_EXECUTION",
+  "version": "2.5.46",
+  "status": "M5_BOUNDED_CUTOVER_166_AMENDMENT_2_STAGE_1_5A_PUBLICATION_PENDING_REMOTE_VERIFICATION",
   "updated_at": "2026-08-01",
   "active_project": "lab",
-  "current_phase": "M5_BOUNDED_CUTOVER_166_GRANTED_AWAITING_EXECUTION",
+  "current_phase": "M5_BOUNDED_CUTOVER_166_AMENDMENT_2_STAGE_1_5A_PUBLICATION_PENDING_REMOTE_VERIFICATION",
   "methodology": {
     "version": "2.1",
     "path": "METHODOLOGY.md"
@@ -222,7 +222,7 @@
     "integration_factory_m5_canonical_open_error_decision_baseline_reconciliation_164": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "integration_factory_m5_stage_aware_validator_remediation_162": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "integration_factory_m5_canonical_correction_and_conditional_rollback_drill_165": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "integration_factory_m5_bounded_cutover_observation_and_automatic_rollback_166": "GRANTED_STAGE_1_CONSUMED_STAGE_2_GRANTED_NOT_STARTED"
+    "integration_factory_m5_bounded_cutover_observation_and_automatic_rollback_166": "GRANTED_STAGE_1_CONSUMED_STAGE_1_5A_PENDING_REMOTE_VERIFICATION_STAGE_1_5B_GRANTED_NOT_STARTED_STAGE_2_GRANTED_NOT_STARTED"
   },
   "verified_external_heads": {
     "symphonie": "31dd1345026240c83b015feef34d6f7f2d2147b7",
@@ -252,8 +252,8 @@
     "SYMPHONIE_LIVHAVN_MONOLITHIC_VISUAL_CALIBRATION_083_READY_WITH_BOUNDED_GAPS",
     "INTEGRATION_FACTORY_M1_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_VALIDATION_PASS"
   ],
-  "next_authorized_action": "EXECUTE_STAGE_2_BOUNDED_M5_CUTOVER_FROM_VERIFIED_STAGE_1_REMOTE_HEAD",
-  "next_recommended_transition": "EXECUTE_AUTHORIZED_ATOMIC_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK",
+  "next_authorized_action": "VERIFY_STAGE_1_5A_REMOTE_HEAD_THEN_EXECUTE_STAGE_1_5B_FINALIZATION",
+  "next_recommended_transition": "VERIFY_STAGE_1_5A_REMOTE_AND_FINALIZE_STAGE_1_5B_WITHOUT_STAGE_2",
   "continuity_read_order": [
     "LAB_CONTRACT.md",
     "METHODOLOGY.md",
@@ -619,10 +619,17 @@
     "m5_bounded_cutover_observation_and_automatic_rollback_166": {
       "authorization": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166",
       "amendment": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166_AMENDMENT_1_CANONICAL_M3_CORPUS_REFERENCE_CORRECTION",
-      "status": "M5_BOUNDED_CUTOVER_166_GRANTED_AWAITING_EXECUTION",
+      "amendment_2": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166_AMENDMENT_2_STAGE_AWARE_CANONICAL_STATE_VALIDATOR_SUCCESSOR",
+      "amendment_2_revision": 2,
+      "amendment_2_status": "GRANTED_STAGE_1_5A_PUBLICATION_PENDING_REMOTE_VERIFICATION",
+      "status": "M5_BOUNDED_CUTOVER_166_AMENDMENT_2_STAGE_1_5A_PUBLICATION_PENDING_REMOTE_VERIFICATION",
       "verified_initial_parent_head": "3a7470255f367212fc373fb7eefd9fe112c39f12",
       "stage_1": "CONSUMED_ON_VERIFIED_STAGE_1_REMOTE_PUBLICATION",
-      "stage_2": "GRANTED_NOT_STARTED_AWAITING_VERIFIED_STAGE_1_REMOTE_HEAD",
+      "stage_1_5a": "PUBLICATION_PENDING_REMOTE_VERIFICATION",
+      "stage_1_5b": "GRANTED_NOT_STARTED",
+      "stage_2": "GRANTED_NOT_STARTED_AWAITING_VERIFIED_STAGE_1_5B_REMOTE_HEAD",
+      "stage_2_parent_policy": "USE_VERIFIED_STAGE_1_5B_REMOTE_MAIN_HEAD",
+      "canonical_validator_successor": "scripts/validate_integration_factory_m5_canonical_state_166.py",
       "pre_cutover_general_validator_findings": 329,
       "corpus_path": "architecture/integrations/migration/M3/remediation-158/TEST_CORPUS.json",
       "corpus_blob": "009065769f524f17f3ffdf137fb0213ee30fb150",

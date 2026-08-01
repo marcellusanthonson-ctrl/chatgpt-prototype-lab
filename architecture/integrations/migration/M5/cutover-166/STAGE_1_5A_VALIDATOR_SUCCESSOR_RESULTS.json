@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "result_id": "M5_CUTOVER_166_STAGE_1_5A_VALIDATOR_SUCCESSOR_RESULTS_001",
+  "authorization_id": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166",
+  "amendment_id": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166_AMENDMENT_2_STAGE_AWARE_CANONICAL_STATE_VALIDATOR_SUCCESSOR",
+  "revision": 2,
+  "verified_parent_head": "40398bcdabbc16f6607c344748308fc6051c9aad",
+  "classification": "PASS_PENDING_REMOTE_VERIFICATION",
+  "initial_gates": {
+    "passed": 21,
+    "required": 21,
+    "historical_validator_165": "BLOCK_CURRENT_STATE_TRANSITION_MISMATCH_AS_REQUIRED",
+    "historical_test_165": "PASS_18_OF_18",
+    "portable_baseline": "PASS_EXACT_333_GLOBAL_PASS_FALSE",
+    "pre_cutover_baseline": "PASS_EXACT_329_ZERO_DELTA_GLOBAL_PASS_FALSE",
+    "corpus": "PASS_EXACT_420_CASES",
+    "behavioral_digest": "9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329"
+  },
+  "successor": {
+    "validator": "scripts/validate_integration_factory_m5_canonical_state_166.py",
+    "validator_physical_lines": 254,
+    "test": "scripts/test_integration_factory_m5_canonical_state_166.py",
+    "test_physical_lines": 207,
+    "line_limit": 280,
+    "explicit_profiles": {
+      "PRE_AMENDMENT_166": "PASS",
+      "STAGE_1_5A_PENDING_REMOTE": "PASS",
+      "STAGE_1_5B_FINALIZED": "PASS"
+    },
+    "positive_tests": "3_OF_3_PASS",
+    "negative_tests": "18_OF_18_PASS_EXACT_FAILURE_CODES",
+    "metamorphic_tests": "7_OF_7_PASS",
+    "unknown_profile_policy": "FAIL_CLOSED",
+    "stage_2_gate_profile": "STAGE_1_5B_FINALIZED_ONLY"
+  },
+  "immutable_blobs": {
+    "scripts/validate_integration_factory_m5_canonical_state_165.py": "7a2eb2d87ef0db8220d2ac8090b460684acc342d",
+    "scripts/test_integration_factory_m5_canonical_state_165.py": "4cb2ef2f6f525b6dbd9c2a929ff4fbcf0386aaa0",
+    "architecture/integrations/migration/M5/cutover-166/PRE_CUTOVER_GENERAL_VALIDATOR_BASELINE.json": "af6dfd23d615699b3aa7406d1af1847d406554ef",
+    "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json": "301ba432907758fc49a9b3c86a83fc762eac4607",
+    "architecture/integrations/migration/M2/SHADOW_INTEGRATION_REGISTRY.json": "a067cd9f95b98aa1599d21e3a0ff35fa56ac3a78",
+    "architecture/integrations/migration/M3/remediation-158/TEST_CORPUS.json": "009065769f524f17f3ffdf137fb0213ee30fb150"
+  },
+  "pointer": "ABSENT",
+  "lock": "NOT_ACQUIRED",
+  "candidate": "SHADOW_ONLY_NOT_ACTIVE",
+  "static_selector": "IMMUTABLE_UNCHANGED",
+  "stage_2": "NOT_STARTED_NOT_CONSUMED",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}

@@ -1281,6 +1281,66 @@
       },
       "other_parent_changes_permitted": false,
       "consumption": "WITH_PARENT_AUTHORIZATION_166"
+    },
+    {
+      "amendment_id": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166_AMENDMENT_2_STAGE_AWARE_CANONICAL_STATE_VALIDATOR_SUCCESSOR",
+      "revision": 2,
+      "status": "GRANTED_STAGE_1_5A_PUBLICATION_PENDING_REMOTE_VERIFICATION",
+      "approved_by": "Jonathan Martínez",
+      "approved_at": "2026-08-01T11:34:00-04:00",
+      "approval_source": "Apruebo la Enmienda 2 — Revisión 2 de la autorización 166.",
+      "grant_inferred": false,
+      "technical_executor": "CODEX",
+      "codex_autonomous_authority": false,
+      "expected_parent_head": "40398bcdabbc16f6607c344748308fc6051c9aad",
+      "authorized_stages": [
+        "STAGE_1_5A_SUCCESSOR_IMPLEMENTATION_AND_PUBLICATION",
+        "STAGE_1_5B_REMOTE_VERIFICATION_FINALIZATION_AND_STAGE_2_HANDOFF"
+      ],
+      "stage_2_execution_authorized_in_this_delivery": false,
+      "successor": {
+        "validator": "scripts/validate_integration_factory_m5_canonical_state_166.py",
+        "test": "scripts/test_integration_factory_m5_canonical_state_166.py",
+        "maximum_physical_lines_per_code_file": 280,
+        "profiles": [
+          "PRE_AMENDMENT_166",
+          "STAGE_1_5A_PENDING_REMOTE",
+          "STAGE_1_5B_FINALIZED"
+        ],
+        "profile_required": true,
+        "unknown_profiles_fail_closed": true,
+        "stage_2_gate_profile": "STAGE_1_5B_FINALIZED"
+      },
+      "historical_invariants": {
+        "validator_165_blob": "7a2eb2d87ef0db8220d2ac8090b460684acc342d",
+        "test_165_blob": "4cb2ef2f6f525b6dbd9c2a929ff4fbcf0386aaa0",
+        "pre_cutover_baseline_blob": "af6dfd23d615699b3aa7406d1af1847d406554ef",
+        "pre_cutover_findings": 329,
+        "portable_baseline_findings": 333,
+        "corpus_blob": "009065769f524f17f3ffdf137fb0213ee30fb150",
+        "corpus_id": "INTEGRATION_FACTORY_M3_REMEDIATION_158_CORPUS_001",
+        "corpus_case_count": 420,
+        "behavioral_digest": "9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329"
+      },
+      "required_test_classes": {
+        "positive_profiles": 3,
+        "negative_boundaries": 18,
+        "metamorphic_boundaries": 7,
+        "exact_failure_codes": true
+      },
+      "stage_1_5a": {
+        "commit_message": "fix(lab): publish stage-aware canonical state validator successor 166",
+        "remote_verification_required": true
+      },
+      "stage_1_5b": {
+        "commit_message": "chore(lab): finalize stage-aware validator successor 166",
+        "code_changes_permitted": false,
+        "remote_verification_required": true
+      },
+      "stage_1_5a_remote_verified": false,
+      "stage_1_5a_remote_head": null,
+      "consumption": "ON_VERIFIED_STAGE_1_5B_REMOTE_PUBLICATION",
+      "fail_closed": "NO_STAGE_2_NO_POINTER_NO_LOCK_NO_RUNTIME_NO_INTEGRATION"
     }
   ],
   "authority": {
@@ -1339,10 +1399,23 @@
     "result": "M5_BOUNDED_CUTOVER_166_GRANTED_AWAITING_EXECUTION",
     "commit_message": "docs(lab): grant bounded M5 cutover authorization 166"
   },
+  "stage_1_5a": {
+    "id": "STAGE_1_5A_SUCCESSOR_IMPLEMENTATION_AND_PUBLICATION",
+    "status": "PUBLICATION_PENDING_REMOTE_VERIFICATION",
+    "profile": "STAGE_1_5A_PENDING_REMOTE",
+    "commit_message": "fix(lab): publish stage-aware canonical state validator successor 166"
+  },
+  "stage_1_5b": {
+    "id": "STAGE_1_5B_REMOTE_VERIFICATION_FINALIZATION_AND_STAGE_2_HANDOFF",
+    "status": "GRANTED_NOT_STARTED",
+    "profile": "STAGE_1_5B_FINALIZED",
+    "commit_message": "chore(lab): finalize stage-aware validator successor 166"
+  },
   "stage_2": {
     "id": "STAGE_2_BOUNDED_ATOMIC_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK",
-    "status": "GRANTED_NOT_STARTED_AWAITING_VERIFIED_STAGE_1_REMOTE_HEAD",
-    "expected_parent_policy": "USE_VERIFIED_STAGE_1_REMOTE_MAIN_HEAD",
+    "status": "GRANTED_NOT_STARTED_AWAITING_VERIFIED_STAGE_1_5B_REMOTE_HEAD",
+    "expected_parent_policy": "USE_VERIFIED_STAGE_1_5B_REMOTE_MAIN_HEAD",
+    "gate_7": "python scripts/validate_integration_factory_m5_canonical_state_166.py --profile STAGE_1_5B_FINALIZED",
     "pass_classification": "M5_BOUNDED_CUTOVER_PASS_INTEGRATION_ACTIVE_STATIC_FALLBACK_PRESERVED",
     "rollback_classification": "M5_BOUNDED_CUTOVER_ROLLED_BACK_STATIC_FALLBACK_ACTIVE_WITH_CLASSIFIED_FAILURES"
   },
@@ -1358,9 +1431,45 @@
     "architecture/integrations/migration/M5/validator-remediation-162/**",
     "architecture/integrations/migration/M5/canonical-reconciliation-165/**",
     "architecture/integrations/migration/M5/rollback-drill-165/**",
+    "scripts/validate_integration_factory_m5_canonical_state_165.py",
+    "scripts/test_integration_factory_m5_canonical_state_165.py",
+    "architecture/integrations/migration/M5/cutover-166/PRE_CUTOVER_GENERAL_VALIDATOR_BASELINE.json",
     "schemas/**"
   ],
-  "consumption_rule": "STAGE_1_CONSUMED_AFTER_VERIFIED_STAGE_1_REMOTE_PUBLICATION; STAGE_2_CONSUMED_ONLY_AFTER_COMPLETE_PASS_OR_ROLLBACK_RESULT_COMMIT_PUSH_AND_REMOTE_VERIFICATION",
+  "consumption_rule": "STAGE_1_CONSUMED_AFTER_VERIFIED_STAGE_1_REMOTE_PUBLICATION; STAGE_1_5_AND_AMENDMENT_2_REVISION_2_CONSUMED_AFTER_VERIFIED_STAGE_1_5B_REMOTE_PUBLICATION; STAGE_2_REMAINS_GRANTED_NOT_STARTED_UNCONSUMED_UNTIL_SEPARATE_EXECUTION_RESULT_PUBLICATION",
+  "stage_1_5_response_contract": {
+    "format": "28_ORDERED_FIELDS",
+    "fields": [
+      "RESULT",
+      "VERIFIED_INITIAL_REMOTE_HEAD",
+      "STAGE_1_5A_INITIAL_GATES",
+      "HISTORICAL_VALIDATOR_165_RESULT",
+      "HISTORICAL_TEST_165_RESULT",
+      "PORTABLE_333_RESULT",
+      "PRE_CUTOVER_329_RESULT",
+      "CORPUS_AND_DIGEST_RESULT",
+      "SUCCESSOR_PROFILE_RESULTS",
+      "POSITIVE_TEST_RESULT",
+      "NEGATIVE_TEST_RESULT",
+      "METAMORPHIC_TEST_RESULT",
+      "CODE_LINE_LIMIT_RESULT",
+      "STAGE_1_5A_FILES_CREATED",
+      "STAGE_1_5A_FILES_MODIFIED",
+      "STAGE_1_5A_COMMIT_SHA",
+      "VERIFIED_STAGE_1_5A_REMOTE_HEAD",
+      "STAGE_1_5B_FILES_CREATED",
+      "STAGE_1_5B_FILES_MODIFIED",
+      "STAGE_1_5B_COMMIT_SHA",
+      "VERIFIED_STAGE_1_5B_REMOTE_HEAD",
+      "AMENDMENT_2_STATUS",
+      "STAGE_2_STATUS",
+      "STATIC_CANDIDATE_POINTER_LOCK_RESULT",
+      "GENERAL_VALIDATOR_DELTA",
+      "RUNTIME_AND_INTEGRATION_EFFECT",
+      "WORKTREE_RESULT",
+      "SINGLE_NEXT_ACTION"
+    ]
+  },
   "response_contract": {
     "format": "43_ORDERED_FIELDS",
     "fields": [
