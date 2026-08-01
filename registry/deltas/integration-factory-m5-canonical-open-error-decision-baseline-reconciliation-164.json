@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "integration-factory-m5-canonical-open-error-decision-baseline-reconciliation-164",
+  "project_id": "lab",
+  "recorded_at": "2026-07-31T18:15:00-04:00",
+  "parent_head": "184411a66e96c7b78b255a341dfc3d0ec0c3cf64",
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_M5_CANONICAL_OPEN_ERROR_AND_DECISION_BASELINE_RECONCILIATION_164",
+    "amendment_id": "AUTHORIZATION_LAB_M5_CANONICAL_OPEN_ERROR_AND_DECISION_BASELINE_RECONCILIATION_164_AMENDMENT_1",
+    "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "amendment_status": "CONSUMED_WITH_AUTHORIZATION_164_ON_VERIFIED_REMOTE_PUBLICATION",
+    "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_M5_CANONICAL_OPEN_ERROR_AND_DECISION_BASELINE_RECONCILIATION_164.json"
+  },
+  "blocked_execution": {
+    "attempt_id": "AUTHORIZATION_164_EXECUTION_ATTEMPT_001",
+    "classification": "BLOCKED_PREPUBLICATION_EXPECTED_STATE_OPEN_ERRORS_FIXTURE_MISMATCH",
+    "candidate_findings": 334,
+    "added_finding": "expected-state mismatch for open_errors",
+    "candidate_changes_reverted": true,
+    "commit_created": false,
+    "remote_head_changed": false
+  },
+  "fixture_reconciliation": {
+    "path": "tests/expected_repository_state.json",
+    "field": "open_errors",
+    "before": [],
+    "after": ["ERR-LAB-009"],
+    "all_other_fields_unchanged": true
+  },
+  "state_and_decision": {
+    "current_state_open_errors": ["ERR-LAB-009"],
+    "decision": "DEC-LAB-028",
+    "historical_baseline": 335,
+    "operative_attempt_003_baseline": 333
+  },
+  "general_validator": {
+    "finding_count": 333,
+    "exit_code": 1,
+    "structured_inventory_digest": "e6448fbe63ffc0b2f4d90636b8560345eed5db461b3090e3bd0137afd0acda7b",
+    "raw_ordered_message_digest": "f2cd173455fe57b24be1da685575febff11f04e0d946d68854d8099c3feb15ce",
+    "added_findings": 0,
+    "removed_findings": 0,
+    "modified_findings": 0
+  },
+  "authorization_162": {
+    "status": "GRANTED_NOT_CONSUMED_AWAITING_ATTEMPT_003",
+    "attempt_003_started": false,
+    "consumption_effect": "NONE"
+  },
+  "error": {
+    "id": "ERR-LAB-009",
+    "status": "OPEN_BLOCKING_M5_CUTOVER"
+  },
+  "evidence": "projects/lab/evidence/EVD-LAB-M5-CANONICAL-OPEN-ERROR-DECISION-BASELINE-RECONCILIATION-164.json",
+  "next_action": "EXECUTE_ATTEMPT_003_UNDER_AUTHORIZATION_162_FROM_NEW_VERIFIED_REMOTE_HEAD_LIMITED_TO_SEMANTIC_REPLAY_AND_STAGE_AWARE_SANDBOX_VALIDATION",
+  "authority_effect": "DOCUMENTARY_RECONCILIATION_ONLY",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}

@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-M5-CANONICAL-OPEN-ERROR-DECISION-BASELINE-RECONCILIATION-164",
+  "project_id": "lab",
+  "kind": "DOCUMENTARY_CANONICAL_OPEN_ERROR_DECISION_BASELINE_AND_EXPECTED_STATE_RECONCILIATION",
+  "status": "PASS_EFFECTIVE_ON_VERIFIED_REMOTE_PUBLICATION",
+  "verified_initial_parent_head": "184411a66e96c7b78b255a341dfc3d0ec0c3cf64",
+  "authorization_id": "AUTHORIZATION_LAB_M5_CANONICAL_OPEN_ERROR_AND_DECISION_BASELINE_RECONCILIATION_164",
+  "amendment_id": "AUTHORIZATION_LAB_M5_CANONICAL_OPEN_ERROR_AND_DECISION_BASELINE_RECONCILIATION_164_AMENDMENT_1",
+  "approval_record": {
+    "authorization_164": {
+      "approved_by": "Jonathan Martínez",
+      "approved_at": "2026-07-31T17:45:00-04:00",
+      "approval_source": "Continuemos con la Única siguiente acción: emitir y aprobar una autorización documental mínima que incorpore ERR-LAB-009 en CURRENT_STATE.json.open_errors y reconcilie DEC-LAB-028 con el baseline sucesor 333, preservando íntegramente ambos baselines y sin iniciar todavía ATTEMPT-003."
+    },
+    "amendment_1": {
+      "approved_by": "Jonathan Martínez",
+      "approved_at": "2026-07-31T18:15:00-04:00",
+      "approval_source": "Apruebo la enmienda. Continuemos."
+    }
+  },
+  "authorization_164_execution_attempt_001": {
+    "attempt_id": "AUTHORIZATION_164_EXECUTION_ATTEMPT_001",
+    "classification": "BLOCKED_PREPUBLICATION_EXPECTED_STATE_OPEN_ERRORS_FIXTURE_MISMATCH",
+    "initial_general_validator_findings": 333,
+    "candidate_general_validator_findings": 334,
+    "candidate_added_findings": ["expected-state mismatch for open_errors"],
+    "root_cause": "tests/expected_repository_state.json.open_errors remained [] while the authorized CURRENT_STATE.json candidate contained ERR-LAB-009",
+    "candidate_changes_reverted": true,
+    "final_general_validator_findings_after_reversal": 333,
+    "files_created": 0,
+    "files_modified": 0,
+    "commit_created": false,
+    "remote_head_changed": false,
+    "authorization_164_consumed": false,
+    "authorization_162_consumed": false,
+    "attempt_003_started": false
+  },
+  "current_state_reconciliation": {
+    "open_errors_before": [],
+    "open_errors_after": ["ERR-LAB-009"],
+    "err_lab_009_status": "OPEN_BLOCKING_M5_CUTOVER"
+  },
+  "expected_state_fixture_reconciliation": {
+    "path": "tests/expected_repository_state.json",
+    "blob_at_expected_parent": "d2ccf01f8af2e51250b60aa63ce8252a161b1f63",
+    "open_errors_before": [],
+    "open_errors_after": ["ERR-LAB-009"],
+    "all_other_fields_unchanged": true,
+    "role": "LIVE_EXPECTED_STATE_ORACLE_NOT_HISTORICAL_EVIDENCE"
+  },
+  "decision_reconciliation": {
+    "decision_id": "DEC-LAB-028",
+    "amendment_id": "DEC-LAB-028-AMENDMENT-1-SUCCESSOR-333-BASELINE",
+    "historical_baseline_335": "PRESERVED_IMMUTABLE_HISTORICAL_EVIDENCE",
+    "successor_baseline_333": "APPROVED_OPERATIVE_BASELINE_FOR_AUTHORIZATION_162_ATTEMPT_003",
+    "authorization_162_effect": "NONE_REMAINS_GRANTED_NOT_CONSUMED",
+    "attempt_003_effect": "NOT_STARTED"
+  },
+  "baseline_immutability": {
+    "historical_path": "architecture/integrations/migration/M5/execution-160/GENERAL_VALIDATOR_BASELINE.json",
+    "historical_blob": "94997b3bdd46c2083b6371d93b7bc264a6d5cbd7",
+    "successor_path": "architecture/integrations/migration/M5/documentary-reconciliation-163/GENERAL_VALIDATOR_SUCCESSOR_BASELINE.json",
+    "successor_blob": "0dec0e8660ab029f33be87c91c5e0ae0342961a1",
+    "both_unchanged": true
+  },
+  "general_validator": {
+    "initial_finding_count": 333,
+    "final_finding_count": 333,
+    "exit_code": 1,
+    "structured_inventory_digest": "e6448fbe63ffc0b2f4d90636b8560345eed5db461b3090e3bd0137afd0acda7b",
+    "raw_ordered_message_digest": "f2cd173455fe57b24be1da685575febff11f04e0d946d68854d8099c3feb15ce",
+    "added_findings": 0,
+    "removed_findings": 0,
+    "modified_findings": 0,
+    "global_repository_pass": false
+  },
+  "boundaries": {
+    "authorization_162": "GRANTED_NOT_CONSUMED_AWAITING_ATTEMPT_003",
+    "attempt_003_started": false,
+    "semantic_replay_executed": false,
+    "stage_aware_tests_executed": false,
+    "static_selector": "AUTHORITATIVE_UNCHANGED",
+    "shadow_registry": "INACTIVE_UNCHANGED",
+    "active_pointer": "ABSENT",
+    "runtime_effect": "NONE",
+    "integration_effect": "NONE",
+    "aws_effect": "NONE",
+    "terraform_effect": "NONE"
+  },
+  "files_created": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_M5_CANONICAL_OPEN_ERROR_AND_DECISION_BASELINE_RECONCILIATION_164.json",
+    "projects/lab/briefs/CODEX_M5_CANONICAL_OPEN_ERROR_AND_DECISION_BASELINE_RECONCILIATION_001.json",
+    "projects/lab/continuity/archive/m5-canonical-open-error-decision-baseline-preexecution-184411a66e96c7b78b255a341dfc3d0ec0c3cf64/ATTACHMENT_MANIFEST.json",
+    "projects/lab/continuity/archive/m5-canonical-open-error-decision-baseline-preexecution-184411a66e96c7b78b255a341dfc3d0ec0c3cf64/CURRENT_CONTINUITY.json",
+    "projects/lab/continuity/archive/m5-canonical-open-error-decision-baseline-preexecution-184411a66e96c7b78b255a341dfc3d0ec0c3cf64/CURRENT_CONTINUITY.md",
+    "projects/lab/continuity/archive/m5-canonical-open-error-decision-baseline-preexecution-184411a66e96c7b78b255a341dfc3d0ec0c3cf64/START_PROMPT.md",
+    "projects/lab/evidence/EVD-LAB-M5-CANONICAL-OPEN-ERROR-DECISION-BASELINE-RECONCILIATION-164.json",
+    "registry/deltas/integration-factory-m5-canonical-open-error-decision-baseline-reconciliation-164.json"
+  ],
+  "files_modified": [
+    "CURRENT_STATE.json",
+    "CURRENT_STATE.md",
+    "decisions/DEC-LAB-028.json",
+    "projects/lab/PROJECT_STATE.json",
+    "projects/lab/PROJECT_STATE.md",
+    "projects/lab/continuity/ATTACHMENT_MANIFEST.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.md",
+    "projects/lab/continuity/START_PROMPT.md",
+    "registry/authorizations.json",
+    "registry/decisions.json",
+    "registry/evidence.json",
+    "registry/index.json",
+    "tests/expected_repository_state.json"
+  ],
+  "publication_commit": "THIS_DOCUMENTARY_PUBLICATION_COMMIT",
+  "verified_final_remote_head": "MUST_EQUAL_THIS_DOCUMENTARY_PUBLICATION_COMMIT",
+  "authority_effect": "AUTHORIZATION_164_AND_AMENDMENT_1_CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}

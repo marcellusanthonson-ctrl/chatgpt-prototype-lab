@@ -1,13 +1,13 @@
 {
   "schema_version": "1.2.0",
-  "continuity_id": "LAB-CONTINUITY-M5-CANONICAL-OPEN-ERROR-DECISION-BASELINE-RECONCILIATION-164-AMENDMENT-1-20260731",
+  "continuity_id": "LAB-CONTINUITY-M5-ACTIVE-AUTHORIZATION-REGISTRY-RECONCILIATION-163-20260731",
   "project_id": "lab",
-  "status": "CURRENT_M5_CANONICAL_OPEN_ERROR_DECISION_AND_EXPECTED_STATE_RECONCILED_AWAITING_ATTEMPT_003",
-  "created_at": "2026-07-31T18:15:00-04:00",
+  "status": "CURRENT_M5_REGISTRY_RECONCILED_SUCCESSOR_333_AWAITING_ATTEMPT_003",
+  "created_at": "2026-07-31T17:05:00-04:00",
   "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "canonical_branch": "main",
   "head_policy": "VERIFY_LIVE_AT_USE",
-  "verified_initial_parent_head": "184411a66e96c7b78b255a341dfc3d0ec0c3cf64",
+  "verified_initial_parent_head": "8ff2b228c55b11fa59bf1ae08c669a488f7b09e4",
   "entrypoint": "project-sources/chatgpt/START_HERE.md",
   "required_reading_order": [
     "VERIFY_LIVE_HEAD_OF_MAIN",
@@ -18,10 +18,6 @@
     "registry/index.json",
     "registry/projects.json",
     "projects/lab/PROJECT_STATE.json",
-    "projects/lab/authorizations/AUTHORIZATION_LAB_M5_CANONICAL_OPEN_ERROR_AND_DECISION_BASELINE_RECONCILIATION_164.json",
-    "decisions/DEC-LAB-028.json",
-    "tests/expected_repository_state.json",
-    "projects/lab/evidence/EVD-LAB-M5-CANONICAL-OPEN-ERROR-DECISION-BASELINE-RECONCILIATION-164.json",
     "projects/lab/authorizations/AUTHORIZATION_LAB_M5_ATTEMPT_002_AND_ACTIVE_AUTHORIZATION_REGISTRY_SEMANTICS_RECONCILIATION_163.json",
     "projects/lab/authorizations/AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162.json",
     "architecture/integrations/migration/M5/documentary-reconciliation-163/GENERAL_VALIDATOR_SUCCESSOR_BASELINE.json",
@@ -32,21 +28,6 @@
     "projects/lab/continuity/CURRENT_CONTINUITY.json"
   ],
   "facts": [
-    {
-      "claim": "Authorization 164 attempt 001 was blocked before publication by the expected-state open_errors mismatch and all candidate changes were reverted.",
-      "source_refs": [
-        "projects/lab/authorizations/AUTHORIZATION_LAB_M5_CANONICAL_OPEN_ERROR_AND_DECISION_BASELINE_RECONCILIATION_164.json",
-        "projects/lab/evidence/EVD-LAB-M5-CANONICAL-OPEN-ERROR-DECISION-BASELINE-RECONCILIATION-164.json"
-      ]
-    },
-    {
-      "claim": "Authorization 164 amendment 1 reconciled only tests/expected_repository_state.json.open_errors and completed the original documentary scope with the exact 333-finding successor inventory preserved.",
-      "source_refs": [
-        "projects/lab/authorizations/AUTHORIZATION_LAB_M5_CANONICAL_OPEN_ERROR_AND_DECISION_BASELINE_RECONCILIATION_164.json",
-        "tests/expected_repository_state.json",
-        "decisions/DEC-LAB-028.json"
-      ]
-    },
     {
       "claim": "Authorization 163 amendment 1 repaired only the two explicitly authorized historical authorization-registry findings and published a distinct 333-finding successor baseline.",
       "source_refs": [
@@ -73,15 +54,13 @@
     "160": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_REGISTERED_NOT_ACTIVE",
     "161": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_STATE_CORRESPONDENCE_REPAIRED",
     "162": "GRANTED_NOT_CONSUMED_AWAITING_ATTEMPT_003_ACTIVE",
-    "163": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "164": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_WITH_AMENDMENT_1"
+    "163": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
   },
   "baseline_transition": {
     "historical_count": 335,
     "historical_structured_digest": "cb54594bdbe3b2d7a5e473fdcb4a98e02cc7a5840966e4f0a5286c277f6226ab",
     "historical_raw_digest": "00310f685ddb2ec849aa848eb9c78dbad17e08f199993259ce3057f904e2fd95",
     "successor_count": 333,
-    "successor_role": "OPERATIVE_GENERAL_VALIDATOR_BASELINE_FOR_AUTHORIZATION_162_ATTEMPT_003",
     "removed_stable_ids": [
       "GVF-714B283984E90E5D",
       "GVF-C8069FAE89C311D4"
@@ -113,7 +92,7 @@
   "deferred_capability": "SOFTWARE_SOLUTION_ENGINEERING",
   "forbidden": [
     "MODIFY_HISTORICAL_VALIDATORS_OR_OUTPUTS",
-    "EXECUTE_ATTEMPT_003_IN_AUTHORIZATION_164_OR_AMENDMENT_1",
+    "EXECUTE_ATTEMPT_003_IN_AUTHORIZATION_163",
     "EXECUTE_OPERATIONAL_ROLLBACK_DRILL_M5_RETRY_OR_CUTOVER",
     "CREATE_OR_UPDATE_ACTIVE_POINTER",
     "RETIRE_STATIC_SELECTOR_OR_ACTIVATE_SHADOW_REGISTRY",
@@ -122,8 +101,8 @@
     "MODIFY_EXTERNAL_REPOSITORIES"
   ],
   "single_next_action": "EXECUTE_ATTEMPT_003_UNDER_AUTHORIZATION_162_FROM_THE_NEW_VERIFIED_REMOTE_HEAD_LIMITED_TO_SEMANTIC_REPLAY_AND_STAGE_AWARE_SANDBOX_VALIDATION",
-  "first_phrase_for_new_conversation": "Continúa ChatGPT Prototype LAB desde el HEAD remoto vigente de main. La autorización 164 y su enmienda 1 quedaron consumidas al registrar ERR-LAB-009 como error abierto, reconciliar el fixture esperado y establecer el baseline sucesor de 333 como operativo en DEC-LAB-028; la autorización 162 permanece GRANTED y no consumida para ATTEMPT-003, que aún no ha comenzado.",
-  "authority_effect": "AUTHORIZATION_164_AND_AMENDMENT_1_CONSUMED_AUTHORIZATION_162_ACTIVE_BOUNDED_STAGE_2_ONLY",
+  "first_phrase_for_new_conversation": "Continúa ChatGPT Prototype LAB desde el HEAD remoto vigente de main. La autorización 163 quedó consumida al reconciliar el registro y publicar el baseline sucesor de 333; la autorización 162 permanece GRANTED y no consumida para ATTEMPT-003, que aún no ha comenzado.",
+  "authority_effect": "AUTHORIZATION_162_ACTIVE_BOUNDED_STAGE_2_ONLY",
   "runtime_effect": "NONE",
   "integration_effect": "NONE"
 }

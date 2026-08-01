@@ -36,7 +36,7 @@
     "CREATE_A_SEMANTIC_M3_REPLAY_SUCCESSOR_VALIDATOR",
     "CREATE_A_STAGE_AWARE_AUTHORIZATION_LIFECYCLE_SUCCESSOR_VALIDATOR",
     "EXECUTE_POSITIVE_AND_NEGATIVE_SANDBOX_TESTS",
-    "VERIFY_EXACT_335_GENERAL_VALIDATOR_FINDINGS_WITH_ZERO_DELTA",
+    "VERIFY_EXACT_333_GENERAL_VALIDATOR_FINDINGS_WITH_ZERO_UNAUTHORIZED_DELTA_AGAINST_AUTHORIZATION_163_SUCCESSOR_BASELINE",
     "PREPARE_ANY_FUTURE_M5_RETRY_AUTHORIZATION_AS_PROPOSED_NOT_GRANTED_NOT_EXECUTABLE"
   ],
   "future_integration_priority": [
@@ -63,8 +63,31 @@
     "architecture/integrations/migration/M5/execution-160/ROLLBACK_DRILL_RESULTS.json",
     "architecture/integrations/migration/M5/execution-160/VALIDATION_RESULTS.json",
     "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-160.json",
-    "projects/lab/authorizations/AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162.json"
+    "projects/lab/authorizations/AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_M5_ATTEMPT_002_AND_ACTIVE_AUTHORIZATION_REGISTRY_SEMANTICS_RECONCILIATION_163.json",
+    "projects/lab/evidence/EVD-LAB-M5-ACTIVE-AUTHORIZATION-REGISTRY-RECONCILIATION-163.json",
+    "architecture/integrations/migration/M5/documentary-reconciliation-163/GENERAL_VALIDATOR_SUCCESSOR_BASELINE.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_M5_CANONICAL_OPEN_ERROR_AND_DECISION_BASELINE_RECONCILIATION_164.json"
   ],
+  "baseline_reconciliation": {
+    "amendment_id": "DEC-LAB-028-AMENDMENT-1-SUCCESSOR-333-BASELINE",
+    "approved_by": "Jonathan Martínez",
+    "approved_at": "2026-07-31T17:45:00-04:00",
+    "approval_source": "Continuemos con la Única siguiente acción: emitir y aprobar una autorización documental mínima que incorpore ERR-LAB-009 en CURRENT_STATE.json.open_errors y reconcilie DEC-LAB-028 con el baseline sucesor 333, preservando íntegramente ambos baselines y sin iniciar todavía ATTEMPT-003.",
+    "historical_baseline": {
+      "path": "architecture/integrations/migration/M5/execution-160/GENERAL_VALIDATOR_BASELINE.json",
+      "finding_count": 335,
+      "status": "PRESERVED_IMMUTABLE_HISTORICAL_EVIDENCE"
+    },
+    "operative_attempt_003_baseline": {
+      "path": "architecture/integrations/migration/M5/documentary-reconciliation-163/GENERAL_VALIDATOR_SUCCESSOR_BASELINE.json",
+      "finding_count": 333,
+      "status": "APPROVED_OPERATIVE_BASELINE"
+    },
+    "effect": "PRESERVE_HISTORICAL_335_AND_USE_SUCCESSOR_333_FOR_AUTHORIZATION_162_ATTEMPT_003",
+    "authorization_162_effect": "NONE_REMAINS_GRANTED_NOT_CONSUMED",
+    "attempt_003_effect": "NOT_STARTED"
+  },
   "supersedes": [],
   "superseded_by": null,
   "authority_effect": "NORMATIVE_DECISION_AND_BOUNDED_AUTHORIZATION_GRANT",

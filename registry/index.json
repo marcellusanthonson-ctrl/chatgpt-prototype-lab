@@ -9,8 +9,8 @@
         "ideas": 5,
         "integrations": 6,
         "experiments": 8,
-        "authorizations": 91,
-        "evidence": 70,
+        "authorizations": 92,
+        "evidence": 71,
         "unincorporated": 0,
         "proposals": 3,
         "sessions": 1,
@@ -37,7 +37,8 @@
             "registry/deltas/integration-factory-m3-remediation-authorization-158.json",
             "registry/deltas/integration-factory-m4-preparation-authorization-159.json",
             "registry/deltas/integration-factory-m5-readiness-authorization-161.json",
-            "registry/deltas/integration-factory-m5-cutover-authorization-160.json"
+            "registry/deltas/integration-factory-m5-cutover-authorization-160.json",
+            "registry/deltas/integration-factory-m5-canonical-open-error-decision-baseline-reconciliation-164.json"
         ],
         "errors": "registry/errors.json",
         "patterns": "registry/patterns.json",
@@ -84,7 +85,8 @@
             "registry/deltas/integration-factory-m5-readiness-remediation-161.json",
             "registry/deltas/integration-factory-m5-cutover-authorization-160.json",
             "registry/deltas/integration-factory-m5-execution-160.json",
-            "registry/deltas/integration-factory-m5-attempt-002-active-authorization-semantics-reconciliation-163.json"
+            "registry/deltas/integration-factory-m5-attempt-002-active-authorization-semantics-reconciliation-163.json",
+            "registry/deltas/integration-factory-m5-canonical-open-error-decision-baseline-reconciliation-164.json"
         ],
         "evidence": "registry/evidence.json",
         "evidence_deltas": [
@@ -117,7 +119,8 @@
             "registry/deltas/integration-factory-m5-readiness-remediation-161.json",
             "registry/deltas/integration-factory-m5-cutover-authorization-160.json",
             "registry/deltas/integration-factory-m5-execution-160.json",
-            "registry/deltas/integration-factory-m5-attempt-002-active-authorization-semantics-reconciliation-163.json"
+            "registry/deltas/integration-factory-m5-attempt-002-active-authorization-semantics-reconciliation-163.json",
+            "registry/deltas/integration-factory-m5-canonical-open-error-decision-baseline-reconciliation-164.json"
         ],
         "current_state": "CURRENT_STATE.json",
         "current_state_deltas": [
@@ -158,7 +161,8 @@
             "registry/deltas/integration-factory-m5-readiness-authorization-161.json",
             "registry/deltas/integration-factory-m5-readiness-remediation-161.json",
             "registry/deltas/integration-factory-m5-execution-160.json",
-            "registry/deltas/integration-factory-m5-attempt-002-active-authorization-semantics-reconciliation-163.json"
+            "registry/deltas/integration-factory-m5-attempt-002-active-authorization-semantics-reconciliation-163.json",
+            "registry/deltas/integration-factory-m5-canonical-open-error-decision-baseline-reconciliation-164.json"
         ],
         "pattern_deltas": [
             "registry/deltas/livhavn-surgical-visual-patch-093.json"
@@ -220,12 +224,12 @@
         "decision_path": "decisions/DEC-LAB-028.json",
         "error": "ERR-LAB-009",
         "pattern": "PAT-LAB-009",
-        "authorization": "AUTHORIZATION_LAB_M5_ATTEMPT_002_AND_ACTIVE_AUTHORIZATION_REGISTRY_SEMANTICS_RECONCILIATION_163",
-        "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_M5_ATTEMPT_002_AND_ACTIVE_AUTHORIZATION_REGISTRY_SEMANTICS_RECONCILIATION_163.json",
-        "evidence": "EVD-LAB-M5-ACTIVE-AUTHORIZATION-REGISTRY-RECONCILIATION-163",
-        "evidence_path": "projects/lab/evidence/EVD-LAB-M5-ACTIVE-AUTHORIZATION-REGISTRY-RECONCILIATION-163.json",
-        "current_state_delta": "integration-factory-m5-attempt-002-active-authorization-semantics-reconciliation-163",
-        "current_state_delta_path": "registry/deltas/integration-factory-m5-attempt-002-active-authorization-semantics-reconciliation-163.json",
+        "authorization": "AUTHORIZATION_LAB_M5_CANONICAL_OPEN_ERROR_AND_DECISION_BASELINE_RECONCILIATION_164",
+        "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_M5_CANONICAL_OPEN_ERROR_AND_DECISION_BASELINE_RECONCILIATION_164.json",
+        "evidence": "EVD-LAB-M5-CANONICAL-OPEN-ERROR-DECISION-BASELINE-RECONCILIATION-164",
+        "evidence_path": "projects/lab/evidence/EVD-LAB-M5-CANONICAL-OPEN-ERROR-DECISION-BASELINE-RECONCILIATION-164.json",
+        "current_state_delta": "integration-factory-m5-canonical-open-error-decision-baseline-reconciliation-164",
+        "current_state_delta_path": "registry/deltas/integration-factory-m5-canonical-open-error-decision-baseline-reconciliation-164.json",
         "experiment": "EXP-LAB-003",
         "proposal": "PROP-LAB-003",
         "session": "SES-2026-06-28-001",

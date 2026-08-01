@@ -149,3 +149,9 @@ Se repararon exclusivamente `GVF-714B283984E90E5D` y `GVF-C8069FAE89C311D4`. El 
 Las autorizaciones 153, 154, 160, 161 y 163 tienen correspondencia consumida exacta entre `registry/authorizations.json.records` y `CURRENT_STATE.json.authorization_state`. La autorización 160 ya no está activa. La autorización 162 permanece `GRANTED`, no consumida y únicamente en `active_authorizations`, a la espera de ATTEMPT-003.
 
 `ERR-LAB-009` continúa `OPEN_BLOCKING_M5_CUTOVER`, `PEND-LAB-039` permanece resuelto y `PEND-LAB-040` está ausente. El selector estático sigue autoritativo, el shadow registry inactivo y el puntero activo ausente. No hubo runtime, integración, AWS, Terraform ni trabajo sobre Product Leadership, Intelligent Application Construction o SSE.
+
+## Autorización 164 — error abierto y baseline de decisión reconciliados
+
+El primer intento de la autorización 164 fue bloqueado antes de publicación porque el fixture esperado conservaba `open_errors: []`; todas sus mutaciones fueron revertidas. La enmienda 1 autorizó exclusivamente sincronizar ese campo con `ERR-LAB-009` y repetir la ejecución documental.
+
+`CURRENT_STATE.json` y el fixture esperado registran ahora `ERR-LAB-009`. `DEC-LAB-028` conserva el baseline histórico de 335 como evidencia inmutable y reconoce el baseline sucesor de 333 como operativo para ATTEMPT-003. La autorización 162 permanece concedida, no consumida y es la única activa. ATTEMPT-003 no comenzó y no hubo efecto de runtime, integración, AWS o Terraform.

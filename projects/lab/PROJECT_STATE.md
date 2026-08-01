@@ -129,3 +129,9 @@ La enmienda 1 autorizó la transición controlada del baseline histórico de 335
 El registro separa ahora las autorizaciones consumidas de las activas. Las autorizaciones 153, 154, 160, 161 y 163 están consumidas con transición exacta. La autorización 162 permanece `GRANTED_NOT_CONSUMED_AWAITING_ATTEMPT_003`, exclusivamente en `active_authorizations`.
 
 ATTEMPT-003 no comenzó. `ERR-LAB-009` sigue abierto y bloquea M5 cutover. `PEND-LAB-039` está resuelto y `PEND-LAB-040` no existe. El selector estático, el shadow registry inactivo y la ausencia del puntero activo permanecen sin cambios, sin efecto de runtime o integración.
+
+## Autorización 164 — reconciliación canónica del error abierto y baseline de decisión
+
+El intento `AUTHORIZATION_164_EXECUTION_ATTEMPT_001` fue bloqueado y revertido antes de publicación por la divergencia acotada entre `CURRENT_STATE.json.open_errors` y el fixture esperado. La enmienda 1 autorizó únicamente reconciliar `tests/expected_repository_state.json.open_errors` y repetir el alcance documental original.
+
+`ERR-LAB-009` queda incorporado en ambos estados. `DEC-LAB-028` preserva el baseline histórico de 335 y establece el sucesor de 333 como operativo para ATTEMPT-003. La autorización 162 permanece `GRANTED_NOT_CONSUMED_AWAITING_ATTEMPT_003`; ATTEMPT-003 no comenzó. No hubo replay semántico, pruebas stage-aware, rollback drill, M5, cutover, puntero activo, runtime, integración, AWS o Terraform.

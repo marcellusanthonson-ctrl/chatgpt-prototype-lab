@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.2.0",
+  "authorization_id": "AUTHORIZATION_LAB_M5_CANONICAL_OPEN_ERROR_AND_DECISION_BASELINE_RECONCILIATION_164",
+  "state_key": "integration_factory_m5_canonical_open_error_decision_baseline_reconciliation_164",
+  "project_id": "lab",
+  "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+  "publication_status": "COMPLETE_VERIFIED_REMOTE_PUBLICATION",
+  "authorization_class": "BOUNDED_DOCUMENTARY_STATE_AND_DECISION_RECONCILIATION_ONLY",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-07-31T17:45:00-04:00",
+  "approval_source": "Continuemos con la Única siguiente acción: emitir y aprobar una autorización documental mínima que incorpore ERR-LAB-009 en CURRENT_STATE.json.open_errors y reconcilie DEC-LAB-028 con el baseline sucesor 333, preservando íntegramente ambos baselines y sin iniciar todavía ATTEMPT-003.",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "184411a66e96c7b78b255a341dfc3d0ec0c3cf64",
+  "head_policy": "VERIFY_LIVE_AT_USE",
+  "technical_executor": "CODEX",
+  "objective": [
+    "INCORPORATE_ERR_LAB_009_IN_CURRENT_STATE_OPEN_ERRORS",
+    "RECONCILE_DEC_LAB_028_WITH_SUCCESSOR_333_BASELINE",
+    "RECONCILE_EXPECTED_STATE_OPEN_ERRORS_ONLY",
+    "PRESERVE_BOTH_GENERAL_VALIDATOR_BASELINES",
+    "KEEP_AUTHORIZATION_162_GRANTED_NOT_CONSUMED",
+    "DO_NOT_START_ATTEMPT_003"
+  ],
+  "execution_history": [
+    {
+      "attempt_id": "AUTHORIZATION_164_EXECUTION_ATTEMPT_001",
+      "classification": "BLOCKED_PREPUBLICATION_EXPECTED_STATE_OPEN_ERRORS_FIXTURE_MISMATCH",
+      "verified_initial_parent_head": "184411a66e96c7b78b255a341dfc3d0ec0c3cf64",
+      "initial_general_validator_findings": 333,
+      "initial_exit_code": 1,
+      "candidate_general_validator_findings": 334,
+      "candidate_exit_code": 1,
+      "candidate_added_findings": [
+        "expected-state mismatch for open_errors"
+      ],
+      "root_cause": "tests/expected_repository_state.json.open_errors remained [] while the authorized CURRENT_STATE.json candidate contained ERR-LAB-009",
+      "candidate_changes_reverted": true,
+      "final_general_validator_findings_after_reversal": 333,
+      "final_structured_digest_after_reversal": "e6448fbe63ffc0b2f4d90636b8560345eed5db461b3090e3bd0137afd0acda7b",
+      "final_raw_digest_after_reversal": "f2cd173455fe57b24be1da685575febff11f04e0d946d68854d8099c3feb15ce",
+      "files_created": 0,
+      "files_modified": 0,
+      "commit_created": false,
+      "remote_head_changed": false,
+      "authorization_164_consumed": false,
+      "authorization_162_consumed": false,
+      "attempt_003_started": false,
+      "semantic_replay_executed": false,
+      "stage_aware_tests_executed": false
+    },
+    {
+      "attempt_id": "AUTHORIZATION_164_AMENDMENT_1_EXECUTION_ATTEMPT_002",
+      "classification": "M5_CANONICAL_OPEN_ERROR_AND_DECISION_BASELINE_RECONCILIATION_PASS_AWAITING_ATTEMPT_003",
+      "expected_state_fixture_reconciled": true,
+      "attempt_003_started": false
+    }
+  ],
+  "amendments": [
+    {
+      "amendment_id": "AUTHORIZATION_LAB_M5_CANONICAL_OPEN_ERROR_AND_DECISION_BASELINE_RECONCILIATION_164_AMENDMENT_1",
+      "status": "CONSUMED_WITH_AUTHORIZATION_164_ON_VERIFIED_REMOTE_PUBLICATION",
+      "amendment_class": "BOUNDED_EXPECTED_STATE_FIXTURE_RECONCILIATION",
+      "approved_by": "Jonathan Martínez",
+      "approved_at": "2026-07-31T18:15:00-04:00",
+      "approval_source": "Apruebo la enmienda. Continuemos.",
+      "additional_allowed_path": "tests/expected_repository_state.json",
+      "exact_mutation": {
+        "field": "open_errors",
+        "before": [],
+        "after": ["ERR-LAB-009"],
+        "all_other_fields_unchanged": true
+      }
+    }
+  ],
+  "baseline_policy": {
+    "historical_335": {
+      "path": "architecture/integrations/migration/M5/execution-160/GENERAL_VALIDATOR_BASELINE.json",
+      "finding_count": 335,
+      "structured_digest": "cb54594bdbe3b2d7a5e473fdcb4a98e02cc7a5840966e4f0a5286c277f6226ab",
+      "raw_digest": "00310f685ddb2ec849aa848eb9c78dbad17e08f199993259ce3057f904e2fd95",
+      "mutation_authorized": false
+    },
+    "successor_333": {
+      "path": "architecture/integrations/migration/M5/documentary-reconciliation-163/GENERAL_VALIDATOR_SUCCESSOR_BASELINE.json",
+      "finding_count": 333,
+      "structured_digest": "e6448fbe63ffc0b2f4d90636b8560345eed5db461b3090e3bd0137afd0acda7b",
+      "raw_digest": "f2cd173455fe57b24be1da685575febff11f04e0d946d68854d8099c3feb15ce",
+      "role": "OPERATIVE_GENERAL_VALIDATOR_BASELINE_FOR_AUTHORIZATION_162_ATTEMPT_003",
+      "mutation_authorized": false
+    }
+  },
+  "registry_semantics": {
+    "authorization_162": "ONLY_ACTIVE_GRANTED_NOT_CONSUMED_AWAITING_ATTEMPT_003",
+    "authorization_163": "CONSUMED_UNCHANGED",
+    "authorization_164": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_ABSENT_FROM_ACTIVE",
+    "amendment_1": "CONSUMED_WITH_AUTHORIZATION_164_ON_VERIFIED_REMOTE_PUBLICATION"
+  },
+  "authority": {
+    "execution": true,
+    "commit": true,
+    "push": true,
+    "source_file_update": true,
+    "documentary_state_reconciliation": true,
+    "expected_state_open_errors_reconciliation": true,
+    "validator_code_change": false,
+    "schema_change": false,
+    "semantic_replay": false,
+    "stage_aware_tests": false,
+    "attempt_003": false,
+    "runtime": false,
+    "integration": false,
+    "aws": false,
+    "terraform": false,
+    "external_repository_change": false
+  },
+  "allowed_paths": [
+    "CURRENT_STATE.json", "CURRENT_STATE.md", "decisions/DEC-LAB-028.json", "registry/decisions.json", "registry/authorizations.json", "registry/evidence.json", "registry/index.json", "registry/deltas/integration-factory-m5-canonical-open-error-decision-baseline-reconciliation-164.json", "projects/lab/PROJECT_STATE.json", "projects/lab/PROJECT_STATE.md", "projects/lab/authorizations/AUTHORIZATION_LAB_M5_CANONICAL_OPEN_ERROR_AND_DECISION_BASELINE_RECONCILIATION_164.json", "projects/lab/briefs/CODEX_M5_CANONICAL_OPEN_ERROR_AND_DECISION_BASELINE_RECONCILIATION_001.json", "projects/lab/evidence/EVD-LAB-M5-CANONICAL-OPEN-ERROR-DECISION-BASELINE-RECONCILIATION-164.json", "projects/lab/continuity/CURRENT_CONTINUITY.json", "projects/lab/continuity/CURRENT_CONTINUITY.md", "projects/lab/continuity/ATTACHMENT_MANIFEST.json", "projects/lab/continuity/START_PROMPT.md", "projects/lab/continuity/archive/**", "tests/expected_repository_state.json"
+  ],
+  "immutable_paths": [
+    "architecture/integrations/migration/M5/execution-160/**", "architecture/integrations/migration/M5/documentary-reconciliation-163/GENERAL_VALIDATOR_SUCCESSOR_BASELINE.json", "scripts/**", "schemas/**", "errors/ERR-LAB-009.json", "projects/lab/pending/PEND-LAB-039.json", "projects/lab/authorizations/AUTHORIZATION_LAB_M5_STAGE_AWARE_VALIDATOR_REMEDIATION_162.json", "projects/lab/authorizations/AUTHORIZATION_LAB_M5_ATTEMPT_002_AND_ACTIVE_AUTHORIZATION_REGISTRY_SEMANTICS_RECONCILIATION_163.json", "projects/lab/evidence/EVD-LAB-M5-ACTIVE-AUTHORIZATION-REGISTRY-RECONCILIATION-163.json", "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json", "architecture/integrations/migration/M2/SHADOW_INTEGRATION_REGISTRY.json", "architecture/integrations/active/INTEGRATION_FACTORY_RESOLUTION_POINTER.json"
+  ],
+  "forbidden_actions": [
+    "BROAD_EXPECTED_STATE_REFRESH", "MUTATE_EITHER_BASELINE", "GENERAL_VALIDATOR_OR_SCHEMA_CHANGE", "SEMANTIC_REPLAY", "STAGE_AWARE_TEST_EXECUTION", "ATTEMPT_003", "OPERATIONAL_ROLLBACK_DRILL", "M5_RETRY_OR_CUTOVER", "ACTIVE_POINTER_CHANGE", "STATIC_SELECTOR_RETIREMENT", "SHADOW_REGISTRY_ACTIVATION", "AUTHORIZATION_162_CONSUMPTION", "RUNTIME_INTEGRATION_AWS_TERRAFORM_OR_EXTERNAL_REPOSITORY_EFFECT"
+  ],
+  "validation_gates": {
+    "initial_general_validator": "EXACT_SUCCESSOR_333_AND_DIGESTS",
+    "final_general_validator": "EXACT_SUCCESSOR_333_AND_DIGESTS_ZERO_DELTA",
+    "expected_state_fixture": "ONLY_OPEN_ERRORS_CHANGED_FROM_EMPTY_TO_ERR_LAB_009",
+    "baseline_immutability": "BOTH_BLOBS_UNCHANGED",
+    "scope": "ONLY_ALLOWED_PATHS_CHANGED"
+  },
+  "commit_message": "docs(lab): reconcile open error and expected-state fixture",
+  "consumption_rule": "CONSUMED_ONLY_AFTER_COMPLETE_DOCUMENTARY_RESULT_IS_COMMITTED_PUSHED_AND_REMOTE_MAIN_HEAD_IS_VERIFIED",
+  "response_contract": {
+    "format": "ORDERED_FIELDS",
+    "required_fields": ["RESULT", "VERIFIED_INITIAL_PARENT_HEAD", "AUTHORIZATION_164_STATUS", "AUTHORIZATION_164_AMENDMENT_1_STATUS", "APPROVAL_RECORD", "AUTHORIZATION_164_EXECUTION_ATTEMPT_001_RECORD", "CURRENT_STATE_OPEN_ERRORS_BEFORE", "CURRENT_STATE_OPEN_ERRORS_AFTER", "EXPECTED_STATE_FIXTURE_OPEN_ERRORS_BEFORE", "EXPECTED_STATE_FIXTURE_OPEN_ERRORS_AFTER", "EXPECTED_STATE_FIXTURE_OTHER_FIELDS_IMMUTABILITY", "DEC_LAB_028_RECONCILIATION", "HISTORICAL_335_BASELINE", "SUCCESSOR_333_BASELINE", "BASELINE_BLOB_IMMUTABILITY", "INITIAL_GENERAL_VALIDATOR_BASELINE", "FINAL_GENERAL_VALIDATOR_BASELINE", "FINAL_SUCCESSOR_STRUCTURED_DIGEST", "FINAL_SUCCESSOR_RAW_DIGEST", "AUTHORIZATION_162_STATUS", "AUTHORIZATION_164_CONSUMPTION", "ERR_LAB_009_STATUS", "ATTEMPT_003_STATUS", "SELECTOR_SHADOW_AND_POINTER_BOUNDARIES", "RUNTIME_INTEGRATION_AWS_TERRAFORM_BOUNDARIES", "VALIDATION_RESULTS", "FILES_CREATED", "FILES_MODIFIED", "COMMIT_SHA", "VERIFIED_FINAL_REMOTE_HEAD", "SINGLE_NEXT_ACTION"]
+  },
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}
