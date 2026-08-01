@@ -1,14 +1,14 @@
 {
   "schema_version": "1.2.0",
-  "continuity_id": "LAB-CONTINUITY-M5-CUTOVER-166-STAGE-1-20260801",
+  "continuity_id": "LAB-CONTINUITY-M5-ROLLBACK-DRILL-165-PASS-20260731",
   "project_id": "lab",
-  "status": "M5_BOUNDED_CUTOVER_166_GRANTED_AWAITING_EXECUTION",
-  "created_at": "2026-08-01T09:48:00-04:00",
+  "status": "M5_OPERATIONAL_ROLLBACK_DRILL_PASS_AWAITING_SEPARATE_M5_RETRY_OR_CUTOVER_DECISION",
+  "created_at": "2026-07-31T23:59:00-04:00",
   "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "canonical_branch": "main",
   "head_policy": "VERIFY_LIVE_AT_USE",
-  "verified_initial_parent_head": "3a7470255f367212fc373fb7eefd9fe112c39f12",
-  "verified_stage_1_remote_head": "SET_AFTER_STAGE_1_REMOTE_PUBLICATION",
+  "verified_initial_parent_head": "b19e702cbe7afb83b4e209b85f9e7c5dbba40fc1",
+  "verified_stage_2_execution_remote_head": "07061091d876e97b0299ff025edd9c59c227e966",
   "entrypoint": "project-sources/chatgpt/START_HERE.md",
   "required_reading_order": [
     "VERIFY_LIVE_HEAD_OF_MAIN",
@@ -44,10 +44,6 @@
     "architecture/integrations/migration/M5/rollback-drill-165/VALIDATION_RESULTS.json",
     "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-ROLLBACK-DRILL-165.json",
     "projects/lab/pending/PEND-LAB-041.json",
-    "projects/lab/authorizations/AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166.json",
-    "projects/lab/briefs/CODEX_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_001.json",
-    "architecture/integrations/migration/M5/cutover-166/PRE_CUTOVER_GENERAL_VALIDATOR_BASELINE.json",
-    "architecture/integrations/migration/M5/cutover-166/INITIAL_VERIFICATION_RESULTS.json",
     "projects/lab/continuity/CURRENT_CONTINUITY.json"
   ],
   "facts": [
@@ -103,15 +99,6 @@
         "architecture/integrations/migration/M5/rollback-drill-165/VALIDATION_RESULTS.json",
         "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-ROLLBACK-DRILL-165.json"
       ]
-    },
-    {
-      "claim": "Authorization 166 with Amendment 1 passed Stage 1 initial verification, corrected only the canonical M3 corpus reference, froze the exact 329-finding live validator inventory, and grants conditional Stage 2 bounded cutover authority after verified Stage 1 remote publication.",
-      "source_refs": [
-        "projects/lab/authorizations/AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166.json",
-        "projects/lab/briefs/CODEX_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_001.json",
-        "architecture/integrations/migration/M5/cutover-166/PRE_CUTOVER_GENERAL_VALIDATOR_BASELINE.json",
-        "architecture/integrations/migration/M5/cutover-166/INITIAL_VERIFICATION_RESULTS.json"
-      ]
     }
   ],
   "authorizations": {
@@ -122,8 +109,7 @@
     "162": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_AFTER_ATTEMPT_003_PASS",
     "163": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "164": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_WITH_AMENDMENT_1",
-    "165": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_NO_RESIDUAL_AUTHORITY",
-    "166": "GRANTED_STAGE_1_CONSUMED_STAGE_2_GRANTED_NOT_STARTED_WITH_AMENDMENT_1"
+    "165": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_NO_RESIDUAL_AUTHORITY"
   },
   "baseline_transition": {
     "historical_count": 335,
@@ -150,21 +136,20 @@
     },
     {
       "id": "PEND-LAB-041",
-      "status": "RESOLVED_AUTHORIZE_BOUNDED_M5_CUTOVER_166"
+      "status": "AWAITING_HUMAN_DECISION_FOR_SEPARATE_M5_RETRY_OR_CUTOVER_AUTHORIZATION"
     }
   ],
   "active_boundaries": {
-    "static_selector": "IMMUTABLE_FALLBACK_UNCHANGED",
+    "static_selector": "AUTHORITATIVE_UNCHANGED",
     "shadow_registry": "INACTIVE_UNCHANGED",
     "active_pointer_exists": false,
     "operational_rollback_drill_authorized": false,
     "operational_rollback_drill_result": "PASS_14_OF_14_AUTHORIZATION_CONSUMED",
-    "m5_retry_authorized": true,
-    "cutover_authorized": true,
-    "persistent_active_pointer_authorized": true,
+    "m5_retry_authorized": false,
+    "cutover_authorized": false,
     "static_selector_retirement_authorized": false,
-    "runtime_effect": "NONE_UNTIL_STAGE_2_BOUNDED_OBSERVATION",
-    "integration_effect": "NONE_UNTIL_STAGE_2_SINGLE_GOVERNED_POINTER"
+    "runtime_effect": "NONE",
+    "integration_effect": "NONE"
   },
   "future_integration_priority": [
     "PRODUCT_LEADERSHIP",
@@ -174,16 +159,16 @@
   "forbidden": [
     "MODIFY_HISTORICAL_VALIDATORS_OR_OUTPUTS",
     "REUSE_CONSUMED_AUTHORIZATION_162_OR_AMENDMENT_3",
-    "EXECUTE_M5_OUTSIDE_AUTHORIZATION_166",
-    "CREATE_OR_UPDATE_ANY_POINTER_OTHER_THAN_THE_SINGLE_GOVERNED_POINTER",
-    "RETIRE_OR_MODIFY_STATIC_SELECTOR",
+    "EXECUTE_M5_RETRY_OR_CUTOVER",
+    "CREATE_OR_UPDATE_ACTIVE_POINTER",
+    "RETIRE_STATIC_SELECTOR_OR_ACTIVATE_SHADOW_REGISTRY",
     "TEST_ADAPT_ACTIVATE_OR_INTEGRATE_PRODUCT_LEADERSHIP_IAC_OR_SSE",
     "RUN_AWS_OR_TERRAFORM",
     "MODIFY_EXTERNAL_REPOSITORIES"
   ],
-  "single_next_action": "EXECUTE_STAGE_2_BOUNDED_M5_CUTOVER_FROM_VERIFIED_STAGE_1_REMOTE_HEAD",
-  "first_phrase_for_new_conversation": "Continua ChatGPT Prototype LAB desde el HEAD remoto vigente de main. La autorizacion 166 con Amendment 1 esta publicada en Stage 1 y Stage 2 queda concedido y no iniciado hasta verificar el Stage 1 remoto.",
-  "authority_effect": "AUTHORIZATION_166_STAGE_2_CONDITIONAL_ONLY",
-  "runtime_effect": "NONE_UNTIL_STAGE_2_BOUNDED_OBSERVATION",
-  "integration_effect": "NONE_UNTIL_STAGE_2_SINGLE_GOVERNED_POINTER"
+  "single_next_action": "JONATHAN_MARTINEZ_DECIDES_WHETHER_TO_AUTHORIZE_A_SEPARATE_M5_RETRY_OR_CUTOVER_ATTEMPT",
+  "first_phrase_for_new_conversation": "Continua ChatGPT Prototype LAB desde el HEAD remoto vigente de main. La autorizacion 165 esta consumida despues del rollback drill PASS 14/14 y no deja autoridad residual. ERR-LAB-009 esta resuelto; PEND-LAB-041 espera una decision humana separada sobre M5 retry o cutover.",
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_165_CONSUMPTION",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
 }

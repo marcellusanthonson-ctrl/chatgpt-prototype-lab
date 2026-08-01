@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1.0",
   "project_id": "lab",
-  "updated_at": "2026-07-31",
+  "updated_at": "2026-08-01",
   "records": [
     {
       "id": "PEND-LAB-001",
@@ -798,7 +798,7 @@
       "schema_version": "1.0.0",
       "id": "PEND-LAB-041",
       "project_id": "lab",
-      "status": "AWAITING_HUMAN_DECISION_FOR_SEPARATE_M5_RETRY_OR_CUTOVER_AUTHORIZATION",
+      "status": "RESOLVED_AUTHORIZE_BOUNDED_M5_CUTOVER_166",
       "type": "INTEGRATION_FACTORY_M5_POST_ROLLBACK_DRILL_HUMAN_DECISION_GATE",
       "priority": "HIGH",
       "subject": "Decide whether to authorize a separate M5 retry or cutover attempt after the operational rollback drill PASS",
@@ -807,14 +807,18 @@
       "automatic_approval": false,
       "source_authorization": "AUTHORIZATION_LAB_M5_CANONICAL_CORRECTION_AND_CONDITIONAL_OPERATIONAL_ROLLBACK_DRILL_165",
       "source_classification": "M5_OPERATIONAL_ROLLBACK_DRILL_PASS_AWAITING_SEPARATE_M5_RETRY_OR_CUTOVER_DECISION",
-      "current_authority": "NONE_AFTER_AUTHORIZATION_165_CONSUMPTION",
-      "m5_retry_authorized": false,
-      "cutover_authorized": false,
-      "active_pointer_authorized": false,
-      "next_transition": "JONATHAN_MARTINEZ_DECIDES_WHETHER_TO_AUTHORIZE_A_SEPARATE_M5_RETRY_OR_CUTOVER_ATTEMPT",
-      "authority_effect": "NONE_UNTIL_SEPARATE_EXPLICIT_HUMAN_AUTHORIZATION",
-      "runtime_effect": "NONE",
-      "integration_effect": "NONE"
+      "resolved_at": "2026-08-01T09:01:00-04:00",
+      "selected_authorization": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166",
+      "amendment": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166_AMENDMENT_1_CANONICAL_M3_CORPUS_REFERENCE_CORRECTION",
+      "current_authority": "AUTHORIZATION_166_STAGE_2_CONDITIONAL_CUTOVER_ONLY",
+      "m5_retry_authorized": true,
+      "cutover_authorized": true,
+      "active_pointer_authorized": true,
+      "static_selector_retirement_authorized": false,
+      "next_transition": "EXECUTE_STAGE_2_BOUNDED_M5_CUTOVER_FROM_VERIFIED_STAGE_1_REMOTE_HEAD",
+      "authority_effect": "BOUNDED_AUTHORIZATION_166_STAGE_2_ONLY",
+      "runtime_effect": "NONE_UNTIL_STAGE_2_BOUNDED_OBSERVATION",
+      "integration_effect": "NONE_UNTIL_STAGE_2_SINGLE_GOVERNED_POINTER"
     }
   ]
 }

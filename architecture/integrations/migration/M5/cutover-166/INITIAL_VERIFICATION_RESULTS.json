@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "result_id": "M5_CUTOVER_166_STAGE_1_INITIAL_VERIFICATION_RESULTS",
+  "authorization_id": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166",
+  "amendment_id": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166_AMENDMENT_1_CANONICAL_M3_CORPUS_REFERENCE_CORRECTION",
+  "verified_at": "2026-08-01T09:48:00-04:00",
+  "classification": "PASS",
+  "verified_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "verified_branch": "main",
+  "verified_head": "3a7470255f367212fc373fb7eefd9fe112c39f12",
+  "verified_origin_main": "3a7470255f367212fc373fb7eefd9fe112c39f12",
+  "worktree_clean": true,
+  "gates": {
+    "fetch_origin": "PASS",
+    "head_equality": "PASS",
+    "canonical_reading_order": "PASS",
+    "authorization_165_consumed": "PASS",
+    "active_authorizations_empty": "PASS",
+    "err_lab_009_resolved": "PASS",
+    "pend_lab_041_awaits_cutover_decision": "PASS",
+    "retry_not_authorized_before_grant": "PASS",
+    "cutover_not_authorized_before_grant": "PASS",
+    "pointer_absent": "PASS",
+    "static_blob_exact": "PASS",
+    "candidate_blob_exact": "PASS",
+    "candidate_inactive": "PASS",
+    "rollback_drill_14_of_14": "PASS",
+    "every_injected_failure_static_intact": "PASS",
+    "real_canonical_state_validator": "PASS",
+    "portable_333_baseline_immutable": "PASS",
+    "general_validator_live_inventory_exact_329": "PASS",
+    "continuity_package_archived_by_exact_blobs": "PASS",
+    "amended_corpus_reference": "PASS",
+    "m3_equivalence_baseline": "PASS"
+  },
+  "corpus": {
+    "path": "architecture/integrations/migration/M3/remediation-158/TEST_CORPUS.json",
+    "blob": "009065769f524f17f3ffdf137fb0213ee30fb150",
+    "corpus_id": "INTEGRATION_FACTORY_M3_REMEDIATION_158_CORPUS_001",
+    "status": "DETERMINISTIC_SYNTHETIC_REMEDIATION_158",
+    "synthetic_only": true,
+    "case_count": 420
+  },
+  "equivalence": {
+    "exact_matches": "420_OF_420",
+    "static_oracles": "13_OF_13",
+    "shadow_oracles": "13_OF_13",
+    "behavioral_divergences": 0,
+    "static_run_digest_1": "9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329",
+    "static_run_digest_2": "9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329",
+    "shadow_run_digest_1": "9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329",
+    "shadow_run_digest_2": "9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329",
+    "deterministic": true
+  },
+  "general_validator": {
+    "finding_count": 329,
+    "exit_code": 1,
+    "structured_inventory_digest": "7014f40da42487c7de502c6e209e10b751b8f1718e4c148663c2511ba2bc705b",
+    "raw_ordered_message_digest": "3b724dbb28e9922e1e658bb07d9c5cdbbbe33167553e62398b43c88056af258d",
+    "global_repository_pass": false
+  }
+}

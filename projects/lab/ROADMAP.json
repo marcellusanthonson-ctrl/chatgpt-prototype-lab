@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1.0",
   "project_id": "lab",
-  "updated_at": "2026-07-31",
+  "updated_at": "2026-08-01",
   "authority_effect": "NONE",
   "records": [
     {
@@ -393,19 +393,40 @@
     {
       "order": 31,
       "item": "M5_POST_ROLLBACK_DRILL_HUMAN_DECISION",
-      "status": "AWAITING_HUMAN_DECISION_FOR_SEPARATE_M5_RETRY_OR_CUTOVER_AUTHORIZATION",
+      "status": "RESOLVED_AUTHORIZE_BOUNDED_M5_CUTOVER_166",
       "pending": "PEND-LAB-041",
       "source_authorization": "AUTHORIZATION_LAB_M5_CANONICAL_CORRECTION_AND_CONDITIONAL_OPERATIONAL_ROLLBACK_DRILL_165",
       "rollback_drill_result": "14_OF_14_PASS",
-      "active_authorization": "NONE",
-      "m5_retry_authorized": false,
-      "cutover_authorized": false,
+      "active_authorization": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166",
+      "m5_retry_authorized": true,
+      "cutover_authorized": true,
       "active_pointer": "ABSENT",
       "static_selector_status": "AUTHORITATIVE_UNCHANGED",
       "shadow_registry_status": "INACTIVE_UNCHANGED",
-      "runtime_effect": "NONE",
-      "integration_effect": "NONE",
-      "next_gate": "EXPLICIT_HUMAN_DECISION"
+      "runtime_effect": "NONE_UNTIL_STAGE_2",
+      "integration_effect": "NONE_UNTIL_STAGE_2_SINGLE_POINTER",
+      "next_gate": "VERIFIED_STAGE_1_REMOTE_PUBLICATION"
+    },
+    {
+      "order": 32,
+      "item": "M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166",
+      "status": "M5_BOUNDED_CUTOVER_166_GRANTED_AWAITING_EXECUTION",
+      "authorization": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166",
+      "amendment": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166_AMENDMENT_1_CANONICAL_M3_CORPUS_REFERENCE_CORRECTION",
+      "stage_1": "CONSUMED_ON_VERIFIED_STAGE_1_REMOTE_PUBLICATION",
+      "stage_2": "GRANTED_NOT_STARTED_AWAITING_VERIFIED_STAGE_1_REMOTE_HEAD",
+      "corpus": "architecture/integrations/migration/M3/remediation-158/TEST_CORPUS.json@009065769f524f17f3ffdf137fb0213ee30fb150",
+      "m3_equivalence": "420_OF_420_13_OF_13_PER_EVALUATOR_ZERO_DIVERGENCES_EXACT_DETERMINISTIC_DIGEST",
+      "pre_cutover_general_validator": "329_EXACT_GLOBAL_PASS_FALSE",
+      "static_selector_status": "IMMUTABLE_FALLBACK",
+      "shadow_registry_status": "INACTIVE_UNCHANGED",
+      "active_pointer": "ABSENT_AWAITING_STAGE_2",
+      "m5_retry_authorized": true,
+      "cutover_authorized": true,
+      "static_selector_retirement_authorized": false,
+      "runtime_effect": "NONE_UNTIL_STAGE_2_BOUNDED_OBSERVATION",
+      "integration_effect": "NONE_UNTIL_STAGE_2_SINGLE_POINTER",
+      "next_gate": "EXECUTE_STAGE_2_FROM_VERIFIED_STAGE_1_REMOTE_HEAD"
     }
   ]
 }

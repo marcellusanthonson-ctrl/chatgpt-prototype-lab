@@ -1,6 +1,6 @@
 {
     "schema_version": "1.0.0",
-    "updated_at": "2026-07-31",
+    "updated_at": "2026-08-01",
     "counts": {
         "projects": 7,
         "decisions": 27,
@@ -9,7 +9,7 @@
         "ideas": 5,
         "integrations": 6,
         "experiments": 8,
-        "authorizations": 93,
+        "authorizations": 94,
     "evidence": 74,
         "unincorporated": 0,
         "proposals": 3,
@@ -89,7 +89,8 @@
             "registry/deltas/integration-factory-m5-attempt-002-active-authorization-semantics-reconciliation-163.json",
             "registry/deltas/integration-factory-m5-canonical-open-error-decision-baseline-reconciliation-164.json",
             "registry/deltas/integration-factory-m5-stage-aware-validator-remediation-162.json",
-            "registry/deltas/integration-factory-m5-canonical-correction-and-conditional-rollback-drill-165.json"
+            "registry/deltas/integration-factory-m5-canonical-correction-and-conditional-rollback-drill-165.json",
+            "registry/deltas/integration-factory-m5-bounded-cutover-observation-and-automatic-rollback-166.json"
         ],
         "evidence": "registry/evidence.json",
         "evidence_deltas": [
@@ -125,7 +126,8 @@
             "registry/deltas/integration-factory-m5-attempt-002-active-authorization-semantics-reconciliation-163.json",
             "registry/deltas/integration-factory-m5-canonical-open-error-decision-baseline-reconciliation-164.json",
             "registry/deltas/integration-factory-m5-stage-aware-validator-remediation-162.json",
-            "registry/deltas/integration-factory-m5-canonical-correction-and-conditional-rollback-drill-165.json"
+            "registry/deltas/integration-factory-m5-canonical-correction-and-conditional-rollback-drill-165.json",
+            "registry/deltas/integration-factory-m5-bounded-cutover-observation-and-automatic-rollback-166.json"
         ],
         "current_state": "CURRENT_STATE.json",
         "current_state_deltas": [
@@ -233,12 +235,12 @@
         "decision_path": "decisions/DEC-LAB-028.json",
         "error": "ERR-LAB-009",
         "pattern": "PAT-LAB-009",
-        "authorization": "AUTHORIZATION_LAB_M5_CANONICAL_CORRECTION_AND_CONDITIONAL_OPERATIONAL_ROLLBACK_DRILL_165",
-        "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_M5_CANONICAL_CORRECTION_AND_CONDITIONAL_OPERATIONAL_ROLLBACK_DRILL_165.json",
+        "authorization": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166",
+        "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166.json",
     "evidence": "EVD-LAB-INTEGRATION-FACTORY-M5-ROLLBACK-DRILL-165",
     "evidence_path": "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-ROLLBACK-DRILL-165.json",
-        "current_state_delta": "integration-factory-m5-canonical-correction-and-conditional-rollback-drill-165",
-        "current_state_delta_path": "registry/deltas/integration-factory-m5-canonical-correction-and-conditional-rollback-drill-165.json",
+        "current_state_delta": "integration-factory-m5-bounded-cutover-observation-and-automatic-rollback-166",
+        "current_state_delta_path": "registry/deltas/integration-factory-m5-bounded-cutover-observation-and-automatic-rollback-166.json",
         "experiment": "EXP-LAB-003",
         "proposal": "PROP-LAB-003",
         "session": "SES-2026-06-28-001",

@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.0.0",
+  "brief_id": "CODEX_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_001",
+  "task_id": "LAB-M5-CUTOVER-166",
+  "project_id": "lab",
+  "status": "READY",
+  "objective": "Publish and remotely verify the bounded authorization and baseline, atomically activate exactly one governed candidate pointer, execute two exact observation iterations, automatically roll back to STATIC on any failure, publish a complete PASS or fail-closed result, and consume authority only after verified remote publication.",
+  "repositories": [
+    {
+      "name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "verified_initial_head": "3a7470255f367212fc373fb7eefd9fe112c39f12",
+      "stage_2_parent_policy": "USE_VERIFIED_STAGE_1_REMOTE_MAIN_HEAD"
+    }
+  ],
+  "authority": {
+    "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166.json",
+    "authorization_status": "GRANTED_STAGE_1_CONSUMED_STAGE_2_GRANTED_NOT_STARTED",
+    "amendment_ref": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166_AMENDMENT_1_CANONICAL_M3_CORPUS_REFERENCE_CORRECTION",
+    "technical_executor": "CODEX",
+    "codex_autonomous_authority": false
+  },
+  "scope": {
+    "stage_1": "AUTHORIZATION_PUBLICATION_AND_CUTOVER_BASELINE_FREEZE",
+    "stage_2": "BOUNDED_ATOMIC_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK",
+    "single_mutable_integration_pointer": "architecture/integrations/active/INTEGRATION_FACTORY_RESOLUTION_POINTER.json",
+    "static_fallback": {
+      "path": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json",
+      "blob": "301ba432907758fc49a9b3c86a83fc762eac4607"
+    },
+    "candidate": {
+      "path": "architecture/integrations/migration/M2/SHADOW_INTEGRATION_REGISTRY.json",
+      "blob": "a067cd9f95b98aa1599d21e3a0ff35fa56ac3a78"
+    },
+    "corpus": {
+      "path": "architecture/integrations/migration/M3/remediation-158/TEST_CORPUS.json",
+      "blob": "009065769f524f17f3ffdf137fb0213ee30fb150",
+      "id": "INTEGRATION_FACTORY_M3_REMEDIATION_158_CORPUS_001",
+      "case_count": 420
+    },
+    "observation": {
+      "iterations": 2,
+      "matches_per_iteration": "420_OF_420",
+      "oracles_per_evaluator": "13_OF_13",
+      "expected_behavioral_digest": "9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329",
+      "allowed_divergences": 0,
+      "determinism": "IDENTICAL_NORMALIZED_DIGESTS"
+    }
+  },
+  "required_outputs": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166.json",
+    "projects/lab/briefs/CODEX_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_001.json",
+    "architecture/integrations/migration/M5/cutover-166/PRE_CUTOVER_GENERAL_VALIDATOR_BASELINE.json",
+    "architecture/integrations/migration/M5/cutover-166/INITIAL_VERIFICATION_RESULTS.json",
+    "architecture/integrations/migration/M5/cutover-166/STAGE_1_CHANGED_FILES.json",
+    "registry/deltas/integration-factory-m5-bounded-cutover-observation-and-automatic-rollback-166.json",
+    "architecture/integrations/active/INTEGRATION_FACTORY_RESOLUTION_POINTER.json",
+    "architecture/integrations/migration/M5/cutover-166/CUTOVER_RESULTS.json",
+    "architecture/integrations/migration/M5/cutover-166/OBSERVATION_RESULTS.json",
+    "architecture/integrations/migration/M5/cutover-166/POINTER_STATE_TRANSITIONS.json",
+    "architecture/integrations/migration/M5/cutover-166/AUTOMATIC_ROLLBACK_RESULTS.json",
+    "architecture/integrations/migration/M5/cutover-166/COMMAND_TRANSCRIPT.json",
+    "architecture/integrations/migration/M5/cutover-166/LOCK_AND_CLEANUP_RESULTS.json",
+    "architecture/integrations/migration/M5/cutover-166/GENERAL_VALIDATOR_DELTA.json",
+    "architecture/integrations/migration/M5/cutover-166/VALIDATION_RESULTS.json",
+    "architecture/integrations/migration/M5/cutover-166/STAGE_2_CHANGED_FILES.json",
+    "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-CUTOVER-166.json",
+    "scripts/execute_integration_factory_m5_cutover_166.py",
+    "scripts/validate_integration_factory_m5_cutover_166.py"
+  ],
+  "required_outputs_by_stage": {
+    "stage_1": [
+      "projects/lab/authorizations/AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166.json",
+      "projects/lab/briefs/CODEX_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_001.json",
+      "architecture/integrations/migration/M5/cutover-166/PRE_CUTOVER_GENERAL_VALIDATOR_BASELINE.json",
+      "architecture/integrations/migration/M5/cutover-166/INITIAL_VERIFICATION_RESULTS.json",
+      "architecture/integrations/migration/M5/cutover-166/STAGE_1_CHANGED_FILES.json",
+      "registry/deltas/integration-factory-m5-bounded-cutover-observation-and-automatic-rollback-166.json"
+    ],
+    "stage_2": [
+      "architecture/integrations/active/INTEGRATION_FACTORY_RESOLUTION_POINTER.json",
+      "architecture/integrations/migration/M5/cutover-166/CUTOVER_RESULTS.json",
+      "architecture/integrations/migration/M5/cutover-166/OBSERVATION_RESULTS.json",
+      "architecture/integrations/migration/M5/cutover-166/POINTER_STATE_TRANSITIONS.json",
+      "architecture/integrations/migration/M5/cutover-166/AUTOMATIC_ROLLBACK_RESULTS.json",
+      "architecture/integrations/migration/M5/cutover-166/COMMAND_TRANSCRIPT.json",
+      "architecture/integrations/migration/M5/cutover-166/LOCK_AND_CLEANUP_RESULTS.json",
+      "architecture/integrations/migration/M5/cutover-166/GENERAL_VALIDATOR_DELTA.json",
+      "architecture/integrations/migration/M5/cutover-166/VALIDATION_RESULTS.json",
+      "architecture/integrations/migration/M5/cutover-166/STAGE_2_CHANGED_FILES.json",
+      "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-CUTOVER-166.json",
+      "scripts/execute_integration_factory_m5_cutover_166.py",
+      "scripts/validate_integration_factory_m5_cutover_166.py"
+    ]
+  },
+  "acceptance_checks": [
+    "EXACT_REPOSITORY_BRANCH_AND_PARENT",
+    "CORRECTED_CORPUS_PATH_BLOB_ID_AND_420_CASES",
+    "M3_420_OF_420_13_OF_13_ZERO_DIVERGENCES_EXACT_DETERMINISTIC_DIGEST",
+    "STAGE_1_REMOTE_PUBLICATION_VERIFIED",
+    "EXACTLY_ONE_GOVERNED_POINTER",
+    "STATIC_AND_CANDIDATE_BLOBS_UNCHANGED",
+    "TWO_OBSERVATION_ITERATIONS_PASS",
+    "ZERO_AUTHORITY_RUNTIME_INTEGRATION_DRIFT",
+    "ZERO_UNAUTHORIZED_GENERAL_VALIDATOR_DELTA",
+    "AUTOMATIC_ROLLBACK_ON_ANY_FAILURE",
+    "FINAL_REMOTE_PUBLICATION_VERIFIED"
+  ],
+  "forbidden_actions": [
+    "CLINICAL_OS_SKILL_INVOCATION",
+    "STATIC_SELECTOR_MODIFICATION_OR_RETIREMENT",
+    "CANDIDATE_REGISTRY_CONTENT_MODIFICATION",
+    "M2_ADAPTER_MODIFICATION",
+    "M3_MODIFICATION",
+    "NONATOMIC_POINTER_WRITE",
+    "MORE_THAN_ONE_PERSISTENT_POINTER",
+    "AWS",
+    "TERRAFORM",
+    "REAL_DATA",
+    "PRODUCTION_CREDENTIALS",
+    "EXTERNAL_REPOSITORY_CHANGE",
+    "GLOBAL_REPOSITORY_PASS_CLAIM",
+    "SCOPE_EXPANSION"
+  ],
+  "stop_conditions": [
+    "UNEXPECTED_REPOSITORY_BRANCH_OR_HEAD",
+    "WORKTREE_NOT_CLEAN_AT_STAGE_BOUNDARY",
+    "CORPUS_REFERENCE_BLOB_ID_COUNT_OR_DIGEST_MISMATCH",
+    "IMMUTABLE_OR_UNAUTHORIZED_DELTA",
+    "STAGE_1_REMOTE_NOT_VERIFIED",
+    "ANY_POST_SWITCH_GATE_FAILURE_TRIGGERS_AUTOMATIC_ROLLBACK",
+    "ROLLBACK_TARGET_VERIFICATION_FAILURE_REQUIRES_HUMAN_REVIEW"
+  ],
+  "response_contract": {
+    "format": "43_ORDERED_FIELDS",
+    "fields": [
+      "RESULT",
+      "VERIFIED_INITIAL_REMOTE_HEAD",
+      "AUTHORIZATION_166_STATUS_BEFORE",
+      "STAGE_1_EXECUTION_STATUS",
+      "PRE_CUTOVER_GENERAL_VALIDATOR_BASELINE",
+      "STAGE_1_FILES_CREATED",
+      "STAGE_1_FILES_MODIFIED",
+      "STAGE_1_COMMIT_SHA",
+      "VERIFIED_STAGE_1_REMOTE_HEAD",
+      "STAGE_2_AUTHORITY_GATE",
+      "STAGE_2_EXECUTION_STATUS",
+      "LOCK_RESULT",
+      "STATIC_FALLBACK_BLOB_RESULT",
+      "CANDIDATE_BLOB_RESULT",
+      "POINTER_PRE_STATE",
+      "POINTER_TRANSITION",
+      "IMMEDIATE_ACTIVE_CANDIDATE_VALIDATION",
+      "OBSERVATION_ITERATION_1",
+      "OBSERVATION_ITERATION_2",
+      "BEHAVIORAL_DIGEST_RESULT",
+      "ORACLE_RESULT",
+      "AUTHORITY_BOUNDARY_RESULT",
+      "RUNTIME_BOUNDARY_RESULT",
+      "INTEGRATION_BOUNDARY_RESULT",
+      "GENERAL_VALIDATOR_DELTA",
+      "AUTOMATIC_ROLLBACK_TRIGGERED",
+      "AUTOMATIC_ROLLBACK_RESULT",
+      "POINTER_FINAL_STATE",
+      "STATIC_FALLBACK_FINAL_STATE",
+      "CANDIDATE_FINAL_STATE",
+      "CLEANUP_RESULT",
+      "ERR_LAB_010_STATUS",
+      "PEND_LAB_041_FINAL_STATUS",
+      "PEND_LAB_042_STATUS",
+      "AUTHORIZATION_166_CONSUMPTION",
+      "INTEGRATION_FINAL_STATUS",
+      "STATIC_SELECTOR_RETIREMENT_AUTHORIZATION",
+      "RUNTIME_AND_EXTERNAL_EFFECT",
+      "STAGE_2_FILES_CREATED",
+      "STAGE_2_FILES_MODIFIED",
+      "STAGE_2_COMMIT_SHA",
+      "VERIFIED_FINAL_REMOTE_HEAD",
+      "SINGLE_NEXT_ACTION"
+    ]
+  },
+  "authorization_reusable": false,
+  "current_execution_id": null
+}

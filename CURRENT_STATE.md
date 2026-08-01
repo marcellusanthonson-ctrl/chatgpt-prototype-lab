@@ -181,3 +181,9 @@ Stage 2 se ejecutó únicamente en un worktree Git temporal desde el Stage 1 rem
 El checkpoint de ejecución se publicó y verificó remotamente como `07061091d876e97b0299ff025edd9c59c227e966` antes del consumo. `ERR-LAB-009` está resuelto; `PEND-LAB-040` está cerrado y `PEND-LAB-041` espera una decisión humana separada. La autorización 165 quedó consumida sin autoridad residual.
 
 El pointer canónico está ausente, el selector estático conserva el blob `301ba432907758fc49a9b3c86a83fc762eac4607` y el shadow registry conserva `a067cd9f95b98aa1599d21e3a0ff35fa56ac3a78` e inactividad. No hubo M5 retry, cutover, pointer persistente, runtime, integración, AWS, Terraform ni cambios externos.
+
+## Autorización 166 — Stage 1 publicado, Stage 2 concedido
+
+La autorización 166 y su Amendment 1 corrigen únicamente la referencia del corpus a `architecture/integrations/migration/M3/remediation-158/TEST_CORPUS.json` con blob `009065769f524f17f3ffdf137fb0213ee30fb150`. El corpus determinista sintético conserva 420 casos; la equivalencia publicada permanece 420/420, 13/13 por evaluador, cero divergencias y digest `9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329`.
+
+El baseline pre-cutover congela 329 hallazgos con `global_repository_pass = false`. `PEND-LAB-041` quedó resuelto autorizando el cutover acotado. El selector estático y el candidate registry permanecen inmutables; el pointer sigue ausente hasta Stage 2.

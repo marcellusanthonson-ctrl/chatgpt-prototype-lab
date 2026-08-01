@@ -159,3 +159,7 @@ El baseline histórico 335 y el sucesor 333 permanecen inmutables. El baseline p
 Stage 2 se ejecutó en el worktree temporal exigido desde `b19e702cbe7afb83b4e209b85f9e7c5dbba40fc1`. El checkpoint `07061091d876e97b0299ff025edd9c59c227e966` fue publicado y verificado antes del cierre canónico. Los 14 casos pasaron, todos los fallos inyectados terminaron en estado estático intacto y no quedó pointer, lock, copia candidata temporal ni activación parcial.
 
 La autorización 165 está consumida; `ERR-LAB-009` está resuelto y `PEND-LAB-041` es el único sucesor de esta línea. No existe autorización para M5 retry o cutover. El selector estático sigue autoritativo, el shadow registry sigue inactivo y no hubo efecto de runtime, integración, AWS, Terraform o repositorio externo.
+
+## M5 cutover 166 — Stage 1
+
+La autorización 166 con Amendment 1 está publicada para el cutover atómico acotado. El corpus canónico es `architecture/integrations/migration/M3/remediation-158/TEST_CORPUS.json@009065769f524f17f3ffdf137fb0213ee30fb150`; el baseline pre-cutover contiene 329 hallazgos y no declara PASS global. Stage 2 queda concedido y no iniciado hasta verificar el commit remoto de Stage 1.

@@ -1,5 +1,3 @@
-La autorización 166 con Amendment 1 tiene Stage 1 publicado y Stage 2 concedido, no iniciado hasta verificar el Stage 1 remoto. Usa exclusivamente el corpus `architecture/integrations/migration/M3/remediation-158/TEST_CORPUS.json@009065769f524f17f3ffdf137fb0213ee30fb150`. Preserva el selector estático como fallback inmutable y ejecuta rollback automático a STATIC ante cualquier gate fallido.
-
 Continúa ChatGPT Prototype LAB reconstruyendo primero el estado desde `marcellusanthonson-ctrl/chatgpt-prototype-lab`, rama `main`, entrypoint `project-sources/chatgpt/START_HERE.md`; verifica el HEAD remoto vigente y sigue exactamente su orden de lectura.
 
 La autorización 165 completó Stage 1 y ejecutó Stage 2 desde el parent remoto verificado `b19e702cbe7afb83b4e209b85f9e7c5dbba40fc1`. El rollback drill pasó 14/14 y su checkpoint `07061091d876e97b0299ff025edd9c59c227e966` fue verificado remotamente antes del consumo. La autorización 165 está consumida y no es reutilizable.

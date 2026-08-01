@@ -1,11 +1,3 @@
-# Continuidad actual — autorización 166 Stage 1, cutover concedido
-
-Fecha: 2026-08-01T09:48:00-04:00
-
-La autorización 166 con Amendment 1 fija el corpus `architecture/integrations/migration/M3/remediation-158/TEST_CORPUS.json@009065769f524f17f3ffdf137fb0213ee30fb150`, preserva el selector estático como fallback inmutable y concede Stage 2 únicamente desde el Stage 1 remoto verificado. El baseline pre-cutover congela 329 hallazgos con `global_repository_pass = false`.
-
-## Historial preservado
-
 # Continuidad actual — autorización 165 consumida, rollback drill PASS 14/14
 
 Fecha: 2026-07-31T23:59:00-04:00

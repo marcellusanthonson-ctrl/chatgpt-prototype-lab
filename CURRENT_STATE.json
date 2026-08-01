@@ -1,11 +1,11 @@
 {
   "schema_version": "2.5.0",
   "document_id": "lab.current-state",
-  "version": "2.5.44",
-  "status": "M5_OPERATIONAL_ROLLBACK_DRILL_PASS_AWAITING_SEPARATE_M5_RETRY_OR_CUTOVER_DECISION",
-  "updated_at": "2026-07-31",
+  "version": "2.5.45",
+  "status": "M5_BOUNDED_CUTOVER_166_GRANTED_AWAITING_EXECUTION",
+  "updated_at": "2026-08-01",
   "active_project": "lab",
-  "current_phase": "M5_OPERATIONAL_ROLLBACK_DRILL_PASS_AWAITING_SEPARATE_M5_RETRY_OR_CUTOVER_DECISION",
+  "current_phase": "M5_BOUNDED_CUTOVER_166_GRANTED_AWAITING_EXECUTION",
   "methodology": {
     "version": "2.1",
     "path": "METHODOLOGY.md"
@@ -221,7 +221,8 @@
     "integration_factory_m5_attempt_002_active_authorization_semantics_reconciliation_163": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "integration_factory_m5_canonical_open_error_decision_baseline_reconciliation_164": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "integration_factory_m5_stage_aware_validator_remediation_162": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "integration_factory_m5_canonical_correction_and_conditional_rollback_drill_165": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+    "integration_factory_m5_canonical_correction_and_conditional_rollback_drill_165": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "integration_factory_m5_bounded_cutover_observation_and_automatic_rollback_166": "GRANTED_STAGE_1_CONSUMED_STAGE_2_GRANTED_NOT_STARTED"
   },
   "verified_external_heads": {
     "symphonie": "31dd1345026240c83b015feef34d6f7f2d2147b7",
@@ -251,8 +252,8 @@
     "SYMPHONIE_LIVHAVN_MONOLITHIC_VISUAL_CALIBRATION_083_READY_WITH_BOUNDED_GAPS",
     "INTEGRATION_FACTORY_M1_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_VALIDATION_PASS"
   ],
-  "next_authorized_action": "NONE_AFTER_AUTHORIZATION_165_CONSUMPTION",
-  "next_recommended_transition": "JONATHAN_MARTINEZ_DECIDES_WHETHER_TO_AUTHORIZE_A_SEPARATE_M5_RETRY_OR_CUTOVER_ATTEMPT",
+  "next_authorized_action": "EXECUTE_STAGE_2_BOUNDED_M5_CUTOVER_FROM_VERIFIED_STAGE_1_REMOTE_HEAD",
+  "next_recommended_transition": "EXECUTE_AUTHORIZED_ATOMIC_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK",
   "continuity_read_order": [
     "LAB_CONTRACT.md",
     "METHODOLOGY.md",
@@ -495,7 +496,7 @@
     "authority_effect": "NONE_AFTER_CONSUMPTION"
   },
   "integration_factory_migration": {
-    "status": "M5_OPERATIONAL_ROLLBACK_DRILL_PASS_AWAITING_SEPARATE_M5_RETRY_OR_CUTOVER_DECISION",
+    "status": "M5_BOUNDED_CUTOVER_166_GRANTED_AWAITING_EXECUTION",
     "architecture": "PROVIDER_AND_TECHNOLOGY_NEUTRAL",
     "global_preferred_stack": "NONE",
     "production_provider": "NONE",
@@ -614,6 +615,27 @@
       "active_pointer": "ABSENT",
       "runtime_effect": "NONE",
       "integration_effect": "NONE"
+    },
+    "m5_bounded_cutover_observation_and_automatic_rollback_166": {
+      "authorization": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166",
+      "amendment": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166_AMENDMENT_1_CANONICAL_M3_CORPUS_REFERENCE_CORRECTION",
+      "status": "M5_BOUNDED_CUTOVER_166_GRANTED_AWAITING_EXECUTION",
+      "verified_initial_parent_head": "3a7470255f367212fc373fb7eefd9fe112c39f12",
+      "stage_1": "CONSUMED_ON_VERIFIED_STAGE_1_REMOTE_PUBLICATION",
+      "stage_2": "GRANTED_NOT_STARTED_AWAITING_VERIFIED_STAGE_1_REMOTE_HEAD",
+      "pre_cutover_general_validator_findings": 329,
+      "corpus_path": "architecture/integrations/migration/M3/remediation-158/TEST_CORPUS.json",
+      "corpus_blob": "009065769f524f17f3ffdf137fb0213ee30fb150",
+      "observation_plan": "TWO_ITERATIONS_420_OF_420_13_OF_13_ZERO_DIVERGENCES_EXACT_DIGEST",
+      "static_selector": "IMMUTABLE_FALLBACK",
+      "candidate_registry": "INACTIVE_UNCHANGED_UNTIL_POINTER_SWITCH",
+      "active_pointer": "ABSENT_AWAITING_STAGE_2",
+      "m5_retry_authorized": true,
+      "cutover_authorized": true,
+      "persistent_active_pointer_authorized": true,
+      "static_selector_retirement_authorized": false,
+      "runtime_effect": "NONE_UNTIL_STAGE_2_BOUNDED_OBSERVATION",
+      "integration_effect": "NONE_UNTIL_STAGE_2_SINGLE_POINTER"
     }
   }
 }

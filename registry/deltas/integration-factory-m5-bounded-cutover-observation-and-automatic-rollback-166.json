@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "integration-factory-m5-bounded-cutover-observation-and-automatic-rollback-166",
+  "project_id": "lab",
+  "authorization_id": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166",
+  "amendment_id": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166_AMENDMENT_1_CANONICAL_M3_CORPUS_REFERENCE_CORRECTION",
+  "updated_at": "2026-08-01",
+  "stage_1": {
+    "status": "PASS_CONSUMED_ON_VERIFIED_STAGE_1_REMOTE_PUBLICATION",
+    "canonical_state": "M5_BOUNDED_CUTOVER_166_GRANTED_AWAITING_EXECUTION",
+    "pre_cutover_general_validator": {
+      "finding_count": 329,
+      "exit_code": 1,
+      "structured_inventory_digest": "7014f40da42487c7de502c6e209e10b751b8f1718e4c148663c2511ba2bc705b",
+      "raw_ordered_message_digest": "3b724dbb28e9922e1e658bb07d9c5cdbbbe33167553e62398b43c88056af258d",
+      "global_repository_pass": false
+    },
+    "corpus": {
+      "path": "architecture/integrations/migration/M3/remediation-158/TEST_CORPUS.json",
+      "blob": "009065769f524f17f3ffdf137fb0213ee30fb150",
+      "id": "INTEGRATION_FACTORY_M3_REMEDIATION_158_CORPUS_001",
+      "case_count": 420
+    },
+    "m3_equivalence": "420_OF_420_13_OF_13_PER_EVALUATOR_ZERO_DIVERGENCES_EXACT_DETERMINISTIC_DIGEST"
+  },
+  "stage_2": {
+    "status": "GRANTED_NOT_STARTED_AWAITING_VERIFIED_STAGE_1_REMOTE_HEAD"
+  },
+  "active_authorization": "AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166",
+  "m5_retry_authorized": true,
+  "cutover_authorized": true,
+  "active_pointer_authorized": true,
+  "static_selector_retirement_authorized": false,
+  "runtime_effect": "NONE_UNTIL_STAGE_2",
+  "integration_effect": "NONE_UNTIL_STAGE_2_SINGLE_POINTER"
+}
