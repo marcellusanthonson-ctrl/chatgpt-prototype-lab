@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "roadmap-canonical-reference-behavior-core-176",
+  "project_id": "lab",
+  "updated_at": "2026-08-02",
+  "decision": {
+    "id": "DEC-LAB-031",
+    "status": "APPROVED_IN_FORCE"
+  },
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176",
+    "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "approved_by": "Jonathan Martínez",
+    "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176.json"
+  },
+  "stage_0": {
+    "status": "CANONICAL_STATE_RECONCILED",
+    "err_lab_011": "CLOSED_BY_APPROVED_SECTION_SCOPED_SOURCE_FIDELITY",
+    "pend_lab_046": "CLOSED_BY_APPROVED_SOURCE_FIDELITY",
+    "candidate_002": "HUMAN_APPROVED_SOURCE_FIDELITY_CANONICAL_REFERENCE_DESIGNATED",
+    "authorization_173": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "previous_active_authority": "NONE"
+  },
+  "stage_1": {
+    "status": "CANONICAL_REFERENCE_IMPLEMENTATION_DESIGNATED",
+    "effect_id": "ROADMAP-VERTICAL-PROGRESS-001",
+    "reference_id": "CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
+    "pointer": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/CANONICAL_REFERENCE.json",
+    "reference_blob_sha": "66100821888e37e769a7dcc1f9af53d30a74175e",
+    "historical_neutral_derivation": "REJECTED_AS_CANONICAL_REFERENCE_PRESERVED_HISTORICALLY"
+  },
+  "stage_2": {
+    "status": "BEHAVIOR_CORE_EXTRACTED_AND_VALIDATED_PASS_CONTROLLED_EXACT_BYTES",
+    "behavior_core_id": "ROADMAP-VERTICAL-PROGRESS-BEHAVIOR-CORE-001",
+    "root": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core",
+    "normal_motion": "PASS_7_OF_7",
+    "reduced_motion": "PASS_7_OF_7",
+    "reference_transition_checks": "PASS_7_OF_7",
+    "horizontal_overflow": "ZERO",
+    "external_requests": "ZERO",
+    "real_localhost_automation": "NOT_ESTABLISHED_BLOCKED_BY_EXECUTION_ENVIRONMENT"
+  },
+  "evidence": {
+    "id": "EVD-LAB-ROADMAP-CANONICAL-REFERENCE-BEHAVIOR-CORE-176",
+    "path": "projects/lab/evidence/EVD-LAB-ROADMAP-CANONICAL-REFERENCE-BEHAVIOR-CORE-176.json"
+  },
+  "pending": {
+    "id": "PEND-LAB-043",
+    "status": "ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_COMPLETE_REMAINING_MOTION_LIBRARY_GATES_PENDING"
+  },
+  "preserved": {
+    "global_phase": "PRIORITY_INTEGRATIONS_PHASE_1_CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED",
+    "statistics_counter": "HUMAN_REVIEW_PENDING",
+    "reference_implementation_blob_sha": "66100821888e37e769a7dcc1f9af53d30a74175e",
+    "comparison_metrics_blob_sha": "87254c059ef32975e29327731968f028bbc46fe4",
+    "source_provenance_blob_sha": "5233884b89de573b631f9f2257649f539c6f704b",
+    "carolina_repository_mutation": "NONE"
+  },
+  "non_authorizations": [
+    "NO_CANONICAL_REPLACEMENT",
+    "NO_NEUTRAL_ADAPTATION",
+    "NO_REUSABLE_PROMOTION",
+    "NO_PRODUCT_INTEGRATION",
+    "NO_RUNTIME_OR_DEPLOYMENT"
+  ],
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_176_CONSUMPTION"
+}
