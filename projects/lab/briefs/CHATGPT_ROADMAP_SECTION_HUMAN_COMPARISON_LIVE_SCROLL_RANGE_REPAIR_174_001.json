@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "task_id": "CHATGPT_ROADMAP_SECTION_HUMAN_COMPARISON_LIVE_SCROLL_RANGE_REPAIR_174_001",
   "project_id": "lab",
-  "status": "ACTIVE",
+  "status": "COMPLETE_PASS_NEW_HUMAN_REVIEW_REQUIRED",
   "objective": "Repair only candidate 002 HUMAN_COMPARISON.html so the review surface measures the live stabilized child range, reconstructs the trailing scroll context excluded by section isolation, and confirms the real terminal state in both panels.",
   "executor": "ChatGPT",
   "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
@@ -66,5 +66,38 @@
     "NEW_REVIEW_LINK",
     "AUTHORIZATION_STATE",
     "SINGLE_NEXT_ACTION"
+  ],
+  "verified_root_causes": [
+    "CACHED_MAX_SCROLL_MEASURED_BEFORE_360MS_CHILD_STABILIZATION",
+    "SECTION_ISOLATION_REMOVED_POST_SECTION_SCROLL_CONTEXT_REQUIRED_BY_VIEWPORT_TRIGGER_FORMULA",
+    "OVERFLOW_X_HIDDEN_DISABLED_STICKY_REVIEW_SHELL"
+  ],
+  "acceptance_results": {
+    "ALL_SIX_REQUIRED_VIEWPORTS_PASS": "PASS",
+    "DIRECT_SOURCE_CONTEXT_TERMINAL_COMPLETE": "PASS",
+    "COMPARISON_BOTH_PANELS_TERMINAL_COMPLETE": "PASS",
+    "DIRECT_AND_COMPARISON_TERMINAL_PARITY": "PASS",
+    "BOTH_CHILD_SCROLL_TOP_EQUALS_LIVE_MAXIMUM": "PASS",
+    "BOTH_TIMELINES_IS_END_ACTIVE": "PASS",
+    "BOTH_THIRD_NODES_ACTIVE": "PASS",
+    "BOTH_TERMINAL_CAPS_TEAL": "PASS",
+    "NO_USER_NESTED_SCROLL": "PASS",
+    "REFERENCE_IMPLEMENTATION_BLOB_UNCHANGED": "PASS_SHA_66100821888E37E769A7DCC1F9AF53D30A74175E",
+    "NO_CAROLINA_MUTATION": "PASS"
+  },
+  "result": "PASS_TECHNICAL_REPAIR_NEW_HUMAN_REVIEW_REQUIRED",
+  "evidence_ref": "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-LIVE-RANGE-174.json",
+  "authorization_173_stage_2": "CONDITIONALLY_AUTHORIZED_AWAITING_EXPLICIT_HUMAN_DETERMINATION_NOT_TRIGGERED",
+  "human_source_fidelity_decision": "PENDING_NEW_COMPLETE_REVIEW",
+  "publication_commits": [
+    "0365ec738c395ddec2013adaf6a28a27b1d1a267",
+    "59823debd0d94bc5414065681d2a7de05e401c79",
+    "0d66fbd8210ebbc993f90dc8823429f72787c6f1",
+    "ce9e59b36888167f309170ab4d41ef52a2ff4b05",
+    "43212b35e321798886394c35a6d76ac2c0287949",
+    "8fccba43fcff68c9cd4f325de2884f3c8758fe6f",
+    "bc775af38f5d517edbf3d4ba57bc4a9f054d44bd",
+    "4f9ec379608699c0d091eccbc92c3378a238cc06",
+    "5f00df7386d350bba5975d73125347fb08ed990c"
   ]
 }
