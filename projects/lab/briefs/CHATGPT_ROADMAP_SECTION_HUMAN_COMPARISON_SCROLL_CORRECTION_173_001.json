@@ -2,54 +2,81 @@
   "schema_version": "1.0.0",
   "task_id": "CHATGPT_ROADMAP_SECTION_HUMAN_COMPARISON_SCROLL_CORRECTION_173_001",
   "project_id": "lab",
-  "status": "STAGE_1_RESULT_REVERSED_BY_HUMAN_REVIEW_STAGE_2_TRIGGER_PENDING",
-  "objective": "Correct only the candidate 002 human comparison surface so one outer scroll drives both complete panels synchronously from start to terminal cap.",
+  "status": "COMPLETE_STAGE_2_HUMAN_SOURCE_FIDELITY_APPROVED_RECONCILED",
+  "objective": "Correct only the candidate 002 human comparison surface so one outer scroll drives both complete panels synchronously from start to terminal cap, then conditionally register the explicit human determination and reconcile affected canonical sources.",
   "executor": "ChatGPT",
   "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "branch": "main",
   "expected_parent_head": "62c0e2d32537fa8a3aa354e6933c5e826cbf1b37",
   "authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_SCROLL_CORRECTION_AND_CONDITIONAL_DECISION_RECONCILIATION_173",
-  "target_paths": [
-    "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/HUMAN_COMPARISON.html",
-    "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/README.md",
-    "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/MANIFEST.json",
-    "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-173.json"
-  ],
+  "stage_1": {
+    "status": "CONSUMED_RESULT_REVERSED_BY_HUMAN_EVIDENCE",
+    "result": "HUMAN_REVIEW_REVERSED_STAGE_1_PASS_SCROLL_RANGE_STALE",
+    "successor_authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_LIVE_SCROLL_RANGE_REPAIR_174",
+    "successor_brief_ref": "projects/lab/briefs/CHATGPT_ROADMAP_SECTION_HUMAN_COMPARISON_LIVE_SCROLL_RANGE_REPAIR_174_001.json",
+    "successor_evidence_ref": "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-LIVE-RANGE-174.json"
+  },
+  "stage_2": {
+    "status": "TRIGGERED_AND_CONSUMED",
+    "trigger_value": "APPROVED_SOURCE_FIDELITY",
+    "triggered_at": "2026-08-02T18:43:00-04:00",
+    "human_determination": {
+      "value": "APPROVED_SOURCE_FIDELITY",
+      "approved_by": "Jonathan Martínez",
+      "approval_source": "Explicit human approval in conversation after complete localhost review"
+    },
+    "scope_completed": [
+      "REGISTER_EXPLICIT_HUMAN_DETERMINATION",
+      "RECONCILE_AFFECTED_CANONICAL_STATE_REGISTRIES_INDEXES_AND_CONTINUITY",
+      "CLOSE_ERR_LAB_011",
+      "CLOSE_PEND_LAB_046",
+      "ADVANCE_PEND_LAB_043_WITH_REMAINING_SEPARATE_GATES",
+      "SYNCHRONIZE_CANDIDATE_AND_MOTION_LIBRARY_MANIFESTS"
+    ]
+  },
+  "final_acceptance": {
+    "COMPLETE_LOCALHOST_JOURNEY": "PASS_HUMAN_CONFIRMED",
+    "POST_TERMINAL_DEAD_SCROLL": "ABSENT_HUMAN_CONFIRMED",
+    "RESPONSIVE_ALTERNATING_CARD_LAYOUT": "PASS_HUMAN_CONFIRMED",
+    "BASELINE_AND_CANDIDATE_PARITY": "PASS_HUMAN_CONFIRMED",
+    "REFERENCE_IMPLEMENTATION_BLOB_UNCHANGED": "PASS",
+    "NO_CAROLINA_MUTATION": "PASS",
+    "HUMAN_SOURCE_FIDELITY_DECISION": "APPROVED_SOURCE_FIDELITY"
+  },
   "preserve_byte_for_byte": [
     "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/REFERENCE_IMPLEMENTATION.html",
     "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/COMPARISON_METRICS.json",
     "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/SOURCE_PROVENANCE.json"
   ],
-  "acceptance_check_reassessment": {
-    "SINGLE_OUTER_VERTICAL_SCROLL": "CONFIRMED",
-    "NO_USER_OPERATED_NESTED_IFRAME_SCROLL": "CONFIRMED",
-    "BOTH_PANELS_SYNCHRONIZED": "CONFIRMED_IN_OBSERVED_RANGE",
-    "OUTER_PROGRESS_REACHES_100_PERCENT": "INSUFFICIENT_AS_TERMINAL_PROOF",
-    "EACH_CHILD_SCROLL_REACHES_ITS_EXACT_MAXIMUM": "REVERSED_STALE_CACHED_MAXIMUM",
-    "TERMINAL_REACHED_STATE_EXPOSED": "REVERSED_BY_HUMAN_VISUAL_EVIDENCE",
-    "REFERENCE_IMPLEMENTATION_BLOB_UNCHANGED": "CONFIRMED",
-    "NO_CAROLINA_MUTATION": "CONFIRMED"
-  },
-  "stage_1_result": "HUMAN_REVIEW_REVERSED_STAGE_1_PASS_SCROLL_RANGE_STALE",
-  "successor_authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_LIVE_SCROLL_RANGE_REPAIR_174",
-  "successor_brief_ref": "projects/lab/briefs/CHATGPT_ROADMAP_SECTION_HUMAN_COMPARISON_LIVE_SCROLL_RANGE_REPAIR_174_001.json",
-  "successor_evidence_ref": "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-LIVE-RANGE-174.json",
-  "stage_2_trigger_required": [
-    "APPROVED_SOURCE_FIDELITY",
-    "MODIFIED_WITH_LIMITATIONS",
-    "REJECTED_SOURCE_FIDELITY"
+  "reconciliation_refs": [
+    "registry/deltas/roadmap-section-source-fidelity-human-approval-173.json",
+    "errors/ERR-LAB-011.json",
+    "projects/lab/pending/PEND-LAB-046.json",
+    "projects/lab/pending/PEND-LAB-043.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/MANIFEST.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/MANIFEST.json",
+    "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-173.json",
+    "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-POST-TERMINAL-DEAD-SCROLL-175.json",
+    "registry/index.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json"
   ],
-  "stop_conditions": [
-    "REMOTE_HEAD_DIVERGES_FROM_AUTHORIZED_LINE",
-    "REFERENCE_IMPLEMENTATION_CHANGE_REQUIRED",
-    "PRODUCT_OR_RUNTIME_CHANGE_REQUIRED",
-    "SCOPE_EXPANSION_REQUIRED"
+  "remaining_non_authorizations": [
+    "NO_CANONICAL_REFERENCE_DESIGNATION",
+    "NO_CANONICAL_REPLACEMENT",
+    "NO_BEHAVIOR_CORE_EXTRACTION",
+    "NO_REUSABLE_PROMOTION",
+    "NO_PRODUCT_INTEGRATION",
+    "NO_CAROLINA_REPOSITORY_MUTATION",
+    "NO_RUNTIME_OR_DEPLOYMENT"
   ],
+  "result": "APPROVED_SOURCE_FIDELITY_CANONICAL_DOCUMENTARY_RECONCILIATION_COMPLETE",
+  "authority_effect": "NONE_AFTER_STAGE_2_CONSUMPTION",
   "response_contract": [
     "RESULT",
     "COMMITS",
     "VALIDATION",
-    "NEW_REVIEW_LINK",
-    "STAGE_2_TRIGGER_REQUIRED"
+    "CLOSED_ERROR_AND_PENDING",
+    "PRESERVED_NON_AUTHORIZATIONS",
+    "SINGLE_NEXT_ACTION"
   ]
 }
