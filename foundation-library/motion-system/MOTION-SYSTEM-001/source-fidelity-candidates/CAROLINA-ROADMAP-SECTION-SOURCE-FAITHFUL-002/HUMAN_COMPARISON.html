@@ -14,7 +14,7 @@
     .intro h1{margin:0 0 6px;font-size:22px;line-height:1.2}
     .status{font-weight:750;color:#0f766e}
     .intro p{max-width:1120px;margin:8px 0 0;line-height:1.5;color:#40566d}
-    .runway{position:relative;min-height:420vh}
+    .runway{position:relative;min-height:100vh}
     .review-shell{position:sticky;top:0;height:100vh;height:100svh;padding:12px;display:flex;flex-direction:column;gap:10px;background:#eef3f6;overflow:hidden}
     .toolbar{display:grid;grid-template-columns:minmax(150px,auto) minmax(100px,1fr) auto;gap:12px;align-items:center;padding:10px 12px;background:#fff;border:1px solid #dbe5ea;border-radius:12px;box-shadow:0 8px 30px rgba(17,43,72,.05)}
     .toolbar strong{font-size:13px}
@@ -258,8 +258,8 @@
             return next;
           });
           const maxInner=Math.max(1,...metrics.map(item=>item.maxScroll));
-          const terminalBuffer=Math.max(280,innerHeight*.38);
-          const requiredHeight=Math.ceil(innerHeight+maxInner+terminalBuffer);
+          const releaseMargin=16;
+          const requiredHeight=Math.ceil(innerHeight+maxInner+releaseMargin);
           if(Math.abs(runway.offsetHeight-requiredHeight)>1){
             runway.style.height=requiredHeight+'px';
           }
