@@ -1,0 +1,36 @@
+name: Validate Motion System 167
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/validate-motion-system-167.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Motion system validator
+        run: python scripts/validate_motion_system_foundation.py
+      - name: Repository validator inventory
+        shell: bash
+        run: |
+          set +e
+          python scripts/validate_repository.py 2>&1 | tee /tmp/repository-validator.txt
+          code=${PIPESTATUS[0]}
+          echo "REPOSITORY_VALIDATOR_EXIT_CODE=$code"
+          exit 0
+      - name: Portable baseline validator
+        run: python scripts/validate_repository_portable_baseline_165.py
+      - name: Protected blob verification
+        shell: bash
+        run: |
+          test "$(git rev-parse HEAD:project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json)" = "301ba432907758fc49a9b3c86a83fc762eac4607"
+          test "$(git rev-parse HEAD:architecture/integrations/migration/M2/SHADOW_INTEGRATION_REGISTRY.json)" = "a067cd9f95b98aa1599d21e3a0ff35fa56ac3a78"
+          test "$(git rev-parse HEAD:architecture/integrations/active/INTEGRATION_FACTORY_RESOLUTION_POINTER.json)" = "618c2fe00a6b23a84c5ce90361cb3b7cfa5b9053"
+          echo PROTECTED_BLOBS_PASS
