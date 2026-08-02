@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "effect_id": "ROADMAP-VERTICAL-PROGRESS-001",
   "canonical_name": "Parametric Vertical Roadmap Progress",
   "level": "COMPOSITION",
@@ -23,8 +23,32 @@
     "MODERATE_MOTION_RISK"
   ],
   "reduced_motion_strategy": "FINAL_STATE_IMMEDIATE",
-  "status": "HUMAN_REVIEW_PENDING",
-  "maximum_authorized_status": "HUMAN_REVIEW_PENDING",
+  "status": "CANONICAL_REFERENCE_DESIGNATED_BEHAVIOR_CORE_EXTRACTED_VALIDATION_PENDING_PUBLICATION",
+  "maximum_authorized_status": "CANONICAL_REFERENCE_DESIGNATED_BEHAVIOR_CORE_EXTRACTED_NOT_REUSABLY_PROMOTED",
+  "canonical_reference": {
+    "reference_id": "CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
+    "pointer": "CANONICAL_REFERENCE.json",
+    "artifact_pointer": "../../../source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/REFERENCE_IMPLEMENTATION.html",
+    "artifact_blob_sha": "66100821888e37e769a7dcc1f9af53d30a74175e",
+    "status": "CANONICAL_REFERENCE_IMPLEMENTATION_DESIGNATED",
+    "human_determination": "APPROVED_SOURCE_FIDELITY"
+  },
+  "behavior_core": {
+    "behavior_core_id": "ROADMAP-VERTICAL-PROGRESS-BEHAVIOR-CORE-001",
+    "root": "behavior-core",
+    "contract": "behavior-core/BEHAVIOR_CORE_CONTRACT.json",
+    "implementation": "behavior-core/roadmap-progress-core.js",
+    "harness": "behavior-core/BEHAVIOR_CORE_HARNESS.html",
+    "validation": "behavior-core/BEHAVIOR_CORE_VALIDATION_RESULTS.json",
+    "status": "EXTRACTED_VALIDATION_PENDING_PUBLICATION",
+    "source_independent": true
+  },
+  "historical_neutral_derivation": {
+    "status": "REJECTED_AS_CANONICAL_REFERENCE_PRESERVED_HISTORICALLY",
+    "canonical_reference": false,
+    "reusable_promotion": false,
+    "product_integration": false
+  },
   "customization_levels": [
     "L0_DEFAULT",
     "L1_TOKEN_CUSTOMIZATION",
@@ -32,6 +56,9 @@
     "L3_VISUAL_ADAPTATION",
     "L4_SIGNATURE_DERIVATION"
   ],
-  "source_reference": "CAROLINA-ROADMAP-PARAMETRIC-001",
-  "product_integration_status": "NOT_AUTHORIZED_NOT_PERFORMED"
+  "source_reference": "CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
+  "authorization_ref": "AUTHORIZATION_LAB_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176",
+  "product_integration_status": "NOT_AUTHORIZED_NOT_PERFORMED",
+  "reusable_promotion_status": "NOT_AUTHORIZED_NOT_PERFORMED",
+  "runtime_effect": "NONE"
 }
