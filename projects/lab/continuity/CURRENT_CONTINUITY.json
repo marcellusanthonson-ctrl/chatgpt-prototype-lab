@@ -1,13 +1,12 @@
 {
   "schema_version": "1.2.0",
-  "continuity_id": "LAB-CONTINUITY-ROADMAP-SECTION-SOURCE-FIDELITY-APPROVED-173-20260802",
+  "continuity_id": "LAB-CONTINUITY-ROADMAP-CANONICAL-REFERENCE-BEHAVIOR-CORE-176-20260802",
   "project_id": "lab",
-  "status": "ROADMAP_SECTION_SOURCE_FIDELITY_HUMAN_APPROVED_PRIORITY_INTEGRATIONS_PHASE_1_PRESERVED",
-  "created_at": "2026-08-02T18:43:00-04:00",
+  "status": "ROADMAP_CANONICAL_REFERENCE_DESIGNATED_BEHAVIOR_CORE_VALIDATED_PRIORITY_INTEGRATIONS_PHASE_1_PRESERVED",
+  "created_at": "2026-08-02T19:36:00-04:00",
   "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "canonical_branch": "main",
   "head_policy": "VERIFY_LIVE_AT_USE",
-  "publication_baseline_head": "eb09a88153e5589b0c9c2e00d8dae99fd3200b38",
   "current_head": "VERIFY_LIVE_AT_USE",
   "entrypoint": "project-sources/chatgpt/START_HERE.md",
   "required_reading_order": [
@@ -20,25 +19,23 @@
     "registry/projects.json",
     "projects/lab/PROJECT_STATE.json",
     "decisions/DEC-LAB-031.json",
-    "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_SECTION_ISOLATION_AND_REVALIDATION_172.json",
-    "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_SCROLL_CORRECTION_AND_CONDITIONAL_DECISION_RECONCILIATION_173.json",
-    "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_LIVE_SCROLL_RANGE_REPAIR_174.json",
-    "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SECTION_POST_TERMINAL_DEAD_SCROLL_REMOVAL_175.json",
-    "registry/deltas/roadmap-section-source-fidelity-human-approval-173.json",
-    "errors/ERR-LAB-011.json",
-    "projects/lab/pending/PEND-LAB-046.json",
-    "projects/lab/pending/PEND-LAB-043.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176.json",
+    "projects/lab/briefs/CODEX_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176_001.json",
     "foundation-library/motion-system/MOTION-SYSTEM-001/MANIFEST.json",
-    "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/MANIFEST.json",
-    "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-173.json",
-    "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-POST-TERMINAL-DEAD-SCROLL-175.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/MOTION_EFFECTS_REGISTRY.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/CANONICAL_REFERENCE.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/BEHAVIOR_CORE_CONTRACT.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/BEHAVIOR_CORE_VALIDATION_RESULTS.json",
+    "projects/lab/evidence/EVD-LAB-ROADMAP-CANONICAL-REFERENCE-BEHAVIOR-CORE-176.json",
+    "projects/lab/pending/PEND-LAB-043.json",
+    "registry/deltas/roadmap-canonical-reference-behavior-core-176.json",
     "projects/lab/continuity/CURRENT_CONTINUITY.json"
   ],
   "repository_state": [
     {
       "name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
       "branch": "main",
-      "role": "CANONICAL_DOCUMENTARY_MUTATION_TARGET",
+      "role": "CANONICAL_DOCUMENTARY_AND_FOUNDATION_MUTATION_TARGET",
       "head": "VERIFY_LIVE_AT_USE"
     },
     {
@@ -55,106 +52,64 @@
     "runtime_authorized": false,
     "integration_authorized": false,
     "product_changes_authorized": false,
-    "active_execution_authority": "NONE_AFTER_AUTHORIZATION_173_STAGE_2_CONSUMPTION"
+    "active_execution_authority": "NONE_AFTER_AUTHORIZATION_176_CONSUMPTION"
   },
   "facts": [
     {
-      "claim": "Candidate 002 is an exact section-scoped extraction of .ca-roadmap-editorial from the protected Carolina commit.",
+      "claim": "Candidate 002 remains the human-approved source-faithful section extraction from the protected Carolina commit.",
       "source_refs": [
-        "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/SOURCE_PROVENANCE.json"
+        "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/MANIFEST.json"
       ]
     },
     {
-      "claim": "Automated gates passed with SSIM 1.0 and zero style, geometry, axis, concentricity, external request, isolation and horizontal-overflow mismatches.",
+      "claim": "Authorization 176 designated candidate 002 as the canonical reference implementation by pointer without copying, moving, rewriting or modifying the protected reference artifact.",
       "source_refs": [
-        "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/COMPARISON_METRICS.json"
+        "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/CANONICAL_REFERENCE.json"
       ]
     },
     {
-      "claim": "The final localhost human review confirmed the complete journey, no purposeless post-terminal scroll, responsive alternating card layout and baseline-candidate visual parity.",
+      "claim": "The source-independent behavior core passed seven normal-motion, seven reduced-motion and seven reference-transition controlled exact-byte browser checks.",
       "source_refs": [
-        "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-173.json",
-        "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-POST-TERMINAL-DEAD-SCROLL-175.json"
+        "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/BEHAVIOR_CORE_VALIDATION_RESULTS.json"
+      ]
+    },
+    {
+      "claim": "Automated real-localhost browser navigation was not established because the execution environment returned ERR_BLOCKED_BY_ADMINISTRATOR.",
+      "source_refs": [
+        "projects/lab/evidence/EVD-LAB-ROADMAP-CANONICAL-REFERENCE-BEHAVIOR-CORE-176.json"
       ]
     }
   ],
-  "human_determination": {
-    "value": "APPROVED_SOURCE_FIDELITY",
-    "approved_by": "Jonathan Martínez",
-    "determined_at": "2026-08-02T18:43:00-04:00",
+  "decision": {
+    "id": "DEC-LAB-031",
+    "status": "APPROVED_IN_FORCE",
+    "effect": "SOURCE_FIDELITY_WAS_PROVEN_BEFORE_CANONICAL_REFERENCE_DESIGNATION_AND_BEHAVIOR_CORE_EXTRACTION"
+  },
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176",
+    "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "stage_0": "CANONICAL_STATE_RECONCILED",
+    "stage_1": "CANONICAL_REFERENCE_IMPLEMENTATION_DESIGNATED",
+    "stage_2": "BEHAVIOR_CORE_EXTRACTED_AND_VALIDATED_PASS_CONTROLLED_EXACT_BYTES",
+    "active": false
+  },
+  "results": {
     "candidate_id": "CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
-    "source_refs": [
-      "registry/deltas/roadmap-section-source-fidelity-human-approval-173.json",
-      "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-173.json"
-    ]
+    "candidate_status": "HUMAN_APPROVED_SOURCE_FIDELITY_CANONICAL_REFERENCE_DESIGNATED",
+    "effect_id": "ROADMAP-VERTICAL-PROGRESS-001",
+    "canonical_reference_pointer": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/CANONICAL_REFERENCE.json",
+    "behavior_core_id": "ROADMAP-VERTICAL-PROGRESS-BEHAVIOR-CORE-001",
+    "behavior_core_status": "EXTRACTED_AND_VALIDATED_PASS_CONTROLLED_EXACT_BYTES",
+    "historical_neutral_derivation": "REJECTED_AS_CANONICAL_REFERENCE_PRESERVED_HISTORICALLY"
   },
-  "decisions": [
-    {
-      "id": "DEC-LAB-031",
-      "status": "APPROVED_IN_FORCE",
-      "effect": "SOURCE_FIDELITY_PROVEN_BEFORE_ANY_SEPARATE_ABSTRACTION_NEUTRALIZATION_OR_REUSABLE_PROMOTION_DECISION",
-      "source_refs": ["decisions/DEC-LAB-031.json"]
-    }
-  ],
-  "authorizations": {
-    "consumed": [
-      {
-        "id": "AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_SECTION_ISOLATION_AND_REVALIDATION_172",
-        "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
-      },
-      {
-        "id": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_SCROLL_CORRECTION_AND_CONDITIONAL_DECISION_RECONCILIATION_173",
-        "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-        "stage_1": "CONSUMED_RESULT_REVERSED_BY_HUMAN_EVIDENCE",
-        "stage_2": "TRIGGERED_BY_APPROVED_SOURCE_FIDELITY_AND_CONSUMED"
-      },
-      {
-        "id": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_LIVE_SCROLL_RANGE_REPAIR_174",
-        "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
-      },
-      {
-        "id": "AUTHORIZATION_LAB_ROADMAP_SECTION_POST_TERMINAL_DEAD_SCROLL_REMOVAL_175",
-        "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
-      }
-    ],
-    "active": []
-  },
-  "results": [
-    {
-      "id": "CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
-      "status": "HUMAN_APPROVED_SOURCE_FIDELITY",
-      "canonical_reference_designation": false,
-      "reusable_promotion": false,
-      "product_integration": false
-    },
-    {
-      "id": "AUTHORIZATION-175-POST-TERMINAL-REPAIR",
-      "status": "HUMAN_LOCALHOST_REVALIDATION_PASS"
-    }
-  ],
   "errors": [
-    {
-      "id": "ERR-LAB-010",
-      "status": "CLOSED_UNCHANGED"
-    },
-    {
-      "id": "ERR-LAB-011",
-      "status": "CLOSED_BY_APPROVED_SECTION_SCOPED_SOURCE_FIDELITY"
-    }
+    {"id": "ERR-LAB-010", "status": "CLOSED_UNCHANGED"},
+    {"id": "ERR-LAB-011", "status": "CLOSED_BY_APPROVED_SECTION_SCOPED_SOURCE_FIDELITY"}
   ],
   "pending": [
-    {
-      "id": "PEND-LAB-046",
-      "status": "CLOSED_BY_APPROVED_SOURCE_FIDELITY"
-    },
-    {
-      "id": "PEND-LAB-043",
-      "status": "ROADMAP_SOURCE_FIDELITY_APPROVED_REMAINING_LIBRARY_POPULATION_AND_SEPARATE_PROMOTION_DECISIONS_PENDING"
-    },
-    {
-      "id": "PEND-LAB-045",
-      "status": "UNCHANGED_PRIORITY_INTEGRATIONS_PHASE_1_FOLLOWUP"
-    }
+    {"id": "PEND-LAB-046", "status": "CLOSED_BY_APPROVED_SOURCE_FIDELITY"},
+    {"id": "PEND-LAB-043", "status": "ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_COMPLETE_REMAINING_MOTION_LIBRARY_GATES_PENDING"},
+    {"id": "PEND-LAB-045", "status": "UNCHANGED_PRIORITY_INTEGRATIONS_PHASE_1_FOLLOWUP"}
   ],
   "preserved_artifacts": {
     "reference_implementation_blob_sha": "66100821888e37e769a7dcc1f9af53d30a74175e",
@@ -163,18 +118,17 @@
     "carolina_repository_mutation": "NONE"
   },
   "non_authorizations": [
-    "NO_CANONICAL_REFERENCE_DESIGNATION",
     "NO_CANONICAL_REPLACEMENT",
-    "NO_BEHAVIOR_CORE_EXTRACTION",
+    "NO_NEUTRAL_ADAPTATION",
     "NO_REUSABLE_PROMOTION",
     "NO_PRODUCT_INTEGRATION",
     "NO_CAROLINA_REPOSITORY_MUTATION",
     "NO_RUNTIME_OR_DEPLOYMENT"
   ],
   "next_action": {
-    "single": "AWAIT_SEPARATE_EXPLICIT_AUTHORIZATION_FOR_CANONICAL_REFERENCE_DESIGNATION_AND_BEHAVIOR_CORE_EXTRACTION_OR_CONTINUE_ANOTHER_AUTHORIZED_LAB_PRIORITY",
-    "authority_required": true
+    "single": "HUMAN_REVIEW_STATISTICS_COUNTER_STATIC_SUFFIX_001",
+    "authority_required_for_repository_write": true
   },
-  "archived_predecessor": "projects/lab/continuity/archive/LAB-CONTINUITY-ROADMAP-SOURCE-FIDELITY-171-20260802.pointer.json",
-  "authority_effect": "NONE_AFTER_AUTHORIZATION_173_STAGE_2_CONSUMPTION"
+  "archived_predecessor": "projects/lab/continuity/archive/LAB-CONTINUITY-ROADMAP-SECTION-SOURCE-FIDELITY-APPROVED-173-20260802.pointer.json",
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_176_CONSUMPTION"
 }
