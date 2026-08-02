@@ -53,6 +53,26 @@ jobs:
           amendment['authority_effect'] = 'NONE_AFTER_CONSUMPTION'
           save(amendment_path, amendment)
 
+          auth_registry_path = Path('registry/authorizations.json')
+          auth_registry = load(auth_registry_path)
+          update_record(auth_registry['records'], {
+              'id': 'AUTHORIZATION_LAB_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_167',
+              'state_key': 'transversal_motion_effects_library_foundation_167',
+              'project_id': 'lab',
+              'status': 'CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION',
+              'approved_by': 'Jonathan Martínez',
+              'scope': 'TRANSVERSAL_MOTION_SYSTEM_FOUNDATION',
+              'canonical_path': 'projects/lab/authorizations/AUTHORIZATION_LAB_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_167.json',
+              'commit_authorized': False,
+              'push_authorized': False,
+              'runtime_authorized': False,
+              'integration_authorized': False,
+              'product_changes_authorized': False,
+              'updated_at': '2026-08-01'
+          })
+          auth_registry['updated_at'] = '2026-08-01'
+          save(auth_registry_path, auth_registry)
+
           current = load(Path('CURRENT_STATE.json'))
           current['authorization_state']['transversal_motion_effects_library_foundation_167'] = 'CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION'
           motion = current['canonical_model']['motion_system_foundation']
@@ -205,7 +225,7 @@ jobs:
           if ! git diff --quiet; then
             git config user.name "ChatGPT Prototype LAB"
             git config user.email "actions@users.noreply.github.com"
-            git add projects/lab/authorizations/AUTHORIZATION_LAB_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_167_AMENDMENT_1_STAGE_2_PROGRESS.json CURRENT_STATE.json tests/expected_repository_state.json projects/lab/PROJECT_STATE.json projects/lab/continuity/CURRENT_CONTINUITY.json projects/lab/continuity/CURRENT_CONTINUITY.md projects/lab/continuity/START_PROMPT.md projects/lab/pending/PEND-LAB-043.json projects/lab/PENDING.json projects/lab/ROADMAP.json registry/deltas/transversal-motion-system-foundation-167.json projects/lab/evidence/EVD-LAB-MOTION-SYSTEM-001.json foundation-library/motion-system/MOTION-SYSTEM-001/evidence/VALIDATION_SUMMARY.json projects/lab/briefs/CODEX_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_001_STAGE_2_STATUS.json CURRENT_STATE.md projects/lab/PROJECT_STATE.md projects/lab/test-executions/MOTION-SYSTEM-167-FINALIZATION-DONE.json
+            git add registry/authorizations.json projects/lab/authorizations/AUTHORIZATION_LAB_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_167_AMENDMENT_1_STAGE_2_PROGRESS.json CURRENT_STATE.json tests/expected_repository_state.json projects/lab/PROJECT_STATE.json projects/lab/continuity/CURRENT_CONTINUITY.json projects/lab/continuity/CURRENT_CONTINUITY.md projects/lab/continuity/START_PROMPT.md projects/lab/pending/PEND-LAB-043.json projects/lab/PENDING.json projects/lab/ROADMAP.json registry/deltas/transversal-motion-system-foundation-167.json projects/lab/evidence/EVD-LAB-MOTION-SYSTEM-001.json foundation-library/motion-system/MOTION-SYSTEM-001/evidence/VALIDATION_SUMMARY.json projects/lab/briefs/CODEX_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_001_STAGE_2_STATUS.json CURRENT_STATE.md projects/lab/PROJECT_STATE.md projects/lab/test-executions/MOTION-SYSTEM-167-FINALIZATION-DONE.json
             git commit -m "docs(lab): consume motion system authorization 167"
             git push origin HEAD:${{ github.head_ref }}
           fi
