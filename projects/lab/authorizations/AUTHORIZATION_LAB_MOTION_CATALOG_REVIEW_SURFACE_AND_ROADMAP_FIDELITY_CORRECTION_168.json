@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_MOTION_CATALOG_REVIEW_SURFACE_AND_ROADMAP_FIDELITY_CORRECTION_168",
+  "project_id": "lab",
+  "status": "GRANTED_STAGE_1_PUBLICATION_IN_PROGRESS_STAGE_2_CONDITIONAL",
+  "authorization_class": "TWO_STAGE_MOTION_REVIEW_SURFACE_AND_FIDELITY_CORRECTION",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-08-02",
+  "approval_source": "AUTORIZO AUTHORIZATION_LAB_MOTION_CATALOG_REVIEW_SURFACE_AND_ROADMAP_FIDELITY_CORRECTION_168. COMMIT_AUTHORIZATION_LAB = YES. PUSH_AUTHORIZATION_LAB = YES. SOURCE_FILE_UPDATE_AUTHORIZATION_LAB = YES.",
+  "grant_inferred": false,
+  "technical_executor": "CODEX_BOUNDED_EXECUTOR",
+  "codex_autonomous_authority": "NO",
+  "repository": {
+    "name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "branch": "main",
+    "expected_parent_head": "384313477b4034dbcf6fbdb26c0dcdc256b4c7aa",
+    "head_policy": "VERIFY_LIVE_AT_USE",
+    "entrypoint": "project-sources/chatgpt/START_HERE.md"
+  },
+  "objective": "Correct only the motion catalog review surface, the mathematical, temporal and visual fidelity of ROADMAP-VERTICAL-PROGRESS-001, and the evidence and governed state associated with the confirmed defect.",
+  "authority": {
+    "commit_authorized": true,
+    "push_authorized": true,
+    "source_file_update_authorized": true,
+    "visible_browser_execution_authorized": true,
+    "read_only_external_source_inspection_authorized": true,
+    "runtime_authorized": false,
+    "product_changes_authorized": false,
+    "external_repository_mutation_authorized": false,
+    "deployment_authorized": false,
+    "new_effect_implementation_authorized": false,
+    "counter_modification_authorized": false,
+    "pointer_mutation_authorized": false,
+    "candidate_registry_mutation_authorized": false,
+    "static_selector_mutation_authorized": false
+  },
+  "stages": [
+    {
+      "stage_id": "STAGE_1_GOVERNANCE_PUBLICATION",
+      "status": "IN_PROGRESS",
+      "required_outputs": [
+        "projects/lab/authorizations/AUTHORIZATION_LAB_MOTION_CATALOG_REVIEW_SURFACE_AND_ROADMAP_FIDELITY_CORRECTION_168.json",
+        "projects/lab/briefs/CODEX_MOTION_CATALOG_REVIEW_SURFACE_AND_ROADMAP_FIDELITY_CORRECTION_001.json",
+        "registry/deltas/motion-catalog-review-surface-and-roadmap-fidelity-correction-168.json"
+      ],
+      "consumption_rule": "PASS_AFTER_REMOTE_PUBLICATION_AND_HEAD_VERIFICATION"
+    },
+    {
+      "stage_id": "STAGE_2_CORRECTION_VALIDATION_AND_RECONCILIATION",
+      "status": "GRANTED_CONDITIONAL_ON_VERIFIED_STAGE_1_PASS",
+      "consumption_rule": "CONSUMED_AFTER_COMPLETE_VALIDATED_REMOTE_PUBLICATION"
+    }
+  ],
+  "authorized_functional_paths": [
+    "foundation-library/motion-system/MOTION-SYSTEM-001/catalog/MOTION_EFFECTS_CATALOG.html",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/EFFECT_DEMO.html",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/FORMULA_CONTRACT.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/TEST_CONTRACT.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/TEST_VECTORS.json"
+  ],
+  "protected_paths": {
+    "counter_root": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001",
+    "static_selector": {
+      "path": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json",
+      "blob": "301ba432907758fc49a9b3c86a83fc762eac4607"
+    },
+    "candidate_registry": {
+      "path": "architecture/integrations/migration/M2/SHADOW_INTEGRATION_REGISTRY.json",
+      "blob": "a067cd9f95b98aa1599d21e3a0ff35fa56ac3a78"
+    },
+    "active_pointer": {
+      "path": "architecture/integrations/active/INTEGRATION_FACTORY_RESOLUTION_POINTER.json",
+      "blob": "618c2fe00a6b23a84c5ce90361cb3b7cfa5b9053"
+    }
+  },
+  "external_source": {
+    "repository": "marcellusanthonson-ctrl/carolina-md-next-landing",
+    "commit": "52654da574952148f96d051e439bff1cbc7b4b9d",
+    "primary_path": "hooks/landing/_scrollReveal.ts",
+    "styles_path": "public/landing/carolina_md_approved_patch.css",
+    "mutation": "PROHIBITED_READ_ONLY_REFERENCE"
+  },
+  "preservation_gates": {
+    "general_validator_expected_finding_count": 329,
+    "global_repository_pass_expected": false,
+    "added_findings_expected": 0,
+    "removed_findings_expected": 0,
+    "protected_blobs_must_remain_byte_identical": true,
+    "effect_status_ceiling": "HUMAN_REVIEW_PENDING"
+  },
+  "stop_conditions": [
+    "EXPECTED_PARENT_HEAD_MISMATCH",
+    "SOURCE_REFERENCE_MISMATCH",
+    "COUNTER_MODIFICATION_REQUIRED",
+    "PRODUCT_CHANGE_REQUIRED",
+    "FULL_BROWSER_MATRIX_UNAVAILABLE",
+    "GENERAL_VALIDATOR_FINDING_DELTA",
+    "PROTECTED_BLOB_CHANGED",
+    "LAST_NODE_UNREACHABLE",
+    "ROADMAP_TAIL_CLIPPED",
+    "ACTIVE_CARD_VISUALLY_INACTIVE",
+    "CATALOG_DOUBLE_TAB_OPEN",
+    "SCOPE_EXPANSION_REQUIRED"
+  ],
+  "maximum_result": "MOTION_CATALOG_REVIEW_SURFACE_PASS_ROADMAP_CORRECTED_READY_FOR_NEW_HUMAN_REVIEW",
+  "authority_effect": "BOUNDED_TWO_STAGE_EXECUTION",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}

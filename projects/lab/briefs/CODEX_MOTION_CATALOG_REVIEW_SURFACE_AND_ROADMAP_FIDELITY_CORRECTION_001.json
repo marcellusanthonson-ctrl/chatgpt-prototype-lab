@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0.0",
+  "brief_id": "CODEX_MOTION_CATALOG_REVIEW_SURFACE_AND_ROADMAP_FIDELITY_CORRECTION_001",
+  "project_id": "lab",
+  "status": "READY",
+  "objective": "Correct the motion catalog review surface and restore the complete source-derived geometry stabilization, timing, terminal state and coherent visual state of ROADMAP-VERTICAL-PROGRESS-001 without changing the counter or adding effects.",
+  "repositories": [
+    {
+      "name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "expected_initial_parent_head": "384313477b4034dbcf6fbdb26c0dcdc256b4c7aa",
+      "head_policy": "VERIFY_LIVE_AT_USE",
+      "mutation": "AUTHORIZED_WITHIN_EXACT_SCOPE"
+    },
+    {
+      "name": "marcellusanthonson-ctrl/carolina-md-next-landing",
+      "ref": "52654da574952148f96d051e439bff1cbc7b4b9d",
+      "mutation": "PROHIBITED_READ_ONLY_SOURCE_REFERENCE"
+    }
+  ],
+  "authority": {
+    "authorization_ref": "AUTHORIZATION_LAB_MOTION_CATALOG_REVIEW_SURFACE_AND_ROADMAP_FIDELITY_CORRECTION_168",
+    "decision_ref": "DEC-LAB-029",
+    "approved_by": "Jonathan Martínez",
+    "commit_authorized": true,
+    "push_authorized": true,
+    "source_file_update_authorized": true,
+    "visible_browser_execution_authorized": true,
+    "runtime_authorized": false,
+    "product_changes_authorized": false,
+    "external_repository_mutation_authorized": false,
+    "counter_modification_authorized": false,
+    "new_effect_implementation_authorized": false
+  },
+  "scope": {
+    "functional_update": [
+      "foundation-library/motion-system/MOTION-SYSTEM-001/catalog/MOTION_EFFECTS_CATALOG.html",
+      "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/EFFECT_DEMO.html",
+      "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/FORMULA_CONTRACT.json",
+      "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/TEST_CONTRACT.json",
+      "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/TEST_VECTORS.json"
+    ],
+    "governance_update": [
+      "errors/ERR-LAB-010.json",
+      "motion-system browser evidence and summary",
+      "EVD-LAB-MOTION-SYSTEM-001",
+      "PEND-LAB-043",
+      "canonical registries or compatible deltas",
+      "CURRENT and project state JSON and Markdown",
+      "complete CURRENT continuity",
+      "authorization 168, brief and execution evidence"
+    ],
+    "forbidden": [
+      "modify STATISTICS-COUNTER-STATIC-SUFFIX-001",
+      "modify Carolina source repository",
+      "modify a product repository",
+      "integrate into a landing",
+      "implement new effects",
+      "enable GitHub Pages",
+      "modify selector, pointer or candidate registry",
+      "alter the 329 historical findings",
+      "promote any effect beyond HUMAN_REVIEW_PENDING",
+      "declare human approval"
+    ]
+  },
+  "pre_patch_audit": [
+    {"contract": "dynamic bottom padding", "source": "PRESENT", "current_demo": "ABSENT", "result": "MISMATCH"},
+    {"contract": "second timeline measurement", "source": "PRESENT", "current_demo": "ABSENT", "result": "MISMATCH"},
+    {"contract": "window load recalculation", "source": "PRESENT", "current_demo": "ABSENT", "result": "MISMATCH"},
+    {"contract": "document.fonts.ready", "source": "PRESENT", "current_demo": "PRESENT", "result": "MATCH"},
+    {"contract": "120 and 360 ms stabilization passes", "source": "PRESENT", "current_demo": "ABSENT", "result": "MISMATCH"},
+    {"contract": "terminal end state", "source": "PRESENT", "current_demo": "ABSENT", "result": "MISMATCH"},
+    {"contract": "card reveal", "source": "PERSISTENT_INTERSECTION_REVEAL", "current_demo": "SCROLL_LINKED_LOW_OPACITY", "result": "MISMATCH"},
+    {"contract": "dot activation", "source": "GEOMETRIC_BINARY_OFFSET_3", "current_demo": "GEOMETRIC_BINARY_OFFSET_3", "result": "MATCH"},
+    {"contract": "step progress", "source": "CLAMPED_STEP_GEOMETRY", "current_demo": "CLAMPED_STEP_GEOMETRY", "result": "MATCH"}
+  ],
+  "required_outputs": [
+    "Stage 1 grant publication and verified remote head",
+    "large directly openable implemented catalog previews with compact inert planned cards",
+    "source-faithful roadmap geometry and stabilization",
+    "complete visible browser matrix evidence",
+    "ERR-LAB-010 confirmed and closed only after verified remote publication",
+    "state, registries and continuity reconciled without history rewrites",
+    "authorization consumed after verified Stage 2 publication"
+  ],
+  "acceptance_checks": [
+    "all modified JSON parses and applicable schemas pass",
+    "catalog click, Enter, Space and button each open exactly one tab",
+    "planned effects open no tabs",
+    "roadmap matrix covers all stage, content, state, viewport and reduced-motion cases",
+    "all geometry invariants hold with zero NaN and zero Infinity",
+    "last node and terminal state are reachable and tail is not clipped",
+    "revealed and active cards remain fully legible",
+    "zero console errors and zero external requests",
+    "motion-system validator passes",
+    "repository validator preserves exact 329 historical findings with zero added and removed",
+    "protected blobs remain exact"
+  ],
+  "stop_conditions": [
+    "live remote head differs from the required stage parent",
+    "fixed Carolina source commit does not contain the required behavior",
+    "counter or product mutation is required",
+    "complete browser matrix cannot be executed",
+    "general repository findings change",
+    "protected blob changes",
+    "last node, tail, active-card coherence or single-tab invariants fail",
+    "scope expansion is required"
+  ],
+  "response_contract": {
+    "required_sections": ["result", "stage_commits", "functional_changes", "browser_matrix", "validators", "preservation_checks", "governance", "human_review_pending", "authorization_consumption"],
+    "maximum_result": "MOTION_CATALOG_REVIEW_SURFACE_PASS_ROADMAP_CORRECTED_READY_FOR_NEW_HUMAN_REVIEW",
+    "forbidden_claims": ["HUMAN_APPROVED", "REUSABLE_FOUNDATION", "INTEGRATED_IN_PROJECT"]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "motion-catalog-review-surface-and-roadmap-fidelity-correction-168",
+  "project_id": "lab",
+  "updated_at": "2026-08-02",
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_MOTION_CATALOG_REVIEW_SURFACE_AND_ROADMAP_FIDELITY_CORRECTION_168",
+    "state_key": "motion_catalog_review_surface_and_roadmap_fidelity_correction_168",
+    "status": "GRANTED_STAGE_1_PUBLICATION_IN_PROGRESS_STAGE_2_CONDITIONAL",
+    "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_MOTION_CATALOG_REVIEW_SURFACE_AND_ROADMAP_FIDELITY_CORRECTION_168.json",
+    "brief_path": "projects/lab/briefs/CODEX_MOTION_CATALOG_REVIEW_SURFACE_AND_ROADMAP_FIDELITY_CORRECTION_001.json",
+    "approved_by": "Jonathan Martínez",
+    "commit_authorized": true,
+    "push_authorized": true,
+    "source_file_update_authorized": true,
+    "runtime_authorized": false,
+    "product_changes_authorized": false,
+    "external_repository_mutation_authorized": false
+  },
+  "active_authorization": "AUTHORIZATION_LAB_MOTION_CATALOG_REVIEW_SURFACE_AND_ROADMAP_FIDELITY_CORRECTION_168",
+  "stage_1": "IN_PROGRESS",
+  "stage_2": "GRANTED_CONDITIONAL_ON_VERIFIED_STAGE_1_PASS",
+  "source_commit_verified": "52654da574952148f96d051e439bff1cbc7b4b9d",
+  "protected_blobs": "PASS_PRE_PATCH",
+  "pre_patch_audit": "COMPLETE_CONFIRMED_MISMATCH",
+  "planned_error": "ERR-LAB-010",
+  "planned_evidence": "EVD-LAB-MOTION-SYSTEM-001",
+  "pending": "PEND-LAB-043",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}
