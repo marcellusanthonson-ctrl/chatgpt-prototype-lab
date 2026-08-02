@@ -1,13 +1,21 @@
-# Continuidad LAB — fidelidad de fuente del roadmap 171
+# Continuidad LAB — fidelidad de fuente del roadmap aprobada
 
-Stage 1 fue publicado y verificado en `65e5536606807e37a46a2724426fbcb9f36144f7`. Stage 2 materializa el candidato fiel a la fuente Carolina fija en `52654da574952148f96d051e439bff1cbc7b4b9d`; el HEAD remoto verificado de Stage 2 se reporta al cierre de la ejecución.
+Jonathan Martínez emitió la determinación humana `APPROVED_SOURCE_FIDELITY` para `CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002` el 2 de agosto de 2026, después de una revisión completa mediante `localhost`.
 
-La matriz de 64 casos pasa con SSIM mínimo `0.9988932964993412`, cero discrepancias de estilo computado, cero discrepancias geométricas y cero solicitudes externas del candidato. El protocolo y la plantilla ahora exigen inventario, implementación de referencia, anatomía, geometría, baseline fuente, comparación fuente–candidato y revisión humana antes de abstraer.
+La revisión confirmó:
 
-El roadmap neutral vigente permanece byte-idéntico y clasificado como `HISTORICAL_NEUTRAL_DERIVATION`, rechazado como referencia canónica. El counter permanece tree-idéntico. Carolina fue inspeccionado sin mutación; la única copia con instalación y build fue la copia desechable sin remote.
+- recorrido íntegro desde el inicio hasta el terminal cap;
+- paridad visual entre baseline y candidato;
+- ausencia de scroll sin objetivo después del terminal;
+- disposición responsive alternada de las tarjetas al superar el breakpoint aplicable;
+- conservación de la fórmula, los artefactos protegidos y el repositorio Carolina sin mutaciones.
 
-`ERR-LAB-011` sigue `OPEN_AWAITING_HUMAN_SOURCE_FIDELITY_DECISION`; `PEND-LAB-046` sigue `OPEN_HUMAN_COMPARISON_REQUIRED`. El candidato está `HUMAN_REVIEW_PENDING`: no hay aprobación humana, reemplazo canónico, promoción reusable, integración de producto ni efecto de runtime.
+Los gates automatizados del candidato permanecen en PASS: SSIM `1.0`, cero diferencias de estilos computados, geometría, eje, concentricidad, solicitudes externas, aislamiento y overflow horizontal.
 
-La fase global continúa `PRIORITY_INTEGRATIONS_PHASE_1_CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED`.
+`ERR-LAB-011` está cerrado por fidelidad de fuente aprobada. `PEND-LAB-046` está cerrado. `PEND-LAB-043` continúa abierto únicamente para la revisión del counter, la población restante de la biblioteca y decisiones separadas sobre designación canónica, behavior core, promoción reusable e integraciones.
 
-Siguiente acción única: Jonathan Martínez revisa `HUMAN_COMPARISON.html` y emite una decisión separada de fidelidad de fuente.
+Las autorizaciones 172, 173, 174 y 175 están consumidas. No existe autoridad activa. La aprobación de fidelidad **no** constituye designación de referencia canónica, reemplazo canónico, extracción de behavior core, promoción reusable, integración de producto ni autorización de runtime.
+
+La fase global continúa `PRIORITY_INTEGRATIONS_PHASE_1_CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED`; `PEND-LAB-045` permanece sin cambios.
+
+Siguiente acción única: obtener una autorización explícita separada para designar la referencia canónica y extraer el behavior core, o continuar otra prioridad del LAB que cuente con autorización vigente.
