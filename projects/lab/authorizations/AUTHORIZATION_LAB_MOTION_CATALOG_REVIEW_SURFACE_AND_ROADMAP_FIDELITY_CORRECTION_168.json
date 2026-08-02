@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_MOTION_CATALOG_REVIEW_SURFACE_AND_ROADMAP_FIDELITY_CORRECTION_168",
   "project_id": "lab",
-  "status": "GRANTED_STAGE_1_PUBLICATION_IN_PROGRESS_STAGE_2_CONDITIONAL",
+  "status": "GRANTED_STAGE_2_VALIDATED_PENDING_REMOTE_PUBLICATION",
   "authorization_class": "TWO_STAGE_MOTION_REVIEW_SURFACE_AND_FIDELITY_CORRECTION",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-08-02",
@@ -37,7 +37,8 @@
   "stages": [
     {
       "stage_id": "STAGE_1_GOVERNANCE_PUBLICATION",
-      "status": "IN_PROGRESS",
+      "status": "PASS_VERIFIED_REMOTE_PUBLICATION",
+      "remote_head": "a3286e7088eeb820e5eb5f7603acde253428d35b",
       "required_outputs": [
         "projects/lab/authorizations/AUTHORIZATION_LAB_MOTION_CATALOG_REVIEW_SURFACE_AND_ROADMAP_FIDELITY_CORRECTION_168.json",
         "projects/lab/briefs/CODEX_MOTION_CATALOG_REVIEW_SURFACE_AND_ROADMAP_FIDELITY_CORRECTION_001.json",
@@ -47,7 +48,7 @@
     },
     {
       "stage_id": "STAGE_2_CORRECTION_VALIDATION_AND_RECONCILIATION",
-      "status": "GRANTED_CONDITIONAL_ON_VERIFIED_STAGE_1_PASS",
+      "status": "VALIDATED_PENDING_REMOTE_PUBLICATION",
       "consumption_rule": "CONSUMED_AFTER_COMPLETE_VALIDATED_REMOTE_PUBLICATION"
     }
   ],

@@ -207,3 +207,9 @@ El selector estático conserva byte-for-byte el blob `301ba432907758fc49a9b3c86a
 ## Motion system transversal — autorización 167
 
 La fundación está publicada y validada; la autorización 167 está consumida. Los dos efectos iniciales continúan en HUMAN_REVIEW_PENDING.
+
+## Corrección de catálogo y roadmap — autorización 168
+
+Stage 1 fue publicado y verificado en `a3286e7088eeb820e5eb5f7603acde253428d35b`. La auditoría contra Carolina `52654da574952148f96d051e439bff1cbc7b4b9d` confirmó `ERR-LAB-010`.
+
+El patch funcional corrige exclusivamente la superficie de revisión del catálogo y `ROADMAP-VERTICAL-PROGRESS-001`. La matriz visible pasa 54/54 casos normales, 3/3 reduced-motion y 8/8 activaciones del catálogo con exactamente una pestaña. Stage 2 permanece pendiente de validación general y publicación remota; ambos efectos siguen en `HUMAN_REVIEW_PENDING`.

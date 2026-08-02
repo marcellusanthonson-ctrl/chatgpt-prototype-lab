@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-MOTION-CATALOG-ROADMAP-CORRECTION-168",
+  "project_id": "lab",
+  "authorization_id": "AUTHORIZATION_LAB_MOTION_CATALOG_REVIEW_SURFACE_AND_ROADMAP_FIDELITY_CORRECTION_168",
+  "decision_id": "DEC-LAB-029",
+  "error_id": "ERR-LAB-010",
+  "classification": "MOTION_CATALOG_AND_ROADMAP_CORRECTION_VALIDATED_PENDING_REMOTE_PUBLICATION",
+  "created_at": "2026-08-02T00:58:21-04:00",
+  "verified_parent_head": "a3286e7088eeb820e5eb5f7603acde253428d35b",
+  "source_verification": {
+    "repository": "marcellusanthonson-ctrl/carolina-md-next-landing",
+    "commit": "52654da574952148f96d051e439bff1cbc7b4b9d",
+    "primary_path": "hooks/landing/_scrollReveal.ts",
+    "styles_path": "public/landing/carolina_md_approved_patch.css",
+    "mutation": "NONE"
+  },
+  "pre_patch_audit": {
+    "dynamic_padding": "MISMATCH_CONFIRMED",
+    "second_timeline_measurement": "MISMATCH_CONFIRMED",
+    "window_load_recalculation": "MISMATCH_CONFIRMED",
+    "document_fonts_ready": "MATCH",
+    "stabilization_120_360_ms": "MISMATCH_CONFIRMED",
+    "terminal_state": "MISMATCH_CONFIRMED",
+    "card_reveal": "MISMATCH_CONFIRMED",
+    "dot_activation": "MATCH",
+    "step_progress": "MATCH"
+  },
+  "functional_patch": {
+    "authorized_functional_files": 5,
+    "counter_files_modified": 0,
+    "new_effects_implemented": 0,
+    "product_files_modified": 0,
+    "external_repository_files_modified": 0
+  },
+  "browser_validation": {
+    "mode": "PLAYWRIGHT_CHROMIUM_VISIBLE_LOCAL_HTTP",
+    "catalog_activations": "PASS_8_OF_8_EXACTLY_ONE_TAB",
+    "planned_effect_tabs": 0,
+    "normal_motion_cases": "PASS_54_OF_54_540_SAMPLES",
+    "reduced_motion_cases": "PASS_3_OF_3",
+    "console_errors": 0,
+    "external_requests": 0,
+    "canonical_results": "foundation-library/motion-system/MOTION-SYSTEM-001/evidence/BROWSER_VALIDATION_RESULTS.json"
+  },
+  "repository_validation": {
+    "modified_json_parse": "PASS_21_FILES",
+    "applicable_new_schemas": "PASS",
+    "motion_system_validator": "PASS",
+    "general_repository_validator": "EXACT_329_ZERO_ADDED_ZERO_REMOVED_GLOBAL_REPOSITORY_PASS_FALSE",
+    "portable_baseline": "PASS_333_ORDERED_STABLE_IDS_PRESERVED_GLOBAL_REPOSITORY_PASS_FALSE",
+    "protected_blobs": "PASS_EXACT",
+    "counter_diff": "NONE"
+  },
+  "remote_publication": "PENDING",
+  "result": "ALL_PREPUBLICATION_GATES_PASS_PENDING_REMOTE_PUBLICATION",
+  "result_boundary": "BOTH_INITIAL_EFFECTS_REMAIN_HUMAN_REVIEW_PENDING_NO_PRODUCT_RUNTIME_OR_INTEGRATION_EFFECT"
+}

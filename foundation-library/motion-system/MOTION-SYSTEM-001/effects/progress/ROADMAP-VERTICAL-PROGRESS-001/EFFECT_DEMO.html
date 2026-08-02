@@ -1,1 +1,140 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Parametric roadmap</title><style>:root{--rail-start:0px;--rail-height:1px;--rail-fill-height:0px}body{font-family:system-ui;margin:0;background:#f4f3ef;color:#1c2926}.wrap{max-width:900px;margin:auto;padding:20vh 24px}.timeline{position:relative;padding-left:72px}.line,.fill{position:absolute;left:28px;top:var(--rail-start);width:3px;height:var(--rail-height);border-radius:3px}.line{background:#cbd6d2}.fill{height:var(--rail-fill-height);background:#0b7a70}.step{position:relative;min-height:260px}.dot{position:absolute;left:-53px;top:24px;width:18px;height:18px;border-radius:50%;background:#fff;border:3px solid #8da49e}.step.active .dot{background:#0b7a70;border-color:#0b7a70}.card{padding:28px;border-radius:20px;background:#fff;border:1px solid #d5dedb;opacity:calc(.45 + var(--progress,0)*.55);transform:translateY(calc((1 - var(--progress,0))*12px))}@media(prefers-reduced-motion:reduce){.card{transform:none}}</style><body><main class="wrap"><section class="timeline"><div class="line"></div><div class="fill"></div><article class="step"><span class="dot"></span><div class="card"><h2>Discovery</h2><p>Understand context and constraints.</p></div></article><article class="step"><span class="dot"></span><div class="card"><h2>Design</h2><p>Create and validate the direction with enough content to vary height.</p></div></article><article class="step"><span class="dot"></span><div class="card"><h2>Delivery</h2><p>Integrate, verify and preserve evidence.</p></div></article></section></main><script>const t=document.querySelector('.timeline'),steps=[...t.querySelectorAll('.step')],dots=steps.map(s=>s.querySelector('.dot')),fill=document.querySelector('.fill');const clamp=(v,a,b)=>Math.min(Math.max(v,a),b);function center(el,tr){const r=el.getBoundingClientRect();return r.top+r.height/2-tr.top}function update(){const tr=t.getBoundingClientRect(),first=center(dots[0],tr),last=steps.at(-1).querySelector('.card').getBoundingClientRect(),lastTop=last.top-tr.top,lastMid=lastTop+last.height/2,target=lastMid+last.height,railStart=Math.max(0,first),railEnd=Math.min(t.scrollHeight,target),railHeight=Math.max(1,railEnd-railStart);t.style.setProperty('--rail-start',railStart.toFixed(2)+'px');t.style.setProperty('--rail-height',railHeight.toFixed(2)+'px');let fh=clamp(innerHeight*.64-tr.top-railStart,0,railHeight);if(matchMedia('(prefers-reduced-motion: reduce)').matches)fh=railHeight;t.style.setProperty('--rail-fill-height',fh.toFixed(2)+'px');steps.forEach((s,i)=>{const sr=s.getBoundingClientRect(),top=sr.top-tr.top-railStart,bottom=sr.bottom-tr.top-railStart,dist=Math.max(1,bottom-top),p=clamp((fh-top)/dist,0,1),dotOffset=center(dots[i],tr)-railStart;s.style.setProperty('--progress',p.toFixed(3));s.classList.toggle('active',fh>=dotOffset+3)})}let ticking=false;function req(){if(ticking)return;ticking=true;requestAnimationFrame(()=>{update();ticking=false})}addEventListener('scroll',req,{passive:true});addEventListener('resize',req);addEventListener('orientationchange',req);document.fonts?.ready.then(req);req();</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Parametric roadmap</title>
+  <style>
+    :root{--rail-start:0px;--rail-height:1px;--rail-fill-height:0px}
+    *{box-sizing:border-box}
+    body{font-family:system-ui,sans-serif;margin:0;background:#f4f3ef;color:#1c2926}
+    .wrap{max-width:900px;margin:auto;padding:20vh 24px}
+    .timeline{position:relative;padding-left:72px;overflow:visible}
+    .line,.fill{position:absolute;left:28px;top:var(--rail-start);width:3px;height:var(--rail-height);border-radius:3px}
+    .line{background:#cbd6d2}
+    .fill{height:var(--rail-fill-height);background:#0b7a70;transition:height 90ms linear}
+    .line::after{content:"";position:absolute;left:50%;bottom:-6px;width:12px;height:12px;transform:translateX(-50%);border-radius:50%;background:#f4f3ef;border:2px solid #8da49e;transition:background-color .2s,border-color .2s}
+    .timeline.is-end-active .line::after{background:#0b7a70;border-color:#0b7a70}
+    .step{position:relative;min-height:260px;--progress:0}
+    .dot{position:absolute;left:-53px;top:24px;width:18px;height:18px;border-radius:50%;background:#fff;border:3px solid #8da49e;transition:background-color .2s,border-color .2s}
+    .step.is-dot-active .dot{background:#0b7a70;border-color:#0b7a70}
+    .card{padding:28px;border-radius:20px;background:#fff;border:1px solid #d5dedb;opacity:.28;transform:translateY(18px);transition:transform .35s ease}
+    .step.is-revealed .card,.step.is-dot-active .card{opacity:1;transform:none}
+    .card h2{margin-top:0}
+    @media(prefers-reduced-motion:reduce){
+      .fill,.line::after,.dot,.card{transition:none!important}
+      .card{opacity:1!important;transform:none!important}
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="timeline">
+      <div class="line"></div>
+      <div class="fill"></div>
+      <article class="step"><span class="dot"></span><div class="card"><h2>Discovery</h2><p>Understand context and constraints.</p></div></article>
+      <article class="step"><span class="dot"></span><div class="card"><h2>Design</h2><p>Create and validate the direction with enough content to vary height.</p></div></article>
+      <article class="step"><span class="dot"></span><div class="card"><h2>Delivery</h2><p>Integrate, verify and preserve evidence.</p></div></article>
+    </section>
+  </main>
+  <script>
+    (()=>{
+      const timeline=document.querySelector('.timeline');
+      const steps=[...timeline.querySelectorAll('.step')];
+      const dots=steps.map(step=>step.querySelector('.dot'));
+      const fill=document.querySelector('.fill');
+      if(!timeline||!fill||!steps.length||!dots.every(Boolean))return;
+
+      const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)');
+      const clamp=(value,min,max)=>Math.min(Math.max(value,min),max);
+      const debug={updates:0,requests:[],causes:[],last:null};
+      let ticking=false;
+      let pendingCause='initial';
+
+      const revealObserver='IntersectionObserver' in window?new IntersectionObserver(entries=>{
+        for(const entry of entries){
+          if(entry.isIntersecting){
+            entry.target.classList.add('is-revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        }
+      },{threshold:.1}):null;
+      if(revealObserver)steps.forEach(step=>revealObserver.observe(step));
+      else steps.forEach(step=>step.classList.add('is-revealed'));
+
+      function centerInTimeline(element,timelineRect){
+        const rect=element.getBoundingClientRect();
+        return rect.top+rect.height/2-timelineRect.top;
+      }
+
+      function updateTimeline(){
+        const initialTimelineRect=timeline.getBoundingClientRect();
+        const firstDotCenter=centerInTimeline(dots[0],initialTimelineRect);
+        const lastCard=steps.at(-1).querySelector('.card');
+        const lastCardRect=lastCard.getBoundingClientRect();
+        const lastCardHeight=lastCardRect.height;
+
+        timeline.style.paddingBottom=`${Math.ceil(lastCardHeight+72)}px`;
+
+        const remeasuredTimelineRect=timeline.getBoundingClientRect();
+        const lastCardTop=lastCardRect.top-remeasuredTimelineRect.top;
+        const lastCardMid=lastCardTop+lastCardHeight/2;
+        const targetTailEnd=lastCardMid+lastCardHeight;
+        const railStart=Math.max(0,firstDotCenter);
+        const railEnd=Math.min(remeasuredTimelineRect.height,targetTailEnd);
+        const railHeight=Math.max(1,railEnd-railStart);
+        const triggerY=innerHeight*.64;
+        const triggerInTimeline=triggerY-initialTimelineRect.top;
+        let fillHeight=clamp(triggerInTimeline-railStart,0,railHeight);
+        if(reduceMotion.matches)fillHeight=railHeight;
+
+        timeline.style.setProperty('--rail-start',`${railStart.toFixed(2)}px`);
+        timeline.style.setProperty('--rail-height',`${railHeight.toFixed(2)}px`);
+        timeline.style.setProperty('--rail-fill-height',`${fillHeight.toFixed(2)}px`);
+        timeline.classList.toggle('is-end-active',fillHeight>=railHeight-2);
+
+        const stepState=steps.map((step,index)=>{
+          const dotOffset=centerInTimeline(dots[index],remeasuredTimelineRect)-railStart;
+          const dotReached=fillHeight>=dotOffset+3;
+          step.classList.toggle('is-dot-active',dotReached);
+          const stepRect=step.getBoundingClientRect();
+          const stepTop=stepRect.top-remeasuredTimelineRect.top-railStart;
+          const stepDistance=Math.max(1,stepRect.height);
+          const stepProgress=clamp((fillHeight-stepTop)/stepDistance,0,1);
+          step.style.setProperty('--progress',stepProgress.toFixed(3));
+          return {dotOffset,dotReached,stepTop,stepDistance,stepProgress};
+        });
+
+        debug.updates+=1;
+        debug.causes.push(pendingCause);
+        debug.last={
+          firstDotCenter,lastCardHeight,paddingBottom:parseFloat(timeline.style.paddingBottom),
+          timelineHeight:remeasuredTimelineRect.height,lastCardTop,lastCardMid,targetTailEnd,
+          railStart,railEnd,railHeight,triggerY,triggerInTimeline,fillHeight,
+          endActive:timeline.classList.contains('is-end-active'),reducedMotion:reduceMotion.matches,steps:stepState
+        };
+        ticking=false;
+      }
+
+      function requestUpdate(cause='manual'){
+        debug.requests.push(cause);
+        pendingCause=cause;
+        if(ticking)return;
+        ticking=true;
+        requestAnimationFrame(updateTimeline);
+      }
+
+      addEventListener('scroll',()=>requestUpdate('scroll'),{passive:true});
+      addEventListener('resize',()=>requestUpdate('resize'));
+      addEventListener('orientationchange',()=>requestUpdate('orientationchange'));
+      addEventListener('load',()=>requestUpdate('load'));
+      if(document.fonts?.ready)document.fonts.ready.then(()=>requestUpdate('fonts-ready'));
+      if(reduceMotion.addEventListener)reduceMotion.addEventListener('change',()=>requestUpdate('reduced-motion-change'));
+      requestUpdate('initial');
+      setTimeout(()=>requestUpdate('stabilization-120ms'),120);
+      setTimeout(()=>requestUpdate('stabilization-360ms'),360);
+      window.__roadmapDemo={debug,requestUpdate};
+    })();
+  </script>
+</body>
+</html>

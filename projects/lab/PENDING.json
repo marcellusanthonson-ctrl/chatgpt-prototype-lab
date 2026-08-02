@@ -852,20 +852,23 @@
       "schema_version": "1.0.0",
       "id": "PEND-LAB-043",
       "project_id": "lab",
-      "status": "PENDING_HUMAN_REVIEW_AND_STAGED_LIBRARY_POPULATION",
+      "status": "CORRECTION_VALIDATED_PENDING_REMOTE_PUBLICATION_AND_NEW_HUMAN_REVIEW",
       "type": "MOTION_SYSTEM_HUMAN_GATE_AND_LIBRARY_POPULATION",
       "title": "Human review and staged population of the transversal motion-effects library",
       "priority": "HIGH",
       "required_actions": [
-        "HUMAN_REVIEW_TWO_INITIAL_DEMOS",
+        "VERIFY_AUTHORIZATION_168_REMOTE_PUBLICATION",
+        "HUMAN_REVIEW_TWO_INITIAL_DEMOS_AFTER_CORRECTION",
         "PROMOTE_REVISE_OR_REJECT_EACH_INITIAL_EFFECT",
         "IMPLEMENT_INDUSTRY_EFFECTS_IN_BOUNDED_BATCHES",
         "AUTHORIZE_PROJECT_INTEGRATIONS_SEPARATELY"
       ],
-      "current_authority": "NONE_AFTER_AUTHORIZATION_167_CONSUMPTION",
+      "current_authority": "AUTHORIZATION_168_ACTIVE_UNTIL_VERIFIED_REMOTE_PUBLICATION",
       "source_refs": [
         "foundation-library/motion-system/MOTION-SYSTEM-001/MANIFEST.json",
-        "projects/lab/evidence/EVD-LAB-MOTION-SYSTEM-001.json"
+        "projects/lab/evidence/EVD-LAB-MOTION-SYSTEM-001.json",
+        "projects/lab/evidence/EVD-LAB-MOTION-CATALOG-ROADMAP-CORRECTION-168.json",
+        "errors/ERR-LAB-010.json"
       ]
     }
   ]

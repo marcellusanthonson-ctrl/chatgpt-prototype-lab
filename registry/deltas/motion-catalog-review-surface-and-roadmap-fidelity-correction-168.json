@@ -6,7 +6,7 @@
   "authorization": {
     "id": "AUTHORIZATION_LAB_MOTION_CATALOG_REVIEW_SURFACE_AND_ROADMAP_FIDELITY_CORRECTION_168",
     "state_key": "motion_catalog_review_surface_and_roadmap_fidelity_correction_168",
-    "status": "GRANTED_STAGE_1_PUBLICATION_IN_PROGRESS_STAGE_2_CONDITIONAL",
+    "status": "GRANTED_STAGE_2_VALIDATED_PENDING_REMOTE_PUBLICATION",
     "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_MOTION_CATALOG_REVIEW_SURFACE_AND_ROADMAP_FIDELITY_CORRECTION_168.json",
     "brief_path": "projects/lab/briefs/CODEX_MOTION_CATALOG_REVIEW_SURFACE_AND_ROADMAP_FIDELITY_CORRECTION_001.json",
     "approved_by": "Jonathan Martínez",
@@ -18,14 +18,31 @@
     "external_repository_mutation_authorized": false
   },
   "active_authorization": "AUTHORIZATION_LAB_MOTION_CATALOG_REVIEW_SURFACE_AND_ROADMAP_FIDELITY_CORRECTION_168",
-  "stage_1": "IN_PROGRESS",
-  "stage_2": "GRANTED_CONDITIONAL_ON_VERIFIED_STAGE_1_PASS",
+  "stage_1": "PASS_VERIFIED_REMOTE_PUBLICATION",
+  "stage_1_remote_head": "a3286e7088eeb820e5eb5f7603acde253428d35b",
+  "stage_2": "ALL_PREPUBLICATION_GATES_PASS_PENDING_REMOTE_PUBLICATION",
   "source_commit_verified": "52654da574952148f96d051e439bff1cbc7b4b9d",
-  "protected_blobs": "PASS_PRE_PATCH",
+  "protected_blobs": "PASS_PRE_PATCH_AND_POST_FUNCTIONAL_PATCH",
   "pre_patch_audit": "COMPLETE_CONFIRMED_MISMATCH",
-  "planned_error": "ERR-LAB-010",
-  "planned_evidence": "EVD-LAB-MOTION-SYSTEM-001",
+  "error": {
+    "id": "ERR-LAB-010",
+    "status": "CONFIRMED_REMEDIATED_PENDING_VERIFIED_REMOTE_PUBLICATION",
+    "canonical_path": "errors/ERR-LAB-010.json"
+  },
+  "evidence": {
+    "id": "EVD-LAB-MOTION-CATALOG-ROADMAP-CORRECTION-168",
+    "status": "FUNCTIONAL_AND_VISIBLE_BROWSER_MATRIX_PASS_PENDING_REMOTE_PUBLICATION",
+    "canonical_path": "projects/lab/evidence/EVD-LAB-MOTION-CATALOG-ROADMAP-CORRECTION-168.json"
+  },
   "pending": "PEND-LAB-043",
+  "validation": {
+    "browser": "PASS_54_NORMAL_3_REDUCED_8_CATALOG_ACTIVATIONS",
+    "motion_system": "PASS",
+    "general_repository": "EXACT_329_ZERO_ADDED_ZERO_REMOVED_GLOBAL_REPOSITORY_PASS_FALSE",
+    "portable_baseline": "PASS_333_ORDERED_STABLE_IDS_PRESERVED",
+    "protected_blobs": "PASS_EXACT",
+    "counter_diff": "NONE"
+  },
   "runtime_effect": "NONE",
   "integration_effect": "NONE"
 }

@@ -1,11 +1,11 @@
 {
   "schema_version": "2.5.0",
   "document_id": "lab.current-state",
-  "version": "2.5.48",
-  "status": "M5_BOUNDED_CUTOVER_PASS_INTEGRATION_ACTIVE_STATIC_FALLBACK_PRESERVED",
-  "updated_at": "2026-08-01",
+  "version": "2.5.49",
+  "status": "MOTION_CATALOG_ROADMAP_CORRECTION_VALIDATED_PENDING_REMOTE_PUBLICATION",
+  "updated_at": "2026-08-02",
   "active_project": "lab",
-  "current_phase": "M5_BOUNDED_CUTOVER_PASS_INTEGRATION_ACTIVE_STATIC_FALLBACK_PRESERVED",
+  "current_phase": "MOTION_CATALOG_ROADMAP_CORRECTION_VALIDATED_PENDING_REMOTE_PUBLICATION",
   "methodology": {
     "version": "2.1",
     "path": "METHODOLOGY.md"
@@ -88,8 +88,9 @@
     "integration_factory_state_reconciliation_evidence": "projects/lab/evidence/EVD-LAB-M1-PASS-STATE-REGISTRY-CONTINUITY-RECONCILIATION-154.json",
     "integration_factory_current_continuity": "projects/lab/continuity/CURRENT_CONTINUITY.json",
     "motion_system": "foundation-library/motion-system/MOTION-SYSTEM-001/MANIFEST.json",
+    "motion_system_correction_168_evidence": "projects/lab/evidence/EVD-LAB-MOTION-CATALOG-ROADMAP-CORRECTION-168.json",
     "motion_system_foundation": {
-      "status": "FOUNDATION_PUBLISHED_VALIDATION_PASS_INITIAL_EFFECTS_HUMAN_REVIEW_PENDING",
+      "status": "CORRECTION_FUNCTIONAL_AND_VISIBLE_BROWSER_PASS_PENDING_REMOTE_PUBLICATION_HUMAN_REVIEW_PENDING",
       "decision": "DEC-LAB-029",
       "authorization": "AUTHORIZATION_LAB_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_167",
       "root": "foundation-library/motion-system/MOTION-SYSTEM-001",
@@ -99,7 +100,7 @@
       "product_effect": "NONE",
       "runtime_effect": "NONE",
       "authorization_state": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-      "validation": "EXACT_329_ZERO_ADDED_ZERO_REMOVED_PROTECTED_BLOBS_PASS"
+      "validation": "VISIBLE_BROWSER_MATRIX_PASS_REPOSITORY_VALIDATION_PENDING"
     }
   },
   "projects": {
@@ -163,7 +164,9 @@
     "DEC-LAB-021",
     "DEC-LAB-029"
   ],
-  "open_errors": [],
+  "open_errors": [
+    "ERR-LAB-010"
+  ],
   "validated_patterns": [
     "PAT-LAB-001",
     "PAT-LAB-002",
@@ -241,7 +244,8 @@
     "integration_factory_m5_stage_aware_validator_remediation_162": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "integration_factory_m5_canonical_correction_and_conditional_rollback_drill_165": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "integration_factory_m5_bounded_cutover_observation_and_automatic_rollback_166": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "transversal_motion_effects_library_foundation_167": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+    "transversal_motion_effects_library_foundation_167": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "motion_catalog_review_surface_and_roadmap_fidelity_correction_168": "GRANTED_STAGE_2_VALIDATED_PENDING_REMOTE_PUBLICATION"
   },
   "verified_external_heads": {
     "symphonie": "31dd1345026240c83b015feef34d6f7f2d2147b7",
@@ -271,8 +275,8 @@
     "SYMPHONIE_LIVHAVN_MONOLITHIC_VISUAL_CALIBRATION_083_READY_WITH_BOUNDED_GAPS",
     "INTEGRATION_FACTORY_M1_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_VALIDATION_PASS"
   ],
-  "next_authorized_action": "NONE_AFTER_AUTHORIZATION_166_CONSUMPTION",
-  "next_recommended_transition": "JONATHAN_MARTINEZ_DECIDES_WHETHER_TO_RETAIN_OR_RETIRE_THE_STATIC_FALLBACK",
+  "next_authorized_action": "PUBLISH_VALIDATED_STAGE_2_CORRECTION_FROM_VERIFIED_STAGE_1_HEAD",
+  "next_recommended_transition": "VERIFY_REMOTE_STAGE_2_THEN_CONSUME_AUTHORIZATION_168_AND_REQUEST_NEW_HUMAN_REVIEW",
   "continuity_read_order": [
     "LAB_CONTRACT.md",
     "METHODOLOGY.md",

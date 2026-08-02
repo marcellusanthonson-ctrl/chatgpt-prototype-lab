@@ -1,15 +1,14 @@
 {
   "schema_version": "1.2.0",
-  "continuity_id": "LAB-CONTINUITY-MOTION-SYSTEM-167-STAGE-2-PARTIAL-20260801",
+  "continuity_id": "LAB-CONTINUITY-MOTION-CATALOG-ROADMAP-CORRECTION-168-20260802",
   "project_id": "lab",
-  "status": "MOTION_SYSTEM_FOUNDATION_PUBLISHED_VALIDATION_PASS_INITIAL_EFFECTS_HUMAN_REVIEW_PENDING",
-  "created_at": "2026-08-01T22:53:00-04:00",
+  "status": "STAGE_2_VALIDATED_PENDING_REMOTE_PUBLICATION",
+  "created_at": "2026-08-02T00:58:21-04:00",
   "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "canonical_branch": "main",
   "head_policy": "VERIFY_LIVE_AT_USE",
-  "verified_execution_parent_head": "db3b6d7e05418c72f88b29638c0c026410792c04",
-  "verified_stage_2_remote_head": "aafa9e3bc8a08df8912467e889157f11b33143c0",
-  "verified_preservation_correction_head": "021375ade4cfdd93bee3de6fe25c4aff6fb1e0d8",
+  "verified_stage_1_remote_head": "a3286e7088eeb820e5eb5f7603acde253428d35b",
+  "stage_2_execution_head": "PENDING_COMMIT_AND_REMOTE_VERIFICATION",
   "entrypoint": "project-sources/chatgpt/START_HERE.md",
   "required_reading_order": [
     "VERIFY_LIVE_HEAD_OF_MAIN",
@@ -21,90 +20,127 @@
     "registry/projects.json",
     "projects/lab/PROJECT_STATE.json",
     "decisions/DEC-LAB-029.json",
-    "projects/lab/authorizations/AUTHORIZATION_LAB_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_167.json",
-    "projects/lab/authorizations/AUTHORIZATION_LAB_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_167_AMENDMENT_1_STAGE_2_PROGRESS.json",
-    "projects/lab/briefs/CODEX_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_001.json",
-    "projects/lab/briefs/CODEX_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_001_STAGE_2_STATUS.json",
-    "foundation-library/motion-system/MOTION-SYSTEM-001/MANIFEST.json",
-    "projects/lab/evidence/EVD-LAB-MOTION-SYSTEM-001.json",
-    "projects/lab/reconciliations/REC-LAB-MOTION-SYSTEM-167-PRESERVATION-001.json",
     "projects/lab/pending/PEND-LAB-043.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_MOTION_CATALOG_REVIEW_SURFACE_AND_ROADMAP_FIDELITY_CORRECTION_168.json",
+    "projects/lab/briefs/CODEX_MOTION_CATALOG_REVIEW_SURFACE_AND_ROADMAP_FIDELITY_CORRECTION_001.json",
+    "errors/ERR-LAB-010.json",
+    "projects/lab/evidence/EVD-LAB-MOTION-CATALOG-ROADMAP-CORRECTION-168.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/MANIFEST.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/evidence/BROWSER_VALIDATION_RESULTS.json",
     "projects/lab/continuity/CURRENT_CONTINUITY.json"
+  ],
+  "repository_state": [
+    {
+      "name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "verified_head": "a3286e7088eeb820e5eb5f7603acde253428d35b",
+      "role": "CANONICAL_MUTATION_TARGET"
+    },
+    {
+      "name": "marcellusanthonson-ctrl/carolina-md-next-landing",
+      "commit": "52654da574952148f96d051e439bff1cbc7b4b9d",
+      "role": "READ_ONLY_FORMULA_AND_BEHAVIOR_SOURCE",
+      "mutation": "NONE"
+    }
   ],
   "facts": [
     {
-      "claim": "Stage 1 was published and verified at db3b6d7e05418c72f88b29638c0c026410792c04.",
-      "source_refs": [
-        "registry/deltas/transversal-motion-system-foundation-167.json"
-      ]
+      "claim": "Stage 1 authorization, brief and grant were published and verified at a3286e7088eeb820e5eb5f7603acde253428d35b.",
+      "source_refs": ["registry/deltas/motion-catalog-review-surface-and-roadmap-fidelity-correction-168.json"]
     },
     {
-      "claim": "Stage 2 foundation was published at aafa9e3bc8a08df8912467e889157f11b33143c0 with two effects and 61 planned candidates.",
-      "source_refs": [
-        "foundation-library/motion-system/MOTION-SYSTEM-001/MANIFEST.json"
-      ]
+      "claim": "The source-to-demo audit confirmed omitted dynamic padding, remeasurement, load and stabilization passes, terminal state and independent card reveal.",
+      "source_refs": ["projects/lab/briefs/CODEX_MOTION_CATALOG_REVIEW_SURFACE_AND_ROADMAP_FIDELITY_CORRECTION_001.json", "errors/ERR-LAB-010.json"]
     },
     {
-      "claim": "Browser validation passed through set_content rendering; direct file navigation was blocked by environment policy.",
-      "source_refs": [
-        "foundation-library/motion-system/MOTION-SYSTEM-001/evidence/BROWSER_VALIDATION_RESULTS.json"
-      ]
+      "claim": "The visible browser matrix passed 54 normal roadmap cases with 540 samples, three reduced-motion cases and eight catalog activations with exactly one tab.",
+      "source_refs": ["foundation-library/motion-system/MOTION-SYSTEM-001/evidence/BROWSER_VALIDATION_RESULTS.json"]
     },
     {
-      "claim": "The preservation correction restored the complete authorization and brief, archived the previous continuity package and was verified at 021375ade4cfdd93bee3de6fe25c4aff6fb1e0d8.",
-      "source_refs": [
-        "projects/lab/reconciliations/REC-LAB-MOTION-SYSTEM-167-PRESERVATION-001.json"
-      ]
-    },
-    {
-      "claim": "The canonical reconciliation passed at exactly 329 historical findings, zero added and zero removed; protected blobs remained unchanged.",
-      "source_refs": [
-        "projects/lab/test-executions/MOTION-SYSTEM-167-RECONCILIATION-DONE.json",
-        "projects/lab/evidence/EVD-LAB-MOTION-SYSTEM-001.json"
-      ]
+      "claim": "The statistics counter, products, Carolina source, selector, candidate registry and active pointer were not modified.",
+      "source_refs": ["projects/lab/evidence/EVD-LAB-MOTION-CATALOG-ROADMAP-CORRECTION-168.json"]
     }
   ],
-  "preserved_m5_state": {
-    "status": "M5_BOUNDED_CUTOVER_PASS_INTEGRATION_ACTIVE_STATIC_FALLBACK_PRESERVED",
-    "pointer": "CANDIDATE_ACTIVE_CONFIRMED",
-    "fallback_target": "STATIC",
-    "static_selector_retirement_authorized": false
-  },
-  "authorization": {
-    "167": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_NO_RESIDUAL_AUTHORITY"
-  },
-  "motion_system": {
-    "root": "foundation-library/motion-system/MOTION-SYSTEM-001",
-    "implemented_effects": [
-      "STATISTICS-COUNTER-STATIC-SUFFIX-001",
-      "ROADMAP-VERTICAL-PROGRESS-001"
-    ],
-    "effect_status": "HUMAN_REVIEW_PENDING_NOT_PROMOTABLE",
-    "planned_effects": 61
-  },
-  "pending": [
+  "decisions": [
     {
-      "id": "PEND-LAB-042",
-      "status": "UNCHANGED_AWAITING_FALLBACK_DECISION"
-    },
-    {
-      "id": "PEND-LAB-043",
-      "status": "PENDING_HUMAN_REVIEW_AND_STAGED_LIBRARY_POPULATION"
+      "id": "DEC-LAB-029",
+      "status": "APPROVED_IN_FORCE",
+      "effect": "MOTION_SYSTEM_GOVERNANCE_AND_HUMAN_GATE_PRESERVED",
+      "source_refs": ["decisions/DEC-LAB-029.json"]
     }
   ],
-  "archived_previous_package": "projects/lab/continuity/archive/motion-system-167-pre-stage2-db3b6d7e05418c72f88b29638c0c026410792c04/",
-  "forbidden": [
-    "EXPAND_AUTHORIZATION_167_BEYOND_REMAINING_GATES",
-    "PROMOTE_EFFECT_WITHOUT_HUMAN_REVIEW",
-    "MODIFY_PRODUCT_WITHOUT_SEPARATE_AUTHORIZATION",
-    "RETIRE_STATIC_SELECTOR_WITHOUT_SEPARATE_AUTHORIZATION"
-  ],
-  "single_next_action": "JONATHAN_MARTINEZ_REVIEWS_THE_TWO_INITIAL_MOTION_EFFECT_DEMOS",
-  "first_phrase_for_new_conversation": "Continúa ChatGPT Prototype LAB desde el HEAD remoto vigente de main. MOTION-SYSTEM-001 está publicado y validado; la autorización 167 está consumida y los dos efectos iniciales esperan revisión humana.",
-  "authority_effect": "NONE_AFTER_AUTHORIZATION_167_CONSUMPTION",
-  "runtime_effect": "NONE",
-  "integration_effect": "DOCUMENTARY_CRITERION_SOURCE_DISCOVERABILITY_ONLY",
   "authorizations": {
-    "167": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_NO_RESIDUAL_AUTHORITY"
-  }
+    "consumed": [
+      {
+        "id": "AUTHORIZATION_LAB_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_167",
+        "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+        "source_refs": ["projects/lab/authorizations/AUTHORIZATION_LAB_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_167.json"]
+      }
+    ],
+    "active": [
+      {
+        "id": "AUTHORIZATION_LAB_MOTION_CATALOG_REVIEW_SURFACE_AND_ROADMAP_FIDELITY_CORRECTION_168",
+        "status": "GRANTED_STAGE_2_VALIDATED_PENDING_REMOTE_PUBLICATION",
+        "source_refs": ["projects/lab/authorizations/AUTHORIZATION_LAB_MOTION_CATALOG_REVIEW_SURFACE_AND_ROADMAP_FIDELITY_CORRECTION_168.json"]
+      }
+    ]
+  },
+  "results": [
+    {
+      "id": "MOTION-CATALOG-ROADMAP-168-BROWSER-MATRIX",
+      "status": "PASS",
+      "source_refs": ["foundation-library/motion-system/MOTION-SYSTEM-001/evidence/BROWSER_VALIDATION_RESULTS.json"]
+    },
+    {
+      "id": "STAGE-2-REPOSITORY-VALIDATION",
+      "status": "PASS_EXACT_329_ZERO_ADDED_ZERO_REMOVED_GLOBAL_FALSE",
+      "source_refs": ["foundation-library/motion-system/MOTION-SYSTEM-001/evidence/VALIDATION_SUMMARY.json"]
+    }
+  ],
+  "pending": [
+    {"id": "PEND-LAB-042", "status": "UNCHANGED_AWAITING_STATIC_FALLBACK_DECISION", "source_refs": ["projects/lab/pending/PEND-LAB-042.json"]},
+    {"id": "PEND-LAB-043", "status": "CORRECTION_VALIDATED_PENDING_REMOTE_PUBLICATION_AND_NEW_HUMAN_REVIEW", "source_refs": ["projects/lab/pending/PEND-LAB-043.json"]}
+  ],
+  "errors": [
+    {
+      "id": "ERR-LAB-010",
+      "status": "CONFIRMED_REMEDIATED_PENDING_VERIFIED_REMOTE_PUBLICATION",
+      "source_refs": ["errors/ERR-LAB-010.json", "projects/lab/evidence/EVD-LAB-MOTION-CATALOG-ROADMAP-CORRECTION-168.json"]
+    }
+  ],
+  "proposals": {"material_change": "NONE", "source_refs": ["registry/proposals.json"]},
+  "ideas": {"material_change": "NONE", "source_refs": ["registry/ideas.json"]},
+  "possible_integrations": {"material_change": "NONE", "product_integration_authorized": false, "source_refs": ["registry/integrations.json"]},
+  "experiments": {"material_change": "NONE", "source_refs": ["registry/experiments.json"]},
+  "skills": {"installed_or_modified": "NONE", "authority_effect": "NONE"},
+  "roadmap": {
+    "current_gate": "REMOTE_STAGE_2_PUBLICATION_AND_AUTHORIZATION_CONSUMPTION",
+    "after_gate": "NEW_HUMAN_REVIEW_OF_BOTH_INITIAL_EFFECTS",
+    "effect_status": "HUMAN_REVIEW_PENDING",
+    "source_refs": ["projects/lab/pending/PEND-LAB-043.json"]
+  },
+  "risks": [
+    {"id": "REMOTE_PUBLICATION_NOT_YET_VERIFIED", "state": "OPEN_GATE", "source_refs": ["errors/ERR-LAB-010.json"]},
+    {"id": "HUMAN_VISUAL_APPROVAL", "state": "NOT_ESTABLISHED", "source_refs": ["projects/lab/pending/PEND-LAB-043.json"]}
+  ],
+  "attachments": [
+    "projects/lab/continuity/CURRENT_CONTINUITY.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.md",
+    "projects/lab/continuity/ATTACHMENT_MANIFEST.json",
+    "projects/lab/continuity/START_PROMPT.md"
+  ],
+  "archived_previous_package": "projects/lab/continuity/archive/motion-catalog-roadmap-168-pre-stage2-a3286e7088eeb820e5eb5f7603acde253428d35b/",
+  "boundaries": [
+    "NO_COUNTER_CHANGE",
+    "NO_NEW_EFFECT",
+    "NO_PRODUCT_OR_CAROLINA_MUTATION",
+    "NO_SELECTOR_POINTER_OR_CANDIDATE_REGISTRY_CHANGE",
+    "NO_HUMAN_APPROVAL_CLAIM",
+    "NO_PROMOTION_BEYOND_HUMAN_REVIEW_PENDING"
+  ],
+  "single_next_action": "PUBLISH_AND_VERIFY_STAGE_2_THEN_CONSUME_AUTHORIZATION_168",
+  "first_phrase_for_new_conversation": "Continúa ChatGPT Prototype LAB desde el HEAD remoto vigente de main. La autorización 168 tiene Stage 1 verificado y Stage 2 funcional/browser PASS, pendiente de validación general y publicación remota antes de su consumo.",
+  "authority_effect": "AUTHORIZATION_168_ACTIVE_BOUNDED_UNTIL_VERIFIED_STAGE_2_PUBLICATION",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
 }

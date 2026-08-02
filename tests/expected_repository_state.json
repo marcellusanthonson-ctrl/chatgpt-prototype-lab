@@ -2,7 +2,7 @@
   "schema_version": "2.5.0",
   "methodology_version": "2.1",
   "active_project": "lab",
-  "current_phase": "M5_BOUNDED_CUTOVER_PASS_INTEGRATION_ACTIVE_STATIC_FALLBACK_PRESERVED",
+  "current_phase": "MOTION_CATALOG_ROADMAP_CORRECTION_VALIDATED_PENDING_REMOTE_PUBLICATION",
   "project_statuses": {
     "lab": "active",
     "mammothskills": "active_pipeline_validated_phase_a",
@@ -36,7 +36,9 @@
     "DEC-LAB-021",
     "DEC-LAB-029"
   ],
-  "open_errors": [],
+  "open_errors": [
+    "ERR-LAB-010"
+  ],
   "validated_patterns": [
     "PAT-LAB-001",
     "PAT-LAB-002",
@@ -51,13 +53,13 @@
   "registry_counts": {
     "projects": 7,
     "decisions": 27,
-    "errors": 10,
+    "errors": 11,
     "patterns": 10,
     "ideas": 5,
     "integrations": 7,
     "experiments": 8,
-    "authorizations": 94,
-    "evidence": 76,
+    "authorizations": 95,
+    "evidence": 77,
     "unincorporated": 0,
     "proposals": 3,
     "sessions": 1,
@@ -146,6 +148,7 @@
     "integration_factory_m5_stage_aware_validator_remediation_162": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "integration_factory_m5_canonical_correction_and_conditional_rollback_drill_165": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "integration_factory_m5_bounded_cutover_observation_and_automatic_rollback_166": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "transversal_motion_effects_library_foundation_167": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+    "transversal_motion_effects_library_foundation_167": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "motion_catalog_review_surface_and_roadmap_fidelity_correction_168": "GRANTED_STAGE_2_VALIDATED_PENDING_REMOTE_PUBLICATION"
   }
 }

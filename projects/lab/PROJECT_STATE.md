@@ -183,3 +183,9 @@ La autorización 166 queda consumida con publicación remota verificada y no dej
 ## Motion system transversal — autorización 167
 
 MOTION-SYSTEM-001 quedó publicado con taxonomía multidimensional, contratos de fórmula y personalización, 61 efectos planificados y dos candidatos en HUMAN_REVIEW_PENDING. No existe efecto de producto o runtime.
+
+## Corrección de catálogo y roadmap — autorización 168
+
+Stage 1 fue publicado y verificado en `a3286e7088eeb820e5eb5f7603acde253428d35b`. `ERR-LAB-010` está confirmado y remediado técnicamente, pendiente de cierre tras publicación remota verificada.
+
+La matriz visible pasa 54/54 casos normales del roadmap, 3/3 casos reduced-motion y 8/8 activaciones del catálogo con exactamente una pestaña. El contador permanece fuera del patch y ambos efectos conservan `HUMAN_REVIEW_PENDING`.

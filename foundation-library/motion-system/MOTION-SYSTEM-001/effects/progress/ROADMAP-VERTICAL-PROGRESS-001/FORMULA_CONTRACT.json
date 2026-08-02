@@ -5,81 +5,41 @@
   "calculation_model": "SCROLL_LINKED_PARAMETRIC",
   "coordinate_space": "TIMELINE_LOCAL_VERTICAL_AXIS",
   "inputs": [
-    {
-      "id": "timelineRect",
-      "unit": "css_px"
-    },
-    {
-      "id": "dotRects",
-      "unit": "css_px"
-    },
-    {
-      "id": "stepRects",
-      "unit": "css_px"
-    },
-    {
-      "id": "lastCardHeight",
-      "unit": "css_px"
-    },
-    {
-      "id": "viewportHeight",
-      "unit": "css_px"
-    }
+    {"id": "initialTimelineRect", "unit": "css_px"},
+    {"id": "remeasuredTimelineRect", "unit": "css_px"},
+    {"id": "dotRects", "unit": "css_px"},
+    {"id": "stepRects", "unit": "css_px"},
+    {"id": "lastCardRect", "unit": "css_px"},
+    {"id": "lastCardHeight", "unit": "css_px"},
+    {"id": "viewportHeight", "unit": "css_px"}
   ],
   "derived_values": [
-    "firstDotCenter",
-    "lastCardTop",
-    "lastCardMid",
-    "targetTailEnd",
-    "railStart",
-    "railEnd",
-    "railHeight",
-    "triggerY",
-    "triggerInTimeline",
-    "fillHeight",
-    "dotOffset",
-    "stepProgress"
+    "firstDotCenter", "paddingBottom", "lastCardTop", "lastCardMid", "targetTailEnd",
+    "railStart", "railEnd", "railHeight", "triggerY", "triggerInTimeline", "fillHeight",
+    "dotOffset", "dotReached", "stepTop", "stepDistance", "stepProgress", "endActive"
   ],
   "equations": [
     "center(el)=el.top+el.height/2-timeline.top",
     "paddingBottom=ceil(lastCardHeight+bottomSafetyGap)",
-    "lastCardTop=lastCard.top-timeline.top",
+    "lastCardTop=lastCard.top-remeasuredTimeline.top",
     "lastCardMid=lastCardTop+lastCardHeight/2",
-    "targetTailEnd=lastCardMid+tailExtension",
+    "targetTailEnd=lastCardMid+lastCardHeight",
     "railStart=max(0,firstDotCenter)",
-    "railEnd=min(timelineHeight,targetTailEnd)",
+    "railEnd=min(remeasuredTimeline.height,targetTailEnd)",
     "railHeight=max(minimumRailHeight,railEnd-railStart)",
     "triggerY=viewportHeight*triggerRatio",
-    "triggerInTimeline=triggerY-timeline.top",
+    "triggerInTimeline=triggerY-initialTimeline.top",
     "fillHeight=clamp(triggerInTimeline-railStart,0,railHeight)",
     "dotReached=fillHeight>=dotOffset+dotActivationOffset",
-    "stepProgress=clamp((fillHeight-stepTop)/stepDistance,0,1)"
+    "stepProgress=clamp((fillHeight-stepTop)/stepDistance,0,1)",
+    "endActive=fillHeight>=railHeight-endTolerance"
   ],
   "constants": [
-    {
-      "id": "triggerRatio",
-      "default": 0.64
-    },
-    {
-      "id": "bottomSafetyGap",
-      "default": 72,
-      "unit": "px"
-    },
-    {
-      "id": "dotActivationOffset",
-      "default": 3,
-      "unit": "px"
-    },
-    {
-      "id": "endTolerance",
-      "default": 2,
-      "unit": "px"
-    },
-    {
-      "id": "minimumRailHeight",
-      "default": 1,
-      "unit": "px"
-    }
+    {"id": "triggerRatio", "default": 0.64},
+    {"id": "bottomSafetyGap", "default": 72, "unit": "px"},
+    {"id": "dotActivationOffset", "default": 3, "unit": "px"},
+    {"id": "endTolerance", "default": 2, "unit": "px"},
+    {"id": "minimumRailHeight", "default": 1, "unit": "px"}
   ],
   "clamps": [
     "0<=fillHeight<=railHeight",
@@ -89,32 +49,32 @@
     "railEnd<=timelineHeight"
   ],
   "invariants": [
-    "no NaN",
+    "no NaN or Infinity",
     "ordered geometric activation",
-    "recalculate after geometry changes"
+    "padding mutation precedes second timeline measurement",
+    "tail is not clipped",
+    "last node and terminal state are reachable",
+    "card reveal, dot activation and step progress remain separate states",
+    "a dot-active card is fully legible",
+    "measurement order: initial timeline, first dot and last card; lastCardHeight; padding; second timeline measurement; derived geometry and clamps; terminal state",
+    "at most one update per requestAnimationFrame"
   ],
   "recalculation_triggers": [
-    "SCROLL",
-    "RESIZE",
-    "ORIENTATION_CHANGE",
-    "LOAD",
-    "DOCUMENT_FONTS_READY"
+    "INITIAL_LOAD", "SCROLL", "RESIZE", "ORIENTATION_CHANGE", "WINDOW_LOAD",
+    "DOCUMENT_FONTS_READY", "POST_INITIALIZATION_120_MS", "POST_INITIALIZATION_360_MS"
   ],
   "fallbacks": [
     "missing required nodes => no effect",
-    "reduced motion => fillHeight=railHeight"
+    "IntersectionObserver unavailable => reveal all cards",
+    "reduced motion => fillHeight=railHeight; all nodes active; all cards complete and legible"
   ],
-  "customizable_coefficients": [
-    "triggerRatio",
-    "bottomSafetyGap",
-    "tailExtension",
-    "dotActivationOffset",
-    "endTolerance"
-  ],
+  "customizable_coefficients": ["triggerRatio", "bottomSafetyGap", "dotActivationOffset", "endTolerance"],
   "locked_relations": [
+    "measurement and remeasurement order",
     "local coordinate normalization",
-    "rail and step clamps",
-    "geometry recalculation"
+    "targetTailEnd uses one full lastCardHeight after lastCardMid",
+    "rail, fill and step clamps",
+    "terminal state tolerance"
   ],
-  "reduced_motion_formula": "fillHeight=railHeight; all steps active"
+  "reduced_motion_formula": "fillHeight=railHeight; all nodes active; all cards fully visible; no scroll-dependent transition"
 }

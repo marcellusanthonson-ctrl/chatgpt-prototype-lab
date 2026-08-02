@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ERR-LAB-010",
+  "title": "Motion roadmap extraction omitted required geometry stabilization and catalog prevented valid human review",
+  "project_id": "lab",
+  "classification": "CONFIRMED",
+  "status": "CONFIRMED_REMEDIATED_PENDING_VERIFIED_REMOTE_PUBLICATION",
+  "lifecycle_state": "REMEDIATED_VALIDATED_PENDING_PUBLICATION",
+  "severity": "HIGH",
+  "detected_at": "2026-08-02T00:00:00-04:00",
+  "component": "MOTION_SYSTEM_CATALOG_AND_ROADMAP_VERTICAL_PROGRESS",
+  "causes": [
+    "DYNAMIC_PADDING_OMITTED_FROM_DEMO",
+    "TIMELINE_NOT_REMEASURED_AFTER_LAYOUT_MUTATION",
+    "POST_LAYOUT_STABILIZATION_PASSES_OMITTED",
+    "END_STATE_OMITTED",
+    "DOT_AND_CARD_VISUAL_STATE_INCOHERENT",
+    "DECLARED_TEST_MATRIX_NOT_FULLY_EXECUTED",
+    "CATALOG_PREVIEW_TOO_SMALL_FOR_HUMAN_REVIEW",
+    "IMPLEMENTED_EFFECT_NOT_DIRECTLY_OPENABLE"
+  ],
+  "technical_determination": "CONFIRMED",
+  "pre_patch_audit": "COMPLETE_SOURCE_TO_DEMO_COMPARISON_CONFIRMED_FIVE_BEHAVIORAL_MISMATCHES_AND_ONE_VISUAL_STATE_MISMATCH",
+  "repair_authorized": true,
+  "repair_performed": true,
+  "browser_validation": "PASS_COMPLETE_VISIBLE_MATRIX_54_NORMAL_3_REDUCED_8_CATALOG_ACTIVATIONS",
+  "repository_validation": "EXACT_329_ZERO_ADDED_ZERO_REMOVED_GLOBAL_REPOSITORY_PASS_FALSE",
+  "protected_blobs": "PASS_EXACT",
+  "resolution_gate": "PATCH_MATRIX_EVIDENCE_AND_VERIFIED_REMOTE_PUBLICATION",
+  "resolution": null,
+  "resolved_at": null,
+  "resolution_evidence": "projects/lab/evidence/EVD-LAB-MOTION-CATALOG-ROADMAP-CORRECTION-168.json",
+  "source_refs": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_MOTION_CATALOG_REVIEW_SURFACE_AND_ROADMAP_FIDELITY_CORRECTION_168.json",
+    "projects/lab/briefs/CODEX_MOTION_CATALOG_REVIEW_SURFACE_AND_ROADMAP_FIDELITY_CORRECTION_001.json",
+    "marcellusanthonson-ctrl/carolina-md-next-landing@52654da574952148f96d051e439bff1cbc7b4b9d:hooks/landing/_scrollReveal.ts",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/evidence/BROWSER_VALIDATION_RESULTS.json"
+  ],
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}

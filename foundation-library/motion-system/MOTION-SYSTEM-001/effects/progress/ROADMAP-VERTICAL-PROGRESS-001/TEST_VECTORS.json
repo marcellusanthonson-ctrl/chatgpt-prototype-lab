@@ -2,35 +2,27 @@
   "schema_version": "1.0.0",
   "effect_id": "ROADMAP-VERTICAL-PROGRESS-001",
   "vectors": [
-    {
-      "id": "ONE_STAGE",
-      "stage_heights": [
-        240
-      ]
-    },
-    {
-      "id": "TWO_VARIABLE",
-      "stage_heights": [
-        180,
-        360
-      ]
-    },
-    {
-      "id": "FOUR_MIXED",
-      "stage_heights": [
-        220,
-        310,
-        190,
-        420
-      ]
-    },
-    {
-      "id": "REDUCED_MOTION",
-      "expected": "ALL_ACTIVE"
-    },
-    {
-      "id": "MID_PAGE_LOAD",
-      "initial_scroll_ratio": 0.55
-    }
+    {"id": "ONE_STAGE_EQUAL", "stage_heights": [240], "content": "EQUAL_HEIGHT"},
+    {"id": "TWO_STAGES_EQUAL", "stage_heights": [240, 240], "content": "EQUAL_HEIGHT"},
+    {"id": "THREE_STAGES_EQUAL", "stage_heights": [260, 260, 260], "content": "EQUAL_HEIGHT"},
+    {"id": "SIX_STAGES_EQUAL", "stage_heights": [220, 220, 220, 220, 220, 220], "content": "EQUAL_HEIGHT"},
+    {"id": "TWO_STAGES_VARIABLE", "stage_heights": [180, 360], "content": "VARIABLE_HEIGHT"},
+    {"id": "THREE_STAGES_VARIABLE", "stage_heights": [220, 310, 190], "content": "VARIABLE_HEIGHT"},
+    {"id": "SIX_STAGES_VARIABLE", "stage_heights": [180, 280, 210, 340, 240, 390], "content": "VARIABLE_HEIGHT"},
+    {"id": "LONG_TEXT", "stage_heights": [260, 420, 360], "content": "LONG_TEXT"},
+    {"id": "TALL_LAST_CARD", "stage_heights": [200, 220, 620], "content": "SIGNIFICANTLY_TALLER_LAST_CARD"},
+    {"id": "MID_PAGE_LOAD", "stage_heights": [220, 310, 190, 420], "initial_scroll_ratio": 0.55},
+    {"id": "RESIZE_DURING_SCROLL", "stage_heights": [220, 310, 190, 420], "resize_sequence": ["390x844", "768x1024", "1440x1000"]},
+    {"id": "ORIENTATION_CHANGE", "stage_heights": [220, 310, 190], "orientation_sequence": ["390x844", "844x390"]},
+    {"id": "FONT_STABILIZATION", "expected_causes": ["fonts-ready", "stabilization-120ms", "stabilization-360ms"]},
+    {"id": "REDUCED_MOTION", "expected": "RAIL_COMPLETE_ALL_NODES_ACTIVE_ALL_CARDS_LEGIBLE_ZERO_SCROLL_TRANSITION"}
+  ],
+  "sample_invariants": [
+    "0<=fillHeight<=railHeight",
+    "0<=stepProgress<=1",
+    "railHeight>=1",
+    "railStart>=0",
+    "railEnd<=timelineHeight",
+    "all values finite"
   ]
 }
