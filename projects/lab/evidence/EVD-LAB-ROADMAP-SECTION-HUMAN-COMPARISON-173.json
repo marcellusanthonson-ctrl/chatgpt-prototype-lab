@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-173",
+  "project_id": "lab",
+  "authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_SCROLL_CORRECTION_AND_CONDITIONAL_DECISION_RECONCILIATION_173",
+  "decision_ref": "DEC-LAB-031",
+  "status": "STAGE_1_PASS_NEW_HUMAN_REVIEW_REQUIRED",
+  "candidate_id": "CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
+  "human_observation_before_correction": [
+    "VISUALLY_IMPECCABLE_IN_OBSERVED_RANGE",
+    "HUMAN_REVIEW_INCOMPLETE_DUE_TO_COMPARISON_SCROLL_LIMITATION"
+  ],
+  "root_cause": "HUMAN_COMPARISON_FIXED_VIEWPORT_WITH_TWO_USER_OPERATED_NESTED_IFRAME_SCROLL_CONTAINERS_LIMITED_COMPLETE_REVIEW",
+  "correction": {
+    "target": "HUMAN_COMPARISON.html",
+    "single_outer_vertical_scroll": true,
+    "nested_user_scroll_removed": true,
+    "panels_synchronized": true,
+    "outer_progress_indicator": true,
+    "terminal_reached_indicator": true,
+    "local_file_access_fallback": "DIRECT_REFERENCE_IMPLEMENTATION_LINK"
+  },
+  "controlled_validation": {
+    "status": "PASS",
+    "method": "SAME_ORIGIN_SYNTHETIC_TALL_CHILD_BROWSER_HARNESS",
+    "viewport": "1440x900",
+    "initial_outer_progress": 0.0,
+    "final_outer_progress": 1.0,
+    "both_child_scroll_positions_equal": true,
+    "each_child_scroll_reached_exact_maximum": true,
+    "terminal_reached_state": true,
+    "completion_message": "Recorrido completo",
+    "html_parse": "PASS"
+  },
+  "preserved_unchanged": [
+    "REFERENCE_IMPLEMENTATION.html",
+    "COMPARISON_METRICS.json",
+    "SOURCE_PROVENANCE.json",
+    "AUTHORIZATION_172_AUTOMATED_RESULTS"
+  ],
+  "human_source_fidelity_decision": "PENDING_NEW_COMPLETE_REVIEW",
+  "stage_2_trigger": [
+    "APPROVED_SOURCE_FIDELITY",
+    "MODIFIED_WITH_LIMITATIONS",
+    "REJECTED_SOURCE_FIDELITY"
+  ],
+  "claims_not_established": [
+    "HUMAN_APPROVAL",
+    "CANONICAL_REPLACEMENT",
+    "REUSABLE_PROMOTION",
+    "PRODUCT_INTEGRATION"
+  ],
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE",
+  "protected_source_mutation": "NONE"
+}
