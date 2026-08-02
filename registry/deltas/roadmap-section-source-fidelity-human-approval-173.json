@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "roadmap-section-source-fidelity-human-approval-173",
+  "project_id": "lab",
+  "updated_at": "2026-08-02",
+  "human_determination": {
+    "value": "APPROVED_SOURCE_FIDELITY",
+    "approved_by": "Jonathan Martínez",
+    "determined_at": "2026-08-02T18:43:00-04:00",
+    "source": "Explicit human approval in conversation after complete localhost review",
+    "observations": [
+      "COMPLETE_ROADMAP_JOURNEY_CONFIRMED",
+      "POST_TERMINAL_DEAD_SCROLL_REMOVED",
+      "RESPONSIVE_ALTERNATING_CARD_LAYOUT_CONFIRMED_AFTER_VIEWPORT_RESIZE",
+      "BASELINE_AND_CANDIDATE_VISUALLY_EQUAL",
+      "RESULT_APPROVED"
+    ],
+    "screenshot": {
+      "filename": "2026-08-02_18h42_50.png",
+      "sha256": "0bda032c221b8d66426d576c525fc9fd560b33514992dd5fd3fe4a59760e7424",
+      "dimensions": "2048x765"
+    }
+  },
+  "authorizations": [
+    {
+      "id": "AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_SECTION_ISOLATION_AND_REVALIDATION_172",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_SECTION_ISOLATION_AND_REVALIDATION_172.json"
+    },
+    {
+      "id": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_SCROLL_CORRECTION_AND_CONDITIONAL_DECISION_RECONCILIATION_173",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "stage_1": "CONSUMED_RESULT_REVERSED_BY_HUMAN_EVIDENCE",
+      "stage_2": "TRIGGERED_BY_APPROVED_SOURCE_FIDELITY_AND_CONSUMED",
+      "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_SCROLL_CORRECTION_AND_CONDITIONAL_DECISION_RECONCILIATION_173.json"
+    },
+    {
+      "id": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_LIVE_SCROLL_RANGE_REPAIR_174",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_LIVE_SCROLL_RANGE_REPAIR_174.json"
+    },
+    {
+      "id": "AUTHORIZATION_LAB_ROADMAP_SECTION_POST_TERMINAL_DEAD_SCROLL_REMOVAL_175",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SECTION_POST_TERMINAL_DEAD_SCROLL_REMOVAL_175.json"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "EVD-LAB-ROADMAP-SECTION-SOURCE-FIDELITY-172",
+      "status": "PASS_AUTOMATED_GATES_HUMAN_REVIEW_NOW_COMPLETED",
+      "canonical_path": "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-SOURCE-FIDELITY-172.json"
+    },
+    {
+      "id": "EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-173",
+      "status": "HUMAN_SOURCE_FIDELITY_APPROVED",
+      "canonical_path": "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-173.json"
+    },
+    {
+      "id": "EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-LIVE-RANGE-174",
+      "status": "MODIFIED_TERMINAL_COMPLETION_CONFIRMED_POST_TERMINAL_DEAD_SCROLL_PRESENT",
+      "canonical_path": "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-LIVE-RANGE-174.json"
+    },
+    {
+      "id": "EVD-LAB-ROADMAP-SECTION-POST-TERMINAL-DEAD-SCROLL-175",
+      "status": "HUMAN_LOCALHOST_REVALIDATION_PASS",
+      "canonical_path": "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-POST-TERMINAL-DEAD-SCROLL-175.json"
+    }
+  ],
+  "error": {
+    "id": "ERR-LAB-011",
+    "status": "CLOSED_BY_APPROVED_SECTION_SCOPED_SOURCE_FIDELITY",
+    "canonical_path": "errors/ERR-LAB-011.json"
+  },
+  "pending": {
+    "id": "PEND-LAB-046",
+    "status": "CLOSED_BY_APPROVED_SOURCE_FIDELITY",
+    "canonical_path": "projects/lab/pending/PEND-LAB-046.json"
+  },
+  "related_pending": {
+    "id": "PEND-LAB-043",
+    "status": "ROADMAP_SOURCE_FIDELITY_APPROVED_REMAINING_LIBRARY_POPULATION_AND_SEPARATE_PROMOTION_DECISIONS_PENDING",
+    "canonical_path": "projects/lab/pending/PEND-LAB-043.json"
+  },
+  "current_state_patch": {
+    "global_phase_preserved": "PRIORITY_INTEGRATIONS_PHASE_1_CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED",
+    "remove_open_error": "ERR-LAB-011",
+    "motion_source_fidelity_candidate": "CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
+    "motion_source_fidelity_status": "HUMAN_APPROVED_SOURCE_FIDELITY",
+    "human_approval": true,
+    "canonical_replacement": false,
+    "reusable_promotion": false,
+    "product_integration": false,
+    "active_execution_authority": "NONE_AFTER_AUTHORIZATION_173_STAGE_2_CONSUMPTION"
+  },
+  "project_state_patch": {
+    "motion_system_status": "SECTION_SCOPED_ROADMAP_SOURCE_FIDELITY_HUMAN_APPROVED",
+    "err_lab_011": "CLOSED",
+    "pend_lab_046": "CLOSED",
+    "pend_lab_043": "OPEN_FOR_REMAINING_LIBRARY_POPULATION_AND_SEPARATE_PROMOTION_DECISIONS"
+  },
+  "roadmap_patch": {
+    "roadmap_vertical_progress_source_fidelity": "COMPLETE_HUMAN_APPROVED",
+    "canonical_reference_designation": "NOT_AUTHORIZED",
+    "behavior_core_extraction": "NOT_AUTHORIZED",
+    "neutral_adaptation": "NOT_AUTHORIZED",
+    "reusable_promotion": "NOT_AUTHORIZED",
+    "product_integration": "NOT_AUTHORIZED"
+  },
+  "preserved": {
+    "carolina_repository": "READ_ONLY_UNMODIFIED",
+    "carolina_fixed_commit": "52654da574952148f96d051e439bff1cbc7b4b9d",
+    "reference_implementation_blob": "66100821888e37e769a7dcc1f9af53d30a74175e",
+    "comparison_metrics": "UNCHANGED",
+    "source_provenance": "UNCHANGED",
+    "priority_integrations_phase": "UNCHANGED",
+    "pend_lab_045": "UNCHANGED",
+    "statistics_counter_human_review": "PENDING",
+    "runtime_effect": "NONE",
+    "integration_effect": "NONE"
+  },
+  "next_action": "AWAIT_SEPARATE_EXPLICIT_AUTHORIZATION_FOR_CANONICAL_REFERENCE_DESIGNATION_AND_BEHAVIOR_CORE_EXTRACTION_OR_CONTINUE_ANOTHER_AUTHORIZED_LAB_PRIORITY",
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_173_STAGE_2_CONSUMPTION",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}
