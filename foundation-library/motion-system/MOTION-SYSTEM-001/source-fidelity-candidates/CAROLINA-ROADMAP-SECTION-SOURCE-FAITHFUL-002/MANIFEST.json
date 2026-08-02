@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "candidate_id": "CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
-  "status": "HUMAN_APPROVED_SOURCE_FIDELITY",
-  "classification": "SECTION_SCOPED_REFERENCE_IMPLEMENTATION_CANDIDATE_SOURCE_FIDELITY_APPROVED",
+  "status": "HUMAN_APPROVED_SOURCE_FIDELITY_CANONICAL_REFERENCE_DESIGNATED",
+  "classification": "SECTION_SCOPED_CANONICAL_REFERENCE_IMPLEMENTATION_SOURCE_FIDELITY_APPROVED",
   "source_repository": "marcellusanthonson-ctrl/carolina-md-next-landing",
   "fixed_commit": "52654da574952148f96d051e439bff1cbc7b4b9d",
   "source_selector": ".ca-roadmap-editorial",
@@ -13,6 +13,7 @@
   "human_comparison_correction_authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_SCROLL_CORRECTION_AND_CONDITIONAL_DECISION_RECONCILIATION_173",
   "live_scroll_range_repair_authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_LIVE_SCROLL_RANGE_REPAIR_174",
   "post_terminal_repair_authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_POST_TERMINAL_DEAD_SCROLL_REMOVAL_175",
+  "canonical_reference_and_behavior_core_authorization_ref": "AUTHORIZATION_LAB_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176",
   "scope": [
     "eyebrow_CÓMO_FUNCIONA",
     "title",
@@ -82,14 +83,22 @@
       "RESPONSIVE_ALTERNATING_CARD_LAYOUT_CONFIRMED_AFTER_VIEWPORT_RESIZE"
     ]
   },
+  "canonical_reference": {
+    "effect_id": "ROADMAP-VERTICAL-PROGRESS-001",
+    "designation": "CANONICAL_REFERENCE_IMPLEMENTATION",
+    "pointer": "../../effects/progress/ROADMAP-VERTICAL-PROGRESS-001/CANONICAL_REFERENCE.json",
+    "reference_artifact": "REFERENCE_IMPLEMENTATION.html",
+    "reference_artifact_blob_sha": "66100821888e37e769a7dcc1f9af53d30a74175e",
+    "designation_method": "POINTER_ONLY_NO_COPY_MOVE_REWRITE_OR_MODIFICATION"
+  },
   "historical_comparison_results": [
     "HUMAN_REVIEW_REVERSED_STAGE_1_PASS_SCROLL_RANGE_STALE",
     "MODIFIED_TERMINAL_COMPLETION_CONFIRMED_POST_TERMINAL_DEAD_SCROLL_PRESENT"
   ],
   "human_approval": true,
-  "canonical_reference_designation": false,
+  "canonical_reference_designation": true,
   "canonical_replacement": false,
-  "behavior_core_extraction": false,
+  "behavior_core_extraction": "AUTHORIZED_IN_PROGRESS",
   "reusable_promotion": false,
   "product_integration": false,
   "runtime_effect": "NONE"
