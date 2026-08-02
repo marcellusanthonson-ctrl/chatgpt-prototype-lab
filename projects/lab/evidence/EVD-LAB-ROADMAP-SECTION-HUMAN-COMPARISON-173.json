@@ -4,59 +4,105 @@
   "project_id": "lab",
   "authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_SCROLL_CORRECTION_AND_CONDITIONAL_DECISION_RECONCILIATION_173",
   "decision_ref": "DEC-LAB-031",
-  "status": "HUMAN_REVIEW_REVERSED_STAGE_1_PASS_SCROLL_RANGE_STALE",
+  "status": "HUMAN_SOURCE_FIDELITY_APPROVED",
   "candidate_id": "CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
-  "human_observation_before_correction": [
-    "VISUALLY_IMPECCABLE_IN_OBSERVED_RANGE",
-    "HUMAN_REVIEW_INCOMPLETE_DUE_TO_COMPARISON_SCROLL_LIMITATION"
+  "stage_1_history": {
+    "original_human_observation": [
+      "VISUALLY_IMPECCABLE_IN_OBSERVED_RANGE",
+      "HUMAN_REVIEW_INCOMPLETE_DUE_TO_COMPARISON_SCROLL_LIMITATION"
+    ],
+    "original_root_cause": "HUMAN_COMPARISON_FIXED_VIEWPORT_WITH_TWO_USER_OPERATED_NESTED_IFRAME_SCROLL_CONTAINERS_LIMITED_COMPLETE_REVIEW",
+    "original_correction": {
+      "target": "HUMAN_COMPARISON.html",
+      "single_outer_vertical_scroll": true,
+      "nested_user_scroll_removed": true,
+      "panels_synchronized": true,
+      "outer_progress_indicator": true,
+      "terminal_reached_indicator": true,
+      "local_file_access_fallback": "DIRECT_REFERENCE_IMPLEMENTATION_LINK"
+    },
+    "original_controlled_validation": {
+      "status": "REVERSED_BY_POST_PUBLICATION_HUMAN_EVIDENCE",
+      "method": "SAME_ORIGIN_SYNTHETIC_TALL_CHILD_BROWSER_HARNESS",
+      "viewport": "1440x900",
+      "original_claim": "PASS",
+      "defect": "SYNTHETIC_CHILD_DID_NOT_REPRODUCE_SOURCE_DYNAMIC_PADDING_AND_POST_SECTION_SCROLL_CONTEXT"
+    },
+    "post_publication_human_evidence": {
+      "status": "CONFIRMED_DEFECT",
+      "observed_at": "2026-08-02T17:24:00-04:00",
+      "finding": "COMPARISON_PANELS_STOP_BEFORE_ACTIVE_TERMINAL_CAP_WHILE_FULL_SOURCE_CONTEXT_CAN_COMPLETE_THE_LINE",
+      "classification": "HUMAN_REVIEW_REVERSED_STAGE_1_PASS_SCROLL_RANGE_STALE"
+    },
+    "refined_root_causes": [
+      "MAX_SCROLL_CACHED_AT_60_AND_240_MS_BEFORE_CHILD_360_MS_STABILIZATION",
+      "SECTION_ISOLATION_EXCLUDED_ALL_NON_TARGET_LANDING_SECTIONS_AND_REMOVED_TRAILING_SCROLL_CONTEXT",
+      "OUTER_100_PERCENT_WAS_USED_AS_A_PROXY_INSTEAD_OF_ACTUAL_CHILD_TERMINAL_STATE"
+    ],
+    "successor_authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_LIVE_SCROLL_RANGE_REPAIR_174",
+    "successor_evidence_ref": "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-LIVE-RANGE-174.json"
+  },
+  "successor_repairs": [
+    {
+      "authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_LIVE_SCROLL_RANGE_REPAIR_174",
+      "result": "MODIFIED_TERMINAL_COMPLETION_CONFIRMED_POST_TERMINAL_DEAD_SCROLL_PRESENT"
+    },
+    {
+      "authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_POST_TERMINAL_DEAD_SCROLL_REMOVAL_175",
+      "result": "POST_TERMINAL_DEAD_SCROLL_REMOVED_HUMAN_LOCALHOST_REVIEW_PASS"
+    }
   ],
-  "original_root_cause": "HUMAN_COMPARISON_FIXED_VIEWPORT_WITH_TWO_USER_OPERATED_NESTED_IFRAME_SCROLL_CONTAINERS_LIMITED_COMPLETE_REVIEW",
-  "original_correction": {
-    "target": "HUMAN_COMPARISON.html",
-    "single_outer_vertical_scroll": true,
-    "nested_user_scroll_removed": true,
-    "panels_synchronized": true,
-    "outer_progress_indicator": true,
-    "terminal_reached_indicator": true,
-    "local_file_access_fallback": "DIRECT_REFERENCE_IMPLEMENTATION_LINK"
+  "final_human_determination": {
+    "value": "APPROVED_SOURCE_FIDELITY",
+    "approved_by": "Jonathan Martínez",
+    "determined_at": "2026-08-02T18:43:00-04:00",
+    "approval_source": "Explicit human approval in conversation after complete localhost review",
+    "verbatim_observations": [
+      "Confirmo tu premisa. Al cambiar el tamaño en la pantalla, obtuve el diseño perfecto.",
+      "Apruebo el resultado."
+    ],
+    "verified_findings": [
+      "COMPLETE_ROADMAP_JOURNEY_CONFIRMED",
+      "BOTH_PANELS_REACH_REAL_TERMINAL_STATE",
+      "POST_TERMINAL_DEAD_SCROLL_ABSENT",
+      "RESPONSIVE_ALTERNATING_CARD_LAYOUT_CONFIRMED_AFTER_VIEWPORT_RESIZE",
+      "BASELINE_AND_CANDIDATE_VISUAL_PARITY_CONFIRMED"
+    ],
+    "screenshot": {
+      "filename": "2026-08-02_18h42_50.png",
+      "sha256": "0bda032c221b8d66426d576c525fc9fd560b33514992dd5fd3fe4a59760e7424",
+      "dimensions": "2048x765"
+    }
   },
-  "original_controlled_validation": {
-    "status": "REVERSED_BY_POST_PUBLICATION_HUMAN_EVIDENCE",
-    "method": "SAME_ORIGIN_SYNTHETIC_TALL_CHILD_BROWSER_HARNESS",
-    "viewport": "1440x900",
-    "original_claim": "PASS",
-    "defect": "SYNTHETIC_CHILD_DID_NOT_REPRODUCE_SOURCE_DYNAMIC_PADDING_AND_POST_SECTION_SCROLL_CONTEXT"
+  "stage_2": {
+    "trigger_value": "APPROVED_SOURCE_FIDELITY",
+    "triggered": true,
+    "triggered_at": "2026-08-02T18:43:00-04:00",
+    "result": "HUMAN_DECISION_REGISTERED_CANONICAL_STATE_REGISTRY_INDEX_AND_CONTINUITY_RECONCILIATION_EXECUTED"
   },
-  "post_publication_human_evidence": {
-    "status": "CONFIRMED_DEFECT",
-    "observed_at": "2026-08-02T17:24:00-04:00",
-    "finding": "COMPARISON_PANELS_STOP_BEFORE_ACTIVE_TERMINAL_CAP_WHILE_FULL_SOURCE_CONTEXT_CAN_COMPLETE_THE_LINE",
-    "classification": "HUMAN_REVIEW_REVERSED_STAGE_1_PASS_SCROLL_RANGE_STALE"
-  },
-  "refined_root_causes": [
-    "MAX_SCROLL_CACHED_AT_60_AND_240_MS_BEFORE_CHILD_360_MS_STABILIZATION",
-    "SECTION_ISOLATION_EXCLUDED_ALL_NON_TARGET_LANDING_SECTIONS_AND_REMOVED_TRAILING_SCROLL_CONTEXT",
-    "OUTER_100_PERCENT_WAS_USED_AS_A_PROXY_INSTEAD_OF_ACTUAL_CHILD_TERMINAL_STATE"
-  ],
-  "successor_authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_LIVE_SCROLL_RANGE_REPAIR_174",
-  "successor_evidence_ref": "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-LIVE-RANGE-174.json",
   "preserved_unchanged": [
     "REFERENCE_IMPLEMENTATION.html",
     "COMPARISON_METRICS.json",
     "SOURCE_PROVENANCE.json",
     "AUTHORIZATION_172_AUTOMATED_RESULTS"
   ],
-  "human_source_fidelity_decision": "PENDING_NEW_COMPLETE_REVIEW",
-  "stage_2_trigger": [
-    "APPROVED_SOURCE_FIDELITY",
-    "MODIFIED_WITH_LIMITATIONS",
-    "REJECTED_SOURCE_FIDELITY"
-  ],
+  "human_source_fidelity_decision": "APPROVED_SOURCE_FIDELITY",
+  "canonical_reference_designation": "NOT_AUTHORIZED",
+  "canonical_replacement": "NOT_AUTHORIZED",
+  "behavior_core_extraction": "NOT_AUTHORIZED",
+  "reusable_promotion": "NOT_AUTHORIZED",
+  "product_integration": "NOT_AUTHORIZED",
   "claims_not_established": [
-    "HUMAN_APPROVAL",
+    "CANONICAL_REFERENCE_DESIGNATION",
     "CANONICAL_REPLACEMENT",
+    "BEHAVIOR_CORE_EXTRACTION",
     "REUSABLE_PROMOTION",
     "PRODUCT_INTEGRATION"
+  ],
+  "source_refs": [
+    "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-LIVE-RANGE-174.json",
+    "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-POST-TERMINAL-DEAD-SCROLL-175.json",
+    "registry/deltas/roadmap-section-source-fidelity-human-approval-173.json"
   ],
   "runtime_effect": "NONE",
   "integration_effect": "NONE",
