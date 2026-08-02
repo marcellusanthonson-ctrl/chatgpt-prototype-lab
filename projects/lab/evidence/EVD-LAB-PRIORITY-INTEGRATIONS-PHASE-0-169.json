@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-PRIORITY-INTEGRATIONS-PHASE-0-169",
+  "project_id": "lab",
+  "evidence_type": "DOCUMENTARY_RECONCILIATION",
+  "status": "PASS_PENDING_SQUASHED_MAIN_PUBLICATION",
+  "created_at": "2026-08-02",
+  "authorization_ref": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_0_CANONICAL_RECONCILIATION_169",
+  "decision_ref": "DEC-LAB-030",
+  "verified_parent_head": "5b133661a643e290567324604083558cb72f31fd",
+  "findings": [
+    {
+      "claim": "The priority program contains exactly Product Leadership and Software Solution Engineering.",
+      "classification": "CONFIRMED",
+      "refs": [
+        "decisions/DEC-LAB-030.json",
+        "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/MANIFEST.json"
+      ]
+    },
+    {
+      "claim": "Product Leadership remains a candidate with Test 003 approved but not executed, active or integrated.",
+      "classification": "CONFIRMED",
+      "refs": [
+        "projects/lab/integrations/INT-LAB-004.json",
+        "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/PROPOSAL.json"
+      ]
+    },
+    {
+      "claim": "Software Solution Engineering remains a candidate with final test design review complete but execution and audit unauthorized.",
+      "classification": "CONFIRMED",
+      "refs": [
+        "projects/lab/integrations/INT-LAB-005.json",
+        "projects/lab/test-designs/SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json"
+      ]
+    },
+    {
+      "claim": "Intelligent Application Construction is preserved as a secondary candidate outside the critical path.",
+      "classification": "CONFIRMED",
+      "refs": [
+        "decisions/DEC-LAB-030.json",
+        "registry/deltas/intelligent-application-construction-090.json"
+      ]
+    },
+    {
+      "claim": "ECR, Integration Factory, Criterion Layer and Motion System are not substitutes for the two priority integrations.",
+      "classification": "CONFIRMED",
+      "refs": [
+        "decisions/DEC-LAB-030.json",
+        "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/MANIFEST.json"
+      ]
+    }
+  ],
+  "created_records": [
+    "DEC-LAB-030",
+    "INT-LAB-004",
+    "INT-LAB-005",
+    "PRIORITY-INTEGRATIONS-PROGRAM-001",
+    "PRIORITY-INTEGRATIONS-ROADMAP-001",
+    "PEND-LAB-044"
+  ],
+  "protected_scope": {
+    "test_execution": 0,
+    "external_audit_execution": 0,
+    "aws_calls": 0,
+    "terraform_execution": 0,
+    "runtime_changes": 0,
+    "product_changes": 0,
+    "active_pointer_changes": 0,
+    "candidate_registry_changes": 0,
+    "static_selector_changes": 0,
+    "motion_system_changes": 0
+  },
+  "validation": {
+    "exact_priority_count": 2,
+    "priority_order": [
+      "PRODUCT_LEADERSHIP",
+      "SOFTWARE_SOLUTION_ENGINEERING"
+    ],
+    "critical_path_count": 8,
+    "duplicate_new_ids": 0,
+    "historical_records_deleted": 0,
+    "authority_effect": "NONE_AFTER_PUBLICATION"
+  },
+  "maximum_result": "PHASE_0_PRIORITY_INTEGRATIONS_CANONICAL_INVENTORY_AND_ROADMAP_RECONCILED",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "integration_effect": "NONE"
+}
