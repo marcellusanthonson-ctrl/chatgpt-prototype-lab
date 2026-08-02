@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_SECTION_ISOLATION_AND_REVALIDATION_172",
+  "project_id": "lab",
+  "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+  "authorization_class": "SOURCE_FIDELITY_SECTION_ISOLATION_AND_REVALIDATION",
+  "decision_ref": "DEC-LAB-031",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-08-02",
+  "approval_source": "Explicit authorization in conversation on 2026-08-02",
+  "grant_inferred": false,
+  "repository": {
+    "name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "branch": "main",
+    "expected_parent_head": "7918342f65d01ca0dafd67edb3345c795083400d",
+    "head_policy": "VERIFY_LIVE_AT_USE",
+    "entrypoint": "project-sources/chatgpt/START_HERE.md"
+  },
+  "protected_repository": {
+    "name": "marcellusanthonson-ctrl/carolina-md-next-landing",
+    "fixed_commit": "52654da574952148f96d051e439bff1cbc7b4b9d",
+    "access_mode": "READ_ONLY_IMMUTABLE_EVIDENTIARY_SOURCE",
+    "mutation_authorized": false
+  },
+  "authority": {
+    "commit_authorized": true,
+    "push_authorized": true,
+    "source_file_update_authorized": true,
+    "runtime_authorized": false,
+    "product_changes_authorized": false,
+    "canonical_replacement_authorized": false,
+    "reusable_promotion_authorized": false,
+    "external_repository_mutation_authorized": false
+  },
+  "authorized_scope": [
+    "RECLASSIFY_CANDIDATE_001_SCOPE_OVERBROAD",
+    "PRESERVE_CANDIDATE_001_FULL_CONTEXT_FORENSIC_CAPTURE",
+    "CREATE_SECTION_SCOPED_CANDIDATE_002",
+    "REVALIDATE_64_STATE_CASES",
+    "PRESERVE_ERR_LAB_011_AND_PEND_LAB_046_OPEN"
+  ],
+  "prohibitions": [
+    "NO_CAROLINA_REPOSITORY_MUTATION",
+    "NO_PRODUCT_INTEGRATION",
+    "NO_CANONICAL_REPLACEMENT",
+    "NO_REUSABLE_PROMOTION",
+    "NO_RUNTIME_OR_DEPLOYMENT",
+    "NO_SCOPE_EXPANSION"
+  ],
+  "execution_result": {
+    "candidate_001": "HUMAN_REVIEW_REJECTED_SCOPE_OVERBROAD_PRESERVED_AS_FULL_CONTEXT_FORENSIC_CAPTURE",
+    "candidate_002": "HUMAN_REVIEW_PENDING_AUTOMATED_GATES_PASS",
+    "automated_gates": "PASS",
+    "err_lab_011": "OPEN",
+    "pend_lab_046": "OPEN"
+  },
+  "authority_effect": "NONE_AFTER_CONSUMPTION",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}
