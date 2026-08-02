@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "CHATGPT_ROADMAP_SECTION_HUMAN_COMPARISON_SCROLL_CORRECTION_173_001",
+  "project_id": "lab",
+  "status": "ACTIVE_STAGE_1",
+  "objective": "Correct only the candidate 002 human comparison surface so one outer scroll drives both complete panels synchronously from start to terminal cap.",
+  "executor": "ChatGPT",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "62c0e2d32537fa8a3aa354e6933c5e826cbf1b37",
+  "authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_SCROLL_CORRECTION_AND_CONDITIONAL_DECISION_RECONCILIATION_173",
+  "target_paths": [
+    "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/HUMAN_COMPARISON.html",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/README.md",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/MANIFEST.json",
+    "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-173.json"
+  ],
+  "preserve_byte_for_byte": [
+    "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/REFERENCE_IMPLEMENTATION.html",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/COMPARISON_METRICS.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/SOURCE_PROVENANCE.json"
+  ],
+  "acceptance_checks": [
+    "SINGLE_OUTER_VERTICAL_SCROLL",
+    "NO_USER_OPERATED_NESTED_IFRAME_SCROLL",
+    "BOTH_PANELS_SYNCHRONIZED",
+    "OUTER_PROGRESS_REACHES_100_PERCENT",
+    "EACH_CHILD_SCROLL_REACHES_ITS_EXACT_MAXIMUM",
+    "TERMINAL_REACHED_STATE_EXPOSED",
+    "REFERENCE_IMPLEMENTATION_BLOB_UNCHANGED",
+    "NO_CAROLINA_MUTATION"
+  ],
+  "stop_conditions": [
+    "REMOTE_HEAD_DIVERGES_FROM_AUTHORIZED_LINE",
+    "REFERENCE_IMPLEMENTATION_CHANGE_REQUIRED",
+    "PRODUCT_OR_RUNTIME_CHANGE_REQUIRED",
+    "SCOPE_EXPANSION_REQUIRED"
+  ],
+  "response_contract": [
+    "RESULT",
+    "COMMITS",
+    "VALIDATION",
+    "NEW_REVIEW_LINK",
+    "STAGE_2_TRIGGER_REQUIRED"
+  ]
+}
