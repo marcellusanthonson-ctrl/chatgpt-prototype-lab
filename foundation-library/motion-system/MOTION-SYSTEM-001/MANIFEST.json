@@ -2,11 +2,12 @@
   "schema_version": "1.0.0",
   "library_id": "MOTION-SYSTEM-001",
   "version": "0.1.0",
-  "status": "FOUNDATION_PUBLISHED_SECTION_SCOPED_ROADMAP_HUMAN_REVIEW_PENDING",
+  "status": "FOUNDATION_PUBLISHED_SECTION_SCOPED_ROADMAP_SOURCE_FIDELITY_HUMAN_APPROVED",
   "project_id": "lab",
   "owner": "LAB",
   "canonical_root": "foundation-library/motion-system/MOTION-SYSTEM-001",
   "decision_ref": "DEC-LAB-029",
+  "source_fidelity_decision_ref": "DEC-LAB-031",
   "authorization_ref": "AUTHORIZATION_LAB_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_167",
   "purpose": "Governed transversal classification, validation, formula preservation, customization and reuse of motion effects across projects.",
   "initial_effects": [
@@ -19,16 +20,24 @@
       "path": "source-fidelity-candidates/CAROLINA-ROADMAP-SOURCE-FAITHFUL-001",
       "status": "HUMAN_REVIEW_REJECTED_SCOPE_OVERBROAD",
       "preservation": "PRESERVED_AS_FULL_CONTEXT_FORENSIC_CAPTURE",
+      "human_approval": false,
       "canonical_replacement": false,
       "reusable_promotion": false
     },
     {
       "candidate_id": "CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
       "path": "source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
-      "status": "HUMAN_REVIEW_PENDING_AUTOMATED_GATES_PASS",
+      "status": "HUMAN_APPROVED_SOURCE_FIDELITY",
       "source_selector": ".ca-roadmap-editorial",
+      "human_determination": "APPROVED_SOURCE_FIDELITY",
+      "approved_by": "Jonathan Martínez",
+      "determined_at": "2026-08-02T18:43:00-04:00",
+      "human_approval": true,
+      "canonical_reference_designation": false,
       "canonical_replacement": false,
-      "reusable_promotion": false
+      "behavior_core_extraction": false,
+      "reusable_promotion": false,
+      "product_integration": false
     }
   ],
   "historical_neutral_derivations": [
@@ -39,10 +48,24 @@
   ],
   "implemented_effect_count": 2,
   "planned_effect_count": 61,
-  "maximum_initial_effect_status": "HUMAN_REVIEW_PENDING",
+  "maximum_initial_effect_status": "MIXED_ROADMAP_SOURCE_FIDELITY_APPROVED_STATISTICS_COUNTER_HUMAN_REVIEW_PENDING",
   "criterion_sources": [
     "DESIGN_CRITERION",
     "WEB_ACCESSIBILITY"
+  ],
+  "remaining_gates": [
+    "STATISTICS_COUNTER_HUMAN_REVIEW",
+    "SEPARATE_CANONICAL_REFERENCE_DESIGNATION_DECISION_IF_DESIRED",
+    "SEPARATE_BEHAVIOR_CORE_EXTRACTION_AUTHORIZATION_IF_DESIRED",
+    "SEPARATE_REUSABLE_PROMOTION_AUTHORIZATION",
+    "SEPARATE_PRODUCT_INTEGRATION_AUTHORIZATION"
+  ],
+  "source_refs": [
+    "decisions/DEC-LAB-029.json",
+    "decisions/DEC-LAB-031.json",
+    "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-173.json",
+    "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-POST-TERMINAL-DEAD-SCROLL-175.json",
+    "registry/deltas/roadmap-section-source-fidelity-human-approval-173.json"
   ],
   "product_effect": "NONE",
   "runtime_effect": "NONE",
