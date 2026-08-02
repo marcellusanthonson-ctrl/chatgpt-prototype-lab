@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-ROADMAP-CANONICAL-REFERENCE-BEHAVIOR-CORE-176",
+  "project_id": "lab",
+  "authorization_ref": "AUTHORIZATION_LAB_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176",
+  "decision_ref": "DEC-LAB-031",
+  "status": "PASS_CANONICAL_REFERENCE_DESIGNATED_BEHAVIOR_CORE_EXTRACTED_AND_CONTROLLED_VALIDATION_PASS",
+  "stage_0": {
+    "classification": "CANONICAL_STATE_DIVERGENCE_CONFIRMED",
+    "findings": [
+      "CURRENT_STATE_JSON_STILL_LISTED_ERR_LAB_011_OPEN_AND_CANDIDATE_HUMAN_REVIEW_PENDING",
+      "PROJECTS_LAB_PENDING_JSON_STILL_LISTED_PEND_LAB_043_AND_PEND_LAB_046_PRE_APPROVAL_STATES",
+      "CANONICAL_ITEM_FILES_CONTINUITY_AND_DELTA_ALREADY_RECORDED_APPROVAL_AND_CLOSURE"
+    ],
+    "treatment": "RECONCILE_DIRECT_CURRENT_STATE_AND_PENDING_AGGREGATES_WHILE_PRESERVING_UNRELATED_GLOBAL_PHASE_AND_HISTORY"
+  },
+  "stage_1": {
+    "result": "CANONICAL_REFERENCE_IMPLEMENTATION_DESIGNATED",
+    "effect_id": "ROADMAP-VERTICAL-PROGRESS-001",
+    "reference_id": "CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
+    "pointer": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/CANONICAL_REFERENCE.json",
+    "artifact": "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/REFERENCE_IMPLEMENTATION.html",
+    "designation_method": "POINTER_ONLY_NO_COPY_MOVE_REWRITE_OR_MODIFICATION",
+    "historical_neutral_derivation": "REJECTED_AS_CANONICAL_REFERENCE_PRESERVED_HISTORICALLY"
+  },
+  "stage_2": {
+    "result": "BEHAVIOR_CORE_EXTRACTED_AND_VALIDATED",
+    "behavior_core_id": "ROADMAP-VERTICAL-PROGRESS-BEHAVIOR-CORE-001",
+    "root": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core",
+    "artifacts": {
+      "implementation": {
+        "path": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/roadmap-progress-core.js",
+        "sha256": "a5491f0760eb26c50ef0d80a3d5d8f7fedca49ddbc54b91f80a5a6c678bbc16f"
+      },
+      "harness": {
+        "path": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/BEHAVIOR_CORE_HARNESS.html",
+        "sha256": "582d40e71a8a38379f6db5ada951c83cf2403f17838f4a34dfd50585417230fc"
+      },
+      "contract": {
+        "path": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/BEHAVIOR_CORE_CONTRACT.json",
+        "sha256": "cb4242983d992d8172579e06c2d10f38762bfd998ab367e519f47a973eb3ea02"
+      },
+      "validation": {
+        "path": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/BEHAVIOR_CORE_VALIDATION_RESULTS.json",
+        "sha256": "11c43f904ec3420c501acee19625e2d8012c352b5cee3043386b3529e6d331ce"
+      }
+    },
+    "preserved_semantics": [
+      "SCROLL_LINKED_PARAMETRIC_FILL",
+      "TIMELINE_LOCAL_COORDINATE_NORMALIZATION",
+      "LIVE_MEASUREMENT_AND_RESIZE_REMEASUREMENT",
+      "DYNAMIC_TRAILING_SPACE_ONLY_WHEN_REQUIRED",
+      "PROGRESSIVE_NODE_ACTIVATION",
+      "INDEPENDENT_CARD_REVEAL",
+      "STEP_LOCAL_PROGRESS",
+      "TERMINAL_STATE_AND_TERMINAL_CAP_SIGNAL",
+      "BOUNDED_POST_TERMINAL_RELEASE_MARGIN",
+      "REDUCED_MOTION_FINAL_STATE_IMMEDIATE",
+      "WINDOW_LOAD_DOCUMENT_FONTS_AND_DELAYED_STABILIZATION"
+    ],
+    "excluded_source_specific_dependencies": [
+      "CAROLINA_TEXT_CONTENT",
+      "CAROLINA_BRAND_IDENTITY",
+      "CAROLINA_TYPOGRAPHY",
+      "CAROLINA_COLORS",
+      "CAROLINA_ICONS",
+      "CLINICAL_CONTENT",
+      "SOURCE_EDITORIAL_COMPOSITION",
+      "PRODUCT_ASSETS"
+    ]
+  },
+  "validation": {
+    "status": "PASS_CONTROLLED_EXACT_BYTES",
+    "browser": "Chromium",
+    "method": "CONTROLLED_SET_CONTENT_EXACT_BYTES",
+    "real_localhost_navigation": "BLOCKED_BY_EXECUTION_ENVIRONMENT_ERR_BLOCKED_BY_ADMINISTRATOR",
+    "claim_boundary": "AUTOMATED_REAL_LOCALHOST_PASS_NOT_ESTABLISHED",
+    "normal_motion": "PASS_7_OF_7",
+    "reduced_motion": "PASS_7_OF_7",
+    "reference_transition_checks": "PASS_7_OF_7",
+    "required_viewports": ["390x844", "768x1024", "1280x720", "1440x900", "1541x899", "1920x1080", "2560x1080"],
+    "resize_round_trip": "PASS",
+    "late_stabilization": "PASS",
+    "terminal_state": "PASS",
+    "all_three_nodes_active": "PASS",
+    "final_progresses": [1, 1, 1],
+    "horizontal_overflow": "ZERO",
+    "external_requests": "ZERO",
+    "configured_release_margin_css_px": 16,
+    "minimum_post_terminal_visual_motion_css_px": 11,
+    "post_terminal_extra_metric_note": "TOTAL_DOCUMENT_DISTANCE_AFTER_FIRST_TERMINAL_EVENT_INCLUDES_VISIBLE_FOOTER_MOVEMENT_AND_IS_NOT_A_FROZEN_DEAD_SCROLL_MEASURE",
+    "node_check": "PASS"
+  },
+  "protected_artifacts": {
+    "reference_implementation_blob_sha": "66100821888e37e769a7dcc1f9af53d30a74175e",
+    "comparison_metrics_blob_sha": "87254c059ef32975e29327731968f028bbc46fe4",
+    "source_provenance_blob_sha": "5233884b89de573b631f9f2257649f539c6f704b",
+    "mutation": "NONE"
+  },
+  "non_effects": {
+    "carolina_repository_mutation": "NONE",
+    "canonical_replacement": "NONE",
+    "neutral_adaptation": "NONE",
+    "reusable_promotion": "NONE",
+    "product_integration": "NONE",
+    "runtime": "NONE",
+    "deployment": "NONE"
+  }
+}
