@@ -5,26 +5,17 @@
   "level": "COMPOSITION",
   "category": "PROGRESS",
   "industry_frequency": "COMMON",
-  "intents": [
-    "PROGRESS",
-    "CONTINUITY",
-    "STORYTELLING"
-  ],
-  "triggers": [
-    "SCROLL_PROGRESS",
-    "RESIZE"
-  ],
+  "intents": ["PROGRESS", "CONTINUITY", "STORYTELLING"],
+  "triggers": ["SCROLL_PROGRESS", "RESIZE"],
   "intensity": "LEVEL_2_SUBTLE",
   "calculation_model": "SCROLL_LINKED_PARAMETRIC",
   "formula_required": true,
   "implementation_type": "REQUEST_ANIMATION_FRAME",
   "performance_class": "COMPOSITOR_SAFE_WITH_BOUNDED_DOM_MEASUREMENT",
-  "motion_risks": [
-    "MODERATE_MOTION_RISK"
-  ],
+  "motion_risks": ["MODERATE_MOTION_RISK"],
   "reduced_motion_strategy": "FINAL_STATE_IMMEDIATE",
-  "status": "CANONICAL_REFERENCE_DESIGNATED_BEHAVIOR_CORE_EXTRACTED_VALIDATION_PENDING_PUBLICATION",
-  "maximum_authorized_status": "CANONICAL_REFERENCE_DESIGNATED_BEHAVIOR_CORE_EXTRACTED_NOT_REUSABLY_PROMOTED",
+  "status": "CANONICAL_REFERENCE_DESIGNATED_BEHAVIOR_CORE_VALIDATED",
+  "maximum_authorized_status": "CANONICAL_REFERENCE_DESIGNATED_BEHAVIOR_CORE_VALIDATED_NOT_REUSABLY_PROMOTED",
   "canonical_reference": {
     "reference_id": "CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
     "pointer": "CANONICAL_REFERENCE.json",
@@ -40,8 +31,17 @@
     "implementation": "behavior-core/roadmap-progress-core.js",
     "harness": "behavior-core/BEHAVIOR_CORE_HARNESS.html",
     "validation": "behavior-core/BEHAVIOR_CORE_VALIDATION_RESULTS.json",
-    "status": "EXTRACTED_VALIDATION_PENDING_PUBLICATION",
-    "source_independent": true
+    "status": "VALIDATED_PASS_CONTROLLED_EXACT_BYTES",
+    "source_independent": true,
+    "normal_viewports_pass": "7_OF_7",
+    "reduced_motion_viewports_pass": "7_OF_7",
+    "reference_transition_checks_pass": "7_OF_7",
+    "resize_round_trip": "PASS",
+    "terminal_state": "PASS",
+    "horizontal_overflow": "ZERO",
+    "external_requests": "ZERO",
+    "configured_release_margin_css_px": 16,
+    "real_localhost_automation": "BLOCKED_BY_EXECUTION_ENVIRONMENT_ERR_BLOCKED_BY_ADMINISTRATOR"
   },
   "historical_neutral_derivation": {
     "status": "REJECTED_AS_CANONICAL_REFERENCE_PRESERVED_HISTORICALLY",
@@ -49,13 +49,7 @@
     "reusable_promotion": false,
     "product_integration": false
   },
-  "customization_levels": [
-    "L0_DEFAULT",
-    "L1_TOKEN_CUSTOMIZATION",
-    "L2_CHOREOGRAPHY_CUSTOMIZATION",
-    "L3_VISUAL_ADAPTATION",
-    "L4_SIGNATURE_DERIVATION"
-  ],
+  "customization_levels": ["L0_DEFAULT", "L1_TOKEN_CUSTOMIZATION", "L2_CHOREOGRAPHY_CUSTOMIZATION", "L3_VISUAL_ADAPTATION", "L4_SIGNATURE_DERIVATION"],
   "source_reference": "CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
   "authorization_ref": "AUTHORIZATION_LAB_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176",
   "product_integration_status": "NOT_AUTHORIZED_NOT_PERFORMED",
