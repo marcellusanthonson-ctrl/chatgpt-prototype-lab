@@ -2,19 +2,31 @@
   "schema_version": "1.0.0",
   "id": "PEND-LAB-046",
   "project_id": "lab",
-  "status": "OPEN_HUMAN_COMPARISON_OF_SECTION_SCOPED_CANDIDATE_REQUIRED",
+  "status": "CLOSED_BY_APPROVED_SOURCE_FIDELITY",
   "type": "MOTION_SOURCE_FIDELITY_HUMAN_COMPARISON",
   "subject": "Human comparison of the isolated Carolina roadmap section source-faithful candidate",
   "priority": "HIGH",
   "precondition": "CAROLINA_ROADMAP_SECTION_SOURCE_FAITHFUL_002_AUTOMATED_GATES_PASS",
-  "current_candidate_state": "CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002_HUMAN_REVIEW_PENDING",
-  "required_actions": [
-    "HUMAN_COMPARE_SECTION_SCOPED_BASELINE_AND_CANDIDATE",
-    "ISSUE_SEPARATE_HUMAN_SOURCE_FIDELITY_DECISION"
+  "current_candidate_state": "CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002_HUMAN_APPROVED_SOURCE_FIDELITY",
+  "required_actions": [],
+  "completed_actions": [
+    "HUMAN_COMPARED_SECTION_SCOPED_BASELINE_AND_CANDIDATE",
+    "COMPLETE_LOCALHOST_JOURNEY_CONFIRMED",
+    "POST_TERMINAL_DEAD_SCROLL_REMOVED_AND_REVALIDATED",
+    "RESPONSIVE_ALTERNATING_CARD_LAYOUT_CONFIRMED",
+    "EXPLICIT_HUMAN_SOURCE_FIDELITY_DECISION_ISSUED"
   ],
-  "prohibitions": [
-    "NO_AUTOMATIC_REFERENCE_APPROVAL",
+  "human_determination": {
+    "value": "APPROVED_SOURCE_FIDELITY",
+    "approved_by": "Jonathan Martínez",
+    "determined_at": "2026-08-02T18:43:00-04:00",
+    "approval_source": "Explicit human approval in conversation after complete localhost review"
+  },
+  "resolution": "The section-scoped candidate reproduces the protected Carolina roadmap section faithfully. The comparison harness completes the full journey, releases immediately after the terminal state and preserves the responsive alternating card arrangement at the applicable viewport width.",
+  "remaining_non_authorizations": [
+    "NO_AUTOMATIC_CANONICAL_REFERENCE_DESIGNATION",
     "NO_CANONICAL_REPLACEMENT",
+    "NO_BEHAVIOR_CORE_EXTRACTION",
     "NO_REUSABLE_PROMOTION",
     "NO_PRODUCT_INTEGRATION",
     "NO_CAROLINA_MUTATION"
@@ -23,7 +35,13 @@
     "decisions/DEC-LAB-031.json",
     "errors/ERR-LAB-011.json",
     "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_SECTION_ISOLATION_AND_REVALIDATION_172.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_SCROLL_CORRECTION_AND_CONDITIONAL_DECISION_RECONCILIATION_173.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_LIVE_SCROLL_RANGE_REPAIR_174.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SECTION_POST_TERMINAL_DEAD_SCROLL_REMOVAL_175.json",
     "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-SOURCE-FIDELITY-172.json",
+    "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-173.json",
+    "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-POST-TERMINAL-DEAD-SCROLL-175.json",
+    "registry/deltas/roadmap-section-source-fidelity-human-approval-173.json",
     "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/HUMAN_COMPARISON.html"
   ],
   "authority_effect": "NONE",
