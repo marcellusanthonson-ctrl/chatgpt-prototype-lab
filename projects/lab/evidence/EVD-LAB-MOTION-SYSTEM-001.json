@@ -1,1 +1,33 @@
-{"schema_version":"1.0.0","evidence_id":"EVD-LAB-MOTION-SYSTEM-001","project_id":"lab","authorization_id":"AUTHORIZATION_LAB_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_167","decision_id":"DEC-LAB-029","classification":"MOTION_SYSTEM_FOUNDATION_MATERIALIZED_BROWSER_PASS_AWAITING_GENERAL_VALIDATION_AND_CANONICAL_RECONCILIATION","created_at":"2026-08-01T22:53:00-04:00","verified_outputs":{"schemas":6,"implemented_effects":2,"planned_effects":61,"patterns":2,"catalog_offline":true,"product_changes":false,"external_repository_mutations":false,"browser_validation":"PASS_SET_CONTENT_RENDERING"},"preservation":{"pointer":"UNCHANGED_BY_TREE","static_selector":"UNCHANGED_BY_TREE","candidate_registry":"UNCHANGED_BY_TREE","selector_semantics":"UNCHANGED"},"limitations":["FILE_PROTOCOL_NAVIGATION_BLOCKED_BY_ENVIRONMENT_ADMIN_POLICY","GENERAL_REPOSITORY_VALIDATOR_NOT_EXECUTED_LOCALLY_BECAUSE_FULL_REPOSITORY_CHECKOUT_UNAVAILABLE","CANONICAL_AGGREGATE_FILES_PENDING_RECONCILIATION","HUMAN_REVIEW_PENDING"],"result_boundary":"PUBLISHED_FOUNDATION_CANDIDATE_NOT_AUTHORIZATION_CONSUMPTION_NOT_PRODUCT_INTEGRATION"}
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-MOTION-SYSTEM-001",
+  "project_id": "lab",
+  "authorization_id": "AUTHORIZATION_LAB_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_167",
+  "decision_id": "DEC-LAB-029",
+  "classification": "MOTION_SYSTEM_FOUNDATION_VALIDATION_PASS_AWAITING_REMOTE_VERIFICATION_AND_AUTHORIZATION_CONSUMPTION",
+  "created_at": "2026-08-01T22:53:00-04:00",
+  "verified_outputs": {
+    "schemas": 6,
+    "implemented_effects": 2,
+    "planned_effects": 61,
+    "patterns": 2,
+    "catalog_offline": true,
+    "product_changes": false,
+    "external_repository_mutations": false,
+    "browser_validation": "PASS_SET_CONTENT_RENDERING",
+    "general_repository_validator": "PREPUBLICATION_EXACT_329_ZERO_ADDED_ZERO_REMOVED",
+    "canonical_aggregate_reconciliation": "PASS_PREPUBLICATION"
+  },
+  "preservation": {
+    "pointer": "UNCHANGED_BY_TREE",
+    "static_selector": "UNCHANGED_BY_TREE",
+    "candidate_registry": "UNCHANGED_BY_TREE",
+    "selector_semantics": "UNCHANGED"
+  },
+  "limitations": [
+    "FILE_PROTOCOL_NAVIGATION_BLOCKED_BY_ENVIRONMENT_ADMIN_POLICY_SET_CONTENT_BROWSER_VALIDATION_USED",
+    "HUMAN_REVIEW_PENDING",
+    "REMOTE_PUBLICATION_VERIFICATION_PENDING"
+  ],
+  "result_boundary": "PUBLISHED_FOUNDATION_CANDIDATE_NOT_AUTHORIZATION_CONSUMPTION_NOT_PRODUCT_INTEGRATION"
+}

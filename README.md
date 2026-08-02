@@ -123,3 +123,7 @@ PRODUCT_EFFECT = NONE
 EXTERNAL_PROJECT_EFFECT = NONE
 NEW_PILOT_AUTHORIZED = NO
 ```
+
+## Motion system transversal
+
+- `foundation-library/motion-system/MOTION-SYSTEM-001/`: catálogo, protocolos, fórmulas, personalización y efectos reutilizables gobernados.

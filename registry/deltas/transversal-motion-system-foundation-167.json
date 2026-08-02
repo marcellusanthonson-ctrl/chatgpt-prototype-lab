@@ -1,1 +1,44 @@
-{"schema_version":"1.0.0","delta_id":"transversal-motion-system-foundation-167","project_id":"lab","updated_at":"2026-08-01","decision":{"id":"DEC-LAB-029","status":"APPROVED","canonical_path":"decisions/DEC-LAB-029.json"},"authorization":{"id":"AUTHORIZATION_LAB_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_167","state_key":"transversal_motion_effects_library_foundation_167","status":"GRANTED_STAGE_1_CONSUMED_STAGE_2_PUBLISHED_AWAITING_GENERAL_VALIDATION_AND_CANONICAL_RECONCILIATION","canonical_path":"projects/lab/authorizations/AUTHORIZATION_LAB_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_167.json","brief_path":"projects/lab/briefs/CODEX_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_001.json"},"active_authorization":"AUTHORIZATION_LAB_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_167","stage_1":"PASS_CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION","stage_1_remote_head":"db3b6d7e05418c72f88b29638c0c026410792c04","stage_2":"MATERIALIZED_BROWSER_PASS_AWAITING_GENERAL_VALIDATION_AND_CANONICAL_RECONCILIATION","canonical_root":"foundation-library/motion-system/MOTION-SYSTEM-001","patterns":["PAT-LAB-010","PAT-LAB-011"],"evidence":"EVD-LAB-MOTION-SYSTEM-001","pending":"PEND-LAB-043","foundation_library_delta":{"add":1,"implemented_effects":2,"planned_effects":61},"runtime_effect":"NONE","integration_effect":"DOCUMENTARY_CRITERION_SOURCE_DISCOVERABILITY_ONLY","validation":{"browser":"PASS_SET_CONTENT_RENDERING","file_protocol":"BLOCKED_BY_ENVIRONMENT_POLICY","general_repository_validator":"PENDING","canonical_aggregate_reconciliation":"PENDING"}}
+{
+  "schema_version": "1.0.0",
+  "delta_id": "transversal-motion-system-foundation-167",
+  "project_id": "lab",
+  "updated_at": "2026-08-01",
+  "decision": {
+    "id": "DEC-LAB-029",
+    "status": "APPROVED",
+    "canonical_path": "decisions/DEC-LAB-029.json"
+  },
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_167",
+    "state_key": "transversal_motion_effects_library_foundation_167",
+    "status": "GRANTED_STAGE_1_CONSUMED_STAGE_2_PUBLISHED_AWAITING_GENERAL_VALIDATION_AND_CANONICAL_RECONCILIATION",
+    "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_167.json",
+    "brief_path": "projects/lab/briefs/CODEX_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_001.json"
+  },
+  "active_authorization": "AUTHORIZATION_LAB_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_167",
+  "stage_1": "PASS_CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+  "stage_1_remote_head": "db3b6d7e05418c72f88b29638c0c026410792c04",
+  "stage_2": "VALIDATION_PASS_AWAITING_REMOTE_VERIFICATION_AND_AUTHORIZATION_CONSUMPTION",
+  "canonical_root": "foundation-library/motion-system/MOTION-SYSTEM-001",
+  "patterns": [
+    "PAT-LAB-010",
+    "PAT-LAB-011"
+  ],
+  "evidence": "EVD-LAB-MOTION-SYSTEM-001",
+  "pending": "PEND-LAB-043",
+  "foundation_library_delta": {
+    "add": 1,
+    "implemented_effects": 2,
+    "planned_effects": 61
+  },
+  "runtime_effect": "NONE",
+  "integration_effect": "DOCUMENTARY_CRITERION_SOURCE_DISCOVERABILITY_ONLY",
+  "validation": {
+    "browser": "PASS_SET_CONTENT_RENDERING",
+    "file_protocol": "BLOCKED_BY_ENVIRONMENT_POLICY_STATIC_OFFLINE_CONTRACT_PASS",
+    "motion_system_validator": "PASS",
+    "general_repository_validator": "PREPUBLICATION_EXACT_329_ZERO_ADDED_ZERO_REMOVED",
+    "protected_blobs": "PASS",
+    "canonical_aggregate_reconciliation": "PASS_PREPUBLICATION"
+  }
+}

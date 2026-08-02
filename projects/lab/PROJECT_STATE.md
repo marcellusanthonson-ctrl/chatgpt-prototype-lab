@@ -179,3 +179,7 @@ Stage 2 de la autorización 166 se ejecutó desde `4ced6a5f63f833f1526400b70eb53
 Ambas iteraciones pasaron 420/420, 13/13 oráculos por evaluador, cero divergencias y digest exacto determinista. El selector estático y el candidate permanecen byte-for-byte intactos; el lock y todos los temporales fueron retirados. No hubo AWS, Terraform, datos reales, credenciales de producción ni cambios externos.
 
 La autorización 166 queda consumida con publicación remota verificada y no deja autoridad residual. `PEND-LAB-042` conserva la única siguiente decisión: mantener indefinidamente el selector estático como fallback o autorizar su retiro mediante una ejecución separada.
+
+## Motion system transversal — autorización 167
+
+MOTION-SYSTEM-001 quedó publicado con taxonomía multidimensional, contratos de fórmula y personalización, 61 efectos planificados y dos candidatos en HUMAN_REVIEW_PENDING. No existe efecto de producto o runtime.
