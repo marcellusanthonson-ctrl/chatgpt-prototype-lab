@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "roadmap-source-fidelity-section-isolation-and-revalidation-172",
+  "project_id": "lab",
+  "updated_at": "2026-08-02",
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_SECTION_ISOLATION_AND_REVALIDATION_172",
+    "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_SECTION_ISOLATION_AND_REVALIDATION_172.json",
+    "brief_path": "projects/lab/briefs/CODEX_ROADMAP_SOURCE_FIDELITY_SECTION_ISOLATION_AND_REVALIDATION_172_001.json",
+    "approved_by": "Jonathan Martínez"
+  },
+  "active_authorization": null,
+  "human_review": {
+    "candidate_001": "HUMAN_REVIEW_REJECTED_SCOPE_OVERBROAD",
+    "preservation": "PRESERVED_AS_FULL_CONTEXT_FORENSIC_CAPTURE",
+    "review_path": "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SOURCE-FAITHFUL-001/HUMAN_SCOPE_REVIEW_2026-08-02.json"
+  },
+  "execution_result": {
+    "candidate_002": "HUMAN_REVIEW_PENDING_AUTOMATED_GATES_PASS",
+    "path": "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
+    "validation": {
+      "state_cases": 64,
+      "minimum_ssim": 1.0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "axis_delta_css_px": 0,
+      "external_request_count": 0,
+      "scope_isolation_failure_count": 0
+    },
+    "human_review": "PENDING"
+  },
+  "error": {
+    "id": "ERR-LAB-011",
+    "status": "OPEN_AWAITING_SECTION_SCOPED_HUMAN_SOURCE_FIDELITY_DECISION"
+  },
+  "pending": {
+    "id": "PEND-LAB-046",
+    "status": "OPEN_HUMAN_COMPARISON_OF_CANDIDATE_002_REQUIRED"
+  },
+  "preserved": {
+    "global_current_phase": "PRIORITY_INTEGRATIONS_PHASE_1_CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED",
+    "carolina_repository": "IMMUTABLE_UNCHANGED",
+    "canonical_replacement": false,
+    "reusable_promotion": false,
+    "product_integration": false
+  },
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_172_CONSUMPTION",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}
