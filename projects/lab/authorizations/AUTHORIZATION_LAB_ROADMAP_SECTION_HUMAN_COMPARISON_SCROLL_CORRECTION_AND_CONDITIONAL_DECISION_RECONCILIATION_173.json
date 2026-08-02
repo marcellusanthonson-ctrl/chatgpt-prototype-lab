@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_SCROLL_CORRECTION_AND_CONDITIONAL_DECISION_RECONCILIATION_173",
   "project_id": "lab",
-  "status": "STAGE_1_CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_STAGE_2_CONDITIONAL_ACTIVE",
+  "status": "STAGE_1_CONSUMED_RESULT_REVERSED_STAGE_2_CONDITIONAL_ACTIVE",
   "authorization_class": "HUMAN_COMPARISON_SCROLL_CORRECTION_AND_CONDITIONAL_DECISION_RECONCILIATION",
   "decision_ref": "DEC-LAB-031",
   "approved_by": "Jonathan Martínez",
@@ -42,7 +42,7 @@
       "UPDATE_ONLY_STRICTLY_NECESSARY_README_MANIFEST_OR_REVIEW_EVIDENCE",
       "PUBLISH_NEW_REVIEW_LINK"
     ],
-    "result": {
+    "original_publication_claim": {
       "human_comparison_surface": "PASS_SINGLE_OUTER_SCROLL_SYNCHRONIZED_0_TO_100_PERCENT",
       "nested_user_scroll": "REMOVED",
       "terminal_reached_indicator": "IMPLEMENTED",
@@ -51,13 +51,26 @@
       "reference_implementation_changed": false,
       "carolina_repository_mutation": "NONE"
     },
+    "post_publication_reassessment": {
+      "classification": "HUMAN_REVIEW_REVERSED_STAGE_1_PASS_SCROLL_RANGE_STALE",
+      "basis": "POST_PUBLICATION_HUMAN_SIDE_BY_SIDE_EVIDENCE_SHOWED_BOTH_COMPARISON_PANELS_STOPPED_BEFORE_THE_ACTIVE_TERMINAL_CAP",
+      "root_causes": [
+        "MAX_SCROLL_CACHED_BEFORE_360MS_CHILD_GEOMETRY_STABILIZATION",
+        "SECTION_ISOLATION_REMOVED_POST_SECTION_SCROLL_CONTEXT_REQUIRED_BY_THE_SOURCE_VIEWPORT_TRIGGER_FORMULA",
+        "OVERFLOW_X_HIDDEN_ON_THE_REVIEW_ROOT_PREVENTED_THE_STICKY_SHELL_FROM_REMAINING_FIXED_IN_CONTROLLED_REPAIR_DEVELOPMENT"
+      ],
+      "successor_authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_LIVE_SCROLL_RANGE_REPAIR_174",
+      "successor_evidence_ref": "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-LIVE-RANGE-174.json"
+    },
     "publication_commits": [
       "63db6e29f88cb11e2ff82bd55eebebaa3df4da0a",
       "e8bb4d14b806d279b5078bcd24ad438c26e216a0",
       "46280ec5c233b63ff3cbff5a2d29917d7b5cee9e",
       "485c5f5a975351c1242f68f62ec36c9a3a4da871",
       "4f4b02991284c0c340212ead2218bcf17f44ec1e",
-      "832f7bf3be1081a76d8ef07acd0c3cf4a3d58b5d"
+      "832f7bf3be1081a76d8ef07acd0c3cf4a3d58b5d",
+      "b6022586e885a3d8af7e0d7417811fca2c62331a",
+      "cd4efaad21532de8e08d0a793dbea6308d0ae296"
     ]
   },
   "stage_2": {
@@ -72,11 +85,12 @@
       "REGISTER_EXPLICIT_HUMAN_DETERMINATION",
       "RECONCILE_AFFECTED_CANONICAL_STATE_REGISTRIES_INDEXES_AND_CONTINUITY",
       "UPDATE_ERR_LAB_011_AND_PEND_LAB_046_CONSISTENTLY_WITH_HUMAN_DETERMINATION"
-    ]
+    ],
+    "triggered": false
   },
   "current_human_observation": [
     "VISUALLY_IMPECCABLE_IN_OBSERVED_RANGE",
-    "COMPLETE_REVIEW_RETRY_REQUIRED_AFTER_HARNESS_CORRECTION"
+    "COMPLETE_REVIEW_RETRY_REQUIRED_AFTER_LIVE_SCROLL_RANGE_REPAIR_174"
   ],
   "preserve_byte_for_byte": [
     "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/REFERENCE_IMPLEMENTATION.html",
