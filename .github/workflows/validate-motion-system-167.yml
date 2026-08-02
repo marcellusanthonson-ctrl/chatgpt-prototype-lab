@@ -1,9 +1,7 @@
 name: Validate Motion System 167
 on:
-  push:
+  pull_request:
     branches: [main]
-    paths:
-      - '.github/workflows/validate-motion-system-167.yml'
   workflow_dispatch:
 permissions:
   contents: read
