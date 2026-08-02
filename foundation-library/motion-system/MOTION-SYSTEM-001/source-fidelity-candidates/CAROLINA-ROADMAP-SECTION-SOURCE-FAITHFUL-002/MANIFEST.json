@@ -14,30 +14,8 @@
   "live_scroll_range_repair_authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_LIVE_SCROLL_RANGE_REPAIR_174",
   "post_terminal_repair_authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_POST_TERMINAL_DEAD_SCROLL_REMOVAL_175",
   "canonical_reference_and_behavior_core_authorization_ref": "AUTHORIZATION_LAB_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176",
-  "scope": [
-    "eyebrow_CÓMO_FUNCIONA",
-    "title",
-    "introductory_paragraph",
-    "timeline",
-    "three_cards",
-    "nodes",
-    "halos",
-    "base_line",
-    "progress",
-    "terminal_cap",
-    "strictly_required_styles_fonts_and_inline_assets"
-  ],
-  "exclusions": [
-    "navigation",
-    "hero",
-    "statistics",
-    "services",
-    "CTA",
-    "forms",
-    "footer",
-    "floating_controls",
-    "all_other_landing_sections"
-  ],
+  "scope": ["eyebrow_CÓMO_FUNCIONA", "title", "introductory_paragraph", "timeline", "three_cards", "nodes", "halos", "base_line", "progress", "terminal_cap", "strictly_required_styles_fonts_and_inline_assets"],
+  "exclusions": ["navigation", "hero", "statistics", "services", "CTA", "forms", "footer", "floating_controls", "all_other_landing_sections"],
   "automated_gates": {
     "status": "PASS",
     "state_cases": 64,
@@ -76,12 +54,7 @@
     "value": "APPROVED_SOURCE_FIDELITY",
     "approved_by": "Jonathan Martínez",
     "determined_at": "2026-08-02T18:43:00-04:00",
-    "basis": [
-      "COMPLETE_ROADMAP_JOURNEY_CONFIRMED",
-      "BASELINE_AND_CANDIDATE_VISUALLY_EQUAL",
-      "POST_TERMINAL_DEAD_SCROLL_ABSENT",
-      "RESPONSIVE_ALTERNATING_CARD_LAYOUT_CONFIRMED_AFTER_VIEWPORT_RESIZE"
-    ]
+    "basis": ["COMPLETE_ROADMAP_JOURNEY_CONFIRMED", "BASELINE_AND_CANDIDATE_VISUALLY_EQUAL", "POST_TERMINAL_DEAD_SCROLL_ABSENT", "RESPONSIVE_ALTERNATING_CARD_LAYOUT_CONFIRMED_AFTER_VIEWPORT_RESIZE"]
   },
   "canonical_reference": {
     "effect_id": "ROADMAP-VERTICAL-PROGRESS-001",
@@ -91,14 +64,19 @@
     "reference_artifact_blob_sha": "66100821888e37e769a7dcc1f9af53d30a74175e",
     "designation_method": "POINTER_ONLY_NO_COPY_MOVE_REWRITE_OR_MODIFICATION"
   },
-  "historical_comparison_results": [
-    "HUMAN_REVIEW_REVERSED_STAGE_1_PASS_SCROLL_RANGE_STALE",
-    "MODIFIED_TERMINAL_COMPLETION_CONFIRMED_POST_TERMINAL_DEAD_SCROLL_PRESENT"
-  ],
+  "behavior_core": {
+    "behavior_core_id": "ROADMAP-VERTICAL-PROGRESS-BEHAVIOR-CORE-001",
+    "pointer": "../../effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/BEHAVIOR_CORE_CONTRACT.json",
+    "implementation": "../../effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/roadmap-progress-core.js",
+    "validation": "../../effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/BEHAVIOR_CORE_VALIDATION_RESULTS.json",
+    "status": "EXTRACTED_AND_VALIDATED_PASS_CONTROLLED_EXACT_BYTES",
+    "source_independent": true
+  },
+  "historical_comparison_results": ["HUMAN_REVIEW_REVERSED_STAGE_1_PASS_SCROLL_RANGE_STALE", "MODIFIED_TERMINAL_COMPLETION_CONFIRMED_POST_TERMINAL_DEAD_SCROLL_PRESENT"],
   "human_approval": true,
   "canonical_reference_designation": true,
   "canonical_replacement": false,
-  "behavior_core_extraction": "AUTHORIZED_IN_PROGRESS",
+  "behavior_core_extraction": true,
   "reusable_promotion": false,
   "product_integration": false,
   "runtime_effect": "NONE"
