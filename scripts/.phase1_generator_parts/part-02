@@ -1,0 +1,61 @@
+in {"PEND-LAB-044","PEND-LAB-045"}]
+    records.extend([replacement, successor])
+    save("projects/lab/PENDING.json", pending_view)
+
+    roadmap_view = load("projects/lab/ROADMAP.json")
+    roadmap_view["updated_at"] = DATE
+    roadmap_view["priority_integrations_program"] = {
+        "program_ref": PROGRAM,
+        "roadmap_ref": ROADMAP,
+        "status": "PHASE_1_COMPLETE_LATER_PHASES_NOT_AUTHORIZED",
+        "phase_1": "COMPLETE_PASS",
+        "phase_2": "NOT_AUTHORIZED",
+        "next_pending": PENDING
+    }
+    save("projects/lab/ROADMAP.json", roadmap_view)
+
+    continuity = load("projects/lab/continuity/CURRENT_CONTINUITY.json")
+    continuity["updated_at"] = DATE
+    continuity["priority_integrations_program"] = {
+        "status": "PHASE_1_FACTORY_CONTRACT_COMPLETION_PASS",
+        "program_ref": PROGRAM,
+        "roadmap_ref": ROADMAP,
+        "composition_ref": COMPOSITION,
+        "evidence_ref": EVIDENCE,
+        "next_pending_ref": PENDING,
+        "authority": "NONE_AFTER_AUTHORIZATION_170_REVISION_2_CONSUMPTION"
+    }
+    continuity["single_next_action"] = "SEPARATELY_AUTHORIZE_PHASE_2_INDEPENDENT_EVIDENCE_CLOSURE"
+    save("projects/lab/continuity/CURRENT_CONTINUITY.json", continuity)
+
+def finalize(validation_path: str) -> None:
+    result = json.loads(Path(validation_path).read_text(encoding="utf-8"))
+    if result.get("status") != "PASS":
+        raise SystemExit("Validator did not pass")
+    vr = load("projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/phase1/VALIDATION_RESULTS.json")
+    vr["status"] = "PASS_FULL_REPOSITORY_BRANCH_VALIDATION"
+    vr["full_repository_result"] = result
+    vr["remote_checks_pending"] = ["BRANCH_TO_MAIN_COMPARE","SQUASH_MERGE_VERIFICATION"]
+    save("projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/phase1/VALIDATION_RESULTS.json", vr)
+
+    evidence = load(EVIDENCE)
+    evidence["status"] = "PASS_BRANCH_VALIDATED_PUBLICATION_PENDING"
+    evidence["remote_checks_pending"] = ["BRANCH_TO_MAIN_COMPARE","SQUASH_MERGE","REMOTE_HEAD_VERIFICATION"]
+    evidence["full_repository_validation"] = result
+    save(EVIDENCE, evidence)
+
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--materialize", action="store_true")
+    parser.add_argument("--finalize")
+    args = parser.parse_args()
+    if args.materialize:
+        materialize()
+    elif args.finalize:
+        finalize(args.finalize)
+    else:
+        parser.error("choose --materialize or --finalize")
+    return 0
+
+if __name__ == "__main__":
+    raise SystemExit(main())
