@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "source_repository": "marcellusanthonson-ctrl/carolina-md-next-landing",
+  "fixed_commit": "52654da574952148f96d051e439bff1cbc7b4b9d",
+  "access_mode": "READ_ONLY_IMMUTABLE_EVIDENTIARY_SOURCE",
+  "mutation": "NONE",
+  "selector": ".ca-roadmap-editorial",
+  "source_files": {
+    "components/landing/_landingMarkup.ts": "MARKUP_AND_INLINE_SVG_ASSETS",
+    "public/landing/carolina_md_approved_patch.css": "STYLES_RESPONSIVE_VISUAL_ANATOMY",
+    "hooks/landing/_scrollReveal.ts": "MOTION_FORMULA_AND_REDUCED_MOTION",
+    "app/layout.tsx": "INTER_FONT_FAMILY_DECLARATION"
+  },
+  "derivation": "EXACT_SECTION_EXTRACTION_FROM_HUMAN_ACCEPTED_FULL_CONTEXT_CAPTURE",
+  "excluded_context": "ALL_NON_TARGET_LANDING_SECTIONS"
+}
