@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_ROADMAP_SECTION_POST_TERMINAL_DEAD_SCROLL_REMOVAL_175",
   "project_id": "lab",
-  "status": "GRANTED_ACTIVE",
+  "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
   "authorization_class": "HUMAN_COMPARISON_POST_TERMINAL_DEAD_SCROLL_REMOVAL",
   "decision_ref": "DEC-LAB-031",
   "approved_by": "Jonathan Martínez",
@@ -80,7 +80,37 @@
     "NO_RUNTIME_OR_DEPLOYMENT",
     "NO_SCOPE_EXPANSION"
   ],
-  "authority_effect": "ACTIVE_FOR_AUTHORIZATION_175_ONLY",
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_175_CONSUMPTION_AUTHORIZATION_173_STAGE_2_CONDITIONAL_UNCHANGED",
   "runtime_effect": "NONE",
-  "integration_effect": "NONE"
+  "integration_effect": "NONE",
+  "execution_result": {
+    "status": "POST_TERMINAL_DEAD_SCROLL_REMOVED_TECHNICAL_REPAIR_PUBLISHED_HUMAN_LOCALHOST_REVIEW_REQUIRED",
+    "reassessment_of_174": "MODIFIED_TERMINAL_COMPLETION_CONFIRMED_POST_TERMINAL_DEAD_SCROLL_PRESENT",
+    "css_runway_min_height": "100VH_REPLACING_420VH",
+    "post_terminal_release_margin_css_px": 16,
+    "authorized_maximum_release_margin_css_px": 24,
+    "supplementary_exact_bytes_browser_matrix": "PASS_7_OF_7",
+    "maximum_observed_post_terminal_extra_css_px": 16.390625,
+    "maximum_observed_release_ms": 55.95,
+    "real_localhost_server_delivery": "PASS_HTTP_200",
+    "real_localhost_browser_automation": "BLOCKED_ERR_BLOCKED_BY_ADMINISTRATOR",
+    "human_localhost_revalidation_required": true,
+    "reference_implementation_blob_sha": "66100821888e37e769a7dcc1f9af53d30a74175e",
+    "reference_implementation_changed": false,
+    "source_fidelity_tests_reexecuted": false,
+    "carolina_repository_mutation": "NONE",
+    "human_source_fidelity_decision": "PENDING_NEW_COMPLETE_LOCALHOST_REVIEW",
+    "authorization_173_stage_2_triggered": false,
+    "evidence_ref": "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-POST-TERMINAL-DEAD-SCROLL-175.json"
+  },
+  "publication_commits": [
+    "655d3926a3a4685dde3f7ea16559472486ebfbac",
+    "253edd6ecb719ce24577b4c1d037c3a0cf3ad126",
+    "68ac07601648cfa6d6c50a05f831d0f8aa65a190",
+    "db6aa5a491dfa02b5d4ed34ca6554918cc2457b8",
+    "c79418087bfa390ba4ee937bc82ceab84c3178e7",
+    "871379093154d3004fcf982e223f50b77b96d629",
+    "997084165141d1a6cce5a0a115ecd579289f44d4"
+  ],
+  "consumed_at": "2026-08-02T18:24:00-04:00"
 }
