@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "integration_id": "INT-LAB-004",
+  "project_id": "lab",
+  "title": "Product Leadership priority criterion integration candidate",
+  "status": "CANDIDATE",
+  "priority_order": 1,
+  "program_role": "PRIORITY_INTEGRATION_CRITICAL_PATH",
+  "profile": "CRITERION_MODULE",
+  "producer": {
+    "id": "PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001",
+    "version": "0.1.0",
+    "manifest": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/MANIFEST.json"
+  },
+  "first_intended_consumer": "SYMPHONIE",
+  "activation_contract": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/ACTIVATION_CONTRACT.json",
+  "test_program": {
+    "current_design": "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/PROPOSAL.json",
+    "contract_status": "APPROVED_REQUIRES_SEPARATE_EXECUTION_AUTHORIZATION",
+    "execution_authorized": false,
+    "execution_completed": false,
+    "external_audit_completed": false
+  },
+  "current_state": "OPERATIONAL_PREFLIGHT_INCOMPLETE_TEST_003_NOT_EXECUTED",
+  "promotion_state": "NOT_PROPOSED_FOR_PROMOTION",
+  "composition": {
+    "precedes": "INT-LAB-005",
+    "responsibility": "Determine product problem, outcome, priority, exclusions and learning need.",
+    "must_not": [
+      "SELECT_ARCHITECTURE_OR_STACK",
+      "AUTHORIZE_IMPLEMENTATION",
+      "REOPEN_CLOSED_TECHNICAL_TASKS"
+    ]
+  },
+  "rollback": {
+    "required": true,
+    "defined_for_activation": false,
+    "reason": "Activation has not been designed or authorized."
+  },
+  "integrated": false,
+  "active": false,
+  "automatic_consumption": false,
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "rag_effect": "NONE",
+  "decision_ref": "DEC-LAB-030",
+  "authorization_ref": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_0_CANONICAL_RECONCILIATION_169",
+  "program_ref": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/MANIFEST.json",
+  "updated_at": "2026-08-02"
+}
