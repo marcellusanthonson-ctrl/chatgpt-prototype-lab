@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "candidate_id": "CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
-  "status": "HUMAN_REVIEW_PENDING_AUTOMATED_GATES_PASS",
+  "status": "HUMAN_REVIEW_PENDING_COMPLETE_REVIEW_SURFACE_READY_AUTOMATED_GATES_PASS",
   "classification": "SECTION_SCOPED_REFERENCE_IMPLEMENTATION_CANDIDATE",
   "source_repository": "marcellusanthonson-ctrl/carolina-md-next-landing",
   "fixed_commit": "52654da574952148f96d051e439bff1cbc7b4b9d",
@@ -9,7 +9,8 @@
   "parent_candidate": "CAROLINA-ROADMAP-SOURCE-FAITHFUL-001",
   "parent_classification": "HUMAN_REVIEW_REJECTED_SCOPE_OVERBROAD_PRESERVED_AS_FULL_CONTEXT_FORENSIC_CAPTURE",
   "decision_ref": "DEC-LAB-031",
-  "authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_SECTION_ISOLATION_AND_REVALIDATION_172",
+  "source_fidelity_authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_SECTION_ISOLATION_AND_REVALIDATION_172",
+  "human_comparison_correction_authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_SCROLL_CORRECTION_AND_CONDITIONAL_DECISION_RECONCILIATION_173",
   "scope": [
     "eyebrow_CÓMO_FUNCIONA",
     "title",
@@ -47,6 +48,20 @@
     "scope_isolation_failure_count": 0,
     "horizontal_overflow_case_count": 0
   },
+  "human_comparison_surface": {
+    "status": "STAGE_1_CORRECTED_READY_FOR_COMPLETE_HUMAN_REVIEW",
+    "path": "HUMAN_COMPARISON.html",
+    "single_outer_vertical_scroll": true,
+    "synchronized_panels": true,
+    "nested_user_scroll": false,
+    "progress_range": "0_TO_100_PERCENT",
+    "terminal_reached_indicator": true,
+    "evidence_ref": "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-173.json"
+  },
+  "current_human_observation": [
+    "VISUALLY_IMPECCABLE_IN_OBSERVED_RANGE",
+    "COMPLETE_REVIEW_RETRY_REQUIRED_AFTER_HARNESS_CORRECTION"
+  ],
   "human_approval": false,
   "canonical_replacement": false,
   "reusable_promotion": false,
