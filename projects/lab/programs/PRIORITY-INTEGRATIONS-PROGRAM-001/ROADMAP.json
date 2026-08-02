@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0.0",
+  "roadmap_id": "PRIORITY-INTEGRATIONS-ROADMAP-001",
+  "program_id": "PRIORITY-INTEGRATIONS-PROGRAM-001",
+  "project_id": "lab",
+  "status": "PHASE_0_IN_PROGRESS_LATER_PHASES_NOT_AUTHORIZED",
+  "updated_at": "2026-08-02",
+  "critical_path_policy": "ONLY_PRODUCT_LEADERSHIP_AND_SOFTWARE_SOLUTION_ENGINEERING_ARE_PRIORITY_INTEGRATIONS",
+  "phases": [
+    {
+      "order": 0,
+      "id": "PHASE_0_CANONICAL_INVENTORY_AND_ROADMAP",
+      "status": "IN_PROGRESS",
+      "objective": "Create one canonical inventory, separate candidate records and one governed roadmap.",
+      "outputs": [
+        "DEC-LAB-030",
+        "INT-LAB-004",
+        "INT-LAB-005",
+        "PRIORITY-INTEGRATIONS-PROGRAM-001",
+        "PRIORITY-INTEGRATIONS-ROADMAP-001",
+        "PEND-LAB-044"
+      ],
+      "exit_gate": "EXACTLY_TWO_PRIORITY_INTEGRATIONS_AND_ALL_OTHER_LINES_EXPLICITLY_CLASSIFIED",
+      "authority": "AUTHORIZATION_169_ONLY"
+    },
+    {
+      "order": 1,
+      "id": "PHASE_1_FACTORY_CONTRACT_COMPLETION",
+      "status": "NOT_AUTHORIZED",
+      "objective": "Adapt both candidates to the CRITERION_MODULE profile and complete missing standard artifacts without activation.",
+      "product_leadership_required": [
+        "INTEGRATION_INTAKE",
+        "INPUT_CONTRACT",
+        "RESULT_CONTRACT",
+        "COMPOSITION_CONTRACT",
+        "CONFLICTS",
+        "SCORING_AND_GATES",
+        "ROLLBACK",
+        "VALIDATION_EVIDENCE_SHELL"
+      ],
+      "sse_required": [
+        "INTEGRATION_INTAKE",
+        "INPUT_CONTRACT",
+        "RESULT_CONTRACT",
+        "COMPOSITION_CONTRACT",
+        "CONFLICTS",
+        "ROLLBACK",
+        "VALIDATION_EVIDENCE_SHELL"
+      ],
+      "exit_gate": "BOTH_CONTRACT_COMPLETE_AND_FACTORY_VALID",
+      "requires_separate_authorization": true
+    },
+    {
+      "order": 2,
+      "id": "PHASE_2_INDEPENDENT_EVIDENCE_CLOSURE",
+      "status": "NOT_AUTHORIZED",
+      "tracks": [
+        {
+          "id": "PRODUCT_LEADERSHIP_TRACK",
+          "sequence": [
+            "RESOLVE_LEAST_PRIVILEGE_PREFLIGHT_PATH",
+            "COMPLETE_REQUIRED_OPERATIONAL_PREFLIGHT",
+            "SEPARATELY_AUTHORIZE_TEST_003",
+            "EXECUTE_APPROVED_TEST_003_CONTRACT",
+            "PUBLISH_REPRODUCIBLE_EVIDENCE"
+          ],
+          "constraints": [
+            "AWS_IS_REPLACEABLE_REFERENCE_ENVIRONMENT_NOT_PRODUCTION_DEPENDENCY",
+            "NO_TEST_EXECUTION_BEFORE_VALID_PREFLIGHT_AND_AUTHORIZATION",
+            "NO_ACTIVATION_AS_TEST_EFFECT"
+          ]
+        },
+        {
+          "id": "SSE_TRACK",
+          "sequence": [
+            "SEPARATELY_AUTHORIZE_SYNTHETIC_TEST",
+            "EXECUTE_32_FIXTURES_ACROSS_3_ARMS",
+            "PRODUCE_AT_LEAST_96_OUTPUTS",
+            "APPLY_VALUE_INACTIVITY_NEGATIVE_TRANSFER_AND_BIAS_GATES",
+            "PUBLISH_REPRODUCIBLE_EVIDENCE"
+          ],
+          "constraints": [
+            "NO_AWS_DEPENDENCY_FOR_SYNTHETIC_DOCUMENTARY_TEST",
+            "NO_ARCHITECTURE_STACK_OR_PROVIDER_SELECTION",
+            "NO_ACTIVATION_AS_TEST_EFFECT"
+          ]
+        }
+      ],
+      "exit_gate": "EACH_TRACK_HAS_REPRODUCIBLE_TEST_EVIDENCE_OR_IS_REVISED_OR_REJECTED",
+      "requires_separate_authorizations": true
+    },
+    {
+      "order": 3,
+      "id": "PHASE_3_INDEPENDENT_EXTERNAL_AUDITS",
+      "status": "NOT_AUTHORIZED",
+      "objective": "Audit each integration independently for traceability, isolation, scoring reproducibility, correct activation, incremental value and negative transfer.",
+      "rule": "AUDIT_DOES_NOT_APPROVE_OR_ACTIVATE",
+      "exit_gate": "AUDIT_FINDINGS_RECONCILED_SEPARATELY_FOR_EACH_INTEGRATION",
+      "requires_separate_authorizations": true
+    },
+    {
+      "order": 4,
+      "id": "PHASE_4_SEPARATE_HUMAN_PROMOTION_DECISIONS",
+      "status": "NOT_AUTHORIZED",
+      "decision_order": [
+        "PRODUCT_LEADERSHIP",
+        "SOFTWARE_SOLUTION_ENGINEERING"
+      ],
+      "allowed_outcomes": [
+        "PROMOTE",
+        "REVISE_AND_RETEST",
+        "REJECT"
+      ],
+      "rule": "NO_GROUPED_OR_AUTOMATIC_PROMOTION",
+      "exit_gate": "SEPARATE_HUMAN_DECISION_RECORDED_FOR_EACH_INTEGRATION"
+    },
+    {
+      "order": 5,
+      "id": "PHASE_5_SHADOW_REGISTRY_AND_DUAL_EVALUATION",
+      "status": "NOT_AUTHORIZED",
+      "objective": "Materialize approved candidates in a successor shadow registry without changing the active pointer.",
+      "checks": [
+        "DETERMINISTIC_RESOLUTION",
+        "ACTIVE_INACTIVE_AND_AMBIGUOUS_CASES",
+        "PRODUCT_LEADERSHIP_TO_SSE_COMPOSITION",
+        "NO_INTERFERENCE_WITH_EXISTING_MODULES",
+        "EXPLICIT_IAC_CONFLICTS",
+        "FALLBACK_FUNCTIONAL",
+        "REPRODUCIBLE_DIGEST",
+        "ZERO_IMPLICIT_AUTHORITY"
+      ],
+      "exit_gate": "DUAL_EVALUATION_PASS",
+      "requires_separate_authorization": true
+    },
+    {
+      "order": 6,
+      "id": "PHASE_6_SEQUENTIAL_BOUNDED_ACTIVATION",
+      "status": "NOT_AUTHORIZED",
+      "sequence": [
+        "ACTIVATE_PRODUCT_LEADERSHIP_WITH_FALLBACK_OBSERVATION_AND_ROLLBACK",
+        "CLOSE_PRODUCT_LEADERSHIP_OBSERVATION",
+        "ACTIVATE_SSE_WITH_FALLBACK_OBSERVATION_COMPOSITION_VALIDATION_AND_ROLLBACK"
+      ],
+      "rule": "NO_SIMULTANEOUS_CUTOVER",
+      "exit_gate": "BOTH_ACTIVATIONS_PASS_OBSERVATION_AND_ROLLBACK_VERIFICATION",
+      "requires_separate_authorizations": true
+    },
+    {
+      "order": 7,
+      "id": "PHASE_7_SEPARATE_SYMPHONIE_ADOPTION",
+      "status": "NOT_AUTHORIZED",
+      "objective": "Adopt exact active versions in Symphonie through consumer-specific contracts and tests.",
+      "rule": "LAB_ACTIVE_DOES_NOT_AUTHORIZE_SYMPHONIE_CONSUMPTION",
+      "exit_gate": "SEPARATE_PROJECT_AUTHORIZATION_AND_VALIDATION_PER_INTEGRATION",
+      "requires_separate_authorizations": true
+    }
+  ],
+  "program_definition_of_done": "BOTH_INTEGRATIONS_INDEPENDENTLY_TESTED_AUDITED_HUMAN_APPROVED_FACTORY_REGISTERED_SEQUENTIALLY_ACTIVATED_OBSERVED_AND_ROLLBACK_VERIFIED",
+  "next_action": "SEPARATELY_AUTHORIZE_PHASE_1_FACTORY_CONTRACT_COMPLETION_AFTER_PHASE_0_PUBLICATION",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "integration_effect": "NONE"
+}
