@@ -792,7 +792,7 @@
   "verified_parent_head": "3a7470255f367212fc373fb7eefd9fe112c39f12",
   "self_head_is_canonical_state": false,
   "motion_system_foundation": {
-    "status": "PUBLISHED_VALIDATION_PASS_AWAITING_REMOTE_VERIFICATION_AND_AUTHORIZATION_CONSUMPTION",
+    "status": "FOUNDATION_PUBLISHED_VALIDATION_PASS_INITIAL_EFFECTS_HUMAN_REVIEW_PENDING",
     "decision": "DEC-LAB-029",
     "authorization": "AUTHORIZATION_LAB_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_167",
     "root": "foundation-library/motion-system/MOTION-SYSTEM-001",
@@ -800,6 +800,8 @@
     "planned_effects": 61,
     "maximum_effect_status": "HUMAN_REVIEW_PENDING",
     "product_effect": "NONE",
-    "runtime_effect": "NONE"
+    "runtime_effect": "NONE",
+    "authorization_state": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "validation": "EXACT_329_ZERO_ADDED_ZERO_REMOVED_PROTECTED_BLOBS_PASS"
   }
 }

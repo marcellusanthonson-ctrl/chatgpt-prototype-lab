@@ -11,14 +11,14 @@
   "authorization": {
     "id": "AUTHORIZATION_LAB_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_167",
     "state_key": "transversal_motion_effects_library_foundation_167",
-    "status": "GRANTED_STAGE_1_CONSUMED_STAGE_2_PUBLISHED_AWAITING_GENERAL_VALIDATION_AND_CANONICAL_RECONCILIATION",
+    "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_167.json",
     "brief_path": "projects/lab/briefs/CODEX_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_001.json"
   },
-  "active_authorization": "AUTHORIZATION_LAB_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_167",
+  "active_authorization": null,
   "stage_1": "PASS_CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
   "stage_1_remote_head": "db3b6d7e05418c72f88b29638c0c026410792c04",
-  "stage_2": "VALIDATION_PASS_AWAITING_REMOTE_VERIFICATION_AND_AUTHORIZATION_CONSUMPTION",
+  "stage_2": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
   "canonical_root": "foundation-library/motion-system/MOTION-SYSTEM-001",
   "patterns": [
     "PAT-LAB-010",
@@ -37,8 +37,9 @@
     "browser": "PASS_SET_CONTENT_RENDERING",
     "file_protocol": "BLOCKED_BY_ENVIRONMENT_POLICY_STATIC_OFFLINE_CONTRACT_PASS",
     "motion_system_validator": "PASS",
-    "general_repository_validator": "PREPUBLICATION_EXACT_329_ZERO_ADDED_ZERO_REMOVED",
+    "general_repository_validator": "EXACT_329_ZERO_ADDED_ZERO_REMOVED",
     "protected_blobs": "PASS",
-    "canonical_aggregate_reconciliation": "PASS_PREPUBLICATION"
-  }
+    "canonical_aggregate_reconciliation": "PASS"
+  },
+  "authority_effect": "NONE_AFTER_CONSUMPTION"
 }
