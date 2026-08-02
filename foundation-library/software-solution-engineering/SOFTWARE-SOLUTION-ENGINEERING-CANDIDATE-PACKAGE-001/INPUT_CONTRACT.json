@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0.0",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false,
+  "artifact_type": "INPUT_CONTRACT",
+  "module_id": "SOFTWARE_SOLUTION_ENGINEERING",
+  "required_inputs": [
+    "TASK_OBJECTIVE",
+    "RESOLVED_PRODUCT_SCOPE",
+    "PRODUCT_OUTCOME",
+    "PRIORITY",
+    "EXCLUSIONS",
+    "BINDING_DECISIONS",
+    "FUNCTIONAL_REQUIREMENTS",
+    "NON_FUNCTIONAL_REQUIREMENTS",
+    "SYSTEM_CONTEXT",
+    "CURRENT_ARCHITECTURE",
+    "LIFECYCLE_STAGE",
+    "AUTHORITY_STATE",
+    "AVAILABLE_EVIDENCE",
+    "UNKNOWNS_AND_ASSUMPTIONS",
+    "REQUESTED_OUTPUT"
+  ],
+  "optional_inputs": [
+    "LOAD_PROFILE",
+    "DATA_VOLUME",
+    "CONSISTENCY_INVARIANTS",
+    "TEAM_TOPOLOGY",
+    "BUDGET",
+    "MIGRATION_CONSTRAINTS",
+    "OBSERVABILITY_BASELINE",
+    "SECURITY_AND_REGULATORY_REQUIREMENTS"
+  ],
+  "forbidden_inputs": [
+    "INVENTED_SCALE_LOAD_SLA_BUDGET_TEAM_ORGANIZATION_OR_COMPLIANCE",
+    "ASSUMED_IMPLEMENTATION_AUTHORITY",
+    "UNVERIFIED_SECURITY_CONTROLS",
+    "GLOBAL_STACK_OR_PROVIDER_DEFAULT",
+    "PRODUCT_SCOPE_REDEFINITION"
+  ],
+  "minimum_context_rule": "Fail closed when resolved product scope, binding decisions, authority state or minimum functional and non-functional requirements are absent; otherwise classify limited when evidence is insufficient."
+}

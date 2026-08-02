@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1.0",
   "project_id": "lab",
-  "updated_at": "2026-08-01",
+  "updated_at": "2026-08-02",
   "authority_effect": "NONE",
   "records": [
     {
@@ -453,5 +453,13 @@
       "pending": "PEND-LAB-043",
       "authority_effect": "NONE_AFTER_AUTHORIZATION_167_CONSUMPTION"
     }
-  ]
+  ],
+  "priority_integrations_program": {
+    "program_ref": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/MANIFEST.json",
+    "roadmap_ref": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/ROADMAP.json",
+    "status": "PHASE_1_COMPLETE_LATER_PHASES_NOT_AUTHORIZED",
+    "phase_1": "COMPLETE_PASS",
+    "phase_2": "NOT_AUTHORIZED",
+    "next_pending": "projects/lab/pending/PEND-LAB-045.json"
+  }
 }

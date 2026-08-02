@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0.0",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false,
+  "artifact_type": "VALIDATION_EVIDENCE",
+  "validation_id": "SOFTWARE_SOLUTION_ENGINEERING-FACTORY-CONTRACT-VALIDATION-170",
+  "integration_id": "INT-LAB-005",
+  "module_id": "SOFTWARE_SOLUTION_ENGINEERING",
+  "status": "PASS_CONTRACT_VALIDATION_ONLY",
+  "validated_artifacts": [
+    "INTEGRATION_INTAKE.json",
+    "MANIFEST.json",
+    "ACTIVATION_CONTRACT.json",
+    "INPUT_CONTRACT.json",
+    "RESULT_CONTRACT.json",
+    "COMPOSITION_CONTRACT.json",
+    "CONFLICTS.json",
+    "MISUSE_RISKS.json",
+    "FIXTURES.json",
+    "TEST_DESIGN.json",
+    "SCORING_AND_GATES.json",
+    "ROLLBACK.json",
+    "VALIDATION_EVIDENCE.json"
+  ],
+  "applicable_schema_validation": "PASS",
+  "semantic_preservation": "PASS",
+  "unknown_module_rejection": "PASS",
+  "directional_composition": "PASS",
+  "rollback_declaration": "PASS",
+  "negative_transfer_controls": "PASS",
+  "changed_artifact_sha256": {
+    "INTEGRATION_INTAKE.json": "9b7acb0b4b51850232ac7e771a855782e7c00512535061c3a541e7f606d7d3aa",
+    "MANIFEST.json": "354a4bae407a899b915aac94aca8311e922560429e4b90411b7b7ace817af9dc",
+    "ACTIVATION_CONTRACT.json": "9749329c1f351b37d0d16d12b92bf810c0a7a69338432baba6d86676a11c4f37",
+    "INPUT_CONTRACT.json": "d21ad7b581601d5b3d1f540fa19b96b9d228185191cfec0a0f25a18768f9edef",
+    "RESULT_CONTRACT.json": "53d38d585d6ec6ebc6941a2746061527c11e7297bf13b980019d3a226c96bcb8",
+    "COMPOSITION_CONTRACT.json": "fb930552e7d4857fc67bc90a7b90f4860774927e28f3dc879ef3a8bcd5e3af06",
+    "CONFLICTS.json": "0aed3a6eb6dc1020cbe1a777b06af21547d5f67e9cdabfdb8364b17331680714",
+    "TEST_DESIGN.json": "e40db20a785fd6626b9d1519bac417f9eb51d9ba996b4069a3d8fd8ad2cb9140",
+    "SCORING_AND_GATES.json": "51c89ad4e80425ae7bdc11c6265e1a42a75d7e75fd9227027cf1ae7dd79a3d45",
+    "ROLLBACK.json": "c745bad33d92f42fba31e7bf164a8bbc2e2435d520ed05db45f558a04a161948"
+  },
+  "unchanged_existing_artifacts": [
+    "MISUSE_RISKS.json",
+    "FIXTURES.json"
+  ],
+  "test_execution": false,
+  "external_audit_execution": false,
+  "active": false,
+  "integrated": false,
+  "product_effect": "NONE",
+  "source_refs": [
+    "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/PRINCIPLES.json",
+    "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/ACTIVATION_CONTRACT.json",
+    "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/MISUSE_RISKS.json",
+    "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/FIXTURES.json",
+    "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/DDIA_FOUNDATIONAL_NORMALIZATION.json",
+    "projects/lab/test-designs/SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json",
+    "decisions/DEC-LAB-030.json"
+  ]
+}

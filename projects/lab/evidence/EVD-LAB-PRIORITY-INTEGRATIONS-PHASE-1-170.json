@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-PRIORITY-INTEGRATIONS-PHASE-1-170",
+  "project_id": "lab",
+  "evidence_type": "FACTORY_CONTRACT_COMPLETION",
+  "status": "PASS_BRANCH_VALIDATED_PUBLICATION_PENDING",
+  "created_at": "2026-08-02",
+  "authorization_ref": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_1_FACTORY_CONTRACT_COMPLETION_170_REVISION_2",
+  "decision_ref": "DEC-LAB-030",
+  "verified_parent_head": "4ab9d032d179377670bc62034316e14954bed7db",
+  "findings": [
+    {
+      "claim": "Product Leadership has all 13 standard factory artifacts and remains inactive, not integrated and untested.",
+      "classification": "CONFIRMED"
+    },
+    {
+      "claim": "Software Solution Engineering has all 13 standard factory artifacts, three-arm 96-output future test design and remains inactive, not integrated and untested.",
+      "classification": "CONFIRMED"
+    },
+    {
+      "claim": "The active CRITERION_MODULE schemas accept exactly six registered module IDs and reject unknown IDs.",
+      "classification": "CONFIRMED"
+    },
+    {
+      "claim": "Product Leadership precedes SSE through a deterministic fail-closed directional composition contract.",
+      "classification": "CONFIRMED"
+    }
+  ],
+  "validation_ref": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/phase1/VALIDATION_RESULTS.json",
+  "protected_scope": {
+    "test_execution": 0,
+    "external_audit_execution": 0,
+    "aws_calls": 0,
+    "terraform_execution": 0,
+    "runtime_changes": 0,
+    "product_changes": 0,
+    "active_pointer_changes": 0,
+    "shadow_registry_changes": 0,
+    "static_selector_changes": 0,
+    "motion_system_changes": 0
+  },
+  "remote_checks_pending": [
+    "BRANCH_TO_MAIN_COMPARE",
+    "SQUASH_MERGE",
+    "REMOTE_HEAD_VERIFICATION"
+  ],
+  "maximum_result": "PRODUCT_LEADERSHIP_AND_SOFTWARE_SOLUTION_ENGINEERING_CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "integration_effect": "NONE",
+  "full_repository_validation": {
+    "status": "PASS",
+    "registered_module_ids": [
+      "EVIDENCE_AND_CLAIMS",
+      "DESIGN_CRITERION",
+      "WEB_ACCESSIBILITY",
+      "CONTEXTUAL_VISUAL_PREFERENCE",
+      "PRODUCT_LEADERSHIP",
+      "SOFTWARE_SOLUTION_ENGINEERING"
+    ],
+    "packages": {
+      "PRODUCT_LEADERSHIP": {
+        "standard_artifacts": 13,
+        "lifecycle": "CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED"
+      },
+      "SOFTWARE_SOLUTION_ENGINEERING": {
+        "standard_artifacts": 13,
+        "lifecycle": "CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED",
+        "test_arms": 3,
+        "minimum_future_outputs": 96
+      }
+    },
+    "test_execution": 0,
+    "external_audit_execution": 0,
+    "runtime_effect": "NONE",
+    "product_effect": "NONE",
+    "integration_activation_effect": "NONE"
+  }
+}

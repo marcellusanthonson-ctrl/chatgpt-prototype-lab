@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false,
+  "artifact_type": "TEST_DESIGN",
+  "test_id": "SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001",
+  "status": "DRAFT_NOT_AUTHORIZED",
+  "arms": [
+    {
+      "id": "BASELINE_A",
+      "context": "LAB_AND_CURRENT_CRITERION_LAYER"
+    },
+    {
+      "id": "BASELINE_B",
+      "context": "BASELINE_A_PLUS_PRODUCT_LEADERSHIP_AND_IAC_WHEN_APPLICABLE"
+    },
+    {
+      "id": "CANDIDATE",
+      "context": "BASELINE_B_PLUS_SOFTWARE_SOLUTION_ENGINEERING_CANDIDATE_PACKAGE_001"
+    }
+  ],
+  "fixture_families": [
+    "SOFTWARE_SOLUTION_DECISIONS",
+    "LAB_GOVERNANCE_DECISIONS",
+    "ACTIVE",
+    "INACTIVE",
+    "LIMITED_OR_AMBIGUOUS",
+    "NEGATIVE_TRANSFER"
+  ],
+  "minimum_outputs": 96,
+  "blinding": "USE_EXISTING_FINAL_TEST_DESIGN_BLINDING_AND_EXTERNAL_AUDIT_REQUIREMENTS; NO EXECUTION IN PHASE_1",
+  "telemetry": [
+    "ACTIVATION_CLASSIFICATION",
+    "SELECTED_MODULES",
+    "REJECTED_MODULES",
+    "VALUE_SCORE",
+    "NEGATIVE_TRANSFER",
+    "AUTHORITY_ERRORS",
+    "TOKEN_AND_LATENCY_WHEN_EXECUTION_IS_AUTHORIZED"
+  ],
+  "stop_conditions": [
+    "EXECUTION_AUTHORIZATION_MISSING",
+    "FIXTURE_OR_ARM_COUNT_MISMATCH",
+    "AUTHORITY_OR_ARCHITECTURE_INVENTION",
+    "UNBLINDING_OR_PROVENANCE_FAILURE",
+    "ZERO_TOLERANCE_EVENT"
+  ],
+  "source_refs": [
+    "projects/lab/test-designs/SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json"
+  ],
+  "execution_authorized": false,
+  "test_executed": false
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false,
+  "artifact_type": "CONFLICTS",
+  "module_id": "SOFTWARE_SOLUTION_ENGINEERING",
+  "conflicts": [
+    {
+      "with": "PRODUCT_LEADERSHIP",
+      "when": "PRODUCT_SCOPE_IS_UNRESOLVED",
+      "resolution": "PRODUCT_LEADERSHIP_PRECEDES_AND_SSE_ABSTAINS"
+    },
+    {
+      "with": "INTELLIGENT_APPLICATION_CONSTRUCTION",
+      "when": "AI_COMPONENT_SCOPE_AND_GENERAL_SOFTWARE_SCOPE_OVERLAP",
+      "resolution": "SSE_OWNS_GENERAL_SYSTEM_BOUNDARIES_IAC_OWNS_INTELLIGENT_PROBABILISTIC_COMPONENT_ONLY"
+    },
+    {
+      "with": "BINDING_ARCHITECTURE_DECISION",
+      "when": "GUIDANCE_WOULD_REOPEN_CLOSED_DECISION",
+      "resolution": "ABSTAIN_OR_LIMIT_TO_REVIEW_TRIGGER_EXPLICITLY_ALLOWED"
+    },
+    {
+      "with": "AUTHORITY_STATE",
+      "when": "REQUEST_REQUIRES_IMPLEMENTATION_OR_STACK_SELECTION_WITHOUT_AUTHORITY",
+      "resolution": "FAIL_CLOSED"
+    },
+    {
+      "with": "EVIDENCE_AND_CLAIMS",
+      "when": "CURRENT_SECURITY_OR_REGULATORY_CLAIM_LACKS_PRIMARY_SOURCE",
+      "resolution": "REQUEST_CURRENT_PRIMARY_EVIDENCE_OR_ABSTAIN"
+    }
+  ],
+  "source_refs": [
+    "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/PRINCIPLES.json",
+    "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/ACTIVATION_CONTRACT.json",
+    "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/MISUSE_RISKS.json",
+    "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/FIXTURES.json",
+    "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/DDIA_FOUNDATIONAL_NORMALIZATION.json",
+    "projects/lab/test-designs/SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json",
+    "decisions/DEC-LAB-030.json"
+  ]
+}

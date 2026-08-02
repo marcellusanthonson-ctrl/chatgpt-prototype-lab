@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false,
+  "artifact_type": "INTEGRATION_INTAKE",
+  "integration_id": "INT-LAB-004",
+  "profile": "CRITERION_MODULE",
+  "problem": "Product decisions require selective, evidence-bounded guidance for unresolved problem, outcome, priority, exclusions and learning needs without creating authority or reopening closed implementation work.",
+  "producer": "PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001@0.1.0",
+  "consumer": "CHATGPT_PROJECT",
+  "first_intended_external_consumer": "SYMPHONIE",
+  "value_hypothesis": "Selective Product Leadership guidance improves decision framing and prioritization only when product scope is unresolved; value remains unproven until Test 003 executes.",
+  "risk_signals": [
+    "FRAMEWORK_OVERACTIVATION",
+    "REOPENING_CLOSED_TASKS",
+    "INVENTED_EVIDENCE",
+    "AUTHORITY_CONFUSION",
+    "ARCHITECTURE_OR_STACK_SELECTION"
+  ],
+  "rollback_strategy": "Keep candidate inactive and remove future registry reference under separate authorization; no active pointer or product state is changed in Phase 1.",
+  "source_refs": [
+    "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/PRINCIPLES.json",
+    "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/ACTIVATION_CONTRACT.json",
+    "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/MISUSE_RISKS.json",
+    "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/FIXTURES.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/PROPOSAL.json",
+    "decisions/DEC-LAB-030.json"
+  ]
+}

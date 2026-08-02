@@ -3,7 +3,7 @@
   "project_id": "lab",
   "name": "LAB",
   "status": "active",
-  "current_phase": "MOTION_CATALOG_REVIEW_SURFACE_PASS_ROADMAP_CORRECTED_READY_FOR_NEW_HUMAN_REVIEW",
+  "current_phase": "PRIORITY_INTEGRATIONS_PHASE_1_CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED",
   "updated_at": "2026-08-02",
   "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "canonical_branch": "main",
@@ -12,7 +12,7 @@
     "autonomous_model_authority": false
   },
   "summary": "Gobierno, autoridad, continuidad, auditoría y biblioteca documental gobernada entre proyectos.",
-  "content_completeness": "STRUCTURED_V2_WITH_MOTION_CORRECTION_168_REMOTE_VERIFIED_READY_FOR_NEW_HUMAN_REVIEW",
+  "content_completeness": "STRUCTURED_V2_WITH_PRIORITY_INTEGRATIONS_PHASE_1_CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED",
   "source_refs": [
     "projects/lab/PROJECT_STATE.md",
     "README.md",
@@ -159,7 +159,15 @@
     "projects/lab/authorizations/AUTHORIZATION_LAB_MOTION_CATALOG_REVIEW_SURFACE_AND_ROADMAP_FIDELITY_CORRECTION_168.json",
     "projects/lab/briefs/CODEX_MOTION_CATALOG_REVIEW_SURFACE_AND_ROADMAP_FIDELITY_CORRECTION_001.json",
     "errors/ERR-LAB-010.json",
-    "projects/lab/evidence/EVD-LAB-MOTION-CATALOG-ROADMAP-CORRECTION-168.json"
+    "projects/lab/evidence/EVD-LAB-MOTION-CATALOG-ROADMAP-CORRECTION-168.json",
+    "decisions/DEC-LAB-030.json",
+    "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/MANIFEST.json",
+    "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/ROADMAP.json",
+    "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/contracts/PRODUCT-LEADERSHIP-TO-SSE-COMPOSITION-CONTRACT-001.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_1_FACTORY_CONTRACT_COMPLETION_170_REVISION_2.json",
+    "projects/lab/evidence/EVD-LAB-PRIORITY-INTEGRATIONS-PHASE-1-170.json",
+    "projects/lab/pending/PEND-LAB-045.json",
+    "projects/lab/continuity/PRIORITY_INTEGRATIONS_PHASE_1_170.json"
   ],
   "governance_paths": {
     "roadmap": "projects/lab/ROADMAP.json",
@@ -180,7 +188,11 @@
     "ecr_capability": "foundation-library/evidential-control/ECR-CAPABILITY-001/MANIFEST.json",
     "product_leadership_candidate": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/MANIFEST.json",
     "pending_successor": "projects/lab/pending/PEND-LAB-024.json",
-    "chatgpt_project_sources": "project-sources/chatgpt/START_HERE.md"
+    "chatgpt_project_sources": "project-sources/chatgpt/START_HERE.md",
+    "priority_integrations_program": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/MANIFEST.json",
+    "priority_integrations_roadmap": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/ROADMAP.json",
+    "priority_integrations_phase1_evidence": "projects/lab/evidence/EVD-LAB-PRIORITY-INTEGRATIONS-PHASE-1-170.json",
+    "priority_integrations_phase2_pending": "projects/lab/pending/PEND-LAB-045.json"
   },
   "metadata": {
     "last_instruction_test": {
@@ -817,5 +829,20 @@
       "verified_remote_head": "5c335328af6e573f2f97abe729e228d99072f035",
       "authorization_state": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
     }
-  }
+  },
+  "priority_integrations_program": {
+    "status": "PHASE_1_FACTORY_CONTRACT_COMPLETION_PASS",
+    "priority_order": [
+      "PRODUCT_LEADERSHIP",
+      "SOFTWARE_SOLUTION_ENGINEERING"
+    ],
+    "product_leadership": "CANDIDATE_CONTRACT_COMPLETE_TEST_003_NOT_EXECUTED",
+    "software_solution_engineering": "CANDIDATE_CONTRACT_COMPLETE_TEST_READY_EXECUTION_AND_AUDIT_NOT_AUTHORIZED",
+    "composition_contract": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/contracts/PRODUCT-LEADERSHIP-TO-SSE-COMPOSITION-CONTRACT-001.json",
+    "next_pending": "projects/lab/pending/PEND-LAB-045.json",
+    "active": false,
+    "integrated": false
+  },
+  "next_authorized_action": "NONE_AFTER_PHASE_1_AUTHORIZATION_CONSUMPTION",
+  "next_recommended_transition": "SEPARATELY_AUTHORIZE_PHASE_2_INDEPENDENT_EVIDENCE_CLOSURE"
 }

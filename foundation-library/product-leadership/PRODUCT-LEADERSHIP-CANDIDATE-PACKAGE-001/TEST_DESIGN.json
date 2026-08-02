@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false,
+  "artifact_type": "TEST_DESIGN",
+  "test_id": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003",
+  "status": "DRAFT_NOT_AUTHORIZED",
+  "arms": [
+    {
+      "id": "BASELINE",
+      "context": "LAB_AND_CURRENT_CRITERION_LAYER_WITHOUT_PRODUCT_LEADERSHIP_PACKAGE"
+    },
+    {
+      "id": "CANDIDATE",
+      "context": "SAME_CONTEXT_PLUS_PRODUCT_LEADERSHIP_CANDIDATE_PACKAGE_001"
+    }
+  ],
+  "fixture_families": [
+    "PL003-R1-001_THROUGH_PL003-R1-160",
+    "PL003-R2-001_THROUGH_PL003-R2-160",
+    "POSITIVE_CONTROLS",
+    "NEGATIVE_CONTROLS"
+  ],
+  "minimum_outputs": 640,
+  "blinding": "PL003_NEUTRAL_RENDERER_V1_WITH_INDEPENDENT_NORMALIZATION_RANDOMIZATION_AND_THREE_EVALUATORS",
+  "telemetry": [
+    "ACTIVATION_CLASSIFICATION",
+    "NORMALIZED_TOTAL_SCORE",
+    "DIMENSION_SCORES",
+    "ARM_GUESS",
+    "ROLE_SESSION_LOGS",
+    "HASH_MANIFEST"
+  ],
+  "stop_conditions": [
+    "EXECUTION_AUTHORIZATION_MISSING",
+    "REQUIRED_ROLE_SEPARATION_MISSING",
+    "PRE_UNBLIND_CHECKPOINT_MISSING",
+    "ZERO_TOLERANCE_SAFETY_EVENT",
+    "MIXED_LINE_ENDINGS_OR_HASH_FAILURE"
+  ],
+  "source_refs": [
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/PROPOSAL.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/EXECUTION_CONTRACT.json"
+  ],
+  "execution_authorized": false,
+  "test_executed": false
+}

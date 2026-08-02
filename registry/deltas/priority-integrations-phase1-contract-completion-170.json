@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "priority-integrations-phase1-contract-completion-170",
+  "project_id": "lab",
+  "created_at": "2026-08-02",
+  "authorization_ref": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_1_FACTORY_CONTRACT_COMPLETION_170_REVISION_2",
+  "base_head": "4ab9d032d179377670bc62034316e14954bed7db",
+  "adds": {
+    "authorizations": [
+      "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_1_FACTORY_CONTRACT_COMPLETION_170_REVISION_2"
+    ],
+    "evidence": [
+      "EVD-LAB-PRIORITY-INTEGRATIONS-PHASE-1-170"
+    ],
+    "pending": [
+      "PEND-LAB-045"
+    ],
+    "briefs": [
+      "CODEX_PRIORITY_INTEGRATIONS_PHASE_1_FACTORY_CONTRACT_COMPLETION_170_R2"
+    ],
+    "program_artifacts": [
+      "PRODUCT-LEADERSHIP-TO-SSE-COMPOSITION-CONTRACT-001",
+      "PRIORITY-INTEGRATIONS-PHASE-1-VALIDATION-RESULTS"
+    ]
+  },
+  "updates": {
+    "integrations": [
+      "INT-LAB-004:CANDIDATE_CONTRACT_COMPLETE",
+      "INT-LAB-005:CANDIDATE_CONTRACT_COMPLETE"
+    ],
+    "pending": [
+      "PEND-LAB-044:COMPLETED"
+    ],
+    "program": [
+      "PRIORITY-INTEGRATIONS-PROGRAM-001:PHASE_1_COMPLETE"
+    ],
+    "schemas": [
+      "integration-manifest.schema.json",
+      "activation-contract.schema.json"
+    ]
+  },
+  "effects": {
+    "authority": "NONE_AFTER_CONSUMPTION",
+    "runtime": "NONE",
+    "product": "NONE",
+    "integration_activation": "NONE",
+    "test_execution": 0,
+    "audit_execution": 0
+  }
+}

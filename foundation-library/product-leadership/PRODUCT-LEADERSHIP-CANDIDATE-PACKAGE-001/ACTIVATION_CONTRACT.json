@@ -1,9 +1,14 @@
 {
   "schema_version": "1.0.0",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false,
+  "artifact_type": "ACTIVATION_CONTRACT",
   "contract_id": "PRODUCT-LEADERSHIP-ACTIVATION-CONTRACT-001",
   "package_id": "PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001",
+  "module_id": "PRODUCT_LEADERSHIP",
   "status": "DOCUMENTED_DISABLED_PENDING_TESTS",
-  "automatic_activation": false,
   "allowed_classifications": [
     "ACTIVE",
     "INACTIVE",
@@ -18,27 +23,41 @@
     "PRODUCT_DECISION_SCOPE",
     "REQUESTED_OUTPUT"
   ],
-  "active_when": [
-    "PRODUCT_PROBLEM_OR_OUTCOME_IS_UNRESOLVED",
-    "STRATEGIC_CHOICES_OR_EXCLUSIONS_ARE_REQUIRED",
-    "PRIORITIZATION_REQUIRES_EXPLICIT_CRITERIA_AND_ORDER",
-    "PRODUCT_EVIDENCE_RISK_OR_LEARNING_NEEDS_SYNTHESIS",
-    "HUMAN_VALUE_REVIEW_IS_REQUESTED"
-  ],
-  "inactive_when": [
-    "CLOSED_TECHNICAL_TASK",
-    "BOUNDED_BUG_FIX",
-    "APPROVED_VISUAL_CORRECTION",
-    "BINDING_OBLIGATION",
-    "AUTHORIZED_IMPLEMENTATION",
-    "DETERMINISTIC_OPERATION"
-  ],
-  "limited_when": [
+  "active_when": {
+    "logic": "ANY_CONDITION_MATCHES_AND_NO_FAIL_CLOSED_CONDITION",
+    "conditions": [
+      "PRODUCT_PROBLEM_OR_OUTCOME_IS_UNRESOLVED",
+      "STRATEGIC_CHOICES_OR_EXCLUSIONS_ARE_REQUIRED",
+      "PRIORITIZATION_REQUIRES_EXPLICIT_CRITERIA_AND_ORDER",
+      "PRODUCT_EVIDENCE_RISK_OR_LEARNING_NEEDS_SYNTHESIS",
+      "HUMAN_VALUE_REVIEW_IS_REQUESTED"
+    ]
+  },
+  "inactive_when": {
+    "logic": "ANY_EXPLICIT_INACTIVE_CONDITION_TAKES_PRECEDENCE",
+    "conditions": [
+      "CLOSED_TECHNICAL_TASK",
+      "BOUNDED_BUG_FIX",
+      "APPROVED_VISUAL_CORRECTION",
+      "BINDING_OBLIGATION",
+      "AUTHORIZED_IMPLEMENTATION",
+      "DETERMINISTIC_OPERATION"
+    ]
+  },
+  "limited_when": "ANY_LIMITED_CONDITION_MATCHES_OR_PRODUCT_TO_TECHNICAL_HANDOFF_IS_NOT_STABLE",
+  "limited_conditions": [
     "MIXED_PRODUCT_AND_TECHNICAL_SCOPE",
     "INSUFFICIENT_EVIDENCE",
     "UNRESOLVED_AUTHORITY",
     "CONTRADICTORY_EVIDENCE",
     "FRAMEWORK_APPLICABILITY_UNCERTAIN"
+  ],
+  "fail_closed_when": [
+    "AUTHORITY_CONFLICT",
+    "MISSING_BINDING_OBLIGATION",
+    "EVIDENCE_PROVENANCE_UNKNOWN",
+    "ACTIVATION_WOULD_EXPAND_SCOPE",
+    "OUTPUT_REQUIRES_UNAUTHORIZED_PRODUCT_DECISION"
   ],
   "selection_rules": [
     "CLASSIFY_BEFORE_LOADING_FRAMEWORKS",
@@ -50,13 +69,6 @@
     "DO_NOT_INVENT_EVIDENCE",
     "DO_NOT_CONVERT_RECOMMENDATION_TO_AUTHORITY"
   ],
-  "fail_closed_conditions": [
-    "AUTHORITY_CONFLICT",
-    "MISSING_BINDING_OBLIGATION",
-    "EVIDENCE_PROVENANCE_UNKNOWN",
-    "ACTIVATION_WOULD_EXPAND_SCOPE",
-    "OUTPUT_REQUIRES_UNAUTHORIZED_PRODUCT_DECISION"
-  ],
   "output_contract": {
     "activation_classification_required": true,
     "selected_principles_required": true,
@@ -67,7 +79,5 @@
     "value_claim_requires_measurement": true
   },
   "integrated": false,
-  "active": false,
-  "runtime_effect": "NONE",
-  "authority_effect": "NONE"
+  "active": false
 }

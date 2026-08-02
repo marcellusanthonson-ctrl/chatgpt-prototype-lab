@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false,
+  "artifact_type": "VALIDATION_EVIDENCE",
+  "validation_id": "PRODUCT_LEADERSHIP-FACTORY-CONTRACT-VALIDATION-170",
+  "integration_id": "INT-LAB-004",
+  "module_id": "PRODUCT_LEADERSHIP",
+  "status": "PASS_CONTRACT_VALIDATION_ONLY",
+  "validated_artifacts": [
+    "INTEGRATION_INTAKE.json",
+    "MANIFEST.json",
+    "ACTIVATION_CONTRACT.json",
+    "INPUT_CONTRACT.json",
+    "RESULT_CONTRACT.json",
+    "COMPOSITION_CONTRACT.json",
+    "CONFLICTS.json",
+    "MISUSE_RISKS.json",
+    "FIXTURES.json",
+    "TEST_DESIGN.json",
+    "SCORING_AND_GATES.json",
+    "ROLLBACK.json",
+    "VALIDATION_EVIDENCE.json"
+  ],
+  "applicable_schema_validation": "PASS",
+  "semantic_preservation": "PASS",
+  "unknown_module_rejection": "PASS",
+  "directional_composition": "PASS",
+  "rollback_declaration": "PASS",
+  "negative_transfer_controls": "PASS",
+  "changed_artifact_sha256": {
+    "INTEGRATION_INTAKE.json": "a04c3bcbc2b7a710714bbf480fc05d2b8c1ad083f43380a1e99cdba76de39b41",
+    "MANIFEST.json": "f2c15780b988154321e8e1950eff0a2bd126a9ea3ec5c8764dc2631fae58578f",
+    "ACTIVATION_CONTRACT.json": "b4f32f79b85633402af1b92979ad4f66e727827479fef7a50f6f14c643999c15",
+    "INPUT_CONTRACT.json": "04e7f5092a6fbe3059d1d8012094a36004dff756db3e67e3dfd22f4d690dd140",
+    "RESULT_CONTRACT.json": "6b92016684a8e9e27d9a3d935d6226663754124b0ed5a3305c5a00c7af7fdf25",
+    "COMPOSITION_CONTRACT.json": "2c2cc0761cdb128415ef9a48eb142fcd287ce9c024daf850e077ac4bdd2e098d",
+    "CONFLICTS.json": "704a4b2e26c3b021a760a11b4ecf0c2ad4b021415aae83a9c98a20df794193f9",
+    "TEST_DESIGN.json": "e7b6593ef11d853753ff0245e6a2a6120ef58ac0ba888292a73f7acb79cc32ae",
+    "SCORING_AND_GATES.json": "c0c07b88d43b2e5016c313bf9624e0af749289b1229aea96816150ed56e145bd",
+    "ROLLBACK.json": "65c289f66e20a0dd3b6004120374368a0d1f531eddafbcae0df965260477a088"
+  },
+  "unchanged_existing_artifacts": [
+    "MISUSE_RISKS.json",
+    "FIXTURES.json"
+  ],
+  "test_execution": false,
+  "external_audit_execution": false,
+  "active": false,
+  "integrated": false,
+  "product_effect": "NONE",
+  "source_refs": [
+    "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/PRINCIPLES.json",
+    "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/ACTIVATION_CONTRACT.json",
+    "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/MISUSE_RISKS.json",
+    "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/FIXTURES.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/PROPOSAL.json",
+    "decisions/DEC-LAB-030.json"
+  ]
+}

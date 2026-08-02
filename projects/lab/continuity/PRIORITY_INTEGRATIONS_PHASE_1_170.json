@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "continuity_id": "LAB-PRIORITY-INTEGRATIONS-PHASE-1-170",
+  "project_id": "lab",
+  "status": "PHASE_1_COMPLETE_ON_VERIFIED_SQUASH_MERGE",
+  "created_at": "2026-08-02T01:53:00-04:00",
+  "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "canonical_branch": "main",
+  "head_policy": "VERIFY_LIVE_AT_USE",
+  "execution_parent_head": "4ab9d032d179377670bc62034316e14954bed7db",
+  "priority_integrations": [
+    {
+      "order": 1,
+      "id": "PRODUCT_LEADERSHIP",
+      "integration_ref": "INT-LAB-004",
+      "state": "CANDIDATE_CONTRACT_COMPLETE_TEST_003_NOT_EXECUTED"
+    },
+    {
+      "order": 2,
+      "id": "SOFTWARE_SOLUTION_ENGINEERING",
+      "integration_ref": "INT-LAB-005",
+      "state": "CANDIDATE_CONTRACT_COMPLETE_TEST_READY_EXECUTION_AND_AUDIT_NOT_AUTHORIZED"
+    }
+  ],
+  "composition_contract": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/contracts/PRODUCT-LEADERSHIP-TO-SSE-COMPOSITION-CONTRACT-001.json",
+  "authorization": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_1_FACTORY_CONTRACT_COMPLETION_170_REVISION_2",
+  "evidence": "projects/lab/evidence/EVD-LAB-PRIORITY-INTEGRATIONS-PHASE-1-170.json",
+  "next_pending": "PEND-LAB-045",
+  "prohibitions": [
+    "NO_PHASE_2_WITHOUT_SEPARATE_AUTHORIZATION",
+    "NO_TEST_OR_AUDIT_EXECUTION",
+    "NO_AWS_TERRAFORM_OR_INFRASTRUCTURE",
+    "NO_POINTER_SELECTOR_OR_SHADOW_REGISTRY_MUTATION",
+    "NO_PROMOTION_ACTIVATION_PRODUCT_OR_RUNTIME_CHANGE"
+  ],
+  "single_next_action": "SEPARATELY_AUTHORIZE_PHASE_2_INDEPENDENT_EVIDENCE_CLOSURE",
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_170_REVISION_2_CONSUMPTION",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "integration_effect": "NONE"
+}

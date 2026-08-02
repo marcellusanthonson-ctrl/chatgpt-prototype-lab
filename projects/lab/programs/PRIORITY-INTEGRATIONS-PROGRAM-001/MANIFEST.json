@@ -1,13 +1,16 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "program_id": "PRIORITY-INTEGRATIONS-PROGRAM-001",
   "project_id": "lab",
   "name": "Priority Integrations Program",
-  "status": "PHASE_0_CANONICAL_INVENTORY_AND_ROADMAP_RECONCILED",
+  "status": "PHASE_1_FACTORY_CONTRACT_COMPLETION_PASS",
   "created_at": "2026-08-02",
   "updated_at": "2026-08-02",
   "decision_ref": "DEC-LAB-030",
-  "authorization_ref": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_0_CANONICAL_RECONCILIATION_169",
+  "authorization_refs": [
+    "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_0_CANONICAL_RECONCILIATION_169",
+    "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_1_FACTORY_CONTRACT_COMPLETION_170_REVISION_2"
+  ],
   "objective": "Move Product Leadership and Software Solution Engineering from documented candidates to independently tested, audited, human-approved and bounded active integrations without losing priority focus or weakening authority controls.",
   "priority_integrations": [
     {
@@ -15,7 +18,7 @@
       "id": "PRODUCT_LEADERSHIP",
       "integration_ref": "INT-LAB-004",
       "package": "PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001@0.1.0",
-      "current_stage": "OPERATIONAL_PREFLIGHT_INCOMPLETE_TEST_003_NOT_EXECUTED",
+      "current_stage": "CONTRACT_COMPLETE_OPERATIONAL_PREFLIGHT_INCOMPLETE_TEST_003_NOT_EXECUTED",
       "integrated": false,
       "active": false
     },
@@ -24,17 +27,37 @@
       "id": "SOFTWARE_SOLUTION_ENGINEERING",
       "integration_ref": "INT-LAB-005",
       "package": "SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001@0.2.0",
-      "current_stage": "TEST_READY_EXECUTION_AND_AUDIT_NOT_AUTHORIZED",
+      "current_stage": "CONTRACT_COMPLETE_TEST_READY_EXECUTION_AND_AUDIT_NOT_AUTHORIZED",
       "integrated": false,
       "active": false
     }
   ],
   "non_priority_inventory": [
-    {"id":"INTELLIGENT_APPLICATION_CONSTRUCTION","classification":"SECONDARY_CANDIDATE_OUTSIDE_CRITICAL_PATH","preserved":true},
-    {"id":"ECR","classification":"SUPPORTING_TRANSVERSAL_CAPABILITY","preserved":true},
-    {"id":"STANDARDIZED_INTEGRATION_FACTORY","classification":"ENABLING_INFRASTRUCTURE_ALREADY_ACTIVE","preserved":true},
-    {"id":"CRITERION_LAYER","classification":"INTEGRATED_BASELINE","preserved":true},
-    {"id":"MOTION_SYSTEM","classification":"SEPARATE_ADDITIONAL_LINE","preserved":true}
+    {
+      "id": "INTELLIGENT_APPLICATION_CONSTRUCTION",
+      "classification": "SECONDARY_CANDIDATE_OUTSIDE_CRITICAL_PATH",
+      "preserved": true
+    },
+    {
+      "id": "ECR",
+      "classification": "SUPPORTING_TRANSVERSAL_CAPABILITY",
+      "preserved": true
+    },
+    {
+      "id": "STANDARDIZED_INTEGRATION_FACTORY",
+      "classification": "ENABLING_INFRASTRUCTURE_ALREADY_ACTIVE",
+      "preserved": true
+    },
+    {
+      "id": "CRITERION_LAYER",
+      "classification": "INTEGRATED_BASELINE",
+      "preserved": true
+    },
+    {
+      "id": "MOTION_SYSTEM",
+      "classification": "SEPARATE_ADDITIONAL_LINE",
+      "preserved": true
+    }
   ],
   "critical_path": [
     "PHASE_0_CANONICAL_INVENTORY_AND_ROADMAP",
@@ -47,7 +70,11 @@
     "PHASE_7_SEPARATE_SYMPHONIE_ADOPTION"
   ],
   "composition_contract": {
-    "order": ["PRODUCT_LEADERSHIP","SOFTWARE_SOLUTION_ENGINEERING"],
+    "order": [
+      "PRODUCT_LEADERSHIP",
+      "SOFTWARE_SOLUTION_ENGINEERING"
+    ],
+    "canonical_ref": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/contracts/PRODUCT-LEADERSHIP-TO-SSE-COMPOSITION-CONTRACT-001.json",
     "product_leadership_output_boundary": "PROBLEM_OUTCOME_PRIORITY_EXCLUSIONS_LEARNING_NEED",
     "sse_input_boundary": "RESOLVED_PRODUCT_SCOPE_PLUS_VERIFIED_FUNCTIONAL_AND_NON_FUNCTIONAL_REQUIREMENTS",
     "shared_prohibitions": [
@@ -70,9 +97,10 @@
     "ACTIVE"
   ],
   "phase_0_result": "PASS",
+  "phase_1_result": "PASS",
   "roadmap_ref": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/ROADMAP.json",
-  "next_pending_ref": "projects/lab/pending/PEND-LAB-044.json",
-  "next_authorized_action": "NONE_UNTIL_SEPARATE_PHASE_1_AUTHORIZATION",
+  "next_pending_ref": "projects/lab/pending/PEND-LAB-045.json",
+  "next_authorized_action": "NONE_UNTIL_SEPARATE_PHASE_2_AUTHORIZATION",
   "authority_effect": "NONE",
   "runtime_effect": "NONE",
   "product_effect": "NONE",

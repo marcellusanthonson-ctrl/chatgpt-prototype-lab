@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "validation_id": "PRIORITY-INTEGRATIONS-PHASE-1-VALIDATION-RESULTS-170",
+  "project_id": "lab",
+  "status": "PASS_FULL_REPOSITORY_BRANCH_VALIDATION",
+  "authorization_ref": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_1_FACTORY_CONTRACT_COMPLETION_170_REVISION_2",
+  "validator": "scripts/validate_priority_integrations_phase1_contracts_170.py",
+  "local_result": {
+    "json_parse": "PASS",
+    "applicable_schema_validation": "PASS",
+    "exact_registered_module_ids": 6,
+    "unknown_module_rejection": "PASS",
+    "product_leadership_standard_artifacts": 13,
+    "sse_standard_artifacts": 13,
+    "directional_composition": "PASS",
+    "sse_test_arms": 3,
+    "sse_minimum_future_outputs": 96,
+    "test_execution": 0,
+    "external_audit_execution": 0
+  },
+  "remote_checks_pending": [
+    "BRANCH_TO_MAIN_COMPARE",
+    "SQUASH_MERGE_VERIFICATION"
+  ],
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "integration_effect": "NONE",
+  "full_repository_result": {
+    "status": "PASS",
+    "registered_module_ids": [
+      "EVIDENCE_AND_CLAIMS",
+      "DESIGN_CRITERION",
+      "WEB_ACCESSIBILITY",
+      "CONTEXTUAL_VISUAL_PREFERENCE",
+      "PRODUCT_LEADERSHIP",
+      "SOFTWARE_SOLUTION_ENGINEERING"
+    ],
+    "packages": {
+      "PRODUCT_LEADERSHIP": {
+        "standard_artifacts": 13,
+        "lifecycle": "CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED"
+      },
+      "SOFTWARE_SOLUTION_ENGINEERING": {
+        "standard_artifacts": 13,
+        "lifecycle": "CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED",
+        "test_arms": 3,
+        "minimum_future_outputs": 96
+      }
+    },
+    "test_execution": 0,
+    "external_audit_execution": 0,
+    "runtime_effect": "NONE",
+    "product_effect": "NONE",
+    "integration_activation_effect": "NONE"
+  }
+}
