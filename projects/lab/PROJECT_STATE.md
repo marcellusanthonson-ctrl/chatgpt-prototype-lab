@@ -186,6 +186,6 @@ MOTION-SYSTEM-001 quedó publicado con taxonomía multidimensional, contratos de
 
 ## Corrección de catálogo y roadmap — autorización 168
 
-Stage 1 fue publicado y verificado en `a3286e7088eeb820e5eb5f7603acde253428d35b`. `ERR-LAB-010` está confirmado y remediado técnicamente, pendiente de cierre tras publicación remota verificada.
+Stage 1 fue publicado y verificado en `a3286e7088eeb820e5eb5f7603acde253428d35b`. Stage 2 fue publicado y verificado en `5c335328af6e573f2f97abe729e228d99072f035`; `ERR-LAB-010` está cerrado y la autorización 168 consumida.
 
-La matriz visible pasa 54/54 casos normales del roadmap, 3/3 casos reduced-motion y 8/8 activaciones del catálogo con exactamente una pestaña. El contador permanece fuera del patch y ambos efectos conservan `HUMAN_REVIEW_PENDING`.
+La matriz visible pasa 54/54 casos normales del roadmap, 3/3 casos reduced-motion y 8/8 activaciones del catálogo con exactamente una pestaña. El contador permanece fuera del patch y ambos efectos conservan `HUMAN_REVIEW_PENDING`, listos para una nueva revisión humana sin aprobación o autoridad residual inferida.

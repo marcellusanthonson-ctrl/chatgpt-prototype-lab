@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-08-01",
+  "updated_at": "2026-08-02",
   "active_authorizations": [],
   "records": [
     {
@@ -1249,6 +1249,23 @@
       "integration_authorized": false,
       "product_changes_authorized": false,
       "updated_at": "2026-08-01"
+    },
+    {
+      "id": "AUTHORIZATION_LAB_MOTION_CATALOG_REVIEW_SURFACE_AND_ROADMAP_FIDELITY_CORRECTION_168",
+      "state_key": "motion_catalog_review_surface_and_roadmap_fidelity_correction_168",
+      "project_id": "lab",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "approved_by": "Jonathan Martínez",
+      "scope": "MOTION_CATALOG_REVIEW_SURFACE_AND_ROADMAP_FIDELITY_CORRECTION",
+      "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_MOTION_CATALOG_REVIEW_SURFACE_AND_ROADMAP_FIDELITY_CORRECTION_168.json",
+      "stage_1_remote_head": "a3286e7088eeb820e5eb5f7603acde253428d35b",
+      "stage_2_execution_commit": "5c335328af6e573f2f97abe729e228d99072f035",
+      "commit_authorized": false,
+      "push_authorized": false,
+      "runtime_authorized": false,
+      "integration_authorized": false,
+      "product_changes_authorized": false,
+      "updated_at": "2026-08-02"
     }
   ]
 }

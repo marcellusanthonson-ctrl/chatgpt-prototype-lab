@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_MOTION_CATALOG_REVIEW_SURFACE_AND_ROADMAP_FIDELITY_CORRECTION_168",
   "project_id": "lab",
-  "status": "GRANTED_STAGE_2_VALIDATED_PENDING_REMOTE_PUBLICATION",
+  "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
   "authorization_class": "TWO_STAGE_MOTION_REVIEW_SURFACE_AND_FIDELITY_CORRECTION",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-08-02",
@@ -48,7 +48,9 @@
     },
     {
       "stage_id": "STAGE_2_CORRECTION_VALIDATION_AND_RECONCILIATION",
-      "status": "VALIDATED_PENDING_REMOTE_PUBLICATION",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "execution_commit": "5c335328af6e573f2f97abe729e228d99072f035",
+      "remote_head_verified": "5c335328af6e573f2f97abe729e228d99072f035",
       "consumption_rule": "CONSUMED_AFTER_COMPLETE_VALIDATED_REMOTE_PUBLICATION"
     }
   ],
@@ -104,7 +106,7 @@
     "SCOPE_EXPANSION_REQUIRED"
   ],
   "maximum_result": "MOTION_CATALOG_REVIEW_SURFACE_PASS_ROADMAP_CORRECTED_READY_FOR_NEW_HUMAN_REVIEW",
-  "authority_effect": "BOUNDED_TWO_STAGE_EXECUTION",
+  "authority_effect": "NONE_AFTER_CONSUMPTION",
   "runtime_effect": "NONE",
   "integration_effect": "NONE"
 }

@@ -3,7 +3,7 @@
   "project_id": "lab",
   "name": "LAB",
   "status": "active",
-  "current_phase": "MOTION_CATALOG_ROADMAP_CORRECTION_VALIDATED_PENDING_REMOTE_PUBLICATION",
+  "current_phase": "MOTION_CATALOG_REVIEW_SURFACE_PASS_ROADMAP_CORRECTED_READY_FOR_NEW_HUMAN_REVIEW",
   "updated_at": "2026-08-02",
   "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "canonical_branch": "main",
@@ -12,7 +12,7 @@
     "autonomous_model_authority": false
   },
   "summary": "Gobierno, autoridad, continuidad, auditoría y biblioteca documental gobernada entre proyectos.",
-  "content_completeness": "STRUCTURED_V2_WITH_MOTION_CORRECTION_168_VISIBLE_BROWSER_MATRIX_PASS_PENDING_REMOTE_PUBLICATION",
+  "content_completeness": "STRUCTURED_V2_WITH_MOTION_CORRECTION_168_REMOTE_VERIFIED_READY_FOR_NEW_HUMAN_REVIEW",
   "source_refs": [
     "projects/lab/PROJECT_STATE.md",
     "README.md",
@@ -199,9 +199,9 @@
       "attached_files_role": "BOOTSTRAP_POINTER_ONLY"
     },
     "authorization_registry": {
-      "status": "AUTHORIZATION_168_ACTIVE_STAGE_2_VALIDATED_PENDING_REMOTE_PUBLICATION",
-      "registered_consumed_transitions": 59,
-      "active_authorizations": 1,
+      "status": "AUTHORIZATION_168_CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "registered_consumed_transitions": 61,
+      "active_authorizations": 0,
       "latest": "AUTHORIZATION_LAB_MOTION_CATALOG_REVIEW_SURFACE_AND_ROADMAP_FIDELITY_CORRECTION_168",
       "base_registry": "registry/authorizations.json",
       "correspondence_policy": "CONSUMED_RECORD_STATE_KEY_REQUIRED_ACTIVE_NON_CONSUMED_SEPARATE"
@@ -796,7 +796,7 @@
   "verified_parent_head": "3a7470255f367212fc373fb7eefd9fe112c39f12",
   "self_head_is_canonical_state": false,
   "motion_system_foundation": {
-    "status": "CORRECTION_FUNCTIONAL_AND_VISIBLE_BROWSER_PASS_PENDING_REMOTE_PUBLICATION_HUMAN_REVIEW_PENDING",
+    "status": "CORRECTION_REMOTE_VERIFIED_READY_FOR_NEW_HUMAN_REVIEW",
     "decision": "DEC-LAB-029",
     "authorization": "AUTHORIZATION_LAB_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_167",
     "root": "foundation-library/motion-system/MOTION-SYSTEM-001",
@@ -806,14 +806,16 @@
     "product_effect": "NONE",
     "runtime_effect": "NONE",
     "authorization_state": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "validation": "VISIBLE_BROWSER_MATRIX_PASS_REPOSITORY_VALIDATION_PENDING",
+    "validation": "VISIBLE_BROWSER_MATRIX_AND_REPOSITORY_VALIDATION_PASS",
     "correction_168": {
       "authorization": "AUTHORIZATION_LAB_MOTION_CATALOG_REVIEW_SURFACE_AND_ROADMAP_FIDELITY_CORRECTION_168",
       "error": "ERR-LAB-010",
       "evidence": "EVD-LAB-MOTION-CATALOG-ROADMAP-CORRECTION-168",
       "catalog": "PASS_8_OF_8_EXACTLY_ONE_TAB_PLANNED_ZERO_TABS",
       "roadmap": "PASS_54_OF_54_NORMAL_CASES_540_SAMPLES_AND_3_OF_3_REDUCED_MOTION",
-      "remote_publication": "PENDING"
+      "remote_publication": "PASS_VERIFIED",
+      "verified_remote_head": "5c335328af6e573f2f97abe729e228d99072f035",
+      "authorization_state": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
     }
   }
 }

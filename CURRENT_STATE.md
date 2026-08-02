@@ -212,4 +212,6 @@ La fundación está publicada y validada; la autorización 167 está consumida. 
 
 Stage 1 fue publicado y verificado en `a3286e7088eeb820e5eb5f7603acde253428d35b`. La auditoría contra Carolina `52654da574952148f96d051e439bff1cbc7b4b9d` confirmó `ERR-LAB-010`.
 
-El patch funcional corrige exclusivamente la superficie de revisión del catálogo y `ROADMAP-VERTICAL-PROGRESS-001`. La matriz visible pasa 54/54 casos normales, 3/3 reduced-motion y 8/8 activaciones del catálogo con exactamente una pestaña. Stage 2 permanece pendiente de validación general y publicación remota; ambos efectos siguen en `HUMAN_REVIEW_PENDING`.
+El patch funcional corrige exclusivamente la superficie de revisión del catálogo y `ROADMAP-VERTICAL-PROGRESS-001`. La matriz visible pasa 54/54 casos normales, 3/3 reduced-motion y 8/8 activaciones del catálogo con exactamente una pestaña. Stage 2 fue publicado y verificado en `5c335328af6e573f2f97abe729e228d99072f035`; `ERR-LAB-010` está cerrado y la autorización 168 consumida.
+
+El resultado es `MOTION_CATALOG_REVIEW_SURFACE_PASS_ROADMAP_CORRECTED_READY_FOR_NEW_HUMAN_REVIEW`. Ambos efectos siguen en `HUMAN_REVIEW_PENDING`; no existe aprobación humana, promoción reusable, integración de producto ni autoridad residual.
