@@ -2,4 +2,4 @@
 
 Temporary pull-request marker for the bounded authorization-consumption transition. It grants no product, runtime, deployment or integration authority.
 
-Run: include the consumed authorization transition in registry/authorizations.json before exact validation.
+Run: verify the committed consumed-state tree at exact baseline 329 after registration in registry/authorizations.json.
