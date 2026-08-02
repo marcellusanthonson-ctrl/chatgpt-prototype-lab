@@ -2,14 +2,15 @@
   "schema_version": "1.0.0",
   "id": "PEND-LAB-046",
   "project_id": "lab",
-  "status": "OPEN_HUMAN_COMPARISON_REQUIRED",
+  "status": "OPEN_HUMAN_COMPARISON_OF_SECTION_SCOPED_CANDIDATE_REQUIRED",
   "type": "MOTION_SOURCE_FIDELITY_HUMAN_COMPARISON",
-  "subject": "Human comparison of the Carolina roadmap source-faithful candidate after forensic reconstruction",
+  "subject": "Human comparison of the isolated Carolina roadmap section source-faithful candidate",
   "priority": "HIGH",
-  "precondition": "CAROLINA_ROADMAP_SOURCE_FIDELITY_CANDIDATE_READY_FOR_HUMAN_COMPARISON_PROTOCOL_HARDENED",
-  "current_candidate_state": "HUMAN_REVIEW_PENDING_AUTOMATED_GATES_PASS",
+  "precondition": "CAROLINA_ROADMAP_SECTION_SOURCE_FAITHFUL_002_AUTOMATED_GATES_PASS",
+  "current_candidate_state": "CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002_HUMAN_REVIEW_PENDING",
   "required_actions": [
-    "OBTAIN_SEPARATE_HUMAN_SOURCE_FIDELITY_DECISION"
+    "HUMAN_COMPARE_SECTION_SCOPED_BASELINE_AND_CANDIDATE",
+    "ISSUE_SEPARATE_HUMAN_SOURCE_FIDELITY_DECISION"
   ],
   "prohibitions": [
     "NO_AUTOMATIC_REFERENCE_APPROVAL",
@@ -21,8 +22,9 @@
   "source_refs": [
     "decisions/DEC-LAB-031.json",
     "errors/ERR-LAB-011.json",
-    "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171.json",
-    "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SOURCE-FAITHFUL-001/HUMAN_COMPARISON.html"
+    "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_SECTION_ISOLATION_AND_REVALIDATION_172.json",
+    "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-SOURCE-FIDELITY-172.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/HUMAN_COMPARISON.html"
   ],
   "authority_effect": "NONE",
   "runtime_effect": "NONE",
