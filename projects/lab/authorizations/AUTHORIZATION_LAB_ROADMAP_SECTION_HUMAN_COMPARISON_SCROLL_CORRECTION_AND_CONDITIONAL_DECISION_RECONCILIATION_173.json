@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_SCROLL_CORRECTION_AND_CONDITIONAL_DECISION_RECONCILIATION_173",
   "project_id": "lab",
-  "status": "GRANTED_STAGE_1_ACTIVE_STAGE_2_CONDITIONAL",
+  "status": "STAGE_1_CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_STAGE_2_CONDITIONAL_ACTIVE",
   "authorization_class": "HUMAN_COMPARISON_SCROLL_CORRECTION_AND_CONDITIONAL_DECISION_RECONCILIATION",
   "decision_ref": "DEC-LAB-031",
   "approved_by": "Jonathan Martínez",
@@ -33,7 +33,7 @@
     "external_repository_mutation_authorized": false
   },
   "stage_1": {
-    "status": "AUTHORIZED_NOT_YET_EXECUTED",
+    "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "scope": [
       "CORRECT_ONLY_CANDIDATE_002_HUMAN_COMPARISON_SURFACE",
       "REMOVE_NESTED_SCROLL_AND_FIXED_HEIGHT_LIMITATION",
@@ -41,6 +41,23 @@
       "MAKE_START_TO_TERMINAL_CAP_REVIEW_VERIFIABLE",
       "UPDATE_ONLY_STRICTLY_NECESSARY_README_MANIFEST_OR_REVIEW_EVIDENCE",
       "PUBLISH_NEW_REVIEW_LINK"
+    ],
+    "result": {
+      "human_comparison_surface": "PASS_SINGLE_OUTER_SCROLL_SYNCHRONIZED_0_TO_100_PERCENT",
+      "nested_user_scroll": "REMOVED",
+      "terminal_reached_indicator": "IMPLEMENTED",
+      "controlled_browser_harness_validation": "PASS",
+      "human_source_fidelity_decision": "PENDING_NEW_COMPLETE_REVIEW",
+      "reference_implementation_changed": false,
+      "carolina_repository_mutation": "NONE"
+    },
+    "publication_commits": [
+      "63db6e29f88cb11e2ff82bd55eebebaa3df4da0a",
+      "e8bb4d14b806d279b5078bcd24ad438c26e216a0",
+      "46280ec5c233b63ff3cbff5a2d29917d7b5cee9e",
+      "485c5f5a975351c1242f68f62ec36c9a3a4da871",
+      "4f4b02991284c0c340212ead2218bcf17f44ec1e",
+      "832f7bf3be1081a76d8ef07acd0c3cf4a3d58b5d"
     ]
   },
   "stage_2": {
@@ -59,7 +76,7 @@
   },
   "current_human_observation": [
     "VISUALLY_IMPECCABLE_IN_OBSERVED_RANGE",
-    "HUMAN_REVIEW_INCOMPLETE_DUE_TO_COMPARISON_SCROLL_LIMITATION"
+    "COMPLETE_REVIEW_RETRY_REQUIRED_AFTER_HARNESS_CORRECTION"
   ],
   "preserve_byte_for_byte": [
     "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/REFERENCE_IMPLEMENTATION.html",
@@ -79,7 +96,7 @@
     "NO_RUNTIME_OR_DEPLOYMENT",
     "NO_SCOPE_EXPANSION"
   ],
-  "authority_effect": "STAGE_1_ACTIVE_STAGE_2_CONDITIONAL",
+  "authority_effect": "STAGE_1_NONE_AFTER_CONSUMPTION_STAGE_2_CONDITIONAL_ONLY",
   "runtime_effect": "NONE",
   "integration_effect": "NONE"
 }
