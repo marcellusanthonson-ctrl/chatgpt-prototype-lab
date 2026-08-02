@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Roadmap Progress Behavior Core Harness</title>
+<style>
+:root{--page:#f5f7fa;--surface:#fff;--ink:#17202a;--muted:#607080;--accent:#356b8c;--rail:#c8d4dc}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;overflow-x:hidden}body{font:16px/1.5 system-ui,sans-serif;background:var(--page);color:var(--ink)}
+header{max-width:920px;margin:auto;padding:72px 24px 44px;text-align:center}h1{font-size:clamp(30px,5vw,54px);line-height:1.05;margin:0 0 12px}header p{max-width:680px;margin:auto;color:var(--muted)}
+[data-roadmap]{max-width:980px;margin:auto;padding:28px 24px 80px}
+[data-roadmap-timeline]{position:relative;padding:24px 0;--rail-start:0px;--rail-height:0px;--rail-fill-height:0px}
+[data-roadmap-line],[data-roadmap-progress]{position:absolute;top:var(--rail-start);left:24px;width:2px;height:var(--rail-height);transform:translateX(-50%);border-radius:99px}
+[data-roadmap-line]{background:var(--rail)}[data-roadmap-progress]{height:var(--rail-fill-height);background:var(--accent);z-index:2}
+[data-roadmap-line]::after{content:"";position:absolute;left:50%;bottom:-7px;width:14px;height:14px;border:2px solid var(--rail);background:var(--page);border-radius:50%;transform:translateX(-50%)}
+[data-roadmap-timeline].is-end-active [data-roadmap-line]::after{background:var(--accent);border-color:var(--accent)}
+[data-roadmap-step]{position:relative;display:flex;justify-content:flex-end;margin-bottom:64px;--progress:0}
+[data-roadmap-step]:last-child{margin-bottom:0}
+[data-roadmap-dot]{position:absolute;left:24px;top:44px;width:12px;height:12px;border:2px solid var(--rail);background:var(--surface);border-radius:50%;transform:translate(-50%,-50%);z-index:3}
+[data-roadmap-step].is-dot-active [data-roadmap-dot]{background:var(--accent);border-color:var(--accent)}
+[data-roadmap-card]{width:calc(100% - 58px);min-height:220px;padding:28px;border:1px solid #dce4e9;border-radius:18px;background:var(--surface);box-shadow:0 8px 30px rgba(30,50,65,.05);opacity:0;transform:translateY(24px);transition:opacity .45s,transform .45s}
+[data-roadmap-step].is-visible [data-roadmap-card]{opacity:1;transform:none}
+[data-roadmap-card] strong{display:block;font-size:22px;margin-bottom:10px}[data-roadmap-card] p{margin:0;color:var(--muted)}
+[data-roadmap-card] output{display:block;margin-top:18px;font:600 13px/1.2 ui-monospace,monospace;color:var(--accent)}
+footer{padding:32px;text-align:center;color:var(--muted);border-top:1px solid #dde5ea;background:#fff}
+@media(min-width:768px){[data-roadmap-line],[data-roadmap-progress],[data-roadmap-dot]{left:50%}[data-roadmap-step]{justify-content:space-between}[data-roadmap-card]{width:calc(50% - 48px)}[data-roadmap-step]:nth-of-type(even){flex-direction:row-reverse}}
+@media(prefers-reduced-motion:reduce){[data-roadmap-card]{transition:none;transform:none}}
+</style>
+</head>
+<body>
+<header><h1>Generic milestone progression</h1><p>This fixture contains neutral text and geometry. It exercises only the source-independent motion behavior.</p></header>
+<section data-roadmap aria-label="Generic milestone progression">
+  <div data-roadmap-timeline>
+    <div data-roadmap-line aria-hidden="true"></div>
+    <div data-roadmap-progress aria-hidden="true"></div>
+    <article data-roadmap-step><span data-roadmap-dot aria-hidden="true"></span><div data-roadmap-card><strong>Milestone Alpha</strong><p>Neutral fixture content with no source brand, clinical text, icons, colors or product assets.</p><output data-state-output>waiting</output></div></article>
+    <article data-roadmap-step><span data-roadmap-dot aria-hidden="true"></span><div data-roadmap-card><strong>Milestone Beta</strong><p>A second generic step validates independent reveal, progress and node activation.</p><output data-state-output>waiting</output></div></article>
+    <article data-roadmap-step><span data-roadmap-dot aria-hidden="true"></span><div data-roadmap-card><strong>Milestone Gamma</strong><p>The final generic step validates the terminal state and bounded release margin.</p><output data-state-output>waiting</output></div></article>
+  </div>
+</section>
+<footer data-completion>Behavior-core fixture end</footer>
+<script src="roadmap-progress-core.js"></script>
+<script>
+(() => {
+  const core = RoadmapProgressCore.createRoadmapProgressCore({ root: '[data-roadmap]' });
+  document.querySelector('[data-roadmap]').addEventListener('roadmapprogresschange', event => {
+    event.detail.steps.forEach((state, index) => {
+      document.querySelectorAll('[data-state-output]')[index].textContent = `${state.visible?'visible':'hidden'} · ${state.dotActive?'active':'inactive'} · ${state.progress.toFixed(3)}`;
+    });
+    document.documentElement.dataset.terminal = event.detail.endActive ? 'true' : 'false';
+  });
+  core.connect();
+  window.__roadmapCore = core;
+})();
+</script>
+</body>
+</html>
