@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-08-01",
+  "updated_at": "2026-08-02",
   "records": [
     {
       "id": "INT-SYM-001",
@@ -50,6 +50,23 @@
       "status": "INTEGRATED",
       "canonical_path": "architecture/integrations/STANDARDIZED_INTEGRATION_FACTORY_001.json",
       "updated_at": "2026-08-01"
+    },
+    {
+      "id": "INT-LAB-004",
+      "project_id": "lab",
+      "status": "CANDIDATE",
+      "priority_order": 1,
+      "canonical_path": "projects/lab/integrations/INT-LAB-004.json",
+      "updated_at": "2026-08-02"
+    },
+    {
+      "id": "INT-LAB-005",
+      "project_id": "lab",
+      "status": "CANDIDATE",
+      "priority_order": 2,
+      "canonical_path": "projects/lab/integrations/INT-LAB-005.json",
+      "updated_at": "2026-08-02"
     }
-  ]
+  ],
+  "priority_program": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/MANIFEST.json"
 }
