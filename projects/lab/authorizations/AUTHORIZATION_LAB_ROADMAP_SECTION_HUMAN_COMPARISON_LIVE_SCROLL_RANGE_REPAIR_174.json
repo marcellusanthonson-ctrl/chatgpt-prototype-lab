@@ -49,13 +49,15 @@
   ],
   "preserve_authorization_state": {
     "authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_SCROLL_CORRECTION_AND_CONDITIONAL_DECISION_RECONCILIATION_173",
-    "stage_2_status": "CONDITIONALLY_AUTHORIZED_AWAITING_EXPLICIT_HUMAN_DETERMINATION",
+    "stage_2_status_at_174_execution": "CONDITIONALLY_AUTHORIZED_AWAITING_EXPLICIT_HUMAN_DETERMINATION",
     "trigger_values": [
       "APPROVED_SOURCE_FIDELITY",
       "MODIFIED_WITH_LIMITATIONS",
       "REJECTED_SOURCE_FIDELITY"
     ],
-    "triggered": false
+    "triggered_at_174_execution": false,
+    "current_stage_2_status": "TRIGGERED_AND_CONSUMED",
+    "current_trigger_value": "APPROVED_SOURCE_FIDELITY"
   },
   "required_viewports": [
     "390x844",
@@ -85,7 +87,7 @@
     "NO_RUNTIME_OR_DEPLOYMENT",
     "NO_SCOPE_EXPANSION"
   ],
-  "authority_effect": "NONE_AFTER_AUTHORIZATION_174_CONSUMPTION_AUTHORIZATION_173_STAGE_2_CONDITIONAL_UNCHANGED",
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_174_CONSUMPTION",
   "runtime_effect": "NONE",
   "integration_effect": "NONE",
   "execution_result": {
@@ -100,8 +102,8 @@
     "reference_implementation_changed": false,
     "source_fidelity_tests_reexecuted": false,
     "carolina_repository_mutation": "NONE",
-    "human_source_fidelity_decision": "PENDING_NEW_COMPLETE_REVIEW",
-    "authorization_173_stage_2_triggered": false,
+    "human_source_fidelity_decision_at_174_execution": "PENDING_NEW_COMPLETE_REVIEW",
+    "authorization_173_stage_2_triggered_at_174_execution": false,
     "evidence_ref": "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-LIVE-RANGE-174.json",
     "successor_authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_POST_TERMINAL_DEAD_SCROLL_REMOVAL_175"
   },
@@ -116,6 +118,16 @@
       "CSS_RUNWAY_MIN_HEIGHT_420VH_OVERRULED_DYNAMIC_REQUIRED_HEIGHT",
       "TERMINAL_BUFFER_ADDED_REDUNDANT_POST_COMPLETION_TRAVEL"
     ]
+  },
+  "downstream_resolution": {
+    "successor_authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_POST_TERMINAL_DEAD_SCROLL_REMOVAL_175",
+    "post_terminal_dead_scroll": "REMOVED",
+    "human_localhost_revalidation": "PASS",
+    "human_source_fidelity_decision": "APPROVED_SOURCE_FIDELITY",
+    "approved_by": "Jonathan Martínez",
+    "determined_at": "2026-08-02T18:43:00-04:00",
+    "authorization_173_stage_2": "TRIGGERED_AND_CONSUMED",
+    "reconciliation_ref": "registry/deltas/roadmap-section-source-fidelity-human-approval-173.json"
   },
   "publication_commits": [
     "0365ec738c395ddec2013adaf6a28a27b1d1a267",
