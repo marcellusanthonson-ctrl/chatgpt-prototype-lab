@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "CODEX_ROADMAP_SOURCE_FIDELITY_SECTION_ISOLATION_AND_REVALIDATION_172_001",
+  "authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_SECTION_ISOLATION_AND_REVALIDATION_172",
+  "objective": "Isolate and revalidate only .ca-roadmap-editorial from the accepted full-context forensic capture without mutating the protected source repository.",
+  "expected_parent_head": "7918342f65d01ca0dafd67edb3345c795083400d",
+  "target_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "target_branch": "main",
+  "protected_source": "marcellusanthonson-ctrl/carolina-md-next-landing@52654da574952148f96d051e439bff1cbc7b4b9d",
+  "required_outputs": [
+    "candidate_001_human_scope_reconciliation",
+    "candidate_002_section_package",
+    "64_case_validation_metrics",
+    "evidence_record",
+    "registry_delta"
+  ],
+  "acceptance_checks": [
+    "ONLY_CA_ROADMAP_EDITORIAL",
+    "THREE_CARDS_AND_NODES",
+    "LINE_PROGRESS_HALOS_TERMINAL_CAP",
+    "ZERO_EXTERNAL_REQUESTS",
+    "ZERO_SCOPE_FAILURES",
+    "ZERO_AXIS_DELTA",
+    "ZERO_STYLE_AND_GEOMETRY_CONTENT_MISMATCH",
+    "HUMAN_REVIEW_PENDING"
+  ],
+  "stop_conditions": [
+    "NO_CAROLINA_REPOSITORY_MUTATION",
+    "NO_PRODUCT_INTEGRATION",
+    "NO_CANONICAL_REPLACEMENT",
+    "NO_REUSABLE_PROMOTION",
+    "NO_RUNTIME_OR_DEPLOYMENT",
+    "NO_SCOPE_EXPANSION",
+    "EXPECTED_PARENT_HEAD_MISMATCH",
+    "SOURCE_SECTION_NOT_LOCATED",
+    "AUTOMATED_GATE_FAILURE"
+  ],
+  "response_contract": [
+    "RESULT",
+    "CHANGES",
+    "COMMIT",
+    "VALIDATIONS",
+    "DIVERGENCES",
+    "AUTHORIZATION_CONSUMPTION",
+    "SINGLE_NEXT_ACTION"
+  ]
+}
