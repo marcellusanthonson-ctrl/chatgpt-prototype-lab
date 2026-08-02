@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "effect_id": "ROADMAP-VERTICAL-PROGRESS-001",
+  "reference_id": "CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
+  "status": "CANONICAL_REFERENCE_IMPLEMENTATION_DESIGNATED",
+  "classification": "SOURCE_FAITHFUL_SECTION_SCOPED_REFERENCE_IMPLEMENTATION",
+  "decision_ref": "DEC-LAB-031",
+  "authorization_ref": "AUTHORIZATION_LAB_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176",
+  "human_determination": "APPROVED_SOURCE_FIDELITY",
+  "approved_by": "Jonathan Martínez",
+  "source_repository": "marcellusanthonson-ctrl/carolina-md-next-landing",
+  "source_commit": "52654da574952148f96d051e439bff1cbc7b4b9d",
+  "source_selector": ".ca-roadmap-editorial",
+  "artifact_pointer": "../../../source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/REFERENCE_IMPLEMENTATION.html",
+  "artifact_blob_sha": "66100821888e37e769a7dcc1f9af53d30a74175e",
+  "comparison_metrics_pointer": "../../../source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/COMPARISON_METRICS.json",
+  "comparison_metrics_blob_sha": "87254c059ef32975e29327731968f028bbc46fe4",
+  "source_provenance_pointer": "../../../source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/SOURCE_PROVENANCE.json",
+  "source_provenance_blob_sha": "5233884b89de573b631f9f2257649f539c6f704b",
+  "designation_method": "POINTER_TO_EXISTING_IMMUTABLE_APPROVED_ARTIFACT",
+  "copied": false,
+  "moved": false,
+  "rewritten": false,
+  "modified": false,
+  "historical_neutral_derivation": {
+    "path": ".",
+    "status": "REJECTED_AS_CANONICAL_REFERENCE_PRESERVED_AS_HISTORICAL_NEUTRAL_DERIVATION",
+    "may_impersonate_reference": false
+  },
+  "non_authorizations": [
+    "NO_CANONICAL_REPLACEMENT_OF_HISTORICAL_NEUTRAL_DERIVATION",
+    "NO_NEUTRAL_ADAPTATION",
+    "NO_REUSABLE_PROMOTION",
+    "NO_PRODUCT_INTEGRATION",
+    "NO_RUNTIME_OR_DEPLOYMENT",
+    "NO_CAROLINA_REPOSITORY_MUTATION"
+  ]
+}
