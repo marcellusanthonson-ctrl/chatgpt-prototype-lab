@@ -3,7 +3,7 @@
   "amendment_id": "AUTHORIZATION_LAB_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_167_AMENDMENT_1_STAGE_2_PROGRESS",
   "authorization_id": "AUTHORIZATION_LAB_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_167",
   "project_id": "lab",
-  "status": "ACTIVE",
+  "status": "CONSUMED",
   "approved_scope_effect": "NONE_SCOPE_PRESERVED",
   "parent_authorization_blob": "2c351720f7fcb02900b77f2faa36494eefbff7e4",
   "stage_1": {
@@ -11,7 +11,7 @@
     "remote_head": "db3b6d7e05418c72f88b29638c0c026410792c04"
   },
   "stage_2": {
-    "status": "VALIDATION_PASS_AWAITING_REMOTE_VERIFICATION_AND_AUTHORIZATION_CONSUMPTION",
+    "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "remote_head": "aafa9e3bc8a08df8912467e889157f11b33143c0"
   },
   "preservation_correction": {
@@ -26,21 +26,22 @@
     "schema_instances": "PASS_11_OF_11",
     "browser": "PASS_SET_CONTENT_RENDERING",
     "file_protocol": "BLOCKED_BY_ENVIRONMENT_ADMIN_POLICY",
-    "general_repository_validator": "PREPUBLICATION_EXACT_329_ZERO_ADDED_ZERO_REMOVED",
-    "canonical_aggregate_reconciliation": "PASS_PREPUBLICATION"
+    "general_repository_validator": "EXACT_329_ZERO_ADDED_ZERO_REMOVED",
+    "canonical_aggregate_reconciliation": "PASS",
+    "remote_publication_verification": "PASS_REQUIRED_AT_MERGE_AND_VERIFIED_AFTER_MERGE"
   },
   "current_authority": {
-    "commit_authorized": true,
-    "push_authorized": true,
-    "source_file_update_authorized": true,
-    "scope": "REMOTE_VERIFICATION_AND_AUTHORIZATION_CONSUMPTION_ONLY",
+    "commit_authorized": false,
+    "push_authorized": false,
+    "source_file_update_authorized": false,
+    "scope": "NONE_AFTER_CONSUMPTION",
     "runtime_authorized": false,
     "product_changes_authorized": false,
     "external_repository_mutation_authorized": false
   },
-  "consumption_state": "NOT_CONSUMED",
+  "consumption_state": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
   "pending": "PEND-LAB-043",
-  "authority_effect": "PRESERVES_ORIGINAL_GRANT_NO_SCOPE_EXPANSION",
+  "authority_effect": "NONE_AFTER_CONSUMPTION",
   "runtime_effect": "NONE",
   "product_effect": "NONE"
 }

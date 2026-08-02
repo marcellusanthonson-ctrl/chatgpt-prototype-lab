@@ -206,4 +206,4 @@ El selector estático conserva byte-for-byte el blob `301ba432907758fc49a9b3c86a
 
 ## Motion system transversal — autorización 167
 
-La fundación está publicada y validada antes de publicación final; resta verificar el remoto y consumir la autorización. Los dos efectos iniciales continúan en HUMAN_REVIEW_PENDING.
+La fundación está publicada y validada; la autorización 167 está consumida. Los dos efectos iniciales continúan en HUMAN_REVIEW_PENDING.

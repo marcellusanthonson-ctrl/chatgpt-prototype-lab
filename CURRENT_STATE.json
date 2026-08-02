@@ -89,7 +89,7 @@
     "integration_factory_current_continuity": "projects/lab/continuity/CURRENT_CONTINUITY.json",
     "motion_system": "foundation-library/motion-system/MOTION-SYSTEM-001/MANIFEST.json",
     "motion_system_foundation": {
-      "status": "PUBLISHED_VALIDATION_PASS_AWAITING_REMOTE_VERIFICATION_AND_AUTHORIZATION_CONSUMPTION",
+      "status": "FOUNDATION_PUBLISHED_VALIDATION_PASS_INITIAL_EFFECTS_HUMAN_REVIEW_PENDING",
       "decision": "DEC-LAB-029",
       "authorization": "AUTHORIZATION_LAB_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_167",
       "root": "foundation-library/motion-system/MOTION-SYSTEM-001",
@@ -97,7 +97,9 @@
       "planned_effects": 61,
       "maximum_effect_status": "HUMAN_REVIEW_PENDING",
       "product_effect": "NONE",
-      "runtime_effect": "NONE"
+      "runtime_effect": "NONE",
+      "authorization_state": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "validation": "EXACT_329_ZERO_ADDED_ZERO_REMOVED_PROTECTED_BLOBS_PASS"
     }
   },
   "projects": {
@@ -239,7 +241,7 @@
     "integration_factory_m5_stage_aware_validator_remediation_162": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "integration_factory_m5_canonical_correction_and_conditional_rollback_drill_165": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "integration_factory_m5_bounded_cutover_observation_and_automatic_rollback_166": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "transversal_motion_effects_library_foundation_167": "GRANTED_STAGE_1_CONSUMED_STAGE_2_VALIDATION_PASS_AWAITING_REMOTE_VERIFICATION"
+    "transversal_motion_effects_library_foundation_167": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
   },
   "verified_external_heads": {
     "symphonie": "31dd1345026240c83b015feef34d6f7f2d2147b7",

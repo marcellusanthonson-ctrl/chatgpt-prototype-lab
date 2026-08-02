@@ -2,7 +2,7 @@
   "schema_version": "1.2.0",
   "continuity_id": "LAB-CONTINUITY-MOTION-SYSTEM-167-STAGE-2-PARTIAL-20260801",
   "project_id": "lab",
-  "status": "MOTION_SYSTEM_FOUNDATION_PUBLISHED_BROWSER_PASS_AWAITING_GENERAL_VALIDATION_AND_CANONICAL_RECONCILIATION",
+  "status": "MOTION_SYSTEM_FOUNDATION_PUBLISHED_VALIDATION_PASS_INITIAL_EFFECTS_HUMAN_REVIEW_PENDING",
   "created_at": "2026-08-01T22:53:00-04:00",
   "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "canonical_branch": "main",
@@ -57,10 +57,10 @@
       ]
     },
     {
-      "claim": "General repository validation and canonical aggregate reconciliation remain pending.",
+      "claim": "The canonical reconciliation passed at exactly 329 historical findings, zero added and zero removed; protected blobs remained unchanged.",
       "source_refs": [
-        "foundation-library/motion-system/MOTION-SYSTEM-001/evidence/VALIDATION_SUMMARY.json",
-        "projects/lab/pending/PEND-LAB-043.json"
+        "projects/lab/test-executions/MOTION-SYSTEM-167-RECONCILIATION-DONE.json",
+        "projects/lab/evidence/EVD-LAB-MOTION-SYSTEM-001.json"
       ]
     }
   ],
@@ -71,7 +71,7 @@
     "static_selector_retirement_authorized": false
   },
   "authorization": {
-    "167": "ACTIVE_FOR_GENERAL_VALIDATION_CANONICAL_RECONCILIATION_AND_REMOTE_VERIFICATION_ONLY"
+    "167": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_NO_RESIDUAL_AUTHORITY"
   },
   "motion_system": {
     "root": "foundation-library/motion-system/MOTION-SYSTEM-001",
@@ -89,7 +89,7 @@
     },
     {
       "id": "PEND-LAB-043",
-      "status": "PENDING_GENERAL_VALIDATION_CANONICAL_RECONCILIATION_AND_HUMAN_REVIEW"
+      "status": "PENDING_HUMAN_REVIEW_AND_STAGED_LIBRARY_POPULATION"
     }
   ],
   "archived_previous_package": "projects/lab/continuity/archive/motion-system-167-pre-stage2-db3b6d7e05418c72f88b29638c0c026410792c04/",
@@ -99,12 +99,12 @@
     "MODIFY_PRODUCT_WITHOUT_SEPARATE_AUTHORIZATION",
     "RETIRE_STATIC_SELECTOR_WITHOUT_SEPARATE_AUTHORIZATION"
   ],
-  "single_next_action": "VERIFY_ZERO_DELTA_REMOTE_PUBLICATION_AND_CONSUME_AUTHORIZATION_167",
-  "first_phrase_for_new_conversation": "Continúa ChatGPT Prototype LAB desde el HEAD remoto vigente de main. MOTION-SYSTEM-001 está publicado; la autorización 167 permanece activa solo para verificar la reconciliación canónica y consumirse si el delta general es cero.",
-  "authority_effect": "AUTHORIZATION_167_ACTIVE_BOUNDED",
+  "single_next_action": "JONATHAN_MARTINEZ_REVIEWS_THE_TWO_INITIAL_MOTION_EFFECT_DEMOS",
+  "first_phrase_for_new_conversation": "Continúa ChatGPT Prototype LAB desde el HEAD remoto vigente de main. MOTION-SYSTEM-001 está publicado y validado; la autorización 167 está consumida y los dos efectos iniciales esperan revisión humana.",
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_167_CONSUMPTION",
   "runtime_effect": "NONE",
   "integration_effect": "DOCUMENTARY_CRITERION_SOURCE_DISCOVERABILITY_ONLY",
   "authorizations": {
-    "167": "ACTIVE_FOR_GENERAL_VALIDATION_CANONICAL_RECONCILIATION_AND_REMOTE_VERIFICATION_ONLY"
+    "167": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_NO_RESIDUAL_AUTHORITY"
   }
 }

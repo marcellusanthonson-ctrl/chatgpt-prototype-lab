@@ -4,7 +4,7 @@
   "project_id": "lab",
   "authorization_id": "AUTHORIZATION_LAB_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_167",
   "decision_id": "DEC-LAB-029",
-  "classification": "MOTION_SYSTEM_FOUNDATION_VALIDATION_PASS_AWAITING_REMOTE_VERIFICATION_AND_AUTHORIZATION_CONSUMPTION",
+  "classification": "MOTION_SYSTEM_FOUNDATION_PUBLISHED_VALIDATION_PASS_INITIAL_EFFECTS_HUMAN_REVIEW_PENDING",
   "created_at": "2026-08-01T22:53:00-04:00",
   "verified_outputs": {
     "schemas": 6,
@@ -15,8 +15,9 @@
     "product_changes": false,
     "external_repository_mutations": false,
     "browser_validation": "PASS_SET_CONTENT_RENDERING",
-    "general_repository_validator": "PREPUBLICATION_EXACT_329_ZERO_ADDED_ZERO_REMOVED",
-    "canonical_aggregate_reconciliation": "PASS_PREPUBLICATION"
+    "general_repository_validator": "EXACT_329_ZERO_ADDED_ZERO_REMOVED",
+    "canonical_aggregate_reconciliation": "PASS",
+    "protected_blobs": "PASS"
   },
   "preservation": {
     "pointer": "UNCHANGED_BY_TREE",
@@ -26,8 +27,7 @@
   },
   "limitations": [
     "FILE_PROTOCOL_NAVIGATION_BLOCKED_BY_ENVIRONMENT_ADMIN_POLICY_SET_CONTENT_BROWSER_VALIDATION_USED",
-    "HUMAN_REVIEW_PENDING",
-    "REMOTE_PUBLICATION_VERIFICATION_PENDING"
+    "HUMAN_REVIEW_PENDING"
   ],
-  "result_boundary": "PUBLISHED_FOUNDATION_CANDIDATE_NOT_AUTHORIZATION_CONSUMPTION_NOT_PRODUCT_INTEGRATION"
+  "result_boundary": "FOUNDATION_PUBLISHED_NO_PRODUCT_OR_RUNTIME_EFFECT_INITIAL_EFFECTS_NOT_YET_REUSABLE_FOUNDATION"
 }

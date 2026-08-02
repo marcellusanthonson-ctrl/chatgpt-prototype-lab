@@ -1,3 +1,3 @@
-Continúa ChatGPT Prototype LAB desde el HEAD remoto vigente de main. La autorización 167 publicó la fundación del motion system y sus demos pasaron validación de navegador por set_content, pero la autorización sigue activa únicamente para ejecutar el validador general y reconciliar los agregados canónicos antes de su consumo.
+Continúa ChatGPT Prototype LAB desde el HEAD remoto vigente de main. MOTION-SYSTEM-001 está publicado y validado; la autorización 167 está consumida y los dos efectos iniciales esperan revisión humana.
 
-No infieras autoridad: la autorización 167 permanece limitada a la verificación remota y su consumo; no autoriza productos, runtime, integraciones ni promoción automática de efectos.
+No infieras autoridad: no existe permiso residual para modificar la biblioteca, promover efectos, integrar productos, ejecutar runtime o desplegar.

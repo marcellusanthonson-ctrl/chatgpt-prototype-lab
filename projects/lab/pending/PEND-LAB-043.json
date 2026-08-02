@@ -2,19 +2,17 @@
   "schema_version": "1.0.0",
   "id": "PEND-LAB-043",
   "project_id": "lab",
-  "status": "PENDING_HUMAN_REVIEW_AND_STAGED_LIBRARY_POPULATION_AFTER_AUTHORIZATION_167_CONSUMPTION",
+  "status": "PENDING_HUMAN_REVIEW_AND_STAGED_LIBRARY_POPULATION",
   "type": "MOTION_SYSTEM_HUMAN_GATE_AND_LIBRARY_POPULATION",
   "title": "Human review and staged population of the transversal motion-effects library",
   "priority": "HIGH",
   "required_actions": [
-    "VERIFY_REMOTE_ZERO_DELTA_PUBLICATION",
-    "CONSUME_AUTHORIZATION_167",
     "HUMAN_REVIEW_TWO_INITIAL_DEMOS",
     "PROMOTE_REVISE_OR_REJECT_EACH_INITIAL_EFFECT",
     "IMPLEMENT_INDUSTRY_EFFECTS_IN_BOUNDED_BATCHES",
     "AUTHORIZE_PROJECT_INTEGRATIONS_SEPARATELY"
   ],
-  "current_authority": "AUTHORIZATION_167_ACTIVE_FOR_REMOTE_VERIFICATION_AND_CONSUMPTION_ONLY",
+  "current_authority": "NONE_AFTER_AUTHORIZATION_167_CONSUMPTION",
   "source_refs": [
     "foundation-library/motion-system/MOTION-SYSTEM-001/MANIFEST.json",
     "projects/lab/evidence/EVD-LAB-MOTION-SYSTEM-001.json"
