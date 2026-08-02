@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_LIVE_SCROLL_RANGE_REPAIR_174",
   "project_id": "lab",
-  "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+  "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_RESULT_MODIFIED_BY_POST_PUBLICATION_HUMAN_EVIDENCE",
   "authorization_class": "HUMAN_COMPARISON_LIVE_SCROLL_RANGE_REPAIR",
   "decision_ref": "DEC-LAB-031",
   "approved_by": "Jonathan Martínez",
@@ -89,19 +89,33 @@
   "runtime_effect": "NONE",
   "integration_effect": "NONE",
   "execution_result": {
-    "status": "PASS_TECHNICAL_REPAIR_NEW_HUMAN_REVIEW_REQUIRED",
+    "status": "MODIFIED_TERMINAL_COMPLETION_CONFIRMED_POST_TERMINAL_DEAD_SCROLL_PRESENT",
     "previous_173_stage_1_result": "HUMAN_REVIEW_REVERSED_STAGE_1_PASS_SCROLL_RANGE_STALE",
-    "human_comparison_surface": "LIVE_SCROLL_RANGE_REPAIRED",
-    "required_viewports": "PASS_6_OF_6",
+    "human_comparison_surface": "LIVE_SCROLL_RANGE_REPAIRED_TERMINAL_COMPLETE_POST_TERMINAL_RELEASE_DEFECT_REMAINED",
+    "required_viewports": "TECHNICAL_MATRIX_REPORTED_PASS_6_OF_6_LATER_LIMITED_BY_HUMAN_RUNTIME_EVIDENCE",
     "direct_and_comparison_terminal_parity": true,
-    "actual_terminal_gate": "PASS_BOTH_PANELS",
+    "actual_terminal_gate": "CONFIRMED_BOTH_PANELS",
+    "post_terminal_dead_scroll": true,
     "reference_implementation_blob_sha": "66100821888e37e769a7dcc1f9af53d30a74175e",
     "reference_implementation_changed": false,
     "source_fidelity_tests_reexecuted": false,
     "carolina_repository_mutation": "NONE",
     "human_source_fidelity_decision": "PENDING_NEW_COMPLETE_REVIEW",
     "authorization_173_stage_2_triggered": false,
-    "evidence_ref": "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-LIVE-RANGE-174.json"
+    "evidence_ref": "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-LIVE-RANGE-174.json",
+    "successor_authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_POST_TERMINAL_DEAD_SCROLL_REMOVAL_175"
+  },
+  "post_publication_human_reassessment": {
+    "classification": "MODIFIED",
+    "observed_at": "2026-08-02T18:09:55-04:00",
+    "finding": "TERMINAL_COMPLETION_AND_PANEL_PARITY_CONFIRMED_BUT_SCROLL_CONTINUED_WITHOUT_VISIBLE_OBJECTIVE_BEFORE_STICKY_RELEASE",
+    "human_video_sha256": "cfedfe3777ab00fa89250528b4c658f68cec43f4b4ffb89897c56268b2887f76",
+    "human_video_duration_seconds": 24.0291,
+    "human_video_dimensions": "2560x1080",
+    "technical_root_causes": [
+      "CSS_RUNWAY_MIN_HEIGHT_420VH_OVERRULED_DYNAMIC_REQUIRED_HEIGHT",
+      "TERMINAL_BUFFER_ADDED_REDUNDANT_POST_COMPLETION_TRAVEL"
+    ]
   },
   "publication_commits": [
     "0365ec738c395ddec2013adaf6a28a27b1d1a267",
