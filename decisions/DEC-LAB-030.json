@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0.0",
+  "decision_id": "DEC-LAB-030",
+  "project_id": "lab",
+  "title": "Establish Product Leadership and Software Solution Engineering as the two priority integrations",
+  "status": "APPROVED",
+  "decision_class": "NORMATIVE_PRIORITY_AND_PROGRAM_BOUNDARY",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-08-02",
+  "approval_sources": [
+    "La prioridad eran 2 integraciones",
+    "Falta SOFTWARE-SOLUTION-ENGINEERING",
+    "Reconcilia el inventario. Necesito que definas un roadmap para concretar las integraciones. No podemos perder el foco nuevamente",
+    "Continuamos con la fase 0",
+    "Continuamos"
+  ],
+  "decision": {
+    "priority_integrations_in_order": [
+      "PRODUCT_LEADERSHIP",
+      "SOFTWARE_SOLUTION_ENGINEERING"
+    ],
+    "critical_path_excludes": [
+      "INTELLIGENT_APPLICATION_CONSTRUCTION",
+      "ECR",
+      "STANDARDIZED_INTEGRATION_FACTORY",
+      "CRITERION_LAYER",
+      "MOTION_SYSTEM"
+    ],
+    "classification_boundaries": {
+      "INTELLIGENT_APPLICATION_CONSTRUCTION": "SECONDARY_CANDIDATE_OUTSIDE_CRITICAL_PATH",
+      "ECR": "SUPPORTING_TRANSVERSAL_CAPABILITY",
+      "STANDARDIZED_INTEGRATION_FACTORY": "ENABLING_INFRASTRUCTURE_ALREADY_ACTIVE",
+      "CRITERION_LAYER": "INTEGRATED_BASELINE",
+      "MOTION_SYSTEM": "SEPARATE_ADDITIONAL_LINE"
+    }
+  },
+  "composition_order": [
+    "PRODUCT_LEADERSHIP_DETERMINES_PROBLEM_OUTCOME_PRIORITY_EXCLUSIONS_AND_LEARNING_NEED",
+    "SOFTWARE_SOLUTION_ENGINEERING_ANALYZES_PROPORTIONAL_TECHNICAL_SOLUTION_BOUNDARIES_EVOLUTION_OPERABILITY_AND_MAINTAINABILITY",
+    "NEITHER_INTEGRATION_CREATES_AUTHORITY_OR_SELECTS_A_GLOBAL_STACK"
+  ],
+  "supersession": {
+    "decision_ref": "DEC-LAB-026",
+    "scope": "SUPERSEDES_ONLY_THE_PREVIOUS_PRIORITY_PAIRING_OF_PRODUCT_LEADERSHIP_PLUS_INTELLIGENT_APPLICATION_CONSTRUCTION",
+    "preserved": [
+      "M5_READINESS_AND_CUTOVER_HISTORY",
+      "INTELLIGENT_APPLICATION_CONSTRUCTION_CANDIDATE_STATUS",
+      "ALL_TECHNICAL_RESULTS_AND_EVIDENCE"
+    ]
+  },
+  "non_authorizations": [
+    "NO_TEST_EXECUTION",
+    "NO_EXTERNAL_AUDIT_EXECUTION",
+    "NO_AWS_OR_TERRAFORM",
+    "NO_RUNTIME_OR_PRODUCT_CHANGE",
+    "NO_POINTER_SELECTOR_OR_CANDIDATE_REGISTRY_MUTATION",
+    "NO_CANDIDATE_PROMOTION_OR_ACTIVATION"
+  ],
+  "program_ref": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/MANIFEST.json",
+  "authorization_ref": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_0_CANONICAL_RECONCILIATION_169",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "integration_effect": "NONE"
+}
