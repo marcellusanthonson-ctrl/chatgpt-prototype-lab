@@ -1,0 +1,174 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-ROADMAP-SECTION-POST-TERMINAL-DEAD-SCROLL-175",
+  "project_id": "lab",
+  "authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_POST_TERMINAL_DEAD_SCROLL_REMOVAL_175",
+  "parent_authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_LIVE_SCROLL_RANGE_REPAIR_174",
+  "decision_ref": "DEC-LAB-031",
+  "status": "TECHNICAL_REPAIR_PUBLISHED_SUPPLEMENTARY_MATRIX_PASS_HUMAN_LOCALHOST_REVIEW_REQUIRED",
+  "candidate_id": "CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
+  "human_runtime_evidence": {
+    "source": "USER_UPLOADED_REAL_LOCALHOST_SCREEN_RECORDING",
+    "filename": "Desktop 2026.08.02 - 18.09.55.02.mp4",
+    "sha256": "cfedfe3777ab00fa89250528b4c658f68cec43f4b4ffb89897c56268b2887f76",
+    "duration_seconds": 24.0291,
+    "dimensions": "2560x1080",
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "finding": "BOTH_PANELS_REACHED_REAL_TERMINAL_STATE_AND_100_PERCENT_BUT_THE_STICKY_REVIEW_SURFACE_CONTINUED_SCROLLING_WITHOUT_VISIBLE_OBJECTIVE_BEFORE_RELEASE"
+  },
+  "reassessment_of_174": {
+    "classification": "MODIFIED",
+    "result": "MODIFIED_TERMINAL_COMPLETION_CONFIRMED_POST_TERMINAL_DEAD_SCROLL_PRESENT",
+    "terminal_completion": true,
+    "panel_parity": true,
+    "post_terminal_dead_scroll": true
+  },
+  "confirmed_root_causes": [
+    "CSS_RUNWAY_MIN_HEIGHT_420VH_OVERRULED_THE_SMALLER_DYNAMIC_REQUIRED_HEIGHT",
+    "TERMINAL_BUFFER_MAX_280PX_OR_38_PERCENT_VIEWPORT_ADDED_REDUNDANT_POST_COMPLETION_TRAVEL"
+  ],
+  "implementation_change": {
+    "target": "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/HUMAN_COMPARISON.html",
+    "changes": [
+      {
+        "from": ".runway{position:relative;min-height:420vh}",
+        "to": ".runway{position:relative;min-height:100vh}",
+        "purpose": "ALLOW_THE_LIVE_DYNAMIC_RUNWAY_HEIGHT_TO_CONTROL_STICKY_RELEASE"
+      },
+      {
+        "from": "terminalBuffer = max(280px, 38 percent viewport height)",
+        "to": "releaseMargin = 16px",
+        "purpose": "RELEASE_THE_STICKY_SHELL_WITHIN_THE_AUTHORIZED_MAXIMUM_24PX_AFTER_TERMINAL"
+      }
+    ],
+    "terminal_gate_changed": false,
+    "reference_implementation_changed": false,
+    "effect_formula_changed": false
+  },
+  "artifacts": {
+    "human_comparison_sha256": "7a39476b9d0cea393f8564702da593efa8c5db6f7436579b19cd4dd7a5e2787d",
+    "reference_implementation_blob_sha": "66100821888e37e769a7dcc1f9af53d30a74175e",
+    "reference_implementation_sha256": "f6d032227b4ce6325bebd70836657ac595c28d852ae0005a0632655b0c430122",
+    "reference_implementation_unchanged": true,
+    "comparison_metrics_unchanged": true,
+    "source_provenance_unchanged": true
+  },
+  "real_localhost_validation": {
+    "server_delivery": "PASS_HTTP_200_EXACT_LOCAL_FILES",
+    "browser_automation": "BLOCKED_BY_EXECUTION_ENVIRONMENT",
+    "browser_error": "ERR_BLOCKED_BY_ADMINISTRATOR",
+    "attempted_urls": [
+      "http://127.0.0.1:8765/HUMAN_COMPARISON.html",
+      "http://localhost:8765/HUMAN_COMPARISON.html"
+    ],
+    "claim_limit": "AUTOMATED_REAL_LOCALHOST_BROWSER_PASS_NOT_ESTABLISHED",
+    "human_localhost_revalidation_required": true
+  },
+  "supplementary_controlled_browser_validation": {
+    "status": "PASS",
+    "method": "CONTROLLED_EXACT_PROTECTED_BYTES_SRCDOC_SUPPLEMENTARY_NOT_LOCALHOST",
+    "browser": "Chromium",
+    "required_viewport_count": 7,
+    "matrix": [
+      {
+        "viewport": "390x844",
+        "release_margin_css_px": 16,
+        "post_terminal_extra_css_px": 16.171875,
+        "footer_visible_after_24px": true,
+        "release_observed_ms": 54.49,
+        "both_panels_complete": true,
+        "progress": "100%",
+        "horizontal_overflow_css_px": 0,
+        "status": "PASS"
+      },
+      {
+        "viewport": "768x1024",
+        "release_margin_css_px": 16,
+        "post_terminal_extra_css_px": 16.390625,
+        "footer_visible_after_24px": true,
+        "release_observed_ms": 54.53,
+        "both_panels_complete": true,
+        "progress": "100%",
+        "horizontal_overflow_css_px": 0,
+        "status": "PASS"
+      },
+      {
+        "viewport": "1280x720",
+        "release_margin_css_px": 16,
+        "post_terminal_extra_css_px": 16.390625,
+        "footer_visible_after_24px": true,
+        "release_observed_ms": 52.8,
+        "both_panels_complete": true,
+        "progress": "100%",
+        "horizontal_overflow_css_px": 0,
+        "status": "PASS"
+      },
+      {
+        "viewport": "1440x900",
+        "release_margin_css_px": 16,
+        "post_terminal_extra_css_px": 16.390625,
+        "footer_visible_after_24px": true,
+        "release_observed_ms": 55.03,
+        "both_panels_complete": true,
+        "progress": "100%",
+        "horizontal_overflow_css_px": 0,
+        "status": "PASS"
+      },
+      {
+        "viewport": "1541x899",
+        "release_margin_css_px": 16,
+        "post_terminal_extra_css_px": 16.390625,
+        "footer_visible_after_24px": true,
+        "release_observed_ms": 54.5,
+        "both_panels_complete": true,
+        "progress": "100%",
+        "horizontal_overflow_css_px": 0,
+        "status": "PASS"
+      },
+      {
+        "viewport": "1920x1080",
+        "release_margin_css_px": 16,
+        "post_terminal_extra_css_px": 16.390625,
+        "footer_visible_after_24px": true,
+        "release_observed_ms": 54.72,
+        "both_panels_complete": true,
+        "progress": "100%",
+        "horizontal_overflow_css_px": 0,
+        "status": "PASS"
+      },
+      {
+        "viewport": "2560x1080",
+        "release_margin_css_px": 16,
+        "post_terminal_extra_css_px": 16.390625,
+        "footer_visible_after_24px": true,
+        "release_observed_ms": 55.95,
+        "both_panels_complete": true,
+        "progress": "100%",
+        "horizontal_overflow_css_px": 0,
+        "status": "PASS"
+      }
+    ],
+    "all_required_viewports_pass": true,
+    "maximum_observed_post_terminal_extra_css_px": 16.390625,
+    "maximum_observed_release_ms": 55.95,
+    "terminal_gate_preserved": true,
+    "panel_parity_preserved": true
+  },
+  "source_fidelity_tests_reexecuted": false,
+  "human_source_fidelity_decision": "PENDING_NEW_COMPLETE_LOCALHOST_REVIEW",
+  "authorization_173_stage_2": {
+    "status": "CONDITIONALLY_AUTHORIZED_AWAITING_EXPLICIT_HUMAN_DETERMINATION",
+    "triggered": false
+  },
+  "claims_not_established": [
+    "AUTOMATED_REAL_LOCALHOST_BROWSER_PASS",
+    "HUMAN_APPROVAL",
+    "CANONICAL_REPLACEMENT",
+    "REUSABLE_PROMOTION",
+    "PRODUCT_INTEGRATION"
+  ],
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE",
+  "protected_source_mutation": "NONE"
+}
