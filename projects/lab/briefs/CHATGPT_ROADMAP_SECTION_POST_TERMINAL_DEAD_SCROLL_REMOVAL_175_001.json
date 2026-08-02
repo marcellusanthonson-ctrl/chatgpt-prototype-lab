@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "task_id": "CHATGPT_ROADMAP_SECTION_POST_TERMINAL_DEAD_SCROLL_REMOVAL_175_001",
   "project_id": "lab",
-  "status": "ACTIVE",
+  "status": "COMPLETE_TECHNICAL_REPAIR_PUBLISHED_HUMAN_LOCALHOST_REVIEW_REQUIRED",
   "objective": "Remove only the purposeless outer scroll after candidate 002 comparison has already confirmed the real terminal state in both panels.",
   "executor": "ChatGPT",
   "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
@@ -21,12 +21,19 @@
   ],
   "human_evidence_input": {
     "video_attachment": "Desktop 2026.08.02 - 18.09.55.02.mp4",
+    "sha256": "cfedfe3777ab00fa89250528b4c658f68cec43f4b4ffb89897c56268b2887f76",
     "finding": "TERMINAL_COMPLETION_CONFIRMED_BUT_POST_TERMINAL_SCROLL_CONTINUES_WITHOUT_VISIBLE_OBJECTIVE"
   },
   "required_changes": [
     "REMOVE_CSS_MIN_HEIGHT_420VH_FLOOR_THAT_OVERRIDES_DYNAMIC_RUNWAY_HEIGHT",
     "REPLACE_TERMINAL_BUFFER_WITH_RELEASE_MARGIN_NOT_GREATER_THAN_24PX",
     "PRESERVE_REAL_TERMINAL_GATE_AND_PANEL_PARITY"
+  ],
+  "implemented_changes": [
+    "RUNWAY_MIN_HEIGHT_REDUCED_FROM_420VH_TO_100VH",
+    "TERMINAL_BUFFER_REPLACED_WITH_16PX_RELEASE_MARGIN",
+    "REAL_TERMINAL_GATE_UNCHANGED",
+    "REFERENCE_IMPLEMENTATION_UNCHANGED"
   ],
   "required_viewports": [
     "390x844",
@@ -50,6 +57,20 @@
     "REFERENCE_IMPLEMENTATION_BLOB_UNCHANGED",
     "NO_CAROLINA_MUTATION"
   ],
+  "acceptance_results": {
+    "SUPPLEMENTARY_EXACT_BYTES_BROWSER_MATRIX": "PASS_7_OF_7",
+    "BOTH_PANELS_COMPLETE_AT_100_PERCENT": "PASS",
+    "BOTH_TIMELINES_IS_END_ACTIVE": "PASS",
+    "BOTH_THIRD_NODES_ACTIVE": "PASS",
+    "BOTH_TERMINAL_CAPS_ACTIVE": "PASS",
+    "BOTH_PANELS_AT_LIVE_MAXIMUM": "PASS",
+    "MAXIMUM_POST_TERMINAL_SCROLL_CSS_PX": 16.390625,
+    "FOOTER_VISIBLE_AFTER_24PX": "PASS",
+    "MAXIMUM_OBSERVED_RELEASE_MS": 55.95,
+    "NO_HORIZONTAL_OVERFLOW": "PASS",
+    "REFERENCE_IMPLEMENTATION_BLOB_UNCHANGED": "PASS_SHA_66100821888E37E769A7DCC1F9AF53D30A74175E",
+    "NO_CAROLINA_MUTATION": "PASS"
+  },
   "preserve_byte_for_byte": [
     "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/REFERENCE_IMPLEMENTATION.html",
     "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/COMPARISON_METRICS.json",
@@ -57,9 +78,11 @@
   ],
   "validation_policy": {
     "preferred": "REAL_LOCALHOST_BROWSER_MATRIX",
-    "environment_stop_condition": "AUTOMATION_PLATFORM_BLOCKS_LOCALHOST_BROWSER_NAVIGATION",
-    "fallback_may_not_be_misrepresented_as_localhost": true,
-    "human_localhost_review_remains_required_if_preferred_validation_is_blocked": true
+    "real_localhost_server_delivery": "PASS_HTTP_200",
+    "real_localhost_browser_automation": "BLOCKED_ERR_BLOCKED_BY_ADMINISTRATOR",
+    "supplementary_validation": "CONTROLLED_EXACT_PROTECTED_BYTES_SRCDOC_MATRIX_PASS",
+    "fallback_not_misrepresented_as_localhost": true,
+    "human_localhost_review_remains_required": true
   },
   "stop_conditions": [
     "REMOTE_HEAD_DIVERGES_BEFORE_FIRST_WRITE",
@@ -76,5 +99,9 @@
     "NEW_REVIEW_LINK",
     "AUTHORIZATION_STATE",
     "SINGLE_NEXT_ACTION"
-  ]
+  ],
+  "result": "POST_TERMINAL_DEAD_SCROLL_REMOVED_TECHNICAL_REPAIR_PUBLISHED_HUMAN_LOCALHOST_REVIEW_REQUIRED",
+  "evidence_ref": "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-POST-TERMINAL-DEAD-SCROLL-175.json",
+  "authorization_173_stage_2": "CONDITIONALLY_AUTHORIZED_AWAITING_EXPLICIT_HUMAN_DETERMINATION_NOT_TRIGGERED",
+  "human_source_fidelity_decision": "PENDING_NEW_COMPLETE_LOCALHOST_REVIEW"
 }
