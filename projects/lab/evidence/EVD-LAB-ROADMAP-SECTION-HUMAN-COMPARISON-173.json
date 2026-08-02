@@ -4,14 +4,14 @@
   "project_id": "lab",
   "authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_SCROLL_CORRECTION_AND_CONDITIONAL_DECISION_RECONCILIATION_173",
   "decision_ref": "DEC-LAB-031",
-  "status": "STAGE_1_PASS_NEW_HUMAN_REVIEW_REQUIRED",
+  "status": "HUMAN_REVIEW_REVERSED_STAGE_1_PASS_SCROLL_RANGE_STALE",
   "candidate_id": "CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
   "human_observation_before_correction": [
     "VISUALLY_IMPECCABLE_IN_OBSERVED_RANGE",
     "HUMAN_REVIEW_INCOMPLETE_DUE_TO_COMPARISON_SCROLL_LIMITATION"
   ],
-  "root_cause": "HUMAN_COMPARISON_FIXED_VIEWPORT_WITH_TWO_USER_OPERATED_NESTED_IFRAME_SCROLL_CONTAINERS_LIMITED_COMPLETE_REVIEW",
-  "correction": {
+  "original_root_cause": "HUMAN_COMPARISON_FIXED_VIEWPORT_WITH_TWO_USER_OPERATED_NESTED_IFRAME_SCROLL_CONTAINERS_LIMITED_COMPLETE_REVIEW",
+  "original_correction": {
     "target": "HUMAN_COMPARISON.html",
     "single_outer_vertical_scroll": true,
     "nested_user_scroll_removed": true,
@@ -20,18 +20,26 @@
     "terminal_reached_indicator": true,
     "local_file_access_fallback": "DIRECT_REFERENCE_IMPLEMENTATION_LINK"
   },
-  "controlled_validation": {
-    "status": "PASS",
+  "original_controlled_validation": {
+    "status": "REVERSED_BY_POST_PUBLICATION_HUMAN_EVIDENCE",
     "method": "SAME_ORIGIN_SYNTHETIC_TALL_CHILD_BROWSER_HARNESS",
     "viewport": "1440x900",
-    "initial_outer_progress": 0.0,
-    "final_outer_progress": 1.0,
-    "both_child_scroll_positions_equal": true,
-    "each_child_scroll_reached_exact_maximum": true,
-    "terminal_reached_state": true,
-    "completion_message": "Recorrido completo",
-    "html_parse": "PASS"
+    "original_claim": "PASS",
+    "defect": "SYNTHETIC_CHILD_DID_NOT_REPRODUCE_SOURCE_DYNAMIC_PADDING_AND_POST_SECTION_SCROLL_CONTEXT"
   },
+  "post_publication_human_evidence": {
+    "status": "CONFIRMED_DEFECT",
+    "observed_at": "2026-08-02T17:24:00-04:00",
+    "finding": "COMPARISON_PANELS_STOP_BEFORE_ACTIVE_TERMINAL_CAP_WHILE_FULL_SOURCE_CONTEXT_CAN_COMPLETE_THE_LINE",
+    "classification": "HUMAN_REVIEW_REVERSED_STAGE_1_PASS_SCROLL_RANGE_STALE"
+  },
+  "refined_root_causes": [
+    "MAX_SCROLL_CACHED_AT_60_AND_240_MS_BEFORE_CHILD_360_MS_STABILIZATION",
+    "SECTION_ISOLATION_EXCLUDED_ALL_NON_TARGET_LANDING_SECTIONS_AND_REMOVED_TRAILING_SCROLL_CONTEXT",
+    "OUTER_100_PERCENT_WAS_USED_AS_A_PROXY_INSTEAD_OF_ACTUAL_CHILD_TERMINAL_STATE"
+  ],
+  "successor_authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_LIVE_SCROLL_RANGE_REPAIR_174",
+  "successor_evidence_ref": "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-LIVE-RANGE-174.json",
   "preserved_unchanged": [
     "REFERENCE_IMPLEMENTATION.html",
     "COMPARISON_METRICS.json",
