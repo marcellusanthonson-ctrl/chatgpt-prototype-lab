@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "behavior_core_id": "ROADMAP-VERTICAL-PROGRESS-BEHAVIOR-CORE-001",
+  "effect_id": "ROADMAP-VERTICAL-PROGRESS-001",
+  "status": "EXTRACTED_AWAITING_VALIDATION",
+  "source_reference_id": "CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
+  "purpose": "Source-independent scroll-linked roadmap geometry and state engine.",
+  "api": {
+    "global": "RoadmapProgressCore",
+    "factory": "createRoadmapProgressCore(options)",
+    "class": "RoadmapProgressCore",
+    "methods": ["connect", "disconnect", "destroy", "measure", "update", "getState"],
+    "event": "roadmapprogresschange"
+  },
+  "required_semantics": [
+    "SCROLL_LINKED_PARAMETRIC_FILL",
+    "TIMELINE_LOCAL_COORDINATE_NORMALIZATION",
+    "LIVE_MEASUREMENT_AND_RESIZE_REMEASUREMENT",
+    "DYNAMIC_TRAILING_SPACE_ONLY_WHEN_REQUIRED",
+    "PROGRESSIVE_NODE_ACTIVATION",
+    "INDEPENDENT_CARD_REVEAL",
+    "STEP_LOCAL_PROGRESS",
+    "TERMINAL_STATE_AND_TERMINAL_CAP_SIGNAL",
+    "BOUNDED_POST_TERMINAL_RELEASE_MARGIN",
+    "REDUCED_MOTION_FINAL_STATE_IMMEDIATE",
+    "WINDOW_LOAD_DOCUMENT_FONTS_AND_DELAYED_STABILIZATION"
+  ],
+  "configuration_surface": {
+    "selectors": ["root", "timeline", "line", "progress", "step", "dot", "card"],
+    "classes": ["visible", "dotActive", "endActive"],
+    "css_variables": ["railStart", "railHeight", "railFillHeight", "stepProgress"],
+    "coefficients": ["triggerRatio", "bottomSafetyGap", "releaseMargin", "dotActivationOffset", "endTolerance", "minimumRailHeight"],
+    "stabilization": ["settleDelays", "stableSamplesRequired", "maximumStabilizationFrames"]
+  },
+  "source_specific_exclusions": [
+    "TEXT_CONTENT",
+    "BRAND_IDENTITY",
+    "BRAND_TYPOGRAPHY",
+    "BRAND_COLORS",
+    "ICONS",
+    "CLINICAL_CONTENT",
+    "EDITORIAL_COMPOSITION",
+    "PRODUCT_ASSETS"
+  ],
+  "invariants": [
+    "No external requests are required by the behavior core.",
+    "No source-specific selector is hard-coded.",
+    "At most one scroll update is scheduled per animation frame.",
+    "Measurement applies minimum tail padding before remeasurement.",
+    "Document runway is increased only when the terminal trigger would otherwise be unreachable.",
+    "Post-terminal release margin is at most 24 CSS pixels under the canonical configuration.",
+    "The reference implementation remains immutable and separate."
+  ],
+  "non_authorizations": [
+    "NO_NEUTRAL_PRODUCTION_ADAPTATION",
+    "NO_REUSABLE_PROMOTION",
+    "NO_PRODUCT_INTEGRATION",
+    "NO_RUNTIME_DEPLOYMENT",
+    "NO_CAROLINA_REPOSITORY_MUTATION"
+  ]
+}
