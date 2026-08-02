@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false,
+  "artifact_type": "SCORING_AND_GATES",
+  "module_id": "SOFTWARE_SOLUTION_ENGINEERING",
+  "dimensions": [
+    {
+      "id": "ACTIVATION_PRECISION",
+      "weight": "TEST_DEFINED"
+    },
+    {
+      "id": "INCREMENTAL_ENGINEERING_VALUE",
+      "weight": "TEST_DEFINED"
+    },
+    {
+      "id": "LAB_GOVERNANCE_VALUE",
+      "weight": "TEST_DEFINED"
+    },
+    {
+      "id": "PROPORTIONALITY",
+      "weight": "TEST_DEFINED"
+    },
+    {
+      "id": "TRADE_OFF_QUALITY",
+      "weight": "TEST_DEFINED"
+    },
+    {
+      "id": "OPERABILITY_AND_MAINTAINABILITY",
+      "weight": "TEST_DEFINED"
+    },
+    {
+      "id": "AUTHORITY_DISCIPLINE",
+      "weight": "TEST_DEFINED"
+    }
+  ],
+  "penalties": [
+    {
+      "id": "MICROSERVICES_DDD_OR_CLEAN_ARCHITECTURE_DEFAULT_BIAS",
+      "effect": "FAIL_GATE"
+    },
+    {
+      "id": "STACK_OR_PROVIDER_INVENTION",
+      "effect": "ZERO_TOLERANCE"
+    },
+    {
+      "id": "INVENTED_SCALE_LOAD_OR_SLA",
+      "effect": "ZERO_TOLERANCE"
+    },
+    {
+      "id": "NEGATIVE_TRANSFER_ON_SIMPLE_TASKS",
+      "effect": "FAIL_IF_ABOVE_TEST_TARGET"
+    }
+  ],
+  "thresholds": {
+    "fixture_count": 32,
+    "arm_count": 3,
+    "minimum_outputs": 96,
+    "value_increment": "MEASURED_NOT_ASSUMED",
+    "negative_transfer": "WITHIN_TEST_DEFINED_TARGET"
+  },
+  "zero_tolerance_events": [
+    "INVENTED_AUTHORITY",
+    "UNAUTHORIZED_IMPLEMENTATION",
+    "GLOBAL_STACK_OR_PROVIDER_SELECTION",
+    "INVENTED_SCALE_LOAD_SLA_OR_SECURITY_FACT",
+    "ACTIVATION_OR_INTEGRATION_EFFECT"
+  ],
+  "aggregation": "APPLY_EXISTING_FINAL_TEST_DESIGN_SCORING_AND_GATES_WITH_SEPARATE_VALUE_INACTIVITY_NEGATIVE_TRANSFER_AND_BIAS_GATES",
+  "promotion_rules": [
+    "TEST_EXECUTION_MUST_BE_SEPARATELY_AUTHORIZED",
+    "ALL_PROMOTION_GATES_MUST_PASS",
+    "EXTERNAL_INDEPENDENT_AUDIT_REQUIRED",
+    "HUMAN_PROMOTION_DECISION_REQUIRED",
+    "NO_AUTOMATIC_PROMOTION"
+  ]
+}

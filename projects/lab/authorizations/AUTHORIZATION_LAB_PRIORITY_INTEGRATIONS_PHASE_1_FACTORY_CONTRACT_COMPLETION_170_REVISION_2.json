@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_1_FACTORY_CONTRACT_COMPLETION_170_REVISION_2",
+  "parent_authorization": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_1_FACTORY_CONTRACT_COMPLETION_170",
+  "project_id": "lab",
+  "status": "CONSUMED_ON_VERIFIED_SQUASH_MERGE",
+  "authorization_class": "BOUNDED_FACTORY_CONTRACT_COMPLETION",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-08-02",
+  "approval_source": "La apruebo, continuemos",
+  "repository": {
+    "name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "branch": "main",
+    "expected_parent_head": "4ab9d032d179377670bc62034316e14954bed7db",
+    "working_branch": "phase1-priority-integrations-170-r2",
+    "head_policy": "VERIFY_LIVE_AT_USE",
+    "entrypoint": "project-sources/chatgpt/START_HERE.md"
+  },
+  "objective": "Complete and validate Integration Factory CRITERION_MODULE contracts for Product Leadership and Software Solution Engineering, including directional composition, without testing, promotion, activation, runtime or product effect.",
+  "authority": {
+    "commit_authorized": true,
+    "push_authorized": true,
+    "source_file_update_authorized": true,
+    "test_execution_authorized": false,
+    "external_audit_execution_authorized": false,
+    "aws_authorized": false,
+    "terraform_authorized": false,
+    "runtime_authorized": false,
+    "integration_activation_authorized": false,
+    "product_changes_authorized": false,
+    "pointer_mutation_authorized": false,
+    "shadow_registry_mutation_authorized": false,
+    "static_selector_mutation_authorized": false
+  },
+  "schema_extension": {
+    "authorized_module_ids": [
+      "PRODUCT_LEADERSHIP",
+      "SOFTWARE_SOLUTION_ENGINEERING"
+    ],
+    "preserved_module_ids": [
+      "EVIDENCE_AND_CLAIMS",
+      "DESIGN_CRITERION",
+      "WEB_ACCESSIBILITY",
+      "CONTEXTUAL_VISUAL_PREFERENCE"
+    ],
+    "unrestricted_module_ids": false
+  },
+  "completed_scope": [
+    "EXTEND_TWO_CLOSED_SCHEMA_ENUMS",
+    "MATERIALIZE_AND_VALIDATE_13_FACTORY_ARTIFACTS_FOR_PRODUCT_LEADERSHIP",
+    "MATERIALIZE_AND_VALIDATE_13_FACTORY_ARTIFACTS_FOR_SSE",
+    "CREATE_DIRECTIONAL_PRODUCT_LEADERSHIP_TO_SSE_COMPOSITION_CONTRACT",
+    "DEFINE_CONFLICTS_SCORING_GATES_AND_ROLLBACK",
+    "CREATE_SUCCESSOR_VALIDATOR",
+    "RECONCILE_SMALL_PROGRAM_INTEGRATION_AND_PENDING_RECORDS",
+    "CREATE_PHASE_2_SUCCESSOR_PENDING",
+    "PUBLISH_BY_SQUASH_MERGE_AND_VERIFY_REMOTE"
+  ],
+  "prohibited_actions_preserved": [
+    "NO_PRODUCT_LEADERSHIP_TEST_003_EXECUTION",
+    "NO_SSE_TEST_EXECUTION",
+    "NO_EXTERNAL_AUDIT_EXECUTION",
+    "NO_AWS_TERRAFORM_OR_INFRASTRUCTURE",
+    "NO_CANDIDATE_PROMOTION_ACTIVATION_OR_INTEGRATION",
+    "NO_ACTIVE_POINTER_SHADOW_REGISTRY_OR_STATIC_SELECTOR_MUTATION",
+    "NO_PRODUCT_RUNTIME_ECR_IAC_OR_MOTION_SYSTEM_CHANGE",
+    "NO_GLOBAL_ARCHITECTURE_STACK_PROVIDER_SELECTION",
+    "NO_HISTORICAL_RESULT_REWRITE"
+  ],
+  "publication": {
+    "method": "SQUASH_MERGE",
+    "main_commit_count": 1,
+    "working_branch_intermediate_commits_allowed": true
+  },
+  "evidence_ref": "projects/lab/evidence/EVD-LAB-PRIORITY-INTEGRATIONS-PHASE-1-170.json",
+  "next_pending_ref": "projects/lab/pending/PEND-LAB-045.json",
+  "residual_authority": "NONE",
+  "maximum_result": "PRODUCT_LEADERSHIP_AND_SOFTWARE_SOLUTION_ENGINEERING_CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED",
+  "authority_effect": "NONE_AFTER_CONSUMPTION",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "integration_effect": "NONE",
+  "test_effect": "NONE",
+  "audit_effect": "NONE"
+}

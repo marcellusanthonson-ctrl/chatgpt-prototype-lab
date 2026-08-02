@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false,
+  "artifact_type": "INTEGRATION_INTAKE",
+  "integration_id": "INT-LAB-005",
+  "profile": "CRITERION_MODULE",
+  "problem": "Technical solution decisions require selective, evidence-bounded analysis of boundaries, proportional architecture, evolution, operability and maintainability after product scope is sufficiently resolved.",
+  "producer": "SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001@0.2.0",
+  "consumer": "CHATGPT_PROJECT",
+  "first_intended_external_consumer": "SYMPHONIE",
+  "value_hypothesis": "Selective SSE guidance improves technical trade-off quality while reducing overengineering and negative transfer; value remains unproven until the discriminating test executes.",
+  "risk_signals": [
+    "OVERENGINEERING",
+    "MICROSERVICES_BY_DEFAULT",
+    "DDD_OVERACTIVATION",
+    "CLEAN_ARCHITECTURE_DOGMATISM",
+    "STACK_BIAS",
+    "INVENTED_SCALE_OR_LOAD",
+    "AUTHORITY_CONFUSION"
+  ],
+  "rollback_strategy": "Keep candidate inactive and remove future registry reference under separate authorization; no active pointer or product state is changed in Phase 1.",
+  "source_refs": [
+    "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/PRINCIPLES.json",
+    "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/ACTIVATION_CONTRACT.json",
+    "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/MISUSE_RISKS.json",
+    "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/FIXTURES.json",
+    "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/DDIA_FOUNDATIONAL_NORMALIZATION.json",
+    "projects/lab/test-designs/SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json",
+    "decisions/DEC-LAB-030.json"
+  ]
+}

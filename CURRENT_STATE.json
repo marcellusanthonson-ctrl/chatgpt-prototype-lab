@@ -1,11 +1,11 @@
 {
   "schema_version": "2.5.0",
   "document_id": "lab.current-state",
-  "version": "2.5.50",
-  "status": "MOTION_CATALOG_REVIEW_SURFACE_PASS_ROADMAP_CORRECTED_READY_FOR_NEW_HUMAN_REVIEW",
+  "version": "2.5.51",
+  "status": "PRIORITY_INTEGRATIONS_PHASE_1_CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED",
   "updated_at": "2026-08-02",
   "active_project": "lab",
-  "current_phase": "MOTION_CATALOG_REVIEW_SURFACE_PASS_ROADMAP_CORRECTED_READY_FOR_NEW_HUMAN_REVIEW",
+  "current_phase": "PRIORITY_INTEGRATIONS_PHASE_1_CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED",
   "methodology": {
     "version": "2.1",
     "path": "METHODOLOGY.md"
@@ -101,7 +101,11 @@
       "runtime_effect": "NONE",
       "authorization_state": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
       "validation": "VISIBLE_BROWSER_MATRIX_AND_REPOSITORY_VALIDATION_PASS"
-    }
+    },
+    "priority_integrations_program": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/MANIFEST.json",
+    "priority_integrations_roadmap": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/ROADMAP.json",
+    "priority_integrations_phase1_evidence": "projects/lab/evidence/EVD-LAB-PRIORITY-INTEGRATIONS-PHASE-1-170.json",
+    "product_leadership_to_sse_composition": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/contracts/PRODUCT-LEADERSHIP-TO-SSE-COMPOSITION-CONTRACT-001.json"
   },
   "projects": {
     "lab": {
@@ -162,7 +166,8 @@
     "DEC-LAB-019",
     "DEC-LAB-020",
     "DEC-LAB-021",
-    "DEC-LAB-029"
+    "DEC-LAB-029",
+    "DEC-LAB-030"
   ],
   "open_errors": [],
   "validated_patterns": [
@@ -243,7 +248,9 @@
     "integration_factory_m5_canonical_correction_and_conditional_rollback_drill_165": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "integration_factory_m5_bounded_cutover_observation_and_automatic_rollback_166": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "transversal_motion_effects_library_foundation_167": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "motion_catalog_review_surface_and_roadmap_fidelity_correction_168": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+    "motion_catalog_review_surface_and_roadmap_fidelity_correction_168": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "priority_integrations_phase0_169": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "priority_integrations_phase1_170_revision_2": "CONSUMED_ON_VERIFIED_SQUASH_MERGE"
   },
   "verified_external_heads": {
     "symphonie": "31dd1345026240c83b015feef34d6f7f2d2147b7",
@@ -273,8 +280,8 @@
     "SYMPHONIE_LIVHAVN_MONOLITHIC_VISUAL_CALIBRATION_083_READY_WITH_BOUNDED_GAPS",
     "INTEGRATION_FACTORY_M1_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_VALIDATION_PASS"
   ],
-  "next_authorized_action": "NONE_AFTER_AUTHORIZATION_168_CONSUMPTION",
-  "next_recommended_transition": "JONATHAN_MARTINEZ_REVIEWS_BOTH_CORRECTED_INITIAL_EFFECTS",
+  "next_authorized_action": "NONE_AFTER_PHASE_1_AUTHORIZATION_CONSUMPTION",
+  "next_recommended_transition": "SEPARATELY_AUTHORIZE_PHASE_2_INDEPENDENT_EVIDENCE_CLOSURE",
   "continuity_read_order": [
     "LAB_CONTRACT.md",
     "METHODOLOGY.md",
@@ -673,5 +680,18 @@
       "runtime_effect": "BOUNDED_LAB_OBSERVATION_COMPLETE_NO_EXTERNAL_RUNTIME",
       "integration_effect": "M5_INTEGRATED_ACTIVE_VIA_GOVERNED_POINTER"
     }
+  },
+  "priority_integrations_program": {
+    "status": "PHASE_1_FACTORY_CONTRACT_COMPLETION_PASS",
+    "priority_order": [
+      "PRODUCT_LEADERSHIP",
+      "SOFTWARE_SOLUTION_ENGINEERING"
+    ],
+    "product_leadership": "CANDIDATE_CONTRACT_COMPLETE_TEST_003_NOT_EXECUTED",
+    "software_solution_engineering": "CANDIDATE_CONTRACT_COMPLETE_TEST_READY_EXECUTION_AND_AUDIT_NOT_AUTHORIZED",
+    "composition_contract": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/contracts/PRODUCT-LEADERSHIP-TO-SSE-COMPOSITION-CONTRACT-001.json",
+    "next_pending": "projects/lab/pending/PEND-LAB-045.json",
+    "active": false,
+    "integrated": false
   }
 }

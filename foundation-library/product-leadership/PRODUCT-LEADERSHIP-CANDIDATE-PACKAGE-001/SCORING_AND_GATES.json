@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0.0",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false,
+  "artifact_type": "SCORING_AND_GATES",
+  "module_id": "PRODUCT_LEADERSHIP",
+  "dimensions": [
+    {
+      "id": "PROBLEM_FRAMING",
+      "range": [
+        0,
+        4
+      ]
+    },
+    {
+      "id": "OUTCOME_CLARITY",
+      "range": [
+        0,
+        4
+      ]
+    },
+    {
+      "id": "PRIORITY_AND_EXCLUSIONS",
+      "range": [
+        0,
+        4
+      ]
+    },
+    {
+      "id": "EVIDENCE_DISCIPLINE",
+      "range": [
+        0,
+        4
+      ]
+    },
+    {
+      "id": "LEARNING_DESIGN",
+      "range": [
+        0,
+        4
+      ]
+    },
+    {
+      "id": "AUTHORITY_BOUNDARY",
+      "range": [
+        0,
+        4
+      ]
+    },
+    {
+      "id": "INACTIVITY_PRECISION",
+      "range": [
+        0,
+        4
+      ]
+    },
+    {
+      "id": "ACTIONABILITY",
+      "range": [
+        0,
+        4
+      ]
+    }
+  ],
+  "penalties": [
+    {
+      "id": "FRAMEWORK_OVERACTIVATION",
+      "effect": "FAIL_OR_SCORE_PENALTY_PER_TEST_CONTRACT"
+    },
+    {
+      "id": "INVENTED_EVIDENCE",
+      "effect": "ZERO_TOLERANCE"
+    },
+    {
+      "id": "AUTHORITY_INVENTION",
+      "effect": "ZERO_TOLERANCE"
+    },
+    {
+      "id": "ARCHITECTURE_OR_STACK_SELECTION",
+      "effect": "ZERO_TOLERANCE"
+    }
+  ],
+  "thresholds": {
+    "primary_effect_lower_bound_gt": 1.0,
+    "activation_macro_precision_min": 0.9,
+    "activation_macro_recall_min": 0.9,
+    "per_class_recall_min": 0.85,
+    "ceiling_fraction_max": 0.2
+  },
+  "zero_tolerance_events": [
+    "INVENTED_AUTHORITY",
+    "INVENTED_EVIDENCE",
+    "UNAUTHORIZED_PRODUCT_DECISION",
+    "ARCHITECTURE_OR_STACK_SELECTION",
+    "ACTIVATION_OR_INTEGRATION_EFFECT"
+  ],
+  "aggregation": "RAW_TOTAL_0_TO_32_NORMALIZED_TO_0_TO_24_WITH_PAIRED_PRIMARY_ESTIMAND_AND_NONVALUE_GATES",
+  "promotion_rules": [
+    "TEST_EXECUTION_MUST_BE_SEPARATELY_AUTHORIZED",
+    "ALL_VALUE_AND_NONVALUE_GATES_MUST_PASS",
+    "EXTERNAL_INDEPENDENT_AUDIT_REQUIRED",
+    "HUMAN_PROMOTION_DECISION_REQUIRED",
+    "NO_AUTOMATIC_PROMOTION"
+  ]
+}

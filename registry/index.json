@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-08-01",
+  "updated_at": "2026-08-02",
   "counts": {
     "projects": 7,
     "decisions": 27,
@@ -93,7 +93,8 @@
       "registry/deltas/integration-factory-m5-canonical-correction-and-conditional-rollback-drill-165.json",
       "registry/deltas/integration-factory-m5-bounded-cutover-observation-and-automatic-rollback-166.json",
       "registry/deltas/transversal-motion-system-foundation-167.json",
-      "registry/deltas/motion-catalog-review-surface-and-roadmap-fidelity-correction-168.json"
+      "registry/deltas/motion-catalog-review-surface-and-roadmap-fidelity-correction-168.json",
+      "registry/deltas/priority-integrations-phase1-contract-completion-170.json"
     ],
     "evidence": "registry/evidence.json",
     "evidence_deltas": [
@@ -132,7 +133,8 @@
       "registry/deltas/integration-factory-m5-canonical-correction-and-conditional-rollback-drill-165.json",
       "registry/deltas/integration-factory-m5-bounded-cutover-observation-and-automatic-rollback-166.json",
       "registry/deltas/transversal-motion-system-foundation-167.json",
-      "registry/deltas/motion-catalog-review-surface-and-roadmap-fidelity-correction-168.json"
+      "registry/deltas/motion-catalog-review-surface-and-roadmap-fidelity-correction-168.json",
+      "registry/deltas/priority-integrations-phase1-contract-completion-170.json"
     ],
     "current_state": "CURRENT_STATE.json",
     "current_state_deltas": [
@@ -177,7 +179,8 @@
       "registry/deltas/integration-factory-m5-canonical-open-error-decision-baseline-reconciliation-164.json",
       "registry/deltas/integration-factory-m5-canonical-correction-and-conditional-rollback-drill-165.json",
       "registry/deltas/transversal-motion-system-foundation-167.json",
-      "registry/deltas/motion-catalog-review-surface-and-roadmap-fidelity-correction-168.json"
+      "registry/deltas/motion-catalog-review-surface-and-roadmap-fidelity-correction-168.json",
+      "registry/deltas/priority-integrations-phase1-contract-completion-170.json"
     ],
     "pattern_deltas": [
       "registry/deltas/livhavn-surgical-visual-patch-093.json",
@@ -225,7 +228,8 @@
       "projects/lab/pending/PEND-LAB-037.json",
       "projects/lab/pending/PEND-LAB-038.json",
       "projects/lab/pending/PEND-LAB-039.json",
-      "projects/lab/pending/PEND-LAB-040.json"
+      "projects/lab/pending/PEND-LAB-040.json",
+      "projects/lab/pending/PEND-LAB-045.json"
     ],
     "test_executions": "projects/lab/test-executions/index.json",
     "source_packages": "registry/source-packages.json",
@@ -239,7 +243,10 @@
     "rag_contracts": "registry/rag-contracts.json",
     "foundation_pilots": "registry/foundation-pilots.json",
     "visual_preferences": "registry/visual-preferences.json",
-    "design_knowledge_package": "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/MANIFEST.json"
+    "design_knowledge_package": "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/MANIFEST.json",
+    "priority_integrations_program": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/MANIFEST.json",
+    "priority_integrations_roadmap": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/ROADMAP.json",
+    "priority_integrations_phase1_evidence": "projects/lab/evidence/EVD-LAB-PRIORITY-INTEGRATIONS-PHASE-1-170.json"
   },
   "latest": {
     "decision": "DEC-LAB-028",

@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false,
+  "artifact_type": "INPUT_CONTRACT",
+  "module_id": "PRODUCT_LEADERSHIP",
+  "required_inputs": [
+    "TASK_OBJECTIVE",
+    "TASK_STATE",
+    "AUTHORITY_STATE",
+    "BINDING_OBLIGATIONS",
+    "AVAILABLE_EVIDENCE",
+    "PRODUCT_DECISION_SCOPE",
+    "REQUESTED_OUTPUT"
+  ],
+  "optional_inputs": [
+    "USER_RESEARCH",
+    "MARKET_EVIDENCE",
+    "PRODUCT_METRICS",
+    "RISK_REGISTER",
+    "LEARNING_HISTORY",
+    "KNOWN_EXCLUSIONS"
+  ],
+  "forbidden_inputs": [
+    "INVENTED_EVIDENCE",
+    "ASSUMED_AUTHORITY",
+    "UNVERIFIED_BINDING_OBLIGATION",
+    "UNREQUESTED_ARCHITECTURE_OR_STACK_SELECTION"
+  ],
+  "minimum_context_rule": "Classify as LIMITED_OR_AMBIGUOUS unless product decision scope, authority state, binding obligations and available evidence are explicit."
+}

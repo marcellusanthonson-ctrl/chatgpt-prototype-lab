@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "id": "PEND-LAB-045",
+  "project_id": "lab",
+  "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+  "type": "PRIORITY_INTEGRATIONS_PHASE_2_INDEPENDENT_EVIDENCE_CLOSURE",
+  "subject": "Produce reproducible independent evidence for Product Leadership and Software Solution Engineering after contract completion",
+  "priority": "CRITICAL",
+  "program_ref": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/MANIFEST.json",
+  "roadmap_ref": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/ROADMAP.json",
+  "precondition": "PHASE_1_FACTORY_CONTRACT_COMPLETION_PASS",
+  "tracks": {
+    "PRODUCT_LEADERSHIP": [
+      "RESOLVE_LEAST_PRIVILEGE_PREFLIGHT_PATH",
+      "COMPLETE_REQUIRED_OPERATIONAL_PREFLIGHT",
+      "SEPARATELY_AUTHORIZE_AND_EXECUTE_TEST_003",
+      "PUBLISH_REPRODUCIBLE_EVIDENCE"
+    ],
+    "SOFTWARE_SOLUTION_ENGINEERING": [
+      "SEPARATELY_AUTHORIZE_SYNTHETIC_TEST",
+      "EXECUTE_32_FIXTURES_ACROSS_3_ARMS",
+      "PRODUCE_AT_LEAST_96_OUTPUTS",
+      "PUBLISH_REPRODUCIBLE_EVIDENCE"
+    ]
+  },
+  "current_authority": "NONE_UNTIL_SEPARATE_EXPLICIT_AUTHORIZATION",
+  "prohibitions": [
+    "NO_AUTOMATIC_TEST_EXECUTION",
+    "NO_EXTERNAL_AUDIT_EXECUTION",
+    "NO_ACTIVATION",
+    "NO_POINTER_OR_REGISTRY_MUTATION",
+    "NO_PRODUCT_CHANGE"
+  ],
+  "next_action": "SEPARATE_EXPLICIT_PHASE_2_AUTHORIZATION",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "integration_effect": "NONE"
+}

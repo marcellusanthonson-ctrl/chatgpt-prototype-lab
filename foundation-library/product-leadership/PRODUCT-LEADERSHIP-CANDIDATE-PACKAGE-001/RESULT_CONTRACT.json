@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false,
+  "artifact_type": "RESULT_CONTRACT",
+  "module_id": "PRODUCT_LEADERSHIP",
+  "result_envelope": [
+    "ACTIVATION_CLASSIFICATION",
+    "PRODUCT_PROBLEM",
+    "DESIRED_OUTCOME",
+    "PRIORITY",
+    "EXCLUSIONS",
+    "EVIDENCE",
+    "ASSUMPTIONS_AND_UNKNOWNS",
+    "LEARNING_NEED",
+    "RECOMMENDATION",
+    "AUTHORITY_BOUNDARY",
+    "TECHNICAL_HANDOFF_READINESS"
+  ],
+  "allowed_claims": [
+    "EVIDENCE_BOUNDED_PRODUCT_FRAMING",
+    "CONDITIONAL_PRIORITY_RECOMMENDATION",
+    "EXPLICIT_EXCLUSIONS",
+    "LEARNING_OR_EXPERIMENT_NEED",
+    "HANDOFF_READINESS_CLASSIFICATION"
+  ],
+  "required_uncertainties": [
+    "MISSING_EVIDENCE",
+    "UNRESOLVED_AUTHORITY",
+    "CONFLICTING_OBLIGATIONS",
+    "FRAMEWORK_APPLICABILITY",
+    "VALUE_NOT_MEASURED_BEFORE_TEST_003"
+  ],
+  "evidence_requirements": [
+    "TRACE_EACH_MATERIAL_CLAIM",
+    "SEPARATE_FACT_FROM_RECOMMENDATION",
+    "DO_NOT_INVENT_USER_MARKET_OR_PRODUCT_EVIDENCE",
+    "NO_VALUE_INCREMENT_CLAIM_BEFORE_TEST_EXECUTION"
+  ],
+  "implementation_authorized_false": true
+}

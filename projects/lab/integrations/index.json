@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "project_id": "lab",
   "updated_at": "2026-08-02",
   "records": [
@@ -24,6 +24,7 @@
     {
       "id": "INT-LAB-004",
       "status": "CANDIDATE",
+      "lifecycle_stage": "CONTRACT_COMPLETE",
       "priority_order": 1,
       "canonical_path": "projects/lab/integrations/INT-LAB-004.json",
       "title": "Product Leadership priority criterion integration candidate"
@@ -31,10 +32,12 @@
     {
       "id": "INT-LAB-005",
       "status": "CANDIDATE",
+      "lifecycle_stage": "CONTRACT_COMPLETE",
       "priority_order": 2,
       "canonical_path": "projects/lab/integrations/INT-LAB-005.json",
       "title": "Software Solution Engineering priority criterion integration candidate"
     }
   ],
-  "priority_program": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/MANIFEST.json"
+  "priority_program": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/MANIFEST.json",
+  "phase_1_validation": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/phase1/VALIDATION_RESULTS.json"
 }

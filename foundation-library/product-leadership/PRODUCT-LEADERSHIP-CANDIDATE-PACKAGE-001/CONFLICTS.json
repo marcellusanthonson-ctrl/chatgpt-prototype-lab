@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false,
+  "artifact_type": "CONFLICTS",
+  "module_id": "PRODUCT_LEADERSHIP",
+  "conflicts": [
+    {
+      "with": "SOFTWARE_SOLUTION_ENGINEERING",
+      "when": "PRODUCT_SCOPE_IS_UNRESOLVED",
+      "resolution": "PRODUCT_LEADERSHIP_PRECEDES_AND_SSE_ABSTAINS"
+    },
+    {
+      "with": "INTELLIGENT_APPLICATION_CONSTRUCTION",
+      "when": "GENERAL_PRODUCT_DECISION_IS_MISCLASSIFIED_AS_AI_SYSTEM_DECISION",
+      "resolution": "CLASSIFY_PRODUCT_SCOPE_FIRST_THEN_ROUTE_ONLY_APPLICABLE_AI_COMPONENT_SCOPE"
+    },
+    {
+      "with": "BINDING_DECISION",
+      "when": "GUIDANCE_WOULD_REOPEN_CLOSED_SCOPE",
+      "resolution": "ABSTAIN_AND_PRESERVE_BINDING_DECISION"
+    },
+    {
+      "with": "AUTHORITY_STATE",
+      "when": "REQUEST_REQUIRES_UNAUTHORIZED_PRODUCT_DECISION",
+      "resolution": "FAIL_CLOSED"
+    }
+  ],
+  "source_refs": [
+    "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/PRINCIPLES.json",
+    "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/ACTIVATION_CONTRACT.json",
+    "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/MISUSE_RISKS.json",
+    "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/FIXTURES.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/PROPOSAL.json",
+    "decisions/DEC-LAB-030.json"
+  ]
+}

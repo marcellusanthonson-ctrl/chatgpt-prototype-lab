@@ -1,99 +1,112 @@
 {
-  "schema_version": "1.1.0",
-  "package_id": "SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001",
-  "name": "Software Solution Engineering Candidate Package",
+  "schema_version": "1.0.0",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false,
+  "artifact_type": "MANIFEST",
+  "integration_id": "INT-LAB-005",
+  "module_id": "SOFTWARE_SOLUTION_ENGINEERING",
   "version": "0.2.0",
-  "status": "CANDIDATE_REQUIRES_DISCRIMINATING_TESTS",
+  "status": "CANDIDATE",
+  "profile": "CRITERION_MODULE",
+  "producer": "SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001",
+  "consumer": "CHATGPT_PROJECT",
+  "first_intended_consumer": "SYMPHONIE",
+  "contract_status": "CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED",
   "integrated": false,
   "active": false,
   "automatic_consumption": false,
-  "runtime_effect": "NONE",
-  "authority_effect": "NONE",
-  "rag_effect": "NONE",
-  "created_at": "2026-07-26",
-  "updated_at": "2026-07-26",
-  "source_authorizations": [
-    "AUTHORIZATION_LAB_SOFTWARE_SOLUTION_ENGINEERING_CANDIDATE_PACKAGE_091",
-    "AUTHORIZATION_LAB_SSE_DDIA_FOUNDATIONAL_NORMALIZATION_092"
+  "contract_refs": [
+    "ACTIVATION_CONTRACT.json",
+    "INPUT_CONTRACT.json",
+    "RESULT_CONTRACT.json",
+    "COMPOSITION_CONTRACT.json",
+    "CONFLICTS.json",
+    "SCORING_AND_GATES.json",
+    "ROLLBACK.json"
   ],
-  "first_intended_consumer": "SYMPHONIE",
-  "purpose": "Provide selective, evidence-bounded guidance for structuring, evolving and operating sustainable software solutions without presuming distributed architecture, domain-driven design, microservices or any specific stack.",
-  "modules": [
-    {"id":"SSE-01","name":"SOLUTION_BOUNDARY_AND_DECOMPOSITION"},
-    {"id":"SSE-02","name":"ARCHITECTURE_DECISION_FITNESS"},
-    {"id":"SSE-03","name":"DATA_INTENSIVE_SYSTEM_DESIGN"},
-    {"id":"SSE-04","name":"EVOLUTIONARY_ARCHITECTURE"},
-    {"id":"SSE-05","name":"SUSTAINABLE_CODEBASE"},
-    {"id":"SSE-06","name":"LEGACY_SYSTEM_RECOVERY"},
-    {"id":"SSE-07","name":"DISTRIBUTED_SYSTEM_DECISION_GATE"},
-    {"id":"SSE-08","name":"ENTERPRISE_APPLICATION_PATTERNS"},
-    {"id":"SSE-09","name":"OPERABILITY_AND_LIFECYCLE"},
-    {"id":"SSE-10","name":"SECURITY_INTEGRATION_BOUNDARY"}
+  "evidence_refs": [
+    "VALIDATION_EVIDENCE.json"
   ],
-  "principles": [
-    "ARCHITECTURE_MUST_BE_PROPORTIONAL_TO_VERIFIED_NEED",
-    "MODULAR_MONOLITH_PRECEDES_DISTRIBUTION_UNLESS_EVIDENCE_JUSTIFIES_OTHERWISE",
-    "TIME_SCALE_AND_TRADEOFFS_ARE_FIRST_CLASS_ENGINEERING_INPUTS",
-    "FUNCTIONAL_AND_NON_FUNCTIONAL_REQUIREMENTS_MUST_REMAIN_SEPARATE",
-    "DISTRIBUTED_SYSTEMS_REQUIRE_EXPLICIT_FAILURE_CONSISTENCY_AND_OPERABILITY_COSTS",
-    "ARCHITECTURE_DECISIONS_REQUIRE_ALTERNATIVES_REVERSIBILITY_AND_REVIEW_TRIGGERS",
-    "LEGACY_CHANGE_REQUIRES_CHARACTERIZATION_AND_A_BEHAVIORAL_SAFETY_NET",
-    "PATTERNS_ARE_CONDITIONAL_TO_PROBLEMS_NOT_DEFAULT_STRUCTURE",
-    "OPERABILITY_DOCUMENTATION_TESTING_AND_MIGRATION_ARE_PART_OF_THE_SOLUTION",
-    "CURRENT_SECURITY_CONTROLS_REQUIRE_CURRENT_PRIMARY_SOURCES",
-    "DERIVED_STATE_MUST_NOT_SILENTLY_REPLACE_SOURCE_AUTHORITY",
-    "CONSISTENCY_REQUIREMENTS_MUST_BE_EXPRESSED_AS_DOMAIN_INVARIANTS",
-    "TIMEOUT_DOES_NOT_ESTABLISH_OPERATION_FAILURE",
-    "CRITICAL_INVARIANTS_REQUIRE_END_TO_END_VERIFICATION"
-  ],
-  "relationships": {
-    "product_leadership":"DETERMINES_PROBLEM_OUTCOME_PRIORITY_AND_EXCLUSIONS",
-    "intelligent_application_construction":"GOVERNS_INTELLIGENT_PROBABILISTIC_COMPONENTS_WHEN_APPLICABLE",
-    "symphonie":"GOVERNS_PHASES_ARTIFACTS_GATES_AND_TRANSITIONS",
-    "ecr":"CONTROLS_PROVENANCE_CLAIMS_APPLICABILITY_AND_RECONCILIATION"
+  "compatibility": {
+    "compatible_with": [
+      "EVIDENCE_AND_CLAIMS",
+      "PRODUCT_LEADERSHIP",
+      "INTELLIGENT_APPLICATION_CONSTRUCTION_WHEN_AI_SCOPE_IS_EXPLICIT"
+    ],
+    "conflicts_with": [
+      "UNRESOLVED_PRODUCT_SCOPE",
+      "BINDING_ARCHITECTURE_DECISION",
+      "UNAUTHORIZED_IMPLEMENTATION_REQUEST",
+      "UNVERIFIED_SCALE_OR_SECURITY_ASSUMPTION"
+    ]
   },
-  "copyright_boundary": [
-    "NO_REPOSITORY_BOOK_COPY",
-    "NO_BOOK_TEXT_REPRODUCTION",
-    "NO_EMBEDDINGS",
-    "NO_VECTOR_INGESTION",
-    "NO_TRAINING_CORPUS_CREATION",
-    "REPOSITORIES_ARE_DISCOVERY_LEADS_ONLY",
-    "DERIVED_PRINCIPLES_MUST_BE_ORIGINAL_TRACEABLE_AND_SOURCE_COMPATIBLE"
-  ],
-  "evidence_limits": [
-    "BOOK_POPULARITY_DOES_NOT_ESTABLISH_UNIVERSAL_APPLICABILITY",
-    "OLDER_EDITIONS_REQUIRE_FRESHNESS_REVIEW",
-    "DDIA_2017_IS_FOUNDATIONAL_BUT_SUPERSEDED_BY_CURRENT_2026_EDITION",
-    "INTERVIEW_MATERIAL_IS_TRAINING_REFERENCE_ONLY",
-    "STACK_SPECIFIC_BOOKS_DO_NOT_CREATE_TRANSVERSAL_RULES",
-    "NO_ARCHITECTURE_OR_STACK_SELECTION",
-    "NO_VALUE_INCREMENT_CLAIM_BEFORE_DISCRIMINATING_TEST_EXECUTION"
-  ],
-  "misuse_risks": [
-    "OVERENGINEERING",
-    "MICROSERVICES_BY_DEFAULT",
-    "CLEAN_ARCHITECTURE_DOGMATISM",
-    "DDD_OVERACTIVATION",
-    "PATTERN_ACCUMULATION",
-    "STACK_BIAS",
-    "INTERVIEW_ARCHITECTURE_AS_PRODUCTION_GUIDANCE",
-    "STALE_SECURITY_GUIDANCE",
-    "COPYRIGHT_VIOLATION",
-    "DUPLICATION_WITH_IAC_OR_PRODUCT_LEADERSHIP"
+  "rollback_ref": "ROLLBACK.json",
+  "modules": [
+    {
+      "id": "SSE-01",
+      "name": "SOLUTION_BOUNDARY_AND_DECOMPOSITION"
+    },
+    {
+      "id": "SSE-02",
+      "name": "ARCHITECTURE_DECISION_FITNESS"
+    },
+    {
+      "id": "SSE-03",
+      "name": "DATA_INTENSIVE_SYSTEM_DESIGN"
+    },
+    {
+      "id": "SSE-04",
+      "name": "EVOLUTIONARY_ARCHITECTURE"
+    },
+    {
+      "id": "SSE-05",
+      "name": "SUSTAINABLE_CODEBASE"
+    },
+    {
+      "id": "SSE-06",
+      "name": "LEGACY_SYSTEM_RECOVERY"
+    },
+    {
+      "id": "SSE-07",
+      "name": "DISTRIBUTED_SYSTEM_DECISION_GATE"
+    },
+    {
+      "id": "SSE-08",
+      "name": "ENTERPRISE_APPLICATION_PATTERNS"
+    },
+    {
+      "id": "SSE-09",
+      "name": "OPERABILITY_AND_LIFECYCLE"
+    },
+    {
+      "id": "SSE-10",
+      "name": "SECURITY_INTEGRATION_BOUNDARY"
+    }
   ],
   "files": [
+    "INTEGRATION_INTAKE.json",
     "MANIFEST.json",
     "ACTIVATION_CONTRACT.json",
-    "SOURCE_REGISTER.json",
-    "PRINCIPLES.json",
+    "INPUT_CONTRACT.json",
+    "RESULT_CONTRACT.json",
+    "COMPOSITION_CONTRACT.json",
+    "CONFLICTS.json",
     "MISUSE_RISKS.json",
     "FIXTURES.json",
+    "TEST_DESIGN.json",
+    "SCORING_AND_GATES.json",
+    "ROLLBACK.json",
+    "VALIDATION_EVIDENCE.json",
+    "SOURCE_REGISTER.json",
+    "PRINCIPLES.json",
     "DDIA_FOUNDATIONAL_NORMALIZATION.json"
   ],
-  "test_design": "SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001",
   "fixture_count": 20,
+  "test_design": "SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001",
+  "test_executed": false,
   "value_increment": "MEASURED_NOT_ASSUMED",
   "product_effect": "NONE",
-  "next_authorized_action": "NONE_AFTER_CONSUMPTION"
+  "rag_effect": "NONE"
 }

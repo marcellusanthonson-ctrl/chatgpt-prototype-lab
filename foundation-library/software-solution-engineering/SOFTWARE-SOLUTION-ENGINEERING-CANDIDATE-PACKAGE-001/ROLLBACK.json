@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false,
+  "artifact_type": "ROLLBACK",
+  "module_id": "SOFTWARE_SOLUTION_ENGINEERING",
+  "trigger_conditions": [
+    "FUTURE_ACTIVATION_CAUSES_NEGATIVE_TRANSFER",
+    "OVERENGINEERING_OR_STACK_BIAS",
+    "AUTHORITY_CONFUSION",
+    "FAILS_OBSERVATION_GATE",
+    "HUMAN_SUSPENSION_DECISION"
+  ],
+  "steps": [
+    "SET_CANDIDATE_INACTIVE_UNDER_SEPARATE_AUTHORIZATION",
+    "RESTORE_PRE_ACTIVATION_REGISTRY_OR_POINTER_BASELINE",
+    "VERIFY_PRODUCT_LEADERSHIP_AND_EXISTING_MODULE_BEHAVIOR",
+    "RETAIN_ALL_TEST_AUDIT_AND_OBSERVATION_EVIDENCE"
+  ],
+  "baseline_verification": [
+    "ACTIVE_POINTER_DIGEST_MATCHES_PRE_ACTIVATION_BASELINE",
+    "STATIC_FALLBACK_REMAINS_FUNCTIONAL",
+    "PRODUCT_LEADERSHIP_COMPOSITION_REMAINS_UNCHANGED",
+    "NO_PRODUCT_OR_RUNTIME_STATE_CHANGED"
+  ],
+  "evidence_retention": "Preserve candidate package, test, audit, activation and rollback evidence; rollback removes consumption, not history.",
+  "authority_required": true,
+  "phase1_effect": "DECLARATION_ONLY_NO_ACTIVATION_OR_ROLLBACK_EXECUTED"
+}

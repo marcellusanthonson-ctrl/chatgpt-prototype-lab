@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "automatic_activation": false,
+  "implementation_authorized": false,
+  "contract_id": "PRODUCT-LEADERSHIP-TO-SSE-COMPOSITION-CONTRACT-001",
+  "artifact_type": "DIRECTIONAL_COMPOSITION_CONTRACT",
+  "status": "CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED",
+  "source_module": "PRODUCT_LEADERSHIP",
+  "target_module": "SOFTWARE_SOLUTION_ENGINEERING",
+  "direction": "ONE_WAY_PRODUCT_SCOPE_TO_TECHNICAL_ANALYSIS",
+  "source_owns": [
+    "PRODUCT_PROBLEM",
+    "DESIRED_OUTCOME",
+    "PRIORITY",
+    "EXCLUSIONS",
+    "VALUE_HYPOTHESIS",
+    "LEARNING_NEED",
+    "PRODUCT_UNCERTAINTIES"
+  ],
+  "target_owns": [
+    "TECHNICAL_ALTERNATIVES",
+    "PROPORTIONAL_SOLUTION_BOUNDARY",
+    "ARCHITECTURAL_TRADE_OFFS",
+    "OPERABILITY",
+    "MAINTAINABILITY",
+    "MIGRATION",
+    "REVERSIBILITY",
+    "TECHNICAL_REVIEW_TRIGGERS"
+  ],
+  "required_handoff": [
+    "RESOLVED_PRODUCT_SCOPE",
+    "PRODUCT_OUTCOME",
+    "PRIORITY",
+    "EXCLUSIONS",
+    "BINDING_DECISIONS",
+    "FUNCTIONAL_REQUIREMENTS",
+    "KNOWN_NON_FUNCTIONAL_REQUIREMENTS",
+    "AUTHORITY_STATE",
+    "AVAILABLE_EVIDENCE",
+    "UNKNOWNS_AND_ASSUMPTIONS"
+  ],
+  "handoff_gate": {
+    "ready_when": [
+      "PRODUCT_SCOPE_IS_RESOLVED_OR_EXPLICITLY_MARKED_UNCERTAIN",
+      "BINDING_DECISIONS_ARE_IDENTIFIED",
+      "AUTHORITY_STATE_IS_EXPLICIT",
+      "MINIMUM_FUNCTIONAL_REQUIREMENTS_EXIST"
+    ],
+    "limited_when": [
+      "PRODUCT_SCOPE_PARTIALLY_RESOLVED",
+      "NON_FUNCTIONAL_REQUIREMENTS_INCOMPLETE",
+      "EVIDENCE_INSUFFICIENT"
+    ],
+    "fail_closed_when": [
+      "PRODUCT_SCOPE_MISSING",
+      "AUTHORITY_CONFLICT",
+      "BINDING_DECISION_MISSING",
+      "REQUEST_REQUIRES_UNAUTHORIZED_IMPLEMENTATION"
+    ]
+  },
+  "precedence_rules": [
+    "PRODUCT_LEADERSHIP_CLASSIFIES_FIRST_ON_MIXED_UNRESOLVED_TASKS",
+    "SSE_ABSTAINS_UNTIL_HANDOFF_GATE_IS_READY_OR_LIMITED_WITH_EXPLICIT_UNKNOWNS",
+    "SSE_MUST_NOT_REDEFINE_PRODUCT_PROBLEM_OUTCOME_PRIORITY_OR_EXCLUSIONS",
+    "PRODUCT_LEADERSHIP_MUST_NOT_SELECT_ARCHITECTURE_STACK_PROVIDER_OR_INFRASTRUCTURE",
+    "NEITHER_MODULE_CREATES_AUTHORITY_OR_IMPLEMENTATION_PERMISSION",
+    "BINDING_HUMAN_AND_PROJECT_DECISIONS_PRECEDE_BOTH_MODULES"
+  ],
+  "conflict_resolution": [
+    {
+      "key": "PRODUCT_SCOPE",
+      "winner": "PRODUCT_LEADERSHIP_WITHIN_HUMAN_APPROVED_BOUNDARIES"
+    },
+    {
+      "key": "TECHNICAL_ALTERNATIVES",
+      "winner": "SOFTWARE_SOLUTION_ENGINEERING_AFTER_VALID_HANDOFF"
+    },
+    {
+      "key": "AUTHORITY",
+      "winner": "CANONICAL_AUTHORIZATION_STATE"
+    },
+    {
+      "key": "BINDING_DECISION",
+      "winner": "CANONICAL_HUMAN_OR_PROJECT_DECISION"
+    },
+    {
+      "key": "EVIDENCE_CLAIM",
+      "winner": "EVIDENCE_AND_CLAIMS_RULES"
+    }
+  ],
+  "activation_effect": "NONE",
+  "integration_effect": "NONE",
+  "test_effect": "NONE",
+  "source_refs": [
+    "decisions/DEC-LAB-030.json",
+    "projects/lab/integrations/INT-LAB-004.json",
+    "projects/lab/integrations/INT-LAB-005.json"
+  ]
+}

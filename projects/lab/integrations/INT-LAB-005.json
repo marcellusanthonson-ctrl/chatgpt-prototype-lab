@@ -1,9 +1,10 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "integration_id": "INT-LAB-005",
   "project_id": "lab",
   "title": "Software Solution Engineering priority criterion integration candidate",
   "status": "CANDIDATE",
+  "lifecycle_stage": "CONTRACT_COMPLETE",
   "priority_order": 2,
   "program_role": "PRIORITY_INTEGRATION_CRITICAL_PATH",
   "profile": "CRITERION_MODULE",
@@ -13,6 +14,12 @@
     "manifest": "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/MANIFEST.json"
   },
   "first_intended_consumer": "SYMPHONIE",
+  "factory_contracts": {
+    "status": "COMPLETE_VALIDATED",
+    "artifact_count": 13,
+    "validation": "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/VALIDATION_EVIDENCE.json",
+    "shared_composition": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/contracts/PRODUCT-LEADERSHIP-TO-SSE-COMPOSITION-CONTRACT-001.json"
+  },
   "activation_contract": "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/ACTIVATION_CONTRACT.json",
   "test_program": {
     "current_design": "projects/lab/test-designs/SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json",
@@ -24,11 +31,12 @@
     "fixture_count": 32,
     "minimum_future_outputs": 96
   },
-  "current_state": "TEST_READY_EXECUTION_AND_AUDIT_NOT_AUTHORIZED",
+  "current_state": "CONTRACT_COMPLETE_TEST_READY_EXECUTION_AND_AUDIT_NOT_AUTHORIZED",
   "promotion_state": "NOT_PROPOSED_FOR_PROMOTION",
   "composition": {
     "follows": "INT-LAB-004",
     "responsibility": "Analyze proportional technical solution boundaries, architecture fitness, evolution, operability and maintainability after product scope is resolved.",
+    "shared_contract": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/contracts/PRODUCT-LEADERSHIP-TO-SSE-COMPOSITION-CONTRACT-001.json",
     "must_not": [
       "REOPEN_CLOSED_PRODUCT_DECISIONS",
       "SELECT_GLOBAL_STACK_OR_PROVIDER",
@@ -38,8 +46,9 @@
   },
   "rollback": {
     "required": true,
-    "defined_for_activation": false,
-    "reason": "Activation has not been designed or authorized."
+    "defined_for_activation": true,
+    "contract": "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/ROLLBACK.json",
+    "executed": false
   },
   "integrated": false,
   "active": false,
@@ -49,7 +58,7 @@
   "product_effect": "NONE",
   "rag_effect": "NONE",
   "decision_ref": "DEC-LAB-030",
-  "authorization_ref": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_0_CANONICAL_RECONCILIATION_169",
+  "authorization_ref": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_1_FACTORY_CONTRACT_COMPLETION_170_REVISION_2",
   "program_ref": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/MANIFEST.json",
   "updated_at": "2026-08-02"
 }
