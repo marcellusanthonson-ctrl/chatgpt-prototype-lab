@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "CODEX_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176_001",
+  "project_id": "lab",
+  "status": "AUTHORIZED_FOR_EXECUTION",
+  "objective": "Reconcile stale canonical state, designate the human-approved Carolina roadmap section candidate as the canonical reference implementation for ROADMAP-VERTICAL-PROGRESS-001, and extract a source-independent behavior core without creating a reusable promotion or product integration.",
+  "coordinator": "ChatGPT",
+  "executor": "CODEX_BOUNDED_EXECUTOR",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "a4e05f5c5ac8493340fbac41afed881c8b2bced4",
+  "head_policy": "VERIFY_LIVE_AT_USE",
+  "authorization_ref": "AUTHORIZATION_LAB_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176",
+  "decision_ref": "DEC-LAB-031",
+  "protected_source": {
+    "repository": "marcellusanthonson-ctrl/carolina-md-next-landing",
+    "commit": "52654da574952148f96d051e439bff1cbc7b4b9d",
+    "access": "READ_ONLY_IMMUTABLE_EVIDENTIARY_SOURCE"
+  },
+  "stages": [
+    {
+      "id": "STAGE_0",
+      "name": "CANONICAL_STATE_RECONCILIATION",
+      "actions": [
+        "Inspect only canonical structured sources that still contradict the consumed 173 result.",
+        "Synchronize ERR-LAB-011 closed, PEND-LAB-046 closed, candidate 002 approved, authorization 173 consumed and prior active execution authority none.",
+        "Preserve the global Priority Integrations phase and unrelated state."
+      ]
+    },
+    {
+      "id": "STAGE_1",
+      "name": "CANONICAL_REFERENCE_DESIGNATION",
+      "actions": [
+        "Designate the existing candidate 002 REFERENCE_IMPLEMENTATION.html as the canonical reference implementation for ROADMAP-VERTICAL-PROGRESS-001.",
+        "Reference the immutable artifact without copying, moving, rewriting or modifying it.",
+        "Keep the pre-existing neutral implementation rejected as canonical reference and preserved as a historical neutral derivation."
+      ]
+    },
+    {
+      "id": "STAGE_2",
+      "name": "BEHAVIOR_CORE_EXTRACTION",
+      "actions": [
+        "Create an isolated source-independent behavior core under the ROADMAP-VERTICAL-PROGRESS-001 package.",
+        "Preserve scroll-linked progress, live measurement, resize remeasurement, dynamic trailing space, node activation, independent reveal, terminal state, no dead scroll, reduced motion final state and load/font stabilization.",
+        "Exclude Carolina text, brand, typography, colors, icons, clinical content, editorial composition and product assets.",
+        "Create contracts, isolated harness and validation evidence needed to prove parity."
+      ]
+    }
+  ],
+  "target_paths": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176.json",
+    "projects/lab/briefs/CODEX_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176_001.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/MANIFEST.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/MOTION_EFFECTS_REGISTRY.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/",
+    "projects/lab/evidence/EVD-LAB-ROADMAP-CANONICAL-REFERENCE-BEHAVIOR-CORE-176.json",
+    "projects/lab/pending/PEND-LAB-043.json",
+    "registry/deltas/roadmap-canonical-reference-behavior-core-176.json",
+    "registry/index.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json"
+  ],
+  "conditionally_reconciled_paths": [
+    "CURRENT_STATE.json",
+    "projects/lab/PROJECT_STATE.json",
+    "projects/lab/PENDING.json",
+    "registry/errors.json",
+    "registry/authorizations.json",
+    "registry/evidence.json"
+  ],
+  "preserve_byte_for_byte": [
+    {
+      "path": "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/REFERENCE_IMPLEMENTATION.html",
+      "blob_sha": "66100821888e37e769a7dcc1f9af53d30a74175e"
+    },
+    {
+      "path": "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/COMPARISON_METRICS.json",
+      "blob_sha": "87254c059ef32975e29327731968f028bbc46fe4"
+    },
+    {
+      "path": "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/SOURCE_PROVENANCE.json",
+      "blob_sha": "5233884b89de573b631f9f2257649f539c6f704b"
+    }
+  ],
+  "forbidden_actions": [
+    "MUTATE_CAROLINA_REPOSITORY",
+    "MODIFY_PROTECTED_REFERENCE_ARTIFACTS",
+    "REPLACE_EXISTING_NEUTRAL_PACKAGE_WITH_REFERENCE_BYTES",
+    "CREATE_NEUTRAL_PRODUCTION_ADAPTATION",
+    "PROMOTE_AS_REUSABLE",
+    "INTEGRATE_INTO_PRODUCT",
+    "EXECUTE_RUNTIME_OR_DEPLOYMENT",
+    "ADD_SOURCE_SPECIFIC_TEXT_BRAND_COLORS_ICONS_OR_ASSETS_TO_BEHAVIOR_CORE",
+    "EXPAND_SCOPE"
+  ],
+  "acceptance_checks": [
+    "HEAD verified before each stage.",
+    "Canonical state contains no material contradiction about ERR-LAB-011, PEND-LAB-046, candidate 002 or authorization 173.",
+    "Candidate 002 is designated as canonical reference implementation by pointer and protected blobs remain exact.",
+    "Historical neutral derivation remains preserved and cannot impersonate the reference.",
+    "Behavior core exposes source-independent measurement and application contracts.",
+    "Harness validates normal and reduced motion, resize, late stabilization, terminal state, no post-terminal dead scroll, no horizontal overflow and no external requests.",
+    "Validation covers 390x844, 768x1024, 1280x720, 1440x900, 1541x899, 1920x1080 and 2560x1080.",
+    "No reusable promotion, product integration, runtime or deployment claim is created."
+  ],
+  "stop_conditions": [
+    "REMOTE_HEAD_DIVERGED",
+    "PROTECTED_REFERENCE_MODIFICATION_REQUIRED",
+    "CAROLINA_REPOSITORY_MUTATION_REQUIRED",
+    "PRODUCT_OR_RUNTIME_CHANGE_REQUIRED",
+    "REUSABLE_PROMOTION_REQUIRED",
+    "BEHAVIOR_CANNOT_BE_SEPARATED_WITHOUT_LOSING_APPROVED_SEMANTICS",
+    "UNRESOLVED_CANONICAL_STATE_CONTRADICTION",
+    "SCOPE_EXPANSION_REQUIRED"
+  ],
+  "response_contract": [
+    "RESULT",
+    "STAGE_RESULTS",
+    "COMMITS",
+    "VALIDATION",
+    "DIVERGENCES",
+    "AUTHORIZATION_CONSUMPTION",
+    "SINGLE_NEXT_ACTION"
+  ]
+}
