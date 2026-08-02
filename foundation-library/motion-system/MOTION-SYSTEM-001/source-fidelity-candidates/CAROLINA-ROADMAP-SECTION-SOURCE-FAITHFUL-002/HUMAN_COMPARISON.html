@@ -8,14 +8,15 @@
     :root{font-family:Inter,Arial,sans-serif;color:#112b48;background:#eef3f6}
     *{box-sizing:border-box}
     html{scroll-behavior:auto}
-    body{margin:0;min-width:320px;background:#eef3f6;color:#112b48}
+    html,body{margin:0;min-width:320px;overflow-x:clip}
+    body{background:#eef3f6;color:#112b48}
     .intro{padding:20px 24px;background:#fff;border-bottom:1px solid #dbe5ea}
     .intro h1{margin:0 0 6px;font-size:22px;line-height:1.2}
     .status{font-weight:750;color:#0f766e}
-    .intro p{max-width:1100px;margin:8px 0 0;line-height:1.5;color:#40566d}
-    .runway{position:relative;min-height:360vh}
-    .review-shell{position:sticky;top:0;height:100vh;padding:12px;display:flex;flex-direction:column;gap:10px;background:#eef3f6;overflow:hidden}
-    .toolbar{display:grid;grid-template-columns:auto minmax(180px,1fr) auto;gap:12px;align-items:center;padding:10px 12px;background:#fff;border:1px solid #dbe5ea;border-radius:12px;box-shadow:0 8px 30px rgba(17,43,72,.05)}
+    .intro p{max-width:1120px;margin:8px 0 0;line-height:1.5;color:#40566d}
+    .runway{position:relative;min-height:420vh}
+    .review-shell{position:sticky;top:0;height:100vh;height:100svh;padding:12px;display:flex;flex-direction:column;gap:10px;background:#eef3f6;overflow:hidden}
+    .toolbar{display:grid;grid-template-columns:minmax(150px,auto) minmax(100px,1fr) auto;gap:12px;align-items:center;padding:10px 12px;background:#fff;border:1px solid #dbe5ea;border-radius:12px;box-shadow:0 8px 30px rgba(17,43,72,.05)}
     .toolbar strong{font-size:13px}
     .meter{height:8px;border-radius:999px;background:#e4eef1;overflow:hidden}
     .meter span{display:block;width:0;height:100%;background:#0d9488;transform-origin:left center}
@@ -35,12 +36,12 @@
     .direct-review-required .fallback{display:grid}
     .direct-review-required iframe{visibility:hidden}
     @media(max-width:900px){
-      .review-shell{height:auto;min-height:100vh;position:relative;overflow:visible}
-      .runway{min-height:0!important;height:auto!important}
-      .grid{grid-template-columns:1fr;display:grid}
-      .panel{height:78vh;min-height:620px}
-      iframe{pointer-events:auto}
-      .hint{padding:8px}
+      .review-shell{padding:8px;gap:7px}
+      .toolbar{grid-template-columns:minmax(112px,auto) 1fr auto;gap:8px;padding:8px 10px}
+      .toolbar strong{font-size:11px}
+      .grid{grid-template-columns:1fr;grid-template-rows:1fr 1fr;gap:7px}
+      .panel h2{font-size:11px;padding:6px 9px}
+      .hint{font-size:10px;padding-bottom:0}
     }
   </style>
 </head>
@@ -48,13 +49,13 @@
   <header class="intro">
     <h1>CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002</h1>
     <div class="status">Automated gates PASS · HUMAN_REVIEW_PENDING</div>
-    <p>La extracción y el candidato son byte-idénticos. En escritorio, un único scroll exterior controla ambos recorridos en sincronía desde el inicio hasta el terminal cap. No implica reemplazo canónico, promoción reusable ni integración de producto.</p>
+    <p>La extracción y el candidato son byte-idénticos. El visor reconstruye únicamente el espacio de desplazamiento posterior que aporta la landing completa; un único scroll exterior controla ambos recorridos con medición viva hasta confirmar el estado terminal real en los dos paneles. No implica reemplazo canónico, promoción reusable ni integración de producto.</p>
   </header>
 
   <section class="runway" id="review-runway" aria-label="Recorrido comparativo sincronizado">
     <div class="review-shell">
       <div class="toolbar" aria-live="polite">
-        <strong id="review-state">Recorrido listo</strong>
+        <strong id="review-state">Cargando y estabilizando</strong>
         <div class="meter" aria-hidden="true"><span id="review-meter"></span></div>
         <div class="percent" id="review-percent">0%</div>
       </div>
@@ -64,96 +65,348 @@
           <h2>Baseline fuente aislado</h2>
           <div class="viewport">
             <iframe src="REFERENCE_IMPLEMENTATION.html" title="Baseline fuente aislado" scrolling="no" tabindex="-1"></iframe>
-            <div class="fallback"><div>El navegador bloqueó la sincronización entre archivos locales.<br><a href="REFERENCE_IMPLEMENTATION.html" target="_blank" rel="noopener">Abrir recorrido completo</a></div></div>
+            <div class="fallback"><div>El navegador bloqueó el acceso coordinado entre archivos locales. Sirve esta carpeta mediante un servidor local o usa un navegador que permita acceso entre archivos del mismo directorio.<br><a href="REFERENCE_IMPLEMENTATION.html" target="_blank" rel="noopener">Abrir referencia aislada (inspección parcial)</a></div></div>
           </div>
         </section>
         <section class="panel">
           <h2>Candidato 002</h2>
           <div class="viewport">
             <iframe src="REFERENCE_IMPLEMENTATION.html" title="Candidato 002" scrolling="no" tabindex="-1"></iframe>
-            <div class="fallback"><div>El navegador bloqueó la sincronización entre archivos locales.<br><a href="REFERENCE_IMPLEMENTATION.html" target="_blank" rel="noopener">Abrir recorrido completo</a></div></div>
+            <div class="fallback"><div>El navegador bloqueó el acceso coordinado entre archivos locales. Sirve esta carpeta mediante un servidor local o usa un navegador que permita acceso entre archivos del mismo directorio.<br><a href="REFERENCE_IMPLEMENTATION.html" target="_blank" rel="noopener">Abrir referencia aislada (inspección parcial)</a></div></div>
           </div>
         </section>
       </main>
-      <p class="hint">Desplázate por la página. La barra debe llegar a 100% y ambos terminal caps deben activarse.</p>
+      <p class="hint">La barra solo llega a 100% cuando ambos paneles alcanzan el máximo vivo, activan el tercer nodo y confirman el terminal cap.</p>
     </div>
   </section>
 
   <footer class="completion" id="review-completion" data-reached="false">
     <strong>Recorrido todavía incompleto</strong>
-    <span>Continúa desplazándote hasta alcanzar el 100%.</span>
+    <span>Continúa desplazándote hasta confirmar el estado terminal en ambos paneles.</span>
   </footer>
 
   <script>
     (()=>{
-      const clamp=(v,min,max)=>Math.min(Math.max(v,min),max);
+      const clamp=(value,min,max)=>Math.min(Math.max(value,min),max);
       const runway=document.getElementById('review-runway');
       const frames=[...document.querySelectorAll('iframe')];
       const meter=document.getElementById('review-meter');
       const percent=document.getElementById('review-percent');
-      const state=document.getElementById('review-state');
+      const stateLabel=document.getElementById('review-state');
       const completion=document.getElementById('review-completion');
-      let frameMetrics=[];
-      let ticking=false;
-      let loaded=0;
+      const frameStates=frames.map(frame=>({
+        frame,
+        loaded:false,
+        fontsReady:false,
+        resizeObserver:null,
+        mutationObserver:null,
+        lastSignature:'',
+        stableSamples:0,
+        metrics:null,
+        contextSpacer:null,
+        contextSpacerHeight:0
+      }));
+      let updateQueued=false;
+      let measureQueued=false;
+      let terminalVerificationQueued=false;
+      let globalStableSamples=0;
+      let lastGlobalSignature='';
+      let stabilizationTimer=0;
 
-      const measureFrame=frame=>{
+      const readMetrics=entry=>{
+        const {frame}=entry;
+        const win=frame.contentWindow;
         const doc=frame.contentDocument;
-        if(!doc)throw new Error('FRAME_DOCUMENT_UNAVAILABLE');
+        if(!win||!doc)throw new Error('FRAME_DOCUMENT_UNAVAILABLE');
         const root=doc.documentElement;
         const body=doc.body;
-        const scrollHeight=Math.max(root?.scrollHeight||0,body?.scrollHeight||0);
-        return {frame,maxScroll:Math.max(0,scrollHeight-frame.clientHeight)};
+        const scrolling=doc.scrollingElement||root;
+        const timeline=doc.querySelector('.ca-roadmap-editorial__timeline');
+        const steps=[...doc.querySelectorAll('.ca-roadmap-editorial__step')];
+        const lastStep=steps.at(-1)||null;
+        const lastCard=lastStep?.querySelector('.ca-roadmap-editorial__card')||null;
+        const line=timeline?.querySelector('.ca-roadmap-editorial__line')||null;
+        const scrollHeight=Math.max(
+          root?.scrollHeight||0,
+          body?.scrollHeight||0,
+          scrolling?.scrollHeight||0
+        );
+        const viewportHeight=Math.max(1,frame.clientHeight||win.innerHeight||1);
+        const maxScroll=Math.max(0,scrollHeight-viewportHeight);
+        const scrollTop=Math.max(0,win.scrollY||scrolling?.scrollTop||0);
+        const timelineHeight=timeline?.getBoundingClientRect().height||0;
+        const lastCardHeight=lastCard?.getBoundingClientRect().height||0;
+        const paddingBottom=timeline?parseFloat(win.getComputedStyle(timeline).paddingBottom)||0:0;
+        const terminalClass=Boolean(timeline?.classList.contains('is-end-active'));
+        const lastNodeActive=Boolean(lastStep?.classList.contains('is-dot-active'));
+        const atLiveMaximum=Math.abs(scrollTop-maxScroll)<=1.5;
+        let terminalCapActive=false;
+        if(line){
+          const capColor=win.getComputedStyle(line,'::after').backgroundColor.replace(/\s+/g,'');
+          terminalCapActive=capColor==='rgb(13,148,136)'||capColor==='rgba(13,148,136,1)';
+        }
+        const signature=[
+          Math.round(scrollHeight*10)/10,
+          Math.round(viewportHeight*10)/10,
+          Math.round(timelineHeight*10)/10,
+          Math.round(lastCardHeight*10)/10,
+          Math.round(paddingBottom*10)/10
+        ].join('|');
+        return {
+          frame,win,doc,root,body,scrolling,timeline,steps,lastStep,lastCard,line,
+          scrollHeight,viewportHeight,maxScroll,scrollTop,timelineHeight,lastCardHeight,
+          paddingBottom,terminalClass,lastNodeActive,atLiveMaximum,terminalCapActive,signature,
+          railStart:timeline?parseFloat(win.getComputedStyle(timeline).getPropertyValue('--rail-start'))||0:0,
+          railHeight:timeline?parseFloat(win.getComputedStyle(timeline).getPropertyValue('--rail-height'))||0:0,
+          absoluteTimelineTop:(timeline?.getBoundingClientRect().top||0)+scrollTop
+        };
       };
 
-      const measure=()=>{
+
+      const ensureContextSpacer=entry=>{
+        const doc=entry.frame.contentDocument;
+        if(!doc?.body)throw new Error('FRAME_BODY_UNAVAILABLE');
+        let spacer=doc.querySelector('[data-human-review-context-spacer]');
+        if(!spacer){
+          spacer=doc.createElement('div');
+          spacer.setAttribute('data-human-review-context-spacer','');
+          spacer.setAttribute('aria-hidden','true');
+          spacer.style.cssText='display:block;width:1px;height:0;pointer-events:none;visibility:hidden;';
+          doc.body.appendChild(spacer);
+        }
+        entry.contextSpacer=spacer;
+        return spacer;
+      };
+
+      const calibrateContextSpacer=(entry,metrics)=>{
+        const spacer=ensureContextSpacer(entry);
+        const naturalMax=Math.max(0,metrics.maxScroll-entry.contextSpacerHeight);
+        const requiredMax=Math.max(0,Math.ceil(
+          metrics.absoluteTimelineTop+
+          metrics.railStart+
+          metrics.railHeight-
+          metrics.viewportHeight*.64+
+          4
+        ));
+        const nextHeight=Math.max(0,requiredMax-naturalMax);
+        if(Math.abs(nextHeight-entry.contextSpacerHeight)>1){
+          entry.contextSpacerHeight=nextHeight;
+          spacer.style.height=nextHeight+'px';
+          return true;
+        }
+        return false;
+      };
+
+      const setFallback=message=>{
+        document.documentElement.classList.add('direct-review-required');
+        stateLabel.textContent=message;
+        runway.style.height='auto';
+      };
+
+      const observeFrame=entry=>{
         try{
-          frameMetrics=frames.map(measureFrame);
-          const maxInner=Math.max(1,...frameMetrics.map(item=>item.maxScroll));
-          const travel=Math.max(innerHeight*2.75,maxInner*1.65+innerHeight*.7);
-          runway.style.height=Math.ceil(innerHeight+travel)+'px';
-          document.documentElement.classList.remove('direct-review-required');
-          request();
+          const metrics=readMetrics(entry);
+          const win=metrics.win;
+          const ResizeObserverCtor=win.ResizeObserver;
+          const MutationObserverCtor=win.MutationObserver;
+          entry.resizeObserver?.disconnect();
+          entry.mutationObserver?.disconnect();
+          if(ResizeObserverCtor){
+            entry.resizeObserver=new ResizeObserverCtor(()=>scheduleMeasure(true));
+            [metrics.root,metrics.body,metrics.timeline,metrics.lastCard].filter(Boolean).forEach(node=>entry.resizeObserver.observe(node));
+          }
+          if(MutationObserverCtor&&metrics.timeline){
+            entry.mutationObserver=new MutationObserverCtor(()=>{
+              scheduleMeasure(false);
+              scheduleUpdate();
+            });
+            entry.mutationObserver.observe(metrics.timeline,{
+              attributes:true,
+              attributeFilter:['class','style'],
+              subtree:true
+            });
+          }
         }catch(error){
-          document.documentElement.classList.add('direct-review-required');
-          state.textContent='Sincronización local bloqueada';
-          runway.style.height='auto';
+          setFallback('Sincronización local bloqueada');
         }
       };
 
-      const update=()=>{
-        const rect=runway.getBoundingClientRect();
-        const maxOuter=Math.max(1,runway.offsetHeight-innerHeight);
-        const progress=clamp(-rect.top/maxOuter,0,1);
-        frameMetrics.forEach(({frame,maxScroll})=>frame.contentWindow?.scrollTo(0,Math.round(maxScroll*progress)));
-        const value=Math.round(progress*100);
-        meter.style.width=value+'%';
-        percent.textContent=value+'%';
-        state.textContent=progress>=.999?'Terminal cap alcanzado':'Recorrido sincronizado';
-        completion.dataset.reached=progress>=.999?'true':'false';
-        completion.querySelector('strong').textContent=progress>=.999?'Recorrido completo':'Recorrido todavía incompleto';
-        completion.querySelector('span').textContent=progress>=.999?'Inicio, tres etapas y terminal cap recorridos íntegramente.':'Continúa desplazándote hasta alcanzar el 100%.';
-        document.documentElement.dataset.reviewProgress=progress.toFixed(4);
-        document.documentElement.dataset.terminalReached=progress>=.999?'true':'false';
-        ticking=false;
-      };
-
-      const request=()=>{
-        if(!ticking){ticking=true;requestAnimationFrame(update)}
-      };
-
-      frames.forEach(frame=>frame.addEventListener('load',()=>{
-        loaded+=1;
-        if(loaded===frames.length){
-          setTimeout(measure,60);
-          setTimeout(measure,240);
+      const measureNow=(resetStability=false)=>{
+        measureQueued=false;
+        try{
+          if(!frameStates.every(entry=>entry.loaded&&entry.fontsReady))return;
+          let contextChanged=false;
+          let metrics=frameStates.map(entry=>{
+            const first=readMetrics(entry);
+            contextChanged=calibrateContextSpacer(entry,first)||contextChanged;
+            return first;
+          });
+          if(contextChanged){
+            metrics=frameStates.map(entry=>readMetrics(entry));
+            resetStability=true;
+          }
+          metrics=metrics.map((next,index)=>{
+            const entry=frameStates[index];
+            const completeSignature=next.signature+'|'+Math.round(entry.contextSpacerHeight*10)/10;
+            if(resetStability||completeSignature!==entry.lastSignature){
+              entry.stableSamples=0;
+              entry.lastSignature=completeSignature;
+            }else{
+              entry.stableSamples+=1;
+            }
+            entry.metrics=next;
+            return next;
+          });
+          const maxInner=Math.max(1,...metrics.map(item=>item.maxScroll));
+          const terminalBuffer=Math.max(280,innerHeight*.38);
+          const requiredHeight=Math.ceil(innerHeight+maxInner+terminalBuffer);
+          if(Math.abs(runway.offsetHeight-requiredHeight)>1){
+            runway.style.height=requiredHeight+'px';
+          }
+          const globalSignature=metrics.map((item,index)=>item.signature+'|'+Math.round(frameStates[index].contextSpacerHeight*10)/10).join('::')+'::'+Math.round(innerHeight)+'::'+Math.round(runway.offsetHeight);
+          if(resetStability||globalSignature!==lastGlobalSignature){
+            globalStableSamples=0;
+            lastGlobalSignature=globalSignature;
+          }else{
+            globalStableSamples+=1;
+          }
+          const stable=globalStableSamples>=6&&frameStates.every(entry=>entry.stableSamples>=6);
+          document.documentElement.dataset.metricsStable=stable?'true':'false';
+          document.documentElement.dataset.liveMaxScroll=String(Math.round(maxInner));
+          document.documentElement.classList.remove('direct-review-required');
+          scheduleUpdate();
+        }catch(error){
+          setFallback('Sincronización local bloqueada');
         }
-      },{once:true}));
+      };
 
-      addEventListener('scroll',request,{passive:true});
-      addEventListener('resize',measure,{passive:true});
-      addEventListener('orientationchange',measure,{passive:true});
-      setTimeout(()=>{if(loaded<frames.length)measure()},800);
+      const scheduleMeasure=(resetStability=false)=>{
+        if(resetStability){
+          globalStableSamples=0;
+          frameStates.forEach(entry=>entry.stableSamples=0);
+        }
+        if(!measureQueued){
+          measureQueued=true;
+          requestAnimationFrame(()=>measureNow(resetStability));
+        }
+      };
+
+      const terminalState=entry=>{
+        const metrics=readMetrics(entry);
+        entry.metrics=metrics;
+        return {
+          terminalClass:metrics.terminalClass,
+          lastNodeActive:metrics.lastNodeActive,
+          terminalCapActive:metrics.terminalCapActive,
+          atLiveMaximum:metrics.atLiveMaximum,
+          scrollTop:metrics.scrollTop,
+          maxScroll:metrics.maxScroll,
+          contextSpacerHeight:entry.contextSpacerHeight,
+          complete:metrics.terminalClass&&metrics.lastNodeActive&&metrics.terminalCapActive&&metrics.atLiveMaximum
+        };
+      };
+
+      const renderVerification=()=>{
+        terminalVerificationQueued=false;
+        try{
+          const results=frameStates.map(terminalState);
+          const allComplete=results.every(result=>result.complete);
+          const ratios=results.map(result=>result.maxScroll<=1?1:clamp(result.scrollTop/result.maxScroll,0,1));
+          const actualRatio=Math.min(...ratios);
+          const stable=document.documentElement.dataset.metricsStable==='true';
+          const displayValue=allComplete?100:Math.min(99,Math.floor(actualRatio*100));
+          meter.style.width=displayValue+'%';
+          percent.textContent=displayValue+'%';
+          if(allComplete){
+            stateLabel.textContent='Terminal cap confirmado en ambos paneles';
+          }else if(!stable){
+            stateLabel.textContent='Estabilizando rango vivo';
+          }else if(actualRatio>=.999){
+            stateLabel.textContent='Finalizando estado terminal real';
+          }else{
+            stateLabel.textContent='Recorrido sincronizado';
+          }
+          completion.dataset.reached=allComplete?'true':'false';
+          completion.querySelector('strong').textContent=allComplete?'Recorrido completo':'Recorrido todavía incompleto';
+          completion.querySelector('span').textContent=allComplete
+            ?'Inicio, tres etapas y terminal cap confirmados en ambos paneles.'
+            :'Continúa desplazándote hasta confirmar el estado terminal en ambos paneles.';
+          document.documentElement.dataset.reviewProgress=(allComplete?1:actualRatio).toFixed(4);
+          document.documentElement.dataset.terminalReached=allComplete?'true':'false';
+          document.documentElement.dataset.panelStates=JSON.stringify(results);
+          const currentMax=Math.max(...results.map(result=>result.maxScroll));
+          const recordedMax=Number(document.documentElement.dataset.liveMaxScroll||0);
+          if(currentMax>recordedMax+1){
+            scheduleMeasure(true);
+          }
+        }catch(error){
+          setFallback('Sincronización local bloqueada');
+        }
+      };
+
+      const scheduleTerminalVerification=()=>{
+        if(!terminalVerificationQueued){
+          terminalVerificationQueued=true;
+          requestAnimationFrame(()=>requestAnimationFrame(renderVerification));
+        }
+      };
+
+      const updateNow=()=>{
+        updateQueued=false;
+        try{
+          if(!frameStates.every(entry=>entry.metrics))return;
+          const rect=runway.getBoundingClientRect();
+          const liveMetrics=frameStates.map(entry=>readMetrics(entry));
+          const maxInner=Math.max(1,...liveMetrics.map(item=>item.maxScroll));
+          const outerTravel=Math.max(0,-rect.top);
+          const ratio=clamp(outerTravel/maxInner,0,1);
+          liveMetrics.forEach((metrics,index)=>{
+            const target=Math.round(metrics.maxScroll*ratio);
+            metrics.win.scrollTo(0,target);
+            frameStates[index].metrics=metrics;
+          });
+          scheduleTerminalVerification();
+        }catch(error){
+          setFallback('Sincronización local bloqueada');
+        }
+      };
+
+      const scheduleUpdate=()=>{
+        if(!updateQueued){
+          updateQueued=true;
+          requestAnimationFrame(updateNow);
+        }
+      };
+
+      const startStabilization=()=>{
+        clearInterval(stabilizationTimer);
+        scheduleMeasure(true);
+        stabilizationTimer=setInterval(()=>scheduleMeasure(false),120);
+      };
+
+      frameStates.forEach(entry=>{
+        entry.frame.addEventListener('load',async()=>{
+          entry.loaded=true;
+          try{
+            const fonts=entry.frame.contentDocument?.fonts;
+            if(fonts?.ready)await fonts.ready;
+            entry.fontsReady=true;
+            ensureContextSpacer(entry);
+            observeFrame(entry);
+            startStabilization();
+            [0,120,360,600,900].forEach(delay=>setTimeout(()=>scheduleMeasure(delay===0),delay));
+          }catch(error){
+            setFallback('Sincronización local bloqueada');
+          }
+        },{once:true});
+      });
+
+      addEventListener('scroll',scheduleUpdate,{passive:true});
+      addEventListener('resize',()=>scheduleMeasure(true),{passive:true});
+      addEventListener('orientationchange',()=>scheduleMeasure(true),{passive:true});
+      setTimeout(()=>{
+        if(!frameStates.every(entry=>entry.loaded))setFallback('No se pudieron cargar ambos paneles');
+      },2500);
     })();
   </script>
 </body>
