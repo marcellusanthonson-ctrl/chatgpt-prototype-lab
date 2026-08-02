@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.2.0",
+  "manifest_id": "LAB-CONTINUITY-ATTACHMENTS-M5-CUTOVER-166-STAGE-2-PASS-20260801",
+  "status": "CURRENT",
+  "project_id": "lab",
+  "created_at": "2026-08-01T12:32:48-04:00",
+  "required_read_order": [
+    "CURRENT_CONTINUITY.json",
+    "CURRENT_CONTINUITY.md",
+    "ATTACHMENT_MANIFEST.json",
+    "START_PROMPT.md"
+  ],
+  "attachments": [
+    {"path": "projects/lab/continuity/CURRENT_CONTINUITY.json", "role": "CANONICAL_STRUCTURED_CONTINUITY", "required": true},
+    {"path": "projects/lab/continuity/CURRENT_CONTINUITY.md", "role": "HUMAN_READABLE_CONTINUITY", "required": true},
+    {"path": "projects/lab/continuity/ATTACHMENT_MANIFEST.json", "role": "READ_ORDER_AND_REFERENCE_MANIFEST", "required": true},
+    {"path": "projects/lab/continuity/START_PROMPT.md", "role": "FIRST_MESSAGE_FOR_NEW_CONVERSATION", "required": true}
+  ],
+  "repository_sources_not_duplicated_as_attachments": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_166.json",
+    "projects/lab/briefs/CODEX_M5_BOUNDED_CUTOVER_OBSERVATION_AND_AUTOMATIC_ROLLBACK_001.json",
+    "architecture/integrations/active/INTEGRATION_FACTORY_RESOLUTION_POINTER.json",
+    "architecture/integrations/migration/M5/cutover-166/CUTOVER_RESULTS.json",
+    "architecture/integrations/migration/M5/cutover-166/OBSERVATION_RESULTS.json",
+    "architecture/integrations/migration/M5/cutover-166/VALIDATION_RESULTS.json",
+    "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-CUTOVER-166.json",
+    "projects/lab/pending/PEND-LAB-042.json"
+  ],
+  "archived_package": "projects/lab/continuity/archive/m5-cutover-166-stage-2-preexecution-4ced6a5f63f833f1526400b70eb531078f1e771a/",
+  "archived_package_integrity": {
+    "CURRENT_CONTINUITY.json": "889cdf7107474f86245f3a0d1b6c80e1acf96a7f",
+    "CURRENT_CONTINUITY.md": "1f48059aa0fbca1854cbd267deb0e069c3dbc776",
+    "ATTACHMENT_MANIFEST.json": "32d66efdd54b5d794cc5f2179fe346410b98550c",
+    "START_PROMPT.md": "fb23141948834b0c8376cb9a1cbedd2e6f81ca70"
+  },
+  "missing_attachments": [],
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_166_CONSUMPTION"
+}
