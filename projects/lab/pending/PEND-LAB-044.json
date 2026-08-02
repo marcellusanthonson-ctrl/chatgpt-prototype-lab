@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "id": "PEND-LAB-044",
+  "project_id": "lab",
+  "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+  "type": "PRIORITY_INTEGRATIONS_PHASE_1_FACTORY_CONTRACT_COMPLETION",
+  "subject": "Complete Integration Factory CRITERION_MODULE contracts for Product Leadership and Software Solution Engineering without testing or activation",
+  "priority": "CRITICAL",
+  "program_ref": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/MANIFEST.json",
+  "roadmap_ref": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/ROADMAP.json",
+  "priority_integrations": [
+    "INT-LAB-004",
+    "INT-LAB-005"
+  ],
+  "current_authority": "NONE_UNTIL_SEPARATE_EXPLICIT_AUTHORIZATION",
+  "authorized_by_phase_0": false,
+  "required_scope": [
+    "COMPLETE_MISSING_STANDARD_FACTORY_ARTIFACTS",
+    "DEFINE_COMPOSITION_AND_CONFLICT_CONTRACTS",
+    "DEFINE_ROLLBACK_BEFORE_ACTIVATION",
+    "VALIDATE_FACTORY_PROFILE_CONFORMANCE"
+  ],
+  "prohibitions": [
+    "NO_TEST_EXECUTION",
+    "NO_EXTERNAL_AUDIT_EXECUTION",
+    "NO_AWS_OR_TERRAFORM",
+    "NO_POINTER_SELECTOR_OR_CANDIDATE_REGISTRY_MUTATION",
+    "NO_PROMOTION_ACTIVATION_OR_PRODUCT_CHANGE"
+  ],
+  "automatic_approval": false,
+  "next_action": "SEPARATE_EXPLICIT_PHASE_1_AUTHORIZATION",
+  "source_refs": [
+    "decisions/DEC-LAB-030.json",
+    "projects/lab/integrations/INT-LAB-004.json",
+    "projects/lab/integrations/INT-LAB-005.json",
+    "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/ROADMAP.json"
+  ],
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "integration_effect": "NONE"
+}
