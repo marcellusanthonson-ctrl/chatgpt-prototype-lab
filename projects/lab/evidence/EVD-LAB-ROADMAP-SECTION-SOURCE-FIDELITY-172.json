@@ -4,7 +4,7 @@
   "project_id": "lab",
   "authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_SECTION_ISOLATION_AND_REVALIDATION_172",
   "decision_ref": "DEC-LAB-031",
-  "status": "PASS_AUTOMATED_GATES_HUMAN_REVIEW_PENDING",
+  "status": "PASS_AUTOMATED_GATES_HUMAN_REVIEW_COMPLETED_APPROVED_SOURCE_FIDELITY",
   "source_repository": "marcellusanthonson-ctrl/carolina-md-next-landing",
   "fixed_commit": "52654da574952148f96d051e439bff1cbc7b4b9d",
   "protected_source_mutation": "NONE",
@@ -29,12 +29,30 @@
     "treatment": "NORMALIZED_BY_BYTE_IDENTITY_AND_EXACT_STATE_RENDER",
     "source_candidate_byte_identical": true
   },
+  "downstream_human_review": {
+    "determination": "APPROVED_SOURCE_FIDELITY",
+    "approved_by": "Jonathan Martínez",
+    "determined_at": "2026-08-02T18:43:00-04:00",
+    "complete_localhost_journey": true,
+    "post_terminal_dead_scroll_absent": true,
+    "responsive_alternating_card_layout_confirmed": true,
+    "baseline_candidate_visual_parity": true,
+    "evidence_refs": [
+      "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-173.json",
+      "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-POST-TERMINAL-DEAD-SCROLL-175.json"
+    ]
+  },
+  "claims_established": [
+    "HUMAN_APPROVED_SOURCE_FIDELITY"
+  ],
   "claims_not_established": [
-    "HUMAN_APPROVAL",
+    "CANONICAL_REFERENCE_DESIGNATION",
     "CANONICAL_REPLACEMENT",
+    "BEHAVIOR_CORE_EXTRACTION",
     "REUSABLE_PROMOTION",
     "PRODUCT_INTEGRATION"
   ],
-  "err_lab_011": "OPEN_AWAITING_SECTION_SCOPED_HUMAN_SOURCE_FIDELITY_DECISION",
-  "pend_lab_046": "OPEN_HUMAN_COMPARISON_OF_CANDIDATE_002_REQUIRED"
+  "err_lab_011": "CLOSED_BY_APPROVED_SECTION_SCOPED_SOURCE_FIDELITY",
+  "pend_lab_046": "CLOSED_BY_APPROVED_SOURCE_FIDELITY",
+  "reconciliation_ref": "registry/deltas/roadmap-section-source-fidelity-human-approval-173.json"
 }
