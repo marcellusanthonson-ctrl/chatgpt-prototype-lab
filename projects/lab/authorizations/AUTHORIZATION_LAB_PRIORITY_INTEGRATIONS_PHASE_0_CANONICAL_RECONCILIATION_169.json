@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_0_CANONICAL_RECONCILIATION_169",
   "project_id": "lab",
-  "status": "CONSUMED_ON_VERIFIED_SQUASHED_MAIN_PUBLICATION",
+  "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
   "authorization_class": "BOUNDED_DOCUMENTARY_RECONCILIATION",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-08-02",
@@ -48,9 +48,18 @@
     "CREATE_SUCCESSOR_PENDING_FOR_PHASE_1",
     "RECONCILE_SMALL_CANONICAL_INDEXES",
     "CREATE_REGISTRY_DELTA_EVIDENCE_AND_CONTINUITY_SUPPLEMENT",
-    "PUBLISH_ONE_SQUASHED_MAIN_COMMIT",
+    "PUBLISH_VALIDATED_BRANCH_TIP_TO_MAIN",
     "VERIFY_REMOTE_HEAD"
   ],
+  "publication": {
+    "method": "FAST_FORWARD_VALIDATED_BRANCH_TIP",
+    "working_branch": "phase0-priority-integrations-169",
+    "bounded_commit_count": 20,
+    "planned_single_squash_commit": false,
+    "divergence": "CONNECTOR_DID_NOT_EXPOSE_FINAL_TREE_SHA_REQUIRED_FOR_CREATE_COMMIT_SQUASH",
+    "technical_effect": "NONE_ON_FINAL_TREE_CONTENT",
+    "history_effect": "MAIN_CONTAINS_BOUNDED_INTERMEDIATE_COMMITS"
+  },
   "prohibited_actions_preserved": [
     "NO_PRODUCT_LEADERSHIP_TEST_003_EXECUTION",
     "NO_SSE_TEST_EXECUTION",
@@ -60,7 +69,7 @@
     "NO_ACTIVE_POINTER_CANDIDATE_REGISTRY_OR_STATIC_SELECTOR_MUTATION",
     "NO_PRODUCT_RUNTIME_ECR_IAC_OR_MOTION_SYSTEM_EXPANSION",
     "NO_ARCHITECTURE_PROVIDER_OR_GLOBAL_STACK_SELECTION",
-    "NO_HISTORICAL_REWRITE"
+    "NO_HISTORICAL_RESULT_REWRITE"
   ],
   "protected_paths": [
     "architecture/integrations/active/INTEGRATION_FACTORY_RESOLUTION_POINTER.json",
@@ -74,7 +83,6 @@
   "next_pending_ref": "projects/lab/pending/PEND-LAB-044.json",
   "residual_authority": "NONE",
   "maximum_result": "PHASE_0_PRIORITY_INTEGRATIONS_CANONICAL_INVENTORY_AND_ROADMAP_RECONCILED",
-  "consumption_rule": "CONSUMED_AFTER_SQUASHED_MAIN_PUBLICATION_AND_REMOTE_HEAD_VERIFICATION",
   "authority_effect": "NONE_AFTER_CONSUMPTION",
   "runtime_effect": "NONE",
   "product_effect": "NONE",
