@@ -3,7 +3,7 @@
   "evidence_id": "EVD-LAB-PRIORITY-INTEGRATIONS-PHASE-0-169",
   "project_id": "lab",
   "evidence_type": "DOCUMENTARY_RECONCILIATION",
-  "status": "PASS_ON_VERIFIED_SQUASHED_MAIN_PUBLICATION",
+  "status": "PASS_ON_VERIFIED_REMOTE_PUBLICATION_WITH_RECORDED_HISTORY_DIVERGENCE",
   "created_at": "2026-08-02",
   "authorization_ref": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_0_CANONICAL_RECONCILIATION_169",
   "decision_ref": "DEC-LAB-030",
@@ -35,8 +35,15 @@
     "duplicate_new_ids": 0,
     "historical_records_deleted": 0,
     "small_canonical_indexes_reconciled": true,
-    "json_documents_created_or_updated": 14,
+    "changed_file_count": 14,
     "authority_effect": "NONE_AFTER_PUBLICATION"
+  },
+  "publication_divergence": {
+    "expected": "ONE_SQUASHED_MAIN_COMMIT",
+    "actual": "FAST_FORWARD_VALIDATED_BRANCH_TIP_WITH_BOUNDED_INTERMEDIATE_COMMITS",
+    "cause": "CONNECTOR_DID_NOT_EXPOSE_FINAL_TREE_SHA_REQUIRED_FOR_CREATE_COMMIT_SQUASH",
+    "final_tree_semantics_affected": false,
+    "governance_disclosed": true
   },
   "maximum_result": "PHASE_0_PRIORITY_INTEGRATIONS_CANONICAL_INVENTORY_AND_ROADMAP_RECONCILED",
   "authority_effect": "NONE",
