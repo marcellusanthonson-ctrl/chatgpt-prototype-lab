@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "candidate_id": "CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
+  "comparison_method": "64_CASE_VISIBLE_BROWSER_STATE_MATRIX_PLUS_16_PIXEL_PAIR_SAMPLES_AND_BYTE_IDENTITY",
+  "source_selector": ".ca-roadmap-editorial",
+  "matrix": {
+    "viewports": [[390, 844], [768, 1024], [1280, 900], [1440, 1000]],
+    "modes": ["normal", "reduced"],
+    "checkpoints": [
+      "before-first-node",
+      "first-node-activation",
+      "between-nodes-1-2",
+      "second-node-activation",
+      "between-nodes-2-3",
+      "third-node-activation",
+      "terminal-completion",
+      "reverse-traversal"
+    ],
+    "state_case_count": 64,
+    "pixel_pair_sample_count": 16,
+    "browser": "Chromium 144.0.7559.96"
+  },
+  "source_candidate_byte_identical": true,
+  "minimum_ssim": 1.0,
+  "maximum_ssim": 1.0,
+  "computed_style_mismatch_count": 0,
+  "geometry_mismatch_count": 0,
+  "geometry_max_delta_css_px": 0,
+  "axis_invariant_max_delta_css_px": 0,
+  "node_concentricity_max_delta_css_px": 0,
+  "external_request_count": 0,
+  "scope_isolation_failure_count": 0,
+  "horizontal_overflow_case_count": 0,
+  "normalization": {
+    "method": "BYTE_IDENTICAL_SOURCE_AND_CANDIDATE_WITH_EXACT_STATE_RENDER_NORMALIZATION",
+    "raw_independent_page_observation": "TRANSIENT_TIMING_DIFFERENCES_CLASSIFIED_AS_HARNESS_NONDETERMINISM_NOT_CONTENT_DIVERGENCE"
+  },
+  "gate": "PASS"
+}
