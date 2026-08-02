@@ -49,10 +49,23 @@
   ],
   "execution_result": {
     "candidate_001": "HUMAN_REVIEW_REJECTED_SCOPE_OVERBROAD_PRESERVED_AS_FULL_CONTEXT_FORENSIC_CAPTURE",
-    "candidate_002": "HUMAN_REVIEW_PENDING_AUTOMATED_GATES_PASS",
+    "candidate_002_at_execution": "HUMAN_REVIEW_PENDING_AUTOMATED_GATES_PASS",
     "automated_gates": "PASS",
-    "err_lab_011": "OPEN",
-    "pend_lab_046": "OPEN"
+    "err_lab_011_at_execution": "OPEN",
+    "pend_lab_046_at_execution": "OPEN"
+  },
+  "downstream_human_reconciliation": {
+    "authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_SCROLL_CORRECTION_AND_CONDITIONAL_DECISION_RECONCILIATION_173",
+    "human_determination": "APPROVED_SOURCE_FIDELITY",
+    "approved_by": "Jonathan Martínez",
+    "determined_at": "2026-08-02T18:43:00-04:00",
+    "candidate_002_current_status": "HUMAN_APPROVED_SOURCE_FIDELITY",
+    "err_lab_011_current_status": "CLOSED_BY_APPROVED_SECTION_SCOPED_SOURCE_FIDELITY",
+    "pend_lab_046_current_status": "CLOSED_BY_APPROVED_SOURCE_FIDELITY",
+    "canonical_reference_designation": "NOT_AUTHORIZED",
+    "reusable_promotion": "NOT_AUTHORIZED",
+    "product_integration": "NOT_AUTHORIZED",
+    "source_ref": "registry/deltas/roadmap-section-source-fidelity-human-approval-173.json"
   },
   "authority_effect": "NONE_AFTER_CONSUMPTION",
   "runtime_effect": "NONE",
