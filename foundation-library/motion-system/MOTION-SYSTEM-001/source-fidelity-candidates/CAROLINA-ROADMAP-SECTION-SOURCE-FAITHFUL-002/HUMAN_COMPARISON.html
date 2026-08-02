@@ -1,1 +1,160 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Human comparison · Carolina Roadmap Section 002</title><style>body{margin:0;font:14px Inter,Arial;background:#eef3f6;color:#112b48}header{padding:20px 24px;background:#fff;border-bottom:1px solid #dbe5ea}h1{margin:0 0 6px;font-size:22px}.status{font-weight:700;color:#0f766e}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:12px;height:calc(100vh - 110px)}section{display:grid;grid-template-rows:auto 1fr;background:#fff;border:1px solid #dbe5ea;border-radius:14px;overflow:hidden}h2{font-size:13px;margin:0;padding:10px 14px;border-bottom:1px solid #e6edf1}iframe{width:100%;height:100%;border:0}@media(max-width:900px){.grid{grid-template-columns:1fr;height:auto}.grid section{height:860px}}</style></head><body><header><h1>CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002</h1><div class="status">Automated gates PASS · HUMAN_REVIEW_PENDING</div><p>La extracción y el candidato son byte-idénticos; ambos paneles abren el artefacto aislado validado. No implican reemplazo canónico, promoción reusable ni integración de producto.</p></header><main class="grid"><section><h2>Baseline fuente aislado</h2><iframe src="REFERENCE_IMPLEMENTATION.html" title="Baseline fuente aislado"></iframe></section><section><h2>Candidato 002</h2><iframe src="REFERENCE_IMPLEMENTATION.html" title="Candidato 002"></iframe></section></main></body></html>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Human comparison · Carolina Roadmap Section 002</title>
+  <style>
+    :root{font-family:Inter,Arial,sans-serif;color:#112b48;background:#eef3f6}
+    *{box-sizing:border-box}
+    html{scroll-behavior:auto}
+    body{margin:0;min-width:320px;background:#eef3f6;color:#112b48}
+    .intro{padding:20px 24px;background:#fff;border-bottom:1px solid #dbe5ea}
+    .intro h1{margin:0 0 6px;font-size:22px;line-height:1.2}
+    .status{font-weight:750;color:#0f766e}
+    .intro p{max-width:1100px;margin:8px 0 0;line-height:1.5;color:#40566d}
+    .runway{position:relative;min-height:360vh}
+    .review-shell{position:sticky;top:0;height:100vh;padding:12px;display:flex;flex-direction:column;gap:10px;background:#eef3f6;overflow:hidden}
+    .toolbar{display:grid;grid-template-columns:auto minmax(180px,1fr) auto;gap:12px;align-items:center;padding:10px 12px;background:#fff;border:1px solid #dbe5ea;border-radius:12px;box-shadow:0 8px 30px rgba(17,43,72,.05)}
+    .toolbar strong{font-size:13px}
+    .meter{height:8px;border-radius:999px;background:#e4eef1;overflow:hidden}
+    .meter span{display:block;width:0;height:100%;background:#0d9488;transform-origin:left center}
+    .percent{min-width:42px;text-align:right;font-variant-numeric:tabular-nums;font-weight:750;color:#0f766e}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;flex:1;min-height:0}
+    .panel{display:grid;grid-template-rows:auto 1fr;min-width:0;min-height:0;background:#fff;border:1px solid #dbe5ea;border-radius:14px;overflow:hidden;box-shadow:0 8px 30px rgba(17,43,72,.04)}
+    .panel h2{font-size:13px;margin:0;padding:10px 14px;border-bottom:1px solid #e6edf1}
+    .viewport{position:relative;min-height:0;overflow:hidden;background:#f8fafc}
+    iframe{display:block;width:100%;height:100%;border:0;pointer-events:none;background:#f8fafc}
+    .fallback{display:none;position:absolute;inset:0;padding:24px;place-content:center;text-align:center;background:#fff;color:#40566d}
+    .fallback a{display:inline-flex;margin-top:12px;padding:10px 14px;border-radius:999px;background:#0d9488;color:#fff;text-decoration:none;font-weight:700}
+    .hint{margin:0;padding:0 4px 2px;font-size:12px;color:#52697f;text-align:center}
+    .completion{padding:44px 24px 64px;text-align:center;background:#fff;border-top:1px solid #dbe5ea}
+    .completion strong{display:block;font-size:18px;margin-bottom:6px}
+    .completion[data-reached="false"]{color:#52697f}
+    .completion[data-reached="true"]{color:#0f766e}
+    .direct-review-required .fallback{display:grid}
+    .direct-review-required iframe{visibility:hidden}
+    @media(max-width:900px){
+      .review-shell{height:auto;min-height:100vh;position:relative;overflow:visible}
+      .runway{min-height:0!important;height:auto!important}
+      .grid{grid-template-columns:1fr;display:grid}
+      .panel{height:78vh;min-height:620px}
+      iframe{pointer-events:auto}
+      .hint{padding:8px}
+    }
+  </style>
+</head>
+<body>
+  <header class="intro">
+    <h1>CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002</h1>
+    <div class="status">Automated gates PASS · HUMAN_REVIEW_PENDING</div>
+    <p>La extracción y el candidato son byte-idénticos. En escritorio, un único scroll exterior controla ambos recorridos en sincronía desde el inicio hasta el terminal cap. No implica reemplazo canónico, promoción reusable ni integración de producto.</p>
+  </header>
+
+  <section class="runway" id="review-runway" aria-label="Recorrido comparativo sincronizado">
+    <div class="review-shell">
+      <div class="toolbar" aria-live="polite">
+        <strong id="review-state">Recorrido listo</strong>
+        <div class="meter" aria-hidden="true"><span id="review-meter"></span></div>
+        <div class="percent" id="review-percent">0%</div>
+      </div>
+
+      <main class="grid">
+        <section class="panel">
+          <h2>Baseline fuente aislado</h2>
+          <div class="viewport">
+            <iframe src="REFERENCE_IMPLEMENTATION.html" title="Baseline fuente aislado" scrolling="no" tabindex="-1"></iframe>
+            <div class="fallback"><div>El navegador bloqueó la sincronización entre archivos locales.<br><a href="REFERENCE_IMPLEMENTATION.html" target="_blank" rel="noopener">Abrir recorrido completo</a></div></div>
+          </div>
+        </section>
+        <section class="panel">
+          <h2>Candidato 002</h2>
+          <div class="viewport">
+            <iframe src="REFERENCE_IMPLEMENTATION.html" title="Candidato 002" scrolling="no" tabindex="-1"></iframe>
+            <div class="fallback"><div>El navegador bloqueó la sincronización entre archivos locales.<br><a href="REFERENCE_IMPLEMENTATION.html" target="_blank" rel="noopener">Abrir recorrido completo</a></div></div>
+          </div>
+        </section>
+      </main>
+      <p class="hint">Desplázate por la página. La barra debe llegar a 100% y ambos terminal caps deben activarse.</p>
+    </div>
+  </section>
+
+  <footer class="completion" id="review-completion" data-reached="false">
+    <strong>Recorrido todavía incompleto</strong>
+    <span>Continúa desplazándote hasta alcanzar el 100%.</span>
+  </footer>
+
+  <script>
+    (()=>{
+      const clamp=(v,min,max)=>Math.min(Math.max(v,min),max);
+      const runway=document.getElementById('review-runway');
+      const frames=[...document.querySelectorAll('iframe')];
+      const meter=document.getElementById('review-meter');
+      const percent=document.getElementById('review-percent');
+      const state=document.getElementById('review-state');
+      const completion=document.getElementById('review-completion');
+      let frameMetrics=[];
+      let ticking=false;
+      let loaded=0;
+
+      const measureFrame=frame=>{
+        const doc=frame.contentDocument;
+        if(!doc)throw new Error('FRAME_DOCUMENT_UNAVAILABLE');
+        const root=doc.documentElement;
+        const body=doc.body;
+        const scrollHeight=Math.max(root?.scrollHeight||0,body?.scrollHeight||0);
+        return {frame,maxScroll:Math.max(0,scrollHeight-frame.clientHeight)};
+      };
+
+      const measure=()=>{
+        try{
+          frameMetrics=frames.map(measureFrame);
+          const maxInner=Math.max(1,...frameMetrics.map(item=>item.maxScroll));
+          const travel=Math.max(innerHeight*2.75,maxInner*1.65+innerHeight*.7);
+          runway.style.height=Math.ceil(innerHeight+travel)+'px';
+          document.documentElement.classList.remove('direct-review-required');
+          request();
+        }catch(error){
+          document.documentElement.classList.add('direct-review-required');
+          state.textContent='Sincronización local bloqueada';
+          runway.style.height='auto';
+        }
+      };
+
+      const update=()=>{
+        const rect=runway.getBoundingClientRect();
+        const maxOuter=Math.max(1,runway.offsetHeight-innerHeight);
+        const progress=clamp(-rect.top/maxOuter,0,1);
+        frameMetrics.forEach(({frame,maxScroll})=>frame.contentWindow?.scrollTo(0,Math.round(maxScroll*progress)));
+        const value=Math.round(progress*100);
+        meter.style.width=value+'%';
+        percent.textContent=value+'%';
+        state.textContent=progress>=.999?'Terminal cap alcanzado':'Recorrido sincronizado';
+        completion.dataset.reached=progress>=.999?'true':'false';
+        completion.querySelector('strong').textContent=progress>=.999?'Recorrido completo':'Recorrido todavía incompleto';
+        completion.querySelector('span').textContent=progress>=.999?'Inicio, tres etapas y terminal cap recorridos íntegramente.':'Continúa desplazándote hasta alcanzar el 100%.';
+        document.documentElement.dataset.reviewProgress=progress.toFixed(4);
+        document.documentElement.dataset.terminalReached=progress>=.999?'true':'false';
+        ticking=false;
+      };
+
+      const request=()=>{
+        if(!ticking){ticking=true;requestAnimationFrame(update)}
+      };
+
+      frames.forEach(frame=>frame.addEventListener('load',()=>{
+        loaded+=1;
+        if(loaded===frames.length){
+          setTimeout(measure,60);
+          setTimeout(measure,240);
+        }
+      },{once:true}));
+
+      addEventListener('scroll',request,{passive:true});
+      addEventListener('resize',measure,{passive:true});
+      addEventListener('orientationchange',measure,{passive:true});
+      setTimeout(()=>{if(loaded<frames.length)measure()},800);
+    })();
+  </script>
+</body>
+</html>
