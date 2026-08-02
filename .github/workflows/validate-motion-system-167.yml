@@ -15,14 +15,38 @@ jobs:
           python-version: '3.12'
       - name: Motion system validator
         run: python scripts/validate_motion_system_foundation.py
-      - name: Repository validator inventory
+      - name: Repository validator exact delta
         shell: bash
         run: |
-          set +e
-          python scripts/validate_repository.py 2>&1 | tee /tmp/repository-validator.txt
-          code=${PIPESTATUS[0]}
-          echo "REPOSITORY_VALIDATOR_EXIT_CODE=$code"
-          exit 0
+          python - <<'PY'
+          import json, subprocess
+          from pathlib import Path
+          root = Path.cwd()
+          run = subprocess.run(['python','scripts/validate_repository.py'], text=True, capture_output=True)
+          print(run.stdout, end='')
+          print(run.stderr, end='')
+          current=[]
+          for line in (run.stdout + '\n' + run.stderr).splitlines():
+              if line.startswith('FAIL: '):
+                  msg=line[6:].replace('\\','/')
+                  prefix=root.as_posix()+'/'
+                  if msg.startswith(prefix): msg=msg[len(prefix):]
+                  current.append(msg)
+          baseline=json.loads((root/'architecture/integrations/migration/M5/cutover-166/PRE_CUTOVER_GENERAL_VALIDATOR_BASELINE.json').read_text())
+          previous=[item['normalized_message'] for item in baseline['findings']]
+          added=[m for m in current if m not in set(previous)]
+          removed=[m for m in previous if m not in set(current)]
+          result={
+            'current_count':len(current),
+            'baseline_count':len(previous),
+            'added_count':len(added),
+            'removed_count':len(removed),
+            'added':added,
+            'removed':removed,
+            'global_repository_pass':run.returncode==0
+          }
+          print('VALIDATOR_DELTA_JSON='+json.dumps(result,ensure_ascii=False,sort_keys=True))
+          PY
       - name: Portable baseline validator
         run: python scripts/validate_repository_portable_baseline_165.py
       - name: Protected blob verification
