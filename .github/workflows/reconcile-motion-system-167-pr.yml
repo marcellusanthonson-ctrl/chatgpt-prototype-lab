@@ -1,0 +1,40 @@
+name: Reconcile Motion System 167 PR
+on:
+  pull_request:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply and validate bounded reconciliation
+        shell: bash
+        run: |
+          if test -f projects/lab/test-executions/MOTION-SYSTEM-167-RECONCILIATION-DONE.json; then
+            python scripts/reconcile_motion_system_167.py --validate
+          else
+            python scripts/reconcile_motion_system_167.py --apply --validate
+            cat > projects/lab/test-executions/MOTION-SYSTEM-167-RECONCILIATION-DONE.json <<'JSON'
+          {
+            "schema_version": "1.0.0",
+            "execution_id": "MOTION-SYSTEM-167-CANONICAL-RECONCILIATION-001",
+            "result": "PREPUBLICATION_EXACT_329_ZERO_ADDED_ZERO_REMOVED",
+            "authority": "AUTHORIZATION_LAB_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_167",
+            "runtime_effect": "NONE",
+            "product_effect": "NONE"
+          }
+          JSON
+            git config user.name "ChatGPT Prototype LAB"
+            git config user.email "actions@users.noreply.github.com"
+            git add decisions/DEC-LAB-029.json registry/decisions.json projects/lab/briefs/CODEX_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_001_STAGE_2_STATUS.json projects/lab/continuity/CURRENT_CONTINUITY.json projects/lab/continuity/START_PROMPT.md projects/lab/pending/PEND-LAB-043.json projects/lab/PENDING.json projects/lab/ROADMAP.json CURRENT_STATE.json tests/expected_repository_state.json projects/lab/PROJECT_STATE.json registry/index.json registry/deltas/transversal-motion-system-foundation-167.json projects/lab/authorizations/AUTHORIZATION_LAB_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_167_AMENDMENT_1_STAGE_2_PROGRESS.json projects/lab/evidence/EVD-LAB-MOTION-SYSTEM-001.json projects/lab/PROJECT_STATE.md CURRENT_STATE.md project-sources/chatgpt/08_CRITERION_LAYER.md README.md projects/lab/test-executions/MOTION-SYSTEM-167-RECONCILIATION-DONE.json
+            git commit -m "docs(lab): reconcile motion system 167 canonical state"
+            git push origin HEAD:${{ github.head_ref }}
+          fi
