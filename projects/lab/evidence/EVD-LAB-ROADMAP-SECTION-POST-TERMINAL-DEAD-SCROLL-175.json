@@ -5,9 +5,9 @@
   "authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_POST_TERMINAL_DEAD_SCROLL_REMOVAL_175",
   "parent_authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_LIVE_SCROLL_RANGE_REPAIR_174",
   "decision_ref": "DEC-LAB-031",
-  "status": "TECHNICAL_REPAIR_PUBLISHED_SUPPLEMENTARY_MATRIX_PASS_HUMAN_LOCALHOST_REVIEW_REQUIRED",
+  "status": "HUMAN_LOCALHOST_REVALIDATION_PASS",
   "candidate_id": "CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
-  "human_runtime_evidence": {
+  "human_runtime_evidence_before_repair": {
     "source": "USER_UPLOADED_REAL_LOCALHOST_SCREEN_RECORDING",
     "filename": "Desktop 2026.08.02 - 18.09.55.02.mp4",
     "sha256": "cfedfe3777ab00fa89250528b4c658f68cec43f4b4ffb89897c56268b2887f76",
@@ -58,115 +58,67 @@
     "server_delivery": "PASS_HTTP_200_EXACT_LOCAL_FILES",
     "browser_automation": "BLOCKED_BY_EXECUTION_ENVIRONMENT",
     "browser_error": "ERR_BLOCKED_BY_ADMINISTRATOR",
-    "attempted_urls": [
-      "http://127.0.0.1:8765/HUMAN_COMPARISON.html",
-      "http://localhost:8765/HUMAN_COMPARISON.html"
+    "automated_real_localhost_claim": "NOT_ESTABLISHED",
+    "human_localhost_revalidation": "PASS",
+    "human_reviewed_at": "2026-08-02T18:43:00-04:00",
+    "human_reviewer": "Jonathan Martínez",
+    "human_findings": [
+      "ROADMAP_COMPLETES_INTEGRALLY",
+      "NO_PURPOSELESS_SCROLL_AFTER_TERMINAL",
+      "RESPONSIVE_ALTERNATING_CARD_LAYOUT_CONFIRMED_AFTER_VIEWPORT_RESIZE",
+      "BASELINE_AND_CANDIDATE_MATCH",
+      "RESULT_APPROVED"
     ],
-    "claim_limit": "AUTOMATED_REAL_LOCALHOST_BROWSER_PASS_NOT_ESTABLISHED",
-    "human_localhost_revalidation_required": true
+    "screenshot": {
+      "filename": "2026-08-02_18h42_50.png",
+      "sha256": "0bda032c221b8d66426d576c525fc9fd560b33514992dd5fd3fe4a59760e7424",
+      "dimensions": "2048x765"
+    }
   },
   "supplementary_controlled_browser_validation": {
     "status": "PASS",
     "method": "CONTROLLED_EXACT_PROTECTED_BYTES_SRCDOC_SUPPLEMENTARY_NOT_LOCALHOST",
     "browser": "Chromium",
     "required_viewport_count": 7,
-    "matrix": [
-      {
-        "viewport": "390x844",
-        "release_margin_css_px": 16,
-        "post_terminal_extra_css_px": 16.171875,
-        "footer_visible_after_24px": true,
-        "release_observed_ms": 54.49,
-        "both_panels_complete": true,
-        "progress": "100%",
-        "horizontal_overflow_css_px": 0,
-        "status": "PASS"
-      },
-      {
-        "viewport": "768x1024",
-        "release_margin_css_px": 16,
-        "post_terminal_extra_css_px": 16.390625,
-        "footer_visible_after_24px": true,
-        "release_observed_ms": 54.53,
-        "both_panels_complete": true,
-        "progress": "100%",
-        "horizontal_overflow_css_px": 0,
-        "status": "PASS"
-      },
-      {
-        "viewport": "1280x720",
-        "release_margin_css_px": 16,
-        "post_terminal_extra_css_px": 16.390625,
-        "footer_visible_after_24px": true,
-        "release_observed_ms": 52.8,
-        "both_panels_complete": true,
-        "progress": "100%",
-        "horizontal_overflow_css_px": 0,
-        "status": "PASS"
-      },
-      {
-        "viewport": "1440x900",
-        "release_margin_css_px": 16,
-        "post_terminal_extra_css_px": 16.390625,
-        "footer_visible_after_24px": true,
-        "release_observed_ms": 55.03,
-        "both_panels_complete": true,
-        "progress": "100%",
-        "horizontal_overflow_css_px": 0,
-        "status": "PASS"
-      },
-      {
-        "viewport": "1541x899",
-        "release_margin_css_px": 16,
-        "post_terminal_extra_css_px": 16.390625,
-        "footer_visible_after_24px": true,
-        "release_observed_ms": 54.5,
-        "both_panels_complete": true,
-        "progress": "100%",
-        "horizontal_overflow_css_px": 0,
-        "status": "PASS"
-      },
-      {
-        "viewport": "1920x1080",
-        "release_margin_css_px": 16,
-        "post_terminal_extra_css_px": 16.390625,
-        "footer_visible_after_24px": true,
-        "release_observed_ms": 54.72,
-        "both_panels_complete": true,
-        "progress": "100%",
-        "horizontal_overflow_css_px": 0,
-        "status": "PASS"
-      },
-      {
-        "viewport": "2560x1080",
-        "release_margin_css_px": 16,
-        "post_terminal_extra_css_px": 16.390625,
-        "footer_visible_after_24px": true,
-        "release_observed_ms": 55.95,
-        "both_panels_complete": true,
-        "progress": "100%",
-        "horizontal_overflow_css_px": 0,
-        "status": "PASS"
-      }
+    "viewports": [
+      "390x844",
+      "768x1024",
+      "1280x720",
+      "1440x900",
+      "1541x899",
+      "1920x1080",
+      "2560x1080"
     ],
     "all_required_viewports_pass": true,
     "maximum_observed_post_terminal_extra_css_px": 16.390625,
     "maximum_observed_release_ms": 55.95,
     "terminal_gate_preserved": true,
-    "panel_parity_preserved": true
+    "panel_parity_preserved": true,
+    "horizontal_overflow_css_px": 0
+  },
+  "final_human_determination": {
+    "value": "APPROVED_SOURCE_FIDELITY",
+    "approved_by": "Jonathan Martínez",
+    "determined_at": "2026-08-02T18:43:00-04:00"
   },
   "source_fidelity_tests_reexecuted": false,
-  "human_source_fidelity_decision": "PENDING_NEW_COMPLETE_LOCALHOST_REVIEW",
+  "human_source_fidelity_decision": "APPROVED_SOURCE_FIDELITY",
   "authorization_173_stage_2": {
-    "status": "CONDITIONALLY_AUTHORIZED_AWAITING_EXPLICIT_HUMAN_DETERMINATION",
-    "triggered": false
+    "status": "TRIGGERED_AND_CONSUMED",
+    "trigger_value": "APPROVED_SOURCE_FIDELITY",
+    "triggered": true
   },
   "claims_not_established": [
     "AUTOMATED_REAL_LOCALHOST_BROWSER_PASS",
-    "HUMAN_APPROVAL",
+    "CANONICAL_REFERENCE_DESIGNATION",
     "CANONICAL_REPLACEMENT",
+    "BEHAVIOR_CORE_EXTRACTION",
     "REUSABLE_PROMOTION",
     "PRODUCT_INTEGRATION"
+  ],
+  "source_refs": [
+    "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-173.json",
+    "registry/deltas/roadmap-section-source-fidelity-human-approval-173.json"
   ],
   "runtime_effect": "NONE",
   "integration_effect": "NONE",
