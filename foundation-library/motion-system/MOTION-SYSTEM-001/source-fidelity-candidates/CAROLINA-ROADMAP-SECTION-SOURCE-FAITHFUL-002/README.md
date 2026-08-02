@@ -2,12 +2,23 @@
 
 Sucesor aislado de `CAROLINA-ROADMAP-SOURCE-FAITHFUL-001`. Contiene exclusivamente `.ca-roadmap-editorial` del commit fuente fijo `52654da574952148f96d051e439bff1cbc7b4b9d`.
 
-Estado: `HUMAN_REVIEW_PENDING_LIVE_SCROLL_RANGE_REPAIR_READY_AUTOMATED_GATES_PASS`. Los gates automatizados no constituyen aprobación humana, reemplazo canónico, promoción reusable ni integración de producto.
+Estado: `HUMAN_APPROVED_SOURCE_FIDELITY`.
 
-Abra `HUMAN_COMPARISON.html` para la revisión completa. La superficie usa un único scroll exterior, mantiene ambos paneles fijos y sincronizados y mide el rango vivo después de `load`, `document.fonts.ready` y la estabilización dinámica del timeline.
+Jonathan Martínez aprobó explícitamente la fidelidad de fuente el 2 de agosto de 2026 después de completar la revisión real mediante `localhost`. La revisión confirmó el recorrido íntegro, la paridad visual entre baseline y candidato, la liberación inmediata después del terminal cap y la disposición responsive alternada de las tarjetas al superar el breakpoint aplicable.
+
+Los gates automatizados permanecen registrados: 64 estados, 16 pares de píxeles, SSIM mínimo 1.0, cero diferencias de estilos computados, geometría, eje, concentricidad, solicitudes externas, fallos de aislamiento y overflow horizontal.
+
+Abra `HUMAN_COMPARISON.html` para reproducir la superficie de revisión. Usa un único scroll exterior, mantiene ambos paneles sincronizados, mide el rango vivo después de `load`, `document.fonts.ready` y la estabilización dinámica, y libera el panel sticky con un margen técnico de 16 px una vez confirmado el estado terminal real.
 
 La extracción aislada excluye las secciones posteriores de la landing. Como la fórmula fuente depende de un trigger situado al `64%` del viewport, el visor agrega únicamente un espaciador invisible de contexto de revisión, calculado en vivo, para reconstruir el rango de desplazamiento que aporta la landing completa. No modifica `REFERENCE_IMPLEMENTATION.html`, la fórmula del efecto ni el repositorio Carolina.
 
-La barra solo debe alcanzar `100%` cuando, en ambos paneles, el tercer nodo está activo, el timeline contiene `is-end-active`, el terminal cap está en verde petróleo y `scrollTop` coincide con el máximo vivo. El encabezado debe mostrar `Terminal cap confirmado en ambos paneles`.
+La aprobación de fidelidad de fuente **no** autoriza por sí sola:
 
-Si el navegador bloquea el acceso coordinado entre archivos locales, sirve esta carpeta mediante un servidor local o usa un navegador que permita acceso entre archivos del mismo directorio. El enlace de fallback abre la referencia aislada únicamente para inspección visual parcial; por sí sola no contiene el contexto posterior de la landing completa.
+- designar el candidato como referencia canónica activa;
+- reemplazar artefactos canónicos;
+- extraer o publicar un behavior core reusable;
+- promover una adaptación neutral;
+- integrar el efecto en un producto;
+- modificar `marcellusanthonson-ctrl/carolina-md-next-landing`.
+
+Cualquiera de esas acciones requiere una autorización explícita separada.
