@@ -1,0 +1,64 @@
+#!/usr/bin/env python3
+"""Transient generator for authorized Phase 1 branch materialization. Removed before PR."""
+from __future__ import annotations
+import argparse
+import base64
+import json
+import zlib
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+PAYLOAD_DIR = ROOT / ".phase1_payload"
+DATE = "2026-08-02"
+PHASE = "PRIORITY_INTEGRATIONS_PHASE_1_CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED"
+AUTH = "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_1_FACTORY_CONTRACT_COMPLETION_170_REVISION_2"
+EVIDENCE = "projects/lab/evidence/EVD-LAB-PRIORITY-INTEGRATIONS-PHASE-1-170.json"
+PROGRAM = "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/MANIFEST.json"
+ROADMAP = "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/ROADMAP.json"
+COMPOSITION = "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/contracts/PRODUCT-LEADERSHIP-TO-SSE-COMPOSITION-CONTRACT-001.json"
+PENDING = "projects/lab/pending/PEND-LAB-045.json"
+DELTA = "registry/deltas/priority-integrations-phase1-contract-completion-170.json"
+CONTINUITY = "projects/lab/continuity/PRIORITY_INTEGRATIONS_PHASE_1_170.json"
+
+def load(rel: str):
+    return json.loads((ROOT / rel).read_text(encoding="utf-8"))
+
+def save(rel: str, value):
+    path = ROOT / rel
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
+
+def append_unique(seq, value):
+    if value not in seq:
+        seq.append(value)
+
+def increment_patch(version: str) -> str:
+    parts = version.split(".")
+    if len(parts) == 3 and all(p.isdigit() for p in parts):
+        parts[-1] = str(int(parts[-1]) + 1)
+        return ".".join(parts)
+    return version
+
+def materialize() -> None:
+    encoded = "".join(p.read_text(encoding="ascii").strip() for p in sorted(PAYLOAD_DIR.glob("chunk-*.txt")))
+    payload = json.loads(zlib.decompress(base64.b64decode(encoded)).decode("utf-8"))
+    for rel, content in payload.items():
+        path = ROOT / rel
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(content, encoding="utf-8", newline="\n")
+
+    current = load("CURRENT_STATE.json")
+    current["version"] = increment_patch(str(current.get("version", "2.5.50")))
+    current["status"] = PHASE
+    current["current_phase"] = PHASE
+    current["updated_at"] = DATE
+    canonical = current.setdefault("canonical_model", {})
+    canonical["priority_integrations_program"] = PROGRAM
+    canonical["priority_integrations_roadmap"] = ROADMAP
+    canonical["priority_integrations_phase1_evidence"] = EVIDENCE
+    canonical["product_leadership_to_sse_composition"] = COMPOSITION
+    decisions = current.setdefault("decisions_in_force", [])
+    append_unique(decisions, "DEC-LAB-030")
+    auth_state = current.setdefault("authorization_state", {})
+    auth_state["priority_integrations_phase0_169"] = "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+    auth_state["priority_integrations_phase1_170_revision_2"] = "CONSUMED_ON_VERIFIED_
