@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "effect_id": "STATISTICS-COUNTER-STATIC-SUFFIX-001",
+  "sources": [
+    {
+      "source_id": "CAROLINA-STATS-ATTEMPT-009",
+      "role": "VERIFIED_BEHAVIORAL_SOURCE"
+    }
+  ],
+  "claims": [
+    {
+      "claim": "Separate dynamic number and static suffix",
+      "classification": "HUMAN_APPROVED_SOURCE_PLUS_AUDITED_STRUCTURE"
+    },
+    {
+      "claim": "Generic package reusable across projects",
+      "classification": "PENDING_HUMAN_REVIEW"
+    }
+  ],
+  "project_source_mutation": "PROHIBITED"
+}

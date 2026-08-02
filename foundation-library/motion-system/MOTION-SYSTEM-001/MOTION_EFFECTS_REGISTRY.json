@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0.0",
+  "registry_id": "MOTION-EFFECTS-REGISTRY-001",
+  "updated_at": "2026-08-01",
+  "records": [
+    {
+      "effect_id": "STATISTICS-COUNTER-STATIC-SUFFIX-001",
+      "path": "effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001",
+      "status": "HUMAN_REVIEW_PENDING",
+      "formula_required": true,
+      "calculation_model": "INTERPOLATED_VALUE",
+      "source_reference": "CAROLINA-STATS-ATTEMPT-009"
+    },
+    {
+      "effect_id": "ROADMAP-VERTICAL-PROGRESS-001",
+      "path": "effects/progress/ROADMAP-VERTICAL-PROGRESS-001",
+      "status": "HUMAN_REVIEW_PENDING",
+      "formula_required": true,
+      "calculation_model": "SCROLL_LINKED_PARAMETRIC",
+      "source_reference": "CAROLINA-ROADMAP-PARAMETRIC-001"
+    }
+  ],
+  "promotion_rule": "REUSABLE_FOUNDATION_REQUIRES_EXPLICIT_HUMAN_APPROVAL"
+}

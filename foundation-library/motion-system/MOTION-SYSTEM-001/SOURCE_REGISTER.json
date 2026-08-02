@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "register_id": "MOTION-SOURCE-REGISTER-001",
+  "records": [
+    {
+      "source_id": "CAROLINA-STATS-ATTEMPT-009",
+      "source_type": "LOCAL_PROJECT_EVIDENCE",
+      "mutation": "PROHIBITED",
+      "hashes": {
+        "html_sha256": "74274E55FF1C8B9EDD849D433F12BF6FFE0ABB00097872FEB6BC7ADDE83B463E",
+        "manifest_sha256": "6EBC9D98E8EE6113B671136640994C861846241CA2B6D28A1298530E87FE0D0A",
+        "source_integrity_sha256": "7D5E8A0F45FE0D881AF09CA86C0B9565551F4B951482DC1A85C6650B1EB0FF67",
+        "validation_sha256": "A2B830101590E7FF1D7E58486369FDC0630DCDB7F816AB8B4E8A245C5CDD167D"
+      }
+    },
+    {
+      "source_id": "CAROLINA-ROADMAP-PARAMETRIC-001",
+      "source_type": "GITHUB_HISTORICAL_SOURCE_REFERENCE",
+      "repository": "marcellusanthonson-ctrl/carolina-md-next-landing",
+      "commit": "52654da574952148f96d051e439bff1cbc7b4b9d",
+      "path": "hooks/landing/_scrollReveal.ts",
+      "mutation": "PROHIBITED"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "effect_id": "STATISTICS-COUNTER-STATIC-SUFFIX-001",
+  "vectors": [
+    {
+      "id": "ZERO_TO_1000",
+      "from": 0,
+      "to": 1000,
+      "suffix": "+"
+    },
+    {
+      "id": "REVERSE_100_TO_0",
+      "from": 100,
+      "to": 0,
+      "suffix": "%"
+    },
+    {
+      "id": "SINGLE_DIGIT",
+      "from": 0,
+      "to": 3,
+      "suffix": ""
+    },
+    {
+      "id": "REDUCED_MOTION",
+      "from": 0,
+      "to": 1000,
+      "expected": "IMMEDIATE_FINAL"
+    }
+  ]
+}

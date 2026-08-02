@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "states": [
+    "SOURCE_REFERENCE",
+    "RESEARCHED",
+    "SPECIFIED",
+    "DRAFT",
+    "TECHNICAL_CANDIDATE",
+    "HUMAN_REVIEW_PENDING",
+    "HUMAN_APPROVED",
+    "REUSABLE_FOUNDATION",
+    "PROJECT_ADAPTED",
+    "INTEGRATED_IN_PROJECT",
+    "DEPRECATED",
+    "REJECTED"
+  ],
+  "transitions": {
+    "SOURCE_REFERENCE": [
+      "RESEARCHED"
+    ],
+    "RESEARCHED": [
+      "SPECIFIED",
+      "REJECTED"
+    ],
+    "SPECIFIED": [
+      "DRAFT",
+      "REJECTED"
+    ],
+    "DRAFT": [
+      "TECHNICAL_CANDIDATE",
+      "REJECTED"
+    ],
+    "TECHNICAL_CANDIDATE": [
+      "HUMAN_REVIEW_PENDING",
+      "DRAFT"
+    ],
+    "HUMAN_REVIEW_PENDING": [
+      "HUMAN_APPROVED",
+      "DRAFT",
+      "REJECTED"
+    ],
+    "HUMAN_APPROVED": [
+      "REUSABLE_FOUNDATION"
+    ],
+    "REUSABLE_FOUNDATION": [
+      "PROJECT_ADAPTED",
+      "DEPRECATED"
+    ],
+    "PROJECT_ADAPTED": [
+      "INTEGRATED_IN_PROJECT",
+      "DEPRECATED"
+    ]
+  },
+  "automatic_promotion": false,
+  "human_gate_states": [
+    "HUMAN_APPROVED",
+    "REUSABLE_FOUNDATION"
+  ]
+}

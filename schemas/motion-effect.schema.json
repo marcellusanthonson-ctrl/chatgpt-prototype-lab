@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lab.local/schemas/motion-effect.schema.json",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "effect_id",
+    "canonical_name",
+    "level",
+    "category",
+    "calculation_model",
+    "formula_required",
+    "status",
+    "reduced_motion_strategy",
+    "motion_risks"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "effect_id": {
+      "type": "string"
+    },
+    "canonical_name": {
+      "type": "string"
+    },
+    "level": {
+      "enum": [
+        "PRIMITIVE",
+        "PATTERN",
+        "COMPOSITION",
+        "PROJECT_ADAPTATION"
+      ]
+    },
+    "category": {
+      "type": "string"
+    },
+    "calculation_model": {
+      "enum": [
+        "STATIC_TRANSITION",
+        "KEYFRAME_SEQUENCE",
+        "INTERPOLATED_VALUE",
+        "PARAMETRIC_GEOMETRY",
+        "SCROLL_LINKED_PARAMETRIC",
+        "PHYSICS_BASED",
+        "DATA_DRIVEN",
+        "STATE_MACHINE",
+        "HYBRID"
+      ]
+    },
+    "formula_required": {
+      "type": "boolean"
+    },
+    "status": {
+      "enum": [
+        "SOURCE_REFERENCE",
+        "RESEARCHED",
+        "SPECIFIED",
+        "DRAFT",
+        "TECHNICAL_CANDIDATE",
+        "HUMAN_REVIEW_PENDING",
+        "HUMAN_APPROVED",
+        "REUSABLE_FOUNDATION",
+        "PROJECT_ADAPTED",
+        "INTEGRATED_IN_PROJECT",
+        "DEPRECATED",
+        "REJECTED"
+      ]
+    },
+    "reduced_motion_strategy": {
+      "type": "string"
+    },
+    "motion_risks": {
+      "type": "array",
+      "minItems": 1
+    },
+    "intents": {
+      "type": "array"
+    },
+    "triggers": {
+      "type": "array"
+    },
+    "intensity": {
+      "type": "string"
+    },
+    "industry_frequency": {
+      "type": "string"
+    },
+    "implementation_type": {
+      "type": "string"
+    },
+    "performance_class": {
+      "type": "string"
+    },
+    "maximum_authorized_status": {
+      "type": "string"
+    },
+    "customization_levels": {
+      "type": "array"
+    },
+    "source_reference": {
+      "type": "string"
+    },
+    "product_integration_status": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

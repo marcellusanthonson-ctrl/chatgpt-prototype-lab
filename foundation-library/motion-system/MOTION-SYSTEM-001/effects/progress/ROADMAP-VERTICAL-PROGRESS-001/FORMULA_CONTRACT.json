@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0.0",
+  "effect_id": "ROADMAP-VERTICAL-PROGRESS-001",
+  "formula_required": true,
+  "calculation_model": "SCROLL_LINKED_PARAMETRIC",
+  "coordinate_space": "TIMELINE_LOCAL_VERTICAL_AXIS",
+  "inputs": [
+    {
+      "id": "timelineRect",
+      "unit": "css_px"
+    },
+    {
+      "id": "dotRects",
+      "unit": "css_px"
+    },
+    {
+      "id": "stepRects",
+      "unit": "css_px"
+    },
+    {
+      "id": "lastCardHeight",
+      "unit": "css_px"
+    },
+    {
+      "id": "viewportHeight",
+      "unit": "css_px"
+    }
+  ],
+  "derived_values": [
+    "firstDotCenter",
+    "lastCardTop",
+    "lastCardMid",
+    "targetTailEnd",
+    "railStart",
+    "railEnd",
+    "railHeight",
+    "triggerY",
+    "triggerInTimeline",
+    "fillHeight",
+    "dotOffset",
+    "stepProgress"
+  ],
+  "equations": [
+    "center(el)=el.top+el.height/2-timeline.top",
+    "paddingBottom=ceil(lastCardHeight+bottomSafetyGap)",
+    "lastCardTop=lastCard.top-timeline.top",
+    "lastCardMid=lastCardTop+lastCardHeight/2",
+    "targetTailEnd=lastCardMid+tailExtension",
+    "railStart=max(0,firstDotCenter)",
+    "railEnd=min(timelineHeight,targetTailEnd)",
+    "railHeight=max(minimumRailHeight,railEnd-railStart)",
+    "triggerY=viewportHeight*triggerRatio",
+    "triggerInTimeline=triggerY-timeline.top",
+    "fillHeight=clamp(triggerInTimeline-railStart,0,railHeight)",
+    "dotReached=fillHeight>=dotOffset+dotActivationOffset",
+    "stepProgress=clamp((fillHeight-stepTop)/stepDistance,0,1)"
+  ],
+  "constants": [
+    {
+      "id": "triggerRatio",
+      "default": 0.64
+    },
+    {
+      "id": "bottomSafetyGap",
+      "default": 72,
+      "unit": "px"
+    },
+    {
+      "id": "dotActivationOffset",
+      "default": 3,
+      "unit": "px"
+    },
+    {
+      "id": "endTolerance",
+      "default": 2,
+      "unit": "px"
+    },
+    {
+      "id": "minimumRailHeight",
+      "default": 1,
+      "unit": "px"
+    }
+  ],
+  "clamps": [
+    "0<=fillHeight<=railHeight",
+    "0<=stepProgress<=1",
+    "railHeight>=1",
+    "railStart>=0",
+    "railEnd<=timelineHeight"
+  ],
+  "invariants": [
+    "no NaN",
+    "ordered geometric activation",
+    "recalculate after geometry changes"
+  ],
+  "recalculation_triggers": [
+    "SCROLL",
+    "RESIZE",
+    "ORIENTATION_CHANGE",
+    "LOAD",
+    "DOCUMENT_FONTS_READY"
+  ],
+  "fallbacks": [
+    "missing required nodes => no effect",
+    "reduced motion => fillHeight=railHeight"
+  ],
+  "customizable_coefficients": [
+    "triggerRatio",
+    "bottomSafetyGap",
+    "tailExtension",
+    "dotActivationOffset",
+    "endTolerance"
+  ],
+  "locked_relations": [
+    "local coordinate normalization",
+    "rail and step clamps",
+    "geometry recalculation"
+  ],
+  "reduced_motion_formula": "fillHeight=railHeight; all steps active"
+}

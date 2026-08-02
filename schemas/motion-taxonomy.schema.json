@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lab.local/schemas/motion-taxonomy.schema.json",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "taxonomy_id",
+    "levels",
+    "intents",
+    "triggers",
+    "calculation_models",
+    "intensities",
+    "industry_frequency",
+    "performance",
+    "motion_risk"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "taxonomy_id": {
+      "type": "string"
+    },
+    "levels": {
+      "type": "array",
+      "minItems": 4
+    },
+    "intents": {
+      "type": "array"
+    },
+    "triggers": {
+      "type": "array"
+    },
+    "calculation_models": {
+      "type": "array"
+    },
+    "intensities": {
+      "type": "array"
+    },
+    "industry_frequency": {
+      "type": "array"
+    },
+    "performance": {
+      "type": "array"
+    },
+    "motion_risk": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": false
+}

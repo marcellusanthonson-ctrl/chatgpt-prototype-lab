@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "effect_id": "ROADMAP-VERTICAL-PROGRESS-001",
+  "perceptual_objective": "Show progress through ordered roadmap stages while preserving geometric alignment across variable card heights.",
+  "dynamic_elements": [
+    "rail_fill",
+    "dot_state",
+    "step_progress"
+  ],
+  "static_elements": [
+    "content_order",
+    "timeline_coordinate_system"
+  ],
+  "initial_state": {
+    "fillHeight": 0
+  },
+  "final_state": {
+    "fillHeight": "railHeight"
+  },
+  "trigger": "SCROLL_PROGRESS",
+  "repetition_policy": "SCROLL_REVERSIBLE",
+  "reduced_motion_behavior": "COMPLETE_STATE_IMMEDIATE",
+  "properties_and_owners": [
+    {
+      "property": "rail_fill_height",
+      "owner": "timeline_engine"
+    },
+    {
+      "property": "step_progress",
+      "owner": "timeline_engine"
+    }
+  ]
+}

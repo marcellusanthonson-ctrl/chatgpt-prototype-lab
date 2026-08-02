@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "token_set_id": "MOTION-TOKENS-001",
+  "tokens": {
+    "duration": {
+      "utility_ms": 120,
+      "subtle_ms": 240,
+      "expressive_ms": 480,
+      "signature_ms": 720
+    },
+    "distance_px": {
+      "small": 8,
+      "medium": 20,
+      "large": 48
+    },
+    "stagger_ms": {
+      "tight": 32,
+      "standard": 64,
+      "expressive": 100
+    },
+    "easing": {
+      "standard": "cubic-bezier(0.2,0,0,1)",
+      "enter": "cubic-bezier(0,0,0,1)",
+      "exit": "cubic-bezier(0.4,0,1,1)"
+    }
+  },
+  "note": "Defaults are starting points, not universal brand values."
+}

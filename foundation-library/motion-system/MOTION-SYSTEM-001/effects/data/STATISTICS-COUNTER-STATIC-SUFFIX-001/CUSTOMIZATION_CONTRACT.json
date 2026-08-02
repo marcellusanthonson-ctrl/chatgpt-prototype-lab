@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0.0",
+  "effect_id": "STATISTICS-COUNTER-STATIC-SUFFIX-001",
+  "locked_invariants": [
+    "STATIC_SUFFIX_NODE",
+    "BOUNDED_PROGRESS",
+    "BOUNDED_VALUE",
+    "RESERVED_FINAL_WIDTH",
+    "NO_INNERHTML_PER_FRAME"
+  ],
+  "safe_tokens": [
+    {
+      "id": "duration",
+      "range_ms": [
+        300,
+        3000
+      ]
+    },
+    {
+      "id": "triggerThreshold",
+      "range": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "easing",
+      "allowed": "MONOTONIC_EASE_OUT_PREFERRED"
+    }
+  ],
+  "choreography": [
+    "stagger across multiple counters"
+  ],
+  "visual_adaptation": [
+    "typography",
+    "color",
+    "weight",
+    "cell composition"
+  ],
+  "signature_derivation": {
+    "new_id_required": true,
+    "human_review_required": true
+  }
+}

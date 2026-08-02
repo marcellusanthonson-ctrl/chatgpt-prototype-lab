@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "approver": "Jonathan Martínez",
+  "silence_is_approval": false,
+  "model_self_approval": "PROHIBITED",
+  "review_questions": [
+    "Does motion clarify or distract?",
+    "Are static elements truly stable?",
+    "Is timing natural?",
+    "Is any movement unnecessary?",
+    "Does the effect fit the product context?"
+  ],
+  "allowed_outcomes": [
+    "APPROVED",
+    "APPROVED_WITH_EXPLICIT_DELTA",
+    "REQUEST_REVISION",
+    "REJECTED"
+  ]
+}

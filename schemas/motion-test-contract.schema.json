@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lab.local/schemas/motion-test-contract.schema.json",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "effect_id",
+    "required_replays",
+    "viewports",
+    "checks"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "effect_id": {
+      "type": "string"
+    },
+    "required_replays": {
+      "type": "integer",
+      "minimum": 5
+    },
+    "viewports": {
+      "type": "array",
+      "minItems": 3
+    },
+    "checks": {
+      "type": "array",
+      "minItems": 5
+    }
+  },
+  "additionalProperties": false
+}

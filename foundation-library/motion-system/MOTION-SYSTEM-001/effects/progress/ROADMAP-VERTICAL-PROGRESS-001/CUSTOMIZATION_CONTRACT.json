@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "effect_id": "ROADMAP-VERTICAL-PROGRESS-001",
+  "locked_invariants": [
+    "LOCAL_COORDINATE_SYSTEM",
+    "BOUNDED_RAIL",
+    "BOUNDED_STEP_PROGRESS",
+    "GEOMETRY_RECALCULATION",
+    "ORDERED_ACTIVATION"
+  ],
+  "safe_tokens": [
+    {
+      "id": "triggerRatio",
+      "range": [
+        0.45,
+        0.8
+      ]
+    },
+    {
+      "id": "bottomSafetyGap",
+      "range_px": [
+        24,
+        160
+      ]
+    },
+    {
+      "id": "dotActivationOffset",
+      "range_px": [
+        0,
+        12
+      ]
+    }
+  ],
+  "choreography": [
+    "card reveal can be synchronized but may not own rail progress"
+  ],
+  "visual_adaptation": [
+    "rail style",
+    "dot geometry",
+    "color",
+    "gradient",
+    "card materiality",
+    "mobile composition"
+  ],
+  "signature_derivation": {
+    "new_id_required": true,
+    "human_review_required": true
+  }
+}

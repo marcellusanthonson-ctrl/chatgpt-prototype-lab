@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "taxonomy_id": "MOTION-TAXONOMY-001",
+  "levels": [
+    "PRIMITIVE",
+    "PATTERN",
+    "COMPOSITION",
+    "PROJECT_ADAPTATION"
+  ],
+  "intents": [
+    "FEEDBACK",
+    "ORIENTATION",
+    "CONTINUITY",
+    "DISCLOSURE",
+    "FOCUS",
+    "ATTENTION",
+    "PROGRESS",
+    "STATUS",
+    "DATA_EXPLANATION",
+    "STORYTELLING",
+    "DELIGHT",
+    "BRAND_EXPRESSION"
+  ],
+  "triggers": [
+    "PAGE_LOAD",
+    "ROUTE_CHANGE",
+    "VIEWPORT_ENTRY",
+    "SCROLL_PROGRESS",
+    "HOVER",
+    "PRESS",
+    "FOCUS",
+    "SELECTION",
+    "DATA_UPDATE",
+    "DRAG",
+    "SWIPE",
+    "RESIZE",
+    "PROGRAMMATIC"
+  ],
+  "calculation_models": [
+    "STATIC_TRANSITION",
+    "KEYFRAME_SEQUENCE",
+    "INTERPOLATED_VALUE",
+    "PARAMETRIC_GEOMETRY",
+    "SCROLL_LINKED_PARAMETRIC",
+    "PHYSICS_BASED",
+    "DATA_DRIVEN",
+    "STATE_MACHINE",
+    "HYBRID"
+  ],
+  "intensities": [
+    "LEVEL_0_NONE",
+    "LEVEL_1_UTILITY",
+    "LEVEL_2_SUBTLE",
+    "LEVEL_3_EXPRESSIVE",
+    "LEVEL_4_SIGNATURE"
+  ],
+  "industry_frequency": [
+    "CORE",
+    "COMMON",
+    "SPECIALIZED",
+    "EXPERIMENTAL"
+  ],
+  "performance": [
+    "COMPOSITOR_SAFE",
+    "PAINT_REQUIRED",
+    "LAYOUT_AFFECTING",
+    "HIGH_RENDER_COST"
+  ],
+  "motion_risk": [
+    "LOW_MOTION_RISK",
+    "MODERATE_MOTION_RISK",
+    "HIGH_MOTION_RISK",
+    "FLASH_RISK",
+    "VESTIBULAR_RISK",
+    "COGNITIVE_LOAD_RISK"
+  ]
+}

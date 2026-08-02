@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "dimensions": [
+    {
+      "id": "level",
+      "required": true
+    },
+    {
+      "id": "intent",
+      "required": true,
+      "multi": true
+    },
+    {
+      "id": "trigger",
+      "required": true,
+      "multi": true
+    },
+    {
+      "id": "calculation_model",
+      "required": true
+    },
+    {
+      "id": "intensity",
+      "required": true
+    },
+    {
+      "id": "industry_frequency",
+      "required": true
+    },
+    {
+      "id": "implementation_type",
+      "required": true
+    },
+    {
+      "id": "performance_class",
+      "required": true
+    },
+    {
+      "id": "motion_risks",
+      "required": true,
+      "multi": true
+    },
+    {
+      "id": "reduced_motion_strategy",
+      "required": true
+    },
+    {
+      "id": "formula_required",
+      "required": true
+    },
+    {
+      "id": "customization_levels",
+      "required": true,
+      "multi": true
+    },
+    {
+      "id": "status",
+      "required": true
+    }
+  ]
+}

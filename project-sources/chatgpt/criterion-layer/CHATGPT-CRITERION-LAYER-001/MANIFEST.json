@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
   "layer_id": "CHATGPT-CRITERION-LAYER-001",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "status": "INTEGRATED_DOCUMENTARY_SELECTIVE",
-  "updated_at": "2026-07-31",
+  "updated_at": "2026-08-01",
   "files": [
     "CONTRACT.json",
     "MODULE_SELECTOR.json",
@@ -11,6 +11,7 @@
     "ACCEPTANCE_FIXTURES.json",
     "history/ACCEPTANCE_FIXTURES.v1.1.0.json",
     "VALIDATION_EVIDENCE.json",
+    "MOTION_SYSTEM_SOURCE.json",
     "MANIFEST.json"
   ],
   "canonical_paths": {
@@ -19,20 +20,24 @@
     "result_contract": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/RESULT_CONTRACT.json",
     "fixtures": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/ACCEPTANCE_FIXTURES.json",
     "fixtures_history_1_1_0": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/history/ACCEPTANCE_FIXTURES.v1.1.0.json",
-    "validation": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/VALIDATION_EVIDENCE.json"
+    "validation": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/VALIDATION_EVIDENCE.json",
+    "motion_system_source": "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MOTION_SYSTEM_SOURCE.json"
   },
   "sources": {
     "design_package": "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/MANIFEST.json",
     "accessibility_protocol": "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/ASSISTIVE_TECHNOLOGY_TEST_PROTOCOL.json",
     "visual_profile": "foundation-library/visual-preferences/jonathan-martinez.visual-preference-profile.json",
     "visual_protocol": "foundation-library/visual-protocols/high-fidelity-visual-protocol.json",
-    "minimum_impeccable_visual_foundation": "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MANIFEST.json"
+    "minimum_impeccable_visual_foundation": "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MANIFEST.json",
+    "motion_system": "foundation-library/motion-system/MOTION-SYSTEM-001/MANIFEST.json"
   },
   "counts": {
     "modules": 4,
-    "referenced_principles": 25,
-    "fixtures": 13
+    "referenced_principles": 27,
+    "fixtures": 13,
+    "transversal_motion_sources": 1
   },
+  "selector_semantics_effect": "NONE",
   "authority_effect": "NONE",
   "runtime_effect": "NONE",
   "rag_effect": "NONE"

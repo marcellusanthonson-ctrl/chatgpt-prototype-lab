@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "effect_id": "ROADMAP-VERTICAL-PROGRESS-001",
+  "sources": [
+    {
+      "source_id": "CAROLINA-ROADMAP-PARAMETRIC-001",
+      "role": "VERIFIED_CODE_FORMULA_SOURCE"
+    }
+  ],
+  "claims": [
+    {
+      "claim": "Formula extracted from committed Carolina source",
+      "classification": "VERIFIED_FROM_GITHUB_SOURCE"
+    },
+    {
+      "claim": "Generic package ready for reuse",
+      "classification": "PENDING_HUMAN_REVIEW"
+    }
+  ],
+  "project_source_mutation": "PROHIBITED"
+}

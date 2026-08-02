@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "effect_id": "STATISTICS-COUNTER-STATIC-SUFFIX-001",
+  "formula_required": true,
+  "calculation_model": "INTERPOLATED_VALUE",
+  "coordinate_space": "SCALAR_VALUE_DOMAIN",
+  "inputs": [
+    {
+      "id": "from",
+      "unit": "number"
+    },
+    {
+      "id": "to",
+      "unit": "number"
+    },
+    {
+      "id": "duration",
+      "unit": "ms"
+    },
+    {
+      "id": "timestamp",
+      "unit": "ms"
+    }
+  ],
+  "derived_values": [
+    {
+      "id": "rawProgress"
+    },
+    {
+      "id": "progress"
+    },
+    {
+      "id": "easedProgress"
+    },
+    {
+      "id": "currentValue"
+    }
+  ],
+  "equations": [
+    "rawProgress=(timestamp-startTime)/duration",
+    "progress=clamp(rawProgress,0,1)",
+    "easedProgress=easing(progress)",
+    "currentValue=round(from+(to-from)*easedProgress)"
+  ],
+  "constants": [],
+  "clamps": [
+    "0<=progress<=1",
+    "min(from,to)<=currentValue<=max(from,to)"
+  ],
+  "invariants": [
+    "suffix DOM identity is stable",
+    "number slot reserves final width",
+    "no empty numeric frame"
+  ],
+  "recalculation_triggers": [
+    "ANIMATION_FRAME"
+  ],
+  "fallbacks": [
+    "duration<=0 => final state"
+  ],
+  "customizable_coefficients": [
+    "duration",
+    "easing",
+    "from",
+    "to",
+    "triggerThreshold"
+  ],
+  "locked_relations": [
+    "only numeric node textContent changes",
+    "suffix is never recreated"
+  ],
+  "reduced_motion_formula": "currentValue=to immediately"
+}

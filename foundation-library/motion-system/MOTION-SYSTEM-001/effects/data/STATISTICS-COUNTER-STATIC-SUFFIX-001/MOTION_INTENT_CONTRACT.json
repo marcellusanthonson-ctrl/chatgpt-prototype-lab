@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "effect_id": "STATISTICS-COUNTER-STATIC-SUFFIX-001",
+  "perceptual_objective": "Reveal a changing numeric value while its suffix, unit and label remain visually and structurally stable.",
+  "dynamic_elements": [
+    "numeric_value"
+  ],
+  "static_elements": [
+    "suffix",
+    "unit",
+    "label",
+    "container"
+  ],
+  "initial_state": {
+    "numeric_value": 0
+  },
+  "final_state": {
+    "numeric_value": "configured_end"
+  },
+  "trigger": "VIEWPORT_ENTRY",
+  "repetition_policy": "ONCE_BY_DEFAULT",
+  "reduced_motion_behavior": "FINAL_STATE_IMMEDIATE",
+  "properties_and_owners": [
+    {
+      "property": "textContent",
+      "owner": "numeric_node"
+    },
+    {
+      "property": "suffix_geometry",
+      "owner": "layout"
+    }
+  ]
+}

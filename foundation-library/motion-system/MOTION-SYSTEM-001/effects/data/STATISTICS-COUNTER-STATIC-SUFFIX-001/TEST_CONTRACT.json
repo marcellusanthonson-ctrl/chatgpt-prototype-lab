@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0.0",
+  "effect_id": "STATISTICS-COUNTER-STATIC-SUFFIX-001",
+  "required_replays": 5,
+  "viewports": [
+    "390x844",
+    "768x1024",
+    "1440x1000"
+  ],
+  "checks": [
+    "NO_NEGATIVE_VALUES",
+    "NO_VALUES_ABOVE_MAX",
+    "ONE_SUFFIX_NODE",
+    "SUFFIX_DOM_IDENTITY_STABLE",
+    "SUFFIX_XY_VARIATION_LTE_0_25_CSS_PX",
+    "NO_EMPTY_FRAMES",
+    "REDUCED_MOTION_FINAL_STATE",
+    "FINAL_STATE_STABLE_500MS",
+    "NO_EXTERNAL_NETWORK",
+    "NO_CONSOLE_ERRORS"
+  ]
+}

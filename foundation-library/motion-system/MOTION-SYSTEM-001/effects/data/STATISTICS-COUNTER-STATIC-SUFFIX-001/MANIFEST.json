@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "effect_id": "STATISTICS-COUNTER-STATIC-SUFFIX-001",
+  "canonical_name": "Statistics Counter with Static Suffix",
+  "level": "COMPOSITION",
+  "category": "DATA_CHANGE",
+  "industry_frequency": "COMMON",
+  "intents": [
+    "DATA_EXPLANATION",
+    "ATTENTION"
+  ],
+  "triggers": [
+    "VIEWPORT_ENTRY",
+    "PROGRAMMATIC"
+  ],
+  "intensity": "LEVEL_2_SUBTLE",
+  "calculation_model": "INTERPOLATED_VALUE",
+  "formula_required": true,
+  "implementation_type": "REQUEST_ANIMATION_FRAME",
+  "performance_class": "COMPOSITOR_SAFE_WITH_BOUNDED_DOM_MEASUREMENT",
+  "motion_risks": [
+    "MODERATE_MOTION_RISK"
+  ],
+  "reduced_motion_strategy": "FINAL_STATE_IMMEDIATE",
+  "status": "HUMAN_REVIEW_PENDING",
+  "maximum_authorized_status": "HUMAN_REVIEW_PENDING",
+  "customization_levels": [
+    "L0_DEFAULT",
+    "L1_TOKEN_CUSTOMIZATION",
+    "L2_CHOREOGRAPHY_CUSTOMIZATION",
+    "L3_VISUAL_ADAPTATION",
+    "L4_SIGNATURE_DERIVATION"
+  ],
+  "source_reference": "CAROLINA-STATS-ATTEMPT-009",
+  "product_integration_status": "NOT_AUTHORIZED_NOT_PERFORMED"
+}

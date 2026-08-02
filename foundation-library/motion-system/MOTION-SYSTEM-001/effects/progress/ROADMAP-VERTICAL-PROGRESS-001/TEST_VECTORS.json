@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "effect_id": "ROADMAP-VERTICAL-PROGRESS-001",
+  "vectors": [
+    {
+      "id": "ONE_STAGE",
+      "stage_heights": [
+        240
+      ]
+    },
+    {
+      "id": "TWO_VARIABLE",
+      "stage_heights": [
+        180,
+        360
+      ]
+    },
+    {
+      "id": "FOUR_MIXED",
+      "stage_heights": [
+        220,
+        310,
+        190,
+        420
+      ]
+    },
+    {
+      "id": "REDUCED_MOTION",
+      "expected": "ALL_ACTIVE"
+    },
+    {
+      "id": "MID_PAGE_LOAD",
+      "initial_scroll_ratio": 0.55
+    }
+  ]
+}

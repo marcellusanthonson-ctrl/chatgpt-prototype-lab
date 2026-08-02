@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "effect_id": "ROADMAP-VERTICAL-PROGRESS-001",
+  "required_replays": 5,
+  "viewports": [
+    "390x844",
+    "768x1024",
+    "1440x1000"
+  ],
+  "checks": [
+    "ONE_STAGE",
+    "TWO_STAGES",
+    "MULTIPLE_STAGES",
+    "VARIABLE_HEIGHT_CARDS",
+    "LONG_TEXT",
+    "RESIZE",
+    "ORIENTATION_CHANGE",
+    "FONT_READY_RECALCULATION",
+    "MID_PAGE_LOAD",
+    "SCROLL_FORWARD_AND_REVERSE",
+    "NO_NAN",
+    "BOUNDED_FILL",
+    "BOUNDED_STEP_PROGRESS",
+    "REDUCED_MOTION_COMPLETE_STATE",
+    "NO_EXTERNAL_NETWORK",
+    "NO_CONSOLE_ERRORS"
+  ]
+}

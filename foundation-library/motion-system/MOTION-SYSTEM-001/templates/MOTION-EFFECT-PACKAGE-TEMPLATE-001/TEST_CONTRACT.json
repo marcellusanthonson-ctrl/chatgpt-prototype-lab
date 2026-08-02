@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "effect_id": "REPLACE_ME",
+  "required_replays": 5,
+  "viewports": [
+    "390x844",
+    "768x1024",
+    "1440x1000"
+  ],
+  "checks": [
+    "REDUCED_MOTION",
+    "NO_EXTERNAL_NETWORK",
+    "NO_CONSOLE_ERRORS",
+    "NO_EMPTY_FRAMES",
+    "FINAL_STATE_STABLE_500MS"
+  ]
+}
