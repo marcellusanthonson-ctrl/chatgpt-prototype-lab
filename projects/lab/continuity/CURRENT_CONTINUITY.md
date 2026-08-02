@@ -1,21 +1,17 @@
-# Continuidad LAB — fidelidad de fuente del roadmap aprobada
+# Continuidad LAB — referencia canónica y behavior core del roadmap
 
-Jonathan Martínez emitió la determinación humana `APPROVED_SOURCE_FIDELITY` para `CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002` el 2 de agosto de 2026, después de una revisión completa mediante `localhost`.
+La autorización `AUTHORIZATION_LAB_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176` fue ratificada por Jonathan Martínez y ejecutada desde el parent autorizado `a4e05f5c5ac8493340fbac41afed881c8b2bced4`.
 
-La revisión confirmó:
+`CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002` quedó designado como la implementación de referencia canónica para `ROADMAP-VERTICAL-PROGRESS-001` mediante un puntero al artefacto ya aprobado. `REFERENCE_IMPLEMENTATION.html`, `COMPARISON_METRICS.json` y `SOURCE_PROVENANCE.json` permanecen sin modificación.
 
-- recorrido íntegro desde el inicio hasta el terminal cap;
-- paridad visual entre baseline y candidato;
-- ausencia de scroll sin objetivo después del terminal;
-- disposición responsive alternada de las tarjetas al superar el breakpoint aplicable;
-- conservación de la fórmula, los artefactos protegidos y el repositorio Carolina sin mutaciones.
+El behavior core `ROADMAP-VERTICAL-PROGRESS-BEHAVIOR-CORE-001` fue extraído sin textos, marca, tipografía, colores, íconos, contenido clínico ni assets Carolina. Conserva cálculo paramétrico, medición viva, re-medición, padding dinámico, activación progresiva, revelado independiente, terminal cap, reduced motion y estabilización tardía.
 
-Los gates automatizados del candidato permanecen en PASS: SSIM `1.0`, cero diferencias de estilos computados, geometría, eje, concentricidad, solicitudes externas, aislamiento y overflow horizontal.
+La matriz Chromium controlada con bytes exactos pasó siete viewports en movimiento normal, siete en reduced motion y siete comprobaciones de transición de la referencia. Hubo cero solicitudes externas y cero overflow horizontal. La navegación automatizada real a `localhost` no quedó establecida porque el entorno devolvió `ERR_BLOCKED_BY_ADMINISTRATOR`; esta limitación no se oculta ni se convierte en un claim de localhost.
 
-`ERR-LAB-011` está cerrado por fidelidad de fuente aprobada. `PEND-LAB-046` está cerrado. `PEND-LAB-043` continúa abierto únicamente para la revisión del counter, la población restante de la biblioteca y decisiones separadas sobre designación canónica, behavior core, promoción reusable e integraciones.
+La implementación neutral anterior permanece `REJECTED_AS_CANONICAL_REFERENCE_PRESERVED_HISTORICALLY`. No fue reemplazada ni promovida.
 
-Las autorizaciones 172, 173, 174 y 175 están consumidas. No existe autoridad activa. La aprobación de fidelidad **no** constituye designación de referencia canónica, reemplazo canónico, extracción de behavior core, promoción reusable, integración de producto ni autorización de runtime.
+`ERR-LAB-011` y `PEND-LAB-046` permanecen cerrados. `PEND-LAB-043` continúa únicamente para la revisión humana del counter, una eventual adaptación neutral, promoción reusable, población adicional e integraciones de proyecto, todas mediante autorizaciones separadas.
 
-La fase global continúa `PRIORITY_INTEGRATIONS_PHASE_1_CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED`; `PEND-LAB-045` permanece sin cambios.
+La fase global continúa `PRIORITY_INTEGRATIONS_PHASE_1_CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED`. No existe autoridad activa después del consumo de la autorización 176.
 
-Siguiente acción única: obtener una autorización explícita separada para designar la referencia canónica y extraer el behavior core, o continuar otra prioridad del LAB que cuente con autorización vigente.
+Siguiente acción única: revisión humana de `STATISTICS-COUNTER-STATIC-SUFFIX-001`.
