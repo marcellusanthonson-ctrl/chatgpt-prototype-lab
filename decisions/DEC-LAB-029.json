@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0.0",
+  "id": "DEC-LAB-029",
+  "project": "lab",
+  "project_id": "lab",
+  "title": "Establish a governed transversal motion-design system with classified, customizable and formula-bearing effects",
+  "status": "APPROVED",
+  "approval_state": "APPROVED",
+  "effective_date": "2026-08-01",
+  "publication_status": "PUBLISHED",
+  "decision_type": "HUMAN_TRANSVERSAL_MOTION_SYSTEM_FOUNDATION",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-08-01T22:53:00-04:00",
+  "approval_source": "APRUEBO DEC-LAB-029.",
+  "decision": {
+    "motion_system_authorized_as_transversal_foundation": true,
+    "canonical_owner": "LAB",
+    "canonical_root": "foundation-library/motion-system/MOTION-SYSTEM-001",
+    "project_operational_implementations_remain_project_owned": true,
+    "formula_bearing_effects_require_canonical_formula_contracts": true,
+    "human_approval_required_before_reusable_foundation_promotion": true,
+    "product_integration_requires_separate_authorization": true,
+    "initial_effects": [
+      "STATISTICS-COUNTER-STATIC-SUFFIX-001",
+      "ROADMAP-VERTICAL-PROGRESS-001"
+    ],
+    "taxonomy_gate_required_before_population": true
+  },
+  "required_outcomes": [
+    "PUBLISH_MULTIDIMENSIONAL_MOTION_TAXONOMY",
+    "PUBLISH_REUSABLE_PROTOCOL_AND_VALIDATION_CONTRACTS",
+    "PUBLISH_CUSTOMIZATION_AND_SIGNATURE_DERIVATION_BOUNDARIES",
+    "PUBLISH_FORMULA_CONTRACT_FOR_PARAMETRIC_EFFECTS",
+    "PUBLISH_OFFLINE_VISUAL_CATALOG",
+    "EXTRACT_TWO_INITIAL_EFFECTS_AS_HUMAN_REVIEW_PENDING_CANDIDATES",
+    "CONNECT_AS_SOURCE_OF_DESIGN_CRITERION_AND_WEB_ACCESSIBILITY_WITHOUT_SELECTOR_SEMANTIC_CHANGE"
+  ],
+  "non_authorizations": [
+    "NO_PRODUCT_CHANGE",
+    "NO_EXTERNAL_REPOSITORY_MUTATION",
+    "NO_PRODUCT_INTEGRATION",
+    "NO_RUNTIME",
+    "NO_DEPLOYMENT",
+    "NO_SKILL_INSTALLATION",
+    "NO_AUTOMATIC_EFFECT_PROMOTION",
+    "NO_STATIC_SELECTOR_RETIREMENT",
+    "NO_POINTER_OR_CANDIDATE_REGISTRY_CHANGE"
+  ],
+  "supersedes": [
+    "AUTHORIZATION_LOCAL_CAROLINA_REUSABLE_MOTION_LIBRARY_FOUNDATION_010_PROPOSAL_ONLY"
+  ],
+  "superseded_by": null,
+  "source_refs": [
+    "project-sources/chatgpt/START_HERE.md",
+    "LAB_CONTRACT.md",
+    "METHODOLOGY.md",
+    "foundation-library/visual-protocols/high-fidelity-visual-protocol.json",
+    "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MANIFEST.json",
+    "marcellusanthonson-ctrl/carolina-md-next-landing@52654da574952148f96d051e439bff1cbc7b4b9d:hooks/landing/_scrollReveal.ts"
+  ],
+  "authority_effect": "NORMATIVE_DECISION_ONLY_EXECUTION_REQUIRES_AUTHORIZATION_167",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}
