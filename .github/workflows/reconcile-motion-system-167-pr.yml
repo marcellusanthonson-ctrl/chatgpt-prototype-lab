@@ -18,10 +18,21 @@ jobs:
       - name: Apply and validate bounded reconciliation
         shell: bash
         run: |
+          cp scripts/reconcile_motion_system_167.py /tmp/reconcile_motion_system_167.py
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('/tmp/reconcile_motion_system_167.py')
+          text = path.read_text(encoding='utf-8')
+          text = text.replace('ROOT = Path(__file__).resolve().parents[1]', 'ROOT = Path.cwd()')
+          text = text.replace('current["motion_system_foundation"] = {', 'current["canonical_model"]["motion_system_foundation"] = {')
+          text = text.replace('project_state["motion_system_foundation"] = current["motion_system_foundation"]', 'project_state["motion_system_foundation"] = current["canonical_model"]["motion_system_foundation"]')
+          path.write_text(text, encoding='utf-8')
+          PY
+          rm scripts/reconcile_motion_system_167.py
           if test -f projects/lab/test-executions/MOTION-SYSTEM-167-RECONCILIATION-DONE.json; then
-            python scripts/reconcile_motion_system_167.py --validate
+            python /tmp/reconcile_motion_system_167.py --validate
           else
-            python scripts/reconcile_motion_system_167.py --apply --validate
+            python /tmp/reconcile_motion_system_167.py --apply --validate
             cat > projects/lab/test-executions/MOTION-SYSTEM-167-RECONCILIATION-DONE.json <<'JSON'
           {
             "schema_version": "1.0.0",
