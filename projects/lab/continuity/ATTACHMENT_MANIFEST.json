@@ -1,71 +1,36 @@
 {
   "schema_version": "1.2.0",
-  "manifest_id": "LAB-CONTINUITY-ATTACHMENTS-ROADMAP-SECTION-SOURCE-FIDELITY-APPROVED-173-20260802",
+  "manifest_id": "LAB-CONTINUITY-ATTACHMENTS-ROADMAP-CANONICAL-REFERENCE-BEHAVIOR-CORE-176-20260802",
   "status": "CURRENT",
   "project_id": "lab",
-  "created_at": "2026-08-02T18:43:00-04:00",
-  "required_read_order": [
-    "CURRENT_CONTINUITY.json",
-    "CURRENT_CONTINUITY.md",
-    "ATTACHMENT_MANIFEST.json",
-    "START_PROMPT.md"
-  ],
+  "created_at": "2026-08-02T19:36:00-04:00",
+  "required_read_order": ["CURRENT_CONTINUITY.json", "CURRENT_CONTINUITY.md", "ATTACHMENT_MANIFEST.json", "START_PROMPT.md"],
   "attachments": [
-    {
-      "path": "projects/lab/continuity/CURRENT_CONTINUITY.json",
-      "role": "CANONICAL_STRUCTURED_CONTINUITY",
-      "required": true
-    },
-    {
-      "path": "projects/lab/continuity/CURRENT_CONTINUITY.md",
-      "role": "HUMAN_READABLE_CONTINUITY",
-      "required": true
-    },
-    {
-      "path": "projects/lab/continuity/ATTACHMENT_MANIFEST.json",
-      "role": "READ_ORDER_AND_REFERENCE_MANIFEST",
-      "required": true
-    },
-    {
-      "path": "projects/lab/continuity/START_PROMPT.md",
-      "role": "FIRST_MESSAGE_FOR_NEW_CONVERSATION",
-      "required": true
-    }
+    {"path":"projects/lab/continuity/CURRENT_CONTINUITY.json","role":"CANONICAL_STRUCTURED_CONTINUITY","required":true},
+    {"path":"projects/lab/continuity/CURRENT_CONTINUITY.md","role":"HUMAN_READABLE_CONTINUITY","required":true},
+    {"path":"projects/lab/continuity/ATTACHMENT_MANIFEST.json","role":"READ_ORDER_AND_REFERENCE_MANIFEST","required":true},
+    {"path":"projects/lab/continuity/START_PROMPT.md","role":"FIRST_MESSAGE_FOR_NEW_CONVERSATION","required":true}
   ],
   "repository_sources_not_duplicated_as_attachments": [
     "decisions/DEC-LAB-031.json",
-    "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_SECTION_ISOLATION_AND_REVALIDATION_172.json",
-    "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_SCROLL_CORRECTION_AND_CONDITIONAL_DECISION_RECONCILIATION_173.json",
-    "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_LIVE_SCROLL_RANGE_REPAIR_174.json",
-    "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SECTION_POST_TERMINAL_DEAD_SCROLL_REMOVAL_175.json",
-    "registry/deltas/roadmap-section-source-fidelity-human-approval-173.json",
-    "errors/ERR-LAB-011.json",
-    "projects/lab/pending/PEND-LAB-043.json",
-    "projects/lab/pending/PEND-LAB-046.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176.json",
+    "projects/lab/briefs/CODEX_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176_001.json",
     "foundation-library/motion-system/MOTION-SYSTEM-001/MANIFEST.json",
-    "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/MANIFEST.json",
-    "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-173.json",
-    "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-POST-TERMINAL-DEAD-SCROLL-175.json"
+    "foundation-library/motion-system/MOTION-SYSTEM-001/MOTION_EFFECTS_REGISTRY.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/CANONICAL_REFERENCE.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/BEHAVIOR_CORE_CONTRACT.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/BEHAVIOR_CORE_VALIDATION_RESULTS.json",
+    "projects/lab/evidence/EVD-LAB-ROADMAP-CANONICAL-REFERENCE-BEHAVIOR-CORE-176.json",
+    "projects/lab/pending/PEND-LAB-043.json",
+    "registry/deltas/roadmap-canonical-reference-behavior-core-176.json"
   ],
-  "archived_package": "projects/lab/continuity/archive/LAB-CONTINUITY-ROADMAP-SOURCE-FIDELITY-171-20260802.pointer.json",
+  "archived_package": "projects/lab/continuity/archive/LAB-CONTINUITY-ROADMAP-SECTION-SOURCE-FIDELITY-APPROVED-173-20260802.pointer.json",
   "archived_package_integrity": {
-    "CURRENT_CONTINUITY.json": {
-      "git_blob_sha": "a94d76428427f58cb3584035da7eb287c486e407",
-      "commit": "eb09a88153e5589b0c9c2e00d8dae99fd3200b38"
-    },
-    "CURRENT_CONTINUITY.md": {
-      "git_blob_sha": "01d4a025592f8aaa724f92eac69eedc73abb92fe",
-      "commit": "eb09a88153e5589b0c9c2e00d8dae99fd3200b38"
-    },
-    "ATTACHMENT_MANIFEST.json": {
-      "git_blob_sha": "a01e5b3a657aa85df8e45156fee30ce442bccfdb",
-      "commit": "eb09a88153e5589b0c9c2e00d8dae99fd3200b38"
-    },
-    "START_PROMPT.md": {
-      "git_blob_sha": "ded426aa11831db1c0597e6c4d675086b3253685",
-      "commit": "eb09a88153e5589b0c9c2e00d8dae99fd3200b38"
-    }
+    "CURRENT_CONTINUITY.json": {"git_blob_sha":"b9fdc40ece7b1a70c46b42383bba7325e905acab"},
+    "CURRENT_CONTINUITY.md": {"git_blob_sha":"d19f3bd666d2a357805f5c3fd18a8df9130fa573"},
+    "ATTACHMENT_MANIFEST.json": {"git_blob_sha":"dab076f6ee2228a5542a7f0fea83c17d8f546457"},
+    "START_PROMPT.md": {"git_blob_sha":"e761f58425b48cb0483ce6411d53fd2b00e0dd1d"}
   },
   "missing_attachments": [],
-  "authority_effect": "NONE_AFTER_AUTHORIZATION_173_STAGE_2_CONSUMPTION"
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_176_CONSUMPTION"
 }
