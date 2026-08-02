@@ -852,22 +852,26 @@
       "schema_version": "1.0.0",
       "id": "PEND-LAB-043",
       "project_id": "lab",
-      "status": "PENDING_NEW_HUMAN_REVIEW_AND_STAGED_LIBRARY_POPULATION",
+      "status": "SOURCE_FAITHFUL_CANDIDATE_READY_HUMAN_COMPARISON_PENDING",
       "type": "MOTION_SYSTEM_HUMAN_GATE_AND_LIBRARY_POPULATION",
       "title": "Human review and staged population of the transversal motion-effects library",
       "priority": "HIGH",
       "required_actions": [
-        "HUMAN_REVIEW_TWO_INITIAL_DEMOS_AFTER_CORRECTION",
+        "PRESERVE_STATISTICS_COUNTER_HUMAN_REVIEW_PENDING_STATE",
+        "PRESERVE_CURRENT_ROADMAP_AS_HISTORICAL_NEUTRAL_DERIVATION",
+        "HUMAN_COMPARE_SOURCE_FAITHFUL_CANDIDATE",
         "PROMOTE_REVISE_OR_REJECT_EACH_INITIAL_EFFECT",
         "IMPLEMENT_INDUSTRY_EFFECTS_IN_BOUNDED_BATCHES",
         "AUTHORIZE_PROJECT_INTEGRATIONS_SEPARATELY"
       ],
-      "current_authority": "NONE_AFTER_AUTHORIZATION_168_CONSUMPTION",
+      "current_authority": "NONE_AFTER_AUTHORIZATION_171_CONSUMPTION_HUMAN_DECISION_REQUIRED",
       "source_refs": [
         "foundation-library/motion-system/MOTION-SYSTEM-001/MANIFEST.json",
         "projects/lab/evidence/EVD-LAB-MOTION-SYSTEM-001.json",
         "projects/lab/evidence/EVD-LAB-MOTION-CATALOG-ROADMAP-CORRECTION-168.json",
-        "errors/ERR-LAB-010.json"
+        "errors/ERR-LAB-010.json",
+        "errors/ERR-LAB-011.json",
+        "projects/lab/pending/PEND-LAB-046.json"
       ]
     },
     {
@@ -950,7 +954,7 @@
       "subject": "Human comparison of the Carolina roadmap source-faithful candidate after forensic reconstruction",
       "priority": "HIGH",
       "canonical_path": "projects/lab/pending/PEND-LAB-046.json",
-      "current_candidate_state": "NOT_YET_MATERIALIZED",
+      "current_candidate_state": "HUMAN_REVIEW_PENDING_AUTOMATED_GATES_PASS",
       "authorization": "AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171",
       "decision": "DEC-LAB-031",
       "error": "ERR-LAB-011",

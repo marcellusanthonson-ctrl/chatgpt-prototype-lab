@@ -216,9 +216,9 @@
       "attached_files_role": "BOOTSTRAP_POINTER_ONLY"
     },
     "authorization_registry": {
-      "status": "AUTHORIZATION_171_GRANTED_AWAITING_EXECUTION",
-      "registered_consumed_transitions": 61,
-      "active_authorizations": 1,
+      "status": "AUTHORIZATION_171_CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "registered_consumed_transitions": 62,
+      "active_authorizations": 0,
       "latest": "AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171",
       "base_registry": "registry/authorizations.json",
       "correspondence_policy": "CONSUMED_RECORD_STATE_KEY_REQUIRED_ACTIVE_NON_CONSUMED_SEPARATE"
@@ -849,19 +849,25 @@
     "integrated": false
   },
   "motion_source_fidelity_workstream_171": {
-    "status": "ROADMAP_SOURCE_FIDELITY_RECONSTRUCTION_171_GRANTED_AWAITING_EXECUTION",
+    "status": "CAROLINA_ROADMAP_SOURCE_FIDELITY_CANDIDATE_READY_FOR_HUMAN_COMPARISON_PROTOCOL_HARDENED",
     "decision": "DEC-LAB-031",
     "authorization": "AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171",
     "error": "ERR-LAB-011",
     "pending": "PEND-LAB-046",
     "current_neutral_derivation": "REJECTED_AS_CANONICAL_REFERENCE_PRESERVED_HISTORICALLY",
-    "source_faithful_candidate": "NOT_YET_MATERIALIZED",
+    "source_faithful_candidate": "HUMAN_REVIEW_PENDING",
+    "candidate_path": "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SOURCE-FAITHFUL-001/",
+    "automated_gates": "PASS_SSIM_0_998893_STYLE_0_GEOMETRY_0_EXTERNAL_0",
+    "authorization_state": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "human_approval": false,
+    "canonical_replacement": false,
+    "reusable_promotion": false,
     "carolina_repository": "READ_ONLY_IMMUTABLE_EVIDENTIARY_SOURCE",
     "global_current_phase": "PRESERVED_PRIORITY_INTEGRATIONS_PHASE_1_CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED",
     "product_effect": "NONE",
     "runtime_effect": "NONE",
     "integration_effect": "NONE"
   },
-  "next_authorized_action": "EXECUTE_AUTHORIZATION_171_STAGE_2_AFTER_VERIFIED_STAGE_1_REMOTE_PUBLICATION",
-  "next_recommended_transition": "EXECUTE_PARALLEL_MOTION_SOURCE_FIDELITY_WORKSTREAM_171_WITHOUT_CHANGING_PRIORITY_INTEGRATIONS_PHASE"
+  "next_authorized_action": "NONE_HUMAN_SOURCE_FIDELITY_DECISION_REQUIRED",
+  "next_recommended_transition": "HUMAN_COMPARE_CAROLINA_ROADMAP_SOURCE_FAITHFUL_CANDIDATE_WITHOUT_CHANGING_PRIORITY_INTEGRATIONS_PHASE"
 }

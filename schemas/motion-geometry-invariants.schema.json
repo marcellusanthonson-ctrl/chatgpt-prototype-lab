@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lab.local/schemas/motion-geometry-invariants.schema.json",
+  "title": "Motion geometry invariants",
+  "type": "object",
+  "required": ["schema_version", "axis_tolerance_css_px", "concentricity_tolerance_css_px", "source_candidate_structural_tolerance_css_px", "text_xy_tolerance_css_px", "exact_relationships", "measurements"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "axis_tolerance_css_px": {"type": "number", "minimum": 0, "maximum": 0.25},
+    "concentricity_tolerance_css_px": {"type": "number", "minimum": 0, "maximum": 0.25},
+    "source_candidate_structural_tolerance_css_px": {"type": "number", "minimum": 0, "maximum": 0.5},
+    "text_xy_tolerance_css_px": {"type": "number", "minimum": 0, "maximum": 1},
+    "exact_relationships": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true},
+    "measurements": {"type": "string", "minLength": 1}
+  },
+  "additionalProperties": false
+}

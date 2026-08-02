@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0",
+  "rail_start": "max(0, firstDotCenter)",
+  "dynamic_padding_bottom": "ceil(lastCardHeight + 72)",
+  "target_tail_end": "lastCardMid + lastCardHeight",
+  "rail_end": "min(timelineHeight, targetTailEnd)",
+  "rail_height": "max(1, railEnd - railStart)",
+  "trigger_y": "viewportHeight * 0.64",
+  "fill_height": "clamp(triggerY - initialTimelineTop - railStart, 0, railHeight)",
+  "reduced_motion_fill": "railHeight",
+  "node_reached": "fillHeight >= dotOffset + 3",
+  "step_progress": "clamp((fillHeight - stepTop) / max(1, stepBottom - stepTop), 0, 1)",
+  "terminal_active": "fillHeight >= railHeight - 2"
+}

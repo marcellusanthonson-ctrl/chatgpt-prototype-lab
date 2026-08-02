@@ -1,7 +1,7 @@
 {
   "schema_version": "2.5.0",
   "document_id": "lab.current-state",
-  "version": "2.5.51",
+  "version": "2.5.52",
   "status": "PRIORITY_INTEGRATIONS_PHASE_1_CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED",
   "updated_at": "2026-08-02",
   "active_project": "lab",
@@ -94,6 +94,8 @@
     "motion_source_fidelity_brief_171": "projects/lab/briefs/CODEX_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171_001.json",
     "motion_source_fidelity_error_011": "errors/ERR-LAB-011.json",
     "motion_source_fidelity_pending_046": "projects/lab/pending/PEND-LAB-046.json",
+    "motion_source_fidelity_candidate_171": "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SOURCE-FAITHFUL-001/MANIFEST.json",
+    "motion_source_fidelity_human_comparison_171": "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SOURCE-FAITHFUL-001/HUMAN_COMPARISON.html",
     "motion_system_foundation": {
       "status": "CORRECTION_REMOTE_VERIFIED_READY_FOR_NEW_HUMAN_REVIEW",
       "decision": "DEC-LAB-029",
@@ -105,7 +107,16 @@
       "product_effect": "NONE",
       "runtime_effect": "NONE",
       "authorization_state": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-      "validation": "VISIBLE_BROWSER_MATRIX_AND_REPOSITORY_VALIDATION_PASS"
+      "validation": "VISIBLE_BROWSER_MATRIX_AND_REPOSITORY_VALIDATION_PASS",
+      "source_fidelity_171": {
+        "status": "CAROLINA_ROADMAP_SOURCE_FIDELITY_CANDIDATE_READY_FOR_HUMAN_COMPARISON_PROTOCOL_HARDENED",
+        "current_neutral_derivation": "REJECTED_AS_CANONICAL_REFERENCE_PRESERVED_HISTORICALLY",
+        "source_faithful_candidate": "HUMAN_REVIEW_PENDING",
+        "automated_gates": "PASS",
+        "human_approval": false,
+        "canonical_replacement": false,
+        "reusable_promotion": false
+      }
     },
     "priority_integrations_program": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/MANIFEST.json",
     "priority_integrations_roadmap": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/ROADMAP.json",
@@ -259,7 +270,7 @@
     "motion_catalog_review_surface_and_roadmap_fidelity_correction_168": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "priority_integrations_phase0_169": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "priority_integrations_phase1_170_revision_2": "CONSUMED_ON_VERIFIED_SQUASH_MERGE",
-    "roadmap_source_fidelity_forensic_reconstruction_171": "ROADMAP_SOURCE_FIDELITY_RECONSTRUCTION_171_GRANTED_AWAITING_EXECUTION"
+    "roadmap_source_fidelity_forensic_reconstruction_171": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
   },
   "verified_external_heads": {
     "symphonie": "31dd1345026240c83b015feef34d6f7f2d2147b7",

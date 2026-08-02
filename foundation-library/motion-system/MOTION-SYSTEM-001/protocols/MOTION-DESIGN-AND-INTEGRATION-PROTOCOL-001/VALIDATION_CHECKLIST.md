@@ -2,6 +2,8 @@
 
 ## Antes de construir
 - [ ] Intención y resultado perceptual definidos.
+- [ ] Inventario completo de fuente con blobs, hashes, roles, imports y selectores.
+- [ ] Implementación de referencia y contratos de fidelidad, anatomía y geometría creados.
 - [ ] Elementos dinámicos y estáticos separados.
 - [ ] Trigger, repetición y reduced motion definidos.
 - [ ] Geometría máxima y fórmula identificadas.
@@ -20,8 +22,11 @@
 - [ ] Cero frames vacíos, NaN o valores fuera de rango.
 - [ ] Reduced motion preserva información y layout.
 - [ ] Cero recursos externos y errores de consola.
+- [ ] Baseline fuente y comparación fuente-candidato en el mismo navegador.
+- [ ] Eje horizontal, concentricidad, geometría vertical, estilos computados, diff y SSIM validados.
 
 ## Cierre
 - [ ] Hashes, inventario, diff y procedencia.
 - [ ] Resultado humano separado del técnico.
 - [ ] Estado no supera la autoridad concedida.
+- [ ] Comparación humana publicada antes de cualquier abstracción, reemplazo o promoción.

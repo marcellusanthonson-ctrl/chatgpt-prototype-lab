@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "states": [
+    "before-first-node",
+    "first-node-activation",
+    "between-nodes-1-2",
+    "second-node-activation",
+    "between-nodes-2-3",
+    "third-node-activation",
+    "terminal-completion",
+    "reverse-traversal"
+  ],
+  "modes": [
+    "normal",
+    "reduced"
+  ],
+  "trigger_viewport_ratio": 0.64,
+  "events": [
+    "INITIAL_LOAD",
+    "SCROLL_FORWARD",
+    "SCROLL_REVERSE",
+    "RESIZE",
+    "ORIENTATION_CHANGE",
+    "WINDOW_LOAD",
+    "DOCUMENT_FONTS_READY",
+    "POST_INITIALIZATION_120_MS",
+    "POST_INITIALIZATION_360_MS"
+  ],
+  "card_reveal": {
+    "threshold": 0.1,
+    "independent": true
+  },
+  "reduced_motion": {
+    "rail": "COMPLETE",
+    "nodes": "ACTIVE",
+    "scroll_transitions": "DISABLED_BY_SOURCE_CSS"
+  }
+}

@@ -11,7 +11,7 @@
   "authorization": {
     "id": "AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171",
     "state_key": "roadmap_source_fidelity_forensic_reconstruction_171",
-    "status": "ROADMAP_SOURCE_FIDELITY_RECONSTRUCTION_171_GRANTED_AWAITING_EXECUTION",
+    "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171.json",
     "brief_path": "projects/lab/briefs/CODEX_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171_001.json",
     "approved_by": "Jonathan Martínez",
@@ -22,12 +22,12 @@
     "product_changes_authorized": false,
     "external_repository_mutation_authorized": false
   },
-  "active_authorization": "AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171",
-  "stage_1": "PUBLICATION_PENDING_REMOTE_VERIFICATION",
-  "stage_2": "GRANTED_CONDITIONAL_ON_STAGE_1_REMOTE_VERIFICATION",
+  "active_authorization": null,
+  "stage_1": "CONSUMED_ON_VERIFIED_STAGE_1_REMOTE_PUBLICATION_65E5536606807E37A46A2724426FBCB9F36144F7",
+  "stage_2": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
   "error": {
     "id": "ERR-LAB-011",
-    "status": "OPEN_CONFIRMED_REMEDIATION_AUTHORIZED",
+    "status": "OPEN_AWAITING_HUMAN_SOURCE_FIDELITY_DECISION",
     "canonical_path": "errors/ERR-LAB-011.json"
   },
   "pending": {
@@ -49,6 +49,17 @@
     "global_repository_pass": false,
     "ordered_message_digest": "37f9b685b127a980ee2be416760ac332ba3febd144514c873e64adc4d6b34bc1",
     "sorted_normalized_id_digest": "b104f98f2a5ecdbcd0cce08840f88ff8a458fc828b7683dfefb684bef21aae65"
+  },
+  "execution_result": {
+    "status": "CAROLINA_ROADMAP_SOURCE_FIDELITY_CANDIDATE_READY_FOR_HUMAN_COMPARISON_PROTOCOL_HARDENED",
+    "candidate": "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SOURCE-FAITHFUL-001/",
+    "minimum_ssim": 0.9988932964993412,
+    "computed_style_mismatch_count": 0,
+    "geometry_mismatch_count": 0,
+    "candidate_external_request_count": 0,
+    "human_review": "PENDING",
+    "canonical_replacement": false,
+    "reusable_promotion": false
   },
   "authority_effect": "BOUNDED_STAGE_1_PUBLICATION_AND_CONDITIONAL_STAGE_2_EXECUTION",
   "runtime_effect": "NONE",

@@ -1,0 +1,204 @@
+{
+  "schema_version": "1.0.0",
+  "repository": "marcellusanthonson-ctrl/carolina-md-next-landing",
+  "fixed_commit": "52654da574952148f96d051e439bff1cbc7b4b9d",
+  "complete": true,
+  "records": [
+    {
+      "repository": "marcellusanthonson-ctrl/carolina-md-next-landing",
+      "fixed_commit": "52654da574952148f96d051e439bff1cbc7b4b9d",
+      "path": "app/page.tsx",
+      "blob_sha": "62b6a9a39a972688034f0d47c4079e3e262e93e5",
+      "sha256": "21f72c2e22eaf3140cdf796b5356f0d485972fdd37a839907f42f9419b454fdd",
+      "role": [
+        "MARKUP"
+      ],
+      "imported_by": [
+        "components/landing/LandingPage.tsx"
+      ],
+      "selectors_or_symbols": [
+        "Home",
+        "LandingPage"
+      ],
+      "copied_referenced_or_excluded": "REFERENCED_AND_FRAMEWORK_NEUTRALIZED_WITH_BEHAVIOR_PRESERVED",
+      "exclusion_reason": null
+    },
+    {
+      "repository": "marcellusanthonson-ctrl/carolina-md-next-landing",
+      "fixed_commit": "52654da574952148f96d051e439bff1cbc7b4b9d",
+      "path": "app/layout.tsx",
+      "blob_sha": "05a2eef0858405e1217a6338e46c7eafee432223",
+      "sha256": "885ff00d71d28773682c3ba42ad294d145c89013f7f6549a4e468837361c71ac",
+      "role": [
+        "TYPOGRAPHY",
+        "ACCESSIBILITY_BEHAVIOR"
+      ],
+      "imported_by": [
+        "app/page.tsx"
+      ],
+      "selectors_or_symbols": [
+        "Inter",
+        "RootLayout"
+      ],
+      "copied_referenced_or_excluded": "REFERENCED_AND_FRAMEWORK_NEUTRALIZED_WITH_BEHAVIOR_PRESERVED",
+      "exclusion_reason": null
+    },
+    {
+      "repository": "marcellusanthonson-ctrl/carolina-md-next-landing",
+      "fixed_commit": "52654da574952148f96d051e439bff1cbc7b4b9d",
+      "path": "app/globals.css",
+      "blob_sha": "7364654709c628cd41525c7efe8b79b4731a3c5a",
+      "sha256": "8de8d91f12c1dddcdec8915a34e580a39db97dd21d49553c31fb9ff23fffd826",
+      "role": [
+        "STYLES",
+        "RESPONSIVE_RULES"
+      ],
+      "imported_by": [
+        "app/layout.tsx"
+      ],
+      "selectors_or_symbols": [
+        "html",
+        "body",
+        "*"
+      ],
+      "copied_referenced_or_excluded": "COPIED_EXACT_INTO_MONOLITHIC_REFERENCE",
+      "exclusion_reason": null
+    },
+    {
+      "repository": "marcellusanthonson-ctrl/carolina-md-next-landing",
+      "fixed_commit": "52654da574952148f96d051e439bff1cbc7b4b9d",
+      "path": "components/landing/LandingPage.tsx",
+      "blob_sha": "dbea3ed55f28fc6fa439ca65cbf1dc30c8d0b0ad",
+      "sha256": "ef68261fb55696109062c7e31926366b1ce7a42b5337c7063a521884a81fa029",
+      "role": [
+        "MARKUP",
+        "STYLES"
+      ],
+      "imported_by": [
+        "app/page.tsx"
+      ],
+      "selectors_or_symbols": [
+        "LandingPage",
+        "LANDING_CSS_HREF"
+      ],
+      "copied_referenced_or_excluded": "REFERENCED_AND_FRAMEWORK_NEUTRALIZED_WITH_BEHAVIOR_PRESERVED",
+      "exclusion_reason": null
+    },
+    {
+      "repository": "marcellusanthonson-ctrl/carolina-md-next-landing",
+      "fixed_commit": "52654da574952148f96d051e439bff1cbc7b4b9d",
+      "path": "components/landing/_landingMarkup.ts",
+      "blob_sha": "7552ea088dc8d0f234e01b33658eeb3886e5f518",
+      "sha256": "2132a4683fc33c1aac390a1ae27499ac76b697eebbfa78c97ab662ae5c250103",
+      "role": [
+        "MARKUP",
+        "CONTENT_DATA",
+        "ICON_ASSET",
+        "ACCESSIBILITY_BEHAVIOR"
+      ],
+      "imported_by": [
+        "components/landing/LandingPage.tsx"
+      ],
+      "selectors_or_symbols": [
+        "approvedLandingMarkup",
+        ".ca-roadmap-editorial"
+      ],
+      "copied_referenced_or_excluded": "COPIED_EXACT_INTO_MONOLITHIC_REFERENCE",
+      "exclusion_reason": null
+    },
+    {
+      "repository": "marcellusanthonson-ctrl/carolina-md-next-landing",
+      "fixed_commit": "52654da574952148f96d051e439bff1cbc7b4b9d",
+      "path": "hooks/landing/useCarolinaLandingInteractions.ts",
+      "blob_sha": "721c5858dcb4a538a14524c71232becb1c29446d",
+      "sha256": "e6ce8f9582fec6b04e768a2f15041ba775bcdd12f23b27755c7237970df02e16",
+      "role": [
+        "REVEAL_BEHAVIOR",
+        "ACCESSIBILITY_BEHAVIOR"
+      ],
+      "imported_by": [
+        "components/landing/LandingPage.tsx"
+      ],
+      "selectors_or_symbols": [
+        "useCarolinaLandingInteractions",
+        "initScrollReveal"
+      ],
+      "copied_referenced_or_excluded": "REFERENCED_AND_FRAMEWORK_NEUTRALIZED_WITH_BEHAVIOR_PRESERVED",
+      "exclusion_reason": null
+    },
+    {
+      "repository": "marcellusanthonson-ctrl/carolina-md-next-landing",
+      "fixed_commit": "52654da574952148f96d051e439bff1cbc7b4b9d",
+      "path": "hooks/landing/_landingTypes.ts",
+      "blob_sha": "04a19d5a78eb0dfecfda10f934fbf3f022edc8c3",
+      "sha256": "d176c253ff446fa6f5599191622196389433ba513270d9130fcbeea5733e3ea0",
+      "role": [
+        "ACCESSIBILITY_BEHAVIOR"
+      ],
+      "imported_by": [
+        "hooks/landing/useCarolinaLandingInteractions.ts",
+        "hooks/landing/_scrollReveal.ts"
+      ],
+      "selectors_or_symbols": [
+        "LandingCtx",
+        "Cleanup"
+      ],
+      "copied_referenced_or_excluded": "REFERENCED_AND_FRAMEWORK_NEUTRALIZED_WITH_BEHAVIOR_PRESERVED",
+      "exclusion_reason": null
+    },
+    {
+      "repository": "marcellusanthonson-ctrl/carolina-md-next-landing",
+      "fixed_commit": "52654da574952148f96d051e439bff1cbc7b4b9d",
+      "path": "hooks/landing/_scrollReveal.ts",
+      "blob_sha": "8d1714f97ba0188346a070dcc2d6887d296a7a90",
+      "sha256": "8e9fea9601af68b72450219943702c19b9a1825ec5722e2502d065e364e4882e",
+      "role": [
+        "MOTION_FORMULA",
+        "REVEAL_BEHAVIOR",
+        "RESPONSIVE_RULES",
+        "ACCESSIBILITY_BEHAVIOR"
+      ],
+      "imported_by": [
+        "hooks/landing/useCarolinaLandingInteractions.ts"
+      ],
+      "selectors_or_symbols": [
+        "initScrollReveal",
+        "updateTimeline",
+        "--rail-start",
+        "--rail-height",
+        "--rail-fill-height",
+        "--progress"
+      ],
+      "copied_referenced_or_excluded": "REFERENCED_AND_FRAMEWORK_NEUTRALIZED_WITH_BEHAVIOR_PRESERVED",
+      "exclusion_reason": null
+    },
+    {
+      "repository": "marcellusanthonson-ctrl/carolina-md-next-landing",
+      "fixed_commit": "52654da574952148f96d051e439bff1cbc7b4b9d",
+      "path": "public/landing/carolina_md_approved_patch.css",
+      "blob_sha": "e727535db8af36368f7e2623f6a5626f8a8fe5ea",
+      "sha256": "6e1f6886cd515061b5ac18836eb192e4e3a9c73be4c61b91b3e81623e3461704",
+      "role": [
+        "STYLES",
+        "TYPOGRAPHY",
+        "RESPONSIVE_RULES",
+        "ICON_ASSET",
+        "ACCESSIBILITY_BEHAVIOR"
+      ],
+      "imported_by": [
+        "components/landing/LandingPage.tsx"
+      ],
+      "selectors_or_symbols": [
+        ".ca-roadmap-editorial",
+        ".ca-roadmap-editorial__timeline",
+        ".ca-roadmap-editorial__line",
+        ".ca-roadmap-editorial__progress",
+        ".ca-roadmap-editorial__step",
+        ".ca-roadmap-editorial__dot",
+        ".ca-roadmap-editorial__card"
+      ],
+      "copied_referenced_or_excluded": "COPIED_EXACT_INTO_MONOLITHIC_REFERENCE",
+      "exclusion_reason": null
+    }
+  ]
+}

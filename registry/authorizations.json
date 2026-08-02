@@ -1,9 +1,7 @@
 {
   "schema_version": "1.0.0",
   "updated_at": "2026-08-02",
-  "active_authorizations": [
-    "AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171"
-  ],
+  "active_authorizations": [],
   "records": [
     {
       "id": "AUTH-LAB-GOVERNANCE-V2-013",
@@ -1267,6 +1265,24 @@
       "runtime_authorized": false,
       "integration_authorized": false,
       "product_changes_authorized": false,
+      "updated_at": "2026-08-02"
+    },
+    {
+      "id": "AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171",
+      "state_key": "roadmap_source_fidelity_forensic_reconstruction_171",
+      "project_id": "lab",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "approved_by": "Jonathan Martínez",
+      "scope": "ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_AND_PROTOCOL_HARDENING",
+      "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171.json",
+      "stage_1_remote_head": "65e5536606807e37a46a2724426fbcb9f36144f7",
+      "stage_2_result": "CAROLINA_ROADMAP_SOURCE_FIDELITY_CANDIDATE_READY_FOR_HUMAN_COMPARISON_PROTOCOL_HARDENED",
+      "commit_authorized": false,
+      "push_authorized": false,
+      "runtime_authorized": false,
+      "integration_authorized": false,
+      "product_changes_authorized": false,
+      "external_repository_mutation_authorized": false,
       "updated_at": "2026-08-02"
     }
   ]

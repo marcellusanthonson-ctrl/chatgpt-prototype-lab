@@ -4,5 +4,17 @@
   "status": "DRAFT",
   "formula_required": false,
   "reduced_motion_strategy": "REPLACE_ME",
-  "product_integration_status": "NOT_AUTHORIZED_NOT_PERFORMED"
+  "product_integration_status": "NOT_AUTHORIZED_NOT_PERFORMED",
+  "source_fidelity_status": "DRAFT",
+  "required_source_fidelity_artifacts": [
+    "SOURCE_FILE_INVENTORY.json",
+    "REFERENCE_IMPLEMENTATION.html",
+    "SOURCE_FIDELITY_CONTRACT.json",
+    "VISUAL_ANATOMY_CONTRACT.json",
+    "GEOMETRY_INVARIANTS.json",
+    "SOURCE_RENDER_BASELINE.json",
+    "COMPARISON_METRICS.json",
+    "HUMAN_COMPARISON.html"
+  ],
+  "abstraction_gate": "HUMAN_COMPARISON_REQUIRED"
 }

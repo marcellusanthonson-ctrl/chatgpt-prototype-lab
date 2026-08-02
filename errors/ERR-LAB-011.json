@@ -7,7 +7,7 @@
   "classification": "CONFIRMED",
   "technical_determination": "CONFIRMED",
   "severity": "HIGH",
-  "status": "OPEN_CONFIRMED_REMEDIATION_AUTHORIZED",
+  "status": "OPEN_AWAITING_HUMAN_SOURCE_FIDELITY_DECISION",
   "lifecycle_state": "OPEN",
   "canonical_path": "errors/ERR-LAB-011.json",
   "updated_at": "2026-08-02",
@@ -32,10 +32,14 @@
   "repair_scope": "SEPARATE_SOURCE_FAITHFUL_CANDIDATE_AND_PROTOCOL_HARDENING_ONLY",
   "err_lab_010_preservation": "CLOSED_UNCHANGED",
   "closure_prohibited_before_human_source_fidelity_decision": true,
+  "technical_remediation": "PASS_SOURCE_FAITHFUL_CANDIDATE_READY_PROTOCOL_HARDENED",
+  "human_source_fidelity_decision": "PENDING",
   "source_refs": [
     "decisions/DEC-LAB-031.json",
     "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171.json",
-    "projects/lab/briefs/CODEX_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171_001.json"
+    "projects/lab/briefs/CODEX_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171_001.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SOURCE-FAITHFUL-001/COMPARISON_METRICS.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SOURCE-FAITHFUL-001/HUMAN_COMPARISON.html"
   ],
   "authority_effect": "NONE",
   "runtime_effect": "NONE",

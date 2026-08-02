@@ -13,6 +13,21 @@
     "STATISTICS-COUNTER-STATIC-SUFFIX-001",
     "ROADMAP-VERTICAL-PROGRESS-001"
   ],
+  "source_fidelity_candidates": [
+    {
+      "candidate_id": "CAROLINA-ROADMAP-SOURCE-FAITHFUL-001",
+      "path": "source-fidelity-candidates/CAROLINA-ROADMAP-SOURCE-FAITHFUL-001",
+      "status": "HUMAN_REVIEW_PENDING",
+      "canonical_replacement": false,
+      "reusable_promotion": false
+    }
+  ],
+  "historical_neutral_derivations": [
+    {
+      "effect_id": "ROADMAP-VERTICAL-PROGRESS-001",
+      "status": "REJECTED_AS_CANONICAL_REFERENCE_PRESERVED_HISTORICALLY"
+    }
+  ],
   "implemented_effect_count": 2,
   "planned_effect_count": 61,
   "maximum_initial_effect_status": "HUMAN_REVIEW_PENDING",

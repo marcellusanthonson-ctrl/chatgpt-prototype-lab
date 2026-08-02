@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "axis_tolerance_css_px": 0.25,
+  "concentricity_tolerance_css_px": 0.25,
+  "source_candidate_structural_tolerance_css_px": 0.5,
+  "text_xy_tolerance_css_px": 1,
+  "exact_relationships": [
+    "CARD_ALTERNATION",
+    "NODE_COUNT",
+    "CARD_COUNT",
+    "CARD_ORDER",
+    "NODE_TO_CARD_ASSOCIATION",
+    "RAIL_START",
+    "RAIL_ENDPOINT",
+    "TAIL_EXTENT",
+    "NO_CLIPPED_HALO",
+    "NO_CLIPPED_TERMINAL_CAP",
+    "NO_HORIZONTAL_SCROLL"
+  ],
+  "measurements": "evidence/geometry/"
+}

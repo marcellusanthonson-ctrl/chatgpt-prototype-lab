@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "status": "HUMAN_REVIEW_PENDING",
+  "required_distinctions": [
+    "REFERENCE_IMPLEMENTATION",
+    "BEHAVIOR_CORE",
+    "NEUTRAL_ADAPTATION",
+    "PROJECT_ADAPTATION"
+  ],
+  "reference_implementation": "REFERENCE_IMPLEMENTATION.html",
+  "exact": [
+    "DOM_HIERARCHY",
+    "VISIBLE_CONTENT",
+    "CARD_ORDER",
+    "CARD_ALTERNATION",
+    "NODE_ANATOMY",
+    "INLINE_SVG",
+    "TYPOGRAPHY",
+    "SPACING",
+    "RESPONSIVE_RULES",
+    "MOTION_FORMULA",
+    "REVERSE_SCROLL",
+    "REDUCED_MOTION"
+  ],
+  "prohibited": [
+    "NEUTRAL_ADAPTATION_IMPERSONATION",
+    "CANONICAL_REPLACEMENT",
+    "REUSABLE_PROMOTION",
+    "HUMAN_APPROVAL_CLAIM"
+  ]
+}

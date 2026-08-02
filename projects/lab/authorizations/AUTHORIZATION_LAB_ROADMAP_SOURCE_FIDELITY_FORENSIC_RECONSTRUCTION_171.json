@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171",
   "project_id": "lab",
-  "status": "ROADMAP_SOURCE_FIDELITY_RECONSTRUCTION_171_GRANTED_AWAITING_EXECUTION",
+  "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
   "authorization_class": "TWO_STAGE_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION",
   "decision_ref": "DEC-LAB-031",
   "approved_by": "Jonathan Martínez",
@@ -45,14 +45,15 @@
   "stages": [
     {
       "stage_id": "STAGE_1_GOVERNANCE_PUBLICATION",
-      "status": "PUBLICATION_PENDING_REMOTE_VERIFICATION",
+      "status": "CONSUMED_ON_VERIFIED_STAGE_1_REMOTE_PUBLICATION",
+      "verified_remote_head": "65e5536606807e37a46a2724426fbcb9f36144f7",
       "maximum_state": "ROADMAP_SOURCE_FIDELITY_RECONSTRUCTION_171_GRANTED_AWAITING_EXECUTION",
       "commit_limit": 1,
       "consumption_rule": "PASS_AFTER_REMOTE_PUBLICATION_AND_HEAD_VERIFICATION"
     },
     {
       "stage_id": "STAGE_2_FORENSIC_RECONSTRUCTION_PROTOCOL_HARDENING_AND_COMPARISON",
-      "status": "GRANTED_CONDITIONAL_ON_STAGE_1_REMOTE_VERIFICATION",
+      "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
       "commit_limit": 1,
       "consumption_rule": "CONSUMED_AFTER_COMPLETE_VALIDATED_REMOTE_PUBLICATION"
     }
@@ -124,6 +125,17 @@
     "SCOPE_EXPANSION_REQUIRED"
   ],
   "maximum_result": "CAROLINA_ROADMAP_SOURCE_FIDELITY_CANDIDATE_READY_FOR_HUMAN_COMPARISON_PROTOCOL_HARDENED",
+  "execution_result": {
+    "candidate": "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SOURCE-FAITHFUL-001/",
+    "candidate_status": "HUMAN_REVIEW_PENDING",
+    "minimum_ssim": 0.9988932964993412,
+    "computed_style_mismatch_count": 0,
+    "geometry_mismatch_count": 0,
+    "candidate_external_request_count": 0,
+    "canonical_replacement": false,
+    "reusable_promotion": false,
+    "human_approval": false
+  },
   "authority_effect": "BOUNDED_TWO_STAGE_EXECUTION",
   "runtime_effect": "NONE",
   "integration_effect": "NONE"

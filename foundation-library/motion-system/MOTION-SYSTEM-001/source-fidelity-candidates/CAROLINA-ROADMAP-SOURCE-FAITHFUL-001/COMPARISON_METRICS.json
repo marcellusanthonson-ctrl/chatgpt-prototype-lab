@@ -1,0 +1,3725 @@
+{
+  "schema_version": "1.0.0",
+  "status": "PASS_AUTOMATED_GATES_HUMAN_REVIEW_PENDING",
+  "minimum_required_ssim": 0.995,
+  "minimum_observed_ssim": 0.9988932964993412,
+  "computed_style_mismatch_count": 0,
+  "geometry_mismatch_count": 0,
+  "maximum_axis_delta_css_px": 0,
+  "maximum_concentricity_delta_css_px": 0,
+  "candidate_external_request_count": 0,
+  "cases": [
+    {
+      "key": "390x844__normal__before-first-node",
+      "viewport": "390x844",
+      "mode": "normal",
+      "checkpoint": "before-first-node",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 975.44,
+        "rail_fill_height": 0,
+        "end_active": false,
+        "dot_active": [
+          false,
+          false,
+          false
+        ],
+        "cards_visible": [
+          true,
+          false,
+          false
+        ],
+        "progress": [
+          0.145,
+          0,
+          0
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 975.44,
+        "rail_fill_height": 0,
+        "end_active": false,
+        "dot_active": [
+          false,
+          false,
+          false
+        ],
+        "cards_visible": [
+          true,
+          false,
+          false
+        ],
+        "progress": [
+          0.145,
+          0,
+          0
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "390x844__normal__first-node-activation",
+      "viewport": "390x844",
+      "mode": "normal",
+      "checkpoint": "first-node-activation",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 975.44,
+        "rail_fill_height": 3.75,
+        "end_active": false,
+        "dot_active": [
+          true,
+          false,
+          false
+        ],
+        "cards_visible": [
+          true,
+          false,
+          false
+        ],
+        "progress": [
+          0.159,
+          0,
+          0
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 975.44,
+        "rail_fill_height": 3.75,
+        "end_active": false,
+        "dot_active": [
+          true,
+          false,
+          false
+        ],
+        "cards_visible": [
+          true,
+          false,
+          false
+        ],
+        "progress": [
+          0.159,
+          0,
+          0
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "390x844__normal__between-nodes-1-2",
+      "viewport": "390x844",
+      "mode": "normal",
+      "checkpoint": "between-nodes-1-2",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 975.44,
+        "rail_fill_height": 161.75,
+        "end_active": false,
+        "dot_active": [
+          true,
+          false,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          0.731,
+          0,
+          0
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 975.44,
+        "rail_fill_height": 161.75,
+        "end_active": false,
+        "dot_active": [
+          true,
+          false,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          0.731,
+          0,
+          0
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "390x844__normal__second-node-activation",
+      "viewport": "390x844",
+      "mode": "normal",
+      "checkpoint": "second-node-activation",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 975.44,
+        "rail_fill_height": 327.75,
+        "end_active": false,
+        "dot_active": [
+          true,
+          true,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          1,
+          0.159,
+          0
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 975.44,
+        "rail_fill_height": 327.75,
+        "end_active": false,
+        "dot_active": [
+          true,
+          true,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          1,
+          0.159,
+          0
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "390x844__normal__between-nodes-2-3",
+      "viewport": "390x844",
+      "mode": "normal",
+      "checkpoint": "between-nodes-2-3",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 975.44,
+        "rail_fill_height": 485.75,
+        "end_active": false,
+        "dot_active": [
+          true,
+          true,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          0.732,
+          0
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 975.44,
+        "rail_fill_height": 485.75,
+        "end_active": false,
+        "dot_active": [
+          true,
+          true,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          0.732,
+          0
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "390x844__normal__third-node-activation",
+      "viewport": "390x844",
+      "mode": "normal",
+      "checkpoint": "third-node-activation",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 975.44,
+        "rail_fill_height": 651.75,
+        "end_active": false,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          0.16
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 975.44,
+        "rail_fill_height": 651.75,
+        "end_active": false,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          0.16
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "390x844__normal__terminal-completion",
+      "viewport": "390x844",
+      "mode": "normal",
+      "checkpoint": "terminal-completion",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 975.44,
+        "rail_fill_height": 975.44,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          false,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 975.44,
+        "rail_fill_height": 975.44,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          false,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "390x844__normal__reverse-traversal",
+      "viewport": "390x844",
+      "mode": "normal",
+      "checkpoint": "reverse-traversal",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 975.44,
+        "rail_fill_height": 485.75,
+        "end_active": false,
+        "dot_active": [
+          true,
+          true,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          0.732,
+          0
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 975.44,
+        "rail_fill_height": 485.75,
+        "end_active": false,
+        "dot_active": [
+          true,
+          true,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          0.732,
+          0
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "390x844__reduced__before-first-node",
+      "viewport": "390x844",
+      "mode": "reduced",
+      "checkpoint": "before-first-node",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 975.44,
+        "rail_fill_height": 975.44,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          false,
+          false
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 975.44,
+        "rail_fill_height": 975.44,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          false,
+          false
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "390x844__reduced__first-node-activation",
+      "viewport": "390x844",
+      "mode": "reduced",
+      "checkpoint": "first-node-activation",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 975.44,
+        "rail_fill_height": 975.44,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          false,
+          false
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 975.44,
+        "rail_fill_height": 975.44,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          false,
+          false
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "390x844__reduced__between-nodes-1-2",
+      "viewport": "390x844",
+      "mode": "reduced",
+      "checkpoint": "between-nodes-1-2",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 975.44,
+        "rail_fill_height": 975.44,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 975.44,
+        "rail_fill_height": 975.44,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "390x844__reduced__second-node-activation",
+      "viewport": "390x844",
+      "mode": "reduced",
+      "checkpoint": "second-node-activation",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 975.44,
+        "rail_fill_height": 975.44,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 975.44,
+        "rail_fill_height": 975.44,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "390x844__reduced__between-nodes-2-3",
+      "viewport": "390x844",
+      "mode": "reduced",
+      "checkpoint": "between-nodes-2-3",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 975.44,
+        "rail_fill_height": 975.44,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 975.44,
+        "rail_fill_height": 975.44,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "390x844__reduced__third-node-activation",
+      "viewport": "390x844",
+      "mode": "reduced",
+      "checkpoint": "third-node-activation",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 975.44,
+        "rail_fill_height": 975.44,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 975.44,
+        "rail_fill_height": 975.44,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "390x844__reduced__terminal-completion",
+      "viewport": "390x844",
+      "mode": "reduced",
+      "checkpoint": "terminal-completion",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 975.44,
+        "rail_fill_height": 975.44,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          false,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 975.44,
+        "rail_fill_height": 975.44,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          false,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "390x844__reduced__reverse-traversal",
+      "viewport": "390x844",
+      "mode": "reduced",
+      "checkpoint": "reverse-traversal",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 975.44,
+        "rail_fill_height": 975.44,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 975.44,
+        "rail_fill_height": 975.44,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "768x1024__normal__before-first-node",
+      "viewport": "768x1024",
+      "mode": "normal",
+      "checkpoint": "before-first-node",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1081,
+        "rail_fill_height": 0,
+        "end_active": false,
+        "dot_active": [
+          false,
+          false,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          0.137,
+          0,
+          0
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1081,
+        "rail_fill_height": 0,
+        "end_active": false,
+        "dot_active": [
+          false,
+          false,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          0.137,
+          0,
+          0
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "768x1024__normal__first-node-activation",
+      "viewport": "768x1024",
+      "mode": "normal",
+      "checkpoint": "first-node-activation",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1081,
+        "rail_fill_height": 3.91,
+        "end_active": false,
+        "dot_active": [
+          true,
+          false,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          0.15,
+          0,
+          0
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1081,
+        "rail_fill_height": 3.91,
+        "end_active": false,
+        "dot_active": [
+          true,
+          false,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          0.15,
+          0,
+          0
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "768x1024__normal__between-nodes-1-2",
+      "viewport": "768x1024",
+      "mode": "normal",
+      "checkpoint": "between-nodes-1-2",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1081,
+        "rail_fill_height": 177.91,
+        "end_active": false,
+        "dot_active": [
+          true,
+          false,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          0.747,
+          0,
+          0
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1081,
+        "rail_fill_height": 177.91,
+        "end_active": false,
+        "dot_active": [
+          true,
+          false,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          0.747,
+          0,
+          0
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "768x1024__normal__second-node-activation",
+      "viewport": "768x1024",
+      "mode": "normal",
+      "checkpoint": "second-node-activation",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1081,
+        "rail_fill_height": 359.91,
+        "end_active": false,
+        "dot_active": [
+          true,
+          true,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          0.139,
+          0
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1081,
+        "rail_fill_height": 359.91,
+        "end_active": false,
+        "dot_active": [
+          true,
+          true,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          0.139,
+          0
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "768x1024__normal__between-nodes-2-3",
+      "viewport": "768x1024",
+      "mode": "normal",
+      "checkpoint": "between-nodes-2-3",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1081,
+        "rail_fill_height": 546.91,
+        "end_active": false,
+        "dot_active": [
+          true,
+          true,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          0.729,
+          0
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1081,
+        "rail_fill_height": 546.91,
+        "end_active": false,
+        "dot_active": [
+          true,
+          true,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          0.729,
+          0
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "768x1024__normal__third-node-activation",
+      "viewport": "768x1024",
+      "mode": "normal",
+      "checkpoint": "third-node-activation",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1081,
+        "rail_fill_height": 740.91,
+        "end_active": false,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          0.15
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1081,
+        "rail_fill_height": 740.91,
+        "end_active": false,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          0.15
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "768x1024__normal__terminal-completion",
+      "viewport": "768x1024",
+      "mode": "normal",
+      "checkpoint": "terminal-completion",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1081,
+        "rail_fill_height": 1081,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          false,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1081,
+        "rail_fill_height": 1081,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          false,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "768x1024__normal__reverse-traversal",
+      "viewport": "768x1024",
+      "mode": "normal",
+      "checkpoint": "reverse-traversal",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1081,
+        "rail_fill_height": 546.91,
+        "end_active": false,
+        "dot_active": [
+          true,
+          true,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          0.729,
+          0
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1081,
+        "rail_fill_height": 546.91,
+        "end_active": false,
+        "dot_active": [
+          true,
+          true,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          0.729,
+          0
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "768x1024__reduced__before-first-node",
+      "viewport": "768x1024",
+      "mode": "reduced",
+      "checkpoint": "before-first-node",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1081,
+        "rail_fill_height": 1081,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1081,
+        "rail_fill_height": 1081,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "768x1024__reduced__first-node-activation",
+      "viewport": "768x1024",
+      "mode": "reduced",
+      "checkpoint": "first-node-activation",
+      "ssim": 0.9988932964993412,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1081,
+        "rail_fill_height": 1081,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1081,
+        "rail_fill_height": 1081,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "768x1024__reduced__between-nodes-1-2",
+      "viewport": "768x1024",
+      "mode": "reduced",
+      "checkpoint": "between-nodes-1-2",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1081,
+        "rail_fill_height": 1081,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1081,
+        "rail_fill_height": 1081,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "768x1024__reduced__second-node-activation",
+      "viewport": "768x1024",
+      "mode": "reduced",
+      "checkpoint": "second-node-activation",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1081,
+        "rail_fill_height": 1081,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1081,
+        "rail_fill_height": 1081,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "768x1024__reduced__between-nodes-2-3",
+      "viewport": "768x1024",
+      "mode": "reduced",
+      "checkpoint": "between-nodes-2-3",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1081,
+        "rail_fill_height": 1081,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1081,
+        "rail_fill_height": 1081,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "768x1024__reduced__third-node-activation",
+      "viewport": "768x1024",
+      "mode": "reduced",
+      "checkpoint": "third-node-activation",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1081,
+        "rail_fill_height": 1081,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1081,
+        "rail_fill_height": 1081,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "768x1024__reduced__terminal-completion",
+      "viewport": "768x1024",
+      "mode": "reduced",
+      "checkpoint": "terminal-completion",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1081,
+        "rail_fill_height": 1081,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          false,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1081,
+        "rail_fill_height": 1081,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          false,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "768x1024__reduced__reverse-traversal",
+      "viewport": "768x1024",
+      "mode": "reduced",
+      "checkpoint": "reverse-traversal",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1081,
+        "rail_fill_height": 1081,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1081,
+        "rail_fill_height": 1081,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "1280x900__normal__before-first-node",
+      "viewport": "1280x900",
+      "mode": "normal",
+      "checkpoint": "before-first-node",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1027.34,
+        "rail_fill_height": 0.33,
+        "end_active": false,
+        "dot_active": [
+          false,
+          false,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          0.153,
+          0,
+          0
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1027.34,
+        "rail_fill_height": 0.33,
+        "end_active": false,
+        "dot_active": [
+          false,
+          false,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          0.153,
+          0,
+          0
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "1280x900__normal__first-node-activation",
+      "viewport": "1280x900",
+      "mode": "normal",
+      "checkpoint": "first-node-activation",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1027.34,
+        "rail_fill_height": 4.33,
+        "end_active": false,
+        "dot_active": [
+          true,
+          false,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          0.168,
+          0,
+          0
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1027.34,
+        "rail_fill_height": 4.33,
+        "end_active": false,
+        "dot_active": [
+          true,
+          false,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          0.168,
+          0,
+          0
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "1280x900__normal__between-nodes-1-2",
+      "viewport": "1280x900",
+      "mode": "normal",
+      "checkpoint": "between-nodes-1-2",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1027.34,
+        "rail_fill_height": 164.33,
+        "end_active": false,
+        "dot_active": [
+          true,
+          false,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          0.773,
+          0,
+          0
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1027.34,
+        "rail_fill_height": 164.33,
+        "end_active": false,
+        "dot_active": [
+          true,
+          false,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          0.773,
+          0,
+          0
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "1280x900__normal__second-node-activation",
+      "viewport": "1280x900",
+      "mode": "normal",
+      "checkpoint": "second-node-activation",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1027.34,
+        "rail_fill_height": 332.33,
+        "end_active": false,
+        "dot_active": [
+          true,
+          true,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          0.167,
+          0
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1027.34,
+        "rail_fill_height": 332.33,
+        "end_active": false,
+        "dot_active": [
+          true,
+          true,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          0.167,
+          0
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "1280x900__normal__between-nodes-2-3",
+      "viewport": "1280x900",
+      "mode": "normal",
+      "checkpoint": "between-nodes-2-3",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1027.34,
+        "rail_fill_height": 492.33,
+        "end_active": false,
+        "dot_active": [
+          true,
+          true,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          0.773,
+          0
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1027.34,
+        "rail_fill_height": 492.33,
+        "end_active": false,
+        "dot_active": [
+          true,
+          true,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          0.773,
+          0
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "1280x900__normal__third-node-activation",
+      "viewport": "1280x900",
+      "mode": "normal",
+      "checkpoint": "third-node-activation",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1027.34,
+        "rail_fill_height": 660.33,
+        "end_active": false,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          0.16
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1027.34,
+        "rail_fill_height": 660.33,
+        "end_active": false,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          0.16
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "1280x900__normal__terminal-completion",
+      "viewport": "1280x900",
+      "mode": "normal",
+      "checkpoint": "terminal-completion",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1027.34,
+        "rail_fill_height": 1027.34,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          false,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1027.34,
+        "rail_fill_height": 1027.34,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          false,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "1280x900__normal__reverse-traversal",
+      "viewport": "1280x900",
+      "mode": "normal",
+      "checkpoint": "reverse-traversal",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1027.34,
+        "rail_fill_height": 492.33,
+        "end_active": false,
+        "dot_active": [
+          true,
+          true,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          0.773,
+          0
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1027.34,
+        "rail_fill_height": 492.33,
+        "end_active": false,
+        "dot_active": [
+          true,
+          true,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          0.773,
+          0
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "1280x900__reduced__before-first-node",
+      "viewport": "1280x900",
+      "mode": "reduced",
+      "checkpoint": "before-first-node",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1027.34,
+        "rail_fill_height": 1027.34,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1027.34,
+        "rail_fill_height": 1027.34,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "1280x900__reduced__first-node-activation",
+      "viewport": "1280x900",
+      "mode": "reduced",
+      "checkpoint": "first-node-activation",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1027.34,
+        "rail_fill_height": 1027.34,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1027.34,
+        "rail_fill_height": 1027.34,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "1280x900__reduced__between-nodes-1-2",
+      "viewport": "1280x900",
+      "mode": "reduced",
+      "checkpoint": "between-nodes-1-2",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1027.34,
+        "rail_fill_height": 1027.34,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1027.34,
+        "rail_fill_height": 1027.34,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "1280x900__reduced__second-node-activation",
+      "viewport": "1280x900",
+      "mode": "reduced",
+      "checkpoint": "second-node-activation",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1027.34,
+        "rail_fill_height": 1027.34,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1027.34,
+        "rail_fill_height": 1027.34,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "1280x900__reduced__between-nodes-2-3",
+      "viewport": "1280x900",
+      "mode": "reduced",
+      "checkpoint": "between-nodes-2-3",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1027.34,
+        "rail_fill_height": 1027.34,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1027.34,
+        "rail_fill_height": 1027.34,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "1280x900__reduced__third-node-activation",
+      "viewport": "1280x900",
+      "mode": "reduced",
+      "checkpoint": "third-node-activation",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1027.34,
+        "rail_fill_height": 1027.34,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1027.34,
+        "rail_fill_height": 1027.34,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "1280x900__reduced__terminal-completion",
+      "viewport": "1280x900",
+      "mode": "reduced",
+      "checkpoint": "terminal-completion",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1027.34,
+        "rail_fill_height": 1027.34,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          false,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1027.34,
+        "rail_fill_height": 1027.34,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          false,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "1280x900__reduced__reverse-traversal",
+      "viewport": "1280x900",
+      "mode": "reduced",
+      "checkpoint": "reverse-traversal",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1027.34,
+        "rail_fill_height": 1027.34,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1027.34,
+        "rail_fill_height": 1027.34,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "1440x1000__normal__before-first-node",
+      "viewport": "1440x1000",
+      "mode": "normal",
+      "checkpoint": "before-first-node",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1068.09,
+        "rail_fill_height": 0.38,
+        "end_active": false,
+        "dot_active": [
+          false,
+          false,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          0.15,
+          0,
+          0
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1068.09,
+        "rail_fill_height": 0.38,
+        "end_active": false,
+        "dot_active": [
+          false,
+          false,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          0.15,
+          0,
+          0
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "1440x1000__normal__first-node-activation",
+      "viewport": "1440x1000",
+      "mode": "normal",
+      "checkpoint": "first-node-activation",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1068.09,
+        "rail_fill_height": 4.38,
+        "end_active": false,
+        "dot_active": [
+          true,
+          false,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          0.165,
+          0,
+          0
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1068.09,
+        "rail_fill_height": 4.38,
+        "end_active": false,
+        "dot_active": [
+          true,
+          false,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          0.165,
+          0,
+          0
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "1440x1000__normal__between-nodes-1-2",
+      "viewport": "1440x1000",
+      "mode": "normal",
+      "checkpoint": "between-nodes-1-2",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1068.09,
+        "rail_fill_height": 166.38,
+        "end_active": false,
+        "dot_active": [
+          true,
+          false,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          0.766,
+          0,
+          0
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1068.09,
+        "rail_fill_height": 166.38,
+        "end_active": false,
+        "dot_active": [
+          true,
+          false,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          0.766,
+          0,
+          0
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "1440x1000__normal__second-node-activation",
+      "viewport": "1440x1000",
+      "mode": "normal",
+      "checkpoint": "second-node-activation",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1068.09,
+        "rail_fill_height": 337.38,
+        "end_active": false,
+        "dot_active": [
+          true,
+          true,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          0.154,
+          0
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1068.09,
+        "rail_fill_height": 337.38,
+        "end_active": false,
+        "dot_active": [
+          true,
+          true,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          0.154,
+          0
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "1440x1000__normal__between-nodes-2-3",
+      "viewport": "1440x1000",
+      "mode": "normal",
+      "checkpoint": "between-nodes-2-3",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1068.09,
+        "rail_fill_height": 507.38,
+        "end_active": false,
+        "dot_active": [
+          true,
+          true,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          0.753,
+          0
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1068.09,
+        "rail_fill_height": 507.38,
+        "end_active": false,
+        "dot_active": [
+          true,
+          true,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          0.753,
+          0
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "1440x1000__normal__third-node-activation",
+      "viewport": "1440x1000",
+      "mode": "normal",
+      "checkpoint": "third-node-activation",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1068.09,
+        "rail_fill_height": 685.38,
+        "end_active": false,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          0.154
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1068.09,
+        "rail_fill_height": 685.38,
+        "end_active": false,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          0.154
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "1440x1000__normal__terminal-completion",
+      "viewport": "1440x1000",
+      "mode": "normal",
+      "checkpoint": "terminal-completion",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1068.09,
+        "rail_fill_height": 1068.09,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          false,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1068.09,
+        "rail_fill_height": 1068.09,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          false,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "1440x1000__normal__reverse-traversal",
+      "viewport": "1440x1000",
+      "mode": "normal",
+      "checkpoint": "reverse-traversal",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1068.09,
+        "rail_fill_height": 507.38,
+        "end_active": false,
+        "dot_active": [
+          true,
+          true,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          0.753,
+          0
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1068.09,
+        "rail_fill_height": 507.38,
+        "end_active": false,
+        "dot_active": [
+          true,
+          true,
+          false
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          0.753,
+          0
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "1440x1000__reduced__before-first-node",
+      "viewport": "1440x1000",
+      "mode": "reduced",
+      "checkpoint": "before-first-node",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1068.09,
+        "rail_fill_height": 1068.09,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1068.09,
+        "rail_fill_height": 1068.09,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "1440x1000__reduced__first-node-activation",
+      "viewport": "1440x1000",
+      "mode": "reduced",
+      "checkpoint": "first-node-activation",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1068.09,
+        "rail_fill_height": 1068.09,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1068.09,
+        "rail_fill_height": 1068.09,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "1440x1000__reduced__between-nodes-1-2",
+      "viewport": "1440x1000",
+      "mode": "reduced",
+      "checkpoint": "between-nodes-1-2",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1068.09,
+        "rail_fill_height": 1068.09,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1068.09,
+        "rail_fill_height": 1068.09,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          false
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "1440x1000__reduced__second-node-activation",
+      "viewport": "1440x1000",
+      "mode": "reduced",
+      "checkpoint": "second-node-activation",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1068.09,
+        "rail_fill_height": 1068.09,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1068.09,
+        "rail_fill_height": 1068.09,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "1440x1000__reduced__between-nodes-2-3",
+      "viewport": "1440x1000",
+      "mode": "reduced",
+      "checkpoint": "between-nodes-2-3",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1068.09,
+        "rail_fill_height": 1068.09,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1068.09,
+        "rail_fill_height": 1068.09,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "1440x1000__reduced__third-node-activation",
+      "viewport": "1440x1000",
+      "mode": "reduced",
+      "checkpoint": "third-node-activation",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1068.09,
+        "rail_fill_height": 1068.09,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1068.09,
+        "rail_fill_height": 1068.09,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "1440x1000__reduced__terminal-completion",
+      "viewport": "1440x1000",
+      "mode": "reduced",
+      "checkpoint": "terminal-completion",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1068.09,
+        "rail_fill_height": 1068.09,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          false,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1068.09,
+        "rail_fill_height": 1068.09,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          false,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "key": "1440x1000__reduced__reverse-traversal",
+      "viewport": "1440x1000",
+      "mode": "reduced",
+      "checkpoint": "reverse-traversal",
+      "ssim": 1,
+      "pixel_diff_count": 0,
+      "pixel_diff_ratio": 0,
+      "computed_style_mismatch_count": 0,
+      "geometry_mismatch_count": 0,
+      "max_structural_delta_css_px": 0,
+      "source_external_requests": [],
+      "candidate_external_requests": [],
+      "source_state": {
+        "rail_start": 64,
+        "rail_height": 1068.09,
+        "rail_fill_height": 1068.09,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      },
+      "candidate_state": {
+        "rail_start": 64,
+        "rail_height": 1068.09,
+        "rail_fill_height": 1068.09,
+        "end_active": true,
+        "dot_active": [
+          true,
+          true,
+          true
+        ],
+        "cards_visible": [
+          true,
+          true,
+          true
+        ],
+        "progress": [
+          1,
+          1,
+          1
+        ],
+        "horizontal_overflow": false
+      }
+    }
+  ]
+}

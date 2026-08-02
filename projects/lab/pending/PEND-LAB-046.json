@@ -7,12 +7,8 @@
   "subject": "Human comparison of the Carolina roadmap source-faithful candidate after forensic reconstruction",
   "priority": "HIGH",
   "precondition": "CAROLINA_ROADMAP_SOURCE_FIDELITY_CANDIDATE_READY_FOR_HUMAN_COMPARISON_PROTOCOL_HARDENED",
-  "current_candidate_state": "NOT_YET_MATERIALIZED",
+  "current_candidate_state": "HUMAN_REVIEW_PENDING_AUTOMATED_GATES_PASS",
   "required_actions": [
-    "COMPLETE_SOURCE_FILE_INVENTORY",
-    "COMPLETE_SOURCE_AND_CANDIDATE_RENDER_MATRIX",
-    "PASS_GEOMETRY_COMPUTED_STYLE_AND_SCREENSHOT_GATES",
-    "PRESENT_HUMAN_COMPARISON_SURFACE",
     "OBTAIN_SEPARATE_HUMAN_SOURCE_FIDELITY_DECISION"
   ],
   "prohibitions": [
@@ -25,7 +21,8 @@
   "source_refs": [
     "decisions/DEC-LAB-031.json",
     "errors/ERR-LAB-011.json",
-    "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171.json"
+    "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SOURCE-FAITHFUL-001/HUMAN_COMPARISON.html"
   ],
   "authority_effect": "NONE",
   "runtime_effect": "NONE",

@@ -1,14 +1,16 @@
 {
   "schema_version": "1.2.0",
-  "continuity_id": "LAB-CONTINUITY-MOTION-CATALOG-ROADMAP-CORRECTION-168-20260802",
+  "continuity_id": "LAB-CONTINUITY-ROADMAP-SOURCE-FIDELITY-171-20260802",
   "project_id": "lab",
-  "status": "PARALLEL_MOTION_SOURCE_FIDELITY_171_GRANTED_AWAITING_EXECUTION_PRIORITY_INTEGRATIONS_PHASE_1_PRESERVED",
+  "status": "ROADMAP_SOURCE_FIDELITY_CANDIDATE_READY_HUMAN_COMPARISON_PENDING_PRIORITY_INTEGRATIONS_PHASE_1_PRESERVED",
   "created_at": "2026-08-02T00:58:21-04:00",
   "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "canonical_branch": "main",
   "head_policy": "VERIFY_LIVE_AT_USE",
   "verified_stage_1_remote_head": "a3286e7088eeb820e5eb5f7603acde253428d35b",
   "stage_2_execution_head": "5c335328af6e573f2f97abe729e228d99072f035",
+  "verified_stage_1_171_remote_head": "65e5536606807e37a46a2724426fbcb9f36144f7",
+  "stage_2_171_remote_head": "RECORDED_IN_RESPONSE_AFTER_VERIFIED_REMOTE_PUBLICATION",
   "entrypoint": "project-sources/chatgpt/START_HERE.md",
   "required_reading_order": [
     "VERIFY_LIVE_HEAD_OF_MAIN",
@@ -38,7 +40,7 @@
     {
       "name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
       "branch": "main",
-      "verified_head": "5c335328af6e573f2f97abe729e228d99072f035",
+      "verified_head_before_stage_2_171": "65e5536606807e37a46a2724426fbcb9f36144f7",
       "role": "CANONICAL_MUTATION_TARGET"
     },
     {
@@ -72,6 +74,12 @@
       "claim": "The statistics counter, products, Carolina source, selector, candidate registry and active pointer were not modified.",
       "source_refs": [
         "projects/lab/evidence/EVD-LAB-MOTION-CATALOG-ROADMAP-CORRECTION-168.json"
+      ]
+    },
+    {
+      "claim": "The source-faithful Carolina roadmap candidate passed the 64-case render matrix with minimum SSIM 0.9988932964993412, zero computed-style mismatches, zero geometry mismatches and zero candidate external requests.",
+      "source_refs": [
+        "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SOURCE-FAITHFUL-001/COMPARISON_METRICS.json"
       ]
     }
   ],
@@ -108,17 +116,16 @@
         "source_refs": [
           "projects/lab/authorizations/AUTHORIZATION_LAB_MOTION_CATALOG_REVIEW_SURFACE_AND_ROADMAP_FIDELITY_CORRECTION_168.json"
         ]
-      }
-    ],
-    "active": [
+      },
       {
         "id": "AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171",
-        "status": "ROADMAP_SOURCE_FIDELITY_RECONSTRUCTION_171_GRANTED_AWAITING_EXECUTION",
+        "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
         "source_refs": [
           "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171.json"
         ]
       }
-    ]
+    ],
+    "active": []
   },
   "results": [
     {
@@ -134,6 +141,14 @@
       "source_refs": [
         "foundation-library/motion-system/MOTION-SYSTEM-001/evidence/VALIDATION_SUMMARY.json"
       ]
+    },
+    {
+      "id": "ROADMAP-SOURCE-FIDELITY-171-FORENSIC-MATRIX",
+      "status": "PASS_AUTOMATED_GATES_HUMAN_REVIEW_PENDING",
+      "source_refs": [
+        "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SOURCE-FAITHFUL-001/COMPARISON_METRICS.json",
+        "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SOURCE-FAITHFUL-001/HUMAN_COMPARISON.html"
+      ]
     }
   ],
   "pending": [
@@ -146,7 +161,7 @@
     },
     {
       "id": "PEND-LAB-043",
-      "status": "PENDING_NEW_HUMAN_REVIEW_AND_STAGED_LIBRARY_POPULATION",
+      "status": "SOURCE_FAITHFUL_CANDIDATE_READY_HUMAN_COMPARISON_PENDING",
       "source_refs": [
         "projects/lab/pending/PEND-LAB-043.json"
       ]
@@ -170,7 +185,7 @@
     },
     {
       "id": "ERR-LAB-011",
-      "status": "OPEN_CONFIRMED_REMEDIATION_AUTHORIZED",
+      "status": "OPEN_AWAITING_HUMAN_SOURCE_FIDELITY_DECISION",
       "source_refs": [
         "errors/ERR-LAB-011.json"
       ]
@@ -240,9 +255,9 @@
     "NO_CAROLINA_REMOTE_OR_OFFICIAL_CHECKOUT_MUTATION",
     "NO_PRIORITY_INTEGRATIONS_GLOBAL_PHASE_OVERWRITE"
   ],
-  "single_next_action": "EXECUTE_AUTHORIZATION_171_STAGE_2_AFTER_VERIFIED_STAGE_1_REMOTE_PUBLICATION",
-  "first_phrase_for_new_conversation": "Continúa ChatGPT Prototype LAB desde el HEAD remoto vigente de main. La autorización 168 está consumida tras la publicación remota verificada de Stage 2 y ambos efectos permanecen HUMAN_REVIEW_PENDING.",
-  "authority_effect": "NONE_AFTER_AUTHORIZATION_168_CONSUMPTION",
+  "single_next_action": "HUMAN_COMPARE_CAROLINA_ROADMAP_SOURCE_FAITHFUL_CANDIDATE",
+  "first_phrase_for_new_conversation": "Continúa ChatGPT Prototype LAB desde el HEAD remoto vigente de main. La autorización 171 está consumida; el candidato fiel del roadmap espera comparación humana y no reemplaza el canon.",
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_171_CONSUMPTION",
   "runtime_effect": "NONE",
   "integration_effect": "NONE",
   "updated_at": "2026-08-02",
@@ -256,14 +271,21 @@
     "authority": "NONE_AFTER_AUTHORIZATION_170_REVISION_2_CONSUMPTION"
   },
   "motion_source_fidelity_workstream_171": {
-    "status": "GRANTED_AWAITING_EXECUTION",
+    "status": "CANDIDATE_READY_FOR_HUMAN_COMPARISON_PROTOCOL_HARDENED",
     "decision_ref": "decisions/DEC-LAB-031.json",
     "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171.json",
     "brief_ref": "projects/lab/briefs/CODEX_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171_001.json",
     "error_ref": "errors/ERR-LAB-011.json",
     "pending_ref": "projects/lab/pending/PEND-LAB-046.json",
     "current_neutral_derivation": "REJECTED_AS_CANONICAL_REFERENCE_PRESERVED_HISTORICALLY",
-    "source_faithful_candidate": "NOT_YET_MATERIALIZED",
+    "source_faithful_candidate": "HUMAN_REVIEW_PENDING",
+    "candidate_ref": "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SOURCE-FAITHFUL-001/MANIFEST.json",
+    "comparison_ref": "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SOURCE-FAITHFUL-001/HUMAN_COMPARISON.html",
+    "automated_gates": "PASS_SSIM_0_998893_STYLE_0_GEOMETRY_0_EXTERNAL_0",
+    "authorization_state": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "canonical_replacement": false,
+    "reusable_promotion": false,
+    "human_approval": false,
     "protected_repository": "marcellusanthonson-ctrl/carolina-md-next-landing@52654da574952148f96d051e439bff1cbc7b4b9d_READ_ONLY_IMMUTABLE",
     "global_phase": "PRIORITY_INTEGRATIONS_PHASE_1_CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED_UNCHANGED"
   }
