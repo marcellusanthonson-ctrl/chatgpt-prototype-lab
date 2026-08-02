@@ -9,8 +9,8 @@
     "ideas": 5,
     "integrations": 7,
     "experiments": 8,
-    "authorizations": 95,
-    "evidence": 77,
+    "authorizations": 99,
+    "evidence": 81,
     "unincorporated": 0,
     "proposals": 3,
     "sessions": 1,
@@ -96,7 +96,8 @@
       "registry/deltas/transversal-motion-system-foundation-167.json",
       "registry/deltas/motion-catalog-review-surface-and-roadmap-fidelity-correction-168.json",
       "registry/deltas/priority-integrations-phase1-contract-completion-170.json",
-      "registry/deltas/roadmap-source-fidelity-forensic-reconstruction-171.json"
+      "registry/deltas/roadmap-source-fidelity-forensic-reconstruction-171.json",
+      "registry/deltas/roadmap-section-source-fidelity-human-approval-173.json"
     ],
     "evidence": "registry/evidence.json",
     "evidence_deltas": [
@@ -136,7 +137,8 @@
       "registry/deltas/integration-factory-m5-bounded-cutover-observation-and-automatic-rollback-166.json",
       "registry/deltas/transversal-motion-system-foundation-167.json",
       "registry/deltas/motion-catalog-review-surface-and-roadmap-fidelity-correction-168.json",
-      "registry/deltas/priority-integrations-phase1-contract-completion-170.json"
+      "registry/deltas/priority-integrations-phase1-contract-completion-170.json",
+      "registry/deltas/roadmap-section-source-fidelity-human-approval-173.json"
     ],
     "current_state": "CURRENT_STATE.json",
     "current_state_deltas": [
@@ -183,7 +185,8 @@
       "registry/deltas/transversal-motion-system-foundation-167.json",
       "registry/deltas/motion-catalog-review-surface-and-roadmap-fidelity-correction-168.json",
       "registry/deltas/priority-integrations-phase1-contract-completion-170.json",
-      "registry/deltas/roadmap-source-fidelity-forensic-reconstruction-171.json"
+      "registry/deltas/roadmap-source-fidelity-forensic-reconstruction-171.json",
+      "registry/deltas/roadmap-section-source-fidelity-human-approval-173.json"
     ],
     "pattern_deltas": [
       "registry/deltas/livhavn-surgical-visual-patch-093.json",
@@ -197,7 +200,8 @@
       "registry/deltas/integration-factory-m5-stage-aware-validator-remediation-162.json",
       "registry/deltas/integration-factory-m5-canonical-correction-and-conditional-rollback-drill-165.json",
       "registry/deltas/motion-catalog-review-surface-and-roadmap-fidelity-correction-168.json",
-      "registry/deltas/roadmap-source-fidelity-forensic-reconstruction-171.json"
+      "registry/deltas/roadmap-source-fidelity-forensic-reconstruction-171.json",
+      "registry/deltas/roadmap-section-source-fidelity-human-approval-173.json"
     ],
     "unincorporated": "registry/unincorporated.json",
     "proposals": "registry/proposals.json",
@@ -233,8 +237,8 @@
       "projects/lab/pending/PEND-LAB-038.json",
       "projects/lab/pending/PEND-LAB-039.json",
       "projects/lab/pending/PEND-LAB-040.json",
-      "projects/lab/pending/PEND-LAB-045.json",
-      "projects/lab/pending/PEND-LAB-046.json"
+      "projects/lab/pending/PEND-LAB-043.json",
+      "projects/lab/pending/PEND-LAB-045.json"
     ],
     "test_executions": "projects/lab/test-executions/index.json",
     "source_packages": "registry/source-packages.json",
@@ -244,7 +248,8 @@
       "registry/deltas/software-solution-engineering-091.json",
       "registry/deltas/transversal-motion-system-foundation-167.json",
       "registry/deltas/motion-catalog-review-surface-and-roadmap-fidelity-correction-168.json",
-      "registry/deltas/roadmap-source-fidelity-forensic-reconstruction-171.json"
+      "registry/deltas/roadmap-source-fidelity-forensic-reconstruction-171.json",
+      "registry/deltas/roadmap-section-source-fidelity-human-approval-173.json"
     ],
     "rag_contracts": "registry/rag-contracts.json",
     "foundation_pilots": "registry/foundation-pilots.json",
@@ -260,12 +265,12 @@
     "error": "ERR-LAB-011",
     "error_path": "errors/ERR-LAB-011.json",
     "pattern": "PAT-LAB-009",
-    "authorization": "AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171",
-    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171.json",
-    "evidence": "EVD-LAB-MOTION-CATALOG-ROADMAP-CORRECTION-168",
-    "evidence_path": "projects/lab/evidence/EVD-LAB-MOTION-CATALOG-ROADMAP-CORRECTION-168.json",
-    "current_state_delta": "roadmap-source-fidelity-forensic-reconstruction-171",
-    "current_state_delta_path": "registry/deltas/roadmap-source-fidelity-forensic-reconstruction-171.json",
+    "authorization": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_SCROLL_CORRECTION_AND_CONDITIONAL_DECISION_RECONCILIATION_173",
+    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_SCROLL_CORRECTION_AND_CONDITIONAL_DECISION_RECONCILIATION_173.json",
+    "evidence": "EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-173",
+    "evidence_path": "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-173.json",
+    "current_state_delta": "roadmap-section-source-fidelity-human-approval-173",
+    "current_state_delta_path": "registry/deltas/roadmap-section-source-fidelity-human-approval-173.json",
     "experiment": "EXP-LAB-003",
     "proposal": "PROP-LAB-003",
     "session": "SES-2026-06-28-001",
@@ -273,7 +278,7 @@
     "reconciliation": "REC-LAB-INTEGRATION-FACTORY-M2-155-DOCUMENTARY-INTEGRITY-001",
     "reconciliation_path": "projects/lab/reconciliations/REC-LAB-INTEGRATION-FACTORY-M2-155-DOCUMENTARY-INTEGRITY-001.json",
     "test_design": "PL003_EFFECTIVE_PERMISSION_GATE_OPERATOR_001",
-    "pending": "PEND-LAB-046",
+    "pending": "PEND-LAB-043",
     "test_execution": "PRODUCT-LEADERSHIP-TEST-003-AWS-PREFLIGHT-EXECUTION-002",
     "external_audit": "AUDIT-CLAUDE-M5-ATTEMPT-003-001",
     "source_package": "DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001@1.2.0",
@@ -294,6 +299,8 @@
     "chatgpt_criterion_layer": "CHATGPT-CRITERION-LAYER-001@1.1.1",
     "minimum_impeccable_visual_foundation": "MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001@1.1.1",
     "local_icon_asset_candidate_library": "LOCAL-ICON-ASSET-CANDIDATE-LIBRARY-001@1.1.0",
+    "motion_source_fidelity_candidate": "CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
+    "motion_source_fidelity_human_decision": "APPROVED_SOURCE_FIDELITY",
     "livhavn_intent_patch_brief": "pilotos/SYMPHONIE-PILOT-LIVHAVN-001/phase-3/LIVHAVN_INTENT_PATCH_BRIEF_089.json",
     "surgical_visual_patch_protocol": "docs/SURGICAL_VISUAL_PATCH_PROTOCOL.md",
     "symphonie_phase_brief_architecture": "docs/SYMPHONIE_PHASES_0_3_AGENT_AND_BRIEF_ARCHITECTURE.md",
