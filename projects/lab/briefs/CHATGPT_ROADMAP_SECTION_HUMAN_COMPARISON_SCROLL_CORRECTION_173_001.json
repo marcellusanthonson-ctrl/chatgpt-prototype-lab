@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "task_id": "CHATGPT_ROADMAP_SECTION_HUMAN_COMPARISON_SCROLL_CORRECTION_173_001",
   "project_id": "lab",
-  "status": "ACTIVE_STAGE_1",
+  "status": "STAGE_1_COMPLETE_STAGE_2_TRIGGER_PENDING",
   "objective": "Correct only the candidate 002 human comparison surface so one outer scroll drives both complete panels synchronously from start to terminal cap.",
   "executor": "ChatGPT",
   "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
@@ -20,15 +20,21 @@
     "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/COMPARISON_METRICS.json",
     "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/SOURCE_PROVENANCE.json"
   ],
-  "acceptance_checks": [
-    "SINGLE_OUTER_VERTICAL_SCROLL",
-    "NO_USER_OPERATED_NESTED_IFRAME_SCROLL",
-    "BOTH_PANELS_SYNCHRONIZED",
-    "OUTER_PROGRESS_REACHES_100_PERCENT",
-    "EACH_CHILD_SCROLL_REACHES_ITS_EXACT_MAXIMUM",
-    "TERMINAL_REACHED_STATE_EXPOSED",
-    "REFERENCE_IMPLEMENTATION_BLOB_UNCHANGED",
-    "NO_CAROLINA_MUTATION"
+  "acceptance_checks": {
+    "SINGLE_OUTER_VERTICAL_SCROLL": "PASS",
+    "NO_USER_OPERATED_NESTED_IFRAME_SCROLL": "PASS",
+    "BOTH_PANELS_SYNCHRONIZED": "PASS",
+    "OUTER_PROGRESS_REACHES_100_PERCENT": "PASS",
+    "EACH_CHILD_SCROLL_REACHES_ITS_EXACT_MAXIMUM": "PASS",
+    "TERMINAL_REACHED_STATE_EXPOSED": "PASS",
+    "REFERENCE_IMPLEMENTATION_BLOB_UNCHANGED": "VERIFY_REMOTE_AT_CLOSE",
+    "NO_CAROLINA_MUTATION": "PASS"
+  },
+  "stage_1_result": "PASS_NEW_COMPLETE_HUMAN_REVIEW_REQUIRED",
+  "stage_2_trigger_required": [
+    "APPROVED_SOURCE_FIDELITY",
+    "MODIFIED_WITH_LIMITATIONS",
+    "REJECTED_SOURCE_FIDELITY"
   ],
   "stop_conditions": [
     "REMOTE_HEAD_DIVERGES_FROM_AUTHORIZED_LINE",
