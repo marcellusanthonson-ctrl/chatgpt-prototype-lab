@@ -2,4 +2,4 @@
 
 Temporary pull-request marker. It authorizes no runtime, product, integration, release or deployment effect.
 
-Run: isolate the temporary reconciler and validate the final tree at exact baseline 329.
+Run: verify the committed reconciliation tree at exact baseline 329 after the workflow-generated commit.
