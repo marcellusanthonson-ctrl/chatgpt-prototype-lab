@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "integration_id": "INT-LAB-005",
+  "project_id": "lab",
+  "title": "Software Solution Engineering priority criterion integration candidate",
+  "status": "CANDIDATE",
+  "priority_order": 2,
+  "program_role": "PRIORITY_INTEGRATION_CRITICAL_PATH",
+  "profile": "CRITERION_MODULE",
+  "producer": {
+    "id": "SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001",
+    "version": "0.2.0",
+    "manifest": "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/MANIFEST.json"
+  },
+  "first_intended_consumer": "SYMPHONIE",
+  "activation_contract": "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/ACTIVATION_CONTRACT.json",
+  "test_program": {
+    "current_design": "projects/lab/test-designs/SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json",
+    "design_status": "FINAL_REVIEW_COMPLETE_READY_FOR_SEPARATE_EXECUTION_AND_AUDIT_AUTHORIZATION",
+    "execution_authorized": false,
+    "execution_completed": false,
+    "external_audit_authorized": false,
+    "external_audit_completed": false,
+    "fixture_count": 32,
+    "minimum_future_outputs": 96
+  },
+  "current_state": "TEST_READY_EXECUTION_AND_AUDIT_NOT_AUTHORIZED",
+  "promotion_state": "NOT_PROPOSED_FOR_PROMOTION",
+  "composition": {
+    "follows": "INT-LAB-004",
+    "responsibility": "Analyze proportional technical solution boundaries, architecture fitness, evolution, operability and maintainability after product scope is resolved.",
+    "must_not": [
+      "REOPEN_CLOSED_PRODUCT_DECISIONS",
+      "SELECT_GLOBAL_STACK_OR_PROVIDER",
+      "DEFAULT_TO_MICROSERVICES_DDD_OR_CLEAN_ARCHITECTURE",
+      "AUTHORIZE_IMPLEMENTATION"
+    ]
+  },
+  "rollback": {
+    "required": true,
+    "defined_for_activation": false,
+    "reason": "Activation has not been designed or authorized."
+  },
+  "integrated": false,
+  "active": false,
+  "automatic_consumption": false,
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "rag_effect": "NONE",
+  "decision_ref": "DEC-LAB-030",
+  "authorization_ref": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_0_CANONICAL_RECONCILIATION_169",
+  "program_ref": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/MANIFEST.json",
+  "updated_at": "2026-08-02"
+}
