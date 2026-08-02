@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_LIVE_SCROLL_RANGE_REPAIR_174",
+  "project_id": "lab",
+  "status": "GRANTED_ACTIVE",
+  "authorization_class": "HUMAN_COMPARISON_LIVE_SCROLL_RANGE_REPAIR",
+  "decision_ref": "DEC-LAB-031",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-08-02T17:28:00-04:00",
+  "approval_source": "Explicit authorization in conversation on 2026-08-02",
+  "grant_inferred": false,
+  "repository": {
+    "name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "branch": "main",
+    "expected_parent_head": "cd4efaad21532de8e08d0a793dbea6308d0ae296",
+    "head_policy": "VERIFY_LIVE_AT_USE",
+    "entrypoint": "project-sources/chatgpt/START_HERE.md"
+  },
+  "authority": {
+    "commit_authorized": true,
+    "push_authorized": true,
+    "source_file_update_authorized": true,
+    "runtime_authorized": false,
+    "product_changes_authorized": false,
+    "canonical_replacement_authorized": false,
+    "reusable_promotion_authorized": false,
+    "external_repository_mutation_authorized": false
+  },
+  "authorized_scope": [
+    "REGISTER_POST_173_HUMAN_EVIDENCE",
+    "RECLASSIFY_173_STAGE_1_AS_HUMAN_REVIEW_REVERSED_STAGE_1_PASS_SCROLL_RANGE_STALE",
+    "MODIFY_ONLY_CANDIDATE_002_HUMAN_COMPARISON_SURFACE",
+    "REPLACE_FROZEN_MAX_SCROLL_WITH_LIVE_STABILIZED_MEASUREMENT",
+    "WAIT_FOR_IFRAME_LOAD_AND_DOCUMENT_FONTS_READY",
+    "OBSERVE_SCROLL_HEIGHT_TIMELINE_AND_DYNAMIC_PADDING_CHANGES",
+    "REQUIRE_CONSECUTIVE_STABLE_SAMPLES",
+    "RECALCULATE_LIVE_MAXIMUM_AFTER_LATER_CHANGES",
+    "VERIFY_REAL_TERMINAL_STATE_IN_BOTH_PANELS",
+    "VALIDATE_SIX_REQUIRED_VIEWPORTS",
+    "COMPARE_DIRECT_SOURCE_CONTEXT_AND_COMPARATIVE_TERMINAL_PARITY",
+    "UPDATE_ONLY_173_AUTHORIZATION_BRIEF_EVIDENCE_CANDIDATE_MANIFEST_AND_README_AS_STRICTLY_NECESSARY",
+    "PUBLISH_NEW_HUMAN_REVIEW_LINK"
+  ],
+  "preserve_byte_for_byte": [
+    "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/REFERENCE_IMPLEMENTATION.html",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/COMPARISON_METRICS.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/SOURCE_PROVENANCE.json",
+    "ALL_TECHNICAL_ARTIFACTS_AND_AUTOMATED_RESULTS_FROM_AUTHORIZATION_172"
+  ],
+  "preserve_authorization_state": {
+    "authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_SCROLL_CORRECTION_AND_CONDITIONAL_DECISION_RECONCILIATION_173",
+    "stage_2_status": "CONDITIONALLY_AUTHORIZED_AWAITING_EXPLICIT_HUMAN_DETERMINATION",
+    "trigger_values": [
+      "APPROVED_SOURCE_FIDELITY",
+      "MODIFIED_WITH_LIMITATIONS",
+      "REJECTED_SOURCE_FIDELITY"
+    ],
+    "triggered": false
+  },
+  "required_viewports": [
+    "390x844",
+    "768x1024",
+    "1280x720",
+    "1440x900",
+    "1541x899",
+    "1920x1080"
+  ],
+  "required_terminal_checks": [
+    "TIMELINE_IS_END_ACTIVE_TRUE",
+    "THIRD_NODE_ACTIVE_TRUE",
+    "TERMINAL_CAP_VISUALLY_ACTIVE",
+    "SCROLL_TOP_EQUALS_LIVE_MAX_SCROLL",
+    "BOTH_PANELS_SAME_TERMINAL_STATE",
+    "OUTER_JOURNEY_COMPLETE_WITHOUT_USER_NESTED_SCROLL"
+  ],
+  "prohibitions": [
+    "NO_CAROLINA_REPOSITORY_MUTATION",
+    "NO_REFERENCE_IMPLEMENTATION_CHANGE",
+    "NO_EFFECT_BEHAVIOR_CHANGE",
+    "NO_SOURCE_FIDELITY_TEST_REEXECUTION",
+    "NO_AUTOMATIC_HUMAN_APPROVAL",
+    "NO_CANONICAL_REPLACEMENT",
+    "NO_REUSABLE_PROMOTION",
+    "NO_PRODUCT_INTEGRATION",
+    "NO_RUNTIME_OR_DEPLOYMENT",
+    "NO_SCOPE_EXPANSION"
+  ],
+  "authority_effect": "ACTIVE_FOR_AUTHORIZATION_174_ONLY",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}
