@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "roadmap-source-fidelity-forensic-reconstruction-171",
+  "project_id": "lab",
+  "updated_at": "2026-08-02",
+  "decision": {
+    "id": "DEC-LAB-031",
+    "status": "APPROVED",
+    "canonical_path": "decisions/DEC-LAB-031.json"
+  },
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171",
+    "state_key": "roadmap_source_fidelity_forensic_reconstruction_171",
+    "status": "ROADMAP_SOURCE_FIDELITY_RECONSTRUCTION_171_GRANTED_AWAITING_EXECUTION",
+    "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171.json",
+    "brief_path": "projects/lab/briefs/CODEX_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171_001.json",
+    "approved_by": "Jonathan Martínez",
+    "commit_authorized": true,
+    "push_authorized": true,
+    "source_file_update_authorized": true,
+    "runtime_authorized": false,
+    "product_changes_authorized": false,
+    "external_repository_mutation_authorized": false
+  },
+  "active_authorization": "AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171",
+  "stage_1": "PUBLICATION_PENDING_REMOTE_VERIFICATION",
+  "stage_2": "GRANTED_CONDITIONAL_ON_STAGE_1_REMOTE_VERIFICATION",
+  "error": {
+    "id": "ERR-LAB-011",
+    "status": "OPEN_CONFIRMED_REMEDIATION_AUTHORIZED",
+    "canonical_path": "errors/ERR-LAB-011.json"
+  },
+  "pending": {
+    "id": "PEND-LAB-046",
+    "status": "OPEN_HUMAN_COMPARISON_REQUIRED",
+    "canonical_path": "projects/lab/pending/PEND-LAB-046.json"
+  },
+  "preserved": {
+    "global_current_phase": "PRIORITY_INTEGRATIONS_PHASE_1_CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED",
+    "priority_integrations_pending": "PEND-LAB-045",
+    "err_lab_010": "CLOSED",
+    "historical_authorization_170_records": "UNCHANGED",
+    "roadmap_demo_blob": "10b769398ac40787adb4178efde535bf443e77bc",
+    "roadmap_demo_sha256": "1eca96e93c9d16b79e5db7efcc6cbe06786b742e6065f31d362d2e811f4a3495",
+    "counter_tree": "fab26b47265960454c37b501dc187fd90e45a759"
+  },
+  "live_general_validator_baseline": {
+    "finding_count": 347,
+    "global_repository_pass": false,
+    "ordered_message_digest": "37f9b685b127a980ee2be416760ac332ba3febd144514c873e64adc4d6b34bc1",
+    "sorted_normalized_id_digest": "b104f98f2a5ecdbcd0cce08840f88ff8a458fc828b7683dfefb684bef21aae65"
+  },
+  "authority_effect": "BOUNDED_STAGE_1_PUBLICATION_AND_CONDITIONAL_STAGE_2_EXECUTION",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}

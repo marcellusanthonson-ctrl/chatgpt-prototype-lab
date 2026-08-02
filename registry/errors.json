@@ -140,5 +140,17 @@
       "canonical_path": "errors/ERR-LAB-010.json",
       "updated_at": "2026-08-02"
     }
+    ,{
+      "id": "ERR-LAB-011",
+      "title": "Motion source fidelity and visual anatomy contract omitted",
+      "project_scope": ["lab"],
+      "severity": "HIGH",
+      "status": "OPEN_CONFIRMED_REMEDIATION_AUTHORIZED",
+      "lifecycle_state": "OPEN",
+      "canonical_path": "errors/ERR-LAB-011.json",
+      "updated_at": "2026-08-02",
+      "repair_authorized": true,
+      "closure_gate": "HUMAN_SOURCE_FIDELITY_DECISION"
+    }
   ]
 }

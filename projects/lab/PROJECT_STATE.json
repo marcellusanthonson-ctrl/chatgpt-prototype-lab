@@ -192,7 +192,12 @@
     "priority_integrations_program": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/MANIFEST.json",
     "priority_integrations_roadmap": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/ROADMAP.json",
     "priority_integrations_phase1_evidence": "projects/lab/evidence/EVD-LAB-PRIORITY-INTEGRATIONS-PHASE-1-170.json",
-    "priority_integrations_phase2_pending": "projects/lab/pending/PEND-LAB-045.json"
+    "priority_integrations_phase2_pending": "projects/lab/pending/PEND-LAB-045.json",
+    "motion_source_fidelity_decision": "decisions/DEC-LAB-031.json",
+    "motion_source_fidelity_authorization": "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171.json",
+    "motion_source_fidelity_brief": "projects/lab/briefs/CODEX_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171_001.json",
+    "motion_source_fidelity_error": "errors/ERR-LAB-011.json",
+    "motion_source_fidelity_pending": "projects/lab/pending/PEND-LAB-046.json"
   },
   "metadata": {
     "last_instruction_test": {
@@ -211,10 +216,10 @@
       "attached_files_role": "BOOTSTRAP_POINTER_ONLY"
     },
     "authorization_registry": {
-      "status": "AUTHORIZATION_168_CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+      "status": "AUTHORIZATION_171_GRANTED_AWAITING_EXECUTION",
       "registered_consumed_transitions": 61,
-      "active_authorizations": 0,
-      "latest": "AUTHORIZATION_LAB_MOTION_CATALOG_REVIEW_SURFACE_AND_ROADMAP_FIDELITY_CORRECTION_168",
+      "active_authorizations": 1,
+      "latest": "AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171",
       "base_registry": "registry/authorizations.json",
       "correspondence_policy": "CONSUMED_RECORD_STATE_KEY_REQUIRED_ACTIVE_NON_CONSUMED_SEPARATE"
     },
@@ -843,6 +848,20 @@
     "active": false,
     "integrated": false
   },
-  "next_authorized_action": "NONE_AFTER_PHASE_1_AUTHORIZATION_CONSUMPTION",
-  "next_recommended_transition": "SEPARATELY_AUTHORIZE_PHASE_2_INDEPENDENT_EVIDENCE_CLOSURE"
+  "motion_source_fidelity_workstream_171": {
+    "status": "ROADMAP_SOURCE_FIDELITY_RECONSTRUCTION_171_GRANTED_AWAITING_EXECUTION",
+    "decision": "DEC-LAB-031",
+    "authorization": "AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171",
+    "error": "ERR-LAB-011",
+    "pending": "PEND-LAB-046",
+    "current_neutral_derivation": "REJECTED_AS_CANONICAL_REFERENCE_PRESERVED_HISTORICALLY",
+    "source_faithful_candidate": "NOT_YET_MATERIALIZED",
+    "carolina_repository": "READ_ONLY_IMMUTABLE_EVIDENTIARY_SOURCE",
+    "global_current_phase": "PRESERVED_PRIORITY_INTEGRATIONS_PHASE_1_CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED",
+    "product_effect": "NONE",
+    "runtime_effect": "NONE",
+    "integration_effect": "NONE"
+  },
+  "next_authorized_action": "EXECUTE_AUTHORIZATION_171_STAGE_2_AFTER_VERIFIED_STAGE_1_REMOTE_PUBLICATION",
+  "next_recommended_transition": "EXECUTE_PARALLEL_MOTION_SOURCE_FIDELITY_WORKSTREAM_171_WITHOUT_CHANGING_PRIORITY_INTEGRATIONS_PHASE"
 }

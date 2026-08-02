@@ -1,0 +1,442 @@
+{
+  "schema_version": "1.0.0",
+  "brief_id": "CODEX_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171_001",
+  "task_id": "CODEX_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171_001",
+  "decision_id": "DEC-LAB-031",
+  "authorization_id": "AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171",
+  "error_id": "ERR-LAB-011",
+  "pending_id": "PEND-LAB-046",
+  "project_id": "lab",
+  "status": "READY",
+  "objective": "Produce a source-faithful monolithic reference candidate of the Carolina MD vertical roadmap whose visual anatomy, geometry, responsive behavior, motion, typography, assets and states are demonstrably equivalent to the fixed source, without repairing or overwriting the current LAB roadmap.",
+  "successor_and_preservation": {
+    "successor_of": [
+      "PROPOSED_ROADMAP_SOURCE_FIDELITY_AUTHORIZATION_170",
+      "FORENSIC_RECONSTRUCTION_BRIEF_PREPARED_IN_CONVERSATION",
+      "ABSOLUTE_IMMUTABILITY_INSTRUCTION_FOR_CAROLINA_REPOSITORY"
+    ],
+    "preserved_content": [
+      "SOURCE_FAITHFUL_RECONSTRUCTION_OBJECTIVE",
+      "FORENSIC_SOURCE_INVENTORY",
+      "VISUAL_ANATOMY_CONTRACTS",
+      "SOURCE_FIDELITY_CONTRACTS",
+      "GEOMETRY_INVARIANTS",
+      "COMPUTED_STYLE_COMPARISON",
+      "SCREENSHOT_COMPARISON",
+      "HUMAN_COMPARISON_SURFACE",
+      "IMMUTABLE_CURRENT_NEUTRAL_DERIVATION",
+      "IMMUTABLE_STATISTICS_COUNTER",
+      "NO_CANONICAL_REPLACEMENT",
+      "NO_HUMAN_APPROVAL_CLAIM",
+      "NO_REUSABLE_PROMOTION",
+      "TWO_STAGE_EXECUTION",
+      "FAIL_CLOSED_CONDITIONS"
+    ],
+    "authorized_changes": [
+      "AUTHORIZATION_ID_170_TO_171",
+      "EXPECTED_PARENT_TO_VERIFIED_CURRENT_HEAD",
+      "PENDING_ID_PEND_LAB_045_TO_PEND_LAB_046_FOR_THIS_PARALLEL_LINE",
+      "BRANCH_NAMES_TO_171_NAMESPACE",
+      "GLOBAL_CURRENT_PHASE_UNTOUCHED",
+      "CAROLINA_REPOSITORY_IMMUTABILITY_STRENGTHENED_TO_ABSOLUTE_PROHIBITION"
+    ],
+    "material_omissions": "NONE"
+  },
+  "repositories": [
+    {
+      "name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "expected_parent_head": "1204d9c56af79b4d9a840c6609716aca94ecfb65",
+      "role": "ONLY_CANONICAL_MUTATION_TARGET"
+    },
+    {
+      "name": "marcellusanthonson-ctrl/carolina-md-next-landing",
+      "fixed_commit": "52654da574952148f96d051e439bff1cbc7b4b9d",
+      "role": "READ_ONLY_IMMUTABLE_EVIDENTIARY_SOURCE",
+      "mutation": "ABSOLUTELY_PROHIBITED"
+    }
+  ],
+  "authority": {
+    "technical_executor": "CODEX_BOUNDED_EXECUTOR",
+    "codex_autonomous_authority": "NO",
+    "commit_authorized": true,
+    "push_authorized": true,
+    "source_file_update_authorized": true,
+    "runtime_authorized": false,
+    "product_changes_authorized": false,
+    "carolina_mutation_authorized": false,
+    "canonical_replacement_authorized": false,
+    "human_approval_claim_authorized": false,
+    "reusable_promotion_authorized": false
+  },
+  "scope": {
+    "stage_1": {
+      "create": [
+        "decisions/DEC-LAB-031.json",
+        "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171.json",
+        "projects/lab/briefs/CODEX_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171_001.json",
+        "errors/ERR-LAB-011.json",
+        "projects/lab/pending/PEND-LAB-046.json",
+        "registry/deltas/roadmap-source-fidelity-forensic-reconstruction-171.json"
+      ],
+      "update": [
+        "APPLICABLE_CANONICAL_INDEXES",
+        "MOTION_SYSTEM_SUBSTATE_ONLY",
+        "PEND_LAB_043_RECONCILIATION",
+        "CONTINUITY_WITH_PRIORITY_INTEGRATIONS_LINE_PRESERVED"
+      ],
+      "commit_limit": 1,
+      "maximum_state": "ROADMAP_SOURCE_FIDELITY_RECONSTRUCTION_171_GRANTED_AWAITING_EXECUTION"
+    },
+    "stage_2": {
+      "candidate_root": "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SOURCE-FAITHFUL-001/",
+      "catalog_changes": "CLASSIFICATION_AND_COMPARISON_LINKS_ONLY",
+      "protocol_hardening": true,
+      "commit_limit": 1,
+      "maximum_result": "CAROLINA_ROADMAP_SOURCE_FIDELITY_CANDIDATE_READY_FOR_HUMAN_COMPARISON_PROTOCOL_HARDENED"
+    }
+  },
+  "global_state_preservation": {
+    "required_current_phase": "PRIORITY_INTEGRATIONS_PHASE_1_CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED",
+    "must_not_replace": [
+      "CURRENT_STATE.current_phase",
+      "PROJECT_STATE.current_phase",
+      "PRIORITY_INTEGRATIONS_STATUS",
+      "PEND-LAB-045",
+      "AUTHORIZATION_170_RECORDS",
+      "PRIORITY_INTEGRATIONS_PHASE_1_EVIDENCE"
+    ],
+    "authorization_171_line": "PARALLEL_MOTION_SYSTEM_WORKSTREAM"
+  },
+  "carolina_immutability": {
+    "remote_prohibitions": [
+      "CREATE_UPDATE_DELETE_FILE",
+      "COMMIT_PUSH_BRANCH_TAG",
+      "PULL_REQUEST_ISSUE_RELEASE",
+      "WORKFLOW_OR_REPOSITORY_CONFIGURATION_MUTATION"
+    ],
+    "official_checkout_prohibitions": [
+      "TRACKED_OR_UNTRACKED_CHANGES",
+      "GENERATED_FILES_OR_DEPENDENCIES",
+      "BUILD_SCREENSHOT_LOG_TEST_OR_CACHE_ARTIFACTS",
+      "FORMATTING_LOCKFILE_EDITOR_OR_OS_METADATA_CHANGES"
+    ],
+    "disposable_copy": {
+      "outside_official_workspaces": true,
+      "pinned_to_fixed_commit": true,
+      "push_credentials": "NONE",
+      "origin_removed_or_push_disabled": true,
+      "permanent_outputs_destination": "marcellusanthonson-ctrl/chatgpt-prototype-lab"
+    }
+  },
+  "stage_0": {
+    "required": [
+      "FETCH_ORIGIN_MAIN_AND_VERIFY_EXACT_PARENT",
+      "CLEAN_LAB_WORKING_TREE",
+      "VERIFY_FOUR_ID_ABSENCES",
+      "IGNORE_ROADMAP_SOURCE_FIDELITY_170_STAGE1",
+      "READ_CANONICAL_ENTRYPOINT_IN_FULL_ORDER",
+      "CALCULATE_LIVE_GENERAL_VALIDATOR_BASELINE",
+      "PERSIST_NORMALIZED_FINDING_IDS_AND_GLOBAL_SEMANTICS",
+      "CAPTURE_ROADMAP_BLOB_AND_SHA256",
+      "CAPTURE_COUNTER_TREE",
+      "VERIFY_THREE_PROTECTED_BLOBS"
+    ],
+    "observed_live_validator": {
+      "finding_count": 347,
+      "global_repository_pass": false,
+      "ordered_message_digest": "37f9b685b127a980ee2be416760ac332ba3febd144514c873e64adc4d6b34bc1",
+      "sorted_normalized_id_digest": "b104f98f2a5ecdbcd0cce08840f88ff8a458fc828b7683dfefb684bef21aae65"
+    }
+  },
+  "source_discovery": {
+    "known_files": [
+      "hooks/landing/_scrollReveal.ts",
+      "public/landing/carolina_md_approved_patch.css"
+    ],
+    "must_locate": [
+      "EXACT_JSX_TSX_MARKUP",
+      "CONTENT_DATA_AND_VISIBLE_STRINGS",
+      "COMPLETE_SELECTORS_VARIABLES_AND_MEDIA_QUERIES",
+      "FONTS_AND_FONT_SOURCES",
+      "ICONS_SVGS_AND_ALL_NODE_LAYERS",
+      "BASE_ACTIVE_RAIL_AND_TERMINAL_CAP",
+      "CARD_STRUCTURE_REVEAL_SCROLL_REDUCED_MOTION_AND_ACCESSIBILITY",
+      "INITIALIZATION_HOOKS"
+    ],
+    "inventory_fields": [
+      "repository",
+      "fixed_commit",
+      "path",
+      "blob_sha",
+      "sha256",
+      "role",
+      "imported_by",
+      "selectors_or_symbols",
+      "copied_referenced_or_excluded",
+      "exclusion_reason"
+    ],
+    "roles": [
+      "MARKUP",
+      "CONTENT_DATA",
+      "STYLES",
+      "MOTION_FORMULA",
+      "REVEAL_BEHAVIOR",
+      "ICON_ASSET",
+      "TYPOGRAPHY",
+      "RESPONSIVE_RULES",
+      "ACCESSIBILITY_BEHAVIOR"
+    ]
+  },
+  "required_outputs": [
+    "MANIFEST.json",
+    "REFERENCE_IMPLEMENTATION.html",
+    "SOURCE_FILE_INVENTORY.json",
+    "SOURCE_PROVENANCE.json",
+    "SOURCE_FIDELITY_CONTRACT.json",
+    "VISUAL_ANATOMY_CONTRACT.json",
+    "GEOMETRY_INVARIANTS.json",
+    "RESPONSIVE_CONTRACT.json",
+    "MOTION_STATE_CONTRACT.json",
+    "FORMULA_CONTRACT.json",
+    "COMPUTED_STYLE_BASELINE.json",
+    "SOURCE_RENDER_BASELINE.json",
+    "CANDIDATE_RENDER_RESULTS.json",
+    "COMPARISON_METRICS.json",
+    "COMPARISON_REPORT.md",
+    "HUMAN_COMPARISON.html",
+    "evidence/source/",
+    "evidence/candidate/",
+    "evidence/diff/",
+    "evidence/overlay/",
+    "evidence/geometry/",
+    "evidence/computed-styles/",
+    "schemas/motion-source-fidelity-contract.schema.json",
+    "schemas/motion-visual-anatomy-contract.schema.json",
+    "schemas/motion-geometry-invariants.schema.json"
+  ],
+  "source_fidelity_requirements": [
+    "DOM_HIERARCHY_AND_VISIBLE_CONTENT",
+    "CARD_ORDER_LEFT_RIGHT_ALTERNATION_AND_DIMENSIONS",
+    "RAIL_POSITION_WIDTH_FILL_START_NODES_AND_TERMINAL_CAP",
+    "NODE_HALOS_RINGS_CORE_ICONS_AND_CONTAINERS",
+    "NUMBERING_DESCRIPTIONS_BADGES_BACKGROUNDS_BORDERS_RADIUS_SHADOWS",
+    "TYPOGRAPHY_SPACING_AND_RESPONSIVE_CHANGES",
+    "SCROLL_THRESHOLDS_REVEAL_TERMINAL_REVERSE_SCROLL_AND_REDUCED_MOTION",
+    "NO_APPROXIMATED_ASSET_WHEN_EXACT_SOURCE_EXISTS",
+    "STATIC_MONOLITHIC_PACKAGING_ONLY_WITH_EQUIVALENT_DOM_GEOMETRY_STYLE_AND_BEHAVIOR"
+  ],
+  "visual_anatomy_layers": [
+    "ROADMAP_CONTAINER",
+    "TIMELINE",
+    "BASE_RAIL",
+    "ACTIVE_RAIL",
+    "START_NODE",
+    "INTERMEDIATE_NODES",
+    "TERMINAL_CAP",
+    "NODE_OUTER_HALO",
+    "NODE_SURFACE",
+    "NODE_RING",
+    "NODE_CORE",
+    "LEFT_CARDS",
+    "RIGHT_CARDS",
+    "CARD_ICON_CONTAINER",
+    "CARD_ICON",
+    "CARD_TITLE",
+    "CARD_NUMBER",
+    "CARD_DESCRIPTION",
+    "CARD_META_BADGE",
+    "CARD_BACKGROUND",
+    "CARD_BORDER",
+    "CARD_SHADOW",
+    "SECTION_BACKGROUND",
+    "SPACING_SYSTEM"
+  ],
+  "geometry_gates": {
+    "axis_tolerance_css_px": 0.25,
+    "concentricity_tolerance_css_px": 0.25,
+    "source_candidate_structural_tolerance_css_px": 0.5,
+    "source_candidate_text_xy_tolerance_css_px": 1.0,
+    "font_properties_exact": true,
+    "relationships_exact": [
+      "CARD_ALTERNATION",
+      "NODE_AND_CARD_COUNTS_AND_ORDER",
+      "NODE_TO_CARD_ASSOCIATION",
+      "RAIL_START_ENDPOINT_AND_TAIL_EXTENT",
+      "NO_CLIPPED_HALO_OR_TERMINAL_CAP",
+      "NO_HORIZONTAL_SCROLL"
+    ]
+  },
+  "computed_style_properties": [
+    "display",
+    "position",
+    "insets",
+    "width",
+    "height",
+    "padding",
+    "margin",
+    "gap",
+    "grid_properties",
+    "flex_properties",
+    "transform",
+    "transform_origin",
+    "opacity",
+    "border",
+    "border_radius",
+    "background",
+    "box_shadow",
+    "color",
+    "font_family",
+    "font_size",
+    "font_weight",
+    "line_height",
+    "letter_spacing",
+    "transition",
+    "animation",
+    "z_index",
+    "overflow"
+  ],
+  "render_matrix": {
+    "viewports": ["390x844", "768x1024", "1280x900", "1440x1000"],
+    "checkpoints": [
+      "BEFORE_FIRST_NODE",
+      "FIRST_NODE_ACTIVATION",
+      "BETWEEN_NODES_1_AND_2",
+      "SECOND_NODE_ACTIVATION",
+      "BETWEEN_NODES_2_AND_3",
+      "THIRD_NODE_ACTIVATION",
+      "TERMINAL_COMPLETION",
+      "REVERSE_TRAVERSAL_SAME_POSITIONS"
+    ],
+    "modes": ["NORMAL_MOTION", "PREFERS_REDUCED_MOTION"],
+    "same_browser_build_and_device_scale_factor": true,
+    "settle_requirements": [
+      "DOCUMENT_FONTS_READY",
+      "WINDOW_LOAD",
+      "SOURCE_DEFINED_DELAYED_LAYOUT_PASSES",
+      "ZERO_PENDING_LAYOUT_MUTATION"
+    ]
+  },
+  "screenshot_comparison": {
+    "per_case": ["SOURCE", "CANDIDATE", "SIDE_BY_SIDE", "OVERLAY", "DIFF", "METRICS"],
+    "minimum_ssim": 0.995,
+    "mandatory_gates": [
+      "NO_MISSING_OR_ADDITIONAL_VISIBLE_LAYER",
+      "NO_UNMATCHED_STRUCTURAL_REGION_OVER_2_CSS_PX",
+      "UNCHANGED_CARD_ALTERNATION_NODE_ANATOMY_RAIL_ENDPOINT_AND_CONTENT_HIERARCHY",
+      "NUMERIC_SCORE_CANNOT_OVERRIDE_OBVIOUS_VISUAL_MISMATCH"
+    ]
+  },
+  "human_comparison": {
+    "required_features": [
+      "SOURCE_SCREENSHOTS",
+      "LIVE_CANDIDATE",
+      "VIEWPORT_AND_CHECKPOINT_SELECTORS",
+      "SIDE_BY_SIDE_OVERLAY_AND_DIFF_MODES",
+      "GEOMETRY_MEASUREMENTS",
+      "COMPUTED_STYLE_MISMATCH_COUNT",
+      "SOURCE_INVENTORY_ACCESS",
+      "FULL_SCREEN_CANDIDATE_BUTTON",
+      "CLEAR_HUMAN_REVIEW_PENDING_STATE"
+    ],
+    "approval_claim": "PROHIBITED"
+  },
+  "catalog_scope": [
+    "CLASSIFY_EXISTING_ROADMAP_AS_HISTORICAL_NEUTRAL_DERIVATION",
+    "COMMUNICATE_REJECTED_AS_CANONICAL_REFERENCE",
+    "RETAIN_HISTORICAL_EVIDENCE_ACCESS",
+    "ADD_SOURCE_FAITHFUL_CANDIDATE_AND_HUMAN_COMPARISON",
+    "COUNTER_CATALOG_BEHAVIOR_UNCHANGED"
+  ],
+  "protocol_hardening": {
+    "require": [
+      "COMPLETE_SOURCE_INVENTORY",
+      "REFERENCE_IMPLEMENTATION",
+      "SOURCE_FIDELITY_CONTRACT",
+      "VISUAL_ANATOMY_CONTRACT",
+      "GEOMETRY_INVARIANTS",
+      "SOURCE_RENDER_BASELINE",
+      "SOURCE_TO_CANDIDATE_COMPARISON",
+      "HUMAN_COMPARISON_BEFORE_ABSTRACTION"
+    ],
+    "prohibited_patterns": [
+      "FORMULA_ONLY_SOURCE_RECONSTRUCTION",
+      "NEUTRAL_ADAPTATION_PRESENTED_AS_REFERENCE",
+      "SOURCE_ANATOMY_NOT_INVENTORIED",
+      "VISUAL_FIDELITY_INFERRED_FROM_FUNCTIONAL_PASS",
+      "GEOMETRY_VALIDATION_WITHOUT_HORIZONTAL_AXIS",
+      "AUTOMATED_PASS_WITHOUT_SOURCE_RENDER_COMPARISON",
+      "CANONICAL_REPLACEMENT_BEFORE_HUMAN_REVIEW"
+    ]
+  },
+  "acceptance_checks": [
+    "LIVE_GENERAL_VALIDATOR_BASELINE_PRESERVED_WITH_IDENTICAL_NORMALIZED_FINDING_IDS_AND_GLOBAL_SEMANTICS",
+    "ALL_NEW_SCHEMAS_PASS",
+    "ALL_JSON_PARSE_AND_REFERENCES_RESOLVE_WITHOUT_DUPLICATE_IDS",
+    "MOTION_VALIDATOR_PASS",
+    "ZERO_EXTERNAL_RESOURCES_IN_CANDIDATE",
+    "CURRENT_ROADMAP_DEMO_BYTE_IDENTICAL",
+    "COUNTER_ROOT_TREE_IDENTICAL",
+    "THREE_PROTECTED_BLOBS_EXACT",
+    "NO_CAROLINA_REMOTE_OR_OFFICIAL_CHECKOUT_MUTATION",
+    "NO_PRODUCT_EFFECT_CANONICAL_REPLACEMENT_OR_HUMAN_APPROVAL_CLAIM"
+  ],
+  "stop_conditions": [
+    "EXPECTED_PARENT_HEAD_MISMATCH",
+    "ID_COLLISION",
+    "GENERAL_VALIDATOR_BASELINE_UNAVAILABLE",
+    "GENERAL_VALIDATOR_FINDING_DELTA",
+    "PROTECTED_BLOB_CHANGED",
+    "SOURCE_MARKUP_NOT_LOCATED",
+    "SOURCE_ASSET_SET_INCOMPLETE",
+    "SOURCE_TYPOGRAPHY_NOT_REPRODUCIBLE",
+    "PRODUCT_REPOSITORY_MUTATION_REQUIRED",
+    "CAROLINA_OFFICIAL_REPOSITORY_IMMUTABILITY_VIOLATION",
+    "DISPOSABLE_SOURCE_COPY_HAS_PUSH_CAPABILITY",
+    "CURRENT_ROADMAP_HTML_CHANGED",
+    "COUNTER_TREE_CHANGED",
+    "SOURCE_AND_CANDIDATE_CONTENT_DIFFER",
+    "SOURCE_AND_CANDIDATE_ANATOMY_DIFFER",
+    "AXIS_INVARIANT_FAILED",
+    "NODE_CONCENTRICITY_FAILED",
+    "CARD_ALTERNATION_DIFFERED",
+    "TERMINAL_GEOMETRY_DIFFERED",
+    "VISIBLE_LAYER_MISSING",
+    "VISIBLE_LAYER_ADDED",
+    "COMPUTED_STYLE_COMPARISON_UNAVAILABLE",
+    "SCREENSHOT_COMPARISON_UNAVAILABLE",
+    "SOURCE_FIDELITY_THRESHOLD_FAILED",
+    "UNRELATED_GLOBAL_PHASE_OVERWRITE",
+    "CANONICAL_REPLACEMENT_ATTEMPTED",
+    "ERR_LAB_011_CLOSURE_ATTEMPTED",
+    "HUMAN_APPROVAL_CLAIM_ATTEMPTED",
+    "REUSABLE_PROMOTION_ATTEMPTED",
+    "SCOPE_EXPANSION_REQUIRED"
+  ],
+  "response_contract": {
+    "report": [
+      "VERIFIED_INITIAL_HEAD",
+      "STAGE_1_COMMIT_AND_VERIFIED_REMOTE_HEAD",
+      "STAGE_2_COMMIT_AND_VERIFIED_REMOTE_HEAD",
+      "LIVE_VALIDATOR_BASELINE_BEFORE_AND_AFTER",
+      "NORMALIZED_FINDING_DELTA",
+      "COMPLETE_SOURCE_INVENTORY",
+      "CAROLINA_REMOTE_AND_OFFICIAL_CHECKOUT_IMMUTABILITY_PROOF",
+      "DISPOSABLE_COPY_PATH_AND_PUSH_DISABLED_PROOF",
+      "ROADMAP_AND_COUNTER_HASHES_BEFORE_AND_AFTER",
+      "GEOMETRY_AND_COMPUTED_STYLE_RESULTS",
+      "SCREENSHOT_MATRIX_AND_SSIM_RESULTS",
+      "HUMAN_COMPARISON_AND_REFERENCE_IMPLEMENTATION_PATHS",
+      "BLOCKERS_OR_DEVIATIONS",
+      "NO_REPLACEMENT_PROMOTION_OR_HUMAN_APPROVAL_CONFIRMATION"
+    ]
+  },
+  "final_states": {
+    "current_neutral_derivation": "REJECTED_AS_CANONICAL_REFERENCE_PRESERVED_HISTORICALLY",
+    "source_faithful_candidate": "HUMAN_REVIEW_PENDING",
+    "err_lab_011": "OPEN_AWAITING_HUMAN_SOURCE_FIDELITY_DECISION",
+    "pend_lab_046": "OPEN_HUMAN_COMPARISON_REQUIRED",
+    "authorization_171": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "global_current_phase": "PRESERVED_UNCHANGED"
+  }
+}

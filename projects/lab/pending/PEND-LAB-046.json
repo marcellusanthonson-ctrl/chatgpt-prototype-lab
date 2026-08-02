@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "id": "PEND-LAB-046",
+  "project_id": "lab",
+  "status": "OPEN_HUMAN_COMPARISON_REQUIRED",
+  "type": "MOTION_SOURCE_FIDELITY_HUMAN_COMPARISON",
+  "subject": "Human comparison of the Carolina roadmap source-faithful candidate after forensic reconstruction",
+  "priority": "HIGH",
+  "precondition": "CAROLINA_ROADMAP_SOURCE_FIDELITY_CANDIDATE_READY_FOR_HUMAN_COMPARISON_PROTOCOL_HARDENED",
+  "current_candidate_state": "NOT_YET_MATERIALIZED",
+  "required_actions": [
+    "COMPLETE_SOURCE_FILE_INVENTORY",
+    "COMPLETE_SOURCE_AND_CANDIDATE_RENDER_MATRIX",
+    "PASS_GEOMETRY_COMPUTED_STYLE_AND_SCREENSHOT_GATES",
+    "PRESENT_HUMAN_COMPARISON_SURFACE",
+    "OBTAIN_SEPARATE_HUMAN_SOURCE_FIDELITY_DECISION"
+  ],
+  "prohibitions": [
+    "NO_AUTOMATIC_REFERENCE_APPROVAL",
+    "NO_CANONICAL_REPLACEMENT",
+    "NO_REUSABLE_PROMOTION",
+    "NO_PRODUCT_INTEGRATION",
+    "NO_CAROLINA_MUTATION"
+  ],
+  "source_refs": [
+    "decisions/DEC-LAB-031.json",
+    "errors/ERR-LAB-011.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171.json"
+  ],
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "integration_effect": "NONE"
+}

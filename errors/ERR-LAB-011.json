@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ERR-LAB-011",
+  "title": "Motion source fidelity and visual anatomy contract omitted",
+  "project_id": "lab",
+  "project_scope": ["lab"],
+  "classification": "CONFIRMED",
+  "technical_determination": "CONFIRMED",
+  "severity": "HIGH",
+  "status": "OPEN_CONFIRMED_REMEDIATION_AUTHORIZED",
+  "lifecycle_state": "OPEN",
+  "canonical_path": "errors/ERR-LAB-011.json",
+  "updated_at": "2026-08-02",
+  "causes": [
+    "FORMULA_FIDELITY_CONFUSED_WITH_EFFECT_FIDELITY",
+    "SOURCE_VISUAL_ANATOMY_NOT_EXTRACTED",
+    "GENERIC_DERIVATION_PRESENTED_AS_REFERENCE_IMPLEMENTATION",
+    "HORIZONTAL_AXIS_NOT_CONTRACTED",
+    "SOURCE_MARKUP_AND_STYLE_SET_NOT_INVENTORIED",
+    "NO_SOURCE_RENDER_BASELINE",
+    "NO_COMPUTED_STYLE_PARITY_GATE",
+    "NO_PIXEL_OR_GEOMETRY_PARITY_GATE",
+    "HUMAN_REVIEW_OCCURRED_AFTER_CANDIDATE_PUBLICATION",
+    "AUTOMATED_PASS_EXCEEDED_EVIDENCE_SCOPE"
+  ],
+  "current_demo_determination": "HUMAN_REVIEW_REJECTED_REVISION_REQUIRED",
+  "current_demo_classification": [
+    "REJECTED_AS_CANONICAL_REFERENCE",
+    "PRESERVED_AS_HISTORICAL_NEUTRAL_DERIVATION"
+  ],
+  "repair_authorized": true,
+  "repair_scope": "SEPARATE_SOURCE_FAITHFUL_CANDIDATE_AND_PROTOCOL_HARDENING_ONLY",
+  "err_lab_010_preservation": "CLOSED_UNCHANGED",
+  "closure_prohibited_before_human_source_fidelity_decision": true,
+  "source_refs": [
+    "decisions/DEC-LAB-031.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171.json",
+    "projects/lab/briefs/CODEX_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171_001.json"
+  ],
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}

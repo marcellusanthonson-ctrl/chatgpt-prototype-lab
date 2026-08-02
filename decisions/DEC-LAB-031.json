@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "id": "DEC-LAB-031",
+  "project": "lab",
+  "project_id": "lab",
+  "title": "Require proven source fidelity before abstraction, neutralization or reusable promotion of source-derived motion",
+  "status": "APPROVED",
+  "approval_state": "APPROVED",
+  "effective_date": "2026-08-02",
+  "approved_at": "2026-08-02",
+  "approved_by": "Jonathan Martínez",
+  "approval_evidence": "RATIFICO DEC-LAB-031.",
+  "decision": {
+    "rule": "SOURCE_FIDELITY_MUST_BE_PROVEN_BEFORE_ABSTRACTION_NEUTRALIZATION_OR_REUSABLE_PROMOTION",
+    "required_distinctions": [
+      "REFERENCE_IMPLEMENTATION",
+      "BEHAVIOR_CORE",
+      "NEUTRAL_ADAPTATION",
+      "PROJECT_ADAPTATION"
+    ],
+    "formula_or_functional_validation_is_not_effect_fidelity": true,
+    "neutral_adaptation_may_not_replace_overwrite_or_impersonate_reference": true,
+    "human_review_required_before": [
+      "REFERENCE_APPROVAL",
+      "CANONICAL_REPLACEMENT",
+      "REUSABLE_PROMOTION",
+      "NEUTRAL_DERIVATION_APPROVAL",
+      "PRODUCT_INTEGRATION"
+    ],
+    "roadmap_vertical_progress_001": {
+      "human_determination": "HUMAN_REVIEW_REJECTED_REVISION_REQUIRED",
+      "current_demo_classification": [
+        "REJECTED_AS_CANONICAL_REFERENCE",
+        "PRESERVED_AS_HISTORICAL_NEUTRAL_DERIVATION"
+      ]
+    }
+  },
+  "consequences": [
+    "PUBLISH_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_PROTOCOL",
+    "PRESERVE_EXISTING_ROADMAP_AS_HISTORICAL_NEUTRAL_DERIVATION",
+    "CREATE_SEPARATE_CAROLINA_SOURCE_FAITHFUL_CANDIDATE_FOR_HUMAN_COMPARISON",
+    "HARDEN_MOTION_PROTOCOL_SCHEMAS_AND_TEMPLATE"
+  ],
+  "non_authorizations": [
+    "NO_HUMAN_APPROVAL_CLAIM",
+    "NO_REFERENCE_APPROVAL",
+    "NO_CANONICAL_REPLACEMENT",
+    "NO_REUSABLE_PROMOTION",
+    "NO_PRODUCT_INTEGRATION",
+    "NO_CAROLINA_REPOSITORY_MUTATION"
+  ],
+  "supersedes": [],
+  "superseded_by": null,
+  "source_refs": [
+    "projects/lab/briefs/CODEX_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171_001.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171.json",
+    "errors/ERR-LAB-011.json"
+  ],
+  "authority_effect": "NORMATIVE_DECISION_EXECUTION_BOUNDED_BY_AUTHORIZATION_171",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
+}

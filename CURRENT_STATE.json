@@ -89,6 +89,11 @@
     "integration_factory_current_continuity": "projects/lab/continuity/CURRENT_CONTINUITY.json",
     "motion_system": "foundation-library/motion-system/MOTION-SYSTEM-001/MANIFEST.json",
     "motion_system_correction_168_evidence": "projects/lab/evidence/EVD-LAB-MOTION-CATALOG-ROADMAP-CORRECTION-168.json",
+    "motion_source_fidelity_decision_031": "decisions/DEC-LAB-031.json",
+    "motion_source_fidelity_authorization_171": "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171.json",
+    "motion_source_fidelity_brief_171": "projects/lab/briefs/CODEX_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171_001.json",
+    "motion_source_fidelity_error_011": "errors/ERR-LAB-011.json",
+    "motion_source_fidelity_pending_046": "projects/lab/pending/PEND-LAB-046.json",
     "motion_system_foundation": {
       "status": "CORRECTION_REMOTE_VERIFIED_READY_FOR_NEW_HUMAN_REVIEW",
       "decision": "DEC-LAB-029",
@@ -167,9 +172,12 @@
     "DEC-LAB-020",
     "DEC-LAB-021",
     "DEC-LAB-029",
-    "DEC-LAB-030"
+    "DEC-LAB-030",
+    "DEC-LAB-031"
   ],
-  "open_errors": [],
+  "open_errors": [
+    "ERR-LAB-011"
+  ],
   "validated_patterns": [
     "PAT-LAB-001",
     "PAT-LAB-002",
@@ -250,7 +258,8 @@
     "transversal_motion_effects_library_foundation_167": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "motion_catalog_review_surface_and_roadmap_fidelity_correction_168": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "priority_integrations_phase0_169": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "priority_integrations_phase1_170_revision_2": "CONSUMED_ON_VERIFIED_SQUASH_MERGE"
+    "priority_integrations_phase1_170_revision_2": "CONSUMED_ON_VERIFIED_SQUASH_MERGE",
+    "roadmap_source_fidelity_forensic_reconstruction_171": "ROADMAP_SOURCE_FIDELITY_RECONSTRUCTION_171_GRANTED_AWAITING_EXECUTION"
   },
   "verified_external_heads": {
     "symphonie": "31dd1345026240c83b015feef34d6f7f2d2147b7",
@@ -280,8 +289,8 @@
     "SYMPHONIE_LIVHAVN_MONOLITHIC_VISUAL_CALIBRATION_083_READY_WITH_BOUNDED_GAPS",
     "INTEGRATION_FACTORY_M1_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_VALIDATION_PASS"
   ],
-  "next_authorized_action": "NONE_AFTER_PHASE_1_AUTHORIZATION_CONSUMPTION",
-  "next_recommended_transition": "SEPARATELY_AUTHORIZE_PHASE_2_INDEPENDENT_EVIDENCE_CLOSURE",
+  "next_authorized_action": "EXECUTE_AUTHORIZATION_171_STAGE_2_AFTER_VERIFIED_STAGE_1_REMOTE_PUBLICATION",
+  "next_recommended_transition": "EXECUTE_PARALLEL_MOTION_SOURCE_FIDELITY_WORKSTREAM_171_WITHOUT_CHANGING_PRIORITY_INTEGRATIONS_PHASE",
   "continuity_read_order": [
     "LAB_CONTRACT.md",
     "METHODOLOGY.md",
