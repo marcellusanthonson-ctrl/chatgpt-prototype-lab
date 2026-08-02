@@ -65,8 +65,10 @@
   ],
   "preserve_authorization_state": {
     "authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_SCROLL_CORRECTION_AND_CONDITIONAL_DECISION_RECONCILIATION_173",
-    "stage_2_status": "CONDITIONALLY_AUTHORIZED_AWAITING_EXPLICIT_HUMAN_DETERMINATION",
-    "triggered": false
+    "stage_2_status_at_175_execution": "CONDITIONALLY_AUTHORIZED_AWAITING_EXPLICIT_HUMAN_DETERMINATION",
+    "triggered_at_175_execution": false,
+    "current_stage_2_status": "TRIGGERED_AND_CONSUMED",
+    "current_trigger_value": "APPROVED_SOURCE_FIDELITY"
   },
   "prohibitions": [
     "NO_CAROLINA_REPOSITORY_MUTATION",
@@ -80,11 +82,11 @@
     "NO_RUNTIME_OR_DEPLOYMENT",
     "NO_SCOPE_EXPANSION"
   ],
-  "authority_effect": "NONE_AFTER_AUTHORIZATION_175_CONSUMPTION_AUTHORIZATION_173_STAGE_2_CONDITIONAL_UNCHANGED",
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_175_CONSUMPTION",
   "runtime_effect": "NONE",
   "integration_effect": "NONE",
   "execution_result": {
-    "status": "POST_TERMINAL_DEAD_SCROLL_REMOVED_TECHNICAL_REPAIR_PUBLISHED_HUMAN_LOCALHOST_REVIEW_REQUIRED",
+    "status": "POST_TERMINAL_DEAD_SCROLL_REMOVED_HUMAN_LOCALHOST_REVALIDATION_PASS",
     "reassessment_of_174": "MODIFIED_TERMINAL_COMPLETION_CONFIRMED_POST_TERMINAL_DEAD_SCROLL_PRESENT",
     "css_runway_min_height": "100VH_REPLACING_420VH",
     "post_terminal_release_margin_css_px": 16,
@@ -94,14 +96,24 @@
     "maximum_observed_release_ms": 55.95,
     "real_localhost_server_delivery": "PASS_HTTP_200",
     "real_localhost_browser_automation": "BLOCKED_ERR_BLOCKED_BY_ADMINISTRATOR",
-    "human_localhost_revalidation_required": true,
+    "human_localhost_revalidation": "PASS",
+    "human_localhost_reviewer": "Jonathan Martínez",
+    "human_localhost_revalidation_at": "2026-08-02T18:43:00-04:00",
+    "human_findings": [
+      "COMPLETE_ROADMAP_JOURNEY_CONFIRMED",
+      "POST_TERMINAL_DEAD_SCROLL_ABSENT",
+      "RESPONSIVE_ALTERNATING_CARD_LAYOUT_CONFIRMED_AFTER_VIEWPORT_RESIZE",
+      "BASELINE_AND_CANDIDATE_VISUAL_PARITY_CONFIRMED"
+    ],
     "reference_implementation_blob_sha": "66100821888e37e769a7dcc1f9af53d30a74175e",
     "reference_implementation_changed": false,
     "source_fidelity_tests_reexecuted": false,
     "carolina_repository_mutation": "NONE",
-    "human_source_fidelity_decision": "PENDING_NEW_COMPLETE_LOCALHOST_REVIEW",
-    "authorization_173_stage_2_triggered": false,
-    "evidence_ref": "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-POST-TERMINAL-DEAD-SCROLL-175.json"
+    "human_source_fidelity_decision": "APPROVED_SOURCE_FIDELITY",
+    "authorization_173_stage_2_triggered": true,
+    "authorization_173_stage_2_status": "TRIGGERED_AND_CONSUMED",
+    "evidence_ref": "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-POST-TERMINAL-DEAD-SCROLL-175.json",
+    "reconciliation_ref": "registry/deltas/roadmap-section-source-fidelity-human-approval-173.json"
   },
   "publication_commits": [
     "655d3926a3a4685dde3f7ea16559472486ebfbac",
