@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_LIVE_SCROLL_RANGE_REPAIR_174",
   "project_id": "lab",
-  "status": "GRANTED_ACTIVE",
+  "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
   "authorization_class": "HUMAN_COMPARISON_LIVE_SCROLL_RANGE_REPAIR",
   "decision_ref": "DEC-LAB-031",
   "approved_by": "Jonathan Martínez",
@@ -85,7 +85,34 @@
     "NO_RUNTIME_OR_DEPLOYMENT",
     "NO_SCOPE_EXPANSION"
   ],
-  "authority_effect": "ACTIVE_FOR_AUTHORIZATION_174_ONLY",
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_174_CONSUMPTION_AUTHORIZATION_173_STAGE_2_CONDITIONAL_UNCHANGED",
   "runtime_effect": "NONE",
-  "integration_effect": "NONE"
+  "integration_effect": "NONE",
+  "execution_result": {
+    "status": "PASS_TECHNICAL_REPAIR_NEW_HUMAN_REVIEW_REQUIRED",
+    "previous_173_stage_1_result": "HUMAN_REVIEW_REVERSED_STAGE_1_PASS_SCROLL_RANGE_STALE",
+    "human_comparison_surface": "LIVE_SCROLL_RANGE_REPAIRED",
+    "required_viewports": "PASS_6_OF_6",
+    "direct_and_comparison_terminal_parity": true,
+    "actual_terminal_gate": "PASS_BOTH_PANELS",
+    "reference_implementation_blob_sha": "66100821888e37e769a7dcc1f9af53d30a74175e",
+    "reference_implementation_changed": false,
+    "source_fidelity_tests_reexecuted": false,
+    "carolina_repository_mutation": "NONE",
+    "human_source_fidelity_decision": "PENDING_NEW_COMPLETE_REVIEW",
+    "authorization_173_stage_2_triggered": false,
+    "evidence_ref": "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-LIVE-RANGE-174.json"
+  },
+  "publication_commits": [
+    "0365ec738c395ddec2013adaf6a28a27b1d1a267",
+    "59823debd0d94bc5414065681d2a7de05e401c79",
+    "0d66fbd8210ebbc993f90dc8823429f72787c6f1",
+    "ce9e59b36888167f309170ab4d41ef52a2ff4b05",
+    "43212b35e321798886394c35a6d76ac2c0287949",
+    "8fccba43fcff68c9cd4f325de2884f3c8758fe6f",
+    "bc775af38f5d517edbf3d4ba57bc4a9f054d44bd",
+    "4f9ec379608699c0d091eccbc92c3378a238cc06",
+    "5f00df7386d350bba5975d73125347fb08ed990c"
+  ],
+  "consumed_at": "2026-08-02T17:46:00-04:00"
 }
