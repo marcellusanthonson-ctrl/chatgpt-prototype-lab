@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "task_id": "CHATGPT_ROADMAP_SECTION_HUMAN_COMPARISON_LIVE_SCROLL_RANGE_REPAIR_174_001",
   "project_id": "lab",
-  "status": "COMPLETE_PASS_NEW_HUMAN_REVIEW_REQUIRED",
+  "status": "COMPLETE_RESULT_MODIFIED_BY_POST_PUBLICATION_HUMAN_EVIDENCE",
   "objective": "Repair only candidate 002 HUMAN_COMPARISON.html so the review surface measures the live stabilized child range, reconstructs the trailing scroll context excluded by section isolation, and confirms the real terminal state in both panels.",
   "executor": "ChatGPT",
   "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
@@ -72,8 +72,8 @@
     "SECTION_ISOLATION_REMOVED_POST_SECTION_SCROLL_CONTEXT_REQUIRED_BY_VIEWPORT_TRIGGER_FORMULA",
     "OVERFLOW_X_HIDDEN_DISABLED_STICKY_REVIEW_SHELL"
   ],
-  "acceptance_results": {
-    "ALL_SIX_REQUIRED_VIEWPORTS_PASS": "PASS",
+  "acceptance_results_at_publication": {
+    "ALL_SIX_REQUIRED_VIEWPORTS_PASS": "PASS_REPORTED_AT_PUBLICATION",
     "DIRECT_SOURCE_CONTEXT_TERMINAL_COMPLETE": "PASS",
     "COMPARISON_BOTH_PANELS_TERMINAL_COMPLETE": "PASS",
     "DIRECT_AND_COMPARISON_TERMINAL_PARITY": "PASS",
@@ -85,7 +85,19 @@
     "REFERENCE_IMPLEMENTATION_BLOB_UNCHANGED": "PASS_SHA_66100821888E37E769A7DCC1F9AF53D30A74175E",
     "NO_CAROLINA_MUTATION": "PASS"
   },
-  "result": "PASS_TECHNICAL_REPAIR_NEW_HUMAN_REVIEW_REQUIRED",
+  "result": "MODIFIED_TERMINAL_COMPLETION_CONFIRMED_POST_TERMINAL_DEAD_SCROLL_PRESENT",
+  "post_publication_human_reassessment": {
+    "classification": "MODIFIED",
+    "terminal_completion": "CONFIRMED",
+    "panel_parity": "CONFIRMED",
+    "post_terminal_dead_scroll": "CONFIRMED",
+    "root_causes": [
+      "CSS_RUNWAY_MIN_HEIGHT_420VH_OVERRULED_DYNAMIC_REQUIRED_HEIGHT",
+      "TERMINAL_BUFFER_ADDED_REDUNDANT_POST_COMPLETION_TRAVEL"
+    ],
+    "successor_authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_POST_TERMINAL_DEAD_SCROLL_REMOVAL_175",
+    "successor_brief_ref": "projects/lab/briefs/CHATGPT_ROADMAP_SECTION_POST_TERMINAL_DEAD_SCROLL_REMOVAL_175_001.json"
+  },
   "evidence_ref": "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-LIVE-RANGE-174.json",
   "authorization_173_stage_2": "CONDITIONALLY_AUTHORIZED_AWAITING_EXPLICIT_HUMAN_DETERMINATION_NOT_TRIGGERED",
   "human_source_fidelity_decision": "PENDING_NEW_COMPLETE_REVIEW",
