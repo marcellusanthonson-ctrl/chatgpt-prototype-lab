@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_0_CANONICAL_RECONCILIATION_169",
+  "project_id": "lab",
+  "status": "GRANTED_EXECUTION_IN_PROGRESS",
+  "authorization_class": "BOUNDED_DOCUMENTARY_RECONCILIATION",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-08-02",
+  "approval_source": "Continuamos con la fase 0. Continuamos.",
+  "grant_inferred": false,
+  "repository": {
+    "name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "branch": "main",
+    "expected_parent_head": "5b133661a643e290567324604083558cb72f31fd",
+    "head_policy": "VERIFY_LIVE_AT_USE",
+    "entrypoint": "project-sources/chatgpt/START_HERE.md"
+  },
+  "objective": "Reconcile and publish the canonical inventory and roadmap for exactly two priority integrations: Product Leadership and Software Solution Engineering.",
+  "priority_integrations": [
+    "PRODUCT_LEADERSHIP",
+    "SOFTWARE_SOLUTION_ENGINEERING"
+  ],
+  "classification_boundaries": {
+    "INTELLIGENT_APPLICATION_CONSTRUCTION": "SECONDARY_CANDIDATE_OUTSIDE_CRITICAL_PATH",
+    "ECR": "SUPPORTING_TRANSVERSAL_CAPABILITY",
+    "STANDARDIZED_INTEGRATION_FACTORY": "ENABLING_INFRASTRUCTURE",
+    "CRITERION_LAYER": "INTEGRATED_BASELINE",
+    "MOTION_SYSTEM": "SEPARATE_ADDITIONAL_LINE"
+  },
+  "authority": {
+    "commit_authorized": true,
+    "push_authorized": true,
+    "source_file_update_authorized": true,
+    "runtime_authorized": false,
+    "integration_authorized": false,
+    "product_changes_authorized": false,
+    "aws_authorized": false,
+    "terraform_authorized": false,
+    "external_audit_execution_authorized": false,
+    "test_execution_authorized": false,
+    "pointer_mutation_authorized": false,
+    "candidate_registry_mutation_authorized": false,
+    "static_selector_mutation_authorized": false
+  },
+  "authorized_actions": [
+    "CREATE_DEC_LAB_030",
+    "CREATE_INT_LAB_004_PRODUCT_LEADERSHIP_CANDIDATE_RECORD",
+    "CREATE_INT_LAB_005_SOFTWARE_SOLUTION_ENGINEERING_CANDIDATE_RECORD",
+    "CREATE_PRIORITY_INTEGRATIONS_PROGRAM_001",
+    "CREATE_PRIORITY_INTEGRATIONS_ROADMAP_001",
+    "CREATE_SUCCESSOR_PENDING_FOR_PHASE_1",
+    "RECONCILE_SMALL_CANONICAL_INDEXES",
+    "CREATE_REGISTRY_DELTA_EVIDENCE_AND_CONTINUITY_SUPPLEMENT",
+    "VALIDATE_JSON_REFERENCES_COUNTS_AND_DUPLICATES",
+    "PUBLISH_ONE_SQUASHED_MAIN_COMMIT",
+    "VERIFY_REMOTE_HEAD",
+    "MARK_AUTHORIZATION_CONSUMED_AFTER_VERIFIED_PUBLICATION"
+  ],
+  "prohibited_actions": [
+    "EXECUTE_PRODUCT_LEADERSHIP_TEST_003",
+    "EXECUTE_SOFTWARE_SOLUTION_ENGINEERING_TEST",
+    "EXECUTE_EXTERNAL_AUDIT",
+    "EXECUTE_AWS_OR_TERRAFORM",
+    "CREATE_OR_MODIFY_INFRASTRUCTURE",
+    "ACTIVATE_INTEGRATE_OR_PROMOTE_ANY_CANDIDATE",
+    "MODIFY_ACTIVE_POINTER",
+    "MODIFY_CANDIDATE_REGISTRY",
+    "MODIFY_STATIC_SELECTOR",
+    "MODIFY_PRODUCT_REPOSITORY_OR_RUNTIME",
+    "EXPAND_ECR_IAC_OR_MOTION_SYSTEM",
+    "SELECT_ARCHITECTURE_PROVIDER_OR_GLOBAL_STACK",
+    "REWRITE_HISTORICAL_RESULTS"
+  ],
+  "protected_paths": [
+    "architecture/integrations/active/INTEGRATION_FACTORY_RESOLUTION_POINTER.json",
+    "architecture/integrations/migration/M2/SHADOW_INTEGRATION_REGISTRY.json",
+    "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001"
+  ],
+  "acceptance_checks": [
+    "EXACTLY_TWO_PRIORITY_INTEGRATIONS_RECORDED",
+    "PRODUCT_LEADERSHIP_AND_SSE_HAVE_SEPARATE_CANDIDATE_RECORDS",
+    "ALL_OTHER_LINES_HAVE_EXPLICIT_NON_PRIORITY_CLASSIFICATION",
+    "ROADMAP_HAS_ONE_ORDERED_CRITICAL_PATH",
+    "NO_TEST_AUDIT_ACTIVATION_RUNTIME_PRODUCT_OR_PROVIDER_EFFECT",
+    "JSON_REFERENCES_AND_DUPLICATE_IDS_PASS",
+    "PROTECTED_PATHS_UNCHANGED"
+  ],
+  "maximum_result": "PHASE_0_PRIORITY_INTEGRATIONS_CANONICAL_INVENTORY_AND_ROADMAP_RECONCILED",
+  "consumption_rule": "CONSUMED_AFTER_SQUASHED_MAIN_PUBLICATION_AND_REMOTE_HEAD_VERIFICATION",
+  "authority_effect": "BOUNDED_DOCUMENTARY_RECONCILIATION_ONLY",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "integration_effect": "NONE"
+}
