@@ -203,3 +203,7 @@ Stage 2 se ejecutó desde el parent remoto verificado `4ced6a5f63f833f1526400b70
 Las dos iteraciones pasaron 420/420 matches, 13/13 oráculos por evaluador, cero divergencias y el digest exacto `9d9f48ab881ee0f604e70ae1d23887afe8c2a6bdfcf683b49e76b0a641935329`, con digests normalizados deterministas. El inventario general conserva exactamente 329 hallazgos, delta cero y `global_repository_pass = false`.
 
 El selector estático conserva byte-for-byte el blob `301ba432907758fc49a9b3c86a83fc762eac4607`; el candidate conserva `a067cd9f95b98aa1599d21e3a0ff35fa56ac3a78`. El lock fue liberado, los temporales eliminados y no se activó rollback. La autorización 166 queda consumida con la publicación remota verificada. No existe autoridad residual para retirar el selector; `PEND-LAB-042` espera la decisión humana de conservarlo o autorizar separadamente su retiro.
+
+## Motion system transversal — autorización 167
+
+La fundación está publicada y validada antes de publicación final; resta verificar el remoto y consumir la autorización. Los dos efectos iniciales continúan en HUMAN_REVIEW_PENDING.

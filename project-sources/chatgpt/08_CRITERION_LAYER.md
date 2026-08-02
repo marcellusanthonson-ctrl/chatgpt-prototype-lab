@@ -57,3 +57,7 @@ Consultar el perfil visual sólo cuando el selector lo active. Las invariantes d
 ## Límites
 
 Esta fuente no autoriza ejecución, commits, integración de Symphonie, cambios de producto, RAG, embeddings, base vectorial, instalación de skills, tecnologías de asistencia, conformidad WCAG, despliegue ni release.
+
+## Motion system transversal
+
+Para tareas de motion, animación, transición, microinteracción, counters, scroll paramétrico, reduced motion, flicker o layout shift, DESIGN_CRITERION y WEB_ACCESSIBILITY consultan `foundation-library/motion-system/MOTION-SYSTEM-001/MANIFEST.json`. Esta fuente no modifica la semántica del selector ni autoriza integración de producto.
