@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "CHATGPT_ROADMAP_SECTION_POST_TERMINAL_DEAD_SCROLL_REMOVAL_175_001",
+  "project_id": "lab",
+  "status": "ACTIVE",
+  "objective": "Remove only the purposeless outer scroll after candidate 002 comparison has already confirmed the real terminal state in both panels.",
+  "executor": "ChatGPT",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "ce6bf1c7ffb039907edcaaf684d3baed1da2ad65",
+  "authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_POST_TERMINAL_DEAD_SCROLL_REMOVAL_175",
+  "parent_authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_LIVE_SCROLL_RANGE_REPAIR_174",
+  "target_implementation_path": "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/HUMAN_COMPARISON.html",
+  "documentary_paths": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SECTION_POST_TERMINAL_DEAD_SCROLL_REMOVAL_175.json",
+    "projects/lab/briefs/CHATGPT_ROADMAP_SECTION_POST_TERMINAL_DEAD_SCROLL_REMOVAL_175_001.json",
+    "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-POST-TERMINAL-DEAD-SCROLL-175.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_LIVE_SCROLL_RANGE_REPAIR_174.json",
+    "projects/lab/briefs/CHATGPT_ROADMAP_SECTION_HUMAN_COMPARISON_LIVE_SCROLL_RANGE_REPAIR_174_001.json",
+    "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-LIVE-RANGE-174.json"
+  ],
+  "human_evidence_input": {
+    "video_attachment": "Desktop 2026.08.02 - 18.09.55.02.mp4",
+    "finding": "TERMINAL_COMPLETION_CONFIRMED_BUT_POST_TERMINAL_SCROLL_CONTINUES_WITHOUT_VISIBLE_OBJECTIVE"
+  },
+  "required_changes": [
+    "REMOVE_CSS_MIN_HEIGHT_420VH_FLOOR_THAT_OVERRIDES_DYNAMIC_RUNWAY_HEIGHT",
+    "REPLACE_TERMINAL_BUFFER_WITH_RELEASE_MARGIN_NOT_GREATER_THAN_24PX",
+    "PRESERVE_REAL_TERMINAL_GATE_AND_PANEL_PARITY"
+  ],
+  "required_viewports": [
+    "390x844",
+    "768x1024",
+    "1280x720",
+    "1440x900",
+    "1541x899",
+    "1920x1080",
+    "2560x1080"
+  ],
+  "acceptance_checks": [
+    "BOTH_PANELS_COMPLETE_AT_100_PERCENT",
+    "BOTH_TIMELINES_IS_END_ACTIVE",
+    "BOTH_THIRD_NODES_ACTIVE",
+    "BOTH_TERMINAL_CAPS_ACTIVE",
+    "BOTH_PANELS_AT_LIVE_MAXIMUM",
+    "POST_TERMINAL_SCROLL_NOT_GREATER_THAN_24PX",
+    "FOOTER_VISIBLE_AFTER_ONE_NORMAL_WHEEL_TICK",
+    "RELEASE_NOT_GREATER_THAN_150MS_CONTINUOUS_SCROLL",
+    "NO_HORIZONTAL_OVERFLOW",
+    "REFERENCE_IMPLEMENTATION_BLOB_UNCHANGED",
+    "NO_CAROLINA_MUTATION"
+  ],
+  "preserve_byte_for_byte": [
+    "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/REFERENCE_IMPLEMENTATION.html",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/COMPARISON_METRICS.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/SOURCE_PROVENANCE.json"
+  ],
+  "validation_policy": {
+    "preferred": "REAL_LOCALHOST_BROWSER_MATRIX",
+    "environment_stop_condition": "AUTOMATION_PLATFORM_BLOCKS_LOCALHOST_BROWSER_NAVIGATION",
+    "fallback_may_not_be_misrepresented_as_localhost": true,
+    "human_localhost_review_remains_required_if_preferred_validation_is_blocked": true
+  },
+  "stop_conditions": [
+    "REMOTE_HEAD_DIVERGES_BEFORE_FIRST_WRITE",
+    "REFERENCE_IMPLEMENTATION_CHANGE_REQUIRED",
+    "EFFECT_FORMULA_CHANGE_REQUIRED",
+    "PRODUCT_OR_RUNTIME_CHANGE_REQUIRED",
+    "SCOPE_EXPANSION_REQUIRED"
+  ],
+  "response_contract": [
+    "RESULT",
+    "COMMITS",
+    "VALIDATION",
+    "DIVERGENCES",
+    "NEW_REVIEW_LINK",
+    "AUTHORIZATION_STATE",
+    "SINGLE_NEXT_ACTION"
+  ]
+}
