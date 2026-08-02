@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "REGISTRY-DELTA-PRIORITY-INTEGRATIONS-PHASE-0-169",
+  "project_id": "lab",
+  "updated_at": "2026-08-02",
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_0_CANONICAL_RECONCILIATION_169",
+    "path": "projects/lab/authorizations/AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_0_CANONICAL_RECONCILIATION_169.json",
+    "status": "GRANTED_EXECUTION_IN_PROGRESS"
+  },
+  "decision": {
+    "id": "DEC-LAB-030",
+    "path": "decisions/DEC-LAB-030.json",
+    "status": "APPROVED"
+  },
+  "integrations": [
+    {
+      "id": "INT-LAB-004",
+      "status": "CANDIDATE",
+      "priority_order": 1,
+      "path": "projects/lab/integrations/INT-LAB-004.json"
+    },
+    {
+      "id": "INT-LAB-005",
+      "status": "CANDIDATE",
+      "priority_order": 2,
+      "path": "projects/lab/integrations/INT-LAB-005.json"
+    }
+  ],
+  "program": {
+    "id": "PRIORITY-INTEGRATIONS-PROGRAM-001",
+    "manifest": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/MANIFEST.json",
+    "roadmap": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/ROADMAP.json",
+    "phase": "PHASE_0_CANONICAL_INVENTORY_AND_ROADMAP"
+  },
+  "pending": {
+    "id": "PEND-LAB-044",
+    "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+    "path": "projects/lab/pending/PEND-LAB-044.json"
+  },
+  "evidence": {
+    "id": "EVD-LAB-PRIORITY-INTEGRATIONS-PHASE-0-169",
+    "path": "projects/lab/evidence/EVD-LAB-PRIORITY-INTEGRATIONS-PHASE-0-169.json"
+  },
+  "classification_boundaries": {
+    "INTELLIGENT_APPLICATION_CONSTRUCTION": "SECONDARY_CANDIDATE_OUTSIDE_CRITICAL_PATH",
+    "ECR": "SUPPORTING_TRANSVERSAL_CAPABILITY",
+    "STANDARDIZED_INTEGRATION_FACTORY": "ENABLING_INFRASTRUCTURE_ALREADY_ACTIVE",
+    "CRITERION_LAYER": "INTEGRATED_BASELINE",
+    "MOTION_SYSTEM": "SEPARATE_ADDITIONAL_LINE"
+  },
+  "effects": {
+    "authority": "NONE_AFTER_AUTHORIZATION_CONSUMPTION",
+    "runtime": "NONE",
+    "product": "NONE",
+    "integration": "NONE",
+    "test_execution": "NONE",
+    "external_audit": "NONE",
+    "aws": "NONE",
+    "terraform": "NONE"
+  }
+}
