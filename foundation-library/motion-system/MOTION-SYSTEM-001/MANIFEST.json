@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "library_id": "MOTION-SYSTEM-001",
   "version": "0.1.0",
-  "status": "FOUNDATION_PUBLISHED_INITIAL_EFFECTS_HUMAN_REVIEW_PENDING",
+  "status": "FOUNDATION_PUBLISHED_SECTION_SCOPED_ROADMAP_HUMAN_REVIEW_PENDING",
   "project_id": "lab",
   "owner": "LAB",
   "canonical_root": "foundation-library/motion-system/MOTION-SYSTEM-001",
@@ -17,7 +17,16 @@
     {
       "candidate_id": "CAROLINA-ROADMAP-SOURCE-FAITHFUL-001",
       "path": "source-fidelity-candidates/CAROLINA-ROADMAP-SOURCE-FAITHFUL-001",
-      "status": "HUMAN_REVIEW_PENDING",
+      "status": "HUMAN_REVIEW_REJECTED_SCOPE_OVERBROAD",
+      "preservation": "PRESERVED_AS_FULL_CONTEXT_FORENSIC_CAPTURE",
+      "canonical_replacement": false,
+      "reusable_promotion": false
+    },
+    {
+      "candidate_id": "CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
+      "path": "source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
+      "status": "HUMAN_REVIEW_PENDING_AUTOMATED_GATES_PASS",
+      "source_selector": ".ca-roadmap-editorial",
       "canonical_replacement": false,
       "reusable_promotion": false
     }
