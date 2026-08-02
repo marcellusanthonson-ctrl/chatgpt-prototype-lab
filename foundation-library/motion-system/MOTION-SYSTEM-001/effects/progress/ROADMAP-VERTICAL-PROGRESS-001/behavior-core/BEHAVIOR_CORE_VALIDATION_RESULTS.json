@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0.0",
+  "validation_id": "ROADMAP-VERTICAL-PROGRESS-BEHAVIOR-CORE-176",
+  "browser": "Chromium",
+  "server": "CONTROLLED_SET_CONTENT_EXACT_BYTES",
+  "environment_limitation": "REAL_LOCALHOST_NAVIGATION_BLOCKED_BY_EXECUTION_ENVIRONMENT_ERR_BLOCKED_BY_ADMINISTRATOR",
+  "claim_boundary": "CONTROLLED_EXACT_BYTES_BROWSER_VALIDATION_PASS_NOT_AUTOMATED_REAL_LOCALHOST_PASS",
+  "viewports": [
+    {"viewport":"390x844","mode":"normal","max_scroll":731,"final_end_active":true,"final_active_steps":3,"final_progresses":[1,1,1],"scroll_top_equals_max":true,"post_terminal_extra_css_px":23.566,"first_terminal_scroll":719.757,"post_terminal_probe_scroll_css_px":11.243,"post_terminal_visual_motion_css_px":11,"configured_release_margin_css_px":16,"footer_visible_at_end":true,"after_resize_end_active":true,"after_resize_active_steps":3,"active_count_sequence":[1,2,3],"fill_monotonic":true,"horizontal_overflow_css_px":0,"external_requests":[],"padding_bottom":292,"additional_padding":0,"pass":true},
+    {"viewport":"390x844","mode":"reduced","max_scroll":731,"final_end_active":true,"final_active_steps":3,"final_progresses":[1,1,1],"scroll_top_equals_max":true,"post_terminal_extra_css_px":47.566,"first_terminal_scroll":0.178,"post_terminal_probe_scroll_css_px":24,"post_terminal_visual_motion_css_px":24,"configured_release_margin_css_px":16,"footer_visible_at_end":true,"after_resize_end_active":true,"after_resize_active_steps":3,"active_count_sequence":[3],"fill_monotonic":true,"horizontal_overflow_css_px":0,"external_requests":[],"padding_bottom":292,"additional_padding":0,"pass":true,"reduced_initial_final_state":true},
+    {"viewport":"768x1024","mode":"normal","max_scroll":528,"final_end_active":true,"final_active_steps":3,"final_progresses":[1,1,1],"scroll_top_equals_max":true,"post_terminal_extra_css_px":16.048,"first_terminal_scroll":132,"post_terminal_probe_scroll_css_px":24,"post_terminal_visual_motion_css_px":24,"configured_release_margin_css_px":16,"footer_visible_at_end":true,"after_resize_end_active":true,"after_resize_active_steps":3,"active_count_sequence":[2,3],"fill_monotonic":true,"horizontal_overflow_css_px":0,"external_requests":[],"padding_bottom":326,"additional_padding":34,"pass":true},
+    {"viewport":"768x1024","mode":"reduced","max_scroll":527,"final_end_active":true,"final_active_steps":3,"final_progresses":[1,1,1],"scroll_top_equals_max":true,"post_terminal_extra_css_px":16.048,"first_terminal_scroll":0.129,"post_terminal_probe_scroll_css_px":24,"post_terminal_visual_motion_css_px":24,"configured_release_margin_css_px":16,"footer_visible_at_end":true,"after_resize_end_active":true,"after_resize_active_steps":3,"active_count_sequence":[3],"fill_monotonic":true,"horizontal_overflow_css_px":0,"external_requests":[],"padding_bottom":326,"additional_padding":34,"pass":true,"reduced_initial_final_state":true},
+    {"viewport":"1280x720","mode":"normal","max_scroll":814,"final_end_active":true,"final_active_steps":3,"final_progresses":[1,1,1],"scroll_top_equals_max":true,"post_terminal_extra_css_px":68.112,"first_terminal_scroll":788.761,"post_terminal_probe_scroll_css_px":24,"post_terminal_visual_motion_css_px":24,"configured_release_margin_css_px":16,"footer_visible_at_end":true,"after_resize_end_active":true,"after_resize_active_steps":3,"active_count_sequence":[1,2,3],"fill_monotonic":true,"horizontal_overflow_css_px":0,"external_requests":[],"padding_bottom":292,"additional_padding":0,"pass":true},
+    {"viewport":"1280x720","mode":"reduced","max_scroll":814,"final_end_active":true,"final_active_steps":3,"final_progresses":[1,1,1],"scroll_top_equals_max":true,"post_terminal_extra_css_px":92.112,"first_terminal_scroll":0.199,"post_terminal_probe_scroll_css_px":24,"post_terminal_visual_motion_css_px":24,"configured_release_margin_css_px":16,"footer_visible_at_end":true,"after_resize_end_active":true,"after_resize_active_steps":3,"active_count_sequence":[3],"fill_monotonic":true,"horizontal_overflow_css_px":0,"external_requests":[],"padding_bottom":292,"additional_padding":0,"pass":true,"reduced_initial_final_state":true},
+    {"viewport":"1440x900","mode":"normal","max_scroll":635,"final_end_active":true,"final_active_steps":3,"final_progresses":[1,1,1],"scroll_top_equals_max":true,"post_terminal_extra_css_px":27.312,"first_terminal_scroll":158.75,"post_terminal_probe_scroll_css_px":24,"post_terminal_visual_motion_css_px":24,"configured_release_margin_css_px":16,"footer_visible_at_end":true,"after_resize_end_active":true,"after_resize_active_steps":3,"active_count_sequence":[1,2,3],"fill_monotonic":true,"horizontal_overflow_css_px":0,"external_requests":[],"padding_bottom":292,"additional_padding":0,"pass":true},
+    {"viewport":"1440x900","mode":"reduced","max_scroll":634,"final_end_active":true,"final_active_steps":3,"final_progresses":[1,1,1],"scroll_top_equals_max":true,"post_terminal_extra_css_px":27.312,"first_terminal_scroll":0.155,"post_terminal_probe_scroll_css_px":24,"post_terminal_visual_motion_css_px":24,"configured_release_margin_css_px":16,"footer_visible_at_end":true,"after_resize_end_active":true,"after_resize_active_steps":3,"active_count_sequence":[3],"fill_monotonic":true,"horizontal_overflow_css_px":0,"external_requests":[],"padding_bottom":292,"additional_padding":0,"pass":true,"reduced_initial_final_state":true},
+    {"viewport":"1541x899","mode":"normal","max_scroll":635,"final_end_active":true,"final_active_steps":3,"final_progresses":[1,1,1],"scroll_top_equals_max":true,"post_terminal_extra_css_px":27.673,"first_terminal_scroll":317.5,"post_terminal_probe_scroll_css_px":24,"post_terminal_visual_motion_css_px":24,"configured_release_margin_css_px":16,"footer_visible_at_end":true,"after_resize_end_active":true,"after_resize_active_steps":3,"active_count_sequence":[1,2,3],"fill_monotonic":true,"horizontal_overflow_css_px":0,"external_requests":[],"padding_bottom":292,"additional_padding":0,"pass":true},
+    {"viewport":"1541x899","mode":"reduced","max_scroll":635,"final_end_active":true,"final_active_steps":3,"final_progresses":[1,1,1],"scroll_top_equals_max":true,"post_terminal_extra_css_px":27.673,"first_terminal_scroll":0.155,"post_terminal_probe_scroll_css_px":24,"post_terminal_visual_motion_css_px":24,"configured_release_margin_css_px":16,"footer_visible_at_end":true,"after_resize_end_active":true,"after_resize_active_steps":3,"active_count_sequence":[3],"fill_monotonic":true,"horizontal_overflow_css_px":0,"external_requests":[],"padding_bottom":292,"additional_padding":0,"pass":true,"reduced_initial_final_state":true},
+    {"viewport":"1920x1080","mode":"normal","max_scroll":508,"final_end_active":true,"final_active_steps":3,"final_progresses":[1,1,1],"scroll_top_equals_max":true,"post_terminal_extra_css_px":16.513,"first_terminal_scroll":492.249,"post_terminal_probe_scroll_css_px":15.751,"post_terminal_visual_motion_css_px":16,"configured_release_margin_css_px":16,"footer_visible_at_end":true,"after_resize_end_active":true,"after_resize_active_steps":3,"active_count_sequence":[2,3],"fill_monotonic":true,"horizontal_overflow_css_px":0,"external_requests":[],"padding_bottom":346,"additional_padding":54,"pass":true},
+    {"viewport":"1920x1080","mode":"reduced","max_scroll":508,"final_end_active":true,"final_active_steps":3,"final_progresses":[1,1,1],"scroll_top_equals_max":true,"post_terminal_extra_css_px":16.513,"first_terminal_scroll":0.124,"post_terminal_probe_scroll_css_px":24,"post_terminal_visual_motion_css_px":24,"configured_release_margin_css_px":16,"footer_visible_at_end":true,"after_resize_end_active":true,"after_resize_active_steps":3,"active_count_sequence":[3],"fill_monotonic":true,"horizontal_overflow_css_px":0,"external_requests":[],"padding_bottom":346,"additional_padding":54,"pass":true,"reduced_initial_final_state":true},
+    {"viewport":"2560x1080","mode":"normal","max_scroll":508,"final_end_active":true,"final_active_steps":3,"final_progresses":[1,1,1],"scroll_top_equals_max":true,"post_terminal_extra_css_px":16.513,"first_terminal_scroll":254,"post_terminal_probe_scroll_css_px":24,"post_terminal_visual_motion_css_px":24,"configured_release_margin_css_px":16,"footer_visible_at_end":true,"after_resize_end_active":true,"after_resize_active_steps":3,"active_count_sequence":[2,3],"fill_monotonic":true,"horizontal_overflow_css_px":0,"external_requests":[],"padding_bottom":346,"additional_padding":54,"pass":true},
+    {"viewport":"2560x1080","mode":"reduced","max_scroll":508,"final_end_active":true,"final_active_steps":3,"final_progresses":[1,1,1],"scroll_top_equals_max":true,"post_terminal_extra_css_px":16.513,"first_terminal_scroll":0.124,"post_terminal_probe_scroll_css_px":24,"post_terminal_visual_motion_css_px":24,"configured_release_margin_css_px":16,"footer_visible_at_end":true,"after_resize_end_active":true,"after_resize_active_steps":3,"active_count_sequence":[3],"fill_monotonic":true,"horizontal_overflow_css_px":0,"external_requests":[],"padding_bottom":346,"additional_padding":54,"pass":true,"reduced_initial_final_state":true}
+  ],
+  "reference_transition_checks": [
+    {"viewport":"390x844","active_count_sequence":[1,2,3],"terminal_reached":true,"final_progresses":[1,1,1]},
+    {"viewport":"768x1024","active_count_sequence":[1,2,3],"terminal_reached":true,"final_progresses":[1,1,1]},
+    {"viewport":"1280x720","active_count_sequence":[0,1,2,3],"terminal_reached":true,"final_progresses":[1,1,1]},
+    {"viewport":"1440x900","active_count_sequence":[1,2,3],"terminal_reached":true,"final_progresses":[1,1,1]},
+    {"viewport":"1541x899","active_count_sequence":[1,2,3],"terminal_reached":true,"final_progresses":[1,1,1]},
+    {"viewport":"1920x1080","active_count_sequence":[1,2,3],"terminal_reached":true,"final_progresses":[1,1,1]},
+    {"viewport":"2560x1080","active_count_sequence":[1,2,3],"terminal_reached":true,"final_progresses":[1,1,1]}
+  ],
+  "summary": {
+    "normal_pass": 7,
+    "normal_total": 7,
+    "reduced_pass": 7,
+    "reduced_total": 7,
+    "reference_transition_pass": 7,
+    "reference_transition_total": 7,
+    "maximum_post_terminal_extra_css_px": 68.112,
+    "post_terminal_extra_interpretation": "TOTAL_DOCUMENT_DISTANCE_AFTER_FIRST_TERMINAL_EVENT_INCLUDES_VISIBLE_FOOTER_MOVEMENT_AND_IS_NOT_A_FROZEN_DEAD_SCROLL_MEASURE",
+    "minimum_post_terminal_visual_motion_css_px": 11,
+    "configured_release_margin_css_px": 16,
+    "all_external_request_counts_zero": true,
+    "all_horizontal_overflow_zero": true,
+    "node_check": "PASS"
+  },
+  "status": "PASS_CONTROLLED_EXACT_BYTES",
+  "artifacts": {
+    "behavior_core_sha256": "a5491f0760eb26c50ef0d80a3d5d8f7fedca49ddbc54b91f80a5a6c678bbc16f",
+    "harness_sha256": "582d40e71a8a38379f6db5ada951c83cf2403f17838f4a34dfd50585417230fc",
+    "contract_sha256": "cb4242983d992d8172579e06c2d10f38762bfd998ab367e519f47a973eb3ea02"
+  }
+}
