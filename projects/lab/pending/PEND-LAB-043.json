@@ -2,25 +2,46 @@
   "schema_version": "1.0.0",
   "id": "PEND-LAB-043",
   "project_id": "lab",
-  "status": "SOURCE_FAITHFUL_CANDIDATE_READY_HUMAN_COMPARISON_PENDING",
+  "status": "ROADMAP_SOURCE_FIDELITY_APPROVED_REMAINING_LIBRARY_POPULATION_AND_SEPARATE_PROMOTION_DECISIONS_PENDING",
   "type": "MOTION_SYSTEM_HUMAN_GATE_AND_LIBRARY_POPULATION",
   "title": "Human review and staged population of the transversal motion-effects library",
   "priority": "HIGH",
+  "completed_actions": [
+    "PRESERVE_CURRENT_ROADMAP_AS_HISTORICAL_NEUTRAL_DERIVATION",
+    "HUMAN_COMPARE_SECTION_SCOPED_SOURCE_FAITHFUL_CANDIDATE",
+    "APPROVE_CAROLINA_ROADMAP_SECTION_SOURCE_FIDELITY"
+  ],
   "required_actions": [
     "PRESERVE_STATISTICS_COUNTER_HUMAN_REVIEW_PENDING_STATE",
-    "PRESERVE_CURRENT_ROADMAP_AS_HISTORICAL_NEUTRAL_DERIVATION",
-    "HUMAN_COMPARE_SOURCE_FAITHFUL_CANDIDATE",
-    "PROMOTE_REVISE_OR_REJECT_EACH_INITIAL_EFFECT",
+    "DECIDE_CANONICAL_REFERENCE_DESIGNATION_SEPARATELY",
+    "AUTHORIZE_BEHAVIOR_CORE_EXTRACTION_SEPARATELY_IF_DESIRED",
+    "PROMOTE_REVISE_OR_REJECT_OTHER_INITIAL_EFFECTS",
     "IMPLEMENT_INDUSTRY_EFFECTS_IN_BOUNDED_BATCHES",
+    "AUTHORIZE_REUSABLE_PROMOTION_SEPARATELY",
     "AUTHORIZE_PROJECT_INTEGRATIONS_SEPARATELY"
   ],
-  "current_authority": "NONE_AFTER_AUTHORIZATION_171_CONSUMPTION_HUMAN_DECISION_REQUIRED",
+  "roadmap_source_fidelity": {
+    "candidate_id": "CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
+    "human_determination": "APPROVED_SOURCE_FIDELITY",
+    "approved_by": "Jonathan Martínez",
+    "determined_at": "2026-08-02T18:43:00-04:00",
+    "canonical_reference_designation": "NOT_AUTHORIZED",
+    "reusable_promotion": "NOT_AUTHORIZED",
+    "product_integration": "NOT_AUTHORIZED"
+  },
+  "current_authority": "NONE_AFTER_AUTHORIZATION_173_STAGE_2_CONSUMPTION",
   "source_refs": [
     "foundation-library/motion-system/MOTION-SYSTEM-001/MANIFEST.json",
     "projects/lab/evidence/EVD-LAB-MOTION-SYSTEM-001.json",
     "projects/lab/evidence/EVD-LAB-MOTION-CATALOG-ROADMAP-CORRECTION-168.json",
-    "errors/ERR-LAB-010.json"
-    ,"errors/ERR-LAB-011.json"
-    ,"projects/lab/pending/PEND-LAB-046.json"
-  ]
+    "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-173.json",
+    "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-POST-TERMINAL-DEAD-SCROLL-175.json",
+    "registry/deltas/roadmap-section-source-fidelity-human-approval-173.json",
+    "errors/ERR-LAB-010.json",
+    "errors/ERR-LAB-011.json",
+    "projects/lab/pending/PEND-LAB-046.json"
+  ],
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE"
 }
