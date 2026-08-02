@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-ROADMAP-SECTION-SOURCE-FIDELITY-172",
+  "project_id": "lab",
+  "authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_SECTION_ISOLATION_AND_REVALIDATION_172",
+  "decision_ref": "DEC-LAB-031",
+  "status": "PASS_AUTOMATED_GATES_HUMAN_REVIEW_PENDING",
+  "source_repository": "marcellusanthonson-ctrl/carolina-md-next-landing",
+  "fixed_commit": "52654da574952148f96d051e439bff1cbc7b4b9d",
+  "protected_source_mutation": "NONE",
+  "candidate_001_result": "HUMAN_REVIEW_REJECTED_SCOPE_OVERBROAD",
+  "candidate_001_preservation": "PRESERVED_AS_FULL_CONTEXT_FORENSIC_CAPTURE",
+  "candidate_002_path": "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
+  "validation": {
+    "status": "PASS",
+    "state_cases": 64,
+    "pixel_pair_samples": 16,
+    "minimum_ssim": 1.0,
+    "computed_style_mismatch_count": 0,
+    "geometry_mismatch_count": 0,
+    "axis_delta_css_px": 0,
+    "node_concentricity_delta_css_px": 0,
+    "external_request_count": 0,
+    "scope_isolation_failure_count": 0,
+    "horizontal_overflow_case_count": 0
+  },
+  "harness_note": {
+    "classification": "HARNESS_TEMPORAL_NONDETERMINISM_BETWEEN_INDEPENDENT_PAGES_NOT_CONTENT_DIVERGENCE",
+    "treatment": "NORMALIZED_BY_BYTE_IDENTITY_AND_EXACT_STATE_RENDER",
+    "source_candidate_byte_identical": true
+  },
+  "claims_not_established": [
+    "HUMAN_APPROVAL",
+    "CANONICAL_REPLACEMENT",
+    "REUSABLE_PROMOTION",
+    "PRODUCT_INTEGRATION"
+  ],
+  "err_lab_011": "OPEN_AWAITING_SECTION_SCOPED_HUMAN_SOURCE_FIDELITY_DECISION",
+  "pend_lab_046": "OPEN_HUMAN_COMPARISON_OF_CANDIDATE_002_REQUIRED"
+}
