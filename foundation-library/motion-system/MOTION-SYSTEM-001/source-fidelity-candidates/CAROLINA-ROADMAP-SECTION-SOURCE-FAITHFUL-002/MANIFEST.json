@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
   "candidate_id": "CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
-  "status": "HUMAN_REVIEW_PENDING_LIVE_SCROLL_RANGE_REPAIR_READY_AUTOMATED_GATES_PASS",
-  "classification": "SECTION_SCOPED_REFERENCE_IMPLEMENTATION_CANDIDATE",
+  "status": "HUMAN_APPROVED_SOURCE_FIDELITY",
+  "classification": "SECTION_SCOPED_REFERENCE_IMPLEMENTATION_CANDIDATE_SOURCE_FIDELITY_APPROVED",
   "source_repository": "marcellusanthonson-ctrl/carolina-md-next-landing",
   "fixed_commit": "52654da574952148f96d051e439bff1cbc7b4b9d",
   "source_selector": ".ca-roadmap-editorial",
@@ -12,6 +12,7 @@
   "source_fidelity_authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_SECTION_ISOLATION_AND_REVALIDATION_172",
   "human_comparison_correction_authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_SCROLL_CORRECTION_AND_CONDITIONAL_DECISION_RECONCILIATION_173",
   "live_scroll_range_repair_authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_LIVE_SCROLL_RANGE_REPAIR_174",
+  "post_terminal_repair_authorization_ref": "AUTHORIZATION_LAB_ROADMAP_SECTION_POST_TERMINAL_DEAD_SCROLL_REMOVAL_175",
   "scope": [
     "eyebrow_CÓMO_FUNCIONA",
     "title",
@@ -50,25 +51,45 @@
     "horizontal_overflow_case_count": 0
   },
   "human_comparison_surface": {
-    "status": "LIVE_SCROLL_RANGE_REPAIRED_READY_FOR_COMPLETE_HUMAN_REVIEW",
+    "status": "HUMAN_LOCALHOST_REVIEW_PASS",
     "path": "HUMAN_COMPARISON.html",
     "single_outer_vertical_scroll": true,
     "synchronized_panels": true,
     "nested_user_scroll": false,
     "live_stabilized_range": true,
     "review_only_trailing_context_reconstruction": true,
+    "post_terminal_dead_scroll_removed": true,
+    "release_margin_css_px": 16,
     "progress_range": "0_TO_100_PERCENT_ONLY_AFTER_REAL_TERMINAL_CONFIRMATION",
     "actual_terminal_state_gate": true,
-    "required_viewport_matrix": "PASS_6_OF_6",
-    "evidence_ref": "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-LIVE-RANGE-174.json"
+    "responsive_alternating_card_layout_confirmed": true,
+    "required_viewport_matrix": "PASS_7_OF_7_SUPPLEMENTARY",
+    "human_localhost_review": "PASS",
+    "evidence_refs": [
+      "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-173.json",
+      "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-LIVE-RANGE-174.json",
+      "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-POST-TERMINAL-DEAD-SCROLL-175.json"
+    ]
   },
-  "previous_comparison_result": "HUMAN_REVIEW_REVERSED_STAGE_1_PASS_SCROLL_RANGE_STALE",
-  "current_human_observation": [
-    "VISUALLY_IMPECCABLE_IN_OBSERVED_RANGE",
-    "COMPLETE_REVIEW_RETRY_REQUIRED_AFTER_LIVE_SCROLL_RANGE_REPAIR_174"
+  "human_determination": {
+    "value": "APPROVED_SOURCE_FIDELITY",
+    "approved_by": "Jonathan Martínez",
+    "determined_at": "2026-08-02T18:43:00-04:00",
+    "basis": [
+      "COMPLETE_ROADMAP_JOURNEY_CONFIRMED",
+      "BASELINE_AND_CANDIDATE_VISUALLY_EQUAL",
+      "POST_TERMINAL_DEAD_SCROLL_ABSENT",
+      "RESPONSIVE_ALTERNATING_CARD_LAYOUT_CONFIRMED_AFTER_VIEWPORT_RESIZE"
+    ]
+  },
+  "historical_comparison_results": [
+    "HUMAN_REVIEW_REVERSED_STAGE_1_PASS_SCROLL_RANGE_STALE",
+    "MODIFIED_TERMINAL_COMPLETION_CONFIRMED_POST_TERMINAL_DEAD_SCROLL_PRESENT"
   ],
-  "human_approval": false,
+  "human_approval": true,
+  "canonical_reference_designation": false,
   "canonical_replacement": false,
+  "behavior_core_extraction": false,
   "reusable_promotion": false,
   "product_integration": false,
   "runtime_effect": "NONE"
