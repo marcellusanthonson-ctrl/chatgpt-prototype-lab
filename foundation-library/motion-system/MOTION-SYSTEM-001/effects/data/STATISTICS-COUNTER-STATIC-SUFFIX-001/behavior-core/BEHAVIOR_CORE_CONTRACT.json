@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "behavior_core_id": "STATISTICS-COUNTER-BEHAVIOR-CORE-001",
+  "effect_id": "STATISTICS-COUNTER-STATIC-SUFFIX-001",
+  "status": "EXTRACTED_AND_VALIDATED_PASS_NODE_DETERMINISTIC_WITH_HUMAN_SOURCE_FIDELITY",
+  "source_reference_id": "CAROLINA-STATISTICS-MOTION-EXPERIMENT-001",
+  "purpose": "Source-independent one-shot statistics animation engine that updates persistent target nodes without recreating static suffix nodes.",
+  "implementation": "statistics-counter-core.js",
+  "api": {
+    "global": "StatisticsCounterCore",
+    "factory": "createStatisticsCounterCore(options)",
+    "class": "StatisticsCounterCore",
+    "methods": [
+      "connect",
+      "disconnect",
+      "destroy",
+      "replay",
+      "trigger",
+      "start",
+      "showFinal",
+      "setReducedMotion",
+      "handleResize",
+      "getState"
+    ],
+    "event": "statisticscounterchange"
+  },
+  "required_semantics": [
+    "PERSISTENT_TARGET_NODE_IDENTITY",
+    "STATIC_SUFFIX_NODE_IDENTITY_PRESERVED",
+    "NUMERIC_INTERPOLATION_WITH_BOUNDED_EASING",
+    "TEXT_SEQUENCE_WITHOUT_INNER_HTML_REPLACEMENT",
+    "ONE_SHOT_VIEWPORT_ENTRY_TRIGGER",
+    "PROGRAMMATIC_REPLAY_WITH_STALE_CALLBACK_CANCELLATION",
+    "REDUCED_MOTION_FINAL_STATE_IMMEDIATE",
+    "REENTRY_DOES_NOT_RESTART_AFTER_COMPLETION",
+    "RESIZE_AND_ORIENTATION_CHANGE_PRESERVE_CURRENT_STATE",
+    "DESTROY_CANCELS_PENDING_MUTATIONS",
+    "NO_EXTERNAL_REQUESTS"
+  ],
+  "configuration_surface": {
+    "root": "Element or selector",
+    "targets": {
+      "numeric": ["element", "from", "to", "delay", "duration", "easing", "formatter"],
+      "sequence": ["element", "values", "delay", "stepMs"]
+    },
+    "trigger": ["threshold", "once", "IntersectionObserver"],
+    "motion": ["reducedMotionQuery", "completionPaddingMs"],
+    "runtime_injection": ["now", "requestAnimationFrame", "cancelAnimationFrame", "setTimeout", "clearTimeout", "matchMedia"]
+  },
+  "locked_invariants": [
+    "Only target node textContent may be changed by the core.",
+    "Target elements are resolved once and their identity is checked after reset, completion and resize.",
+    "No target may emit an empty numeric frame when its formatter returns non-empty values.",
+    "A monotonic run token invalidates callbacks from superseded runs.",
+    "Reduced motion bypasses interpolation and exposes the final state immediately.",
+    "The behavior core contains no Carolina-specific labels, values, selectors, colors, typography or layout rules."
+  ],
+  "source_specific_exclusions": [
+    "BRAND_IDENTITY",
+    "BRAND_TYPOGRAPHY",
+    "BRAND_COLORS",
+    "CLINICAL_TEXT",
+    "CAROLINA_VALUES",
+    "CARD_LAYOUT",
+    "VISUAL_STYLING",
+    "PRODUCT_REPOSITORY_SELECTORS"
+  ],
+  "validation": {
+    "path": "BEHAVIOR_CORE_VALIDATION_RESULTS.json",
+    "status": "PASS_NODE_DETERMINISTIC_7_OF_7",
+    "human_source_fidelity": "APPROVED_SOURCE_FIDELITY_REAL_LOCALHOST",
+    "normal_motion": "PASS",
+    "reduced_motion": "PASS",
+    "one_shot_reentry": "PASS",
+    "programmatic_replay": "PASS",
+    "resize_preservation": "PASS",
+    "source_independence": "PASS",
+    "destroy_cancellation": "PASS"
+  },
+  "consumption": {
+    "contract": "../FUTURE_CONSUMPTION_CONTRACT.json",
+    "status": "READY_FOR_FUTURE_BOUNDED_CONSUMPTION_REQUIRES_SEPARATE_PRODUCT_AUTHORIZATION"
+  },
+  "non_authorizations": [
+    "NO_CURRENT_PRODUCT_INTEGRATION",
+    "NO_RUNTIME_DEPLOYMENT",
+    "NO_CAROLINA_REPOSITORY_MUTATION",
+    "NO_AUTOMATIC_REUSABLE_PROMOTION"
+  ]
+}
