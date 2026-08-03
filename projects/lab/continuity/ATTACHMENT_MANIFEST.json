@@ -1,9 +1,9 @@
 {
-  "schema_version": "1.2.0",
-  "manifest_id": "LAB-CONTINUITY-ATTACHMENTS-STATISTICS-COUNTER-FUNCTIONAL-SOURCE-178-20260802",
+  "schema_version": "1.3.0",
+  "manifest_id": "LAB-CONTINUITY-ATTACHMENTS-POST-178-RECONCILIATION-179-20260803",
   "status": "CURRENT",
   "project_id": "lab",
-  "created_at": "2026-08-02T22:29:00-04:00",
+  "created_at": "2026-08-03T09:24:00-04:00",
   "required_read_order": [
     "CURRENT_CONTINUITY.json",
     "CURRENT_CONTINUITY.md",
@@ -50,10 +50,16 @@
     "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/DIRECT_HUMAN_REVIEW.html",
     "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_SECTION.html",
     "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_MOTION.js",
-    "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_EXCERPT_PROVENANCE.json"
+    "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_EXCERPT_PROVENANCE.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_POST_178_CANONICAL_STATE_AND_PHASE1_EVIDENCE_RECONCILIATION_179.json",
+    "projects/lab/briefs/CODEX_POST_178_CANONICAL_STATE_AND_PHASE1_EVIDENCE_RECONCILIATION_179_001.json",
+    "projects/lab/evidence/EVD-LAB-POST-178-CANONICAL-STATE-RECONCILIATION-179.json",
+    "registry/deltas/post-178-canonical-state-phase1-evidence-reconciliation-179.json",
+    "projects/lab/ROADMAP.json",
+    "projects/lab/PROJECT_STATE.json"
   ],
   "known_stale_canonical_aggregates": [],
-  "blocking_pending": null,
+  "blocking_pending": "PEND-LAB-045_REQUIRES_SEPARATE_AUTHORIZATION",
   "missing_attachments": [],
-  "authority_effect": "ONLY_CONDITIONAL_STAGE_2_AFTER_EXACT_HUMAN_DETERMINATION"
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_179_CONSUMPTION"
 }

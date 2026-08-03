@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "CODEX_POST_178_CANONICAL_STATE_AND_PHASE1_EVIDENCE_RECONCILIATION_179_001",
+  "project_id": "lab",
+  "status": "COMPLETED_BY_AUTHORIZATION_179",
+  "authorization_ref": "AUTHORIZATION_LAB_POST_178_CANONICAL_STATE_AND_PHASE1_EVIDENCE_RECONCILIATION_179",
+  "objective": "Analyze changes after Phase 1 and authorization 178, then reconcile only confirmed documentary contradictions without technical, runtime, integration or product effects.",
+  "repository": {
+    "name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "branch": "main",
+    "expected_parent_head": "234b595b40309e8bcdc01448d91ea6b88c9e1cd2",
+    "working_branch": "post178-canonical-reconciliation-179",
+    "head_policy": "VERIFY_LIVE_AT_USE",
+    "entrypoint": "project-sources/chatgpt/START_HERE.md"
+  },
+  "scope": [
+    "CURRENT_STATE.json",
+    "projects/lab/PENDING.json",
+    "projects/lab/PROJECT_STATE.json",
+    "projects/lab/ROADMAP.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_POST_178_CANONICAL_STATE_AND_PHASE1_EVIDENCE_RECONCILIATION_179.json",
+    "projects/lab/briefs/CODEX_POST_178_CANONICAL_STATE_AND_PHASE1_EVIDENCE_RECONCILIATION_179_001.json",
+    "projects/lab/continuity/ATTACHMENT_MANIFEST.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.md",
+    "projects/lab/continuity/START_PROMPT.md",
+    "projects/lab/evidence/EVD-LAB-POST-178-CANONICAL-STATE-RECONCILIATION-179.json",
+    "projects/lab/evidence/EVD-LAB-PRIORITY-INTEGRATIONS-PHASE-1-170.json",
+    "registry/deltas/post-178-canonical-state-phase1-evidence-reconciliation-179.json",
+    "registry/index.json"
+  ],
+  "forbidden_actions": [
+    "NO_TEST_OR_AUDIT_EXECUTION",
+    "NO_RUNTIME_PRODUCT_OR_EXTERNAL_REPOSITORY_CHANGE",
+    "NO_POINTER_SELECTOR_OR_SHADOW_REGISTRY_MUTATION",
+    "NO_MOTION_BEHAVIOR_CORE_OR_CANONICAL_REFERENCE_CHANGE",
+    "NO_PRODUCT_LEADERSHIP_OR_SSE_CONTRACT_SCHEMA_OR_FIXTURE_CHANGE",
+    "NO_PHASE_2_EXECUTION_OR_AUTHORIZATION"
+  ],
+  "required_outputs": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_POST_178_CANONICAL_STATE_AND_PHASE1_EVIDENCE_RECONCILIATION_179.json",
+    "projects/lab/evidence/EVD-LAB-POST-178-CANONICAL-STATE-RECONCILIATION-179.json",
+    "registry/deltas/post-178-canonical-state-phase1-evidence-reconciliation-179.json"
+  ],
+  "acceptance_checks": [
+    "EXPECTED_PARENT_HEAD_MATCHES",
+    "ALL_JSON_PARSE",
+    "ZERO_DUPLICATE_PENDING_IDS",
+    "ZERO_DUPLICATE_ROADMAP_ORDERS",
+    "ZERO_DUPLICATE_REGISTRY_DELTA_PATHS",
+    "ZERO_STALE_STAGE_1_OR_PUBLICATION_PENDING_CLAIMS_IN_RECONCILED_SURFACES",
+    "ONLY_AUTHORIZED_PATHS_CHANGED",
+    "PHASE_2_REMAINS_NOT_AUTHORIZED"
+  ],
+  "stop_conditions": [
+    "MAIN_HEAD_MOVED",
+    "CANONICAL_SOURCE_CONTRADICTION_OUTSIDE_SCOPE",
+    "TECHNICAL_ARTIFACT_CHANGE_REQUIRED",
+    "ATOMIC_SQUASH_PUBLICATION_UNAVAILABLE"
+  ],
+  "response_contract": "REPORT_RESULT_CHANGED_PATHS_VALIDATION_DIVERGENCES_AUTHORITY_AND_ONE_NEXT_ACTION"
+}
