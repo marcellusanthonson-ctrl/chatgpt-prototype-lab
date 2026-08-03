@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "contract_id": "STATISTICS-COUNTER-FUTURE-CONSUMPTION-CONTRACT-001",
+  "effect_id": "STATISTICS-COUNTER-STATIC-SUFFIX-001",
+  "behavior_core_id": "STATISTICS-COUNTER-BEHAVIOR-CORE-001",
+  "status": "READY_FOR_FUTURE_BOUNDED_CONSUMPTION_NOT_CURRENTLY_INTEGRATED",
+  "purpose": "Preserve an immediately actionable integration boundary for a future authorized landing implementation without coupling the behavior core to Carolina-specific markup or styling.",
+  "current_state": {
+    "product_integration": false,
+    "runtime_deployment": false,
+    "carolina_repository_mutation": false,
+    "active_integration_authority": false
+  },
+  "required_before_consumption": [
+    "VERIFY_LIVE_HEAD_OF_TARGET_PRODUCT_REPOSITORY",
+    "OBTAIN_SEPARATE_EXPLICIT_PRODUCT_INTEGRATION_AUTHORIZATION",
+    "IDENTIFY_TARGET_SECTION_AND_PERSISTENT_VALUE_NODES",
+    "PRESERVE_ACCESSIBLE_FINAL_VALUES_AND_STATIC_SUFFIX_SEMANTICS",
+    "DEFINE_ROLLBACK_TO_PRE_INTEGRATION_BYTES"
+  ],
+  "integration_inputs": {
+    "root": "Target statistics section element",
+    "numeric_targets": ["persistent element", "from", "to", "delay", "duration", "optional formatter"],
+    "sequence_targets": ["persistent element", "ordered values", "delay", "stepMs"],
+    "trigger": "IntersectionObserver threshold or explicit programmatic trigger",
+    "reduced_motion": "Immediate final state"
+  },
+  "mandatory_invariants": [
+    "Do not recreate static suffix nodes with innerHTML.",
+    "Do not replace the containing statistic card during animation.",
+    "Keep accessible final values available independently of visual interpolation.",
+    "Prevent loop or automatic restart on viewport reentry unless separately approved.",
+    "Resize and orientation changes must not restart a completed sequence.",
+    "Cancel stale animation frames and timers before replay or teardown.",
+    "Do not introduce external runtime dependencies or network requests without separate approval."
+  ],
+  "recommended_product_adapter_sequence": [
+    "Import statistics-counter-core.js into the target build or adapt it byte-traceably.",
+    "Resolve persistent target nodes after DOM and fonts are ready.",
+    "Create target descriptors using product values and timing tokens.",
+    "Connect the core once per mounted section.",
+    "Destroy the core during component unmount or navigation teardown.",
+    "Validate normal motion, reduced motion, reentry, resize, mobile widths and final DOM stability.",
+    "Obtain human review before product publication."
+  ],
+  "rollback": {
+    "method": "Remove the product adapter and restore the pre-integration section bytes.",
+    "behavior_core_source": "Preserved unchanged in the LAB.",
+    "data_loss_risk": "NONE"
+  },
+  "canonical_reference": "CANONICAL_REFERENCE.json",
+  "behavior_core_contract": "behavior-core/BEHAVIOR_CORE_CONTRACT.json",
+  "validation_results": "behavior-core/BEHAVIOR_CORE_VALIDATION_RESULTS.json",
+  "non_authorizations": [
+    "NO_CURRENT_LANDING_INTEGRATION",
+    "NO_PRODUCT_REPOSITORY_WRITE",
+    "NO_DEPLOYMENT",
+    "NO_IMPLICIT_AUTHORITY_FROM_THIS_CONTRACT"
+  ]
+}
