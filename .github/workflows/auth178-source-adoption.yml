@@ -17,56 +17,51 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Materialize exact source package artifacts
+      - name: Verify and materialize source-package evidence
         run: |
           set -euo pipefail
           BASE='foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001'
-          wc -c .auth178-payload/CAROLINA_MD_STATISTICS_MOTION_EXPERIMENT_001.html.xz
-          sha256sum .auth178-payload/CAROLINA_MD_STATISTICS_MOTION_EXPERIMENT_001.html.xz
+          cat > /tmp/auth178-payload.sha256 <<'EOF'
+          f6466958dcbba9a720db314a20128b8dc64badeb474456c99987db5fc7801006  .auth178-payload/ARCHIVE_CONTENT_INDEX.json.xz
+          39b316511a4c99381157e0cee53ffcd25b88a92a119396150a5cd3c4af9dbd33  .auth178-payload/ARCHIVE_INTEGRITY_ATTEMPT_007.json.xz
+          039abbf3569c7f0f778e9a75ff73f3797d2dafa6650df9b7f9df49b2bfa45d7f  .auth178-payload/key-artifacts.tar.xz
+          07f6733aefa156a11b9f21cb8a08d4372c7ed53b6911311cb95e871798f3c2e8  .auth178-payload/auth178_reconcile.py.xz
+          EOF
+          sha256sum -c /tmp/auth178-payload.sha256
           mkdir -p "$BASE/expanded/statistics-motion-001/evidence" scripts
-          xz -dc .auth178-payload/CAROLINA_MD_STATISTICS_MOTION_EXPERIMENT_001.html.xz > "$BASE/expanded/statistics-motion-001/CAROLINA_MD_STATISTICS_MOTION_EXPERIMENT_001.html"
           xz -dc .auth178-payload/ARCHIVE_CONTENT_INDEX.json.xz > "$BASE/ARCHIVE_CONTENT_INDEX.json"
           xz -dc .auth178-payload/ARCHIVE_INTEGRITY_ATTEMPT_007.json.xz > "$BASE/expanded/statistics-motion-001/evidence/ARCHIVE_INTEGRITY_ATTEMPT_007.json"
           tar -xJf .auth178-payload/key-artifacts.tar.xz -C .
           xz -dc .auth178-payload/auth178_reconcile.py.xz > scripts/_auth178_reconcile.py
-          rm -rf .auth178-payload
-      - name: Verify staged payload hashes
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          import hashlib
-          expected = {
-            'foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/expanded/statistics-motion-001/CAROLINA_MD_STATISTICS_MOTION_EXPERIMENT_001.html': '74274e55ff1c8b9edd849d433f12bf6ffe0abb00097872feb6bc7adde83b463e',
-            'foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/ARCHIVE_CONTENT_INDEX.json': 'c44c2a763ca761e3c1be91f122abc90c76669c65c7a960abd81adbd50d2c8115',
-            'foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/expanded/statistics-motion-001/EXPERIMENT_MANIFEST.json': '6ebc9d98e8ee6113b671136640994c861846241ca2b6d28a1298530e87fe0d0a',
-            'foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/expanded/statistics-motion-001/evidence/SOURCE_INTEGRITY_ATTEMPT_009.json': '7d5e8a0f45fe0d881af09ca86c0b9565551f4b951482dc1a85c6650b1eb0ff67',
-            'foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/expanded/statistics-motion-001/evidence/ARCHIVE_INTEGRITY_ATTEMPT_007.json': '96f29f1095e51ad49ec262ec22c6540e82be8d07a5a7d95ce1a54894314f5354',
-            'foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/expanded/statistics-motion-001/evidence/VALIDATION_REPORT_ATTEMPT_009.md': 'a2b830101590e7ff1d7e58486369fdc0630dcdb7f816ab8b4e8a245c5cdd167d',
-            'foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/expanded/statistics-motion-001/evidence/attempt006_functional_results.json': 'a3cdfb4a7f59a951edaba38218b34621748b938eaa8ca3cf35687ad49be2fea6',
-          }
-          for path, digest in expected.items():
-              actual = hashlib.sha256(Path(path).read_bytes()).hexdigest()
-              if actual != digest:
-                  raise SystemExit(f'HASH_MISMATCH {path} {actual} != {digest}')
-          print('AUTH178_PAYLOAD_HASHES_PASS')
-          PY
       - name: Reconcile Stage 1
         run: python scripts/_auth178_reconcile.py
-      - name: Validate no forbidden product paths changed
+      - name: Validate clean governed result
         run: |
           set -euo pipefail
-          if git diff --name-only origin/main...HEAD | grep -E '(^|/)(carolina-md-next-landing|carolina-md-experiments)(/|$)'; then
-            echo 'Forbidden product/source repository path detected' >&2
-            exit 1
-          fi
           test ! -e .auth178-payload
           test ! -e scripts/_auth178_reconcile.py
+          test ! -e .github/workflows/auth178-source-adoption.yml
           python - <<'PY'
           import json
           from pathlib import Path
-          for p in Path('.').rglob('*.json'):
-              json.loads(p.read_text(encoding='utf-8'))
-          print('AUTH178_JSON_PASS')
+          for path in Path('.').rglob('*.json'):
+              json.loads(path.read_text(encoding='utf-8'))
+          forbidden = [
+              'carolina-md-next-landing',
+              'carolina-md-experiments',
+          ]
+          changed = set()
+          import subprocess
+          for command in [
+              ['git','diff','--name-only','origin/main'],
+              ['git','ls-files','--others','--exclude-standard'],
+          ]:
+              output = subprocess.check_output(command, text=True)
+              changed.update(line.strip() for line in output.splitlines() if line.strip())
+          for path in changed:
+              if any(token in path for token in forbidden):
+                  raise SystemExit(f'FORBIDDEN_PATH_CHANGE {path}')
+          print('AUTH178_JSON_AND_SCOPE_PASS')
           PY
       - name: Commit reconciled Stage 1
         run: |
@@ -74,5 +69,5 @@ jobs:
           git config user.name 'chatgpt-prototype-lab-bot'
           git config user.email 'chatgpt-prototype-lab-bot@users.noreply.github.com'
           git add -A
-          git commit -m 'complete statistics counter source package adoption 178'
+          git commit -m 'complete statistics counter functional source adoption 178'
           git push origin HEAD:${{ github.head_ref }}
