@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-STATISTICS-COUNTER-SOURCE-PACKAGE-178",
+  "project_id": "lab",
+  "authorization_ref": "AUTHORIZATION_LAB_STATISTICS_COUNTER_EXPERIMENT_SOURCE_ADOPTION_HUMAN_REVIEW_AND_CONDITIONAL_CLOSURE_178",
+  "status": "SOURCE_PACKAGE_PRESERVED_AWAITING_DIRECT_HUMAN_REVIEW",
+  "source_package_id": "CAROLINA-STATISTICS-MOTION-EXPERIMENT-001",
+  "archive_sha256": "8eecd53dc698d4587dfa882a5eabe701ec9a77a45bb9747d57f0cf5d68c876b0",
+  "archive_bytes": 3493574,
+  "archive_format": "RAR5",
+  "archive_entry_count": 163,
+  "extracted_file_count": 134,
+  "extracted_total_file_bytes": 33120282,
+  "primary_html_sha256": "74274e55ff1c8b9edd849d433f12bf6ffe0abb00097872feb6bc7adde83b463e",
+  "primary_html_bytes": 1866483,
+  "experiment_manifest_sha256": "6ebc9d98e8ee6113b671136640994c861846241ca2b6d28a1298530e87fe0d0a",
+  "archive_content_index_sha256": "c44c2a763ca761e3c1be91f122abc90c76669c65c7a960abd81adbd50d2c8115",
+  "confirmed_contents": [
+    "PRIMARY_MONOLITHIC_HTML",
+    "EXPERIMENT_MANIFEST",
+    "ATTEMPT_006_EVIDENCE",
+    "ATTEMPT_007_EVIDENCE",
+    "ATTEMPT_009_SOURCE_INTEGRITY",
+    "REL_001_THROUGH_REL_010",
+    "PIXEL_DIFF_EVIDENCE_MULTIPLE_VIEWPORTS_AND_DPR"
+  ],
+  "validation": {
+    "archive_sha256": "PASS_UPLOADED_ATTACHMENT",
+    "rar5_inventory": "PASS_163_ENTRIES",
+    "extraction": "PASS_134_FILES",
+    "key_artifact_hashes": "PASS",
+    "json_parse": "PASS",
+    "source_mutation": "NONE",
+    "archive_repository_storage": "NOT_REQUIRED_PRIMARY_HTML_EXACT_BYTES_PUBLISHED"
+  },
+  "claim_boundary": "THE COMPLETE FUNCTIONAL EFFECT IS THE EXACT MONOLITHIC_HTML; RAR PROVENANCE IS PRESERVED BY SHA256_AND_CONTENT_INDEX. THIS DOES_NOT_CREATE_LAB_HUMAN_APPROVAL_OR_PRODUCT_INTEGRATION_AUTHORITY.",
+  "next_gate": "HUMAN_REVIEW_STATISTICS_COUNTER_STATIC_SUFFIX_001"
+}
