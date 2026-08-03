@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-POST-178-CANONICAL-STATE-RECONCILIATION-179",
+  "project_id": "lab",
+  "evidence_type": "POST_PUBLICATION_AND_POST_178_CANONICAL_RECONCILIATION",
+  "status": "PASS_CANONICAL_RECONCILIATION_COMPLETE_ON_AUTHORIZED_SQUASH_MERGE",
+  "created_at": "2026-08-03T09:24:00-04:00",
+  "authorization_ref": "AUTHORIZATION_LAB_POST_178_CANONICAL_STATE_AND_PHASE1_EVIDENCE_RECONCILIATION_179",
+  "verified_parent_head": "234b595b40309e8bcdc01448d91ea6b88c9e1cd2",
+  "analysis": {
+    "commits_after_phase1": 119,
+    "phase1_baseline": "1204d9c56af79b4d9a840c6609716aca94ecfb65",
+    "phase1_contract_artifacts_changed_after_baseline": 0,
+    "post_phase1_change_concentration": "MOTION_SYSTEM_SOURCE_FIDELITY_AND_STATISTICS_COUNTER_CLOSURE"
+  },
+  "findings": [
+    {
+      "claim": "Product Leadership and SSE Phase 1 contracts changed after the Phase 1 squash merge.",
+      "classification": "REVERSED"
+    },
+    {
+      "claim": "Phase 1 publication remained pending.",
+      "classification": "REVERSED"
+    },
+    {
+      "claim": "The statistics counter still awaited human review and Stage 2 was not triggered.",
+      "classification": "REVERSED"
+    },
+    {
+      "claim": "PEND-LAB-043 standalone and CURRENT_CONTINUITY.json already reflected the completed authorization 178 result.",
+      "classification": "CONFIRMED"
+    },
+    {
+      "claim": "Priority Integrations Phase 2 is authorized.",
+      "classification": "REVERSED"
+    }
+  ],
+  "reconciled_paths": [
+    "CURRENT_STATE.json",
+    "projects/lab/PENDING.json",
+    "projects/lab/PROJECT_STATE.json",
+    "projects/lab/ROADMAP.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_POST_178_CANONICAL_STATE_AND_PHASE1_EVIDENCE_RECONCILIATION_179.json",
+    "projects/lab/briefs/CODEX_POST_178_CANONICAL_STATE_AND_PHASE1_EVIDENCE_RECONCILIATION_179_001.json",
+    "projects/lab/continuity/ATTACHMENT_MANIFEST.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.md",
+    "projects/lab/continuity/START_PROMPT.md",
+    "projects/lab/evidence/EVD-LAB-POST-178-CANONICAL-STATE-RECONCILIATION-179.json",
+    "projects/lab/evidence/EVD-LAB-PRIORITY-INTEGRATIONS-PHASE-1-170.json",
+    "registry/deltas/post-178-canonical-state-phase1-evidence-reconciliation-179.json",
+    "registry/index.json"
+  ],
+  "validation": {
+    "json_parse": "PASS",
+    "duplicate_pending_ids": 0,
+    "duplicate_roadmap_orders": 0,
+    "duplicate_registry_delta_paths": 0,
+    "stale_claims_in_reconciled_surfaces": 0,
+    "phase1_contract_diff": 0,
+    "motion_technical_artifact_diff": 0,
+    "runtime_effect": "NONE",
+    "product_effect": "NONE",
+    "integration_effect": "NONE",
+    "test_execution": 0,
+    "audit_execution": 0
+  },
+  "next_pending": "projects/lab/pending/PEND-LAB-045.json",
+  "authority_effect": "NONE"
+}

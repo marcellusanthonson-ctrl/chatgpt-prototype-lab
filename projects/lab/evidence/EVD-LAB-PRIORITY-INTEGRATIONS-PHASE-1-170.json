@@ -1,9 +1,9 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "evidence_id": "EVD-LAB-PRIORITY-INTEGRATIONS-PHASE-1-170",
   "project_id": "lab",
   "evidence_type": "FACTORY_CONTRACT_COMPLETION",
-  "status": "PASS_BRANCH_VALIDATED_PUBLICATION_PENDING",
+  "status": "PASS_ON_VERIFIED_SQUASH_MERGE_AND_REMOTE_PUBLICATION",
   "created_at": "2026-08-02",
   "authorization_ref": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_1_FACTORY_CONTRACT_COMPLETION_170_REVISION_2",
   "decision_ref": "DEC-LAB-030",
@@ -39,11 +39,7 @@
     "static_selector_changes": 0,
     "motion_system_changes": 0
   },
-  "remote_checks_pending": [
-    "BRANCH_TO_MAIN_COMPARE",
-    "SQUASH_MERGE",
-    "REMOTE_HEAD_VERIFICATION"
-  ],
+  "remote_checks_pending": [],
   "maximum_result": "PRODUCT_LEADERSHIP_AND_SOFTWARE_SOLUTION_ENGINEERING_CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED",
   "authority_effect": "NONE",
   "runtime_effect": "NONE",
@@ -76,5 +72,23 @@
     "runtime_effect": "NONE",
     "product_effect": "NONE",
     "integration_activation_effect": "NONE"
+  },
+  "publication": {
+    "method": "SQUASH_MERGE",
+    "pull_request": 12,
+    "main_commit": "1204d9c56af79b4d9a840c6609716aca94ecfb65",
+    "merged_at": "2026-08-02T06:14:48Z",
+    "remote_verification": "PASS"
+  },
+  "remote_checks_completed": [
+    "BRANCH_TO_MAIN_COMPARE_PASS",
+    "SQUASH_MERGE_PASS",
+    "REMOTE_HEAD_VERIFICATION_PASS"
+  ],
+  "post_publication_reconciliation": {
+    "authorization_ref": "AUTHORIZATION_LAB_POST_178_CANONICAL_STATE_AND_PHASE1_EVIDENCE_RECONCILIATION_179",
+    "classification": "MODIFIED",
+    "reason": "Technical findings were correct; publication fields remained at the pre-merge branch state after PR 12 was squash-merged and verified.",
+    "technical_result_changed": false
   }
 }

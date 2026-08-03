@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1.0",
   "project_id": "lab",
-  "updated_at": "2026-08-02",
+  "updated_at": "2026-08-03",
   "records": [
     {
       "id": "PEND-LAB-001",
@@ -849,10 +849,10 @@
       "integration_effect": "NONE"
     },
     {
-      "schema_version": "1.1.0",
+      "schema_version": "1.2.0",
       "id": "PEND-LAB-043",
       "project_id": "lab",
-      "status": "STATISTICS_COUNTER_FUNCTIONAL_SOURCE_PRESERVED_HUMAN_REVIEW_PENDING",
+      "status": "INITIAL_EFFECTS_COMPLETE_REMAINING_LIBRARY_POPULATION_AND_SEPARATE_PROMOTION_GATES",
       "type": "MOTION_SYSTEM_HUMAN_GATE_AND_LIBRARY_POPULATION",
       "title": "Human review and staged population of the transversal motion-effects library",
       "priority": "HIGH",
@@ -866,10 +866,16 @@
         "RECONCILE_CANONICAL_AGGREGATES_AND_CLOSE_PEND_LAB_047",
         "PRESERVE_STATISTICS_COUNTER_ARCHIVE_PROVENANCE_AND_COMPLETE_CONTENT_INDEX_IN_LAB",
         "PRESERVE_EXACT_STATISTICS_COUNTER_DOM_AND_MOTION_SCRIPT_EXCERPTS",
-        "PUBLISH_STATISTICS_COUNTER_DIRECT_REVIEW_HARNESS"
+        "PUBLISH_STATISTICS_COUNTER_DIRECT_REVIEW_HARNESS",
+        "HUMAN_REVIEW_PRESERVED_STATISTICS_COUNTER_FUNCTIONAL_INTEGRATION_SOURCE",
+        "APPROVE_STATISTICS_COUNTER_SOURCE_FIDELITY",
+        "DESIGNATE_STATISTICS_COUNTER_CANONICAL_REFERENCE",
+        "EXTRACT_SOURCE_INDEPENDENT_STATISTICS_COUNTER_BEHAVIOR_CORE",
+        "VALIDATE_STATISTICS_COUNTER_NORMAL_REDUCED_REENTRY_REPLAY_RESIZE_AND_TEARDOWN",
+        "PUBLISH_STATISTICS_COUNTER_FUTURE_CONSUMPTION_CONTRACT",
+        "CLOSE_AUTHORIZATION_178_STAGE_2"
       ],
       "required_actions": [
-        "HUMAN_REVIEW_PRESERVED_STATISTICS_COUNTER_FUNCTIONAL_INTEGRATION_SOURCE",
         "SEPARATELY_AUTHORIZE_NEUTRAL_ADAPTATION_IF_DESIRED",
         "PROMOTE_REVISE_OR_REJECT_OTHER_INITIAL_EFFECTS",
         "IMPLEMENT_INDUSTRY_EFFECTS_IN_BOUNDED_BATCHES",
@@ -891,7 +897,7 @@
       },
       "statistics_counter": {
         "effect_id": "STATISTICS-COUNTER-STATIC-SUFFIX-001",
-        "status": "FUNCTIONAL_SOURCE_PRESERVED_HUMAN_REVIEW_PENDING",
+        "status": "HUMAN_APPROVED_CANONICAL_REFERENCE_DESIGNATED_BEHAVIOR_CORE_VALIDATED_READY_FOR_FUTURE_BOUNDED_CONSUMPTION",
         "source_package_id": "CAROLINA-STATISTICS-MOTION-EXPERIMENT-001",
         "source_package_manifest": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/SOURCE_PACKAGE_MANIFEST.json",
         "archive_sha256": "8eecd53dc698d4587dfa882a5eabe701ec9a77a45bb9747d57f0cf5d68c876b0",
@@ -899,9 +905,17 @@
         "exact_dom_excerpt": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_SECTION.html",
         "exact_motion_script_excerpt": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_MOTION.js",
         "direct_review_artifact": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/DIRECT_HUMAN_REVIEW.html",
-        "next_single_gate": "DIRECT_HUMAN_REVIEW_OF_PRESERVED_FUNCTIONAL_INTEGRATION_SOURCE"
+        "human_determination": "APPROVED_SOURCE_FIDELITY",
+        "approved_by": "Jonathan Martínez",
+        "determined_at": "2026-08-03T00:23:25-04:00",
+        "canonical_reference": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/CANONICAL_REFERENCE.json",
+        "behavior_core": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/behavior-core/BEHAVIOR_CORE_CONTRACT.json",
+        "behavior_core_validation": "PASS_NODE_DETERMINISTIC_7_OF_7_WITH_HUMAN_SOURCE_FIDELITY",
+        "future_consumption_contract": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/FUTURE_CONSUMPTION_CONTRACT.json",
+        "future_product_integration": "REQUIRES_SEPARATE_EXPLICIT_AUTHORIZATION",
+        "product_integration": "NOT_PERFORMED"
       },
-      "current_authority": "AUTHORIZATION_178_STAGE_2_CONDITIONALLY_AUTHORIZED_AWAITING_EXPLICIT_HUMAN_DETERMINATION",
+      "current_authority": "NONE_AFTER_AUTHORIZATION_178_CONSUMPTION",
       "source_refs": [
         "projects/lab/pending/PEND-LAB-047.json",
         "projects/lab/authorizations/AUTHORIZATION_LAB_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_AND_CLOSURE_177.json",
@@ -916,6 +930,10 @@
         "projects/lab/authorizations/AUTHORIZATION_LAB_STATISTICS_COUNTER_EXPERIMENT_SOURCE_ADOPTION_HUMAN_REVIEW_AND_CONDITIONAL_CLOSURE_178.json",
         "projects/lab/evidence/EVD-LAB-STATISTICS-COUNTER-SOURCE-PACKAGE-178.json",
         "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/SOURCE_PACKAGE_MANIFEST.json",
+        "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/CANONICAL_REFERENCE.json",
+        "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/behavior-core/BEHAVIOR_CORE_CONTRACT.json",
+        "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/behavior-core/BEHAVIOR_CORE_VALIDATION_RESULTS.json",
+        "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/FUTURE_CONSUMPTION_CONTRACT.json",
         "registry/deltas/statistics-counter-source-package-adoption-178.json"
       ],
       "authority_effect": "NONE",

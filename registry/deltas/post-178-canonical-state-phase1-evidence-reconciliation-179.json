@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "post-178-canonical-state-phase1-evidence-reconciliation-179",
+  "project_id": "lab",
+  "updated_at": "2026-08-03",
+  "status": "PASS_POST_178_CANONICAL_STATE_AND_PHASE1_EVIDENCE_RECONCILED",
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_POST_178_CANONICAL_STATE_AND_PHASE1_EVIDENCE_RECONCILIATION_179",
+    "status": "CONSUMED_ON_VERIFIED_SQUASH_MERGE",
+    "path": "projects/lab/authorizations/AUTHORIZATION_LAB_POST_178_CANONICAL_STATE_AND_PHASE1_EVIDENCE_RECONCILIATION_179.json"
+  },
+  "evidence": {
+    "id": "EVD-LAB-POST-178-CANONICAL-STATE-RECONCILIATION-179",
+    "status": "PASS_CANONICAL_RECONCILIATION_COMPLETE_ON_AUTHORIZED_SQUASH_MERGE",
+    "path": "projects/lab/evidence/EVD-LAB-POST-178-CANONICAL-STATE-RECONCILIATION-179.json"
+  },
+  "reconciled": {
+    "phase1_evidence_170": "PUBLICATION_VERIFIED",
+    "current_state": "POST_178_CURRENT",
+    "project_state": "POST_178_CURRENT",
+    "pending_aggregate": "PEND_LAB_043_CURRENT",
+    "roadmap": "MOTION_171_THROUGH_178_CURRENT",
+    "continuity_package": "CURRENT_AND_INTERNALLY_CONSISTENT"
+  },
+  "registry_counts_after": {
+    "authorizations": 103,
+    "evidence": 85
+  },
+  "preserved": {
+    "global_phase": "PRIORITY_INTEGRATIONS_PHASE_1_CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED",
+    "priority_integrations_phase2": "NOT_AUTHORIZED",
+    "product_leadership_and_sse_contracts": "UNCHANGED",
+    "motion_technical_artifacts": "UNCHANGED",
+    "product_integration": "NONE",
+    "runtime_effect": "NONE"
+  },
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_179_CONSUMPTION"
+}

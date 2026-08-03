@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_POST_178_CANONICAL_STATE_AND_PHASE1_EVIDENCE_RECONCILIATION_179",
+  "project_id": "lab",
+  "status": "CONSUMED_ON_VERIFIED_SQUASH_MERGE",
+  "authorization_class": "BOUNDED_DOCUMENTARY_CANONICAL_RECONCILIATION",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-08-03T09:24:00-04:00",
+  "approval_source": "Continuemos, ejecuta un análisis para determinar qué ha cambiado y ejecutar alguna reconciliación si es necesario.",
+  "grant_inferred": false,
+  "repository": {
+    "name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "branch": "main",
+    "expected_parent_head": "234b595b40309e8bcdc01448d91ea6b88c9e1cd2",
+    "working_branch": "post178-canonical-reconciliation-179",
+    "head_policy": "VERIFY_LIVE_AT_USE",
+    "entrypoint": "project-sources/chatgpt/START_HERE.md"
+  },
+  "objective": "Analyze changes after Phase 1 and authorization 178, then reconcile only confirmed documentary contradictions without technical, runtime, integration or product effects.",
+  "authorized_scope": [
+    "CURRENT_STATE.json",
+    "projects/lab/PENDING.json",
+    "projects/lab/PROJECT_STATE.json",
+    "projects/lab/ROADMAP.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_POST_178_CANONICAL_STATE_AND_PHASE1_EVIDENCE_RECONCILIATION_179.json",
+    "projects/lab/briefs/CODEX_POST_178_CANONICAL_STATE_AND_PHASE1_EVIDENCE_RECONCILIATION_179_001.json",
+    "projects/lab/continuity/ATTACHMENT_MANIFEST.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.md",
+    "projects/lab/continuity/START_PROMPT.md",
+    "projects/lab/evidence/EVD-LAB-POST-178-CANONICAL-STATE-RECONCILIATION-179.json",
+    "projects/lab/evidence/EVD-LAB-PRIORITY-INTEGRATIONS-PHASE-1-170.json",
+    "registry/deltas/post-178-canonical-state-phase1-evidence-reconciliation-179.json",
+    "registry/index.json"
+  ],
+  "authority": {
+    "commit_authorized": true,
+    "push_authorized": true,
+    "source_file_update_authorized": true,
+    "test_execution_authorized": false,
+    "external_audit_execution_authorized": false,
+    "runtime_authorized": false,
+    "integration_authorized": false,
+    "product_changes_authorized": false,
+    "pointer_mutation_authorized": false,
+    "shadow_registry_mutation_authorized": false,
+    "static_selector_mutation_authorized": false,
+    "motion_technical_artifact_mutation_authorized": false,
+    "product_leadership_or_sse_contract_mutation_authorized": false
+  },
+  "findings_authorized_for_correction": [
+    "PHASE1_EVIDENCE_170_PREMERGE_PUBLICATION_FIELDS_STALE",
+    "CURRENT_STATE_POST_178_MOTION_SUMMARY_STALE",
+    "PROJECT_STATE_POST_171_THROUGH_178_SUMMARIES_STALE",
+    "PENDING_AGGREGATE_PEND_043_STAGE_1_COPY_STALE",
+    "ROADMAP_GLOBAL_MOTION_ITEMS_33_AND_34_STALE_AND_178_ITEM_MISSING",
+    "CURRENT_CONTINUITY_HUMAN_VIEWS_AND_ATTACHMENT_MANIFEST_STALE"
+  ],
+  "publication": {
+    "method": "SQUASH_MERGE",
+    "main_commit_count": 1
+  },
+  "residual_authority": "NONE",
+  "maximum_result": "POST_178_CANONICAL_STATE_AND_PHASE1_EVIDENCE_RECONCILED_PHASE2_NOT_AUTHORIZED",
+  "authority_effect": "NONE_AFTER_CONSUMPTION",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "integration_effect": "NONE",
+  "test_effect": "NONE",
+  "audit_effect": "NONE"
+}
