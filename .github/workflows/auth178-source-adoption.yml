@@ -24,7 +24,7 @@ jobs:
           cat > /tmp/auth178-payload.sha256 <<'EOF'
           f6466958dcbba9a720db314a20128b8dc64badeb474456c99987db5fc7801006  .auth178-payload/ARCHIVE_CONTENT_INDEX.json.xz
           039abbf3569c7f0f778e9a75ff73f3797d2dafa6650df9b7f9df49b2bfa45d7f  .auth178-payload/key-artifacts.tar.xz
-          07f6733aefa156a11b9f21cb8a08d4372c7ed53b6911311cb95e871798f3c2e8  .auth178-payload/auth178_reconcile.py.xz
+          634f649f7e919b0718b5afc166f217e6c6578f5a06f516e59831627830fc4020  .auth178-payload/auth178_reconcile.py.xz
           EOF
           sha256sum -c /tmp/auth178-payload.sha256
           xz -t .auth178-payload/ARCHIVE_INTEGRITY_ATTEMPT_007.json.xz
