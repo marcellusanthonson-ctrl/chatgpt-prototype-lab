@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.2.0",
   "effect_id": "STATISTICS-COUNTER-STATIC-SUFFIX-001",
   "canonical_name": "Statistics Counter with Static Suffix",
   "level": "COMPOSITION",
@@ -22,8 +22,8 @@
     "MODERATE_MOTION_RISK"
   ],
   "reduced_motion_strategy": "FINAL_STATE_IMMEDIATE",
-  "status": "FUNCTIONAL_SOURCE_PRESERVED_HUMAN_REVIEW_PENDING",
-  "maximum_authorized_status": "FUNCTIONAL_SOURCE_PRESERVED_HUMAN_REVIEW_PENDING",
+  "status": "CANONICAL_REFERENCE_DESIGNATED_BEHAVIOR_CORE_VALIDATED_READY_FOR_FUTURE_BOUNDED_CONSUMPTION",
+  "maximum_authorized_status": "CANONICAL_REFERENCE_DESIGNATED_BEHAVIOR_CORE_VALIDATED_READY_FOR_FUTURE_BOUNDED_CONSUMPTION",
   "customization_levels": [
     "L0_DEFAULT",
     "L1_TOKEN_CUSTOMIZATION",
@@ -34,8 +34,21 @@
   "source_reference": "CAROLINA-STATS-ATTEMPT-009",
   "product_integration_status": "NOT_AUTHORIZED_NOT_PERFORMED",
   "authorization_ref": "AUTHORIZATION_LAB_STATISTICS_COUNTER_EXPERIMENT_SOURCE_ADOPTION_HUMAN_REVIEW_AND_CONDITIONAL_CLOSURE_178",
-  "canonical_reference_designation": false,
-  "behavior_core_extraction": false,
+  "human_determination": {
+    "status": "APPROVED_SOURCE_FIDELITY",
+    "approved_by": "Jonathan Martínez",
+    "determined_at": "2026-08-03T00:23:25-04:00",
+    "protocol": "REAL_LOCALHOST_CHROMIUM",
+    "statement": "Funciona perfecto"
+  },
+  "canonical_reference_designation": true,
+  "canonical_reference": "CANONICAL_REFERENCE.json",
+  "behavior_core_extraction": true,
+  "behavior_core": "behavior-core/BEHAVIOR_CORE_CONTRACT.json",
+  "behavior_core_validation": "behavior-core/BEHAVIOR_CORE_VALIDATION_RESULTS.json",
+  "future_consumption_contract": "FUTURE_CONSUMPTION_CONTRACT.json",
+  "future_consumption_status": "READY_REQUIRES_SEPARATE_PRODUCT_INTEGRATION_AUTHORIZATION",
+  "reusable_promotion": false,
   "source_package": {
     "source_package_id": "CAROLINA-STATISTICS-MOTION-EXPERIMENT-001",
     "manifest": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/SOURCE_PACKAGE_MANIFEST.json",
@@ -44,6 +57,12 @@
     "exact_dom_excerpt": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_SECTION.html",
     "exact_motion_script_excerpt": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_MOTION.js",
     "direct_review_artifact": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/DIRECT_HUMAN_REVIEW.html",
-    "status": "PRESERVED_AWAITING_DIRECT_HUMAN_REVIEW"
-  }
+    "status": "HUMAN_APPROVED_CANONICAL_REFERENCE_DESIGNATED_SOURCE_PRESERVED"
+  },
+  "non_authorizations": [
+    "NO_CURRENT_PRODUCT_INTEGRATION",
+    "NO_CAROLINA_REPOSITORY_MUTATION",
+    "NO_RUNTIME_OR_DEPLOYMENT",
+    "FUTURE_PRODUCT_CONSUMPTION_REQUIRES_SEPARATE_EXPLICIT_AUTHORIZATION"
+  ]
 }
