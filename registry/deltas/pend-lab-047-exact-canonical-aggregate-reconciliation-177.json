@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "pend-lab-047-exact-canonical-aggregate-reconciliation-177",
+  "project_id": "lab",
+  "updated_at": "2026-08-02",
+  "status": "PASS_CANONICAL_AGGREGATES_RECONCILED_PEND_LAB_047_CLOSED",
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_AND_CLOSURE_177",
+    "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "approved_by": "Jonathan Martínez",
+    "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_AND_CLOSURE_177.json"
+  },
+  "source_authorization": {
+    "id": "AUTHORIZATION_LAB_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176",
+    "status": "CONSUMED_BLOCKED_BY_UNRESOLVED_CANONICAL_STATE_CONTRADICTION",
+    "historical_result_preserved": true
+  },
+  "targets": {
+    "CURRENT_STATE.json": "RECONCILED",
+    "projects/lab/PENDING.json": "RECONCILED",
+    "registry/index.json": "RECONCILED"
+  },
+  "state": {
+    "err_lab_011": "CLOSED_BY_APPROVED_SECTION_SCOPED_SOURCE_FIDELITY",
+    "pend_lab_046": "CLOSED_BY_APPROVED_SOURCE_FIDELITY",
+    "pend_lab_047": "CLOSED_CANONICAL_AGGREGATES_RECONCILED_AND_VALIDATED",
+    "pend_lab_043": "ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_COMPLETE_REMAINING_MOTION_LIBRARY_GATES_PENDING",
+    "candidate_002": "HUMAN_APPROVED_SOURCE_FIDELITY_CANONICAL_REFERENCE_DESIGNATED",
+    "behavior_core": "EXTRACTED_AND_VALIDATED_PASS_CONTROLLED_EXACT_BYTES",
+    "active_execution_authority": "NONE_AFTER_AUTHORIZATION_177_CONSUMPTION",
+    "next_gate": "HUMAN_REVIEW_STATISTICS_COUNTER_STATIC_SUFFIX_001"
+  },
+  "index": {
+    "authorizations": 101,
+    "evidence": 83,
+    "duplicate_paths": 0,
+    "new_broken_paths": 0
+  },
+  "evidence": {
+    "id": "EVD-LAB-PEND-047-EXACT-CANONICAL-AGGREGATE-RECONCILIATION-177",
+    "path": "projects/lab/evidence/EVD-LAB-PEND-047-EXACT-CANONICAL-AGGREGATE-RECONCILIATION-177.json"
+  },
+  "preserved": {
+    "global_phase": "PRIORITY_INTEGRATIONS_PHASE_1_CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED",
+    "technical_artifact_diff": "ZERO",
+    "reference_implementation_blob_sha": "66100821888e37e769a7dcc1f9af53d30a74175e",
+    "comparison_metrics_blob_sha": "87254c059ef32975e29327731968f028bbc46fe4",
+    "source_provenance_blob_sha": "5233884b89de573b631f9f2257649f539c6f704b",
+    "carolina_repository_mutation": "NONE"
+  },
+  "non_authorizations": [
+    "NO_CANONICAL_REFERENCE_CHANGE",
+    "NO_BEHAVIOR_CORE_CHANGE",
+    "NO_NEUTRAL_ADAPTATION",
+    "NO_REUSABLE_PROMOTION",
+    "NO_PRODUCT_INTEGRATION",
+    "NO_RUNTIME_OR_DEPLOYMENT"
+  ],
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_177_CONSUMPTION"
+}

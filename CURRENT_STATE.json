@@ -1,7 +1,7 @@
 {
   "schema_version": "2.5.0",
   "document_id": "lab.current-state",
-  "version": "2.5.52",
+  "version": "2.5.53",
   "status": "PRIORITY_INTEGRATIONS_PHASE_1_CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED",
   "updated_at": "2026-08-02",
   "active_project": "lab",
@@ -97,31 +97,63 @@
     "motion_source_fidelity_candidate_171": "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SOURCE-FAITHFUL-001/MANIFEST.json",
     "motion_source_fidelity_human_comparison_171": "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SOURCE-FAITHFUL-001/HUMAN_COMPARISON.html",
     "motion_system_foundation": {
-      "status": "CORRECTION_REMOTE_VERIFIED_READY_FOR_NEW_HUMAN_REVIEW",
+      "status": "ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_COMPLETE_STATISTICS_COUNTER_HUMAN_REVIEW_PENDING",
       "decision": "DEC-LAB-029",
       "authorization": "AUTHORIZATION_LAB_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_167",
       "root": "foundation-library/motion-system/MOTION-SYSTEM-001",
       "implemented_effects": 2,
       "planned_effects": 61,
-      "maximum_effect_status": "HUMAN_REVIEW_PENDING",
+      "maximum_effect_status": "MIXED_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_VALIDATED_STATISTICS_COUNTER_HUMAN_REVIEW_PENDING",
       "product_effect": "NONE",
       "runtime_effect": "NONE",
       "authorization_state": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-      "validation": "VISIBLE_BROWSER_MATRIX_AND_REPOSITORY_VALIDATION_PASS",
+      "validation": "ROADMAP_SOURCE_FIDELITY_HUMAN_APPROVED_BEHAVIOR_CORE_CONTROLLED_EXACT_BYTES_PASS",
       "source_fidelity_171": {
-        "status": "CAROLINA_ROADMAP_SOURCE_FIDELITY_CANDIDATE_READY_FOR_HUMAN_COMPARISON_PROTOCOL_HARDENED",
+        "status": "SUPERSEDED_BY_SECTION_SCOPED_CANDIDATE_002_HUMAN_APPROVAL_AND_AUTHORIZATION_176",
         "current_neutral_derivation": "REJECTED_AS_CANONICAL_REFERENCE_PRESERVED_HISTORICALLY",
-        "source_faithful_candidate": "HUMAN_REVIEW_PENDING",
-        "automated_gates": "PASS",
-        "human_approval": false,
+        "source_faithful_candidate_001": "HUMAN_REVIEW_REJECTED_SCOPE_OVERBROAD_PRESERVED_AS_FULL_CONTEXT_FORENSIC_CAPTURE",
         "canonical_replacement": false,
-        "reusable_promotion": false
-      }
+        "reusable_promotion": false,
+        "source_faithful_candidate": "SUPERSEDED_BY_SECTION_SCOPED_CANDIDATE_002",
+        "automated_gates": "PASS_HISTORICAL_CANDIDATE_001",
+        "human_approval": false
+      },
+      "roadmap_vertical_progress_001": {
+        "candidate": "CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
+        "candidate_status": "HUMAN_APPROVED_SOURCE_FIDELITY_CANONICAL_REFERENCE_DESIGNATED",
+        "human_approval": true,
+        "canonical_reference": "DESIGNATED_BY_IMMUTABLE_POINTER",
+        "canonical_reference_path": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/CANONICAL_REFERENCE.json",
+        "behavior_core": "ROADMAP-VERTICAL-PROGRESS-BEHAVIOR-CORE-001",
+        "behavior_core_status": "EXTRACTED_AND_VALIDATED_PASS_CONTROLLED_EXACT_BYTES",
+        "behavior_core_path": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/BEHAVIOR_CORE_CONTRACT.json",
+        "canonical_aggregate_reconciliation": "CLOSED_BY_AUTHORIZATION_177",
+        "historical_neutral_derivation": "REJECTED_AS_CANONICAL_REFERENCE_PRESERVED_HISTORICALLY",
+        "canonical_replacement": false,
+        "neutral_adaptation": false,
+        "reusable_promotion": false,
+        "product_integration": false,
+        "runtime_effect": "NONE"
+      },
+      "next_gate": "HUMAN_REVIEW_STATISTICS_COUNTER_STATIC_SUFFIX_001"
     },
     "priority_integrations_program": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/MANIFEST.json",
     "priority_integrations_roadmap": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/ROADMAP.json",
     "priority_integrations_phase1_evidence": "projects/lab/evidence/EVD-LAB-PRIORITY-INTEGRATIONS-PHASE-1-170.json",
-    "product_leadership_to_sse_composition": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/contracts/PRODUCT-LEADERSHIP-TO-SSE-COMPOSITION-CONTRACT-001.json"
+    "product_leadership_to_sse_composition": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/contracts/PRODUCT-LEADERSHIP-TO-SSE-COMPOSITION-CONTRACT-001.json",
+    "motion_source_fidelity_authorization_172": "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_SECTION_ISOLATION_AND_REVALIDATION_172.json",
+    "motion_human_comparison_authorization_173": "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_SCROLL_CORRECTION_AND_CONDITIONAL_DECISION_RECONCILIATION_173.json",
+    "motion_live_scroll_repair_authorization_174": "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_LIVE_SCROLL_RANGE_REPAIR_174.json",
+    "motion_post_terminal_repair_authorization_175": "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SECTION_POST_TERMINAL_DEAD_SCROLL_REMOVAL_175.json",
+    "motion_canonical_reference_behavior_core_authorization_176": "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176.json",
+    "motion_canonical_aggregate_reconciliation_authorization_177": "projects/lab/authorizations/AUTHORIZATION_LAB_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_AND_CLOSURE_177.json",
+    "motion_source_fidelity_candidate_002": "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/MANIFEST.json",
+    "motion_roadmap_canonical_reference": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/CANONICAL_REFERENCE.json",
+    "motion_roadmap_behavior_core_contract": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/BEHAVIOR_CORE_CONTRACT.json",
+    "motion_roadmap_behavior_core_validation": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/BEHAVIOR_CORE_VALIDATION_RESULTS.json",
+    "motion_canonical_reference_behavior_core_evidence_176": "projects/lab/evidence/EVD-LAB-ROADMAP-CANONICAL-REFERENCE-BEHAVIOR-CORE-176.json",
+    "motion_canonical_aggregate_reconciliation_evidence_177": "projects/lab/evidence/EVD-LAB-PEND-047-EXACT-CANONICAL-AGGREGATE-RECONCILIATION-177.json",
+    "motion_canonical_aggregate_reconciliation_pending_047": "projects/lab/pending/PEND-LAB-047.json"
   },
   "projects": {
     "lab": {
@@ -186,9 +218,7 @@
     "DEC-LAB-030",
     "DEC-LAB-031"
   ],
-  "open_errors": [
-    "ERR-LAB-011"
-  ],
+  "open_errors": [],
   "validated_patterns": [
     "PAT-LAB-001",
     "PAT-LAB-002",
@@ -270,7 +300,13 @@
     "motion_catalog_review_surface_and_roadmap_fidelity_correction_168": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "priority_integrations_phase0_169": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "priority_integrations_phase1_170_revision_2": "CONSUMED_ON_VERIFIED_SQUASH_MERGE",
-    "roadmap_source_fidelity_forensic_reconstruction_171": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+    "roadmap_source_fidelity_forensic_reconstruction_171": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "roadmap_source_fidelity_section_isolation_and_revalidation_172": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "roadmap_section_human_comparison_scroll_correction_and_conditional_decision_reconciliation_173": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "roadmap_section_human_comparison_live_scroll_range_repair_174": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "roadmap_section_post_terminal_dead_scroll_removal_175": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "roadmap_canonical_reference_and_behavior_core_extraction_176": "CONSUMED_BLOCKED_BY_UNRESOLVED_CANONICAL_STATE_CONTRADICTION",
+    "pend_047_exact_canonical_aggregate_reconciliation_and_closure_177": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
   },
   "verified_external_heads": {
     "symphonie": "31dd1345026240c83b015feef34d6f7f2d2147b7",
@@ -298,10 +334,11 @@
     "SYMPHONIE_MINIMUM_END_TO_END_DRY_RUN_081_READY_WITH_BOUNDED_GAPS",
     "SYMPHONIE_ALL_PHASES_VALIDATION_082_WITH_BOUNDED_LIMITS",
     "SYMPHONIE_LIVHAVN_MONOLITHIC_VISUAL_CALIBRATION_083_READY_WITH_BOUNDED_GAPS",
-    "INTEGRATION_FACTORY_M1_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_VALIDATION_PASS"
+    "INTEGRATION_FACTORY_M1_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_VALIDATION_PASS",
+    "ROADMAP_CANONICAL_REFERENCE_DESIGNATED_BEHAVIOR_CORE_VALIDATED_CANONICAL_AGGREGATES_RECONCILED"
   ],
-  "next_authorized_action": "EXECUTE_AUTHORIZATION_171_STAGE_2_AFTER_VERIFIED_STAGE_1_REMOTE_PUBLICATION",
-  "next_recommended_transition": "EXECUTE_PARALLEL_MOTION_SOURCE_FIDELITY_WORKSTREAM_171_WITHOUT_CHANGING_PRIORITY_INTEGRATIONS_PHASE",
+  "next_authorized_action": "NONE_AFTER_AUTHORIZATION_177_CONSUMPTION",
+  "next_recommended_transition": "HUMAN_REVIEW_STATISTICS_COUNTER_STATIC_SUFFIX_001",
   "continuity_read_order": [
     "LAB_CONTRACT.md",
     "METHODOLOGY.md",
@@ -713,5 +750,21 @@
     "next_pending": "projects/lab/pending/PEND-LAB-045.json",
     "active": false,
     "integrated": false
+  },
+  "motion_system_reconciliation_177": {
+    "authorization": "AUTHORIZATION_LAB_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_AND_CLOSURE_177",
+    "authorization_status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "source_authorization_176": "CONSUMED_BLOCKED_BY_UNRESOLVED_CANONICAL_STATE_CONTRADICTION_PRESERVED_HISTORICALLY",
+    "pend_lab_047": "CLOSED_CANONICAL_AGGREGATES_RECONCILED_AND_VALIDATED",
+    "err_lab_011": "CLOSED_BY_APPROVED_SECTION_SCOPED_SOURCE_FIDELITY",
+    "pend_lab_046": "CLOSED_BY_APPROVED_SOURCE_FIDELITY",
+    "pend_lab_043": "ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_COMPLETE_REMAINING_MOTION_LIBRARY_GATES_PENDING",
+    "candidate_002": "HUMAN_APPROVED_SOURCE_FIDELITY_CANONICAL_REFERENCE_DESIGNATED",
+    "behavior_core": "EXTRACTED_AND_VALIDATED_PASS_CONTROLLED_EXACT_BYTES",
+    "active_execution_authority": "NONE",
+    "next_gate": "HUMAN_REVIEW_STATISTICS_COUNTER_STATIC_SUFFIX_001",
+    "runtime_effect": "NONE",
+    "product_effect": "NONE",
+    "integration_effect": "NONE"
   }
 }

@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-PEND-047-EXACT-CANONICAL-AGGREGATE-RECONCILIATION-177",
+  "project_id": "lab",
+  "authorization_ref": "AUTHORIZATION_LAB_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_AND_CLOSURE_177",
+  "source_authorization_ref": "AUTHORIZATION_LAB_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176",
+  "source_pending_ref": "PEND-LAB-047",
+  "status": "PASS_EXACT_CANONICAL_AGGREGATES_RECONCILED_PEND_LAB_047_CLOSED",
+  "execution_environment": {
+    "method": "AUTHENTICATED_GITHUB_CONTENTS_WITH_LOCAL_EXACT_BLOB_RECONSTRUCTION",
+    "complete_untruncated_access": true,
+    "original_blob_verification": [
+      {
+        "path": "CURRENT_STATE.json",
+        "expected_blob_sha": "b729e4a659fbd56dde2f130eafc26bee84f9ff7e",
+        "result": "PASS"
+      },
+      {
+        "path": "projects/lab/PENDING.json",
+        "expected_blob_sha": "39f7b319fc8a08d409468d9cecd54f04122d1a88",
+        "result": "PASS"
+      },
+      {
+        "path": "registry/index.json",
+        "expected_blob_sha": "8925fd49e1f6af5b612691b35160638aa993fca8",
+        "result": "PASS"
+      }
+    ]
+  },
+  "outputs": [
+    {
+      "path": "CURRENT_STATE.json",
+      "git_blob_sha": "ab95d10f82f12a441a3e2bef25d1b1dec56d081b",
+      "sha256": "a8dfc8b2470117f937685927061cb39a2743273892534a6196f5c0c14955a17e"
+    },
+    {
+      "path": "projects/lab/PENDING.json",
+      "git_blob_sha": "0cccec8101d61cd188d52f3e313811f9cc44a2f5",
+      "sha256": "c0bea3c2771747f88674a7a8ac930369679da8c684c5d8b35c2033a2f9d95818"
+    },
+    {
+      "path": "registry/index.json",
+      "git_blob_sha": "4d9b247a91f8de2755a7c3268995fd06ff121f6a",
+      "sha256": "f2a0be8816e527bf8c18db6cc6a3619f0eb2da1d5f249f8e595b3ba4a60b4162"
+    }
+  ],
+  "reconciliation": {
+    "err_lab_011": "CLOSED_REMOVED_FROM_OPEN_ERRORS",
+    "pend_lab_046": "CLOSED_BY_APPROVED_SOURCE_FIDELITY",
+    "pend_lab_047": "CLOSED_CANONICAL_AGGREGATES_RECONCILED_AND_VALIDATED",
+    "pend_lab_043": "ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_COMPLETE_REMAINING_MOTION_LIBRARY_GATES_PENDING",
+    "candidate_002": "HUMAN_APPROVED_SOURCE_FIDELITY_CANONICAL_REFERENCE_DESIGNATED",
+    "authorization_172": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "authorization_173": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "authorization_174": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "authorization_175": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "authorization_176": "CONSUMED_BLOCKED_BY_UNRESOLVED_CANONICAL_STATE_CONTRADICTION_PRESERVED_HISTORICALLY",
+    "authorization_177": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "behavior_core": "EXTRACTED_AND_VALIDATED_PASS_CONTROLLED_EXACT_BYTES",
+    "global_phase": "PRIORITY_INTEGRATIONS_PHASE_1_CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED",
+    "next_gate": "HUMAN_REVIEW_STATISTICS_COUNTER_STATIC_SUFFIX_001"
+  },
+  "index_counts": {
+    "baseline_authorizations": 99,
+    "new_authorization_records": [
+      "AUTHORIZATION_LAB_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176",
+      "AUTHORIZATION_LAB_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_AND_CLOSURE_177"
+    ],
+    "authorizations": 101,
+    "baseline_evidence": 81,
+    "new_evidence_records": [
+      "EVD-LAB-ROADMAP-CANONICAL-REFERENCE-BEHAVIOR-CORE-176",
+      "EVD-LAB-PEND-047-EXACT-CANONICAL-AGGREGATE-RECONCILIATION-177"
+    ],
+    "evidence": 83
+  },
+  "validation": {
+    "json_parse": "PASS_ALL_CHANGED_JSON",
+    "applicable_schema_treatment": "NO_DEDICATED_AGGREGATE_SCHEMA_DISCOVERED_STRUCTURAL_CONTRACT_CHECKS_PASS",
+    "duplicate_pending_ids": "ZERO",
+    "duplicate_index_paths": "ZERO",
+    "new_broken_indexed_paths": "ZERO",
+    "material_contradictions_173_through_177": "ZERO",
+    "unrelated_semantic_diff": "ZERO",
+    "protected_technical_diff": "ZERO",
+    "carolina_repository_diff": "ZERO",
+    "authorization_176_history_preserved": true
+  },
+  "protected_artifacts": {
+    "reference_implementation_blob_sha": "66100821888e37e769a7dcc1f9af53d30a74175e",
+    "comparison_metrics_blob_sha": "87254c059ef32975e29327731968f028bbc46fe4",
+    "source_provenance_blob_sha": "5233884b89de573b631f9f2257649f539c6f704b",
+    "canonical_reference_change": "NONE",
+    "behavior_core_change": "NONE",
+    "carolina_repository_mutation": "NONE"
+  },
+  "non_effects": {
+    "neutral_adaptation": "NONE",
+    "reusable_promotion": "NONE",
+    "product_integration": "NONE",
+    "runtime": "NONE",
+    "deployment": "NONE"
+  }
+}
