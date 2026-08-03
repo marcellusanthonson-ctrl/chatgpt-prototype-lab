@@ -1,7 +1,9 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-08-02",
-  "active_authorizations": [],
+  "updated_at": "2026-08-03",
+  "active_authorizations": [
+    "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180"
+  ],
   "records": [
     {
       "id": "AUTH-LAB-GOVERNANCE-V2-013",
@@ -1284,6 +1286,25 @@
       "product_changes_authorized": false,
       "external_repository_mutation_authorized": false,
       "updated_at": "2026-08-02"
+    },
+    {
+      "id": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180",
+      "state_key": "priority_integrations_phase2_sse_synthetic_test_execution_180",
+      "project_id": "lab",
+      "status": "GRANTED_STAGE_1_CONSUMED_STAGE_2_AUTHORIZED_NOT_STARTED",
+      "approved_by": "Jonathan Martínez",
+      "scope": "SSE_SYNTHETIC_TEST_EXECUTION_ONLY",
+      "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180.json",
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "expected_parent_head": "f388adce6a7917b5378489bda6bf058469f2a643",
+      "commit_authorized": true,
+      "push_authorized": true,
+      "test_execution_authorized": true,
+      "external_audit_authorized": false,
+      "runtime_authorized": false,
+      "integration_authorized": false,
+      "product_changes_authorized": false
     }
   ]
 }

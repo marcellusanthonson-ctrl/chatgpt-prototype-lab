@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "priority-integrations-phase2-sse-authority-180",
+  "project_id": "lab",
+  "updated_at": "2026-08-03",
+  "status": "PASS_PHASE_2_SSE_EXECUTION_AUTHORIZED_NOT_STARTED_PL_PREFLIGHT_BLOCKED",
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180",
+    "status": "GRANTED_STAGE_1_CONSUMED_STAGE_2_AUTHORIZED_NOT_STARTED",
+    "path": "projects/lab/authorizations/AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180.json"
+  },
+  "superseded_authorization": {
+    "id": "AUTHORIZATION_LAB_SSE_TEST_EXECUTION_AND_READ_ONLY_AUDIT_147",
+    "status": "SUPERSEDED_UNEXECUTED",
+    "path": "projects/lab/authorizations/AUTHORIZATION_LAB_SSE_TEST_EXECUTION_AND_READ_ONLY_AUDIT_147.json"
+  },
+  "error": {
+    "id": "ERR-LAB-012",
+    "status": "CLOSED_BY_AUTHORIZATION_180",
+    "path": "errors/ERR-LAB-012.json"
+  },
+  "evidence": {
+    "id": "EVD-LAB-PRIORITY-INTEGRATIONS-PHASE-2-SSE-AUTHORITY-180",
+    "status": "PASS_SSE_STAGE_2_AUTHORIZED_NOT_STARTED_PRODUCT_LEADERSHIP_PREFLIGHT_BLOCKED",
+    "path": "projects/lab/evidence/EVD-LAB-PRIORITY-INTEGRATIONS-PHASE-2-SSE-AUTHORITY-180.json"
+  },
+  "state": {
+    "global_phase": "PRIORITY_INTEGRATIONS_PHASE_2_SSE_EXECUTION_AUTHORIZED_NOT_STARTED_PRODUCT_LEADERSHIP_PREFLIGHT_BLOCKED",
+    "active_execution_authority": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180",
+    "sse": "TEST_EXECUTION_AUTHORIZED_NOT_STARTED_EXTERNAL_AUDIT_NOT_AUTHORIZED",
+    "product_leadership": "PREFLIGHT_BLOCKED_NO_EXECUTION_AUTHORITY",
+    "phase_3_external_audits": "NOT_AUTHORIZED"
+  },
+  "registry_counts_after": {
+    "authorizations": 104,
+    "evidence": 86,
+    "errors": 13
+  },
+  "non_effects": [
+    "NO_TEST_EXECUTION_DURING_RECONCILIATION",
+    "NO_EXTERNAL_AUDIT",
+    "NO_AWS_OR_TERRAFORM",
+    "NO_ACTIVATION_OR_INTEGRATION",
+    "NO_PRODUCT_OR_RUNTIME_CHANGE"
+  ],
+  "next_authorized_action": "CODEX_EXECUTE_SSE_SYNTHETIC_TEST_UNDER_AUTHORIZATION_180"
+}

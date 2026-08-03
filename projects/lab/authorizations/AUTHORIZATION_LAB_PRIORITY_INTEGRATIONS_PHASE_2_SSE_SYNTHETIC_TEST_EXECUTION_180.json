@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180",
+  "project_id": "lab",
+  "status": "GRANTED_STAGE_1_CONSUMED_STAGE_2_AUTHORIZED_NOT_STARTED",
+  "authorization_class": "BOUNDED_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-08-03T10:12:00-04:00",
+  "approval_source": "Continuemos",
+  "approval_context": "The unique canonical next transition was to separately authorize Priority Integrations Phase 2 independent evidence closure. Analysis found Product Leadership blocked and SSE independently executable after superseding stale authorization 147.",
+  "grant_inferred": false,
+  "repository": {
+    "name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "branch": "main",
+    "expected_parent_head": "f388adce6a7917b5378489bda6bf058469f2a643",
+    "working_branch": "priority-integrations-phase2-sse-180",
+    "head_policy": "VERIFY_LIVE_AT_USE",
+    "entrypoint": "project-sources/chatgpt/START_HERE.md"
+  },
+  "supersedes": {
+    "authorization": "AUTHORIZATION_LAB_SSE_TEST_EXECUTION_AND_READ_ONLY_AUDIT_147",
+    "scope": "EXECUTION_AUTHORITY_ONLY",
+    "historical_approval_and_document_preserved": true,
+    "execution_under_147": "NOT_STARTED"
+  },
+  "purpose": "Execute only the frozen Software Solution Engineering synthetic activation and value-discrimination test, producing reproducible evidence without external audit, activation, integration, infrastructure or product effects.",
+  "stages": {
+    "stage_1_documentary_authority_reconciliation": "CONSUMED_ON_VERIFIED_SQUASH_MERGE",
+    "stage_2_sse_synthetic_test_execution": "AUTHORIZED_NOT_STARTED"
+  },
+  "execution_parent_policy": "VERIFY_LIVE_MAIN_AND_REQUIRE_AUTHORIZATION_180_PUBLICATION_COMMIT_IN_ANCESTRY",
+  "brief_ref": "projects/lab/briefs/CODEX_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180_001.json",
+  "test_design_ref": "projects/lab/test-designs/SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json",
+  "test_contract": {
+    "candidate_package": "SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001@0.2.0",
+    "fixture_count": 32,
+    "arm_count": 3,
+    "minimum_output_count": 96,
+    "domains": [
+      "SOFTWARE_SOLUTION_DECISIONS",
+      "LAB_GOVERNANCE_DECISIONS"
+    ],
+    "input_freeze_required": true,
+    "blinded_scoring_required": true,
+    "cost_and_negative_transfer_measurement_required": true
+  },
+  "allowed_actions": [
+    "VERIFY_AND_PIN_REMOTE_HEAD",
+    "CREATE_ISOLATED_BRANCH_OR_WORKTREE",
+    "FREEZE_AND_HASH_CANONICAL_TEST_INPUTS",
+    "CALIBRATE_SCORERS",
+    "GENERATE_AT_LEAST_96_AUTHORIZED_OUTPUTS",
+    "ANONYMIZE_HASH_AND_RECORD_OUTPUT_PROVENANCE",
+    "RUN_BLINDED_SCORING_AFTER_OUTPUT_FREEZE",
+    "MEASURE_TOKEN_TIME_RETRY_COST_AND_NEGATIVE_TRANSFER",
+    "PUBLISH_BOUNDED_SYNTHETIC_TEST_EXECUTION_EVIDENCE",
+    "COMMIT_AND_PUSH_ONLY_AUTHORIZED_TEST_EVIDENCE"
+  ],
+  "forbidden_actions": [
+    "NO_EXTERNAL_AUDIT_EXECUTION_OR_AUDITOR_ASSIGNMENT",
+    "NO_PRODUCT_LEADERSHIP_TEST_OR_PREFLIGHT_EXECUTION",
+    "NO_AWS_TERRAFORM_PROVISIONING_OR_EXTERNAL_DATABASE",
+    "NO_SSE_ACTIVATION_INTEGRATION_PROMOTION_OR_FACTORY_REGISTRATION",
+    "NO_POINTER_SELECTOR_SHADOW_REGISTRY_OR_STATIC_FALLBACK_MUTATION",
+    "NO_ARCHITECTURE_STACK_PROVIDER_OR_IMPLEMENTATION_SELECTION",
+    "NO_PRODUCT_RUNTIME_SYMPHONIE_RAG_EMBEDDING_OR_MOTION_CHANGE",
+    "NO_REAL_PRODUCT_OR_PERSONAL_DATA",
+    "NO_POST_FREEZE_FIXTURE_PROMPT_OUTPUT_OR_SCORE_MUTATION"
+  ],
+  "stop_conditions": [
+    "REMOTE_HEAD_OR_AUTHORIZATION_ANCESTRY_MISMATCH",
+    "DIRTY_OR_UNCONTROLLED_WORKTREE",
+    "INPUT_HASH_MISMATCH",
+    "MODEL_OR_TOOL_ACCESS_NOT_REPRODUCIBLE",
+    "SCORER_CALIBRATION_INCOMPLETE",
+    "ARM_LEAKAGE_OR_BLINDING_FAILURE",
+    "OUTPUT_COUNT_PROVENANCE_OR_COST_INCOMPLETE",
+    "POST_FREEZE_MUTATION",
+    "REQUEST_REQUIRES_EXTERNAL_AUDIT_AWS_PRODUCT_RUNTIME_OR_ACTIVATION",
+    "AUTHORITY_OR_SCOPE_AMBIGUOUS"
+  ],
+  "consumption_criterion": "Stage 2 is consumed only after the complete synthetic execution package, at least 96 outputs, hashes, provenance, blinded scores, cost and negative-transfer analysis are published and remotely verified.",
+  "external_audit_authorized": false,
+  "product_leadership_track_authorized": false,
+  "sse_activation_authorized": false,
+  "sse_integration_authorized": false,
+  "runtime_authorized": false,
+  "product_changes_authorized": false,
+  "commit_authorized": true,
+  "push_authorized": true,
+  "test_execution_authorized": true,
+  "residual_authority_after_stage_1": "STAGE_2_SSE_SYNTHETIC_TEST_EXECUTION_ONLY",
+  "maximum_result": "SSE_SYNTHETIC_TEST_EXECUTION_EVIDENCE_READY_FOR_SEPARATE_PHASE_3_EXTERNAL_AUDIT_DECISION"
+}

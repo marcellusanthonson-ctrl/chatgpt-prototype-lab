@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "brief_id": "CODEX_SSE_ACTIVATION_AND_VALUE_DISCRIMINATION_TEST_001",
   "project_id": "lab",
-  "status": "FINAL_REVIEW_COMPLETE_PROPOSED_NOT_AUTHORIZED_FOR_EXECUTION",
+  "status": "SUPERSEDED_FOR_EXECUTION_BY_SUCCESSOR_BRIEF_180_PRESERVED_HISTORICALLY",
   "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "branch": "main",
   "head_policy": "VERIFY_LIVE_AT_USE_AND_PIN_EXECUTION_HEAD",
@@ -96,5 +96,7 @@
     "architecture_or_stack_authorized": false,
     "next_effect": "ELIGIBLE_FOR_EXTERNAL_AUDIT_AND_HUMAN_PROMOTION_DECISION_ONLY"
   },
-  "execution_authority": "NONE_UNTIL_SEPARATE_EXPLICIT_AUTHORIZATION"
+  "execution_authority": "NONE_SUPERSEDED",
+  "successor_brief": "projects/lab/briefs/CODEX_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180_001.json",
+  "supersession_reason": "The current roadmap separates Phase 2 synthetic test execution from Phase 3 external audit and authorization 147 is blocked by its remote-head mismatch stop condition."
 }

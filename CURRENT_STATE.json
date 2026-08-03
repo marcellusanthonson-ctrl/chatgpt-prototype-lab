@@ -1,11 +1,11 @@
 {
   "schema_version": "2.5.0",
   "document_id": "lab.current-state",
-  "version": "2.5.55",
-  "status": "PRIORITY_INTEGRATIONS_PHASE_1_CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED",
+  "version": "2.5.56",
+  "status": "PRIORITY_INTEGRATIONS_PHASE_2_SSE_EXECUTION_AUTHORIZED_NOT_STARTED_PRODUCT_LEADERSHIP_PREFLIGHT_BLOCKED",
   "updated_at": "2026-08-03",
   "active_project": "lab",
-  "current_phase": "PRIORITY_INTEGRATIONS_PHASE_1_CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED",
+  "current_phase": "PRIORITY_INTEGRATIONS_PHASE_2_SSE_EXECUTION_AUTHORIZED_NOT_STARTED_PRODUCT_LEADERSHIP_PREFLIGHT_BLOCKED",
   "methodology": {
     "version": "2.1",
     "path": "METHODOLOGY.md"
@@ -181,7 +181,12 @@
     "motion_statistics_counter_evidence_178": "projects/lab/evidence/EVD-LAB-STATISTICS-COUNTER-SOURCE-PACKAGE-178.json",
     "post_178_reconciliation_authorization_179": "projects/lab/authorizations/AUTHORIZATION_LAB_POST_178_CANONICAL_STATE_AND_PHASE1_EVIDENCE_RECONCILIATION_179.json",
     "post_178_reconciliation_evidence_179": "projects/lab/evidence/EVD-LAB-POST-178-CANONICAL-STATE-RECONCILIATION-179.json",
-    "post_178_reconciliation_delta_179": "registry/deltas/post-178-canonical-state-phase1-evidence-reconciliation-179.json"
+    "post_178_reconciliation_delta_179": "registry/deltas/post-178-canonical-state-phase1-evidence-reconciliation-179.json",
+    "priority_integrations_phase2_sse_authorization_180": "projects/lab/authorizations/AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180.json",
+    "priority_integrations_phase2_sse_brief_180": "projects/lab/briefs/CODEX_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180_001.json",
+    "priority_integrations_phase2_sse_evidence_180": "projects/lab/evidence/EVD-LAB-PRIORITY-INTEGRATIONS-PHASE-2-SSE-AUTHORITY-180.json",
+    "priority_integrations_phase2_authority_error_012": "errors/ERR-LAB-012.json",
+    "priority_integrations_phase2_sse_delta_180": "registry/deltas/priority-integrations-phase2-sse-authority-180.json"
   },
   "projects": {
     "lab": {
@@ -260,8 +265,8 @@
   ],
   "authorization_state": {
     "governance_v2_013": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "commit_authorized": false,
-    "push_authorized": false,
+    "commit_authorized": true,
+    "push_authorized": true,
     "runtime_authorized": false,
     "integration_authorized": false,
     "product_changes_authorized": false,
@@ -336,7 +341,11 @@
     "roadmap_canonical_reference_and_behavior_core_extraction_176": "CONSUMED_BLOCKED_BY_UNRESOLVED_CANONICAL_STATE_CONTRADICTION",
     "pend_047_exact_canonical_aggregate_reconciliation_and_closure_177": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "statistics_counter_experiment_source_adoption_human_review_and_conditional_closure_178": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "post_178_canonical_state_and_phase1_evidence_reconciliation_179": "CONSUMED_ON_VERIFIED_SQUASH_MERGE"
+    "post_178_canonical_state_and_phase1_evidence_reconciliation_179": "CONSUMED_ON_VERIFIED_SQUASH_MERGE",
+    "test_execution_authorized": true,
+    "external_audit_execution_authorized": false,
+    "sse_test_execution_and_read_only_audit_147": "SUPERSEDED_UNEXECUTED_BY_AUTHORIZATION_180",
+    "priority_integrations_phase2_sse_synthetic_test_execution_180": "GRANTED_STAGE_1_CONSUMED_STAGE_2_AUTHORIZED_NOT_STARTED"
   },
   "verified_external_heads": {
     "symphonie": "31dd1345026240c83b015feef34d6f7f2d2147b7",
@@ -368,8 +377,8 @@
     "ROADMAP_CANONICAL_REFERENCE_DESIGNATED_BEHAVIOR_CORE_VALIDATED_CANONICAL_AGGREGATES_RECONCILED",
     "STATISTICS_COUNTER_SOURCE_FIDELITY_APPROVED_CANONICAL_REFERENCE_DESIGNATED_BEHAVIOR_CORE_VALIDATED"
   ],
-  "next_authorized_action": "NONE_AFTER_AUTHORIZATION_179_CONSUMPTION",
-  "next_recommended_transition": "SEPARATELY_AUTHORIZE_PRIORITY_INTEGRATIONS_PHASE_2_INDEPENDENT_EVIDENCE_CLOSURE",
+  "next_authorized_action": "CODEX_EXECUTE_SSE_SYNTHETIC_TEST_UNDER_AUTHORIZATION_180",
+  "next_recommended_transition": "EXECUTE_AND_PUBLISH_REPRODUCIBLE_SSE_SYNTHETIC_TEST_EVIDENCE_WITHOUT_EXTERNAL_AUDIT",
   "continuity_read_order": [
     "LAB_CONTRACT.md",
     "METHODOLOGY.md",
@@ -408,7 +417,7 @@
   },
   "product_leadership_candidate": {
     "package_id": "PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001",
-    "status": "CANDIDATE_REQUIRES_DISCRIMINATING_TESTS",
+    "status": "CONTRACT_COMPLETE_OPERATIONAL_PREFLIGHT_BLOCKED_TEST_003_NOT_EXECUTED",
     "integrated": false,
     "active": false,
     "automatic_consumption": false,
@@ -417,7 +426,9 @@
     "fixture_count": 40,
     "successor_pending": "PEND-LAB-024",
     "runtime_effect": "NONE",
-    "authority_effect": "NONE"
+    "authority_effect": "NONE",
+    "operational_preflight": "BLOCKED_NO_ELIGIBLE_BOUNDED_CREATOR",
+    "execution_authority": "NONE"
   },
   "latest_reconciliation": {
     "authorization_id": "AUTHORIZATION_LAB_FULL_RAG_FAILURE_DISCRIMINATION_EXECUTION_002_EXTERNAL_AUDIT_RECONCILIATION_077",
@@ -658,7 +669,7 @@
     "active_selector_modified": false,
     "runtime_effect": "NONE",
     "integration_effect": "NONE",
-    "sse_test_147": "UNCHANGED_SEPARATE_AUTHORIZATION_GRANTED_NOT_STARTED",
+    "sse_test_147": "SUPERSEDED_UNEXECUTED_BY_AUTHORIZATION_180",
     "legacy_repository_validator": "PREEXISTING_ARRAY_VALUED_REGISTRY_DELTA_PATH_CRASH_NOT_CORRECTED",
     "state_reconciliation": {
       "authorization": "AUTHORIZATION_LAB_M1_PASS_STATE_REGISTRY_AND_CONTINUITY_RECONCILIATION_154",
@@ -767,16 +778,19 @@
       "static_selector_retirement_authorized": false,
       "runtime_effect": "BOUNDED_LAB_OBSERVATION_COMPLETE_NO_EXTERNAL_RUNTIME",
       "integration_effect": "M5_INTEGRATED_ACTIVE_VIA_GOVERNED_POINTER"
-    }
+    },
+    "sse_test_180": "AUTHORIZED_NOT_STARTED_NO_AWS_NO_AUDIT"
   },
   "priority_integrations_program": {
-    "status": "PHASE_1_FACTORY_CONTRACT_COMPLETION_PASS",
+    "status": "PRIORITY_INTEGRATIONS_PHASE_2_SSE_EXECUTION_AUTHORIZED_NOT_STARTED_PRODUCT_LEADERSHIP_PREFLIGHT_BLOCKED",
     "priority_order": [
       "PRODUCT_LEADERSHIP",
       "SOFTWARE_SOLUTION_ENGINEERING"
     ],
-    "product_leadership": "CANDIDATE_CONTRACT_COMPLETE_TEST_003_NOT_EXECUTED",
-    "software_solution_engineering": "CANDIDATE_CONTRACT_COMPLETE_TEST_READY_EXECUTION_AND_AUDIT_NOT_AUTHORIZED",
+    "product_leadership": "PREFLIGHT_BLOCKED_NO_EXECUTION_AUTHORITY",
+    "software_solution_engineering": "SYNTHETIC_TEST_EXECUTION_AUTHORIZED_NOT_STARTED_EXTERNAL_AUDIT_NOT_AUTHORIZED",
+    "sse_execution_authority": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180",
+    "phase_3_external_audit": "NOT_AUTHORIZED",
     "composition_contract": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/contracts/PRODUCT-LEADERSHIP-TO-SSE-COMPOSITION-CONTRACT-001.json",
     "next_pending": "projects/lab/pending/PEND-LAB-045.json",
     "active": false,

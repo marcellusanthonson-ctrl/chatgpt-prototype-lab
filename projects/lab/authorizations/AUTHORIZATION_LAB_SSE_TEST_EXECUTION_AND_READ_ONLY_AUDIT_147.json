@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_SSE_TEST_EXECUTION_AND_READ_ONLY_AUDIT_147",
-  "status": "GRANTED",
+  "status": "SUPERSEDED_UNEXECUTED_BY_AUTHORIZATION_180",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-07-30",
   "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
@@ -13,7 +13,10 @@
     "fixture_count": 32,
     "arm_count": 3,
     "minimum_output_count": 96,
-    "domains": ["SOFTWARE_SOLUTION_DECISIONS", "LAB_GOVERNANCE_DECISIONS"]
+    "domains": [
+      "SOFTWARE_SOLUTION_DECISIONS",
+      "LAB_GOVERNANCE_DECISIONS"
+    ]
   },
   "allowed_actions": [
     "VERIFY_AND_PIN_REMOTE_HEAD",
@@ -50,7 +53,21 @@
     "AUTHORITY_OR_SCOPE_AMBIGUOUS"
   ],
   "consumption_criterion": "Complete test, scoring, independent read-only audit and bounded evidence are published and verified remotely; authorization is then marked CONSUMED.",
-  "authority_effect": "EXECUTION_AND_READ_ONLY_AUDIT_ONLY_WITHIN_REFERENCED_BRIEF",
+  "authority_effect": "NONE_SUPERSEDED_UNEXECUTED",
   "sse_activation_authorized": false,
-  "sse_integration_authorized": false
+  "sse_integration_authorized": false,
+  "execution_started": false,
+  "test_executed": false,
+  "external_audit_executed": false,
+  "historical_approval_preserved": true,
+  "supersession": {
+    "authorization": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180",
+    "reasons": [
+      "REMOTE_HEAD_DRIFT_TRIGGERS_AUTHORIZATION_147_STOP_CONDITION",
+      "DEC_LAB_030_AND_PRIORITY_INTEGRATIONS_ROADMAP_SEPARATE_PHASE_2_TEST_EXECUTION_FROM_PHASE_3_EXTERNAL_AUDIT",
+      "AUTHORIZATION_147_DELTA_WAS_NOT_DISCOVERED_BY_REGISTRY_INDEX",
+      "CURRENT_SSE_MANIFEST_INTEGRATION_AND_PENDING_RECORDS_DECLARED_NO_EXECUTION_OR_AUDIT_AUTHORITY"
+    ],
+    "effect": "NO_RESIDUAL_OR_RESUMABLE_AUTHORITY"
+  }
 }
