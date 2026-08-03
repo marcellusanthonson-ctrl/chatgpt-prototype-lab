@@ -4,17 +4,29 @@
   "project_id": "lab",
   "authorization_ref": "AUTHORIZATION_LAB_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176",
   "decision_ref": "DEC-LAB-031",
-  "status": "PASS_CANONICAL_REFERENCE_DESIGNATED_BEHAVIOR_CORE_EXTRACTED_AND_CONTROLLED_VALIDATION_PASS",
+  "status": "MODIFIED_TECHNICAL_PASS_CANONICAL_AGGREGATE_RECONCILIATION_BLOCKED",
+  "overall_classification": "BLOCKED_BY_UNRESOLVED_CANONICAL_STATE_CONTRADICTION",
   "stage_0": {
+    "status": "PARTIAL_BLOCKED",
     "classification": "CANONICAL_STATE_DIVERGENCE_CONFIRMED",
     "findings": [
-      "CURRENT_STATE_JSON_STILL_LISTED_ERR_LAB_011_OPEN_AND_CANDIDATE_HUMAN_REVIEW_PENDING",
-      "PROJECTS_LAB_PENDING_JSON_STILL_LISTED_PEND_LAB_043_AND_PEND_LAB_046_PRE_APPROVAL_STATES",
-      "CANONICAL_ITEM_FILES_CONTINUITY_AND_DELTA_ALREADY_RECORDED_APPROVAL_AND_CLOSURE"
+      "CURRENT_STATE_JSON_STILL_LISTS_ERR_LAB_011_OPEN_AND_CANDIDATE_HUMAN_REVIEW_PENDING",
+      "CURRENT_STATE_JSON_DOES_NOT_RECORD_AUTHORIZATIONS_172_THROUGH_176",
+      "PROJECTS_LAB_PENDING_JSON_STILL_LISTS_PEND_LAB_043_AND_PEND_LAB_046_PRE_APPROVAL_STATES",
+      "REGISTRY_INDEX_JSON_DOES_NOT_DISCOVER_AUTHORIZATION_176_EVIDENCE_176_DELTA_176_OR_PEND_LAB_047",
+      "ITEM_LEVEL_FILES_AND_CURRENT_CONTINUITY_RECORD_THE_NEWER_APPROVED_AND_TECHNICAL_RESULTS"
     ],
-    "treatment": "RECONCILE_DIRECT_CURRENT_STATE_AND_PENDING_AGGREGATES_WHILE_PRESERVING_UNRELATED_GLOBAL_PHASE_AND_HISTORY"
+    "unreconciled_paths": [
+      "CURRENT_STATE.json",
+      "projects/lab/PENDING.json",
+      "registry/index.json"
+    ],
+    "preservation_constraint": "EXACT_FULL_FILE_RECONCILIATION_REQUIRED_NO_COMPACTION_OR_HISTORY_LOSS",
+    "stop_condition": "UNRESOLVED_CANONICAL_STATE_CONTRADICTION",
+    "pending_ref": "projects/lab/pending/PEND-LAB-047.json"
   },
   "stage_1": {
+    "status": "PASS",
     "result": "CANONICAL_REFERENCE_IMPLEMENTATION_DESIGNATED",
     "effect_id": "ROADMAP-VERTICAL-PROGRESS-001",
     "reference_id": "CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
@@ -24,6 +36,7 @@
     "historical_neutral_derivation": "REJECTED_AS_CANONICAL_REFERENCE_PRESERVED_HISTORICALLY"
   },
   "stage_2": {
+    "status": "PASS_CONTROLLED_EXACT_BYTES",
     "result": "BEHAVIOR_CORE_EXTRACTED_AND_VALIDATED",
     "behavior_core_id": "ROADMAP-VERTICAL-PROGRESS-BEHAVIOR-CORE-001",
     "root": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core",
@@ -45,51 +58,23 @@
         "sha256": "11c43f904ec3420c501acee19625e2d8012c352b5cee3043386b3529e6d331ce"
       }
     },
-    "preserved_semantics": [
-      "SCROLL_LINKED_PARAMETRIC_FILL",
-      "TIMELINE_LOCAL_COORDINATE_NORMALIZATION",
-      "LIVE_MEASUREMENT_AND_RESIZE_REMEASUREMENT",
-      "DYNAMIC_TRAILING_SPACE_ONLY_WHEN_REQUIRED",
-      "PROGRESSIVE_NODE_ACTIVATION",
-      "INDEPENDENT_CARD_REVEAL",
-      "STEP_LOCAL_PROGRESS",
-      "TERMINAL_STATE_AND_TERMINAL_CAP_SIGNAL",
-      "BOUNDED_POST_TERMINAL_RELEASE_MARGIN",
-      "REDUCED_MOTION_FINAL_STATE_IMMEDIATE",
-      "WINDOW_LOAD_DOCUMENT_FONTS_AND_DELAYED_STABILIZATION"
-    ],
-    "excluded_source_specific_dependencies": [
-      "CAROLINA_TEXT_CONTENT",
-      "CAROLINA_BRAND_IDENTITY",
-      "CAROLINA_TYPOGRAPHY",
-      "CAROLINA_COLORS",
-      "CAROLINA_ICONS",
-      "CLINICAL_CONTENT",
-      "SOURCE_EDITORIAL_COMPOSITION",
-      "PRODUCT_ASSETS"
-    ]
+    "source_specific_dependencies_excluded": true
   },
   "validation": {
-    "status": "PASS_CONTROLLED_EXACT_BYTES",
     "browser": "Chromium",
     "method": "CONTROLLED_SET_CONTENT_EXACT_BYTES",
-    "real_localhost_navigation": "BLOCKED_BY_EXECUTION_ENVIRONMENT_ERR_BLOCKED_BY_ADMINISTRATOR",
-    "claim_boundary": "AUTOMATED_REAL_LOCALHOST_PASS_NOT_ESTABLISHED",
     "normal_motion": "PASS_7_OF_7",
     "reduced_motion": "PASS_7_OF_7",
     "reference_transition_checks": "PASS_7_OF_7",
-    "required_viewports": ["390x844", "768x1024", "1280x720", "1440x900", "1541x899", "1920x1080", "2560x1080"],
     "resize_round_trip": "PASS",
     "late_stabilization": "PASS",
     "terminal_state": "PASS",
     "all_three_nodes_active": "PASS",
-    "final_progresses": [1, 1, 1],
     "horizontal_overflow": "ZERO",
     "external_requests": "ZERO",
     "configured_release_margin_css_px": 16,
-    "minimum_post_terminal_visual_motion_css_px": 11,
-    "post_terminal_extra_metric_note": "TOTAL_DOCUMENT_DISTANCE_AFTER_FIRST_TERMINAL_EVENT_INCLUDES_VISIBLE_FOOTER_MOVEMENT_AND_IS_NOT_A_FROZEN_DEAD_SCROLL_MEASURE",
-    "node_check": "PASS"
+    "real_localhost_navigation": "NOT_ESTABLISHED_BLOCKED_BY_EXECUTION_ENVIRONMENT_ERR_BLOCKED_BY_ADMINISTRATOR",
+    "claim_boundary": "TECHNICAL_CONTROLLED_PASS_DOES_NOT_OVERRIDE_CANONICAL_RECONCILIATION_BLOCKER"
   },
   "protected_artifacts": {
     "reference_implementation_blob_sha": "66100821888e37e769a7dcc1f9af53d30a74175e",
