@@ -2,7 +2,7 @@
   "schema_version": "1.1.0",
   "id": "PEND-LAB-043",
   "project_id": "lab",
-  "status": "ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_COMPLETE_REMAINING_MOTION_LIBRARY_GATES_PENDING",
+  "status": "ROADMAP_TECHNICAL_COMPLETE_CANONICAL_AGGREGATE_RECONCILIATION_BLOCKED_BEFORE_REMAINING_MOTION_GATES",
   "type": "MOTION_SYSTEM_HUMAN_GATE_AND_LIBRARY_POPULATION",
   "title": "Human review and staged population of the transversal motion-effects library",
   "priority": "HIGH",
@@ -14,7 +14,13 @@
     "EXTRACT_SOURCE_INDEPENDENT_ROADMAP_BEHAVIOR_CORE",
     "VALIDATE_ROADMAP_BEHAVIOR_CORE_IN_NORMAL_AND_REDUCED_MOTION_MATRIX"
   ],
+  "blocking_precondition": {
+    "id": "PEND-LAB-047",
+    "status": "OPEN_CANONICAL_AGGREGATE_RECONCILIATION_REQUIRED_AFTER_176_TECHNICAL_COMPLETION",
+    "reason": "CURRENT_STATE_JSON_PROJECTS_LAB_PENDING_JSON_AND_REGISTRY_INDEX_JSON_REMAIN_MATERIALLY_STALE"
+  },
   "required_actions": [
+    "CLOSE_PEND_LAB_047_CANONICAL_AGGREGATE_RECONCILIATION",
     "PRESERVE_STATISTICS_COUNTER_HUMAN_REVIEW_PENDING_STATE",
     "HUMAN_REVIEW_STATISTICS_COUNTER_STATIC_SUFFIX_001",
     "SEPARATELY_AUTHORIZE_NEUTRAL_ADAPTATION_IF_DESIRED",
@@ -28,29 +34,29 @@
     "human_determination": "APPROVED_SOURCE_FIDELITY",
     "approved_by": "Jonathan Martínez",
     "determined_at": "2026-08-02T18:43:00-04:00",
-    "canonical_reference_designation": "COMPLETED_BY_AUTHORIZATION_176",
+    "canonical_reference_designation": "TECHNICALLY_COMPLETED_BY_AUTHORIZATION_176",
     "canonical_reference_pointer": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/CANONICAL_REFERENCE.json",
-    "behavior_core_extraction": "COMPLETED_AND_VALIDATED_BY_AUTHORIZATION_176",
+    "behavior_core_extraction": "TECHNICALLY_COMPLETED_AND_VALIDATED_BY_AUTHORIZATION_176",
     "behavior_core_pointer": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/BEHAVIOR_CORE_CONTRACT.json",
+    "canonical_aggregate_reconciliation": "INCOMPLETE_BLOCKED_PEND_LAB_047",
     "reusable_promotion": "NOT_AUTHORIZED",
     "product_integration": "NOT_AUTHORIZED"
   },
   "statistics_counter": {
     "effect_id": "STATISTICS-COUNTER-STATIC-SUFFIX-001",
     "status": "HUMAN_REVIEW_PENDING",
-    "next_single_gate": "HUMAN_REVIEW_STATISTICS_COUNTER_STATIC_SUFFIX_001"
+    "next_gate_after_pend_lab_047": "HUMAN_REVIEW_STATISTICS_COUNTER_STATIC_SUFFIX_001"
   },
-  "current_authority": "NONE_AFTER_AUTHORIZATION_176_CONSUMPTION",
+  "current_authority": "NONE_AFTER_AUTHORIZATION_176_BLOCKED_CONSUMPTION",
   "source_refs": [
+    "projects/lab/pending/PEND-LAB-047.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176.json",
     "foundation-library/motion-system/MOTION-SYSTEM-001/MANIFEST.json",
     "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/CANONICAL_REFERENCE.json",
     "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/BEHAVIOR_CORE_CONTRACT.json",
     "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/BEHAVIOR_CORE_VALIDATION_RESULTS.json",
     "projects/lab/evidence/EVD-LAB-ROADMAP-CANONICAL-REFERENCE-BEHAVIOR-CORE-176.json",
-    "registry/deltas/roadmap-canonical-reference-behavior-core-176.json",
-    "errors/ERR-LAB-010.json",
-    "errors/ERR-LAB-011.json",
-    "projects/lab/pending/PEND-LAB-046.json"
+    "registry/deltas/roadmap-canonical-reference-behavior-core-176.json"
   ],
   "authority_effect": "NONE",
   "runtime_effect": "NONE",
