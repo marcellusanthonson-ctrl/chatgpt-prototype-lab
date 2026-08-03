@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "task_id": "CODEX_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_177_001",
   "project_id": "lab",
-  "status": "AUTHORIZED_FOR_EXECUTION",
+  "status": "COMPLETED_PASS",
   "objective": "Close PEND-LAB-047 by reconciling CURRENT_STATE.json, projects/lab/PENDING.json and registry/index.json exactly, preserving all unrelated structured history and all protected technical artifacts.",
   "coordinator": "ChatGPT",
   "executor": "CODEX_BOUNDED_EXECUTOR",
@@ -81,5 +81,8 @@
     "PRESERVATION",
     "AUTHORIZATION_CONSUMPTION",
     "SINGLE_NEXT_ACTION"
-  ]
+  ],
+  "result": "PEND_LAB_047_CLOSED_CANONICAL_AGGREGATES_RECONCILED_AND_VALIDATED",
+  "authorization_status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+  "single_next_action": "HUMAN_REVIEW_STATISTICS_COUNTER_STATIC_SUFFIX_001"
 }

@@ -2,48 +2,48 @@
   "schema_version": "1.0.0",
   "id": "PEND-LAB-047",
   "project_id": "lab",
-  "status": "OPEN_CANONICAL_AGGREGATE_RECONCILIATION_REQUIRED_AFTER_176_TECHNICAL_COMPLETION",
+  "status": "CLOSED_CANONICAL_AGGREGATES_RECONCILED_AND_VALIDATED",
   "type": "CANONICAL_STATE_AGGREGATE_RECONCILIATION",
   "title": "Reconcile stale canonical aggregates after roadmap reference and behavior-core technical completion",
   "priority": "HIGH",
-  "blocking": true,
-  "scope": [
+  "blocking": false,
+  "closed_at": "2026-08-02T20:27:00-04:00",
+  "closed_by_authorization": "AUTHORIZATION_LAB_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_AND_CLOSURE_177",
+  "reconciled_paths": [
     "CURRENT_STATE.json",
     "projects/lab/PENDING.json",
     "registry/index.json"
   ],
-  "confirmed_divergences": [
-    "CURRENT_STATE_JSON_STILL_LISTS_ERR_LAB_011_AS_OPEN",
-    "CURRENT_STATE_JSON_STILL_CLASSIFIES_CANDIDATE_002_AS_HUMAN_REVIEW_PENDING",
-    "CURRENT_STATE_JSON_DOES_NOT_RECORD_AUTHORIZATIONS_172_THROUGH_176",
-    "PROJECTS_LAB_PENDING_JSON_STILL_EXPOSES_PRE_APPROVAL_PEND_LAB_043_AND_PEND_LAB_046_STATES",
-    "REGISTRY_INDEX_JSON_DOES_NOT_DISCOVER_AUTHORIZATION_176_EVIDENCE_176_DELTA_176_OR_PEND_LAB_047"
-  ],
-  "preservation_requirement": "EXACT_FULL_FILE_RECONCILIATION_WITHOUT_COMPACTION_HISTORY_LOSS_OR_SILENT_RESTRUCTURING",
-  "technical_results_not_reversed": [
+  "closure_result": {
+    "json_parse": "PASS",
+    "duplicate_pending_ids": "ZERO",
+    "duplicate_index_paths": "ZERO",
+    "material_contradictions_173_through_177": "ZERO",
+    "err_lab_011_open_entry": "REMOVED",
+    "pend_lab_046": "CLOSED_BY_APPROVED_SOURCE_FIDELITY",
+    "candidate_002": "HUMAN_APPROVED_SOURCE_FIDELITY_CANONICAL_REFERENCE_DESIGNATED",
+    "authorization_176": "PRESERVED_HISTORICAL_BLOCKED_CONSUMED_RESULT",
+    "authorization_177": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "protected_technical_diff": "ZERO",
+    "unrelated_semantic_diff": "ZERO"
+  },
+  "technical_results_preserved": [
     "CANONICAL_REFERENCE_IMPLEMENTATION_DESIGNATED",
     "BEHAVIOR_CORE_EXTRACTED",
     "CONTROLLED_EXACT_BYTES_BROWSER_VALIDATION_PASS"
   ],
-  "required_actions": [
-    "RECONCILE_CURRENT_STATE_JSON_EXACTLY",
-    "RECONCILE_PROJECTS_LAB_PENDING_JSON_EXACTLY",
-    "RECONCILE_REGISTRY_INDEX_JSON_EXACTLY",
-    "RUN_JSON_REFERENCE_DUPLICATE_AND_CANONICAL_STATE_VALIDATORS",
-    "VERIFY_REMOTE_PUBLICATION",
-    "CLOSE_PEND_LAB_047_ONLY_AFTER_ZERO_MATERIAL_CONTRADICTIONS"
-  ],
-  "execution_environment_requirement": "CAPABLE_OF_EXACT_FULL_FILE_READ_MODIFY_WRITE_FOR_LARGE_CANONICAL_JSON_FILES",
-  "current_authority": "NONE_AFTER_AUTHORIZATION_176_BLOCKED_CONSUMPTION",
+  "next_gate": "HUMAN_REVIEW_STATISTICS_COUNTER_STATIC_SUFFIX_001",
+  "current_authority": "NONE_AFTER_AUTHORIZATION_177_CONSUMPTION",
   "source_refs": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_AND_CLOSURE_177.json",
+    "projects/lab/briefs/CODEX_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_177_001.json",
+    "projects/lab/evidence/EVD-LAB-PEND-047-EXACT-CANONICAL-AGGREGATE-RECONCILIATION-177.json",
+    "registry/deltas/pend-lab-047-exact-canonical-aggregate-reconciliation-177.json",
     "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176.json",
-    "projects/lab/evidence/EVD-LAB-ROADMAP-CANONICAL-REFERENCE-BEHAVIOR-CORE-176.json",
-    "registry/deltas/roadmap-canonical-reference-behavior-core-176.json",
-    "CURRENT_STATE.json",
-    "projects/lab/PENDING.json",
-    "registry/index.json"
+    "projects/lab/evidence/EVD-LAB-ROADMAP-CANONICAL-REFERENCE-BEHAVIOR-CORE-176.json"
   ],
   "runtime_effect": "NONE",
   "integration_effect": "NONE",
-  "product_effect": "NONE"
+  "product_effect": "NONE",
+  "canonical_path": "projects/lab/pending/PEND-LAB-047.json"
 }

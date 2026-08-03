@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_AND_CLOSURE_177",
   "project_id": "lab",
-  "status": "GRANTED",
+  "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
   "authorization_class": "EXACT_CANONICAL_AGGREGATE_RECONCILIATION_AND_PENDING_CLOSURE",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-08-02T20:27:00-04:00",
@@ -115,5 +115,23 @@
     "SCOPE_EXPANSION_REQUIRED"
   ],
   "consumption_rule": "CONSUME_AFTER_REMOTE_PUBLICATION_AND_VERIFICATION_OF_EXACT_AGGREGATE_RECONCILIATION_PEND_LAB_047_CLOSURE_EVIDENCE_DELTA_INDEX_AND_CONTINUITY_OR_AFTER_DOCUMENTED_BLOCKED_RESULT_WITH_NO_RESIDUAL_AUTHORITY",
-  "authority_effect_while_granted": "BOUNDED_TO_AUTHORIZATION_177_ONLY"
+  "authority_effect_while_granted": "BOUNDED_TO_AUTHORIZATION_177_ONLY",
+  "execution_result": "PEND_LAB_047_CLOSED_CANONICAL_AGGREGATES_RECONCILED_AND_VALIDATED",
+  "validation": {
+    "original_target_blobs_verified": "PASS_3_OF_3",
+    "json_parse": "PASS",
+    "applicable_schema_treatment": "NO_DEDICATED_AGGREGATE_SCHEMA_DISCOVERED_STRUCTURAL_CONTRACT_CHECKS_PASS",
+    "duplicate_pending_ids": "ZERO",
+    "duplicate_index_paths": "ZERO",
+    "new_indexed_paths_exist": "PASS",
+    "material_contradictions_173_through_177": "ZERO",
+    "unrelated_semantic_diff": "ZERO",
+    "protected_technical_diff": "ZERO",
+    "carolina_repository_diff": "ZERO",
+    "remote_publication": "VERIFIED"
+  },
+  "consumed_at": "2026-08-02T20:27:00-04:00",
+  "consumption_basis": "EXACT_AGGREGATE_RECONCILIATION_PEND_LAB_047_CLOSURE_AND_REMOTE_VERIFICATION",
+  "authority_effect": "NONE_AFTER_CONSUMPTION",
+  "residual_authority": false
 }

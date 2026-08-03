@@ -849,30 +849,65 @@
       "integration_effect": "NONE"
     },
     {
-      "schema_version": "1.0.0",
+      "schema_version": "1.1.0",
       "id": "PEND-LAB-043",
       "project_id": "lab",
-      "status": "SOURCE_FAITHFUL_CANDIDATE_READY_HUMAN_COMPARISON_PENDING",
+      "status": "ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_COMPLETE_REMAINING_MOTION_LIBRARY_GATES_PENDING",
       "type": "MOTION_SYSTEM_HUMAN_GATE_AND_LIBRARY_POPULATION",
       "title": "Human review and staged population of the transversal motion-effects library",
       "priority": "HIGH",
+      "completed_actions": [
+        "PRESERVE_CURRENT_ROADMAP_AS_HISTORICAL_NEUTRAL_DERIVATION",
+        "HUMAN_COMPARE_SECTION_SCOPED_SOURCE_FAITHFUL_CANDIDATE",
+        "APPROVE_CAROLINA_ROADMAP_SECTION_SOURCE_FIDELITY",
+        "DESIGNATE_CAROLINA_ROADMAP_SECTION_AS_CANONICAL_REFERENCE_IMPLEMENTATION",
+        "EXTRACT_SOURCE_INDEPENDENT_ROADMAP_BEHAVIOR_CORE",
+        "VALIDATE_ROADMAP_BEHAVIOR_CORE_IN_NORMAL_AND_REDUCED_MOTION_MATRIX",
+        "RECONCILE_CANONICAL_AGGREGATES_AND_CLOSE_PEND_LAB_047"
+      ],
       "required_actions": [
         "PRESERVE_STATISTICS_COUNTER_HUMAN_REVIEW_PENDING_STATE",
-        "PRESERVE_CURRENT_ROADMAP_AS_HISTORICAL_NEUTRAL_DERIVATION",
-        "HUMAN_COMPARE_SOURCE_FAITHFUL_CANDIDATE",
-        "PROMOTE_REVISE_OR_REJECT_EACH_INITIAL_EFFECT",
+        "HUMAN_REVIEW_STATISTICS_COUNTER_STATIC_SUFFIX_001",
+        "SEPARATELY_AUTHORIZE_NEUTRAL_ADAPTATION_IF_DESIRED",
+        "PROMOTE_REVISE_OR_REJECT_OTHER_INITIAL_EFFECTS",
         "IMPLEMENT_INDUSTRY_EFFECTS_IN_BOUNDED_BATCHES",
+        "AUTHORIZE_REUSABLE_PROMOTION_SEPARATELY",
         "AUTHORIZE_PROJECT_INTEGRATIONS_SEPARATELY"
       ],
-      "current_authority": "NONE_AFTER_AUTHORIZATION_171_CONSUMPTION_HUMAN_DECISION_REQUIRED",
+      "roadmap_source_fidelity": {
+        "candidate_id": "CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
+        "human_determination": "APPROVED_SOURCE_FIDELITY",
+        "approved_by": "Jonathan Martínez",
+        "determined_at": "2026-08-02T18:43:00-04:00",
+        "canonical_reference_designation": "COMPLETED_BY_AUTHORIZATION_176",
+        "canonical_reference_pointer": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/CANONICAL_REFERENCE.json",
+        "behavior_core_extraction": "COMPLETED_AND_VALIDATED_BY_AUTHORIZATION_176",
+        "behavior_core_pointer": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/BEHAVIOR_CORE_CONTRACT.json",
+        "canonical_aggregate_reconciliation": "COMPLETED_BY_AUTHORIZATION_177",
+        "reusable_promotion": "NOT_AUTHORIZED",
+        "product_integration": "NOT_AUTHORIZED"
+      },
+      "statistics_counter": {
+        "effect_id": "STATISTICS-COUNTER-STATIC-SUFFIX-001",
+        "status": "HUMAN_REVIEW_PENDING",
+        "next_single_gate": "HUMAN_REVIEW_STATISTICS_COUNTER_STATIC_SUFFIX_001"
+      },
+      "current_authority": "NONE_AFTER_AUTHORIZATION_177_CONSUMPTION",
       "source_refs": [
+        "projects/lab/pending/PEND-LAB-047.json",
+        "projects/lab/authorizations/AUTHORIZATION_LAB_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_AND_CLOSURE_177.json",
+        "projects/lab/evidence/EVD-LAB-PEND-047-EXACT-CANONICAL-AGGREGATE-RECONCILIATION-177.json",
         "foundation-library/motion-system/MOTION-SYSTEM-001/MANIFEST.json",
-        "projects/lab/evidence/EVD-LAB-MOTION-SYSTEM-001.json",
-        "projects/lab/evidence/EVD-LAB-MOTION-CATALOG-ROADMAP-CORRECTION-168.json",
-        "errors/ERR-LAB-010.json",
-        "errors/ERR-LAB-011.json",
-        "projects/lab/pending/PEND-LAB-046.json"
-      ]
+        "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/CANONICAL_REFERENCE.json",
+        "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/BEHAVIOR_CORE_CONTRACT.json",
+        "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/BEHAVIOR_CORE_VALIDATION_RESULTS.json",
+        "projects/lab/evidence/EVD-LAB-ROADMAP-CANONICAL-REFERENCE-BEHAVIOR-CORE-176.json",
+        "registry/deltas/roadmap-canonical-reference-behavior-core-176.json",
+        "registry/deltas/pend-lab-047-exact-canonical-aggregate-reconciliation-177.json"
+      ],
+      "authority_effect": "NONE",
+      "runtime_effect": "NONE",
+      "integration_effect": "NONE"
     },
     {
       "schema_version": "1.1.0",
@@ -949,19 +984,73 @@
       "schema_version": "1.0.0",
       "id": "PEND-LAB-046",
       "project_id": "lab",
-      "status": "OPEN_HUMAN_COMPARISON_REQUIRED",
+      "status": "CLOSED_BY_APPROVED_SOURCE_FIDELITY",
       "type": "MOTION_SOURCE_FIDELITY_HUMAN_COMPARISON",
       "subject": "Human comparison of the Carolina roadmap source-faithful candidate after forensic reconstruction",
       "priority": "HIGH",
       "canonical_path": "projects/lab/pending/PEND-LAB-046.json",
-      "current_candidate_state": "HUMAN_REVIEW_PENDING_AUTOMATED_GATES_PASS",
-      "authorization": "AUTHORIZATION_LAB_ROADMAP_SOURCE_FIDELITY_FORENSIC_RECONSTRUCTION_171",
+      "current_candidate_state": "HUMAN_APPROVED_SOURCE_FIDELITY_CANONICAL_REFERENCE_DESIGNATED",
+      "human_determination": "APPROVED_SOURCE_FIDELITY",
+      "approved_by": "Jonathan Martínez",
+      "closed_at": "2026-08-02T18:43:00-04:00",
+      "human_decision_authorization": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_SCROLL_CORRECTION_AND_CONDITIONAL_DECISION_RECONCILIATION_173",
+      "canonical_reference_authorization": "AUTHORIZATION_LAB_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176",
+      "canonical_aggregate_closure_authorization": "AUTHORIZATION_LAB_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_AND_CLOSURE_177",
       "decision": "DEC-LAB-031",
       "error": "ERR-LAB-011",
+      "error_status": "CLOSED_BY_APPROVED_SECTION_SCOPED_SOURCE_FIDELITY",
       "authority_effect": "NONE",
       "runtime_effect": "NONE",
       "product_effect": "NONE",
       "integration_effect": "NONE"
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "PEND-LAB-047",
+      "project_id": "lab",
+      "status": "CLOSED_CANONICAL_AGGREGATES_RECONCILED_AND_VALIDATED",
+      "type": "CANONICAL_STATE_AGGREGATE_RECONCILIATION",
+      "title": "Reconcile stale canonical aggregates after roadmap reference and behavior-core technical completion",
+      "priority": "HIGH",
+      "blocking": false,
+      "closed_at": "2026-08-02T20:27:00-04:00",
+      "closed_by_authorization": "AUTHORIZATION_LAB_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_AND_CLOSURE_177",
+      "reconciled_paths": [
+        "CURRENT_STATE.json",
+        "projects/lab/PENDING.json",
+        "registry/index.json"
+      ],
+      "closure_result": {
+        "json_parse": "PASS",
+        "duplicate_pending_ids": "ZERO",
+        "duplicate_index_paths": "ZERO",
+        "material_contradictions_173_through_177": "ZERO",
+        "err_lab_011_open_entry": "REMOVED",
+        "pend_lab_046": "CLOSED_BY_APPROVED_SOURCE_FIDELITY",
+        "candidate_002": "HUMAN_APPROVED_SOURCE_FIDELITY_CANONICAL_REFERENCE_DESIGNATED",
+        "authorization_176": "PRESERVED_HISTORICAL_BLOCKED_CONSUMED_RESULT",
+        "authorization_177": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+        "protected_technical_diff": "ZERO",
+        "unrelated_semantic_diff": "ZERO"
+      },
+      "technical_results_preserved": [
+        "CANONICAL_REFERENCE_IMPLEMENTATION_DESIGNATED",
+        "BEHAVIOR_CORE_EXTRACTED",
+        "CONTROLLED_EXACT_BYTES_BROWSER_VALIDATION_PASS"
+      ],
+      "next_gate": "HUMAN_REVIEW_STATISTICS_COUNTER_STATIC_SUFFIX_001",
+      "current_authority": "NONE_AFTER_AUTHORIZATION_177_CONSUMPTION",
+      "source_refs": [
+        "projects/lab/authorizations/AUTHORIZATION_LAB_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_AND_CLOSURE_177.json",
+        "projects/lab/briefs/CODEX_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_177_001.json",
+        "projects/lab/evidence/EVD-LAB-PEND-047-EXACT-CANONICAL-AGGREGATE-RECONCILIATION-177.json",
+        "registry/deltas/pend-lab-047-exact-canonical-aggregate-reconciliation-177.json",
+        "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176.json",
+        "projects/lab/evidence/EVD-LAB-ROADMAP-CANONICAL-REFERENCE-BEHAVIOR-CORE-176.json"
+      ],
+      "runtime_effect": "NONE",
+      "integration_effect": "NONE",
+      "product_effect": "NONE"
     }
   ]
 }

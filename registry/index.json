@@ -9,8 +9,8 @@
     "ideas": 5,
     "integrations": 7,
     "experiments": 8,
-    "authorizations": 99,
-    "evidence": 81,
+    "authorizations": 101,
+    "evidence": 83,
     "unincorporated": 0,
     "proposals": 3,
     "sessions": 1,
@@ -97,7 +97,9 @@
       "registry/deltas/motion-catalog-review-surface-and-roadmap-fidelity-correction-168.json",
       "registry/deltas/priority-integrations-phase1-contract-completion-170.json",
       "registry/deltas/roadmap-source-fidelity-forensic-reconstruction-171.json",
-      "registry/deltas/roadmap-section-source-fidelity-human-approval-173.json"
+      "registry/deltas/roadmap-section-source-fidelity-human-approval-173.json",
+      "registry/deltas/roadmap-canonical-reference-behavior-core-176.json",
+      "registry/deltas/pend-lab-047-exact-canonical-aggregate-reconciliation-177.json"
     ],
     "evidence": "registry/evidence.json",
     "evidence_deltas": [
@@ -138,7 +140,9 @@
       "registry/deltas/transversal-motion-system-foundation-167.json",
       "registry/deltas/motion-catalog-review-surface-and-roadmap-fidelity-correction-168.json",
       "registry/deltas/priority-integrations-phase1-contract-completion-170.json",
-      "registry/deltas/roadmap-section-source-fidelity-human-approval-173.json"
+      "registry/deltas/roadmap-section-source-fidelity-human-approval-173.json",
+      "registry/deltas/roadmap-canonical-reference-behavior-core-176.json",
+      "registry/deltas/pend-lab-047-exact-canonical-aggregate-reconciliation-177.json"
     ],
     "current_state": "CURRENT_STATE.json",
     "current_state_deltas": [
@@ -186,7 +190,9 @@
       "registry/deltas/motion-catalog-review-surface-and-roadmap-fidelity-correction-168.json",
       "registry/deltas/priority-integrations-phase1-contract-completion-170.json",
       "registry/deltas/roadmap-source-fidelity-forensic-reconstruction-171.json",
-      "registry/deltas/roadmap-section-source-fidelity-human-approval-173.json"
+      "registry/deltas/roadmap-section-source-fidelity-human-approval-173.json",
+      "registry/deltas/roadmap-canonical-reference-behavior-core-176.json",
+      "registry/deltas/pend-lab-047-exact-canonical-aggregate-reconciliation-177.json"
     ],
     "pattern_deltas": [
       "registry/deltas/livhavn-surgical-visual-patch-093.json",
@@ -201,7 +207,9 @@
       "registry/deltas/integration-factory-m5-canonical-correction-and-conditional-rollback-drill-165.json",
       "registry/deltas/motion-catalog-review-surface-and-roadmap-fidelity-correction-168.json",
       "registry/deltas/roadmap-source-fidelity-forensic-reconstruction-171.json",
-      "registry/deltas/roadmap-section-source-fidelity-human-approval-173.json"
+      "registry/deltas/roadmap-section-source-fidelity-human-approval-173.json",
+      "registry/deltas/roadmap-canonical-reference-behavior-core-176.json",
+      "registry/deltas/pend-lab-047-exact-canonical-aggregate-reconciliation-177.json"
     ],
     "unincorporated": "registry/unincorporated.json",
     "proposals": "registry/proposals.json",
@@ -238,7 +246,8 @@
       "projects/lab/pending/PEND-LAB-039.json",
       "projects/lab/pending/PEND-LAB-040.json",
       "projects/lab/pending/PEND-LAB-043.json",
-      "projects/lab/pending/PEND-LAB-045.json"
+      "projects/lab/pending/PEND-LAB-045.json",
+      "projects/lab/pending/PEND-LAB-047.json"
     ],
     "test_executions": "projects/lab/test-executions/index.json",
     "source_packages": "registry/source-packages.json",
@@ -249,7 +258,9 @@
       "registry/deltas/transversal-motion-system-foundation-167.json",
       "registry/deltas/motion-catalog-review-surface-and-roadmap-fidelity-correction-168.json",
       "registry/deltas/roadmap-source-fidelity-forensic-reconstruction-171.json",
-      "registry/deltas/roadmap-section-source-fidelity-human-approval-173.json"
+      "registry/deltas/roadmap-section-source-fidelity-human-approval-173.json",
+      "registry/deltas/roadmap-canonical-reference-behavior-core-176.json",
+      "registry/deltas/pend-lab-047-exact-canonical-aggregate-reconciliation-177.json"
     ],
     "rag_contracts": "registry/rag-contracts.json",
     "foundation_pilots": "registry/foundation-pilots.json",
@@ -265,12 +276,12 @@
     "error": "ERR-LAB-011",
     "error_path": "errors/ERR-LAB-011.json",
     "pattern": "PAT-LAB-009",
-    "authorization": "AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_SCROLL_CORRECTION_AND_CONDITIONAL_DECISION_RECONCILIATION_173",
-    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_SECTION_HUMAN_COMPARISON_SCROLL_CORRECTION_AND_CONDITIONAL_DECISION_RECONCILIATION_173.json",
-    "evidence": "EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-173",
-    "evidence_path": "projects/lab/evidence/EVD-LAB-ROADMAP-SECTION-HUMAN-COMPARISON-173.json",
-    "current_state_delta": "roadmap-section-source-fidelity-human-approval-173",
-    "current_state_delta_path": "registry/deltas/roadmap-section-source-fidelity-human-approval-173.json",
+    "authorization": "AUTHORIZATION_LAB_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_AND_CLOSURE_177",
+    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_AND_CLOSURE_177.json",
+    "evidence": "EVD-LAB-PEND-047-EXACT-CANONICAL-AGGREGATE-RECONCILIATION-177",
+    "evidence_path": "projects/lab/evidence/EVD-LAB-PEND-047-EXACT-CANONICAL-AGGREGATE-RECONCILIATION-177.json",
+    "current_state_delta": "pend-lab-047-exact-canonical-aggregate-reconciliation-177",
+    "current_state_delta_path": "registry/deltas/pend-lab-047-exact-canonical-aggregate-reconciliation-177.json",
     "experiment": "EXP-LAB-003",
     "proposal": "PROP-LAB-003",
     "session": "SES-2026-06-28-001",
@@ -304,6 +315,14 @@
     "livhavn_intent_patch_brief": "pilotos/SYMPHONIE-PILOT-LIVHAVN-001/phase-3/LIVHAVN_INTENT_PATCH_BRIEF_089.json",
     "surgical_visual_patch_protocol": "docs/SURGICAL_VISUAL_PATCH_PROTOCOL.md",
     "symphonie_phase_brief_architecture": "docs/SYMPHONIE_PHASES_0_3_AGENT_AND_BRIEF_ARCHITECTURE.md",
-    "previous_error_path": "errors/ERR-LAB-009.json"
+    "previous_error_path": "errors/ERR-LAB-009.json",
+    "pending_path": "projects/lab/pending/PEND-LAB-043.json",
+    "closed_pending": "PEND-LAB-047",
+    "closed_pending_path": "projects/lab/pending/PEND-LAB-047.json",
+    "error_status": "ERR-LAB-011_CLOSED_BY_APPROVED_SECTION_SCOPED_SOURCE_FIDELITY",
+    "motion_roadmap_canonical_reference": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/CANONICAL_REFERENCE.json",
+    "motion_roadmap_behavior_core": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/BEHAVIOR_CORE_CONTRACT.json",
+    "motion_roadmap_behavior_core_status": "EXTRACTED_AND_VALIDATED_PASS_CONTROLLED_EXACT_BYTES",
+    "motion_next_gate": "HUMAN_REVIEW_STATISTICS_COUNTER_STATIC_SUFFIX_001"
   }
 }
