@@ -1,9 +1,9 @@
 {
   "schema_version": "1.2.0",
-  "continuity_id": "LAB-CONTINUITY-ROADMAP-CANONICAL-REFERENCE-BEHAVIOR-CORE-176-20260802",
+  "continuity_id": "LAB-CONTINUITY-ROADMAP-CANONICAL-REFERENCE-BEHAVIOR-CORE-176-BLOCKED-20260802",
   "project_id": "lab",
-  "status": "ROADMAP_CANONICAL_REFERENCE_DESIGNATED_BEHAVIOR_CORE_VALIDATED_PRIORITY_INTEGRATIONS_PHASE_1_PRESERVED",
-  "created_at": "2026-08-02T19:36:00-04:00",
+  "status": "ROADMAP_TECHNICAL_STAGES_COMPLETE_CANONICAL_AGGREGATE_RECONCILIATION_BLOCKED_PRIORITY_INTEGRATIONS_PHASE_1_PRESERVED",
+  "created_at": "2026-08-02T20:09:00-04:00",
   "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "canonical_branch": "main",
   "head_policy": "VERIFY_LIVE_AT_USE",
@@ -18,16 +18,18 @@
     "registry/index.json",
     "registry/projects.json",
     "projects/lab/PROJECT_STATE.json",
+    "projects/lab/PENDING.json",
     "decisions/DEC-LAB-031.json",
     "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176.json",
     "projects/lab/briefs/CODEX_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176_001.json",
+    "projects/lab/pending/PEND-LAB-047.json",
+    "projects/lab/pending/PEND-LAB-043.json",
     "foundation-library/motion-system/MOTION-SYSTEM-001/MANIFEST.json",
     "foundation-library/motion-system/MOTION-SYSTEM-001/MOTION_EFFECTS_REGISTRY.json",
     "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/CANONICAL_REFERENCE.json",
     "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/BEHAVIOR_CORE_CONTRACT.json",
     "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/BEHAVIOR_CORE_VALIDATION_RESULTS.json",
     "projects/lab/evidence/EVD-LAB-ROADMAP-CANONICAL-REFERENCE-BEHAVIOR-CORE-176.json",
-    "projects/lab/pending/PEND-LAB-043.json",
     "registry/deltas/roadmap-canonical-reference-behavior-core-176.json",
     "projects/lab/continuity/CURRENT_CONTINUITY.json"
   ],
@@ -52,32 +54,31 @@
     "runtime_authorized": false,
     "integration_authorized": false,
     "product_changes_authorized": false,
-    "active_execution_authority": "NONE_AFTER_AUTHORIZATION_176_CONSUMPTION"
+    "active_execution_authority": "NONE_AFTER_AUTHORIZATION_176_BLOCKED_CONSUMPTION"
   },
   "facts": [
     {
-      "claim": "Candidate 002 remains the human-approved source-faithful section extraction from the protected Carolina commit.",
-      "source_refs": [
-        "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/MANIFEST.json"
-      ]
+      "claim": "Candidate 002 is the human-approved source-faithful section extraction from the protected Carolina commit.",
+      "source_refs": ["foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/MANIFEST.json"]
     },
     {
-      "claim": "Authorization 176 designated candidate 002 as the canonical reference implementation by pointer without copying, moving, rewriting or modifying the protected reference artifact.",
-      "source_refs": [
-        "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/CANONICAL_REFERENCE.json"
-      ]
+      "claim": "Stage 1 designated candidate 002 as the canonical reference implementation by immutable pointer without modifying the protected reference artifact.",
+      "source_refs": ["foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/CANONICAL_REFERENCE.json"]
     },
     {
-      "claim": "The source-independent behavior core passed seven normal-motion, seven reduced-motion and seven reference-transition controlled exact-byte browser checks.",
+      "claim": "Stage 2 extracted a source-independent behavior core and passed seven normal-motion, seven reduced-motion and seven reference-transition controlled exact-byte browser checks.",
+      "source_refs": ["foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/BEHAVIOR_CORE_VALIDATION_RESULTS.json"]
+    },
+    {
+      "claim": "Stage 0 could not publish an exact preserving reconciliation of CURRENT_STATE.json, projects/lab/PENDING.json and registry/index.json; those aggregates remain materially stale.",
       "source_refs": [
-        "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/BEHAVIOR_CORE_VALIDATION_RESULTS.json"
+        "projects/lab/pending/PEND-LAB-047.json",
+        "projects/lab/evidence/EVD-LAB-ROADMAP-CANONICAL-REFERENCE-BEHAVIOR-CORE-176.json"
       ]
     },
     {
       "claim": "Automated real-localhost browser navigation was not established because the execution environment returned ERR_BLOCKED_BY_ADMINISTRATOR.",
-      "source_refs": [
-        "projects/lab/evidence/EVD-LAB-ROADMAP-CANONICAL-REFERENCE-BEHAVIOR-CORE-176.json"
-      ]
+      "source_refs": ["projects/lab/evidence/EVD-LAB-ROADMAP-CANONICAL-REFERENCE-BEHAVIOR-CORE-176.json"]
     }
   ],
   "decision": {
@@ -87,13 +88,14 @@
   },
   "authorization": {
     "id": "AUTHORIZATION_LAB_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176",
-    "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "stage_0": "CANONICAL_STATE_RECONCILED",
+    "status": "CONSUMED_BLOCKED_BY_UNRESOLVED_CANONICAL_STATE_CONTRADICTION",
+    "stage_0": "PARTIAL_BLOCKED",
     "stage_1": "CANONICAL_REFERENCE_IMPLEMENTATION_DESIGNATED",
     "stage_2": "BEHAVIOR_CORE_EXTRACTED_AND_VALIDATED_PASS_CONTROLLED_EXACT_BYTES",
-    "active": false
+    "active": false,
+    "residual_authority": false
   },
-  "results": {
+  "technical_results": {
     "candidate_id": "CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
     "candidate_status": "HUMAN_APPROVED_SOURCE_FIDELITY_CANONICAL_REFERENCE_DESIGNATED",
     "effect_id": "ROADMAP-VERTICAL-PROGRESS-001",
@@ -102,13 +104,20 @@
     "behavior_core_status": "EXTRACTED_AND_VALIDATED_PASS_CONTROLLED_EXACT_BYTES",
     "historical_neutral_derivation": "REJECTED_AS_CANONICAL_REFERENCE_PRESERVED_HISTORICALLY"
   },
+  "canonical_divergence": {
+    "status": "OPEN_BLOCKING",
+    "pending_id": "PEND-LAB-047",
+    "stale_paths": ["CURRENT_STATE.json", "projects/lab/PENDING.json", "registry/index.json"],
+    "required_treatment": "EXACT_FULL_FILE_RECONCILIATION_WITHOUT_COMPACTION_HISTORY_LOSS_OR_SILENT_RESTRUCTURING"
+  },
   "errors": [
-    {"id": "ERR-LAB-010", "status": "CLOSED_UNCHANGED"},
-    {"id": "ERR-LAB-011", "status": "CLOSED_BY_APPROVED_SECTION_SCOPED_SOURCE_FIDELITY"}
+    {"id": "ERR-LAB-010", "item_file_status": "CLOSED_UNCHANGED"},
+    {"id": "ERR-LAB-011", "item_file_status": "CLOSED_BY_APPROVED_SECTION_SCOPED_SOURCE_FIDELITY", "current_state_aggregate": "STALE_OPEN_ENTRY_REMAINS"}
   ],
   "pending": [
-    {"id": "PEND-LAB-046", "status": "CLOSED_BY_APPROVED_SOURCE_FIDELITY"},
-    {"id": "PEND-LAB-043", "status": "ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_COMPLETE_REMAINING_MOTION_LIBRARY_GATES_PENDING"},
+    {"id": "PEND-LAB-046", "item_file_status": "CLOSED_BY_APPROVED_SOURCE_FIDELITY", "pending_aggregate": "STALE_PRE_APPROVAL_ENTRY_REMAINS"},
+    {"id": "PEND-LAB-047", "status": "OPEN_CANONICAL_AGGREGATE_RECONCILIATION_REQUIRED_AFTER_176_TECHNICAL_COMPLETION"},
+    {"id": "PEND-LAB-043", "status": "ROADMAP_TECHNICAL_COMPLETE_CANONICAL_AGGREGATE_RECONCILIATION_BLOCKED_BEFORE_REMAINING_MOTION_GATES"},
     {"id": "PEND-LAB-045", "status": "UNCHANGED_PRIORITY_INTEGRATIONS_PHASE_1_FOLLOWUP"}
   ],
   "preserved_artifacts": {
@@ -126,9 +135,9 @@
     "NO_RUNTIME_OR_DEPLOYMENT"
   ],
   "next_action": {
-    "single": "HUMAN_REVIEW_STATISTICS_COUNTER_STATIC_SUFFIX_001",
-    "authority_required_for_repository_write": true
+    "single": "AUTHORIZE_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_FOR_PEND_LAB_047_IN_AN_ENVIRONMENT_CAPABLE_OF_FULL_FILE_EDITS",
+    "authority_required": true
   },
   "archived_predecessor": "projects/lab/continuity/archive/LAB-CONTINUITY-ROADMAP-SECTION-SOURCE-FIDELITY-APPROVED-173-20260802.pointer.json",
-  "authority_effect": "NONE_AFTER_AUTHORIZATION_176_CONSUMPTION"
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_176_BLOCKED_CONSUMPTION"
 }
