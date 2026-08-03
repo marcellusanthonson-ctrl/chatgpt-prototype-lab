@@ -3,7 +3,7 @@
   "task_id": "CODEX_STATISTICS_COUNTER_EXPERIMENT_SOURCE_ADOPTION_178_001",
   "project_id": "lab",
   "status": "STAGE_1_COMPLETE_STAGE_2_AWAITING_EXPLICIT_HUMAN_DETERMINATION",
-  "objective": "Preserve the complete Carolina statistics motion experiment in the LAB repository as an immutable source package and expose the exact monolithic implementation for direct human review, without integrating it into the official landing.",
+  "objective": "Preserve the functional Carolina statistics-counter integration source and complete experiment provenance in the LAB repository, expose a direct review harness, and avoid official landing integration until separately authorized.",
   "authorization_ref": "AUTHORIZATION_LAB_STATISTICS_COUNTER_EXPERIMENT_SOURCE_ADOPTION_HUMAN_REVIEW_AND_CONDITIONAL_CLOSURE_178",
   "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "branch": "main",
@@ -18,20 +18,28 @@
   "required_outputs": [
     "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/ARCHIVE_CONTENT_INDEX.json",
     "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/SOURCE_PACKAGE_MANIFEST.json",
-    "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/expanded/statistics-motion-001/CAROLINA_MD_STATISTICS_MOTION_EXPERIMENT_001.html",
-    "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/expanded/statistics-motion-001/EXPERIMENT_MANIFEST.json"
+    "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_SECTION.html",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_MOTION.js",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_STYLES.css",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_EXCERPT_PROVENANCE.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/DIRECT_HUMAN_REVIEW.html",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/expanded/statistics-motion-001/EXPERIMENT_MANIFEST.json",
+    "KEY_ATTEMPT_006_ATTEMPT_007_AND_ATTEMPT_009_EVIDENCE"
   ],
   "acceptance_checks": [
     "REMOTE_HEAD_MATCHES_AUTHORIZED_PARENT",
-    "PRIMARY_HTML_SHA256_MATCH",
+    "ARCHIVE_SHA256_PROVENANCE_RECORDED",
     "ARCHIVE_ENTRY_COUNT_163",
     "EXTRACTED_FILE_COUNT_134",
+    "COMPLETE_ARCHIVE_CONTENT_INDEX_SHA256_MATCH",
+    "EXACT_STATS_SECTION_DOM_SHA256_MATCH",
+    "EXACT_STATS_MOTION_SCRIPT_SHA256_MATCH",
+    "KEY_EVIDENCE_HASHES_MATCH",
     "JSON_PARSE_PASS",
     "SOURCE_MUTATION_NONE",
     "COUNTER_REMAINS_HUMAN_REVIEW_PENDING",
     "PRODUCT_INTEGRATION_NONE",
-    "ARCHIVE_SHA256_PROVENANCE_RECORDED",
-    "PRIMARY_HTML_EXACT_BYTES_PUBLISHED"
+    "NO_CLAIM_THAT_ORIGINAL_RAR_OR_FULL_MONOLITH_IS_EMBEDDED_AS_SINGLE_BLOB"
   ],
   "forbidden_actions": [
     "MUTATE_SOURCE_EXPERIMENT",
