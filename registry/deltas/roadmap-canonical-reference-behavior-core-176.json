@@ -3,23 +3,24 @@
   "delta_id": "roadmap-canonical-reference-behavior-core-176",
   "project_id": "lab",
   "updated_at": "2026-08-02",
+  "status": "TECHNICAL_STAGES_COMPLETE_CANONICAL_AGGREGATE_RECONCILIATION_BLOCKED",
   "decision": {
     "id": "DEC-LAB-031",
     "status": "APPROVED_IN_FORCE"
   },
   "authorization": {
     "id": "AUTHORIZATION_LAB_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176",
-    "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "status": "CONSUMED_BLOCKED_BY_UNRESOLVED_CANONICAL_STATE_CONTRADICTION",
     "approved_by": "Jonathan Martínez",
-    "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176.json"
+    "canonical_path": "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176.json",
+    "residual_authority": false
   },
   "stage_0": {
-    "status": "CANONICAL_STATE_RECONCILED",
-    "err_lab_011": "CLOSED_BY_APPROVED_SECTION_SCOPED_SOURCE_FIDELITY",
-    "pend_lab_046": "CLOSED_BY_APPROVED_SOURCE_FIDELITY",
-    "candidate_002": "HUMAN_APPROVED_SOURCE_FIDELITY_CANONICAL_REFERENCE_DESIGNATED",
-    "authorization_173": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "previous_active_authority": "NONE"
+    "status": "PARTIAL_BLOCKED",
+    "reconciled": "ITEM_LEVEL_RECORDS_MOTION_MANIFESTS_EVIDENCE_DELTA_AND_CONTINUITY",
+    "unreconciled": ["CURRENT_STATE.json", "projects/lab/PENDING.json", "registry/index.json"],
+    "stop_condition": "UNRESOLVED_CANONICAL_STATE_CONTRADICTION",
+    "successor_pending": "projects/lab/pending/PEND-LAB-047.json"
   },
   "stage_1": {
     "status": "CANONICAL_REFERENCE_IMPLEMENTATION_DESIGNATED",
@@ -42,12 +43,19 @@
   },
   "evidence": {
     "id": "EVD-LAB-ROADMAP-CANONICAL-REFERENCE-BEHAVIOR-CORE-176",
-    "path": "projects/lab/evidence/EVD-LAB-ROADMAP-CANONICAL-REFERENCE-BEHAVIOR-CORE-176.json"
+    "path": "projects/lab/evidence/EVD-LAB-ROADMAP-CANONICAL-REFERENCE-BEHAVIOR-CORE-176.json",
+    "status": "MODIFIED_TECHNICAL_PASS_CANONICAL_AGGREGATE_RECONCILIATION_BLOCKED"
   },
-  "pending": {
-    "id": "PEND-LAB-043",
-    "status": "ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_COMPLETE_REMAINING_MOTION_LIBRARY_GATES_PENDING"
-  },
+  "pending": [
+    {
+      "id": "PEND-LAB-043",
+      "status": "ROADMAP_TECHNICAL_COMPLETE_CANONICAL_AGGREGATE_RECONCILIATION_BLOCKED_BEFORE_REMAINING_MOTION_GATES"
+    },
+    {
+      "id": "PEND-LAB-047",
+      "status": "OPEN_CANONICAL_AGGREGATE_RECONCILIATION_REQUIRED_AFTER_176_TECHNICAL_COMPLETION"
+    }
+  ],
   "preserved": {
     "global_phase": "PRIORITY_INTEGRATIONS_PHASE_1_CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED",
     "statistics_counter": "HUMAN_REVIEW_PENDING",
@@ -63,5 +71,5 @@
     "NO_PRODUCT_INTEGRATION",
     "NO_RUNTIME_OR_DEPLOYMENT"
   ],
-  "authority_effect": "NONE_AFTER_AUTHORIZATION_176_CONSUMPTION"
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_176_BLOCKED_CONSUMPTION"
 }
