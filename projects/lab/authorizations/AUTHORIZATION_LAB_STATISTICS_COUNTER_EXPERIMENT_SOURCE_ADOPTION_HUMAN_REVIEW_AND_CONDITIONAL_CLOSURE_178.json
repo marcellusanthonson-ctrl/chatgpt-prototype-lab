@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "authorization_id": "AUTHORIZATION_LAB_STATISTICS_COUNTER_EXPERIMENT_SOURCE_ADOPTION_HUMAN_REVIEW_AND_CONDITIONAL_CLOSURE_178",
   "project_id": "lab",
-  "status": "GRANTED_STAGE_1_PUBLISHED_STAGE_2_CONDITIONALLY_AUTHORIZED_AWAITING_HUMAN_DETERMINATION",
+  "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
   "authorization_class": "STATISTICS_COUNTER_SOURCE_PACKAGE_ADOPTION_HUMAN_REVIEW_AND_CONDITIONAL_CLOSURE",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-08-02T22:25:00-04:00",
@@ -12,6 +12,7 @@
     "name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
     "branch": "main",
     "expected_parent_head": "282e5bdd001294dc24d6812622b7634158f3c018",
+    "stage_2_live_parent_head": "c65d0fcc41ba3e18a4d0d916f53839064d64910c",
     "head_policy": "VERIFY_LIVE_AT_USE",
     "entrypoint": "project-sources/chatgpt/START_HERE.md"
   },
@@ -43,7 +44,7 @@
   },
   "stage_1": {
     "name": "SOURCE_PACKAGE_ADOPTION_AND_DIRECT_HUMAN_REVIEW_PREPARATION",
-    "status": "FUNCTIONAL_INTEGRATION_SOURCE_PRESERVED_AND_DIRECT_REVIEW_READY",
+    "status": "COMPLETED_FUNCTIONAL_INTEGRATION_SOURCE_PRESERVED_AND_DIRECT_REVIEW_READY",
     "required_outputs": [
       "PUBLISH_EXACT_STATS_SECTION_DOM_EXCERPT",
       "PUBLISH_EXACT_STATS_MOTION_SCRIPT_EXCERPT",
@@ -67,21 +68,38 @@
   },
   "stage_2": {
     "name": "CONDITIONAL_HUMAN_DETERMINATION_AND_CLOSURE",
-    "status": "CONDITIONALLY_AUTHORIZED_AWAITING_EXPLICIT_HUMAN_DETERMINATION",
-    "triggered": false,
+    "status": "COMPLETED_APPROVED_SOURCE_FIDELITY_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_PUBLISHED",
+    "triggered": true,
+    "triggered_at": "2026-08-03T00:23:25-04:00",
+    "human_determination": "APPROVED_SOURCE_FIDELITY",
+    "determined_by": "Jonathan Martínez",
+    "human_statement": "Funciona perfecto",
+    "review_protocol": "REAL_LOCALHOST_CHROMIUM",
     "valid_determinations": [
       "APPROVED_SOURCE_FIDELITY",
       "MODIFIED_WITH_LIMITATIONS",
       "REJECTED_SOURCE_FIDELITY"
     ],
-    "approved_path_actions": [
+    "completed_actions": [
       "DESIGNATE_APPROVED_EXPERIMENT_AS_CANONICAL_COUNTER_REFERENCE",
       "EXTRACT_SOURCE_INDEPENDENT_BEHAVIOR_CORE",
       "VALIDATE_NORMAL_REDUCED_MOTION_REENTRY_AND_RESIZE",
       "RECONCILE_MANIFESTS_EVIDENCE_REGISTRIES_PENDING_AND_CONTINUITY",
-      "CLOSE_INITIAL_STATISTICS_COUNTER_HUMAN_GATE"
+      "CLOSE_INITIAL_STATISTICS_COUNTER_HUMAN_GATE",
+      "PUBLISH_FUTURE_CONSUMPTION_CONTRACT_WITHOUT_PRODUCT_INTEGRATION"
     ],
-    "non_approved_path": "REGISTER_DETERMINATION_AND_STOP_WITHOUT_IMPLICIT_EXTRACTION_OR_INTEGRATION"
+    "validation": {
+      "human_source_fidelity": "PASS_APPROVED",
+      "normal_motion": "PASS",
+      "reduced_motion": "PASS",
+      "one_shot_reentry": "PASS",
+      "programmatic_replay": "PASS",
+      "resize_preservation": "PASS",
+      "source_independence": "PASS",
+      "destroy_cancellation": "PASS",
+      "deterministic_tests": "7_OF_7_PASS"
+    },
+    "completed_at": "2026-08-03T00:40:00-04:00"
   },
   "target_root": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001",
   "preservation": {
@@ -104,6 +122,13 @@
     "direct_review_harness": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/DIRECT_HUMAN_REVIEW.html",
     "source_mutation": "NONE"
   },
+  "closure_artifacts": {
+    "canonical_reference": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/CANONICAL_REFERENCE.json",
+    "behavior_core": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/behavior-core/statistics-counter-core.js",
+    "behavior_core_contract": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/behavior-core/BEHAVIOR_CORE_CONTRACT.json",
+    "behavior_core_validation": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/behavior-core/BEHAVIOR_CORE_VALIDATION_RESULTS.json",
+    "future_consumption_contract": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/FUTURE_CONSUMPTION_CONTRACT.json"
+  },
   "forbidden_actions": [
     "MUTATE_SOURCE_EXPERIMENT",
     "MUTATE_CAROLINA_MD_NEXT_LANDING",
@@ -114,6 +139,7 @@
     "RUNTIME_OR_DEPLOYMENT",
     "SCOPE_EXPANSION"
   ],
-  "consumption_rule": "STAGE_1_PUBLICATION_DOES_NOT_CONSUME_STAGE_2. AUTHORIZATION_CONSUMES_AFTER_EXPLICIT_HUMAN_DETERMINATION_AND_THE_AUTHORIZED_CONDITIONAL_PATH_IS_PUBLISHED_AND_VERIFIED_OR_AFTER_A_DOCUMENTED_NON_APPROVAL_RESULT.",
-  "authority_effect_while_waiting": "NO_TECHNICAL_WRITE_UNTIL_EXACT_HUMAN_DETERMINATION_TRIGGERS_STAGE_2"
+  "consumption_rule": "CONSUMED_AFTER_EXPLICIT APPROVED_SOURCE_FIDELITY DETERMINATION, AUTHORIZED STAGE_2 PUBLICATION, AND VERIFIED REMOTE RESULT.",
+  "authority_effect_after_consumption": "NONE",
+  "future_product_consumption": "REQUIRES_SEPARATE_EXPLICIT_AUTHORIZATION"
 }
