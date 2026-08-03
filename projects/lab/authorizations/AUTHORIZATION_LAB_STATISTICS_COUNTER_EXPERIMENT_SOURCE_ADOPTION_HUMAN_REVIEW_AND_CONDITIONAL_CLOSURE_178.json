@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_STATISTICS_COUNTER_EXPERIMENT_SOURCE_ADOPTION_HUMAN_REVIEW_AND_CONDITIONAL_CLOSURE_178",
+  "project_id": "lab",
+  "status": "GRANTED_STAGE_1_SOURCE_PACKAGE_PUBLICATION_IN_PROGRESS_STAGE_2_CONDITIONAL",
+  "authorization_class": "STATISTICS_COUNTER_SOURCE_PACKAGE_ADOPTION_HUMAN_REVIEW_AND_CONDITIONAL_CLOSURE",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-08-02T22:25:00-04:00",
+  "approval_source": "Explicit ratification in conversation followed by explicit instruction to preserve the complete experiment in the LAB repository before future official landing integration.",
+  "grant_inferred": false,
+  "repository": {
+    "name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "branch": "main",
+    "expected_parent_head": "282e5bdd001294dc24d6812622b7634158f3c018",
+    "head_policy": "VERIFY_LIVE_AT_USE",
+    "entrypoint": "project-sources/chatgpt/START_HERE.md"
+  },
+  "source": {
+    "local_workspace": "C:\\Users\\JF Martin\\Documents\\Proyectos\\Carolina Clinical Os\\carolina-md-experiments",
+    "package": "statistics-motion-001",
+    "primary_implementation": "statistics-motion-001/CAROLINA_MD_STATISTICS_MOTION_EXPERIMENT_001.html",
+    "uploaded_archive_original_name": "statistics-motion-001(1).rar",
+    "uploaded_archive_sha256": "8eecd53dc698d4587dfa882a5eabe701ec9a77a45bb9747d57f0cf5d68c876b0",
+    "uploaded_archive_bytes": 3493574,
+    "archive_format": "RAR5",
+    "access_mode": "READ_ONLY_SOURCE"
+  },
+  "authority": {
+    "commit_authorized": true,
+    "push_authorized": true,
+    "source_file_update_authorized": true,
+    "source_package_archival_authorized": true,
+    "expanded_primary_review_artifact_authorized": true,
+    "human_review_preparation_authorized": true,
+    "conditional_canonical_reference_designation_authorized": true,
+    "conditional_behavior_core_extraction_authorized": true,
+    "source_experiment_mutation_authorized": false,
+    "official_landing_integration_authorized": false,
+    "carolina_md_next_landing_mutation_authorized": false,
+    "reusable_promotion_authorized": false,
+    "runtime_authorized": false,
+    "deployment_authorized": false
+  },
+  "stage_1": {
+    "name": "SOURCE_PACKAGE_ADOPTION_AND_DIRECT_HUMAN_REVIEW_PREPARATION",
+    "status": "AUTHORIZED_IN_PROGRESS",
+    "required_outputs": [
+      "PUBLISH_PRIMARY_MONOLITHIC_HTML_AS_EXACT_EXPANDED_REVIEW_ARTIFACT",
+      "PUBLISH_EXPERIMENT_MANIFEST_AND_KEY_INTEGRITY_EVIDENCE",
+      "PUBLISH_CURRENT_ARCHIVE_CONTENT_INDEX_AND_ARCHIVE_SHA256_PROVENANCE",
+      "REGISTER_SOURCE_PACKAGE_WITHOUT_HUMAN_APPROVAL_CLAIM",
+      "KEEP_STATISTICS_COUNTER_HUMAN_REVIEW_PENDING"
+    ]
+  },
+  "stage_2": {
+    "name": "CONDITIONAL_HUMAN_DETERMINATION_AND_CLOSURE",
+    "status": "CONDITIONALLY_AUTHORIZED_AWAITING_EXPLICIT_HUMAN_DETERMINATION",
+    "triggered": false,
+    "valid_determinations": [
+      "APPROVED_SOURCE_FIDELITY",
+      "MODIFIED_WITH_LIMITATIONS",
+      "REJECTED_SOURCE_FIDELITY"
+    ],
+    "approved_path_actions": [
+      "DESIGNATE_APPROVED_EXPERIMENT_AS_CANONICAL_COUNTER_REFERENCE",
+      "EXTRACT_SOURCE_INDEPENDENT_BEHAVIOR_CORE",
+      "VALIDATE_NORMAL_REDUCED_MOTION_REENTRY_AND_RESIZE",
+      "RECONCILE_MANIFESTS_EVIDENCE_REGISTRIES_PENDING_AND_CONTINUITY",
+      "CLOSE_INITIAL_STATISTICS_COUNTER_HUMAN_GATE"
+    ],
+    "non_approved_path": "REGISTER_DETERMINATION_AND_STOP_WITHOUT_IMPLICIT_EXTRACTION_OR_INTEGRATION"
+  },
+  "target_root": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001",
+  "preservation": {
+    "archive_sha256": "8eecd53dc698d4587dfa882a5eabe701ec9a77a45bb9747d57f0cf5d68c876b0",
+    "primary_html_sha256": "74274e55ff1c8b9edd849d433f12bf6ffe0abb00097872feb6bc7adde83b463e",
+    "experiment_manifest_sha256": "6ebc9d98e8ee6113b671136640994c861846241ca2b6d28a1298530e87fe0d0a",
+    "archive_content_index_sha256": "c44c2a763ca761e3c1be91f122abc90c76669c65c7a960abd81adbd50d2c8115",
+    "archive_entry_count": 163,
+    "extracted_file_count": 134,
+    "source_mutation": "NONE",
+    "archive_binary_repository_storage": "NOT_REQUIRED_FOR_FUTURE_INTEGRATION_PRIMARY_HTML_IS_EXACT_FUNCTIONAL_SOURCE",
+    "archive_provenance": "SHA256_AND_163_ENTRY_CONTENT_INDEX_PRESERVED"
+  },
+  "forbidden_actions": [
+    "MUTATE_SOURCE_EXPERIMENT",
+    "MUTATE_CAROLINA_MD_NEXT_LANDING",
+    "SYNTHETIC_COUNTER_RECREATION",
+    "AUTOMATIC_HUMAN_APPROVAL",
+    "OFFICIAL_LANDING_INTEGRATION",
+    "REUSABLE_PROMOTION",
+    "RUNTIME_OR_DEPLOYMENT",
+    "SCOPE_EXPANSION"
+  ],
+  "consumption_rule": "STAGE_1_PUBLICATION_DOES_NOT_CONSUME_STAGE_2. AUTHORIZATION_CONSUMES AFTER EXPLICIT HUMAN DETERMINATION AND THE AUTHORIZED CONDITIONAL PATH IS PUBLISHED AND VERIFIED, OR AFTER A DOCUMENTED NON_APPROVAL_RESULT.",
+  "authority_effect_while_waiting": "ONLY_STAGE_2_CONDITIONAL_ACTIONS_AFTER_EXACT_HUMAN_DETERMINATION"
+}
