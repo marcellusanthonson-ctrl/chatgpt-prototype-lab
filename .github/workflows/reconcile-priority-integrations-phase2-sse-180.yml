@@ -6,9 +6,6 @@ on:
       - main
     types:
       - opened
-      - synchronize
-      - ready_for_review
-      - reopened
 
 permissions:
   contents: write
@@ -20,27 +17,32 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          ref: priority-integrations-phase2-sse-180
+          ref: priority-integrations-phase2-sse-180-r2
       - name: Configure Git
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-      - name: Apply bounded aggregate compatibility patch
+      - name: Apply bounded compatibility patches
         run: |
           python - <<'PY'
           from pathlib import Path
           path = Path('scripts/reconcile_priority_integrations_phase2_sse_180.py')
           text = path.read_text(encoding='utf-8')
-          old = '''    require(found == set(replacements), f"pending aggregate missing {set(replacements)-found}")
+          old_guard = '''    require(found == set(replacements), f"pending aggregate missing {set(replacements)-found}")
     ids = [item["id"] for item in aggregate["records"]]
 '''
-          new = '''    for missing_id in sorted(set(replacements) - found):
+          new_guard = '''    for missing_id in sorted(set(replacements) - found):
         aggregate["records"].append(replacements[missing_id])
     ids = [item["id"] for item in aggregate["records"]]
 '''
-          if old not in text:
+          if old_guard not in text:
               raise SystemExit('expected pending aggregate guard not found')
-          path.write_text(text.replace(old, new), encoding='utf-8')
+          text = text.replace(old_guard, new_guard)
+          old_branch = 'BRANCH = "priority-integrations-phase2-sse-180"'
+          new_branch = 'BRANCH = "priority-integrations-phase2-sse-180-r2"'
+          if old_branch not in text:
+              raise SystemExit('expected branch constant not found')
+          path.write_text(text.replace(old_branch, new_branch), encoding='utf-8')
           PY
       - name: Apply bounded authority reconciliation
         run: python scripts/reconcile_priority_integrations_phase2_sse_180.py apply
@@ -95,4 +97,4 @@ jobs:
       - name: Commit validated reconciliation
         run: |
           git commit -m "docs(lab): authorize Phase 2 SSE synthetic test 180"
-          git push origin HEAD:priority-integrations-phase2-sse-180
+          git push origin HEAD:priority-integrations-phase2-sse-180-r2
