@@ -1,9 +1,9 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "evidence_id": "EVD-LAB-STATISTICS-COUNTER-SOURCE-PACKAGE-178",
   "project_id": "lab",
   "authorization_ref": "AUTHORIZATION_LAB_STATISTICS_COUNTER_EXPERIMENT_SOURCE_ADOPTION_HUMAN_REVIEW_AND_CONDITIONAL_CLOSURE_178",
-  "status": "FUNCTIONAL_INTEGRATION_SOURCE_PRESERVED_AWAITING_DIRECT_HUMAN_REVIEW",
+  "status": "SOURCE_FIDELITY_APPROVED_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_CLOSED",
   "source_package_id": "CAROLINA-STATISTICS-MOTION-EXPERIMENT-001",
   "archive_sha256": "8eecd53dc698d4587dfa882a5eabe701ec9a77a45bb9747d57f0cf5d68c876b0",
   "archive_bytes": 3493574,
@@ -22,8 +22,21 @@
     "ATTEMPT_007_EVIDENCE",
     "ATTEMPT_009_SOURCE_INTEGRITY",
     "REL_001_THROUGH_REL_010",
-    "PIXEL_DIFF_EVIDENCE_MULTIPLE_VIEWPORTS_AND_DPR"
+    "PIXEL_DIFF_EVIDENCE_MULTIPLE_VIEWPORTS_AND_DPR",
+    "EXACT_FUNCTIONAL_DOM_EXCERPT",
+    "EXACT_MOTION_SCRIPT_EXCERPT",
+    "HUMAN_LOCALHOST_APPROVAL",
+    "SOURCE_INDEPENDENT_BEHAVIOR_CORE",
+    "DETERMINISTIC_CORE_VALIDATION"
   ],
+  "human_review": {
+    "determination": "APPROVED_SOURCE_FIDELITY",
+    "approved_by": "Jonathan Martínez",
+    "determined_at": "2026-08-03T00:23:25-04:00",
+    "protocol": "REAL_LOCALHOST_CHROMIUM",
+    "statement": "Funciona perfecto",
+    "reviewed_artifact": "C:\\Users\\JF Martin\\Documents\\Proyectos\\Carolina Clinical Os\\carolina-md-experiments\\experiments\\statistics-motion-001\\CAROLINA_MD_STATISTICS_MOTION_EXPERIMENT_001.html"
+  },
   "validation": {
     "archive_sha256": "PASS_UPLOADED_ATTACHMENT",
     "rar5_inventory": "PASS_163_ENTRIES",
@@ -33,11 +46,20 @@
     "source_mutation": "NONE",
     "archive_repository_storage": "SHA256_AND_COMPLETE_CONTENT_INDEX_WITH_FUNCTIONAL_INTEGRATION_CAPSULE_PUBLISHED",
     "repository_capsule_hashes": "PASS",
-    "original_archive_and_monolith_embedding": "NOT_PERFORMED_DUE_CONNECTOR_SINGLE_BLOB_TRUNCATION"
+    "original_archive_and_monolith_embedding": "NOT_PERFORMED_DUE_CONNECTOR_SINGLE_BLOB_TRUNCATION",
+    "human_source_fidelity": "PASS_APPROVED",
+    "behavior_core_node_tests": "PASS_7_OF_7",
+    "normal_motion": "PASS",
+    "reduced_motion": "PASS",
+    "one_shot_reentry": "PASS",
+    "programmatic_replay": "PASS",
+    "resize_preservation": "PASS",
+    "source_independence": "PASS",
+    "destroy_cancellation": "PASS"
   },
   "publication_limitation": "ORIGINAL_RAR_AND_FULL_MONOLITH_NOT_EMBEDDED_DUE_CONNECTOR_SINGLE_BLOB_TRUNCATION",
-  "claim_boundary": "THE_FUNCTIONAL_INTEGRATION_SOURCE_IS_PRESERVED_AS_EXACT_DOM_AND_MOTION_SCRIPT_EXCERPTS, SOURCE_DERIVED_STYLES, DIRECT_REVIEW_HARNESS, KEY_EVIDENCE, AND_COMPLETE_ARCHIVE_INDEX. THE_ORIGINAL_RAR_AND_FULL_MONOLITH_ARE_IDENTIFIED_BY_SHA256_BUT_NOT_EMBEDDED_AS_SINGLE_BLOBS. NO_LAB_HUMAN_APPROVAL_OR_PRODUCT_INTEGRATION_AUTHORITY_IS_CREATED.",
-  "next_gate": "DIRECT_HUMAN_REVIEW_OF_PRESERVED_FUNCTIONAL_INTEGRATION_SOURCE",
+  "claim_boundary": "The preserved functional source was approved by Jonathan Martínez on real localhost. The source-independent behavior core passed deterministic dependency-free Node tests. No current landing integration, product repository mutation, runtime deployment or automatic reusable promotion is claimed.",
+  "next_gate": "SEPARATE_EXPLICIT_PRODUCT_INTEGRATION_AUTHORIZATION_WHEN_FUTURE_CONSUMPTION_IS_DESIRED",
   "repository_preservation": {
     "archive_content_index": {
       "path": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/ARCHIVE_CONTENT_INDEX.json",
@@ -72,6 +94,20 @@
     "attempt006_functional_results": {
       "path": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/expanded/statistics-motion-001/evidence/attempt006_functional_results.json",
       "sha256": "a3cdfb4a7f59a951edaba38218b34621748b938eaa8ca3cf35687ad49be2fea6"
-    }
-  }
+    },
+    "canonical_reference": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/CANONICAL_REFERENCE.json",
+    "behavior_core": {
+      "path": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/behavior-core/statistics-counter-core.js",
+      "sha256": "5a48f4d4c863333da650cbfaca1fb1598f87fc605cd17eaddbf05371ff3ea8e0"
+    },
+    "behavior_core_tests": {
+      "path": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/behavior-core/test-statistics-counter-core.js",
+      "sha256": "588db5677ddba08eb2a76fd2ec9bb2af9fa6db9c1c2064c5c9123dcbca3b74a1"
+    },
+    "behavior_core_contract": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/behavior-core/BEHAVIOR_CORE_CONTRACT.json",
+    "behavior_core_validation": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/behavior-core/BEHAVIOR_CORE_VALIDATION_RESULTS.json",
+    "future_consumption_contract": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/FUTURE_CONSUMPTION_CONTRACT.json"
+  },
+  "product_integration": false,
+  "runtime_effect": "NONE"
 }
