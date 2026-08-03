@@ -21,6 +21,8 @@ jobs:
         run: |
           set -euo pipefail
           BASE='foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001'
+          wc -c .auth178-payload/CAROLINA_MD_STATISTICS_MOTION_EXPERIMENT_001.html.xz
+          sha256sum .auth178-payload/CAROLINA_MD_STATISTICS_MOTION_EXPERIMENT_001.html.xz
           mkdir -p "$BASE/expanded/statistics-motion-001/evidence" scripts
           xz -dc .auth178-payload/CAROLINA_MD_STATISTICS_MOTION_EXPERIMENT_001.html.xz > "$BASE/expanded/statistics-motion-001/CAROLINA_MD_STATISTICS_MOTION_EXPERIMENT_001.html"
           xz -dc .auth178-payload/ARCHIVE_CONTENT_INDEX.json.xz > "$BASE/ARCHIVE_CONTENT_INDEX.json"
