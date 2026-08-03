@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_AND_CLOSURE_177",
+  "project_id": "lab",
+  "status": "GRANTED",
+  "authorization_class": "EXACT_CANONICAL_AGGREGATE_RECONCILIATION_AND_PENDING_CLOSURE",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-08-02T20:27:00-04:00",
+  "approval_source": "Explicit ratification in conversation: RATIFICO AUTHORIZATION_LAB_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_AND_CLOSURE_177",
+  "grant_inferred": false,
+  "repository": {
+    "name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "branch": "main",
+    "expected_parent_head": "1a54e7aa67981ea52deafd7d84f22ae7378bb9a7",
+    "head_policy": "VERIFY_LIVE_AT_USE",
+    "entrypoint": "project-sources/chatgpt/START_HERE.md"
+  },
+  "execution_environment": {
+    "required": "AUTHENTICATED_GIT_WORKTREE_WITH_COMPLETE_UNTRUNCATED_FILE_ACCESS",
+    "actual": "AUTHENTICATED_GITHUB_CONTENTS_WITH_LOCAL_EXACT_BLOB_RECONSTRUCTION",
+    "equivalence_basis": [
+      "COMPLETE_CONTENT_RECONSTRUCTED_WITHOUT_TRUNCATION",
+      "RECONSTRUCTED_BYTES_MATCHED_ORIGINAL_GIT_BLOB_SHA_FOR_ALL_THREE_TARGETS",
+      "JSON_PARSED_BEFORE_MUTATION",
+      "FULL_REPLACEMENT_CONTENT_GENERATED_LOCALLY"
+    ]
+  },
+  "authority": {
+    "commit_authorized": true,
+    "push_authorized": true,
+    "source_file_update_authorized": true,
+    "canonical_aggregate_reconciliation_authorized": true,
+    "pend_lab_047_closure_authorized": true,
+    "continuity_reconciliation_authorized": true,
+    "technical_artifact_change_authorized": false,
+    "canonical_reference_change_authorized": false,
+    "behavior_core_change_authorized": false,
+    "neutral_adaptation_authorized": false,
+    "reusable_promotion_authorized": false,
+    "product_integration_authorized": false,
+    "runtime_authorized": false,
+    "deployment_authorized": false,
+    "carolina_repository_mutation_authorized": false
+  },
+  "primary_targets": [
+    {
+      "path": "CURRENT_STATE.json",
+      "original_blob_sha": "b729e4a659fbd56dde2f130eafc26bee84f9ff7e"
+    },
+    {
+      "path": "projects/lab/PENDING.json",
+      "original_blob_sha": "39f7b319fc8a08d409468d9cecd54f04122d1a88"
+    },
+    {
+      "path": "registry/index.json",
+      "original_blob_sha": "8925fd49e1f6af5b612691b35160638aa993fca8"
+    }
+  ],
+  "supporting_paths": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_AND_CLOSURE_177.json",
+    "projects/lab/briefs/CODEX_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_177_001.json",
+    "projects/lab/evidence/EVD-LAB-PEND-047-EXACT-CANONICAL-AGGREGATE-RECONCILIATION-177.json",
+    "registry/deltas/pend-lab-047-exact-canonical-aggregate-reconciliation-177.json",
+    "projects/lab/pending/PEND-LAB-047.json",
+    "projects/lab/pending/PEND-LAB-043.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.md",
+    "projects/lab/continuity/ATTACHMENT_MANIFEST.json",
+    "projects/lab/continuity/START_PROMPT.md"
+  ],
+  "required_reconciliation": [
+    "READ_ALL_THREE_AGGREGATES_COMPLETELY_WITHOUT_TRUNCATION",
+    "PRESERVE_UNRELATED_RECORDS_ARRAYS_KEYS_RELATIONS_AND_HISTORY",
+    "REMOVE_ERR_LAB_011_FROM_OPEN_ERRORS",
+    "CLOSE_PEND_LAB_046_IN_PENDING_AGGREGATE",
+    "CLOSE_PEND_LAB_047",
+    "UNBLOCK_PEND_LAB_043",
+    "REGISTER_CANDIDATE_002_HUMAN_APPROVED_CANONICAL_REFERENCE",
+    "REGISTER_BEHAVIOR_CORE_EXTRACTED_AND_VALIDATED",
+    "PRESERVE_AUTHORIZATION_176_HISTORICAL_BLOCKED_CONSUMED_RESULT",
+    "REGISTER_AUTHORIZATION_177_CONSUMED",
+    "RECALCULATE_INDEX_COUNTS_FROM_GOVERNED_BASELINE_AND_NEW_RECORDS",
+    "REMOVE_DUPLICATE_INDEX_PATHS",
+    "PRESERVE_PRIORITY_INTEGRATIONS_GLOBAL_PHASE"
+  ],
+  "no_diff_allowed": [
+    "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/REFERENCE_IMPLEMENTATION.html",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/COMPARISON_METRICS.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002/SOURCE_PROVENANCE.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/CANONICAL_REFERENCE.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/"
+  ],
+  "required_validation": [
+    "VERIFY_LIVE_AT_USE_BEFORE_WRITING",
+    "COMPLETE_UNTRUNCATED_TARGET_READS",
+    "JSON_PARSE_PASS",
+    "APPLICABLE_SCHEMAS_PASS",
+    "DUPLICATE_IDS_ZERO",
+    "DUPLICATE_INDEX_PATHS_ZERO",
+    "NEW_BROKEN_INDEX_PATHS_ZERO",
+    "MATERIAL_CONTRADICTIONS_173_THROUGH_177_ZERO",
+    "UNRELATED_SEMANTIC_DIFF_ZERO",
+    "PROTECTED_TECHNICAL_DIFF_ZERO",
+    "CAROLINA_REPOSITORY_DIFF_ZERO",
+    "REMOTE_PUBLICATION_VERIFIED"
+  ],
+  "stop_conditions": [
+    "REMOTE_HEAD_DIVERGED",
+    "ANY_TARGET_FILE_CANNOT_BE_READ_IN_FULL",
+    "UNRELATED_HISTORY_WOULD_BE_REMOVED_OR_COMPACTED",
+    "UNAUTHORIZED_TECHNICAL_ARTIFACT_CHANGE_REQUIRED",
+    "ADDITIONAL_CANONICAL_AGGREGATE_REQUIRES_MUTATION",
+    "VALIDATOR_FAILURE_REMAINS_UNRESOLVED",
+    "PRODUCT_INTEGRATION_OR_CAROLINA_MUTATION_REQUIRED",
+    "SCOPE_EXPANSION_REQUIRED"
+  ],
+  "consumption_rule": "CONSUME_AFTER_REMOTE_PUBLICATION_AND_VERIFICATION_OF_EXACT_AGGREGATE_RECONCILIATION_PEND_LAB_047_CLOSURE_EVIDENCE_DELTA_INDEX_AND_CONTINUITY_OR_AFTER_DOCUMENTED_BLOCKED_RESULT_WITH_NO_RESIDUAL_AUTHORITY",
+  "authority_effect_while_granted": "BOUNDED_TO_AUTHORIZATION_177_ONLY"
+}
