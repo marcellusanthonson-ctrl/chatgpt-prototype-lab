@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "source_package_id": "CAROLINA-STATISTICS-MOTION-EXPERIMENT-001",
+  "source_monolith": {
+    "path_in_archive": "statistics-motion-001/CAROLINA_MD_STATISTICS_MOTION_EXPERIMENT_001.html",
+    "sha256": "74274e55ff1c8b9edd849d433f12bf6ffe0abb00097872feb6bc7adde83b463e",
+    "bytes": 1866483,
+    "repository_materialization": "NOT_EMBEDDED_AS_FULL_MONOLITH_DUE_CONNECTOR_SINGLE_BLOB_TRUNCATION"
+  },
+  "archive": {
+    "original_name": "statistics-motion-001(1).rar",
+    "format": "RAR5",
+    "sha256": "8eecd53dc698d4587dfa882a5eabe701ec9a77a45bb9747d57f0cf5d68c876b0",
+    "bytes": 3493574,
+    "entry_count": 163,
+    "content_index": "../ARCHIVE_CONTENT_INDEX.json"
+  },
+  "exact_source_excerpts": [
+    {
+      "id": "STATS_SECTION_DOM",
+      "path": "SOURCE_STATS_SECTION.html",
+      "sha256": "f9c192a24252d9685b7afc5099fa576f40037c7bbeb0cf00c1ad08d210ac3b39",
+      "source_start": 1855966,
+      "source_end": 1857042,
+      "classification": "EXACT_UTF8_EXCERPT"
+    },
+    {
+      "id": "STATS_MOTION_SCRIPT",
+      "path": "SOURCE_STATS_MOTION.js",
+      "sha256": "a387f76edbf4f5013f733b4d24d258185500f389e12637b65be6ad9171cf4e1e",
+      "source_start": 1857120,
+      "source_end": 1866010,
+      "classification": "EXACT_SCRIPT_BODY_EXCERPT"
+    }
+  ],
+  "style_source_ranges": [
+    {
+      "id": "CORE_STATS_BANNER",
+      "source_start": 1658395,
+      "source_end": 1659497,
+      "source_range_sha256": "ef076f7a4acec0b79044d4dfa66058220bf6907d0de8999353f05dc024766661"
+    },
+    {
+      "id": "INTERACTION_STABILITY",
+      "source_start": 1725468,
+      "source_end": 1726141,
+      "source_range_sha256": "875ee27f29938fb11c394b3ae9b5391dfc3a3b391ff7efa396a34a22143ed1fd"
+    },
+    {
+      "id": "RESPONSIVE_TABLET",
+      "source_start": 1744714,
+      "source_end": 1745793,
+      "source_range_sha256": "f25f3561e27911f698893a008e456ac2d75b6e172f6146de26611a5296b7e97d"
+    },
+    {
+      "id": "RESPONSIVE_MOBILE",
+      "source_start": 1745850,
+      "source_end": 1746397,
+      "source_range_sha256": "257fffe337640d04186012f8be9309bb09f8c2913106efab4675b2f944e772bc"
+    },
+    {
+      "id": "EXPERIMENT_NUMERIC_STABILITY",
+      "source_start": 1853774,
+      "source_end": 1854132,
+      "classification": "SELECTOR_LEVEL_SOURCE_EXTRACTION"
+    }
+  ],
+  "style_materialization": {
+    "path": "SOURCE_STATS_STYLES.css",
+    "classification": "SOURCE_DERIVED_INTEGRATION_STYLES_WITH_EXPLICIT_RANGE_REFERENCES",
+    "byte_identical_to_full_source_ranges": false
+  },
+  "review_harness": {
+    "path": "DIRECT_HUMAN_REVIEW.html",
+    "shell_styles": "REVIEW_CAPSULE.css",
+    "classification": "GENERATED_REVIEW_HARNESS_USING_EXACT_DOM_AND_MOTION_SCRIPT",
+    "original_monolith_claim": false
+  },
+  "claim_boundary": "THE COMPLETE COUNTER BEHAVIOR NEEDED FOR FUTURE LANDING INTEGRATION IS PRESERVED AS EXACT DOM_AND_SCRIPT_EXCERPTS_WITH_SOURCE_DERIVED_STYLES. THE_ORIGINAL_RAR_AND_FULL_MONOLITH_ARE_IDENTIFIED_BY_SHA256_AND_COMPLETE_ARCHIVE_INDEX_BUT_ARE_NOT_EMBEDDED_AS_SINGLE_BINARY_BLOBS. NO_LAB_HUMAN_APPROVAL_OR_PRODUCT_INTEGRATION_IS_CREATED."
+}

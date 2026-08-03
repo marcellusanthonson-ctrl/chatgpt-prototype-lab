@@ -1,0 +1,39 @@
+/* Exact source ranges from CAROLINA_MD_STATISTICS_MOTION_EXPERIMENT_001.html. */
+/* CORE_STATS_BANNER offsets 1658395:1659497 */
+.stats-banner{background:linear-gradient(180deg,#ECFDF5 0%,#F0FDFA 100%);padding:64px 0;border-top:1px solid var(--teal-100);border-bottom:1px solid var(--teal-100);position:relative;z-index:5}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.stat-cell{text-align:center;padding:28px 22px;background:rgba(255,255,255,.70);backdrop-filter:blur(12px) saturate(140%);-webkit-backdrop-filter:blur(12px) saturate(140%);border:1px solid rgba(13,148,136,.12);border-radius:20px;box-shadow:0 2px 16px rgba(13,148,136,.08),inset 0 1px 0 rgba(255,255,255,.8);transition:transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s cubic-bezier(.16,1,.3,1)}
+.stat-cell:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(13,148,136,.15),inset 0 1px 0 rgba(255,255,255,.9)}
+.stat-num{font-size:54px;font-weight:800;color:var(--teal-800);letter-spacing:-.03em;line-height:1}
+.stat-num .plus{color:var(--lime);font-weight:700}
+.stat-lbl{margin-top:10px;font-size:14px;color:var(--muted);font-weight:500;line-height:1.4}
+
+/* INTERACTION_STABILITY offsets 1725468:1726141 */
+.stat-cell{position:relative;overflow:hidden}
+.stat-cell::before{content:"";position:absolute;inset:1px;border-radius:inherit;pointer-events:none;background:radial-gradient(240px 120px at var(--mx,50%) var(--my,0%),rgba(13,148,136,.16),transparent 68%);opacity:0}
+.stat-cell:hover::before{opacity:1}
+.stat-num{transition:transform var(--motion-med) var(--ease-premium),text-shadow var(--motion-med) ease}
+.stat-cell:hover .stat-num{transform:translateY(-2px);text-shadow:0 12px 28px rgba(13,148,136,.16)}
+
+/* Numeric slot and static suffix rules from EXPERIMENT_CONTROLS_AND_STABILITY offsets 1853132:1855432. */
+.stat-value--patients .stat-number-slot{display:inline-grid}
+.stat-value--patients .stat-number-slot::before{content:"1000";visibility:hidden;grid-area:1/1}
+.stat-value--patients .stat-number{grid-area:1/1;text-align:right}
+.stat-value--patients .stat-suffix{opacity:1;transform:none;animation:none;transition:none}
+
+/* RESPONSIVE_TABLET offsets 1744714:1745793 */
+@media (min-width:641px) and (max-width:1100px){
+.stats-banner{padding-top:56px!important;padding-bottom:56px!important}
+.stats-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:20px!important;max-width:720px!important;margin-left:auto!important;margin-right:auto!important}
+.stat-cell{min-height:184px!important;padding:30px 24px!important;display:flex!important;flex-direction:column!important;justify-content:center!important;align-items:center!important}
+.stat-num{font-size:clamp(52px,8vw,72px)!important;line-height:.92!important;letter-spacing:-.055em!important;white-space:nowrap!important;max-width:100%!important;overflow:visible!important}
+.stat-num .plus{font-size:.78em!important;letter-spacing:-.04em!important}
+.stat-lbl{margin-top:14px!important;font-size:15px!important;line-height:1.35!important;max-width:180px!important}}
+
+/* RESPONSIVE_MOBILE offsets 1745850:1746397. */
+@media (max-width:640px){
+.stats-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important}
+.stat-cell{min-height:156px!important;padding:24px 16px!important;min-width:0!important}
+.stat-num{font-size:clamp(38px,13vw,54px)!important;line-height:.94!important;letter-spacing:-.055em!important;white-space:nowrap!important}
+.stat-num .plus{font-size:.76em!important}
+.stat-lbl{font-size:13.5px!important;line-height:1.32!important}}

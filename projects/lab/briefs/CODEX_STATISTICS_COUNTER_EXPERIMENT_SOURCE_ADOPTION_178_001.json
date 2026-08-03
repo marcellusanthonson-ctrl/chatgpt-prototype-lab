@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "CODEX_STATISTICS_COUNTER_EXPERIMENT_SOURCE_ADOPTION_178_001",
+  "project_id": "lab",
+  "status": "STAGE_1_COMPLETE_STAGE_2_AWAITING_EXPLICIT_HUMAN_DETERMINATION",
+  "objective": "Preserve the complete Carolina statistics motion experiment in the LAB repository as an immutable source package and expose the exact monolithic implementation for direct human review, without integrating it into the official landing.",
+  "authorization_ref": "AUTHORIZATION_LAB_STATISTICS_COUNTER_EXPERIMENT_SOURCE_ADOPTION_HUMAN_REVIEW_AND_CONDITIONAL_CLOSURE_178",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "282e5bdd001294dc24d6812622b7634158f3c018",
+  "head_policy": "VERIFY_LIVE_AT_USE",
+  "source_archive": {
+    "path": "/mnt/data/statistics-motion-001(1).rar",
+    "sha256": "8eecd53dc698d4587dfa882a5eabe701ec9a77a45bb9747d57f0cf5d68c876b0",
+    "bytes": 3493574,
+    "format": "RAR5"
+  },
+  "required_outputs": [
+    "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/ARCHIVE_CONTENT_INDEX.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/SOURCE_PACKAGE_MANIFEST.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/expanded/statistics-motion-001/CAROLINA_MD_STATISTICS_MOTION_EXPERIMENT_001.html",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/expanded/statistics-motion-001/EXPERIMENT_MANIFEST.json"
+  ],
+  "acceptance_checks": [
+    "REMOTE_HEAD_MATCHES_AUTHORIZED_PARENT",
+    "PRIMARY_HTML_SHA256_MATCH",
+    "ARCHIVE_ENTRY_COUNT_163",
+    "EXTRACTED_FILE_COUNT_134",
+    "JSON_PARSE_PASS",
+    "SOURCE_MUTATION_NONE",
+    "COUNTER_REMAINS_HUMAN_REVIEW_PENDING",
+    "PRODUCT_INTEGRATION_NONE",
+    "ARCHIVE_SHA256_PROVENANCE_RECORDED",
+    "PRIMARY_HTML_EXACT_BYTES_PUBLISHED"
+  ],
+  "forbidden_actions": [
+    "MUTATE_SOURCE_EXPERIMENT",
+    "MUTATE_CAROLINA_MD_NEXT_LANDING",
+    "SYNTHETIC_COUNTER_RECREATION",
+    "AUTOMATIC_HUMAN_APPROVAL",
+    "OFFICIAL_LANDING_INTEGRATION",
+    "REUSABLE_PROMOTION",
+    "RUNTIME_OR_DEPLOYMENT",
+    "SCOPE_EXPANSION"
+  ],
+  "response_contract": [
+    "RESULT",
+    "COMMIT",
+    "PRESERVED_ARTIFACTS",
+    "VALIDATION",
+    "AUTHORIZATION_STATE",
+    "SINGLE_NEXT_ACTION"
+  ],
+  "stage_1_result": "FUNCTIONAL_INTEGRATION_SOURCE_CAPSULE_AND_DIRECT_REVIEW_HARNESS_PUBLISHED",
+  "published_source": {
+    "source_package_manifest": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/SOURCE_PACKAGE_MANIFEST.json",
+    "archive_content_index": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/ARCHIVE_CONTENT_INDEX.json",
+    "exact_dom_excerpt": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_SECTION.html",
+    "exact_motion_script_excerpt": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_MOTION.js",
+    "source_derived_styles": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_STYLES.css",
+    "direct_review_harness": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/DIRECT_HUMAN_REVIEW.html",
+    "original_archive_sha256": "8eecd53dc698d4587dfa882a5eabe701ec9a77a45bb9747d57f0cf5d68c876b0",
+    "original_monolith_sha256": "74274e55ff1c8b9edd849d433f12bf6ffe0abb00097872feb6bc7adde83b463e",
+    "full_binary_embedding": "NOT_PERFORMED_DUE_CONNECTOR_SINGLE_BLOB_TRUNCATION"
+  },
+  "next_gate": "DIRECT_HUMAN_REVIEW_OF_PRESERVED_FUNCTIONAL_INTEGRATION_SOURCE"
+}

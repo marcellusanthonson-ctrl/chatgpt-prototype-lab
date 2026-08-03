@@ -1,0 +1,1028 @@
+{
+  "attempt": "ATTEMPT-007",
+  "source_snapshot": "C:\\Users\\JF Martin\\Documents\\Proyectos\\Carolina Clinical Os\\carolina-md-experiments\\experiments\\statistics-motion-001",
+  "archive": "C:\\Users\\JF Martin\\Documents\\Proyectos\\Carolina Clinical Os\\carolina-md-experiments\\archive\\statistics-motion-001-attempt-006-human-rejected",
+  "first_write_copy_observation": {
+    "file_count": 69,
+    "directory_count": 15,
+    "total_file_bytes": 5200183,
+    "files_exact": true,
+    "directories_exact": true,
+    "source_primary_sha256": "dfd69186754eeeeb925ce8fd41da691880e7150d7593a1b4d68ecdc2b657e558",
+    "archive_primary_sha256": "dfd69186754eeeeb925ce8fd41da691880e7150d7593a1b4d68ecdc2b657e558"
+  },
+  "pre_archive_inventory": [
+    {
+      "path": "CAROLINA_MD_STATISTICS_MOTION_EXPERIMENT_001.html",
+      "type": "file",
+      "size": 1864081,
+      "sha256": "dfd69186754eeeeb925ce8fd41da691880e7150d7593a1b4d68ecdc2b657e558"
+    },
+    {
+      "path": "evidence",
+      "type": "directory",
+      "size": 0,
+      "sha256": null
+    },
+    {
+      "path": "evidence\\attempt006_capture_results.json",
+      "type": "file",
+      "size": 496074,
+      "sha256": "8b75ee840391aa74d6848dcb41d2e16223e4cfd9666ade69b8734199bcb22e5e"
+    },
+    {
+      "path": "evidence\\attempt006_functional_results.json",
+      "type": "file",
+      "size": 4789,
+      "sha256": "a3cdfb4a7f59a951edaba38218b34621748b938eaa8ca3cf35687ad49be2fea6"
+    },
+    {
+      "path": "evidence\\attempt006_pipeline.py",
+      "type": "file",
+      "size": 54103,
+      "sha256": "19610bd19654df95f1a73a1cb5584d311d3145953732111bf18dc919f4ea2265"
+    },
+    {
+      "path": "evidence\\attempt006_production_cache.json",
+      "type": "file",
+      "size": 675482,
+      "sha256": "fbf69dd631ad1b08564c26cd62f4cbcf788a11de7525758dc6f705a86acc66bd"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-005",
+      "type": "directory",
+      "size": 0,
+      "sha256": null
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-005\\BLOCKED.json",
+      "type": "file",
+      "size": 440,
+      "sha256": "27c932750aa3237c9d049ce460ce2b169e7ce28864157a368c92114880ab5cc7"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006",
+      "type": "directory",
+      "size": 0,
+      "sha256": null
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1024x768-dpr1",
+      "type": "directory",
+      "size": 0,
+      "sha256": null
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1024x768-dpr1\\experiment-final.png",
+      "type": "file",
+      "size": 51543,
+      "sha256": "c787fbc4e31c3a4ad102e115075b0a9f37d2baa104b4d08baf08a12d85fa7629"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1024x768-dpr1\\final-diff.json",
+      "type": "file",
+      "size": 42604,
+      "sha256": "fd61c31741b9b7f6a739482217c47adaef4ad8eca365a5d08bb881beb1c8bbf2"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1024x768-dpr1\\final-diff.png",
+      "type": "file",
+      "size": 3226,
+      "sha256": "8db55749fd23298f53f9628666a66a868c1b17102fa3874599e4f166f2cb0e2b"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1024x768-dpr1\\production-reference.png",
+      "type": "file",
+      "size": 51543,
+      "sha256": "c787fbc4e31c3a4ad102e115075b0a9f37d2baa104b4d08baf08a12d85fa7629"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1280x800-dpr1",
+      "type": "directory",
+      "size": 0,
+      "sha256": null
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1280x800-dpr1\\experiment-final.png",
+      "type": "file",
+      "size": 41742,
+      "sha256": "5390932c67927d48fe496c5a8bae7aa1f86dd21f5475513fdf69e37fbf8b3c2b"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1280x800-dpr1\\final-diff.json",
+      "type": "file",
+      "size": 42646,
+      "sha256": "ab1d3eca41a710379a558f6908846ce9a09ab1ceb93ea7ed7d0806094daafdc7"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1280x800-dpr1\\final-diff.png",
+      "type": "file",
+      "size": 2089,
+      "sha256": "5af98d9561451557192582c5fe9bd3f07ea02dc0f2306287a23d13e125068ee7"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1280x800-dpr1\\production-reference.png",
+      "type": "file",
+      "size": 41742,
+      "sha256": "5390932c67927d48fe496c5a8bae7aa1f86dd21f5475513fdf69e37fbf8b3c2b"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1440x900-dpr1",
+      "type": "directory",
+      "size": 0,
+      "sha256": null
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1440x900-dpr1-animation-mid.png",
+      "type": "file",
+      "size": 35102,
+      "sha256": "24a73fe60792bccce4277ed327708d332969c54549b15a83e70b02ea3cf0f91b"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1440x900-dpr1-animation-outside-mask-diff.json",
+      "type": "file",
+      "size": 1181,
+      "sha256": "824ceff491e549ff43241db5c876676b5cd21b4d819c013dbea06a2184ea20a0"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1440x900-dpr1-animation-outside-mask-diff.png",
+      "type": "file",
+      "size": 3959,
+      "sha256": "8c3c11fe156495309e75830ec560324b4024e262f74eff3a9b480e02d16ecb58"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1440x900-dpr1\\experiment-final.png",
+      "type": "file",
+      "size": 43165,
+      "sha256": "4c91705407f38ee7ec6b5b3684e66ee1f84571db220506e13d04ec67c0d9af09"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1440x900-dpr1\\final-diff.json",
+      "type": "file",
+      "size": 42488,
+      "sha256": "420916cbfd67d23b5a3541ded12e72231835d45634cbd154d48f899d5c9be69a"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1440x900-dpr1\\final-diff.png",
+      "type": "file",
+      "size": 2262,
+      "sha256": "49a680f1322cde5a99ec99fbcc0f8b834ae0b15f65d1c006d2b78f19e20c6e84"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1440x900-dpr1\\production-reference.png",
+      "type": "file",
+      "size": 43165,
+      "sha256": "4c91705407f38ee7ec6b5b3684e66ee1f84571db220506e13d04ec67c0d9af09"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1440x900-dpr2",
+      "type": "directory",
+      "size": 0,
+      "sha256": null
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1440x900-dpr2\\experiment-final.png",
+      "type": "file",
+      "size": 97394,
+      "sha256": "c271651bf42642cefe33f25ae623cafbb1a9015c372542f4789d6789dddab605"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1440x900-dpr2\\final-diff.json",
+      "type": "file",
+      "size": 42488,
+      "sha256": "49fe58c759ee7c66cc5480530680dbc482447c087fede18a27c3ac577ccb1eb7"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1440x900-dpr2\\final-diff.png",
+      "type": "file",
+      "size": 7609,
+      "sha256": "de590eb8cac615caf6a7ef989640099db7ed9d425851204936e4fc7bc17505a1"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1440x900-dpr2\\production-reference.png",
+      "type": "file",
+      "size": 97394,
+      "sha256": "c271651bf42642cefe33f25ae623cafbb1a9015c372542f4789d6789dddab605"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1920x1080-dpr1",
+      "type": "directory",
+      "size": 0,
+      "sha256": null
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1920x1080-dpr1\\experiment-final.png",
+      "type": "file",
+      "size": 45028,
+      "sha256": "df26cfb568c7c1bae7498b21c9891570670f5a82f56bca9e0194808fc9b0c955"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1920x1080-dpr1\\final-diff.json",
+      "type": "file",
+      "size": 42493,
+      "sha256": "70a5e90b6329e2c7c9f5367acc6e98d9a8fd8863f255069461f2ffcb7eb0bf21"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1920x1080-dpr1\\final-diff.png",
+      "type": "file",
+      "size": 2780,
+      "sha256": "5cfc92aea8855132182563f5062cf21828e9b86bd41b18e1844463f9df9f8ae8"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1920x1080-dpr1\\production-reference.png",
+      "type": "file",
+      "size": 45028,
+      "sha256": "df26cfb568c7c1bae7498b21c9891570670f5a82f56bca9e0194808fc9b0c955"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\320x800-dpr1",
+      "type": "directory",
+      "size": 0,
+      "sha256": null
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\320x800-dpr1\\experiment-final.png",
+      "type": "file",
+      "size": 35851,
+      "sha256": "f7bdefa66d94d9e2a4fa8bf10164f5547bf357a42ab9e0ea2842835e87906fc8"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\320x800-dpr1\\final-diff.json",
+      "type": "file",
+      "size": 42363,
+      "sha256": "0ddf4b33a07b412bf6f51f4ece71e146c59d9e7d01a858a83499ab8187588505"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\320x800-dpr1\\final-diff.png",
+      "type": "file",
+      "size": 1471,
+      "sha256": "1e3847c8ed6f8d532573bb6af42142f0bb65b51c1a11b60dede7e2ef3150e151"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\320x800-dpr1\\production-reference.png",
+      "type": "file",
+      "size": 35851,
+      "sha256": "f7bdefa66d94d9e2a4fa8bf10164f5547bf357a42ab9e0ea2842835e87906fc8"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\375x812-dpr1",
+      "type": "directory",
+      "size": 0,
+      "sha256": null
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\375x812-dpr1-animation-mid.png",
+      "type": "file",
+      "size": 29971,
+      "sha256": "8c44f7fd4d8e3736cc74dfcd751ad944b74f5e6d008dfe350c2116b2e5f0bdc5"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\375x812-dpr1-animation-outside-mask-diff.json",
+      "type": "file",
+      "size": 1195,
+      "sha256": "e4b9210baf6ff2f460c54bf74163d601a758e774e76baa3b281fe0c8a7fefdfe"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\375x812-dpr1-animation-outside-mask-diff.png",
+      "type": "file",
+      "size": 2528,
+      "sha256": "c11e5e5a4fe9e28284009d928100d594645d967a8c7a82907bc53e2c6c7977d0"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\375x812-dpr1\\experiment-final.png",
+      "type": "file",
+      "size": 36669,
+      "sha256": "e97d3061d19bcc473decc44e8bb3d4b991f707da09be491950193c13a84ab0ca"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\375x812-dpr1\\final-diff.json",
+      "type": "file",
+      "size": 42475,
+      "sha256": "97ca466662b08ada9136beff29240f51e9b91ec5b6eaf6ce491c2356de025b35"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\375x812-dpr1\\final-diff.png",
+      "type": "file",
+      "size": 1541,
+      "sha256": "76a5f4d0623b512fb8675d98017d8379695c1f8556f46b283f4a3550e2ff8321"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\375x812-dpr1\\production-reference.png",
+      "type": "file",
+      "size": 36669,
+      "sha256": "e97d3061d19bcc473decc44e8bb3d4b991f707da09be491950193c13a84ab0ca"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\375x812-dpr2",
+      "type": "directory",
+      "size": 0,
+      "sha256": null
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\375x812-dpr2\\experiment-final.png",
+      "type": "file",
+      "size": 93038,
+      "sha256": "ac4930c89f96fe528eb00772decc040ca61b1d4fd28bfabcce3494147e9c162d"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\375x812-dpr2\\final-diff.json",
+      "type": "file",
+      "size": 42475,
+      "sha256": "0a54d73f09e8473128c91930bc0482a08212f1fb5ac9f3cfc04d1253260d9cbc"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\375x812-dpr2\\final-diff.png",
+      "type": "file",
+      "size": 4343,
+      "sha256": "855c246206e0fa4c82ff351cf8c096d038b41a9b6799a25f8f97c252f6bc16f0"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\375x812-dpr2\\production-reference.png",
+      "type": "file",
+      "size": 93038,
+      "sha256": "ac4930c89f96fe528eb00772decc040ca61b1d4fd28bfabcce3494147e9c162d"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\768x1024-dpr1",
+      "type": "directory",
+      "size": 0,
+      "sha256": null
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\768x1024-dpr1-animation-mid.png",
+      "type": "file",
+      "size": 39225,
+      "sha256": "d442b1f52678e705d0ad2b3392607ae8d7b41ea3bb81047941b0efb2c1b9d4db"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\768x1024-dpr1-animation-outside-mask-diff.json",
+      "type": "file",
+      "size": 1267,
+      "sha256": "6a01da1d842f610285e8c9546df3964e365aac7c4787e61c14a0b76b206a607a"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\768x1024-dpr1-animation-outside-mask-diff.png",
+      "type": "file",
+      "size": 4400,
+      "sha256": "224e9036b219b84e4b2cb7c6a2a77a60f6d60c7dd825d2a0e6a1af8407f4dcb2"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\768x1024-dpr1\\experiment-final.png",
+      "type": "file",
+      "size": 48219,
+      "sha256": "d3d1c614d2ffaf950be40a9552569faab9e85e128dbb1effe37387ceaea0e1b4"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\768x1024-dpr1\\final-diff.json",
+      "type": "file",
+      "size": 42750,
+      "sha256": "e2b5400f5aa5524377e08d7e83686b139bcf0dc8e628e3bde98c7e17475224ef"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\768x1024-dpr1\\final-diff.png",
+      "type": "file",
+      "size": 2629,
+      "sha256": "6d3c47004e10a441667c96feb9a957192ace3e0845a1eeeb948d3f8483862d71"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\768x1024-dpr1\\production-reference.png",
+      "type": "file",
+      "size": 48219,
+      "sha256": "d3d1c614d2ffaf950be40a9552569faab9e85e128dbb1effe37387ceaea0e1b4"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\768x1024-dpr2",
+      "type": "directory",
+      "size": 0,
+      "sha256": null
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\768x1024-dpr2\\experiment-final.png",
+      "type": "file",
+      "size": 116447,
+      "sha256": "a188f3e43480960ac83eb859db908e9243dcd13a2430665b115d4433826f9e6c"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\768x1024-dpr2\\final-diff.json",
+      "type": "file",
+      "size": 42752,
+      "sha256": "38b18ce142b2a18699b8bf94b59d847b5bd41f50f706730a8cbcaee34e6f4d3e"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\768x1024-dpr2\\final-diff.png",
+      "type": "file",
+      "size": 8272,
+      "sha256": "7d16f71e47beaebdb2e511d58213e7e5c3f5ae63b83e70d8880c9ec8478d9dfa"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\768x1024-dpr2\\production-reference.png",
+      "type": "file",
+      "size": 116447,
+      "sha256": "a188f3e43480960ac83eb859db908e9243dcd13a2430665b115d4433826f9e6c"
+    },
+    {
+      "path": "evidence\\screenshots",
+      "type": "directory",
+      "size": 0,
+      "sha256": null
+    },
+    {
+      "path": "evidence\\screenshots\\1024x768-final.png",
+      "type": "file",
+      "size": 36330,
+      "sha256": "d5b3536695b209659368f8168cc787d242dfdbb3eda797f82ad8ea93032e13a9"
+    },
+    {
+      "path": "evidence\\screenshots\\1280x800-final.png",
+      "type": "file",
+      "size": 41013,
+      "sha256": "1881348d4ab27149f80388a8adc9e200c3d9bb9eafe1493477b299c3c7927ebf"
+    },
+    {
+      "path": "evidence\\screenshots\\1440x900-final.png",
+      "type": "file",
+      "size": 42658,
+      "sha256": "eeaea3a6061c2d35e06d9e496ded811c1b6c5d9c009614691aac95bc84082bbe"
+    },
+    {
+      "path": "evidence\\screenshots\\1920x1080-final.png",
+      "type": "file",
+      "size": 50215,
+      "sha256": "39ba16421f85407742b4829f0618366e71dfbc2f2b094f0f615066ce15a79b72"
+    },
+    {
+      "path": "evidence\\screenshots\\320x800-final.png",
+      "type": "file",
+      "size": 28082,
+      "sha256": "bd33d3e71cef805ed3d5906d4116090f9a5cb1912573cc310501855540354b2b"
+    },
+    {
+      "path": "evidence\\screenshots\\375x812-final.png",
+      "type": "file",
+      "size": 31910,
+      "sha256": "8275320bb2678fef19d061c424e794e150937c49a804f06f41c72e00ee5d051d"
+    },
+    {
+      "path": "evidence\\screenshots\\768x1024-final.png",
+      "type": "file",
+      "size": 42755,
+      "sha256": "0b077d413b0eeb6b07957167f016573291b5375f14c526387aa92770d5755b04"
+    },
+    {
+      "path": "evidence\\SOURCE_INTEGRITY_ATTEMPT_005.json",
+      "type": "file",
+      "size": 2722,
+      "sha256": "f8b616fc48478ea372d2d738dd95bd8dd651c4b83d10a09d277839f6d231ffaa"
+    },
+    {
+      "path": "evidence\\SOURCE_INTEGRITY_ATTEMPT_006.json",
+      "type": "file",
+      "size": 7255,
+      "sha256": "b8c484b7a24ae76e830957cfaf2f00686347ae3c4235373d17206b77316eaebc"
+    },
+    {
+      "path": "evidence\\VALIDATION_REPORT.md",
+      "type": "file",
+      "size": 8710,
+      "sha256": "7a488d8c73551f250332b3548f3165515c0ee05d56a29531ae0e5b5688a94d48"
+    },
+    {
+      "path": "evidence\\VALIDATION_REPORT_ATTEMPT_005.md",
+      "type": "file",
+      "size": 4707,
+      "sha256": "31374417eb53a84e7b063e5fa122c25cd89b3c5d53de8bd61237f94cb22413c3"
+    },
+    {
+      "path": "evidence\\VALIDATION_REPORT_ATTEMPT_006.md",
+      "type": "file",
+      "size": 5838,
+      "sha256": "a3be92da249784ed52405eaf1d42367ac81a1638c8d887d54d6738a8f4b00511"
+    },
+    {
+      "path": "EXPERIMENT_MANIFEST.json",
+      "type": "file",
+      "size": 3437,
+      "sha256": "ed298556a0d59eb57137a400d2337f1820cd1dc09e75d61e7a07743d8e41e465"
+    },
+    {
+      "path": "notes",
+      "type": "directory",
+      "size": 0,
+      "sha256": null
+    },
+    {
+      "path": "notes\\evaluation.md",
+      "type": "file",
+      "size": 806,
+      "sha256": "d97eaeebecd4c93d8698f1a8b276b93d2320344d83ef277ba4b5394a5334624e"
+    }
+  ],
+  "post_archive_inventory": [
+    {
+      "path": "CAROLINA_MD_STATISTICS_MOTION_EXPERIMENT_001.html",
+      "type": "file",
+      "size": 1864081,
+      "sha256": "dfd69186754eeeeb925ce8fd41da691880e7150d7593a1b4d68ecdc2b657e558"
+    },
+    {
+      "path": "evidence",
+      "type": "directory",
+      "size": 0,
+      "sha256": null
+    },
+    {
+      "path": "evidence\\attempt006_capture_results.json",
+      "type": "file",
+      "size": 496074,
+      "sha256": "8b75ee840391aa74d6848dcb41d2e16223e4cfd9666ade69b8734199bcb22e5e"
+    },
+    {
+      "path": "evidence\\attempt006_functional_results.json",
+      "type": "file",
+      "size": 4789,
+      "sha256": "a3cdfb4a7f59a951edaba38218b34621748b938eaa8ca3cf35687ad49be2fea6"
+    },
+    {
+      "path": "evidence\\attempt006_pipeline.py",
+      "type": "file",
+      "size": 54103,
+      "sha256": "19610bd19654df95f1a73a1cb5584d311d3145953732111bf18dc919f4ea2265"
+    },
+    {
+      "path": "evidence\\attempt006_production_cache.json",
+      "type": "file",
+      "size": 675482,
+      "sha256": "fbf69dd631ad1b08564c26cd62f4cbcf788a11de7525758dc6f705a86acc66bd"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-005",
+      "type": "directory",
+      "size": 0,
+      "sha256": null
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-005\\BLOCKED.json",
+      "type": "file",
+      "size": 440,
+      "sha256": "27c932750aa3237c9d049ce460ce2b169e7ce28864157a368c92114880ab5cc7"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006",
+      "type": "directory",
+      "size": 0,
+      "sha256": null
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1024x768-dpr1",
+      "type": "directory",
+      "size": 0,
+      "sha256": null
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1024x768-dpr1\\experiment-final.png",
+      "type": "file",
+      "size": 51543,
+      "sha256": "c787fbc4e31c3a4ad102e115075b0a9f37d2baa104b4d08baf08a12d85fa7629"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1024x768-dpr1\\final-diff.json",
+      "type": "file",
+      "size": 42604,
+      "sha256": "fd61c31741b9b7f6a739482217c47adaef4ad8eca365a5d08bb881beb1c8bbf2"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1024x768-dpr1\\final-diff.png",
+      "type": "file",
+      "size": 3226,
+      "sha256": "8db55749fd23298f53f9628666a66a868c1b17102fa3874599e4f166f2cb0e2b"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1024x768-dpr1\\production-reference.png",
+      "type": "file",
+      "size": 51543,
+      "sha256": "c787fbc4e31c3a4ad102e115075b0a9f37d2baa104b4d08baf08a12d85fa7629"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1280x800-dpr1",
+      "type": "directory",
+      "size": 0,
+      "sha256": null
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1280x800-dpr1\\experiment-final.png",
+      "type": "file",
+      "size": 41742,
+      "sha256": "5390932c67927d48fe496c5a8bae7aa1f86dd21f5475513fdf69e37fbf8b3c2b"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1280x800-dpr1\\final-diff.json",
+      "type": "file",
+      "size": 42646,
+      "sha256": "ab1d3eca41a710379a558f6908846ce9a09ab1ceb93ea7ed7d0806094daafdc7"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1280x800-dpr1\\final-diff.png",
+      "type": "file",
+      "size": 2089,
+      "sha256": "5af98d9561451557192582c5fe9bd3f07ea02dc0f2306287a23d13e125068ee7"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1280x800-dpr1\\production-reference.png",
+      "type": "file",
+      "size": 41742,
+      "sha256": "5390932c67927d48fe496c5a8bae7aa1f86dd21f5475513fdf69e37fbf8b3c2b"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1440x900-dpr1",
+      "type": "directory",
+      "size": 0,
+      "sha256": null
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1440x900-dpr1-animation-mid.png",
+      "type": "file",
+      "size": 35102,
+      "sha256": "24a73fe60792bccce4277ed327708d332969c54549b15a83e70b02ea3cf0f91b"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1440x900-dpr1-animation-outside-mask-diff.json",
+      "type": "file",
+      "size": 1181,
+      "sha256": "824ceff491e549ff43241db5c876676b5cd21b4d819c013dbea06a2184ea20a0"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1440x900-dpr1-animation-outside-mask-diff.png",
+      "type": "file",
+      "size": 3959,
+      "sha256": "8c3c11fe156495309e75830ec560324b4024e262f74eff3a9b480e02d16ecb58"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1440x900-dpr1\\experiment-final.png",
+      "type": "file",
+      "size": 43165,
+      "sha256": "4c91705407f38ee7ec6b5b3684e66ee1f84571db220506e13d04ec67c0d9af09"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1440x900-dpr1\\final-diff.json",
+      "type": "file",
+      "size": 42488,
+      "sha256": "420916cbfd67d23b5a3541ded12e72231835d45634cbd154d48f899d5c9be69a"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1440x900-dpr1\\final-diff.png",
+      "type": "file",
+      "size": 2262,
+      "sha256": "49a680f1322cde5a99ec99fbcc0f8b834ae0b15f65d1c006d2b78f19e20c6e84"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1440x900-dpr1\\production-reference.png",
+      "type": "file",
+      "size": 43165,
+      "sha256": "4c91705407f38ee7ec6b5b3684e66ee1f84571db220506e13d04ec67c0d9af09"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1440x900-dpr2",
+      "type": "directory",
+      "size": 0,
+      "sha256": null
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1440x900-dpr2\\experiment-final.png",
+      "type": "file",
+      "size": 97394,
+      "sha256": "c271651bf42642cefe33f25ae623cafbb1a9015c372542f4789d6789dddab605"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1440x900-dpr2\\final-diff.json",
+      "type": "file",
+      "size": 42488,
+      "sha256": "49fe58c759ee7c66cc5480530680dbc482447c087fede18a27c3ac577ccb1eb7"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1440x900-dpr2\\final-diff.png",
+      "type": "file",
+      "size": 7609,
+      "sha256": "de590eb8cac615caf6a7ef989640099db7ed9d425851204936e4fc7bc17505a1"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1440x900-dpr2\\production-reference.png",
+      "type": "file",
+      "size": 97394,
+      "sha256": "c271651bf42642cefe33f25ae623cafbb1a9015c372542f4789d6789dddab605"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1920x1080-dpr1",
+      "type": "directory",
+      "size": 0,
+      "sha256": null
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1920x1080-dpr1\\experiment-final.png",
+      "type": "file",
+      "size": 45028,
+      "sha256": "df26cfb568c7c1bae7498b21c9891570670f5a82f56bca9e0194808fc9b0c955"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1920x1080-dpr1\\final-diff.json",
+      "type": "file",
+      "size": 42493,
+      "sha256": "70a5e90b6329e2c7c9f5367acc6e98d9a8fd8863f255069461f2ffcb7eb0bf21"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1920x1080-dpr1\\final-diff.png",
+      "type": "file",
+      "size": 2780,
+      "sha256": "5cfc92aea8855132182563f5062cf21828e9b86bd41b18e1844463f9df9f8ae8"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\1920x1080-dpr1\\production-reference.png",
+      "type": "file",
+      "size": 45028,
+      "sha256": "df26cfb568c7c1bae7498b21c9891570670f5a82f56bca9e0194808fc9b0c955"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\320x800-dpr1",
+      "type": "directory",
+      "size": 0,
+      "sha256": null
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\320x800-dpr1\\experiment-final.png",
+      "type": "file",
+      "size": 35851,
+      "sha256": "f7bdefa66d94d9e2a4fa8bf10164f5547bf357a42ab9e0ea2842835e87906fc8"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\320x800-dpr1\\final-diff.json",
+      "type": "file",
+      "size": 42363,
+      "sha256": "0ddf4b33a07b412bf6f51f4ece71e146c59d9e7d01a858a83499ab8187588505"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\320x800-dpr1\\final-diff.png",
+      "type": "file",
+      "size": 1471,
+      "sha256": "1e3847c8ed6f8d532573bb6af42142f0bb65b51c1a11b60dede7e2ef3150e151"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\320x800-dpr1\\production-reference.png",
+      "type": "file",
+      "size": 35851,
+      "sha256": "f7bdefa66d94d9e2a4fa8bf10164f5547bf357a42ab9e0ea2842835e87906fc8"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\375x812-dpr1",
+      "type": "directory",
+      "size": 0,
+      "sha256": null
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\375x812-dpr1-animation-mid.png",
+      "type": "file",
+      "size": 29971,
+      "sha256": "8c44f7fd4d8e3736cc74dfcd751ad944b74f5e6d008dfe350c2116b2e5f0bdc5"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\375x812-dpr1-animation-outside-mask-diff.json",
+      "type": "file",
+      "size": 1195,
+      "sha256": "e4b9210baf6ff2f460c54bf74163d601a758e774e76baa3b281fe0c8a7fefdfe"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\375x812-dpr1-animation-outside-mask-diff.png",
+      "type": "file",
+      "size": 2528,
+      "sha256": "c11e5e5a4fe9e28284009d928100d594645d967a8c7a82907bc53e2c6c7977d0"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\375x812-dpr1\\experiment-final.png",
+      "type": "file",
+      "size": 36669,
+      "sha256": "e97d3061d19bcc473decc44e8bb3d4b991f707da09be491950193c13a84ab0ca"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\375x812-dpr1\\final-diff.json",
+      "type": "file",
+      "size": 42475,
+      "sha256": "97ca466662b08ada9136beff29240f51e9b91ec5b6eaf6ce491c2356de025b35"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\375x812-dpr1\\final-diff.png",
+      "type": "file",
+      "size": 1541,
+      "sha256": "76a5f4d0623b512fb8675d98017d8379695c1f8556f46b283f4a3550e2ff8321"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\375x812-dpr1\\production-reference.png",
+      "type": "file",
+      "size": 36669,
+      "sha256": "e97d3061d19bcc473decc44e8bb3d4b991f707da09be491950193c13a84ab0ca"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\375x812-dpr2",
+      "type": "directory",
+      "size": 0,
+      "sha256": null
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\375x812-dpr2\\experiment-final.png",
+      "type": "file",
+      "size": 93038,
+      "sha256": "ac4930c89f96fe528eb00772decc040ca61b1d4fd28bfabcce3494147e9c162d"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\375x812-dpr2\\final-diff.json",
+      "type": "file",
+      "size": 42475,
+      "sha256": "0a54d73f09e8473128c91930bc0482a08212f1fb5ac9f3cfc04d1253260d9cbc"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\375x812-dpr2\\final-diff.png",
+      "type": "file",
+      "size": 4343,
+      "sha256": "855c246206e0fa4c82ff351cf8c096d038b41a9b6799a25f8f97c252f6bc16f0"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\375x812-dpr2\\production-reference.png",
+      "type": "file",
+      "size": 93038,
+      "sha256": "ac4930c89f96fe528eb00772decc040ca61b1d4fd28bfabcce3494147e9c162d"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\768x1024-dpr1",
+      "type": "directory",
+      "size": 0,
+      "sha256": null
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\768x1024-dpr1-animation-mid.png",
+      "type": "file",
+      "size": 39225,
+      "sha256": "d442b1f52678e705d0ad2b3392607ae8d7b41ea3bb81047941b0efb2c1b9d4db"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\768x1024-dpr1-animation-outside-mask-diff.json",
+      "type": "file",
+      "size": 1267,
+      "sha256": "6a01da1d842f610285e8c9546df3964e365aac7c4787e61c14a0b76b206a607a"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\768x1024-dpr1-animation-outside-mask-diff.png",
+      "type": "file",
+      "size": 4400,
+      "sha256": "224e9036b219b84e4b2cb7c6a2a77a60f6d60c7dd825d2a0e6a1af8407f4dcb2"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\768x1024-dpr1\\experiment-final.png",
+      "type": "file",
+      "size": 48219,
+      "sha256": "d3d1c614d2ffaf950be40a9552569faab9e85e128dbb1effe37387ceaea0e1b4"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\768x1024-dpr1\\final-diff.json",
+      "type": "file",
+      "size": 42750,
+      "sha256": "e2b5400f5aa5524377e08d7e83686b139bcf0dc8e628e3bde98c7e17475224ef"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\768x1024-dpr1\\final-diff.png",
+      "type": "file",
+      "size": 2629,
+      "sha256": "6d3c47004e10a441667c96feb9a957192ace3e0845a1eeeb948d3f8483862d71"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\768x1024-dpr1\\production-reference.png",
+      "type": "file",
+      "size": 48219,
+      "sha256": "d3d1c614d2ffaf950be40a9552569faab9e85e128dbb1effe37387ceaea0e1b4"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\768x1024-dpr2",
+      "type": "directory",
+      "size": 0,
+      "sha256": null
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\768x1024-dpr2\\experiment-final.png",
+      "type": "file",
+      "size": 116447,
+      "sha256": "a188f3e43480960ac83eb859db908e9243dcd13a2430665b115d4433826f9e6c"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\768x1024-dpr2\\final-diff.json",
+      "type": "file",
+      "size": 42752,
+      "sha256": "38b18ce142b2a18699b8bf94b59d847b5bd41f50f706730a8cbcaee34e6f4d3e"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\768x1024-dpr2\\final-diff.png",
+      "type": "file",
+      "size": 8272,
+      "sha256": "7d16f71e47beaebdb2e511d58213e7e5c3f5ae63b83e70d8880c9ec8478d9dfa"
+    },
+    {
+      "path": "evidence\\pixel-diff-attempt-006\\768x1024-dpr2\\production-reference.png",
+      "type": "file",
+      "size": 116447,
+      "sha256": "a188f3e43480960ac83eb859db908e9243dcd13a2430665b115d4433826f9e6c"
+    },
+    {
+      "path": "evidence\\screenshots",
+      "type": "directory",
+      "size": 0,
+      "sha256": null
+    },
+    {
+      "path": "evidence\\screenshots\\1024x768-final.png",
+      "type": "file",
+      "size": 36330,
+      "sha256": "d5b3536695b209659368f8168cc787d242dfdbb3eda797f82ad8ea93032e13a9"
+    },
+    {
+      "path": "evidence\\screenshots\\1280x800-final.png",
+      "type": "file",
+      "size": 41013,
+      "sha256": "1881348d4ab27149f80388a8adc9e200c3d9bb9eafe1493477b299c3c7927ebf"
+    },
+    {
+      "path": "evidence\\screenshots\\1440x900-final.png",
+      "type": "file",
+      "size": 42658,
+      "sha256": "eeaea3a6061c2d35e06d9e496ded811c1b6c5d9c009614691aac95bc84082bbe"
+    },
+    {
+      "path": "evidence\\screenshots\\1920x1080-final.png",
+      "type": "file",
+      "size": 50215,
+      "sha256": "39ba16421f85407742b4829f0618366e71dfbc2f2b094f0f615066ce15a79b72"
+    },
+    {
+      "path": "evidence\\screenshots\\320x800-final.png",
+      "type": "file",
+      "size": 28082,
+      "sha256": "bd33d3e71cef805ed3d5906d4116090f9a5cb1912573cc310501855540354b2b"
+    },
+    {
+      "path": "evidence\\screenshots\\375x812-final.png",
+      "type": "file",
+      "size": 31910,
+      "sha256": "8275320bb2678fef19d061c424e794e150937c49a804f06f41c72e00ee5d051d"
+    },
+    {
+      "path": "evidence\\screenshots\\768x1024-final.png",
+      "type": "file",
+      "size": 42755,
+      "sha256": "0b077d413b0eeb6b07957167f016573291b5375f14c526387aa92770d5755b04"
+    },
+    {
+      "path": "evidence\\SOURCE_INTEGRITY_ATTEMPT_005.json",
+      "type": "file",
+      "size": 2722,
+      "sha256": "f8b616fc48478ea372d2d738dd95bd8dd651c4b83d10a09d277839f6d231ffaa"
+    },
+    {
+      "path": "evidence\\SOURCE_INTEGRITY_ATTEMPT_006.json",
+      "type": "file",
+      "size": 7255,
+      "sha256": "b8c484b7a24ae76e830957cfaf2f00686347ae3c4235373d17206b77316eaebc"
+    },
+    {
+      "path": "evidence\\VALIDATION_REPORT.md",
+      "type": "file",
+      "size": 8710,
+      "sha256": "7a488d8c73551f250332b3548f3165515c0ee05d56a29531ae0e5b5688a94d48"
+    },
+    {
+      "path": "evidence\\VALIDATION_REPORT_ATTEMPT_005.md",
+      "type": "file",
+      "size": 4707,
+      "sha256": "31374417eb53a84e7b063e5fa122c25cd89b3c5d53de8bd61237f94cb22413c3"
+    },
+    {
+      "path": "evidence\\VALIDATION_REPORT_ATTEMPT_006.md",
+      "type": "file",
+      "size": 5838,
+      "sha256": "a3be92da249784ed52405eaf1d42367ac81a1638c8d887d54d6738a8f4b00511"
+    },
+    {
+      "path": "EXPERIMENT_MANIFEST.json",
+      "type": "file",
+      "size": 3437,
+      "sha256": "ed298556a0d59eb57137a400d2337f1820cd1dc09e75d61e7a07743d8e41e465"
+    },
+    {
+      "path": "notes",
+      "type": "directory",
+      "size": 0,
+      "sha256": null
+    },
+    {
+      "path": "notes\\evaluation.md",
+      "type": "file",
+      "size": 806,
+      "sha256": "d97eaeebecd4c93d8698f1a8b276b93d2320344d83ef277ba4b5394a5334624e"
+    }
+  ],
+  "inventories_equal": true,
+  "result": "PRE_ARCHIVE_INVENTORY_EQUALS_POST_ARCHIVE_INVENTORY"
+}
