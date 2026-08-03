@@ -1,0 +1,78 @@
+name: Reconcile Priority Integrations Phase 2 SSE authority 180
+
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+
+permissions:
+  contents: write
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: priority-integrations-phase2-sse-180
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - name: Apply bounded authority reconciliation
+        run: python scripts/reconcile_priority_integrations_phase2_sse_180.py apply
+      - name: Revalidate deterministic result
+        run: python scripts/reconcile_priority_integrations_phase2_sse_180.py check
+      - name: Remove transient execution files
+        run: |
+          rm scripts/reconcile_priority_integrations_phase2_sse_180.py
+          rm .github/workflows/reconcile-priority-integrations-phase2-sse-180.yml
+      - name: Stage and verify exact final diff
+        run: |
+          git add -A
+          python - <<'PY'
+          import subprocess
+          allowed = {
+            'CURRENT_STATE.json',
+            'registry/index.json',
+            'registry/authorizations.json',
+            'registry/errors.json',
+            'registry/integrations.json',
+            'registry/deltas/sse-test-execution-and-read-only-audit-147.json',
+            'registry/deltas/priority-integrations-phase2-sse-authority-180.json',
+            'projects/lab/PROJECT_STATE.json',
+            'projects/lab/PENDING.json',
+            'projects/lab/ROADMAP.json',
+            'projects/lab/authorizations/AUTHORIZATION_LAB_SSE_TEST_EXECUTION_AND_READ_ONLY_AUDIT_147.json',
+            'projects/lab/authorizations/AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180.json',
+            'projects/lab/briefs/CODEX_SSE_ACTIVATION_AND_VALUE_DISCRIMINATION_TEST_001.json',
+            'projects/lab/briefs/CODEX_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180_001.json',
+            'projects/lab/evidence/EVD-LAB-PRIORITY-INTEGRATIONS-PHASE-2-SSE-AUTHORITY-180.json',
+            'errors/ERR-LAB-012.json',
+            'projects/lab/test-designs/index.json',
+            'projects/lab/test-designs/SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json',
+            'projects/lab/integrations/INT-LAB-005.json',
+            'projects/lab/integrations/index.json',
+            'projects/lab/pending/PEND-LAB-027.json',
+            'projects/lab/pending/PEND-LAB-045.json',
+            'projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/MANIFEST.json',
+            'projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/ROADMAP.json',
+            'projects/lab/continuity/CURRENT_CONTINUITY.json',
+            'projects/lab/continuity/CURRENT_CONTINUITY.md',
+            'projects/lab/continuity/START_PROMPT.md',
+            'projects/lab/continuity/ATTACHMENT_MANIFEST.json',
+          }
+          changed = set(subprocess.check_output(['git','diff','--cached','--name-only','origin/main'], text=True).splitlines())
+          extra = changed - allowed
+          missing = allowed - changed
+          if extra or missing:
+              raise SystemExit(f'extra={sorted(extra)} missing={sorted(missing)}')
+          print(f'PASS: {len(changed)} authorized files')
+          PY
+      - name: Commit validated reconciliation
+        run: |
+          git commit -m "docs(lab): authorize Phase 2 SSE synthetic test 180"
+          git push origin HEAD:priority-integrations-phase2-sse-180
