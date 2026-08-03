@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "validation_id": "STATISTICS-COUNTER-BEHAVIOR-CORE-178",
+  "effect_id": "STATISTICS-COUNTER-STATIC-SUFFIX-001",
+  "behavior_core_id": "STATISTICS-COUNTER-BEHAVIOR-CORE-001",
+  "executed_at": "2026-08-03T00:31:00-04:00",
+  "environment": {
+    "runtime": "Node.js v22.16.0",
+    "dependencies": "NONE",
+    "network_requests": 0,
+    "test_file": "test-statistics-counter-core.js",
+    "command": "node test-statistics-counter-core.js"
+  },
+  "human_source_review": {
+    "status": "APPROVED_SOURCE_FIDELITY",
+    "approved_by": "Jonathan Martínez",
+    "determined_at": "2026-08-03T00:23:25-04:00",
+    "protocol": "REAL_LOCALHOST_CHROMIUM",
+    "statement": "Funciona perfecto",
+    "scope": "PRESERVED_FUNCTIONAL_INTEGRATION_SOURCE"
+  },
+  "tests": [
+    {
+      "id": "NORMAL_MOTION_AND_STATIC_SUFFIX",
+      "result": "PASS",
+      "assertions": ["numeric sequence monotonic", "final values exact", "persistent plus identity stable", "no empty numeric frame"]
+    },
+    {
+      "id": "REDUCED_MOTION_IMMEDIATE_FINAL",
+      "result": "PASS",
+      "assertions": ["no interpolation required", "all final states immediate"]
+    },
+    {
+      "id": "ONE_SHOT_REENTRY",
+      "result": "PASS",
+      "assertions": ["second trigger ignored", "no restart after completion"]
+    },
+    {
+      "id": "PROGRAMMATIC_REPLAY_CANCELLATION",
+      "result": "PASS",
+      "assertions": ["stale callbacks invalidated", "final state exact"]
+    },
+    {
+      "id": "RESIZE_PRESERVATION",
+      "result": "PASS",
+      "assertions": ["no restart", "final values preserved", "node identity preserved"]
+    },
+    {
+      "id": "SOURCE_INDEPENDENCE",
+      "result": "PASS",
+      "assertions": ["custom numeric values", "custom sequence values", "no Carolina-specific token in core"]
+    },
+    {
+      "id": "DESTROY_CANCELLATION",
+      "result": "PASS",
+      "assertions": ["pending mutations cancelled", "destroyed state stable"]
+    }
+  ],
+  "static_validation": {
+    "node_syntax_check": "PASS",
+    "source_independence_scan": "PASS",
+    "forbidden_terms_scanned": ["Carolina", "Pacientes", "Audición", "Lenguaje", "TDAH", "Portal", "1000", "28", "24/7"]
+  },
+  "summary": {
+    "tests_passed": 7,
+    "tests_total": 7,
+    "normal_motion": "PASS",
+    "reduced_motion": "PASS",
+    "reentry": "PASS",
+    "resize": "PASS",
+    "external_requests": 0,
+    "status": "PASS_NODE_DETERMINISTIC_WITH_HUMAN_SOURCE_FIDELITY"
+  },
+  "claim_boundary": "The preserved source was approved by Jonathan Martínez on real localhost. The extracted source-independent core passed deterministic Node tests; no claim of current product integration, deployment, or automated browser validation of the extracted core is made.",
+  "artifacts": {
+    "behavior_core_sha256": "5a48f4d4c863333da650cbfaca1fb1598f87fc605cd17eaddbf05371ff3ea8e0",
+    "test_sha256": "588db5677ddba08eb2a76fd2ec9bb2af9fa6db9c1c2064c5c9123dcbca3b74a1"
+  }
+}
