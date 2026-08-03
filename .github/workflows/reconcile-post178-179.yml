@@ -38,8 +38,9 @@ jobs:
         run: |
           rm scripts/reconcile_post178_canonical_state_179.py
           rm .github/workflows/reconcile-post178-179.yml
-      - name: Verify final allowed diff
+      - name: Stage and verify final allowed diff
         run: |
+          git add -A
           python - <<'PY'
           import subprocess
           allowed = {
@@ -58,7 +59,7 @@ jobs:
             'projects/lab/evidence/EVD-LAB-POST-178-CANONICAL-STATE-RECONCILIATION-179.json',
             'registry/deltas/post-178-canonical-state-phase1-evidence-reconciliation-179.json',
           }
-          changed = set(subprocess.check_output(['git','diff','--name-only','origin/main'], text=True).splitlines())
+          changed = set(subprocess.check_output(['git','diff','--cached','--name-only','origin/main'], text=True).splitlines())
           extra = changed - allowed
           missing = allowed - changed
           if extra or missing:
@@ -67,6 +68,5 @@ jobs:
           PY
       - name: Commit validated reconciliation
         run: |
-          git add -A
           git commit -m "docs(lab): reconcile post-178 canonical state 179"
           git push origin HEAD:post178-canonical-reconciliation-179
