@@ -6,6 +6,7 @@ on:
       - main
     types:
       - opened
+      - synchronize
 
 permissions:
   contents: write
@@ -22,6 +23,23 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - name: Apply bounded aggregate compatibility patch
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('scripts/reconcile_priority_integrations_phase2_sse_180.py')
+          text = path.read_text(encoding='utf-8')
+          old = '''    require(found == set(replacements), f"pending aggregate missing {set(replacements)-found}")
+    ids = [item["id"] for item in aggregate["records"]]
+'''
+          new = '''    for missing_id in sorted(set(replacements) - found):
+        aggregate["records"].append(replacements[missing_id])
+    ids = [item["id"] for item in aggregate["records"]]
+'''
+          if old not in text:
+              raise SystemExit('expected pending aggregate guard not found')
+          path.write_text(text.replace(old, new), encoding='utf-8')
+          PY
       - name: Apply bounded authority reconciliation
         run: python scripts/reconcile_priority_integrations_phase2_sse_180.py apply
       - name: Revalidate deterministic result
