@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "CODEX_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_177_001",
+  "project_id": "lab",
+  "status": "AUTHORIZED_FOR_EXECUTION",
+  "objective": "Close PEND-LAB-047 by reconciling CURRENT_STATE.json, projects/lab/PENDING.json and registry/index.json exactly, preserving all unrelated structured history and all protected technical artifacts.",
+  "coordinator": "ChatGPT",
+  "executor": "CODEX_BOUNDED_EXECUTOR",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "1a54e7aa67981ea52deafd7d84f22ae7378bb9a7",
+  "head_policy": "VERIFY_LIVE_AT_USE",
+  "authorization_ref": "AUTHORIZATION_LAB_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_AND_CLOSURE_177",
+  "source_pending": "PEND-LAB-047",
+  "execution_method": {
+    "source": "AUTHENTICATED_GITHUB_CONTENTS",
+    "full_file_reconstruction": "LOCAL_EXACT_BYTES",
+    "original_blob_verification": "PASS_3_OF_3",
+    "mutation": "PARSED_JSON_TARGETED_SEMANTIC_UPDATES_FULL_FILE_SERIALIZATION"
+  },
+  "target_files": [
+    "CURRENT_STATE.json",
+    "projects/lab/PENDING.json",
+    "registry/index.json"
+  ],
+  "required_results": [
+    "ERR_LAB_011_REMOVED_FROM_OPEN_ERRORS",
+    "PEND_LAB_046_CLOSED",
+    "PEND_LAB_047_CLOSED",
+    "PEND_LAB_043_UNBLOCKED",
+    "CANDIDATE_002_APPROVED_AND_CANONICAL_REFERENCE_DESIGNATED",
+    "BEHAVIOR_CORE_EXTRACTED_AND_VALIDATED",
+    "AUTHORIZATION_176_PRESERVED_HISTORICAL_BLOCKED_CONSUMED",
+    "AUTHORIZATION_177_CONSUMED",
+    "INDEX_DISCOVERS_176_AND_177_RECORDS",
+    "NEXT_GATE_HUMAN_REVIEW_STATISTICS_COUNTER_STATIC_SUFFIX_001"
+  ],
+  "preservation": {
+    "global_phase": "PRIORITY_INTEGRATIONS_PHASE_1_CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED",
+    "unrelated_semantic_diff": "ZERO_REQUIRED",
+    "technical_artifact_diff": "ZERO_REQUIRED",
+    "carolina_repository_mutation": "NONE"
+  },
+  "acceptance_checks": [
+    "Original target Git blobs match b729e4a659fbd56dde2f130eafc26bee84f9ff7e, 39f7b319fc8a08d409468d9cecd54f04122d1a88 and 8925fd49e1f6af5b612691b35160638aa993fca8.",
+    "All target and supporting JSON parses.",
+    "Pending IDs are unique.",
+    "Index list paths are unique.",
+    "All newly indexed paths exist.",
+    "Counts are 101 authorizations and 83 evidence records after adding 176 and 177 to the governed baseline.",
+    "No material contradiction about authorizations 173 through 177 remains.",
+    "Protected technical artifacts remain unchanged.",
+    "Remote HEAD is verified after publication."
+  ],
+  "forbidden_actions": [
+    "MODIFY_TECHNICAL_ARTIFACTS",
+    "MODIFY_CANONICAL_REFERENCE",
+    "MODIFY_BEHAVIOR_CORE",
+    "CREATE_NEUTRAL_ADAPTATION",
+    "PROMOTE_AS_REUSABLE",
+    "INTEGRATE_INTO_PRODUCT",
+    "EXECUTE_RUNTIME_OR_DEPLOYMENT",
+    "MUTATE_CAROLINA_REPOSITORY",
+    "COMPACT_OR_REMOVE_UNRELATED_HISTORY",
+    "EXPAND_SCOPE"
+  ],
+  "stop_conditions": [
+    "REMOTE_HEAD_DIVERGED",
+    "ANY_TARGET_FILE_CANNOT_BE_READ_IN_FULL",
+    "UNRELATED_HISTORY_WOULD_BE_REMOVED_OR_COMPACTED",
+    "UNAUTHORIZED_TECHNICAL_ARTIFACT_CHANGE_REQUIRED",
+    "ADDITIONAL_CANONICAL_AGGREGATE_REQUIRES_MUTATION",
+    "VALIDATOR_FAILURE_REMAINS_UNRESOLVED",
+    "PRODUCT_INTEGRATION_OR_CAROLINA_MUTATION_REQUIRED",
+    "SCOPE_EXPANSION_REQUIRED"
+  ],
+  "response_contract": [
+    "RESULT",
+    "CHANGED_AGGREGATES",
+    "VALIDATION",
+    "PRESERVATION",
+    "AUTHORIZATION_CONSUMPTION",
+    "SINGLE_NEXT_ACTION"
+  ]
+}
