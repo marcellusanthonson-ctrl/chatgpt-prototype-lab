@@ -4,7 +4,7 @@
   "project_id": "lab",
   "title": "Software Solution Engineering priority criterion integration candidate",
   "status": "CANDIDATE",
-  "lifecycle_stage": "CONTRACT_COMPLETE",
+  "lifecycle_stage": "EVIDENCE_CLOSURE_EXECUTION_AUTHORIZED_NOT_STARTED",
   "priority_order": 2,
   "program_role": "PRIORITY_INTEGRATION_CRITICAL_PATH",
   "profile": "CRITERION_MODULE",
@@ -23,15 +23,16 @@
   "activation_contract": "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/ACTIVATION_CONTRACT.json",
   "test_program": {
     "current_design": "projects/lab/test-designs/SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json",
-    "design_status": "FINAL_REVIEW_COMPLETE_READY_FOR_SEPARATE_EXECUTION_AND_AUDIT_AUTHORIZATION",
-    "execution_authorized": false,
+    "design_status": "EXECUTION_AUTHORIZED_NOT_STARTED_EXTERNAL_AUDIT_NOT_AUTHORIZED",
+    "execution_authorized": true,
     "execution_completed": false,
     "external_audit_authorized": false,
     "external_audit_completed": false,
     "fixture_count": 32,
-    "minimum_future_outputs": 96
+    "minimum_future_outputs": 96,
+    "execution_authorization": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180"
   },
-  "current_state": "CONTRACT_COMPLETE_TEST_READY_EXECUTION_AND_AUDIT_NOT_AUTHORIZED",
+  "current_state": "CONTRACT_COMPLETE_SSE_TEST_EXECUTION_AUTHORIZED_NOT_STARTED_EXTERNAL_AUDIT_NOT_AUTHORIZED",
   "promotion_state": "NOT_PROPOSED_FOR_PROMOTION",
   "composition": {
     "follows": "INT-LAB-004",
@@ -58,7 +59,7 @@
   "product_effect": "NONE",
   "rag_effect": "NONE",
   "decision_ref": "DEC-LAB-030",
-  "authorization_ref": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_1_FACTORY_CONTRACT_COMPLETION_170_REVISION_2",
+  "authorization_ref": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180",
   "program_ref": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/MANIFEST.json",
-  "updated_at": "2026-08-02"
+  "updated_at": "2026-08-03"
 }

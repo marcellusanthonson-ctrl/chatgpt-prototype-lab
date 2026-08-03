@@ -3,7 +3,7 @@
   "project_id": "lab",
   "name": "LAB",
   "status": "active",
-  "current_phase": "PRIORITY_INTEGRATIONS_PHASE_1_CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED",
+  "current_phase": "PRIORITY_INTEGRATIONS_PHASE_2_SSE_EXECUTION_AUTHORIZED_NOT_STARTED_PRODUCT_LEADERSHIP_PREFLIGHT_BLOCKED",
   "updated_at": "2026-08-03",
   "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "canonical_branch": "main",
@@ -12,7 +12,7 @@
     "autonomous_model_authority": false
   },
   "summary": "Gobierno, autoridad, continuidad, auditoría y biblioteca documental gobernada entre proyectos.",
-  "content_completeness": "STRUCTURED_V2_WITH_PRIORITY_INTEGRATIONS_PHASE_1_AND_POST_178_CANONICAL_RECONCILIATION",
+  "content_completeness": "STRUCTURED_V2_WITH_PRIORITY_INTEGRATIONS_PHASE_2_SSE_AUTHORIZED_NOT_STARTED_AND_PL_PREFLIGHT_BLOCKED",
   "source_refs": [
     "projects/lab/PROJECT_STATE.md",
     "README.md",
@@ -175,7 +175,12 @@
     "registry/deltas/statistics-counter-source-package-adoption-178.json",
     "projects/lab/authorizations/AUTHORIZATION_LAB_POST_178_CANONICAL_STATE_AND_PHASE1_EVIDENCE_RECONCILIATION_179.json",
     "projects/lab/evidence/EVD-LAB-POST-178-CANONICAL-STATE-RECONCILIATION-179.json",
-    "registry/deltas/post-178-canonical-state-phase1-evidence-reconciliation-179.json"
+    "registry/deltas/post-178-canonical-state-phase1-evidence-reconciliation-179.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180.json",
+    "projects/lab/briefs/CODEX_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180_001.json",
+    "projects/lab/evidence/EVD-LAB-PRIORITY-INTEGRATIONS-PHASE-2-SSE-AUTHORITY-180.json",
+    "errors/ERR-LAB-012.json",
+    "registry/deltas/priority-integrations-phase2-sse-authority-180.json"
   ],
   "governance_paths": {
     "roadmap": "projects/lab/ROADMAP.json",
@@ -894,13 +899,15 @@
     }
   },
   "priority_integrations_program": {
-    "status": "PHASE_1_FACTORY_CONTRACT_COMPLETION_PASS",
+    "status": "PRIORITY_INTEGRATIONS_PHASE_2_SSE_EXECUTION_AUTHORIZED_NOT_STARTED_PRODUCT_LEADERSHIP_PREFLIGHT_BLOCKED",
     "priority_order": [
       "PRODUCT_LEADERSHIP",
       "SOFTWARE_SOLUTION_ENGINEERING"
     ],
-    "product_leadership": "CANDIDATE_CONTRACT_COMPLETE_TEST_003_NOT_EXECUTED",
-    "software_solution_engineering": "CANDIDATE_CONTRACT_COMPLETE_TEST_READY_EXECUTION_AND_AUDIT_NOT_AUTHORIZED",
+    "product_leadership": "PREFLIGHT_BLOCKED_NO_EXECUTION_AUTHORITY",
+    "software_solution_engineering": "SYNTHETIC_TEST_EXECUTION_AUTHORIZED_NOT_STARTED_EXTERNAL_AUDIT_NOT_AUTHORIZED",
+    "sse_execution_authority": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180",
+    "phase_3_external_audit": "NOT_AUTHORIZED",
     "composition_contract": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/contracts/PRODUCT-LEADERSHIP-TO-SSE-COMPOSITION-CONTRACT-001.json",
     "next_pending": "projects/lab/pending/PEND-LAB-045.json",
     "active": false,
@@ -923,8 +930,8 @@
     "runtime_effect": "NONE",
     "integration_effect": "NONE"
   },
-  "next_authorized_action": "NONE_AFTER_AUTHORIZATION_179_CONSUMPTION",
-  "next_recommended_transition": "SEPARATELY_AUTHORIZE_PRIORITY_INTEGRATIONS_PHASE_2_INDEPENDENT_EVIDENCE_CLOSURE",
+  "next_authorized_action": "CODEX_EXECUTE_SSE_SYNTHETIC_TEST_UNDER_AUTHORIZATION_180",
+  "next_recommended_transition": "EXECUTE_AND_PUBLISH_REPRODUCIBLE_SSE_SYNTHETIC_TEST_EVIDENCE_WITHOUT_EXTERNAL_AUDIT",
   "motion_statistics_counter_source_adoption_178": {
     "authorization": "AUTHORIZATION_LAB_STATISTICS_COUNTER_EXPERIMENT_SOURCE_ADOPTION_HUMAN_REVIEW_AND_CONDITIONAL_CLOSURE_178",
     "authorization_status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
@@ -938,5 +945,19 @@
     "official_landing_integration": "NOT_AUTHORIZED_NOT_PERFORMED",
     "runtime_effect": "NONE",
     "product_effect": "NONE"
+  },
+  "priority_integrations_phase2_authority_reconciliation_180": {
+    "authorization": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180",
+    "status": "GRANTED_STAGE_1_CONSUMED_STAGE_2_AUTHORIZED_NOT_STARTED",
+    "authorization_147": "SUPERSEDED_UNEXECUTED",
+    "error_012": "CLOSED_BY_AUTHORIZATION_180",
+    "sse_test": "AUTHORIZED_NOT_STARTED_32_FIXTURES_3_ARMS_MINIMUM_96_OUTPUTS",
+    "sse_external_audit": "NOT_AUTHORIZED",
+    "product_leadership": "PREFLIGHT_BLOCKED_NO_EXECUTION_AUTHORITY",
+    "aws_calls": 0,
+    "test_outputs_generated": 0,
+    "runtime_effect": "NONE",
+    "product_effect": "NONE",
+    "integration_effect": "NONE"
   }
 }

@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ERR-LAB-012",
+  "title": "Stale and undiscoverable SSE authorization 147 contradicted current Phase 2 authority state",
+  "project_id": "lab",
+  "project_scope": [
+    "lab"
+  ],
+  "classification": "CONFIRMED",
+  "technical_determination": "CONFIRMED_REMEDIATED",
+  "severity": "HIGH",
+  "status": "CLOSED_BY_AUTHORIZATION_180",
+  "lifecycle_state": "CLOSED",
+  "canonical_path": "errors/ERR-LAB-012.json",
+  "created_at": "2026-08-03",
+  "causes": [
+    "AUTHORIZATION_147_REMAINED_GRANT_MARKED_AFTER_REMOTE_HEAD_DRIFT",
+    "AUTHORIZATION_147_BUNDLED_PHASE_2_TEST_WITH_PHASE_3_EXTERNAL_AUDIT",
+    "AUTHORIZATION_147_DELTA_NOT_DISCOVERED_BY_REGISTRY_INDEX",
+    "CURRENT_SSE_MANIFEST_INTEGRATION_AND_PENDING_RECORDS_DECLARED_NO_EXECUTION_AUTHORITY"
+  ],
+  "impact": "AMBIGUOUS_AND_CONTRADICTORY_SSE_EXECUTION_AUTHORITY_BLOCKED_SAFE_PHASE_2_ENTRY",
+  "remediation": [
+    "PRESERVE_AUTHORIZATION_147_HISTORICALLY_AS_UNEXECUTED",
+    "SUPERSEDE_147_EXECUTION_AUTHORITY",
+    "SEPARATE_SSE_SYNTHETIC_TEST_FROM_EXTERNAL_AUDIT",
+    "REGISTER_SUCCESSOR_AUTHORIZATION_180_AND_DISCOVERABILITY",
+    "PRESERVE_PRODUCT_LEADERSHIP_PREFLIGHT_BLOCK"
+  ],
+  "closed_by_authorization": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180",
+  "test_execution_effect": "NONE_DURING_RECONCILIATION",
+  "audit_execution_effect": "NONE",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "integration_effect": "NONE",
+  "source_refs": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_SSE_TEST_EXECUTION_AND_READ_ONLY_AUDIT_147.json",
+    "registry/deltas/sse-test-execution-and-read-only-audit-147.json",
+    "projects/lab/test-designs/SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json",
+    "projects/lab/integrations/INT-LAB-005.json",
+    "projects/lab/pending/PEND-LAB-027.json",
+    "projects/lab/pending/PEND-LAB-045.json",
+    "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/ROADMAP.json"
+  ]
+}

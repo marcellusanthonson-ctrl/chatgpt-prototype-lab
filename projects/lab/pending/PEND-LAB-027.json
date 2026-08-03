@@ -1,17 +1,25 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "id": "PEND-LAB-027",
-  "status": "PROPOSED_REQUIRES_SEPARATE_AUTHORIZATION",
+  "status": "SUPERSEDED_BY_PHASE_SEPARATION_AND_AUTHORIZATION_180",
   "type": "SOFTWARE_SOLUTION_ENGINEERING_DISCRIMINATING_TEST_EXECUTION_AND_EXTERNAL_AUDIT",
   "subject": "Execute and independently audit the Software Solution Engineering activation and value discrimination test design",
   "priority": "HIGH",
   "authorization_required": true,
-  "current_authority": "NONE",
+  "current_authority": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180",
   "automatic_approval": false,
-  "preserves_pending": ["PEND-LAB-026"],
-  "next_authorized_action": "NONE_UNTIL_SEPARATE_EXPLICIT_AUTHORIZATION",
+  "preserves_pending": [
+    "PEND-LAB-026"
+  ],
+  "next_authorized_action": "CODEX_EXECUTE_SSE_SYNTHETIC_TEST_UNDER_AUTHORIZATION_180",
   "source_refs": [
     "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/MANIFEST.json",
-    "projects/lab/test-designs/SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json"
-  ]
+    "projects/lab/test-designs/SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180.json",
+    "projects/lab/evidence/EVD-LAB-PRIORITY-INTEGRATIONS-PHASE-2-SSE-AUTHORITY-180.json"
+  ],
+  "test_execution": "AUTHORIZED_NOT_STARTED",
+  "external_audit": "NOT_AUTHORIZED_REQUIRES_SEPARATE_PHASE_3_AUTHORIZATION",
+  "superseded_combined_scope": "TEST_EXECUTION_AND_EXTERNAL_AUDIT",
+  "successor_authorization": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180"
 }

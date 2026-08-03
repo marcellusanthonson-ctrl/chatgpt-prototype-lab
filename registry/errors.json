@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1.0",
-  "updated_at": "2026-07-31",
+  "updated_at": "2026-08-03",
   "records": [
     {
       "id": "ERR-LAB-001",
@@ -96,7 +96,10 @@
     {
       "id": "ERR-LAB-007",
       "title": "Localized visual substitution expanded into unauthorized creative revision",
-      "project_scope": ["lab", "symphonie"],
+      "project_scope": [
+        "lab",
+        "symphonie"
+      ],
       "severity": "HIGH",
       "status": "CONTAINED",
       "lifecycle_state": "CONTAINED",
@@ -106,7 +109,9 @@
     {
       "id": "ERR-LAB-008",
       "title": "General LAB validator crashes when array-valued registry delta fields are interpreted as scalar paths",
-      "project_scope": ["lab"],
+      "project_scope": [
+        "lab"
+      ],
       "severity": "MEDIUM",
       "status": "CORRECTED_VALIDATED",
       "lifecycle_state": "RESOLVED_VALIDATED",
@@ -117,7 +122,9 @@
     {
       "id": "ERR-LAB-009",
       "title": "Mandatory M5 rollback drill validators are incompatible with the authorized post-grant execution state",
-      "project_scope": ["lab"],
+      "project_scope": [
+        "lab"
+      ],
       "severity": "HIGH",
       "status": "RESOLVED",
       "lifecycle_state": "RESOLVED_VALIDATED",
@@ -133,17 +140,21 @@
     {
       "id": "ERR-LAB-010",
       "title": "Motion roadmap extraction omitted required geometry stabilization and catalog prevented valid human review",
-      "project_scope": ["lab"],
+      "project_scope": [
+        "lab"
+      ],
       "severity": "HIGH",
       "status": "CLOSED",
       "lifecycle_state": "CLOSED",
       "canonical_path": "errors/ERR-LAB-010.json",
       "updated_at": "2026-08-02"
-    }
-    ,{
+    },
+    {
       "id": "ERR-LAB-011",
       "title": "Motion source fidelity and visual anatomy contract omitted",
-      "project_scope": ["lab"],
+      "project_scope": [
+        "lab"
+      ],
       "severity": "HIGH",
       "status": "OPEN_AWAITING_HUMAN_SOURCE_FIDELITY_DECISION",
       "lifecycle_state": "OPEN",
@@ -151,6 +162,18 @@
       "updated_at": "2026-08-02",
       "repair_authorized": true,
       "closure_gate": "HUMAN_SOURCE_FIDELITY_DECISION"
+    },
+    {
+      "id": "ERR-LAB-012",
+      "title": "Stale and undiscoverable SSE authorization 147 contradicted current Phase 2 authority state",
+      "status": "CLOSED_BY_AUTHORIZATION_180",
+      "lifecycle_state": "CLOSED",
+      "severity": "HIGH",
+      "project_scope": [
+        "lab"
+      ],
+      "canonical_path": "errors/ERR-LAB-012.json",
+      "updated_at": "2026-08-03"
     }
   ]
 }

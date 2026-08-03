@@ -1,19 +1,19 @@
-# Continuidad LAB — reconciliación canónica posterior a 178
+# Continuidad LAB — Fase 2 SSE autorizada, no iniciada
 
-El estado estructurado fue reconciliado bajo `AUTHORIZATION_LAB_POST_178_CANONICAL_STATE_AND_PHASE1_EVIDENCE_RECONCILIATION_179` después de comparar el HEAD vigente con el squash de Fase 1.
+El HEAD canónico conserva Fase 1 completa y abre únicamente el track sintético de Software Solution Engineering mediante `AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180`.
 
-## Estado vigente
+## Reconciliación de autoridad
 
-- Fase global: `PRIORITY_INTEGRATIONS_PHASE_1_CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED`.
-- Product Leadership y Software Solution Engineering conservan sus contratos de Fase 1 sin cambios.
-- La evidencia `EVD-LAB-PRIORITY-INTEGRATIONS-PHASE-1-170` registra ahora el squash merge y la verificación remota completados.
-- Los dos efectos iniciales de Motion tienen referencia canónica designada y behavior core validado.
-- `STATISTICS-COUNTER-STATIC-SUFFIX-001` fue aprobado por Jonathan Martínez, cerró Stage 2 y está listo únicamente para consumo futuro acotado con autorización separada.
+- `AUTHORIZATION_LAB_SSE_TEST_EXECUTION_AND_READ_ONLY_AUDIT_147` se preserva históricamente como `SUPERSEDED_UNEXECUTED`: su parent quedó obsoleto, su stop condition de `REMOTE_HEAD_MISMATCH` aplica y agrupaba indebidamente la prueba de Fase 2 con la auditoría de Fase 3.
+- `ERR-LAB-012` quedó confirmado y cerrado por la reconciliación 180.
+- Product Leadership permanece bloqueado por `BLOCKED_NO_ELIGIBLE_BOUNDED_CREATOR`; Test 003 no está autorizado ni ejecutado.
 
-## Límites
+## Autoridad activa
 
-No existe autorización vigente para Fase 2, ejecución de tests, auditoría externa, activación, cambios del pointer o selector, integración en Carolina, runtime, despliegue o promoción reusable.
+La única autoridad activa permite a Codex ejecutar la prueba SSE congelada de 32 fixtures, tres arms y al menos 96 outputs, con hashes, procedencia, scoring ciego, costos y transferencia negativa.
+
+No autoriza auditoría externa, AWS, Terraform, activación, integración, promoción, pointer, selector, shadow registry, producto, runtime, Symphonie ni datos reales.
 
 ## Siguiente acción única
 
-Autorizar separadamente la Fase 2 de cierre de evidencia independiente para Product Leadership y Software Solution Engineering.
+Codex debe ejecutar y publicar la evidencia reproducible de la prueba sintética SSE bajo la autorización 180. La auditoría externa requerirá una autorización separada de Fase 3.

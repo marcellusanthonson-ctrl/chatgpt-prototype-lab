@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-08-02",
+  "updated_at": "2026-08-03",
   "records": [
     {
       "id": "INT-SYM-001",
@@ -65,7 +65,10 @@
       "status": "CANDIDATE",
       "priority_order": 2,
       "canonical_path": "projects/lab/integrations/INT-LAB-005.json",
-      "updated_at": "2026-08-02"
+      "updated_at": "2026-08-03",
+      "lifecycle_stage": "EVIDENCE_CLOSURE_EXECUTION_AUTHORIZED_NOT_STARTED",
+      "test_execution_authorized": true,
+      "external_audit_authorized": false
     }
   ],
   "priority_program": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/MANIFEST.json"

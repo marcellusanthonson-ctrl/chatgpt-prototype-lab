@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1.0",
   "project_id": "lab",
-  "updated_at": "2026-08-02",
+  "updated_at": "2026-08-03",
   "records": [
     {
       "id": "INT-LAB-001",
@@ -32,10 +32,13 @@
     {
       "id": "INT-LAB-005",
       "status": "CANDIDATE",
-      "lifecycle_stage": "CONTRACT_COMPLETE",
+      "lifecycle_stage": "EVIDENCE_CLOSURE_EXECUTION_AUTHORIZED_NOT_STARTED",
       "priority_order": 2,
       "canonical_path": "projects/lab/integrations/INT-LAB-005.json",
-      "title": "Software Solution Engineering priority criterion integration candidate"
+      "title": "Software Solution Engineering priority criterion integration candidate",
+      "test_execution_authorized": true,
+      "external_audit_authorized": false,
+      "authorization_ref": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180"
     }
   ],
   "priority_program": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/MANIFEST.json",

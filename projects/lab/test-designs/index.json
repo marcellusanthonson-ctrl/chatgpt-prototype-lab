@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "project_id": "lab",
-  "updated_at": "2026-07-27",
+  "updated_at": "2026-08-03",
   "records": [
     {
       "id": "FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-001",
@@ -31,6 +31,16 @@
       "authorization_id": "AUTHORIZATION_LAB_CLAUDE_AUDIT_RECONCILIATION_AND_TEST_003_HARDENING_103",
       "pending_id": "PEND-LAB-029",
       "updated_at": "2026-07-27"
+    },
+    {
+      "id": "SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001",
+      "status": "EXECUTION_AUTHORIZED_NOT_STARTED_EXTERNAL_AUDIT_NOT_AUTHORIZED",
+      "canonical_path": "projects/lab/test-designs/SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json",
+      "authorization_id": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180",
+      "fixture_count": 32,
+      "arm_count": 3,
+      "minimum_future_outputs": 96,
+      "updated_at": "2026-08-03"
     }
   ]
 }

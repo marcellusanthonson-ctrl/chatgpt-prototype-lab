@@ -492,14 +492,32 @@
       "next_gate": "SEPARATE_EXPLICIT_PRODUCT_INTEGRATION_AUTHORIZATION_IF_FUTURE_CONSUMPTION_IS_DESIRED",
       "runtime_effect": "NONE",
       "product_effect": "NONE"
+    },
+    {
+      "order": 36,
+      "item": "PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_AUTHORIZATION_180",
+      "status": "AUTHORIZED_NOT_STARTED_PRODUCT_LEADERSHIP_PREFLIGHT_BLOCKED",
+      "authorization": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180",
+      "supersedes_authorization": "AUTHORIZATION_LAB_SSE_TEST_EXECUTION_AND_READ_ONLY_AUDIT_147",
+      "error": "ERR-LAB-012",
+      "sse_test_contract": "32_FIXTURES_3_ARMS_MINIMUM_96_OUTPUTS",
+      "external_audit": "NOT_AUTHORIZED_PHASE_3_SEPARATE",
+      "product_leadership": "BLOCKED_NO_ELIGIBLE_BOUNDED_CREATOR",
+      "test_execution_during_reconciliation": 0,
+      "next_gate": "CODEX_EXECUTE_SSE_SYNTHETIC_TEST_UNDER_AUTHORIZATION_180",
+      "runtime_effect": "NONE",
+      "product_effect": "NONE",
+      "integration_effect": "NONE"
     }
   ],
   "priority_integrations_program": {
     "program_ref": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/MANIFEST.json",
     "roadmap_ref": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/ROADMAP.json",
-    "status": "PHASE_1_COMPLETE_LATER_PHASES_NOT_AUTHORIZED",
+    "status": "PRIORITY_INTEGRATIONS_PHASE_2_SSE_EXECUTION_AUTHORIZED_NOT_STARTED_PRODUCT_LEADERSHIP_PREFLIGHT_BLOCKED",
     "phase_1": "COMPLETE_PASS",
-    "phase_2": "NOT_AUTHORIZED",
-    "next_pending": "projects/lab/pending/PEND-LAB-045.json"
+    "phase_2": "SSE_AUTHORIZED_NOT_STARTED_PRODUCT_LEADERSHIP_BLOCKED",
+    "phase_3": "NOT_AUTHORIZED",
+    "next_pending": "projects/lab/pending/PEND-LAB-045.json",
+    "next_authorized_action": "CODEX_EXECUTE_SSE_SYNTHETIC_TEST_UNDER_AUTHORIZATION_180"
   }
 }
