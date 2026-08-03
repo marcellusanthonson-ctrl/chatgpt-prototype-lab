@@ -2,7 +2,7 @@
   "schema_version": "1.1.0",
   "id": "PEND-LAB-043",
   "project_id": "lab",
-  "status": "ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_COMPLETE_REMAINING_MOTION_LIBRARY_GATES_PENDING",
+  "status": "STATISTICS_COUNTER_FUNCTIONAL_SOURCE_PRESERVED_HUMAN_REVIEW_PENDING",
   "type": "MOTION_SYSTEM_HUMAN_GATE_AND_LIBRARY_POPULATION",
   "title": "Human review and staged population of the transversal motion-effects library",
   "priority": "HIGH",
@@ -13,11 +13,13 @@
     "DESIGNATE_CAROLINA_ROADMAP_SECTION_AS_CANONICAL_REFERENCE_IMPLEMENTATION",
     "EXTRACT_SOURCE_INDEPENDENT_ROADMAP_BEHAVIOR_CORE",
     "VALIDATE_ROADMAP_BEHAVIOR_CORE_IN_NORMAL_AND_REDUCED_MOTION_MATRIX",
-    "RECONCILE_CANONICAL_AGGREGATES_AND_CLOSE_PEND_LAB_047"
+    "RECONCILE_CANONICAL_AGGREGATES_AND_CLOSE_PEND_LAB_047",
+    "PRESERVE_STATISTICS_COUNTER_ARCHIVE_PROVENANCE_AND_COMPLETE_CONTENT_INDEX_IN_LAB",
+    "PRESERVE_EXACT_STATISTICS_COUNTER_DOM_AND_MOTION_SCRIPT_EXCERPTS",
+    "PUBLISH_STATISTICS_COUNTER_DIRECT_REVIEW_HARNESS"
   ],
   "required_actions": [
-    "PRESERVE_STATISTICS_COUNTER_HUMAN_REVIEW_PENDING_STATE",
-    "HUMAN_REVIEW_STATISTICS_COUNTER_STATIC_SUFFIX_001",
+    "HUMAN_REVIEW_PRESERVED_STATISTICS_COUNTER_FUNCTIONAL_INTEGRATION_SOURCE",
     "SEPARATELY_AUTHORIZE_NEUTRAL_ADAPTATION_IF_DESIRED",
     "PROMOTE_REVISE_OR_REJECT_OTHER_INITIAL_EFFECTS",
     "IMPLEMENT_INDUSTRY_EFFECTS_IN_BOUNDED_BATCHES",
@@ -39,10 +41,17 @@
   },
   "statistics_counter": {
     "effect_id": "STATISTICS-COUNTER-STATIC-SUFFIX-001",
-    "status": "HUMAN_REVIEW_PENDING",
-    "next_single_gate": "HUMAN_REVIEW_STATISTICS_COUNTER_STATIC_SUFFIX_001"
+    "status": "FUNCTIONAL_SOURCE_PRESERVED_HUMAN_REVIEW_PENDING",
+    "source_package_id": "CAROLINA-STATISTICS-MOTION-EXPERIMENT-001",
+    "source_package_manifest": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/SOURCE_PACKAGE_MANIFEST.json",
+    "archive_sha256": "8eecd53dc698d4587dfa882a5eabe701ec9a77a45bb9747d57f0cf5d68c876b0",
+    "original_monolith_sha256": "74274e55ff1c8b9edd849d433f12bf6ffe0abb00097872feb6bc7adde83b463e",
+    "exact_dom_excerpt": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_SECTION.html",
+    "exact_motion_script_excerpt": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_MOTION.js",
+    "direct_review_artifact": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/DIRECT_HUMAN_REVIEW.html",
+    "next_single_gate": "DIRECT_HUMAN_REVIEW_OF_PRESERVED_FUNCTIONAL_INTEGRATION_SOURCE"
   },
-  "current_authority": "NONE_AFTER_AUTHORIZATION_177_CONSUMPTION",
+  "current_authority": "AUTHORIZATION_178_STAGE_2_CONDITIONALLY_AUTHORIZED_AWAITING_EXPLICIT_HUMAN_DETERMINATION",
   "source_refs": [
     "projects/lab/pending/PEND-LAB-047.json",
     "projects/lab/authorizations/AUTHORIZATION_LAB_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_AND_CLOSURE_177.json",
@@ -53,7 +62,11 @@
     "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/BEHAVIOR_CORE_VALIDATION_RESULTS.json",
     "projects/lab/evidence/EVD-LAB-ROADMAP-CANONICAL-REFERENCE-BEHAVIOR-CORE-176.json",
     "registry/deltas/roadmap-canonical-reference-behavior-core-176.json",
-    "registry/deltas/pend-lab-047-exact-canonical-aggregate-reconciliation-177.json"
+    "registry/deltas/pend-lab-047-exact-canonical-aggregate-reconciliation-177.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_STATISTICS_COUNTER_EXPERIMENT_SOURCE_ADOPTION_HUMAN_REVIEW_AND_CONDITIONAL_CLOSURE_178.json",
+    "projects/lab/evidence/EVD-LAB-STATISTICS-COUNTER-SOURCE-PACKAGE-178.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/SOURCE_PACKAGE_MANIFEST.json",
+    "registry/deltas/statistics-counter-source-package-adoption-178.json"
   ],
   "authority_effect": "NONE",
   "runtime_effect": "NONE",

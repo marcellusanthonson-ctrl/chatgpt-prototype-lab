@@ -1,0 +1,271 @@
+{
+  "schema_version": "1.0.0",
+  "experiment_id": "CAROLINA_MD_STATISTICS_MOTION_EXPERIMENT_001",
+  "brief_id": "CODEX_LOCAL_CAROLINA_STATS_DIRECT_BEHAVIOR_TRANSPLANT_ATTEMPT_008",
+  "task_id": "CAROLINA-STATS-DIRECT-BEHAVIOR-TRANSPLANT-008",
+  "attempt_id": "ATTEMPT-008",
+  "authorization_id": "AUTHORIZATION_LOCAL_CAROLINA_STATS_DIRECT_BEHAVIOR_TRANSPLANT_ATTEMPT_008",
+  "authorization_status": "CONSUMED",
+  "status": "TECHNICAL_CANDIDATE_READY_FOR_HUMAN_REVIEW",
+  "completed_at": "2026-08-01T19:17:43.9410277-04:00",
+  "workspace": "C:\\Users\\JF Martin\\Documents\\Proyectos\\Carolina Clinical Os\\carolina-md-experiments",
+  "repository_context": "NO_REPOSITORY_LOCAL_WORKSPACE",
+  "active_attempt": "ATTEMPT-009",
+  "previous_attempt": "ATTEMPT-008",
+  "related_authorization": "AUTHORIZATION_LOCAL_CAROLINA_STATS_STATIC_SUFFIX_CORRECTION_ATTEMPT_009",
+  "documentary_reconciliation_authorization": "AUTHORIZATION_LOCAL_CAROLINA_STATS_ATTEMPT_009_DOCUMENTARY_RECONCILIATION",
+  "implementation_status": "HUMAN_APPROVED",
+  "documentary_status": "RECONCILED",
+  "audit_reference": "AUDIT_LOCAL_CAROLINA_STATS_ATTEMPT_009_POSTHOC_001",
+  "audit_verdict": "IMPLEMENTATION_CONFIRMED_PARTIAL_EVIDENCE_PRESENT",
+  "attempt_009_record": {
+    "baseline": {
+      "attempt_id": "ATTEMPT-008",
+      "path": "archive/statistics-motion-001-attempt-008-human-reviewed-pre-static-plus-correction/CAROLINA_MD_STATISTICS_MOTION_EXPERIMENT_001.html",
+      "sha256": "97d42264777ead2c7efe1ec6a24bf9f0d7578c49614fe1745ed1d5a8e891ba6a",
+      "bytes": 1865892,
+      "inventory_path": "archive/statistics-motion-001-attempt-008-human-reviewed-pre-static-plus-correction.INVENTORY.json",
+      "inventory_sha256": "db611153953952beb4402dc263e12d31a2b53eaa9134d5ab2807b0efa7204814"
+    },
+    "result": {
+      "attempt_id": "ATTEMPT-009",
+      "path": "experiments/statistics-motion-001/CAROLINA_MD_STATISTICS_MOTION_EXPERIMENT_001.html",
+      "sha256": "74274e55ff1c8b9edd849d433f12bf6ffe0abb00097872feb6bc7adde83b463e",
+      "bytes": 1866483,
+      "protocol": "file://"
+    },
+    "functional_files_modified": [
+      "experiments/statistics-motion-001/CAROLINA_MD_STATISTICS_MOTION_EXPERIMENT_001.html"
+    ],
+    "implementation_summary": "Separated the 1000 numeric value from its persistent static plus suffix, reserved four-digit width, targeted JavaScript updates to the numeric node only, and deferred initialization until document.fonts.ready.",
+    "human_result": {
+      "classification": "HUMAN_REPORTED_AND_APPROVED",
+      "statement": "Jonathan Martínez confirmó que ATTEMPT-009 funciona correctamente: los números se animan, el signo `+` permanece estático y el efecto se percibe correcto."
+    },
+    "landing_integration": "NOT_AUTHORIZED_NOT_PERFORMED"
+  },
+  "documentary_reconciliation": {
+    "authorization_id": "AUTHORIZATION_LOCAL_CAROLINA_STATS_ATTEMPT_009_DOCUMENTARY_RECONCILIATION",
+    "authorization_state": "CONSUMED",
+    "source_audit": "AUDIT_LOCAL_CAROLINA_STATS_ATTEMPT_009_POSTHOC_001",
+    "files_modified_or_created": [
+      "experiments/statistics-motion-001/EXPERIMENT_MANIFEST.json",
+      "experiments/statistics-motion-001/evidence/SOURCE_INTEGRITY_ATTEMPT_009.json",
+      "experiments/statistics-motion-001/evidence/VALIDATION_REPORT_ATTEMPT_009.md"
+    ],
+    "html_unchanged_during_reconciliation": true,
+    "product_repository_accessed": false,
+    "landing_integration": "NOT_AUTHORIZED_NOT_PERFORMED"
+  },
+  "primary_deliverable": {
+    "path": "experiments/statistics-motion-001/CAROLINA_MD_STATISTICS_MOTION_EXPERIMENT_001.html",
+    "sha256_before": "5c4192336bfb1ca21458e142b8e70037b7cabf1b1acc670b46409c25fc606e67",
+    "bytes_before": 1881547,
+    "sha256_after": "97d42264777ead2c7efe1ec6a24bf9f0d7578c49614fe1745ed1d5a8e891ba6a",
+    "bytes_after": 1865892,
+    "protocol": "file://",
+    "external_runtime_requests": 0
+  },
+  "functional_baseline": {
+    "attempt_id": "ATTEMPT-004",
+    "path": "archive/statistics-motion-001-attempt-004/CAROLINA_MD_STATISTICS_MOTION_EXPERIMENT_001.html",
+    "expected_sha256": "7e6c1ec587b4e6a9f01fcdee6da93cd99f25e9f0129602b84d4c06dfcbe27393",
+    "observed_sha256": "7e6c1ec587b4e6a9f01fcdee6da93cd99f25e9f0129602b84d4c06dfcbe27393",
+    "verified": true,
+    "browser_mode": "VISIBLE_NON_HEADLESS_CHROME_FILE_PROTOCOL",
+    "natural_playback_reproduced": true,
+    "manual_controls_reproduced": [
+      "reset",
+      "final",
+      "speed_0.5x",
+      "speed_1.5x",
+      "reduced_motion"
+    ],
+    "page_errors": 0,
+    "baseline_engine_extract": {
+      "source_lines": "365-626",
+      "characters": 9562,
+      "sha256_utf8": "3857740dc9199e4a34cec6e894e84d561ac0ec3164f3933413ab486ecd27aeca"
+    }
+  },
+  "visual_baseline": {
+    "attempt_id": "ATTEMPT-007",
+    "expected_sha256": "5c4192336bfb1ca21458e142b8e70037b7cabf1b1acc670b46409c25fc606e67",
+    "observed_sha256": "5c4192336bfb1ca21458e142b8e70037b7cabf1b1acc670b46409c25fc606e67",
+    "verified": true,
+    "archive_path": "archive/statistics-motion-001-attempt-007-human-rejected-pre-attempt-008",
+    "archive_inventory_path": "archive/statistics-motion-001-attempt-007-human-rejected-pre-attempt-008.INVENTORY.json",
+    "archive_inventory_sha256": "22fe6e0b8a0bfce9b6d0309eb391d13cca7cc32441339147989160d4787d5cc1",
+    "archive_inventory_bytes": 37578,
+    "archive_file_count": 132,
+    "archive_directory_count": 28,
+    "archive_total_file_bytes": 33119553,
+    "archive_integrity": "PRE_ARCHIVE_INVENTORY_EQUALS_POST_ARCHIVE_INVENTORY"
+  },
+  "diagnosis": {
+    "attempt_004": "Persistent canonical nodes, direct textContent updates, easeOutCubic counters, tracked requestAnimationFrame and timeout handles, monotonic run token, single 40-percent IntersectionObserver trigger.",
+    "attempt_007": "Canonical glyphs were made transparent; overlays inherited transparency; the explicit plus color could survive alone; innerHTML recreated the suffix; reveal state and final DOM restoration caused disappearance and reappearance.",
+    "reproduced_attempt_007_before_patch": {
+      "sampled_frames": 115,
+      "plus_only_or_transparent_numeric_frames": 100,
+      "transparent_year_frames": 100,
+      "empty_portal_overlay_frames": 20
+    }
+  },
+  "behavioral_engine": {
+    "origin": "DIRECT_MINIMAL_TRANSPLANT_FROM_ATTEMPT_004",
+    "candidate_engine_sha256_utf8": "e9e6b85407bf265c09596c81f85656ea8e874b2e5d28c46975b812575e493d65",
+    "counter_easing": "easeOutCubic",
+    "patients": {
+      "target": 1000,
+      "delay_ms": 0,
+      "duration_ms": 1600,
+      "persistent_plus_node": true
+    },
+    "years": {
+      "target": 28,
+      "delay_ms": 100,
+      "duration_ms": 1250
+    },
+    "pillars": {
+      "sequence": [
+        "Audición",
+        "Audición, Lenguaje",
+        "Audición, Lenguaje y TDAH"
+      ],
+      "delay_ms": 200,
+      "step_ms": 205,
+      "number_3_mutated": false
+    },
+    "portal": {
+      "sequence": [
+        "24",
+        "24/",
+        "24/7"
+      ],
+      "delay_ms": 320,
+      "step_ms": 180,
+      "empty_state_possible": false
+    },
+    "sequence_completion_ms": 1800,
+    "trigger": "IntersectionObserver threshold 0.4 or existing replay control",
+    "speed": 1,
+    "runtime_overlays": 0,
+    "runtime_state_machine": false,
+    "watchdog": false,
+    "inner_html_per_frame": false,
+    "reveal_classes_mutated": false
+  },
+  "validation": {
+    "browser_mode": "VISIBLE_NON_HEADLESS_CHROME_FILE_PROTOCOL",
+    "complete_independent_playbacks": 5,
+    "playback_types": [
+      "natural",
+      "manual_replay",
+      "manual_replay",
+      "manual_replay",
+      "manual_replay"
+    ],
+    "sampled_frames_per_playback": [
+      139,
+      137,
+      136,
+      136,
+      136
+    ],
+    "sampled_frames_total": 684,
+    "duration_ms_per_playback": [
+      2337,
+      2256,
+      2265,
+      2263,
+      2264
+    ],
+    "visibility_continuous_all_indicators": true,
+    "patients_sequence_monotonic_0_to_1000": true,
+    "patients_plus_identity_stable": true,
+    "isolated_plus_frames": 0,
+    "years_sequence_monotonic_0_to_28": true,
+    "number_3_sequence": [
+      "3"
+    ],
+    "portal_sequence": [
+      "24",
+      "24/",
+      "24/7"
+    ],
+    "empty_indicator_frames": 0,
+    "flicker_frames": 0,
+    "abnormal_reappearance_frames": 0,
+    "restart_events": 0,
+    "loop_events": 0,
+    "temporary_nodes_max": 0,
+    "runtime_residual_classes": 0,
+    "grid_class_stable_all_frames": true,
+    "final_state_stable_all_playbacks": true,
+    "console_and_runtime_errors": 0
+  },
+  "visual_validation": {
+    "reference": "ATTEMPT-007_VISIBLE_BROWSER_INSTANCE_PRESERVED_BEFORE_PATCH",
+    "shell_outside_script_byte_identical": true,
+    "grid_final_dom_identical": true,
+    "controls_final_dom_identical": true,
+    "status_final_text_identical": true,
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 1000,
+        "different_pixels": 0
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "different_pixels": 0
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "different_pixels": 0
+      }
+    ],
+    "typography_changed": false,
+    "color_changed": false,
+    "spacing_changed": false,
+    "alignment_changed": false,
+    "dimensions_changed": false,
+    "layout_changed": false,
+    "responsive_changed": false,
+    "texts_changed": false,
+    "backgrounds_changed": false,
+    "composition_changed": false
+  },
+  "source_integrity": {
+    "change_class": "INLINE_JAVASCRIPT_REPLACEMENT_AND_MANIFEST_UPDATE_ONLY",
+    "visual_shell_outside_script_unchanged": true,
+    "canonical_markup_unchanged": true,
+    "canonical_css_unchanged": true,
+    "fonts_unchanged": true,
+    "previous_manifest_sha256": "27a95938e7ea57ac04a75044024fd257082cd04ac9734b76d0f7709bc066eb8e",
+    "previous_manifest_bytes": 5386
+  },
+  "execution": {
+    "network_requests": 0,
+    "git_commands_executed": 0,
+    "npm_commands_executed": 0,
+    "dependencies_installed": 0,
+    "build_executed": false,
+    "lint_executed": false,
+    "dev_server_executed": false,
+    "commit_executed": false,
+    "push_executed": false,
+    "deployment_executed": false,
+    "product_repository_accessed": false,
+    "product_integration_status": "NOT_INTEGRATED"
+  },
+  "human_review": {
+    "required": true,
+    "maximum_codex_classification": "TECHNICAL_CANDIDATE_READY_FOR_HUMAN_REVIEW",
+    "failure_classification_if_visible_defect_is_observed": "HUMAN_REVIEW_FAILED"
+  },
+  "next_action": "JONATHAN_MARTINEZ_OPEN_LOCAL_HTML_AND_REVIEW_FIVE_OR_MORE_PLAYBACKS"
+}

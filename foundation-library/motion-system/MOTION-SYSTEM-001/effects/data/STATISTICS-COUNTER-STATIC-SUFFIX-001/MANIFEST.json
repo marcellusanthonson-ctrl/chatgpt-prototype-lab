@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "effect_id": "STATISTICS-COUNTER-STATIC-SUFFIX-001",
   "canonical_name": "Statistics Counter with Static Suffix",
   "level": "COMPOSITION",
@@ -22,8 +22,8 @@
     "MODERATE_MOTION_RISK"
   ],
   "reduced_motion_strategy": "FINAL_STATE_IMMEDIATE",
-  "status": "HUMAN_REVIEW_PENDING",
-  "maximum_authorized_status": "HUMAN_REVIEW_PENDING",
+  "status": "FUNCTIONAL_SOURCE_PRESERVED_HUMAN_REVIEW_PENDING",
+  "maximum_authorized_status": "FUNCTIONAL_SOURCE_PRESERVED_HUMAN_REVIEW_PENDING",
   "customization_levels": [
     "L0_DEFAULT",
     "L1_TOKEN_CUSTOMIZATION",
@@ -32,5 +32,18 @@
     "L4_SIGNATURE_DERIVATION"
   ],
   "source_reference": "CAROLINA-STATS-ATTEMPT-009",
-  "product_integration_status": "NOT_AUTHORIZED_NOT_PERFORMED"
+  "product_integration_status": "NOT_AUTHORIZED_NOT_PERFORMED",
+  "authorization_ref": "AUTHORIZATION_LAB_STATISTICS_COUNTER_EXPERIMENT_SOURCE_ADOPTION_HUMAN_REVIEW_AND_CONDITIONAL_CLOSURE_178",
+  "canonical_reference_designation": false,
+  "behavior_core_extraction": false,
+  "source_package": {
+    "source_package_id": "CAROLINA-STATISTICS-MOTION-EXPERIMENT-001",
+    "manifest": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/SOURCE_PACKAGE_MANIFEST.json",
+    "archive_sha256": "8eecd53dc698d4587dfa882a5eabe701ec9a77a45bb9747d57f0cf5d68c876b0",
+    "original_monolith_sha256": "74274e55ff1c8b9edd849d433f12bf6ffe0abb00097872feb6bc7adde83b463e",
+    "exact_dom_excerpt": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_SECTION.html",
+    "exact_motion_script_excerpt": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_MOTION.js",
+    "direct_review_artifact": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/DIRECT_HUMAN_REVIEW.html",
+    "status": "PRESERVED_AWAITING_DIRECT_HUMAN_REVIEW"
+  }
 }

@@ -10,12 +10,15 @@
   },
   "source_package": {
     "id": "CAROLINA-STATISTICS-MOTION-EXPERIMENT-001",
-    "status": "PRESERVED_IN_LAB_AWAITING_DIRECT_HUMAN_REVIEW",
+    "status": "FUNCTIONAL_INTEGRATION_SOURCE_PRESERVED_AWAITING_DIRECT_HUMAN_REVIEW",
     "path": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/SOURCE_PACKAGE_MANIFEST.json",
     "archive_sha256": "8eecd53dc698d4587dfa882a5eabe701ec9a77a45bb9747d57f0cf5d68c876b0",
     "primary_html_sha256": "74274e55ff1c8b9edd849d433f12bf6ffe0abb00097872feb6bc7adde83b463e",
-    "archive_storage": "HASH_AND_CONTENT_INDEX_ONLY",
-    "direct_review_artifact": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/expanded/statistics-motion-001/CAROLINA_MD_STATISTICS_MOTION_EXPERIMENT_001.html"
+    "archive_storage": "SHA256_AND_COMPLETE_CONTENT_INDEX",
+    "direct_review_artifact": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/DIRECT_HUMAN_REVIEW.html",
+    "exact_dom_excerpt": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_SECTION.html",
+    "exact_motion_script_excerpt": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_MOTION.js",
+    "original_monolith_sha256": "74274e55ff1c8b9edd849d433f12bf6ffe0abb00097872feb6bc7adde83b463e"
   },
   "evidence": {
     "id": "EVD-LAB-STATISTICS-COUNTER-SOURCE-PACKAGE-178",
@@ -23,13 +26,13 @@
   },
   "effect": {
     "id": "STATISTICS-COUNTER-STATIC-SUFFIX-001",
-    "status": "SOURCE_PACKAGE_PRESERVED_HUMAN_REVIEW_PENDING",
+    "status": "FUNCTIONAL_SOURCE_PRESERVED_HUMAN_REVIEW_PENDING",
     "canonical_reference_designated": false,
     "behavior_core_extracted": false
   },
   "pending": {
     "id": "PEND-LAB-043",
-    "status": "STATISTICS_COUNTER_SOURCE_PACKAGE_PRESERVED_HUMAN_REVIEW_PENDING"
+    "status": "STATISTICS_COUNTER_FUNCTIONAL_SOURCE_PRESERVED_HUMAN_REVIEW_PENDING"
   },
   "non_effects": [
     "NO_OFFICIAL_LANDING_INTEGRATION",
@@ -37,5 +40,6 @@
     "NO_REUSABLE_PROMOTION",
     "NO_RUNTIME_OR_DEPLOYMENT"
   ],
-  "authority_effect": "AUTHORIZATION_178_STAGE_2_CONDITIONAL_AWAITING_EXPLICIT_HUMAN_DETERMINATION"
+  "authority_effect": "AUTHORIZATION_178_STAGE_2_CONDITIONAL_AWAITING_EXPLICIT_HUMAN_DETERMINATION",
+  "status": "STAGE_1_FUNCTIONAL_INTEGRATION_SOURCE_PUBLISHED_STAGE_2_CONDITIONAL"
 }

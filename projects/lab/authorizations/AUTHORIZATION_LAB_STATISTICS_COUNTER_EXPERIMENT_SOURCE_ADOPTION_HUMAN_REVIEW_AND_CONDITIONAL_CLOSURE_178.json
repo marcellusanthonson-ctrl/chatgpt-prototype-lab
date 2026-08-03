@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_STATISTICS_COUNTER_EXPERIMENT_SOURCE_ADOPTION_HUMAN_REVIEW_AND_CONDITIONAL_CLOSURE_178",
   "project_id": "lab",
-  "status": "GRANTED_STAGE_1_SOURCE_PACKAGE_PUBLICATION_IN_PROGRESS_STAGE_2_CONDITIONAL",
+  "status": "GRANTED_STAGE_1_PUBLISHED_STAGE_2_CONDITIONALLY_AUTHORIZED_AWAITING_HUMAN_DETERMINATION",
   "authorization_class": "STATISTICS_COUNTER_SOURCE_PACKAGE_ADOPTION_HUMAN_REVIEW_AND_CONDITIONAL_CLOSURE",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-08-02T22:25:00-04:00",
@@ -43,13 +43,22 @@
   },
   "stage_1": {
     "name": "SOURCE_PACKAGE_ADOPTION_AND_DIRECT_HUMAN_REVIEW_PREPARATION",
-    "status": "AUTHORIZED_IN_PROGRESS",
+    "status": "FUNCTIONAL_INTEGRATION_SOURCE_PRESERVED_AND_DIRECT_REVIEW_READY",
     "required_outputs": [
       "PUBLISH_PRIMARY_MONOLITHIC_HTML_AS_EXACT_EXPANDED_REVIEW_ARTIFACT",
       "PUBLISH_EXPERIMENT_MANIFEST_AND_KEY_INTEGRITY_EVIDENCE",
       "PUBLISH_CURRENT_ARCHIVE_CONTENT_INDEX_AND_ARCHIVE_SHA256_PROVENANCE",
       "REGISTER_SOURCE_PACKAGE_WITHOUT_HUMAN_APPROVAL_CLAIM",
       "KEEP_STATISTICS_COUNTER_HUMAN_REVIEW_PENDING"
+    ],
+    "completed_at": "2026-08-02T22:29:00-04:00",
+    "published_artifacts": [
+      "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_SECTION.html",
+      "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_MOTION.js",
+      "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_STYLES.css",
+      "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/DIRECT_HUMAN_REVIEW.html",
+      "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_EXCERPT_PROVENANCE.json",
+      "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/ARCHIVE_CONTENT_INDEX.json"
     ]
   },
   "stage_2": {
@@ -73,14 +82,23 @@
   "target_root": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001",
   "preservation": {
     "archive_sha256": "8eecd53dc698d4587dfa882a5eabe701ec9a77a45bb9747d57f0cf5d68c876b0",
-    "primary_html_sha256": "74274e55ff1c8b9edd849d433f12bf6ffe0abb00097872feb6bc7adde83b463e",
-    "experiment_manifest_sha256": "6ebc9d98e8ee6113b671136640994c861846241ca2b6d28a1298530e87fe0d0a",
-    "archive_content_index_sha256": "c44c2a763ca761e3c1be91f122abc90c76669c65c7a960abd81adbd50d2c8115",
     "archive_entry_count": 163,
-    "extracted_file_count": 134,
-    "source_mutation": "NONE",
-    "archive_binary_repository_storage": "NOT_REQUIRED_FOR_FUTURE_INTEGRATION_PRIMARY_HTML_IS_EXACT_FUNCTIONAL_SOURCE",
-    "archive_provenance": "SHA256_AND_163_ENTRY_CONTENT_INDEX_PRESERVED"
+    "archive_content_index": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/ARCHIVE_CONTENT_INDEX.json",
+    "archive_content_index_sha256": "c44c2a763ca761e3c1be91f122abc90c76669c65c7a960abd81adbd50d2c8115",
+    "original_monolithic_html_sha256": "74274e55ff1c8b9edd849d433f12bf6ffe0abb00097872feb6bc7adde83b463e",
+    "original_monolithic_html_bytes": 1866483,
+    "original_archive_and_monolith_repository_storage": "NOT_EMBEDDED_DUE_CONNECTOR_SINGLE_BLOB_TRUNCATION",
+    "exact_dom_excerpt": {
+      "path": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_SECTION.html",
+      "sha256": "f9c192a24252d9685b7afc5099fa576f40037c7bbeb0cf00c1ad08d210ac3b39"
+    },
+    "exact_motion_script_excerpt": {
+      "path": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_MOTION.js",
+      "sha256": "a387f76edbf4f5013f733b4d24d258185500f389e12637b65be6ad9171cf4e1e"
+    },
+    "source_derived_styles": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_STYLES.css",
+    "direct_review_harness": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/DIRECT_HUMAN_REVIEW.html",
+    "source_mutation": "NONE"
   },
   "forbidden_actions": [
     "MUTATE_SOURCE_EXPERIMENT",
@@ -93,5 +111,5 @@
     "SCOPE_EXPANSION"
   ],
   "consumption_rule": "STAGE_1_PUBLICATION_DOES_NOT_CONSUME_STAGE_2. AUTHORIZATION_CONSUMES AFTER EXPLICIT HUMAN DETERMINATION AND THE AUTHORIZED CONDITIONAL PATH IS PUBLISHED AND VERIFIED, OR AFTER A DOCUMENTED NON_APPROVAL_RESULT.",
-  "authority_effect_while_waiting": "ONLY_STAGE_2_CONDITIONAL_ACTIONS_AFTER_EXACT_HUMAN_DETERMINATION"
+  "authority_effect_while_waiting": "NO_TECHNICAL_WRITE_UNTIL_EXACT_HUMAN_DETERMINATION_TRIGGERS_STAGE_2"
 }

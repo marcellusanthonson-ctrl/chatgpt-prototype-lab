@@ -3,7 +3,7 @@
   "evidence_id": "EVD-LAB-STATISTICS-COUNTER-SOURCE-PACKAGE-178",
   "project_id": "lab",
   "authorization_ref": "AUTHORIZATION_LAB_STATISTICS_COUNTER_EXPERIMENT_SOURCE_ADOPTION_HUMAN_REVIEW_AND_CONDITIONAL_CLOSURE_178",
-  "status": "SOURCE_PACKAGE_PRESERVED_AWAITING_DIRECT_HUMAN_REVIEW",
+  "status": "FUNCTIONAL_INTEGRATION_SOURCE_PRESERVED_AWAITING_DIRECT_HUMAN_REVIEW",
   "source_package_id": "CAROLINA-STATISTICS-MOTION-EXPERIMENT-001",
   "archive_sha256": "8eecd53dc698d4587dfa882a5eabe701ec9a77a45bb9747d57f0cf5d68c876b0",
   "archive_bytes": 3493574,
@@ -31,8 +31,46 @@
     "key_artifact_hashes": "PASS",
     "json_parse": "PASS",
     "source_mutation": "NONE",
-    "archive_repository_storage": "NOT_REQUIRED_PRIMARY_HTML_EXACT_BYTES_PUBLISHED"
+    "archive_repository_storage": "NOT_REQUIRED_PRIMARY_HTML_EXACT_BYTES_PUBLISHED",
+    "repository_capsule_hashes": "PASS",
+    "original_archive_and_monolith_embedding": "NOT_PERFORMED_DUE_CONNECTOR_SINGLE_BLOB_TRUNCATION"
   },
-  "claim_boundary": "THE COMPLETE FUNCTIONAL EFFECT IS THE EXACT MONOLITHIC_HTML; RAR PROVENANCE IS PRESERVED BY SHA256_AND_CONTENT_INDEX. THIS DOES_NOT_CREATE_LAB_HUMAN_APPROVAL_OR_PRODUCT_INTEGRATION_AUTHORITY.",
-  "next_gate": "HUMAN_REVIEW_STATISTICS_COUNTER_STATIC_SUFFIX_001"
+  "claim_boundary": "THE_FUNCTIONAL_INTEGRATION_SOURCE_IS_PRESERVED_AS_EXACT_DOM_AND_MOTION_SCRIPT_EXCERPTS, SOURCE_DERIVED_STYLES, DIRECT_REVIEW_HARNESS, KEY_EVIDENCE, AND_COMPLETE_ARCHIVE_INDEX. THE_ORIGINAL_RAR_AND_FULL_MONOLITH_ARE_IDENTIFIED_BY_SHA256_BUT_NOT_EMBEDDED_AS_SINGLE_BLOBS. NO_LAB_HUMAN_APPROVAL_OR_PRODUCT_INTEGRATION_AUTHORITY_IS_CREATED.",
+  "next_gate": "HUMAN_REVIEW_STATISTICS_COUNTER_STATIC_SUFFIX_001",
+  "repository_preservation": {
+    "archive_content_index": {
+      "path": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/ARCHIVE_CONTENT_INDEX.json",
+      "sha256": "c44c2a763ca761e3c1be91f122abc90c76669c65c7a960abd81adbd50d2c8115"
+    },
+    "exact_dom_excerpt": {
+      "path": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_SECTION.html",
+      "sha256": "f9c192a24252d9685b7afc5099fa576f40037c7bbeb0cf00c1ad08d210ac3b39"
+    },
+    "exact_motion_script_excerpt": {
+      "path": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_MOTION.js",
+      "sha256": "a387f76edbf4f5013f733b4d24d258185500f389e12637b65be6ad9171cf4e1e"
+    },
+    "source_derived_styles": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_STYLES.css",
+    "direct_review_harness": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/DIRECT_HUMAN_REVIEW.html",
+    "experiment_manifest": {
+      "path": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/expanded/statistics-motion-001/EXPERIMENT_MANIFEST.json",
+      "sha256": "6ebc9d98e8ee6113b671136640994c861846241ca2b6d28a1298530e87fe0d0a"
+    },
+    "source_integrity_attempt_009": {
+      "path": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/expanded/statistics-motion-001/evidence/SOURCE_INTEGRITY_ATTEMPT_009.json",
+      "sha256": "7d5e8a0f45fe0d881af09ca86c0b9565551f4b951482dc1a85c6650b1eb0ff67"
+    },
+    "archive_integrity_attempt_007": {
+      "path": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/expanded/statistics-motion-001/evidence/ARCHIVE_INTEGRITY_ATTEMPT_007.json",
+      "sha256": "96f29f1095e51ad49ec262ec22c6540e82be8d07a5a7d95ce1a54894314f5354"
+    },
+    "validation_report_attempt_009": {
+      "path": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/expanded/statistics-motion-001/evidence/VALIDATION_REPORT_ATTEMPT_009.md",
+      "sha256": "a2b830101590e7ff1d7e58486369fdc0630dcdb7f816ab8b4e8a245c5cdd167d"
+    },
+    "attempt006_functional_results": {
+      "path": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/expanded/statistics-motion-001/evidence/attempt006_functional_results.json",
+      "sha256": "a3cdfb4a7f59a951edaba38218b34621748b938eaa8ca3cf35687ad49be2fea6"
+    }
+  }
 }

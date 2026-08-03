@@ -3,7 +3,7 @@
   "source_package_id": "CAROLINA-STATISTICS-MOTION-EXPERIMENT-001",
   "project_id": "lab",
   "effect_id": "STATISTICS-COUNTER-STATIC-SUFFIX-001",
-  "status": "PRESERVED_IN_LAB_AWAITING_DIRECT_HUMAN_REVIEW",
+  "status": "FUNCTIONAL_INTEGRATION_SOURCE_PRESERVED_AWAITING_DIRECT_HUMAN_REVIEW",
   "authorization_ref": "AUTHORIZATION_LAB_STATISTICS_COUNTER_EXPERIMENT_SOURCE_ADOPTION_HUMAN_REVIEW_AND_CONDITIONAL_CLOSURE_178",
   "source_origin": {
     "workspace": "C:\\Users\\JF Martin\\Documents\\Proyectos\\Carolina Clinical Os\\carolina-md-experiments",
@@ -19,18 +19,8 @@
     "directory_count": 29,
     "content_index": "ARCHIVE_CONTENT_INDEX.json",
     "content_index_sha256": "c44c2a763ca761e3c1be91f122abc90c76669c65c7a960abd81adbd50d2c8115",
-    "repository_storage": "HASH_AND_CONTENT_INDEX_ONLY",
-    "binary_source": "UPLOADED_ATTACHMENT_NOT_REQUIRED_FOR_FUTURE_PRODUCT_INTEGRATION"
-  },
-  "direct_review_artifact": {
-    "path": "expanded/statistics-motion-001/CAROLINA_MD_STATISTICS_MOTION_EXPERIMENT_001.html",
-    "sha256": "74274e55ff1c8b9edd849d433f12bf6ffe0abb00097872feb6bc7adde83b463e",
-    "bytes": 1866483,
-    "protocols": [
-      "file://",
-      "http://localhost"
-    ],
-    "external_runtime_requests_expected": 0
+    "repository_storage": "SHA256_AND_COMPLETE_CONTENT_INDEX",
+    "binary_source": "NOT_EMBEDDED_DUE_CONNECTOR_SINGLE_BLOB_TRUNCATION"
   },
   "expanded_key_artifacts": [
     {
@@ -61,6 +51,26 @@
     "behavior_core_extraction": false,
     "official_landing_integration": "NOT_AUTHORIZED_NOT_PERFORMED"
   },
-  "preservation_policy": "PRIMARY_MONOLITHIC_HTML_AND_KEY_EVIDENCE_ARE_EXACT_REPOSITORY_ARTIFACTS; ORIGINAL_RAR_IS REPRESENTED_BY_SHA256_AND_COMPLETE_CONTENT_INDEX",
-  "next_gate": "DIRECT_HUMAN_REVIEW_OF_EXPANDED_PRIMARY_IMPLEMENTATION"
+  "preservation_policy": "EXACT_DOM_AND_MOTION_SCRIPT_EXCERPTS_PLUS_SOURCE_DERIVED_STYLES_AND_KEY_EVIDENCE_ARE_REPOSITORY_ARTIFACTS; ORIGINAL_RAR_AND_FULL_MONOLITH_ARE_PRESERVED_BY_SHA256_AND_COMPLETE_CONTENT_INDEX.",
+  "next_gate": "DIRECT_HUMAN_REVIEW_OF_FUNCTIONAL_INTEGRATION_SOURCE",
+  "original_monolith": {
+    "path_in_archive": "statistics-motion-001/CAROLINA_MD_STATISTICS_MOTION_EXPERIMENT_001.html",
+    "sha256": "74274e55ff1c8b9edd849d433f12bf6ffe0abb00097872feb6bc7adde83b463e",
+    "bytes": 1866483,
+    "repository_storage": "NOT_EMBEDDED_DUE_CONNECTOR_SINGLE_BLOB_TRUNCATION"
+  },
+  "functional_integration_source": {
+    "exact_dom_excerpt": {
+      "path": "integration-source/SOURCE_STATS_SECTION.html",
+      "sha256": "f9c192a24252d9685b7afc5099fa576f40037c7bbeb0cf00c1ad08d210ac3b39"
+    },
+    "exact_motion_script_excerpt": {
+      "path": "integration-source/SOURCE_STATS_MOTION.js",
+      "sha256": "a387f76edbf4f5013f733b4d24d258185500f389e12637b65be6ad9171cf4e1e"
+    },
+    "source_derived_styles": "integration-source/SOURCE_STATS_STYLES.css",
+    "provenance": "integration-source/SOURCE_EXCERPT_PROVENANCE.json",
+    "direct_review_harness": "integration-source/DIRECT_HUMAN_REVIEW.html",
+    "status": "READY_FOR_DIRECT_HUMAN_REVIEW_AND_FUTURE_BOUNDED_PRODUCT_INTEGRATION"
+  }
 }

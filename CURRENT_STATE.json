@@ -1,7 +1,7 @@
 {
   "schema_version": "2.5.0",
   "document_id": "lab.current-state",
-  "version": "2.5.53",
+  "version": "2.5.54",
   "status": "PRIORITY_INTEGRATIONS_PHASE_1_CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED",
   "updated_at": "2026-08-02",
   "active_project": "lab",
@@ -97,7 +97,7 @@
     "motion_source_fidelity_candidate_171": "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SOURCE-FAITHFUL-001/MANIFEST.json",
     "motion_source_fidelity_human_comparison_171": "foundation-library/motion-system/MOTION-SYSTEM-001/source-fidelity-candidates/CAROLINA-ROADMAP-SOURCE-FAITHFUL-001/HUMAN_COMPARISON.html",
     "motion_system_foundation": {
-      "status": "ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_COMPLETE_STATISTICS_COUNTER_HUMAN_REVIEW_PENDING",
+      "status": "ROADMAP_COMPLETE_STATISTICS_COUNTER_FUNCTIONAL_SOURCE_PRESERVED_HUMAN_REVIEW_PENDING",
       "decision": "DEC-LAB-029",
       "authorization": "AUTHORIZATION_LAB_TRANSVERSAL_MOTION_EFFECTS_LIBRARY_FOUNDATION_167",
       "root": "foundation-library/motion-system/MOTION-SYSTEM-001",
@@ -135,7 +135,22 @@
         "product_integration": false,
         "runtime_effect": "NONE"
       },
-      "next_gate": "HUMAN_REVIEW_STATISTICS_COUNTER_STATIC_SUFFIX_001"
+      "next_gate": "DIRECT_HUMAN_REVIEW_OF_PRESERVED_FUNCTIONAL_INTEGRATION_SOURCE",
+      "latest_authorization": "AUTHORIZATION_LAB_STATISTICS_COUNTER_EXPERIMENT_SOURCE_ADOPTION_HUMAN_REVIEW_AND_CONDITIONAL_CLOSURE_178",
+      "statistics_counter_001": {
+        "effect_id": "STATISTICS-COUNTER-STATIC-SUFFIX-001",
+        "status": "FUNCTIONAL_SOURCE_PRESERVED_HUMAN_REVIEW_PENDING",
+        "source_package_id": "CAROLINA-STATISTICS-MOTION-EXPERIMENT-001",
+        "source_package_manifest": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/SOURCE_PACKAGE_MANIFEST.json",
+        "archive_sha256": "8eecd53dc698d4587dfa882a5eabe701ec9a77a45bb9747d57f0cf5d68c876b0",
+        "original_monolith_sha256": "74274e55ff1c8b9edd849d433f12bf6ffe0abb00097872feb6bc7adde83b463e",
+        "exact_dom_excerpt": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_SECTION.html",
+        "exact_motion_script_excerpt": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_MOTION.js",
+        "direct_review_artifact": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/DIRECT_HUMAN_REVIEW.html",
+        "canonical_reference_designation": false,
+        "behavior_core_extraction": false,
+        "product_integration": false
+      }
     },
     "priority_integrations_program": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/MANIFEST.json",
     "priority_integrations_roadmap": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/ROADMAP.json",
@@ -153,7 +168,10 @@
     "motion_roadmap_behavior_core_validation": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/BEHAVIOR_CORE_VALIDATION_RESULTS.json",
     "motion_canonical_reference_behavior_core_evidence_176": "projects/lab/evidence/EVD-LAB-ROADMAP-CANONICAL-REFERENCE-BEHAVIOR-CORE-176.json",
     "motion_canonical_aggregate_reconciliation_evidence_177": "projects/lab/evidence/EVD-LAB-PEND-047-EXACT-CANONICAL-AGGREGATE-RECONCILIATION-177.json",
-    "motion_canonical_aggregate_reconciliation_pending_047": "projects/lab/pending/PEND-LAB-047.json"
+    "motion_canonical_aggregate_reconciliation_pending_047": "projects/lab/pending/PEND-LAB-047.json",
+    "motion_statistics_counter_source_package_178": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/SOURCE_PACKAGE_MANIFEST.json",
+    "motion_statistics_counter_authorization_178": "projects/lab/authorizations/AUTHORIZATION_LAB_STATISTICS_COUNTER_EXPERIMENT_SOURCE_ADOPTION_HUMAN_REVIEW_AND_CONDITIONAL_CLOSURE_178.json",
+    "motion_statistics_counter_evidence_178": "projects/lab/evidence/EVD-LAB-STATISTICS-COUNTER-SOURCE-PACKAGE-178.json"
   },
   "projects": {
     "lab": {
@@ -306,7 +324,8 @@
     "roadmap_section_human_comparison_live_scroll_range_repair_174": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "roadmap_section_post_terminal_dead_scroll_removal_175": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "roadmap_canonical_reference_and_behavior_core_extraction_176": "CONSUMED_BLOCKED_BY_UNRESOLVED_CANONICAL_STATE_CONTRADICTION",
-    "pend_047_exact_canonical_aggregate_reconciliation_and_closure_177": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"
+    "pend_047_exact_canonical_aggregate_reconciliation_and_closure_177": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "statistics_counter_experiment_source_adoption_human_review_and_conditional_closure_178": "GRANTED_STAGE_1_PUBLISHED_STAGE_2_CONDITIONALLY_AUTHORIZED_AWAITING_HUMAN_DETERMINATION"
   },
   "verified_external_heads": {
     "symphonie": "31dd1345026240c83b015feef34d6f7f2d2147b7",
@@ -337,8 +356,8 @@
     "INTEGRATION_FACTORY_M1_EXECUTABLE_SCHEMA_TEMPLATE_AND_OVERLAY_VALIDATION_PASS",
     "ROADMAP_CANONICAL_REFERENCE_DESIGNATED_BEHAVIOR_CORE_VALIDATED_CANONICAL_AGGREGATES_RECONCILED"
   ],
-  "next_authorized_action": "NONE_AFTER_AUTHORIZATION_177_CONSUMPTION",
-  "next_recommended_transition": "HUMAN_REVIEW_STATISTICS_COUNTER_STATIC_SUFFIX_001",
+  "next_authorized_action": "NONE_UNTIL_EXACT_HUMAN_DETERMINATION_TRIGGERS_AUTHORIZATION_178_STAGE_2",
+  "next_recommended_transition": "DIRECT_HUMAN_REVIEW_OF_PRESERVED_STATISTICS_COUNTER_FUNCTIONAL_INTEGRATION_SOURCE",
   "continuity_read_order": [
     "LAB_CONTRACT.md",
     "METHODOLOGY.md",
@@ -766,5 +785,21 @@
     "runtime_effect": "NONE",
     "product_effect": "NONE",
     "integration_effect": "NONE"
+  },
+  "motion_statistics_counter_source_adoption_178": {
+    "authorization": "AUTHORIZATION_LAB_STATISTICS_COUNTER_EXPERIMENT_SOURCE_ADOPTION_HUMAN_REVIEW_AND_CONDITIONAL_CLOSURE_178",
+    "authorization_status": "GRANTED_STAGE_1_PUBLISHED_STAGE_2_CONDITIONALLY_AUTHORIZED_AWAITING_HUMAN_DETERMINATION",
+    "source_package_id": "CAROLINA-STATISTICS-MOTION-EXPERIMENT-001",
+    "source_package_status": "FUNCTIONAL_INTEGRATION_SOURCE_PRESERVED_AWAITING_DIRECT_HUMAN_REVIEW",
+    "archive_sha256": "8eecd53dc698d4587dfa882a5eabe701ec9a77a45bb9747d57f0cf5d68c876b0",
+    "original_monolith_sha256": "74274e55ff1c8b9edd849d433f12bf6ffe0abb00097872feb6bc7adde83b463e",
+    "original_archive_and_monolith_embedding": "NOT_PERFORMED_DUE_CONNECTOR_SINGLE_BLOB_TRUNCATION",
+    "exact_dom_excerpt": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_SECTION.html",
+    "exact_motion_script_excerpt": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_MOTION.js",
+    "direct_review_artifact": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/DIRECT_HUMAN_REVIEW.html",
+    "stage_2_triggered": false,
+    "official_landing_integration": "NOT_AUTHORIZED_NOT_PERFORMED",
+    "runtime_effect": "NONE",
+    "product_effect": "NONE"
   }
 }

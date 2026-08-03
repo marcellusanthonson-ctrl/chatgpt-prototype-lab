@@ -1,0 +1,202 @@
+{
+  "no_javascript_fallback": {
+    "visible": true,
+    "values": [
+      "1000+",
+      "28",
+      "3",
+      "24/7"
+    ],
+    "labels": [
+      "Pacientes atendidos<br>desde 1998",
+      "Años de práctica<br>clínica continua",
+      "Pilares clínicos<br>Audición, Lenguaje y TDAH",
+      "Portal digital<br>para seguimiento"
+    ],
+    "columns": 2,
+    "externalResources": []
+  },
+  "reduced_motion": {
+    "matches": true,
+    "values": [
+      "1000+",
+      "28",
+      "3",
+      "24/7"
+    ],
+    "temporaryNodes": 0,
+    "finished": "true",
+    "gridClass": "wrap stats-grid reveal reveal-stagger is-revealed"
+  },
+  "canonical_final_state": {
+    "outerHTML": "<section class=\"stats-banner\" data-screen-label=\"stats\">\n  <div class=\"wrap stats-grid reveal reveal-stagger is-revealed\">\n    <div class=\"stat-cell\" style=\"--i:0\">\n      <div class=\"stat-num\">1000<span class=\"plus\">+</span></div>\n      <div class=\"stat-lbl\">Pacientes atendidos<br>desde 1998</div>\n    </div>\n    <div class=\"stat-cell\" style=\"--i:1\">\n      <div class=\"stat-num\">28</div>\n      <div class=\"stat-lbl\">Años de práctica<br>clínica continua</div>\n    </div>\n    <div class=\"stat-cell\" style=\"--i:2\">\n      <div class=\"stat-num\">3</div>\n      <div class=\"stat-lbl\">Pilares clínicos<br>Audición, Lenguaje y TDAH</div>\n    </div>\n    <div class=\"stat-cell\" style=\"--i:3\">\n      <div class=\"stat-num\">24<span class=\"plus\">/7</span></div>\n      <div class=\"stat-lbl\">Portal digital<br>para seguimiento</div>\n    </div>\n  </div>\n</section>",
+    "values": [
+      "1000+",
+      "28",
+      "3",
+      "24/7"
+    ],
+    "numInnerHTML": [
+      "1000<span class=\"plus\">+</span>",
+      "28",
+      "3",
+      "24<span class=\"plus\">/7</span>"
+    ],
+    "labelInnerHTML": [
+      "Pacientes atendidos<br>desde 1998",
+      "Años de práctica<br>clínica continua",
+      "Pilares clínicos<br>Audición, Lenguaje y TDAH",
+      "Portal digital<br>para seguimiento"
+    ],
+    "gridClass": "wrap stats-grid reveal reveal-stagger is-revealed",
+    "temporaryNodes": 0,
+    "temporaryAttributes": [],
+    "inlineStyles": [
+      {
+        "tag": "DIV",
+        "className": "stat-cell",
+        "value": "--i:0"
+      },
+      {
+        "tag": "DIV",
+        "className": "stat-cell",
+        "value": "--i:1"
+      },
+      {
+        "tag": "DIV",
+        "className": "stat-cell",
+        "value": "--i:2"
+      },
+      {
+        "tag": "DIV",
+        "className": "stat-cell",
+        "value": "--i:3"
+      }
+    ],
+    "loadedFonts": [
+      {
+        "family": "Inter",
+        "weight": "400",
+        "status": "loaded"
+      },
+      {
+        "family": "Inter",
+        "weight": "600",
+        "status": "loaded"
+      },
+      {
+        "family": "Inter",
+        "weight": "700",
+        "status": "loaded"
+      }
+    ],
+    "fontsReady": "loaded",
+    "columns": 2,
+    "horizontalOverflow": false,
+    "matches_canonical_outer_html": true
+  },
+  "animation_mid_state": {
+    "overlays": [
+      "237+",
+      "6",
+      "24"
+    ],
+    "semantic": "Audición",
+    "three": "3",
+    "slashOverlay": "24",
+    "plusVisible": true,
+    "rects": [
+      [
+        16,
+        45,
+        165.5,
+        156
+      ],
+      [
+        33,
+        70,
+        131.5,
+        42.296875
+      ],
+      [
+        33,
+        124.296875,
+        131.5,
+        35.34375
+      ],
+      [
+        193.5,
+        45,
+        165.5,
+        156
+      ],
+      [
+        210.5,
+        70,
+        131.5,
+        42.296875
+      ],
+      [
+        210.5,
+        124.296875,
+        131.5,
+        35.34375
+      ],
+      [
+        16,
+        213,
+        165.5,
+        157.3125
+      ],
+      [
+        33,
+        238,
+        131.5,
+        42.296875
+      ],
+      [
+        33,
+        292.296875,
+        131.5,
+        53.015625
+      ],
+      [
+        193.5,
+        213,
+        165.5,
+        157.3125
+      ],
+      [
+        210.5,
+        238,
+        131.5,
+        42.296875
+      ],
+      [
+        210.5,
+        292.296875,
+        131.5,
+        35.34375
+      ]
+    ],
+    "layout_shift_css_px": 0
+  },
+  "keyboard": {
+    "tag": "BUTTON",
+    "action": "replay",
+    "outline": "3px",
+    "keyboard_click_count": 1,
+    "space_started_animation": false,
+    "reduced_motion_matches": false,
+    "status_text": "Animación en curso"
+  },
+  "console": {
+    "exception_count": 0,
+    "error_log_count": 0,
+    "events": []
+  },
+  "offline_runtime": {
+    "blocked_requests": [],
+    "external_requests": []
+  }
+}

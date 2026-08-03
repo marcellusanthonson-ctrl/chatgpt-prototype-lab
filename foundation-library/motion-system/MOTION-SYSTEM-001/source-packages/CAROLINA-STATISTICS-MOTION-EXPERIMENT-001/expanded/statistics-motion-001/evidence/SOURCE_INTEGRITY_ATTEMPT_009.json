@@ -1,0 +1,135 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "SOURCE_INTEGRITY_ATTEMPT_009",
+  "attempt_id": "ATTEMPT-009",
+  "authorization_id": "AUTHORIZATION_LOCAL_CAROLINA_STATS_STATIC_SUFFIX_CORRECTION_ATTEMPT_009",
+  "documentary_reconciliation_authorization_id": "AUTHORIZATION_LOCAL_CAROLINA_STATS_ATTEMPT_009_DOCUMENTARY_RECONCILIATION",
+  "documentary_reconciliation_authorization_state": "CONSUMED",
+  "audit_id": "AUDIT_LOCAL_CAROLINA_STATS_ATTEMPT_009_POSTHOC_001",
+  "audit_verdict": "IMPLEMENTATION_CONFIRMED_PARTIAL_EVIDENCE_PRESENT",
+  "baseline": {
+    "attempt_id": "ATTEMPT-008",
+    "html": {
+      "path": "archive/statistics-motion-001-attempt-008-human-reviewed-pre-static-plus-correction/CAROLINA_MD_STATISTICS_MOTION_EXPERIMENT_001.html",
+      "bytes": 1865892,
+      "sha256": "97d42264777ead2c7efe1ec6a24bf9f0d7578c49614fe1745ed1d5a8e891ba6a"
+    },
+    "inventory": {
+      "path": "archive/statistics-motion-001-attempt-008-human-reviewed-pre-static-plus-correction.INVENTORY.json",
+      "bytes": 37681,
+      "sha256": "db611153953952beb4402dc263e12d31a2b53eaa9134d5ab2807b0efa7204814"
+    },
+    "claim_provenance": "VERIFIED_FROM_FILE"
+  },
+  "result": {
+    "attempt_id": "ATTEMPT-009",
+    "html": {
+      "path": "experiments/statistics-motion-001/CAROLINA_MD_STATISTICS_MOTION_EXPERIMENT_001.html",
+      "bytes": 1866483,
+      "sha256_before_documentary_reconciliation": "74274e55ff1c8b9edd849d433f12bf6ffe0abb00097872feb6bc7adde83b463e",
+      "sha256_after_documentary_reconciliation": "74274e55ff1c8b9edd849d433f12bf6ffe0abb00097872feb6bc7adde83b463e",
+      "unchanged_during_documentary_reconciliation": true
+    },
+    "claim_provenance": "VERIFIED_FROM_FILE"
+  },
+  "functional_files_modified_during_attempt_009": [
+    "experiments/statistics-motion-001/CAROLINA_MD_STATISTICS_MOTION_EXPERIMENT_001.html"
+  ],
+  "documentary_files_modified_or_created_during_reconciliation": [
+    "experiments/statistics-motion-001/EXPERIMENT_MANIFEST.json",
+    "experiments/statistics-motion-001/evidence/SOURCE_INTEGRITY_ATTEMPT_009.json",
+    "experiments/statistics-motion-001/evidence/VALIDATION_REPORT_ATTEMPT_009.md"
+  ],
+  "semantic_diff_recovered": [
+    {
+      "order": 1,
+      "claim": "The 1000+ node was separated into numeric and suffix nodes.",
+      "provenance": "VERIFIED_FROM_FILE"
+    },
+    {
+      "order": 2,
+      "claim": ".stat-number contains exclusively the numeric value.",
+      "provenance": "VERIFIED_FROM_FILE"
+    },
+    {
+      "order": 3,
+      "claim": ".stat-suffix contains exclusively +.",
+      "provenance": "VERIFIED_FROM_FILE"
+    },
+    {
+      "order": 4,
+      "claim": "JavaScript updates only .stat-number for the patient counter.",
+      "provenance": "VERIFIED_FROM_FILE"
+    },
+    {
+      "order": 5,
+      "claim": "No innerHTML assignments exist in the active HTML.",
+      "provenance": "VERIFIED_FROM_FILE"
+    },
+    {
+      "order": 6,
+      "claim": "An invisible pseudo-element with content 1000 reserves four-digit width.",
+      "provenance": "VERIFIED_FROM_FILE"
+    },
+    {
+      "order": 7,
+      "claim": "The number is right-aligned and grows toward the left.",
+      "provenance": "VERIFIED_FROM_FILE"
+    },
+    {
+      "order": 8,
+      "claim": "The plus sign preserves position, size, opacity, and DOM identity throughout playback.",
+      "provenance": "VERIFIED_FROM_BROWSER"
+    },
+    {
+      "order": 9,
+      "claim": "Initialization waits for document.fonts.ready.",
+      "provenance": "VERIFIED_FROM_FILE"
+    },
+    {
+      "order": 10,
+      "claim": "ATTEMPT-009 did not modify the other indicators or the inherited timing engine.",
+      "provenance": "VERIFIED_FROM_FILE"
+    }
+  ],
+  "manifest_before_reconciliation": {
+    "path": "experiments/statistics-motion-001/EXPERIMENT_MANIFEST.json",
+    "attempt_id": "ATTEMPT-008",
+    "bytes": 7778,
+    "sha256": "5e7d24b888fd01caf68dd39a0e526fec62f8bffb403b081d7f261842554a3c74",
+    "state": "COMPLETE_FOR_ATTEMPT_008_BUT_STALE_FOR_ATTEMPT_009",
+    "provenance": "VERIFIED_FROM_FILE"
+  },
+  "attempt_009_partial_artifacts": {
+    "found": false,
+    "provenance": "VERIFIED_FROM_FILE",
+    "scope": "authorized local workspace"
+  },
+  "human_result": {
+    "classification": "HUMAN_REPORTED_AND_APPROVED",
+    "statement": "Jonathan Martínez confirmó que ATTEMPT-009 funciona correctamente: los números se animan, el signo `+` permanece estático y el efecto se percibe correcto.",
+    "provenance": "HUMAN_REPORTED"
+  },
+  "known_nonblocking_anomaly": {
+    "classification": "KNOWN_NONBLOCKING_PREEXISTING_TIMING_ANOMALY",
+    "description": "En Replay 4 se observó durante un frame el valor transitorio `-27`.",
+    "provenance": "VERIFIED_FROM_BROWSER",
+    "introduced_by_attempt_009": false,
+    "compatible_with_inherited_attempt_008_timing_engine": true,
+    "caused_disappearance": false,
+    "caused_flicker": false,
+    "caused_loop": false,
+    "affected_final_state": false,
+    "observed_by_jonathan_martinez": false,
+    "blocks_documentary_reconciliation": false,
+    "authorizes_code_changes": false
+  },
+  "claim_provenance_legend": [
+    "VERIFIED_FROM_FILE",
+    "VERIFIED_FROM_BROWSER",
+    "HUMAN_REPORTED",
+    "INFERRED",
+    "NOT_RECOVERABLE"
+  ],
+  "landing_integration": "NOT_AUTHORIZED_NOT_PERFORMED"
+}

@@ -167,7 +167,12 @@
     "projects/lab/authorizations/AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_1_FACTORY_CONTRACT_COMPLETION_170_REVISION_2.json",
     "projects/lab/evidence/EVD-LAB-PRIORITY-INTEGRATIONS-PHASE-1-170.json",
     "projects/lab/pending/PEND-LAB-045.json",
-    "projects/lab/continuity/PRIORITY_INTEGRATIONS_PHASE_1_170.json"
+    "projects/lab/continuity/PRIORITY_INTEGRATIONS_PHASE_1_170.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_STATISTICS_COUNTER_EXPERIMENT_SOURCE_ADOPTION_HUMAN_REVIEW_AND_CONDITIONAL_CLOSURE_178.json",
+    "projects/lab/briefs/CODEX_STATISTICS_COUNTER_EXPERIMENT_SOURCE_ADOPTION_178_001.json",
+    "projects/lab/evidence/EVD-LAB-STATISTICS-COUNTER-SOURCE-PACKAGE-178.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/SOURCE_PACKAGE_MANIFEST.json",
+    "registry/deltas/statistics-counter-source-package-adoption-178.json"
   ],
   "governance_paths": {
     "roadmap": "projects/lab/ROADMAP.json",
@@ -869,5 +874,13 @@
     "integration_effect": "NONE"
   },
   "next_authorized_action": "NONE_HUMAN_SOURCE_FIDELITY_DECISION_REQUIRED",
-  "next_recommended_transition": "HUMAN_COMPARE_CAROLINA_ROADMAP_SOURCE_FAITHFUL_CANDIDATE_WITHOUT_CHANGING_PRIORITY_INTEGRATIONS_PHASE"
+  "next_recommended_transition": "HUMAN_COMPARE_CAROLINA_ROADMAP_SOURCE_FAITHFUL_CANDIDATE_WITHOUT_CHANGING_PRIORITY_INTEGRATIONS_PHASE",
+  "motion_statistics_counter_source_adoption_178": {
+    "authorization_status": "GRANTED_STAGE_1_PUBLISHED_STAGE_2_CONDITIONALLY_AUTHORIZED_AWAITING_HUMAN_DETERMINATION",
+    "source_package_id": "CAROLINA-STATISTICS-MOTION-EXPERIMENT-001",
+    "source_package_manifest": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/SOURCE_PACKAGE_MANIFEST.json",
+    "effect_status": "FUNCTIONAL_SOURCE_PRESERVED_HUMAN_REVIEW_PENDING",
+    "direct_review_artifact": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/DIRECT_HUMAN_REVIEW.html",
+    "next_gate": "DIRECT_HUMAN_REVIEW_OF_PRESERVED_FUNCTIONAL_INTEGRATION_SOURCE"
+  }
 }

@@ -9,8 +9,8 @@
     "ideas": 5,
     "integrations": 7,
     "experiments": 8,
-    "authorizations": 101,
-    "evidence": 83,
+    "authorizations": 102,
+    "evidence": 84,
     "unincorporated": 0,
     "proposals": 3,
     "sessions": 1,
@@ -18,7 +18,7 @@
     "reconciliations": 8,
     "test_designs": 7,
     "test_executions": 5,
-    "source_packages": 2,
+    "source_packages": 3,
     "foundation_library": 23,
     "visual_preferences": 1,
     "rag_contracts": 6,
@@ -99,7 +99,8 @@
       "registry/deltas/roadmap-source-fidelity-forensic-reconstruction-171.json",
       "registry/deltas/roadmap-section-source-fidelity-human-approval-173.json",
       "registry/deltas/roadmap-canonical-reference-behavior-core-176.json",
-      "registry/deltas/pend-lab-047-exact-canonical-aggregate-reconciliation-177.json"
+      "registry/deltas/pend-lab-047-exact-canonical-aggregate-reconciliation-177.json",
+      "registry/deltas/statistics-counter-source-package-adoption-178.json"
     ],
     "evidence": "registry/evidence.json",
     "evidence_deltas": [
@@ -142,7 +143,8 @@
       "registry/deltas/priority-integrations-phase1-contract-completion-170.json",
       "registry/deltas/roadmap-section-source-fidelity-human-approval-173.json",
       "registry/deltas/roadmap-canonical-reference-behavior-core-176.json",
-      "registry/deltas/pend-lab-047-exact-canonical-aggregate-reconciliation-177.json"
+      "registry/deltas/pend-lab-047-exact-canonical-aggregate-reconciliation-177.json",
+      "registry/deltas/statistics-counter-source-package-adoption-178.json"
     ],
     "current_state": "CURRENT_STATE.json",
     "current_state_deltas": [
@@ -192,7 +194,8 @@
       "registry/deltas/roadmap-source-fidelity-forensic-reconstruction-171.json",
       "registry/deltas/roadmap-section-source-fidelity-human-approval-173.json",
       "registry/deltas/roadmap-canonical-reference-behavior-core-176.json",
-      "registry/deltas/pend-lab-047-exact-canonical-aggregate-reconciliation-177.json"
+      "registry/deltas/pend-lab-047-exact-canonical-aggregate-reconciliation-177.json",
+      "registry/deltas/statistics-counter-source-package-adoption-178.json"
     ],
     "pattern_deltas": [
       "registry/deltas/livhavn-surgical-visual-patch-093.json",
@@ -268,7 +271,10 @@
     "design_knowledge_package": "foundation-library/design-knowledge/DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001/MANIFEST.json",
     "priority_integrations_program": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/MANIFEST.json",
     "priority_integrations_roadmap": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/ROADMAP.json",
-    "priority_integrations_phase1_evidence": "projects/lab/evidence/EVD-LAB-PRIORITY-INTEGRATIONS-PHASE-1-170.json"
+    "priority_integrations_phase1_evidence": "projects/lab/evidence/EVD-LAB-PRIORITY-INTEGRATIONS-PHASE-1-170.json",
+    "source_package_records": [
+      "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/SOURCE_PACKAGE_MANIFEST.json"
+    ]
   },
   "latest": {
     "decision": "DEC-LAB-031",

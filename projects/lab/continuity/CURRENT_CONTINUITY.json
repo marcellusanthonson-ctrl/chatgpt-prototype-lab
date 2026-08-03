@@ -1,9 +1,9 @@
 {
   "schema_version": "1.2.0",
-  "continuity_id": "LAB-CONTINUITY-PEND-047-EXACT-CANONICAL-AGGREGATE-CLOSURE-177-20260802",
+  "continuity_id": "LAB-CONTINUITY-STATISTICS-COUNTER-FUNCTIONAL-SOURCE-178-20260802",
   "project_id": "lab",
-  "status": "ROADMAP_CANONICAL_REFERENCE_BEHAVIOR_CORE_AND_CANONICAL_AGGREGATES_COMPLETE_PRIORITY_INTEGRATIONS_PHASE_1_PRESERVED",
-  "created_at": "2026-08-02T20:27:00-04:00",
+  "status": "STATISTICS_COUNTER_FUNCTIONAL_SOURCE_PRESERVED_DIRECT_HUMAN_REVIEW_PENDING_PRIORITY_INTEGRATIONS_PHASE_1_PRESERVED",
+  "created_at": "2026-08-02T22:29:00-04:00",
   "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "canonical_branch": "main",
   "head_policy": "VERIFY_LIVE_AT_USE",
@@ -25,7 +25,12 @@
     "projects/lab/pending/PEND-LAB-043.json",
     "projects/lab/pending/PEND-LAB-047.json",
     "registry/deltas/pend-lab-047-exact-canonical-aggregate-reconciliation-177.json",
-    "projects/lab/continuity/CURRENT_CONTINUITY.json"
+    "projects/lab/continuity/CURRENT_CONTINUITY.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_STATISTICS_COUNTER_EXPERIMENT_SOURCE_ADOPTION_HUMAN_REVIEW_AND_CONDITIONAL_CLOSURE_178.json",
+    "projects/lab/briefs/CODEX_STATISTICS_COUNTER_EXPERIMENT_SOURCE_ADOPTION_178_001.json",
+    "projects/lab/evidence/EVD-LAB-STATISTICS-COUNTER-SOURCE-PACKAGE-178.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/SOURCE_PACKAGE_MANIFEST.json",
+    "registry/deltas/statistics-counter-source-package-adoption-178.json"
   ],
   "global_state": {
     "current_phase": "PRIORITY_INTEGRATIONS_PHASE_1_CONTRACT_COMPLETE_TESTS_NOT_AUTHORIZED",
@@ -33,7 +38,7 @@
     "runtime_authorized": false,
     "integration_authorized": false,
     "product_changes_authorized": false,
-    "active_execution_authority": "NONE_AFTER_AUTHORIZATION_177_CONSUMPTION"
+    "active_execution_authority": "NONE_UNTIL_AUTHORIZATION_178_STAGE_2_TRIGGERED_BY_EXACT_HUMAN_DETERMINATION"
   },
   "authorization": {
     "id": "AUTHORIZATION_LAB_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_AND_CLOSURE_177",
@@ -81,8 +86,26 @@
     "NO_RUNTIME_OR_DEPLOYMENT"
   ],
   "next_action": {
-    "single": "HUMAN_REVIEW_STATISTICS_COUNTER_STATIC_SUFFIX_001",
-    "authority_required_for_repository_write": true
+    "single": "DIRECT_HUMAN_REVIEW_OF_PRESERVED_STATISTICS_COUNTER_FUNCTIONAL_INTEGRATION_SOURCE",
+    "repository_write_before_human_determination": false
   },
-  "authority_effect": "NONE_AFTER_AUTHORIZATION_177_CONSUMPTION"
+  "authority_effect": "ONLY_CONDITIONAL_STAGE_2_AFTER_EXACT_HUMAN_DETERMINATION",
+  "authorization_178": {
+    "id": "AUTHORIZATION_LAB_STATISTICS_COUNTER_EXPERIMENT_SOURCE_ADOPTION_HUMAN_REVIEW_AND_CONDITIONAL_CLOSURE_178",
+    "status": "GRANTED_STAGE_1_PUBLISHED_STAGE_2_CONDITIONALLY_AUTHORIZED_AWAITING_HUMAN_DETERMINATION",
+    "stage_1": "FUNCTIONAL_INTEGRATION_SOURCE_PUBLISHED",
+    "stage_2": "AWAITING_EXPLICIT_HUMAN_DETERMINATION",
+    "triggered": false
+  },
+  "statistics_counter_source_package": {
+    "source_package_id": "CAROLINA-STATISTICS-MOTION-EXPERIMENT-001",
+    "status": "FUNCTIONAL_INTEGRATION_SOURCE_PRESERVED_AWAITING_DIRECT_HUMAN_REVIEW",
+    "manifest": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/SOURCE_PACKAGE_MANIFEST.json",
+    "archive_sha256": "8eecd53dc698d4587dfa882a5eabe701ec9a77a45bb9747d57f0cf5d68c876b0",
+    "original_monolith_sha256": "74274e55ff1c8b9edd849d433f12bf6ffe0abb00097872feb6bc7adde83b463e",
+    "exact_dom_excerpt": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_SECTION.html",
+    "exact_motion_script_excerpt": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_MOTION.js",
+    "direct_review_artifact": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/DIRECT_HUMAN_REVIEW.html",
+    "original_archive_and_monolith_embedding": "NOT_PERFORMED_DUE_CONNECTOR_SINGLE_BLOB_TRUNCATION"
+  }
 }
