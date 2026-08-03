@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "statistics-counter-source-package-adoption-178",
+  "project_id": "lab",
+  "updated_at": "2026-08-02",
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_STATISTICS_COUNTER_EXPERIMENT_SOURCE_ADOPTION_HUMAN_REVIEW_AND_CONDITIONAL_CLOSURE_178",
+    "status": "GRANTED_STAGE_1_PUBLISHED_STAGE_2_CONDITIONALLY_AUTHORIZED_AWAITING_HUMAN_DETERMINATION",
+    "path": "projects/lab/authorizations/AUTHORIZATION_LAB_STATISTICS_COUNTER_EXPERIMENT_SOURCE_ADOPTION_HUMAN_REVIEW_AND_CONDITIONAL_CLOSURE_178.json"
+  },
+  "source_package": {
+    "id": "CAROLINA-STATISTICS-MOTION-EXPERIMENT-001",
+    "status": "PRESERVED_IN_LAB_AWAITING_DIRECT_HUMAN_REVIEW",
+    "path": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/SOURCE_PACKAGE_MANIFEST.json",
+    "archive_sha256": "8eecd53dc698d4587dfa882a5eabe701ec9a77a45bb9747d57f0cf5d68c876b0",
+    "primary_html_sha256": "74274e55ff1c8b9edd849d433f12bf6ffe0abb00097872feb6bc7adde83b463e",
+    "archive_storage": "HASH_AND_CONTENT_INDEX_ONLY",
+    "direct_review_artifact": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/expanded/statistics-motion-001/CAROLINA_MD_STATISTICS_MOTION_EXPERIMENT_001.html"
+  },
+  "evidence": {
+    "id": "EVD-LAB-STATISTICS-COUNTER-SOURCE-PACKAGE-178",
+    "path": "projects/lab/evidence/EVD-LAB-STATISTICS-COUNTER-SOURCE-PACKAGE-178.json"
+  },
+  "effect": {
+    "id": "STATISTICS-COUNTER-STATIC-SUFFIX-001",
+    "status": "SOURCE_PACKAGE_PRESERVED_HUMAN_REVIEW_PENDING",
+    "canonical_reference_designated": false,
+    "behavior_core_extracted": false
+  },
+  "pending": {
+    "id": "PEND-LAB-043",
+    "status": "STATISTICS_COUNTER_SOURCE_PACKAGE_PRESERVED_HUMAN_REVIEW_PENDING"
+  },
+  "non_effects": [
+    "NO_OFFICIAL_LANDING_INTEGRATION",
+    "NO_CAROLINA_REPOSITORY_MUTATION",
+    "NO_REUSABLE_PROMOTION",
+    "NO_RUNTIME_OR_DEPLOYMENT"
+  ],
+  "authority_effect": "AUTHORIZATION_178_STAGE_2_CONDITIONAL_AWAITING_EXPLICIT_HUMAN_DETERMINATION"
+}
