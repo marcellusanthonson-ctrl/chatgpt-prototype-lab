@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "behavior_core_id": "ROADMAP-VERTICAL-PROGRESS-BEHAVIOR-CORE-001",
   "effect_id": "ROADMAP-VERTICAL-PROGRESS-001",
-  "status": "EXTRACTED_AWAITING_VALIDATION",
+  "status": "EXTRACTED_AND_VALIDATED_PASS_CONTROLLED_EXACT_BYTES",
   "source_reference_id": "CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
   "purpose": "Source-independent scroll-linked roadmap geometry and state engine.",
   "api": {
@@ -42,6 +42,16 @@
     "EDITORIAL_COMPOSITION",
     "PRODUCT_ASSETS"
   ],
+  "validation": {
+    "path": "BEHAVIOR_CORE_VALIDATION_RESULTS.json",
+    "status": "PASS_CONTROLLED_EXACT_BYTES",
+    "normal_motion": "PASS_7_OF_7",
+    "reduced_motion": "PASS_7_OF_7",
+    "reference_transition_checks": "PASS_7_OF_7",
+    "horizontal_overflow": "ZERO",
+    "external_requests": "ZERO",
+    "real_localhost_automation": "NOT_ESTABLISHED_BLOCKED_BY_EXECUTION_ENVIRONMENT_ERR_BLOCKED_BY_ADMINISTRATOR"
+  },
   "invariants": [
     "No external requests are required by the behavior core.",
     "No source-specific selector is hard-coded.",
