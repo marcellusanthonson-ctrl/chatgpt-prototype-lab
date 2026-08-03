@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176",
   "project_id": "lab",
-  "status": "GRANTED",
+  "status": "CONSUMED_BLOCKED_BY_UNRESOLVED_CANONICAL_STATE_CONTRADICTION",
   "authorization_class": "CANONICAL_REFERENCE_DESIGNATION_AND_BEHAVIOR_CORE_EXTRACTION",
   "decision_ref": "DEC-LAB-031",
   "approved_by": "Jonathan Martínez",
@@ -43,6 +43,7 @@
   },
   "stage_0": {
     "name": "CANONICAL_STATE_RECONCILIATION",
+    "status": "PARTIAL_BLOCKED_UNRESOLVED_CANONICAL_STATE_CONTRADICTION",
     "scope": [
       "RECONCILE_ONLY_STRUCTURED_SOURCES_THAT_CONTRADICT_AUTHORIZATION_173_CONSUMED_RESULT",
       "SYNC_ERR_LAB_011_CLOSED",
@@ -51,52 +52,40 @@
       "SYNC_AUTHORIZATION_173_STAGE_2_CONSUMED",
       "SYNC_PRIOR_ACTIVE_EXECUTION_AUTHORITY_NONE"
     ],
-    "candidate_paths": [
+    "reconciled": [
+      "ITEM_LEVEL_ERROR_PENDING_AUTHORIZATION_CANDIDATE_AND_CONTINUITY_RECORDS",
+      "MOTION_SYSTEM_MANIFESTS_AND_REGISTRY",
+      "AUTHORIZATION_176_EVIDENCE_AND_DELTA"
+    ],
+    "unreconciled": [
       "CURRENT_STATE.json",
-      "projects/lab/PROJECT_STATE.json",
       "projects/lab/PENDING.json",
-      "registry/errors.json",
-      "registry/authorizations.json",
-      "registry/evidence.json",
-      "registry/index.json",
-      "projects/lab/continuity/CURRENT_CONTINUITY.json"
-    ]
+      "registry/index.json"
+    ],
+    "blocker_ref": "projects/lab/pending/PEND-LAB-047.json",
+    "stop_condition_triggered": "UNRESOLVED_CANONICAL_STATE_CONTRADICTION"
   },
   "stage_1": {
     "name": "CANONICAL_REFERENCE_DESIGNATION",
+    "status": "COMPLETED",
     "candidate_id": "CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
     "effect_id": "ROADMAP-VERTICAL-PROGRESS-001",
-    "scope": [
-      "DESIGNATE_EXISTING_APPROVED_CANDIDATE_AS_CANONICAL_REFERENCE_IMPLEMENTATION",
-      "REFERENCE_EXISTING_ARTIFACT_WITHOUT_COPY_MOVE_REWRITE_OR_MODIFICATION",
-      "PRESERVE_PRIOR_NEUTRAL_IMPLEMENTATION_AS_REJECTED_CANONICAL_REFERENCE_HISTORICAL_NEUTRAL_DERIVATION",
-      "UPDATE_ONLY_REQUIRED_CONTRACTS_MANIFESTS_REGISTRIES_EVIDENCE_STATE_AND_CONTINUITY"
-    ]
+    "result": "CANONICAL_REFERENCE_IMPLEMENTATION_DESIGNATED_BY_IMMUTABLE_POINTER",
+    "pointer": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/CANONICAL_REFERENCE.json",
+    "reference_modified": false,
+    "historical_neutral_derivation": "REJECTED_AS_CANONICAL_REFERENCE_PRESERVED_HISTORICALLY"
   },
   "stage_2": {
     "name": "BEHAVIOR_CORE_EXTRACTION",
-    "target_root": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001",
-    "preserve_semantics": [
-      "SCROLL_LINKED_PARAMETRIC_CALCULATION",
-      "LIVE_MEASUREMENT_AND_RESIZE_REMEASUREMENT",
-      "REQUIRED_DYNAMIC_PADDING",
-      "PROGRESSIVE_NODE_ACTIVATION",
-      "INDEPENDENT_CARD_REVEAL",
-      "TERMINAL_STATE_AND_TERMINAL_CAP",
-      "EXACT_FINALIZATION_WITHOUT_POST_TERMINAL_DEAD_SCROLL",
-      "REDUCED_MOTION_FINAL_STATE_IMMEDIATE",
-      "LOAD_AND_FONT_STABILIZATION"
-    ],
-    "exclude_source_specific": [
-      "TEXT_CONTENT",
-      "BRAND_IDENTITY",
-      "BRAND_TYPOGRAPHY",
-      "COLORS",
-      "ICONS",
-      "CLINICAL_CONTENT",
-      "EDITORIAL_COMPOSITION",
-      "PRODUCT_ASSETS"
-    ],
+    "status": "COMPLETED_TECHNICAL_VALIDATION_PASS_CONTROLLED_EXACT_BYTES",
+    "target_root": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core",
+    "behavior_core_id": "ROADMAP-VERTICAL-PROGRESS-BEHAVIOR-CORE-001",
+    "normal_motion": "PASS_7_OF_7",
+    "reduced_motion": "PASS_7_OF_7",
+    "reference_transition_checks": "PASS_7_OF_7",
+    "horizontal_overflow": "ZERO",
+    "external_requests": "ZERO",
+    "real_localhost_automation": "NOT_ESTABLISHED_BLOCKED_BY_EXECUTION_ENVIRONMENT_ERR_BLOCKED_BY_ADMINISTRATOR",
     "neutral_adaptation_created": false
   },
   "preserve_byte_for_byte": [
@@ -113,53 +102,20 @@
       "blob_sha": "5233884b89de573b631f9f2257649f539c6f704b"
     }
   ],
-  "human_comparison_change_policy": "NO_CHANGE_UNLESS_REQUIRED_ONLY_FOR_NON_BEHAVIORAL_REFERENCE_LINKING",
-  "required_viewports": [
-    "390x844",
-    "768x1024",
-    "1280x720",
-    "1440x900",
-    "1541x899",
-    "1920x1080",
-    "2560x1080"
-  ],
-  "required_validation": [
-    "VERIFY_HEAD_BEFORE_EACH_STAGE",
-    "JSON_AND_APPLICABLE_SCHEMAS_PASS",
-    "REFERENCES_AND_INDEXES_PASS",
-    "NO_DUPLICATES_OR_CONTRADICTORY_STATES",
-    "PROTECTED_BLOBS_EXACTLY_PRESERVED",
-    "REFERENCE_AND_BEHAVIOR_CORE_STATE_PARITY",
-    "NORMAL_AND_REDUCED_MOTION",
-    "RESIZE_AND_LATE_STABILIZATION",
-    "TERMINAL_CAP_REACHED",
-    "NO_POST_TERMINAL_DEAD_SCROLL",
-    "NO_HORIZONTAL_OVERFLOW",
-    "NO_EXTERNAL_REQUESTS",
-    "NO_CAROLINA_TEXT_BRAND_OR_ASSET_DEPENDENCY",
-    "NO_REUSABLE_PROMOTION_OR_PRODUCT_INTEGRATION_CLAIMS"
-  ],
-  "stop_conditions": [
-    "REMOTE_HEAD_DIVERGED",
-    "PROTECTED_REFERENCE_MODIFICATION_REQUIRED",
-    "CAROLINA_REPOSITORY_MUTATION_REQUIRED",
-    "PRODUCT_OR_RUNTIME_CHANGE_REQUIRED",
-    "REUSABLE_PROMOTION_REQUIRED",
-    "BEHAVIOR_CANNOT_BE_SEPARATED_WITHOUT_LOSING_APPROVED_SEMANTICS",
-    "UNRESOLVED_CANONICAL_STATE_CONTRADICTION",
-    "SCOPE_EXPANSION_REQUIRED"
-  ],
-  "expected_result": {
-    "canonical_state": "COHERENT",
-    "canonical_reference": "CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
-    "behavior_core": "EXTRACTED_DOCUMENTED_AND_VALIDATED",
-    "historical_neutral_derivation": "PRESERVED_WITHOUT_IMPERSONATING_REFERENCE",
-    "carolina_mutation": "NONE",
+  "validation": {
+    "technical_result": "PASS_CONTROLLED_EXACT_BYTES",
+    "global_canonical_reconciliation": "BLOCKED",
+    "protected_blobs_preserved": true,
+    "carolina_repository_mutation": "NONE",
     "product_integration": "NONE",
     "runtime_effect": "NONE",
     "deployment": "NONE",
     "reusable_promotion": "NONE"
   },
-  "consumption_rule": "CONSUME_AFTER_REMOTE_PUBLICATION_AND_VERIFICATION_OF_STAGE_0_STAGE_1_STAGE_2_VALIDATION_EVIDENCE_INDEXES_AND_CONTINUITY_OR_AFTER_DOCUMENTED_BLOCKED_RESULT_WITH_NO_RESIDUAL_AUTHORITY",
-  "authority_effect_while_granted": "BOUNDED_TO_AUTHORIZATION_176_ONLY"
+  "execution_result": "TECHNICAL_REFERENCE_AND_BEHAVIOR_CORE_COMPLETE_CANONICAL_AGGREGATE_RECONCILIATION_INCOMPLETE",
+  "successor_pending_ref": "projects/lab/pending/PEND-LAB-047.json",
+  "consumed_at": "2026-08-02T20:09:00-04:00",
+  "consumption_basis": "DOCUMENTED_BLOCKED_RESULT_UNDER_EXPLICIT_CONSUMPTION_RULE",
+  "authority_effect": "NONE_AFTER_BLOCKED_CONSUMPTION",
+  "residual_authority": false
 }
