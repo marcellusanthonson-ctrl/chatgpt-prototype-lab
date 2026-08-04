@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "PRODUCT-LEADERSHIP-TEST003-REPLAY-187-STAGE1-BLOCK",
+  "project_id": "lab",
+  "created_at": "2026-08-04T16:58:23.5217479-04:00",
+  "authorization": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_AUDIT186_RECONCILIATION_AND_STAGED_UNIQUE_CODEX_REPLAY_187",
+  "authorization_state": "CONSUMED_STAGE_1_BLOCKED_NO_CALIBRATION_ATTEMPT_NO_RETRY_AUTHORITY",
+  "evidence": "projects/lab/evidence/EVD-LAB-PL003-STAGED-UNIQUE-REPLAY-187.json",
+  "dispatch_attestation": "projects/lab/runner-resolutions/PRODUCT-LEADERSHIP-TEST003-STAGED-UNIQUE-REPLAY-187/DISPATCH_ATTESTATION.json",
+  "result": "BLOCKED_CALIBRATION_V2_DIGEST_MISMATCH_PREEXISTING_AUTHENTICATION_ABSENT_EXACT_MODEL_UNAVAILABLE",
+  "smoke_requests": 0,
+  "model_requests": 0,
+  "calibration_started": false,
+  "execution_004_created": false,
+  "outputs_generated": 0,
+  "residual_authority": "NONE",
+  "aggregate_view_divergence": {
+    "preserved": true,
+    "affected_views": [
+      "CURRENT_STATE.json",
+      "projects/lab/PROJECT_STATE.json",
+      "registry/index.json"
+    ]
+  },
+  "next_action": "SEPARATELY_DECIDE_PRODUCT_LEADERSHIP_REPLAY_OR_STOP_AFTER_REVIEWING_STAGE_1_BLOCK_EVIDENCE",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "integration_effect": "NONE"
+}
