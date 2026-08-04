@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "product-leadership-test003-repository-only-authority-182",
+  "project_id": "lab",
+  "updated_at": "2026-08-03",
+  "status": "PASS_PRODUCT_LEADERSHIP_STAGE_2_DEPENDENCY_REASSESSMENT_AND_CONDITIONAL_TEST003_EXECUTION_AUTHORIZED_NOT_STARTED",
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_REPOSITORY_ONLY_PREFLIGHT_RECONCILIATION_AND_CONDITIONAL_EXECUTION_182",
+    "status": "GRANTED_STAGE_2_CONDITIONAL_EXECUTION_NOT_STARTED_AUTHORIZATION_UNCONSUMED",
+    "path": "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_REPOSITORY_ONLY_PREFLIGHT_RECONCILIATION_AND_CONDITIONAL_EXECUTION_182.json"
+  },
+  "brief": {
+    "id": "CODEX_PRODUCT_LEADERSHIP_TEST003_REPOSITORY_ONLY_PREFLIGHT_RECONCILIATION_AND_CONDITIONAL_EXECUTION_182_001",
+    "status": "AUTHORIZED_NOT_STARTED",
+    "path": "projects/lab/briefs/CODEX_PRODUCT_LEADERSHIP_TEST003_REPOSITORY_ONLY_PREFLIGHT_RECONCILIATION_AND_CONDITIONAL_EXECUTION_182_001.json"
+  },
+  "candidate": {
+    "integration_id": "INT-LAB-004",
+    "status": "CANDIDATE_CONTRACT_COMPLETE_PHASE_2_EVIDENCE_CLOSURE_AUTHORIZED",
+    "integrated": false,
+    "active": false
+  },
+  "test_design": {
+    "id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001",
+    "status": "AUTHORIZED_CONDITIONALLY_NOT_STARTED_STAGE_2_DEPENDENCY_REASSESSMENT_REQUIRED",
+    "fixture_count": 52,
+    "arm_count": 4,
+    "minimum_output_count": 112
+  },
+  "conditional_gate": {
+    "required_pass": "AWS_PREFLIGHT_NOT_MATERIAL_REPOSITORY_ONLY_EXECUTION_CAN_REMAIN_FULLY_SYNTHETIC_AND_REPRODUCIBLE",
+    "blocking_result": "AWS_PREFLIGHT_MATERIAL_OR_DEPENDENCY_NOT_DISPROVEN",
+    "outputs_before_pass_allowed": false
+  },
+  "source_control": {
+    "expected_parent_head": "52fc4d0d72752d0a032a2c1401dac3619d771653",
+    "source_branch": "agent/product-leadership-test003-authority-182",
+    "publication_method": "SQUASH_MERGE"
+  },
+  "state": {
+    "global_phase": "PRODUCT_LEADERSHIP_STAGE_2_DEPENDENCY_REASSESSMENT_AUTHORIZED_NOT_STARTED_SSE_RETRY_BLOCKED",
+    "product_leadership": "AUTHORIZATION_182_ACTIVE_STAGE_2_NOT_STARTED_CONDITIONAL_TEST003_EXECUTION_AUTHORIZED",
+    "sse": "AUTHORIZATION_180_UNCONSUMED_BUT_BLOCKED_PENDING_SEPARATE_RUNNER_RESOLUTION",
+    "phase_3_external_audits": "NOT_AUTHORIZED"
+  },
+  "registry_counts_before": {
+    "authorizations": 105,
+    "evidence": 87,
+    "test_executions": 5
+  },
+  "registry_counts_after": {
+    "authorizations": 106,
+    "evidence": 87,
+    "test_executions": 5
+  },
+  "non_effects": [
+    "NO_AWS_OR_TERRAFORM",
+    "NO_OUTPUT_GENERATION_YET",
+    "NO_EXTERNAL_AUDIT",
+    "NO_PROMOTION_ACTIVATION_OR_INTEGRATION",
+    "NO_PRODUCT_OR_RUNTIME_CHANGE",
+    "NO_POINTER_SELECTOR_OR_SHADOW_REGISTRY_CHANGE",
+    "NO_SSE_RUNNER_RESOLUTION_OR_RETRY"
+  ],
+  "next_authorized_action": "CODEX_EXECUTE_PRODUCT_LEADERSHIP_STAGE_2_PREFLIGHT_DEPENDENCY_REASSESSMENT_UNDER_AUTHORIZATION_182",
+  "next_recommended_transition": "EXECUTE_PRODUCT_LEADERSHIP_STAGE_2_PREFLIGHT_DEPENDENCY_REASSESSMENT"
+}

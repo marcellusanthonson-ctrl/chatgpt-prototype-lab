@@ -1,10 +1,10 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.2.0",
   "integration_id": "INT-LAB-004",
   "project_id": "lab",
   "title": "Product Leadership priority criterion integration candidate",
   "status": "CANDIDATE",
-  "lifecycle_stage": "CONTRACT_COMPLETE",
+  "lifecycle_stage": "CONTRACT_COMPLETE_PHASE_2_EVIDENCE_CLOSURE_AUTHORIZED",
   "priority_order": 1,
   "program_role": "PRIORITY_INTEGRATION_CRITICAL_PATH",
   "profile": "CRITERION_MODULE",
@@ -22,13 +22,16 @@
   },
   "activation_contract": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/ACTIVATION_CONTRACT.json",
   "test_program": {
-    "current_design": "projects/lab/test-designs/PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003/PROPOSAL.json",
-    "contract_status": "APPROVED_REQUIRES_SEPARATE_EXECUTION_AUTHORIZATION",
-    "execution_authorized": false,
+    "current_design": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json",
+    "contract_status": "FINAL_DESIGN_REVIEW_COMPLETE",
+    "execution_authorized": true,
+    "execution_authorization": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_REPOSITORY_ONLY_PREFLIGHT_RECONCILIATION_AND_CONDITIONAL_EXECUTION_182",
+    "execution_condition": "STAGE_2_MUST_CONCLUDE_AWS_PREFLIGHT_NOT_MATERIAL_BEFORE_INPUT_FREEZE_OR_OUTPUT_GENERATION",
+    "execution_started": false,
     "execution_completed": false,
     "external_audit_completed": false
   },
-  "current_state": "CONTRACT_COMPLETE_OPERATIONAL_PREFLIGHT_INCOMPLETE_TEST_003_NOT_EXECUTED",
+  "current_state": "CONTRACT_COMPLETE_STAGE_2_DEPENDENCY_REASSESSMENT_AUTHORIZED_NOT_STARTED_CONDITIONAL_TEST003_EXECUTION_AUTHORIZED",
   "promotion_state": "NOT_PROPOSED_FOR_PROMOTION",
   "composition": {
     "precedes": "INT-LAB-005",
@@ -49,12 +52,13 @@
   "integrated": false,
   "active": false,
   "automatic_consumption": false,
-  "authority_effect": "NONE",
+  "authority_effect": "AUTHORIZATION_182_CONDITIONAL_TEST_EXECUTION_ONLY",
   "runtime_effect": "NONE",
   "product_effect": "NONE",
   "rag_effect": "NONE",
   "decision_ref": "DEC-LAB-030",
-  "authorization_ref": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_1_FACTORY_CONTRACT_COMPLETION_170_REVISION_2",
+  "factory_authorization_ref": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_1_FACTORY_CONTRACT_COMPLETION_170_REVISION_2",
+  "execution_authorization_ref": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_REPOSITORY_ONLY_PREFLIGHT_RECONCILIATION_AND_CONDITIONAL_EXECUTION_182",
   "program_ref": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/MANIFEST.json",
-  "updated_at": "2026-08-02"
+  "updated_at": "2026-08-03"
 }

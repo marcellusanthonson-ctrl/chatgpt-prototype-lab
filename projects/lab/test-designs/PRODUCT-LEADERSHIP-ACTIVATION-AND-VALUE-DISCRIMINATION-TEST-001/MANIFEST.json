@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.2.0",
+  "schema_version": "1.3.0",
   "package_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001",
-  "status": "FINAL_DESIGN_REVIEW_COMPLETE_READY_FOR_SEPARATE_EXECUTION_AUTHORIZATION",
-  "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_FINAL_DESIGN_REVIEW_143",
+  "status": "AUTHORIZED_CONDITIONALLY_NOT_STARTED_STAGE_2_DEPENDENCY_REASSESSMENT_REQUIRED",
+  "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_REPOSITORY_ONLY_PREFLIGHT_RECONCILIATION_AND_CONDITIONAL_EXECUTION_182",
   "source_package": "PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001",
   "successor_pending": "PEND-LAB-024",
   "files": [
@@ -22,7 +22,10 @@
   "arm_count": 4,
   "minimum_future_outputs": 112,
   "output_formula": "52_BASELINE + 52_PACKAGE + 4_POSITIVE_CONTROL + 4_NEGATIVE_CONTROL",
-  "governance_domains": ["PRODUCT_AND_PROJECT_DECISIONS", "LAB_GOVERNANCE_DECISIONS"],
+  "governance_domains": [
+    "PRODUCT_AND_PROJECT_DECISIONS",
+    "LAB_GOVERNANCE_DECISIONS"
+  ],
   "measurements": [
     "ACTIVATION_PRECISION",
     "ACTIVATION_RECALL",
@@ -46,6 +49,12 @@
     "negative_transfer_gate_required": true,
     "external_read_only_audit_required": true
   },
+  "conditional_execution_gate": {
+    "stage": "STAGE_2_PREFLIGHT_DEPENDENCY_REASSESSMENT",
+    "required_pass": "AWS_PREFLIGHT_NOT_MATERIAL_REPOSITORY_ONLY_EXECUTION_CAN_REMAIN_FULLY_SYNTHETIC_AND_REPRODUCIBLE",
+    "blocking_result": "AWS_PREFLIGHT_MATERIAL_OR_DEPENDENCY_NOT_DISPROVEN",
+    "outputs_before_pass_allowed": false
+  },
   "test_executed": false,
   "corpus_generated": false,
   "provider_selected": false,
@@ -54,7 +63,7 @@
   "implementation_approved": false,
   "product_effect": "NONE",
   "runtime_effect": "NONE",
-  "governance_authority_effect": "NONE",
-  "next_action": "REVIEW_AND_SEPARATELY_AUTHORIZE_CODEX_PRODUCT_LEADERSHIP_TEST003_REPOSITORY_ONLY_EXECUTION_001",
-  "execution_authority": "NONE"
+  "governance_authority_effect": "AUTHORIZATION_182_CONDITIONAL_TEST_EXECUTION_ONLY",
+  "next_action": "EXECUTE_STAGE_2_PREFLIGHT_DEPENDENCY_REASSESSMENT_UNDER_AUTHORIZATION_182",
+  "execution_authority": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_REPOSITORY_ONLY_PREFLIGHT_RECONCILIATION_AND_CONDITIONAL_EXECUTION_182"
 }
