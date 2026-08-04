@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "PRODUCT-LEADERSHIP-RUNNER-RESOLUTION-RESULT-183",
+  "project_id": "lab",
+  "created_at": "2026-08-04T07:14:00-04:00",
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_REPRODUCIBLE_CODEX_RUNNER_RESOLUTION_183",
+    "status": "CONSUMED_ON_VERIFIED_SQUASH_MERGE_BLOCKED_EPHEMERAL_INSTALLATION_NETWORK_UNAVAILABLE_PREAUTHORIZED_AUTHENTICATION_NOT_AVAILABLE",
+    "path": "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_REPRODUCIBLE_CODEX_RUNNER_RESOLUTION_183.json"
+  },
+  "result": {
+    "id": "PRODUCT-LEADERSHIP-TEST003-CODEX-RUNNER-183",
+    "attempt": "ATTEMPT-001",
+    "status": "BLOCKED_EPHEMERAL_INSTALLATION_NETWORK_UNAVAILABLE_PREAUTHORIZED_AUTHENTICATION_NOT_AVAILABLE",
+    "manifest": "projects/lab/runner-resolutions/PRODUCT-LEADERSHIP-TEST003-CODEX-RUNNER-183/MANIFEST.json",
+    "evidence": "projects/lab/evidence/EVD-LAB-PL003-CODEX-RUNNER-RESOLUTION-183.json"
+  },
+  "verified_facts": {
+    "official_stable_version": "0.146.0",
+    "platform_asset": "codex-package-x86_64-unknown-linux-musl.tar.gz",
+    "platform_asset_sha256": "3c89125af1d7c98abec8beb551292ef99daca52e204e5852a9139feae2c467e5",
+    "official_metadata_and_checksum_pass": true,
+    "asset_downloaded": false,
+    "codex_installed": false,
+    "preauthorized_authentication_available": false,
+    "secret_values_read": false,
+    "model_requests": 0,
+    "test003_retry_started": false,
+    "test003_outputs_generated": 0
+  },
+  "source_authorizations": {
+    "authorization_182": "UNCONSUMED_RETRY_NOT_STARTED",
+    "authorization_180": "UNCONSUMED_SSE_BLOCKED"
+  },
+  "records_updated": [
+    "projects/lab/pending/PEND-LAB-045.json",
+    "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/ROADMAP.json",
+    "projects/lab/integrations/INT-LAB-004.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json"
+  ],
+  "non_effects": [
+    "NO_CODEX_INSTALLATION",
+    "NO_CREDENTIAL_CREATION_OR_SECRET_DISCLOSURE",
+    "NO_MODEL_REQUEST_OR_SUBSTITUTION",
+    "NO_TEST003_RETRY",
+    "NO_AWS_BEDROCK_OR_TERRAFORM",
+    "NO_EXTERNAL_AUDIT",
+    "NO_PROMOTION_ACTIVATION_OR_INTEGRATION",
+    "NO_POINTER_SELECTOR_SHADOW_REGISTRY_OR_FALLBACK_CHANGE",
+    "NO_SSE_CHANGE",
+    "NO_PRODUCT_RUNTIME_OR_SYMPHONIE_CHANGE"
+  ],
+  "aggregate_view_divergence": {
+    "preserved": true,
+    "affected_views": ["CURRENT_STATE.json","projects/lab/PROJECT_STATE.json","registry/index.json"],
+    "correction_authorized": false
+  },
+  "next_recommended_transition": "SEPARATELY_AUTHORIZE_CODEX_PRODUCT_LEADERSHIP_TEST003_NETWORKED_PREAUTHORIZED_EXECUTION_184",
+  "authority_effect": "AUTHORIZATION_183_CONSUMED_NO_RESIDUAL_AUTHORITY",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "integration_effect": "NONE"
+}
