@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "CODEX-BOUNDED-RECOVERY-RESOLVER-001-WAIT-AUTHORIZATION-188",
+  "project_id": "lab",
+  "authorization_ref": "AUTHORIZATION_LAB_CODEX_BOUNDED_RECOVERY_RESOLVER_CREATION_AND_PRODUCT_LEADERSHIP_TEST003_EXECUTION_188",
+  "state": "WAITING_FOR_USER_ACTION_RESUMABLE",
+  "cause": "INTERACTIVE_CODEX_AUTHENTICATION_REQUIRED",
+  "action_count": 1,
+  "action": "Jonathan ejecuta `codex login` en una terminal local con la instalación estable existente y completa el inicio de sesión interactivo.",
+  "authorization_consumed": false,
+  "resume_same_mission": true,
+  "recovery_cycles_used": 2,
+  "recovery_cycles_remaining": 3,
+  "smoke_requests": 0,
+  "calibration_scorer_invocations": 0,
+  "execution_004_created": false,
+  "outputs_generated": 0,
+  "published_state": "PENDING_VERIFIED_REMOTE_PUBLICATION",
+  "recorded_at": "2026-08-04T22:16:02Z"
+}
