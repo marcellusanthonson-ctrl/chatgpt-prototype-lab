@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.0.0",
+  "audit_id": "AUDIT-CLAUDE-PRODUCT-LEADERSHIP-TEST003-PRE-DECISION-186-001",
+  "audited_head": "b00904cb46f5ef9ff3bd6b44e6a293ddd42281b0",
+  "verdict_vocabulary": [
+    "CONFIRMED",
+    "MODIFIED",
+    "REVERSED",
+    "INSUFFICIENT_EVIDENCE"
+  ],
+  "verdicts": [
+    {
+      "id": "CLAIM-186-01",
+      "domain": "FACTUAL",
+      "claim": "The authorization 185 block is an execution-environment block and provides no evidence that calibration-v2 would pass or fail.",
+      "verdict": "CONFIRMED",
+      "confidence": "HIGH",
+      "class": "FACT",
+      "supporting_evidence": [
+        "EVD-185.runner_model_and_requests.smoke_requests=0",
+        "EVD-185.runner_model_and_requests.calibration_scorer_requests=0",
+        "EVD-185.runner_model_and_requests.test003_model_requests=0",
+        "EVD-185.conditional_attempt.created=false",
+        "EVD-185.claims_not_supported includes SCORER_CALIBRATION_V2_PASSED_OR_FAILED",
+        "EVD-185.execution_surface.openai_dns=false and github_dns=false"
+      ],
+      "contrary_evidence_searched": "No partial calibration output, scorer response, request id, token usage or latency record for calibration-v2 exists anywhere at the audited HEAD. No contrary evidence found.",
+      "auditor_refinement": "More precisely it is a SURFACE_ELIGIBILITY block, not an environment failure: the observed surface CHATGPT_CONTAINER_NON_CODEX_LINUX had no outbound DNS or HTTPS to either GitHub or OpenAI and no codex binary, so it was never a candidate execution surface. This is stronger than the claim as written, not weaker."
+    },
+    {
+      "id": "CLAIM-186-02",
+      "domain": "MIXED",
+      "claim": "The calibration-v2 contract is sufficiently explicit, discriminating and reproducible to justify one further execution attempt without redesign.",
+      "verdict": "MODIFIED",
+      "confidence": "MEDIA",
+      "class": "FACTUAL_COMPONENT_CONFIRMED_NORMATIVE_COMPONENT_QUALIFIED",
+      "modified_statement": "Calibration-v2 is a material and correctly targeted remediation and is sufficient to justify exactly one further attempt. It is NOT established to be sufficiently discriminating: one named residual ambiguity remains at critical anchor CAL2-003, and the contract is partly fitted to the v1 failure it must now detect.",
+      "supporting_evidence": [
+        "v1 CALIBRATION_PROMPT.md contained no label definitions, no precedence, no boundary rules and no gold rationales",
+        "v2 adds LABEL_TAXONOMY with definitions, positive tests, negative tests, a 6-level precedence and 4 explicit boundary rules",
+        "cases 6 -> 12, critical boundary anchors 0 -> 8, gold_rationale now mandatory per case, strict JSON output schema added",
+        "independent SHA-256 verification of all 5 frozen calibration-v2 files matches MANIFEST exactly (5/5)",
+        "v1 failure signature was CONVERGENT not random: both scorers agreed on 5/6 and both chose the same non-gold label on CAL-003, which is the signature of an underspecified rubric rather than an unstable scorer"
+      ],
+      "contrary_evidence": [
+        "Precedence places CORRECT_ABSTENTION ABOVE AMBIGUOUS while CALIBRATION_PROMPT.md rule 2 instructs applying precedence before choosing a lower-precedence label; only the negative tests prevent a scorer from resolving CAL2-003 to CORRECT_ABSTENTION",
+        "CAL2-003 candidate_response still contains the phrase that drove both v1 scorers to CORRECT_ABSTENTION ('...before ranking the signals'), and CAL2-003 is a critical anchor whose mismatch is an immediate FAIL",
+        "the v2 taxonomy text, boundary rules and the CAL2-003 item wording were authored after observing the exact v1 error mode, and the two contested cases were retained as anchors: the gate is partially fitted to the failure it must detect, which reduces its independence as a scorer-reliability test",
+        "calibration-v2 MANIFEST contains an 'adjudications' block for CAL2-003 and CAL2-004 while AUTHORIZATION_185.calibration_remediation.post_hoc_adjudication_allowed=false; formally consistent because the adjudication is pre-freeze, but the artifact reads ambiguously"
+      ]
+    },
+    {
+      "id": "CLAIM-186-03",
+      "domain": "MIXED",
+      "claim": "Requiring a Codex-native surface and exact gpt-5.6-sol is proportionate to the evidentiary purpose rather than an avoidable tooling dependency.",
+      "verdict": "MODIFIED",
+      "confidence": "MEDIA_ALTA",
+      "modified_statement": "The exact-model requirement is proportionate and should not be relaxed. The Codex-native SURFACE requirement is an operationally justified instrument choice, not an evidentiary requirement, and it is the single largest source of block risk in this line. It is proportionate only if treated as a precondition verified before an authorization is consumed.",
+      "supporting_evidence_for_the_model_requirement": [
+        "the test is a within-model contrast across 4 arms (baseline, package, positive control, negative control); substituting the model confounds the only comparison the test exists to make",
+        "ACCEPTANCE_CONTRACT.required_model=gpt-5.6-sol with model_substitution_allowed=false is consistent across authorizations 183, 184, 185 and the roadmap constraint NO_MODEL_SUBSTITUTION_FROM_GPT_5_6_SOL"
+      ],
+      "contrary_evidence_for_the_surface_requirement": [
+        "nothing in TEST-001 MANIFEST, SCORING_AND_GATES or FINAL_DESIGN_REVIEW_001 requires Codex; the design requires reproducible provenance (runner version, digest, model, provider, exit status, timestamps, request digest) and no credential handling",
+        "2 of the 4 attempts (183, 185) were lost to surface or runner availability, 0 to the evidentiary contract itself",
+        "the surface requirement was chosen to satisfy a legitimate secondary constraint (preexisting authentication with no credential creation or transfer), which is a security and operability rationale rather than an evidentiary one"
+      ]
+    },
+    {
+      "id": "CLAIM-186-04",
+      "domain": "NORMATIVE",
+      "claim": "A user-opened networked preauthorized Codex replay is the highest-value and lowest-regret next action.",
+      "verdict": "CONFIRMED",
+      "confidence": "MEDIA_ALTA",
+      "class": "AUDITOR_RECOMMENDATION_ON_A_NORMATIVE_QUESTION_JONATHAN_DECIDES",
+      "supporting_evidence": [
+        "the same surface class already worked once: EVD-184 records CODEX_DESKTOP_LOCAL_WINDOWS build 1.2026.190, network PASS, preauthorized OpenAI authentication PASS, runner 0.146.0 with exact official SHA-256, exact gpt-5.6-sol available, 1 smoke request exit 0, 2 real scorer invocations with recorded latency and token usage",
+        "marginal execution cost is approximately 1 smoke request plus 2 scorer invocations before any gate; attempt 002 consumed 14638 input tokens and about 15 seconds per scorer",
+        "reversibility is total: the generation gate blocks all Test 003 output creation until calibration-v2 PASS is recorded, so the worst outcome is a recorded FAIL with 0 outputs and no product, runtime or integration effect",
+        "a calibration-v2 FAIL is itself discriminating information: it would separate 'rubric still ambiguous' from 'scorer unreliable', which no other option produces"
+      ],
+      "contrary_evidence": [
+        "the governance cost per attempt (authorization, brief, evidence, PR, squash merge, reconciliation across 6+ artifacts) far exceeds the execution cost, so a further block is expensive in process even though it is cheap in compute",
+        "185 shows the claim is false if the surface is not verified before the authorization is consumed"
+      ],
+      "qualifier": "CONFIRMED only under the precondition that surface, preauthorized authentication, runner provenance and exact model are verified BEFORE the next authorization is treated as consumed."
+    },
+    {
+      "id": "CLAIM-186-05",
+      "domain": "FACTUAL",
+      "claim": "Existing evidence is insufficient to conclude whether Product Leadership adds incremental value or causes negative transfer.",
+      "verdict": "CONFIRMED",
+      "confidence": "ALTA",
+      "class": "FACT",
+      "supporting_evidence": [
+        "0 of the minimum 112 required Test 003 outputs exist at the audited HEAD",
+        "EXECUTION-003 MANIFEST: OUTPUT_GENERATION=NOT_STARTED, BLINDED_SCORING=NOT_STARTED, COST_AND_NEGATIVE_TRANSFER_ANALYSIS=NOT_RUN_NO_OUTPUTS",
+        "EXECUTION-004 was never created (fresh_execution_004_created=false in 4 independent artifacts)",
+        "EVD-184 and EVD-185 both list PRODUCT_LEADERSHIP_ADDS_VALUE and PRODUCT_LEADERSHIP_FAILS_TO_ADD_VALUE under claims_not_supported",
+        "INT-LAB-004 remains CANDIDATE, integrated=false, active=false"
+      ],
+      "contrary_evidence_searched": "No output corpus, no arm mapping results, no blinded scores and no negative-transfer measurement exist anywhere at the audited HEAD. No contrary evidence found. ARM_MAPPING.json exists but is a pre-execution assignment plan, not results."
+    },
+    {
+      "id": "CLAIM-186-06",
+      "domain": "MIXED",
+      "claim": "The repeated runner and environment blocks justify revising the execution strategy before any further retry.",
+      "verdict": "MODIFIED",
+      "confidence": "MEDIA_ALTA",
+      "modified_statement": "The record justifies revising the DISPATCH procedure (verify surface eligibility before consuming an authorization), not the execution strategy. The 'repeated blocks' framing conflates three heterogeneous causes and is contradicted by attempt 002, which is a positive existence proof that the current execution strategy works end to end up to the calibration gate.",
+      "causal_disaggregation": [
+        {
+          "attempt": "AUTHORIZATION_182 stage 3 attempt 001",
+          "cause": "MODEL_OR_TOOL_ACCESS_NOT_REPRODUCIBLE",
+          "class": "RUNNER"
+        },
+        {
+          "attempt": "AUTHORIZATION_183 attempt 001",
+          "cause": "EPHEMERAL_INSTALLATION_NETWORK_UNAVAILABLE and PREAUTHORIZED_AUTHENTICATION_NOT_AVAILABLE",
+          "class": "ENVIRONMENT_RUNNER"
+        },
+        {
+          "attempt": "AUTHORIZATION_184 attempt 002",
+          "cause": "SCORER_CALIBRATION_INCOMPLETE after full preflight PASS",
+          "class": "EVIDENTIARY_CONTRACT_NOT_ENVIRONMENT"
+        },
+        {
+          "attempt": "AUTHORIZATION_185 attempt 001",
+          "cause": "launched on CHATGPT_CONTAINER_NON_CODEX_LINUX with no DNS, no HTTPS and no codex binary",
+          "class": "DISPATCH_TO_INELIGIBLE_SURFACE"
+        }
+      ],
+      "supporting_evidence": [
+        "CODEX_PRODUCT_LEADERSHIP_TEST003_SCORER_CALIBRATION_REMEDIATION_AND_FRESH_ATTEMPT_185_001.preconditions already required NETWORKED_CODEX_NATIVE_EXECUTION_SURFACE_AVAILABLE; the 185 attempt proceeded to consume the authorization in an environment that plainly did not satisfy a stated precondition"
+      ],
+      "contrary_evidence": [
+        "two of four attempts did fail for environment or runner reasons, which is a real reliability signal and is why the dispatch gate is required rather than optional"
+      ],
+      "collateral_finding": "Aggregate-view overwriting materially inflates the appearance of a persistent environment problem. In merge #27 the fields INT-LAB-004.test_program.exact_model_verified (true -> false), preauthorized_authentication_verified (true -> false), networked_codex_surface_verified (true -> false) and smoke_requests (1 -> 0) were overwritten with the 185 values, erasing from the current view the fact that attempt 002 had already verified all of them. A reader of HEAD alone would reasonably but wrongly conclude the environment has never worked."
+    },
+    {
+      "id": "CLAIM-186-07",
+      "domain": "MIXED",
+      "claim": "A read-only audit at this point can improve the next decision even though it cannot satisfy the formal Phase 3 audit gate for a completed test.",
+      "verdict": "CONFIRMED",
+      "confidence": "ALTA",
+      "supporting_evidence": [
+        "the Phase 3 non-satisfaction is stated identically in AUTHORIZATION_186.phase_boundary, brief 186_001.scope_boundary, AUDIT_INPUT_MANIFEST.phase_3_gate_effect, ROADMAP phases[3].pre_decision_audit_186_effect and INT-LAB-004.pre_decision_audit.phase_3_gate_effect: no ambiguity",
+        "demonstrated in practice by this audit: four material findings (F01-F04) are not visible from the mandated canonical reading path and change the causal reading of the block sequence"
+      ],
+      "contrary_evidence": [
+        "an advisory audit inserted mid-phase adds a governance cycle and creates a standing risk that a recommendation is later read as authority; that risk is mitigated here only by the explicit non-authority declaration, which every consumer of this package must preserve"
+      ]
+    }
+  ]
+}

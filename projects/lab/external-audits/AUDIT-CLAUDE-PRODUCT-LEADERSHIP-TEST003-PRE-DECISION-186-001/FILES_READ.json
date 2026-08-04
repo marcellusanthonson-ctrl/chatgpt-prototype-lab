@@ -1,0 +1,238 @@
+{
+  "schema_version": "1.0.0",
+  "audit_id": "AUDIT-CLAUDE-PRODUCT-LEADERSHIP-TEST003-PRE-DECISION-186-001",
+  "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "canonical_branch": "main",
+  "audited_commit": "b00904cb46f5ef9ff3bd6b44e6a293ddd42281b0",
+  "access_method": "READ_ONLY_SHALLOW_CLONE_PLUS_DEEPENED_HISTORY_NO_WRITE_NO_PUSH",
+  "brief_source_refs_total": 21,
+  "brief_source_refs_read": 21,
+  "brief_source_refs_missing": 0,
+  "additional_artifacts_read_for_adversarial_verification": [
+    "projects/lab/authorizations/...RUNNER_RESOLUTION_183.json",
+    "projects/lab/test-executions/EXECUTION-003/CALIBRATION_CASES.json (contrato v1)",
+    "projects/lab/test-executions/EXECUTION-003/CALIBRATION_PROMPT.md (contrato v1)",
+    "calibration-v2/CALIBRATION_OUTPUT_SCHEMA.json y CALIBRATION_PROMPT.md",
+    "projects/lab/PROJECT_STATE.json, registry/index.json, registry/projects.json",
+    "projects/lab/external-audits/index.json",
+    "git history: commits ff4148c, 6135470, fbf1caa, 8ef3dbd (#25), 831cdb4, 0845757 (#27), b00904c"
+  ],
+  "files": [
+    {
+      "path": "project-sources/chatgpt/START_HERE.md",
+      "read": true,
+      "bytes": 1144,
+      "sha256_at_audited_head": "a1286d3b4bc10c3197c24e34dbe91cf592d3766da5c280e406d222616f33c53f"
+    },
+    {
+      "path": "LAB_CONTRACT.md",
+      "read": true,
+      "bytes": 5992,
+      "sha256_at_audited_head": "e8c32349ef4e5b4ce8c8e365a5b202f1b40f59ec4b55400f903308994ceb7905"
+    },
+    {
+      "path": "METHODOLOGY.md",
+      "read": true,
+      "bytes": 4362,
+      "sha256_at_audited_head": "69ffb6e1c06c607576f8be5e190b299322604aed1cc6edd9ebaeff26500017af"
+    },
+    {
+      "path": "CURRENT_STATE.json",
+      "read": true,
+      "bytes": 54036,
+      "sha256_at_audited_head": "b36294bb40dd4fdd676f0d88f72bd0d9500c7909c7495869ae1fe4ad566e20b8"
+    },
+    {
+      "path": "registry/index.json",
+      "read": true,
+      "bytes": 23487,
+      "sha256_at_audited_head": "865fc40623308e63386fa422712f9a611f316c6faa996ddec0ac468d9e540c55"
+    },
+    {
+      "path": "registry/projects.json",
+      "read": true,
+      "bytes": 3000,
+      "sha256_at_audited_head": "15c780b4568888f3095259ca980da5d781df18ac4f54dd72afa188ff470e1a36"
+    },
+    {
+      "path": "projects/lab/PROJECT_STATE.json",
+      "read": true,
+      "bytes": 60603,
+      "sha256_at_audited_head": "205576c4b16a44790a1a939503e0077728399efb6a70f0d558de1a3f58863ec5"
+    },
+    {
+      "path": "decisions/DEC-LAB-030.json",
+      "read": true,
+      "bytes": 2586,
+      "sha256_at_audited_head": "58f46c9cf77ff67eae719dac7fbe2df64f6138dfe06d1f5b3f3522c47dbcf4dc"
+    },
+    {
+      "path": "projects/lab/pending/PEND-LAB-045.json",
+      "read": true,
+      "bytes": 4019,
+      "sha256_at_audited_head": "0856fcdcb8e2b41c9ebb05f1319db7af63d1bd4be88651d5988aac26abcad8db"
+    },
+    {
+      "path": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/ROADMAP.json",
+      "read": true,
+      "bytes": 8801,
+      "sha256_at_audited_head": "2de679bea38ece351e28b502312c296415fd0eca5ff6682fc36352f7861ea7e2"
+    },
+    {
+      "path": "projects/lab/integrations/INT-LAB-004.json",
+      "read": true,
+      "bytes": 3870,
+      "sha256_at_audited_head": "fa874f1fd80a3499b8c18bb2a44cd0dfd6601110b46073eff9e4c1a0d5cc6631"
+    },
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json",
+      "read": true,
+      "bytes": 3329,
+      "sha256_at_audited_head": "55c8bfa786e6e6d770357928553b1929438a7b00abe97bcfd902ad4c3c6cbf6d"
+    },
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/SCORING_AND_GATES.json",
+      "read": true,
+      "bytes": 6770,
+      "sha256_at_audited_head": "0ba52e310b6539fca39f3ddd3f8dcd1684f8b1e270ddfb1fea5c3aa7efb38e00"
+    },
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/FINAL_DESIGN_REVIEW_001.json",
+      "read": true,
+      "bytes": 3006,
+      "sha256_at_audited_head": "25aee960bfb9faa6595c764267c0d055465107b651acdd4470851c35f58338a2"
+    },
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/calibration-v2/MANIFEST.json",
+      "read": true,
+      "bytes": 3075,
+      "sha256_at_audited_head": "eb9d7b2d26c983f4a88955c7d5acd7770c550c81aac968774c3d8ee0e9539d35"
+    },
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/calibration-v2/LABEL_TAXONOMY.json",
+      "read": true,
+      "bytes": 4732,
+      "sha256_at_audited_head": "ad2b2eb7aba2c5f85166160e2c78e7441e2026388703a468aa73a8e6b501b907"
+    },
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/calibration-v2/CALIBRATION_CASES.json",
+      "read": true,
+      "bytes": 6018,
+      "sha256_at_audited_head": "647723bbb86da3f590119b268cec5dadd19b0d46494fd09c652542b55e03b623"
+    },
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/calibration-v2/ACCEPTANCE_CONTRACT.json",
+      "read": true,
+      "bytes": 1656,
+      "sha256_at_audited_head": "2480c47b595c659d44ef637778303243175e26cb2c455b86b92ee6f7c10d6697"
+    },
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/calibration-v2/CALIBRATION_OUTPUT_SCHEMA.json",
+      "read": true,
+      "bytes": 1014,
+      "sha256_at_audited_head": "325949a7e0034596f6d14ac9b263866659b7044d931650fddfee6be77c8168d2"
+    },
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/calibration-v2/CALIBRATION_PROMPT.md",
+      "read": true,
+      "bytes": 817,
+      "sha256_at_audited_head": "9809edc38b97f51554c988b1956781f3a0789f0af222f435d761998169164022"
+    },
+    {
+      "path": "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_REPOSITORY_ONLY_PREFLIGHT_RECONCILIATION_AND_CONDITIONAL_EXECUTION_182.json",
+      "read": true,
+      "bytes": 8234,
+      "sha256_at_audited_head": "acea34da204d5784073b5a26815ad508785b3e895d27f830257abf0d8549b3a8"
+    },
+    {
+      "path": "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_REPRODUCIBLE_CODEX_RUNNER_RESOLUTION_183.json",
+      "read": true,
+      "bytes": 8013,
+      "sha256_at_audited_head": "f176c0ba4d28f55e47cc1749f945c2caae2ee911c525b571200de152e4a57124"
+    },
+    {
+      "path": "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_NETWORKED_PREAUTHORIZED_CODEX_EXECUTION_184.json",
+      "read": true,
+      "bytes": 9952,
+      "sha256_at_audited_head": "b454dfbd345c5abe6a14094bf244181911e1a00c62cf78167b645bdd5467cc03"
+    },
+    {
+      "path": "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_SCORER_CALIBRATION_CONTRACT_REMEDIATION_AND_FRESH_ATTEMPT_185.json",
+      "read": true,
+      "bytes": 8373,
+      "sha256_at_audited_head": "fae7d9b031df1192cf2b2fb2786c8db68aca542055bb57264385faf0a522f164"
+    },
+    {
+      "path": "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_BLOCKED_STATE_INDEPENDENT_EXTERNAL_READ_ONLY_DECISION_AUDIT_186.json",
+      "read": true,
+      "bytes": 9029,
+      "sha256_at_audited_head": "99203540816aa8ba35f77a1e091fc33caf2231a2ce9b023908e7b9e322dc2948"
+    },
+    {
+      "path": "projects/lab/briefs/CLAUDE_PRODUCT_LEADERSHIP_TEST003_BLOCKED_STATE_DECISION_AUDIT_186_001.json",
+      "read": true,
+      "bytes": 11200,
+      "sha256_at_audited_head": "79a8c9ea24ebb2971644977e8143310248916d2371d72fc7633d67f4acb64c67"
+    },
+    {
+      "path": "projects/lab/briefs/CODEX_PRODUCT_LEADERSHIP_TEST003_SCORER_CALIBRATION_REMEDIATION_AND_FRESH_ATTEMPT_185_001.json",
+      "read": true,
+      "bytes": 12534,
+      "sha256_at_audited_head": "c5a4accaada0697827191b2556f5ee210c4a953b0abf4722c165c65bc883f38e"
+    },
+    {
+      "path": "projects/lab/external-audits/AUDIT-CLAUDE-PRODUCT-LEADERSHIP-TEST003-PRE-DECISION-186-001/AUDIT_INPUT_MANIFEST.json",
+      "read": true,
+      "bytes": 4872,
+      "sha256_at_audited_head": "de58546d06daef2a76c401281a4a6eba56edf6ab9faa4502fbc67b10e84df269"
+    },
+    {
+      "path": "projects/lab/evidence/EVD-LAB-PL003-NETWORKED-PREAUTHORIZED-CODEX-184.json",
+      "read": true,
+      "bytes": 5498,
+      "sha256_at_audited_head": "a81871c2ed796588c9af63c46ef67cf943c6d606d9d75ece41ef7eacd7adbeb9"
+    },
+    {
+      "path": "projects/lab/evidence/EVD-LAB-PL003-SCORER-CALIBRATION-AND-FRESH-ATTEMPT-185.json",
+      "read": true,
+      "bytes": 5272,
+      "sha256_at_audited_head": "5ade6991a7160293ca876af0fe9b911dd506d98b5c7dab23b3904a9b3d5fe188"
+    },
+    {
+      "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-003/MANIFEST.json",
+      "read": true,
+      "bytes": 2920,
+      "sha256_at_audited_head": "30e64fc9dd480ab7be13e5d3c0043b6c0a6d86b396861c9714fdd4c237dcefdc"
+    },
+    {
+      "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-003/CALIBRATION_RESULTS.json",
+      "read": true,
+      "bytes": 4758,
+      "sha256_at_audited_head": "5c1ab3548d644c7397bb656d62c403d8891435a534eb939881f21ae054d78448"
+    },
+    {
+      "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-003/CALIBRATION_CASES.json",
+      "read": true,
+      "bytes": 1684,
+      "sha256_at_audited_head": "3d293b460eb8194f1786edfb176180715ecab1da70551215506e089b7034ed1b"
+    },
+    {
+      "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-003/CALIBRATION_PROMPT.md",
+      "read": true,
+      "bytes": 399,
+      "sha256_at_audited_head": "a77aea56da9bdbdab3a474d6bc0feaf14f87ba3e5b3785d9aa252af531310bcb"
+    },
+    {
+      "path": "projects/lab/continuity/CURRENT_CONTINUITY.json",
+      "read": true,
+      "bytes": 7206,
+      "sha256_at_audited_head": "fb7e84c37143abc12a74fa3bfd2d9f4e012270ddeddc8d93685f24772bdff8d0"
+    },
+    {
+      "path": "projects/lab/external-audits/index.json",
+      "read": true,
+      "bytes": 1478,
+      "sha256_at_audited_head": "e4af727ae267cb364990bd318b40ce7ece45adde164a239eb5e250ccf5644348"
+    }
+  ]
+}

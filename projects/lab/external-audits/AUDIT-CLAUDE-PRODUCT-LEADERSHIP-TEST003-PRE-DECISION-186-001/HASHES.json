@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "audit_id": "AUDIT-CLAUDE-PRODUCT-LEADERSHIP-TEST003-PRE-DECISION-186-001",
+  "audited_head": "b00904cb46f5ef9ff3bd6b44e6a293ddd42281b0",
+  "algorithm": "SHA-256",
+  "deliverable_count": 9,
+  "hashed_count": 8,
+  "self_exclusion_note": "HASHES.json no puede contener su propio digest. Los 8 entregables restantes están cubiertos.",
+  "deliverables": {
+    "AUDIT_MANIFEST.json": {
+      "sha256": "5e604a30c70eaf4f41520b7e1c974fa61dd0ec04cea8cb6c04331251a31a4261",
+      "bytes": 4388
+    },
+    "AUDIT_REPORT.md": {
+      "sha256": "df540d3cc7a72d8e5495784e9ba2458dc69ab099920e549954ed448cfb0a8bb0",
+      "bytes": 18279
+    },
+    "AUDIT_REPORT.json": {
+      "sha256": "4d56f531f6758cd8cfdf197aa816a9fb62a6da2f8dc6a1ffaaab305fab002b0e",
+      "bytes": 4731
+    },
+    "CLAIM_VERDICTS.json": {
+      "sha256": "2a28fa01e2903d81bdbd706a01151ea2f5d916658c0591debf03018df24a2a99",
+      "bytes": 12838
+    },
+    "DECISION_MATRIX.json": {
+      "sha256": "03e1c1796e1d3cf91cf7d902f8e54936bcbeff6eeca06b244ed0fb3bd9b82ab2",
+      "bytes": 6822
+    },
+    "FAVORABLE_AND_CONTRARY_EVIDENCE.json": {
+      "sha256": "1103ad5ad80aa8a7494cc72b75741f3a91680ffb0e9ffbd48c2567036c32d894",
+      "bytes": 7698
+    },
+    "LIMITATIONS.json": {
+      "sha256": "5b48e80c66a9a4796f5143370931a6ba0758b4ad949ca609b4d264521a2a7f05",
+      "bytes": 4215
+    },
+    "FILES_READ.json": {
+      "sha256": "d084305f1a3862ea10e3f6591bee7e53be042e4b306ca90ef4ca9aa4f14a04a8",
+      "bytes": 10399
+    }
+  }
+}

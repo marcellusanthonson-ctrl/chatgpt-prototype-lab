@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "audit_id": "AUDIT-CLAUDE-PRODUCT-LEADERSHIP-TEST003-PRE-DECISION-186-001",
+  "audited_head": "b00904cb46f5ef9ff3bd6b44e6a293ddd42281b0",
+  "scoring_note": "Qualitative only. No numeric aggregation is used because no weighting has been humanly approved and a weighted score would manufacture false precision.",
+  "dimensions": [
+    "information_value",
+    "cost",
+    "reversibility",
+    "operational_risk",
+    "epistemic_risk",
+    "opportunity_cost",
+    "sunk_cost_bias_exposure",
+    "premature_rejection_risk"
+  ],
+  "options": [
+    {
+      "id": "A",
+      "decision": "AUTHORIZE_ONE_USER_OPENED_CODEX_REPLAY_AS_CURRENTLY_DESIGNED",
+      "information_value": "ALTO — es la única opción que produce evidencia discriminante nueva: resuelve si la remediación del rubro sostiene la concordancia inter-scorer y contra gold, y desbloquea condicionalmente los 112 outputs.",
+      "cost": "BAJO en ejecución (1 smoke + 2 invocaciones de scorer, ~15 s y ~14.6k tokens de entrada por scorer según el intento 002). MEDIO-ALTO en gobierno: una autorización, un brief, evidencia, PR, squash merge y reconciliación.",
+      "reversibility": "TOTAL — el generation_gate impide crear EXECUTION-004 o cualquier output antes del PASS; el peor resultado es un FAIL registrado con 0 outputs y efecto nulo en producto, runtime e integración.",
+      "operational_risk": "MEDIO — riesgo concentrado en la elegibilidad de la superficie; ya materializado una vez en 185. Mitigable con verificación previa al consumo de la autorización.",
+      "epistemic_risk": "MEDIO — el contrato v2 está parcialmente ajustado al modo de falla que debe detectar; un PASS será menos informativo de lo que aparenta y debe registrarse con esa salvedad para la auditoría de Fase 3.",
+      "opportunity_cost": "BAJO — no consume la ventana de SSE, que está bloqueada por una resolución de runner separada.",
+      "sunk_cost_bias_exposure": "MEDIO — es la opción que un sesgo de costo hundido también elegiría; se controla con la prueba marginal prospectiva: a costo marginal de ~2 llamadas al modelo, la opción se justifica aunque el historial previo fuese nulo.",
+      "premature_rejection_risk": "NULO",
+      "verdict": "RECOMENDADA"
+    },
+    {
+      "id": "B",
+      "decision": "REVISE_EXECUTION_AND_RUNNER_STRATEGY_BEFORE_ANY_RETRY",
+      "information_value": "BAJO en el corto plazo — no produce evidencia sobre el candidato; produce evidencia sobre el instrumento.",
+      "cost": "ALTO — rediseño de contrato de runner, nueva autorización, nuevo brief, posible reapertura de artefactos congelados.",
+      "reversibility": "ALTA",
+      "operational_risk": "BAJO",
+      "epistemic_risk": "ALTO — descarta una configuración con prueba de funcionamiento (intento 002) sobre la base de un despacho mal dirigido; y reabrir el contrato invita exactamente al ajuste post hoc que ya es un riesgo del paquete v2.",
+      "opportunity_cost": "ALTO — retrasa la única vía de evidencia de la ruta crítica de Fase 2 mientras SSE también está bloqueado.",
+      "sunk_cost_bias_exposure": "BAJO",
+      "premature_rejection_risk": "BAJO",
+      "verdict": "INFERIOR_HOY_SUPERIOR_SI_FALLA_UN_SEGUNDO_INTENTO_EN_SUPERFICIE_VERIFICADA",
+      "why_inferior": "La única falla de estrategia demostrada es de despacho, no de estrategia. Un control previo de precondiciones corrige la causa real a costo casi nulo; B paga costo de rediseño contra una configuración que ya funcionó de extremo a extremo hasta la compuerta de calibración."
+    },
+    {
+      "id": "C",
+      "decision": "PAUSE_PRODUCT_LEADERSHIP_TRACK_UNTIL_EXECUTION_CONDITIONS_CHANGE",
+      "information_value": "NULO",
+      "cost": "NULO en el momento; acumulativo en el tiempo.",
+      "reversibility": "TOTAL",
+      "operational_risk": "NULO",
+      "epistemic_risk": "MEDIO — congela el estado sin resolver ninguna incógnita y deja en pie la divergencia documental de las vistas agregadas, que se degrada con el tiempo.",
+      "opportunity_cost": "ALTO — ambas integraciones prioritarias quedarían detenidas simultáneamente; el programa completo depende de PEND-LAB-045.",
+      "sunk_cost_bias_exposure": "NULO",
+      "premature_rejection_risk": "BAJO",
+      "verdict": "INFERIOR",
+      "why_inferior": "No existe una condición externa identificada que se espere que cambie. La superficie requerida existe hoy y funcionó hace horas (EVD-184). Pausar esperando un cambio que nada indica que ocurrirá es costo de oportunidad puro."
+    },
+    {
+      "id": "D",
+      "decision": "REJECT_PRODUCT_LEADERSHIP_CANDIDATE_OR_CURRENT_TEST_LINE",
+      "information_value": "NULO",
+      "cost": "NULO inmediato; alto e irreversible en conocimiento (se pierde el diseño de 52 fixtures, 4 brazos y 13 artefactos de fábrica ya validados).",
+      "reversibility": "BAJA — revertir un rechazo exige una decisión de reemplazo explícita según METHODOLOGY §4.",
+      "operational_risk": "BAJO",
+      "epistemic_risk": "MUY ALTO — sería una decisión sobre el valor del candidato tomada con 0 outputs de evidencia de valor. Contradice directamente el veredicto CONFIRMED de CLAIM-186-05 y LAB_CONTRACT §11.",
+      "opportunity_cost": "MUY ALTO",
+      "sunk_cost_bias_exposure": "NULO",
+      "premature_rejection_risk": "MÁXIMO — es la definición del modo de falla de rechazo prematuro: confundir fatiga de ejecución con ausencia de valor.",
+      "verdict": "INFERIOR_Y_NO_SOSTENIBLE_CON_LA_EVIDENCIA_VIGENTE",
+      "why_inferior": "Ningún artefacto del HEAD auditado sostiene una afirmación sobre el valor de Product Leadership, ni a favor ni en contra. Rechazar aquí sería sustituir evidencia por cansancio."
+    },
+    {
+      "id": "E",
+      "decision": "INSUFFICIENT_EVIDENCE_NO_DECISION_BEYOND_PRESERVING_CURRENT_BLOCK",
+      "information_value": "NULO",
+      "cost": "NULO",
+      "reversibility": "TOTAL",
+      "operational_risk": "NULO",
+      "epistemic_risk": "MEDIO — es una descripción correcta del estado probatorio pero una decisión incorrecta: confunde insuficiencia de evidencia sobre el valor con insuficiencia de evidencia sobre cuál es el siguiente paso.",
+      "opportunity_cost": "ALTO",
+      "sunk_cost_bias_exposure": "NULO",
+      "premature_rejection_risk": "BAJO",
+      "verdict": "INFERIOR",
+      "why_inferior": "La pregunta en decisión no es si Product Leadership aporta valor (eso es CLAIM-186-05, CONFIRMED como insuficiente), sino cuál es el paso más barato que produce evidencia discriminante. Esa pregunta sí tiene respuesta con la evidencia vigente."
+    }
+  ],
+  "selected": "A",
+  "selection_is": "AUDITOR_RECOMMENDATION_ONLY",
+  "declaration": "AUDIT_RECOMMENDATION_IS_NOT_HUMAN_APPROVAL_OR_EXECUTION_AUTHORITY"
+}
