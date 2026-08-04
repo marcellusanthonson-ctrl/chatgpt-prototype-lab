@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "audit_id": "AUDIT-CLAUDE-PRODUCT-LEADERSHIP-TEST003-PRE-DECISION-186-001",
+  "auditor": "CLAUDE",
+  "audit_mode": "STRICT_READ_ONLY_INDEPENDENT_ADVERSARIAL_PRE_DECISION_AUDIT",
+  "audited_head": "b00904cb46f5ef9ff3bd6b44e6a293ddd42281b0",
+  "expected_parent_head": "0845757639d601e785ab76605343ef9ef09e6cb0",
+  "authorization_186_in_ancestry": true,
+  "global_result": "RECOMMEND_REPLAY_AS_IS",
+  "single_recommendation": "AUTHORIZE_ONE_USER_OPENED_CODEX_REPLAY_AS_CURRENTLY_DESIGNED",
+  "recommendation_confidence": "MEDIA_ALTA",
+  "recommendation_precondition": "La próxima autorización debe declarar la verificación de superficie, autenticación preexistente, procedencia del runner y modelo exacto como una etapa cuyo fracaso NO consume la autorización. Esta condición no altera el diseño del test, el contrato calibration-v2 ni el runner_contract: sólo cambia el criterio de consumo de la autorización.",
+  "separation_of_categories": {
+    "FACTUAL_FINDINGS": [
+      "0 de 112 outputs de Test 003 existen",
+      "el bloqueo 185 ocurrió con 0 solicitudes al modelo",
+      "los 5 digests de calibration-v2 coinciden (verificación independiente)",
+      "el intento 002 superó todo el preflight en una superficie Codex Desktop real",
+      "las autorizaciones 183 y 185 fueron reescritas retroactivamente al cerrarse",
+      "CURRENT_STATE.json y registry/index.json están materialmente obsoletos respecto de la vía Product Leadership"
+    ],
+    "TECHNICAL_INTERPRETATION": [
+      "el fallo de calibración v1 es atribuible a subespecificación del contrato, no a inestabilidad del scorer",
+      "calibration-v2 remedia esa subespecificación pero está parcialmente ajustado al modo de falla observado",
+      "persiste riesgo residual de frontera en el ancla crítica CAL2-003",
+      "el costo dominante de la línea es de gobierno, no de ejecución"
+    ],
+    "AUDITOR_RECOMMENDATION": [
+      "una sola repetición en superficie Codex abierta por el usuario, con verificación de precondiciones previa al consumo de la autorización, y con regla de detención declarada de antemano"
+    ],
+    "HUMAN_DECISION": "Pertenece exclusivamente a Jonathan Martínez. Esta auditoría no decide.",
+    "EXECUTION_AUTHORITY": "NINGUNA. La autorización 186 concede sólo ejecución y entrega de auditoría en modo de solo lectura. Ninguna repetición, promoción, activación, integración ni rechazo queda autorizado por este paquete."
+  },
+  "stop_rule_proposed_for_human_consideration": "Si un próximo intento se bloquea otra vez por superficie o autenticación DESPUÉS de haber verificado las precondiciones, la evidencia pasa a sostener la opción B y la recomendación cambia. Si calibration-v2 falla con desajustes concentrados en CAL2-003 y CAL2-004, corresponde una revisión acotada del rubro, no un rechazo del candidato. Si falla con desajustes dispersos entre las 8 anclas, corresponde reevaluar la medibilidad del constructo.",
+  "evidence_that_would_change_the_recommendation": [
+    {
+      "evidence": "la superficie Codex Desktop del usuario ya no está disponible o gpt-5.6-sol ya no es accesible en ella",
+      "new_recommendation": "C o B"
+    },
+    {
+      "evidence": "un segundo bloqueo de entorno o autenticación en una superficie previamente verificada como elegible",
+      "new_recommendation": "B"
+    },
+    {
+      "evidence": "calibration-v2 FAIL con desajustes de ancla crítica concentrados en CAL2-003 o CAL2-004",
+      "new_recommendation": "B acotada a la regla de frontera del rubro; no D"
+    },
+    {
+      "evidence": "calibration-v2 FAIL con desajustes dispersos y no convergentes entre las 8 anclas críticas",
+      "new_recommendation": "B con reevaluación de medibilidad; D sólo si se repite"
+    },
+    {
+      "evidence": "un presupuesto, plazo o regla de detención declarada que haga material el costo de los 112 outputs o de otro ciclo de gobierno",
+      "new_recommendation": "C o D según el presupuesto"
+    },
+    {
+      "evidence": "evidencia de que la repetición exige creación o transferencia de credenciales, o cualquier operación prohibida",
+      "new_recommendation": "C"
+    }
+  ],
+  "non_effects": [
+    "NO_REPOSITORY_MUTATION",
+    "NO_COMMIT_PUSH_PR_MERGE_OR_COMMENT",
+    "NO_TEST_RUNNER_MODEL_SMOKE_OR_CALIBRATION_EXECUTION",
+    "NO_AWS_TERRAFORM_OR_ACCOUNT_SCOPED_OPERATION",
+    "NO_CREDENTIAL_CREATION_TRANSFER_INSPECTION_OR_DISCLOSURE",
+    "NO_PHASE_3_GATE_SATISFACTION",
+    "NO_PROMOTION_ACTIVATION_INTEGRATION_OR_REJECTION",
+    "NO_AGGREGATE_VIEW_RECONCILIATION",
+    "NO_EXTERNAL_WEB_RESEARCH"
+  ],
+  "declaration": "AUDIT_RECOMMENDATION_IS_NOT_HUMAN_APPROVAL_OR_EXECUTION_AUTHORITY"
+}

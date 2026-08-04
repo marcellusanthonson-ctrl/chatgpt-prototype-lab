@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0.0",
+  "audit_id": "AUDIT-CLAUDE-PRODUCT-LEADERSHIP-TEST003-PRE-DECISION-186-001",
+  "audited_head": "b00904cb46f5ef9ff3bd6b44e6a293ddd42281b0",
+  "material_findings": [
+    {
+      "id": "F01",
+      "title": "El entorno de ejecución requerido ya funcionó de extremo a extremo",
+      "class": "HECHO",
+      "favorable": [
+        "EVD-184.execution_surface = CODEX_DESKTOP_LOCAL_WINDOWS build 1.2026.190",
+        "EVD-184.network_and_authentication: api.openai.com, chatgpt.com, github.com y api.github.com alcanzables por TCP 443; openai_preauthorized_runner_authentication=true; ningún valor de credencial inspeccionado ni creado",
+        "EVD-184.runner_resolution: Codex CLI 0.146.0 estable oficial, sha256 bc343ba4... verificado, instalación efímera, sin instalación global",
+        "EVD-184.model_and_smoke: gpt-5.6-sol disponible, 1 smoke request, exit 0, resultado exacto, digest registrado",
+        "EXECUTION-003 preflight: 7 de 7 fases en PASS incluido input_freeze de 46 entradas"
+      ],
+      "contrary": [
+        "EVD-183 y EVD-185 registran la superficie como no disponible en dos ocasiones distintas, de modo que la disponibilidad no es determinista entre sesiones",
+        "el HEAD vigente ya no muestra este hecho: INT-LAB-004 fue sobrescrito y hoy declara exact_model_verified=false y smoke_requests=0"
+      ]
+    },
+    {
+      "id": "F02",
+      "title": "Las autorizaciones son reescritas retroactivamente al cerrarlas, destruyendo el registro de lo concedido",
+      "class": "HECHO_DEFECTO_DOCUMENTAL",
+      "favorable": [
+        "AUTORIZACIÓN 185, commit de concesión 831cdb4 -> commit de cierre 0845757: commit_authorized true->false, push_authorized true->false, pull_request_authorized true->false, squash_merge_authorized true->false, networked_environment_authorized true->false, preauthorized_authentication_use_authorized true->false, runner_resolution_authorized true->false, smoke_preflight_authorized true->false, calibration_execution_authorized true->false; residual_authority 'CALIBRATION_V2_EXECUTION_AND_CONDITIONAL_FRESH_TEST003_ATTEMPT_ONLY' -> 'NONE'; maximum_result reescrito del resultado esperado al resultado del bloqueo",
+        "AUTORIZACIÓN 183, ff4148c -> 6135470: mismo patrón, 15 valores alterados, 2 claves eliminadas",
+        "efecto neto: leyendo solo el HEAD, la autorización 185 aparece como si nunca hubiera concedido permiso de commit, red, runner ni calibración, mientras su propia lista allowed_actions y su estado CONSUMED afirman lo contrario"
+      ],
+      "contrary": [
+        "el patrón es sistemático y no selectivo, lo que sugiere convención de esquema (schema_version 1.0.0 -> 1.1.0) y no ocultamiento",
+        "la historia de git preserva íntegro el estado de concesión, de modo que el defecto es de legibilidad canónica, no de pérdida de información",
+        "la autorización 184 conserva sus banderas de concesión en true, lo que muestra que la convención no se aplica de forma uniforme y por tanto las banderas booleanas no son hoy interpretables sin consultar la historia"
+      ],
+      "auditor_note": "No dispara la condición de parada ARTIFACT_HASH_OR_PROVENANCE_AMBIGUOUS: la procedencia de los artefactos es verificable y sus digests coinciden. Es una inconsistencia semántica interna y, como tal, materia de hallazgo, no de detención."
+    },
+    {
+      "id": "F03",
+      "title": "La ruta de lectura canónica obligatoria entrega estado materialmente obsoleto",
+      "class": "HECHO_RIESGO_EPISTÉMICO",
+      "favorable": [
+        "START_HERE.md ordena leer CURRENT_STATE.json como paso 4 y registry/index.json como paso 5",
+        "CURRENT_STATE.json (v2.5.57, 2026-08-03) declara product_leadership_candidate.fixture_count=40 cuando el contrato vigente es 52; operational_preflight='BLOCKED_NO_ELIGIBLE_BOUNDED_CREATOR'; execution_authority='NONE'; su status global se refiere a SSE 180",
+        "registry/index.json no menciona las autorizaciones 184, 185 ni 186",
+        "un lector que siga el orden obligatorio no descubre que existen las autorizaciones 182 a 186 salvo que llegue a PEND-LAB-045, ROADMAP o INT-LAB-004"
+      ],
+      "contrary": [
+        "la divergencia está autodeclarada como OPEN_DOCUMENTARY_DIVERGENCE en PEND-LAB-045, ROADMAP, INT-LAB-004, EVD-184, EVD-185 y CURRENT_CONTINUITY, con correction_authorized=false: es conocida y deliberadamente no corregida, no oculta",
+        "CURRENT_CONTINUITY.json sí está actualizado al 2026-08-04 y sí refleja el estado real"
+      ]
+    },
+    {
+      "id": "F04",
+      "title": "Riesgo residual identificado en el ancla crítica CAL2-003",
+      "class": "INTERPRETACIÓN_TÉCNICA",
+      "favorable": [
+        "LABEL_TAXONOMY.precedence sitúa CORRECT_ABSTENTION por encima de AMBIGUOUS",
+        "CALIBRATION_PROMPT.md regla 2 instruye aplicar la precedencia antes de elegir una etiqueta de menor precedencia",
+        "el candidate_response de CAL2-003 conserva la formulación que llevó a ambos scorers v1 a CORRECT_ABSTENTION",
+        "CAL2-003 es ancla crítica: un desacuerdo con gold produce FAIL inmediato por disagreement_policy.critical_anchor_disagreement='FAIL'"
+      ],
+      "contrary": [
+        "v2 añade una regla de frontera explícita AMBIGUOUS_VS_CORRECT_ABSTENTION y negative_tests recíprocos que atacan exactamente este error",
+        "v2 añade el gold_rationale de CAL2-003 declarando de forma expresa que no es una mera abstención",
+        "v2 añade CAL2-007 como segundo caso del mismo límite, lo que permite distinguir un error puntual de un error sistemático de frontera",
+        "el candidate_response de CAL2-003 fue reforzado respecto de v1 con la frase 'limit any conclusion', que empuja hacia AMBIGUOUS"
+      ],
+      "auditor_note": "El riesgo es real pero acotado y, sobre todo, es informativo: si el FAIL se concentra en CAL2-003 y CAL2-004 el diagnóstico es 'la frontera del rubro sigue mal especificada'; si se dispersa entre las 8 anclas el diagnóstico es 'el scorer no es fiable para esta taxonomía'. Ambos resultados son más valiosos que no ejecutar."
+    },
+    {
+      "id": "F05",
+      "title": "El costo dominante de esta línea es de gobierno, no de ejecución",
+      "class": "INTERPRETACIÓN_TÉCNICA",
+      "favorable": [
+        "la ejecución real del intento 002 costó 2 invocaciones de scorer de ~15 s y ~14.6k tokens de entrada cada una",
+        "cada intento bloqueado generó en cambio una autorización, un brief, un archivo de evidencia, un delta de registro, una rama, un PR, un squash merge y la actualización de 6 o más artefactos agregados",
+        "cuatro ciclos de autorización (182, 183, 184, 185) han producido 0 de 112 outputs"
+      ],
+      "contrary": [
+        "ese costo de gobierno es el que produce la trazabilidad que permite esta auditoría y que hace atribuible cada bloqueo a una causa distinta; reducirlo tiene un costo epistémico propio"
+      ],
+      "auditor_note": "Consecuencia práctica: la regla de detención que importa no es el costo de cómputo sino el número de ciclos de gobierno. Debe fijarse antes del próximo intento, no después."
+    }
+  ],
+  "evidence_searched_and_not_found": [
+    "cualquier output de Test 003 en cualquier rama del HEAD auditado",
+    "cualquier resultado parcial de calibración v2",
+    "cualquier medición de transferencia negativa, costo de tokens o latencia por brazo",
+    "cualquier auditoría externa previa de esta línea (external-audits/index.json contiene solo auditorías de FULL-RAG y M5)",
+    "cualquier artefacto que sostenga que Product Leadership aporta o no aporta valor incremental"
+  ]
+}

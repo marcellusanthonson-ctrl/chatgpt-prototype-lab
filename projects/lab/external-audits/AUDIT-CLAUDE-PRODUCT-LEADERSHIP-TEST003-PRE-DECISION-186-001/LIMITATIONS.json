@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "audit_id": "AUDIT-CLAUDE-PRODUCT-LEADERSHIP-TEST003-PRE-DECISION-186-001",
+  "audited_head": "b00904cb46f5ef9ff3bd6b44e6a293ddd42281b0",
+  "limitations": [
+    {
+      "id": "L01",
+      "type": "ACCESO_PARCIAL",
+      "statement": "Los pull requests 25 y 27 no pudieron leerse por su interfaz (api.github.com devolvió HTTP 403 por límite de tasa no autenticado en todos los intentos). Se auditó en su lugar el contenido exacto mergeado, mediante los commits 8ef3dbd (#25) y 0845757 (#27) y sus diffs semánticos.",
+      "impact": "No se pudo revisar metadatos de PR: revisores, comentarios, checks de CI y tiempos de revisión. El contenido sustantivo sí fue auditado íntegramente.",
+      "materiality": "BAJA_PARA_LAS_CONCLUSIONES_TÉCNICAS_MEDIA_PARA_LA_TRAZABILIDAD_DE_REVISIÓN"
+    },
+    {
+      "id": "L02",
+      "type": "NO_REPRODUCIBLE_BAJO_ESTE_MODO",
+      "statement": "No es posible verificar de forma independiente que gpt-5.6-sol produciría hoy los mismos resultados de calibración: la ejecución de modelo está prohibida por el modo STRICT_READ_ONLY.",
+      "impact": "Toda afirmación sobre el resultado probable de calibration-v2 es una predicción, no un hecho verificado. Ninguna conclusión de esta auditoría depende de esa predicción.",
+      "materiality": "ESTRUCTURAL_E_INEVITABLE"
+    },
+    {
+      "id": "L03",
+      "type": "EVIDENCIA_DE_ENTORNO_NO_VERIFICABLE",
+      "statement": "Los hechos de entorno de los intentos 183, 184 y 185 (disponibilidad de superficie, autenticación preexistente, digest del runner, disponibilidad del modelo) se toman de los archivos de evidencia publicados. No existe telemetría independiente ni logs externos que los corroboren.",
+      "impact": "La cronología causal se apoya en evidencia autorreportada y autocoherente. Es internamente consistente en 5 artefactos independientes y no se halló contradicción, pero no es verificación de tercero.",
+      "materiality": "MEDIA"
+    },
+    {
+      "id": "L04",
+      "type": "NO_MEDIBLE_SIN_EJECUCIÓN",
+      "statement": "No puede establecerse si el diseño de 52 fixtures, 4 brazos y 112 outputs tiene potencia suficiente para detectar transferencia negativa por debajo del umbral declarado (<=0.10) con estratificación por dominio.",
+      "impact": "Aun con un Test 003 completado podría resultar subdimensionado para algunas métricas. Fuera del alcance de esta auditoría previa a la decisión.",
+      "materiality": "DIFERIDA_A_FASE_3"
+    },
+    {
+      "id": "L05",
+      "type": "SESGO_DEL_PROPIO_AUDITOR",
+      "statement": "La opción A es también la que elegiría un sesgo de costo hundido. Se aplicó como control la prueba marginal prospectiva: ¿se recomendaría A si este fuera el primer intento y no hubiera inversión previa? A un costo marginal de 1 smoke y 2 invocaciones de scorer, con reversibilidad total y compuerta de generación previa, la respuesta es sí. La recomendación no depende de la inversión acumulada.",
+      "impact": "El control reduce pero no elimina el sesgo. Se explicita para que el aprobador humano pueda ponderarlo.",
+      "materiality": "DECLARADA"
+    },
+    {
+      "id": "L06",
+      "type": "ALCANCE",
+      "statement": "No se auditó la vía SSE (autorización 180) más allá de lo necesario para evaluar costo de oportunidad, ni el paquete PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001 en su contenido sustantivo, ni la divergencia de vistas agregadas más allá de constatarla.",
+      "impact": "Las conclusiones cubren la decisión declarada en el brief 186_001 y no el estado global del programa.",
+      "materiality": "INTENCIONAL"
+    }
+  ],
+  "uncertainty_summary": {
+    "alta_confianza": [
+      "CLAIM-186-01",
+      "CLAIM-186-05",
+      "CLAIM-186-07",
+      "F01",
+      "F02",
+      "F03"
+    ],
+    "confianza_media": [
+      "CLAIM-186-02",
+      "CLAIM-186-04",
+      "CLAIM-186-06",
+      "F04"
+    ],
+    "prediccion_no_verificada": [
+      "resultado probable de calibration-v2"
+    ]
+  },
+  "non_reproducible_aspects": [
+    "ejecución de modelo",
+    "disponibilidad de superficie Codex en el momento de un intento futuro",
+    "metadatos de los PR 25 y 27"
+  ]
+}
