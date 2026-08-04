@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "PRODUCT-LEADERSHIP-NETWORKED-PREAUTHORIZED-CODEX-AUTHORITY-184",
+  "project_id": "lab",
+  "created_at": "2026-08-04T07:50:00-04:00",
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_NETWORKED_PREAUTHORIZED_CODEX_EXECUTION_184",
+    "status": "GRANTED_NETWORKED_PREAUTHORIZED_CODEX_EXECUTION_NOT_STARTED",
+    "path": "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_NETWORKED_PREAUTHORIZED_CODEX_EXECUTION_184.json",
+    "approved_by": "Jonathan Martínez",
+    "approval_source": "Continuemos"
+  },
+  "brief": {
+    "id": "CODEX_PRODUCT_LEADERSHIP_TEST003_NETWORKED_PREAUTHORIZED_EXECUTION_184_001",
+    "status": "AUTHORIZED_AWAITING_NETWORKED_PREAUTHORIZED_CODEX_EXECUTION_SURFACE",
+    "path": "projects/lab/briefs/CODEX_PRODUCT_LEADERSHIP_TEST003_NETWORKED_PREAUTHORIZED_EXECUTION_184_001.json",
+    "parent": "projects/lab/briefs/CODEX_PRODUCT_LEADERSHIP_TEST003_REPRODUCIBLE_RUNNER_RESOLUTION_183_001.json"
+  },
+  "source_state": {
+    "authorization_182": "UNCONSUMED_RETRY_CONDITIONAL",
+    "authorization_183": "CONSUMED_BLOCKED_NO_RESIDUAL_AUTHORITY",
+    "stage_2": "PASS_AWS_PREFLIGHT_NOT_MATERIAL",
+    "test003_outputs_generated": 0,
+    "test003_retry_started": false
+  },
+  "authorized_transition": {
+    "execution_surface": "NETWORKED_CODEX_NATIVE_ENVIRONMENT_WITH_PREEXISTING_AUTHENTICATION",
+    "runner_policy": "EXISTING_CODEX_NATIVE_RUNNER_OR_LATEST_STABLE_OFFICIAL_EPHEMERAL_FALLBACK",
+    "minimum_fallback_version": "0.146.0",
+    "required_model": "gpt-5.6-sol",
+    "model_substitution_allowed": false,
+    "new_credentials_or_secret_transfer_allowed": false,
+    "smoke_request_limit": 1,
+    "conditional_test003_retry": true,
+    "fresh_execution_package": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-003/MANIFEST.json"
+  },
+  "records_updated": [
+    "projects/lab/pending/PEND-LAB-045.json",
+    "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/ROADMAP.json",
+    "projects/lab/integrations/INT-LAB-004.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json"
+  ],
+  "non_effects": [
+    "NO_NETWORKED_CODEX_EXECUTION_OCCURRED_DURING_AUTHORITY_PUBLICATION",
+    "NO_CREDENTIAL_CREATION_TRANSFER_OR_SECRET_DISCLOSURE",
+    "NO_MODEL_REQUEST_OR_SUBSTITUTION",
+    "NO_TEST003_RETRY_OR_OUTPUT_GENERATION",
+    "NO_AWS_BEDROCK_OR_TERRAFORM",
+    "NO_EXTERNAL_AUDIT",
+    "NO_PROMOTION_ACTIVATION_OR_INTEGRATION",
+    "NO_POINTER_SELECTOR_SHADOW_REGISTRY_OR_FALLBACK_CHANGE",
+    "NO_SSE_CHANGE",
+    "NO_PRODUCT_RUNTIME_OR_SYMPHONIE_CHANGE"
+  ],
+  "aggregate_view_divergence": {
+    "preserved": true,
+    "affected_views": ["CURRENT_STATE.json","projects/lab/PROJECT_STATE.json","registry/index.json"],
+    "correction_authorized": false
+  },
+  "next_authorized_action": "EXECUTE_CODEX_PRODUCT_LEADERSHIP_TEST003_NETWORKED_PREAUTHORIZED_EXECUTION_184_IN_A_CODEX_NATIVE_SURFACE",
+  "authority_effect": "AUTHORIZATION_184_ACTIVE_AFTER_VERIFIED_PUBLICATION",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "integration_effect": "NONE"
+}
