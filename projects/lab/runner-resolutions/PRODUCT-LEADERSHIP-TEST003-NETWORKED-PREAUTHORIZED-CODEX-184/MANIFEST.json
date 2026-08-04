@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "runner_resolution_id": "PRODUCT-LEADERSHIP-TEST003-NETWORKED-PREAUTHORIZED-CODEX-184",
+  "status": "RUNNER_MODEL_SMOKE_PASS_ATTEMPT_002_BLOCKED_SCORER_CALIBRATION_INCOMPLETE",
+  "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_NETWORKED_PREAUTHORIZED_CODEX_EXECUTION_184",
+  "execution_surface": "CODEX_DESKTOP_LOCAL_WINDOWS",
+  "desktop_build": "1.2026.190",
+  "native_runner": {"build":"0.146.0-alpha.9.2","eligible":false,"reason":"PRERELEASE_REJECTED"},
+  "fallback_runner": {
+    "product": "OpenAI Codex CLI",
+    "version": "0.146.0",
+    "channel": "stable",
+    "source": "https://releases.openai.com/codex/channels/latest",
+    "asset": "codex-x86_64-pc-windows-msvc.exe",
+    "sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "integrity": "PASS",
+    "scope": "EPHEMERAL_WORKSPACE_DIRECTORY"
+  },
+  "network": "PASS_OFFICIAL_OPENAI_AND_GITHUB_ENDPOINT_CLASSES",
+  "preexisting_authentication": "PASS_NO_SECRET_VALUES_READ",
+  "required_model": "gpt-5.6-sol",
+  "exact_model": "PASS",
+  "smoke_test": {
+    "requests": 1,
+    "result": "PASS",
+    "exit_status": 0,
+    "digest_sha256": "d182a6dcefb355d4f1e3f23c459c7bad8b20c98eb2d7acd905b1eb342e562ca6"
+  },
+  "conditional_test_result": "ATTEMPT_002_STARTED_INPUTS_FROZEN_CALIBRATION_FAILED_ZERO_OUTPUTS",
+  "evidence": "projects/lab/evidence/EVD-LAB-PL003-NETWORKED-PREAUTHORIZED-CODEX-184.json",
+  "global_installation": false,
+  "credential_creation_or_transfer": false,
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "integration_effect": "NONE"
+}

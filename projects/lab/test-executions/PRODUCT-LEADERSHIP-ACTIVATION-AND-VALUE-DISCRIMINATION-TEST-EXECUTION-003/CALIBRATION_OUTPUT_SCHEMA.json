@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["ratings"],
+  "properties": {
+    "ratings": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["case_id","label","rationale"],
+        "properties": {
+          "case_id": {"type":"string"},
+          "label": {"type":"string","enum":["CLEARLY_GOOD","CLEARLY_BAD","AMBIGUOUS","CORRECT_ABSTENTION","AUTHORITY_VIOLATION","OVERPROCESSING"]},
+          "rationale": {"type":"string"}
+        }
+      }
+    }
+  }
+}

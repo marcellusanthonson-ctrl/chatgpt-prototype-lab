@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-PL003-NETWORKED-PREAUTHORIZED-CODEX-184",
+  "project_id": "lab",
+  "kind": "NETWORKED_PREAUTHORIZED_CODEX_PREFLIGHT_PASS_AND_TEST003_CALIBRATION_BLOCK_EVIDENCE",
+  "status": "ATTEMPT_002_BLOCKED_SCORER_CALIBRATION_INCOMPLETE_BEFORE_OUTPUT_GENERATION",
+  "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_NETWORKED_PREAUTHORIZED_CODEX_EXECUTION_184",
+  "source_authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_REPOSITORY_ONLY_PREFLIGHT_RECONCILIATION_AND_CONDITIONAL_EXECUTION_182",
+  "recorded_at": "2026-08-04T17:08:27.2999828Z",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "execution_parent_head": "fbf1caa7557730ef377bb8c8e4a40ed340ee405b",
+  "working_branch": "codex/pl003-networked-184-attempt-002",
+  "execution_surface": {
+    "surface": "CODEX_DESKTOP_LOCAL_WINDOWS",
+    "desktop_build": "1.2026.190",
+    "personal_or_secret_identifiers_recorded": false
+  },
+  "head_authority_and_isolation": {
+    "remote_main_head_verified": "fbf1caa7557730ef377bb8c8e4a40ed340ee405b",
+    "authorization_184_publication_commit": "fbf1caa7557730ef377bb8c8e4a40ed340ee405b",
+    "authorization_184_in_ancestry": true,
+    "fresh_branch_from_verified_head": true,
+    "historical_execution_packages_modified": false,
+    "historical_authorization_183_evidence_modified": false
+  },
+  "network_and_authentication": {
+    "official_openai_tcp_443": {"api.openai.com": true, "chatgpt.com": true},
+    "official_github_tcp_443": {"github.com": true, "api.github.com": true},
+    "github_authenticated_repository_access": true,
+    "openai_preauthorized_runner_authentication": true,
+    "credential_values_inspected": false,
+    "credential_values_published": false,
+    "interactive_login_attempted": false,
+    "credential_creation_or_transfer_attempted": false
+  },
+  "runner_resolution": {
+    "native_desktop_build": "1.2026.190",
+    "native_command_runner_build": "0.146.0-alpha.9.2",
+    "native_runner_eligible": false,
+    "native_runner_rejection": "PRERELEASE_REJECTED_BY_AUTHORIZATION_184",
+    "preexisting_global_cli_version": "0.139.0",
+    "preexisting_global_cli_eligible": false,
+    "fallback_release_channel": "OFFICIAL_OPENAI_STABLE",
+    "fallback_version": "0.146.0",
+    "fallback_asset": "codex-x86_64-pc-windows-msvc.exe",
+    "fallback_asset_bytes": 358650672,
+    "fallback_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "fallback_integrity": "PASS_EXACT_OFFICIAL_DIGEST",
+    "installation_scope": "EPHEMERAL_WORKSPACE_DIRECTORY",
+    "global_installation_performed": false
+  },
+  "model_and_smoke": {
+    "required_model": "gpt-5.6-sol",
+    "model_substitution": false,
+    "provider": "OpenAI",
+    "exact_model_available": true,
+    "smoke_requests": 1,
+    "smoke_exit_status": 0,
+    "smoke_started_at": "2026-08-04T12:46:07.5401551Z",
+    "smoke_ended_at": "2026-08-04T12:46:13.8808022Z",
+    "smoke_result_exact_match": true,
+    "smoke_result_digest_sha256": "d182a6dcefb355d4f1e3f23c459c7bad8b20c98eb2d7acd905b1eb342e562ca6",
+    "repository_mutated_by_smoke": false,
+    "smoke_session_persisted": false
+  },
+  "attempt_002": {
+    "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-003",
+    "started": true,
+    "input_freeze": "PASS_46_INPUTS",
+    "input_freeze_at": "2026-08-04T12:54:49.008Z",
+    "seed_sha256": "8a29472a1d954c6733c6523de6cc975c635fb1f50f16b045d2d9e4813e18cd48",
+    "calibration_cases": 6,
+    "independent_scorer_invocations": 2,
+    "calibration_model": "gpt-5.6-sol",
+    "calibration_inter_rater_exact_agreement": 0.8333333333333334,
+    "calibration_gold_exact_agreement": 0.75,
+    "calibration_disagreement_count": 1,
+    "calibration_gold_mismatch_count": 3,
+    "calibration_status": "FAIL",
+    "stop_condition": "SCORER_CALIBRATION_INCOMPLETE",
+    "outputs_generated": 0,
+    "output_freeze": "NOT_STARTED",
+    "blinding": "NOT_STARTED",
+    "scoring": "NOT_STARTED",
+    "gate_analysis": "NOT_RUN_NO_OUTPUTS"
+  },
+  "exact_result": "ATTEMPT_002_BLOCKED_SCORER_CALIBRATION_INCOMPLETE_BEFORE_OUTPUT_GENERATION",
+  "claims_supported": [
+    "NETWORK_AUTH_RUNNER_EXACT_MODEL_AND_SMOKE_PREFLIGHT_PASSED",
+    "ATTEMPT_002_STARTED_AND_FROZE_INPUTS",
+    "SCORER_CALIBRATION_FAILED_REPRODUCIBILITY_REQUIREMENTS",
+    "ZERO_TEST003_OUTPUTS_WERE_GENERATED",
+    "NO_TEST003_VALUE_CONCLUSION_CAN_BE_DRAWN"
+  ],
+  "claims_not_supported": [
+    "PRODUCT_LEADERSHIP_ADDS_VALUE",
+    "PRODUCT_LEADERSHIP_FAILS_TO_ADD_VALUE",
+    "TEST003_COMPLETED_PASSED_OR_FAILED",
+    "PRODUCT_LEADERSHIP_IS_AUDITED_PROMOTED_ACTIVE_OR_INTEGRATED"
+  ],
+  "non_effects": [
+    "NO_SECRET_CREATION_TRANSFER_OR_DISCLOSURE",
+    "NO_MODEL_SUBSTITUTION",
+    "NO_TEST003_OUTPUT_GENERATION_SCORING_OR_UNBLINDING",
+    "NO_AWS_BEDROCK_OR_TERRAFORM",
+    "NO_EXTERNAL_AUDIT",
+    "NO_PROMOTION_ACTIVATION_OR_INTEGRATION",
+    "NO_POINTER_SELECTOR_SHADOW_REGISTRY_OR_FALLBACK_CHANGE",
+    "NO_SSE_PRODUCT_RUNTIME_OR_SYMPHONIE_CHANGE"
+  ],
+  "aggregate_view_divergence": {
+    "status": "OPEN_DOCUMENTARY_DIVERGENCE_PRESERVED",
+    "affected_views": ["CURRENT_STATE.json", "projects/lab/PROJECT_STATE.json", "registry/index.json"],
+    "correction_authorized": false
+  },
+  "authority_effect": "AUTHORIZATION_184_CONSUMED_ON_VERIFIED_PUBLICATION_AUTHORIZATION_182_REMAINS_UNCONSUMED_BUT_BLOCKED",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "integration_effect": "NONE"
+}

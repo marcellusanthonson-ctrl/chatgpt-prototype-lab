@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-003",
+  "project_id": "lab",
+  "design_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001",
+  "authorization_ids": [
+    "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_NETWORKED_PREAUTHORIZED_CODEX_EXECUTION_184",
+    "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_REPOSITORY_ONLY_PREFLIGHT_RECONCILIATION_AND_CONDITIONAL_EXECUTION_182"
+  ],
+  "attempt": "ATTEMPT-002",
+  "status": "BLOCKED_SCORER_CALIBRATION_INCOMPLETE_BEFORE_OUTPUT_GENERATION",
+  "execution_parent_head": "fbf1caa7557730ef377bb8c8e4a40ed340ee405b",
+  "model": "gpt-5.6-sol",
+  "runner": "OpenAI Codex CLI 0.146.0",
+  "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+  "preflight": {
+    "head_and_ancestry": "PASS",
+    "isolation": "PASS",
+    "network": "PASS",
+    "preexisting_authentication": "PASS",
+    "runner_provenance_and_integrity": "PASS",
+    "exact_model": "PASS",
+    "smoke_test": "PASS"
+  },
+  "input_freeze": {
+    "status": "PASS",
+    "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-003/INPUT_FREEZE.json",
+    "inputs": 46,
+    "seed_sha256": "8a29472a1d954c6733c6523de6cc975c635fb1f50f16b045d2d9e4813e18cd48"
+  },
+  "calibration": {
+    "status": "FAIL",
+    "cases": 6,
+    "independent_scorer_invocations": 2,
+    "inter_rater_exact_agreement": 0.8333333333333334,
+    "gold_exact_agreement": 0.75,
+    "disagreements": 1,
+    "gold_mismatches": 3,
+    "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-003/CALIBRATION_RESULTS.json"
+  },
+  "test_contract": {"fixture_count":52,"arm_count":4,"required_output_count":112},
+  "execution_counts": {
+    "smoke_requests": 1,
+    "calibration_model_requests": 2,
+    "test003_outputs_generated": 0,
+    "output_hashes_frozen": 0,
+    "scoring_runs": 0
+  },
+  "phases": {
+    "NETWORK_AUTH_RUNNER_MODEL_SMOKE_PREFLIGHT": "PASS",
+    "INPUT_AND_CONFIGURATION_FREEZE": "PASS",
+    "SCORER_CALIBRATION": "FAIL_STOP_CONDITION_TRIGGERED",
+    "OUTPUT_GENERATION": "NOT_STARTED",
+    "OUTPUT_HASH_FREEZE": "NOT_STARTED",
+    "BLINDED_SCORING": "NOT_STARTED",
+    "COST_AND_NEGATIVE_TRANSFER_ANALYSIS": "NOT_RUN_NO_OUTPUTS",
+    "EXTERNAL_AUDIT": "NOT_RUN_NOT_AUTHORIZED"
+  },
+  "stop_condition": "SCORER_CALIBRATION_INCOMPLETE",
+  "claims_not_supported": ["PRODUCT_LEADERSHIP_ADDS_VALUE","PRODUCT_LEADERSHIP_FAILS_TO_ADD_VALUE","TEST003_COMPLETED"],
+  "authorization_184_state": "CONSUMED_ON_VERIFIED_SQUASH_MERGE",
+  "authorization_182_state": "GRANTED_STAGE_3_BLOCKED_SCORER_CALIBRATION_INCOMPLETE_RETRY_NOT_STARTED_AUTHORIZATION_UNCONSUMED",
+  "maximum_effect": "BLOCKED_ATTEMPT_DOCUMENTED_ZERO_OUTPUTS",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "integration_effect": "NONE"
+}
