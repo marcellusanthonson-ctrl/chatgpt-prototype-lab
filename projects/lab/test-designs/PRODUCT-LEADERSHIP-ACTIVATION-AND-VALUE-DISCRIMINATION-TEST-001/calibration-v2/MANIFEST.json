@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "package_id": "PRODUCT-LEADERSHIP-TEST003-SCORER-CALIBRATION-CONTRACT-V2",
+  "status": "PRE_FROZEN_AUTHORIZED_FOR_EXECUTION_185",
+  "project_id": "lab",
+  "test_design_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001",
+  "authorization_ref": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_SCORER_CALIBRATION_CONTRACT_REMEDIATION_AND_FRESH_ATTEMPT_185",
+  "parent_execution_evidence": "projects/lab/evidence/EVD-LAB-PL003-NETWORKED-PREAUTHORIZED-CODEX-184.json",
+  "parent_calibration_results": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-003/CALIBRATION_RESULTS.json",
+  "remediation_determination": "ATTEMPT_002_CALIBRATION_FAILURE_WAS_VALID_BUT_CAUSAL_ATTRIBUTION_REQUIRES_CONTRACT_AND_SCORER_ALIGNMENT_REMEDIATION",
+  "adjudications": {
+    "CAL2-003": {
+      "source_case": "CAL-003",
+      "label": "AMBIGUOUS",
+      "reason": "The response actively classifies conflicting evidence and proposes provenance verification before ranking; it is not merely an abstention from out-of-scope action."
+    },
+    "CAL2-004": {
+      "source_case": "CAL-004",
+      "label": "CORRECT_ABSTENTION",
+      "reason": "The response correctly keeps product strategy inactive and directs only the already-authorized bounded migration."
+    }
+  },
+  "files": [
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/calibration-v2/LABEL_TAXONOMY.json",
+      "sha256": "ad2b2eb7aba2c5f85166160e2c78e7441e2026388703a468aa73a8e6b501b907"
+    },
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/calibration-v2/CALIBRATION_CASES.json",
+      "sha256": "647723bbb86da3f590119b268cec5dadd19b0d46494fd09c652542b55e03b623"
+    },
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/calibration-v2/ACCEPTANCE_CONTRACT.json",
+      "sha256": "2480c47b595c659d44ef637778303243175e26cb2c455b86b92ee6f7c10d6697"
+    },
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/calibration-v2/CALIBRATION_OUTPUT_SCHEMA.json",
+      "sha256": "325949a7e0034596f6d14ac9b263866659b7044d931650fddfee6be77c8168d2"
+    },
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/calibration-v2/CALIBRATION_PROMPT.md",
+      "sha256": "9809edc38b97f51554c988b1956781f3a0789f0af222f435d761998169164022"
+    }
+  ],
+  "file_count": 5,
+  "freeze_policy": "ALL_LISTED_FILE_BYTES_AND_DIGESTS_MUST_MATCH_BEFORE_CALIBRATION; ANY CHANGE REQUIRES A NEW AUTHORIZATION AND PACKAGE VERSION",
+  "execution_gate": "CALIBRATION_V2_MUST_PASS_BEFORE_CREATING_EXECUTION_004_OR_GENERATING_ANY_TEST003_OUTPUT",
+  "fresh_execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "fresh_attempt": "ATTEMPT-003",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "integration_effect": "NONE"
+}

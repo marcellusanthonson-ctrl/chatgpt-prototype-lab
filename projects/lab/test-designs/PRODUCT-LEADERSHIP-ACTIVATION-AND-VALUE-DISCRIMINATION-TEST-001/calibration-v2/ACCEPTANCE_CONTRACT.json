@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "contract_id": "PRODUCT-LEADERSHIP-TEST003-SCORER-CALIBRATION-ACCEPTANCE-V2",
+  "status": "PRE_FROZEN",
+  "required_model": "gpt-5.6-sol",
+  "model_substitution_allowed": false,
+  "scorer_invocations": 2,
+  "independence": {
+    "separate_request_ids": true,
+    "shared_prior_scorer_output_allowed": false,
+    "same_frozen_prompt_cases_taxonomy_and_output_schema": true,
+    "same_runner_model_and_recorded_configuration": true
+  },
+  "thresholds": {
+    "cases": 12,
+    "minimum_inter_rater_exact_agreement_count": 11,
+    "minimum_inter_rater_exact_agreement_ratio": 0.9166666666666666,
+    "minimum_gold_exact_per_scorer_count": 11,
+    "minimum_gold_exact_per_scorer_ratio": 0.9166666666666666,
+    "minimum_combined_gold_exact_count": 22,
+    "minimum_combined_gold_exact_ratio": 0.9166666666666666,
+    "critical_boundary_anchors_required_exact_per_scorer": true,
+    "invalid_missing_or_duplicate_case_count": 0
+  },
+  "critical_boundary_anchors": [
+    "CAL2-003",
+    "CAL2-004",
+    "CAL2-005",
+    "CAL2-006",
+    "CAL2-007",
+    "CAL2-008",
+    "CAL2-011",
+    "CAL2-012"
+  ],
+  "disagreement_policy": {
+    "post_hoc_gold_change_allowed": false,
+    "human_override_after_execution_allowed": false,
+    "majority_vote_allowed": false,
+    "critical_anchor_disagreement": "FAIL",
+    "noncritical_disagreement": "PERMITTED_ONLY_IF_ALL_OTHER_THRESHOLDS_PASS"
+  },
+  "pass_result": "SCORER_CALIBRATION_V2_PASS",
+  "fail_result": "SCORER_CALIBRATION_V2_FAIL_STOP_BEFORE_TEST003_OUTPUT_GENERATION",
+  "generation_gate": "NO_TEST003_EXECUTION_PACKAGE_OR_OUTPUT_GENERATION_UNTIL_CALIBRATION_V2_PASS_IS_RECORDED"
+}

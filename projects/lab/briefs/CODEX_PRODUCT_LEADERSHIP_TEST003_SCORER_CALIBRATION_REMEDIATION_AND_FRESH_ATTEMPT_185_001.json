@@ -1,0 +1,239 @@
+{
+  "schema_version": "1.0.0",
+  "brief_id": "CODEX_PRODUCT_LEADERSHIP_TEST003_SCORER_CALIBRATION_REMEDIATION_AND_FRESH_ATTEMPT_185_001",
+  "task_id": "PRODUCT_LEADERSHIP_TEST003_SCORER_CALIBRATION_REMEDIATION_AND_FRESH_ATTEMPT_185",
+  "project_id": "lab",
+  "status": "AUTHORIZED_AWAITING_NETWORKED_PREAUTHORIZED_CODEX_EXECUTION",
+  "authorization_ref": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_SCORER_CALIBRATION_CONTRACT_REMEDIATION_AND_FRESH_ATTEMPT_185",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "8ef3dbd02ab02e2c26c9258313b14eda0bfd30b3",
+  "working_branch": "codex/pl003-calibration-v2-185-attempt-003",
+  "head_policy": "VERIFY_LIVE_AT_USE_AND_PIN_EXECUTION_HEAD",
+  "objective": "Verify and execute the pre-frozen scorer calibration v2 contract in a networked preauthorized Codex surface using exact gpt-5.6-sol and, only after every calibration gate passes, create a fresh isolated Test 003 Execution 004 / ATTEMPT-003 and generate, freeze, blind-score, and analyze the complete authorized synthetic corpus.",
+  "execution_model": {
+    "coordinator": "CHATGPT",
+    "bounded_executor": "CODEX_IN_NETWORKED_PREAUTHORIZED_ENVIRONMENT",
+    "human_approver": "Jonathan Martínez",
+    "external_auditor": "NOT_IN_SCOPE"
+  },
+  "brief_lineage": {
+    "parent_brief": "projects/lab/briefs/CODEX_PRODUCT_LEADERSHIP_TEST003_NETWORKED_PREAUTHORIZED_EXECUTION_184_001.json",
+    "preserved_parent_content": [
+      "VERIFY_LIVE_MAIN_AND_AUTHORIZATION_ANCESTRY",
+      "NETWORKED_CODEX_NATIVE_SURFACE_WITH_PREEXISTING_AUTHENTICATION",
+      "OFFICIAL_STABLE_CODEX_ONLY",
+      "NO_NEW_CREDENTIAL_CREATION_TRANSFER_OR_SECRET_DISCLOSURE",
+      "EXACT_GPT_5_6_SOL_NO_SUBSTITUTION",
+      "MAXIMUM_ONE_SYNTHETIC_SMOKE_REQUEST",
+      "FAIL_CLOSED_STOP_CONDITIONS",
+      "AUTHORIZATION_182_TEST_CONTRACT_AND_BOUNDARIES",
+      "AT_LEAST_112_OUTPUTS_IF_GENERATION_STARTS",
+      "NO_EXTERNAL_AUDIT_PROMOTION_ACTIVATION_OR_INTEGRATION"
+    ],
+    "approved_additions": [
+      "PRE_FROZEN_LABEL_TAXONOMY_PRECEDENCE_AND_BOUNDARY_RULES",
+      "TWELVE_CALIBRATION_CASES_WITH_GOLD_RATIONALES",
+      "EIGHT_CRITICAL_BOUNDARY_ANCHORS",
+      "EXACT_CALIBRATION_PASS_THRESHOLDS",
+      "NO_POST_HOC_GOLD_CHANGE_OR_HUMAN_OVERRIDE",
+      "FRESH_EXECUTION_004_ATTEMPT_003_ONLY_AFTER_CALIBRATION_V2_PASS"
+    ],
+    "explicitly_authorized_changes": [
+      "REPLACE_THE_AMBIGUOUS_ATTEMPT_002_CALIBRATION_CONTRACT_WITH_VERSION_2",
+      "ADJUDICATE_CAL2_003_AS_AMBIGUOUS_AND_CAL2_004_AS_CORRECT_ABSTENTION_WITH_EXPLICIT_RATIONALES",
+      "REQUIRE_PRECEDENCE_AND_BOUNDARY_RULES_BEFORE_LABEL_SELECTION",
+      "CREATE_A_NEW_EXECUTION_PACKAGE_INSTEAD_OF_REUSING_EXECUTION_003"
+    ],
+    "authorized_removals": [],
+    "omissions_detected": []
+  },
+  "source_refs": [
+    "project-sources/chatgpt/START_HERE.md",
+    "LAB_CONTRACT.md",
+    "METHODOLOGY.md",
+    "decisions/DEC-LAB-030.json",
+    "projects/lab/pending/PEND-LAB-045.json",
+    "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/ROADMAP.json",
+    "projects/lab/integrations/INT-LAB-004.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/calibration-v2/MANIFEST.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_REPOSITORY_ONLY_PREFLIGHT_RECONCILIATION_AND_CONDITIONAL_EXECUTION_182.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_NETWORKED_PREAUTHORIZED_CODEX_EXECUTION_184.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_SCORER_CALIBRATION_CONTRACT_REMEDIATION_AND_FRESH_ATTEMPT_185.json",
+    "projects/lab/evidence/EVD-LAB-PL003-NETWORKED-PREAUTHORIZED-CODEX-184.json",
+    "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-003/CALIBRATION_RESULTS.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json"
+  ],
+  "preconditions": [
+    "AUTHORIZATION_185_PUBLISHED_ON_MAIN_AND_VERIFIED_IN_ANCESTRY",
+    "AUTHORIZATION_182_PRESENT_IN_MAIN_ANCESTRY_AND_UNCONSUMED",
+    "AUTHORIZATION_184_CONSUMED_WITH_ATTEMPT_002_CALIBRATION_BLOCK_PRESERVED",
+    "NETWORKED_CODEX_NATIVE_EXECUTION_SURFACE_AVAILABLE",
+    "CHATGPT_SESSION_OR_OPENAI_API_AUTHENTICATION_ESTABLISHED_BEFORE_EXECUTION",
+    "NO_SECRET_TRANSFER_OR_CREATION_REQUIRED",
+    "ALL_CALIBRATION_V2_FILES_MATCH_MANIFEST_DIGESTS"
+  ],
+  "phases": [
+    {
+      "order": 1,
+      "id": "CANONICAL_HEAD_AUTHORITY_AND_ISOLATION_PREFLIGHT",
+      "actions": [
+        "Verify live main HEAD and require authorization 185 in ancestry",
+        "Confirm authorization 182 remains unconsumed and authorization 184 remains consumed",
+        "Create a fresh isolated branch or worktree from the verified main HEAD",
+        "Confirm historical executions 001 through 003 and their evidence remain unmodified"
+      ],
+      "pass": "HEAD_AUTHORITY_ANCESTRY_AND_ISOLATION_PASS"
+    },
+    {
+      "order": 2,
+      "id": "NETWORK_RUNNER_MODEL_AND_CONTRACT_FREEZE_PREFLIGHT",
+      "actions": [
+        "Verify network and preexisting authentication without inspecting secret values",
+        "Use an eligible stable Codex runner with recorded provenance or an official stable ephemeral fallback",
+        "Verify exact gpt-5.6-sol without substitution",
+        "Execute at most one synthetic no-repository-mutation smoke request if needed",
+        "Recalculate every calibration-v2 file digest and compare it with calibration-v2 MANIFEST.json",
+        "Stop before any scorer request if a digest differs"
+      ],
+      "pass": "NETWORK_RUNNER_EXACT_MODEL_AND_CALIBRATION_V2_FREEZE_PASS"
+    },
+    {
+      "order": 3,
+      "id": "SCORER_CALIBRATION_V2",
+      "actions": [
+        "Execute exactly two independent scorer requests using the same frozen taxonomy cases prompt schema runner model and configuration",
+        "Do not share one scorer output with the other scorer",
+        "Validate twelve unique ordered ratings from each scorer against the frozen output schema",
+        "Calculate inter-rater exact agreement and gold exact agreement for each scorer and combined",
+        "Require exact agreement by both scorers on all eight critical boundary anchors",
+        "Prohibit post-hoc gold changes majority voting adjudication or human override"
+      ],
+      "pass": "INTER_RATER_AT_LEAST_11_OF_12_EACH_SCORER_GOLD_AT_LEAST_11_OF_12_COMBINED_AT_LEAST_22_OF_24_ALL_CRITICAL_ANCHORS_EXACT"
+    },
+    {
+      "order": 4,
+      "id": "CONDITIONAL_FRESH_TEST003_ATTEMPT_003",
+      "actions": [
+        "Only after phase 3 PASS create PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+        "Record attempt as ATTEMPT-003",
+        "Verify canonical Test 003 design fixtures prompts schemas tools model and scoring contracts",
+        "Freeze and hash all inputs before generation",
+        "Predeclare domain strata arm assignment blinding seed and cost capture",
+        "Generate 52 baseline outputs 52 Product Leadership package outputs 4 positive controls and 4 negative controls",
+        "Require at least 112 outputs with complete runner model timing token cost and provenance records",
+        "Anonymize outputs and freeze hashes before blinded scoring",
+        "Run blinded scoring and calculate cost negative transfer and net decision value"
+      ],
+      "pass": "COMPLETE_TEST003_ATTEMPT_003_PACKAGE_READY"
+    },
+    {
+      "order": 5,
+      "id": "RESULT_PUBLICATION_AND_REMOTE_VERIFICATION",
+      "actions": [
+        "Publish either the exact calibration or later fail-closed block or the complete Test 003 attempt package",
+        "Update authorization 185 and authorization 182 only according to their consumption criteria",
+        "Update specific Product Leadership pending roadmap integration test design execution index continuity and registry delta",
+        "Open and squash merge the bounded result pull request only after diff scope JSON and reference validation pass",
+        "Verify the new remote main HEAD"
+      ],
+      "pass": "RESULT_PUBLISHED_AND_REMOTE_VERIFIED"
+    }
+  ],
+  "required_outputs": [
+    "projects/lab/evidence/EVD-LAB-PL003-SCORER-CALIBRATION-AND-FRESH-ATTEMPT-185.json",
+    "updated authorization 185 status",
+    "updated authorization 182 status only if its consumption criterion is met",
+    "updated PEND-LAB-045",
+    "updated PRIORITY-INTEGRATIONS roadmap",
+    "updated INT-LAB-004",
+    "updated Test 003 design manifest",
+    "updated CURRENT_CONTINUITY.json",
+    "registry delta for authorization and result",
+    "conditional projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004/MANIFEST.json",
+    "conditional frozen input output scoring cost and analysis artifacts only after calibration-v2 PASS"
+  ],
+  "acceptance_checks": [
+    "REMOTE_MAIN_HEAD_PINNED",
+    "AUTHORIZATION_185_IN_ANCESTRY",
+    "AUTHORIZATION_182_UNCONSUMED_AT_ATTEMPT_START",
+    "CALIBRATION_V2_FILE_DIGESTS_MATCH_MANIFEST",
+    "NETWORKED_CODEX_NATIVE_SURFACE_VERIFIED",
+    "PREAUTHORIZED_AUTHENTICATION_PRESENT_WITH_NO_SECRET_VALUES_READ_OR_PUBLISHED",
+    "STABLE_RUNNER_BUILD_OR_VERSION_PROVENANCE_RECORDED",
+    "EXACT_GPT_5_6_SOL_NO_SUBSTITUTION",
+    "MAXIMUM_ONE_SMOKE_REQUEST",
+    "EXACTLY_TWO_INDEPENDENT_CALIBRATION_REQUESTS",
+    "TWELVE_UNIQUE_ORDERED_CASES_PER_SCORER",
+    "INTER_RATER_EXACT_AT_LEAST_11_OF_12",
+    "EACH_SCORER_GOLD_EXACT_AT_LEAST_11_OF_12",
+    "COMBINED_GOLD_EXACT_AT_LEAST_22_OF_24",
+    "ALL_EIGHT_CRITICAL_BOUNDARY_ANCHORS_EXACT_FOR_BOTH_SCORERS",
+    "NO_POST_HOC_GOLD_OR_THRESHOLD_CHANGE",
+    "NO_EXECUTION_004_OR_OUTPUT_GENERATION_BEFORE_CALIBRATION_V2_PASS",
+    "FRESH_EXECUTION_004_ONLY",
+    "AT_LEAST_112_OUTPUTS_IF_GENERATION_STARTS",
+    "BLINDED_SCORING_ONLY_AFTER_OUTPUT_FREEZE",
+    "COST_AND_NEGATIVE_TRANSFER_ANALYSIS_COMPLETE",
+    "JSON_PARSE_PASS",
+    "REFERENCES_RESOLVE",
+    "DIFF_SCOPE_EXACT",
+    "REMOTE_PUBLICATION_VERIFIED"
+  ],
+  "forbidden_actions": [
+    "NO_NEW_API_KEY_OAUTH_SECRET_OR_OTHER_CREDENTIAL_CREATION",
+    "NO_SECRET_TRANSFER_FROM_CHAT_OR_ANOTHER_ENVIRONMENT",
+    "NO_SECRET_VALUE_INSPECTION_LOGGING_COMMIT_OR_DISCLOSURE",
+    "NO_INTERACTIVE_LOGIN_IMPERSONATION",
+    "NO_GLOBAL_TOOL_INSTALLATION_OR_HOST_CONFIGURATION_CHANGE",
+    "NO_PRERELEASE_OR_UNVERIFIED_CODEX",
+    "NO_MODEL_SUBSTITUTION",
+    "NO_REUSE_OR_MUTATION_OF_EXECUTION_003_AS_ATTEMPT_003",
+    "NO_POST_FREEZE_TAXONOMY_CASE_PROMPT_GOLD_THRESHOLD_OUTPUT_OR_SCORE_MUTATION",
+    "NO_POST_HOC_GOLD_ADJUDICATION_MAJORITY_VOTE_OR_HUMAN_OVERRIDE",
+    "NO_EXECUTION_004_CREATION_OR_TEST003_OUTPUTS_BEFORE_CALIBRATION_V2_PASS",
+    "NO_AWS_BEDROCK_OR_TERRAFORM",
+    "NO_EXTERNAL_AUDIT",
+    "NO_PROMOTION_ACTIVATION_OR_INTEGRATION",
+    "NO_POINTER_SELECTOR_SHADOW_REGISTRY_OR_FALLBACK_MUTATION",
+    "NO_SSE_CHANGE",
+    "NO_PRODUCT_RUNTIME_OR_SYMPHONIE_CHANGE",
+    "NO_REAL_PRODUCT_PERSONAL_CLINICAL_OR_SENSITIVE_DATA",
+    "NO_AGGREGATE_VIEW_RECONCILIATION"
+  ],
+  "stop_conditions": [
+    "HEAD_OR_ANCESTRY_MISMATCH",
+    "CALIBRATION_V2_DIGEST_MISMATCH",
+    "NETWORKED_CODEX_SURFACE_UNAVAILABLE",
+    "PREAUTHORIZED_AUTHENTICATION_NOT_AVAILABLE",
+    "LOGIN_SECRET_CREATION_OR_SECRET_TRANSFER_REQUIRED",
+    "RUNNER_PROVENANCE_OR_INTEGRITY_UNVERIFIABLE",
+    "GPT_5_6_SOL_UNAVAILABLE",
+    "SMOKE_REQUEST_FAILURE_OR_INCOMPLETE_PROVENANCE",
+    "CALIBRATION_OUTPUT_SCHEMA_OR_CASE_COMPLETENESS_FAILURE",
+    "CALIBRATION_THRESHOLDS_NOT_MET",
+    "CRITICAL_BOUNDARY_ANCHOR_MISMATCH_OR_DISAGREEMENT",
+    "TEST_INPUT_HASH_MISMATCH",
+    "BLINDING_FAILURE",
+    "INCOMPLETE_OUTPUT_COUNT_PROVENANCE_OR_COST",
+    "POST_FREEZE_MUTATION",
+    "SCOPE_OR_AUTHORITY_AMBIGUOUS"
+  ],
+  "response_contract": {
+    "result_first": true,
+    "report": [
+      "verified main HEAD",
+      "execution surface and non-secret network authentication preflight",
+      "runner build or version and exact model result",
+      "calibration-v2 digest verification",
+      "two scorer request provenance",
+      "inter-rater gold and critical-anchor results",
+      "whether Execution 004 / ATTEMPT-003 was created",
+      "output count scoring cost negative-transfer and gate results if executed",
+      "files commits pull request and merge result",
+      "authorization consumption states",
+      "remaining exact block or single next action"
+    ]
+  }
+}

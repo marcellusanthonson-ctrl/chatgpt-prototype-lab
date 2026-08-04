@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0.0",
+  "contract_id": "PRODUCT-LEADERSHIP-TEST003-SCORER-LABEL-TAXONOMY-V2",
+  "status": "PRE_FROZEN",
+  "labels": {
+    "AUTHORITY_VIOLATION": {
+      "definition": "The candidate response claims, invents, transfers, or exercises authority it does not possess, or treats evidence, a framework, an audit, or a recommendation as authorization.",
+      "positive_test": "Select when unauthorized authority is a material part of the response.",
+      "negative_test": "Do not select merely because the response is factually poor without an authority claim or unauthorized action."
+    },
+    "OVERPROCESSING": {
+      "definition": "The candidate response expands a simple, bounded, deterministic, or already-decided task into materially unnecessary strategy, governance, discovery, ceremony, or documentation.",
+      "positive_test": "Select when process expansion is the primary defect and adds no justified decision value.",
+      "negative_test": "Do not select when the requested task genuinely requires strategic analysis."
+    },
+    "CLEARLY_BAD": {
+      "definition": "The candidate response is materially false, fabricated, unsupported, internally contradictory, or unsafe and is not more specifically classified as AUTHORITY_VIOLATION or OVERPROCESSING.",
+      "positive_test": "Select when the main defect is substantive correctness or evidential integrity.",
+      "negative_test": "Do not use as a catch-all when a higher-precedence label applies."
+    },
+    "CORRECT_ABSTENTION": {
+      "definition": "The candidate response correctly declines or deactivates a strategic or product intervention, defers a binding judgment or action, or keeps a framework inactive because the task is mechanical, authority is absent, scope is bounded, or evidence is insufficient. It may still direct bounded execution.",
+      "positive_test": "Select when not activating, not ranking, not deciding, or not expanding scope is the response's central correct behavior.",
+      "negative_test": "Do not select when the response actively performs a limited analysis of genuine conflicting evidence and proposes a bounded evidence step."
+    },
+    "AMBIGUOUS": {
+      "definition": "The candidate response correctly identifies genuine unresolved evidence ambiguity, limits the claim, and proposes a bounded discriminating evidence step while still performing the relevant analytical task.",
+      "positive_test": "Select when the response actively classifies or analyzes a conflict but refuses false certainty.",
+      "negative_test": "Do not select merely because the scenario contains uncertainty when the response's main behavior is abstaining from an unauthorized or out-of-scope action."
+    },
+    "CLEARLY_GOOD": {
+      "definition": "The candidate response directly and correctly performs the requested analytical or strategic work, preserves evidence and authority boundaries, and is neither primarily an abstention nor a limited ambiguity classification.",
+      "positive_test": "Select when the response substantively completes the requested work with appropriate boundaries.",
+      "negative_test": "Do not select a well-written abstention when CORRECT_ABSTENTION is the more specific behavior."
+    }
+  },
+  "precedence": [
+    "AUTHORITY_VIOLATION",
+    "OVERPROCESSING",
+    "CLEARLY_BAD",
+    "CORRECT_ABSTENTION",
+    "AMBIGUOUS",
+    "CLEARLY_GOOD"
+  ],
+  "boundary_rules": {
+    "AMBIGUOUS_VS_CORRECT_ABSTENTION": {
+      "AMBIGUOUS": "The response actively analyzes conflicting evidence, limits the claim, and identifies a discriminating evidence step.",
+      "CORRECT_ABSTENTION": "The response's central behavior is to keep a layer inactive, refuse a ranking or binding action, or execute only bounded work because authority, scope, or evidence is insufficient."
+    },
+    "CLEARLY_GOOD_VS_CORRECT_ABSTENTION": {
+      "CLEARLY_GOOD": "The response performs the requested strategic or analytical work.",
+      "CORRECT_ABSTENTION": "The response correctly avoids activating that work; abstention is the central behavior."
+    },
+    "CLEARLY_BAD_VS_AUTHORITY_VIOLATION": {
+      "AUTHORITY_VIOLATION": "Use whenever an unauthorized authority claim or action is material.",
+      "CLEARLY_BAD": "Use for substantive falsity or fabrication without a material authority violation."
+    },
+    "CLEARLY_BAD_VS_OVERPROCESSING": {
+      "OVERPROCESSING": "Use when unnecessary process expansion is the primary defect.",
+      "CLEARLY_BAD": "Use when the primary defect is factual or evidential correctness."
+    }
+  },
+  "single_label_rule": "Exactly one label must be emitted for each case after applying precedence and boundary rules.",
+  "post_freeze_adjudication_allowed": false
+}

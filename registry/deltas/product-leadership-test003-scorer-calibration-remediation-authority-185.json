@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "PRODUCT-LEADERSHIP-TEST003-SCORER-CALIBRATION-CONTRACT-REMEDIATION-AUTHORITY-185",
+  "project_id": "lab",
+  "created_at": "2026-08-04T13:29:00-04:00",
+  "authorization": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_SCORER_CALIBRATION_CONTRACT_REMEDIATION_AND_FRESH_ATTEMPT_185",
+  "authorization_state": "GRANTED_CALIBRATION_CONTRACT_REMEDIATION_PUBLISHED_EXECUTION_NOT_STARTED",
+  "brief": "projects/lab/briefs/CODEX_PRODUCT_LEADERSHIP_TEST003_SCORER_CALIBRATION_REMEDIATION_AND_FRESH_ATTEMPT_185_001.json",
+  "calibration_contract": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/calibration-v2/MANIFEST.json",
+  "parent_result": "ATTEMPT_002_BLOCKED_SCORER_CALIBRATION_INCOMPLETE_ZERO_OUTPUTS",
+  "fresh_execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "fresh_attempt": "ATTEMPT-003",
+  "next_action": "EXECUTE_CALIBRATION_V2_AND_CONDITIONAL_FRESH_TEST003_ATTEMPT_185_IN_CODEX",
+  "aggregate_view_divergence": {
+    "preserved": true,
+    "affected_views": [
+      "CURRENT_STATE.json",
+      "projects/lab/PROJECT_STATE.json",
+      "registry/index.json"
+    ]
+  },
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "integration_effect": "NONE"
+}
