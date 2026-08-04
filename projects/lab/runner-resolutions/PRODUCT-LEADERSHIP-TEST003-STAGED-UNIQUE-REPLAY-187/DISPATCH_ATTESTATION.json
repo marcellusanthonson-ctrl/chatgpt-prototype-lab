@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "attestation_id": "PRODUCT-LEADERSHIP-TEST003-REPLAY-187-STAGE-1-DISPATCH-ATTESTATION",
+  "project_id": "lab",
+  "authorization_ref": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_AUDIT186_RECONCILIATION_AND_STAGED_UNIQUE_CODEX_REPLAY_187",
+  "brief_ref": "projects/lab/briefs/CODEX_PRODUCT_LEADERSHIP_TEST003_STAGED_UNIQUE_REPLAY_187_001.json",
+  "status": "BLOCKED_PRE_SMOKE",
+  "recorded_at": "2026-08-04T16:58:23.5217479-04:00",
+  "surface_product": "Codex Desktop",
+  "surface_version": "26.727.6591.0",
+  "surface_class": "USER_OPENED_NETWORKED_PREAUTHORIZED_CODEX_NATIVE_SURFACE",
+  "surface_process_observed": true,
+  "os": "Windows 10 Pro 22H2 build 19045.6466 x64",
+  "runner_product": "OpenAI Codex CLI",
+  "runner_version": "0.139.0",
+  "runner_release_channel": "stable",
+  "runner_sha256_when_available": "77a84f8078400467ade4301d827b8bcea2d29b6838c9cd162bf3573b7ef97e10",
+  "stable_runner_provenance_verified": true,
+  "preexisting_authentication_present_boolean_only": false,
+  "secrets_inspected": false,
+  "credentials_created_or_transferred": false,
+  "interactive_login_attempted": false,
+  "required_model": "gpt-5.6-sol",
+  "model_availability": false,
+  "model_availability_evidence": "ZERO_EXACT_ENTRIES_IN_LOCAL_CODEX_MODEL_CATALOG",
+  "effective_model": null,
+  "remote_main_head": "982ad3ad89ac1958ed534e5a9d2859f8abe02c1b",
+  "authorization_187_in_ancestry": true,
+  "authorization_187_state_at_start": "GRANTED_STAGE_0_CONSUMED_STAGE_1_SINGLE_DISPATCH_NOT_STARTED",
+  "calibration_v2_digest_result": "FAIL_0_OF_5_SHA256_MATCH",
+  "calibration_v2_digests": [
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/calibration-v2/LABEL_TAXONOMY.json",
+      "expected": "ad2b2eb7aba2c5f85166160e2c78e7441e2026388703a468aa73a8e6b501b907",
+      "observed": "be7d5b04b589d28e2d0653a53f0305555e48f2453b9147898a66635f5ee2d5c2",
+      "match": false
+    },
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/calibration-v2/CALIBRATION_CASES.json",
+      "expected": "647723bbb86da3f590119b268cec5dadd19b0d46494fd09c652542b55e03b623",
+      "observed": "e85c2c9f90d10bba1bc4195a48b4f4eb37593ee1de45b0364f5f59f79001cbba",
+      "match": false
+    },
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/calibration-v2/ACCEPTANCE_CONTRACT.json",
+      "expected": "2480c47b595c659d44ef637778303243175e26cb2c455b86b92ee6f7c10d6697",
+      "observed": "a9a550132e763ea68513d144ef7bb229cb1ad7b6d165216c1f1f6a78142aa4e9",
+      "match": false
+    },
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/calibration-v2/CALIBRATION_OUTPUT_SCHEMA.json",
+      "expected": "325949a7e0034596f6d14ac9b263866659b7044d931650fddfee6be77c8168d2",
+      "observed": "be17f4b5ffae1c30a34ccb4857bc42991a7fd2721cf661c39617189719af7566",
+      "match": false
+    },
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/calibration-v2/CALIBRATION_PROMPT.md",
+      "expected": "9809edc38b97f51554c988b1956781f3a0789f0af222f435d761998169164022",
+      "observed": "240bd12e0c4fa8bd98db85a0be882c0cede4022a48cba0e2c3b591843519b9d9",
+      "match": false
+    }
+  ],
+  "smoke_requests": 0,
+  "model_requests": 0,
+  "calibration_started": false,
+  "triggered_stop_conditions": [
+    "CALIBRATION_V2_DIGEST_MISMATCH",
+    "PREEXISTING_AUTHENTICATION_UNAVAILABLE",
+    "RUNNER_PROVENANCE_OR_EXACT_MODEL_UNVERIFIABLE"
+  ],
+  "exact_result": "BLOCKED_CALIBRATION_V2_DIGEST_MISMATCH_PREEXISTING_AUTHENTICATION_ABSENT_EXACT_MODEL_UNAVAILABLE",
+  "authority_consequence": "CONSUME_187_BLOCKED_NO_CALIBRATION_ATTEMPT_NO_RETRY_AUTHORITY"
+}

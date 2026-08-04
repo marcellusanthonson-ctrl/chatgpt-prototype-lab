@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-PL003-STAGED-UNIQUE-REPLAY-187",
+  "project_id": "lab",
+  "kind": "STAGE_1_DISPATCH_ATTESTATION_BLOCK_EVIDENCE",
+  "status": "CONSUMED_STAGE_1_BLOCKED_NO_CALIBRATION_ATTEMPT_NO_RETRY_AUTHORITY",
+  "recorded_at": "2026-08-04T16:58:23.5217479-04:00",
+  "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_AUDIT186_RECONCILIATION_AND_STAGED_UNIQUE_CODEX_REPLAY_187",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "execution_parent_head": "982ad3ad89ac1958ed534e5a9d2859f8abe02c1b",
+  "working_branch": "codex/auth-187-execution",
+  "dispatch_attestation": "projects/lab/runner-resolutions/PRODUCT-LEADERSHIP-TEST003-STAGED-UNIQUE-REPLAY-187/DISPATCH_ATTESTATION.json",
+  "maximum_stage_reached": "STAGE_1_PRE_SMOKE_ATTESTATION",
+  "exact_result": "BLOCKED_CALIBRATION_V2_DIGEST_MISMATCH_PREEXISTING_AUTHENTICATION_ABSENT_EXACT_MODEL_UNAVAILABLE",
+  "preflight": {
+    "remote_main_head_verified": true,
+    "authorization_187_in_ancestry": true,
+    "correct_surface_observed": true,
+    "preexisting_authentication_present": false,
+    "stable_runner_provenance_verified": true,
+    "exact_model_available": false,
+    "calibration_v2_digests_match": 0,
+    "calibration_v2_digests_mismatch": 5
+  },
+  "requests": {
+    "smoke": 0,
+    "calibration_scorer": 0,
+    "test003": 0,
+    "total_model_requests": 0
+  },
+  "calibration": {
+    "started": false,
+    "result": "NOT_RUN",
+    "metrics": null,
+    "cal2_003": null,
+    "cal2_004": null
+  },
+  "conditional_execution": {
+    "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+    "attempt": "ATTEMPT-003",
+    "created": false,
+    "outputs_generated": 0,
+    "freeze_started": false,
+    "blinding_started": false,
+    "scoring_started": false,
+    "cost_analysis_started": false,
+    "negative_transfer_analysis_started": false
+  },
+  "triggered_stop_conditions": [
+    "CALIBRATION_V2_DIGEST_MISMATCH",
+    "PREEXISTING_AUTHENTICATION_UNAVAILABLE",
+    "RUNNER_PROVENANCE_OR_EXACT_MODEL_UNVERIFIABLE"
+  ],
+  "claims_supported": [
+    "REMOTE_MAIN_AND_AUTHORIZATION_187_ANCESTRY_VERIFIED",
+    "USER_OPENED_CODEX_DESKTOP_SURFACE_OBSERVED",
+    "STABLE_CODEX_CLI_0_139_0_PROVENANCE_AND_SHA256_RECORDED",
+    "PREEXISTING_AUTHENTICATION_BOOLEAN_FALSE",
+    "EXACT_GPT_5_6_SOL_MODEL_AVAILABILITY_FALSE",
+    "CALIBRATION_V2_LOCAL_BYTE_DIGESTS_MISMATCH_5_OF_5",
+    "ZERO_MODEL_REQUESTS",
+    "NO_CALIBRATION_ATTEMPT",
+    "EXECUTION_004_NOT_CREATED",
+    "ZERO_TEST003_OUTPUTS"
+  ],
+  "claims_not_supported": [
+    "EFFECTIVE_MODEL",
+    "STAGE_1_SMOKE_PASS_OR_FAIL",
+    "CALIBRATION_V2_PASS_OR_FAIL",
+    "PRODUCT_LEADERSHIP_TEST003_PASS_OR_FAIL",
+    "PRODUCT_LEADERSHIP_ADDS_OR_DOES_NOT_ADD_VALUE"
+  ],
+  "authorization_state_after_publication": {
+    "authorization_187": "CONSUMED_STAGE_1_BLOCKED_NO_CALIBRATION_ATTEMPT_NO_RETRY_AUTHORITY",
+    "residual_authority": "NONE"
+  },
+  "historical_executions_modified": false,
+  "frozen_calibration_files_modified": false,
+  "aggregate_view_divergence": {
+    "status": "OPEN_DOCUMENTARY_DIVERGENCE_PRESERVED",
+    "affected_views": [
+      "CURRENT_STATE.json",
+      "projects/lab/PROJECT_STATE.json",
+      "registry/index.json"
+    ],
+    "correction_authorized": false
+  },
+  "non_effects": [
+    "NO_SECRET_INSPECTION_OR_DISCLOSURE",
+    "NO_CREDENTIAL_CREATION_TRANSFER_OR_INTERACTIVE_LOGIN",
+    "NO_MODEL_REQUEST_OR_TOOL_CALL",
+    "NO_CALIBRATION",
+    "NO_EXECUTION_004",
+    "NO_TEST003_OUTPUT",
+    "NO_AWS_TERRAFORM_OR_ACCOUNT_SCOPED_OPERATION",
+    "NO_SSE_CHANGE",
+    "NO_FORMAL_PHASE_3_AUDIT",
+    "NO_PROMOTION_ACTIVATION_OR_INTEGRATION",
+    "NO_POINTER_SELECTOR_FALLBACK_SHADOW_REGISTRY_PRODUCT_RUNTIME_OR_SYMPHONIE_CHANGE",
+    "NO_AGGREGATE_VIEW_RECONCILIATION"
+  ],
+  "single_next_action": "SEPARATELY_DECIDE_PRODUCT_LEADERSHIP_REPLAY_OR_STOP_AFTER_REVIEWING_STAGE_1_BLOCK_EVIDENCE",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "integration_effect": "NONE"
+}
