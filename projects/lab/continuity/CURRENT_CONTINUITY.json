@@ -1,9 +1,9 @@
 {
-  "schema_version": "1.5.0",
-  "continuity_id": "LAB-CONTINUITY-PRIORITY-INTEGRATIONS-PHASE-2-SSE-AUTHORITY-180-20260803",
+  "schema_version": "1.6.0",
+  "continuity_id": "LAB-CONTINUITY-SSE-TEST-180-ATTEMPT-001-BLOCKED-RECONCILED-181-20260803",
   "project_id": "lab",
-  "status": "PRIORITY_INTEGRATIONS_PHASE_2_SSE_EXECUTION_AUTHORIZED_NOT_STARTED_PRODUCT_LEADERSHIP_PREFLIGHT_BLOCKED",
-  "created_at": "2026-08-03T10:12:00-04:00",
+  "status": "SSE_TEST_EXECUTION_180_ATTEMPT_001_BLOCKED_CANONICALLY_RECONCILED_AUTHORIZATION_180_UNCONSUMED",
+  "created_at": "2026-08-03T22:54:00-04:00",
   "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "canonical_branch": "main",
   "head_policy": "VERIFY_LIVE_AT_USE",
@@ -19,104 +19,86 @@
     "registry/projects.json",
     "projects/lab/PROJECT_STATE.json",
     "projects/lab/PENDING.json",
-    "decisions/DEC-LAB-031.json",
-    "projects/lab/continuity/CURRENT_CONTINUITY.json",
-    "projects/lab/authorizations/AUTHORIZATION_LAB_STATISTICS_COUNTER_EXPERIMENT_SOURCE_ADOPTION_HUMAN_REVIEW_AND_CONDITIONAL_CLOSURE_178.json",
-    "projects/lab/evidence/EVD-LAB-STATISTICS-COUNTER-SOURCE-PACKAGE-178.json",
-    "foundation-library/motion-system/MOTION-SYSTEM-001/MANIFEST.json",
-    "foundation-library/motion-system/MOTION-SYSTEM-001/MOTION_EFFECTS_REGISTRY.json",
-    "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/SOURCE_PACKAGE_MANIFEST.json",
-    "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/CANONICAL_REFERENCE.json",
-    "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/behavior-core/BEHAVIOR_CORE_CONTRACT.json",
-    "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/behavior-core/BEHAVIOR_CORE_VALIDATION_RESULTS.json",
-    "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/FUTURE_CONSUMPTION_CONTRACT.json",
-    "registry/deltas/statistics-counter-source-package-adoption-178.json",
-    "projects/lab/authorizations/AUTHORIZATION_LAB_POST_178_CANONICAL_STATE_AND_PHASE1_EVIDENCE_RECONCILIATION_179.json",
-    "projects/lab/briefs/CODEX_POST_178_CANONICAL_STATE_AND_PHASE1_EVIDENCE_RECONCILIATION_179_001.json",
-    "projects/lab/evidence/EVD-LAB-POST-178-CANONICAL-STATE-RECONCILIATION-179.json",
-    "registry/deltas/post-178-canonical-state-phase1-evidence-reconciliation-179.json",
-    "errors/ERR-LAB-012.json",
-    "projects/lab/authorizations/AUTHORIZATION_LAB_SSE_TEST_EXECUTION_AND_READ_ONLY_AUDIT_147.json",
+    "projects/lab/pending/PEND-LAB-045.json",
+    "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/ROADMAP.json",
     "projects/lab/authorizations/AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180.json",
-    "projects/lab/briefs/CODEX_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180_001.json",
-    "projects/lab/evidence/EVD-LAB-PRIORITY-INTEGRATIONS-PHASE-2-SSE-AUTHORITY-180.json",
-    "registry/deltas/sse-test-execution-and-read-only-audit-147.json",
-    "registry/deltas/priority-integrations-phase2-sse-authority-180.json",
-    "projects/lab/pending/PEND-LAB-045.json"
+    "projects/lab/authorizations/AUTHORIZATION_LAB_SSE_TEST_180_BLOCKED_ATTEMPT_CANONICAL_RECONCILIATION_181.json",
+    "projects/lab/briefs/CODEX_SSE_TEST_180_BLOCKED_ATTEMPT_CANONICAL_RECONCILIATION_181_001.json",
+    "projects/lab/test-executions/SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-001/MANIFEST.json",
+    "projects/lab/evidence/EVD-LAB-SSE-TEST-EXECUTION-180-ATTEMPT-001.json",
+    "registry/deltas/sse-test-180-blocked-attempt-canonical-reconciliation-181.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json",
+    "project-sources/chatgpt/01_SOURCE_MANIFEST.md",
+    "project-sources/chatgpt/02_GOVERNANCE_AUTHORITY_AND_TRUTH.md",
+    "project-sources/chatgpt/03_STARTUP_AND_CANONICAL_SOURCES.md",
+    "project-sources/chatgpt/04_EXECUTION_EFFICIENCY_AND_BRIEFS.md",
+    "project-sources/chatgpt/05_EPISTEMIC_INDEPENDENCE.md",
+    "project-sources/chatgpt/06_CONTINUITY_PROTOCOL.md",
+    "project-sources/chatgpt/07_ERRORS_AND_RESPONSE_CONTRACT.md",
+    "project-sources/chatgpt/08_CRITERION_LAYER.md"
   ],
+  "source_control": {
+    "verified_parent_head": "85f216f0d6eae8280e51c80aecbb077ce096eb55",
+    "source_pull_request": 19,
+    "source_branch": "codex/sse-synthetic-test-execution-180-001",
+    "source_attempt_commit": "80adb066f3d7561ff4a98e0459ae7fde77354f5a",
+    "publication_method": "SQUASH_MERGE",
+    "publication_verification": "REQUIRED_AT_USE"
+  },
   "global_state": {
-    "current_phase": "PRIORITY_INTEGRATIONS_PHASE_2_SSE_EXECUTION_AUTHORIZED_NOT_STARTED_PRODUCT_LEADERSHIP_PREFLIGHT_BLOCKED",
+    "current_phase": "SSE_TEST_EXECUTION_180_ATTEMPT_001_BLOCKED_CANONICALLY_RECONCILED_AUTHORIZATION_180_UNCONSUMED",
     "priority_integrations_phase_1": "COMPLETE_PASS",
     "product_leadership": "PREFLIGHT_BLOCKED_NO_EXECUTION_AUTHORITY",
-    "software_solution_engineering": "SYNTHETIC_TEST_EXECUTION_AUTHORIZED_NOT_STARTED",
+    "software_solution_engineering": "ATTEMPT_001_BLOCKED_MODEL_OR_TOOL_ACCESS_NOT_REPRODUCIBLE_RETRY_NOT_STARTED",
+    "authorization_180": "GRANTED_STAGE_2_BLOCKED_RETRY_NOT_STARTED_AUTHORIZATION_UNCONSUMED",
+    "authorization_181": "CONSUMED_ON_VERIFIED_SQUASH_MERGE",
     "external_audit_authorized": false,
+    "tooling_update_authorized": false,
     "runtime_authorized": false,
     "integration_authorized": false,
     "product_changes_authorized": false,
-    "active_execution_authority": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180"
+    "active_execution_authority": "AUTHORIZATION_180_EXISTS_BUT_IS_BLOCKED_PENDING_SEPARATE_RUNNER_RESOLUTION"
   },
-  "authorization_178": {
-    "id": "AUTHORIZATION_LAB_STATISTICS_COUNTER_EXPERIMENT_SOURCE_ADOPTION_HUMAN_REVIEW_AND_CONDITIONAL_CLOSURE_178",
-    "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "stage_1": "COMPLETED_FUNCTIONAL_SOURCE_PRESERVED",
-    "stage_2": "COMPLETED_APPROVED_SOURCE_FIDELITY_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_PUBLISHED",
-    "active": false,
-    "residual_authority": false
+  "attempt_001": {
+    "id": "ATTEMPT-001",
+    "execution_id": "SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-001",
+    "result": "BLOCKED",
+    "classification": "BLOCKED_MODEL_OR_TOOL_ACCESS_NOT_REPRODUCIBLE",
+    "stopped_phase": "PREFLIGHT",
+    "stop_condition": "MODEL_OR_TOOL_ACCESS_NOT_REPRODUCIBLE",
+    "configured_model": "gpt-5.6-sol",
+    "codex_cli_version": "0.139.0",
+    "primary_runner_result": "HTTP_400_REQUIRES_NEWER_CODEX",
+    "alternate_runner_result": "ACCESS_DENIED_NOT_STARTED",
+    "fixtures": 32,
+    "arms": 3,
+    "minimum_outputs": 96,
+    "outputs_generated": 0,
+    "freeze_started": false,
+    "hashes_published": 0,
+    "calibration_run": false,
+    "blinding_run": false,
+    "scoring_run": false,
+    "external_audit_run": false
   },
-  "human_determination": {
-    "status": "APPROVED_SOURCE_FIDELITY",
-    "approved_by": "Jonathan Martínez",
-    "determined_at": "2026-08-03T00:23:25-04:00",
-    "protocol": "REAL_LOCALHOST_CHROMIUM",
-    "statement": "Funciona perfecto"
-  },
-  "results": {
-    "roadmap_vertical_progress_001": "HUMAN_APPROVED_CANONICAL_REFERENCE_DESIGNATED_BEHAVIOR_CORE_VALIDATED",
-    "statistics_counter_static_suffix_001": "HUMAN_APPROVED_CANONICAL_REFERENCE_DESIGNATED_BEHAVIOR_CORE_VALIDATED_READY_FOR_FUTURE_BOUNDED_CONSUMPTION",
-    "initial_motion_effects": "COMPLETE",
-    "pend_lab_043": "INITIAL_EFFECTS_COMPLETE_REMAINING_LIBRARY_POPULATION_AND_SEPARATE_PROMOTION_GATES",
-    "official_landing_integration": "NOT_AUTHORIZED_NOT_PERFORMED",
-    "carolina_repository_mutation": "NONE",
-    "runtime_effect": "NONE",
-    "canonical_aggregates": "RECONCILED_POST_AUTHORIZATION_178",
-    "phase1_publication_fields": "CLOSED_VERIFIED"
-  },
-  "statistics_counter": {
-    "effect_id": "STATISTICS-COUNTER-STATIC-SUFFIX-001",
-    "source_package_id": "CAROLINA-STATISTICS-MOTION-EXPERIMENT-001",
-    "source_package_status": "HUMAN_APPROVED_CANONICAL_REFERENCE_DESIGNATED_SOURCE_PRESERVED",
-    "source_package_manifest": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/SOURCE_PACKAGE_MANIFEST.json",
-    "archive_sha256": "8eecd53dc698d4587dfa882a5eabe701ec9a77a45bb9747d57f0cf5d68c876b0",
-    "original_monolith_sha256": "74274e55ff1c8b9edd849d433f12bf6ffe0abb00097872feb6bc7adde83b463e",
-    "canonical_reference": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/CANONICAL_REFERENCE.json",
-    "behavior_core": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/behavior-core/statistics-counter-core.js",
-    "behavior_core_contract": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/behavior-core/BEHAVIOR_CORE_CONTRACT.json",
-    "behavior_core_validation": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/behavior-core/BEHAVIOR_CORE_VALIDATION_RESULTS.json",
-    "future_consumption_contract": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/FUTURE_CONSUMPTION_CONTRACT.json",
-    "future_consumption_status": "READY_REQUIRES_SEPARATE_EXPLICIT_PRODUCT_INTEGRATION_AUTHORIZATION"
-  },
-  "validation": {
-    "human_localhost_source_fidelity": "PASS_APPROVED",
-    "behavior_core_node_tests": "PASS_7_OF_7",
-    "normal_motion": "PASS",
-    "reduced_motion": "PASS",
-    "one_shot_reentry": "PASS",
-    "programmatic_replay": "PASS",
-    "resize_preservation": "PASS",
-    "source_independence": "PASS",
-    "destroy_cancellation": "PASS",
-    "external_requests": 0,
-    "json_parse": "PASS_FOR_PUBLISHED_CLOSURE_ARTIFACTS",
-    "canonical_json_parse": "PASS",
-    "duplicate_pending_ids": 0,
-    "duplicate_roadmap_orders": 0,
-    "stale_stage1_claims": 0,
-    "authorization_147_execution_outputs": 0,
-    "sse_test_outputs_generated_under_180": 0,
-    "aws_calls": 0,
-    "external_audit_runs": 0
+  "claims": {
+    "confirmed": [
+      "ATTEMPT_001_WAS_BLOCKED_BY_A_PREDECLARED_PREFLIGHT_STOP_CONDITION",
+      "NO_OUTPUTS_WERE_GENERATED",
+      "FREEZE_CALIBRATION_BLINDING_AND_SCORING_DID_NOT_START",
+      "NO_AUDIT_INFRASTRUCTURE_PRODUCT_RUNTIME_ACTIVATION_OR_INTEGRATION_EFFECT_OCCURRED",
+      "AUTHORIZATION_180_REMAINS_UNCONSUMED"
+    ],
+    "not_supported": [
+      "SSE_ADDS_OR_DOES_NOT_ADD_VALUE",
+      "SSE_TEST_PASSED_OR_FAILED_TECHNICALLY",
+      "SSE_IS_AUDITED_APPROVED_ACTIVE_INTEGRATED_OR_PROMOTED"
+    ]
   },
   "non_authorizations": [
+    "NO_CODEX_CLI_UPDATE_OR_RUNNER_INSTALLATION",
+    "NO_MODEL_SUBSTITUTION",
+    "NO_PREFLIGHT_RETRY",
     "NO_PRODUCT_LEADERSHIP_PREFLIGHT_OR_TEST_003_EXECUTION",
     "NO_EXTERNAL_AUDIT",
     "NO_AWS_TERRAFORM_OR_PROVISIONING",
@@ -124,48 +106,14 @@
     "NO_POINTER_SELECTOR_SHADOW_REGISTRY_PRODUCT_RUNTIME_OR_SYMPHONIE_CHANGE"
   ],
   "next_action": {
-    "single": "CODEX_EXECUTE_SSE_SYNTHETIC_TEST_UNDER_AUTHORIZATION_180",
-    "repository_write_authorized": true,
+    "single": "SEPARATELY_AUTHORIZE_REPRODUCIBLE_GPT_5_6_SOL_RUNNER_RESOLUTION",
+    "repository_write_authorized": false,
+    "tooling_update_authorized": false,
+    "prefight_retry_authorized_now": false,
     "external_audit_authorized": false
   },
-  "authority_effect": "STAGE_2_SSE_SYNTHETIC_TEST_EXECUTION_ONLY",
-  "authorization_179": {
-    "id": "AUTHORIZATION_LAB_POST_178_CANONICAL_STATE_AND_PHASE1_EVIDENCE_RECONCILIATION_179",
-    "status": "CONSUMED_ON_VERIFIED_SQUASH_MERGE",
-    "active": false,
-    "residual_authority": false
-  },
-  "phase1_publication_evidence": {
-    "evidence": "projects/lab/evidence/EVD-LAB-PRIORITY-INTEGRATIONS-PHASE-1-170.json",
-    "status": "PASS_ON_VERIFIED_SQUASH_MERGE_AND_REMOTE_PUBLICATION",
-    "main_commit": "1204d9c56af79b4d9a840c6609716aca94ecfb65"
-  },
-  "authorization_180": {
-    "id": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180",
-    "status": "GRANTED_STAGE_1_CONSUMED_STAGE_2_AUTHORIZED_NOT_STARTED",
-    "active": true,
-    "scope": "SSE_SYNTHETIC_TEST_EXECUTION_ONLY",
-    "residual_authority": "STAGE_2_ONLY"
-  },
-  "authorization_147": {
-    "id": "AUTHORIZATION_LAB_SSE_TEST_EXECUTION_AND_READ_ONLY_AUDIT_147",
-    "status": "SUPERSEDED_UNEXECUTED",
-    "active": false,
-    "residual_authority": false
-  },
-  "priority_integrations_phase_2": {
-    "product_leadership": {
-      "status": "BLOCKED_NO_ELIGIBLE_BOUNDED_CREATOR",
-      "test_003_executed": false,
-      "authority": "NONE"
-    },
-    "software_solution_engineering": {
-      "status": "AUTHORIZED_NOT_STARTED",
-      "fixtures": 32,
-      "arms": 3,
-      "minimum_outputs": 96,
-      "authority": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180",
-      "external_audit": "NOT_AUTHORIZED"
-    }
-  }
+  "authority_effect": "NONE_AFTER_AUTHORIZATION_181_CONSUMPTION_AUTHORIZATION_180_REMAINS_BLOCKED_AND_UNCONSUMED",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "integration_effect": "NONE"
 }
