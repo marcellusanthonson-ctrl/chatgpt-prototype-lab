@@ -1,0 +1,168 @@
+{
+  "schema_version": "1.0.0",
+  "brief_id": "CODEX_PRODUCT_LEADERSHIP_TEST003_REPRODUCIBLE_RUNNER_RESOLUTION_183_001",
+  "task_id": "PRODUCT_LEADERSHIP_TEST003_REPRODUCIBLE_RUNNER_RESOLUTION_183",
+  "project_id": "lab",
+  "status": "AUTHORIZED_NOT_STARTED",
+  "authorization_ref": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_REPRODUCIBLE_CODEX_RUNNER_RESOLUTION_183",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "12bebd1092367fa96b9c105df88edd0cad084012",
+  "working_branch": "agent/product-leadership-test003-runner-resolution-183",
+  "head_policy": "VERIFY_LIVE_AT_USE_AND_PIN_EXECUTION_HEAD",
+  "objective": "Resolve and verify an ephemeral official stable Codex CLI runner for gpt-5.6-sol and, only if a preauthorized authentication path and one synthetic smoke request pass, resume Product Leadership Test 003 under authorization 182.",
+  "execution_model": {
+    "coordinator": "CHATGPT",
+    "bounded_executor": "CODEX_AFTER_RUNNER_PREFLIGHT_PASS",
+    "human_approver": "Jonathan Martínez",
+    "external_auditor": "NOT_IN_SCOPE"
+  },
+  "source_refs": [
+    "project-sources/chatgpt/START_HERE.md",
+    "LAB_CONTRACT.md",
+    "METHODOLOGY.md",
+    "projects/lab/pending/PEND-LAB-045.json",
+    "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/ROADMAP.json",
+    "projects/lab/integrations/INT-LAB-004.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_REPOSITORY_ONLY_PREFLIGHT_RECONCILIATION_AND_CONDITIONAL_EXECUTION_182.json",
+    "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-002/MANIFEST.json",
+    "projects/lab/evidence/EVD-LAB-PL003-STAGE2-AND-TEST-EXECUTION-182-ATTEMPT-001.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json"
+  ],
+  "external_primary_sources": [
+    "https://github.com/openai/codex",
+    "https://github.com/openai/codex/releases",
+    "https://help.openai.com/en/articles/11096431"
+  ],
+  "preconditions": [
+    "AUTHORIZATION_183_PUBLISHED_ON_MAIN_AND_VERIFIED",
+    "AUTHORIZATION_182_PRESENT_IN_MAIN_ANCESTRY_AND_UNCONSUMED",
+    "PRODUCT_LEADERSHIP_STAGE_2_PASS_AWS_PREFLIGHT_NOT_MATERIAL",
+    "TEST003_ATTEMPT_001_STOPPED_BEFORE_FREEZE_AND_GENERATION"
+  ],
+  "phases": [
+    {
+      "order": 1,
+      "id": "RESOLVE_OFFICIAL_STABLE_RELEASE",
+      "actions": [
+        "Resolve latest stable release from official OpenAI Codex release sources",
+        "Reject prerelease alpha beta nightly and mirrors",
+        "Record release version tag asset URL timestamp and source"
+      ],
+      "pass": "OFFICIAL_STABLE_RELEASE_RESOLVED_VERSION_AT_LEAST_0_146_0"
+    },
+    {
+      "order": 2,
+      "id": "EPHEMERAL_INSTALLATION_AND_INTEGRITY",
+      "actions": [
+        "Download the platform-specific official binary into an ephemeral user-writable directory",
+        "Verify release checksum or official integrity metadata when available",
+        "Do not modify global npm Homebrew PATH shell profile or host configuration",
+        "Record binary SHA-256 and codex --version"
+      ],
+      "pass": "EPHEMERAL_CODEX_RUNNER_INSTALLED_AND_VERSION_VERIFIED"
+    },
+    {
+      "order": 3,
+      "id": "AUTHENTICATION_AND_MODEL_PREFLIGHT",
+      "actions": [
+        "Detect only whether preauthorized authentication exists",
+        "Do not print read copy persist or create credential values",
+        "Verify gpt-5.6-sol is selectable through the resolved runner",
+        "Stop if interactive login or new secret creation is required"
+      ],
+      "pass": "PREAUTHORIZED_AUTHENTICATION_AND_GPT_5_6_SOL_AVAILABLE"
+    },
+    {
+      "order": 4,
+      "id": "SYNTHETIC_SMOKE_REQUEST",
+      "actions": [
+        "Execute at most one synthetic no-repository-mutation request",
+        "Capture runner version model provider exit status timing and non-secret provenance",
+        "Do not freeze Test 003 inputs during this phase"
+      ],
+      "pass": "ONE_SYNTHETIC_REQUEST_COMPLETES_REPRODUCIBLY"
+    },
+    {
+      "order": 5,
+      "id": "CONDITIONAL_TEST003_RETRY",
+      "actions": [
+        "Only after phases 1 through 4 PASS resume Test 003 under authorization 182",
+        "Verify and freeze canonical inputs",
+        "Calibrate scorers stratify domains assign blinded arms generate outputs freeze output hashes score and analyze costs and negative transfer",
+        "Publish the complete result or exact fail-closed stop evidence"
+      ],
+      "pass": "AUTHORIZATION_182_CONSUMPTION_CRITERION_MET_OR_REPRODUCIBLE_BLOCK_PUBLISHED"
+    }
+  ],
+  "required_outputs": [
+    "projects/lab/evidence/EVD-LAB-PL003-CODEX-RUNNER-RESOLUTION-183.json",
+    "projects/lab/runner-resolutions/PRODUCT-LEADERSHIP-TEST003-CODEX-RUNNER-183/MANIFEST.json",
+    "updated authorization 183 status",
+    "updated PEND-LAB-045",
+    "updated PRIORITY-INTEGRATIONS roadmap",
+    "updated INT-LAB-004",
+    "updated Test 003 manifest",
+    "updated CURRENT_CONTINUITY.json",
+    "registry delta for authorization and result",
+    "conditional updated Test 003 execution package only if runner preflight passes"
+  ],
+  "acceptance_checks": [
+    "REMOTE_MAIN_HEAD_PINNED",
+    "AUTHORIZATION_183_IN_ANCESTRY",
+    "OFFICIAL_STABLE_CODEX_RELEASE_ONLY",
+    "CODEX_VERSION_AT_LEAST_0_146_0",
+    "BINARY_SHA256_RECORDED",
+    "NO_GLOBAL_INSTALLATION_OR_HOST_CONFIGURATION_CHANGE",
+    "NO_SECRET_VALUE_DISCLOSED_OR_PERSISTED",
+    "GPT_5_6_SOL_EXACT_NO_SUBSTITUTION",
+    "MAXIMUM_ONE_SMOKE_REQUEST",
+    "NO_TEST003_FREEZE_OR_GENERATION_BEFORE_RUNNER_PREFLIGHT_PASS",
+    "JSON_PARSE_PASS",
+    "REFERENCES_RESOLVE",
+    "DIFF_SCOPE_EXACT",
+    "REMOTE_PUBLICATION_VERIFIED"
+  ],
+  "forbidden_actions": [
+    "NO_NEW_API_KEY_OR_OAUTH_SECRET_CREATION",
+    "NO_INTERACTIVE_LOGIN_IMPERSONATION",
+    "NO_GLOBAL_TOOL_INSTALLATION",
+    "NO_PRERELEASE_CODEX",
+    "NO_MODEL_SUBSTITUTION",
+    "NO_AWS_BEDROCK_OR_TERRAFORM",
+    "NO_EXTERNAL_AUDIT",
+    "NO_PROMOTION_ACTIVATION_OR_INTEGRATION",
+    "NO_POINTER_SELECTOR_SHADOW_REGISTRY_OR_FALLBACK_MUTATION",
+    "NO_SSE_CHANGE",
+    "NO_PRODUCT_RUNTIME_OR_SYMPHONIE_CHANGE"
+  ],
+  "stop_conditions": [
+    "HEAD_OR_ANCESTRY_MISMATCH",
+    "OFFICIAL_RELEASE_OR_INTEGRITY_UNVERIFIABLE",
+    "EPHEMERAL_INSTALLATION_FAILURE",
+    "PREAUTHORIZED_AUTHENTICATION_NOT_AVAILABLE",
+    "INTERACTIVE_LOGIN_OR_NEW_CREDENTIAL_REQUIRED",
+    "GPT_5_6_SOL_UNAVAILABLE",
+    "SMOKE_REQUEST_FAILURE",
+    "TEST_INPUT_HASH_MISMATCH",
+    "SCORER_CALIBRATION_INCOMPLETE",
+    "BLINDING_FAILURE",
+    "INCOMPLETE_OUTPUT_PROVENANCE_OR_COST",
+    "POST_FREEZE_MUTATION",
+    "SCOPE_OR_AUTHORITY_AMBIGUOUS"
+  ],
+  "response_contract": {
+    "result_first": true,
+    "report": [
+      "verified main HEAD",
+      "resolved Codex release and binary SHA-256",
+      "authentication availability without secret values",
+      "model and smoke-test result",
+      "whether Test 003 retry started",
+      "files commits pull request and merge result",
+      "remaining exact block",
+      "single next action"
+    ]
+  }
+}
