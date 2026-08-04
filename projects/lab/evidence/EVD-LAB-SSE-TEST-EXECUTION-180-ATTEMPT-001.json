@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-SSE-TEST-EXECUTION-180-ATTEMPT-001",
+  "project_id": "lab",
+  "status": "PASS_BLOCKED_ATTEMPT_CANONICALLY_RECONCILED",
+  "evidence_class": "SYNTHETIC_TEST_PREFLIGHT_BLOCKED_ATTEMPT_RECONCILIATION",
+  "recorded_at": "2026-08-03T22:54:00-04:00",
+  "authorization_ref": "AUTHORIZATION_LAB_SSE_TEST_180_BLOCKED_ATTEMPT_CANONICAL_RECONCILIATION_181",
+  "source_authorization_ref": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180",
+  "source": {
+    "pull_request": 19,
+    "branch": "codex/sse-synthetic-test-execution-180-001",
+    "commit": "80adb066f3d7561ff4a98e0459ae7fde77354f5a",
+    "base_head": "85f216f0d6eae8280e51c80aecbb077ce096eb55",
+    "execution_manifest": "projects/lab/test-executions/SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-001/MANIFEST.json"
+  },
+  "attempt": {
+    "id": "ATTEMPT-001",
+    "classification": "BLOCKED_MODEL_OR_TOOL_ACCESS_NOT_REPRODUCIBLE",
+    "stopped_phase": "PREFLIGHT",
+    "matched_stop_condition": "MODEL_OR_TOOL_ACCESS_NOT_REPRODUCIBLE",
+    "configured_model": "gpt-5.6-sol",
+    "primary_runner": "Codex CLI 0.139.0",
+    "primary_runner_result": "HTTP_400_MODEL_REQUIRES_NEWER_CODEX",
+    "alternate_runner_result": "ACCESS_DENIED_EXECUTABLE_NOT_STARTED"
+  },
+  "frozen_contract_verified": {
+    "base_fixtures": 20,
+    "governance_fixtures": 12,
+    "fixtures_total": 32,
+    "arms": 3,
+    "minimum_outputs": 96
+  },
+  "execution_results": {
+    "outputs_generated": 0,
+    "outputs_frozen": 0,
+    "outputs_scored": 0,
+    "input_freeze_started": false,
+    "hashes_published": 0,
+    "calibration_run": false,
+    "assignment_or_blinding_run": false,
+    "scoring_run": false,
+    "external_audit_run": false,
+    "tool_upgrade_performed": false,
+    "model_substitution_performed": false
+  },
+  "prohibited_effects_verified": {
+    "aws_calls": 0,
+    "terraform_actions": 0,
+    "product_leadership_executions": 0,
+    "sse_activations": 0,
+    "sse_integrations": 0,
+    "product_changes": 0,
+    "runtime_changes": 0,
+    "pointer_changes": 0,
+    "selector_changes": 0,
+    "shadow_registry_changes": 0
+  },
+  "claims_confirmed": [
+    "ATTEMPT_001_RESULT_IS_BLOCKED",
+    "PREDECLARED_STOP_CONDITION_WAS_REACHED_DURING_PREFLIGHT",
+    "NO_SYNTHETIC_TEST_OUTPUTS_WERE_GENERATED",
+    "INPUT_FREEZE_CALIBRATION_BLINDING_AND_SCORING_DID_NOT_START",
+    "NO_EXTERNAL_AUDIT_INFRASTRUCTURE_PRODUCT_RUNTIME_ACTIVATION_OR_INTEGRATION_EFFECT_OCCURRED",
+    "AUTHORIZATION_180_REMAINS_UNCONSUMED"
+  ],
+  "claims_not_supported": [
+    "SSE_ADDS_INCREMENTAL_VALUE",
+    "SSE_DOES_NOT_ADD_INCREMENTAL_VALUE",
+    "SSE_SYNTHETIC_TEST_PASSED",
+    "SSE_SYNTHETIC_TEST_FAILED_TECHNICALLY",
+    "SSE_IS_AUDITED_APPROVED_ACTIVE_INTEGRATED_OR_PROMOTED"
+  ],
+  "authorization_state_after_reconciliation": {
+    "authorization_181": "CONSUMED_ON_VERIFIED_SQUASH_MERGE",
+    "authorization_180": "GRANTED_STAGE_2_BLOCKED_RETRY_NOT_STARTED_AUTHORIZATION_UNCONSUMED",
+    "tooling_update_authority": "NONE",
+    "external_audit_authority": "NONE",
+    "activation_or_integration_authority": "NONE"
+  },
+  "validation": {
+    "parent_head_match": "PASS",
+    "pr_source_match": "PASS",
+    "pr_changed_files_before_reconciliation": 1,
+    "source_manifest_json_parse": "PASS",
+    "source_manifest_material_facts_preserved": "PASS",
+    "documentary_scope_only": "PASS"
+  },
+  "maximum_result": "SSE_TEST_EXECUTION_180_ATTEMPT_001_BLOCKED_CANONICALLY_RECONCILED_AUTHORIZATION_180_UNCONSUMED",
+  "single_next_action": "SEPARATELY_AUTHORIZE_RESOLUTION_OF_A_REPRODUCIBLE_GPT_5_6_SOL_COMPATIBLE_RUNNER_BEFORE_ANY_PREFLIGHT_RETRY",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "integration_effect": "NONE",
+  "audit_effect": "NONE"
+}
