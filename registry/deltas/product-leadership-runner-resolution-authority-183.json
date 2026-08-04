@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "PRODUCT-LEADERSHIP-RUNNER-RESOLUTION-AUTHORITY-183",
+  "project_id": "lab",
+  "created_at": "2026-08-04T07:05:00-04:00",
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_REPRODUCIBLE_CODEX_RUNNER_RESOLUTION_183",
+    "status": "GRANTED_STAGED_RUNNER_RESOLUTION_NOT_STARTED",
+    "path": "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_REPRODUCIBLE_CODEX_RUNNER_RESOLUTION_183.json",
+    "brief": "projects/lab/briefs/CODEX_PRODUCT_LEADERSHIP_TEST003_REPRODUCIBLE_RUNNER_RESOLUTION_183_001.json",
+    "approved_by": "Jonathan Martínez",
+    "approval_source": "Continuemos",
+    "expected_parent_head": "12bebd1092367fa96b9c105df88edd0cad084012"
+  },
+  "scope": {
+    "product_leadership_only": true,
+    "official_stable_codex_only": true,
+    "minimum_version": "0.146.0",
+    "ephemeral_installation_only": true,
+    "required_model": "gpt-5.6-sol",
+    "model_substitution_allowed": false,
+    "new_credentials_allowed": false,
+    "smoke_request_limit": 1,
+    "conditional_test003_retry_under_authorization_182": true
+  },
+  "records_updated": [
+    "projects/lab/pending/PEND-LAB-045.json",
+    "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/ROADMAP.json",
+    "projects/lab/integrations/INT-LAB-004.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json"
+  ],
+  "non_effects": [
+    "NO_CREDENTIAL_CREATION",
+    "NO_GLOBAL_TOOL_INSTALLATION",
+    "NO_AWS_OR_TERRAFORM",
+    "NO_EXTERNAL_AUDIT",
+    "NO_PROMOTION_ACTIVATION_OR_INTEGRATION",
+    "NO_POINTER_SELECTOR_SHADOW_REGISTRY_OR_FALLBACK_CHANGE",
+    "NO_SSE_CHANGE",
+    "NO_PRODUCT_RUNTIME_OR_SYMPHONIE_CHANGE"
+  ],
+  "aggregate_view_divergence": {
+    "preserved": true,
+    "affected_views": ["CURRENT_STATE.json","projects/lab/PROJECT_STATE.json","registry/index.json"],
+    "correction_authorized": false
+  },
+  "authority_effect": "AUTHORIZATION_183_ACTIVE_AFTER_VERIFIED_PUBLICATION",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "integration_effect": "NONE"
+}
