@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "PRODUCT-LEADERSHIP-TEST003-NETWORKED-CODEX-184-CALIBRATION-BLOCK",
+  "project_id": "lab",
+  "created_at": "2026-08-04T17:08:27.2999828Z",
+  "authorization_184": "CONSUMED_ON_VERIFIED_SQUASH_MERGE_BLOCKED_SCORER_CALIBRATION_INCOMPLETE",
+  "authorization_182": "GRANTED_STAGE_3_BLOCKED_SCORER_CALIBRATION_INCOMPLETE_RETRY_NOT_STARTED_AUTHORIZATION_UNCONSUMED",
+  "execution": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-003/MANIFEST.json",
+  "evidence": "projects/lab/evidence/EVD-LAB-PL003-NETWORKED-PREAUTHORIZED-CODEX-184.json",
+  "runner_resolution": "projects/lab/runner-resolutions/PRODUCT-LEADERSHIP-TEST003-NETWORKED-PREAUTHORIZED-CODEX-184/MANIFEST.json",
+  "exact_result": "PREFLIGHT_PASS_ATTEMPT_002_STARTED_INPUTS_FROZEN_CALIBRATION_FAILED_ZERO_OUTPUTS",
+  "records_updated": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_NETWORKED_PREAUTHORIZED_CODEX_EXECUTION_184.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_REPOSITORY_ONLY_PREFLIGHT_RECONCILIATION_AND_CONDITIONAL_EXECUTION_182.json",
+    "projects/lab/pending/PEND-LAB-045.json",
+    "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/ROADMAP.json",
+    "projects/lab/integrations/INT-LAB-004.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json",
+    "projects/lab/test-executions/index.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json"
+  ],
+  "aggregate_view_divergence": {"preserved":true,"affected_views":["CURRENT_STATE.json","projects/lab/PROJECT_STATE.json","registry/index.json"]},
+  "next_action": "SEPARATELY_AUTHORIZE_FRESH_TEST003_ATTEMPT_WITH_REVISED_PREFROZEN_SCORER_CALIBRATION_CONTRACT",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "integration_effect": "NONE"
+}

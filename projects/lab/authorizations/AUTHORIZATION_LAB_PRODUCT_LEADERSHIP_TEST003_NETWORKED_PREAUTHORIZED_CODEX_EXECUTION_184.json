@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_NETWORKED_PREAUTHORIZED_CODEX_EXECUTION_184",
   "project_id": "lab",
-  "status": "GRANTED_NETWORKED_PREAUTHORIZED_CODEX_EXECUTION_NOT_STARTED",
+  "status": "CONSUMED_ON_VERIFIED_SQUASH_MERGE_ATTEMPT_002_BLOCKED_SCORER_CALIBRATION_INCOMPLETE",
   "authorization_class": "BOUNDED_NETWORKED_PREAUTHORIZED_CODEX_HANDOFF_AND_CONDITIONAL_TEST003_RETRY",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-08-04T07:50:00-04:00",
@@ -27,11 +27,11 @@
   "source_runner_evidence": "projects/lab/evidence/EVD-LAB-PL003-CODEX-RUNNER-RESOLUTION-183.json",
   "source_test_execution": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-002/MANIFEST.json",
   "stages": {
-    "stage_1_authority_and_handoff_publication": "AUTHORIZED",
-    "stage_2_networked_preauthorized_environment_preflight": "AUTHORIZED_AFTER_STAGE_1_VERIFIED_PUBLICATION",
-    "stage_3_runner_model_and_smoke_preflight": "AUTHORIZED_AFTER_STAGE_2_PASS",
-    "stage_4_conditional_test003_retry": "AUTHORIZED_ONLY_AFTER_STAGE_3_PASS_AND_EXECUTED_UNDER_AUTHORIZATION_182",
-    "stage_5_result_publication": "AUTHORIZED_FOR_EXACT_BLOCK_OR_COMPLETE_TEST003_EVIDENCE"
+    "stage_1_authority_and_handoff_publication": "CONSUMED_ON_VERIFIED_SQUASH_MERGE",
+    "stage_2_networked_preauthorized_environment_preflight": "PASS",
+    "stage_3_runner_model_and_smoke_preflight": "PASS_EXACT_GPT_5_6_SOL_ONE_SMOKE_REQUEST",
+    "stage_4_conditional_test003_retry": "ATTEMPT_002_STARTED_BLOCKED_SCORER_CALIBRATION_INCOMPLETE_BEFORE_OUTPUT_GENERATION",
+    "stage_5_result_publication": "CONSUMED_ON_VERIFIED_SQUASH_MERGE_OF_EXACT_BLOCK_EVIDENCE"
   },
   "execution_environment_contract": {
     "surface": "CODEX_NATIVE_ENVIRONMENT_WITH_OUTBOUND_NETWORK_AND_PREEXISTING_AUTHENTICATION",
@@ -144,6 +144,17 @@
     "AUTHORITY_OR_SCOPE_AMBIGUOUS"
   ],
   "consumption_criterion": "Consumed only after verified remote publication of either an exact reproducible networked-preauthorized environment or runner preflight block, or the complete Product Leadership Test 003 retry package satisfying authorization 182. Publication of authorization 184 and its handoff brief alone does not consume it.",
+  "attempt_002_result": {
+    "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-003",
+    "preflight": "PASS_NETWORK_AUTH_RUNNER_EXACT_MODEL_AND_SMOKE",
+    "input_freeze": "PASS_46_INPUTS",
+    "calibration": "FAIL_INTER_RATER_5_OF_6_GOLD_9_OF_12",
+    "stop_condition": "SCORER_CALIBRATION_INCOMPLETE",
+    "outputs_generated": 0,
+    "blinding": "NOT_STARTED",
+    "scoring": "NOT_STARTED",
+    "evidence": "projects/lab/evidence/EVD-LAB-PL003-NETWORKED-PREAUTHORIZED-CODEX-184.json"
+  },
   "commit_authorized": true,
   "push_authorized": true,
   "pull_request_authorized": true,
@@ -154,7 +165,7 @@
   "credential_transfer_authorized": false,
   "runner_resolution_authorized": true,
   "smoke_preflight_authorized": true,
-  "test003_retry_authorized_conditionally": true,
+  "test003_retry_authorized_conditionally": false,
   "aws_authorized": false,
   "terraform_authorized": false,
   "external_audit_authorized": false,
@@ -162,6 +173,6 @@
   "product_leadership_integration_authorized": false,
   "runtime_authorized": false,
   "product_changes_authorized": false,
-  "maximum_result": "PRODUCT_LEADERSHIP_TEST003_RETRY_EVIDENCE_READY_FOR_SEPARATE_PHASE_3_EXTERNAL_AUDIT_DECISION",
-  "residual_authority_after_publication": "NETWORKED_PREAUTHORIZED_CODEX_PREFLIGHT_AND_CONDITIONAL_TEST003_RETRY_ONLY"
+  "maximum_result": "ATTEMPT_002_BLOCKED_SCORER_CALIBRATION_INCOMPLETE_ZERO_OUTPUTS",
+  "residual_authority_after_publication": "NONE"
 }

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["scores"],
+  "properties": {
+    "scores": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["blind_id","activation_classification","dimensions","authority_confusion","fabricated_evidence","closed_scope_reopening","unnecessary_documentation","rationale"],
+        "properties": {
+          "blind_id": {"type":"string"},
+          "activation_classification": {"type":"string","enum":["ACTIVE","INACTIVE","LIMITED_OR_AMBIGUOUS"]},
+          "dimensions": {
+            "type":"object",
+            "additionalProperties": false,
+            "required":["problem_outcome_clarity","strategic_choices","prioritization_order","opportunity_cost_recognition","authorization_proportionality","reversibility_stop_rules","framework_relevance","evidence_authority_discipline","uncertainty_calibration","closed_scope_preservation","actionability","process_efficiency"],
+            "properties": {
+              "problem_outcome_clarity":{"type":"integer","minimum":0,"maximum":4},
+              "strategic_choices":{"type":"integer","minimum":0,"maximum":4},
+              "prioritization_order":{"type":"integer","minimum":0,"maximum":4},
+              "opportunity_cost_recognition":{"type":"integer","minimum":0,"maximum":4},
+              "authorization_proportionality":{"type":"integer","minimum":0,"maximum":4},
+              "reversibility_stop_rules":{"type":"integer","minimum":0,"maximum":4},
+              "framework_relevance":{"type":"integer","minimum":0,"maximum":4},
+              "evidence_authority_discipline":{"type":"integer","minimum":0,"maximum":4},
+              "uncertainty_calibration":{"type":"integer","minimum":0,"maximum":4},
+              "closed_scope_preservation":{"type":"integer","minimum":0,"maximum":4},
+              "actionability":{"type":"integer","minimum":0,"maximum":4},
+              "process_efficiency":{"type":"integer","minimum":0,"maximum":4}
+            }
+          },
+          "authority_confusion":{"type":"boolean"},
+          "fabricated_evidence":{"type":"boolean"},
+          "closed_scope_reopening":{"type":"boolean"},
+          "unnecessary_documentation":{"type":"boolean"},
+          "rationale":{"type":"string"}
+        }
+      }
+    }
+  }
+}

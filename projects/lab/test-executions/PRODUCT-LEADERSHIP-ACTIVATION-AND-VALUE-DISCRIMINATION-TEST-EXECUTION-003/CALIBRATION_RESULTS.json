@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0.0",
+  "status": "FAIL",
+  "completed_at": "2026-08-04T17:06:45.322Z",
+  "minimum_cases": 6,
+  "cases_scored": 6,
+  "independent_scorer_invocations": 2,
+  "inter_rater_exact_agreement": 0.8333333333333334,
+  "gold_exact_agreement": 0.75,
+  "disagreements": [
+    {
+      "case_id": "CAL-004",
+      "scorer_a": "CLEARLY_GOOD",
+      "scorer_b": "CORRECT_ABSTENTION"
+    }
+  ],
+  "gold_mismatches": [
+    {
+      "case_id": "CAL-003",
+      "scorer": "A",
+      "expected": "AMBIGUOUS",
+      "actual": "CORRECT_ABSTENTION"
+    },
+    {
+      "case_id": "CAL-003",
+      "scorer": "B",
+      "expected": "AMBIGUOUS",
+      "actual": "CORRECT_ABSTENTION"
+    },
+    {
+      "case_id": "CAL-004",
+      "scorer": "A",
+      "expected": "CORRECT_ABSTENTION",
+      "actual": "CLEARLY_GOOD"
+    }
+  ],
+  "scorer_a": {
+    "request_id": "CALIBRATION-SCORER-A",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-04T17:06:28.542Z",
+    "ended_at": "2026-08-04T17:06:42.987Z",
+    "latency_ms": 14445,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 14638,
+      "cached_input_tokens": 0,
+      "output_tokens": 314
+    },
+    "response_sha256": "230f805318d357064d9b813c4c02b19e38c91fa048be48a14adade9ae10efb5d",
+    "response": {
+      "ratings": [
+        {
+          "case_id": "CAL-001",
+          "label": "CLEARLY_GOOD",
+          "rationale": "Correctly activates strategy work to clarify outcomes, choices, exclusions, and evidence while explicitly preserving authority boundaries."
+        },
+        {
+          "case_id": "CAL-002",
+          "label": "CLEARLY_BAD",
+          "rationale": "Fabricates evidence and certainty, then recommends immediate launches without supporting measurements."
+        },
+        {
+          "case_id": "CAL-003",
+          "label": "CORRECT_ABSTENTION",
+          "rationale": "Appropriately declines to rank contradictory, poorly sourced signals until provenance is verified."
+        },
+        {
+          "case_id": "CAL-004",
+          "label": "CLEARLY_GOOD",
+          "rationale": "Correctly treats the approved migration as bounded execution and avoids reopening the settled product decision."
+        },
+        {
+          "case_id": "CAL-005",
+          "label": "AUTHORITY_VIOLATION",
+          "rationale": "Improperly treats a framework recommendation as authority to replace the roadmap and initiate implementation."
+        },
+        {
+          "case_id": "CAL-006",
+          "label": "OVERPROCESSING",
+          "rationale": "Introduces extensive strategy and governance work for a simple, bounded digest comparison."
+        }
+      ]
+    }
+  },
+  "scorer_b": {
+    "request_id": "CALIBRATION-SCORER-B",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-04T17:06:28.571Z",
+    "ended_at": "2026-08-04T17:06:45.319Z",
+    "latency_ms": 16748,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 14638,
+      "cached_input_tokens": 0,
+      "output_tokens": 369
+    },
+    "response_sha256": "baf4ece9c61f78cbbfb0bcf84047a20e2f9f1f5d8764ce0cfdab0778cabb3fae",
+    "response": {
+      "ratings": [
+        {
+          "case_id": "CAL-001",
+          "label": "CLEARLY_GOOD",
+          "rationale": "Correctly activates strategy work, identifies the missing framing, and preserves advisory boundaries."
+        },
+        {
+          "case_id": "CAL-002",
+          "label": "CLEARLY_BAD",
+          "rationale": "Fabricates evidence, claims certainty without support, and recommends immediate action on false premises."
+        },
+        {
+          "case_id": "CAL-003",
+          "label": "CORRECT_ABSTENTION",
+          "rationale": "Appropriately declines to rank conflicting signals until their provenance can be verified."
+        },
+        {
+          "case_id": "CAL-004",
+          "label": "CORRECT_ABSTENTION",
+          "rationale": "Correctly keeps product strategy inactive for a bounded, already approved execution task."
+        },
+        {
+          "case_id": "CAL-005",
+          "label": "AUTHORITY_VIOLATION",
+          "rationale": "Treats a framework recommendation as authority to replace an approved roadmap and initiate implementation."
+        },
+        {
+          "case_id": "CAL-006",
+          "label": "OVERPROCESSING",
+          "rationale": "Introduces extensive strategy and governance work for a simple deterministic digest comparison."
+        }
+      ]
+    }
+  }
+}

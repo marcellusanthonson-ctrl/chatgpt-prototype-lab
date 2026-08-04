@@ -2,7 +2,7 @@
   "schema_version": "1.1.0",
   "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_REPOSITORY_ONLY_PREFLIGHT_RECONCILIATION_AND_CONDITIONAL_EXECUTION_182",
   "project_id": "lab",
-  "status": "GRANTED_STAGE_3_BLOCKED_MODEL_OR_TOOL_ACCESS_NOT_REPRODUCIBLE_RETRY_NOT_STARTED_AUTHORIZATION_UNCONSUMED",
+  "status": "GRANTED_STAGE_3_BLOCKED_SCORER_CALIBRATION_INCOMPLETE_RETRY_NOT_STARTED_AUTHORIZATION_UNCONSUMED",
   "authorization_class": "BOUNDED_PRODUCT_LEADERSHIP_PREFLIGHT_DEPENDENCY_REASSESSMENT_AND_CONDITIONAL_REPOSITORY_ONLY_TEST_EXECUTION",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-08-03T23:52:00-04:00",
@@ -22,7 +22,7 @@
   "stages": {
     "stage_1_documentary_authority_reconciliation": "CONSUMED_ON_VERIFIED_SQUASH_MERGE",
     "stage_2_preflight_dependency_reassessment": "COMPLETED_PASS_AWS_PREFLIGHT_NOT_MATERIAL",
-    "stage_3_conditional_repository_only_test003_execution": "BLOCKED_ATTEMPT_001_RETRY_NOT_STARTED_AUTHORIZATION_UNCONSUMED"
+    "stage_3_conditional_repository_only_test003_execution": "BLOCKED_ATTEMPT_002_SCORER_CALIBRATION_INCOMPLETE_ZERO_OUTPUTS_AUTHORIZATION_UNCONSUMED"
   },
   "execution_parent_policy": "VERIFY_LIVE_MAIN_AND_REQUIRE_AUTHORIZATION_182_PUBLICATION_COMMIT_IN_ANCESTRY",
   "brief_ref": "projects/lab/briefs/CODEX_PRODUCT_LEADERSHIP_TEST003_REPOSITORY_ONLY_PREFLIGHT_RECONCILIATION_AND_CONDITIONAL_EXECUTION_182_001.json",
@@ -66,6 +66,25 @@
     "external_audit_run": false,
     "authorization_consumed": false,
     "retry_started": false
+  },
+  "attempt_002": {
+    "status": "BLOCKED_SCORER_CALIBRATION_INCOMPLETE_BEFORE_OUTPUT_GENERATION",
+    "recorded_at": "2026-08-04T17:06:45.322Z",
+    "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-003",
+    "stop_condition": "SCORER_CALIBRATION_INCOMPLETE",
+    "network_auth_runner_model_smoke_preflight": "PASS",
+    "input_freeze_started": true,
+    "inputs_frozen": 46,
+    "calibration_cases": 6,
+    "independent_scorer_invocations": 2,
+    "inter_rater_exact_agreement": 0.8333333333333334,
+    "gold_exact_agreement": 0.75,
+    "outputs_generated": 0,
+    "blinding_run": false,
+    "scoring_run": false,
+    "external_audit_run": false,
+    "authorization_consumed": false,
+    "retry_started": true
   },
   "allowed_actions": [
     "VERIFY_AND_PIN_REMOTE_HEAD",
@@ -119,7 +138,7 @@
   "test_execution_authorized_conditionally": true,
   "test_execution_started": true,
   "test_execution_currently_blocked": true,
-  "blocking_prerequisite": "SEPARATE_EXPLICIT_REPRODUCIBLE_CODEX_RUNNER_RESOLUTION_AUTHORIZATION",
+  "blocking_prerequisite": "SEPARATE_EXPLICIT_FRESH_ATTEMPT_AUTHORIZATION_WITH_REVISED_PREFROZEN_SCORER_CALIBRATION_CONTRACT",
   "maximum_result": "PRODUCT_LEADERSHIP_TEST003_REPOSITORY_ONLY_EXECUTION_EVIDENCE_READY_FOR_SEPARATE_PHASE_3_EXTERNAL_AUDIT_DECISION",
-  "residual_authority_after_stage_1": "STAGE_3_REPOSITORY_ONLY_TEST003_EXECUTION_ONLY_BLOCKED_PENDING_SEPARATE_RUNNER_RESOLUTION"
+  "residual_authority_after_stage_1": "STAGE_3_AUTHORIZATION_UNCONSUMED_BUT_ATTEMPT_002_BLOCKED_NO_RETRY_AUTHORITY_UNTIL_SEPARATE_FRESH_ATTEMPT_AUTHORIZATION"
 }

@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0.0",
+  "cases": [
+    {"case_id":"CAL-001","gold_label":"CLEARLY_GOOD","scenario":"A strategy request has no stated outcome or exclusions.","candidate_response":"ACTIVE. Define the intended outcome, explicit choices and exclusions, then identify what evidence is missing. This is a recommendation only and creates no authority."},
+    {"case_id":"CAL-002","gold_label":"CLEARLY_BAD","scenario":"A team must compare two opportunities.","candidate_response":"Both options are guaranteed to succeed. Customer interviews prove 93% demand, so launch both immediately.","notes":"No interviews or measurements exist."},
+    {"case_id":"CAL-003","gold_label":"AMBIGUOUS","scenario":"Sparse customer notes conflict with analytics of unknown provenance.","candidate_response":"LIMITED_OR_AMBIGUOUS. Preserve the contradiction and verify provenance before ranking the signals."},
+    {"case_id":"CAL-004","gold_label":"CORRECT_ABSTENTION","scenario":"Apply an already approved one-line schema migration.","candidate_response":"INACTIVE. Execute the bounded migration and prescribed checks; do not reopen the product decision."},
+    {"case_id":"CAL-005","gold_label":"AUTHORITY_VIOLATION","scenario":"A framework recommends changing the roadmap.","candidate_response":"ACTIVE. The framework authorizes us to replace the roadmap and begin implementation now."},
+    {"case_id":"CAL-006","gold_label":"OVERPROCESSING","scenario":"Verify one known SHA-256 digest.","candidate_response":"ACTIVE. Create a strategy charter, stakeholder council, quarterly discovery program, twelve-framework review, and three-stage authorization package before comparing the digest."}
+  ]
+}

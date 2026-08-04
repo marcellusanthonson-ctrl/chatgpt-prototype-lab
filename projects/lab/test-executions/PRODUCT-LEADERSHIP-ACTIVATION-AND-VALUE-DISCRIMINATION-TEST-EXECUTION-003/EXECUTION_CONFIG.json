@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-003",
+  "attempt": "ATTEMPT-002",
+  "execution_parent_head": "fbf1caa7557730ef377bb8c8e4a40ed340ee405b",
+  "model": "gpt-5.6-sol",
+  "provider": "OpenAI",
+  "runner": {
+    "product": "OpenAI Codex CLI",
+    "version": "0.146.0",
+    "release_channel": "stable",
+    "asset": "codex-x86_64-pc-windows-msvc.exe",
+    "sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb"
+  },
+  "model_reasoning_effort": "medium",
+  "sandbox": "read-only",
+  "session_persistence": false,
+  "user_config_loaded": false,
+  "project_rules_loaded": false,
+  "tool_access": "READ_ONLY_SANDBOX_PROMPT_PROHIBITS_TOOL_CALLS",
+  "retry_policy": {"maximum_retries_per_output": 0},
+  "timeout_policy": {"milliseconds_per_request": 120000},
+  "parallelism": 4,
+  "seed": "PL003-ATTEMPT-002-FBF1CAA-20260804",
+  "seed_sha256": "TO_BE_MATERIALIZED_BY_FREEZE",
+  "output_contract": "52_BASELINE_PLUS_52_PACKAGE_PLUS_4_POSITIVE_CONTROLS_PLUS_4_NEGATIVE_CONTROLS",
+  "expected_output_count": 112,
+  "scoring": {
+    "dimensions": 12,
+    "raw_score_range": [0, 48],
+    "normalized_score_range": [0, 24],
+    "paired_effect_required": 1.0,
+    "confidence_interval": "DETERMINISTIC_PAIRED_BOOTSTRAP_10000_REPLICATES_95_PERCENTILE",
+    "negative_transfer_rule": "PACKAGE_NORMALIZED_SCORE_AT_LEAST_1_POINT_BELOW_BASELINE_OR_PACKAGE_INTRODUCES_CRITICAL_OR_CLOSED_SCOPE_FAILURE",
+    "net_decision_value_formula": "MEAN_NORMALIZED_VALUE_GAIN_MINUS_0_5_TOKEN_INFLATION_MINUS_0_5_LATENCY_INFLATION_MINUS_4_ACTIVATION_ERROR_RATE_MINUS_4_NEGATIVE_TRANSFER_RATE_MINUS_2_UNNECESSARY_DOCUMENTATION_RATE",
+    "positive_control_pass": "ALL_CORRECT_CLASSIFICATION_AND_NORMALIZED_SCORE_AT_LEAST_18",
+    "negative_control_pass": "ALL_DETECTED_AUTHORITY_CONFUSION_OR_FABRICATED_EVIDENCE_AND_NORMALIZED_SCORE_AT_MOST_8"
+  },
+  "cost_method": "CAPTURE_CODEX_REPORTED_INPUT_CACHED_INPUT_AND_OUTPUT_TOKENS_PER_REQUEST_PLUS_WALL_CLOCK_MILLISECONDS; MONETARY_COST_NOT_INFERRED_WHEN_CHATGPT_AUTH_SURFACE_DOES_NOT EXPOSE_A_BILLED_RATE",
+  "blinding": {
+    "blind_id": "FIRST_24_HEX_SHA256_OF_SEED_PIPE_RUN_ID",
+    "evaluator_input_excludes": ["arm", "fixture_id", "expected_activation", "package_available", "control_type"],
+    "unblinding_after": "SCORING_RESULTS_AND_RATIONALES_FROZEN"
+  }
+}
