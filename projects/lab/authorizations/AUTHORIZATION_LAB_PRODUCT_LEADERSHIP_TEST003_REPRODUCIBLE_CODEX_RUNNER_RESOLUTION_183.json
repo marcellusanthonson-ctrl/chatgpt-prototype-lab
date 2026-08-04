@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_REPRODUCIBLE_CODEX_RUNNER_RESOLUTION_183",
   "project_id": "lab",
-  "status": "GRANTED_STAGED_RUNNER_RESOLUTION_NOT_STARTED",
+  "status": "CONSUMED_ON_VERIFIED_SQUASH_MERGE_BLOCKED_EPHEMERAL_INSTALLATION_NETWORK_UNAVAILABLE_PREAUTHORIZED_AUTHENTICATION_NOT_AVAILABLE",
   "authorization_class": "BOUNDED_REPRODUCIBLE_CODEX_RUNNER_RESOLUTION_AND_CONDITIONAL_TEST003_RETRY",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-08-04T07:05:00-04:00",
@@ -13,7 +13,8 @@
     "name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
     "branch": "main",
     "expected_parent_head": "12bebd1092367fa96b9c105df88edd0cad084012",
-    "working_branch": "agent/product-leadership-test003-runner-resolution-183",
+    "authorization_publication_head": "ff4148cd2d74a3c6da8fd7db07ae108971023b62",
+    "working_branch": "agent/product-leadership-test003-runner-resolution-183-attempt-001",
     "head_policy": "VERIFY_LIVE_AT_USE",
     "entrypoint": "project-sources/chatgpt/START_HERE.md"
   },
@@ -22,11 +23,13 @@
   "source_execution": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-002/MANIFEST.json",
   "source_evidence": "projects/lab/evidence/EVD-LAB-PL003-STAGE2-AND-TEST-EXECUTION-182-ATTEMPT-001.json",
   "brief_ref": "projects/lab/briefs/CODEX_PRODUCT_LEADERSHIP_TEST003_REPRODUCIBLE_RUNNER_RESOLUTION_183_001.json",
+  "runner_resolution_manifest": "projects/lab/runner-resolutions/PRODUCT-LEADERSHIP-TEST003-CODEX-RUNNER-183/MANIFEST.json",
+  "result_evidence": "projects/lab/evidence/EVD-LAB-PL003-CODEX-RUNNER-RESOLUTION-183.json",
   "stages": {
-    "stage_1_authority_publication": "AUTHORIZED",
-    "stage_2_runner_resolution": "AUTHORIZED_AFTER_STAGE_1_VERIFIED_PUBLICATION",
-    "stage_3_reproducible_model_and_tool_preflight": "AUTHORIZED_AFTER_STAGE_2_PASS",
-    "stage_4_conditional_test003_retry": "AUTHORIZED_ONLY_AFTER_STAGE_3_PASS_AND_EXECUTED_UNDER_AUTHORIZATION_182"
+    "stage_1_authority_publication": "CONSUMED_ON_VERIFIED_SQUASH_MERGE",
+    "stage_2_runner_resolution": "BLOCKED_ATTEMPT_001_EPHEMERAL_INSTALLATION_NETWORK_UNAVAILABLE",
+    "stage_3_reproducible_model_and_tool_preflight": "NOT_STARTED_SECONDARY_PREAUTHORIZED_AUTHENTICATION_NOT_AVAILABLE",
+    "stage_4_conditional_test003_retry": "NOT_STARTED_RUNNER_PREFLIGHT_DID_NOT_PASS"
   },
   "runner_contract": {
     "official_product": "OPENAI_CODEX_CLI",
@@ -48,6 +51,23 @@
       "repository_mutation_allowed": false,
       "success_requirement": "DETERMINISTIC_RUNNER_VERSION_MODEL_PROVIDER_AND_REQUEST_RESULT_PROVENANCE_CAPTURED"
     }
+  },
+  "attempt_001": {
+    "executed_at": "2026-08-04T07:14:00-04:00",
+    "status": "BLOCKED_EPHEMERAL_INSTALLATION_NETWORK_UNAVAILABLE_PREAUTHORIZED_AUTHENTICATION_NOT_AVAILABLE",
+    "resolved_stable_version": "0.146.0",
+    "platform_asset": "codex-package-x86_64-unknown-linux-musl.tar.gz",
+    "expected_asset_sha256": "3c89125af1d7c98abec8beb551292ef99daca52e204e5852a9139feae2c467e5",
+    "release_metadata_verified": true,
+    "checksum_metadata_verified": true,
+    "asset_downloaded": false,
+    "codex_installed": false,
+    "codex_version_executed": false,
+    "preauthorized_authentication_available": false,
+    "secret_values_read": false,
+    "model_requests": 0,
+    "test003_retry_started": false,
+    "outputs_generated": 0
   },
   "allowed_actions": [
     "VERIFY_AND_PIN_REMOTE_MAIN_HEAD",
@@ -96,16 +116,19 @@
     "REQUEST_REQUIRES_EXTERNAL_AUDIT_AWS_PRODUCT_RUNTIME_PROMOTION_OR_ACTIVATION",
     "AUTHORITY_OR_SCOPE_AMBIGUOUS"
   ],
+  "triggered_stop_conditions": [
+    "EPHEMERAL_INSTALLATION_FAILS",
+    "PREAUTHORIZED_AUTHENTICATION_NOT_AVAILABLE"
+  ],
   "consumption_criterion": "Consumed after verified remote publication of either a reproducible runner-resolution block with exact evidence, or a runner preflight PASS followed by the authorized Test 003 retry result under authorization 182.",
-  "commit_authorized": true,
-  "push_authorized": true,
-  "pull_request_authorized": true,
-  "squash_merge_authorized": true,
-  "tooling_update_authorized": true,
-  "tooling_update_scope": "EPHEMERAL_CODEX_CLI_ONLY",
+  "commit_authorized": false,
+  "push_authorized": false,
+  "pull_request_authorized": false,
+  "squash_merge_authorized": false,
+  "tooling_update_authorized": false,
   "credential_creation_authorized": false,
-  "preflight_retry_authorized": true,
-  "test003_retry_authorized_conditionally": true,
+  "preflight_retry_authorized": false,
+  "test003_retry_authorized_conditionally": false,
   "aws_authorized": false,
   "terraform_authorized": false,
   "external_audit_authorized": false,
@@ -113,6 +136,6 @@
   "product_leadership_integration_authorized": false,
   "runtime_authorized": false,
   "product_changes_authorized": false,
-  "maximum_result": "PRODUCT_LEADERSHIP_TEST003_RETRY_EVIDENCE_READY_FOR_SEPARATE_PHASE_3_EXTERNAL_AUDIT_DECISION",
-  "residual_authority_after_publication": "RUNNER_RESOLUTION_PREFLIGHT_AND_CONDITIONAL_TEST003_RETRY_ONLY"
+  "maximum_result": "REPRODUCIBLE_RUNNER_RESOLUTION_BLOCK_PUBLISHED",
+  "residual_authority_after_consumption": "NONE"
 }
