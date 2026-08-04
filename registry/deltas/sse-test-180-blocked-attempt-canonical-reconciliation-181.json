@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "sse-test-180-blocked-attempt-canonical-reconciliation-181",
+  "project_id": "lab",
+  "updated_at": "2026-08-03",
+  "status": "PASS_SSE_TEST_EXECUTION_180_ATTEMPT_001_BLOCKED_CANONICALLY_RECONCILED_AUTHORIZATION_180_UNCONSUMED",
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_SSE_TEST_180_BLOCKED_ATTEMPT_CANONICAL_RECONCILIATION_181",
+    "status": "CONSUMED_ON_VERIFIED_SQUASH_MERGE",
+    "path": "projects/lab/authorizations/AUTHORIZATION_LAB_SSE_TEST_180_BLOCKED_ATTEMPT_CANONICAL_RECONCILIATION_181.json"
+  },
+  "source_authorization": {
+    "id": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180",
+    "status": "GRANTED_STAGE_2_BLOCKED_RETRY_NOT_STARTED_AUTHORIZATION_UNCONSUMED",
+    "path": "projects/lab/authorizations/AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180.json"
+  },
+  "execution": {
+    "id": "SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-001",
+    "attempt": "ATTEMPT-001",
+    "status": "BLOCKED_MODEL_OR_TOOL_ACCESS_NOT_REPRODUCIBLE",
+    "path": "projects/lab/test-executions/SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-001/MANIFEST.json",
+    "outputs_generated": 0
+  },
+  "evidence": {
+    "id": "EVD-LAB-SSE-TEST-EXECUTION-180-ATTEMPT-001",
+    "status": "PASS_BLOCKED_ATTEMPT_CANONICALLY_RECONCILED",
+    "path": "projects/lab/evidence/EVD-LAB-SSE-TEST-EXECUTION-180-ATTEMPT-001.json"
+  },
+  "source_control": {
+    "pull_request": 19,
+    "source_branch": "codex/sse-synthetic-test-execution-180-001",
+    "source_commit": "80adb066f3d7561ff4a98e0459ae7fde77354f5a",
+    "expected_parent_head": "85f216f0d6eae8280e51c80aecbb077ce096eb55",
+    "publication_method": "SQUASH_MERGE"
+  },
+  "state": {
+    "global_phase": "SSE_TEST_EXECUTION_180_ATTEMPT_001_BLOCKED_CANONICALLY_RECONCILED_AUTHORIZATION_180_UNCONSUMED",
+    "product_leadership": "PREFLIGHT_BLOCKED_NO_EXECUTION_AUTHORITY",
+    "sse": "ATTEMPT_001_BLOCKED_RUNNER_INCOMPATIBLE_RETRY_NOT_STARTED_AUTHORIZATION_180_UNCONSUMED",
+    "phase_3_external_audits": "NOT_AUTHORIZED",
+    "tooling_resolution": "REQUIRES_SEPARATE_EXPLICIT_AUTHORIZATION"
+  },
+  "registry_counts_before": {
+    "authorizations": 104,
+    "evidence": 86,
+    "test_executions": 5
+  },
+  "registry_counts_after": {
+    "authorizations": 105,
+    "evidence": 87,
+    "test_executions": 5
+  },
+  "non_effects": [
+    "NO_TOOLING_UPDATE",
+    "NO_MODEL_SUBSTITUTION",
+    "NO_PREFLIGHT_RETRY",
+    "NO_OUTPUT_GENERATION_OR_FREEZE",
+    "NO_CALIBRATION_BLINDING_OR_SCORING",
+    "NO_EXTERNAL_AUDIT",
+    "NO_AWS_OR_TERRAFORM",
+    "NO_ACTIVATION_OR_INTEGRATION",
+    "NO_PRODUCT_OR_RUNTIME_CHANGE",
+    "NO_POINTER_SELECTOR_OR_SHADOW_REGISTRY_CHANGE"
+  ],
+  "next_authorized_action": "NONE_RETRY_BLOCKED_PENDING_SEPARATE_RUNNER_RESOLUTION_AUTHORIZATION",
+  "next_recommended_transition": "SEPARATELY_AUTHORIZE_REPRODUCIBLE_GPT_5_6_SOL_RUNNER_RESOLUTION"
+}
