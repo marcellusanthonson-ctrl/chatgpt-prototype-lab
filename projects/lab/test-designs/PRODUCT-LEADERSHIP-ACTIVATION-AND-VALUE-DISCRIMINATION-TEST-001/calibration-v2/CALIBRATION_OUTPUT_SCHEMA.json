@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "PRODUCT-LEADERSHIP-TEST003-SCORER-CALIBRATION-OUTPUT-V2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "ratings"
+  ],
+  "properties": {
+    "ratings": {
+      "type": "array",
+      "minItems": 12,
+      "maxItems": 12,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "case_id",
+          "label",
+          "rationale"
+        ],
+        "properties": {
+          "case_id": {
+            "type": "string",
+            "pattern": "^CAL2-[0-9]{3}$"
+          },
+          "label": {
+            "enum": [
+              "CLEARLY_GOOD",
+              "CLEARLY_BAD",
+              "AMBIGUOUS",
+              "CORRECT_ABSTENTION",
+              "AUTHORITY_VIOLATION",
+              "OVERPROCESSING"
+            ]
+          },
+          "rationale": {
+            "type": "string",
+            "minLength": 10
+          }
+        }
+      }
+    }
+  }
+}
