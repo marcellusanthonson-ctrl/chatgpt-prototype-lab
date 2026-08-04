@@ -9,8 +9,8 @@
     "ideas": 5,
     "integrations": 7,
     "experiments": 8,
-    "authorizations": 104,
-    "evidence": 86,
+    "authorizations": 105,
+    "evidence": 87,
     "unincorporated": 0,
     "proposals": 3,
     "sessions": 1,
@@ -103,7 +103,8 @@
       "registry/deltas/statistics-counter-source-package-adoption-178.json",
       "registry/deltas/post-178-canonical-state-phase1-evidence-reconciliation-179.json",
       "registry/deltas/sse-test-execution-and-read-only-audit-147.json",
-      "registry/deltas/priority-integrations-phase2-sse-authority-180.json"
+      "registry/deltas/priority-integrations-phase2-sse-authority-180.json",
+      "registry/deltas/sse-test-180-blocked-attempt-canonical-reconciliation-181.json"
     ],
     "evidence": "registry/evidence.json",
     "evidence_deltas": [
@@ -149,7 +150,8 @@
       "registry/deltas/pend-lab-047-exact-canonical-aggregate-reconciliation-177.json",
       "registry/deltas/statistics-counter-source-package-adoption-178.json",
       "registry/deltas/post-178-canonical-state-phase1-evidence-reconciliation-179.json",
-      "registry/deltas/priority-integrations-phase2-sse-authority-180.json"
+      "registry/deltas/priority-integrations-phase2-sse-authority-180.json",
+      "registry/deltas/sse-test-180-blocked-attempt-canonical-reconciliation-181.json"
     ],
     "current_state": "CURRENT_STATE.json",
     "current_state_deltas": [
@@ -202,7 +204,8 @@
       "registry/deltas/pend-lab-047-exact-canonical-aggregate-reconciliation-177.json",
       "registry/deltas/statistics-counter-source-package-adoption-178.json",
       "registry/deltas/post-178-canonical-state-phase1-evidence-reconciliation-179.json",
-      "registry/deltas/priority-integrations-phase2-sse-authority-180.json"
+      "registry/deltas/priority-integrations-phase2-sse-authority-180.json",
+      "registry/deltas/sse-test-180-blocked-attempt-canonical-reconciliation-181.json"
     ],
     "pattern_deltas": [
       "registry/deltas/livhavn-surgical-visual-patch-093.json",
@@ -291,28 +294,29 @@
     "error": "ERR-LAB-011",
     "error_path": "errors/ERR-LAB-011.json",
     "pattern": "PAT-LAB-009",
-    "authorization": "AUTHORIZATION_LAB_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_AND_CLOSURE_177",
-    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_AND_CLOSURE_177.json",
-    "evidence": "EVD-LAB-PEND-047-EXACT-CANONICAL-AGGREGATE-RECONCILIATION-177",
-    "evidence_path": "projects/lab/evidence/EVD-LAB-PEND-047-EXACT-CANONICAL-AGGREGATE-RECONCILIATION-177.json",
-    "current_state_delta": "pend-lab-047-exact-canonical-aggregate-reconciliation-177",
-    "current_state_delta_path": "registry/deltas/pend-lab-047-exact-canonical-aggregate-reconciliation-177.json",
+    "authorization": "AUTHORIZATION_LAB_SSE_TEST_180_BLOCKED_ATTEMPT_CANONICAL_RECONCILIATION_181",
+    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_SSE_TEST_180_BLOCKED_ATTEMPT_CANONICAL_RECONCILIATION_181.json",
+    "evidence": "EVD-LAB-SSE-TEST-EXECUTION-180-ATTEMPT-001",
+    "evidence_path": "projects/lab/evidence/EVD-LAB-SSE-TEST-EXECUTION-180-ATTEMPT-001.json",
+    "current_state_delta": "sse-test-180-blocked-attempt-canonical-reconciliation-181",
+    "current_state_delta_path": "registry/deltas/sse-test-180-blocked-attempt-canonical-reconciliation-181.json",
     "experiment": "EXP-LAB-003",
     "proposal": "PROP-LAB-003",
     "session": "SES-2026-06-28-001",
     "reassessment": "REA-LAB-007",
     "reconciliation": "REC-LAB-INTEGRATION-FACTORY-M2-155-DOCUMENTARY-INTEGRITY-001",
     "reconciliation_path": "projects/lab/reconciliations/REC-LAB-INTEGRATION-FACTORY-M2-155-DOCUMENTARY-INTEGRITY-001.json",
-    "test_design": "PL003_EFFECTIVE_PERMISSION_GATE_OPERATOR_001",
-    "pending": "PEND-LAB-043",
-    "test_execution": "PRODUCT-LEADERSHIP-TEST-003-AWS-PREFLIGHT-EXECUTION-002",
+    "test_design": "SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001",
+    "pending": "PEND-LAB-045",
+    "pending_path": "projects/lab/pending/PEND-LAB-045.json",
+    "test_execution": "SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-001",
     "external_audit": "AUDIT-CLAUDE-M5-ATTEMPT-003-001",
     "source_package": "DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001@1.2.0",
-    "foundation_library": "SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001@0.1.0",
+    "foundation_library": "SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001@0.2.0",
     "ecr_capability": "ECR-CAPABILITY-001@0.1.0",
     "product_leadership_package": "PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001@0.1.0",
     "intelligent_application_construction_package": "INTELLIGENT-APPLICATION-CONSTRUCTION-CANDIDATE-PACKAGE-001@0.1.0",
-    "software_solution_engineering_package": "SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001@0.1.0",
+    "software_solution_engineering_package": "SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001@0.2.0",
     "foundation_evidence": "EVIDENCE_PROTOCOL_DEFINED_NOT_EXECUTED",
     "rag_contract": "RAG-FEDERATION-CONTRACT-001",
     "foundation_pilot": "PILOT-PREMIUM-ECOMMERCE-001",
@@ -331,13 +335,14 @@
     "surgical_visual_patch_protocol": "docs/SURGICAL_VISUAL_PATCH_PROTOCOL.md",
     "symphonie_phase_brief_architecture": "docs/SYMPHONIE_PHASES_0_3_AGENT_AND_BRIEF_ARCHITECTURE.md",
     "previous_error_path": "errors/ERR-LAB-009.json",
-    "pending_path": "projects/lab/pending/PEND-LAB-043.json",
     "closed_pending": "PEND-LAB-047",
     "closed_pending_path": "projects/lab/pending/PEND-LAB-047.json",
     "error_status": "ERR-LAB-011_CLOSED_BY_APPROVED_SECTION_SCOPED_SOURCE_FIDELITY",
     "motion_roadmap_canonical_reference": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/CANONICAL_REFERENCE.json",
     "motion_roadmap_behavior_core": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/BEHAVIOR_CORE_CONTRACT.json",
     "motion_roadmap_behavior_core_status": "EXTRACTED_AND_VALIDATED_PASS_CONTROLLED_EXACT_BYTES",
-    "motion_next_gate": "HUMAN_REVIEW_STATISTICS_COUNTER_STATIC_SUFFIX_001"
+    "motion_next_gate": "SEPARATELY_AUTHORIZED_BOUNDED_LIBRARY_POPULATION_OR_PROMOTION_ACTION",
+    "sse_attempt_001": "BLOCKED_MODEL_OR_TOOL_ACCESS_NOT_REPRODUCIBLE",
+    "authorization_180": "GRANTED_STAGE_2_BLOCKED_RETRY_NOT_STARTED_AUTHORIZATION_UNCONSUMED"
   }
 }

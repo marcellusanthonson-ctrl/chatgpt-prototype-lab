@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "project_id": "lab",
-  "updated_at": "2026-07-28",
+  "updated_at": "2026-08-03",
   "records": [
     {
       "id": "FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001",
@@ -22,6 +22,16 @@
       "id": "PRODUCT-LEADERSHIP-TEST-003-AWS-PREFLIGHT-EXECUTION-002",
       "status": "BLOCKED_FAIL_CLOSED_AT_IAM_SECURITY_GATE",
       "canonical_path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-TEST-003-AWS-PREFLIGHT-EXECUTION-002/MANIFEST.json"
+    },
+    {
+      "id": "SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-001",
+      "attempt": "ATTEMPT-001",
+      "status": "BLOCKED_MODEL_OR_TOOL_ACCESS_NOT_REPRODUCIBLE",
+      "authorization": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180",
+      "authorization_state": "GRANTED_STAGE_2_BLOCKED_RETRY_NOT_STARTED_AUTHORIZATION_UNCONSUMED",
+      "canonical_path": "projects/lab/test-executions/SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-001/MANIFEST.json",
+      "evidence": "projects/lab/evidence/EVD-LAB-SSE-TEST-EXECUTION-180-ATTEMPT-001.json",
+      "outputs_generated": 0
     }
   ]
 }

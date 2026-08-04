@@ -216,10 +216,7 @@
       "artifact_sha256": "13cab2709775e9c2923b85c2557988c57ce57987dac0fcb1aedc0e347660b405",
       "geometry_configuration_count": 206,
       "capture_count": 16,
-      "device_scale_factors": [
-        1,
-        2
-      ],
+      "device_scale_factors": [1, 2],
       "authorization_id": "AUTHORIZATION_LAB_FUNCTIONAL_ICONOGRAPHY_RECONCILIATION_056",
       "repository_validation_unblock_authorization_id": "AUTHORIZATION_LAB_TRAILING_WHITESPACE_UNBLOCK_057",
       "previous_candidate": {
@@ -228,10 +225,7 @@
         "status": "SUPERSEDED_BY_AUTHORIZED_FUNCTIONAL_ICONOGRAPHY_RECONCILIATION"
       },
       "automatic_approval": false,
-      "allowed_human_outcomes": [
-        "ACCEPT_AS_NEUTRAL_TECHNICAL_BASELINE",
-        "REJECT_WITH_DOCUMENTED_DEFECTS"
-      ],
+      "allowed_human_outcomes": ["ACCEPT_AS_NEUTRAL_TECHNICAL_BASELINE", "REJECT_WITH_DOCUMENTED_DEFECTS"],
       "fail_safe": "ANY_CONFIRMED_DEFECT_INVALIDATES_PACKAGE_AND_REQUIRES_COMPLETE_REVALIDATION",
       "product_direction_effect": "NONE",
       "wcag_conformance_effect": "NONE",
@@ -265,11 +259,7 @@
       "minimum_impeccable_visual_foundation_human_baseline": "APPROVED",
       "asset_first_for_brand_associated_visuals_result": "SUCCESS",
       "closure_result": "CLOSED_BY_HUMAN_APPROVAL_OF_BOOTSTRAP_WHATSAPP_FOOTER_INTEGRATION",
-      "required_sequence": [
-        "COMPLETED_MANUAL_HUMAN_REVIEW_OF_INTEGRATED_FOOTER",
-        "RECORDED_APPROVED",
-        "BRAND_USAGE_APPROVAL_REMAINS_SEPARATE"
-      ],
+      "required_sequence": ["COMPLETED_MANUAL_HUMAN_REVIEW_OF_INTEGRATED_FOOTER", "RECORDED_APPROVED", "BRAND_USAGE_APPROVAL_REMAINS_SEPARATE"],
       "automatic_selection": false,
       "product_effect": "NONE",
       "runtime_effect": "NONE",
@@ -300,28 +290,8 @@
       "authorization_id": "AUTHORIZATION_LAB_BLINDED_CONTEXT_SELECTION_DISCRIMINATING_EXPERIMENT_065",
       "global_result": "EXPERIMENT_DISCRIMINATES",
       "all_alternatives_status": "NON_VIABLE",
-      "candidate_alternatives": [
-        "NO_CHANGE",
-        "SCHEMA_HYGIENE_SIMULATION",
-        "CONTINUITY_PACKAGE_IMPROVEMENT_SIMULATION",
-        "DETERMINISTIC_REFERENCE_INDEX_SIMULATION",
-        "PARTIAL_RAG_FEDERATION_CONTRACT_STAGES_1_TO_4_AND_7_TO_8_SIMULATION"
-      ],
-      "required_metrics": [
-        "REAL_TOKEN_COUNTS_IF_LOCAL_TOKENIZER_IS_AVAILABLE_WITHOUT_INSTALLATION",
-        "ABSOLUTE_AND_PERCENTAGE_REDUCTION",
-        "MANDATORY_RESIDUAL_COST",
-        "SELECTION_PRECISION",
-        "OMITTED_CONSTRAINTS",
-        "OMITTED_CONTRARY_EVIDENCE",
-        "FALSE_POSITIVES",
-        "FALSE_NEGATIVES",
-        "AUTHORITY_PRESERVATION",
-        "TRACEABILITY",
-        "HEAD_STABILITY",
-        "CROSS_PROJECT_STABILITY",
-        "SHIFTED_LLM_CALL_COST"
-      ],
+      "candidate_alternatives": ["NO_CHANGE", "SCHEMA_HYGIENE_SIMULATION", "CONTINUITY_PACKAGE_IMPROVEMENT_SIMULATION", "DETERMINISTIC_REFERENCE_INDEX_SIMULATION", "PARTIAL_RAG_FEDERATION_CONTRACT_STAGES_1_TO_4_AND_7_TO_8_SIMULATION"],
+      "required_metrics": ["REAL_TOKEN_COUNTS_IF_LOCAL_TOKENIZER_IS_AVAILABLE_WITHOUT_INSTALLATION", "ABSOLUTE_AND_PERCENTAGE_REDUCTION", "MANDATORY_RESIDUAL_COST", "SELECTION_PRECISION", "OMITTED_CONSTRAINTS", "OMITTED_CONTRARY_EVIDENCE", "FALSE_POSITIVES", "FALSE_NEGATIVES", "AUTHORITY_PRESERVATION", "TRACEABILITY", "HEAD_STABILITY", "CROSS_PROJECT_STABILITY", "SHIFTED_LLM_CALL_COST"],
       "implementation_authorized": false,
       "schema_change_authorized": false,
       "rag_implementation_authorized": false,
@@ -345,32 +315,11 @@
       "recommended_auditor": "Claude",
       "audit_mode": "STRICT_READ_ONLY_INDEPENDENT_ANALYSIS",
       "authorization_required": true,
-      "required_analysis": [
-        "PER_FIXTURE_ANALYSIS",
-        "PER_ALTERNATIVE_ANALYSIS",
-        "SHARED_CAUSES",
-        "ALTERNATIVE_SPECIFIC_CAUSES",
-        "DESIGN_FAILURES",
-        "RULE_FAILURES",
-        "METADATA_FAILURES",
-        "CORPUS_FAILURES",
-        "METRIC_FAILURES",
-        "FAVORABLE_AND_CONTRARY_EVIDENCE",
-        "EVIDENCE_SUFFICIENCY_FOR_A_POTENTIAL_SIXTH_ALTERNATIVE"
-      ],
-      "constraints": [
-        "ZERO_CANONICAL_MUTATION",
-        "ZERO_IMPLEMENTATION_SELECTION",
-        "ZERO_IMPLEMENTATION_APPROVAL",
-        "NO_SIXTH_ALTERNATIVE_DESIGN_WITHOUT_SEPARATE_AUTHORIZATION"
-      ],
+      "required_analysis": ["PER_FIXTURE_ANALYSIS", "PER_ALTERNATIVE_ANALYSIS", "SHARED_CAUSES", "ALTERNATIVE_SPECIFIC_CAUSES", "DESIGN_FAILURES", "RULE_FAILURES", "METADATA_FAILURES", "CORPUS_FAILURES", "METRIC_FAILURES", "FAVORABLE_AND_CONTRARY_EVIDENCE", "EVIDENCE_SUFFICIENCY_FOR_A_POTENTIAL_SIXTH_ALTERNATIVE"],
+      "constraints": ["ZERO_CANONICAL_MUTATION", "ZERO_IMPLEMENTATION_SELECTION", "ZERO_IMPLEMENTATION_APPROVAL", "NO_SIXTH_ALTERNATIVE_DESIGN_WITHOUT_SEPARATE_AUTHORIZATION"],
       "next_recommended_transition": "AUTHORIZE_CLAUDE_READ_ONLY_ROOT_CAUSE_ANALYSIS_OF_EXPERIMENT_065",
       "current_authority": "NONE",
-      "source_refs": [
-        "projects/lab/experiments/EXP-LAB-001.json",
-        "projects/lab/evidence/EVD-LAB-EXP-001.json",
-        "projects/lab/authorizations/AUTHORIZATION_LAB_BLINDED_CONTEXT_SELECTION_EXPERIMENT_065_DOCUMENTARY_RECONCILIATION_066.json"
-      ]
+      "source_refs": ["projects/lab/experiments/EXP-LAB-001.json", "projects/lab/evidence/EVD-LAB-EXP-001.json", "projects/lab/authorizations/AUTHORIZATION_LAB_BLINDED_CONTEXT_SELECTION_EXPERIMENT_065_DOCUMENTARY_RECONCILIATION_066.json"]
     },
     {
       "id": "PEND-LAB-017",
@@ -388,12 +337,7 @@
       "architecture_selected": false,
       "implementation_selected": false,
       "successor_pending": "PEND-LAB-018",
-      "source_refs": [
-        "projects/lab/pending/PEND-LAB-017.json",
-        "projects/lab/experiments/EXP-LAB-002.json",
-        "projects/lab/evidence/EVD-LAB-EXP-002.json",
-        "projects/lab/test-executions/FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001/MANIFEST.json"
-      ]
+      "source_refs": ["projects/lab/pending/PEND-LAB-017.json", "projects/lab/experiments/EXP-LAB-002.json", "projects/lab/evidence/EVD-LAB-EXP-002.json", "projects/lab/test-executions/FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001/MANIFEST.json"]
     },
     {
       "id": "PEND-LAB-018",
@@ -414,13 +358,7 @@
       "automatic_approval": false,
       "successor_pending": "PEND-LAB-019",
       "next_authorized_action": "NONE",
-      "source_refs": [
-        "projects/lab/pending/PEND-LAB-018.json",
-        "projects/lab/experiments/EXP-LAB-002.json",
-        "projects/lab/evidence/EVD-LAB-EXP-002.json",
-        "projects/lab/evidence/EVD-LAB-AUD-004.json",
-        "projects/lab/reassessments/REA-LAB-005.json"
-      ]
+      "source_refs": ["projects/lab/pending/PEND-LAB-018.json", "projects/lab/experiments/EXP-LAB-002.json", "projects/lab/evidence/EVD-LAB-EXP-002.json", "projects/lab/evidence/EVD-LAB-AUD-004.json", "projects/lab/reassessments/REA-LAB-005.json"]
     },
     {
       "id": "PEND-LAB-019",
@@ -435,14 +373,7 @@
       "automatic_approval": false,
       "successor_pending": "PEND-LAB-020",
       "next_authorized_action": "NONE_AFTER_CONSUMPTION",
-      "source_refs": [
-        "projects/lab/pending/PEND-LAB-019.json",
-        "projects/lab/evidence/EVD-LAB-AUD-004.json",
-        "projects/lab/reassessments/REA-LAB-005.json",
-        "projects/lab/authorizations/AUTHORIZATION_LAB_FULL_RAG_AUTHORITY_FIRST_FAILURE_ANALYSIS_AND_NEXT_TEST_DESIGN_074.json",
-        "projects/lab/test-designs/FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-002/MANIFEST.json",
-        "projects/lab/pending/PEND-LAB-020.json"
-      ]
+      "source_refs": ["projects/lab/pending/PEND-LAB-019.json", "projects/lab/evidence/EVD-LAB-AUD-004.json", "projects/lab/reassessments/REA-LAB-005.json", "projects/lab/authorizations/AUTHORIZATION_LAB_FULL_RAG_AUTHORITY_FIRST_FAILURE_ANALYSIS_AND_NEXT_TEST_DESIGN_074.json", "projects/lab/test-designs/FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-002/MANIFEST.json", "projects/lab/pending/PEND-LAB-020.json"]
     },
     {
       "id": "PEND-LAB-020",
@@ -463,16 +394,7 @@
       "automatic_approval": false,
       "successor_pending": "PEND-LAB-021",
       "next_authorized_action": "NONE_AFTER_CONSUMPTION",
-      "source_refs": [
-        "projects/lab/pending/PEND-LAB-020.json",
-        "projects/lab/authorizations/AUTHORIZATION_LAB_FULL_RAG_AUTHORITY_FIRST_FAILURE_ANALYSIS_AND_NEXT_TEST_DESIGN_074.json",
-        "projects/lab/test-designs/FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-002/MANIFEST.json",
-        "projects/lab/authorizations/AUTHORIZATION_LAB_FULL_RAG_AUTHORITY_FIRST_FAILURE_DISCRIMINATION_TEST_EXECUTION_075.json",
-        "projects/lab/test-executions/FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-EXECUTION-002/MANIFEST.json",
-        "projects/lab/experiments/EXP-LAB-003.json",
-        "projects/lab/evidence/EVD-LAB-EXP-003.json",
-        "projects/lab/pending/PEND-LAB-021.json"
-      ]
+      "source_refs": ["projects/lab/pending/PEND-LAB-020.json", "projects/lab/authorizations/AUTHORIZATION_LAB_FULL_RAG_AUTHORITY_FIRST_FAILURE_ANALYSIS_AND_NEXT_TEST_DESIGN_074.json", "projects/lab/test-designs/FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-002/MANIFEST.json", "projects/lab/authorizations/AUTHORIZATION_LAB_FULL_RAG_AUTHORITY_FIRST_FAILURE_DISCRIMINATION_TEST_EXECUTION_075.json", "projects/lab/test-executions/FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-EXECUTION-002/MANIFEST.json", "projects/lab/experiments/EXP-LAB-003.json", "projects/lab/evidence/EVD-LAB-EXP-003.json", "projects/lab/pending/PEND-LAB-021.json"]
     },
     {
       "id": "PEND-LAB-021",
@@ -493,16 +415,7 @@
       "automatic_approval": false,
       "successor_pending": "PEND-LAB-022",
       "next_authorized_action": "NONE_AFTER_CONSUMPTION",
-      "source_refs": [
-        "projects/lab/pending/PEND-LAB-021.json",
-        "projects/lab/test-executions/FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-EXECUTION-002/MANIFEST.json",
-        "projects/lab/experiments/EXP-LAB-003.json",
-        "projects/lab/evidence/EVD-LAB-EXP-003.json",
-        "projects/lab/external-audits/AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001/AUDIT_MANIFEST.json",
-        "projects/lab/evidence/EVD-LAB-AUD-005.json",
-        "projects/lab/reassessments/REA-LAB-006.json",
-        "projects/lab/pending/PEND-LAB-022.json"
-      ]
+      "source_refs": ["projects/lab/pending/PEND-LAB-021.json", "projects/lab/test-executions/FULL-RAG-AUTHORITY-FIRST-FAILURE-DISCRIMINATION-TEST-EXECUTION-002/MANIFEST.json", "projects/lab/experiments/EXP-LAB-003.json", "projects/lab/evidence/EVD-LAB-EXP-003.json", "projects/lab/external-audits/AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001/AUDIT_MANIFEST.json", "projects/lab/evidence/EVD-LAB-AUD-005.json", "projects/lab/reassessments/REA-LAB-006.json", "projects/lab/pending/PEND-LAB-022.json"]
     },
     {
       "id": "PEND-LAB-022",
@@ -519,16 +432,7 @@
       "automatic_approval": false,
       "successor_pending": "PEND-LAB-023",
       "next_authorized_action": "NONE_AFTER_CONSUMPTION",
-      "source_refs": [
-        "projects/lab/pending/PEND-LAB-022.json",
-        "projects/lab/external-audits/AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001/AUDIT_REPORT.json",
-        "projects/lab/evidence/EVD-LAB-AUD-005.json",
-        "projects/lab/reassessments/REA-LAB-006.json",
-        "projects/lab/authorizations/AUTHORIZATION_LAB_FULL_RAG_POST_AUDIT_DECISION_AND_REMEDIATION_PLANNING_078_REVISION_2.json",
-        "decisions/DEC-LAB-021.json",
-        "projects/lab/remediation-plans/FULL-RAG-POST-AUDIT-REMEDIATION-PLAN-001.json",
-        "projects/lab/pending/PEND-LAB-023.json"
-      ]
+      "source_refs": ["projects/lab/pending/PEND-LAB-022.json", "projects/lab/external-audits/AUDIT-CLAUDE-FULL-RAG-FAILURE-DISCRIMINATION-EXECUTION-002-001/AUDIT_REPORT.json", "projects/lab/evidence/EVD-LAB-AUD-005.json", "projects/lab/reassessments/REA-LAB-006.json", "projects/lab/authorizations/AUTHORIZATION_LAB_FULL_RAG_POST_AUDIT_DECISION_AND_REMEDIATION_PLANNING_078_REVISION_2.json", "decisions/DEC-LAB-021.json", "projects/lab/remediation-plans/FULL-RAG-POST-AUDIT-REMEDIATION-PLAN-001.json", "projects/lab/pending/PEND-LAB-023.json"]
     },
     {
       "id": "PEND-LAB-023",
@@ -543,13 +447,7 @@
       "current_authority": "NONE_AFTER_SUPERSESSION",
       "automatic_approval": false,
       "next_authorized_action": "NONE_AFTER_SUPERSESSION",
-      "source_refs": [
-        "projects/lab/pending/PEND-LAB-023.json",
-        "decisions/DEC-LAB-021.json",
-        "projects/lab/remediation-plans/FULL-RAG-POST-AUDIT-REMEDIATION-PLAN-001.json",
-        "projects/lab/full-rag-line-closure/FULL-RAG-LINE-CLOSURE-001.json",
-        "foundation-library/evidential-control/ECR-CAPABILITY-001/MANIFEST.json"
-      ]
+      "source_refs": ["projects/lab/pending/PEND-LAB-023.json", "decisions/DEC-LAB-021.json", "projects/lab/remediation-plans/FULL-RAG-POST-AUDIT-REMEDIATION-PLAN-001.json", "projects/lab/full-rag-line-closure/FULL-RAG-LINE-CLOSURE-001.json", "foundation-library/evidential-control/ECR-CAPABILITY-001/MANIFEST.json"]
     },
     {
       "id": "PEND-LAB-024",
@@ -561,11 +459,7 @@
       "current_authority": "NONE",
       "automatic_approval": false,
       "next_authorized_action": "NONE_UNTIL_SEPARATE_EXPLICIT_AUTHORIZATION",
-      "source_refs": [
-        "projects/lab/pending/PEND-LAB-024.json",
-        "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/MANIFEST.json",
-        "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json"
-      ]
+      "source_refs": ["projects/lab/pending/PEND-LAB-024.json", "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/MANIFEST.json", "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json"]
     },
     {
       "id": "PEND-LAB-025",
@@ -584,11 +478,7 @@
       "current_authority": "REAL_HUMAN_VISUAL_DECISION_ONLY",
       "automatic_approval": false,
       "next_authorized_action": "JONATHAN_MARTINEZ_REVIEWS_LIVHAVN_VD_01",
-      "source_refs": [
-        "projects/lab/authorizations/AUTHORIZATION_SYMPHONIE_LIVHAVN_SYNTHETIC_FULL_WORKFLOW_PILOT_083.json",
-        "projects/lab/evidence/EVD-LAB-SYMPHONIE-LIVHAVN-PILOT-083.json",
-        "projects/symphonie/continuity/CURRENT_CONTINUITY.json"
-      ]
+      "source_refs": ["projects/lab/authorizations/AUTHORIZATION_SYMPHONIE_LIVHAVN_SYNTHETIC_FULL_WORKFLOW_PILOT_083.json", "projects/lab/evidence/EVD-LAB-SYMPHONIE-LIVHAVN-PILOT-083.json", "projects/symphonie/continuity/CURRENT_CONTINUITY.json"]
     },
     {
       "schema_version": "1.0.0",
@@ -605,38 +495,13 @@
       "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M3_ORACLE_AND_UTF8_REMEDIATION_158.json",
       "brief_ref": "projects/lab/briefs/CODEX_INTEGRATION_FACTORY_M3_ORACLE_AND_UTF8_REMEDIATION_001.json",
       "technical_executor": "CODEX",
-      "facts": {
-        "m3_classification": "M3_BLOCKED_WITH_CLASSIFIED_DIVERGENCES",
-        "static_shadow_exact_matches": 420,
-        "static_shadow_case_count": 420,
-        "baseline_oracle_passes_per_evaluator": 12,
-        "classified_divergence_count": 2,
-        "single_root_cause": true,
-        "root_fixture": "CRIT-FIX-008",
-        "root_cause_classification": "PREEXISTING_BASELINE_FIXTURE_ORACLE_INCONSISTENCY_DISCOVERED_BY_M3",
-        "static_shadow_negative_transfer": false,
-        "frozen_selector_shadow_and_adapters_unchanged": true
-      },
-      "authorized_treatment": {
-        "correct_fixture_expected_modules": true,
-        "preserve_historical_fixture": true,
-        "repair_m3_introduced_utf8_corruption": true,
-        "rerun_m3_additively": true,
-        "modify_selector": false,
-        "modify_shadow_registry": false,
-        "modify_m2_adapters": false
-      },
+      "facts": {"m3_classification":"M3_BLOCKED_WITH_CLASSIFIED_DIVERGENCES","static_shadow_exact_matches":420,"static_shadow_case_count":420,"baseline_oracle_passes_per_evaluator":12,"classified_divergence_count":2,"single_root_cause":true,"root_fixture":"CRIT-FIX-008","root_cause_classification":"PREEXISTING_BASELINE_FIXTURE_ORACLE_INCONSISTENCY_DISCOVERED_BY_M3","static_shadow_negative_transfer":false,"frozen_selector_shadow_and_adapters_unchanged":true},
+      "authorized_treatment": {"correct_fixture_expected_modules":true,"preserve_historical_fixture":true,"repair_m3_introduced_utf8_corruption":true,"rerun_m3_additively":true,"modify_selector":false,"modify_shadow_registry":false,"modify_m2_adapters":false},
       "effect_until_completion": "M3_REMEDIATION_M4_AND_CUTOVER_BLOCKED",
       "current_authority": "NONE_AFTER_AUTHORIZATION_158_CONSUMPTION",
       "automatic_approval": false,
       "next_transition": "JONATHAN_MARTINEZ_DECIDES_PEND_LAB_036",
-      "source_refs": [
-        "decisions/DEC-LAB-024.json",
-        "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M3_ORACLE_AND_UTF8_REMEDIATION_158.json",
-        "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M3-157.json",
-        "architecture/integrations/migration/M3/DIVERGENCE_LOG.json",
-        "architecture/integrations/migration/M3/VALIDATION_RESULTS.json"
-      ],
+      "source_refs": ["decisions/DEC-LAB-024.json", "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M3_ORACLE_AND_UTF8_REMEDIATION_158.json", "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M3-157.json", "architecture/integrations/migration/M3/DIVERGENCE_LOG.json", "architecture/integrations/migration/M3/VALIDATION_RESULTS.json"],
       "authority_effect": "NONE",
       "runtime_effect": "NONE",
       "completed_at": "2026-07-31T10:05:03-04:00",
@@ -666,12 +531,7 @@
       "successor_pending": "PEND-LAB-037",
       "effect_after_completion": "STATIC_SELECTOR_REMAINS_AUTHORITATIVE_SHADOW_REGISTRY_INACTIVE_M5_NOT_AUTHORIZED",
       "current_authority": "NONE_AFTER_AUTHORIZATION_159_CONSUMPTION",
-      "source_refs": [
-        "architecture/integrations/migration/M4/CUTOVER_DECISION_PACKAGE.json",
-        "architecture/integrations/migration/M4/ROLLBACK_READINESS.json",
-        "architecture/integrations/migration/M4/VALIDATION_RESULTS.json",
-        "projects/lab/pending/PEND-LAB-037.json"
-      ],
+      "source_refs": ["architecture/integrations/migration/M4/CUTOVER_DECISION_PACKAGE.json", "architecture/integrations/migration/M4/ROLLBACK_READINESS.json", "architecture/integrations/migration/M4/VALIDATION_RESULTS.json", "projects/lab/pending/PEND-LAB-037.json"],
       "authority_effect": "NONE",
       "runtime_effect": "NONE",
       "integration_effect": "NONE"
@@ -689,12 +549,7 @@
       "automatic_approval": false,
       "resolved_at": "2026-07-31T12:22:00-04:00",
       "selected_option": "RETURN_FOR_REMEDIATION",
-      "allowed_options": [
-        "APPROVE_BOUNDED_M5_CUTOVER",
-        "DEFER_M5_RETAIN_STATIC_SELECTOR",
-        "REJECT_CUTOVER_CLOSE_MIGRATION",
-        "RETURN_FOR_REMEDIATION"
-      ],
+      "allowed_options": ["APPROVE_BOUNDED_M5_CUTOVER", "DEFER_M5_RETAIN_STATIC_SELECTOR", "REJECT_CUTOVER_CLOSE_MIGRATION", "RETURN_FOR_REMEDIATION"],
       "decision_package_ref": "architecture/integrations/migration/M4/CUTOVER_DECISION_PACKAGE.json",
       "rollback_readiness_ref": "architecture/integrations/migration/M4/ROLLBACK_READINESS.json",
       "proposed_authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_INTEGRATION_FACTORY_M5_BOUNDED_CUTOVER_AND_OBSERVATION_160.json",
@@ -703,11 +558,7 @@
       "effect_until_resolution": "STATIC_SELECTOR_REMAINS_AUTHORITATIVE_SHADOW_REGISTRY_INACTIVE_M5_NOT_AUTHORIZED",
       "current_authority": "NONE_DECISION_RESOLVED",
       "next_transition": "JONATHAN_MARTINEZ_REVIEWS_PEND_LAB_038",
-      "source_refs": [
-        "decisions/DEC-LAB-025.json",
-        "architecture/integrations/migration/M4/CUTOVER_DECISION_PACKAGE.json",
-        "architecture/integrations/migration/M4/ROLLBACK_READINESS.json"
-      ],
+      "source_refs": ["decisions/DEC-LAB-025.json", "architecture/integrations/migration/M4/CUTOVER_DECISION_PACKAGE.json", "architecture/integrations/migration/M4/ROLLBACK_READINESS.json"],
       "authority_effect": "RETURN_FOR_REMEDIATION_RECORDED",
       "runtime_effect": "NONE",
       "integration_effect": "NONE"
@@ -730,11 +581,7 @@
       "readiness_classification": "M5_READINESS_REMEDIATION_PASS_AWAITING_NEW_HUMAN_CUTOVER_DECISION",
       "current_authority": "AUTHORIZATION_160_STAGE_2_ONLY",
       "next_transition": "CODEX_EXECUTES_AUTHORIZATION_160_FROM_THE_VERIFIED_STAGE_1_REMOTE_HEAD",
-      "source_refs": [
-        "projects/lab/pending/PEND-LAB-038.json",
-        "architecture/integrations/migration/M5/readiness-161/VALIDATION_RESULTS.json",
-        "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-READINESS-REMEDIATION-161.json"
-      ],
+      "source_refs": ["projects/lab/pending/PEND-LAB-038.json", "architecture/integrations/migration/M5/readiness-161/VALIDATION_RESULTS.json", "projects/lab/evidence/EVD-LAB-INTEGRATION-FACTORY-M5-READINESS-REMEDIATION-161.json"],
       "authority_effect": "HUMAN_DECISION_RESOLVED_BOUNDED_STAGE_2_AUTHORITY_SEPARATE",
       "runtime_effect": "NONE_UNTIL_STAGE_2_AFTER_ROLLBACK_DRILL_PASS",
       "integration_effect": "NONE_UNTIL_STAGE_2_SINGLE_POINTER_MUTATION"
@@ -856,86 +703,12 @@
       "type": "MOTION_SYSTEM_HUMAN_GATE_AND_LIBRARY_POPULATION",
       "title": "Human review and staged population of the transversal motion-effects library",
       "priority": "HIGH",
-      "completed_actions": [
-        "PRESERVE_CURRENT_ROADMAP_AS_HISTORICAL_NEUTRAL_DERIVATION",
-        "HUMAN_COMPARE_SECTION_SCOPED_SOURCE_FAITHFUL_CANDIDATE",
-        "APPROVE_CAROLINA_ROADMAP_SECTION_SOURCE_FIDELITY",
-        "DESIGNATE_CAROLINA_ROADMAP_SECTION_AS_CANONICAL_REFERENCE_IMPLEMENTATION",
-        "EXTRACT_SOURCE_INDEPENDENT_ROADMAP_BEHAVIOR_CORE",
-        "VALIDATE_ROADMAP_BEHAVIOR_CORE_IN_NORMAL_AND_REDUCED_MOTION_MATRIX",
-        "RECONCILE_CANONICAL_AGGREGATES_AND_CLOSE_PEND_LAB_047",
-        "PRESERVE_STATISTICS_COUNTER_ARCHIVE_PROVENANCE_AND_COMPLETE_CONTENT_INDEX_IN_LAB",
-        "PRESERVE_EXACT_STATISTICS_COUNTER_DOM_AND_MOTION_SCRIPT_EXCERPTS",
-        "PUBLISH_STATISTICS_COUNTER_DIRECT_REVIEW_HARNESS",
-        "HUMAN_REVIEW_PRESERVED_STATISTICS_COUNTER_FUNCTIONAL_INTEGRATION_SOURCE",
-        "APPROVE_STATISTICS_COUNTER_SOURCE_FIDELITY",
-        "DESIGNATE_STATISTICS_COUNTER_CANONICAL_REFERENCE",
-        "EXTRACT_SOURCE_INDEPENDENT_STATISTICS_COUNTER_BEHAVIOR_CORE",
-        "VALIDATE_STATISTICS_COUNTER_NORMAL_REDUCED_REENTRY_REPLAY_RESIZE_AND_TEARDOWN",
-        "PUBLISH_STATISTICS_COUNTER_FUTURE_CONSUMPTION_CONTRACT",
-        "CLOSE_AUTHORIZATION_178_STAGE_2"
-      ],
-      "required_actions": [
-        "SEPARATELY_AUTHORIZE_NEUTRAL_ADAPTATION_IF_DESIRED",
-        "PROMOTE_REVISE_OR_REJECT_OTHER_INITIAL_EFFECTS",
-        "IMPLEMENT_INDUSTRY_EFFECTS_IN_BOUNDED_BATCHES",
-        "AUTHORIZE_REUSABLE_PROMOTION_SEPARATELY",
-        "AUTHORIZE_PROJECT_INTEGRATIONS_SEPARATELY"
-      ],
-      "roadmap_source_fidelity": {
-        "candidate_id": "CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002",
-        "human_determination": "APPROVED_SOURCE_FIDELITY",
-        "approved_by": "Jonathan Martínez",
-        "determined_at": "2026-08-02T18:43:00-04:00",
-        "canonical_reference_designation": "COMPLETED_BY_AUTHORIZATION_176",
-        "canonical_reference_pointer": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/CANONICAL_REFERENCE.json",
-        "behavior_core_extraction": "COMPLETED_AND_VALIDATED_BY_AUTHORIZATION_176",
-        "behavior_core_pointer": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/BEHAVIOR_CORE_CONTRACT.json",
-        "canonical_aggregate_reconciliation": "COMPLETED_BY_AUTHORIZATION_177",
-        "reusable_promotion": "NOT_AUTHORIZED",
-        "product_integration": "NOT_AUTHORIZED"
-      },
-      "statistics_counter": {
-        "effect_id": "STATISTICS-COUNTER-STATIC-SUFFIX-001",
-        "status": "HUMAN_APPROVED_CANONICAL_REFERENCE_DESIGNATED_BEHAVIOR_CORE_VALIDATED_READY_FOR_FUTURE_BOUNDED_CONSUMPTION",
-        "source_package_id": "CAROLINA-STATISTICS-MOTION-EXPERIMENT-001",
-        "source_package_manifest": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/SOURCE_PACKAGE_MANIFEST.json",
-        "archive_sha256": "8eecd53dc698d4587dfa882a5eabe701ec9a77a45bb9747d57f0cf5d68c876b0",
-        "original_monolith_sha256": "74274e55ff1c8b9edd849d433f12bf6ffe0abb00097872feb6bc7adde83b463e",
-        "exact_dom_excerpt": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_SECTION.html",
-        "exact_motion_script_excerpt": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_MOTION.js",
-        "direct_review_artifact": "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/DIRECT_HUMAN_REVIEW.html",
-        "human_determination": "APPROVED_SOURCE_FIDELITY",
-        "approved_by": "Jonathan Martínez",
-        "determined_at": "2026-08-03T00:23:25-04:00",
-        "canonical_reference": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/CANONICAL_REFERENCE.json",
-        "behavior_core": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/behavior-core/BEHAVIOR_CORE_CONTRACT.json",
-        "behavior_core_validation": "PASS_NODE_DETERMINISTIC_7_OF_7_WITH_HUMAN_SOURCE_FIDELITY",
-        "future_consumption_contract": "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/FUTURE_CONSUMPTION_CONTRACT.json",
-        "future_product_integration": "REQUIRES_SEPARATE_EXPLICIT_AUTHORIZATION",
-        "product_integration": "NOT_PERFORMED"
-      },
+      "completed_actions": ["PRESERVE_CURRENT_ROADMAP_AS_HISTORICAL_NEUTRAL_DERIVATION", "HUMAN_COMPARE_SECTION_SCOPED_SOURCE_FAITHFUL_CANDIDATE", "APPROVE_CAROLINA_ROADMAP_SECTION_SOURCE_FIDELITY", "DESIGNATE_CAROLINA_ROADMAP_SECTION_AS_CANONICAL_REFERENCE_IMPLEMENTATION", "EXTRACT_SOURCE_INDEPENDENT_ROADMAP_BEHAVIOR_CORE", "VALIDATE_ROADMAP_BEHAVIOR_CORE_IN_NORMAL_AND_REDUCED_MOTION_MATRIX", "RECONCILE_CANONICAL_AGGREGATES_AND_CLOSE_PEND_LAB_047", "PRESERVE_STATISTICS_COUNTER_ARCHIVE_PROVENANCE_AND_COMPLETE_CONTENT_INDEX_IN_LAB", "PRESERVE_EXACT_STATISTICS_COUNTER_DOM_AND_MOTION_SCRIPT_EXCERPTS", "PUBLISH_STATISTICS_COUNTER_DIRECT_REVIEW_HARNESS", "HUMAN_REVIEW_PRESERVED_STATISTICS_COUNTER_FUNCTIONAL_INTEGRATION_SOURCE", "APPROVE_STATISTICS_COUNTER_SOURCE_FIDELITY", "DESIGNATE_STATISTICS_COUNTER_CANONICAL_REFERENCE", "EXTRACT_SOURCE_INDEPENDENT_STATISTICS_COUNTER_BEHAVIOR_CORE", "VALIDATE_STATISTICS_COUNTER_NORMAL_REDUCED_REENTRY_REPLAY_RESIZE_AND_TEARDOWN", "PUBLISH_STATISTICS_COUNTER_FUTURE_CONSUMPTION_CONTRACT", "CLOSE_AUTHORIZATION_178_STAGE_2"],
+      "required_actions": ["SEPARATELY_AUTHORIZE_NEUTRAL_ADAPTATION_IF_DESIRED", "PROMOTE_REVISE_OR_REJECT_OTHER_INITIAL_EFFECTS", "IMPLEMENT_INDUSTRY_EFFECTS_IN_BOUNDED_BATCHES", "AUTHORIZE_REUSABLE_PROMOTION_SEPARATELY", "AUTHORIZE_PROJECT_INTEGRATIONS_SEPARATELY"],
+      "roadmap_source_fidelity": {"candidate_id":"CAROLINA-ROADMAP-SECTION-SOURCE-FAITHFUL-002","human_determination":"APPROVED_SOURCE_FIDELITY","approved_by":"Jonathan Martínez","determined_at":"2026-08-02T18:43:00-04:00","canonical_reference_designation":"COMPLETED_BY_AUTHORIZATION_176","canonical_reference_pointer":"foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/CANONICAL_REFERENCE.json","behavior_core_extraction":"COMPLETED_AND_VALIDATED_BY_AUTHORIZATION_176","behavior_core_pointer":"foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/BEHAVIOR_CORE_CONTRACT.json","canonical_aggregate_reconciliation":"COMPLETED_BY_AUTHORIZATION_177","reusable_promotion":"NOT_AUTHORIZED","product_integration":"NOT_AUTHORIZED"},
+      "statistics_counter": {"effect_id":"STATISTICS-COUNTER-STATIC-SUFFIX-001","status":"HUMAN_APPROVED_CANONICAL_REFERENCE_DESIGNATED_BEHAVIOR_CORE_VALIDATED_READY_FOR_FUTURE_BOUNDED_CONSUMPTION","source_package_id":"CAROLINA-STATISTICS-MOTION-EXPERIMENT-001","source_package_manifest":"foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/SOURCE_PACKAGE_MANIFEST.json","archive_sha256":"8eecd53dc698d4587dfa882a5eabe701ec9a77a45bb9747d57f0cf5d68c876b0","original_monolith_sha256":"74274e55ff1c8b9edd849d433f12bf6ffe0abb00097872feb6bc7adde83b463e","exact_dom_excerpt":"foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_SECTION.html","exact_motion_script_excerpt":"foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/SOURCE_STATS_MOTION.js","direct_review_artifact":"foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/integration-source/DIRECT_HUMAN_REVIEW.html","human_determination":"APPROVED_SOURCE_FIDELITY","approved_by":"Jonathan Martínez","determined_at":"2026-08-03T00:23:25-04:00","canonical_reference":"foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/CANONICAL_REFERENCE.json","behavior_core":"foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/behavior-core/BEHAVIOR_CORE_CONTRACT.json","behavior_core_validation":"PASS_NODE_DETERMINISTIC_7_OF_7_WITH_HUMAN_SOURCE_FIDELITY","future_consumption_contract":"foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/FUTURE_CONSUMPTION_CONTRACT.json","future_product_integration":"REQUIRES_SEPARATE_EXPLICIT_AUTHORIZATION","product_integration":"NOT_PERFORMED"},
       "current_authority": "NONE_AFTER_AUTHORIZATION_178_CONSUMPTION",
-      "source_refs": [
-        "projects/lab/pending/PEND-LAB-047.json",
-        "projects/lab/authorizations/AUTHORIZATION_LAB_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_AND_CLOSURE_177.json",
-        "projects/lab/evidence/EVD-LAB-PEND-047-EXACT-CANONICAL-AGGREGATE-RECONCILIATION-177.json",
-        "foundation-library/motion-system/MOTION-SYSTEM-001/MANIFEST.json",
-        "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/CANONICAL_REFERENCE.json",
-        "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/BEHAVIOR_CORE_CONTRACT.json",
-        "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/BEHAVIOR_CORE_VALIDATION_RESULTS.json",
-        "projects/lab/evidence/EVD-LAB-ROADMAP-CANONICAL-REFERENCE-BEHAVIOR-CORE-176.json",
-        "registry/deltas/roadmap-canonical-reference-behavior-core-176.json",
-        "registry/deltas/pend-lab-047-exact-canonical-aggregate-reconciliation-177.json",
-        "projects/lab/authorizations/AUTHORIZATION_LAB_STATISTICS_COUNTER_EXPERIMENT_SOURCE_ADOPTION_HUMAN_REVIEW_AND_CONDITIONAL_CLOSURE_178.json",
-        "projects/lab/evidence/EVD-LAB-STATISTICS-COUNTER-SOURCE-PACKAGE-178.json",
-        "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/SOURCE_PACKAGE_MANIFEST.json",
-        "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/CANONICAL_REFERENCE.json",
-        "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/behavior-core/BEHAVIOR_CORE_CONTRACT.json",
-        "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/behavior-core/BEHAVIOR_CORE_VALIDATION_RESULTS.json",
-        "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/FUTURE_CONSUMPTION_CONTRACT.json",
-        "registry/deltas/statistics-counter-source-package-adoption-178.json"
-      ],
+      "source_refs": ["projects/lab/pending/PEND-LAB-047.json", "projects/lab/authorizations/AUTHORIZATION_LAB_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_AND_CLOSURE_177.json", "projects/lab/evidence/EVD-LAB-PEND-047-EXACT-CANONICAL-AGGREGATE-RECONCILIATION-177.json", "foundation-library/motion-system/MOTION-SYSTEM-001/MANIFEST.json", "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/CANONICAL_REFERENCE.json", "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/BEHAVIOR_CORE_CONTRACT.json", "foundation-library/motion-system/MOTION-SYSTEM-001/effects/progress/ROADMAP-VERTICAL-PROGRESS-001/behavior-core/BEHAVIOR_CORE_VALIDATION_RESULTS.json", "projects/lab/evidence/EVD-LAB-ROADMAP-CANONICAL-REFERENCE-BEHAVIOR-CORE-176.json", "registry/deltas/roadmap-canonical-reference-behavior-core-176.json", "registry/deltas/pend-lab-047-exact-canonical-aggregate-reconciliation-177.json", "projects/lab/authorizations/AUTHORIZATION_LAB_STATISTICS_COUNTER_EXPERIMENT_SOURCE_ADOPTION_HUMAN_REVIEW_AND_CONDITIONAL_CLOSURE_178.json", "projects/lab/evidence/EVD-LAB-STATISTICS-COUNTER-SOURCE-PACKAGE-178.json", "foundation-library/motion-system/MOTION-SYSTEM-001/source-packages/CAROLINA-STATISTICS-MOTION-EXPERIMENT-001/SOURCE_PACKAGE_MANIFEST.json", "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/CANONICAL_REFERENCE.json", "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/behavior-core/BEHAVIOR_CORE_CONTRACT.json", "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/behavior-core/BEHAVIOR_CORE_VALIDATION_RESULTS.json", "foundation-library/motion-system/MOTION-SYSTEM-001/effects/data/STATISTICS-COUNTER-STATIC-SUFFIX-001/FUTURE_CONSUMPTION_CONTRACT.json", "registry/deltas/statistics-counter-source-package-adoption-178.json"],
       "authority_effect": "NONE",
       "runtime_effect": "NONE",
       "integration_effect": "NONE",
@@ -951,22 +724,9 @@
       "priority": "CRITICAL",
       "program_ref": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/MANIFEST.json",
       "roadmap_ref": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/ROADMAP.json",
-      "priority_integrations": [
-        "INT-LAB-004",
-        "INT-LAB-005"
-      ],
-      "completion": {
-        "authorization": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_1_FACTORY_CONTRACT_COMPLETION_170_REVISION_2",
-        "result": "PASS_BOTH_CONTRACT_COMPLETE_FACTORY_VALID_TESTS_NOT_AUTHORIZED",
-        "evidence": "projects/lab/evidence/EVD-LAB-PRIORITY-INTEGRATIONS-PHASE-1-170.json"
-      },
-      "prohibitions_preserved": [
-        "NO_TEST_EXECUTION",
-        "NO_EXTERNAL_AUDIT_EXECUTION",
-        "NO_AWS_OR_TERRAFORM",
-        "NO_POINTER_SELECTOR_OR_CANDIDATE_REGISTRY_MUTATION",
-        "NO_PROMOTION_ACTIVATION_OR_PRODUCT_CHANGE"
-      ],
+      "priority_integrations": ["INT-LAB-004", "INT-LAB-005"],
+      "completion": {"authorization":"AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_1_FACTORY_CONTRACT_COMPLETION_170_REVISION_2","result":"PASS_BOTH_CONTRACT_COMPLETE_FACTORY_VALID_TESTS_NOT_AUTHORIZED","evidence":"projects/lab/evidence/EVD-LAB-PRIORITY-INTEGRATIONS-PHASE-1-170.json"},
+      "prohibitions_preserved": ["NO_TEST_EXECUTION", "NO_EXTERNAL_AUDIT_EXECUTION", "NO_AWS_OR_TERRAFORM", "NO_POINTER_SELECTOR_OR_CANDIDATE_REGISTRY_MUTATION", "NO_PROMOTION_ACTIVATION_OR_PRODUCT_CHANGE"],
       "successor_pending": "PEND-LAB-045",
       "authority_effect": "NONE",
       "runtime_effect": "NONE",
@@ -977,7 +737,7 @@
       "schema_version": "1.1.0",
       "id": "PEND-LAB-045",
       "project_id": "lab",
-      "status": "PARTIALLY_AUTHORIZED_SSE_TEST_NOT_STARTED_PRODUCT_LEADERSHIP_PREFLIGHT_BLOCKED",
+      "status": "PARTIALLY_BLOCKED_SSE_ATTEMPT_001_RECONCILED_RETRY_NOT_STARTED_PRODUCT_LEADERSHIP_PREFLIGHT_BLOCKED",
       "type": "PRIORITY_INTEGRATIONS_PHASE_2_INDEPENDENT_EVIDENCE_CLOSURE",
       "subject": "Produce reproducible independent evidence for Product Leadership and Software Solution Engineering after contract completion",
       "priority": "CRITICAL",
@@ -985,36 +745,14 @@
       "roadmap_ref": "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/ROADMAP.json",
       "precondition": "PHASE_1_FACTORY_CONTRACT_COMPLETION_PASS",
       "tracks": {
-        "PRODUCT_LEADERSHIP": {
-          "status": "BLOCKED_OPERATIONAL_PREFLIGHT_NO_ELIGIBLE_BOUNDED_CREATOR",
-          "execution_authority": "NONE",
-          "test_003_executed": false,
-          "required_actions": [
-            "RESOLVE_LEAST_PRIVILEGE_PREFLIGHT_PATH",
-            "COMPLETE_REQUIRED_OPERATIONAL_PREFLIGHT",
-            "SEPARATELY_AUTHORIZE_TEST_003_EXECUTION"
-          ],
-          "source_evidence": "projects/lab/evidence/EVD-LAB-PL003-EFFECTIVE-PERMISSION-GATE-OPERATOR-135-ATTEMPT-001.json"
-        },
-        "SOFTWARE_SOLUTION_ENGINEERING": {
-          "status": "SYNTHETIC_TEST_EXECUTION_AUTHORIZED_NOT_STARTED",
-          "execution_authority": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180",
-          "fixture_count": 32,
-          "arm_count": 3,
-          "minimum_output_count": 96,
-          "external_audit": "NOT_AUTHORIZED_REQUIRES_PHASE_3"
-        }
+        "PRODUCT_LEADERSHIP": {"status":"BLOCKED_OPERATIONAL_PREFLIGHT_NO_ELIGIBLE_BOUNDED_CREATOR","execution_authority":"NONE","test_003_executed":false,"required_actions":["RESOLVE_LEAST_PRIVILEGE_PREFLIGHT_PATH","COMPLETE_REQUIRED_OPERATIONAL_PREFLIGHT","SEPARATELY_AUTHORIZE_TEST_003_EXECUTION"],"source_evidence":"projects/lab/evidence/EVD-LAB-PL003-EFFECTIVE-PERMISSION-GATE-OPERATOR-135-ATTEMPT-001.json"},
+        "SOFTWARE_SOLUTION_ENGINEERING": {"status":"ATTEMPT_001_BLOCKED_MODEL_OR_TOOL_ACCESS_NOT_REPRODUCIBLE_RETRY_NOT_STARTED","execution_authority":"AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180","authorization_state":"GRANTED_STAGE_2_BLOCKED_RETRY_NOT_STARTED_AUTHORIZATION_UNCONSUMED","attempt":"ATTEMPT-001","execution_ref":"projects/lab/test-executions/SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-001/MANIFEST.json","evidence_ref":"projects/lab/evidence/EVD-LAB-SSE-TEST-EXECUTION-180-ATTEMPT-001.json","stop_condition":"MODEL_OR_TOOL_ACCESS_NOT_REPRODUCIBLE","fixture_count":32,"arm_count":3,"minimum_output_count":96,"outputs_generated":0,"freeze_started":false,"retry_started":false,"external_audit":"NOT_AUTHORIZED_REQUIRES_PHASE_3","blocking_prerequisite":"SEPARATE_EXPLICIT_RUNNER_RESOLUTION_AUTHORIZATION"}
       },
-      "current_authority": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180",
-      "prohibitions": [
-        "NO_PRODUCT_LEADERSHIP_TEST_OR_PREFLIGHT_EXECUTION",
-        "NO_EXTERNAL_AUDIT_EXECUTION",
-        "NO_ACTIVATION_OR_INTEGRATION",
-        "NO_POINTER_SELECTOR_OR_REGISTRY_ACTIVATION_MUTATION",
-        "NO_AWS_TERRAFORM_PRODUCT_OR_RUNTIME_CHANGE"
-      ],
-      "next_action": "CODEX_EXECUTE_SSE_SYNTHETIC_TEST_UNDER_AUTHORIZATION_180",
-      "authority_effect": "SSE_SYNTHETIC_TEST_EXECUTION_ONLY",
+      "current_authority": "AUTHORIZATION_180_ACTIVE_BUT_EXECUTION_BLOCKED_PENDING_SEPARATE_RUNNER_RESOLUTION",
+      "prohibitions": ["NO_PRODUCT_LEADERSHIP_TEST_OR_PREFLIGHT_EXECUTION", "NO_EXTERNAL_AUDIT_EXECUTION", "NO_TOOLING_UPDATE_OR_RUNNER_REPLACEMENT_WITHOUT_SEPARATE_AUTHORIZATION", "NO_PREFLIGHT_RETRY_BEFORE_RUNNER_RESOLUTION", "NO_ACTIVATION_OR_INTEGRATION", "NO_POINTER_SELECTOR_OR_REGISTRY_ACTIVATION_MUTATION", "NO_AWS_TERRAFORM_PRODUCT_OR_RUNTIME_CHANGE"],
+      "next_action": "SEPARATELY_AUTHORIZE_REPRODUCIBLE_GPT_5_6_SOL_RUNNER_RESOLUTION",
+      "next_authorized_action": "NONE_RETRY_BLOCKED_PENDING_SEPARATE_RUNNER_RESOLUTION_AUTHORIZATION",
+      "authority_effect": "AUTHORIZATION_180_UNCONSUMED_BUT_BLOCKED",
       "runtime_effect": "NONE",
       "product_effect": "NONE",
       "integration_effect": "NONE"
@@ -1054,39 +792,12 @@
       "blocking": false,
       "closed_at": "2026-08-02T20:27:00-04:00",
       "closed_by_authorization": "AUTHORIZATION_LAB_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_AND_CLOSURE_177",
-      "reconciled_paths": [
-        "CURRENT_STATE.json",
-        "projects/lab/PENDING.json",
-        "registry/index.json"
-      ],
-      "closure_result": {
-        "json_parse": "PASS",
-        "duplicate_pending_ids": "ZERO",
-        "duplicate_index_paths": "ZERO",
-        "material_contradictions_173_through_177": "ZERO",
-        "err_lab_011_open_entry": "REMOVED",
-        "pend_lab_046": "CLOSED_BY_APPROVED_SOURCE_FIDELITY",
-        "candidate_002": "HUMAN_APPROVED_SOURCE_FIDELITY_CANONICAL_REFERENCE_DESIGNATED",
-        "authorization_176": "PRESERVED_HISTORICAL_BLOCKED_CONSUMED_RESULT",
-        "authorization_177": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-        "protected_technical_diff": "ZERO",
-        "unrelated_semantic_diff": "ZERO"
-      },
-      "technical_results_preserved": [
-        "CANONICAL_REFERENCE_IMPLEMENTATION_DESIGNATED",
-        "BEHAVIOR_CORE_EXTRACTED",
-        "CONTROLLED_EXACT_BYTES_BROWSER_VALIDATION_PASS"
-      ],
+      "reconciled_paths": ["CURRENT_STATE.json", "projects/lab/PENDING.json", "registry/index.json"],
+      "closure_result": {"json_parse":"PASS","duplicate_pending_ids":"ZERO","duplicate_index_paths":"ZERO","material_contradictions_173_through_177":"ZERO","err_lab_011_open_entry":"REMOVED","pend_lab_046":"CLOSED_BY_APPROVED_SOURCE_FIDELITY","candidate_002":"HUMAN_APPROVED_SOURCE_FIDELITY_CANONICAL_REFERENCE_DESIGNATED","authorization_176":"PRESERVED_HISTORICAL_BLOCKED_CONSUMED_RESULT","authorization_177":"CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION","protected_technical_diff":"ZERO","unrelated_semantic_diff":"ZERO"},
+      "technical_results_preserved": ["CANONICAL_REFERENCE_IMPLEMENTATION_DESIGNATED", "BEHAVIOR_CORE_EXTRACTED", "CONTROLLED_EXACT_BYTES_BROWSER_VALIDATION_PASS"],
       "next_gate": "HUMAN_REVIEW_STATISTICS_COUNTER_STATIC_SUFFIX_001",
       "current_authority": "NONE_AFTER_AUTHORIZATION_177_CONSUMPTION",
-      "source_refs": [
-        "projects/lab/authorizations/AUTHORIZATION_LAB_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_AND_CLOSURE_177.json",
-        "projects/lab/briefs/CODEX_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_177_001.json",
-        "projects/lab/evidence/EVD-LAB-PEND-047-EXACT-CANONICAL-AGGREGATE-RECONCILIATION-177.json",
-        "registry/deltas/pend-lab-047-exact-canonical-aggregate-reconciliation-177.json",
-        "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176.json",
-        "projects/lab/evidence/EVD-LAB-ROADMAP-CANONICAL-REFERENCE-BEHAVIOR-CORE-176.json"
-      ],
+      "source_refs": ["projects/lab/authorizations/AUTHORIZATION_LAB_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_AND_CLOSURE_177.json", "projects/lab/briefs/CODEX_PEND_047_EXACT_CANONICAL_AGGREGATE_RECONCILIATION_177_001.json", "projects/lab/evidence/EVD-LAB-PEND-047-EXACT-CANONICAL-AGGREGATE-RECONCILIATION-177.json", "registry/deltas/pend-lab-047-exact-canonical-aggregate-reconciliation-177.json", "projects/lab/authorizations/AUTHORIZATION_LAB_ROADMAP_CANONICAL_REFERENCE_AND_BEHAVIOR_CORE_EXTRACTION_176.json", "projects/lab/evidence/EVD-LAB-ROADMAP-CANONICAL-REFERENCE-BEHAVIOR-CORE-176.json"],
       "runtime_effect": "NONE",
       "integration_effect": "NONE",
       "product_effect": "NONE"
@@ -1094,27 +805,21 @@
     {
       "schema_version": "1.1.0",
       "id": "PEND-LAB-027",
-      "status": "SUPERSEDED_BY_PHASE_SEPARATION_AND_AUTHORIZATION_180",
+      "status": "SUPERSEDED_BY_PHASE_SEPARATION_AND_AUTHORIZATION_180_ATTEMPT_001_BLOCKED",
       "type": "SOFTWARE_SOLUTION_ENGINEERING_DISCRIMINATING_TEST_EXECUTION_AND_EXTERNAL_AUDIT",
       "subject": "Execute and independently audit the Software Solution Engineering activation and value discrimination test design",
       "priority": "HIGH",
       "authorization_required": true,
-      "current_authority": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180",
+      "current_authority": "AUTHORIZATION_180_ACTIVE_BUT_EXECUTION_BLOCKED_PENDING_SEPARATE_RUNNER_RESOLUTION",
       "automatic_approval": false,
-      "preserves_pending": [
-        "PEND-LAB-026"
-      ],
-      "next_authorized_action": "CODEX_EXECUTE_SSE_SYNTHETIC_TEST_UNDER_AUTHORIZATION_180",
-      "source_refs": [
-        "foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/MANIFEST.json",
-        "projects/lab/test-designs/SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json",
-        "projects/lab/authorizations/AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180.json",
-        "projects/lab/evidence/EVD-LAB-PRIORITY-INTEGRATIONS-PHASE-2-SSE-AUTHORITY-180.json"
-      ],
-      "test_execution": "AUTHORIZED_NOT_STARTED",
+      "preserves_pending": ["PEND-LAB-026"],
+      "next_authorized_action": "NONE_RETRY_BLOCKED_PENDING_SEPARATE_RUNNER_RESOLUTION_AUTHORIZATION",
+      "source_refs": ["foundation-library/software-solution-engineering/SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001/MANIFEST.json", "projects/lab/test-designs/SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json", "projects/lab/authorizations/AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180.json", "projects/lab/test-executions/SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-001/MANIFEST.json", "projects/lab/evidence/EVD-LAB-SSE-TEST-EXECUTION-180-ATTEMPT-001.json"],
+      "test_execution": "ATTEMPT_001_BLOCKED_MODEL_OR_TOOL_ACCESS_NOT_REPRODUCIBLE",
       "external_audit": "NOT_AUTHORIZED_REQUIRES_SEPARATE_PHASE_3_AUTHORIZATION",
       "superseded_combined_scope": "TEST_EXECUTION_AND_EXTERNAL_AUDIT",
-      "successor_authorization": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180"
+      "successor_authorization": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180",
+      "authorization_state": "GRANTED_STAGE_2_BLOCKED_RETRY_NOT_STARTED_AUTHORIZATION_UNCONSUMED"
     }
   ]
 }

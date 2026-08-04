@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-001",
+  "test_design_id": "SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001",
+  "authorization_ref": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180",
+  "brief_ref": "projects/lab/briefs/CODEX_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180_001.json",
+  "status": "BLOCKED",
+  "overall_result": "BLOCKED",
+  "recorded_at": "2026-08-03T22:27:02.4033425-04:00",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "initial_remote_head": "85f216f0d6eae8280e51c80aecbb077ce096eb55",
+  "authorization_publication_commit": "85f216f0d6eae8280e51c80aecbb077ce096eb55",
+  "authorization_commit_in_initial_head_ancestry": true,
+  "execution_branch": "codex/sse-synthetic-test-execution-180-001",
+  "stopped_phase": "PREFLIGHT",
+  "matched_stop_condition": "MODEL_OR_TOOL_ACCESS_NOT_REPRODUCIBLE",
+  "blocking_condition": {
+    "summary": "The configured model could not be invoked reproducibly by the available Codex runner, and no authorized compatible fallback runner was available.",
+    "configured_model": "gpt-5.6-sol",
+    "primary_runner": {
+      "tool": "Codex CLI",
+      "version": "0.139.0",
+      "mode": "EPHEMERAL_READ_ONLY_JSONL",
+      "access_result": "FAIL",
+      "error_status": 400,
+      "error_type": "invalid_request_error",
+      "error_message": "The 'gpt-5.6-sol' model requires a newer version of Codex. Please upgrade to the latest app or CLI and try again.",
+      "model_output_generated": false,
+      "usage_telemetry_returned": false
+    },
+    "alternate_runner_check": {
+      "tool": "Codex desktop bundled executable",
+      "version": "NOT_OBTAINED",
+      "access_result": "FAIL",
+      "error_message": "Access denied while starting the bundled executable.",
+      "model_output_generated": false
+    },
+    "api_key_presence": {
+      "OPENAI_API_KEY": false,
+      "ANTHROPIC_API_KEY": false,
+      "AZURE_OPENAI_API_KEY": false
+    },
+    "silent_model_substitution_performed": false,
+    "tool_upgrade_performed": false
+  },
+  "preflight": {
+    "remote_head_verified": "PASS",
+    "authorization_ancestry": "PASS",
+    "clean_controlled_worktree_before_branch_creation": "PASS",
+    "isolated_branch_created_from_verified_head": "PASS",
+    "canonical_inputs_exist": "PASS",
+    "canonical_inputs_parse_as_json": "PASS",
+    "fixture_contract": "PASS",
+    "model_and_tool_access": "FAIL",
+    "preflight_result": "BLOCKED"
+  },
+  "frozen_contract": {
+    "base_fixture_count": 20,
+    "governance_fixture_count": 12,
+    "fixture_count": 32,
+    "arm_count": 3,
+    "minimum_output_count": 96,
+    "hash_algorithm": "SHA-256"
+  },
+  "input_freeze": {
+    "status": "NOT_STARTED_STOP_CONDITION_TRIGGERED_IN_PREFLIGHT",
+    "hashes_published": 0,
+    "post_freeze_mutations": 0
+  },
+  "calibration": {
+    "status": "NOT_RUN",
+    "reason": "Generation and calibration were prohibited after the preflight stop condition."
+  },
+  "assignment_and_blinding": {
+    "status": "NOT_RUN",
+    "cross_arm_leakage_events": 0,
+    "reason": "No run assignments or scorer payloads were created."
+  },
+  "execution_counts": {
+    "fixtures_planned": 32,
+    "arms_planned": 3,
+    "outputs_planned_minimum": 96,
+    "outputs_generated": 0,
+    "outputs_frozen": 0,
+    "outputs_scored": 0
+  },
+  "generation_telemetry": {
+    "input_tokens": "NOT_MEASURED_NO_TEST_GENERATION",
+    "output_tokens": "NOT_MEASURED_NO_TEST_GENERATION",
+    "cost": "NOT_MEASURED_NO_TEST_GENERATION",
+    "wall_clock_duration": "NOT_MEASURED_NO_TEST_GENERATION",
+    "retry_count": 0,
+    "failed_preflight_model_access_attempts": 1,
+    "preflight_model_access_attempt_duration_seconds": 13.9
+  },
+  "scoring": {
+    "status": "NOT_RUN",
+    "aggregates": "NOT_AVAILABLE",
+    "negative_transfer": "NOT_MEASURED",
+    "architecture_overprocessing": "NOT_MEASURED",
+    "technical_bias": "NOT_MEASURED"
+  },
+  "gates": {
+    "SSE-GATE-CALIBRATION": "BLOCKED",
+    "SSE-GATE-SAFETY": "NOT_RUN",
+    "SSE-GATE-ACTIVATION": "NOT_RUN",
+    "SSE-GATE-PROPORTIONALITY": "NOT_RUN",
+    "SSE-GATE-GOVERNANCE": "NOT_RUN",
+    "SSE-GATE-NEGATIVE-TRANSFER": "NOT_RUN",
+    "SSE-GATE-VALUE": "NOT_RUN",
+    "SSE-GATE-AUDIT": "NOT_RUN_NOT_AUTHORIZED"
+  },
+  "publication_scope": {
+    "blocked_report_only": true,
+    "complete_execution_package_published": false,
+    "authorization_180_consumed": false,
+    "maximum_permitted_result_reached": false
+  },
+  "prohibited_effects": {
+    "external_audits": 0,
+    "aws_calls": 0,
+    "terraform_actions": 0,
+    "sse_activations": 0,
+    "sse_integrations": 0,
+    "product_changes": 0,
+    "runtime_changes": 0,
+    "pointer_changes": 0,
+    "selector_changes": 0,
+    "shadow_registry_changes": 0
+  },
+  "claims_allowed": [
+    "PREFLIGHT_REPRODUCIBLY_REACHED_A_PREDECLARED_STOP_CONDITION",
+    "NO_SYNTHETIC_TEST_OUTPUTS_WERE_GENERATED",
+    "AUTHORIZATION_180_REMAINS_UNCONSUMED"
+  ],
+  "claims_prohibited": [
+    "SSE_SYNTHETIC_TEST_PASSED",
+    "SSE_SYNTHETIC_TEST_FAILED",
+    "SSE_ADDS_OR_DOES_NOT_ADD_INCREMENTAL_VALUE",
+    "SSE_IS_AUDITED_APPROVED_ACTIVE_INTEGRATED_OR_PROMOTED"
+  ],
+  "divergences": [
+    "The six-file execution package was not created because the predeclared stop condition triggered before input freeze.",
+    "Input hashes, output hashes, scorer calibration, blinded scoring, cost analysis and negative-transfer analysis are unavailable because continuing would violate fail-closed requirements."
+  ],
+  "single_next_action": "Provide an approved reproducible Codex runner compatible with the configured gpt-5.6-sol model, then rerun the Phase A preflight under the still-unconsumed authorization 180."
+}
