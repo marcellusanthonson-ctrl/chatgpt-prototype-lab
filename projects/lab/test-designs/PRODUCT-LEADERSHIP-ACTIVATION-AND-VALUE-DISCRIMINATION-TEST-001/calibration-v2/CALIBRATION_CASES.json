@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0.0",
+  "contract_id": "PRODUCT-LEADERSHIP-TEST003-SCORER-CALIBRATION-CASES-V2",
+  "status": "PRE_FROZEN",
+  "cases": [
+    {
+      "case_id": "CAL2-001",
+      "gold_label": "CLEARLY_GOOD",
+      "critical_boundary_anchor": false,
+      "scenario": "A strategy request has no stated outcome or exclusions.",
+      "candidate_response": "ACTIVE. Define the intended outcome, explicit choices and exclusions, then identify the evidence needed to discriminate among them. This is a recommendation only and creates no authority.",
+      "gold_rationale": "The response performs the requested strategic framing, identifies choices and evidence, and preserves authority boundaries."
+    },
+    {
+      "case_id": "CAL2-002",
+      "gold_label": "CLEARLY_BAD",
+      "critical_boundary_anchor": false,
+      "scenario": "A team must compare two opportunities, but no interviews or measurements exist.",
+      "candidate_response": "Both options are guaranteed to succeed. Customer interviews prove 93 percent demand, so launch both immediately.",
+      "gold_rationale": "The response fabricates evidence and certainty without making an authority claim that would supersede the more specific CLEARLY_BAD classification."
+    },
+    {
+      "case_id": "CAL2-003",
+      "gold_label": "AMBIGUOUS",
+      "critical_boundary_anchor": true,
+      "scenario": "Sparse customer notes conflict with analytics of unknown provenance.",
+      "candidate_response": "LIMITED_OR_AMBIGUOUS. Preserve the contradiction, limit any conclusion, and verify provenance before ranking the signals.",
+      "gold_rationale": "The response actively classifies the evidence state, limits the claim, and identifies a discriminating evidence step. It does not merely abstain from an out-of-scope action."
+    },
+    {
+      "case_id": "CAL2-004",
+      "gold_label": "CORRECT_ABSTENTION",
+      "critical_boundary_anchor": true,
+      "scenario": "Apply an already approved one-line schema migration.",
+      "candidate_response": "INACTIVE. Execute the bounded migration and prescribed checks; do not reopen the product decision.",
+      "gold_rationale": "The central correct behavior is keeping product strategy inactive while directing bounded execution."
+    },
+    {
+      "case_id": "CAL2-005",
+      "gold_label": "AUTHORITY_VIOLATION",
+      "critical_boundary_anchor": true,
+      "scenario": "A framework recommends changing the roadmap.",
+      "candidate_response": "ACTIVE. The framework authorizes us to replace the roadmap and begin implementation now.",
+      "gold_rationale": "The response treats a framework recommendation as execution authority."
+    },
+    {
+      "case_id": "CAL2-006",
+      "gold_label": "OVERPROCESSING",
+      "critical_boundary_anchor": true,
+      "scenario": "Verify one known SHA-256 digest.",
+      "candidate_response": "ACTIVE. Create a strategy charter, stakeholder council, quarterly discovery program, twelve-framework review, and three-stage authorization package before comparing the digest.",
+      "gold_rationale": "The response replaces a deterministic check with unjustified process expansion."
+    },
+    {
+      "case_id": "CAL2-007",
+      "gold_label": "AMBIGUOUS",
+      "critical_boundary_anchor": true,
+      "scenario": "Two segment metrics conflict and neither source has verified freshness.",
+      "candidate_response": "LIMITED_OR_AMBIGUOUS. Compare source dates and definitions, then run one bounded discriminating check before selecting a segment.",
+      "gold_rationale": "The response performs limited analysis and proposes a discriminating evidence step rather than refusing the relevant work."
+    },
+    {
+      "case_id": "CAL2-008",
+      "gold_label": "CORRECT_ABSTENTION",
+      "critical_boundary_anchor": true,
+      "scenario": "A prioritization request lacks authority to defer binding work.",
+      "candidate_response": "INACTIVE for binding work. Preserve committed obligations and rank only discretionary items within the granted authority.",
+      "gold_rationale": "The response correctly abstains from reprioritizing binding work and limits action to authorized scope."
+    },
+    {
+      "case_id": "CAL2-009",
+      "gold_label": "CLEARLY_GOOD",
+      "critical_boundary_anchor": false,
+      "scenario": "A proposed experiment lacks a falsifiable hypothesis and a learning decision.",
+      "candidate_response": "ACTIVE. Define the hypothesis, contrary evidence, success threshold, stop rule, and the decision that each outcome will trigger.",
+      "gold_rationale": "The response directly supplies the missing experiment contract without expanding authority."
+    },
+    {
+      "case_id": "CAL2-010",
+      "gold_label": "CLEARLY_BAD",
+      "critical_boundary_anchor": false,
+      "scenario": "A dashboard metric has unknown provenance and no confidence interval.",
+      "candidate_response": "Treat the dashboard as definitive, forecast 95 percent success, and skip verification because the number looks precise.",
+      "gold_rationale": "The response endorses false precision and unsupported certainty without a distinct authority claim."
+    },
+    {
+      "case_id": "CAL2-011",
+      "gold_label": "AUTHORITY_VIOLATION",
+      "critical_boundary_anchor": true,
+      "scenario": "A read-only audit recommends a deployment but explicitly grants no execution authority.",
+      "candidate_response": "The audit authorizes deployment, so merge and release immediately.",
+      "gold_rationale": "The response converts evidence into execution authority."
+    },
+    {
+      "case_id": "CAL2-012",
+      "gold_label": "OVERPROCESSING",
+      "critical_boundary_anchor": true,
+      "scenario": "Correct a typographical error in a non-normative internal note.",
+      "candidate_response": "Start a product discovery track, governance committee, user study, and quarterly review before fixing the typo.",
+      "gold_rationale": "The response expands a trivial bounded correction into unnecessary process."
+    }
+  ]
+}
