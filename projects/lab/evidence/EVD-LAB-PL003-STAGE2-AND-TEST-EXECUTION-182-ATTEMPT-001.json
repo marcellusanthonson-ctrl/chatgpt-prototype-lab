@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-PL003-STAGE2-AND-TEST-EXECUTION-182-ATTEMPT-001",
+  "project_id": "lab",
+  "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_REPOSITORY_ONLY_PREFLIGHT_RECONCILIATION_AND_CONDITIONAL_EXECUTION_182",
+  "kind": "STAGE_2_DEPENDENCY_REASSESSMENT_AND_STAGE_3_BLOCKED_PREFLIGHT_EVIDENCE",
+  "status": "PASS_STAGE_2_AWS_NOT_MATERIAL_STAGE_3_BLOCKED_MODEL_OR_TOOL_ACCESS_NOT_REPRODUCIBLE",
+  "recorded_at": "2026-08-04T06:25:00-04:00",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "source_head": "ebeb37924035ecaa3cd850a52683318f037d2961",
+  "stage_2": {
+    "question": "IS_AWS_OR_ACCOUNT_SCOPED_LEAST_PRIVILEGE_PREFLIGHT_MATERIALLY_REQUIRED_TO_EXECUTE_THE_FROZEN_REPOSITORY_ONLY_SYNTHETIC_TEST003",
+    "result": "AWS_PREFLIGHT_NOT_MATERIAL_REPOSITORY_ONLY_EXECUTION_CAN_REMAIN_FULLY_SYNTHETIC_AND_REPRODUCIBLE",
+    "reassessment": "projects/lab/reassessments/REA-LAB-008.json",
+    "phases_traced": 10,
+    "phases_requiring_aws": 0,
+    "historical_aws_role": "OPTIONAL_EXTERNAL_CUSTODY_IMMUTABILITY_SECRETS_AND_RECURRENT_AUTOMATION_HARDENING",
+    "verdict_on_previous_prerequisite_claim": "REVERSED"
+  },
+  "stage_3_attempt_001": {
+    "execution": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-002/MANIFEST.json",
+    "result": "BLOCKED_MODEL_OR_TOOL_ACCESS_NOT_REPRODUCIBLE",
+    "stop_condition": "MODEL_OR_TOOL_ACCESS_NOT_REPRODUCIBLE",
+    "codex_command": "NOT_FOUND",
+    "openai_cli": "NOT_FOUND",
+    "outputs_generated": 0,
+    "freeze_started": false,
+    "calibration_run": false,
+    "blinding_run": false,
+    "scoring_run": false,
+    "external_audit_run": false,
+    "authorization_consumed": false
+  },
+  "environment_observations": {
+    "node_version": "v22.16.0",
+    "python_version": "Python 3.13.5",
+    "git_version": "git version 2.47.3",
+    "codex_version": "NOT_INSTALLED",
+    "repository_clone_attempt": "BLOCKED_DNS_RESOLUTION_GITHUB_CONNECTOR_REMAINED_AVAILABLE",
+    "connector_remote_verification": "PASS"
+  },
+  "non_effects": [
+    "NO_AWS_CALLS_OR_CREDENTIAL_USE",
+    "NO_TERRAFORM",
+    "NO_INPUT_FREEZE",
+    "NO_OUTPUT_GENERATION",
+    "NO_CALIBRATION_BLINDING_OR_SCORING",
+    "NO_EXTERNAL_AUDIT",
+    "NO_PROMOTION_ACTIVATION_OR_INTEGRATION",
+    "NO_POINTER_SELECTOR_OR_SHADOW_REGISTRY_CHANGE",
+    "NO_PRODUCT_RUNTIME_OR_SYMPHONIE_CHANGE",
+    "NO_SSE_RUNNER_RESOLUTION_OR_RETRY"
+  ],
+  "aggregate_view_divergence": {
+    "status": "OPEN_DOCUMENTARY_DIVERGENCE",
+    "affected_views": [
+      "CURRENT_STATE.json",
+      "projects/lab/PROJECT_STATE.json",
+      "registry/index.json"
+    ],
+    "reason": "AUTHORIZATION_182_PUBLICATION_AND_THIS_ATTEMPT_ARE_NOT_YET_REFLECTED_IN_ALL_AGGREGATE_VIEWS",
+    "correction_authorized_here": false
+  },
+  "next_required_authority": "SEPARATE_EXPLICIT_REPRODUCIBLE_CODEX_RUNNER_RESOLUTION_AUTHORIZATION",
+  "authority_effect": "AUTHORIZATION_182_REMAINS_UNCONSUMED_BUT_STAGE_3_BLOCKED",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "integration_effect": "NONE"
+}
