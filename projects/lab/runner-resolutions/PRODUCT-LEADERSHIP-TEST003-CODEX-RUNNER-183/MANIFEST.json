@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0.0",
+  "runner_resolution_id": "PRODUCT-LEADERSHIP-TEST003-CODEX-RUNNER-183",
+  "project_id": "lab",
+  "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_REPRODUCIBLE_CODEX_RUNNER_RESOLUTION_183",
+  "source_authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_REPOSITORY_ONLY_PREFLIGHT_RECONCILIATION_AND_CONDITIONAL_EXECUTION_182",
+  "attempt": "ATTEMPT-001",
+  "status": "BLOCKED_EPHEMERAL_INSTALLATION_NETWORK_UNAVAILABLE_PREAUTHORIZED_AUTHENTICATION_NOT_AVAILABLE",
+  "executed_at": "2026-08-04T07:14:00-04:00",
+  "execution_parent_head": "ff4148cd2d74a3c6da8fd7db07ae108971023b62",
+  "working_branch": "agent/product-leadership-test003-runner-resolution-183-attempt-001",
+  "environment": {
+    "os": "Linux",
+    "architecture": "x86_64",
+    "node": "v22.16.0",
+    "npm": "10.9.2",
+    "git": "2.47.3",
+    "initial_codex_command_available": false,
+    "initial_openai_cli_available": false,
+    "outbound_dns_resolution": "UNAVAILABLE",
+    "outbound_direct_https": "UNAVAILABLE",
+    "npm_codex_cache_available": false
+  },
+  "official_release_resolution": {
+    "result": "PASS",
+    "channel": "LATEST_STABLE",
+    "resolved_version": "0.146.0",
+    "minimum_required_version": "0.146.0",
+    "prerelease": false,
+    "official_release_metadata": "https://releases.openai.com/codex/channels/latest",
+    "official_exact_release_metadata": "https://releases.openai.com/codex/releases/0.146.0/release.json",
+    "platform_asset": "codex-package-x86_64-unknown-linux-musl.tar.gz",
+    "platform_asset_url": "https://releases.openai.com/codex/releases/0.146.0/codex-package-x86_64-unknown-linux-musl.tar.gz",
+    "expected_sha256": "3c89125af1d7c98abec8beb551292ef99daca52e204e5852a9139feae2c467e5",
+    "checksum_manifest": "codex-package_SHA256SUMS",
+    "checksum_manifest_url": "https://releases.openai.com/codex/releases/0.146.0/codex-package_SHA256SUMS",
+    "checksum_manifest_sha256": "e6b6a3f937c9cab532f25cca6d81529b44f122f028182b9715038bf15f94b105",
+    "metadata_and_checksum_consistent": true
+  },
+  "asset_transfer": {
+    "result": "BLOCKED",
+    "download_started": false,
+    "archive_created": false,
+    "archive_sha256_verified": false,
+    "reason": "EXECUTION_ENVIRONMENT_HAS_NO_OUTBOUND_NETWORK_PATH_AND_THE_CONTROLLED_DOWNLOAD_SURFACE_COULD_NOT_TRANSFER_THE_BINARY_ASSET",
+    "official_asset_metadata_available": true,
+    "integrity_metadata_available": true
+  },
+  "ephemeral_installation": {
+    "result": "NOT_STARTED_BLOCKED_BY_ASSET_TRANSFER",
+    "target_directory": "/tmp/lab-codex-runner-183",
+    "global_installation_attempted": false,
+    "host_configuration_modified": false,
+    "codex_version_verified": false
+  },
+  "authentication_preflight": {
+    "result": "BLOCKED_PREAUTHORIZED_AUTHENTICATION_NOT_AVAILABLE",
+    "openai_api_key_environment_present": false,
+    "codex_auth_file_present": false,
+    "secret_values_read": false,
+    "secret_values_logged": false,
+    "interactive_login_attempted": false,
+    "new_credentials_created": false
+  },
+  "model_and_smoke_preflight": {
+    "required_model": "gpt-5.6-sol",
+    "model_availability_verified": false,
+    "model_substitution_attempted": false,
+    "smoke_requests_executed": 0,
+    "result": "NOT_STARTED"
+  },
+  "test003_retry": {
+    "started": false,
+    "input_freeze_started": false,
+    "outputs_generated": 0,
+    "calibration_run": false,
+    "blinding_run": false,
+    "scoring_run": false,
+    "reason": "RUNNER_PREFLIGHT_DID_NOT_PASS"
+  },
+  "stop_conditions_triggered": [
+    "EPHEMERAL_INSTALLATION_FAILS",
+    "PREAUTHORIZED_AUTHENTICATION_NOT_AVAILABLE"
+  ],
+  "claims_supported": [
+    "LATEST_STABLE_OFFICIAL_CODEX_RELEASE_0_146_0_AND_PLATFORM_CHECKSUM_WERE_RESOLVED",
+    "THE_EXECUTION_ENVIRONMENT_CANNOT_TRANSFER_THE_OFFICIAL_BINARY_ASSET",
+    "NO_PREAUTHORIZED_CODEX_OR_OPENAI_API_AUTHENTICATION_IS_AVAILABLE",
+    "NO_MODEL_REQUEST_OR_TEST003_RETRY_OCCURRED"
+  ],
+  "claims_not_supported": [
+    "CODEX_0_146_0_WAS_INSTALLED_OR_EXECUTED",
+    "GPT_5_6_SOL_IS_AVAILABLE_OR_UNAVAILABLE_THROUGH_CODEX_0_146_0",
+    "PRODUCT_LEADERSHIP_TEST003_PASSED_OR_FAILED",
+    "PRODUCT_LEADERSHIP_IS_ACTIVE_OR_INTEGRATED"
+  ],
+  "authorization_183_consumption": "CONSUME_ON_VERIFIED_REMOTE_PUBLICATION_OF_THIS_REPRODUCIBLE_BLOCK",
+  "authorization_182_state": "UNCONSUMED_RETRY_NOT_STARTED",
+  "external_audit": "NOT_RUN_NOT_AUTHORIZED",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "integration_effect": "NONE"
+}
