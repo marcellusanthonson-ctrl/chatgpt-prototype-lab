@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.5.0",
+  "schema_version": "1.6.0",
   "package_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001",
-  "status": "STAGE_2_PASS_STAGE_3_RUNNER_RESOLUTION_183_AUTHORIZED_NOT_STARTED",
+  "status": "STAGE_2_PASS_STAGE_3_RUNNER_RESOLUTION_183_BLOCKED_RETRY_NOT_STARTED",
   "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_REPOSITORY_ONLY_PREFLIGHT_RECONCILIATION_AND_CONDITIONAL_EXECUTION_182",
   "runner_resolution_authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_REPRODUCIBLE_CODEX_RUNNER_RESOLUTION_183",
   "source_package": "PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001",
@@ -35,15 +35,19 @@
   },
   "runner_resolution_gate": {
     "authorization": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_REPRODUCIBLE_CODEX_RUNNER_RESOLUTION_183",
-    "brief": "projects/lab/briefs/CODEX_PRODUCT_LEADERSHIP_TEST003_REPRODUCIBLE_RUNNER_RESOLUTION_183_001.json",
-    "status": "AUTHORIZED_NOT_STARTED",
-    "runner": "LATEST_STABLE_OFFICIAL_OPENAI_CODEX_CLI",
-    "minimum_version": "0.146.0",
-    "installation_scope": "EPHEMERAL_ONLY",
-    "required_model": "gpt-5.6-sol",
-    "new_credentials_allowed": false,
-    "smoke_request_limit": 1,
-    "retry_effect": "ONLY_AFTER_RUNNER_PREFLIGHT_PASS_UNDER_AUTHORIZATION_182"
+    "status": "CONSUMED_BLOCKED",
+    "attempt": "ATTEMPT-001",
+    "runner_resolution_ref": "projects/lab/runner-resolutions/PRODUCT-LEADERSHIP-TEST003-CODEX-RUNNER-183/MANIFEST.json",
+    "evidence_ref": "projects/lab/evidence/EVD-LAB-PL003-CODEX-RUNNER-RESOLUTION-183.json",
+    "resolved_stable_version": "0.146.0",
+    "platform_asset_sha256": "3c89125af1d7c98abec8beb551292ef99daca52e204e5852a9139feae2c467e5",
+    "official_metadata_and_checksum": "PASS",
+    "asset_transfer": "BLOCKED_NETWORK_UNAVAILABLE",
+    "ephemeral_installation": "NOT_STARTED",
+    "preauthorized_authentication": "NOT_AVAILABLE",
+    "model_availability": "NOT_VERIFIED",
+    "smoke_requests": 0,
+    "retry_effect": "NOT_STARTED"
   },
   "latest_execution": {
     "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-002",
@@ -66,7 +70,7 @@
   "implementation_approved": false,
   "product_effect": "NONE",
   "runtime_effect": "NONE",
-  "governance_authority_effect": "AUTHORIZATION_183_RUNNER_RESOLUTION_AND_CONDITIONAL_AUTHORIZATION_182_RETRY_ONLY",
-  "next_action": "EXECUTE_AUTHORIZATION_183",
-  "execution_authority": "AUTHORIZATION_182_UNCONSUMED_TEST_EXECUTION_BLOCKED_PENDING_AUTHORIZATION_183_RUNNER_PREFLIGHT"
+  "governance_authority_effect": "AUTHORIZATION_183_CONSUMED_AUTHORIZATION_182_UNCONSUMED_RETRY_BLOCKED",
+  "next_action": "SEPARATELY_AUTHORIZE_CODEX_PRODUCT_LEADERSHIP_TEST003_NETWORKED_PREAUTHORIZED_EXECUTION_184",
+  "execution_authority": "AUTHORIZATION_182_UNCONSUMED_BUT_RETRY_NOT_AUTHORIZED_IN_CURRENT_ENVIRONMENT"
 }
