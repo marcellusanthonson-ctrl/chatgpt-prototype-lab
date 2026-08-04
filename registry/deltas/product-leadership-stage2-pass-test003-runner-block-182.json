@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "product-leadership-stage2-pass-test003-runner-block-182",
+  "project_id": "lab",
+  "updated_at": "2026-08-04",
+  "status": "PASS_STAGE2_AWS_PREFLIGHT_NOT_MATERIAL_STAGE3_ATTEMPT001_BLOCKED_RUNNER_AUTHORIZATION182_UNCONSUMED",
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_REPOSITORY_ONLY_PREFLIGHT_RECONCILIATION_AND_CONDITIONAL_EXECUTION_182",
+    "status": "GRANTED_STAGE_3_BLOCKED_MODEL_OR_TOOL_ACCESS_NOT_REPRODUCIBLE_RETRY_NOT_STARTED_AUTHORIZATION_UNCONSUMED",
+    "path": "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_REPOSITORY_ONLY_PREFLIGHT_RECONCILIATION_AND_CONDITIONAL_EXECUTION_182.json"
+  },
+  "stage_2": {
+    "reassessment_id": "REA-LAB-008",
+    "status": "COMPLETED",
+    "verdict": "REVERSED",
+    "result": "AWS_PREFLIGHT_NOT_MATERIAL_REPOSITORY_ONLY_EXECUTION_CAN_REMAIN_FULLY_SYNTHETIC_AND_REPRODUCIBLE",
+    "path": "projects/lab/reassessments/REA-LAB-008.json",
+    "phases_traced": 10,
+    "phases_requiring_aws": 0
+  },
+  "stage_3": {
+    "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-002",
+    "attempt": "ATTEMPT-001",
+    "status": "BLOCKED_MODEL_OR_TOOL_ACCESS_NOT_REPRODUCIBLE",
+    "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-002/MANIFEST.json",
+    "stop_condition": "MODEL_OR_TOOL_ACCESS_NOT_REPRODUCIBLE",
+    "outputs_generated": 0,
+    "input_freeze_started": false,
+    "retry_started": false
+  },
+  "evidence": {
+    "id": "EVD-LAB-PL003-STAGE2-AND-TEST-EXECUTION-182-ATTEMPT-001",
+    "status": "PASS_STAGE_2_AWS_NOT_MATERIAL_STAGE_3_BLOCKED_MODEL_OR_TOOL_ACCESS_NOT_REPRODUCIBLE",
+    "path": "projects/lab/evidence/EVD-LAB-PL003-STAGE2-AND-TEST-EXECUTION-182-ATTEMPT-001.json"
+  },
+  "historical_execution_preservation": {
+    "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-001",
+    "status": "STOPPED_BY_PREDECLARED_BLINDING_CONTAMINATION",
+    "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-001/MANIFEST.json",
+    "overwritten": false
+  },
+  "specific_indexes_updated": [
+    "projects/lab/test-executions/index.json",
+    "projects/lab/pending/PEND-LAB-045.json",
+    "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/ROADMAP.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json",
+    "projects/lab/integrations/INT-LAB-004.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json"
+  ],
+  "aggregate_view_divergence": {
+    "status": "OPEN_REQUIRES_SEPARATE_DOCUMENTARY_RECONCILIATION_AUTHORITY",
+    "affected_views": [
+      "CURRENT_STATE.json",
+      "projects/lab/PROJECT_STATE.json",
+      "projects/lab/PENDING.json",
+      "registry/index.json"
+    ],
+    "reason": "THESE_AGGREGATE_VIEWS_REMAIN_ON_PRE_AUTHORIZATION_182_OR_PRE_ATTEMPT_STATE_AND_WERE_NOT_SAFELY_REWRITTEN_WITHOUT_FULL_RECONCILIATION",
+    "claims_of_global_count_reconciliation": false
+  },
+  "non_effects": [
+    "NO_CODEX_INSTALLATION_OR_TOOLING_UPDATE",
+    "NO_PREFLIGHT_RETRY",
+    "NO_AWS_OR_TERRAFORM",
+    "NO_INPUT_FREEZE_OR_OUTPUT_GENERATION",
+    "NO_CALIBRATION_BLINDING_OR_SCORING",
+    "NO_EXTERNAL_AUDIT",
+    "NO_PROMOTION_ACTIVATION_OR_INTEGRATION",
+    "NO_POINTER_SELECTOR_OR_SHADOW_REGISTRY_CHANGE",
+    "NO_PRODUCT_RUNTIME_OR_SYMPHONIE_CHANGE",
+    "NO_SSE_RUNNER_RESOLUTION_OR_RETRY"
+  ],
+  "next_authorized_action": "NONE_RETRY_BLOCKED_PENDING_SEPARATE_RUNNER_RESOLUTION_AUTHORIZATION",
+  "next_recommended_transition": "SEPARATELY_AUTHORIZE_REPRODUCIBLE_CODEX_RUNNER_RESOLUTION_FOR_PRODUCT_LEADERSHIP_TEST003",
+  "authority_effect": "AUTHORIZATION_182_UNCONSUMED_BUT_STAGE_3_BLOCKED",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "integration_effect": "NONE"
+}
