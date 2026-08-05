@@ -1,16 +1,17 @@
 {
-  "schema_version": "2.8.0",
-  "continuity_id": "LAB-CONTINUITY-PRODUCT-LEADERSHIP-INSTRUMENT-REDESIGN-191-20260805",
+  "schema_version": "2.9.0",
+  "continuity_id": "LAB-CONTINUITY-PRODUCT-LEADERSHIP-FRESH-RETEST-192-20260805",
   "project_id": "lab",
-  "status": "PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_COMPLETE_STATICALLY_VALIDATED_AWAITING_SEPARATE_FRESH_RETEST_AUTHORIZATION",
-  "created_at": "2026-08-05T01:12:35-04:00",
+  "status": "PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_BLOCKED_BEFORE_MODEL_REQUESTS_RESULT_PUBLICATION_PENDING",
+  "created_at": "2026-08-05T07:48:29-04:00",
   "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "canonical_branch": "main",
   "head_policy": "VERIFY_LIVE_AT_USE",
-  "verified_head_at_creation": "2e2f97449c9734512ddd0dfe3a3f308c037a8e8c",
+  "verified_head_at_execution_start": "0ef5f7428cf07652b567cc28321e85bb3b3c7e62",
   "current_head": "VERIFY_LIVE_AT_USE",
   "entrypoint": "project-sources/chatgpt/START_HERE.md",
   "selected_skills": [],
+  "forbidden_skills": ["clinical-os-preflight"],
   "cross_repository_access": false,
   "required_reading_order": [
     "VERIFY_LIVE_HEAD_OF_MAIN",
@@ -21,41 +22,31 @@
     "registry/index.json",
     "registry/projects.json",
     "projects/lab/PROJECT_STATE.json",
-    "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191.json",
-    "projects/lab/briefs/CODEX_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191_001.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_192.json",
+    "projects/lab/briefs/CODEX_PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_192_001.json",
     "projects/lab/pending/PEND-LAB-048.json",
-    "projects/lab/evidence/EVD-LAB-PL003-INSTRUMENT-REDESIGN-191.json",
-    "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/MANIFEST.json",
-    "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/VALIDATION_RESULTS.json",
+    "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005/MANIFEST.json",
+    "projects/lab/evidence/EVD-LAB-PL003-FRESH-RETEST-192.json",
     "projects/lab/continuity/CURRENT_CONTINUITY.json",
     "projects/lab/continuity/CURRENT_CONTINUITY.md",
     "projects/lab/continuity/ATTACHMENT_MANIFEST.json",
-    "projects/lab/continuity/START_PROMPT.md",
-    "project-sources/chatgpt/01_SOURCE_MANIFEST.md",
-    "project-sources/chatgpt/02_GOVERNANCE_AUTHORITY_AND_TRUTH.md",
-    "project-sources/chatgpt/03_STARTUP_AND_CANONICAL_SOURCES.md",
-    "project-sources/chatgpt/04_EXECUTION_EFFICIENCY_AND_BRIEFS.md",
-    "project-sources/chatgpt/05_EPISTEMIC_INDEPENDENCE.md",
-    "project-sources/chatgpt/06_CONTINUITY_PROTOCOL.md",
-    "project-sources/chatgpt/07_ERRORS_AND_RESPONSE_CONTRACT.md",
-    "project-sources/chatgpt/08_CRITERION_LAYER.md"
+    "projects/lab/continuity/START_PROMPT.md"
   ],
   "source_control": {
-    "verified_parent_head": "2e2f97449c9734512ddd0dfe3a3f308c037a8e8c",
-    "working_branch": "agent/product-leadership-test003-instrument-redesign-191",
-    "publication_method": "COMMIT_PUSH_PULL_REQUEST_SQUASH_MERGE_VERIFY_REMOTE",
-    "publication_status": "VERIFIED_REMOTE_PUBLICATION",
-    "pull_request": 42,
-    "source_commit": "43758caf568290ffe5458ec5075da59fe22e1525",
-    "squash_commit": "bba52b2a0b3d1ce053f11ee3e1b0abf0866697f5",
-    "verified_remote_main_head": "1fc6f36c4ac90f9d1770d52ffd435af023bc86ce",
-    "verified_at": "2026-08-05T01:24:17-04:00"
+    "verified_parent_head": "0ef5f7428cf07652b567cc28321e85bb3b3c7e62",
+    "prepared_branch_head": "c1d397c0a37e7c810753a466fd1296202ca6050e",
+    "working_branch": "agent/product-leadership-test003-fresh-retest-192",
+    "publication_method": "COMMIT_PUSH_SINGLE_PULL_REQUEST_SQUASH_MERGE_VERIFY_REMOTE",
+    "publication_status": "PENDING_SINGLE_PULL_REQUEST",
+    "pull_request": "PENDING_SINGLE_PULL_REQUEST",
+    "squash_commit": "PENDING_REMOTE_MERGE",
+    "verified_remote_main": false
   },
   "authorization": {
-    "id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191",
-    "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
-    "consumption_rule": "CONSUMED_ON_VERIFIED_REMOTE_SQUASH_MERGE_OF_THE_EXACT_INSTRUMENT_REDESIGN_PACKAGE_AFTER_ALL_ACCEPTANCE_GATES_PASS",
-    "residual_authority_after_consumption": "NONE"
+    "id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_192",
+    "status": "GRANTED_RESULT_PUBLICATION_IN_PROGRESS",
+    "consumption_rule": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_OF_TERMINAL_PASS_FAIL_INSUFFICIENT_EVIDENCE_OR_BLOCKED_RESULT",
+    "residual_authority": "PENDING_CONSUMPTION_ON_VERIFIED_REMOTE_PUBLICATION"
   },
   "product_leadership": {
     "integration_id": "INT-LAB-004",
@@ -64,46 +55,53 @@
     "historical_execution": {
       "id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
       "attempt": "ATTEMPT-003",
-      "runner_result": "FAIL_REVISE_OR_REJECT_EVIDENCE_READY_FOR_SEPARATE_EXTERNAL_AUDIT_DECISION",
       "reconciled_interpretation": "INSUFFICIENT_EVIDENCE",
       "file_count": 150,
+      "total_bytes": 1023921,
       "git_tree_sha1": "7bd45ce057ae8362207cc24e7d4cbdad4305d531",
       "sorted_path_sha256_manifest_digest": "e8830433d6a9fdba11c9227669a9155c16a7f58ad8c9ff49a0b93df79d85681c",
       "byte_for_byte_preserved": true
     },
     "instrument_redesign": {
       "id": "INSTRUMENT_REDESIGN_191",
-      "status": "COMPLETE_STATICALLY_VALIDATED",
-      "defect_domains": 8,
-      "neutral_fixture_count": 8,
-      "static_calibration_case_count": 11,
+      "status": "COMPLETE_STATICALLY_VALIDATED_IMMUTABLE",
+      "git_tree_sha1": "cd3a2b8a7d7f62af65bb8cd90b21bfbc99d3f3ab",
+      "mutation": "NONE"
+    },
+    "fresh_retest": {
+      "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005",
+      "attempt": "ATTEMPT-004",
+      "outcome": "BLOCKED_BEFORE_MODEL_REQUESTS",
       "model_requests": 0,
-      "retests": 0,
-      "result": "PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_COMPLETE_STATICALLY_VALIDATED_AWAITING_SEPARATE_FRESH_RETEST_AUTHORIZATION"
+      "retries": 0,
+      "outputs": 0,
+      "scores": 0,
+      "chain_of_custody": "FAIL_STOP_13_OF_13_RAW_BYTE_MISMATCHES",
+      "authentication": "FAIL_STOP_PREEXISTING_CHATGPT_SESSION_NOT_LOGGED_IN"
     },
     "pending": {
       "id": "PEND-LAB-048",
-      "status": "OPEN_INSTRUMENT_REDESIGN_COMPLETE_STATICALLY_VALIDATED_AWAITING_SEPARATE_FRESH_RETEST_AUTHORIZATION"
+      "status": "OPEN_AWAITING_SEPARATE_RECOVERY_OR_REISSUE_AUTHORIZATION"
     }
   },
   "non_authorizations": [
-    "NO_MODEL_REQUESTS",
-    "NO_RETEST_REPLAY_REGENERATION_OR_RESCORING",
-    "NO_PRODUCT_LEADERSHIP_PACKAGE_MODIFICATION",
-    "NO_INT_LAB_004_MODIFICATION",
+    "NO_ADDITIONAL_MODEL_REQUEST_RETRY_RETEST_REPLAY_REGENERATION_OR_RESCORING",
+    "NO_EXTERNAL_AUDIT_OR_PACKAGE_ADJUDICATION",
+    "NO_PRODUCT_LEADERSHIP_PACKAGE_OR_INT_LAB_004_MODIFICATION",
     "NO_PROMOTION_ACTIVATION_OR_INTEGRATION",
     "NO_RUNTIME_OR_PRODUCT_CHANGE",
     "NO_EXTERNAL_REPOSITORY_ACCESS_OR_CHANGE"
   ],
   "next_action": {
-    "single": "PREPARE_A_SEPARATE_EXPLICIT_FRESH_RETEST_AUTHORIZATION_ONLY",
+    "single": "SEPARATELY_AUTHORIZE_RECOVERY_OR_REISSUE_AFTER_EXACT_AUTHENTICATION_AND_RAW_BYTE_CUSTODY_ROOT_CAUSES_ARE_RESOLVED",
     "execution_authorized": false
   },
   "source_refs": [
-    "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191.json",
-    "projects/lab/briefs/CODEX_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191_001.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_192.json",
+    "projects/lab/briefs/CODEX_PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_192_001.json",
     "projects/lab/pending/PEND-LAB-048.json",
-    "projects/lab/evidence/EVD-LAB-PL003-INSTRUMENT-REDESIGN-191.json",
-    "registry/deltas/product-leadership-test003-instrument-redesign-191.json"
+    "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005/MANIFEST.json",
+    "projects/lab/evidence/EVD-LAB-PL003-FRESH-RETEST-192.json",
+    "registry/deltas/product-leadership-test003-fresh-retest-192.json"
   ]
 }

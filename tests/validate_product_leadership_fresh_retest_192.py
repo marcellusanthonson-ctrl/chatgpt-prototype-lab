@@ -20,6 +20,9 @@ PACKAGE_ROOT = "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDA
 INT_PATH = "projects/lab/integrations/INT-LAB-004.json"
 AUTH_PATH = Path("projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_192.json")
 BRIEF_PATH = Path("projects/lab/briefs/CODEX_PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_192_001.json")
+LIFECYCLE_PATH = Path("projects/lab/authorization-lifecycle/PL003_AUTHORIZATION_LIFECYCLE_192.json")
+EVIDENCE_PATH = Path("projects/lab/evidence/EVD-LAB-PL003-FRESH-RETEST-192.json")
+DELTA_PATH = Path("registry/deltas/product-leadership-test003-fresh-retest-192.json")
 ALLOWED_TERMINAL = "PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_BLOCKED_BEFORE_MODEL_REQUESTS_RESULT_PUBLISHED_AWAITING_SEPARATE_RECOVERY_OR_REISSUE_AUTHORIZATION"
 
 failures: list[str] = []
@@ -209,6 +212,55 @@ def verify_no_disallowed_content() -> None:
     passed("neutral synthetic materials and no cross-repository content")
 
 
+def verify_stage_6_records() -> None:
+    lifecycle = load_json(LIFECYCLE_PATH)
+    evidence = load_json(EVIDENCE_PATH)
+    delta = load_json(DELTA_PATH)
+    pending = load_json("projects/lab/pending/PEND-LAB-048.json")
+    aggregate_pending = load_json("projects/lab/PENDING.json")
+    execution_index = load_json("projects/lab/test-executions/index.json")
+    registry_index = load_json("registry/index.json")
+    continuity = load_json("projects/lab/continuity/CURRENT_CONTINUITY.json")
+    archive = load_json("projects/lab/continuity/archive/LAB-CONTINUITY-PRE-FRESH-RETEST-192-20260805.pointer.json")
+    if lifecycle.get("execution_outcome") != "BLOCKED_BEFORE_MODEL_REQUESTS" or lifecycle.get("request_counts", {}).get("total") != 0:
+        fail("authorization lifecycle does not preserve the terminal blocked result")
+    if evidence.get("execution", {}).get("outcome") != "BLOCKED_BEFORE_MODEL_REQUESTS" or evidence.get("execution", {}).get("model_requests") != 0:
+        fail("evidence does not preserve the terminal blocked result")
+    if delta.get("registry_counts_before") != {"authorizations": 106, "evidence": 88, "test_executions": 5}:
+        fail("registry delta before-counts mismatch")
+    if delta.get("registry_counts_after") != {"authorizations": 107, "evidence": 89, "test_executions": 6}:
+        fail("registry delta after-counts mismatch")
+    expected_pending = "OPEN_FRESH_RETEST_ATTEMPT_004_BLOCKED_BEFORE_MODEL_REQUESTS_AWAITING_SEPARATE_RECOVERY_OR_REISSUE_AUTHORIZATION"
+    if pending.get("status") != expected_pending:
+        fail("canonical PEND-LAB-048 status mismatch")
+    aggregate_records = [record for record in aggregate_pending.get("records", []) if record.get("id") == "PEND-LAB-048"]
+    if len(aggregate_records) != 1 or aggregate_records[0].get("status") != expected_pending:
+        fail("aggregate PEND-LAB-048 status mismatch or duplicate")
+    execution_records = [record for record in execution_index.get("records", []) if record.get("id") == EXECUTION_ID]
+    if len(execution_records) != 1 or execution_records[0].get("model_requests") != 0:
+        fail("execution index record missing, duplicate or nonzero")
+    counts = registry_index.get("counts", {})
+    if any(counts.get(key) != value for key, value in {"authorizations": 107, "evidence": 89, "test_executions": 6}.items()):
+        fail("registry counts mismatch")
+    delta_ref = str(DELTA_PATH).replace("\\", "/")
+    registries = registry_index.get("registries", {})
+    for name in ["authorization_deltas", "evidence_deltas", "current_state_deltas"]:
+        if registries.get(name, []).count(delta_ref) != 1:
+            fail(f"registry delta reference count mismatch in {name}")
+    if continuity.get("product_leadership", {}).get("fresh_retest", {}).get("model_requests") != 0:
+        fail("continuity model request count mismatch")
+    expected_archive = {
+        "projects/lab/continuity/CURRENT_CONTINUITY.json": ("25b671cbb0c9cb480d01889f2b9974548b1b3a7a", "c5bcb48470b0a4771426846c52386c29773ea1a89734bef5cc7c40970dea1f6f", 5457),
+        "projects/lab/continuity/CURRENT_CONTINUITY.md": ("6461bd59f8ff727adc9c2b164d327a3328f48881", "422015c227e08e6a1d5460e6177dcae89c232b74dab7ed2b3f5312d6b6ac4914", 2121),
+        "projects/lab/continuity/ATTACHMENT_MANIFEST.json": ("69390cdcbe400c4377df4da5a3350dfb1464ddcf", "b27ceebbbf470ab7b97a971c574427af5f8611eba230eb51c087adea3f4d57f1", 2645),
+        "projects/lab/continuity/START_PROMPT.md": ("00f450c268d832226431fdfc5a290023cbda152d", "7860c5305de77dde433f4ad94cae4795817cac79496ba7682bc4da6ba6774a95", 1203),
+    }
+    observed_archive = {entry["path"]: (entry["git_blob_sha1"], entry["sha256"], entry["bytes"]) for entry in archive.get("files", [])}
+    if observed_archive != expected_archive:
+        fail("continuity archive pointer mismatch")
+    passed("Stage 6 evidence, lifecycle, delta, indexes, pending and continuity")
+
+
 def main() -> int:
     try:
         paths = changed_paths()
@@ -218,6 +270,7 @@ def main() -> int:
         verify_terminal_block()
         verify_custody_reproduction()
         verify_no_disallowed_content()
+        verify_stage_6_records()
     except (OSError, ValueError, json.JSONDecodeError, subprocess.CalledProcessError) as exc:
         fail(f"validator exception: {exc}")
     if failures:

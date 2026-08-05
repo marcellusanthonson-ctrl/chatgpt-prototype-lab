@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-PL003-FRESH-RETEST-192",
+  "project_id": "lab",
+  "kind": "PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_TERMINAL_BLOCKED_RESULT_EVIDENCE",
+  "status": "TERMINAL_BLOCKED_RESULT_VALIDATED_PUBLICATION_PENDING",
+  "recorded_at": "2026-08-05T07:48:29-04:00",
+  "authorization": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_192",
+  "brief": "CODEX_PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_192_001",
+  "authorized_parent_head": "0ef5f7428cf07652b567cc28321e85bb3b3c7e62",
+  "prepared_branch_head": "c1d397c0a37e7c810753a466fd1296202ca6050e",
+  "execution": {
+    "id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005",
+    "attempt": "ATTEMPT-004",
+    "outcome": "BLOCKED_BEFORE_MODEL_REQUESTS",
+    "terminal_status": "PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_BLOCKED_BEFORE_MODEL_REQUESTS_RESULT_PUBLISHED_AWAITING_SEPARATE_RECOVERY_OR_REISSUE_AUTHORIZATION",
+    "model_requests": 0,
+    "retries": 0,
+    "outputs": 0,
+    "scores": 0
+  },
+  "stop_evidence": {
+    "exact_authentication": {
+      "result": "FAIL_NOT_LOGGED_IN",
+      "command": "codex login status",
+      "exit_code": 1,
+      "login_attempted": false,
+      "model_request_attempted": false
+    },
+    "raw_byte_chain_of_custody": {
+      "result": "FAIL",
+      "contract": "SHA-256_RAW_BYTES_NO_LINE_ENDING_NORMALIZATION",
+      "immutable_redesign_files_checked": 13,
+      "git_blob_to_worktree_mismatches": 13,
+      "normalization_or_repair_attempted": false
+    }
+  },
+  "model_and_runner_attestation": {
+    "generation_model": "gpt-5.6-sol",
+    "scoring_model": "gpt-5.6-sol",
+    "reasoning_effort": "medium",
+    "runner": "OpenAI Codex CLI 0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "runner_version_result": "PASS",
+    "runner_sha256_result": "PASS",
+    "substitution": "NONE"
+  },
+  "acceptance_gates": {
+    "live_main_exact_parent": "PASS",
+    "authorization_and_scope": "PASS",
+    "prepared_branch_preserved": "PASS",
+    "historical_immutability": "PASS",
+    "redesign_immutability": "PASS",
+    "package_and_int_lab_004_immutability": "PASS",
+    "neutral_fixture_cardinality": "PASS_8",
+    "fixed_control_cardinality": "PASS_4_POSITIVE_4_NEGATIVE",
+    "subordinate_adapter": "PASS",
+    "runner_identity": "PASS",
+    "exact_authentication": "FAIL_STOP",
+    "raw_byte_chain_of_custody": "FAIL_STOP",
+    "model_activity": "PASS_ZERO",
+    "terminal_result_truthfulness": "PASS"
+  },
+  "historical_immutability": {
+    "root": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+    "attempt": "ATTEMPT-003",
+    "file_count": 150,
+    "total_bytes": 1023921,
+    "git_tree_sha1": "7bd45ce057ae8362207cc24e7d4cbdad4305d531",
+    "sorted_path_sha256_manifest_digest": "e8830433d6a9fdba11c9227669a9155c16a7f58ad8c9ff49a0b93df79d85681c",
+    "result": "PASS_BYTE_FOR_BYTE_PRESERVED"
+  },
+  "other_immutable_objects": {
+    "instrument_redesign_191_git_tree_sha1": "cd3a2b8a7d7f62af65bb8cd90b21bfbc99d3f3ab",
+    "candidate_package_git_tree_sha1": "56aa90d60df30c9ff25efccfd9552b24cc4ae88d",
+    "int_lab_004_git_blob_sha1": "1643a11e7d627b345be427190472f396987b1885",
+    "result": "PASS_UNCHANGED"
+  },
+  "validation": {
+    "commands": [
+      "python tests/validate_product_leadership_instrument_redesign_191.py",
+      "node tests/product_leadership_instrument_core_191.test.mjs",
+      "python tests/validate_product_leadership_fresh_retest_192.py",
+      "node tests/product_leadership_fresh_retest_192.test.mjs",
+      "git diff --check"
+    ],
+    "results": [
+      "PASS_HISTORICAL_AND_REDESIGN_IMMUTABILITY_ZERO_MODEL_ACTIVITY",
+      "PASS_9_CANONICAL_CORE_TESTS",
+      "PASS_TERMINAL_BLOCKED_RESULT_AND_13_RAW_BYTE_MISMATCH_REPRODUCTION",
+      "PASS_13_SUBORDINATE_ADAPTER_AND_FAIL_CLOSED_TESTS",
+      "PASS"
+    ]
+  },
+  "publication": {
+    "status": "PENDING_SINGLE_PULL_REQUEST_SQUASH_AND_REMOTE_VERIFICATION",
+    "pull_request": "PENDING_SINGLE_PULL_REQUEST",
+    "squash_commit": "PENDING_REMOTE_MERGE",
+    "verified_remote_main": false
+  },
+  "claim_boundary": "SYNTHETIC_RETEST_BLOCKED_BEFORE_MODEL_REQUESTS_NO_EXTERNAL_AUDIT_PACKAGE_ADJUDICATION_PROMOTION_ACTIVATION_INTEGRATION_RUNTIME_OR_PRODUCT_EFFECT",
+  "next_action": "SEPARATELY_AUTHORIZE_RECOVERY_OR_REISSUE_AFTER_EXACT_AUTHENTICATION_AND_RAW_BYTE_CUSTODY_ROOT_CAUSES_ARE_RESOLVED"
+}

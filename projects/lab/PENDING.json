@@ -825,20 +825,24 @@
       "schema_version": "1.0.0",
       "id": "PEND-LAB-048",
       "project_id": "lab",
-      "status": "OPEN_INSTRUMENT_REDESIGN_COMPLETE_STATICALLY_VALIDATED_AWAITING_SEPARATE_FRESH_RETEST_AUTHORIZATION",
+      "status": "OPEN_FRESH_RETEST_ATTEMPT_004_BLOCKED_BEFORE_MODEL_REQUESTS_AWAITING_SEPARATE_RECOVERY_OR_REISSUE_AUTHORIZATION",
       "type": "PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_AND_FRESH_RETEST_DECISION",
       "subject": "Correct the material Execution 004 instrument defects and define a fresh discriminating retest before any package adjudication.",
       "priority": "CRITICAL",
       "canonical_path": "projects/lab/pending/PEND-LAB-048.json",
-      "instrument_redesign": "INSTRUMENT_REDESIGN_191_COMPLETE_STATICALLY_VALIDATED",
-      "current_authority": "NONE_AUTHORIZATION_191_CONSUMED_AFTER_VERIFIED_REMOTE_PUBLICATION",
-      "fresh_retest_authorized": false,
+      "instrument_redesign": "INSTRUMENT_REDESIGN_191_COMPLETE_STATICALLY_VALIDATED_IMMUTABLE",
+      "fresh_retest_attempt": "EXECUTION_005_ATTEMPT_004_BLOCKED_BEFORE_MODEL_REQUESTS_ZERO_REQUESTS_ZERO_RETRIES",
+      "current_authority": "AUTHORIZATION_192_RESULT_PUBLICATION_ONLY_CONSUMPTION_PENDING_VERIFIED_REMOTE_SQUASH",
+      "fresh_retest_authorized": true,
       "automatic_approval": false,
-      "next_authorized_action": "NONE_UNTIL_SEPARATE_EXPLICIT_FRESH_RETEST_AUTHORIZATION",
+      "next_authorized_action": "NONE_UNTIL_SEPARATE_EXPLICIT_RECOVERY_OR_REISSUE_AUTHORIZATION",
       "source_refs": [
         "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191.json",
         "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/MANIFEST.json",
-        "projects/lab/evidence/EVD-LAB-PL003-INSTRUMENT-REDESIGN-191.json"
+        "projects/lab/evidence/EVD-LAB-PL003-INSTRUMENT-REDESIGN-191.json",
+        "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_192.json",
+        "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005/MANIFEST.json",
+        "projects/lab/evidence/EVD-LAB-PL003-FRESH-RETEST-192.json"
       ]
     }
   ]

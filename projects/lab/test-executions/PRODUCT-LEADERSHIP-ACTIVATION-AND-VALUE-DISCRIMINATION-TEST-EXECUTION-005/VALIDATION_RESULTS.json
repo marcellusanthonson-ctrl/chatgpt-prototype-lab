@@ -2,13 +2,27 @@
   "schema_version": "1.0.0",
   "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005",
   "attempt": "ATTEMPT-004",
-  "status": "PENDING_SCOPED_DETERMINISTIC_VALIDATION",
-  "commands": [],
-  "results": {},
+  "status": "PASS_TERMINAL_BLOCKED_RESULT_SCOPED_DETERMINISTIC_VALIDATION",
+  "commands": [
+    "python tests/validate_product_leadership_instrument_redesign_191.py",
+    "node tests/product_leadership_instrument_core_191.test.mjs",
+    "python tests/validate_product_leadership_fresh_retest_192.py",
+    "node tests/product_leadership_fresh_retest_192.test.mjs",
+    "git diff --check"
+  ],
+  "results": {
+    "instrument_redesign_validator": "PASS",
+    "canonical_core_tests": "PASS_9",
+    "fresh_retest_blocked_result_validator": "PASS",
+    "fresh_adapter_tests": "PASS_13",
+    "diff_check": "PASS",
+    "raw_byte_chain_of_custody_gate": "FAIL_STOP_REPRODUCED_13_OF_13_MISMATCHES",
+    "exact_authentication_gate": "FAIL_STOP_NOT_LOGGED_IN"
+  },
   "request_count": 0,
   "retries": 0,
-  "historical_immutability": "PENDING",
-  "redesign_immutability": "PENDING",
-  "package_and_int_immutability": "PENDING",
-  "overall": "PENDING"
+  "historical_immutability": "PASS_150_FILES_1023921_BYTES_TREE_7bd45ce057ae8362207cc24e7d4cbdad4305d531_MANIFEST_e8830433d6a9fdba11c9227669a9155c16a7f58ad8c9ff49a0b93df79d85681c",
+  "redesign_immutability": "PASS_TREE_cd3a2b8a7d7f62af65bb8cd90b21bfbc99d3f3ab",
+  "package_and_int_immutability": "PASS_PACKAGE_TREE_56aa90d60df30c9ff25efccfd9552b24cc4ae88d_INT_BLOB_1643a11e7d627b345be427190472f396987b1885",
+  "overall": "PASS_TRUTHFUL_BLOCKED_BEFORE_MODEL_REQUESTS_RESULT"
 }

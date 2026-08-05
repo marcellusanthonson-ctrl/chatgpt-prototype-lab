@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1.0",
   "project_id": "lab",
-  "updated_at": "2026-08-04",
+  "updated_at": "2026-08-05",
   "records": [
     {
       "id": "FULL-RAG-STAGES-5-6-DISCRIMINATING-TEST-EXECUTION-001",
@@ -81,6 +81,23 @@
       "scores_frozen": 112,
       "exact_result": "FAIL_REVISE_OR_REJECT_EVIDENCE_READY_FOR_SEPARATE_EXTERNAL_AUDIT_DECISION",
       "publication_head": "6f42812973cbc99a0c509b3344cea3dcc531bb9c"
+    },
+    {
+      "id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005",
+      "attempt": "ATTEMPT-004",
+      "status": "BLOCKED_BEFORE_MODEL_REQUESTS",
+      "authorization": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_192",
+      "authorization_state": "RESULT_PUBLICATION_PENDING_VERIFIED_REMOTE_CONSUMPTION",
+      "canonical_path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005/MANIFEST.json",
+      "evidence": "projects/lab/evidence/EVD-LAB-PL003-FRESH-RETEST-192.json",
+      "fixtures": 8,
+      "fixed_positive_controls": 4,
+      "fixed_negative_controls": 4,
+      "model_requests": 0,
+      "retries": 0,
+      "outputs_generated": 0,
+      "scores_frozen": 0,
+      "exact_result": "PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_BLOCKED_BEFORE_MODEL_REQUESTS_RESULT_PUBLISHED_AWAITING_SEPARATE_RECOVERY_OR_REISSUE_AUTHORIZATION"
     }
   ]
 }

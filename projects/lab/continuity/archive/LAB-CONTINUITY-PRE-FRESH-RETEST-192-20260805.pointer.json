@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "archive_id": "LAB-CONTINUITY-PRE-FRESH-RETEST-192-20260805",
+  "status": "IMMUTABLE_GIT_POINTER",
+  "project_id": "lab",
+  "source_commit": "0ef5f7428cf07652b567cc28321e85bb3b3c7e62",
+  "files": [
+    {
+      "path": "projects/lab/continuity/CURRENT_CONTINUITY.json",
+      "git_blob_sha1": "25b671cbb0c9cb480d01889f2b9974548b1b3a7a",
+      "sha256": "c5bcb48470b0a4771426846c52386c29773ea1a89734bef5cc7c40970dea1f6f",
+      "bytes": 5457
+    },
+    {
+      "path": "projects/lab/continuity/CURRENT_CONTINUITY.md",
+      "git_blob_sha1": "6461bd59f8ff727adc9c2b164d327a3328f48881",
+      "sha256": "422015c227e08e6a1d5460e6177dcae89c232b74dab7ed2b3f5312d6b6ac4914",
+      "bytes": 2121
+    },
+    {
+      "path": "projects/lab/continuity/ATTACHMENT_MANIFEST.json",
+      "git_blob_sha1": "69390cdcbe400c4377df4da5a3350dfb1464ddcf",
+      "sha256": "b27ceebbbf470ab7b97a971c574427af5f8611eba230eb51c087adea3f4d57f1",
+      "bytes": 2645
+    },
+    {
+      "path": "projects/lab/continuity/START_PROMPT.md",
+      "git_blob_sha1": "00f450c268d832226431fdfc5a290023cbda152d",
+      "sha256": "7860c5305de77dde433f4ad94cae4795817cac79496ba7682bc4da6ba6774a95",
+      "bytes": 1203
+    }
+  ],
+  "archive_method": "CANONICAL_GIT_OBJECT_POINTER_NO_BYTE_COPY",
+  "mutation": "NONE"
+}
