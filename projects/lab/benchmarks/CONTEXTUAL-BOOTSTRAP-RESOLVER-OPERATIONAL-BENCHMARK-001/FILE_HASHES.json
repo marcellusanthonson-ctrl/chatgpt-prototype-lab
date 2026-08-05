@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "benchmark_id": "CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-BENCHMARK-001",
+  "files": {
+    "MANIFEST.json": {
+      "sha256": "46ad8e261e374a6dbe472cc7b0e969765e6347b9a16d38a29bf5358f74ab66df",
+      "bytes": 4968
+    },
+    "README.md": {
+      "sha256": "5f87650caf329d012ff4b26e11a8832eb94049cf66524a0403cc689f5dcda0cc",
+      "bytes": 1874
+    },
+    "SUMMARY.json": {
+      "sha256": "6260e24aa65f2ac2805e33f4db10659b2759ad6078f95b189181bec7302d6424",
+      "bytes": 6624
+    },
+    "fixtures/OPERATIONAL_TASKS.json.gz.b64": {
+      "sha256": "5f8155fbb2eba1ef0c48f3562f42cd683e4ed8808cfa21eeffe617f5ad1eab03",
+      "bytes": 9129
+    },
+    "oracle/PRIVATE_ORACLE.json.gz.b64": {
+      "sha256": "8fb3cebaf83a27c13852cf64879d4e791a809ab94b4a062e7d38acfed8cc3ad9",
+      "bytes": 2033
+    },
+    "results/BENCHMARK_RESULTS.json.gz.b64": {
+      "sha256": "64ad3a67fbac4952c4861d87d3c519a8979122a2938eb145f54d9a2e3fb7fa4a",
+      "bytes": 5345
+    },
+    "results/CONTEXT_MANIFESTS.json.gz.b64": {
+      "sha256": "9060035e2e96beb60bdf54b73c89ded7b4a5a93f7d0b32756fa1374906ff6aa7",
+      "bytes": 11389
+    },
+    "results/HARNESS_CORRECTION.json": {
+      "sha256": "efc43c8e263c9e81a127a20e30c5aeab0ee63e42a3b688f640d94c1c2be527fb",
+      "bytes": 2262
+    },
+    "scripts/BENCHMARK_RUNNER.ts.gz.b64": {
+      "sha256": "5052ca3885874793043ab5c8c8463ec8fbcc818594acffe07b1413c16512ad77",
+      "bytes": 7093
+    },
+    "snapshot/SNAPSHOT_MANIFEST.json.gz.b64": {
+      "sha256": "6f2628221c381a917f21764a119434cf33187ae82b360ac6343c6934ef12a2dc",
+      "bytes": 5293
+    }
+  },
+  "self_hash_excluded": true
+}

@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0.0",
+  "report_id": "CONTEXT-BUDGET-REPORT-198",
+  "project_id": "lab",
+  "authorization_id": "AUTHORIZATION_LAB_CONTEXTUAL_BOOTSTRAP_RESOLVER_REAL_REPOSITORY_SHADOW_BENCHMARK_198",
+  "status": "REAL_REPOSITORY_METADATA_SHADOW_FAIL_CRITICAL_AWAITING_PUBLICATION",
+  "recorded_at": "2026-08-05T19:15:06-04:00",
+  "baseline": "CANONICAL_FULL_BOOTSTRAP_PATH_SET",
+  "selection": "CONTEXTUAL_BOOTSTRAP_RESOLVER_001_UNMODIFIED",
+  "overall": {
+    "tasks": 21,
+    "iterations": 126,
+    "median_byte_reduction_percent": 70.045,
+    "median_source_count_reduction_percent": 75,
+    "macro_path_f1": 0.925243,
+    "critical_constraint_recall": 0.935484,
+    "false_positives": 20,
+    "false_negatives": 8
+  },
+  "by_route": {
+    "CONTINUITY_RESUME": {
+      "count": 3,
+      "medianByteReductionPercent": 92.561
+    },
+    "PROJECT_CONTINUATION": {
+      "count": 3,
+      "medianByteReductionPercent": 94.411
+    },
+    "NEW_DESIGN": {
+      "count": 3,
+      "medianByteReductionPercent": 90.191
+    },
+    "STATUS_OR_AUTHORITY": {
+      "count": 4,
+      "medianByteReductionPercent": 14.104
+    },
+    "CODE_CHANGE": {
+      "count": 2,
+      "medianByteReductionPercent": 68.585
+    },
+    "AUDIT_OR_REASSESSMENT": {
+      "count": 3,
+      "medianByteReductionPercent": 48.185
+    },
+    "UNKNOWN_ESCALATION": {
+      "count": 3,
+      "medianByteReductionPercent": 91.08
+    }
+  },
+  "failed_efficiency_gates": [
+    "perRouteMedianByteReductionAtLeast30"
+  ],
+  "measurement": {
+    "byteMetric": "GITHUB_RECORDED_SOURCE_BYTES_REPRESENTED_BY_SELECTED_PATHS_NOT_LOCAL_FILE_IO",
+    "nonemptyLines": "NOT_RUN_NO_FULL_PRIVATE_WORKTREE",
+    "tokens": "NOT_RUN_NO_AUTHORIZED_LOCAL_TOKENIZER",
+    "timeToFirstUsefulCode": "NOT_RUN_NO_MODEL",
+    "responseQuality": "NOT_RUN_NO_MODEL"
+  },
+  "interpretation": "GLOBAL_REDUCTION_IS_HIGH_BUT_CANNOT_COMPENSATE_FOR_CRITICAL_SOURCE_OMISSIONS_AND_CONFLICT_ERRORS",
+  "source_refs": [
+    "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-BENCHMARK-001/results/BENCHMARK_RESULTS.json.gz.b64"
+  ]
+}

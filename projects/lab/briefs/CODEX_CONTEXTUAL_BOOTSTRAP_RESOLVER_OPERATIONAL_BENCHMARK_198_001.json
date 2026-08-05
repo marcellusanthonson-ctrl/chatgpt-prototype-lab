@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "CODEX_CONTEXTUAL_BOOTSTRAP_RESOLVER_OPERATIONAL_BENCHMARK_198_001",
+  "title": "Real repository shadow benchmark of contextual bootstrap resolver",
+  "project_id": "lab",
+  "executor": "CHATGPT_WITH_DETERMINISTIC_LOCAL_TOOLING",
+  "authorization_ref": "AUTHORIZATION_LAB_CONTEXTUAL_BOOTSTRAP_RESOLVER_REAL_REPOSITORY_SHADOW_BENCHMARK_198",
+  "repository": {
+    "name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "branch": "main",
+    "expected_parent_head": "87b0ca32a8789f2a69ebfc2b3de67ff396b1bcb3",
+    "head_policy": "VERIFY_LIVE_AT_USE"
+  },
+  "objective": "Compare canonical full bootstrap against the unchanged resolver 197 in a shadow benchmark over real LAB repository paths and metadata.",
+  "arms": {
+    "A": "CANONICAL_FULL_BOOTSTRAP",
+    "B": "CONTEXTUAL_RESOLVER_SHADOW"
+  },
+  "scope": {
+    "tasks": 21,
+    "routes": 7,
+    "arms": [
+      "CANONICAL_FULL_BOOTSTRAP",
+      "CONTEXTUAL_RESOLVER_SHADOW"
+    ],
+    "model_requests": 0,
+    "external_repositories": 0,
+    "resolver_mutation": false,
+    "integration": false
+  },
+  "allowed_paths": [
+    "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-BENCHMARK-001/**",
+    "projects/lab/sources/USER_SOURCE_AUTHORIZATION_198_20260805.md",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_CONTEXTUAL_BOOTSTRAP_RESOLVER_REAL_REPOSITORY_SHADOW_BENCHMARK_198.json",
+    "projects/lab/authorization-lifecycle/CONTEXTUAL_BOOTSTRAP_RESOLVER_OPERATIONAL_BENCHMARK_LIFECYCLE_198.json",
+    "projects/lab/briefs/CODEX_CONTEXTUAL_BOOTSTRAP_RESOLVER_OPERATIONAL_BENCHMARK_198_001.json",
+    "projects/lab/evidence/EVD-LAB-CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-BENCHMARK-198.json",
+    "projects/lab/evidence/CONTEXT_BUDGET_REPORT_198.json",
+    "registry/deltas/contextual-bootstrap-resolver-operational-benchmark-198.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.md",
+    "projects/lab/continuity/ATTACHMENT_MANIFEST.json",
+    "projects/lab/continuity/START_PROMPT.md"
+  ],
+  "forbidden_actions": [
+    "MODIFY_RESOLVER_197",
+    "MODEL_REQUESTS",
+    "CODEX_EXECUTION",
+    "DEPENDENCY_INSTALLATION",
+    "EXTERNAL_REPOSITORY_ACCESS",
+    "REAL_PROMPT_INTERCEPTION",
+    "RESOLVER_INTEGRATION_OR_PROMOTION",
+    "RUNTIME_OR_PRODUCT_CHANGE",
+    "ARCHITECTURE_SELECTION",
+    "TOKEN_SAVINGS_CLAIM_WITHOUT_TOKENIZER",
+    "RETAIN_RESIDUAL_AUTHORITY"
+  ],
+  "required_outputs": [
+    "snapshot manifest",
+    "21-task public corpus",
+    "private oracle",
+    "63 ARM-A loads",
+    "63 ARM-B selections",
+    "A/B results",
+    "context manifests",
+    "evidence",
+    "context budget report",
+    "continuity closure"
+  ],
+  "acceptance_checks": [
+    "CRITICAL_CONSTRAINT_RECALL_1",
+    "FORBIDDEN_PATH_PRECISION_1",
+    "AUTHORITY_ACCURACY_1",
+    "HEAD_ACCURACY_1",
+    "CONFLICT_ACCURACY_1",
+    "PROJECT_NAMESPACE_ACCURACY_1",
+    "MACRO_PATH_F1_AT_LEAST_0_95",
+    "DETERMINISTIC_3_OF_3",
+    "ZERO_AUTHORITY_BYPASSES",
+    "ZERO_CONSUMED_AUTHORIZATION_ACTIVATIONS",
+    "ZERO_CROSS_PROJECT_CONTAMINATION",
+    "ZERO_INVENTED_PATHS",
+    "ZERO_UNPINNED_SOURCES",
+    "ZERO_MISSING_REASON_TRACES",
+    "ZERO_AUTO_RESOLVED_CONFLICTS",
+    "ORACLE_LEAKAGE_0",
+    "MEDIAN_BYTE_REDUCTION_AT_LEAST_60",
+    "MEDIAN_SOURCE_REDUCTION_AT_LEAST_40",
+    "PER_ROUTE_MEDIAN_BYTE_REDUCTION_AT_LEAST_30"
+  ],
+  "stop_conditions": [
+    "PARENT_HEAD_MISMATCH",
+    "RESOLVER_BASELINE_MUTATED",
+    "ORACLE_SEPARATION_FAILURE",
+    "DEPENDENCY_INSTALLATION_REQUIRED",
+    "MODEL_REQUEST_REQUIRED",
+    "EXTERNAL_REPOSITORY_REQUIRED",
+    "SENSITIVE_DATA_DETECTED",
+    "PATH_OUTSIDE_AUTHORIZED_SCOPE"
+  ],
+  "response_contract": [
+    "terminal result",
+    "metrics",
+    "critical failures",
+    "measurement boundaries",
+    "publication",
+    "authorization consumption",
+    "one next action"
+  ],
+  "execution_result": {
+    "status": "COMPLETE",
+    "terminal_result": "REAL_REPOSITORY_BENCHMARK_FAIL_CRITICAL",
+    "harness_attempts": 2,
+    "harness_correction": "results/HARNESS_CORRECTION.json"
+  }
+}

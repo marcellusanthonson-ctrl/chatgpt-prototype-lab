@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0.0",
+  "benchmark_id": "CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-BENCHMARK-001",
+  "authorization_id": "AUTHORIZATION_LAB_CONTEXTUAL_BOOTSTRAP_RESOLVER_REAL_REPOSITORY_SHADOW_BENCHMARK_198",
+  "status": "REAL_REPOSITORY_BENCHMARK_FAIL_CRITICAL",
+  "snapshot_head": "87b0ca32a8789f2a69ebfc2b3de67ff396b1bcb3",
+  "snapshot_tree": "cf96df3a6c235ff0663ce191b7e4337abf18638e",
+  "benchmark_mode": "REAL_REPOSITORY_METADATA_AND_CANONICAL_CONTENT_SHADOW_NO_MODEL",
+  "resolver_baseline": "CONTEXTUAL_BOOTSTRAP_RESOLVER_001_0.1.0_EXPERIMENTAL_UNMODIFIED",
+  "arms": {
+    "A": "CANONICAL_FULL_BOOTSTRAP",
+    "B": "CONTEXTUAL_RESOLVER_SHADOW"
+  },
+  "corpus": {
+    "tasks": 21,
+    "routes": 7,
+    "tasks_per_route": 3,
+    "repetitions_per_arm": 3,
+    "baseline_loads": 63,
+    "resolver_selections": 63,
+    "total_iterations": 126,
+    "simulated_authorization_fixtures": 2
+  },
+  "result": {
+    "terminal": "REAL_REPOSITORY_BENCHMARK_FAIL_CRITICAL",
+    "metrics": {
+      "macroPathF1": 0.925243,
+      "microPathF1": 0.892308,
+      "criticalConstraintRecall": 0.935484,
+      "forbiddenPathPrecision": 1,
+      "routeAccuracy": 0.952381,
+      "riskAccuracy": 0.952381,
+      "terminalStateAccuracy": 0.857143,
+      "authorityAccuracy": 0.952381,
+      "headAccuracy": 1,
+      "conflictAccuracy": 0.904762,
+      "projectNamespaceAccuracy": 1,
+      "falsePositives": 20,
+      "falseNegatives": 8,
+      "medianByteReductionPercent": 70.045,
+      "medianSourceCountReductionPercent": 75,
+      "perRoute": {
+        "CONTINUITY_RESUME": {
+          "count": 3,
+          "medianByteReductionPercent": 92.561
+        },
+        "PROJECT_CONTINUATION": {
+          "count": 3,
+          "medianByteReductionPercent": 94.411
+        },
+        "NEW_DESIGN": {
+          "count": 3,
+          "medianByteReductionPercent": 90.191
+        },
+        "STATUS_OR_AUTHORITY": {
+          "count": 4,
+          "medianByteReductionPercent": 14.104
+        },
+        "CODE_CHANGE": {
+          "count": 2,
+          "medianByteReductionPercent": 68.585
+        },
+        "AUDIT_OR_REASSESSMENT": {
+          "count": 3,
+          "medianByteReductionPercent": 48.185
+        },
+        "UNKNOWN_ESCALATION": {
+          "count": 3,
+          "medianByteReductionPercent": 91.08
+        }
+      },
+      "authorityBypasses": 0,
+      "consumedAuthorizationActivations": 0,
+      "crossProjectContaminations": 0,
+      "inventedPaths": 0,
+      "unpinnedSources": 0,
+      "missingReasonTraces": 0,
+      "autoResolvedConflicts": 2,
+      "criticalIssueCount": 16,
+      "noncriticalIssueCount": 2
+    },
+    "failed_gates": [
+      "criticalConstraintRecall1",
+      "authorityAccuracy1",
+      "conflictAccuracy1",
+      "macroPathF1AtLeast0_95",
+      "zeroAutoResolvedConflicts",
+      "perRouteMedianByteReductionAtLeast30"
+    ]
+  },
+  "root_findings": [
+    "CODE_CHANGE_PROMPT_CONTAINING_ESTADO_WAS_MISROUTED_TO_STATUS_OR_AUTHORITY",
+    "STATUS_OR_AUTHORITY_OMITTED_CURRENT_CONTINUITY_AND_AUTHORIZATION_LIFECYCLE",
+    "STATUS_OR_AUTHORITY_AUTO_RESOLVED_TWO_MATERIAL_CONFLICTS",
+    "AUDIT_OR_REASSESSMENT_OMITTED_LIFECYCLE_OR_AGGREGATE_STATE_SOURCES_IN_TARGETED_CASES",
+    "AUDIT_OR_REASSESSMENT_OVER_SELECTED_UNRELATED_EVIDENCE",
+    "STATUS_OR_AUTHORITY_MEDIAN_BYTE_REDUCTION_14_104_PERCENT_FAILED_ROUTE_GATE"
+  ],
+  "positive_controls": {
+    "zero_authority_bypasses": true,
+    "zero_consumed_authorization_activations": true,
+    "zero_cross_project_contamination": true,
+    "zero_invented_paths": true,
+    "zero_unpinned_sources": true,
+    "zero_missing_reason_traces": true,
+    "head_accuracy_1": true,
+    "project_namespace_accuracy_1": true
+  },
+  "measurement_boundaries": {
+    "byteMetric": "GITHUB_RECORDED_SOURCE_BYTES_REPRESENTED_BY_SELECTED_PATHS_NOT_LOCAL_FILE_IO",
+    "nonemptyLines": "NOT_RUN_NO_FULL_PRIVATE_WORKTREE",
+    "tokens": "NOT_RUN_NO_AUTHORIZED_LOCAL_TOKENIZER",
+    "timeToFirstUsefulCode": "NOT_RUN_NO_MODEL",
+    "responseQuality": "NOT_RUN_NO_MODEL"
+  },
+  "no_effects": {
+    "model_requests": 0,
+    "integration": "NONE",
+    "runtime": "NONE",
+    "product": "NONE",
+    "architecture_selection": "NONE",
+    "resolver_mutation": "NONE"
+  },
+  "files": {
+    "summary": "SUMMARY.json",
+    "hash_inventory": "FILE_HASHES.json"
+  },
+  "publication_package": {
+    "format": "DIRECT_GZIP_BASE64_ARTIFACT_SET",
+    "files": [
+      "fixtures/OPERATIONAL_TASKS.json.gz.b64",
+      "oracle/PRIVATE_ORACLE.json.gz.b64",
+      "results/BENCHMARK_RESULTS.json.gz.b64",
+      "results/CONTEXT_MANIFESTS.json.gz.b64",
+      "results/HARNESS_CORRECTION.json",
+      "snapshot/SNAPSHOT_MANIFEST.json.gz.b64",
+      "scripts/BENCHMARK_RUNNER.ts.gz.b64"
+    ],
+    "decode": "BASE64_DECODE_THEN_GZIP_DECOMPRESS_FOR_GZ_B64_FILES",
+    "resolver_sources": "REFERENCED_BY_HASH_FROM_CONTEXTUAL_BOOTSTRAP_RESOLVER_001_NOT_DUPLICATED"
+  },
+  "harness_correction_record": "results/HARNESS_CORRECTION.json"
+}

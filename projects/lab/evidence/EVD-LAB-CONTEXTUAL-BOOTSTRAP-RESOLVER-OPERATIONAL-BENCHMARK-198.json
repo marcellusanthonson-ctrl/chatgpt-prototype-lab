@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-BENCHMARK-198",
+  "title": "Real repository shadow benchmark of contextual bootstrap resolver 197",
+  "project_id": "lab",
+  "status": "REGISTERED_AWAITING_VERIFIED_PUBLICATION",
+  "recorded_at": "2026-08-05T19:15:06-04:00",
+  "authorization_id": "AUTHORIZATION_LAB_CONTEXTUAL_BOOTSTRAP_RESOLVER_REAL_REPOSITORY_SHADOW_BENCHMARK_198",
+  "execution_parent_head": "87b0ca32a8789f2a69ebfc2b3de67ff396b1bcb3",
+  "terminal_result": "REAL_REPOSITORY_BENCHMARK_FAIL_CRITICAL",
+  "benchmark_path": "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-BENCHMARK-001",
+  "snapshot": {
+    "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "headSha": "87b0ca32a8789f2a69ebfc2b3de67ff396b1bcb3",
+    "mode": "GITHUB_METADATA_AND_CANONICAL_CONTENT_READS_NO_LOCAL_PRIVATE_WORKTREE",
+    "fullPrivateWorktreeAvailable": false
+  },
+  "environment": {
+    "platform": "linux",
+    "node": "v22.16.0",
+    "typescript": "5.8.3",
+    "modelRequests": 0,
+    "networkRequestsFromLocalRunner": 0,
+    "dependencyInstallations": 0,
+    "externalRepositoriesAccessed": 0
+  },
+  "corpus": {
+    "tasks": 21,
+    "repetitionsPerArm": 3,
+    "baselineLoads": 63,
+    "resolverSelections": 63,
+    "totalBenchmarkIterations": 126,
+    "operationalRealPaths": true,
+    "simulatedAuthorizationFixtures": 2
+  },
+  "metrics": {
+    "macroPathF1": 0.925243,
+    "microPathF1": 0.892308,
+    "criticalConstraintRecall": 0.935484,
+    "forbiddenPathPrecision": 1,
+    "routeAccuracy": 0.952381,
+    "riskAccuracy": 0.952381,
+    "terminalStateAccuracy": 0.857143,
+    "authorityAccuracy": 0.952381,
+    "headAccuracy": 1,
+    "conflictAccuracy": 0.904762,
+    "projectNamespaceAccuracy": 1,
+    "falsePositives": 20,
+    "falseNegatives": 8,
+    "medianByteReductionPercent": 70.045,
+    "medianSourceCountReductionPercent": 75,
+    "perRoute": {
+      "CONTINUITY_RESUME": {
+        "count": 3,
+        "medianByteReductionPercent": 92.561
+      },
+      "PROJECT_CONTINUATION": {
+        "count": 3,
+        "medianByteReductionPercent": 94.411
+      },
+      "NEW_DESIGN": {
+        "count": 3,
+        "medianByteReductionPercent": 90.191
+      },
+      "STATUS_OR_AUTHORITY": {
+        "count": 4,
+        "medianByteReductionPercent": 14.104
+      },
+      "CODE_CHANGE": {
+        "count": 2,
+        "medianByteReductionPercent": 68.585
+      },
+      "AUDIT_OR_REASSESSMENT": {
+        "count": 3,
+        "medianByteReductionPercent": 48.185
+      },
+      "UNKNOWN_ESCALATION": {
+        "count": 3,
+        "medianByteReductionPercent": 91.08
+      }
+    },
+    "authorityBypasses": 0,
+    "consumedAuthorizationActivations": 0,
+    "crossProjectContaminations": 0,
+    "inventedPaths": 0,
+    "unpinnedSources": 0,
+    "missingReasonTraces": 0,
+    "autoResolvedConflicts": 2,
+    "criticalIssueCount": 16,
+    "noncriticalIssueCount": 2
+  },
+  "failed_gates": [
+    "criticalConstraintRecall1",
+    "authorityAccuracy1",
+    "conflictAccuracy1",
+    "macroPathF1AtLeast0_95",
+    "zeroAutoResolvedConflicts",
+    "perRouteMedianByteReductionAtLeast30"
+  ],
+  "critical_findings": [
+    "CODE_CHANGE_PROMPT_CONTAINING_ESTADO_WAS_MISROUTED_TO_STATUS_OR_AUTHORITY",
+    "STATUS_OR_AUTHORITY_OMITTED_CURRENT_CONTINUITY_AND_AUTHORIZATION_LIFECYCLE",
+    "STATUS_OR_AUTHORITY_AUTO_RESOLVED_TWO_MATERIAL_CONFLICTS",
+    "AUDIT_OR_REASSESSMENT_OMITTED_LIFECYCLE_OR_AGGREGATE_STATE_SOURCES_IN_TARGETED_CASES",
+    "AUDIT_OR_REASSESSMENT_OVER_SELECTED_UNRELATED_EVIDENCE",
+    "STATUS_OR_AUTHORITY_MEDIAN_BYTE_REDUCTION_14_104_PERCENT_FAILED_ROUTE_GATE"
+  ],
+  "positive_controls": {
+    "zero_authority_bypasses": true,
+    "zero_consumed_authorization_activations": true,
+    "zero_cross_project_contamination": true,
+    "zero_invented_paths": true,
+    "zero_unpinned_sources": true,
+    "zero_missing_reason_traces": true,
+    "head_accuracy_1": true,
+    "project_namespace_accuracy_1": true
+  },
+  "measurement_boundaries": {
+    "byteMetric": "GITHUB_RECORDED_SOURCE_BYTES_REPRESENTED_BY_SELECTED_PATHS_NOT_LOCAL_FILE_IO",
+    "nonemptyLines": "NOT_RUN_NO_FULL_PRIVATE_WORKTREE",
+    "tokens": "NOT_RUN_NO_AUTHORIZED_LOCAL_TOKENIZER",
+    "timeToFirstUsefulCode": "NOT_RUN_NO_MODEL",
+    "responseQuality": "NOT_RUN_NO_MODEL"
+  },
+  "harness_reconciliation": {
+    "attempt_001_preserved": true,
+    "correction_record": "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-BENCHMARK-001/results/HARNESS_CORRECTION.json",
+    "tasks_oracle_snapshot_hashes_unchanged": false,
+    "tasks_and_oracle_hashes_unchanged": true,
+    "snapshot_tree_metadata_corrected_before_publication": true,
+    "correct_snapshot_tree": "cf96df3a6c235ff0663ce191b7e4337abf18638e",
+    "benchmark_metrics_changed_by_metadata_correction": false
+  },
+  "resolver_integrity": {
+    "types_sha256": "2d556ea97b1bf20f96a73bde8dd19e18fced21c288db1caf6c0682e6b8b03b96",
+    "resolver_sha256": "66ca3a373230330892754ae34b45850f18b638725cdfcad44d83dd075eaf83fb",
+    "matches_authorization_197_inventory": true,
+    "mutation": "NONE"
+  },
+  "claim_boundary": [
+    "REAL_PATH_AND_GITHUB_METADATA_SHADOW_BENCHMARK",
+    "NO_FULL_LOCAL_PRIVATE_WORKTREE",
+    "NO_NONEMPTY_LINE_METRIC",
+    "NO_TOKENIZER",
+    "NO_MODEL_RESPONSE_QUALITY",
+    "NO_TIME_TO_FIRST_USEFUL_CODE",
+    "FAIL_DOES_NOT_AUTHORIZE_REMEDIATION_INTEGRATION_OR_PROMOTION"
+  ],
+  "effects": {
+    "model_requests": 0,
+    "runtime": "NONE",
+    "product": "NONE",
+    "integration": "NONE",
+    "architecture_selection": "NONE",
+    "external_repositories": 0
+  },
+  "publication": {
+    "branch": "agent/contextual-bootstrap-resolver-operational-benchmark-198",
+    "pull_request": null,
+    "merge_commit": null,
+    "remote_main_verified": null
+  }
+}
