@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005",
+  "attempt": "ATTEMPT-004",
+  "status": "BLOCKED_BEFORE_MODEL_REQUESTS",
+  "terminal_status": "PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_BLOCKED_BEFORE_MODEL_REQUESTS_RESULT_PUBLISHED_AWAITING_SEPARATE_RECOVERY_OR_REISSUE_AUTHORIZATION",
+  "authorization": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_192",
+  "brief": "CODEX_PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_192_001",
+  "authorized_parent_head": "0ef5f7428cf07652b567cc28321e85bb3b3c7e62",
+  "prepared_branch_head": "c1d397c0a37e7c810753a466fd1296202ca6050e",
+  "working_branch": "agent/product-leadership-test003-fresh-retest-192",
+  "fresh_execution": true,
+  "historical_execution_reuse": false,
+  "instrument": {
+    "id": "INSTRUMENT_REDESIGN_191",
+    "mutation_allowed": false,
+    "canonical_core": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/INSTRUMENT_CORE.mjs",
+    "adapter": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005/RUN_TEST003_REDESIGNED.mjs",
+    "adapter_semantics": "ORCHESTRATION_ONLY_SUBORDINATE_TO_CANONICAL_CORE"
+  },
+  "stage_results": {
+    "stage_0": "BLOCKED_CHAIN_OF_CUSTODY_RAW_BYTE_MISMATCH",
+    "stage_1": "BLOCKED_EXACT_PREEXISTING_CHATGPT_AUTHENTICATION_UNAVAILABLE_NO_SMOKE",
+    "stage_2": "NOT_STARTED",
+    "stage_3": "NOT_STARTED",
+    "stage_4": "NOT_STARTED",
+    "stage_5": "TERMINAL_BLOCKED_OUTCOME_RECORDED_WITHOUT_NUMERIC_AGGREGATION",
+    "stage_6": "TERMINAL_RESULT_VALIDATED_PUBLICATION_PENDING_SINGLE_PULL_REQUEST"
+  },
+  "stop_conditions": [
+    "CHAIN_OF_CUSTODY_INCOMPLETE_OR_BROKEN",
+    "EXACT_AUTH_MODEL_REASONING_RUNNER_OR_SANDBOX_UNAVAILABLE"
+  ],
+  "stop_reasons": [
+    "STOP_CHAIN_OF_CUSTODY_BROKEN_13_OF_13_IMMUTABLE_REDESIGN_FILES_DIFFER_BETWEEN_CANONICAL_GIT_BLOBS_AND_WORKTREE_RAW_BYTES_DUE_TO_LINE_ENDINGS",
+    "STOP_EXACT_PREEXISTING_CHATGPT_AUTHENTICATION_UNAVAILABLE_CODEX_LOGIN_STATUS_NOT_LOGGED_IN"
+  ],
+  "request_counts": {
+    "smoke": 0,
+    "generation_baseline": 0,
+    "generation_package": 0,
+    "control_scoring": 0,
+    "experimental_scoring": 0,
+    "total": 0,
+    "maximum": 41,
+    "retries": 0
+  },
+  "fixture_counts": {"defined": 8, "generated_outputs": 0, "scores": 0},
+  "control_counts": {"positive_defined": 4, "negative_defined": 4, "scores": 0},
+  "claim_boundary": "SYNTHETIC_RETEST_BLOCKED_BEFORE_MODEL_REQUESTS_NO_PACKAGE_ADJUDICATION_OR_INTEGRATION_EFFECT",
+  "publication": {
+    "method": "COMMIT_PUSH_SINGLE_PULL_REQUEST_SQUASH_MERGE_VERIFY_REMOTE",
+    "pull_request": 45,
+    "squash_commit": "PENDING_REMOTE_MERGE",
+    "verified_remote_main": false
+  },
+  "next_action": "SEPARATELY_AUTHORIZE_RECOVERY_OR_REISSUE_AFTER_EXACT_AUTHENTICATION_AND_RAW_BYTE_CUSTODY_ROOT_CAUSES_ARE_RESOLVED"
+}

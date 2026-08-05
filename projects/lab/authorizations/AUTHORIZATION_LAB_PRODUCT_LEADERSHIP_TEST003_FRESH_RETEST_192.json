@@ -1,0 +1,193 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_192",
+  "project_id": "lab",
+  "status": "GRANTED",
+  "authorization_class": "BOUNDED_STAGED_FRESH_RETEST_EXECUTION_AND_RESULT_PUBLICATION",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-08-05T07:15:00-04:00",
+  "grant_inferred": false,
+  "repository": {
+    "name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "branch": "main",
+    "expected_parent_head": "0ef5f7428cf07652b567cc28321e85bb3b3c7e62",
+    "head_policy": "VERIFY_LIVE_AT_USE",
+    "entrypoint": "project-sources/chatgpt/START_HERE.md",
+    "working_branch": "agent/product-leadership-test003-fresh-retest-192",
+    "publication_mode": "COMMIT_PUSH_PULL_REQUEST_SQUASH_MERGE_VERIFY_REMOTE"
+  },
+  "purpose": "Execute one fresh, bounded and auditable Product Leadership Test 003 retest using INSTRUMENT_REDESIGN_191, publish only its synthetic execution result, and stop before external audit, package adjudication, promotion, activation, integration, runtime or product change.",
+  "governing_pending": "PEND-LAB-048",
+  "governing_decision": "DEC-LAB-030",
+  "governing_integration": "INT-LAB-004",
+  "predecessor_authorization": {
+    "id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191",
+    "required_state": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "residual_authority": "NONE"
+  },
+  "execution_identity": {
+    "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005",
+    "attempt": "ATTEMPT-004",
+    "fresh_execution": true,
+    "historical_execution_mutation": false
+  },
+  "authority": {
+    "fresh_retest_execution": true,
+    "model_requests": true,
+    "local_deterministic_validation": true,
+    "commit_lab": true,
+    "push_lab": true,
+    "pull_request_lab": true,
+    "squash_merge_lab": true,
+    "external_audit": false,
+    "package_adjudication": false,
+    "product_leadership_package_update": false,
+    "int_lab_004_update": false,
+    "promotion": false,
+    "activation": false,
+    "integration": false,
+    "runtime_or_product_change": false
+  },
+  "repository_verification": {
+    "type": "LAB_CANONICAL_REPOSITORY_VERIFICATION",
+    "generic_preflight_term_permitted": false,
+    "native_git_and_github_checks_only": true
+  },
+  "skill_routing": {
+    "selected_skills": [],
+    "forbidden_skills": ["clinical-os-preflight"],
+    "authorized_repositories": ["marcellusanthonson-ctrl/chatgpt-prototype-lab"],
+    "cross_repository_access": false,
+    "semantic_skill_inference": false
+  },
+  "carolina_isolation": {
+    "access_allowed": false,
+    "forbidden_projects": ["Carolina MD", "Carolina Klinik", "Clinical OS", "Carolina Clinical OS", "carolina-md-next-landing", "carolina-md-experiments"],
+    "forbidden_actions": ["OPEN", "ENUMERATE", "SEARCH", "READ", "INSPECT", "EXECUTE", "MODIFY", "CREATE", "DELETE", "VALIDATE", "BUILD", "TEST", "GIT", "COMMIT", "PUSH", "PULL_REQUEST", "DEPLOY"],
+    "failure_reason": "STOP_SCOPE_EXPANSION"
+  },
+  "source_instrument": {
+    "redesign_id": "INSTRUMENT_REDESIGN_191",
+    "root": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191",
+    "required_status": "COMPLETE_STATICALLY_VALIDATED_AWAITING_SEPARATE_FRESH_RETEST_AUTHORIZATION",
+    "mutation_allowed": false,
+    "canonical_core": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/INSTRUMENT_CORE.mjs",
+    "fresh_retest_contract": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/FRESH_RETEST_GATES_AND_CLAIM_LIMITS.json",
+    "custody_contract": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/CHAIN_OF_CUSTODY_CONTRACT.json",
+    "stop_conditions": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/STOP_CONDITIONS.json"
+  },
+  "execution_surface": {
+    "surface": "CODEX_DESKTOP_LOCAL_WINDOWS",
+    "authentication_mode": "PREEXISTING_CHATGPT_CODEX_SESSION_ONLY",
+    "api_key_creation_or_use": false,
+    "provider": "OpenAI",
+    "generation_model": "gpt-5.6-sol",
+    "scoring_model": "gpt-5.6-sol",
+    "model_reasoning_effort": "medium",
+    "sandbox": "read-only",
+    "model_tool_access": "NONE",
+    "session_persistence": false,
+    "user_config_loaded": false,
+    "project_rules_loaded": false,
+    "runner": {
+      "product": "OpenAI Codex CLI",
+      "version": "0.146.0",
+      "release_channel": "stable",
+      "required_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+      "historical_runner_reuse": false
+    },
+    "timeout_milliseconds_per_request": 120000,
+    "maximum_retries_per_request": 0,
+    "parallelism_maximum": 4
+  },
+  "request_budget": {
+    "smoke": 1,
+    "generation_baseline": 8,
+    "generation_package": 8,
+    "fixed_control_generation": 0,
+    "control_scoring": 8,
+    "experimental_scoring": 16,
+    "maximum_total_model_requests": 41,
+    "retries": 0,
+    "over_budget_behavior": "STOP_REQUEST_BUDGET_EXCEEDED_INSUFFICIENT_EVIDENCE"
+  },
+  "authorized_stages": [
+    "STAGE_0_PRE_REQUEST_MATERIALIZATION_AND_FREEZE",
+    "STAGE_1_ELIGIBILITY_AND_ONE_SMOKE_REQUEST",
+    "STAGE_2_EIGHT_BASELINE_AND_EIGHT_PACKAGE_GENERATIONS",
+    "STAGE_3_FIXED_CONTROL_SCORING_AND_CONTROL_GATE",
+    "STAGE_4_BLINDED_EXPERIMENTAL_SCORING",
+    "STAGE_5_DETERMINISTIC_AGGREGATION_AND_OUTCOME",
+    "STAGE_6_RESULT_PUBLICATION_REMOTE_VERIFICATION_AND_CONSUMPTION"
+  ],
+  "authorized_actions": [
+    "CREATE_EXECUTION_005_ATTEMPT_004",
+    "CREATE_NEW_REQUEST_ADAPTER_SUBORDINATE_TO_INSTRUMENT_CORE",
+    "CREATE_EXECUTION_SCHEMAS_TEMPLATES_FIXTURES_MANIFESTS_AND_VALIDATORS",
+    "RUN_LOCAL_DETERMINISTIC_VALIDATION",
+    "FREEZE_COMPLETE_SHA256_CHAIN_OF_CUSTODY",
+    "EXECUTE_ONLY_THE_EXACT_STAGED_MODEL_REQUEST_BUDGET",
+    "PRESERVE_APPEND_ONLY_REQUEST_OUTPUT_AND_SCORE_EVIDENCE",
+    "COMPUTE_DETERMINISTIC_OUTCOME_WITH_INSUFFICIENT_EVIDENCE_PRECEDENCE",
+    "PUBLISH_TERMINAL_RESULT_AND_CONSUME_AUTHORIZATION"
+  ],
+  "prohibitions": [
+    "NO_EXECUTION_BEFORE_EXPLICIT_GRANT",
+    "NO_REUSE_OR_MUTATION_OF_EXECUTION_004_RUNNER",
+    "NO_MUTATION_OF_INSTRUMENT_REDESIGN_191",
+    "NO_MUTATION_OF_EXECUTION_004_OR_ATTEMPT_003",
+    "NO_PRODUCT_LEADERSHIP_PACKAGE_MODIFICATION",
+    "NO_INT_LAB_004_MODIFICATION",
+    "NO_EXTERNAL_AUDIT",
+    "NO_PACKAGE_ADJUDICATION",
+    "NO_PROMOTION_ACTIVATION_OR_INTEGRATION",
+    "NO_RUNTIME_PRODUCT_SSE_AWS_TERRAFORM_SYMPHONIE_POINTER_SELECTOR_OR_FACTORY_CHANGE",
+    "NO_MODEL_OR_RUNNER_SUBSTITUTION",
+    "NO_RETRY_AFTER_ANY_MODEL_REQUEST",
+    "NO_API_KEY_CREATION_OR_USE",
+    "NO_SECRETS_PERSONAL_DATA_REAL_USER_DATA_OR_REAL_PRODUCT_DATA",
+    "NO_EXTERNAL_REPOSITORY_OR_CAROLINA_ACCESS",
+    "NO_SKILL_SELECTION_OR_SEMANTIC_SKILL_INFERENCE",
+    "NO_COERCION_OF_INSUFFICIENT_EVIDENCE_TO_PASS_OR_FAIL"
+  ],
+  "required_preconditions": [
+    "LIVE_MAIN_EQUALS_EXPECTED_PARENT_HEAD",
+    "AUTHORIZATION_192_IS_GRANTED_AND_EXACT",
+    "AUTHORIZATION_191_IS_CONSUMED_WITH_NO_RESIDUAL_AUTHORITY",
+    "INSTRUMENT_REDESIGN_191_COMPONENTS_EXIST_AT_EXACT_PATHS_AND_BYTES",
+    "HISTORICAL_EXECUTION_004_TREE_AND_SHA256_MANIFEST_MATCH",
+    "PRODUCT_LEADERSHIP_PACKAGE_AND_INT_LAB_004_ARE_UNCHANGED",
+    "ARM_SYMMETRY_TRACEABILITY_CONTROLS_SCORER_ISOLATION_RUBRIC_AND_CUSTODY_VALIDATORS_PASS",
+    "EXACT_MODEL_RUNNER_AUTHENTICATION_AND_SANDBOX_VALUES_PASS"
+  ],
+  "allowed_execution_outcomes": [
+    "PASS_CANDIDATE_FOR_SEPARATE_INTEGRATION_DECISION",
+    "FAIL_REVISE_OR_REJECT",
+    "INSUFFICIENT_EVIDENCE",
+    "BLOCKED_BEFORE_MODEL_REQUESTS"
+  ],
+  "maximum_result": "PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_RESULT_PUBLISHED_AWAITING_SEPARATE_EXTERNAL_READ_ONLY_AUDIT_AUTHORIZATION",
+  "package_adjudication": "NONE",
+  "automatic_promotion_activation_or_integration": false,
+  "consumption": {
+    "pre_request_recovery_cycles_maximum": 3,
+    "first_model_request_makes_attempt_single_use": true,
+    "terminal_result_must_be_published": true,
+    "rule": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_OF_TERMINAL_PASS_FAIL_INSUFFICIENT_EVIDENCE_OR_BLOCKED_RESULT",
+    "residual_authority_after_consumption": "NONE"
+  },
+  "source_refs": [
+    "project-sources/chatgpt/START_HERE.md",
+    "LAB_CONTRACT.md",
+    "METHODOLOGY.md",
+    "decisions/DEC-LAB-030.json",
+    "projects/lab/pending/PEND-LAB-048.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191.json",
+    "projects/lab/evidence/EVD-LAB-PL003-INSTRUMENT-REDESIGN-191.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/MANIFEST.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/FRESH_RETEST_GATES_AND_CLAIM_LIMITS.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/CHAIN_OF_CUSTODY_CONTRACT.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/STOP_CONDITIONS.json"
+  ]
+}

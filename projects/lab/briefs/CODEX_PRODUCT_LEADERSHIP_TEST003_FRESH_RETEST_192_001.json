@@ -1,0 +1,334 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "CODEX_PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_192_001",
+  "brief_id": "CODEX_PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_192_001",
+  "project_id": "lab",
+  "status": "EXECUTED_TERMINAL_BLOCKED_RESULT_PUBLICATION_PENDING",
+  "task_type": "BOUNDED_STAGED_FRESH_RETEST_EXECUTION_AND_RESULT_PUBLICATION",
+  "executor": "Codex",
+  "objective": "Execute one fresh Product Leadership Test 003 retest as Execution 005 / ATTEMPT-004 using the immutable INSTRUMENT_REDESIGN_191, enforce all fail-closed gates and chain-of-custody controls, publish only the synthetic terminal result, consume authorization 192, and stop before external audit, package adjudication, promotion, activation or integration.",
+  "authorization_ref": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_192",
+  "authorization_precondition": "Do not modify files, run validators or make model requests unless authorization 192 exists in GRANTED state, approved_by is Jonathan Martínez, the live main HEAD is exactly 0ef5f7428cf07652b567cc28321e85bb3b3c7e62, and the authorization materially matches this brief.",
+  "authority": {
+    "required_status": "GRANTED",
+    "approved_by": "Jonathan Martínez",
+    "fresh_retest": true,
+    "model_requests": true,
+    "local_deterministic_validation": true,
+    "commit_push_pull_request_squash_merge": true,
+    "external_audit": false,
+    "package_adjudication": false,
+    "promotion_activation_integration": false,
+    "runtime_or_product_change": false
+  },
+  "repositories": [
+    {
+      "name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "branch": "main",
+      "expected_parent_head": "0ef5f7428cf07652b567cc28321e85bb3b3c7e62",
+      "head_policy": "VERIFY_LIVE_AT_USE",
+      "working_branch": "agent/product-leadership-test003-fresh-retest-192"
+    }
+  ],
+  "repository_verification": {
+    "type": "LAB_CANONICAL_REPOSITORY_VERIFICATION",
+    "generic_preflight_term_permitted": false,
+    "native_git_and_github_checks_only": true
+  },
+  "skill_routing": {
+    "selected_skills": [],
+    "forbidden_skills": ["clinical-os-preflight"],
+    "authorized_repositories": ["marcellusanthonson-ctrl/chatgpt-prototype-lab"],
+    "cross_repository_access": false,
+    "semantic_skill_inference": false,
+    "ambiguity_behavior": "DO_NOT_SELECT_A_SKILL_CONTINUE_WITH_LAB_CANONICAL_REPOSITORY_VERIFICATION"
+  },
+  "carolina_isolation_boundary": {
+    "access_allowed": false,
+    "forbidden_projects": ["Carolina MD", "Carolina Klinik", "Clinical OS", "Carolina Clinical OS", "carolina-md-next-landing", "carolina-md-experiments"],
+    "forbidden_actions": ["OPEN", "ENUMERATE", "SEARCH", "READ", "INSPECT", "EXECUTE", "MODIFY", "CREATE", "DELETE", "VALIDATE", "BUILD", "TEST", "GIT", "COMMIT", "PUSH", "PULL_REQUEST", "DEPLOY"],
+    "failure_reason": "STOP_SCOPE_EXPANSION"
+  },
+  "canonical_reconstruction_order": [
+    "Verify the live remote HEAD of main.",
+    "Read project-sources/chatgpt/START_HERE.md and follow its exact order.",
+    "Read LAB_CONTRACT.md and METHODOLOGY.md.",
+    "Read CURRENT_STATE.json, registry/index.json, registry/projects.json and projects/lab/PROJECT_STATE.json.",
+    "Read DEC-LAB-030, PEND-LAB-048, authorization 191, its evidence, redesign manifest, all redesign contracts, validation results and current continuity.",
+    "Verify authorization 191 is consumed with no residual authority.",
+    "Verify authorization 192 is GRANTED and the branch descends from the exact authorized parent.",
+    "Verify selected_skills is empty, clinical-os-preflight is forbidden and only the LAB repository is authorized."
+  ],
+  "immutable_facts": {
+    "integration_id": "INT-LAB-004",
+    "integration_state": "CANDIDATE_NOT_ACTIVE_NOT_INTEGRATED",
+    "candidate_package_mutation_allowed": false,
+    "historical_execution": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+    "historical_attempt": "ATTEMPT-003",
+    "historical_file_count": 150,
+    "historical_git_tree_sha1": "7bd45ce057ae8362207cc24e7d4cbdad4305d531",
+    "historical_manifest_sha256": "e8830433d6a9fdba11c9227669a9155c16a7f58ad8c9ff49a0b93df79d85681c",
+    "historical_reconciled_interpretation": "INSUFFICIENT_EVIDENCE",
+    "redesign_id": "INSTRUMENT_REDESIGN_191",
+    "redesign_status": "COMPLETE_STATICALLY_VALIDATED",
+    "redesign_mutation_allowed": false,
+    "new_execution": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005",
+    "new_attempt": "ATTEMPT-004"
+  },
+  "execution_configuration": {
+    "surface": "CODEX_DESKTOP_LOCAL_WINDOWS",
+    "authentication_mode": "PREEXISTING_CHATGPT_CODEX_SESSION_ONLY",
+    "api_key_creation_or_use": false,
+    "provider": "OpenAI",
+    "generation_model": "gpt-5.6-sol",
+    "scoring_model": "gpt-5.6-sol",
+    "model_reasoning_effort": "medium",
+    "sandbox": "read-only",
+    "model_tool_access": "NONE",
+    "session_persistence": false,
+    "user_config_loaded": false,
+    "project_rules_loaded": false,
+    "runner_product": "OpenAI Codex CLI",
+    "runner_version": "0.146.0",
+    "runner_release_channel": "stable",
+    "runner_required_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "timeout_milliseconds_per_request": 120000,
+    "maximum_retries_per_request": 0,
+    "parallelism_maximum": 4
+  },
+  "request_budget": {
+    "smoke": 1,
+    "generation_baseline": 8,
+    "generation_package": 8,
+    "fixed_control_generation": 0,
+    "control_scoring": 8,
+    "experimental_scoring": 16,
+    "maximum_total_model_requests": 41,
+    "retries": 0
+  },
+  "scope": {
+    "included": [
+      "Create Execution 005 / ATTEMPT-004 under projects/lab/test-executions.",
+      "Create a new request adapter subordinate to INSTRUMENT_CORE.mjs.",
+      "Create execution schemas, templates, eight neutral fixtures, fixed controls, manifests and validators.",
+      "Run existing redesign validators and new execution validators.",
+      "Freeze runner, adapter, core, prompts, contracts, fixtures, schemas, configuration, environment and request manifests with SHA-256 before any request.",
+      "Run exactly one smoke request after eligibility passes.",
+      "Run eight matched baseline and eight matched package generation requests.",
+      "Score four fixed positive and four fixed negative controls before experimental scoring.",
+      "Score sixteen experimental outputs using isolated, redacted, opaque blinded cases.",
+      "Apply exact PL003-RUBRIC-191-1.0.0, deterministic bootstrap and INSUFFICIENT_EVIDENCE precedence.",
+      "Publish PASS, FAIL, INSUFFICIENT_EVIDENCE or pre-request BLOCKED evidence and consume authorization 192."
+    ],
+    "excluded": [
+      "Any mutation or reuse of the historical Execution 004 runner.",
+      "Any mutation of INSTRUMENT_REDESIGN_191, Execution 004 or ATTEMPT-003.",
+      "Any Product Leadership package or INT-LAB-004 modification.",
+      "Any external audit or package adjudication.",
+      "Any promotion, activation, integration, runtime or product effect.",
+      "Any SSE, AWS, Terraform, Symphonie, pointer, selector or factory change.",
+      "Any API key, secrets, personal data, real user data or real product data.",
+      "Any external repository or Carolina access.",
+      "Any skill selection or semantic skill inference.",
+      "Any retries or model/runner substitution."
+    ]
+  },
+  "implementation_sequence": [
+    {
+      "stage": "STAGE_0_PRE_REQUEST_MATERIALIZATION_AND_FREEZE",
+      "model_requests_allowed": 0,
+      "actions": [
+        "Verify live HEAD, authority, repository and skill boundaries.",
+        "Use the existing working branch created from the exact parent.",
+        "Materialize Execution 005, the new request adapter, templates, schemas, eight fixtures, fixed controls and validators.",
+        "Verify the adapter orchestrates only and does not redefine canonical instrument semantics.",
+        "Run schema, duplicate-key, reference, arm-symmetry, traceability, leakage, control, rubric, outcome and custody validators.",
+        "Build and verify the complete sorted-path SHA-256 custody manifest from canonical Git blobs and worktree bytes."
+      ],
+      "pre_request_recovery_cycles_maximum": 3,
+      "failure_behavior": "BLOCKED_BEFORE_MODEL_REQUESTS"
+    },
+    {
+      "stage": "STAGE_1_ELIGIBILITY_AND_SMOKE",
+      "model_requests_allowed": 1,
+      "actions": [
+        "Verify preexisting ChatGPT authentication boolean without exposing credentials.",
+        "Verify exact model, reasoning effort, runner version and runner SHA-256.",
+        "Verify read-only sandbox, no tools, no user config and no project rules.",
+        "Run exactly one schema-validating smoke request and freeze raw bytes and linkage."
+      ],
+      "failure_behavior": "TERMINAL_INSUFFICIENT_EVIDENCE_OR_BLOCKED_NO_RETRY"
+    },
+    {
+      "stage": "STAGE_2_GENERATION",
+      "model_requests_allowed": 16,
+      "actions": [
+        "Verify custody and matched arm symmetry before every request.",
+        "Run eight baseline and eight package requests.",
+        "Preserve every raw response append-only and validate schema/cardinality immediately."
+      ],
+      "failure_behavior": "STOP_REMAINING_REQUESTS_GLOBAL_INSUFFICIENT_EVIDENCE_NO_RETRY"
+    },
+    {
+      "stage": "STAGE_3_CONTROL_SCORING",
+      "model_requests_allowed": 8,
+      "actions": [
+        "Build one opaque blinded and redacted scorer payload for each fixed control.",
+        "Run recursive field, value and path leakage scans.",
+        "Score four positive and four negative controls.",
+        "Freeze scores and rationales and require the control-sensitivity gate before experimental scoring."
+      ],
+      "failure_behavior": "STOP_BEFORE_EXPERIMENTAL_SCORING_INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "stage": "STAGE_4_EXPERIMENTAL_SCORING",
+      "model_requests_allowed": 16,
+      "actions": [
+        "Create one isolated scorer request for each generated output.",
+        "Keep the unblinding map sealed until all scores and rationales are frozen.",
+        "Reject any arm, package, provenance, path, oracle or expected-result leakage."
+      ],
+      "failure_behavior": "STOP_REMAINING_SCORING_GLOBAL_INSUFFICIENT_EVIDENCE_NO_RETRY"
+    },
+    {
+      "stage": "STAGE_5_DETERMINISTIC_AGGREGATION_AND_RESULT",
+      "model_requests_allowed": 0,
+      "actions": [
+        "Reverify the complete custody manifest.",
+        "Unseal the blind map only after scoring freeze.",
+        "Verify pairwise comparability.",
+        "Apply exact rubric, zero-tolerance flags, deterministic paired bootstrap and all substantive gates.",
+        "Emit exactly one allowed execution outcome with no package adjudication."
+      ]
+    },
+    {
+      "stage": "STAGE_6_PUBLICATION_AND_CONSUMPTION",
+      "model_requests_allowed": 0,
+      "actions": [
+        "Create execution evidence, authorization lifecycle and registry delta.",
+        "Update PEND-LAB-048 and continuity only within the synthetic claim boundary.",
+        "Run scoped validators and git diff check.",
+        "Commit, push, open PR, squash merge and verify remote main.",
+        "Consume authorization 192 with no residual authority."
+      ]
+    }
+  ],
+  "required_outputs": [
+    "projects/lab/authorization-lifecycle/PL003_AUTHORIZATION_LIFECYCLE_192.json",
+    "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005/MANIFEST.json",
+    "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005/EXECUTION_CONFIG.json",
+    "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005/RUN_PLAN.json",
+    "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005/RUN_TEST003_REDESIGNED.mjs",
+    "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005/ENVIRONMENT_DECLARATION.json",
+    "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005/MODEL_RUNNER_ATTESTATION.json",
+    "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005/FIXTURE_SET.json",
+    "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005/CONTROL_SET.json",
+    "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005/INPUT_FREEZE.json",
+    "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005/CHAIN_OF_CUSTODY_MANIFEST.json",
+    "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005/REQUEST_MANIFEST.jsonl",
+    "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005/EXECUTION_LOG.jsonl",
+    "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005/RAW_RESPONSE_MANIFEST.json",
+    "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005/BLINDING_MAP.sealed.json",
+    "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005/SCORING_MANIFEST.json",
+    "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005/CONTROL_GATE_RESULTS.json",
+    "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005/AGGREGATE_RESULTS.json",
+    "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005/VALIDATION_RESULTS.json",
+    "projects/lab/evidence/EVD-LAB-PL003-FRESH-RETEST-192.json",
+    "registry/deltas/product-leadership-test003-fresh-retest-192.json",
+    "schemas/product-leadership-fresh-retest-execution.schema.json",
+    "tests/validate_product_leadership_fresh_retest_192.py",
+    "tests/product_leadership_fresh_retest_192.test.mjs"
+  ],
+  "acceptance_checks": [
+    "Live main remains the exact authorized parent when execution starts.",
+    "Only the LAB repository is accessed and selected_skills remains empty.",
+    "Execution 004 retains its 150 files, exact tree and manifest digest.",
+    "The Product Leadership package, INT-LAB-004 and INSTRUMENT_REDESIGN_191 retain exact bytes.",
+    "The new adapter is subordinate to INSTRUMENT_CORE.mjs.",
+    "All eight fixtures are complete, neutral, traceable and pairwise symmetric.",
+    "The complete custody manifest passes before any request and before aggregation/publication.",
+    "Exact authentication, model, runner, reasoning and isolation values pass.",
+    "Request cardinality is within the 41-request ceiling with zero retries.",
+    "Fixed controls pass before experimental scoring.",
+    "All scorer inputs pass recursive isolation and leakage scans.",
+    "INSUFFICIENT_EVIDENCE has precedence over numeric PASS or FAIL.",
+    "The published claim remains synthetic and creates no adjudication or integration effect.",
+    "No Carolina MD, Carolina Klinik or Clinical OS resource is accessed."
+  ],
+  "stop_conditions": [
+    "AUTHORIZATION_192_NOT_GRANTED_OR_MISMATCHED",
+    "LIVE_MAIN_HEAD_MISMATCH",
+    "REPOSITORY_BRANCH_OR_SKILL_SCOPE_MISMATCH",
+    "ANY_CAROLINA_OR_EXTERNAL_REPOSITORY_ACCESS",
+    "EXECUTION_004_PACKAGE_INT_LAB_004_OR_REDESIGN_HASH_MISMATCH",
+    "ADAPTER_WOULD_REDEFINE_CANONICAL_INSTRUMENT_SEMANTICS",
+    "CHAIN_OF_CUSTODY_INCOMPLETE_OR_BROKEN",
+    "ARM_SYMMETRY_OR_FIXTURE_TRACEABILITY_FAILURE",
+    "SCORER_CONTEXT_LEAKAGE",
+    "RUBRIC_CALIBRATION_OR_CONTROL_GATE_FAILURE",
+    "EXACT_AUTH_MODEL_REASONING_RUNNER_OR_SANDBOX_UNAVAILABLE",
+    "SMOKE_OUTPUT_MISSING_MALFORMED_OR_REFUSED",
+    "REQUEST_BUDGET_EXCEEDED_OR_RETRY_ATTEMPTED",
+    "PAIRWISE_COMPARABILITY_FAILURE",
+    "ANY_GLOBAL_INSUFFICIENT_EVIDENCE_TRIGGER",
+    "CLAIM_SCOPE_EXTERNAL_AUDIT_ADJUDICATION_PROMOTION_ACTIVATION_INTEGRATION_RUNTIME_OR_PRODUCT_EXPANSION"
+  ],
+  "response_contract": {
+    "required_fields": [
+      "terminal_status",
+      "remote_main_before",
+      "remote_main_after",
+      "authorization_state",
+      "execution_id",
+      "attempt",
+      "model_and_runner_attestation",
+      "request_counts_by_stage",
+      "retries",
+      "fixture_output_and_score_counts",
+      "control_gate_result",
+      "scorer_isolation_result",
+      "chain_of_custody_result",
+      "execution_outcome",
+      "claim_boundary",
+      "changed_files",
+      "validation_results",
+      "pull_request_and_squash_commit",
+      "historical_immutability_proof",
+      "candidate_package_and_int_lab_004_immutability",
+      "carolina_access_attestation",
+      "residual_authority",
+      "single_next_action"
+    ],
+    "allowed_terminal_statuses": [
+      "PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_COMPLETE_PASS_RESULT_PUBLISHED_AWAITING_SEPARATE_EXTERNAL_READ_ONLY_AUDIT_AUTHORIZATION",
+      "PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_COMPLETE_FAIL_RESULT_PUBLISHED_AWAITING_SEPARATE_EXTERNAL_READ_ONLY_AUDIT_AUTHORIZATION",
+      "PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_COMPLETE_INSUFFICIENT_EVIDENCE_RESULT_PUBLISHED_AWAITING_SEPARATE_EXTERNAL_AUDIT_OR_REMEDIATION_AUTHORIZATION",
+      "PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_BLOCKED_BEFORE_MODEL_REQUESTS_RESULT_PUBLISHED_AWAITING_SEPARATE_RECOVERY_OR_REISSUE_AUTHORIZATION"
+    ],
+    "forbidden_claims": [
+      "PRODUCT_LEADERSHIP_PACKAGE_APPROVED_OR_AUTOMATICALLY_REJECTED",
+      "PRODUCT_LEADERSHIP_PROMOTED_ACTIVATED_OR_INTEGRATED",
+      "INT_LAB_004_MODIFIED",
+      "EXTERNAL_AUDIT_COMPLETED",
+      "RUNTIME_OR_PRODUCT_CHANGED",
+      "AUTHORITY_REMAINS_AFTER_CONSUMPTION"
+    ]
+  },
+  "source_refs": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_192.json",
+    "projects/lab/pending/PEND-LAB-048.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191.json",
+    "projects/lab/evidence/EVD-LAB-PL003-INSTRUMENT-REDESIGN-191.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/MANIFEST.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/ARM_SYMMETRY_CONTRACT.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/SCORER_ISOLATION_CONTRACT.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/NEGATIVE_CONTROL_CONTRACT.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/FIXTURE_ORACLE_TRACEABILITY.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/INSUFFICIENT_EVIDENCE_CONTRACT.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/STOP_CONDITIONS.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/SCORING_CALIBRATION.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/CHAIN_OF_CUSTODY_CONTRACT.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/FRESH_RETEST_GATES_AND_CLAIM_LIMITS.json"
+  ]
+}

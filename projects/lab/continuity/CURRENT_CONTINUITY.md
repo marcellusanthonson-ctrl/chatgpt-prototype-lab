@@ -1,26 +1,36 @@
-# Continuidad actual del LAB
+# LAB continuity — Product Leadership Test 003 fresh retest 192
 
-Estado máximo permitido: `PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_COMPLETE_STATICALLY_VALIDATED_AWAITING_SEPARATE_FRESH_RETEST_AUTHORIZATION`.
+Canonical repository: `marcellusanthonson-ctrl/chatgpt-prototype-lab`
 
-El instrumento técnico y documental de Product Leadership Test 003 fue rediseñado bajo `AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191`. La validación estática dedicada cubre los ocho dominios de `PEND-LAB-048`: simetría de cuatro brazos, aislamiento del scorer, controles negativos fijos, trazabilidad fixture-oráculo, `INSUFFICIENT_EVIDENCE`, condiciones de detención, calibración de la rúbrica principal y cadena de custodia con gates de retest futuro.
+Branch: `main`
 
-El PR 42 fue publicado mediante squash merge y verificado en `origin/main`; la autorización 191 quedó consumida sin autoridad residual.
+Entrypoint: `project-sources/chatgpt/START_HERE.md`
 
-No hubo llamadas a modelos, ejecución de brazos, retest, replay, regeneración ni rescoring. Los 150 archivos históricos de Execution 004 / ATTEMPT-003 permanecen byte por byte intactos; se conserva tanto el FAIL histórico emitido por el runner como la interpretación reconciliada `INSUFFICIENT_EVIDENCE`.
+Head policy: `VERIFY_LIVE_AT_USE`
 
-`INT-LAB-004` permanece `CANDIDATE_NOT_ACTIVE_NOT_INTEGRATED`. El paquete candidato de Product Leadership no fue modificado ni adjudicado. `PEND-LAB-048` permanece abierto únicamente a la espera de una autorización separada y explícita para un fresh retest.
+## Terminal result
 
-## Inicio canónico
+Execution 005 / ATTEMPT-004 is `BLOCKED_BEFORE_MODEL_REQUESTS`. The exact result is:
 
-1. Verifica el HEAD remoto de `main` con `VERIFY_LIVE_AT_USE`.
-2. Lee `project-sources/chatgpt/START_HERE.md` y sigue exactamente su orden.
-3. Lee la autorización, el brief, `PEND-LAB-048`, la evidencia del rediseño, el manifest y los resultados de validación indicados en `CURRENT_CONTINUITY.json`.
+`PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_BLOCKED_BEFORE_MODEL_REQUESTS_RESULT_PUBLISHED_AWAITING_SEPARATE_RECOVERY_OR_REISSUE_AUTHORIZATION`
 
-## Límites vigentes
+No model request was made. Counts are 0 smoke, 0 baseline generation, 0 package generation, 0 control scoring, 0 experimental scoring and 0 retries.
 
-- No hay autoridad para modelos, retest, replay, regeneración o rescoring.
-- No hay autoridad para modificar el paquete candidato ni `INT-LAB-004`.
-- No hay autoridad para promoción, activación, integración, runtime o producto.
-- No hay autoridad para acceder o cambiar repositorios externos.
+Two fail-closed conditions fired before the smoke request:
 
-Siguiente acción única: preparar una autorización separada de fresh retest; no ejecutarla.
+- `codex login status` reported that the required preexisting ChatGPT Codex session was not logged in. No login or API-key action was attempted.
+- The immutable redesign's 13 canonical Git blobs differed from their Windows worktree raw bytes because of line endings. The custody contract forbids normalization; all 13 mismatches were preserved and recorded.
+
+## Immutable boundaries
+
+Execution 004 / ATTEMPT-003 remains byte-for-byte preserved: 150 files, 1,023,921 bytes, Git tree `7bd45ce057ae8362207cc24e7d4cbdad4305d531`, sorted-path SHA-256 manifest digest `e8830433d6a9fdba11c9227669a9155c16a7f58ad8c9ff49a0b93df79d85681c`.
+
+`INSTRUMENT_REDESIGN_191` remains unchanged at tree `cd3a2b8a7d7f62af65bb8cd90b21bfbc99d3f3ab`. The Product Leadership candidate package and `INT-LAB-004` remain unchanged and unadjudicated. No external audit, promotion, activation, integration, runtime or product action occurred.
+
+## Publication and authority
+
+The single result pull request and squash verification are pending. Authorization 192 is limited to publishing this terminal result and is consumed with no residual authority only when the squash appears on verified remote `main`.
+
+## Single next action
+
+Separately authorize recovery or reissue only after resolving exact authentication and raw-byte custody root causes.

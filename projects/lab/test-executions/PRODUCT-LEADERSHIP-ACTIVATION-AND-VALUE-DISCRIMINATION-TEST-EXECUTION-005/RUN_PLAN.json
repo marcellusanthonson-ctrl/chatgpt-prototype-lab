@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005",
+  "attempt": "ATTEMPT-004",
+  "status": "TERMINATED_FAIL_CLOSED_BEFORE_REQUESTS",
+  "stages": [
+    {"stage": 0, "name": "PRE_REQUEST_MATERIALIZATION_AND_FREEZE", "request_budget": 0, "result": "BLOCKED_CHAIN_OF_CUSTODY_BROKEN"},
+    {"stage": 1, "name": "ELIGIBILITY_AND_SMOKE", "request_budget": 1, "result": "BLOCKED_AUTHENTICATION_UNAVAILABLE_SMOKE_NOT_SENT"},
+    {"stage": 2, "name": "GENERATION", "request_budget": 16, "result": "NOT_STARTED"},
+    {"stage": 3, "name": "CONTROL_SCORING", "request_budget": 8, "result": "NOT_STARTED"},
+    {"stage": 4, "name": "EXPERIMENTAL_SCORING", "request_budget": 16, "result": "NOT_STARTED"},
+    {"stage": 5, "name": "DETERMINISTIC_AGGREGATION_AND_RESULT", "request_budget": 0, "result": "BLOCKED_RESULT_ONLY_NO_NUMERIC_AGGREGATION"},
+    {"stage": 6, "name": "PUBLICATION_AND_CONSUMPTION", "request_budget": 0, "result": "PENDING"}
+  ],
+  "pre_request_recovery_cycles_maximum": 3,
+  "pre_request_recovery_cycles_used": 0,
+  "retry_policy": "ZERO_RETRIES",
+  "termination_rule": "ANY_STOP_CONDITION_STOPS_ALL_LATER_MODEL_STAGES"
+}

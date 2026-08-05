@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "PL003-AUTHORIZATION-LIFECYCLE-192",
+  "project_id": "lab",
+  "status": "TERMINAL_BLOCKED_RESULT_RECORDED_PUBLICATION_PENDING",
+  "authorization": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_192",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-08-05T07:15:00-04:00",
+  "expected_parent_head": "0ef5f7428cf07652b567cc28321e85bb3b3c7e62",
+  "prepared_branch_head": "c1d397c0a37e7c810753a466fd1296202ca6050e",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005",
+  "attempt": "ATTEMPT-004",
+  "execution_outcome": "BLOCKED_BEFORE_MODEL_REQUESTS",
+  "consumption_rule": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_OF_TERMINAL_PASS_FAIL_INSUFFICIENT_EVIDENCE_OR_BLOCKED_RESULT",
+  "consumption_trigger": "PENDING_VERIFIED_SQUASH_MERGE_OF_THE_SINGLE_RESULT_PULL_REQUEST",
+  "first_model_request_made": false,
+  "single_use_triggered_by_model_request": false,
+  "terminal_result_publication_required": true,
+  "request_counts": {
+    "smoke": 0,
+    "generation_baseline": 0,
+    "generation_package": 0,
+    "control_scoring": 0,
+    "experimental_scoring": 0,
+    "total": 0,
+    "maximum": 41,
+    "retries": 0
+  },
+  "stop_conditions": [
+    "CHAIN_OF_CUSTODY_INCOMPLETE_OR_BROKEN",
+    "EXACT_AUTH_MODEL_REASONING_RUNNER_OR_SANDBOX_UNAVAILABLE"
+  ],
+  "publication": {
+    "method": "COMMIT_PUSH_SINGLE_PULL_REQUEST_SQUASH_MERGE_VERIFY_REMOTE",
+    "pull_request": 45,
+    "squash_commit": "PENDING_REMOTE_MERGE",
+    "verified_remote_main": false,
+    "verified_at": null
+  },
+  "residual_authority": "PENDING_CONSUMPTION_ON_VERIFIED_REMOTE_PUBLICATION",
+  "next_action_after_consumption": "SEPARATELY_AUTHORIZE_RECOVERY_OR_REISSUE_ONLY"
+}

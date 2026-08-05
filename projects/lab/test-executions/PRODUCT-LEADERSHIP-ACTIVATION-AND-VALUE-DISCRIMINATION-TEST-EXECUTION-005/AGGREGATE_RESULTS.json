@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005",
+  "attempt": "ATTEMPT-004",
+  "status": "TERMINAL",
+  "execution_outcome": "BLOCKED_BEFORE_MODEL_REQUESTS",
+  "numeric_aggregation_performed": false,
+  "insufficient_evidence_coerced": false,
+  "reason_codes": ["STOP_CHAIN_OF_CUSTODY_BROKEN", "STOP_EXACT_AUTHENTICATION_UNAVAILABLE"],
+  "request_counts": {"smoke": 0, "generation_baseline": 0, "generation_package": 0, "control_scoring": 0, "experimental_scoring": 0, "total": 0},
+  "retries": 0,
+  "fixture_outputs": 0,
+  "scores": 0,
+  "control_gate": "NOT_RUN",
+  "scorer_isolation": "NOT_EXERCISED_NO_SCORER_REQUESTS",
+  "chain_of_custody": "FAIL_13_OF_13_REDESIGN_RAW_BYTE_MISMATCHES",
+  "package_adjudication": "NONE",
+  "promotion_activation_integration": "NONE",
+  "claim_boundary": "SYNTHETIC_RETEST_BLOCKED_BEFORE_MODEL_REQUESTS_NO_PACKAGE_ADJUDICATION_OR_INTEGRATION_EFFECT"
+}

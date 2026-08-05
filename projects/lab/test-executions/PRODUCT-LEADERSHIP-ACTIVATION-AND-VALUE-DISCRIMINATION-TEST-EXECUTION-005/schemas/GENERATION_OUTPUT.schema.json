@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lab.local/schemas/pl003-r192-generation-output.json",
+  "type": "object",
+  "required": ["activation_classification", "analysis", "recommendation", "uncertainty"],
+  "properties": {
+    "activation_classification": {"enum": ["ACTIVE", "INACTIVE", "LIMITED_OR_AMBIGUOUS"]},
+    "analysis": {"type": "string", "minLength": 1},
+    "recommendation": {"type": "string", "minLength": 1},
+    "uncertainty": {"type": "string", "minLength": 1}
+  },
+  "additionalProperties": false
+}

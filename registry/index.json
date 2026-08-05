@@ -9,15 +9,15 @@
     "ideas": 5,
     "integrations": 7,
     "experiments": 8,
-    "authorizations": 106,
-    "evidence": 88,
+    "authorizations": 107,
+    "evidence": 89,
     "unincorporated": 0,
     "proposals": 3,
     "sessions": 1,
     "reassessments": 6,
     "reconciliations": 8,
     "test_designs": 7,
-    "test_executions": 5,
+    "test_executions": 6,
     "source_packages": 3,
     "foundation_library": 23,
     "visual_preferences": 1,
@@ -105,7 +105,8 @@
       "registry/deltas/sse-test-execution-and-read-only-audit-147.json",
       "registry/deltas/priority-integrations-phase2-sse-authority-180.json",
       "registry/deltas/sse-test-180-blocked-attempt-canonical-reconciliation-181.json",
-      "registry/deltas/product-leadership-test003-instrument-redesign-191.json"
+      "registry/deltas/product-leadership-test003-instrument-redesign-191.json",
+      "registry/deltas/product-leadership-test003-fresh-retest-192.json"
     ],
     "evidence": "registry/evidence.json",
     "evidence_deltas": [
@@ -153,7 +154,8 @@
       "registry/deltas/post-178-canonical-state-phase1-evidence-reconciliation-179.json",
       "registry/deltas/priority-integrations-phase2-sse-authority-180.json",
       "registry/deltas/sse-test-180-blocked-attempt-canonical-reconciliation-181.json",
-      "registry/deltas/product-leadership-test003-instrument-redesign-191.json"
+      "registry/deltas/product-leadership-test003-instrument-redesign-191.json",
+      "registry/deltas/product-leadership-test003-fresh-retest-192.json"
     ],
     "current_state": "CURRENT_STATE.json",
     "current_state_deltas": [
@@ -208,7 +210,8 @@
       "registry/deltas/post-178-canonical-state-phase1-evidence-reconciliation-179.json",
       "registry/deltas/priority-integrations-phase2-sse-authority-180.json",
       "registry/deltas/sse-test-180-blocked-attempt-canonical-reconciliation-181.json",
-      "registry/deltas/product-leadership-test003-instrument-redesign-191.json"
+      "registry/deltas/product-leadership-test003-instrument-redesign-191.json",
+      "registry/deltas/product-leadership-test003-fresh-retest-192.json"
     ],
     "pattern_deltas": [
       "registry/deltas/livhavn-surgical-visual-patch-093.json",
@@ -299,12 +302,12 @@
     "error": "ERR-LAB-011",
     "error_path": "errors/ERR-LAB-011.json",
     "pattern": "PAT-LAB-009",
-    "authorization": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191",
-    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191.json",
-    "evidence": "EVD-LAB-PL003-INSTRUMENT-REDESIGN-191",
-    "evidence_path": "projects/lab/evidence/EVD-LAB-PL003-INSTRUMENT-REDESIGN-191.json",
-    "current_state_delta": "product-leadership-test003-instrument-redesign-191",
-    "current_state_delta_path": "registry/deltas/product-leadership-test003-instrument-redesign-191.json",
+    "authorization": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_192",
+    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_192.json",
+    "evidence": "EVD-LAB-PL003-FRESH-RETEST-192",
+    "evidence_path": "projects/lab/evidence/EVD-LAB-PL003-FRESH-RETEST-192.json",
+    "current_state_delta": "product-leadership-test003-fresh-retest-192",
+    "current_state_delta_path": "registry/deltas/product-leadership-test003-fresh-retest-192.json",
     "experiment": "EXP-LAB-003",
     "proposal": "PROP-LAB-003",
     "session": "SES-2026-06-28-001",
@@ -314,7 +317,7 @@
     "test_design": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191",
     "pending": "PEND-LAB-048",
     "pending_path": "projects/lab/pending/PEND-LAB-048.json",
-    "test_execution": "SOFTWARE-SOLUTION-ENGINEERING-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-001",
+    "test_execution": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005",
     "external_audit": "AUDIT-CLAUDE-M5-ATTEMPT-003-001",
     "source_package": "DESIGN-KNOWLEDGE-SOURCE-PACKAGE-001@1.2.0",
     "foundation_library": "SOFTWARE-SOLUTION-ENGINEERING-CANDIDATE-PACKAGE-001@0.2.0",

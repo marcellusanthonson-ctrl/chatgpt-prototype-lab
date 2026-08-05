@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "manifest_id": "PL003-R192-CUSTODY-001",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005",
+  "attempt": "ATTEMPT-004",
+  "status": "FAIL_STOP_CHAIN_OF_CUSTODY_BROKEN",
+  "created_at": "2026-08-05T07:36:03-04:00",
+  "hash_algorithm": "SHA-256_RAW_BYTES_NO_LINE_ENDING_NORMALIZATION",
+  "source_head": "c1d397c0a37e7c810753a466fd1296202ca6050e",
+  "instrument_git_tree": "cd3a2b8a7d7f62af65bb8cd90b21bfbc99d3f3ab",
+  "instrument_file_count": 13,
+  "instrument_mismatch_count": 13,
+  "root_cause": "GIT_CHECKOUT_PRODUCED_CRLF_WORKTREE_BYTES_WHILE_CANONICAL_GIT_BLOBS_USE_LF",
+  "normalization_applied": false,
+  "entries": [
+    {"path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/ARM_SYMMETRY_CONTRACT.json", "git_sha256": "61e43fcfd2caf17f870215d79ff445dcfc31ab03024335ef109b7c0ff3035922", "worktree_sha256": "c1858ab761c123975298f280ad3a0e2e3ddb273c98168498a3ebc2a3475c70cf", "git_bytes": 3266, "worktree_bytes": 3312, "match": false},
+    {"path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/CHAIN_OF_CUSTODY_CONTRACT.json", "git_sha256": "bd720963a7b48f46ec5aba62177105c9b53add018f5314cfb7478286f9c0a6ca", "worktree_sha256": "c98b175d674a98598a1d800624eca1930a2aad7964258ffcb6863a8632d58f41", "git_bytes": 4703, "worktree_bytes": 4756, "match": false},
+    {"path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/FIXTURE_ORACLE_TRACEABILITY.json", "git_sha256": "cfbc30b32c76df31ee32018035fb359cf5874d872627eb5ea9b3323ac0144bf9", "worktree_sha256": "b8aed63db5a826e3d236f6321c22b1cfdf934433f1c627e01fe68ff0364cba63", "git_bytes": 10379, "worktree_bytes": 10498, "match": false},
+    {"path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/FRESH_RETEST_GATES_AND_CLAIM_LIMITS.json", "git_sha256": "b2efc9330f1ae9eb1f280a8834ce91039444fb875a55daa6ce0d31ee3f0f52aa", "worktree_sha256": "a13ff4dbd98d19df8ed2684aa69e558f941f9987687796cfe20c1b2720b3456b", "git_bytes": 3141, "worktree_bytes": 3201, "match": false},
+    {"path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/INSTRUMENT_CORE.mjs", "git_sha256": "5cd8925ce832c1f27cc3dc73d991f47621937bf1414b238be919cfdda3c080d4", "worktree_sha256": "7930c45bf751eefae3b86d83aae1ba827042ec17f7023727b7342dd45eaeafff", "git_bytes": 3048, "worktree_bytes": 3129, "match": false},
+    {"path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/INSUFFICIENT_EVIDENCE_CONTRACT.json", "git_sha256": "a2791f11a5389f3a939950dfe52127bc003dc40804786c7c14326102feaa1bbc", "worktree_sha256": "b1e3736e0f3bc680e224d0682e795cc7d36a48ad0f2aa9dc5bc1eae9c7a838de", "git_bytes": 2142, "worktree_bytes": 2185, "match": false},
+    {"path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/MANIFEST.json", "git_sha256": "8009277d298573833cbd24090a7f3f01b4076ee790d89343a2ca4570eccea7e5", "worktree_sha256": "59895899883703b82b960b2f541b7ec1e70b5bb2e8f20cc71744d41067bf8928", "git_bytes": 5386, "worktree_bytes": 5480, "match": false},
+    {"path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/NEGATIVE_CONTROL_CONTRACT.json", "git_sha256": "a1e024ec4610a21139dfb490b4fa9d04fea5ece1462551f44f80611ad22b2ee3", "worktree_sha256": "f67e08968927aaa9a6083fa4b2c97b0cf07b3d66ef079b48529cd941ffc93aab", "git_bytes": 2916, "worktree_bytes": 2943, "match": false},
+    {"path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/SCORER_ISOLATION_CONTRACT.json", "git_sha256": "2a03e9dc889a096924ce3fd9ca1f82be14d44924b5ec1549441adf1c118ede44", "worktree_sha256": "1dc9c3226abd3a66e44c135e8a338c3696ce8dac18a7809737f1e3fad36d8877", "git_bytes": 2441, "worktree_bytes": 2467, "match": false},
+    {"path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/SCORING_CALIBRATION.json", "git_sha256": "8bc0d6a62b16278c5fffe073f81015441a79d025ffbc2d672b7bfa9634dcf617", "worktree_sha256": "6f5b6caf4036f831c7eefa8f5155c3b4ed6d3a2cd3c7dc1da40eddda5134c382", "git_bytes": 4718, "worktree_bytes": 4775, "match": false},
+    {"path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/STATIC_CALIBRATION_FIXTURES.json", "git_sha256": "30bfddc74fd1ce45bf0d33e3e27142542a6fcff02a05f4b560b83cd5872e28ef", "worktree_sha256": "4c64bf3a3d29aae765f2ad3163cc0185367c7f97f693678f3ebf61c1b3dd36bd", "git_bytes": 8956, "worktree_bytes": 9016, "match": false},
+    {"path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/STOP_CONDITIONS.json", "git_sha256": "59a6b9f3beb4f677b27afb3e3e735364b50cc33951bbfef089e985cf7df00727", "worktree_sha256": "f9d2b607faf34dad9eb498790725d14d50d7cd07b91f210b3aa5bc63beae109c", "git_bytes": 5173, "worktree_bytes": 5198, "match": false},
+    {"path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/VALIDATION_RESULTS.json", "git_sha256": "9b34d491deef41b4dcf0de8c5f29e1f4931ae20ae512bc0a4c17ffbb203047f8", "worktree_sha256": "9265270ee355a2590a8e52d02fe01f91e401c764361243e6b1aae2d0be71e972", "git_bytes": 3012, "worktree_bytes": 3096, "match": false}
+  ],
+  "verification_result": "FAIL",
+  "requests_allowed": false,
+  "terminal_outcome": "BLOCKED_BEFORE_MODEL_REQUESTS"
+}

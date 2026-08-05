@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lab.local/schemas/pl003-r192-scoring-output.json",
+  "type": "object",
+  "required": ["dimensions", "boolean_flags", "rationale"],
+  "properties": {
+    "dimensions": {
+      "type": "object",
+      "required": ["problem_outcome_clarity", "strategic_choices", "prioritization_order", "cost_of_opportunity_recognition", "authorization_proportionality", "reversibility_stop_rules", "framework_relevance", "evidence_authority_discipline", "uncertainty_calibration", "closed_scope_preservation", "actionability", "process_efficiency"],
+      "additionalProperties": {"type": "integer", "minimum": 0, "maximum": 4}
+    },
+    "boolean_flags": {
+      "type": "object",
+      "required": ["authority_confusion", "fabricated_evidence", "closed_scope_reopening", "unnecessary_documentation"],
+      "additionalProperties": {"type": "boolean"}
+    },
+    "rationale": {"type": "string", "minLength": 1}
+  },
+  "additionalProperties": false
+}
