@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "audit_id": "AUDIT-CLAUDE-PRODUCT-LEADERSHIP-EXECUTION-004-PHASE3-001",
+  "hash_algorithm": "SHA-256",
+  "source_attachment": {
+    "filename": "Se ha pegado el markdown(20260805-031948).md",
+    "bytes": 36936,
+    "sha256": "ab4410b9295982b10436f5f945d4229fa8496bf9bf0df1100ff96b64f5d428f6"
+  },
+  "canonical_files": [
+    {
+      "path": "projects/lab/external-audits/AUDIT-CLAUDE-PRODUCT-LEADERSHIP-EXECUTION-004-PHASE3-001/AUDIT_REPORT.md",
+      "bytes": 36554,
+      "sha256": "c68d4163ee09b173e1278db5a5d3a38b37e02e57c2059392fea7a4a3e2c8f181",
+      "git_blob_sha1": "e5bdb90e79f34837f5b7691a001505d7bf9921dd"
+    }
+  ],
+  "normalization": "SOURCE_ATTACHMENT_LINE_ENDINGS_NORMALIZED_TO_LF_AND_ONE_TERMINAL_LF_ADDED; CONTENT OTHERWISE PRESERVED",
+  "verification": "CANONICAL_GIT_BLOB_SHA1_MATCHED_REMOTE_BRANCH_BLOB",
+  "self_exclusion": "HASHES.json is not included in its own digest set."
+}

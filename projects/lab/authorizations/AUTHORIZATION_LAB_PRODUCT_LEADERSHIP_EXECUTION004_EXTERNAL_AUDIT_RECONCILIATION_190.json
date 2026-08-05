@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_EXECUTION004_EXTERNAL_AUDIT_RECONCILIATION_190",
+  "project_id": "lab",
+  "status": "GRANTED_ACTIVE_FOR_DOCUMENTARY_RECONCILIATION_PUBLICATION",
+  "authorization_class": "EXTERNAL_AUDIT_DOCUMENTARY_AND_EPISTEMIC_RECONCILIATION",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-08-04T23:29:00-04:00",
+  "approval_source": "Ejecuta la acción única recomendada",
+  "approval_context": "The immediately preceding single recommended action was to authorize and execute a documentary and epistemic reconciliation of the Claude Phase 3 audit of Product Leadership Execution 004, without retest or integration.",
+  "grant_inferred": false,
+  "repository": {
+    "name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "branch": "main",
+    "expected_parent_head": "4cd8158637abd645b23e97a694a15756680c2760",
+    "working_branch": "agent/product-leadership-exec004-audit-reconciliation-190",
+    "head_policy": "VERIFY_LIVE_AT_USE",
+    "entrypoint": "project-sources/chatgpt/START_HERE.md"
+  },
+  "purpose": "Register the complete Claude Phase 3 external audit as evidence; independently reconcile its decisive findings; preserve the runner-emitted FAIL as historical output while establishing INSUFFICIENT_EVIDENCE as the valid interpretation of Execution 004; and open a separate pending item for instrument redesign and any future retest.",
+  "source_audit": {
+    "audit_id": "AUDIT-CLAUDE-PRODUCT-LEADERSHIP-EXECUTION-004-PHASE3-001",
+    "audited_execution": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+    "attempt": "ATTEMPT-003",
+    "audited_head": "4cd8158637abd645b23e97a694a15756680c2760",
+    "auditor": "Claude",
+    "mode": "INDEPENDENT_EXTERNAL_READ_ONLY",
+    "assignment_source": "Jonathan stated that he would perform the audit in Claude and used the bounded read-only audit prompt prepared in the preceding conversation.",
+    "canonical_report": "projects/lab/external-audits/AUDIT-CLAUDE-PRODUCT-LEADERSHIP-EXECUTION-004-PHASE3-001/AUDIT_REPORT.md"
+  },
+  "authorized_actions": [
+    "REGISTER_AUTHORIZATION_190",
+    "PUBLISH_EXTERNAL_AUDIT_REPORT_MANIFEST_AND_HASHES",
+    "CREATE_EVD_LAB_AUD_008",
+    "CREATE_REA_LAB_010",
+    "CREATE_REC_LAB_PL003_EXEC004_AUDIT190_001",
+    "PRESERVE_RUNNER_EMITTED_FAIL_AS_IMMUTABLE_HISTORICAL_RESULT",
+    "REGISTER_INSUFFICIENT_EVIDENCE_AS_RECONCILED_INTERPRETATION",
+    "CREATE_PEND_LAB_048_FOR_SEPARATE_INSTRUMENT_REDESIGN_AND_RETEST_DECISION",
+    "APPEND_EXTERNAL_AUDIT_INDEX_EXACTLY",
+    "CREATE_REGISTRY_DELTA_190",
+    "CREATE_AUTHORIZATION_LIFECYCLE_190",
+    "COMMIT_PUSH_OPEN_PR_SQUASH_MERGE_AND_VERIFY_REMOTE_PUBLICATION"
+  ],
+  "prohibitions": [
+    "NO_MODEL_REQUESTS",
+    "NO_RETEST_OR_REPLAY",
+    "NO_REGENERATION_OR_RESCORING",
+    "NO_MUTATION_OF_EXECUTION_004_OUTPUTS_SCORES_ANALYSIS_GATES_HASHES_OR_RUNNER",
+    "NO_MUTATION_OF_TEST003_DESIGN_SCORING_THRESHOLDS_GATES_FIXTURES_OR_ORACLES",
+    "NO_PRODUCT_LEADERSHIP_PACKAGE_MODIFICATION",
+    "NO_PROMOTION_ACTIVATION_OR_INTEGRATION",
+    "NO_POINTER_SELECTOR_SHADOW_REGISTRY_RUNTIME_PRODUCT_SSE_AWS_TERRAFORM_OR_SYMPHONIE_CHANGE",
+    "NO_BROAD_AGGREGATE_VIEW_RECONCILIATION",
+    "NO_AUTOMATIC_AUTHORIZATION_OF_PENDING_048"
+  ],
+  "publication_permissions": {
+    "commit_authorized": true,
+    "push_authorized": true,
+    "pull_request_authorized": true,
+    "squash_merge_authorized": true
+  },
+  "execution_permissions": {
+    "model_requests_authorized": false,
+    "retest_authorized": false,
+    "package_change_authorized": false,
+    "integration_authorized": false,
+    "runtime_authorized": false,
+    "product_changes_authorized": false
+  },
+  "adjudication_boundary": {
+    "historical_runner_result": "FAIL_REVISE_OR_REJECT_EVIDENCE_READY_FOR_SEPARATE_EXTERNAL_AUDIT_DECISION",
+    "historical_result_mutated": false,
+    "reconciled_execution_interpretation": "INSUFFICIENT_EVIDENCE",
+    "external_audit_determination": "MODIFIED",
+    "recommended_future_action": "RETEST_DUE_TO_MATERIAL_EXECUTION_OR_DESIGN_DEFECT",
+    "future_action_authorized": false
+  },
+  "consumption_rule": "CONSUMED_ON_VERIFIED_REMOTE_SQUASH_MERGE_OF_THE_EXACT_DOCUMENTARY_RECONCILIATION_PACKAGE",
+  "reusable_permission_after_consumption": false,
+  "maximum_result": "PRODUCT_LEADERSHIP_EXECUTION004_EXTERNAL_AUDIT_RECONCILED_INSUFFICIENT_EVIDENCE_PENDING_SEPARATE_REDESIGN_DECISION",
+  "next_authorized_action": "NONE_AFTER_CONSUMPTION"
+}
