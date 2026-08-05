@@ -3,11 +3,12 @@
   "record_id": "PRODUCT-LEADERSHIP-ZERO-MODEL-READINESS-PROBE-AUTHORIZATION-LIFECYCLE-196",
   "project_id": "lab",
   "authorization": "AUTHORIZATION_LAB_POST_195_CONTINUITY_RECONCILIATION_AND_PRODUCT_LEADERSHIP_ZERO_MODEL_READINESS_PROBE_PREPARATION_196",
-  "status": "EXECUTED_AWAITING_REMOTE_PUBLICATION",
+  "status": "CONSUMED_VERIFIED_REMOTE_PUBLICATION",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-08-05T14:28:00-04:00",
   "execution_started_at": "2026-08-05T14:28:00-04:00",
   "execution_completed_at": "2026-08-05T14:31:00-04:00",
+  "consumed_at": "2026-08-05T14:38:00-04:00",
   "verified_execution_parent_head": "9e095a25c367e980cd4a69d224c26b3c73b7d0f4",
   "terminal_result": "INSUFFICIENT_EVIDENCE",
   "model_requests": 0,
@@ -16,8 +17,11 @@
   "external_repository_accesses": 0,
   "publication": {
     "branch": "agent/post-195-continuity-zero-model-probe-196",
-    "status": "PENDING_PULL_REQUEST_AND_REMOTE_VERIFICATION"
+    "pull_request": 54,
+    "merge_commit": "ea069609bbac26ccb20d025f79758d96ff42df3f",
+    "remote_main_verified": "ea069609bbac26ccb20d025f79758d96ff42df3f",
+    "status": "VERIFIED"
   },
-  "residual_authority": "BOUNDED_DOCUMENTARY_PUBLICATION_ONLY_UNTIL_VERIFIED_REMOTE_PUBLICATION",
+  "residual_authority": "NONE",
   "consumption_rule": "CONSUMED_AFTER_VERIFIED_REMOTE_PUBLICATION_OF_CONTINUITY_RECONCILIATION_AND_ZERO_MODEL_PROBE_RESULT"
 }
