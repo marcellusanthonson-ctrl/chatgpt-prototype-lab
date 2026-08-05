@@ -2,10 +2,11 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_CONTINUITY_AND_CODEX_RESOLUTIVE_PROTOCOL_191",
   "project_id": "lab",
-  "status": "GRANTED_ACTIVE_FOR_CONTINUITY_PUBLICATION",
+  "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
   "authorization_class": "DOCUMENTARY_CONTINUITY_PACKAGE_REPLACEMENT",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-08-05T00:12:00-04:00",
+  "consumed_at": "2026-08-05T00:26:36-04:00",
   "approval_source": "Crea un protocolo de continuidad , seguiremos el desarrollo en otra conversación. Conservemos el uso resolutivo que estamos dando a Codex",
   "grant_inferred": false,
   "repository": {
@@ -14,7 +15,11 @@
     "expected_parent_head": "c21af774f3bf3248867bda365b36eb62e15f1a01",
     "working_branch": "agent/product-leadership-continuity-codex-resolutive-191",
     "head_policy": "VERIFY_LIVE_AT_USE",
-    "entrypoint": "project-sources/chatgpt/START_HERE.md"
+    "entrypoint": "project-sources/chatgpt/START_HERE.md",
+    "publication_pr": 40,
+    "publication_head": "57579e007c537db5875fa57c262a721300608e0f",
+    "publication_verified_remote_main": true,
+    "published_at": "2026-08-05T00:26:36-04:00"
   },
   "purpose": "Archive the stale CURRENT continuity package; publish a new continuity package reflecting the reconciled Product Leadership Execution 004 state, PEND-LAB-048, authority boundaries, and Jonathan's resolutive Codex operating preference.",
   "authorized_actions": [
@@ -50,8 +55,21 @@
     "runtime_authorized": false,
     "product_changes_authorized": false
   },
+  "result": {
+    "continuity_id": "LAB-CONTINUITY-PRODUCT-LEADERSHIP-AUDIT190-INSUFFICIENT-EVIDENCE-PEND048-20260805",
+    "previous_current_archived": true,
+    "archive_pointer": "projects/lab/continuity/archive/LAB-CONTINUITY-PRE-AUDIT190-20260805.pointer.json",
+    "codex_resolutive_protocol_registered": true,
+    "instrument_redesign_executed": false,
+    "retest_executed": false,
+    "integration_effect": "NONE",
+    "runtime_effect": "NONE",
+    "product_effect": "NONE"
+  },
   "maximum_result": "CURRENT_CONTINUITY_PUBLISHED_PRODUCT_LEADERSHIP_AUDIT190_INSUFFICIENT_EVIDENCE_PEND048_WITH_CODEX_RESOLUTIVE_PROTOCOL",
   "consumption_rule": "CONSUMED_ON_VERIFIED_REMOTE_SQUASH_MERGE_OF_EXACT_CONTINUITY_PACKAGE",
+  "consumption_trigger_satisfied": true,
+  "residual_authority": "NONE",
   "reusable_permission_after_consumption": false,
   "next_authorized_action": "NONE_AFTER_CONSUMPTION"
 }
