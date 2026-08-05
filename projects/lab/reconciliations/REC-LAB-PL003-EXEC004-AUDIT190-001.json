@@ -2,13 +2,19 @@
   "schema_version": "1.0.0",
   "reconciliation_id": "REC-LAB-PL003-EXEC004-AUDIT190-001",
   "project_id": "lab",
-  "status": "COMPLETE_PENDING_VERIFIED_PUBLICATION",
+  "status": "COMPLETE_VERIFIED_REMOTE_PUBLICATION",
   "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_EXECUTION004_EXTERNAL_AUDIT_RECONCILIATION_190",
   "audit_id": "AUDIT-CLAUDE-PRODUCT-LEADERSHIP-EXECUTION-004-PHASE3-001",
   "evidence_id": "EVD-LAB-AUD-008",
   "reassessment_id": "REA-LAB-010",
   "audited_head": "4cd8158637abd645b23e97a694a15756680c2760",
   "reconciliation_verdict": "MODIFIED",
+  "publication": {
+    "pull_request": 38,
+    "head": "7e2c69307280963aeee15bda9d595e686e8e8620",
+    "verified_remote_main": true,
+    "published_at": "2026-08-04T23:54:18-04:00"
+  },
   "historical_result": {
     "value": "FAIL_REVISE_OR_REJECT_EVIDENCE_READY_FOR_SEPARATE_EXTERNAL_AUDIT_DECISION",
     "classification": "IMMUTABLE_RUNNER_EMITTED_HISTORICAL_OUTPUT",
@@ -50,6 +56,7 @@
     "RESOLVE_RUNNER_CHAIN_OF_CUSTODY_FINDING_BEFORE_ANY_FRESH_TEST"
   ],
   "pending": "PEND-LAB-048",
+  "authorization_state": "CONSUMED_NO_RESIDUAL_AUTHORITY",
   "non_effects": [
     "NO_RETEST",
     "NO_MODEL_REQUESTS",
