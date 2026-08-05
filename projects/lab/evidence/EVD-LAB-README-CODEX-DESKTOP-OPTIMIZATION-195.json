@@ -1,1 +1,36 @@
-{"schema_version":"1.0.0","evidence_id":"EVD-LAB-README-CODEX-DESKTOP-OPTIMIZATION-195","authorization_id":"AUTHORIZATION_LAB_README_CODEX_DESKTOP_OPTIMIZATION_DOCUMENTATION_195","status":"PUBLICATION_PENDING","observations":{"remote_main_before":"1bf91d6a1980fc87eb72b5e29a41bf99de47beda","readme_blob_before":"9968ae258b2bdf3cb6c3c800434914f06052e7cd","readme_blob_after_branch":"34e10bbaf13471b5829c4cf0efeaff861df69fff","section":"Ejecución optimizada con Codex Desktop","placement":"AFTER_ENTRADA_PARA_UN_NUEVO_PILOTO_BEFORE_ORDEN_CANONICO_DE_LECTURA","existing_content_outside_insertion":"PRESERVED","dynamic_state_in_readme":false,"unmeasured_speed_claim":false,"model_requests":0,"login_actions":0,"skills_actions":0,"sdk_actions":0,"runtime_product_or_external_repository_effect":"NONE"},"validation":{"readme_blob_gate":"PASS","context_budget":"projects/lab/evidence/CONTEXT_BUDGET_REPORT_195.json","remote_publication":"PENDING_PR_MERGE"},"captured_at":"2026-08-05T14:19:00-04:00"}
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-README-CODEX-DESKTOP-OPTIMIZATION-195",
+  "authorization_id": "AUTHORIZATION_LAB_README_CODEX_DESKTOP_OPTIMIZATION_DOCUMENTATION_195",
+  "status": "VERIFIED_REMOTE_PUBLICATION_AUTHORIZATION_CONSUMED",
+  "observations": {
+    "remote_main_before": "1bf91d6a1980fc87eb72b5e29a41bf99de47beda",
+    "readme_blob_before": "9968ae258b2bdf3cb6c3c800434914f06052e7cd",
+    "readme_blob_after": "34e10bbaf13471b5829c4cf0efeaff861df69fff",
+    "section": "Ejecución optimizada con Codex Desktop",
+    "placement": "AFTER_ENTRADA_PARA_UN_NUEVO_PILOTO_BEFORE_ORDEN_CANONICO_DE_LECTURA",
+    "existing_content_outside_insertion": "PRESERVED",
+    "dynamic_state_in_readme": false,
+    "unmeasured_speed_claim": false,
+    "model_requests": 0,
+    "login_actions": 0,
+    "skills_actions": 0,
+    "sdk_actions": 0,
+    "runtime_product_or_external_repository_effect": "NONE"
+  },
+  "validation": {
+    "readme_blob_gate": "PASS",
+    "context_budget": "projects/lab/evidence/CONTEXT_BUDGET_REPORT_195.json",
+    "pull_request": 52,
+    "readme_publication_merge_commit": "ad3b5ff55eb811662410bfc888b65ff73d8bc24c",
+    "authorization_closure_pull_request": 53,
+    "authorization_closure_head": "9e095a25c367e980cd4a69d224c26b3c73b7d0f4",
+    "remote_publication": "VERIFIED"
+  },
+  "authorization_lifecycle": "projects/lab/authorization-lifecycle/README_CODEX_DESKTOP_OPTIMIZATION_AUTHORIZATION_LIFECYCLE_195.json",
+  "authorization_state": "CONSUMED_VERIFIED_REMOTE_PUBLICATION",
+  "residual_authority": "NONE",
+  "captured_at": "2026-08-05T14:19:00-04:00",
+  "reconciled_at": "2026-08-05T14:31:00-04:00",
+  "reconciled_by_authorization": "AUTHORIZATION_LAB_POST_195_CONTINUITY_RECONCILIATION_AND_PRODUCT_LEADERSHIP_ZERO_MODEL_READINESS_PROBE_PREPARATION_196"
+}
