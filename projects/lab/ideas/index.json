@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "project_id": "lab",
-  "updated_at": "2026-07-16",
+  "updated_at": "2026-08-05",
   "records": [
     {
       "id": "IDEA-LAB-001",
@@ -20,6 +20,18 @@
       "source_refs": [
         "LAB_CONTRACT.md",
         "registry/unincorporated.json"
+      ]
+    },
+    {
+      "id": "IDEA-LAB-003",
+      "title": "Puente de supervisión en vivo ChatGPT–Codex para ejecuciones gobernadas del LAB",
+      "status": "CAPTURED",
+      "canonical_path": "projects/lab/ideas/IDEA-LAB-003.json",
+      "source_refs": [
+        "LAB_CONTRACT.md",
+        "METHODOLOGY.md",
+        "docs/MODEL_OPERATING_RULES.md",
+        "project-sources/chatgpt/04_EXECUTION_EFFICIENCY_AND_BRIEFS.md"
       ]
     }
   ]
