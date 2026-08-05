@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "routing_id": "CODEX-DESKTOP-RISK-BASED-ROLE-ROUTING-001",
+  "selection_inputs": [
+    "scope_size",
+    "uncertainty",
+    "security_risk",
+    "claim_risk",
+    "reversibility",
+    "subsystem_count",
+    "repository_count",
+    "shared_file_contention"
+  ],
+  "routes": [
+    {
+      "class": "SMALL_CLEAR",
+      "criteria": [
+        "single_bounded_surface",
+        "low_uncertainty",
+        "reversible",
+        "deterministic_tests_available",
+        "no_material_pass_fail_claim"
+      ],
+      "flow": [
+        "LAB_IMPLEMENTATION_WITH_SELF_VALIDATION"
+      ],
+      "threads": 1
+    },
+    {
+      "class": "MEDIUM",
+      "criteria": [
+        "multiple_files_or_one_subsystem",
+        "moderate_change",
+        "independent_validation_useful"
+      ],
+      "flow": [
+        "LAB_IMPLEMENTATION",
+        "LAB_VALIDATION"
+      ],
+      "threads": 2,
+      "sequence": "IMPLEMENTATION_THEN_VALIDATION"
+    },
+    {
+      "class": "UNCERTAIN",
+      "criteria": [
+        "unknown_root_cause_or_scope",
+        "discovery_required_before_safe_write"
+      ],
+      "flow": [
+        "LAB_DISCOVERY",
+        "LAB_IMPLEMENTATION",
+        "LAB_VALIDATION_IF_STATE_CHANGES"
+      ],
+      "sequence": "DISCOVERY_BEFORE_WRITE"
+    },
+    {
+      "class": "CRITICAL",
+      "criteria": [
+        "integration_or_security",
+        "irreversible_or_high_cost",
+        "pass_fail_or_promotion_claim",
+        "credential_or_custody_boundary",
+        "multiple_incompatible_roles"
+      ],
+      "flow": [
+        "LAB_DISCOVERY",
+        "LAB_IMPLEMENTATION",
+        "LAB_VALIDATION",
+        "LAB_AUDIT"
+      ],
+      "sequence": "SEQUENTIAL_HANDOFFS_WITH_FROZEN_ARTIFACTS"
+    }
+  ],
+  "rules": [
+    "DO_NOT_CREATE_FOUR_THREADS_FOR_A_SMALL_CLEAR_TASK",
+    "DO_NOT_LET_IMPLEMENTATION_AND_AUDIT_SHARE_UNFROZEN_CONTEXT",
+    "EXTERNAL_INDEPENDENT_AUDITOR_MAY_REPLACE_LAB_AUDIT_WHEN_REQUIRED",
+    "ROLE_SELECTION_IS_EXPLICIT_NOT_AUTOMATIC_SKILL_INFERENCE"
+  ],
+  "authority_effect": "NONE"
+}

@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lab.local/schemas/execution-envelope.schema.json",
+  "title": "Codex Desktop execution envelope",
+  "type": "object",
+  "required": ["schema_version", "envelope_id", "status", "complexity_class", "role_profile_ref", "canonical_brief_ref", "canonical_brief_sha256", "projection_validation", "objective", "authorization_ref", "repository", "context_manifest_ref", "files_to_read", "allowed_paths", "forbidden_actions", "commands_to_run", "commands_forbidden", "known_applicable_incidents", "required_outputs", "acceptance_checks", "stop_conditions", "response_contract", "context_budget"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "envelope_id": {"type": "string", "minLength": 1},
+    "status": {"enum": ["DRAFT", "READY", "CONSUMED", "STALE", "ARCHIVED"]},
+    "complexity_class": {"enum": ["SMALL_CLEAR", "MEDIUM", "UNCERTAIN", "CRITICAL"]},
+    "role_profile_ref": {"type": "string", "pattern": "LAB_(DISCOVERY|IMPLEMENTATION|VALIDATION|AUDIT)\\.json$"},
+    "canonical_brief_ref": {"type": "string", "minLength": 1},
+    "canonical_brief_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "projection_validation": {"enum": ["PENDING", "PASS", "FAIL"]},
+    "objective": {"type": "string", "minLength": 1},
+    "authorization_ref": {"type": "string", "minLength": 1},
+    "repository": {
+      "type": "object",
+      "required": ["name", "branch", "expected_parent_head", "head_policy"],
+      "properties": {
+        "name": {"type": "string"},
+        "branch": {"type": "string"},
+        "expected_parent_head": {"type": "string", "pattern": "^[a-f0-9]{40}$"},
+        "head_policy": {"const": "VERIFY_LIVE_AT_USE"}
+      }
+    },
+    "context_manifest_ref": {"type": "string", "minLength": 1},
+    "files_to_read": {"type": "array", "items": {"type": "string"}},
+    "allowed_paths": {"type": "array", "items": {"type": "string"}},
+    "forbidden_actions": {"type": "array", "items": {"type": "string"}},
+    "commands_to_run": {"type": "array", "items": {"type": "string"}},
+    "commands_forbidden": {"type": "array", "items": {"type": "string"}},
+    "known_applicable_incidents": {"type": "array", "items": {"type": "string"}},
+    "required_outputs": {"type": "array"},
+    "acceptance_checks": {"type": "array"},
+    "stop_conditions": {"type": "array"},
+    "response_contract": {"type": "object"},
+    "context_budget": {
+      "type": "object",
+      "required": ["class", "exception"],
+      "properties": {
+        "class": {"enum": ["SMALL", "MEDIUM", "CRITICAL"]},
+        "exception": {"type": ["object", "null"]}
+      }
+    }
+  },
+  "additionalProperties": false
+}

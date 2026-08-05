@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "budget_id": "CODEX-DESKTOP-CONTEXT-BUDGETS-001",
+  "measurement_notes": {
+    "line_metric": "NON_EMPTY_LINES",
+    "byte_metric": "UTF8_BYTES",
+    "token_metric": "ESTIMATED_AS_CEILING_OF_CHARACTERS_DIVIDED_BY_4_NOT_PROVIDER_TOKENIZER",
+    "budgets_are": "DEFAULT_GUARDRAILS_WITH_EXPLICIT_JUSTIFIED_EXCEPTION"
+  },
+  "artifacts": {
+    "ROOT_AGENTS_MD": {
+      "max_non_empty_lines": 35,
+      "max_utf8_bytes": 3500,
+      "max_estimated_tokens": 900
+    },
+    "DESKTOP_START_MESSAGE": {
+      "max_non_empty_lines": 25,
+      "max_utf8_bytes": 3000,
+      "max_estimated_tokens": 750
+    },
+    "ROLE_PROFILE": {
+      "max_non_empty_lines": 90,
+      "max_utf8_bytes": 8000,
+      "max_estimated_tokens": 2000
+    },
+    "EXECUTION_ENVELOPE_SMALL": {
+      "max_non_empty_lines": 80,
+      "max_utf8_bytes": 8000,
+      "max_estimated_tokens": 2000
+    },
+    "EXECUTION_ENVELOPE_MEDIUM": {
+      "max_non_empty_lines": 120,
+      "max_utf8_bytes": 12000,
+      "max_estimated_tokens": 3000
+    },
+    "EXECUTION_ENVELOPE_CRITICAL": {
+      "max_non_empty_lines": 180,
+      "max_utf8_bytes": 18000,
+      "max_estimated_tokens": 4500
+    }
+  },
+  "initial_context": {
+    "max_always_plus_required_sources_default": 8,
+    "max_applicable_incidents_default": 5,
+    "historical_documents_initially_loaded": 0,
+    "primary_objectives_per_thread": 1,
+    "duplicate_stable_rules": 0
+  },
+  "exception_contract": {
+    "required_fields": [
+      "artifact",
+      "budget_exceeded",
+      "why_required",
+      "alternatives_rejected",
+      "expected_quality_risk_if_reduced"
+    ],
+    "authority_effect": "NONE"
+  }
+}

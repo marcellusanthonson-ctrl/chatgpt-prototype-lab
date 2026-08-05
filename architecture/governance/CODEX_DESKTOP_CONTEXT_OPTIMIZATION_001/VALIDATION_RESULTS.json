@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "validation_id": "CODEX-DESKTOP-CONTEXT-OPTIMIZATION-194-STATIC-VALIDATION",
+  "status": "PASS_STATIC_STANDARD_VALIDATION_AWAITING_OPERATIONAL_BENCHMARK",
+  "validated_at": "2026-08-05T12:39:00-04:00",
+  "checks": {
+    "all_generated_json_parse": "PASS",
+    "root_agents_stable_only": "PASS",
+    "root_agents_budget": "PASS",
+    "four_profiles": "PASS",
+    "profiles_do_not_create_authority": "PASS",
+    "routing_classes": "PASS_4_OF_4",
+    "parallelism_same_path_and_publication_sequential": "PASS",
+    "canonical_brief_preservation": "PASS",
+    "selective_incident_loading": "PASS",
+    "no_unmeasured_speed_claim": "PASS",
+    "zero_models_login_skills_sdk_runtime_product_integration_external_repo": "PASS"
+  },
+  "metrics": {
+    "root_agents": {
+      "non_empty_lines": 23,
+      "utf8_bytes": 1286,
+      "estimated_tokens": 321
+    },
+    "desktop_start_prompt": {
+      "non_empty_lines": 9,
+      "utf8_bytes": 445,
+      "estimated_tokens": 112
+    },
+    "profiles": {
+      "LAB_DISCOVERY": {
+        "non_empty_lines": 41,
+        "utf8_bytes": 1199,
+        "estimated_tokens": 300
+      },
+      "LAB_IMPLEMENTATION": {
+        "non_empty_lines": 47,
+        "utf8_bytes": 1451,
+        "estimated_tokens": 363
+      },
+      "LAB_VALIDATION": {
+        "non_empty_lines": 43,
+        "utf8_bytes": 1315,
+        "estimated_tokens": 329
+      },
+      "LAB_AUDIT": {
+        "non_empty_lines": 44,
+        "utf8_bytes": 1309,
+        "estimated_tokens": 328
+      }
+    }
+  },
+  "operational_benchmark": "NOT_RUN_REQUIRES_FUTURE_AUTHORIZED_CODEX_DESKTOP_EXECUTION",
+  "validator": "tests/validate_codex_desktop_context_optimization_194.py",
+  "files_in_change_manifest": 43
+}

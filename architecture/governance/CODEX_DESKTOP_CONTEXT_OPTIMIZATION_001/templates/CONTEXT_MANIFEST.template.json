@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "manifest_id": "<TASK>-CONTEXT-MANIFEST-001",
+  "execution_envelope_ref": "<path>",
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "policy": "ALWAYS",
+      "reason": "STABLE_CODEX_BOOTSTRAP"
+    },
+    {
+      "path": "project-sources/chatgpt/START_HERE.md",
+      "policy": "REQUIRED",
+      "reason": "CANONICAL_ENTRYPOINT"
+    },
+    {
+      "path": "<authorization>",
+      "policy": "REQUIRED",
+      "reason": "EXECUTION_AUTHORITY"
+    },
+    {
+      "path": "<task-contract>",
+      "policy": "REQUIRED",
+      "reason": "TASK_SEMANTICS"
+    },
+    {
+      "path": "registry/errors.json",
+      "policy": "FILTERED",
+      "selector": {
+        "ids": []
+      },
+      "reason": "APPLICABLE_INCIDENT_DISCOVERY"
+    },
+    {
+      "path": "<historical-evidence>",
+      "policy": "ON_TRIGGER",
+      "trigger": "CURRENT_EVIDENCE_CONTRADICTION_OR_PROVENANCE_CHALLENGE",
+      "reason": "HISTORICAL_REFERENCE"
+    }
+  ],
+  "forbidden_sources": [],
+  "budget": {
+    "max_always_plus_required_sources": 8,
+    "max_filtered_incidents": 5
+  },
+  "validation": {
+    "status": "PENDING",
+    "canonical_parent_complete": false
+  }
+}

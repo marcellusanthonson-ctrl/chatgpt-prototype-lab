@@ -92,6 +92,21 @@ For photographic, art-direction, or visual-impact briefs, the following categori
 - self-critique;
 - required outputs and gates.
 
+## Operational execution projection
+
+A complete canonical brief may be accompanied by a shorter `EXECUTION_ENVELOPE` for Codex Desktop.
+
+The envelope:
+
+- is a validated execution projection, never the canonical replacement;
+- references the canonical brief and its SHA-256;
+- includes the active objective, authorization, role, paths, prohibitions, outputs, checks and stop conditions;
+- identifies a `CONTEXT_MANIFEST` and a context budget;
+- fails closed when a material parent field is omitted, weakened or changed;
+- may classify the full parent as `ON_TRIGGER` only after projection validation passes.
+
+The Codex Desktop start message should normally contain only the repository-relative envelope path. Full historical, visual and user-authored material remains preserved and addressable in the repository.
+
 ## Storage rule
 
 - Project-specific briefs belong in the project repository.
@@ -110,6 +125,8 @@ Before publication, validate:
 5. JSON or Markdown syntax passes.
 6. Canonical path is registered or discoverable.
 7. Remote publication is verified.
+8. Any execution envelope matches the canonical parent and digest.
+9. Context reduction affects delivery, not canonical completeness.
 
 ## Authority boundary
 

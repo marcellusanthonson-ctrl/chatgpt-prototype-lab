@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "policy_id": "CODEX-DESKTOP-PROGRESSIVE-CONTEXT-LOADING-001",
+  "initial_load_order": [
+    "AGENTS.md",
+    "EXECUTION_ENVELOPE",
+    "ROLE_PROFILE",
+    "CONTEXT_MANIFEST"
+  ],
+  "load_policies": {
+    "ALWAYS": "Load at thread start. Stable bootstrap and the assigned execution projection only.",
+    "REQUIRED": "Load before the first task command because it is necessary for objective, authority, scope or validation.",
+    "FILTERED": "Load only matching records or sections selected by explicit IDs, paths, surfaces or incident fingerprints.",
+    "ON_TRIGGER": "Load only after the declared observable trigger occurs.",
+    "AUDIT_ONLY": "Reserve for an independent validation or audit thread.",
+    "HISTORICAL_REFERENCE": "Use only for contradiction, provenance or challenged claims.",
+    "FORBIDDEN": "Must not be accessed under the current envelope."
+  },
+  "rules": [
+    "DO_NOT_PASTE_CANONICAL_HISTORY_INTO_THE_START_MESSAGE",
+    "DO_NOT_LOAD_COMPLETE_REGISTRIES_WHEN_EXACT_IDS_ARE_AVAILABLE",
+    "DO_NOT_LOAD_COMPLETE_INCIDENT_LEDGERS_WHEN_FILTERS_ARE_AVAILABLE",
+    "DO_NOT_RELOAD_UNCHANGED_SOURCES_AT_THE_SAME_VERIFIED_HEAD",
+    "LOAD_THE_FULL_CANONICAL_BRIEF_ONLY_IF_ENVELOPE_VALIDATION_IS_ABSENT_FAILED_OR_TRIGGERED",
+    "EVERY_CONDENSED_PROJECTION_REFERENCES_ITS_CANONICAL_PARENT_AND_DIGEST"
+  ],
+  "failure_semantics": {
+    "missing_envelope": "BLOCK_BEFORE_EXECUTION",
+    "missing_role_profile": "BLOCK_BEFORE_EXECUTION",
+    "missing_or_invalid_context_manifest": "BLOCK_BEFORE_EXECUTION",
+    "material_projection_mismatch": "BLOCK_AND_LOAD_CANONICAL_PARENT",
+    "budget_exceeded_without_justification": "BLOCK_OR_REQUIRE_REPACKAGING"
+  }
+}

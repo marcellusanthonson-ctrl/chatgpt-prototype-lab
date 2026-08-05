@@ -39,6 +39,19 @@ Codex puede confirmar una recurrencia actual solo mediante evidencia observable.
 
 Transmitir el contexto mínimo suficiente para ejecutar, sin borrar el contexto material acumulado. Un resumen de ejecución no reemplaza al briefing completo que lo origina.
 
+## Codex Desktop y carga progresiva
+
+Las ejecuciones creadas después de la autorización 194 usan `CODEX-DESKTOP-CONTEXT-OPTIMIZATION-001`:
+
+1. `AGENTS.md` aporta únicamente reglas estables.
+2. Un `EXECUTION_ENVELOPE` proyecta la tarea activa y referencia el brief completo y su digest.
+3. Un perfil fija la función del hilo.
+4. Un `CONTEXT_MANIFEST` decide qué leer inicialmente, filtrar, cargar por trigger o reservar para auditoría.
+5. Los presupuestos miden líneas no vacías, bytes, tokens estimados, fuentes cargadas e incidentes aplicables.
+6. El routing usa un hilo para tareas pequeñas y separa discovery, implementación, validación y auditoría únicamente cuando el riesgo lo exige.
+7. El paralelismo se limita a trabajo independiente; los mismos paths, el estado y la publicación son secuenciales.
+8. Toda afirmación de mejora de velocidad requiere benchmark operacional sin regresión de calidad o autoridad.
+
 ## Preservación y versionado obligatorios
 
 Todo briefing creado debe documentarse y publicarse en el repositorio canónico correspondiente.
@@ -52,6 +65,8 @@ La relación válida es:
 Toda omisión material detectada se clasifica `OMITTED_IN_ERROR` y bloquea ejecución hasta su restauración.
 
 El contenido aportado directamente por Jonathan Martínez debe preservarse como artefacto fuente antes de crear una versión derivada. La política completa está en `docs/BRIEF_PRESERVATION_AND_VERSIONING_POLICY.md`.
+
+Un execution envelope es una proyección operativa y no sustituye al brief completo.
 
 ## Cierre
 

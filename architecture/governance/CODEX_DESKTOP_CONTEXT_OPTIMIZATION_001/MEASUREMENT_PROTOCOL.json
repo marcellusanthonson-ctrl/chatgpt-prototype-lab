@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "CODEX-DESKTOP-CONTEXT-AND-LATENCY-MEASUREMENT-001",
+  "status": "READY_AWAITING_FIRST_OPERATIONAL_BENCHMARK",
+  "unit_of_comparison": "REPRESENTATIVE_EQUIVALENT_TASKS_OR_PAIRED_BEFORE_AFTER_RUNS",
+  "required_metrics": [
+    "initial_message_non_empty_lines",
+    "initial_message_utf8_bytes",
+    "initial_message_estimated_tokens",
+    "always_required_source_count",
+    "sources_actually_read",
+    "applicable_incidents_loaded",
+    "time_to_first_useful_command_seconds",
+    "time_to_first_material_change_seconds",
+    "total_elapsed_seconds",
+    "agent_thread_count",
+    "correction_cycles",
+    "validation_failures",
+    "unexpected_stop_conditions",
+    "final_contract_pass",
+    "omitted_material_constraints"
+  ],
+  "success_rule": "FASTER_OR_LOWER_CONTEXT_WITH_NO_DEGRADATION_IN_COMPLETENESS_AUTHORITY_COMPLIANCE_VALIDATION_OR_ERROR_RATE",
+  "claim_limits": [
+    "STATIC_STANDARD_PASS_DOES_NOT_PROVE_RUNTIME_SPEEDUP",
+    "ONE_RUN_DOES_NOT_ESTABLISH_GENERAL_IMPROVEMENT",
+    "TOKEN_ESTIMATES_ARE_DIRECTIONAL_UNLESS_MEASURED_BY_THE_EXECUTION_SURFACE"
+  ],
+  "output_schema": "schemas/context-budget-report.schema.json",
+  "next_measurement_target": "NEXT_SEPARATELY_AUTHORIZED_CODEX_DESKTOP_EXECUTION"
+}

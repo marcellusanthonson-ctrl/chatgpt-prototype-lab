@@ -1,46 +1,34 @@
-# LAB continuity — transversal execution learning and Product Leadership readiness 193
+# LAB continuity — Codex Desktop context and multi-agent optimization 194
 
-Canonical repository: `marcellusanthonson-ctrl/chatgpt-prototype-lab`
-
-Branch: `main`
-
-Entrypoint: `project-sources/chatgpt/START_HERE.md`
-
-Head policy: `VERIFY_LIVE_AT_USE`
+Canonical repository: `marcellusanthonson-ctrl/chatgpt-prototype-lab`  
+Branch: `main`  
+Entrypoint: `project-sources/chatgpt/START_HERE.md`  
+HEAD policy: `VERIFY_LIVE_AT_USE`
 
 ## Result
 
-Authorization 193 implemented and published a transversal execution-learning feedback loop. Future complex briefs must supply a governed `learning_context`. Codex may retrieve applicable confirmed incidents, verify whether they recur now, apply authorized preventive controls and adapt its plan within the brief. Historical errors do not prove current recurrence, and learning does not expand authority.
+Authorization 194 implemented a transversal Codex Desktop delivery standard. Canonical briefs remain complete and preserved; Codex receives a short root `AGENTS.md`, a validated execution envelope, one role profile and a selective context manifest.
 
-The required determinations are:
+Profiles: `LAB_DISCOVERY`, `LAB_IMPLEMENTATION`, `LAB_VALIDATION`, `LAB_AUDIT`.
 
-- `CONFIRMED_CURRENT_OCCURRENCE`
-- `NOT_REPRODUCED`
-- `NOT_APPLICABLE`
-- `INSUFFICIENT_EVIDENCE`
+Routing uses one thread for small clear work, implementation plus validation for medium work, discovery before uncertain writes, and discovery → implementation → validation → audit for critical work. Only independent work may run in parallel.
 
-Codex records evidence, determination, control and plan effect in `LEARNING_APPLICATION_REPORT.json`. Private chain-of-thought is neither required nor recorded.
+## Context budgets
+
+Root `AGENTS.md`: 23 non-empty lines, 1286 UTF-8 bytes, about 321 estimated tokens. Line count is not a token count; budgets also measure bytes, loaded sources and applicable incidents.
+
+## Claim boundary
+
+Static validation passed. No real Codex Desktop benchmark ran, so latency improvement is not yet established. No model, login, Skill, SDK, runtime, product, integration or external repository action occurred.
 
 ## Product Leadership
 
-A consolidated incident ledger and an integration-readiness view identify the critical path. The instrument redesign remains complete and immutable. The last fresh retest remains blocked before model requests with zero requests and zero retries.
-
-The repository now configures LF checkout for `INSTRUMENT_REDESIGN_191`, but no fresh Windows worktree proof was executed. Codex authentication and the exact live model/runner/sandbox surface also remain unverified.
-
-Current readiness is therefore:
-
-`NOT_READY_FOR_FRESH_RETEST_REISSUE`
+Product Leadership remains `CANDIDATE_NOT_ACTIVE_NOT_INTEGRATED` and `NOT_READY_FOR_FRESH_RETEST_REISSUE`. Its next gate remains a separately authorized zero-model local readiness probe.
 
 ## Publication and authority
 
-Implementation PR #46 was squash-merged as `1e2af36d055e91ca7e6225c944e32c797f0db9a1` and verified on remote `main`. Authorization 193 is consumed with no residual authority.
-
-No model request, login, retest, audit, adjudication, promotion, activation, integration, runtime or product change occurred. No external repository or Carolina surface was accessed.
-
-## Aggregate divergence
-
-Large aggregate views remain historical and were not rewritten in this scoped remediation. The current specific sources are the incident ledger, readiness view and `PEND-LAB-048`.
+Implementation publication is pending. Authorization 194 retains only publication and verification authority.
 
 ## Single next action
 
-Separately authorize a zero-model local Product Leadership readiness probe that proves a fresh Windows worktree has 13/13 raw-byte matches and verifies preexisting Codex authentication plus the exact live surface.
+After verified publication, apply the standard to the next separately authorized Codex Desktop execution and capture benchmark metrics.

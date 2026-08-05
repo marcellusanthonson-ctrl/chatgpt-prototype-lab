@@ -35,6 +35,19 @@ Para toda ejecución compleja:
 
 El contrato transversal es `architecture/governance/EXECUTION_LEARNING_FEEDBACK_LOOP_001/CONTRACT.json`.
 
+## Codex Desktop: contexto y perfiles
+
+Para ejecuciones posteriores a la autorización 194:
+
+- Cargar `AGENTS.md` como mapa estable; nunca almacenar allí HEAD, autorización activa, historia o continuidad.
+- Iniciar con un `EXECUTION_ENVELOPE` validado, un perfil explícito y un `CONTEXT_MANIFEST`.
+- Conservar el brief completo como fuente canónica; el envelope es una proyección operativa, no un reemplazo.
+- Medir líneas no vacías, bytes UTF-8 y tokens estimados; una sola línea JSON puede seguir siendo excesiva.
+- Seleccionar `LAB_DISCOVERY`, `LAB_IMPLEMENTATION`, `LAB_VALIDATION` o `LAB_AUDIT` según el routing de riesgo.
+- Usar un hilo para cambios pequeños; añadir separación funcional solo cuando la incertidumbre o el riesgo lo justifican.
+- Paralelizar únicamente trabajo independiente y mantener secuenciales los cambios sobre los mismos paths, estados y publicaciones.
+- No declarar mejora de velocidad hasta completar un benchmark operacional.
+
 ## Respuesta de cierre
 
 Incluir únicamente: resultado, cambios materiales, validación, divergencias, autorizaciones consumidas y una siguiente acción.
