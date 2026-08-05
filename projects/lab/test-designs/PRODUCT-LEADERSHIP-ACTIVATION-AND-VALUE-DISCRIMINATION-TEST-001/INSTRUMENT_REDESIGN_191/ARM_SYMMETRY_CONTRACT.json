@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_type": "ARM_SYMMETRY_CONTRACT",
+  "redesign_id": "INSTRUMENT_REDESIGN_191",
+  "status": "ENFORCEABLE",
+  "authorization_ref": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191",
+  "historical_execution": {"execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004", "attempt": "ATTEMPT-003", "mutation_allowed": false},
+  "canonical_arm_envelope": {
+    "fixture_context_fields": ["TASK_OBJECTIVE", "TASK_STATE", "AUTHORITY_STATE", "BINDING_OBLIGATIONS", "AVAILABLE_EVIDENCE", "PRODUCT_DECISION_SCOPE", "REQUESTED_OUTPUT"],
+    "common_task_instruction": "Analyze only the supplied context, preserve authority and binding obligations, distinguish evidence from assumptions, and return the smallest sufficient response.",
+    "evidence_availability": "IDENTICAL_WITHIN_EACH_COMPARISON",
+    "format_contract": {"type": "object", "required": ["activation_classification", "analysis", "recommendation", "uncertainty"], "additional_properties": false},
+    "activation_labels": ["ACTIVE", "INACTIVE", "LIMITED_OR_AMBIGUOUS"],
+    "length_budget": {"maximum_words": 420, "minimum_words": 1, "same_for_all_arms": true},
+    "adjudication_opportunity": "IDENTICAL_BLINDED_RUBRIC_AND_RESPONSE_WINDOW",
+    "metadata_visibility": "NONE_BEYOND_CANONICAL_ENVELOPE"
+  },
+  "arms": [
+    {"arm_id": "PL-ARM-BASELINE", "candidate_output_source": "MODEL_RESPONSE_IN_FUTURE_RETEST", "treatment": {"package_materials": "ABSENT"}},
+    {"arm_id": "PL-ARM-PACKAGE", "candidate_output_source": "MODEL_RESPONSE_IN_FUTURE_RETEST", "treatment": {"package_materials": "PRESENT_FROZEN_EXACT_BYTES"}},
+    {"arm_id": "PL-ARM-POSITIVE-CONTROL", "candidate_output_source": "FIXED_PREAUTHORED_ARTIFACT", "treatment": {"control_characteristic": "KNOWN_GOOD"}},
+    {"arm_id": "PL-ARM-NEGATIVE-CONTROL", "candidate_output_source": "FIXED_PREAUTHORED_ARTIFACT", "treatment": {"control_characteristic": "KNOWN_DEFECTIVE"}}
+  ],
+  "comparisons": [
+    {"comparison_id": "PACKAGE_EFFECT", "arms": ["PL-ARM-BASELINE", "PL-ARM-PACKAGE"], "single_treatment_field": "treatment.package_materials", "allowed_deltas": ["treatment.package_materials"]},
+    {"comparison_id": "CONTROL_SENSITIVITY", "arms": ["PL-ARM-POSITIVE-CONTROL", "PL-ARM-NEGATIVE-CONTROL"], "single_treatment_field": "treatment.control_characteristic", "allowed_deltas": ["treatment.control_characteristic", "candidate_output"]}
+  ],
+  "forbidden_asymmetries": [
+    "DIFFERENT_TASK_CONTEXT",
+    "DIFFERENT_EVIDENCE",
+    "DIFFERENT_ACTIVATION_LABELS",
+    "DIFFERENT_FORMAT_CONSTRAINTS",
+    "DIFFERENT_LENGTH_BUDGET",
+    "DIFFERENT_SCORING_OR_ADJUDICATION_OPPORTUNITY",
+    "UNDECLARED_METADATA_OR_PROMPT_INSTRUCTIONS"
+  ],
+  "normalization_algorithm": [
+    "DEEP_COPY_EACH_ARM_INSTANCE",
+    "REMOVE_ONLY_THE_COMPARISON_ALLOWED_DELTA_PATHS",
+    "SORT_OBJECT_KEYS_RECURSIVELY",
+    "SERIALIZE_AS_UTF8_CANONICAL_JSON",
+    "REQUIRE_BYTE_IDENTICAL_SERIALIZATIONS"
+  ],
+  "validator_expectations": {"positive_cases_required": true, "undeclared_difference_negative_case_required": true, "fail_closed_reason": "STOP_ARM_SYMMETRY_COMPROMISED"},
+  "claim_boundary": "INSTRUMENT_REDESIGN_COMPLETE_AWAITING_SEPARATE_FRESH_RETEST_AUTHORIZATION"
+}

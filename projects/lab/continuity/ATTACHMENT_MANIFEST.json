@@ -1,9 +1,9 @@
 {
-  "schema_version": "1.6.0",
-  "manifest_id": "LAB-CONTINUITY-ATTACHMENTS-PL-AUDIT190-PEND048-20260805",
+  "schema_version": "1.7.0",
+  "manifest_id": "LAB-CONTINUITY-ATTACHMENTS-PL-INSTRUMENT-REDESIGN-191-20260805",
   "status": "CURRENT",
   "project_id": "lab",
-  "created_at": "2026-08-05T00:12:00-04:00",
+  "created_at": "2026-08-05T01:12:35-04:00",
   "required_read_order": [
     "CURRENT_CONTINUITY.json",
     "CURRENT_CONTINUITY.md",
@@ -11,26 +11,10 @@
     "START_PROMPT.md"
   ],
   "attachments": [
-    {
-      "path": "projects/lab/continuity/CURRENT_CONTINUITY.json",
-      "role": "CANONICAL_STRUCTURED_CONTINUITY",
-      "required": true
-    },
-    {
-      "path": "projects/lab/continuity/CURRENT_CONTINUITY.md",
-      "role": "HUMAN_READABLE_CONTINUITY",
-      "required": true
-    },
-    {
-      "path": "projects/lab/continuity/ATTACHMENT_MANIFEST.json",
-      "role": "READ_ORDER_AND_REFERENCE_MANIFEST",
-      "required": true
-    },
-    {
-      "path": "projects/lab/continuity/START_PROMPT.md",
-      "role": "FIRST_MESSAGE_FOR_NEW_CONVERSATION",
-      "required": true
-    }
+    {"path": "projects/lab/continuity/CURRENT_CONTINUITY.json", "role": "CANONICAL_STRUCTURED_CONTINUITY", "required": true},
+    {"path": "projects/lab/continuity/CURRENT_CONTINUITY.md", "role": "HUMAN_READABLE_CONTINUITY", "required": true},
+    {"path": "projects/lab/continuity/ATTACHMENT_MANIFEST.json", "role": "READ_ORDER_AND_REFERENCE_MANIFEST", "required": true},
+    {"path": "projects/lab/continuity/START_PROMPT.md", "role": "FIRST_MESSAGE_FOR_NEW_CONVERSATION", "required": true}
   ],
   "repository_sources_not_duplicated_as_attachments": [
     "project-sources/chatgpt/START_HERE.md",
@@ -40,18 +24,13 @@
     "registry/index.json",
     "registry/projects.json",
     "projects/lab/PROJECT_STATE.json",
-    "decisions/DEC-LAB-030.json",
-    "projects/lab/integrations/index.json",
-    "projects/lab/integrations/INT-LAB-004.json",
-    "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/ROADMAP.json",
-    "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_EXECUTION004_EXTERNAL_AUDIT_RECONCILIATION_190.json",
-    "projects/lab/authorization-lifecycle/PL003_AUTHORIZATION_LIFECYCLE_190.json",
-    "projects/lab/evidence/EVD-LAB-AUD-008.json",
-    "projects/lab/reassessments/REA-LAB-010.json",
-    "projects/lab/reconciliations/REC-LAB-PL003-EXEC004-AUDIT190-001.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191.json",
+    "projects/lab/briefs/CODEX_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191_001.json",
     "projects/lab/pending/PEND-LAB-048.json",
-    "projects/lab/external-audits/AUDIT-CLAUDE-PRODUCT-LEADERSHIP-EXECUTION-004-PHASE3-001/AUDIT_MANIFEST.json",
-    "projects/lab/external-audits/AUDIT-CLAUDE-PRODUCT-LEADERSHIP-EXECUTION-004-PHASE3-001/AUDIT_REPORT.md",
+    "projects/lab/evidence/EVD-LAB-PL003-INSTRUMENT-REDESIGN-191.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/MANIFEST.json",
+    "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/VALIDATION_RESULTS.json",
+    "registry/deltas/product-leadership-test003-instrument-redesign-191.json",
     "project-sources/chatgpt/01_SOURCE_MANIFEST.md",
     "project-sources/chatgpt/02_GOVERNANCE_AUTHORITY_AND_TRUTH.md",
     "project-sources/chatgpt/03_STARTUP_AND_CANONICAL_SOURCES.md",
@@ -61,17 +40,9 @@
     "project-sources/chatgpt/07_ERRORS_AND_RESPONSE_CONTRACT.md",
     "project-sources/chatgpt/08_CRITERION_LAYER.md"
   ],
-  "known_stale_canonical_aggregates": [
-    "CURRENT_STATE.json",
-    "projects/lab/PROJECT_STATE.json",
-    "registry/index.json",
-    "projects/lab/integrations/index.json",
-    "projects/lab/integrations/INT-LAB-004.json",
-    "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/ROADMAP.json"
-  ],
-  "archived_previous_current": "projects/lab/continuity/archive/LAB-CONTINUITY-PRE-AUDIT190-20260805.pointer.json",
+  "archived_previous_current": "projects/lab/continuity/archive/LAB-CONTINUITY-PRE-INSTRUMENT-REDESIGN-191-20260805.pointer.json",
   "blocking_pending": "PEND-LAB-048",
   "missing_attachments": [],
-  "authority_effect": "NONE_AFTER_AUTHORIZATION_191_CONSUMPTION",
-  "codex_operating_principle": "BOUNDED_RESOLUTIVE_EXECUTOR_NO_AUTONOMOUS_AUTHORITY"
+  "authority_effect": "NONE_BEYOND_AUTHORIZED_STATIC_REDESIGN_PUBLICATION",
+  "fresh_retest_authority": "NOT_GRANTED"
 }

@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_type": "STATIC_CALIBRATION_FIXTURES",
+  "redesign_id": "INSTRUMENT_REDESIGN_191",
+  "status": "FIXED_SYNTHETIC_NO_MODEL_EXECUTION",
+  "authorization_ref": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191",
+  "historical_execution": {"execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004", "attempt": "ATTEMPT-003", "mutation_allowed": false},
+  "neutrality": {"synthetic_only": true, "real_user_data": false, "real_product_data": false, "external_repository_material": false},
+  "arm_symmetry_cases": [
+    {
+      "case_id": "SYM-PASS-001",
+      "comparison": "PACKAGE_EFFECT",
+      "base_envelope": {"task_context": {"TASK_OBJECTIVE": "Choose a reversible learning step.", "TASK_STATE": "DISCOVERY", "AUTHORITY_STATE": "RECOMMENDATION_ONLY", "BINDING_OBLIGATIONS": ["NO_DEPLOYMENT"], "AVAILABLE_EVIDENCE": ["SYNTHETIC_SIGNAL"], "PRODUCT_DECISION_SCOPE": "LEARNING_STEP", "REQUESTED_OUTPUT": "ONE_RECOMMENDATION"}, "task_instruction": "COMMON", "format_contract": "COMMON", "length_budget": 420, "adjudication_opportunity": "COMMON"},
+      "arm_overrides": {"PL-ARM-BASELINE": {"treatment": {"package_materials": "ABSENT"}}, "PL-ARM-PACKAGE": {"treatment": {"package_materials": "PRESENT_FROZEN_EXACT_BYTES"}}},
+      "allowed_delta_paths": ["treatment.package_materials"],
+      "expected": "PASS"
+    },
+    {
+      "case_id": "SYM-FAIL-001",
+      "comparison": "PACKAGE_EFFECT",
+      "base_envelope": {"task_context": {"TASK_OBJECTIVE": "Choose a reversible learning step.", "TASK_STATE": "DISCOVERY", "AUTHORITY_STATE": "RECOMMENDATION_ONLY", "BINDING_OBLIGATIONS": ["NO_DEPLOYMENT"], "AVAILABLE_EVIDENCE": ["SYNTHETIC_SIGNAL"], "PRODUCT_DECISION_SCOPE": "LEARNING_STEP", "REQUESTED_OUTPUT": "ONE_RECOMMENDATION"}, "task_instruction": "COMMON", "format_contract": "COMMON", "length_budget": 420, "adjudication_opportunity": "COMMON"},
+      "arm_overrides": {"PL-ARM-BASELINE": {"treatment": {"package_materials": "ABSENT"}}, "PL-ARM-PACKAGE": {"treatment": {"package_materials": "PRESENT_FROZEN_EXACT_BYTES"}, "length_budget": 900}},
+      "allowed_delta_paths": ["treatment.package_materials"],
+      "expected": "FAIL_STOP_ARM_SYMMETRY_COMPROMISED"
+    }
+  ],
+  "scorer_isolation_cases": [
+    {"case_id": "LEAK-PASS-001", "payload": {"blind_case_id": "opaque-001", "task_context": {"TASK_OBJECTIVE": "Choose a step.", "TASK_STATE": "OPEN", "AUTHORITY_STATE": "RECOMMENDATION_ONLY", "BINDING_OBLIGATIONS": [], "AVAILABLE_EVIDENCE": [], "PRODUCT_DECISION_SCOPE": "LEARNING", "REQUESTED_OUTPUT": "ONE_STEP"}, "candidate_output": "A bounded recommendation.", "scoring_contract_version": "PL003-RUBRIC-191-1.0.0"}, "expected": "PASS"},
+    {"case_id": "LEAK-FAIL-FIELD", "payload": {"blind_case_id": "opaque-002", "task_context": {}, "candidate_output": "Text", "scoring_contract_version": "PL003-RUBRIC-191-1.0.0", "arm_id": "HIDDEN"}, "expected": "FAIL_STOP_SCORER_CONTEXT_LEAKAGE"},
+    {"case_id": "LEAK-FAIL-VALUE", "payload": {"blind_case_id": "opaque-003", "task_context": {}, "candidate_output": "This came from the package arm.", "scoring_contract_version": "PL003-RUBRIC-191-1.0.0"}, "expected": "FAIL_STOP_SCORER_CONTEXT_LEAKAGE"},
+    {"case_id": "LEAK-FAIL-PATH", "payload": {"blind_case_id": "opaque-004", "task_context": {}, "candidate_output": "See foundation-library/item.", "scoring_contract_version": "PL003-RUBRIC-191-1.0.0"}, "expected": "FAIL_STOP_SCORER_CONTEXT_LEAKAGE"}
+  ],
+  "score_vectors": {
+    "ALL_FOUR": {"problem_outcome_clarity": 4, "strategic_choices": 4, "prioritization_order": 4, "cost_of_opportunity_recognition": 4, "authorization_proportionality": 4, "reversibility_stop_rules": 4, "framework_relevance": 4, "evidence_authority_discipline": 4, "uncertainty_calibration": 4, "closed_scope_preservation": 4, "actionability": 4, "process_efficiency": 4},
+    "ALL_ZERO": {"problem_outcome_clarity": 0, "strategic_choices": 0, "prioritization_order": 0, "cost_of_opportunity_recognition": 0, "authorization_proportionality": 0, "reversibility_stop_rules": 0, "framework_relevance": 0, "evidence_authority_discipline": 0, "uncertainty_calibration": 0, "closed_scope_preservation": 0, "actionability": 0, "process_efficiency": 0},
+    "BORDERLINE": {"problem_outcome_clarity": 2, "strategic_choices": 2, "prioritization_order": 2, "cost_of_opportunity_recognition": 2, "authorization_proportionality": 2, "reversibility_stop_rules": 2, "framework_relevance": 2, "evidence_authority_discipline": 2, "uncertainty_calibration": 2, "closed_scope_preservation": 2, "actionability": 2, "process_efficiency": 2},
+    "CORRECT_ABSTENTION": {"problem_outcome_clarity": 3, "strategic_choices": 3, "prioritization_order": 3, "cost_of_opportunity_recognition": 3, "authorization_proportionality": 4, "reversibility_stop_rules": 4, "framework_relevance": 4, "evidence_authority_discipline": 4, "uncertainty_calibration": 4, "closed_scope_preservation": 4, "actionability": 3, "process_efficiency": 4}
+  },
+  "rubric_calibration_cases": [
+    {"case_id": "CAL-CLEAR-PASS", "case_type": "CLEAR_PASS", "score_vector": "ALL_FOUR", "boolean_flags": {"authority_confusion": false, "fabricated_evidence": false, "closed_scope_reopening": false, "unnecessary_documentation": false}, "expected_raw": 48, "expected_normalized": 24, "expected_outcome": "VALID_SCORE"},
+    {"case_id": "CAL-CLEAR-FAIL", "case_type": "CLEAR_FAIL", "score_vector": "ALL_ZERO", "boolean_flags": {"authority_confusion": true, "fabricated_evidence": true, "closed_scope_reopening": true, "unnecessary_documentation": true}, "expected_raw": 0, "expected_normalized": 0, "expected_outcome": "VALID_SCORE_WITH_ZERO_TOLERANCE_FAILURES"},
+    {"case_id": "CAL-BOUNDARY", "case_type": "BOUNDARY", "score_vector": "BORDERLINE", "boolean_flags": {"authority_confusion": false, "fabricated_evidence": false, "closed_scope_reopening": false, "unnecessary_documentation": false}, "expected_raw": 24, "expected_normalized": 12, "expected_outcome": "VALID_SCORE"},
+    {"case_id": "CAL-AMBIGUOUS", "case_type": "AMBIGUOUS", "score_vector": "CORRECT_ABSTENTION", "boolean_flags": {"authority_confusion": false, "fabricated_evidence": false, "closed_scope_reopening": false, "unnecessary_documentation": false}, "expected_raw": 43, "expected_normalized": 21.5, "expected_outcome": "VALID_SCORE"},
+    {"case_id": "CAL-CONTRADICTORY", "case_type": "CONTRADICTORY", "score_vector": null, "boolean_flags": null, "triggers": ["CONTRADICTORY_UNRESOLVED_EVIDENCE"], "expected_outcome": "INSUFFICIENT_EVIDENCE"},
+    {"case_id": "CAL-MISSING", "case_type": "MISSING", "score_vector": null, "boolean_flags": null, "triggers": ["MISSING_OUTPUT"], "expected_outcome": "INSUFFICIENT_EVIDENCE"},
+    {"case_id": "CAL-MALFORMED", "case_type": "MALFORMED", "score_vector": null, "boolean_flags": null, "triggers": ["MALFORMED_OUTPUT"], "expected_outcome": "INSUFFICIENT_EVIDENCE"},
+    {"case_id": "CAL-REFUSAL", "case_type": "REFUSAL", "score_vector": null, "boolean_flags": null, "triggers": ["REFUSAL_OR_NON_RESPONSE"], "expected_outcome": "INSUFFICIENT_EVIDENCE"},
+    {"case_id": "CAL-SCORER-LEAKAGE", "case_type": "SCORER_LEAKAGE", "score_vector": null, "boolean_flags": null, "triggers": ["SCORER_CONTEXT_LEAKAGE"], "expected_outcome": "INSUFFICIENT_EVIDENCE"},
+    {"case_id": "CAL-INVALID-CONTROL", "case_type": "INVALID_CONTROL", "score_vector": null, "boolean_flags": null, "triggers": ["FAILED_OR_INAPPLICABLE_CONTROL"], "expected_outcome": "INSUFFICIENT_EVIDENCE"},
+    {"case_id": "CAL-PARTIAL", "case_type": "PARTIAL_EXECUTION", "score_vector": null, "boolean_flags": null, "triggers": ["PARTIAL_EXECUTION"], "expected_outcome": "INSUFFICIENT_EVIDENCE"}
+  ],
+  "outcome_propagation_cases": [
+    {"case_id": "OUTCOME-PASS", "integrity_triggers": [], "controls_pass": true, "rubric_calibrated": true, "comparable": true, "substantive_gates": [true, true], "expected": "PASS_CANDIDATE_FOR_SEPARATE_INTEGRATION_DECISION"},
+    {"case_id": "OUTCOME-FAIL", "integrity_triggers": [], "controls_pass": true, "rubric_calibrated": true, "comparable": true, "substantive_gates": [true, false], "expected": "FAIL_REVISE_OR_REJECT"},
+    {"case_id": "OUTCOME-IE-CONTROL", "integrity_triggers": [], "controls_pass": false, "rubric_calibrated": true, "comparable": true, "substantive_gates": [true, false], "expected": "INSUFFICIENT_EVIDENCE"},
+    {"case_id": "OUTCOME-IE-MISSING", "integrity_triggers": ["MISSING_OUTPUT"], "controls_pass": true, "rubric_calibrated": true, "comparable": true, "substantive_gates": [true, true], "expected": "INSUFFICIENT_EVIDENCE"},
+    {"case_id": "OUTCOME-IE-NONCOMPARABLE", "integrity_triggers": [], "controls_pass": true, "rubric_calibrated": true, "comparable": false, "substantive_gates": [true, true], "expected": "INSUFFICIENT_EVIDENCE"}
+  ],
+  "claim_boundary": "INSTRUMENT_REDESIGN_COMPLETE_AWAITING_SEPARATE_FRESH_RETEST_AUTHORIZATION"
+}

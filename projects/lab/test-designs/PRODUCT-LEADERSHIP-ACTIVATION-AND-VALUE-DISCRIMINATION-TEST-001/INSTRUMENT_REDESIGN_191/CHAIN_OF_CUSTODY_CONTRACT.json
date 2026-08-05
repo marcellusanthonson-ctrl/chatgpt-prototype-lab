@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_type": "CHAIN_OF_CUSTODY_CONTRACT",
+  "redesign_id": "INSTRUMENT_REDESIGN_191",
+  "status": "FUTURE_RETEST_PRECONDITION_DEFINED_NOT_EXECUTED",
+  "authorization_ref": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191",
+  "historical_execution": {"execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004", "attempt": "ATTEMPT-003", "mutation_allowed": false},
+  "runner_source_provenance": {
+    "historical_runner": "HISTORICAL_ONLY_NOT_REUSABLE_AND_NOT_MUTATED",
+    "canonical_deterministic_core": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/INSTRUMENT_CORE.mjs",
+    "future_request_adapter_required_path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-FUTURE/AUTHORIZED_ATTEMPT/RUN_TEST003_REDESIGNED.mjs",
+    "future_request_adapter_status": "NOT_MATERIALIZED_NO_RETEST_AUTHORITY",
+    "rule": "A future adapter may orchestrate frozen requests but may not redefine scoring, outcome precedence, redaction, symmetry, controls or stop conditions from the canonical deterministic core."
+  },
+  "hash_algorithm": "SHA-256_RAW_BYTES_NO_LINE_ENDING_NORMALIZATION",
+  "manifest_encoding": "UTF-8_LF_CANONICAL_JSON_WITH_SORTED_PATHS",
+  "frozen_component_categories": [
+    {"category": "RUNNER_AND_INSTRUMENT_SOURCE", "required": ["INSTRUMENT_CORE.mjs", "FUTURE_REQUEST_ADAPTER"], "exact_paths_required": true},
+    {"category": "PROMPT_TEMPLATES", "required": ["BASELINE_TEMPLATE", "PACKAGE_TEMPLATE", "SCORER_TEMPLATE"], "exact_paths_required": true},
+    {"category": "CONTRACTS", "required": ["ARM_SYMMETRY_CONTRACT.json", "SCORER_ISOLATION_CONTRACT.json", "NEGATIVE_CONTROL_CONTRACT.json", "INSUFFICIENT_EVIDENCE_CONTRACT.json", "STOP_CONDITIONS.json", "SCORING_CALIBRATION.json"], "exact_paths_required": true},
+    {"category": "FIXTURES_AND_ORACLES", "required": ["FIXTURE_ORACLE_TRACEABILITY.json", "STATIC_CALIBRATION_FIXTURES.json", "FUTURE_RETEST_FIXTURE_SET"], "exact_paths_required": true},
+    {"category": "SCHEMAS", "required": ["PRODUCT_LEADERSHIP_INSTRUMENT_SCHEMA", "GENERATION_OUTPUT_SCHEMA", "SCORING_OUTPUT_SCHEMA", "REQUEST_MANIFEST_SCHEMA"], "exact_paths_required": true},
+    {"category": "CONFIGURATION", "required": ["MODEL_CONFIGURATION", "REASONING_CONFIGURATION", "TOOL_POLICY", "TIMEOUT_RETRY_PARALLELISM_SEED"], "exact_paths_required": true},
+    {"category": "DEPENDENCY_LOCK_STATE", "required": ["LOCKFILE_OR_EXPLICIT_NO_DEPENDENCIES_DECLARATION", "RUNNER_BINARY_VERSION_AND_SHA256"], "exact_paths_required": true},
+    {"category": "ENVIRONMENT_DECLARATION", "required": ["OPERATING_SYSTEM", "RUNTIME_VERSIONS", "LINE_ENDING_POLICY", "LOCALE_TIMEZONE", "NETWORK_POLICY"], "exact_paths_required": true},
+    {"category": "GENERATED_REQUEST_MANIFESTS", "required": ["ONE_RECORD_PER_REQUEST_WITH_REQUEST_ID_INPUT_HASH_OUTPUT_ID_AND_STATUS"], "exact_paths_required": true}
+  ],
+  "pre_run_verification": [
+    "BUILD_COMPLETE_SORTED_PATH_SHA256_MANIFEST_BEFORE_ANY_REQUEST",
+    "REJECT_MISSING_DUPLICATE_OR_UNEXPECTED_COMPONENT",
+    "VERIFY_RAW_BYTES_FROM_CANONICAL_GIT_BLOBS_AND_WORKTREE_MATCH",
+    "VERIFY_EACH_ARM_ENVELOPE_DIGEST_BEFORE_ITS_REQUEST",
+    "VERIFY_SCORER_REDACTION_AND_LEAKAGE_SCAN_BEFORE_SCORING",
+    "VERIFY_MANIFEST_AGAIN_BEFORE_AGGREGATION_ADJUDICATION_AND_PUBLICATION"
+  ],
+  "artifact_linkage": {
+    "request_id": "UNIQUE_OPAQUE_ID",
+    "input_id": "SHA256_OF_CANONICAL_REQUEST_BYTES",
+    "output_id": "SHA256_OF_RAW_RESPONSE_BYTES",
+    "score_id": "SHA256_OF_CANONICAL_SCORE_BYTES",
+    "required_links": ["REQUEST_TO_INPUT", "REQUEST_TO_OUTPUT", "OUTPUT_TO_BLINDED_CASE", "BLINDED_CASE_TO_SCORE", "SCORE_TO_FROZEN_RUBRIC_VERSION"]
+  },
+  "append_only_rules": [
+    "NO_OVERWRITE_OF_REQUEST_OUTPUT_OR_SCORE_RECORDS",
+    "RETRY_CREATES_A_NEW_REQUEST_ID_AND_REQUIRES_PREDECLARED_POLICY",
+    "TIMESTAMPS_ARE_RECORDED_BUT_NEVER_USED_AS_IDENTITY",
+    "UNBLINDING_MAPPING_IS_SEALED_UNTIL_ALL_SCORES_AND_RATIONALES_ARE_FROZEN",
+    "RAW_MODEL_RESPONSE_BYTES_MUST_BE_PRESERVED_FOR_HASH_RECOMPUTATION"
+  ],
+  "custody_failure_behavior": {"machine_reason": "STOP_CHAIN_OF_CUSTODY_BROKEN", "outcome": "INSUFFICIENT_EVIDENCE", "requests_allowed_after_detection": false, "adjudication_allowed": false},
+  "current_static_baseline": {"parent_head": "2e2f97449c9734512ddd0dfe3a3f308c037a8e8c", "historical_execution_file_count": 150, "historical_execution_manifest_sha256": "e8830433d6a9fdba11c9227669a9155c16a7f58ad8c9ff49a0b93df79d85681c"},
+  "claim_boundary": "INSTRUMENT_REDESIGN_COMPLETE_AWAITING_SEPARATE_FRESH_RETEST_AUTHORIZATION"
+}

@@ -1,0 +1,499 @@
+{
+"schema_version": "1.0.0",
+"task_id": "CODEX_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191_001",
+"brief_id": "CODEX_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191_001",
+  "status": "EXECUTED_STATIC_VALIDATION_PASS_PUBLICATION_PENDING",
+"task_type": "BOUNDED_DOCUMENTARY_AND_TECHNICAL_INSTRUMENT_REDESIGN",
+"executor": "Codex",
+"project_id": "lab",
+"objective": "Redesign and statically validate the Product Leadership Test 003 instrument so that every material defect recorded in PEND-LAB-048 is resolved by enforceable contracts, deterministic fixtures, schemas, traceability, validators, calibration cases, stop conditions, and chain-of-custody controls. Do not execute or simulate a retest and do not make any model request.",
+"authorization_ref": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191",
+"authority": {
+"authorization_ref": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191",
+"status": "GRANTED",
+"approved_by": "Jonathan Martínez",
+"local_deterministic_validation_authorized": true,
+"model_requests_authorized": false,
+"retest_authorized": false
+},
+"authorization_precondition": "Do not begin modifications unless authorization 191 exists in GRANTED state with Jonathan Martínez as approved_by and the authorized scope is materially identical to this brief.",
+"repository": {
+"name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+"branch": "main",
+"expected_parent_head": "2e2f97449c9734512ddd0dfe3a3f308c037a8e8c",
+"head_policy": "VERIFY_LIVE_AT_USE",
+"entrypoint": "project-sources/chatgpt/START_HERE.md",
+"working_branch": "agent/product-leadership-test003-instrument-redesign-191",
+"publication_mode": "COMMIT_PUSH_PULL_REQUEST_SQUASH_MERGE_VERIFY_REMOTE"
+},
+"repositories": [
+{
+"name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+"branch": "main",
+"expected_parent_head": "2e2f97449c9734512ddd0dfe3a3f308c037a8e8c",
+"head_policy": "VERIFY_LIVE_AT_USE",
+"working_branch": "agent/product-leadership-test003-instrument-redesign-191"
+}
+],
+"operating_directive": {
+"governance": "ChatGPT defines scope and acceptance. Codex is the bounded technical executor and has no autonomous authority.",
+"continuity": "Once authorization and preflight pass, continue through implementation, deterministic validation, corrections, publication, and remote verification without repeated confirmation.",
+"minor_issue_resolution": "Resolve minor schema, formatting, naming, reference, index, fixture, validator, and documentation defects directly when the correction is clearly necessary to satisfy this brief and does not expand scope.",
+"material_stop_only": true,
+"no_partial_success_claims": true
+},
+"canonical_reconstruction_order": [
+"Resolve the live remote HEAD of main.",
+"Read project-sources/chatgpt/START_HERE.md.",
+"Follow its complete order of reading.",
+"Read LAB_CONTRACT.md.",
+"Read METHODOLOGY.md.",
+"Read CURRENT_STATE.json.",
+"Read registry/index.json and registry/projects.json.",
+"Read projects/lab/PROJECT_STATE.json.",
+"Read applicable decisions, authorizations, integrations, errors, pending records, evidence, reassessments, reconciliations, test designs, executions, roadmap, and current continuity.",
+"Read project-sources/chatgpt/01_SOURCE_MANIFEST.md and sources 02 through 08 in the declared order.",
+"Verify authorization 190 is consumed with no residual authority.",
+"Verify PEND-LAB-048 remains open and authorization 191 is GRANTED."
+],
+"primary_sources": [
+"projects/lab/pending/PEND-LAB-048.json",
+"projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_EXECUTION004_EXTERNAL_AUDIT_RECONCILIATION_190.json",
+"projects/lab/external-audits/AUDIT-CLAUDE-PRODUCT-LEADERSHIP-EXECUTION-004-PHASE3-001/AUDIT_REPORT.md",
+"projects/lab/evidence/EVD-LAB-AUD-008.json",
+"projects/lab/reassessments/REA-LAB-010.json",
+"projects/lab/reconciliations/REC-LAB-PL003-EXEC004-AUDIT190-001.json",
+"projects/lab/integrations/INT-LAB-004.json",
+"foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/MANIFEST.json",
+"projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json",
+"projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/SCORING_AND_GATES.json",
+"projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004/RUN_TEST003.mjs"
+],
+"historical_facts_to_preserve": {
+"integration_state": "CANDIDATE_NOT_ACTIVE_NOT_INTEGRATED",
+"execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+"attempt": "ATTEMPT-003",
+"fixture_count": 52,
+"arm_count": 4,
+"output_count": 112,
+"score_count": 112,
+"runner_result": "FAIL_REVISE_OR_REJECT_EVIDENCE_READY_FOR_SEPARATE_EXTERNAL_AUDIT_DECISION",
+"external_audit_determination": "MODIFIED",
+"reconciled_interpretation": "INSUFFICIENT_EVIDENCE",
+"package_adjudication": "NONE",
+"historical_mutation_allowed": false
+},
+"scope": {
+"included": [
+"Instrument architecture",
+"Prompt and arm symmetry contracts",
+"Scorer input isolation and redaction",
+"Negative-control architecture",
+"Fixture and oracle alignment",
+"INSUFFICIENT_EVIDENCE semantics",
+"Stop-condition architecture",
+"Exact scoring-rubric calibration using fixed static cases",
+"Runner provenance and future runner freezing",
+"Chain of custody",
+"Fresh future retest gates and claim limits",
+"Schemas and deterministic validators",
+"Static synthetic calibration fixtures",
+"Indexes, evidence, registry delta, pending state, and continuity synchronization",
+"Authorized GitHub publication workflow"
+],
+"excluded": [
+"Any new model request",
+"Any execution of a test arm",
+"Any replay, retest, regeneration, or rescoring",
+"Any mutation of Execution 004 or ATTEMPT-003 historical artifacts",
+"Any modification of the Product Leadership candidate package",
+"Any promotion, activation, or integration",
+"Any change to INT-LAB-004 status",
+"Any runtime, product, SSE, AWS, Terraform, Symphonie, selector, pointer, or integration-factory change"
+]
+},
+"implementation_sequence": [
+{
+"step": 1,
+"name": "PREFLIGHT_AND_IMMUTABILITY_BASELINE",
+"actions": [
+"Verify live main HEAD.",
+"Verify authorization 191 is GRANTED.",
+"Create the working branch from the exact authorized parent or perform a safe rebase if permitted by the authorization.",
+"Inventory every governed Execution 004 and ATTEMPT-003 file.",
+"Record SHA-256 hashes before modification.",
+"Verify the working tree is clean and no historical file is scheduled for modification."
+],
+"output": "Preflight and historical immutability manifest."
+},
+{
+"step": 2,
+"name": "DEFECT_TO_REQUIREMENT_TRACEABILITY",
+"actions": [
+"Decompose every PEND-LAB-048 defect into atomic requirements.",
+"Map each requirement to its audit evidence, affected historical component, successor contract, validator, fixture, acceptance gate, and stop condition.",
+"Reject undocumented fixes or inferred scope expansion."
+],
+"output": "Complete defect-to-requirement traceability matrix."
+},
+{
+"step": 3,
+"name": "FOUR_ARM_SYMMETRY",
+"actions": [
+"Define a common canonical arm envelope.",
+"Represent treatment differences as explicit typed deltas.",
+"Equalize all non-treatment context, formatting, evidence, constraints, metadata exposure, and expected response contract.",
+"Add a validator that normalizes all four arms and fails when any undeclared difference remains."
+],
+"output": "ARM_SYMMETRY_CONTRACT.json plus passing and intentionally failing fixtures."
+},
+{
+"step": 4,
+"name": "SCORER_CONTEXT_ISOLATION",
+"actions": [
+"Define the minimum scorer input contract.",
+"Exclude arm names, treatment identity, package state, target conclusion, file paths, provenance hints, expected answer, prior scores, aggregate state, and hidden labels.",
+"Define deterministic redaction and leakage detection.",
+"Create fixtures proving each forbidden field is rejected."
+],
+"output": "SCORER_ISOLATION_CONTRACT.json and leakage-test results."
+},
+{
+"step": 5,
+"name": "NEGATIVE_CONTROL_REDESIGN",
+"actions": [
+"Remove dependence on a model voluntarily following an instruction to produce a bad or refusing output.",
+"Define fixed deterministic negative artifacts or structural controls with guaranteed negative characteristics.",
+"Separate negative controls from ordinary experimental arms.",
+"Document exactly which failure mode each negative control detects."
+],
+"output": "NEGATIVE_CONTROL_CONTRACT.json and fixed control fixtures."
+},
+{
+"step": 6,
+"name": "FIXTURE_ORACLE_ALIGNMENT",
+"actions": [
+"Map every retained or successor fixture to the Product Leadership input contract.",
+"For each fixture, declare tested capability, permitted assumptions, expected evidence, oracle logic, scoring dimensions, invalidating conditions, and claim boundary.",
+"Remove or replace successor-design fixtures that cannot support a discriminating claim.",
+"Do not modify historical fixtures in Execution 004."
+],
+"output": "FIXTURE_ORACLE_TRACEABILITY.json with zero unmapped fixtures."
+},
+{
+"step": 7,
+"name": "INSUFFICIENT_EVIDENCE_AND_STOP_CONDITIONS",
+"actions": [
+"Define INSUFFICIENT_EVIDENCE as an explicit result type.",
+"Specify triggers for missing output, non-comparable arms, scorer leakage, broken custody, invalid fixture, inconsistent oracle, partial run, contradictory evidence, and failed calibration.",
+"Ensure aggregation cannot coerce INSUFFICIENT_EVIDENCE into PASS or FAIL.",
+"Define stop gates before requests, scoring, aggregation, adjudication, and publication."
+],
+"output": "INSUFFICIENT_EVIDENCE_CONTRACT.json and STOP_CONDITIONS.json."
+},
+{
+"step": 8,
+"name": "EXACT_SCORING_RUBRIC_CALIBRATION",
+"actions": [
+"Use the actual main scoring dimensions and aggregation formula, not a simplified surrogate.",
+"Create fixed synthetic calibration cases for unequivocal pass, unequivocal fail, borderline, missing, malformed, refusal, contradictory, scorer-leakage, invalid-control, and insufficient-evidence scenarios.",
+"Define expected dimension scores, aggregate result, confidence boundary, and stop outcome for each case.",
+"Resolve any ambiguity that prevents deterministic expected results."
+],
+"output": "SCORING_CALIBRATION.json and STATIC_CALIBRATION_FIXTURES.json."
+},
+{
+"step": 9,
+"name": "CHAIN_OF_CUSTODY_AND_FUTURE_RETEST_CONTRACT",
+"actions": [
+"Identify the canonical future runner source.",
+"Define exactly which files, prompts, schemas, fixtures, oracles, scorer instructions, dependency locks, environment declarations, and configurations must be frozen.",
+"Require SHA-256 generation before future execution.",
+"Require verification before each request and before adjudication.",
+"Define artifact naming, append-only rules, timestamps, request IDs, output IDs, and score linkage.",
+"Define future retest gates without granting authority to execute them."
+],
+"output": "CHAIN_OF_CUSTODY_CONTRACT.json and FRESH_RETEST_GATES_AND_CLAIM_LIMITS.json."
+},
+{
+"step": 10,
+"name": "DETERMINISTIC_VALIDATORS",
+"actions": [
+"Implement validators for schema compliance, arm symmetry, scorer leakage, negative-control structure, fixture traceability, INSUFFICIENT_EVIDENCE propagation, stop-condition completeness, calibration expectations, custody completeness, duplicate JSON keys, references, indexes, and historical hash preservation.",
+"Include positive and negative test cases.",
+"Ensure validators genuinely exercise their declared contracts."
+],
+"output": "Runnable local validators and machine-readable results."
+},
+{
+"step": 11,
+"name": "CANONICAL_RECONCILIATION",
+"actions": [
+"Create evidence for the redesign.",
+"Update PEND-LAB-048 only to reflect whether the instrument redesign is complete or remains blocked.",
+"Do not close any future retest decision unless the canonical pending contract permits a redesign-only closure state.",
+"Update applicable indexes, registry delta, current state views, repository-state expectations, and continuity.",
+"Preserve no-retest and no-integration boundaries everywhere."
+],
+"output": "Coherent canonical documentary package."
+},
+{
+"step": 12,
+"name": "VALIDATE_PUBLISH_VERIFY",
+"actions": [
+"Run the full deterministic validation suite.",
+"Correct minor in-scope failures and rerun from the relevant earliest gate.",
+"Confirm zero historical hash changes and zero model activity.",
+"Commit intentionally.",
+"Push the working branch.",
+"Open a pull request with exact scope and prohibitions.",
+"Squash merge only when all gates pass.",
+"Verify remote main HEAD and exact published files.",
+"Mark authorization 191 consumed only after verified publication."
+],
+"output": "Verified remote publication or a material BLOCKED report."
+}
+],
+"required_outputs": [
+{
+"path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/MANIFEST.json",
+"minimum_content": [
+"purpose",
+"scope",
+"historical baseline",
+"defect inventory",
+"artifact inventory",
+"validation commands",
+"claim limits",
+"no-retest boundary"
+]
+},
+{
+"path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/ARM_SYMMETRY_CONTRACT.json",
+"minimum_content": [
+"canonical arm envelope",
+"allowed treatment deltas",
+"forbidden asymmetries",
+"normalization algorithm",
+"validator expectations"
+]
+},
+{
+"path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/SCORER_ISOLATION_CONTRACT.json",
+"minimum_content": [
+"allowed fields",
+"forbidden fields",
+"redaction rules",
+"leakage patterns",
+"failure semantics"
+]
+},
+{
+"path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/NEGATIVE_CONTROL_CONTRACT.json",
+"minimum_content": [
+"fixed control definitions",
+"detected failure modes",
+"non-refusability rationale",
+"validation rules"
+]
+},
+{
+"path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/FIXTURE_ORACLE_TRACEABILITY.json",
+"minimum_content": [
+"fixture ID",
+"input-contract clause",
+"capability claim",
+"oracle",
+"scoring dimensions",
+"invalidating conditions",
+"claim boundary"
+]
+},
+{
+"path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/INSUFFICIENT_EVIDENCE_CONTRACT.json",
+"minimum_content": [
+"triggers",
+"propagation",
+"aggregation prohibition",
+"reporting",
+"recovery boundary"
+]
+},
+{
+"path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/STOP_CONDITIONS.json",
+"minimum_content": [
+"stage",
+"condition",
+"detection method",
+"machine-readable reason",
+"permitted recovery",
+"prohibited continuation"
+]
+},
+{
+"path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/SCORING_CALIBRATION.json",
+"minimum_content": [
+"exact rubric version",
+"dimension semantics",
+"aggregation formula",
+"thresholds",
+"boundary behavior",
+"calibration result"
+]
+},
+{
+"path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/CHAIN_OF_CUSTODY_CONTRACT.json",
+"minimum_content": [
+"frozen components",
+"hash algorithm",
+"pre-run verification",
+"artifact linkage",
+"append-only rules",
+"custody failure behavior"
+]
+},
+{
+"path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/FRESH_RETEST_GATES_AND_CLAIM_LIMITS.json",
+"minimum_content": [
+"preconditions",
+"execution gates",
+"adjudication gates",
+"allowed claims",
+"forbidden claims",
+"separate authorization requirement"
+]
+},
+{
+"path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/VALIDATION_RESULTS.json",
+"minimum_content": [
+"commands",
+"timestamps",
+"tested contracts",
+"fixture counts",
+"positive cases",
+"negative cases",
+"historical hash verification",
+"model activity verification",
+"overall result"
+]
+}
+],
+"validation_requirements": [
+"All JSON parses successfully.",
+"No duplicate JSON keys exist.",
+"All applicable schemas pass.",
+"Every referenced path and ID resolves.",
+"Every PEND-LAB-048 requirement maps to at least one enforceable contract and validator.",
+"All four arms normalize identically outside declared treatment deltas.",
+"Scorer leakage fixtures are rejected.",
+"Negative controls are fixed or structurally non-refusable.",
+"Every successor fixture has complete contract and oracle traceability.",
+"INSUFFICIENT_EVIDENCE cases cannot become PASS or FAIL.",
+"All stop-condition fixtures stop at the correct stage.",
+"The exact scoring rubric passes all expected static calibration cases.",
+"The future custody manifest is complete and deterministic.",
+"All historical governed hashes match the preflight baseline.",
+"No model call, test request, output generation, replay, or rescoring occurred.",
+"Indexes, registry counts, canonical aggregates, expected repository state, and continuity are coherent.",
+"The maximum declared result does not exceed redesign completion awaiting separate retest authorization."
+],
+"acceptance_checks": [
+"All JSON parses successfully and contains no duplicate keys.",
+"All applicable schemas and dedicated redesign validators pass.",
+"Every PEND-LAB-048 defect maps to an enforceable contract and static fixture.",
+"Historical Execution 004 and ATTEMPT-003 bytes remain unchanged.",
+"Zero model request, retest, replay, regeneration or rescoring occurs.",
+"The maximum result remains redesign completion awaiting separate fresh-retest authorization."
+],
+"stop_conditions": [
+{
+"code": "STOP_AUTHORIZATION_NOT_GRANTED",
+"condition": "Authorization 191 is absent, proposed, consumed, revoked, expired, or materially different from this brief.",
+"response": "Stop before modification."
+},
+{
+"code": "STOP_PARENT_HEAD_MISMATCH",
+"condition": "Remote main differs and a safe scope-preserving rebase cannot be completed.",
+"response": "Stop and report the exact remote HEAD and conflicting paths."
+},
+{
+"code": "STOP_HISTORICAL_MUTATION_REQUIRED",
+"condition": "Satisfying the redesign would require changing historical Execution 004 or ATTEMPT-003 artifacts.",
+"response": "Stop; create no workaround that obscures the historical record."
+},
+{
+"code": "STOP_MODEL_ACTIVITY_REQUIRED",
+"condition": "A model request, replay, regeneration, or rescoring appears necessary.",
+"response": "Stop; model activity is outside authority."
+},
+{
+"code": "STOP_UNRESOLVED_MATERIAL_INSTRUMENT_DEFECT",
+"condition": "Any of the eight PEND-LAB-048 defect domains cannot be resolved or deterministically validated.",
+"response": "Publish nothing as PASS; produce a precise blocked report."
+},
+{
+"code": "STOP_SCOPE_EXPANSION",
+"condition": "The work requires package modification, integration, activation, runtime, product, SSE, AWS, Terraform, Symphonie, selector, pointer, or external repository changes.",
+"response": "Stop the affected action."
+},
+{
+"code": "STOP_VALIDATION_FAILURE",
+"condition": "Any acceptance gate remains failing after reasonable in-scope correction.",
+"response": "Do not merge; report failing commands, artifacts, root cause, and exact remaining requirement."
+}
+],
+"publication_contract": {
+"commit_message": "Redesign Product Leadership Test 003 instrument under authorization 191",
+"pull_request_title": "Redesign Product Leadership Test 003 instrument",
+"pull_request_body_requirements": [
+"Authorization reference",
+"Expected parent and actual base HEAD",
+"Changed-file inventory",
+"Eight defect domains resolved",
+"Historical files preserved",
+"Validation commands and results",
+"Zero model activity declaration",
+"No-retest and no-integration boundary",
+"Maximum result and remaining authority"
+],
+"merge_condition": "All acceptance gates PASS and no stop condition is active.",
+"post_merge": [
+"Resolve remote main HEAD.",
+"Fetch and verify every required published artifact.",
+"Verify authorization 191 consumption state.",
+"Verify PEND-LAB-048 successor state.",
+"Verify INT-LAB-004 remains CANDIDATE_NOT_ACTIVE_NOT_INTEGRATED."
+]
+},
+"response_contract": {
+"on_success": {
+"result": "PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_COMPLETE_STATICALLY_VALIDATED_AWAITING_SEPARATE_FRESH_RETEST_AUTHORIZATION",
+"include": [
+"Remote main HEAD before and after publication",
+"Commit and pull request",
+"Material changed files",
+"Validation commands and results",
+"Historical hash preservation result",
+"Confirmation of zero model requests and zero retest",
+"Authorization 191 consumption",
+"PEND-LAB-048 state",
+"INT-LAB-004 state",
+"One next action"
+],
+"next_action": "Prepare a separate fresh-retest authorization only; do not execute it."
+},
+"on_blocked": {
+"result": "BLOCKED_WITH_MATERIAL_INSTRUMENT_REDESIGN_DEFECTS",
+"include": [
+"Exact stop code",
+"Failed gate",
+"Affected files",
+"Commands and evidence",
+"Changes made before stopping",
+"Whether anything was committed or pushed",
+"Authorization state",
+"One bounded corrective action"
+]
+}
+}
+}

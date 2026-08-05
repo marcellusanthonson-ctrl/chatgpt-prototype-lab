@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_type": "INSTRUMENT_REDESIGN_MANIFEST",
+  "redesign_id": "INSTRUMENT_REDESIGN_191",
+  "status": "COMPLETE_STATICALLY_VALIDATED_AWAITING_SEPARATE_FRESH_RETEST_AUTHORIZATION",
+  "authorization_ref": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191",
+  "brief_ref": "CODEX_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191_001",
+  "purpose": "Replace the defective Product Leadership Test 003 measurement instrument with enforceable, deterministic contracts while preserving all historical evidence and without executing a retest.",
+  "scope": {
+    "included": [
+      "ARM_SYMMETRY",
+      "SCORER_CONTEXT_ISOLATION",
+      "FIXED_NEGATIVE_CONTROLS",
+      "FIXTURE_ORACLE_TRACEABILITY",
+      "FIRST_CLASS_INSUFFICIENT_EVIDENCE",
+      "FAIL_CLOSED_STOP_CONDITIONS",
+      "EXACT_RUBRIC_CALIBRATION",
+      "CHAIN_OF_CUSTODY",
+      "FRESH_RETEST_GATES_AND_CLAIM_LIMITS",
+      "LOCAL_DETERMINISTIC_VALIDATION"
+    ],
+    "excluded": [
+      "MODEL_REQUESTS",
+      "RETEST_REPLAY_REGENERATION_RESCORING",
+      "HISTORICAL_ARTIFACT_MUTATION",
+      "CANDIDATE_PACKAGE_MODIFICATION",
+      "INT_LAB_004_MODIFICATION",
+      "PROMOTION_ACTIVATION_INTEGRATION",
+      "RUNTIME_OR_PRODUCT_CHANGE"
+    ]
+  },
+  "historical_execution": {
+    "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+    "attempt": "ATTEMPT-003",
+    "mutation_allowed": false,
+    "runner_emitted_result": "FAIL_REVISE_OR_REJECT_EVIDENCE_READY_FOR_SEPARATE_EXTERNAL_AUDIT_DECISION",
+    "reconciled_interpretation": "INSUFFICIENT_EVIDENCE",
+    "parent_head": "2e2f97449c9734512ddd0dfe3a3f308c037a8e8c",
+    "governed_root": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+    "git_tree_sha1": "7bd45ce057ae8362207cc24e7d4cbdad4305d531",
+    "file_count": 150,
+    "total_bytes": 1023921,
+    "sorted_path_sha256_manifest_digest": "e8830433d6a9fdba11c9227669a9155c16a7f58ad8c9ff49a0b93df79d85681c",
+    "hash_algorithm": "SHA-256",
+    "baseline_source": "GIT_BLOBS_AT_AUTHORIZED_PARENT"
+  },
+  "defect_inventory": [
+    {"id": "PL003-R191-01", "source": "PEND-LAB-048", "domain": "ARM_SYMMETRY", "contract": "ARM_SYMMETRY_CONTRACT.json", "validator": "validate_arm_symmetry"},
+    {"id": "PL003-R191-02", "source": "PEND-LAB-048", "domain": "SCORER_CONTEXT_ISOLATION", "contract": "SCORER_ISOLATION_CONTRACT.json", "validator": "validate_scorer_isolation"},
+    {"id": "PL003-R191-03", "source": "PEND-LAB-048", "domain": "NEGATIVE_CONTROLS", "contract": "NEGATIVE_CONTROL_CONTRACT.json", "validator": "validate_negative_controls"},
+    {"id": "PL003-R191-04", "source": "PEND-LAB-048", "domain": "FIXTURE_AND_ORACLE_ALIGNMENT", "contract": "FIXTURE_ORACLE_TRACEABILITY.json", "validator": "validate_fixture_traceability"},
+    {"id": "PL003-R191-05", "source": "PEND-LAB-048", "domain": "INSUFFICIENT_EVIDENCE", "contract": "INSUFFICIENT_EVIDENCE_CONTRACT.json", "validator": "validate_outcome_propagation"},
+    {"id": "PL003-R191-06", "source": "PEND-LAB-048", "domain": "STOP_CONDITIONS", "contract": "STOP_CONDITIONS.json", "validator": "validate_stop_conditions"},
+    {"id": "PL003-R191-07", "source": "PEND-LAB-048", "domain": "SCORING_CALIBRATION", "contract": "SCORING_CALIBRATION.json", "validator": "validate_scoring_calibration"},
+    {"id": "PL003-R191-08", "source": "PEND-LAB-048", "domain": "CHAIN_OF_CUSTODY_AND_FRESH_RETEST_GATES", "contract": "CHAIN_OF_CUSTODY_CONTRACT.json", "validator": "validate_chain_of_custody"}
+  ],
+  "artifact_inventory": [
+    "MANIFEST.json",
+    "ARM_SYMMETRY_CONTRACT.json",
+    "SCORER_ISOLATION_CONTRACT.json",
+    "NEGATIVE_CONTROL_CONTRACT.json",
+    "FIXTURE_ORACLE_TRACEABILITY.json",
+    "INSUFFICIENT_EVIDENCE_CONTRACT.json",
+    "STOP_CONDITIONS.json",
+    "SCORING_CALIBRATION.json",
+    "CHAIN_OF_CUSTODY_CONTRACT.json",
+    "FRESH_RETEST_GATES_AND_CLAIM_LIMITS.json",
+    "STATIC_CALIBRATION_FIXTURES.json",
+    "INSTRUMENT_CORE.mjs",
+    "VALIDATION_RESULTS.json"
+  ],
+  "validation_commands": [
+    "python tests/validate_product_leadership_instrument_redesign_191.py",
+    "node tests/product_leadership_instrument_core_191.test.mjs"
+  ],
+  "historical_read_only_paths": [
+    "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004/**",
+    "projects/lab/external-audits/AUDIT-CLAUDE-PRODUCT-LEADERSHIP-EXECUTION-004-PHASE3-001/**",
+    "projects/lab/reassessments/REA-LAB-010.json",
+    "projects/lab/reconciliations/REC-LAB-PL003-EXEC004-AUDIT190-001.json",
+    "projects/lab/evidence/EVD-LAB-AUD-008.json",
+    "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/**",
+    "projects/lab/integrations/INT-LAB-004.json"
+  ],
+  "neutral_fixture_policy": "ALL_NEW_STATIC_CASES_ARE_DOMAIN_NEUTRAL_SYNTHETIC_AND_CONTAIN_NO_REAL_PRODUCT_OR_USER_DATA",
+  "model_activity": {"requests": 0, "retests": 0, "replays": 0, "regenerations": 0, "rescoring": 0},
+  "claim_limits": [
+    "STATIC_VALIDATION_DOES_NOT_ESTABLISH_PRODUCT_LEADERSHIP_VALUE",
+    "NO_PASS_OR_FAIL_ADJUDICATION_OF_THE_CANDIDATE_PACKAGE",
+    "NO_PROMOTION_ACTIVATION_OR_INTEGRATION",
+    "FRESH_RETEST_REQUIRES_SEPARATE_EXPLICIT_AUTHORIZATION"
+  ],
+  "claim_boundary": "INSTRUMENT_REDESIGN_COMPLETE_AWAITING_SEPARATE_FRESH_RETEST_AUTHORIZATION"
+}

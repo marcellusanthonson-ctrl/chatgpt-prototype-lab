@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "product-leadership-test003-instrument-redesign-191",
+  "project_id": "lab",
+  "created_at": "2026-08-05T01:12:35-04:00",
+  "status": "PASS_STATICALLY_VALIDATED_PUBLICATION_PENDING",
+  "authorization": {
+    "id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191",
+    "status": "GRANTED_UNTIL_VERIFIED_REMOTE_PUBLICATION",
+    "path": "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191.json"
+  },
+  "brief": "projects/lab/briefs/CODEX_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191_001.json",
+  "expected_parent_head": "2e2f97449c9734512ddd0dfe3a3f308c037a8e8c",
+  "adds": {
+    "authorizations": [
+      "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191.json"
+    ],
+    "briefs": [
+      "projects/lab/briefs/CODEX_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191_001.json"
+    ],
+    "instrument_redesign": [
+      "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/MANIFEST.json"
+    ],
+    "evidence": [
+      "projects/lab/evidence/EVD-LAB-PL003-INSTRUMENT-REDESIGN-191.json"
+    ]
+  },
+  "state_delta": {
+    "product_leadership_instrument": "REDESIGN_COMPLETE_STATICALLY_VALIDATED",
+    "pending": "PEND_LAB_048_OPEN_AWAITING_SEPARATE_FRESH_RETEST_AUTHORIZATION",
+    "historical_execution_004": "PRESERVED_RUNNER_FAIL_RECONCILED_INSUFFICIENT_EVIDENCE",
+    "candidate_package": "NOT_ADJUDICATED_NOT_MODIFIED",
+    "integration": "INT_LAB_004_CANDIDATE_NOT_ACTIVE_NOT_INTEGRATED_UNCHANGED",
+    "authorization_191": "GRANTED_UNTIL_VERIFIED_REMOTE_PUBLICATION"
+  },
+  "registry_counts_before": {
+    "authorizations": 105,
+    "evidence": 87
+  },
+  "registry_counts_after": {
+    "authorizations": 106,
+    "evidence": 88
+  },
+  "historical_immutability": {
+    "file_count": 150,
+    "git_tree_sha1": "7bd45ce057ae8362207cc24e7d4cbdad4305d531",
+    "sorted_path_sha256_manifest_digest": "e8830433d6a9fdba11c9227669a9155c16a7f58ad8c9ff49a0b93df79d85681c",
+    "result": "PASS"
+  },
+  "non_effects": [
+    "NO_MODEL_REQUEST",
+    "NO_RETEST_REPLAY_REGENERATION_OR_RESCORING",
+    "NO_HISTORICAL_ARTIFACT_CHANGE",
+    "NO_PRODUCT_LEADERSHIP_PACKAGE_CHANGE",
+    "NO_INT_LAB_004_CHANGE",
+    "NO_PROMOTION_ACTIVATION_INTEGRATION_RUNTIME_OR_PRODUCT_EFFECT",
+    "NO_EXTERNAL_REPOSITORY_ACCESS_OR_CHANGE"
+  ],
+  "result": "PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_COMPLETE_STATICALLY_VALIDATED_AWAITING_SEPARATE_FRESH_RETEST_AUTHORIZATION",
+  "next_authorized_action": "NONE_UNTIL_SEPARATE_EXPLICIT_FRESH_RETEST_AUTHORIZATION"
+}
