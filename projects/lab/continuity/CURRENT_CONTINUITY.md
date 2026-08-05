@@ -7,7 +7,7 @@ HEAD policy: `VERIFY_LIVE_AT_USE`
 
 ## Result
 
-Authorization 194 implemented a transversal Codex Desktop delivery standard. Canonical briefs remain complete and preserved; Codex receives a short root `AGENTS.md`, a validated execution envelope, one role profile and a selective context manifest.
+Authorization 194 published a transversal Codex Desktop delivery standard. Canonical briefs remain complete and preserved; Codex receives a short root `AGENTS.md`, a validated execution envelope, one role profile and a selective context manifest.
 
 Profiles: `LAB_DISCOVERY`, `LAB_IMPLEMENTATION`, `LAB_VALIDATION`, `LAB_AUDIT`.
 
@@ -19,7 +19,7 @@ Root `AGENTS.md`: 23 non-empty lines, 1286 UTF-8 bytes, about 321 estimated toke
 
 ## Claim boundary
 
-Static validation passed. No real Codex Desktop benchmark ran, so latency improvement is not yet established. No model, login, Skill, SDK, runtime, product, integration or external repository action occurred.
+Static validation passed. No real Codex Desktop benchmark ran, so latency improvement is not established. No model, login, Skill, SDK, runtime, product, integration or external repository action occurred.
 
 ## Product Leadership
 
@@ -27,8 +27,8 @@ Product Leadership remains `CANDIDATE_NOT_ACTIVE_NOT_INTEGRATED` and `NOT_READY_
 
 ## Publication and authority
 
-Implementation publication is pending. Authorization 194 retains only publication and verification authority.
+Implementation PR #48 was squash-merged as `5c388e25fc9851fe27d1dd819f8c249d19713162` and verified on remote `main`. Authorization 194 is consumed with no residual authority.
 
 ## Single next action
 
-After verified publication, apply the standard to the next separately authorized Codex Desktop execution and capture benchmark metrics.
+Apply the standard to the next separately authorized Codex Desktop execution and capture context, latency and quality metrics.
