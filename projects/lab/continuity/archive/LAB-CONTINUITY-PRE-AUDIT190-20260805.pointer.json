@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "archive_id": "LAB-CONTINUITY-PRE-AUDIT190-20260805",
+  "status": "ARCHIVED_BY_IMMUTABLE_BLOB_POINTERS",
+  "archived_at": "2026-08-05T00:12:00-04:00",
+  "source_commit": "c21af774f3bf3248867bda365b36eb62e15f1a01",
+  "replaced_by": "LAB-CONTINUITY-PRODUCT-LEADERSHIP-AUDIT190-INSUFFICIENT-EVIDENCE-PEND048-20260805",
+  "files": [
+    {
+      "path": "projects/lab/continuity/CURRENT_CONTINUITY.json",
+      "blob_sha": "ce5b3d76923f5ff2389eadc4bf75525f70453842"
+    },
+    {
+      "path": "projects/lab/continuity/CURRENT_CONTINUITY.md",
+      "blob_sha": "492596b1241cd27a7d158600b6512ae0e09b8fc1"
+    },
+    {
+      "path": "projects/lab/continuity/ATTACHMENT_MANIFEST.json",
+      "blob_sha": "c606e22249e7628352fe991b549770713c33a9b1"
+    },
+    {
+      "path": "projects/lab/continuity/START_PROMPT.md",
+      "blob_sha": "063d3a7a2b329a20dd29c0e36cbf1d6a827e4e3c"
+    }
+  ],
+  "preservation_rule": "FETCH_BLOB_BY_SHA_FROM_SOURCE_COMMIT_FOR_EXACT_HISTORICAL_BYTES",
+  "authority_effect": "NONE"
+}
