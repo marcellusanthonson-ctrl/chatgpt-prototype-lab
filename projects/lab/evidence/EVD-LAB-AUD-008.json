@@ -3,11 +3,17 @@
   "evidence_id": "EVD-LAB-AUD-008",
   "project_id": "lab",
   "kind": "INDEPENDENT_EXTERNAL_PHASE_3_AUDIT_AND_RECONCILIATION_EVIDENCE",
-  "status": "REGISTERED_RECONCILED_MODIFIED",
+  "status": "REGISTERED_RECONCILED_MODIFIED_VERIFIED_REMOTE_PUBLICATION",
   "recorded_at": "2026-08-04T23:29:00-04:00",
   "audit_id": "AUDIT-CLAUDE-PRODUCT-LEADERSHIP-EXECUTION-004-PHASE3-001",
   "reconciliation_authorization": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_EXECUTION004_EXTERNAL_AUDIT_RECONCILIATION_190",
   "audited_head": "4cd8158637abd645b23e97a694a15756680c2760",
+  "publication": {
+    "pull_request": 38,
+    "head": "7e2c69307280963aeee15bda9d595e686e8e8620",
+    "verified_remote_main": true,
+    "published_at": "2026-08-04T23:54:18-04:00"
+  },
   "source_integrity": {
     "source_attachment_sha256": "ab4410b9295982b10436f5f945d4229fa8496bf9bf0df1100ff96b64f5d428f6",
     "canonical_report_sha256": "c68d4163ee09b173e1278db5a5d3a38b37e02e57c2059392fea7a4a3e2c8f181",
@@ -48,10 +54,11 @@
   },
   "reconciled_interpretation": {
     "execution_004": "INSUFFICIENT_EVIDENCE",
-    "reason": "NEGATIVE_CONTROL_FAILED_AND_CANONICAL_OVERALL_RESULT_CONTRACT_REQUIRES_INSUFFICIENT_EVIDENCE; THE_RUNNER_COULD_NOT_EMIT_THAT STATE.",
+    "reason": "NEGATIVE_CONTROL_FAILED_AND_CANONICAL_OVERALL_RESULT_CONTRACT_REQUIRES_INSUFFICIENT_EVIDENCE; THE_RUNNER_COULD_NOT_EMIT_THAT_STATE.",
     "package_adjudication": "NOT_ADJUDICATED_IN_EITHER_DIRECTION",
     "promotion_activation_integration": "NOT_SUPPORTED_AND_NOT_AUTHORIZED"
   },
+  "authorization_state": "AUTHORIZATION_190_CONSUMED_NO_RESIDUAL_AUTHORITY",
   "non_effects": [
     "NO_TEST_OR_MODEL_EXECUTION",
     "NO_RESCORING_OR_METRIC_RECOMPUTATION_AS_NEW_EVIDENCE",
@@ -69,6 +76,7 @@
     "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004/RUN_TEST003.mjs",
     "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004/ANALYSIS.json",
     "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004/GATE_RESULTS.json",
-    "projects/lab/reassessments/REA-LAB-010.json"
+    "projects/lab/reassessments/REA-LAB-010.json",
+    "projects/lab/authorization-lifecycle/PL003_AUTHORIZATION_LIFECYCLE_190.json"
   ]
 }
