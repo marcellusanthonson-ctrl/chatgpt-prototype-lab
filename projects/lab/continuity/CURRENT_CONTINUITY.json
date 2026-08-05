@@ -48,7 +48,15 @@
     "verified_parent_head": "c21af774f3bf3248867bda365b36eb62e15f1a01",
     "working_branch": "agent/product-leadership-continuity-codex-resolutive-191",
     "publication_method": "SQUASH_MERGE_AUTHORIZED_BY_USER_REQUEST",
-    "publication_verification": "REQUIRED_AT_USE"
+    "publication_verification": "VERIFIED_REMOTE_MAIN"
+  },
+  "continuity_publication": {
+    "authorization": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_CONTINUITY_AND_CODEX_RESOLUTIVE_PROTOCOL_191",
+    "authorization_state": "CONSUMED_NO_RESIDUAL_AUTHORITY",
+    "pull_request": 40,
+    "head": "57579e007c537db5875fa57c262a721300608e0f",
+    "verified_remote_main": true,
+    "published_at": "2026-08-05T00:26:36-04:00"
   },
   "global_state": {
     "active_project": "lab",
@@ -149,7 +157,7 @@
   },
   "authorizations": {
     "190": "CONSUMED_NO_RESIDUAL_AUTHORITY",
-    "191": "CONTINUITY_PUBLICATION_ONLY_PENDING_VERIFIED_PUBLICATION",
+    "191": "CONSUMED_NO_RESIDUAL_AUTHORITY",
     "product_leadership_retest": "NOT_AUTHORIZED",
     "product_leadership_package_change": "NOT_AUTHORIZED",
     "promotion_activation_integration": "NOT_AUTHORIZED"
@@ -183,6 +191,8 @@
   },
   "source_refs": [
     "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_EXECUTION004_EXTERNAL_AUDIT_RECONCILIATION_190.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_CONTINUITY_AND_CODEX_RESOLUTIVE_PROTOCOL_191.json",
+    "projects/lab/authorization-lifecycle/LAB_AUTHORIZATION_LIFECYCLE_191.json",
     "projects/lab/evidence/EVD-LAB-AUD-008.json",
     "projects/lab/reassessments/REA-LAB-010.json",
     "projects/lab/reconciliations/REC-LAB-PL003-EXEC004-AUDIT190-001.json",
