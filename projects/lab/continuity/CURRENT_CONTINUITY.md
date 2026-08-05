@@ -1,4 +1,4 @@
-# LAB continuity — Product Leadership Test 003 fresh retest 192
+# LAB continuity — transversal execution learning and Product Leadership readiness 193
 
 Canonical repository: `marcellusanthonson-ctrl/chatgpt-prototype-lab`
 
@@ -8,29 +8,37 @@ Entrypoint: `project-sources/chatgpt/START_HERE.md`
 
 Head policy: `VERIFY_LIVE_AT_USE`
 
-## Terminal result
+## Result
 
-Execution 005 / ATTEMPT-004 is `BLOCKED_BEFORE_MODEL_REQUESTS`. The exact result is:
+Authorization 193 implemented a transversal execution-learning feedback loop. Future complex briefs must supply a governed `learning_context`. Codex may retrieve applicable confirmed incidents, verify whether they recur now, apply authorized preventive controls and adapt its plan within the brief. Historical errors do not prove current recurrence, and learning does not expand authority.
 
-`PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_BLOCKED_BEFORE_MODEL_REQUESTS_RESULT_PUBLISHED_AWAITING_SEPARATE_RECOVERY_OR_REISSUE_AUTHORIZATION`
+The required determinations are:
 
-No model request was made. Counts are 0 smoke, 0 baseline generation, 0 package generation, 0 control scoring, 0 experimental scoring and 0 retries.
+- `CONFIRMED_CURRENT_OCCURRENCE`
+- `NOT_REPRODUCED`
+- `NOT_APPLICABLE`
+- `INSUFFICIENT_EVIDENCE`
 
-Two fail-closed conditions fired before the smoke request:
+Codex records evidence, determination, control and plan effect in `LEARNING_APPLICATION_REPORT.json`. Private chain-of-thought is neither required nor recorded.
 
-- `codex login status` reported that the required preexisting ChatGPT Codex session was not logged in. No login or API-key action was attempted.
-- The immutable redesign's 13 canonical Git blobs differed from their Windows worktree raw bytes because of line endings. The custody contract forbids normalization; all 13 mismatches were preserved and recorded.
+## Product Leadership
 
-## Immutable boundaries
+A consolidated incident ledger and an integration-readiness view now identify the critical path. The instrument redesign remains complete and immutable. The last fresh retest remains blocked before model requests with zero requests and zero retries.
 
-Execution 004 / ATTEMPT-003 remains byte-for-byte preserved: 150 files, 1,023,921 bytes, Git tree `7bd45ce057ae8362207cc24e7d4cbdad4305d531`, sorted-path SHA-256 manifest digest `e8830433d6a9fdba11c9227669a9155c16a7f58ad8c9ff49a0b93df79d85681c`.
+The repository now configures LF checkout for `INSTRUMENT_REDESIGN_191`, but no fresh Windows worktree proof was executed. Codex authentication and the exact live model/runner/sandbox surface also remain unverified.
 
-`INSTRUMENT_REDESIGN_191` remains unchanged at tree `cd3a2b8a7d7f62af65bb8cd90b21bfbc99d3f3ab`. The Product Leadership candidate package and `INT-LAB-004` remain unchanged and unadjudicated. No external audit, promotion, activation, integration, runtime or product action occurred.
+Current readiness is therefore:
 
-## Publication and authority
+`NOT_READY_FOR_FRESH_RETEST_REISSUE`
 
-The single result pull request was PR #45. Its squash `4dc5a5c96440fb99c99930cbc76bd2508ac5fc0c` was verified on remote `main` before authorization 192 was consumed. No residual authority remains.
+## Authority and non-effects
+
+Authorization 193 permits only publication and remote verification after implementation. It does not authorize model requests, login, retest, audit, adjudication, promotion, activation, integration, runtime or product changes. No external repository or Carolina surface was accessed.
+
+## Aggregate divergence
+
+Large aggregate views remain historical and were not rewritten in this scoped remediation. The current specific sources are the incident ledger, readiness view and `PEND-LAB-048`.
 
 ## Single next action
 
-Separately authorize recovery or reissue only after resolving exact authentication and raw-byte custody root causes.
+Separately authorize a zero-model local Product Leadership readiness probe that proves a fresh Windows worktree has 13/13 raw-byte matches and verifies preexisting Codex authentication plus the exact live surface.
