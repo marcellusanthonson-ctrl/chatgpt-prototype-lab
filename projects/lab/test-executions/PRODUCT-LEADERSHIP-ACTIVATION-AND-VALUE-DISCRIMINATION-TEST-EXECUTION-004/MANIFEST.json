@@ -75,8 +75,9 @@
   },
   "evidence": "projects/lab/agents/CODEX-BOUNDED-RECOVERY-RESOLVER-001/RESULT_EVIDENCE.json",
   "claim_boundary": "SYNTHETIC_RESULT_ONLY_NO_AUDIT_PROMOTION_ACTIVATION_OR_INTEGRATION_EFFECT",
-  "publication_state": "PENDING_VERIFIED_SQUASH_MERGE",
-  "authorization_state": "ACTIVE_ONLY_FOR_RESULT_PUBLICATION_AND_VERIFICATION",
+  "publication_state": "VERIFIED_REMOTE_PUBLICATION",
+  "publication": {"pr":36,"url":"https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/pull/36","head":"6f42812973cbc99a0c509b3344cea3dcc531bb9c","verified_remote_main":true,"published_at":"2026-08-05T02:19:57Z"},
+  "authorization_state": "CONSUMED_COMPLETE_RESULT_PUBLISHED_NO_RESIDUAL_AUTHORITY",
   "runtime_effect": "NONE",
   "product_effect": "NONE",
   "integration_effect": "NONE"

@@ -2,7 +2,7 @@
   "schema_version":"1.3.0",
   "agent_id":"CODEX-BOUNDED-RECOVERY-RESOLVER-001",
   "project_id":"lab",
-  "status":"COMPLETE_RESULT_READY_FOR_VERIFIED_PUBLICATION",
+  "status":"COMPLETE",
   "title":"Codex Bounded Recovery Resolver",
   "purpose":"Resolve recoverable Codex dispatch, environment, authentication, model-catalog, and byte-integrity problems without consuming a new authorization for every reversible incident.",
   "authorization_ref":"AUTHORIZATION_LAB_CODEX_BOUNDED_RECOVERY_RESOLVER_CREATION_AND_PRODUCT_LEADERSHIP_TEST003_EXECUTION_188",
@@ -26,12 +26,16 @@
   "recovery_cycles_remaining":1,
   "execution_effect":"EXECUTION_004_ATTEMPT_003_COMPLETE_FAIL_EVIDENCE_READY_FOR_SEPARATE_EXTERNAL_AUDIT_DECISION_112_OUTPUTS_112_SCORES",
   "result":"FAIL_REVISE_OR_REJECT_EVIDENCE_READY_FOR_SEPARATE_EXTERNAL_AUDIT_DECISION",
-  "publication_state":"PENDING_VERIFIED_SQUASH_MERGE",
+  "publication_state":"VERIFIED_REMOTE_PUBLICATION",
+  "authorization_state":"CONSUMED_COMPLETE_RESULT_PUBLISHED_NO_RESIDUAL_AUTHORITY",
   "runtime_effect":"NONE",
   "product_effect":"NONE",
   "integration_effect":"NONE",
   "stage_0_publication_head":"35670497f1849acf10b52a5d5f21353104e9207b",
   "wait_state_publication_head":"bff069598fbf96792a12d035197bfcfd01e8ca03",
   "wait_state_finalization_head":"ef3d1bd023c030b531b99daf5105850f4a296a99",
-  "updated_at":"2026-08-05T02:03:03.437Z"
+  "result_publication_pr":36,
+  "result_publication_head":"6f42812973cbc99a0c509b3344cea3dcc531bb9c",
+  "result_published_at":"2026-08-05T02:19:57Z",
+  "updated_at":"2026-08-05T02:19:57Z"
 }

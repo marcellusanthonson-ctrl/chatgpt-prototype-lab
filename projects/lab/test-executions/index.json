@@ -71,7 +71,7 @@
       "attempt": "ATTEMPT-003",
       "status": "COMPLETE_FAIL_EVIDENCE_READY_FOR_SEPARATE_EXTERNAL_AUDIT_DECISION",
       "authorization": "AUTHORIZATION_LAB_CODEX_BOUNDED_RECOVERY_RESOLVER_CREATION_AND_PRODUCT_LEADERSHIP_TEST003_EXECUTION_188",
-      "authorization_state": "ACTIVE_ONLY_FOR_RESULT_PUBLICATION_AND_VERIFICATION",
+      "authorization_state": "CONSUMED_COMPLETE_RESULT_PUBLISHED_NO_RESIDUAL_AUTHORITY",
       "canonical_path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004/MANIFEST.json",
       "evidence": "projects/lab/agents/CODEX-BOUNDED-RECOVERY-RESOLVER-001/RESULT_EVIDENCE.json",
       "calibration_result": "SCORER_CALIBRATION_V2_PASS",
@@ -79,7 +79,8 @@
       "arms": 4,
       "outputs_generated": 112,
       "scores_frozen": 112,
-      "exact_result": "FAIL_REVISE_OR_REJECT_EVIDENCE_READY_FOR_SEPARATE_EXTERNAL_AUDIT_DECISION"
+      "exact_result": "FAIL_REVISE_OR_REJECT_EVIDENCE_READY_FOR_SEPARATE_EXTERNAL_AUDIT_DECISION",
+      "publication_head": "6f42812973cbc99a0c509b3344cea3dcc531bb9c"
     }
   ]
 }
