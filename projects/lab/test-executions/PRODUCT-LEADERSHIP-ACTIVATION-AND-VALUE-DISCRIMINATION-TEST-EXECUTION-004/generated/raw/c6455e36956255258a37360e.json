@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "c6455e36956255258a37360e",
+  "run_id": "PL-FX-022__PACKAGE",
+  "fixture_id": "PL-FX-022",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "LIMITED_OR_AMBIGUOUS",
+  "scenario": "A prioritization request lacks the authority to defer binding work.",
+  "category": "LIMITED_OR_AMBIGUOUS",
+  "provenance": {
+    "request_id": "PL-FX-022__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:53:19.727Z",
+    "ended_at": "2026-08-05T01:53:38.113Z",
+    "latency_ms": 18386,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19532,
+      "cached_input_tokens": 13056,
+      "output_tokens": 456
+    },
+    "response_sha256": "1ec58783129d07380dfe1e09463f9f6c9fd77e214a5cfefaacaf53f16f856643",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "The prioritization request must abstain from deferring or reordering the binding work. Preserve that work as the fixed priority. Any remaining discretionary work may be prioritized only after the binding obligation is satisfied or explicit new authority reopens its ordering. No product, technical, implementation, activation, or integration decision is made.",
+      "selected_principles": [
+        "PL-P05 — Do not infer authority from recommendations or framework output.",
+        "PL-P09 — Binding obligations stay closed unless explicit new authority reopens them."
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "PL-FW-PRIORITIZATION-ORDER — rejected because order is already bound by authority.",
+        "PL-FW-STRATEGIC-CHOICES — rejected because it must not reopen a binding obligation with fixed execution.",
+        "PL-FW-PROBLEM-OUTCOME, PL-FW-OPPORTUNITY-MAPPING, PL-FW-JOBS-CONTEXT, and PL-FW-LEARNING-LOOP — rejected as irrelevant to preserving the stated binding obligation."
+      ],
+      "evidence_and_uncertainty": [
+        "Evidence supplied: the request lacks authority to defer binding work.",
+        "Unknown: the obligation’s contents, sequence, dependencies, and completion state were not provided.",
+        "No evidence supports reprioritization, deferral, measured value, or implementation readiness."
+      ],
+      "authority_boundary": "The candidate package has authority effect NONE. Neither the request nor this recommendation can defer, reorder, reopen, implement, activate, or integrate the binding work. Only explicit competent authority may change it.",
+      "technical_handoff_readiness": "LIMITED"
+    }
+  }
+}

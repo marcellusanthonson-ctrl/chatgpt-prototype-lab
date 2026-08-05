@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "e93a49bd0c44b6b4f2fd86f5",
+  "run_id": "PL-FX-008__PACKAGE",
+  "fixture_id": "PL-FX-008",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "A proposed experiment lacks a falsifiable hypothesis and learning decision.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-008__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:46:01.319Z",
+    "ended_at": "2026-08-05T01:46:42.555Z",
+    "latency_ms": 41236,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19532,
+      "cached_input_tokens": 0,
+      "output_tokens": 1037
+    },
+    "response_sha256": "f2c6de531d7dda736a3543cde43c01050f858e9f3234ed2ee13491cdce5e8247",
+    "response": {
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "answer": "Product problem: the proposed experiment cannot generate decision-relevant learning because it lacks both a falsifiable hypothesis and a predefined learning decision.\n\nDesired outcome: before execution, the proposal should state (1) a testable prediction, including what observation could disconfirm it; (2) the outcome to observe, without inventing a metric or threshold; and (3) the decision associated with each material result, including inconclusive evidence.\n\nConditional recommendation: revise the experiment proposal to supply those elements, then reassess readiness. This is criterion only; it does not approve, execute, activate, integrate, or otherwise authorize the experiment.\n\nPriority: resolve the learning-design gap before any technical handoff or execution. Exclusions: architecture, stack, provider, implementation, activation, integration, and unrelated strategy or prioritization decisions remain outside scope.",
+      "selected_principles": [
+        "PL-P01 — Start from the product problem and intended outcome.",
+        "PL-P02 — Separate experiment output from outcome and impact.",
+        "PL-P04 — Label missing evidence and unknowns; do not fabricate them.",
+        "PL-P05 — Do not infer authority from this recommendation.",
+        "PL-P07 — Use only context-relevant frameworks and reject the rest."
+      ],
+      "selected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — Applicable narrowly to clarify the intended outcome and success criterion; authority effect remains NONE."
+      ],
+      "rejected_frameworks": [
+        "PL-FW-LEARNING-LOOP — Rejected because the experiment has not been executed and the framework explicitly says not to use it in that state.",
+        "PL-FW-STRATEGIC-CHOICES — No strategy formulation or conflicting initiatives are presented.",
+        "PL-FW-OPPORTUNITY-MAPPING — No discovery or opportunity-prioritization evidence is provided.",
+        "PL-FW-JOBS-CONTEXT — No user-motivation or alternative-behavior question is presented.",
+        "PL-FW-PRIORITIZATION-ORDER — No portfolio or roadmap ordering decision is requested."
+      ],
+      "evidence_and_uncertainty": [
+        "Evidence supplied: only that the proposed experiment lacks a falsifiable hypothesis and learning decision.",
+        "No hypothesis, metric, threshold, observations, provenance, product decision scope, authority state, or binding obligations were supplied.",
+        "Framework applicability is therefore limited, and no claim about experiment value or likely impact can be made.",
+        "Package effectiveness, value increment, integration safety, and real-product generalization remain unestablished."
+      ],
+      "authority_boundary": "The candidate package has authority effect NONE and is disabled. This output is non-binding criterion and a conditional recommendation only. It creates no product decision, execution permission, implementation authority, activation, integration, or scope expansion.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

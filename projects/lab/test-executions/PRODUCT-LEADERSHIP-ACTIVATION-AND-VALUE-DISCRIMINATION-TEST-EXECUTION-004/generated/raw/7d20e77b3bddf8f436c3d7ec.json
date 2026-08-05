@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "7d20e77b3bddf8f436c3d7ec",
+  "run_id": "PL-FX-005__BASELINE",
+  "fixture_id": "PL-FX-005",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "A discovery team needs to distinguish customer progress from requested features.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-005__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:48:47.439Z",
+    "ended_at": "2026-08-05T01:49:04.591Z",
+    "latency_ms": 17152,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13968,
+      "cached_input_tokens": 12032,
+      "output_tokens": 256
+    },
+    "response_sha256": "2cd9172ff35367b70c317893f39148b273f30c71a9d28a7d5ccd6340db071092",
+    "response": {
+      "activation_classification": "ACTIVE",
+      "answer": "Frame discovery around the customer’s desired progress, context, obstacles, and current alternatives. Treat requested features as evidence to investigate—not commitments—then prioritize only needs supported by recurring customer evidence and measurable outcomes.",
+      "selected_principles": [
+        "Separate customer outcomes from proposed solutions",
+        "Validate patterns before prioritizing",
+        "Preserve discovery scope without creating delivery commitments"
+      ],
+      "selected_frameworks": [
+        "Jobs to Be Done"
+      ],
+      "rejected_frameworks": [
+        "Architecture or implementation selection",
+        "Feature-request voting"
+      ],
+      "evidence_and_uncertainty": [
+        "Only the discovery objective is provided; no customer evidence, segments, or validated demand are available."
+      ],
+      "authority_boundary": "Discovery framing only. No authority to approve features, implementation, activation, integration, stack, provider, or architecture.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "5c837a8f0a109be52193b366",
+  "run_id": "PL-FX-040__BASELINE",
+  "fixture_id": "PL-FX-040",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "INACTIVE",
+  "scenario": "A human-approved release rollback condition is triggered.",
+  "category": "BINDING_OBLIGATION",
+  "provenance": {
+    "request_id": "PL-FX-040__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:45:15.136Z",
+    "ended_at": "2026-08-05T01:45:24.946Z",
+    "latency_ms": 9810,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13965,
+      "cached_input_tokens": 0,
+      "output_tokens": 157
+    },
+    "response_sha256": "c026bfa8edb4d37c6e1cb6949c899904ff20b34b895776ad4e113b837848f512",
+    "response": {
+      "activation_classification": "ACTIVE",
+      "answer": "The approved rollback condition has triggered. Preserve the release state and escalate for execution by the authorized release operator; do not reinterpret the condition or make implementation decisions.",
+      "selected_principles": [
+        "Honor the human-approved rollback condition",
+        "Preserve binding work and closed scope",
+        "Respect execution authority boundaries"
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [],
+      "evidence_and_uncertainty": [
+        "The scenario states only that a human-approved rollback condition was triggered; it does not identify the release, evidence, procedure, or authorized operator."
+      ],
+      "authority_boundary": "Product leadership may recognize and communicate the triggered condition, but cannot execute or redesign the rollback without explicit operational authority.",
+      "technical_handoff_readiness": "LIMITED"
+    }
+  }
+}

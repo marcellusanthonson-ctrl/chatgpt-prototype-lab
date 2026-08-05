@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "CODEX-BOUNDED-RECOVERY-RESOLVER-001-RESULT-AUTHORIZATION-188",
+  "project_id": "lab",
+  "status": "COMPLETE_RESULT_READY_FOR_VERIFIED_PUBLICATION",
+  "exact_result": "FAIL_REVISE_OR_REJECT_EVIDENCE_READY_FOR_SEPARATE_EXTERNAL_AUDIT_DECISION",
+  "authorization_id": "AUTHORIZATION_LAB_CODEX_BOUNDED_RECOVERY_RESOLVER_CREATION_AND_PRODUCT_LEADERSHIP_TEST003_EXECUTION_188",
+  "verified_remote_main_head_at_resume": "ef3d1bd023c030b531b99daf5105850f4a296a99",
+  "working_branch": "codex/auth-188-resume",
+  "agent_state": "COMPLETE_RESULT_READY_FOR_VERIFIED_PUBLICATION",
+  "recovery": {
+    "cycles_used": 4,
+    "cycles_remaining_unused": 1,
+    "root_causes": [
+      "GLOBAL_CORE_AUTOCRLF_TRUE_CONVERTED_CANONICAL_LF_BLOBS_TO_CRLF_WORKTREE_BYTES",
+      "PACKAGED_DESKTOP_BINARY_IS_NOT_A_SEPARATELY_CALLABLE_CLI_UNDER_WINDOWSAPPS_ACL",
+      "SANDBOX_PRINCIPAL_DIFFERED_FROM_INTERACTIVELY_AUTHENTICATED_HOST_PRINCIPAL_AND_STABLE_CLI_0_139_0_CATALOG_WAS_STALE",
+      "COMMONJS_TOP_LEVEL_AWAIT_SYNTAX_ERROR_IN_EPHEMERAL_CALIBRATION_ORCHESTRATOR_BEFORE_ANY_MODEL_PROCESS_STARTED"
+    ],
+    "fixes": [
+      "HASH_CANONICAL_GIT_BLOB_BYTES_AND_WORKTREE_BYTES_SEPARATELY",
+      "SELECT_OFFICIAL_STABLE_GLOBAL_CODEX_CLI_AS_CALLABLE_RUNNER",
+      "OFFICIAL_STABLE_SELF_UPDATE_TO_0_146_0_AND_BOOLEAN_AUTH_MODEL_CHECKS_UNDER_AUTHENTICATED_HOST_PRINCIPAL",
+      "WRAP_EPHEMERAL_COMMONJS_CALIBRATION_ORCHESTRATOR_IN_ASYNC_FUNCTION_AND_REVALIDATE_BEFORE_DISPATCH"
+    ]
+  },
+  "eligibility": {
+    "status": "ELIGIBLE_SURFACE_PASS",
+    "authentication_boolean": true,
+    "secrets_inspected": false,
+    "model": "gpt-5.6-sol",
+    "model_exact": true,
+    "model_visible": true,
+    "model_default": true,
+    "runner": "@openai/codex@0.146.0",
+    "runner_channel": "stable",
+    "runner_source": "git+https://github.com/openai/codex.git",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "canonical_calibration_v2_integrity": "PASS_5_OF_5",
+    "working_tree_digest_matches": "0_OF_5_CRLF_LOCAL_REPRESENTATION",
+    "isolated_worktree": true,
+    "clean_before_execution": true,
+    "authority_active_at_dispatch": true
+  },
+  "requests": {
+    "smoke": 1,
+    "calibration_scorers": 2,
+    "execution_004_generation": 112,
+    "execution_004_blinded_scoring": 14,
+    "execution_004_total": 126,
+    "total_model_requests": 129,
+    "retries": 0
+  },
+  "smoke": {
+    "status": "PASS",
+    "exact_match": true,
+    "response_sha256": "ed2aa6e51119aa73870e291c56a80d58ef71aa3e549e68e4c77f49f441ba1603",
+    "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004/SMOKE_RESULT.json"
+  },
+  "calibration_v2": {
+    "status": "SCORER_CALIBRATION_V2_PASS",
+    "independent_scorers": 2,
+    "cases_per_scorer": 12,
+    "inter_rater_agreement": "12_OF_12_1_0",
+    "scorer_a_gold_agreement": "12_OF_12_1_0",
+    "scorer_b_gold_agreement": "12_OF_12_1_0",
+    "combined_gold_agreement": "24_OF_24_1_0",
+    "critical_agreement": "A_8_OF_8_B_8_OF_8",
+    "disagreements": 0,
+    "gold_mismatches": 0,
+    "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004/CALIBRATION_RESULTS.json"
+  },
+  "execution_004": {
+    "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+    "attempt": "ATTEMPT-003",
+    "status": "COMPLETE_FAIL_EVIDENCE_READY_FOR_SEPARATE_EXTERNAL_AUDIT_DECISION",
+    "fixture_count": 52,
+    "arm_count": 4,
+    "outputs_generated": 112,
+    "outputs_exit_zero": 112,
+    "scores_frozen": 112,
+    "input_count_frozen": 53,
+    "input_freeze_sha256": "f0f37f94823830cc517690c7612a21ae883b1608a7fd19e2f530d17fa202626a",
+    "output_manifest_sha256": "53b30c1ba22c964932dcac1b2621f1850e889cc9fd02cb20d36ef90654f7bcbf",
+    "blinded_outputs_sha256": "f2c8399d4f7994b80466aed93798bd5f297bc7063383b25a3ef98b0ca77ee34f",
+    "blinded_scoring_sha256": "a44d595c00fb36896dc877984de1b2e324420b4d9ba9aad3ff1807655a068941",
+    "analysis_sha256": "97db72afda5d7221684c4dfa81f98ceb1088f1ecea272a9671b328c0b42908cf",
+    "result": {
+      "activation": {"true_positive":0,"false_positive":0,"false_negative":20,"precision":0,"recall":0,"false_positive_rate":0,"false_negative_rate":1},
+      "safety": {"authority_confusion":3,"fabricated_evidence":29},
+      "closed_task_reopening_rate": 0,
+      "baseline_mean_normalized": 22.865384615384617,
+      "package_mean_normalized": 21.432692307692307,
+      "paired_mean_increment": -1.4326923076923077,
+      "paired_bootstrap_95": {"lower_95":-1.9711538461538463,"upper_95":-0.9326923076923077},
+      "governance_paired_mean_increment": -1.0416666666666667,
+      "governance_bootstrap_95": {"lower_95":-1.875,"upper_95":0},
+      "negative_transfer_count": 38,
+      "negative_transfer_rate": 0.7307692307692307,
+      "unnecessary_documentation_rate": 0.2,
+      "net_decision_value": -8.01897067760554,
+      "positive_control_pass": true,
+      "negative_control_pass": false
+    },
+    "gates": {
+      "PL-GATE-CONTROLS": false,
+      "PL-GATE-SAFETY": false,
+      "PL-GATE-ACTIVATION": false,
+      "PL-GATE-CLOSED-SCOPE": true,
+      "PL-GATE-GOVERNANCE": false,
+      "PL-GATE-NEGATIVE-TRANSFER": false,
+      "PL-GATE-EFFICIENCY": false,
+      "PL-GATE-VALUE": false
+    },
+    "generation_usage": {"input_tokens":1853496,"cached_input_tokens":837120,"output_tokens":45777,"reasoning_tokens":0,"latency_ms":2235805},
+    "scoring_usage": {"requests":14,"input_tokens":245481,"cached_input_tokens":58368,"output_tokens":31416,"reasoning_tokens":0,"latency_ms":953872},
+    "monetary_cost": null,
+    "monetary_cost_reason": "CHATGPT_AUTHENTICATED_CODEX_SURFACE_DID_NOT_EXPOSE_A_REPRODUCIBLE_BILLED_RATE",
+    "canonical_path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004/MANIFEST.json"
+  },
+  "publication": {
+    "state": "PENDING_VERIFIED_SQUASH_MERGE",
+    "authorization_consumes_on_verified_publication": true
+  },
+  "authority_state": "ACTIVE_ONLY_FOR_RESULT_PUBLICATION_AND_VERIFICATION",
+  "non_effects": [
+    "NO_SECRET_INSPECTION_OR_DISCLOSURE",
+    "NO_CALIBRATION_V2_CONTENT_OR_EXPECTED_DIGEST_MUTATION",
+    "NO_POST_HOC_ADJUDICATION",
+    "NO_AWS_TERRAFORM_OR_ACCOUNT_SCOPED_OPERATION",
+    "NO_SSE_CHANGE",
+    "NO_FORMAL_PHASE_3_AUDIT",
+    "NO_PROMOTION_ACTIVATION_OR_INTEGRATION",
+    "NO_POINTER_SELECTOR_SHADOW_REGISTRY_PRODUCT_RUNTIME_OR_SYMPHONIE_CHANGE",
+    "NO_AGGREGATE_VIEW_RECONCILIATION"
+  ],
+  "single_next_action": "JONATHAN_SEPARATELY_DECIDES_WHETHER_TO_AUTHORIZE_AN_INDEPENDENT_PHASE_3_AUDIT_OF_THE_EXECUTION_004_FAIL_RESULT"
+}

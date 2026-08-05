@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "3ae675e8b48499c58c1cc59a",
+  "run_id": "PL-GOV-FX-007__PACKAGE",
+  "fixture_id": "PL-GOV-FX-007",
+  "domain": "LAB_GOVERNANCE_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "An audit identifies a real defect but recommends a system-wide rebuild although a bounded correction may resolve the risk.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-GOV-FX-007__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:50:47.131Z",
+    "ended_at": "2026-08-05T01:51:11.755Z",
+    "latency_ms": 24624,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19541,
+      "cached_input_tokens": 0,
+      "output_tokens": 723
+    },
+    "response_sha256": "dd4982b90d5c2f36f16bc43d75d18eaf84d44b2804deff01084fc9c91656db8d",
+    "response": {
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "answer": "Product problem: a verified defect creates an identified risk, but the evidence supplied does not establish that a system-wide rebuild is necessary. Desired outcome: resolve the demonstrated risk while avoiding unjustified scope expansion. Conditional priority: preserve any binding obligations and closed scope; distinguish the audit’s defect finding from its rebuild recommendation; then obtain evidence comparing whether a bounded correction adequately resolves the risk. Exclusions: no rebuild approval, implementation direction, architecture, stack, provider, activation, or integration decision. Learning need: determine the defect’s boundaries, required risk-reduction criteria, applicable obligations, and whether a bounded correction satisfies them. The rebuild should remain an unapproved option unless evidence and proper authority justify expanding scope.",
+      "selected_principles": [
+        "PL-P04 — Preserve evidence provenance and distinguish the verified defect from the recommended rebuild.",
+        "PL-P05 — Do not infer authority from the audit evidence or recommendation.",
+        "PL-P07 — Use only context-relevant guidance and reject unnecessary frameworks.",
+        "PL-P09 — Preserve binding obligations and closed scope unless explicit authority reopens them."
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — unnecessary for the narrow evidence-and-scope discrimination required.",
+        "PL-FW-STRATEGIC-CHOICES — premature because authority, obligations, and remediation evidence are incomplete.",
+        "PL-FW-OPPORTUNITY-MAPPING — inappropriate for a potentially bounded defect and unsupported by discovery evidence.",
+        "PL-FW-JOBS-CONTEXT — no user-motivation question or evidence is provided.",
+        "PL-FW-PRIORITIZATION-ORDER — no portfolio or roadmap ordering is requested.",
+        "PL-FW-LEARNING-LOOP — no remediation test or post-release result exists."
+      ],
+      "evidence_and_uncertainty": [
+        "Evidence: the audit identified a real defect.",
+        "Recommendation, not evidence or authority: the audit proposes a system-wide rebuild.",
+        "Uncertainty: a bounded correction may resolve the risk, but its adequacy has not been established.",
+        "Unknown: authority state, binding obligations, closed-scope status, evidence provenance/details, acceptance criteria, and authorized product-decision scope were not supplied.",
+        "No product-value, impact, safety, or comparative-effectiveness claim can be made from the provided scenario."
+      ],
+      "authority_boundary": "The candidate package has authority effect NONE and grants no implementation permission. Neither the audit recommendation nor this assessment authorizes a bounded correction or rebuild, reopens closed scope, or changes binding obligations.",
+      "technical_handoff_readiness": "LIMITED"
+    }
+  }
+}

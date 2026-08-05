@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "ccdd357b270208f83feddafa",
+  "run_id": "PL-GOV-FX-005__PACKAGE",
+  "fixture_id": "PL-GOV-FX-005",
+  "domain": "LAB_GOVERNANCE_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "An experiment passes all technical checks but does not discriminate between the competing strategic options.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-GOV-FX-005__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:47:07.374Z",
+    "ended_at": "2026-08-05T01:47:36.153Z",
+    "latency_ms": 28779,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19536,
+      "cached_input_tokens": 0,
+      "output_tokens": 725
+    },
+    "response_sha256": "72a17b526a3359527cb01627a5af44678e5c2015750d9d40e107d0f09cc80ffe",
+    "response": {
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "answer": "Product problem: the experiment is technically valid but decision-invalid because it cannot distinguish the competing strategic options. Desired outcome: obtain comparative evidence capable of changing or supporting the choice among those options. Priority: treat the result as an unresolved learning need; define a genuinely discriminating follow-up test before using experiment results for prioritization. Exclusions: do not declare a winning option, infer value, reopen binding scope, or select implementation details. Recommendation: record this run as technically passing but strategically inconclusive, identify why the alternatives produced indistinguishable evidence, and propose revised decision criteria or hypotheses for human approval. This is a conditional recommendation, not authority to execute another test.",
+      "selected_principles": [
+        "PL-P04 — Preserve evidence provenance and label assumptions, unknowns, and contradictions.",
+        "PL-P05 — Do not infer authority from evidence or recommendations.",
+        "PL-P10 — Candidate value requires comparative evidence and cannot be asserted."
+      ],
+      "selected_frameworks": [
+        "PL-FW-LEARNING-LOOP — Applicable to experiment review: record the hypothesis, observed non-discrimination, unresolved decision, and next learning need."
+      ],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — Not needed beyond the minimal output-versus-outcome distinction.",
+        "PL-FW-STRATEGIC-CHOICES — The strategic options are already competing; no evidence supports reformulating or selecting them.",
+        "PL-FW-OPPORTUNITY-MAPPING — No discovery or opportunity evidence is provided.",
+        "PL-FW-JOBS-CONTEXT — No user-motivation or alternative-behavior evidence is provided.",
+        "PL-FW-PRIORITIZATION-ORDER — The experiment supplies no discriminating basis for ordering options."
+      ],
+      "evidence_and_uncertainty": [
+        "Evidence: the scenario states that all technical checks passed.",
+        "Evidence: the scenario states that the experiment did not discriminate between the competing strategic options.",
+        "Inference: passing technical checks establishes technical validity only; it does not establish strategic value or a preferred option.",
+        "Unknown: the tested hypotheses, decision criteria, measurements, option results, evidence provenance, and cause of non-discrimination are not supplied.",
+        "Unknown: product decision scope, authority state, and binding obligations are not explicit; therefore the minimum-context rule requires LIMITED_OR_AMBIGUOUS.",
+        "No value increment, option superiority, generalization, or safety claim is established."
+      ],
+      "authority_boundary": "The candidate package has authority effect NONE and is disabled. This output may frame the learning gap and offer a conditional recommendation only. It does not authorize a product decision, test execution, implementation, activation, integration, or changes to binding obligations or closed scope.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

@@ -3,13 +3,13 @@
   "journal_id": "CODEX-BOUNDED-RECOVERY-RESOLVER-001-AUTHORIZATION-188",
   "project_id": "lab",
   "authorization_ref": "AUTHORIZATION_LAB_CODEX_BOUNDED_RECOVERY_RESOLVER_CREATION_AND_PRODUCT_LEADERSHIP_TEST003_EXECUTION_188",
-  "verified_remote_main_head": "826b9cffcd39364c18d34603ed3c38fc0ea94731",
-  "working_branch": "codex/auth-188-recovery",
-  "working_tree": "ISOLATED_AND_CLEAN_AFTER_RECOVERY",
-  "agent_state": "WAITING_FOR_USER_ACTION_RESUMABLE",
+  "verified_remote_main_head": "ef3d1bd023c030b531b99daf5105850f4a296a99",
+  "working_branch": "codex/auth-188-resume",
+  "working_tree": "ISOLATED_CLEAN_AT_ELIGIBILITY_RESULT_ARTIFACTS_PENDING_PUBLICATION",
+  "agent_state": "COMPLETE_RESULT_READY_FOR_VERIFIED_PUBLICATION",
   "maximum_cycles": 5,
-  "cycles_used": 2,
-  "cycles_remaining": 3,
+  "cycles_used": 4,
+  "cycles_remaining": 1,
   "human_pause_increments_cycle": false,
   "cycles": [
     {
@@ -64,24 +64,75 @@
         "reason_model_catalog_not_checked": "AUTHENTICATION_GATE_PRECEDES_MODEL_AVAILABILITY_RECOVERY"
       },
       "result": "WAITING_FOR_USER_ACTION_RESUMABLE"
+    },
+    {
+      "cycle": 3,
+      "classification": "RECOVERABLE",
+      "observation": "After Jonathan completed interactive authentication, the sandbox principal still reported unauthenticated and the callable stable CLI was behind the official stable release.",
+      "causal_hypothesis": "Authentication belongs to the interactive host principal, while the diagnostic shell uses a separate sandbox principal; updating the existing official stable installation refreshes the model catalog without substitution.",
+      "diagnostic": {
+        "sandbox_principal": "DESKTOP-P7H5725\\CodexSandboxOffline",
+        "authenticated_host_principal": "DESKTOP-P7H5725\\JF Martin",
+        "initial_cli_version": "0.139.0",
+        "official_stable_version": "0.146.0",
+        "prerelease_excluded": true,
+        "secret_material_inspected": false
+      },
+      "root_cause": "SANDBOX_PRINCIPAL_DIFFERED_FROM_INTERACTIVELY_AUTHENTICATED_HOST_PRINCIPAL_AND_STABLE_CLI_0_139_0_CATALOG_WAS_STALE",
+      "reversible_correction": "OFFICIAL_STABLE_SELF_UPDATE_WITHIN_EXISTING_INSTALLATION_TO_0_146_0_AND_RUN_BOOLEAN_AUTHENTICATION_AND_MODEL_CATALOG_CHECKS_UNDER_THE_AUTHENTICATED_HOST_PRINCIPAL",
+      "revalidation": {
+        "authentication_boolean": true,
+        "account_type": "chatgpt",
+        "exact_model": "gpt-5.6-sol",
+        "exact_model_visible": true,
+        "exact_model_default": true,
+        "runner_provenance": "PASS_OFFICIAL_STABLE",
+        "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb"
+      },
+      "result": "RECOVERED"
+    },
+    {
+      "cycle": 4,
+      "classification": "RECOVERABLE",
+      "observation": "The first ephemeral calibration orchestrator parse failed before spawning any scorer or model process.",
+      "causal_hypothesis": "A CommonJS inline script used top-level await, which is a syntax error in that execution mode.",
+      "diagnostic": {
+        "failure_phase": "LOCAL_PARSE_BEFORE_MODEL_PROCESS",
+        "model_requests_consumed": 0,
+        "smoke_requests_consumed": 0,
+        "calibration_scorer_invocations_consumed": 0
+      },
+      "root_cause": "COMMONJS_TOP_LEVEL_AWAIT_SYNTAX_ERROR_IN_EPHEMERAL_CALIBRATION_ORCHESTRATOR_BEFORE_ANY_MODEL_PROCESS_STARTED",
+      "reversible_correction": "WRAP_THE_EPHEMERAL_COMMONJS_ORCHESTRATOR_IN_AN_ASYNC_FUNCTION_AND_REVALIDATE_BEFORE_DISPATCH",
+      "revalidation": {
+        "independent_scorers_started": 2,
+        "independent_scorers_completed": 2,
+        "calibration_status": "SCORER_CALIBRATION_V2_PASS",
+        "inter_rater_agreement": "12_OF_12",
+        "combined_gold_agreement": "24_OF_24"
+      },
+      "result": "RECOVERED"
     }
   ],
   "request_counts": {
-    "smoke": 0,
-    "calibration_scorers": 0,
-    "execution_004_model_requests": 0,
-    "total_model_requests": 0
+    "smoke": 1,
+    "calibration_scorers": 2,
+    "execution_004_generation": 112,
+    "execution_004_blinded_scoring": 14,
+    "execution_004_model_requests": 126,
+    "total_model_requests": 129,
+    "retries": 0
   },
   "validation": {
-    "json_parse": "PASS_6_OF_6_CHANGED_JSON_FILES",
+    "json_parse": "PASS_ALL_RESULT_PACKAGE_JSON_FILES",
     "source_refs": "PASS",
     "frozen_content_change": false,
     "diff_check": "PASS",
     "repository_validator": "BASELINE_FAILURES_ONLY",
     "baseline_failures_at_verified_head": 474,
-    "delta_failures_with_wait_state": 474,
+    "delta_failures_with_result_package": 474,
     "new_failures": 0,
     "aggregate_view_reconciliation_performed": false
   },
-  "recorded_at": "2026-08-04T22:16:02Z"
+  "recorded_at": "2026-08-05T02:03:03.437Z"
 }

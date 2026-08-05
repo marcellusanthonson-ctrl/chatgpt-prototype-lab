@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "b889c33ea2c5b3b0ba7d6ce9",
+  "run_id": "PL-GOV-FX-008__PACKAGE",
+  "fixture_id": "PL-GOV-FX-008",
+  "domain": "LAB_GOVERNANCE_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "A blocking evidence gap competes with several visible feature and design improvements.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-GOV-FX-008__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:45:25.332Z",
+    "ended_at": "2026-08-05T01:45:52.228Z",
+    "latency_ms": 26896,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19534,
+      "cached_input_tokens": 13056,
+      "output_tokens": 677
+    },
+    "response_sha256": "3eae3af885eb9473e22b19a169954ab0e0e1f34286d83805ac9cea1ccd23d9a2",
+    "response": {
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "answer": "Product problem: a blocking evidence gap prevents a sufficiently supported decision while visible feature and design improvements compete for attention.\n\nDesired outcome: obtain the minimum decision-relevant evidence needed to remove or characterize the blocker, without claiming product value in advance.\n\nConditional priority: address the blocking evidence gap first because it is a dependency for defensible prioritization. Defer the visible feature and design improvements unless an undisclosed binding obligation fixes their order. This is a recommendation, not an authorized decision.\n\nExclusions: no architecture, stack, provider, implementation, activation, integration, or feature/design selection; no reopening of binding or closed scope.\n\nLearning need: identify the missing evidence, its provenance, and the decision it would inform. No experiment or measurement design can be specified from the supplied facts alone.",
+      "selected_principles": [
+        "PL-P04 — Preserve evidence provenance and label assumptions and unknowns.",
+        "PL-P05 — Do not infer authority from evidence or recommendations.",
+        "PL-P06 — Expose prioritization criterion, ordering, dependencies, trade-offs, and exclusions."
+      ],
+      "selected_frameworks": [
+        "PL-FW-PRIORITIZATION-ORDER — Relevant because the scenario presents competing work and a blocking dependency; used only to recommend evidence-first ordering conditionally."
+      ],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — Insufficient detail about users, outcomes, or success criteria; unnecessary for the narrow ordering decision.",
+        "PL-FW-STRATEGIC-CHOICES — The scenario does not establish strategy formulation or enough initiative context.",
+        "PL-FW-OPPORTUNITY-MAPPING — Evidence is too weak to construct an opportunity map.",
+        "PL-FW-JOBS-CONTEXT — No user motivation or alternative-behavior evidence is supplied.",
+        "PL-FW-LEARNING-LOOP — No test has been executed."
+      ],
+      "evidence_and_uncertainty": [
+        "Evidence: only the scenario establishes that an evidence gap is described as blocking and that several visible improvements compete with it.",
+        "Missing: evidence provenance, nature and severity of the blocker, product decision scope, authority state, binding obligations, task state, user or market evidence, metrics, dependencies, and requested output details.",
+        "Unknown whether any binding obligation or safety constraint already determines the order; if so, it takes precedence.",
+        "No value increment, impact, confidence score, or test result is established."
+      ],
+      "authority_boundary": "The candidate package has authority effect NONE and is disabled. This output supplies conditional criterion only; it does not authorize a priority decision, implementation, test execution, activation, integration, or scope change.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

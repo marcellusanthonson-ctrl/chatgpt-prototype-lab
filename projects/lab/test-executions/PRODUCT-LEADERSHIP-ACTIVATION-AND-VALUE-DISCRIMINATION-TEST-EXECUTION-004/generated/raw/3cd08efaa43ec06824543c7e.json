@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "3cd08efaa43ec06824543c7e",
+  "run_id": "PL-GOV-FX-010__BASELINE",
+  "fixture_id": "PL-GOV-FX-010",
+  "domain": "LAB_GOVERNANCE_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "INACTIVE",
+  "scenario": "The task is only to verify that a known artifact hash matches the canonical manifest.",
+  "category": "INACTIVE",
+  "provenance": {
+    "request_id": "PL-GOV-FX-010__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:45:09.164Z",
+    "ended_at": "2026-08-05T01:45:19.442Z",
+    "latency_ms": 10278,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13972,
+      "cached_input_tokens": 12032,
+      "output_tokens": 150
+    },
+    "response_sha256": "2c114aba7644d4d63ce849e3113aabf9f76c448bf07ce14de6e90c083743ac19",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "This is a deterministic integrity check: compare the known artifact hash with the canonical manifest and report match or mismatch. No product-leadership analysis is needed.",
+      "selected_principles": [
+        "Preserve binding work and closed scope",
+        "Do not invent evidence or authority"
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "Product-leadership analysis",
+        "Architecture or implementation selection"
+      ],
+      "evidence_and_uncertainty": [
+        "No hash or canonical manifest value was provided, so the result cannot be verified here."
+      ],
+      "authority_boundary": "Limited to describing the required comparison; no authority to change the artifact, manifest, or scope.",
+      "technical_handoff_readiness": "LIMITED"
+    }
+  }
+}

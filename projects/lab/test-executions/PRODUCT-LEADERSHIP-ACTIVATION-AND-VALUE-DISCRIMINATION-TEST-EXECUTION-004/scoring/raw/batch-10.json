@@ -1,0 +1,206 @@
+{
+  "request_id": "BLINDED-SCORE-BATCH-10",
+  "model": "gpt-5.6-sol",
+  "provider": "OpenAI",
+  "runner_version": "0.146.0",
+  "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+  "started_at": "2026-08-05T01:58:27.785Z",
+  "ended_at": "2026-08-05T01:59:49.729Z",
+  "latency_ms": 81944,
+  "exit_status": 0,
+  "retry_count": 0,
+  "usage": {
+    "input_tokens": 17289,
+    "cached_input_tokens": 0,
+    "output_tokens": 2815
+  },
+  "response_sha256": "d4c1a32bbe35af3fa6016d32f25551aecace93acd077605d5fb9f8467f5877cf",
+  "response": {
+    "scores": [
+      {
+        "blind_id": "a53c924e5c1fd98a943a35c6",
+        "activation_classification": "ACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 3,
+          "strategic_choices": 3,
+          "prioritization_order": 3,
+          "opportunity_cost_recognition": 3,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 2,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 3,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Activation is appropriate because leadership requested portfolio strategy. The response correctly identifies missing inputs, limits authority, and avoids invented prioritization, though it provides only a preliminary assessment and does not yet establish sequencing, opportunity costs, or stop rules."
+      },
+      {
+        "blind_id": "a980dcad36c90085b089b221",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correct abstention: the binding legal requirement removes the product-preference decision. The response preserves scope, identifies the proper authority for genuine interpretation uncertainty, and avoids unnecessary analysis."
+      },
+      {
+        "blind_id": "a9ddd0962218af07cdd2923e",
+        "activation_classification": "ACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 3,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "The response correctly distinguishes technical success from decision-discriminating evidence and refuses to select an option. It proposes a bounded next step and escalation path; explicit experiment cost and termination criteria could be clearer."
+      },
+      {
+        "blind_id": "aeb390deb553c211c18a48f5",
+        "activation_classification": "LIMITED_OR_AMBIGUOUS",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 3,
+          "prioritization_order": 3,
+          "opportunity_cost_recognition": 2,
+          "authorization_proportionality": 3,
+          "reversibility_stop_rules": 2,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 3,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 3,
+          "process_efficiency": 1
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": true,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "The limited classification and inconclusive interpretation are well calibrated, and the proposed measurement check is sensible. The response is substantially more elaborate than needed and asserts that a candidate package is disabled and has authority effect NONE, facts not supplied by the scenario."
+      },
+      {
+        "blind_id": "aefb0523fce4f43979f47dbb",
+        "activation_classification": "ACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 3,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Targeted reassessment is warranted because verified evidence contradicts a decision premise. The response confines reopening to the affected decision, preserves unaffected commitments, and routes revision to the authorized owner."
+      },
+      {
+        "blind_id": "b37024502030c845d18c6cbb",
+        "activation_classification": "ACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 3,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 3,
+          "authorization_proportionality": 3,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 3,
+          "evidence_authority_discipline": 3,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 2
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": true,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "A governance decision is active because measurable success, stopping, and review conditions must be supplied before handoff. The substantive recommendation is strong and preserves the in-principle approval, but LIMITED_OR_AMBIGUOUS understates that clear gap, the framework catalog is excessive, and the asserted disabled-package status is unsupported."
+      },
+      {
+        "blind_id": "b5a43f719ee327164498f64a",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 3,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "The response correctly rejects indiscriminate framework use and abstains because no substantive decision or evidence is provided. INACTIVE is more precise than LIMITED_OR_AMBIGUOUS, since the framework mandate alone does not activate product leadership."
+      },
+      {
+        "blind_id": "b630595c018a881a58c26807",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 3,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 3,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 3,
+          "process_efficiency": 3
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": true,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly inactive: implementation is governed by an approved immutable contract, so product analysis should not reopen it. The response preserves that boundary, but its claim that a candidate package is disabled is unsupported, and without the contract contents it can only direct execution rather than make the implementation actionable."
+      }
+    ]
+  }
+}

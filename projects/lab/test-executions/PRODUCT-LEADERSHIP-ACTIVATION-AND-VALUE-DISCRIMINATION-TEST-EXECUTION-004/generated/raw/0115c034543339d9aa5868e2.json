@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "0115c034543339d9aa5868e2",
+  "run_id": "PL-FX-018__BASELINE",
+  "fixture_id": "PL-FX-018",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "INACTIVE",
+  "scenario": "Restore a missing generated index entry using its canonical source.",
+  "category": "INACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-018__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:52:31.794Z",
+    "ended_at": "2026-08-05T01:52:42.439Z",
+    "latency_ms": 10645,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13967,
+      "cached_input_tokens": 13056,
+      "output_tokens": 209
+    },
+    "response_sha256": "67adaeb0f7cc886f8d0e5fa786693ce73f38ddc170497150112fb8e9cb036d92",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "Restore only the missing generated index entry from its canonical source, preserving existing generated structure and closed scope.",
+      "selected_principles": [
+        "Canonical source governs generated output",
+        "Minimal scope preservation"
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "Product discovery",
+        "Architecture or implementation selection",
+        "Activation or integration planning"
+      ],
+      "evidence_and_uncertainty": [
+        "The scenario specifies a bounded restoration task and identifies the canonical source.",
+        "No evidence supports broader product-leadership analysis or scope expansion."
+      ],
+      "authority_boundary": "Authority is limited to restoring the missing entry from the canonical source; no product, architecture, stack, provider, activation, or integration decisions are authorized.",
+      "technical_handoff_readiness": "READY"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "d95b538550252b88612857e2",
+  "run_id": "PL-GOV-FX-011__BASELINE",
+  "fixture_id": "PL-GOV-FX-011",
+  "domain": "LAB_GOVERNANCE_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "INACTIVE",
+  "scenario": "A one-line documentary typo correction is proposed with a multi-stage strategy review and new governance package.",
+  "category": "INACTIVE",
+  "provenance": {
+    "request_id": "PL-GOV-FX-011__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:51:46.098Z",
+    "ended_at": "2026-08-05T01:51:56.258Z",
+    "latency_ms": 10160,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13975,
+      "cached_input_tokens": 12032,
+      "output_tokens": 189
+    },
+    "response_sha256": "d16c95ce048be15fcf4b4bed28a14f7fdb6f81048a2a351e8a558ffc51e42e51",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "Reject the multi-stage strategy review and new governance package as disproportionate. Apply only the authorized one-line documentary typo correction, preserving the closed scope; otherwise route it to the document owner for approval.",
+      "selected_principles": [
+        "Proportionality",
+        "Preserve binding work and closed scope",
+        "Minimum necessary change"
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "Multi-stage strategy review",
+        "New governance package"
+      ],
+      "evidence_and_uncertainty": [
+        "The scenario describes only a one-line documentary typo correction.",
+        "No evidence supports broader product-leadership analysis or governance expansion.",
+        "Authority to apply the correction is not stated."
+      ],
+      "authority_boundary": "Do not alter product direction, governance, architecture, stack, providers, implementation, activation, or integrations. If edit authority is absent, obtain approval from the document owner.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "request_id": "BLINDED-SCORE-BATCH-07",
+  "model": "gpt-5.6-sol",
+  "provider": "OpenAI",
+  "runner_version": "0.146.0",
+  "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+  "started_at": "2026-08-05T01:57:00.158Z",
+  "ended_at": "2026-08-05T01:58:12.494Z",
+  "latency_ms": 72336,
+  "exit_status": 0,
+  "retry_count": 0,
+  "usage": {
+    "input_tokens": 17458,
+    "cached_input_tokens": 0,
+    "output_tokens": 2366
+  },
+  "response_sha256": "676d6ee3f6eb8493ebef76becd5a4aeef0eab67f69864cbf34cff11c633a6d31",
+  "response": {
+    "scores": [
+      {
+        "blind_id": "6b03f97db4b67aa93a64d360",
+        "activation_classification": "LIMITED_OR_AMBIGUOUS",
+        "dimensions": {
+          "problem_outcome_clarity": 3,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 3,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 2,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 3,
+          "process_efficiency": 2
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": true,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": true,
+        "rationale": "Correctly rejects indiscriminate framework use and abstains because no substantive decision context exists. However, assertions about package contracts, disabled state, testing, and authority metadata are unsupported by the scenario, and the extensive framework inventory is unnecessary."
+      },
+      {
+        "blind_id": "6d382622778399a0a9d70506",
+        "activation_classification": "LIMITED_OR_AMBIGUOUS",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 3,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Appropriately treats the signed obligation as binding, avoids inventing missing terms, and limits further action to the contract’s actual authorized scope."
+      },
+      {
+        "blind_id": "709522fbe7eaaabfb9a5f9ed",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 2,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 2
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": true,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": true,
+        "rationale": "Correctly keeps the completed security patch closed and requires explicit authority for reopening. The additional claims about an untested, disabled candidate package and its formal authority effect are not established by the scenario, and the long rejection catalog adds little value."
+      },
+      {
+        "blind_id": "718d6d081300bc0e21708182",
+        "activation_classification": "LIMITED_OR_AMBIGUOUS",
+        "dimensions": {
+          "problem_outcome_clarity": 3,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 3,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 2,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 3,
+          "process_efficiency": 2
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": true,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": true,
+        "rationale": "It correctly isolates the one open strategic choice and protects the five approved decisions. Limited activation is defensible because alternatives and evidence are missing, though the response is over-documented and introduces unsupported package-authority metadata."
+      },
+      {
+        "blind_id": "72c24856378467dd71b27cc3",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 2,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 3
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": true,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": true,
+        "rationale": "Correctly recognizes a deterministic approved implementation task and directs execution according to the binding version and prescribed checks. The package-authority assertion is unsupported, and listing every rejected product framework is unnecessary for this simple case."
+      },
+      {
+        "blind_id": "74aa7ee395a784e3b6b9a6fc",
+        "activation_classification": "ACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 3,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly activates product leadership, stops premature feature prioritization, and identifies problem, outcome, and success-criteria alignment as the next step while preserving existing obligations."
+      },
+      {
+        "blind_id": "77aef0abcc6860fbc71ea0b0",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 2,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 3,
+          "process_efficiency": 2
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": true,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": true,
+        "rationale": "Correctly abstains from product guidance and preserves the approved file-and-test boundary. Unsupported package metadata and the exhaustive framework list are unnecessary; additionally, marking the handoff ready is questionable after stating that the exact file, test, and reproduction details are unavailable."
+      },
+      {
+        "blind_id": "784522a59ab8418e6f8c0c41",
+        "activation_classification": "ACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Appropriately refuses fabrication, states the evidence gap, recommends correcting unsupported claims, and preserves authority and scope boundaries."
+      }
+    ]
+  }
+}

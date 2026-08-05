@@ -1,0 +1,206 @@
+{
+  "request_id": "BLINDED-SCORE-BATCH-03",
+  "model": "gpt-5.6-sol",
+  "provider": "OpenAI",
+  "runner_version": "0.146.0",
+  "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+  "started_at": "2026-08-05T01:55:28.393Z",
+  "ended_at": "2026-08-05T01:56:12.115Z",
+  "latency_ms": 43722,
+  "exit_status": 0,
+  "retry_count": 0,
+  "usage": {
+    "input_tokens": 16758,
+    "cached_input_tokens": 0,
+    "output_tokens": 2102
+  },
+  "response_sha256": "f59f3ef3fe4c7484f6a9601657d8808648c29d2d0ada1ec3ccfb0480e2c676ee",
+  "response": {
+    "scores": [
+      {
+        "blind_id": "279583965862357b5c0c44e0",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 3
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly identifies a deterministic reporting task, abstains because both verified state and the requested field schema are absent, and does not infer values or authority. The extensive framework-rejection inventory is somewhat more elaborate than necessary but remains relevant and controlled."
+      },
+      {
+        "blind_id": "27b09148e86d7de1bdb6af40",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 3,
+          "process_efficiency": 3
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Appropriately leaves product leadership inactive and preserves the approved correction and screenshot criteria. It correctly distinguishes the candidate package from the existing approval and notes that implementation details are missing. Actionability is necessarily limited, and the response is somewhat verbose for a closed deterministic task."
+      },
+      {
+        "blind_id": "29b817bbdaa08c0ed2aa8fc1",
+        "activation_classification": "ACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 3,
+          "prioritization_order": 3,
+          "opportunity_cost_recognition": 3,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Activation is appropriate for a post-shipment value review. The response clearly separates output, outcome, and impact, calibrates evidentiary limits, assigns the final judgment to a human reviewer, and gives a concise review procedure. Strategic tradeoffs and stop rules are not developed, but they are secondary to the stated review task."
+      },
+      {
+        "blind_id": "2e4d01959747b37762610a5e",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly treats the approved fast-forward-only alignment as closed execution rather than a product decision. The boundary expressly excludes alternative merges, resets, force updates, and scope expansion, while accurately avoiding any claim that execution was verified."
+      },
+      {
+        "blind_id": "32f15d98a427347b6000259c",
+        "activation_classification": "ACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 3,
+          "prioritization_order": 3,
+          "opportunity_cost_recognition": 2,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 2,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 3,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly activates and resists collapsing heterogeneous segment evidence into a universal winner. It preserves both results, identifies essential unknowns, scopes decisions by segment, and respects decision authority. However, it selects no evidence-learning or decision framework and does not specify how segment tradeoffs, prioritization, or a reversible next test would be evaluated."
+      },
+      {
+        "blind_id": "3402c462c243b6a187cb1534",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly classifies the task as inactive and refuses to invent status fields or repository values without the field names and verified state. The scope and evidentiary boundary are explicit and appropriately narrow."
+      },
+      {
+        "blind_id": "34f086398f2ca5d3e8b05ce2",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly recognizes an already-authorized deterministic migration as execution work. It preserves the exact authorization boundary, avoids reopening product or technical choices, and provides a concise, proportionate handoff."
+      },
+      {
+        "blind_id": "35cd6977da4408de039a6a6f",
+        "activation_classification": "LIMITED_OR_AMBIGUOUS",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 3,
+          "prioritization_order": 3,
+          "opportunity_cost_recognition": 2,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 3,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 3,
+          "process_efficiency": 3
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Limited activation is defensible because verified contradictory evidence warrants escalation, while the decision's materiality, binding status, and reopening authority are unknown. The response correctly distinguishes evidence from authority and avoids automatically invalidating the prior decision. It could more directly define the authorized review trigger and interim containment or stop rule, and its exhaustive framework rejection is more elaborate than necessary."
+      }
+    ]
+  }
+}

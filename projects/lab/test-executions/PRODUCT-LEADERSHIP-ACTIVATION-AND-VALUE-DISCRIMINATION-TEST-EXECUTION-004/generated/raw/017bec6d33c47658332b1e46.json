@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "017bec6d33c47658332b1e46",
+  "run_id": "PL-GOV-FX-001__PACKAGE",
+  "fixture_id": "PL-GOV-FX-001",
+  "domain": "LAB_GOVERNANCE_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "A security-hardening workstream is consuming substantial effort before the underlying capability has demonstrated functional value.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-GOV-FX-001__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:52:41.928Z",
+    "ended_at": "2026-08-05T01:53:08.271Z",
+    "latency_ms": 26343,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19539,
+      "cached_input_tokens": 12032,
+      "output_tokens": 720
+    },
+    "response_sha256": "bf6420c39a58516ca49e584afdd5acdee9fb0d1902ad04d234e04f850e0d7a28",
+    "response": {
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "answer": "Product problem: substantial effort is being spent hardening a capability whose functional value has not yet been demonstrated. Desired outcome: obtain decision-relevant evidence of functional value while preserving any mandatory security obligations. Conditional priority: first distinguish binding minimum security work from discretionary hardening; preserve the former, and consider deferring the latter until a bounded functional-value test is authorized and completed. Exclusions: no architecture, stack, provider, implementation, activation, or integration decision; no reopening of binding or closed scope. Learning need: define the intended outcome and observable success criterion, then test whether the capability produces that outcome. No value increment or safety conclusion may be claimed before evidence exists.",
+      "selected_principles": [
+        "PL-P02 — Separate the hardening output from functional outcomes and impacts.",
+        "PL-P04 — Preserve evidence provenance and label the missing evidence and obligations.",
+        "PL-P05 — Do not infer authority from this recommendation.",
+        "PL-P06 — Make sequencing, trade-offs, and excluded work explicit."
+      ],
+      "selected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — Relevant because functional value and success criteria are unresolved.",
+        "PL-FW-PRIORITIZATION-ORDER — Relevant only for a conditional comparison between value validation and discretionary hardening; binding security or safety ordering takes precedence."
+      ],
+      "rejected_frameworks": [
+        "PL-FW-STRATEGIC-CHOICES — Broader strategy formulation is unnecessary for this bounded sequencing question.",
+        "PL-FW-OPPORTUNITY-MAPPING — Available evidence is too weak to construct a defensible opportunity map.",
+        "PL-FW-JOBS-CONTEXT — No user-motivation or alternative-behavior evidence is supplied.",
+        "PL-FW-LEARNING-LOOP — Explicitly inapplicable because no test has been executed."
+      ],
+      "evidence_and_uncertainty": [
+        "Scenario evidence only: security-hardening consumes substantial effort, and functional value has not been demonstrated.",
+        "Unknown: whether current hardening is a binding legal, contractual, safety, or security obligation.",
+        "Unknown: task state, authority state, closed-scope decisions, product decision scope, success criteria, and evidence provenance.",
+        "Unknown: whether deferring any hardening would create unacceptable risk.",
+        "Framework applicability is therefore conditional; no numeric score, forecast, value increment, or safety claim is supported."
+      ],
+      "authority_boundary": "Criterion-only recommendation with authority effect NONE. It does not authorize reprioritization, testing, implementation, scope changes, activation, integration, or modification of binding obligations.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

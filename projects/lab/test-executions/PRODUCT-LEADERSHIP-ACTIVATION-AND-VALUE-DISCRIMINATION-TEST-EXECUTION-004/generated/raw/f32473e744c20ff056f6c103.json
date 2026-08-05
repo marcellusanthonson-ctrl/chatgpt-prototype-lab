@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "f32473e744c20ff056f6c103",
+  "run_id": "PL-FX-012__BASELINE",
+  "fixture_id": "PL-FX-012",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "INACTIVE",
+  "scenario": "Apply an approved visual spacing correction with exact acceptance screenshots.",
+  "category": "INACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-012__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:48:48.301Z",
+    "ended_at": "2026-08-05T01:49:01.787Z",
+    "latency_ms": 13486,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13967,
+      "cached_input_tokens": 0,
+      "output_tokens": 272
+    },
+    "response_sha256": "9d6e116be5a1a9533eeb2f69557b692353f408cad10d5454d968c5430cfb218a",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "Execution-only: apply the approved spacing correction and verify against the exact acceptance screenshots. No product-leadership decision is open.",
+      "selected_principles": [
+        "Preserve approved scope",
+        "Use stated acceptance evidence"
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "Product strategy analysis",
+        "Architecture or implementation selection"
+      ],
+      "evidence_and_uncertainty": [
+        "The correction is already approved.",
+        "Acceptance screenshots are specified but not provided here."
+      ],
+      "authority_boundary": "No authority to reinterpret the design, expand scope, or choose architecture, stack, provider, activation, or integration.",
+      "technical_handoff_readiness": "LIMITED"
+    }
+  }
+}

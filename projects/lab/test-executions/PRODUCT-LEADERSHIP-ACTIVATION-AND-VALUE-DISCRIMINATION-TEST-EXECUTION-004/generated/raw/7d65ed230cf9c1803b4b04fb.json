@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "7d65ed230cf9c1803b4b04fb",
+  "run_id": "PL-FX-021__BASELINE",
+  "fixture_id": "PL-FX-021",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "LIMITED_OR_AMBIGUOUS",
+  "scenario": "A bug report also suggests a broader onboarding problem but only the bug is authorized.",
+  "category": "LIMITED_OR_AMBIGUOUS",
+  "provenance": {
+    "request_id": "PL-FX-021__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:46:58.731Z",
+    "ended_at": "2026-08-05T01:47:09.105Z",
+    "latency_ms": 10374,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13972,
+      "cached_input_tokens": 12032,
+      "output_tokens": 153
+    },
+    "response_sha256": "1ffacc4854d200a1b20228c7e4dbbcca6143cd163231648f32cfd92d51fe902a",
+    "response": {
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "answer": "Address only the authorized bug. Record the broader onboarding concern as an unvalidated follow-up requiring separate evidence and authorization; do not expand scope.",
+      "selected_principles": [
+        "Preserve authorized scope",
+        "Separate evidence from hypothesis",
+        "Require explicit authority for scope expansion"
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "Broader onboarding analysis",
+        "Architecture or implementation selection",
+        "Activation or integration decisions"
+      ],
+      "evidence_and_uncertainty": [
+        "A broader onboarding problem is only suggested by the bug report; no validating evidence is provided."
+      ],
+      "authority_boundary": "Authority covers the bug only, not broader onboarding investigation or changes.",
+      "technical_handoff_readiness": "LIMITED"
+    }
+  }
+}

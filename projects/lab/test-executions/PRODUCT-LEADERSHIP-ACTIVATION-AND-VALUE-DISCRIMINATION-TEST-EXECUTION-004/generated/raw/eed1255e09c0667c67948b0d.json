@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "eed1255e09c0667c67948b0d",
+  "run_id": "PL-GOV-FX-002__PACKAGE",
+  "fixture_id": "PL-GOV-FX-002",
+  "domain": "LAB_GOVERNANCE_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "A proposed authorization permits documentation, runtime changes, infrastructure and deployment although only one documentary correction is required.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-GOV-FX-002__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:46:52.156Z",
+    "ended_at": "2026-08-05T01:47:24.609Z",
+    "latency_ms": 32453,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19540,
+      "cached_input_tokens": 0,
+      "output_tokens": 679
+    },
+    "response_sha256": "0863760b536ec1d4e91bf3578601fbb2ef2123a57e095fe71b889b362a0e0592",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "The task is a closed, deterministic documentary correction. Narrow the proposed authorization to that correction only. Runtime, infrastructure, deployment, integration, and other implementation changes remain excluded. No product framing, prioritization, technical solution, or activation decision is warranted.",
+      "selected_principles": [
+        "PL-P05 — Do not infer authority from guidance or framework output.",
+        "PL-P09 — Preserve the closed task and binding scope unless explicit authority reopens it."
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — No value-definition or outcome-review question exists.",
+        "PL-FW-STRATEGIC-CHOICES — The required correction is fixed, not a strategy choice.",
+        "PL-FW-OPPORTUNITY-MAPPING — No discovery or opportunity-prioritization scope exists.",
+        "PL-FW-JOBS-CONTEXT — No user-motivation question exists.",
+        "PL-FW-PRIORITIZATION-ORDER — No portfolio or roadmap ordering is required.",
+        "PL-FW-LEARNING-LOOP — No executed experiment or post-release review exists."
+      ],
+      "evidence_and_uncertainty": [
+        "Evidence: The scenario states that only one documentary correction is required and that the proposed authorization also permits runtime, infrastructure, and deployment changes.",
+        "Uncertainty: The exact correction, binding instrument, and approval state of the proposed authorization are not supplied.",
+        "No evidence establishes a need or authority for runtime, infrastructure, deployment, activation, or integration changes.",
+        "The candidate package is disabled, untested, and has authority effect NONE; it supplies criterion only and cannot authorize action or establish value."
+      ],
+      "authority_boundary": "Preserve the existing closed scope: only the separately authorized documentary correction may proceed. This assessment creates no authority. The broader proposed authorization should not be treated as permission for runtime, infrastructure, deployment, implementation, activation, or integration.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

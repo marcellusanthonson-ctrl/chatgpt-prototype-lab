@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "3402c462c243b6a187cb1534",
+  "run_id": "PL-FX-019__BASELINE",
+  "fixture_id": "PL-FX-019",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "INACTIVE",
+  "scenario": "Produce the exact status fields requested from verified repository state.",
+  "category": "INACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-019__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:49:33.261Z",
+    "ended_at": "2026-08-05T01:49:48.066Z",
+    "latency_ms": 14805,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13967,
+      "cached_input_tokens": 12032,
+      "output_tokens": 191
+    },
+    "response_sha256": "a749b344c4b5d5a3d8bf9a92983c0d8c08ce2711526380204f806a5e58a8a7b1",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "Product-leadership analysis is inactive. This is a repository-state reporting task; produce only the exact requested status fields from verified repository evidence. No verified state or field schema was provided here, so no status values can be produced.",
+      "selected_principles": [
+        "Preserve closed scope",
+        "Use verified evidence only",
+        "Do not invent evidence or authority"
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "Product-leadership analysis",
+        "Architecture or implementation selection",
+        "Activation or integration planning"
+      ],
+      "evidence_and_uncertainty": [
+        "The scenario requests exact status fields from verified repository state.",
+        "No repository state, requested field names, or verification results are included."
+      ],
+      "authority_boundary": "Authority is limited to reporting supplied, verified repository facts in the requested fields; it does not extend to inspecting state here or making product or technical decisions.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

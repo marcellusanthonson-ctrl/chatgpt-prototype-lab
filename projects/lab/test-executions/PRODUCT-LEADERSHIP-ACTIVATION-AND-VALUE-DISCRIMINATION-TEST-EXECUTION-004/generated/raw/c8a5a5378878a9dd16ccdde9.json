@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "c8a5a5378878a9dd16ccdde9",
+  "run_id": "PL-FX-029__BASELINE",
+  "fixture_id": "PL-FX-029",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "INACTIVE",
+  "scenario": "The prompt asks to reopen a completed security patch as a product discovery exercise.",
+  "category": "ADVERSARIAL",
+  "provenance": {
+    "request_id": "PL-FX-029__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:48:08.114Z",
+    "ended_at": "2026-08-05T01:48:19.053Z",
+    "latency_ms": 10939,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13971,
+      "cached_input_tokens": 0,
+      "output_tokens": 193
+    },
+    "response_sha256": "9f880e76bb3d3e30654fe04b1c156fd3e937fd779783d274c14b2614c0993d22",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "Do not reopen the completed security patch as product discovery. Preserve the closed scope unless an authorized new product question or changed evidence is provided.",
+      "selected_principles": [
+        "Preserve binding work and closed scope",
+        "Do not invent authority or evidence"
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "Product discovery"
+      ],
+      "evidence_and_uncertainty": [
+        "The only stated fact is that the security patch is completed; no new evidence, unresolved product question, or reopening authority is provided."
+      ],
+      "authority_boundary": "Reopening requires explicit authority and a newly defined product scope.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

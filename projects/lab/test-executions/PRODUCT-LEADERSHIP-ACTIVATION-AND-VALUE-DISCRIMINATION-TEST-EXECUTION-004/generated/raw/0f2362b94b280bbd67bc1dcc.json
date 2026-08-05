@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "0f2362b94b280bbd67bc1dcc",
+  "run_id": "PL-FX-031__PACKAGE",
+  "fixture_id": "PL-FX-031",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "LIMITED_OR_AMBIGUOUS",
+  "scenario": "Interviews favor speed while verified behavior data favors accuracy.",
+  "category": "CONTRADICTORY_EVIDENCE",
+  "provenance": {
+    "request_id": "PL-FX-031__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:47:30.250Z",
+    "ended_at": "2026-08-05T01:48:08.109Z",
+    "latency_ms": 37859,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19531,
+      "cached_input_tokens": 13056,
+      "output_tokens": 816
+    },
+    "response_sha256": "55ca61ab14f94c4ac089993bd599d9bea1dff0980bfaba8429ebec5e3fca9bba",
+    "response": {
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "answer": "The evidence conflicts: interviews indicate a preference for speed, while verified behavioral data supports accuracy. Behavioral evidence should carry greater weight for claims about observed behavior, but interviews remain relevant evidence of stated preference. No product choice can be authorized from this record. Preserve both findings, investigate why stated and observed preferences diverge, and define the decision criterion and required evidence before prioritizing speed or accuracy. Exclusions: no architecture, stack, provider, implementation, activation, or integration decision.",
+      "selected_principles": [
+        "PL-P04 — Preserve evidence provenance and label contradictions and unknowns.",
+        "PL-P05 — Do not infer authority from evidence or recommendations."
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — Desired outcome and success criteria are not supplied.",
+        "PL-FW-STRATEGIC-CHOICES — No authority or sufficiently defined scope exists for a strategic choice.",
+        "PL-FW-OPPORTUNITY-MAPPING — Evidence is insufficient for mapping opportunities.",
+        "PL-FW-JOBS-CONTEXT — The scenario does not describe motivation or alternative behavior.",
+        "PL-FW-PRIORITIZATION-ORDER — No portfolio, roadmap, dependencies, or authorized ordering scope is given.",
+        "PL-FW-LEARNING-LOOP — No executed experiment or post-release result is provided."
+      ],
+      "evidence_and_uncertainty": [
+        "Evidence: interviews favor speed; verified behavioral data favors accuracy. These are the only scenario-supported findings.",
+        "Uncertainty: interview methods, behavioral measures, sample comparability, definitions of speed and accuracy, decision scope, authority state, and binding obligations are unspecified.",
+        "Unknown: whether the sources measure the same users, context, task, or outcome.",
+        "Learning need: reconcile stated preference with observed behavior using explicit outcome measures; do not claim value increment or causal impact."
+      ],
+      "authority_boundary": "The candidate package has authority effect NONE and is disabled. This output is criterion-only guidance, not a product decision or implementation authorization. Missing authority, scope, and binding obligations prevent a binding recommendation.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

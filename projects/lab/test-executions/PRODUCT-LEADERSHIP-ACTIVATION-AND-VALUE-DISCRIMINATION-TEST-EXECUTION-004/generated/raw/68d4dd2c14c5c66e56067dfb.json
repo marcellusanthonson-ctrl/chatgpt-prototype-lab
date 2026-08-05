@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "68d4dd2c14c5c66e56067dfb",
+  "run_id": "PL-FX-025__BASELINE",
+  "fixture_id": "PL-FX-025",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "LIMITED_OR_AMBIGUOUS",
+  "scenario": "A framework appears relevant but its required evidence is missing.",
+  "category": "LIMITED_OR_AMBIGUOUS",
+  "provenance": {
+    "request_id": "PL-FX-025__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:49:48.070Z",
+    "ended_at": "2026-08-05T01:49:59.549Z",
+    "latency_ms": 11479,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13967,
+      "cached_input_tokens": 13056,
+      "output_tokens": 163
+    },
+    "response_sha256": "158aa57b72468b235d140c6d8d475ffc18af20c7f0ad6e16d84e183dc762fb22",
+    "response": {
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "answer": "The framework may be relevant, but it cannot be applied conclusively without its required evidence. Preserve the current scope and binding work; obtain or identify the missing evidence before proceeding.",
+      "selected_principles": [
+        "Evidence-gated analysis",
+        "Preserve binding work and closed scope"
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "The apparently relevant framework is not selected because its required evidence is missing."
+      ],
+      "evidence_and_uncertainty": [
+        "Framework relevance is suggested but unverified.",
+        "Required evidence is absent."
+      ],
+      "authority_boundary": "No authority to infer missing evidence, expand scope, or make architecture, stack, provider, implementation, activation, or integration decisions.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

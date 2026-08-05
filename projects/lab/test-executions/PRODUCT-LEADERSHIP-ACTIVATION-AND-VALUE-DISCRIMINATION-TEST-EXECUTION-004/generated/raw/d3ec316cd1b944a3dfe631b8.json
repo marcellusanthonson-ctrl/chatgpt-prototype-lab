@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "d3ec316cd1b944a3dfe631b8",
+  "run_id": "PL-FX-011__BASELINE",
+  "fixture_id": "PL-FX-011",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "INACTIVE",
+  "scenario": "Fix a reproducible null-pointer bug within an approved file and test.",
+  "category": "INACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-011__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:48:16.931Z",
+    "ended_at": "2026-08-05T01:48:30.107Z",
+    "latency_ms": 13176,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13970,
+      "cached_input_tokens": 0,
+      "output_tokens": 160
+    },
+    "response_sha256": "fb25504ef2a47bdfcadca80485ead1d4daf64d5d5041cfc7f10cf4f3d69177e7",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "This is a bounded implementation task: fix the reproducible null-pointer bug only in the approved file and test, preserving existing scope and decisions.",
+      "selected_principles": [
+        "Preserve binding work and closed scope",
+        "Do not invent evidence or authority"
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "Product-leadership analysis",
+        "Architecture or technology selection",
+        "Activation or integration planning"
+      ],
+      "evidence_and_uncertainty": [
+        "The scenario specifies a reproducible bug and approved file/test but provides no implementation evidence."
+      ],
+      "authority_boundary": "Authority is limited to the approved file and test; no broader product, architecture, stack, provider, activation, or integration decisions are authorized.",
+      "technical_handoff_readiness": "READY"
+    }
+  }
+}

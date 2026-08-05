@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "e9198af6e67de19baab46dac",
+  "run_id": "PL-GOV-FX-003__BASELINE",
+  "fixture_id": "PL-GOV-FX-003",
+  "domain": "LAB_GOVERNANCE_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "A new integration is approved in principle but has no measurable success criterion, stop rule or review date.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-GOV-FX-003__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:49:49.328Z",
+    "ended_at": "2026-08-05T01:50:05.707Z",
+    "latency_ms": 16379,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13976,
+      "cached_input_tokens": 0,
+      "output_tokens": 256
+    },
+    "response_sha256": "b1d72663a3b0a97c3b538fc06c266f06f6e9b754bb676802d563927dd34dfd69",
+    "response": {
+      "activation_classification": "ACTIVE",
+      "answer": "Product-leadership work is required before proceeding: define a measurable success criterion, stop rule, and review date. Approval in principle does not authorize implementation, activation, or integration.",
+      "selected_principles": [
+        "Measurable outcomes",
+        "Explicit stop conditions",
+        "Time-bound review",
+        "Preserve approval scope"
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "Architecture selection",
+        "Stack or provider selection",
+        "Implementation planning",
+        "Activation or integration planning"
+      ],
+      "evidence_and_uncertainty": [
+        "The integration is approved only in principle.",
+        "No success criterion, stop rule, or review date is provided."
+      ],
+      "authority_boundary": "May identify the missing decision controls; may not supply or approve them, or authorize implementation, activation, or integration.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

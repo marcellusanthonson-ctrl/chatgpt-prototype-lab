@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "91deab112bfefab871fe3f1b",
+  "run_id": "PL-GOV-FX-004__PACKAGE",
+  "fixture_id": "PL-GOV-FX-004",
+  "domain": "LAB_GOVERNANCE_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "Two projects request the same limited capacity; one has a blocking customer risk and the other has a high-potential but unvalidated opportunity.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-GOV-FX-004__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:49:43.388Z",
+    "ended_at": "2026-08-05T01:50:16.809Z",
+    "latency_ms": 33421,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19547,
+      "cached_input_tokens": 13056,
+      "output_tokens": 754
+    },
+    "response_sha256": "bc208670e067db3e7174d05d5a7291b2788b6ec9cc64d3ae3c6716eaecf57dca",
+    "response": {
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "answer": "Product problem: two projects compete for the same limited capacity. Desired outcome: sequence the work using explicit risk and evidence criteria without claiming decision authority. Conditional priority recommendation: if the stated customer risk is verified as genuinely blocking and no binding obligation dictates otherwise, address that risk first; defer the unvalidated opportunity. Exclusions: no permanent cancellation of the opportunity, implementation decision, or technical selection. Learning need: establish the opportunity’s customer evidence, expected outcome, and validation method before reconsidering its priority.",
+      "selected_principles": [
+        "PL-P04 — Preserve evidence provenance and label assumptions and unknowns.",
+        "PL-P05 — Do not infer authority from this recommendation.",
+        "PL-P06 — Expose the prioritization criterion, ordering, trade-off, and deferred work."
+      ],
+      "selected_frameworks": [
+        "PL-FW-PRIORITIZATION-ORDER — Relevant because scarce capacity requires an explicit ordering and trade-off."
+      ],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — More analysis than needed for this narrow ordering decision.",
+        "PL-FW-STRATEGIC-CHOICES — The minimum relevant prioritization framework already captures the required choice and exclusion.",
+        "PL-FW-OPPORTUNITY-MAPPING — Evidence is too weak to map the unvalidated opportunity.",
+        "PL-FW-JOBS-CONTEXT — No user-motivation or alternative-behavior evidence is supplied.",
+        "PL-FW-LEARNING-LOOP — No experiment or test has been executed."
+      ],
+      "evidence_and_uncertainty": [
+        "Given scenario evidence: one project has a blocking customer risk; the other is described as high-potential but unvalidated; both request the same limited capacity.",
+        "Missing evidence: provenance and severity of the blocking risk, affected customers, reversibility, timing, dependencies, and evidence supporting the opportunity’s potential.",
+        "Authority state, binding obligations, and detailed product decision scope are not explicit; therefore the minimum-context rule requires LIMITED_OR_AMBIGUOUS.",
+        "No numeric score, forecast, value increment, or impact claim is supportable.",
+        "The recommendation is conditional and must yield to verified binding obligations or an authorized decision."
+      ],
+      "authority_boundary": "The candidate package has authority effect NONE. This output recommends an ordering criterion but neither allocates capacity nor authorizes implementation, activation, integration, architecture, stack, or provider decisions.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

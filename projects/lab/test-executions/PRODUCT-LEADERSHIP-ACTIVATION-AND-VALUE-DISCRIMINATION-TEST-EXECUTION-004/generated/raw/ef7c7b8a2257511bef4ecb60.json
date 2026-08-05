@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "ef7c7b8a2257511bef4ecb60",
+  "run_id": "PL-FX-024__BASELINE",
+  "fixture_id": "PL-FX-024",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "LIMITED_OR_AMBIGUOUS",
+  "scenario": "A strategy review contains one open choice and five already-approved initiatives.",
+  "category": "LIMITED_OR_AMBIGUOUS",
+  "provenance": {
+    "request_id": "PL-FX-024__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:47:04.073Z",
+    "ended_at": "2026-08-05T01:47:16.721Z",
+    "latency_ms": 12648,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13969,
+      "cached_input_tokens": 13056,
+      "output_tokens": 222
+    },
+    "response_sha256": "e2f09ab4c0fbe84df158a5f66914b56a91ca03aa8c6eafcb5deeae8fbaf3ec40",
+    "response": {
+      "activation_classification": "ACTIVE",
+      "answer": "Analyze only the single open strategic choice. Treat the five approved initiatives as binding and out of scope.",
+      "selected_principles": [
+        "Preserve approved work",
+        "Constrain analysis to the open choice",
+        "Do not infer missing evidence or authority"
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "Architecture or technology selection",
+        "Provider or integration selection",
+        "Implementation or activation planning",
+        "Reassessment of approved initiatives"
+      ],
+      "evidence_and_uncertainty": [
+        "The open choice is unspecified, so no recommendation can yet be supported."
+      ],
+      "authority_boundary": "Authority extends only to product-leadership analysis of the stated open choice; it does not include changing the five approved initiatives or making technical decisions.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "0e5e70f14e17f4ccd6b74ad1",
+  "run_id": "PL-FX-007__BASELINE",
+  "fixture_id": "PL-FX-007",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "A shipped capability needs a human review of intended versus observed value.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-007__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:51:25.754Z",
+    "ended_at": "2026-08-05T01:51:48.176Z",
+    "latency_ms": 22422,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13969,
+      "cached_input_tokens": 0,
+      "output_tokens": 179
+    },
+    "response_sha256": "972af82de837aa817af6c8bb44440d55bd2c7fd8f893bcdb60a14596e92354bf",
+    "response": {
+      "activation_classification": "ACTIVE",
+      "answer": "Conduct a human review comparing the shipped capability’s intended value with observed outcomes. Preserve the shipped state and closed scope; document confirmed gaps, evidence limitations, and any decisions requiring authorized follow-up.",
+      "selected_principles": [
+        "Human review of intended versus observed value",
+        "Evidence-based gap documentation",
+        "Preserve binding work and closed scope"
+      ],
+      "selected_frameworks": [
+        "Intended-versus-observed value review"
+      ],
+      "rejected_frameworks": [
+        "Architecture selection",
+        "Stack or provider selection",
+        "Implementation planning",
+        "Activation or integration planning"
+      ],
+      "evidence_and_uncertainty": [
+        "No observed-value evidence or success criteria were provided.",
+        "No authority for changes or follow-up execution was provided."
+      ],
+      "authority_boundary": "Analysis and documentation only; any change, activation, implementation, or integration requires separate authorization.",
+      "technical_handoff_readiness": "LIMITED"
+    }
+  }
+}

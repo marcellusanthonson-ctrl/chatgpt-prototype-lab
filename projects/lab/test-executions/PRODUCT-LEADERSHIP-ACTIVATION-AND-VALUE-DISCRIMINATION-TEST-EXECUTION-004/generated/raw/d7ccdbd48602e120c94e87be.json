@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "d7ccdbd48602e120c94e87be",
+  "run_id": "PL-FX-015__PACKAGE",
+  "fixture_id": "PL-FX-015",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "INACTIVE",
+  "scenario": "Correct a broken internal link in canonical documentation.",
+  "category": "INACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-015__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:52:23.266Z",
+    "ended_at": "2026-08-05T01:52:44.021Z",
+    "latency_ms": 20755,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19529,
+      "cached_input_tokens": 13056,
+      "output_tokens": 484
+    },
+    "response_sha256": "0270ef5d8d31c5e0bbe86420de115c4d6ad9436e594ad8462b12756620d34482",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "This is a bounded, deterministic documentation bug fix. Keep the task closed to correcting the broken internal link in the canonical documentation; do not introduce product framing, prioritization, or broader documentation changes.",
+      "selected_principles": [
+        "PL-P09 — Closed tasks and binding obligations stay closed unless explicitly reopened.",
+        "PL-P05 — The candidate package supplies no authority."
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — no value-definition decision.",
+        "PL-FW-STRATEGIC-CHOICES — no strategy decision.",
+        "PL-FW-OPPORTUNITY-MAPPING — explicitly unsuitable for a closed bug fix.",
+        "PL-FW-JOBS-CONTEXT — no user-motivation question.",
+        "PL-FW-PRIORITIZATION-ORDER — no portfolio or roadmap trade-off.",
+        "PL-FW-LEARNING-LOOP — no executed experiment or release-learning review."
+      ],
+      "evidence_and_uncertainty": [
+        "Evidence supplied: the internal link is broken and is located in canonical documentation.",
+        "The precise document, broken link, correct destination, binding documentation rules, and edit authority were not supplied.",
+        "No product-value, test-result, safety, or effectiveness claim is established."
+      ],
+      "authority_boundary": "The package has authority effect NONE and grants no implementation permission. It cannot authorize editing, reopen scope, or select architecture, stack, provider, activation, or integration.",
+      "technical_handoff_readiness": "LIMITED"
+    }
+  }
+}

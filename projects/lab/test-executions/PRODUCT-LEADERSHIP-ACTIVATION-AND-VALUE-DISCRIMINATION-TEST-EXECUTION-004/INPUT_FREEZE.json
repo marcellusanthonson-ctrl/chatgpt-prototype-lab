@@ -1,0 +1,299 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "status": "FROZEN_BEFORE_GENERATION",
+  "frozen_at": "2026-08-05T01:43:41.751Z",
+  "execution_parent_head": "ef3d1bd023c030b531b99daf5105850f4a296a99",
+  "hash_algorithm": "SHA-256",
+  "seed_sha256": "75747bd56bf5e6482e3a5513b22c0d92c0ad2c1eb42fcb1dad26f9b3dd305be4",
+  "input_count": 53,
+  "runner": {
+    "product": "OpenAI Codex CLI",
+    "version": "0.146.0",
+    "release_channel": "stable",
+    "package": "@openai/codex@0.146.0",
+    "source": "git+https://github.com/openai/codex.git",
+    "sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "integrity": "PASS"
+  },
+  "model": "gpt-5.6-sol",
+  "configuration": {
+    "reasoning_effort": "medium",
+    "sandbox": "read-only",
+    "retries": 0,
+    "timeout_ms": 120000,
+    "parallelism": 4,
+    "tool_access": "READ_ONLY_SANDBOX_PROMPTS_PROHIBIT_TOOL_CALLS",
+    "user_config_loaded": false,
+    "session_persistence": false
+  },
+  "files": [
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/FINAL_DESIGN_REVIEW_001.json",
+      "sha256": "9b2b2216d71f089b0c6fb77ba8e34831083af96d9fcbe2d42dd49effaee2da8a",
+      "bytes": 3069
+    },
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/GOVERNANCE_EXTENSION_001.json",
+      "sha256": "e2771d53091bb98ae4fc788d6e2d7a53049dd8afe8327bb37fe64ef66f5f3209",
+      "bytes": 7946
+    },
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/MANIFEST.json",
+      "sha256": "55c8bfa786e6e6d770357928553b1929438a7b00abe97bcfd902ad4c3c6cbf6d",
+      "bytes": 3329
+    },
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/README.md",
+      "sha256": "e364852929595eb3f8249aacd6a019e2e77fa0b5a770750f7244ec2fbbe6fc89",
+      "bytes": 654
+    },
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/REPLAY_187_DISPATCH_AND_AUTHORITY_CONTRACT.json",
+      "sha256": "26617ed6bdd7a523e2dae92bda78c96200fc0fe4e56b2019054014ce511d794d",
+      "bytes": 3010
+    },
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/RUN_MATRIX.json",
+      "sha256": "eac529a6b407ce97c86cfa9273c458db1265cf3d52fd20fcab7ecdc34cbb1c72",
+      "bytes": 2802
+    },
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/SCORING_AND_GATES.json",
+      "sha256": "ded19633155315d379443ca772ed46f538aa883b35f2ffe672de14a17d71dbc1",
+      "bytes": 6940
+    },
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/TEST_DESIGN.json",
+      "sha256": "9d251350009ccf8fd620e1a31feef052fdec11455adab57f9c8b541f60adcf65",
+      "bytes": 5844
+    },
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/calibration-v2/MANIFEST.json",
+      "sha256": "beb1c85fc282cb2f5ad522255c6e337c9a9dd4be28644ae0c9f8ea94ca04fb58",
+      "bytes": 3128
+    },
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/calibration-v2/LABEL_TAXONOMY.json",
+      "sha256": "be7d5b04b589d28e2d0653a53f0305555e48f2453b9147898a66635f5ee2d5c2",
+      "bytes": 4797
+    },
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/calibration-v2/CALIBRATION_CASES.json",
+      "sha256": "e85c2c9f90d10bba1bc4195a48b4f4eb37593ee1de45b0364f5f59f79001cbba",
+      "bytes": 6121
+    },
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/calibration-v2/ACCEPTANCE_CONTRACT.json",
+      "sha256": "a9a550132e763ea68513d144ef7bb229cb1ad7b6d165216c1f1f6a78142aa4e9",
+      "bytes": 1701
+    },
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/calibration-v2/CALIBRATION_OUTPUT_SCHEMA.json",
+      "sha256": "be17f4b5ffae1c30a34ccb4857bc42991a7fd2721cf661c39617189719af7566",
+      "bytes": 1059
+    },
+    {
+      "path": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/calibration-v2/CALIBRATION_PROMPT.md",
+      "sha256": "240bd12e0c4fa8bd98db85a0be882c0cede4022a48cba0e2c3b591843519b9d9",
+      "bytes": 837
+    },
+    {
+      "path": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/ACTIVATION_CONTRACT.json",
+      "sha256": "902857cf3a3cabf7902a4c158df5ce27b457f0d16f88f1b360436ea216f8c9c5",
+      "bytes": 2678
+    },
+    {
+      "path": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/CLAIM_LINEAGE.json",
+      "sha256": "94eb2509bd3c8f826f6ac5ed5021ccc71050a50d9697c519e2e645d577b3a153",
+      "bytes": 1612
+    },
+    {
+      "path": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/COMPOSITION_CONTRACT.json",
+      "sha256": "b68806e791182e2c6c77ec4545edc62a4a1f00b20c1a7afad3e10a84b0e72019",
+      "bytes": 1848
+    },
+    {
+      "path": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/CONFLICTS.json",
+      "sha256": "fc953db952d03c30629b3dead9533defbc4ab1ccf13e1dc1a81d7de85e04d6ad",
+      "bytes": 1577
+    },
+    {
+      "path": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/CONTEXTUAL_GUIDANCE.json",
+      "sha256": "b866074f2eaf8226c10af55f8666d761b5202870f5c5b4a984ebed43afed2e63",
+      "bytes": 1689
+    },
+    {
+      "path": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/EVIDENCE_LIMITS.json",
+      "sha256": "35ecd8dcf7927c7bdc7e9b93b4b9ca9c9eed3426ee64c18a412ba00ec385d6ab",
+      "bytes": 998
+    },
+    {
+      "path": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/EXTERNAL_DEPENDENCIES.json",
+      "sha256": "94e8d9e2ffc02da8ebbfa9635d7ccf45e162a17ee6bab0cd0de66eb4696e49d5",
+      "bytes": 845
+    },
+    {
+      "path": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/FIXTURES.json",
+      "sha256": "fbff388095c77ced24cac3526777f8c3a218aebef4318e146edc8fadd6f82cb5",
+      "bytes": 14568
+    },
+    {
+      "path": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/FRAMEWORKS.json",
+      "sha256": "6855b110d430e7209643557ecf487fe07021b25a498f1aab903bd3e147118ba7",
+      "bytes": 2139
+    },
+    {
+      "path": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/INPUT_CONTRACT.json",
+      "sha256": "beeea953468ec9fcf7d2b308ed6861b8e847d4328bcfd57895c482c5a6a5f02d",
+      "bytes": 961
+    },
+    {
+      "path": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/INTEGRATION_INTAKE.json",
+      "sha256": "12f672c5bd05bce7da8bb5f5fccfce2823b40b61681545fb892483c8b1104922",
+      "bytes": 1783
+    },
+    {
+      "path": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/MANIFEST.json",
+      "sha256": "1bc3ad666825df422efe53f23feb6f7a2a2c2bc4759d4d08fd8f2d3d0d15f4fb",
+      "bytes": 2144
+    },
+    {
+      "path": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/MISUSE_RISKS.json",
+      "sha256": "2c2cd38c955e3b154915f977634880d665394f3a6daa2c3d35afce03d8e5f883",
+      "bytes": 1544
+    },
+    {
+      "path": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/PRINCIPLES.json",
+      "sha256": "f91e2ac9ae9f94a69cb8443a108940d6e73867ae6c18e0ea8af3bc5a9f4739dd",
+      "bytes": 2622
+    },
+    {
+      "path": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/README.md",
+      "sha256": "75889b6aac5d6e1ca85e06d51c93b0355152b4ef48a8cdfba2efa6a880f629ba",
+      "bytes": 1398
+    },
+    {
+      "path": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/RESEARCH_GAPS.json",
+      "sha256": "7d88649b0ee414ff60eefb29487b961ee4ca172ca97eaf47ba005283f6664c10",
+      "bytes": 1482
+    },
+    {
+      "path": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/RESULT_CONTRACT.json",
+      "sha256": "19ee3e9d3e425d1e7df9d56ea08b5802ef0118d55bfeb2c2a2e3f38eb5a2ac8e",
+      "bytes": 1229
+    },
+    {
+      "path": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/ROLLBACK.json",
+      "sha256": "9aa0ce8212ab5e80e929547d6ba2b29098ad66b503e510ad38b30fd9fa3e7d14",
+      "bytes": 1113
+    },
+    {
+      "path": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/SCORING_AND_GATES.json",
+      "sha256": "a430618c7c935561e74268dbae715f19273e507b757d971034017b7b1acb6639",
+      "bytes": 2251
+    },
+    {
+      "path": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/SOURCE_REGISTER.json",
+      "sha256": "14f340649d5f012059c6c63ed5868d55cc3e8f19ea39dca93fa1717cf7cfca17",
+      "bytes": 2003
+    },
+    {
+      "path": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/TEST_DESIGN.json",
+      "sha256": "fb8856c676e3b2e21767afb25b8b1daf30e49ecd2cc2b02375e265015f961a00",
+      "bytes": 1562
+    },
+    {
+      "path": "foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/VALIDATION_EVIDENCE.json",
+      "sha256": "062cac730ccdb9485dfb4088cedb585811b5272a425ff4e20278be446aa0d2b1",
+      "bytes": 2830
+    },
+    {
+      "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004/EXECUTION_CONFIG.json",
+      "sha256": "75dfe39c81ad60e2b66441157839e756c79bec3a5d6b7db62eac5dbd7be67c24",
+      "bytes": 2561
+    },
+    {
+      "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004/GENERATION_PROMPT_BASELINE.md",
+      "sha256": "9e13a6aec92f33ebcccda3563d3d6c78cbe4e7783a4f1e07616b5af45a806fa6",
+      "bytes": 589
+    },
+    {
+      "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004/GENERATION_PROMPT_PACKAGE.md",
+      "sha256": "6cd42d9618f054943f9adabafb2d5379b1fc6bf5ba1101f85bed2866a4e6fe39",
+      "bytes": 722
+    },
+    {
+      "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004/GENERATION_PROMPT_POSITIVE_CONTROL.md",
+      "sha256": "954811a7ab179a724ce9b105ff64bc648254b8fa24249664a53bb6e6d9d61845",
+      "bytes": 460
+    },
+    {
+      "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004/GENERATION_PROMPT_NEGATIVE_CONTROL.md",
+      "sha256": "67a06a3bda38292fff2db0578d25d614c25a9f72137262e5d442c1adb56ba6e4",
+      "bytes": 443
+    },
+    {
+      "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004/SCORER_PROMPT.md",
+      "sha256": "428d699eea4af40bf99a0c299101eabb81cf23245950566ba1159a292e420664",
+      "bytes": 662
+    },
+    {
+      "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004/CALIBRATION_RESULTS.json",
+      "sha256": "0d492ee66dbcb1406e27e8f337b56570d516fa963082bb7bf791223aee365521",
+      "bytes": 7597
+    },
+    {
+      "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004/SMOKE_RESULT.json",
+      "sha256": "9ef11fe462488453dcf83ba5ab4ce97e3b059a825eee714e16b13653114930e1",
+      "bytes": 949
+    },
+    {
+      "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004/GENERATION_OUTPUT_SCHEMA.json",
+      "sha256": "f8c0c6524b28889d89ece4039461dee662c16cac26d6728590d0ada7d9e4d76c",
+      "bytes": 917
+    },
+    {
+      "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004/SCORING_OUTPUT_SCHEMA.json",
+      "sha256": "60e04c790df1a9a7678d7397daad8e332688358a5067b37c9cc27608284911c6",
+      "bytes": 2453
+    },
+    {
+      "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004/RUN_TEST003.mjs",
+      "sha256": "8a51696f2d9d0cd37562427dba2fbaf0d8ca0e9350e554bf6dee7283e09e3531",
+      "bytes": 35089
+    },
+    {
+      "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004/RUN_PLAN.json",
+      "sha256": "3f0490d1ceeed57dd36629073a27d602a3e9dab30d0a28a184e65e33575348ae",
+      "bytes": 66251
+    },
+    {
+      "path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004/ARM_MAPPING.json",
+      "sha256": "5866a055c6c504c4fd1116ab0cde0297bb73d05bd459638174b375c2f469416b",
+      "bytes": 26442
+    },
+    {
+      "path": "projects/lab/authorizations/AUTHORIZATION_LAB_CODEX_BOUNDED_RECOVERY_RESOLVER_CREATION_AND_PRODUCT_LEADERSHIP_TEST003_EXECUTION_188.json",
+      "sha256": "4ae38325852cf55c83d3dc451b5dc1df9746cf371ea26268bf9dd1c4fe0aa89f",
+      "bytes": 8845
+    },
+    {
+      "path": "projects/lab/briefs/CODEX_BOUNDED_RECOVERY_RESOLVER_PRODUCT_LEADERSHIP_TEST003_188_001.json",
+      "sha256": "8274bd7f7bb5f584a02ae4a486eeeeb3a030c5f4a518993b4802c180a48b0b2a",
+      "bytes": 4503
+    },
+    {
+      "path": "projects/lab/agents/CODEX-BOUNDED-RECOVERY-RESOLVER-001/AGENT_CONTRACT.json",
+      "sha256": "d2c203fca0088c963651251858af6f321913e2d399d3735a7edee05fe3033019",
+      "bytes": 2774
+    },
+    {
+      "path": "projects/lab/agents/CODEX-BOUNDED-RECOVERY-RESOLVER-001/RECOVERY_POLICY.json",
+      "sha256": "03cf60b193c499b1e83f19751f4c674b1f4b2415c8a578888e8b50fdc31e01c5",
+      "bytes": 1676
+    }
+  ],
+  "post_freeze_mutation_allowed": false
+}

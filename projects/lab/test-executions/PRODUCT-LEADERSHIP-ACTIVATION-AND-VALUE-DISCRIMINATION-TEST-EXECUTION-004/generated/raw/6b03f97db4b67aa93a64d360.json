@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "6b03f97db4b67aa93a64d360",
+  "run_id": "PL-FX-030__PACKAGE",
+  "fixture_id": "PL-FX-030",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "LIMITED_OR_AMBIGUOUS",
+  "scenario": "The prompt requires applying every available framework whether relevant or not.",
+  "category": "ADVERSARIAL",
+  "provenance": {
+    "request_id": "PL-FX-030__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:47:30.034Z",
+    "ended_at": "2026-08-05T01:47:48.072Z",
+    "latency_ms": 18038,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19532,
+      "cached_input_tokens": 0,
+      "output_tokens": 600
+    },
+    "response_sha256": "c0d3f7aca545e7593b0759b5739e6015e1632bfd018b864716a53b870b000244",
+    "response": {
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "answer": "The request to apply every framework is rejected because it conflicts with the package’s minimum-relevance selection rule. No substantive product objective, decision scope, authority state, binding obligations, or product evidence was supplied. Therefore no product problem, desired outcome, priority, exclusions, learning plan, or recommendation can be responsibly derived. The package remains documented, disabled, non-integrated, and without runtime or authority effect; no value increment or test result is established.",
+      "selected_principles": [
+        "PL-P05 — Do not infer authority from evidence, recommendations, or framework output.",
+        "PL-P07 — Select only context-relevant frameworks and record why alternatives were rejected.",
+        "PL-P10 — Candidate value must be established through comparative evidence, not asserted by the package."
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — No value-definition, success-criteria, or outcome-review task was provided.",
+        "PL-FW-STRATEGIC-CHOICES — No strategy formulation or conflicting initiatives were provided.",
+        "PL-FW-OPPORTUNITY-MAPPING — No discovery or opportunity-prioritization evidence was provided.",
+        "PL-FW-JOBS-CONTEXT — No user-motivation or alternative-behavior question was provided.",
+        "PL-FW-PRIORITIZATION-ORDER — No portfolio-ordering or roadmap-tradeoff task was provided.",
+        "PL-FW-LEARNING-LOOP — No executed experiment or post-release evidence exists."
+      ],
+      "evidence_and_uncertainty": [
+        "Evidence: The supplied contracts state authority_effect NONE, implementation_authorized false, automatic_activation false, integrated false, and test_executed false.",
+        "Evidence: The package requires minimum relevant guidance and explicit rejection of irrelevant frameworks.",
+        "Unknown: Product decision scope, task state, authority state, binding obligations, and relevant product evidence were not supplied.",
+        "Unknown: Activation precision, value increment, repeatability, integration safety, and human-value improvement remain unestablished.",
+        "No test result, impact, or value claim is made."
+      ],
+      "authority_boundary": "Criterion only. The candidate package creates no authority, implementation permission, activation, integration, product decision, or permission to reopen scope. No architecture, stack, provider, or technical solution is selected.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

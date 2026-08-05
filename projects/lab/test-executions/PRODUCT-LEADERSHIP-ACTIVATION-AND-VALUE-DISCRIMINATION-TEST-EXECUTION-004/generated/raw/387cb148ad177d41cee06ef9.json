@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "387cb148ad177d41cee06ef9",
+  "run_id": "PL-FX-016__BASELINE",
+  "fixture_id": "PL-FX-016",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "INACTIVE",
+  "scenario": "Run a deterministic JSON parser validation without changing artifacts.",
+  "category": "INACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-016__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:52:13.171Z",
+    "ended_at": "2026-08-05T01:52:23.259Z",
+    "latency_ms": 10088,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13966,
+      "cached_input_tokens": 12032,
+      "output_tokens": 165
+    },
+    "response_sha256": "4f3979ed4cf84047988ab5f7ac6fdfafe3296f14160a4346c68bd380d1da1182",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "Run the existing deterministic JSON parser validation in read-only mode and report the result; do not modify artifacts or broaden scope.",
+      "selected_principles": [
+        "Preserve binding work and closed scope",
+        "Do not invent evidence or authority"
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "Product-leadership analysis"
+      ],
+      "evidence_and_uncertainty": [
+        "The scenario is a bounded technical validation with an explicit no-change constraint.",
+        "No artifacts, parser command, or validation result were provided, so no result can be claimed."
+      ],
+      "authority_boundary": "Authorized only to run and report the specified validation without artifact changes; no authority to choose architecture, stack, provider, implementation, activation, or integration.",
+      "technical_handoff_readiness": "LIMITED"
+    }
+  }
+}

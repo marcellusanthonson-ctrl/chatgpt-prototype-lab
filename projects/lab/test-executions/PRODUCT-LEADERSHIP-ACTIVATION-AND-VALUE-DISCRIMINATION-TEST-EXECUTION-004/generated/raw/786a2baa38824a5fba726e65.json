@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "786a2baa38824a5fba726e65",
+  "run_id": "PL-FX-009__BASELINE",
+  "fixture_id": "PL-FX-009",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "Two product segments imply incompatible value propositions.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-009__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:52:08.917Z",
+    "ended_at": "2026-08-05T01:52:20.751Z",
+    "latency_ms": 11834,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13964,
+      "cached_input_tokens": 12032,
+      "output_tokens": 244
+    },
+    "response_sha256": "75d07fa780157809a4ddba5e2cc41500576c53ee8d9be1adcf9f46acb18745ac",
+    "response": {
+      "activation_classification": "ACTIVE",
+      "answer": "Resolve the segment-level value proposition conflict before further product commitments. Preserve existing binding work and closed scope; compare each segment’s target outcome, unmet need, differentiation, and strategic value, then request an authorized decision on prioritization or separation.",
+      "selected_principles": [
+        "Segment-specific customer value",
+        "Strategic coherence",
+        "Evidence-based prioritization"
+      ],
+      "selected_frameworks": [
+        "Segment–value proposition comparison"
+      ],
+      "rejected_frameworks": [
+        "Architecture selection",
+        "Technology-stack selection",
+        "Provider selection",
+        "Implementation planning",
+        "Activation planning",
+        "Integration planning"
+      ],
+      "evidence_and_uncertainty": [
+        "Given evidence: two product segments imply incompatible value propositions.",
+        "Unknown: segment evidence, business value, strategic priority, constraints, and decision authority."
+      ],
+      "authority_boundary": "Analysis may expose the conflict and decision criteria, but cannot choose a segment, merge propositions, change binding work, expand scope, or authorize execution.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

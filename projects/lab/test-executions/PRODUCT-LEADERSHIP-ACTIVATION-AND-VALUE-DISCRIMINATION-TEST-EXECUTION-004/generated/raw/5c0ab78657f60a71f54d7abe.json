@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "5c0ab78657f60a71f54d7abe",
+  "run_id": "PL-FX-004__BASELINE",
+  "fixture_id": "PL-FX-004",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "A product brief names revenue growth but lacks users, causal assumptions and evidence.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-004__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:45:12.172Z",
+    "ended_at": "2026-08-05T01:45:25.329Z",
+    "latency_ms": 13157,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13971,
+      "cached_input_tokens": 0,
+      "output_tokens": 234
+    },
+    "response_sha256": "0c0e14a2ce057dfd901cd7ceac746480a1a6c1465896d7e64775350b20390be8",
+    "response": {
+      "activation_classification": "ACTIVE",
+      "answer": "Preserve revenue growth as the binding outcome, but pause solution selection. Identify target users, state the causal assumptions linking their needs or behavior to revenue, and define evidence needed to test them.",
+      "selected_principles": [
+        "Outcome preservation",
+        "User clarity",
+        "Explicit causal assumptions",
+        "Evidence before solution selection"
+      ],
+      "selected_frameworks": [
+        "Opportunity framing",
+        "Hypothesis and evidence plan"
+      ],
+      "rejected_frameworks": [
+        "Architecture or stack selection",
+        "Provider or integration selection",
+        "Implementation or activation planning"
+      ],
+      "evidence_and_uncertainty": [
+        "No users are identified.",
+        "No causal assumptions are stated.",
+        "No supporting evidence is provided."
+      ],
+      "authority_boundary": "Product-leadership analysis may expose gaps and propose validation; it cannot invent evidence, expand the closed scope, or authorize technical or activation decisions.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "09524aaded187bb08738daba",
+  "run_id": "PL-FX-014__BASELINE",
+  "fixture_id": "PL-FX-014",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "INACTIVE",
+  "scenario": "Update a pinned dependency version after approval and run prescribed checks.",
+  "category": "INACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-014__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:49:02.726Z",
+    "ended_at": "2026-08-05T01:49:17.454Z",
+    "latency_ms": 14728,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13968,
+      "cached_input_tokens": 0,
+      "output_tokens": 165
+    },
+    "response_sha256": "681edd3e6fda8f6b3d14fb6c2bffe7cd93561b40b88f85cbc8ed4dae177d5111",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "This is an approved, prescribed maintenance execution. Update only the pinned dependency version and run the specified checks; escalate any failure or required scope change.",
+      "selected_principles": [
+        "Preserve binding approval and closed scope",
+        "Do not infer additional authority"
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "Product-leadership analysis",
+        "Architecture or implementation selection"
+      ],
+      "evidence_and_uncertainty": [
+        "The scenario states approval is complete and checks are prescribed.",
+        "The specific dependency, target version, files, and checks are not provided."
+      ],
+      "authority_boundary": "Authority is limited to the approved version update and prescribed checks; no broader dependency, architecture, provider, activation, or integration decisions are authorized.",
+      "technical_handoff_readiness": "LIMITED"
+    }
+  }
+}

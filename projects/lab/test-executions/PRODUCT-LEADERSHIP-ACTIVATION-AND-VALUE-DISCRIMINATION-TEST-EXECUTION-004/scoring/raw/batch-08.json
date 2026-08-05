@@ -1,0 +1,206 @@
+{
+  "request_id": "BLINDED-SCORE-BATCH-08",
+  "model": "gpt-5.6-sol",
+  "provider": "OpenAI",
+  "runner_version": "0.146.0",
+  "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+  "started_at": "2026-08-05T01:57:30.968Z",
+  "ended_at": "2026-08-05T01:58:27.782Z",
+  "latency_ms": 56814,
+  "exit_status": 0,
+  "retry_count": 0,
+  "usage": {
+    "input_tokens": 16740,
+    "cached_input_tokens": 0,
+    "output_tokens": 2291
+  },
+  "response_sha256": "df325869cdc069d2fd43262e25cd95e94bab33a29507cd44f51e1929e0f7bc65",
+  "response": {
+    "scores": [
+      {
+        "blind_id": "786a2baa38824a5fba726e65",
+        "activation_classification": "ACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 3,
+          "opportunity_cost_recognition": 3,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 2,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 3,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly activates product leadership for an incompatible segment-value conflict, identifies the required strategic decision, and preserves authority and scope. It lacks explicit reversible tests or stop rules, but those are not essential at this stage."
+      },
+      {
+        "blind_id": "7891936fe6c759b9b0f2ce48",
+        "activation_classification": "ACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 3,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Appropriately challenges disproportionate premature investment while explicitly protecting mandatory security work. The mandatory-versus-discretionary split and evidence-first sequencing are actionable and well calibrated."
+      },
+      {
+        "blind_id": "7b8d3d72b2c9932996e3c8b3",
+        "activation_classification": "ACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 3,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 3,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 3,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly puts the blocking evidence gap ahead of nonblocking improvements and defers rather than discards the other work. Actionability is necessarily limited because the missing evidence and affected decision are unspecified."
+      },
+      {
+        "blind_id": "7bcf6a95d8a15b8916611fca",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correct abstention: an approved immutable contract calls for execution, not renewed product analysis. The response preserves the contract and gives an appropriate escalation rule for ambiguity or deviation."
+      },
+      {
+        "blind_id": "7d20e77b3bddf8f436c3d7ec",
+        "activation_classification": "ACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 3,
+          "opportunity_cost_recognition": 3,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "The response appropriately reframes feature requests as discovery evidence about customer progress and avoids premature commitments. Its evidence threshold and outcome orientation provide a strong, practical discovery approach."
+      },
+      {
+        "blind_id": "7d65ed230cf9c1803b4b04fb",
+        "activation_classification": "LIMITED_OR_AMBIGUOUS",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 3,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "The broader signal warrants limited recognition but not scope expansion. Addressing only the authorized bug while retaining the onboarding concern as an unvalidated, separately authorized follow-up is proportionate."
+      },
+      {
+        "blind_id": "7e9dc0f9e5a11528a7770ea9",
+        "activation_classification": "ACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 3,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "The allocation conflict clearly requires active prioritization. The response sensibly favors the blocking customer risk and preserves opportunity value through bounded validation, although it slightly overstates the risk as a customer obligation and provides no explicit validation stop criterion."
+      },
+      {
+        "blind_id": "7fec1c8d6fbf74244cfa853d",
+        "activation_classification": "ACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 2,
+          "prioritization_order": 3,
+          "opportunity_cost_recognition": 2,
+          "authorization_proportionality": 2,
+          "reversibility_stop_rules": 2,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 3,
+          "process_efficiency": 2
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "The missing executable ordering and dependency graph directly activate prioritization analysis, even though a final sequence cannot be produced from the sparse facts. The response identifies the right inputs and boundaries but misclassifies the need as merely limited, overweights missing approval context, and adds more framework bookkeeping than the decision requires."
+      }
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "da87d9f2ab02ce0c69495068",
+  "run_id": "PL-FX-010__PACKAGE",
+  "fixture_id": "PL-FX-010",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "Phase 7 learning capture has real outcome evidence but no structured synthesis.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-010__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:45:52.231Z",
+    "ended_at": "2026-08-05T01:46:26.534Z",
+    "latency_ms": 34303,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19534,
+      "cached_input_tokens": 0,
+      "output_tokens": 783
+    },
+    "response_sha256": "2eafb88ccf1c6ee75e4c1f8d3245ca263b33c9e5e99d4e7e83a40ab10106084c",
+    "response": {
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "answer": "Product problem: Phase 7 has outcome evidence but lacks a structured synthesis connecting evidence, outcome, decision, and next learning.\n\nDesired outcome: An evidence-traceable learning record that separates outputs from outcomes, records the observed result, updates uncertainties, and identifies the next learning need.\n\nPriority: Synthesize the existing evidence before making further product or technical decisions.\n\nExclusions: No new product decision, reprioritization, implementation, architecture, stack, provider, activation, or integration. Closed scope and binding obligations remain unchanged.\n\nRecommendation: Apply a bounded learning-loop synthesis: document the prior hypothesis or intended outcome if known; register each evidence item and provenance; distinguish observed outcome from output and claimed impact; record what the evidence supports, contradicts, or leaves unknown; capture any decision already made by an authorized human; and state the next learning question. This is guidance only and does not establish authority or value increment.",
+      "selected_principles": [
+        "PL-P02 — Separate outputs, outcomes, and impacts explicitly.",
+        "PL-P04 — Preserve evidence provenance and label assumptions, unknowns, and contradictions.",
+        "PL-P05 — Do not infer authority from evidence, recommendations, or framework output.",
+        "PL-P07 — Use only context-relevant frameworks and record rejected alternatives."
+      ],
+      "selected_frameworks": [
+        "PL-FW-LEARNING-LOOP — Directly matches post-outcome learning capture and structures hypothesis, evidence, decision, outcome, and next learning."
+      ],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — Partly relevant, but its needed output/outcome distinction is covered by PL-P02 without adding another framework.",
+        "PL-FW-STRATEGIC-CHOICES — No strategy formulation or conflicting initiatives are stated.",
+        "PL-FW-OPPORTUNITY-MAPPING — No discovery or opportunity-prioritization task is stated.",
+        "PL-FW-JOBS-CONTEXT — No user-motivation or alternative-behavior question is stated.",
+        "PL-FW-PRIORITIZATION-ORDER — No portfolio ordering or roadmap trade-off is requested."
+      ],
+      "evidence_and_uncertainty": [
+        "Evidence stated by the scenario: real Phase 7 outcome evidence exists; its contents, provenance, quality, and contradictions are not supplied.",
+        "The absence of structured synthesis is stated; no particular conclusion about the outcome is evidenced.",
+        "Product decision scope, authority state, and binding obligations are not explicit, requiring LIMITED_OR_AMBIGUOUS classification under the minimum-context rule.",
+        "No value increment, impact, numeric confidence, or product-value improvement can be claimed from the supplied facts.",
+        "Any prior hypothesis, intended outcome, authorized decision, or next learning need remains unknown until supplied or derived from traceable evidence."
+      ],
+      "authority_boundary": "The candidate package has authority effect NONE and is disabled. This output supplies criterion only: it cannot make or reopen product decisions, alter binding obligations, authorize implementation, or cause activation or integration. Any consequential decision requires separately established human authority.",
+      "technical_handoff_readiness": "LIMITED"
+    }
+  }
+}

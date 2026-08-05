@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "718d6d081300bc0e21708182",
+  "run_id": "PL-FX-024__PACKAGE",
+  "fixture_id": "PL-FX-024",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "LIMITED_OR_AMBIGUOUS",
+  "scenario": "A strategy review contains one open choice and five already-approved initiatives.",
+  "category": "LIMITED_OR_AMBIGUOUS",
+  "provenance": {
+    "request_id": "PL-FX-024__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:46:31.979Z",
+    "ended_at": "2026-08-05T01:47:04.069Z",
+    "latency_ms": 32090,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19533,
+      "cached_input_tokens": 0,
+      "output_tokens": 709
+    },
+    "response_sha256": "ade2d827fadbc0efc32524baa9564bd26ce8e3ec54c77f5a304db1aa42f32b32",
+    "response": {
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "answer": "Product problem and desired outcome: Not supplied. The single open choice may receive evidence-bounded strategic analysis, but its alternatives, decision criteria, authority holder, binding obligations, and available evidence are unspecified.\n\nPriority and recommendation: Preserve all five approved initiatives as closed scope. Do not reprioritize, modify, or reopen them. No recommendation among the open alternatives can be made until the alternatives, criteria, evidence, exclusions, and decision authority are explicit.\n\nExclusions: Architecture, stack, provider, technical solution, implementation, activation, integration, and changes to the five approved initiatives.\n\nLearning need: Establish the missing decision context and evidence; no outcome, impact, value increment, or test result is established.",
+      "selected_principles": [
+        "PL-P03 — Treat the open strategy question as a choice with explicit exclusions, not as another initiative.",
+        "PL-P04 — Separate supplied facts from assumptions and unknowns; preserve evidence provenance.",
+        "PL-P05 — Do not infer decision authority from this analysis or package.",
+        "PL-P09 — Keep the five approved initiatives closed absent explicit authority to reopen them."
+      ],
+      "selected_frameworks": [
+        "PL-FW-STRATEGIC-CHOICES — Applicable only to framing the one open choice, its alternatives, criteria, and exclusions; it cannot decide the choice or alter approved initiatives."
+      ],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — Rejected because no value definition, success-criteria review, or outcome review was requested or evidenced.",
+        "PL-FW-OPPORTUNITY-MAPPING — Rejected because no discovery evidence or opportunity set was supplied.",
+        "PL-FW-JOBS-CONTEXT — Rejected because no user-motivation or alternative-behavior question was supplied.",
+        "PL-FW-PRIORITIZATION-ORDER — Rejected because the five initiatives are already approved and no authority to reorder them was supplied.",
+        "PL-FW-LEARNING-LOOP — Rejected because no executed experiment or post-release evidence exists."
+      ],
+      "evidence_and_uncertainty": [
+        "Fact: The scenario states that exactly one choice remains open and five initiatives are already approved.",
+        "Unknown: The open alternatives, product problem, desired outcome, criteria, dependencies, trade-offs, and exclusions.",
+        "Unknown: Authority state, binding obligations beyond the stated approvals, and who may decide the open choice.",
+        "Missing evidence: No user research, market evidence, product metrics, risk register, or provenance-bearing evidence was supplied.",
+        "No claims are made about outcomes, impact, candidate-package value, test results, or implementation feasibility."
+      ],
+      "authority_boundary": "The candidate package has authority effect NONE and implementation authorization false. This output is criterion-only guidance: it neither decides the open choice nor authorizes changes, implementation, activation, integration, or reopening of the five approved initiatives.",
+      "technical_handoff_readiness": "LIMITED"
+    }
+  }
+}

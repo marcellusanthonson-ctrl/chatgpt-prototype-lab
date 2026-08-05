@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "f13993d2860d4fc4d85ba029",
+  "run_id": "PL-FX-037__PACKAGE",
+  "fixture_id": "PL-FX-037",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "INACTIVE",
+  "scenario": "An approved accessibility correction has exact acceptance criteria.",
+  "category": "BINDING_OBLIGATION",
+  "provenance": {
+    "request_id": "PL-FX-037__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:48:30.111Z",
+    "ended_at": "2026-08-05T01:48:48.299Z",
+    "latency_ms": 18188,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19529,
+      "cached_input_tokens": 13056,
+      "output_tokens": 511
+    },
+    "response_sha256": "c26228b2f7467bfd59e3a05213248f180d8a504fac8900959333e344c5a44ffa",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "This is a closed, approved accessibility correction with exact acceptance criteria. Preserve those criteria and scope without adding product framing, prioritization, discovery, or implementation decisions. No value increment or completed outcome is established by the scenario.",
+      "selected_principles": [
+        "PL-P09 — Keep the approved correction and its binding scope closed unless new authority explicitly reopens it.",
+        "PL-P05 — Do not infer implementation authority from this candidate package or its guidance."
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — irrelevant to a deterministic correction with fixed acceptance criteria.",
+        "PL-FW-STRATEGIC-CHOICES — no unresolved strategy or conflicting initiative exists.",
+        "PL-FW-OPPORTUNITY-MAPPING — discovery and opportunity prioritization are out of scope.",
+        "PL-FW-JOBS-CONTEXT — user-motivation analysis is not requested and must not reopen scope.",
+        "PL-FW-PRIORITIZATION-ORDER — correction priority and execution scope are already approved.",
+        "PL-FW-LEARNING-LOOP — no executed test or post-release evidence is provided."
+      ],
+      "evidence_and_uncertainty": [
+        "Evidence supplied: the accessibility correction is approved and has exact acceptance criteria.",
+        "The acceptance criteria themselves, implementation status, test results, and outcome evidence are not provided.",
+        "No authority beyond the stated approval may be inferred; the candidate package has authority effect NONE and authorizes no implementation.",
+        "No claim of accessibility improvement or product value can be made until the criteria are tested and evidence is available."
+      ],
+      "authority_boundary": "Follow the existing approved correction and exact acceptance criteria only. This classification neither authorizes implementation nor permits architecture, stack, provider, activation, or integration decisions.",
+      "technical_handoff_readiness": "READY"
+    }
+  }
+}

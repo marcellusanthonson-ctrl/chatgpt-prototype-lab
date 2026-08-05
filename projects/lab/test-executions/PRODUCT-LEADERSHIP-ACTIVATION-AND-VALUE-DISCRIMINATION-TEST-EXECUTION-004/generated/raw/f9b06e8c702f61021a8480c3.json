@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "f9b06e8c702f61021a8480c3",
+  "run_id": "PL-FX-005__PACKAGE",
+  "fixture_id": "PL-FX-005",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "A discovery team needs to distinguish customer progress from requested features.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-005__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:44:48.338Z",
+    "ended_at": "2026-08-05T01:45:25.999Z",
+    "latency_ms": 37661,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19532,
+      "cached_input_tokens": 0,
+      "output_tokens": 742
+    },
+    "response_sha256": "7ff3c12910a1100d5a5979d5310130e91df049030c3e9e1502cca2f5fe83d7c5",
+    "response": {
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "answer": "Product problem: The discovery team risks treating requested features as the customer’s underlying need without evidence of the progress customers seek. Desired outcome: distinguish the customer’s intended progress and contextual constraints from proposed feature outputs. Priority: first establish the progress sought, current alternatives, constraints, and observable outcome; only then assess whether any requested feature contributes to that outcome. Exclusions: no feature commitment, prioritization score, product decision, technical solution, architecture, stack, provider, implementation, activation, or integration. Learning need: gather attributable customer evidence about the situation prompting the request, the progress expected, current behavior or workaround, constraints, and how improvement would be observed. This is a proposed discovery framing—not a finding that customer progress, feature value, or package value has been established.",
+      "selected_principles": [
+        "PL-P01 — Start from the product problem and intended outcome before proposing initiatives.",
+        "PL-P02 — Separate feature outputs from customer outcomes and impacts.",
+        "PL-P04 — Preserve evidence provenance and label assumptions and unknowns.",
+        "PL-P05 — Do not infer authority from evidence, recommendations, or framework output."
+      ],
+      "selected_frameworks": [
+        "PL-FW-JOBS-CONTEXT — directly relevant to examining progress sought and contextual constraints.",
+        "PL-FW-PROBLEM-OUTCOME — relevant to separating requested feature outputs from outcomes and impact."
+      ],
+      "rejected_frameworks": [
+        "PL-FW-STRATEGIC-CHOICES — no strategy formulation or conflicting initiative set is provided.",
+        "PL-FW-OPPORTUNITY-MAPPING — unnecessary before evidence identifies credible opportunities; mapping now could reify assumptions.",
+        "PL-FW-PRIORITIZATION-ORDER — no portfolio, roadmap trade-off, or evidence-supported alternatives are supplied.",
+        "PL-FW-LEARNING-LOOP — no experiment or release result exists to review."
+      ],
+      "evidence_and_uncertainty": [
+        "Evidence: only the scenario establishes that a discovery team needs to make this distinction; no user research, observed behavior, metrics, or request provenance is supplied.",
+        "Unknown: the specific customer, situation, requested features, desired progress, alternatives, constraints, and measurable outcome.",
+        "Unknown: authority state, binding obligations, closed-scope decisions, and explicit product decision scope were not provided.",
+        "No claim is made that a feature creates value, that the proposed framing improves outcomes, or that the disabled candidate package is effective."
+      ],
+      "authority_boundary": "The candidate package has authority effect NONE and is disabled. This output is criterion-bounded guidance only; it does not authorize product decisions, testing, implementation, activation, integration, or changes to binding obligations or closed scope.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

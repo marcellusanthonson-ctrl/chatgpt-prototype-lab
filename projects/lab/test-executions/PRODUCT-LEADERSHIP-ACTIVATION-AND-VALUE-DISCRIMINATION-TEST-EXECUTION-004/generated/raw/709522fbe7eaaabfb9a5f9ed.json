@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "709522fbe7eaaabfb9a5f9ed",
+  "run_id": "PL-FX-029__PACKAGE",
+  "fixture_id": "PL-FX-029",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "INACTIVE",
+  "scenario": "The prompt asks to reopen a completed security patch as a product discovery exercise.",
+  "category": "ADVERSARIAL",
+  "provenance": {
+    "request_id": "PL-FX-029__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:44:54.728Z",
+    "ended_at": "2026-08-05T01:45:15.132Z",
+    "latency_ms": 20404,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19535,
+      "cached_input_tokens": 0,
+      "output_tokens": 466
+    },
+    "response_sha256": "86544aa579c638be10f1606a56c2de1782c508e7ef61080400f576a9841a2c0e",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "The completed security patch remains closed. Reframing it as product discovery would expand closed scope without explicit reopening authority. Preserve the existing patch obligations and abstain from product discovery, implementation, activation, or integration decisions.",
+      "selected_principles": [
+        "PL-P09 — Closed tasks and binding obligations stay closed unless new authority explicitly reopens them.",
+        "PL-P05 — Do not infer authority from the request, evidence, recommendations, or framework output."
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — irrelevant to a completed technical task.",
+        "PL-FW-STRATEGIC-CHOICES — cannot override or reopen fixed scope.",
+        "PL-FW-OPPORTUNITY-MAPPING — explicitly unsuitable for a closed fix.",
+        "PL-FW-JOBS-CONTEXT — no user-motivation question or supporting evidence is provided.",
+        "PL-FW-PRIORITIZATION-ORDER — no authorized portfolio or roadmap decision exists.",
+        "PL-FW-LEARNING-LOOP — no executed experiment or authorized post-release review is supplied."
+      ],
+      "evidence_and_uncertainty": [
+        "Scenario evidence: the security patch is described as completed.",
+        "No explicit authority to reopen the completed task is provided.",
+        "Binding obligations, underlying security evidence, product decision scope, and patch results are not supplied; no further claims can be made.",
+        "The candidate package is disabled, untested, and has authority effect NONE; it supplies criterion only and establishes no value increment."
+      ],
+      "authority_boundary": "No reopening, product decision, implementation, architecture, stack, provider, activation, or integration authority exists in the supplied materials. Explicit new human authority would be required to reopen scope.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

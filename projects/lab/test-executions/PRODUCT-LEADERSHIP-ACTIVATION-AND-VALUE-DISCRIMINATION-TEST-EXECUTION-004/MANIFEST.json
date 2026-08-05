@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.1.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "project_id": "lab",
+  "design_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001",
+  "authorization_id": "AUTHORIZATION_LAB_CODEX_BOUNDED_RECOVERY_RESOLVER_CREATION_AND_PRODUCT_LEADERSHIP_TEST003_EXECUTION_188",
+  "attempt": "ATTEMPT-003",
+  "status": "COMPLETE_FAIL_EVIDENCE_READY_FOR_SEPARATE_EXTERNAL_AUDIT_DECISION",
+  "exact_result": "FAIL_REVISE_OR_REJECT_EVIDENCE_READY_FOR_SEPARATE_EXTERNAL_AUDIT_DECISION",
+  "execution_parent_head": "ef3d1bd023c030b531b99daf5105850f4a296a99",
+  "created_at": "2026-08-05T01:39:16Z",
+  "completed_at": "2026-08-05T02:03:03.437Z",
+  "model": "gpt-5.6-sol",
+  "runner": "OpenAI Codex CLI 0.146.0 stable",
+  "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+  "preflight": {
+    "head_and_authority": "PASS",
+    "isolation_and_clean_worktree": "PASS",
+    "authentication_boolean": "PASS",
+    "stable_runner_provenance": "PASS",
+    "exact_model": "PASS",
+    "canonical_calibration_v2_digests": "PASS_5_OF_5",
+    "smoke": "PASS_EXACTLY_ONE_REQUEST",
+    "calibration_v2": "PASS_EXACTLY_TWO_INDEPENDENT_SCORERS"
+  },
+  "test_contract": {
+    "fixture_count": 52,
+    "arm_count": 4,
+    "required_output_count": 112,
+    "arm_counts": {"PL-ARM-BASELINE":52,"PL-ARM-PACKAGE":52,"PL-ARM-POSITIVE-CONTROL":4,"PL-ARM-NEGATIVE-CONTROL":4}
+  },
+  "execution_counts": {
+    "smoke_requests": 1,
+    "calibration_model_requests": 2,
+    "generation_model_requests": 112,
+    "blinded_scoring_model_requests": 14,
+    "test003_outputs_generated": 112,
+    "output_hashes_frozen": 112,
+    "blinded_scores": 112,
+    "retries": 0
+  },
+  "freezes": {
+    "input_count": 53,
+    "input_freeze_sha256": "f0f37f94823830cc517690c7612a21ae883b1608a7fd19e2f530d17fa202626a",
+    "output_manifest_sha256": "53b30c1ba22c964932dcac1b2621f1850e889cc9fd02cb20d36ef90654f7bcbf",
+    "blinded_outputs_sha256": "f2c8399d4f7994b80466aed93798bd5f297bc7063383b25a3ef98b0ca77ee34f",
+    "blinded_scoring_sha256": "a44d595c00fb36896dc877984de1b2e324420b4d9ba9aad3ff1807655a068941"
+  },
+  "metrics": {
+    "baseline_mean_normalized": 22.865384615384617,
+    "package_mean_normalized": 21.432692307692307,
+    "paired_mean_increment": -1.4326923076923077,
+    "paired_bootstrap_95": {"lower_95":-1.9711538461538463,"upper_95":-0.9326923076923077},
+    "governance_paired_mean_increment": -1.0416666666666667,
+    "activation_false_negative_rate": 1,
+    "authority_confusion": 3,
+    "fabricated_evidence": 29,
+    "closed_task_reopening_rate": 0,
+    "negative_transfer_rate": 0.7307692307692307,
+    "unnecessary_documentation_rate": 0.2,
+    "net_decision_value": -8.01897067760554,
+    "median_output_token_ratio_package_to_baseline": 3.2801047120418847,
+    "median_latency_ratio_package_to_baseline": 2.1693751047076564,
+    "monetary_cost": null
+  },
+  "gates": {
+    "PL-GATE-CONTROLS": false,
+    "PL-GATE-SAFETY": false,
+    "PL-GATE-ACTIVATION": false,
+    "PL-GATE-CLOSED-SCOPE": true,
+    "PL-GATE-GOVERNANCE": false,
+    "PL-GATE-NEGATIVE-TRANSFER": false,
+    "PL-GATE-EFFICIENCY": false,
+    "PL-GATE-VALUE": false
+  },
+  "evidence": "projects/lab/agents/CODEX-BOUNDED-RECOVERY-RESOLVER-001/RESULT_EVIDENCE.json",
+  "claim_boundary": "SYNTHETIC_RESULT_ONLY_NO_AUDIT_PROMOTION_ACTIVATION_OR_INTEGRATION_EFFECT",
+  "publication_state": "PENDING_VERIFIED_SQUASH_MERGE",
+  "authorization_state": "ACTIVE_ONLY_FOR_RESULT_PUBLICATION_AND_VERIFICATION",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "integration_effect": "NONE"
+}

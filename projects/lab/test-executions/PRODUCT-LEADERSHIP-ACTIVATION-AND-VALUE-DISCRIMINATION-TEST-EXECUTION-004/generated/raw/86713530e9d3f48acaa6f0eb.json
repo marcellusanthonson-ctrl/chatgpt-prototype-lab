@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "86713530e9d3f48acaa6f0eb",
+  "run_id": "PL-FX-002__PACKAGE",
+  "fixture_id": "PL-FX-002",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "Leadership requests a strategy from twelve unrelated initiatives.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-002__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:44:30.359Z",
+    "ended_at": "2026-08-05T01:45:12.170Z",
+    "latency_ms": 41811,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19529,
+      "cached_input_tokens": 0,
+      "output_tokens": 777
+    },
+    "response_sha256": "e622e7854c4c3c9e16508d6de08173155da1371d16d1af13d3109014af8c95f5",
+    "response": {
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "answer": "Product problem: Leadership has twelve unrelated initiatives but no evidenced strategic basis for choosing among them.\n\nDesired outcome: A coherent strategy expressed as choices, exclusions, and an ordered initiative set tied to an explicit product outcome. The actual outcome is currently unspecified.\n\nConditional recommendation: Leadership should first state the product outcome, decision authority, binding obligations, and available evidence. Then evaluate each initiative against explicit criteria—contribution to the outcome, supporting evidence, dependencies, risk, and learning need—and produce an ordered portfolio with clear exclusions. No initiative can be responsibly prioritized or excluded from the supplied information.\n\nPriority: Resolve the missing decision context before ordering the twelve initiatives.\n\nExclusions: Do not treat all twelve initiatives as the strategy; do not assign unsupported scores; do not select architecture, stack, provider, implementation, activation, or integration.\n\nLearning need: Establish what evidence would discriminate among the initiatives and how the intended outcome would be measured. No value increment or impact is established.",
+      "selected_principles": [
+        "PL-P03 — Strategy requires choices and exclusions, not an initiative list.",
+        "PL-P04 — Preserve evidence provenance and label assumptions and unknowns.",
+        "PL-P05 — Recommendations and framework outputs confer no authority.",
+        "PL-P06 — Prioritization must expose criteria, order, trade-offs, and excluded work."
+      ],
+      "selected_frameworks": [
+        "PL-FW-STRATEGIC-CHOICES — Relevant because leadership requests strategy from conflicting or unrelated initiatives.",
+        "PL-FW-PRIORITIZATION-ORDER — Relevant for making portfolio criteria, sequence, dependencies, and trade-offs explicit once inputs exist."
+      ],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — Its concern is acknowledged, but a separate framework overlay is unnecessary before the product outcome and success criteria are supplied.",
+        "PL-FW-OPPORTUNITY-MAPPING — No discovery evidence, opportunities, assumptions, or experiments were supplied.",
+        "PL-FW-JOBS-CONTEXT — No user-motivation or alternative-behavior evidence was supplied.",
+        "PL-FW-LEARNING-LOOP — No experiment or post-release result exists for review."
+      ],
+      "evidence_and_uncertainty": [
+        "Evidence: Only the request for a strategy covering twelve unrelated initiatives is supplied.",
+        "Missing evidence: Initiative descriptions, user or market evidence, product metrics, dependencies, risks, and learning history are absent.",
+        "Unresolved authority: The decision owner and approval rights are unspecified.",
+        "Unknown obligations: Binding obligations, fixed commitments, and closed initiatives are not identified and therefore cannot be reopened, reordered, or excluded.",
+        "Framework applicability is bounded by the sparse scenario; no quantitative scoring or confidence is supportable.",
+        "Candidate-package effectiveness, value increment, activation precision, and real-product generalization are not established; the test has not been executed."
+      ],
+      "authority_boundary": "This is criterion-only guidance from a disabled package with authority effect NONE. It neither decides the strategy nor authorizes prioritization, exclusion, implementation, activation, integration, or changes to binding scope. Leadership must supply context and make or authorize the product decisions.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

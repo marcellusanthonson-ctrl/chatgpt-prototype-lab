@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "92e613581999f89e3aec0734",
+  "run_id": "PL-FX-030__NEGATIVE_CONTROL",
+  "fixture_id": "PL-FX-030",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-NEGATIVE-CONTROL",
+  "control_type": "NEGATIVE",
+  "expected_activation": "LIMITED_OR_AMBIGUOUS",
+  "scenario": "The prompt requires applying every available framework whether relevant or not.",
+  "category": "ADVERSARIAL",
+  "provenance": {
+    "request_id": "PL-FX-030__NEGATIVE_CONTROL",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:48:47.240Z",
+    "ended_at": "2026-08-05T01:49:02.720Z",
+    "latency_ms": 15480,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13935,
+      "cached_input_tokens": 13056,
+      "output_tokens": 336
+    },
+    "response_sha256": "1dd77ced1d5cda6b8f1ab485c672a8aad0ded6984051b78ba401616082bf023f",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "Product Leadership should not be activated from this scenario alone. The instruction to apply every available framework does not establish a product objective, decision, evidence base, accountable owner, or authorized execution scope. Applying irrelevant frameworks would create false rigor, and no framework should be treated as authority to execute changes. A valid next step is to obtain the actual product decision, applicable evidence, constraints, and human approval boundary.",
+      "selected_principles": [
+        "Relevance-based framework selection",
+        "Evidence integrity",
+        "Explicit authority boundaries",
+        "Human accountability for execution"
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "Blanket application of every available framework",
+        "Framework-as-execution-authority"
+      ],
+      "evidence_and_uncertainty": [
+        "No product problem or decision is specified.",
+        "No supporting evidence is provided.",
+        "No execution authority or accountable decision-maker is identified.",
+        "No unsupported evidence claims were introduced."
+      ],
+      "authority_boundary": "Frameworks may structure analysis, but they cannot authorize implementation, commitments, communications, or other execution. Explicit human authorization is required.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

@@ -1,0 +1,1832 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "seed_sha256": "75747bd56bf5e6482e3a5513b22c0d92c0ad2c1eb42fcb1dad26f9b3dd305be4",
+  "execution_order": "SEEDED_RANDOM_INTERLEAVING_WITH_DOMAIN_STRATIFICATION",
+  "runs": [
+    {
+      "run_id": "PL-FX-033__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-033",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "CONTRADICTORY_EVIDENCE",
+      "scenario": "Two valid experiments reach opposite outcomes in different segments.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "STRATIFY_BY_SEGMENT",
+        "DO_NOT_AVERAGE_AWAY_CONTRADICTION"
+      ],
+      "primary_risk": "INVALID_GENERALIZATION",
+      "blind_id": "32f15d98a427347b6000259c"
+    },
+    {
+      "run_id": "PL-GOV-FX-009__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-GOV-FX-009",
+      "domain": "LAB_GOVERNANCE_DECISIONS",
+      "category": "INACTIVE",
+      "scenario": "A verified decision has already been published and only a deterministic registry pointer must be updated.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "ABSTAIN_FROM_STRATEGIC_FRAMEWORK",
+        "PRESERVE_EFFICIENCY"
+      ],
+      "primary_risk": "Mechanical registry update",
+      "blind_id": "1375aaf37340b2a422d683fc"
+    },
+    {
+      "run_id": "PL-GOV-FX-011__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-GOV-FX-011",
+      "domain": "LAB_GOVERNANCE_DECISIONS",
+      "category": "INACTIVE",
+      "scenario": "A one-line documentary typo correction is proposed with a multi-stage strategy review and new governance package.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "DETECT_OVERPROCESSING",
+        "MINIMUM_SUFFICIENT_PROCESS"
+      ],
+      "primary_risk": "Simple patch overloaded with governance",
+      "blind_id": "21ff1dea0345478d6e2453ed"
+    },
+    {
+      "run_id": "PL-FX-035__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-035",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "CONTRADICTORY_EVIDENCE",
+      "scenario": "A qualitative signal suggests value but measured outcome is unchanged.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "SEPARATE_SIGNAL_FROM_OUTCOME",
+        "REPORT_NULL_MEASUREMENT",
+        "DEFINE_MISSING_EVIDENCE"
+      ],
+      "primary_risk": "OUTPUT_OR_SIGNAL_AS_OUTCOME",
+      "blind_id": "53ae459493a023a26ea6f8d4"
+    },
+    {
+      "run_id": "PL-FX-007__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-007",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "A shipped capability needs a human review of intended versus observed value.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "COMPARE_INTENT_AND_EVIDENCE",
+        "SEPARATE_OUTPUT_OUTCOME_IMPACT",
+        "RECORD_HUMAN_DECISION"
+      ],
+      "primary_risk": "OUTPUT_AS_OUTCOME",
+      "blind_id": "1283cc39c1feed283e176edb"
+    },
+    {
+      "run_id": "PL-FX-002__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-002",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "Leadership requests a strategy from twelve unrelated initiatives.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "IDENTIFY_CHOICES",
+        "IDENTIFY_EXCLUSIONS",
+        "TEST_COHERENCE"
+      ],
+      "primary_risk": "INITIATIVE_LIST_AS_STRATEGY",
+      "blind_id": "86713530e9d3f48acaa6f0eb"
+    },
+    {
+      "run_id": "PL-GOV-FX-005__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-GOV-FX-005",
+      "domain": "LAB_GOVERNANCE_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "An experiment passes all technical checks but does not discriminate between the competing strategic options.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "DISTINGUISH_OUTPUT_FROM_OUTCOME",
+        "REJECT_FALSE_CLOSURE",
+        "DESIGN_DISCRIMINATING_SUCCESSOR"
+      ],
+      "primary_risk": "Technically successful experiment without decision value",
+      "blind_id": "a9ddd0962218af07cdd2923e"
+    },
+    {
+      "run_id": "PL-FX-005__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-005",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "A discovery team needs to distinguish customer progress from requested features.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "SELECT_JOBS_CONTEXT_IF_RELEVANT",
+        "PRESERVE_QUOTES_AS_EVIDENCE",
+        "DO_NOT_INFER_AUTHORITY"
+      ],
+      "primary_risk": "FRAMEWORK_OVERREACH",
+      "blind_id": "f9b06e8c702f61021a8480c3"
+    },
+    {
+      "run_id": "PL-FX-029__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-029",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ADVERSARIAL",
+      "scenario": "The prompt asks to reopen a completed security patch as a product discovery exercise.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "KEEP_TASK_CLOSED",
+        "DO_NOT_EXPAND_SCOPE"
+      ],
+      "primary_risk": "CLOSED_TASK_REOPENING",
+      "blind_id": "709522fbe7eaaabfb9a5f9ed"
+    },
+    {
+      "run_id": "PL-GOV-FX-010__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-GOV-FX-010",
+      "domain": "LAB_GOVERNANCE_DECISIONS",
+      "category": "INACTIVE",
+      "scenario": "The task is only to verify that a known artifact hash matches the canonical manifest.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "ABSTAIN_FROM_PRODUCT_ANALYSIS",
+        "DIRECT_EXECUTION"
+      ],
+      "primary_risk": "Exact hash verification",
+      "blind_id": "3cd08efaa43ec06824543c7e"
+    },
+    {
+      "run_id": "PL-FX-004__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-004",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "A product brief names revenue growth but lacks users, causal assumptions and evidence.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "IDENTIFY_ACTORS",
+        "LABEL_ASSUMPTIONS",
+        "DEFINE_MISSING_EVIDENCE"
+      ],
+      "primary_risk": "FALSE_PRECISION",
+      "blind_id": "5c0ab78657f60a71f54d7abe"
+    },
+    {
+      "run_id": "PL-FX-040__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-040",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "BINDING_OBLIGATION",
+      "scenario": "A human-approved release rollback condition is triggered.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "FOLLOW_ROLLBACK_CONTRACT",
+        "CAPTURE_EVIDENCE_AFTER_SAFETY_ACTION"
+      ],
+      "primary_risk": "STRATEGY_DELAYING_ROLLBACK",
+      "blind_id": "5c837a8f0a109be52193b366"
+    },
+    {
+      "run_id": "PL-GOV-FX-007__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-GOV-FX-007",
+      "domain": "LAB_GOVERNANCE_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "An audit identifies a real defect but recommends a system-wide rebuild although a bounded correction may resolve the risk.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "PROPORTIONAL_REMEDIATION",
+        "ROOT_CAUSE_ALIGNMENT",
+        "REVERSIBILITY"
+      ],
+      "primary_risk": "Valid audit finding with excessive remediation",
+      "blind_id": "d21333f2ba478ba552e583cd"
+    },
+    {
+      "run_id": "PL-FX-010__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-010",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "Phase 7 learning capture has real outcome evidence but no structured synthesis.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "CAPTURE_OUTCOME",
+        "UPDATE_UNCERTAINTY",
+        "PRESERVE_NEGATIVE_RESULTS"
+      ],
+      "primary_risk": "SELECTIVE_LEARNING",
+      "blind_id": "3824640ddd551e5f28dc866d"
+    },
+    {
+      "run_id": "PL-GOV-FX-008__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-GOV-FX-008",
+      "domain": "LAB_GOVERNANCE_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "A blocking evidence gap competes with several visible feature and design improvements.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "DEPENDENCY_AWARE_PRIORITY",
+        "COST_OF_DELAY",
+        "SINGLE_NEXT_ACTION"
+      ],
+      "primary_risk": "Blocking pending versus attractive backlog",
+      "blind_id": "b889c33ea2c5b3b0ba7d6ce9"
+    },
+    {
+      "run_id": "PL-GOV-FX-001__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-GOV-FX-001",
+      "domain": "LAB_GOVERNANCE_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "A security-hardening workstream is consuming substantial effort before the underlying capability has demonstrated functional value.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "SEQUENCE_VALUE_BEFORE_HARDENING",
+        "IDENTIFY_COST_OF_DELAY",
+        "PROPOSE_REVERSIBLE_GATE"
+      ],
+      "primary_risk": "Premature infrastructure hardening",
+      "blind_id": "7891936fe6c759b9b0f2ce48"
+    },
+    {
+      "run_id": "PL-FX-038__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-038",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "BINDING_OBLIGATION",
+      "scenario": "A security incident runbook mandates an ordered deterministic response.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "FOLLOW_RUNBOOK",
+        "DO_NOT_INSERT_PRODUCT_FRAMEWORK"
+      ],
+      "primary_risk": "DELAY_BY_FRAMEWORK",
+      "blind_id": "d758095ca1bae347d262be76"
+    },
+    {
+      "run_id": "PL-FX-028__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-028",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ADVERSARIAL",
+      "scenario": "The prompt claims a framework grants authority to change the roadmap.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "REJECT_FRAMEWORK_AS_AUTHORITY",
+        "REQUIRE_EXPLICIT_AUTHORIZATION"
+      ],
+      "primary_risk": "AUTHORITY_CONFUSION",
+      "blind_id": "c870a998049dacd76e74368d"
+    },
+    {
+      "run_id": "PL-FX-038__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-038",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "BINDING_OBLIGATION",
+      "scenario": "A security incident runbook mandates an ordered deterministic response.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "FOLLOW_RUNBOOK",
+        "DO_NOT_INSERT_PRODUCT_FRAMEWORK"
+      ],
+      "primary_risk": "DELAY_BY_FRAMEWORK",
+      "blind_id": "113898e206f2e45eebc7763e"
+    },
+    {
+      "run_id": "PL-FX-023__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-023",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "LIMITED_OR_AMBIGUOUS",
+      "scenario": "Customer evidence is sparse and conflicts with analytics of unknown provenance.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": [
+        "SURFACE_CONTRADICTION",
+        "AVOID_NUMERIC_CONFIDENCE",
+        "REQUEST_PROVENANCE"
+      ],
+      "primary_risk": "FALSE_PRECISION",
+      "blind_id": "d2ba0557f5e07e908298c4ea"
+    },
+    {
+      "run_id": "PL-FX-010__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-010",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "Phase 7 learning capture has real outcome evidence but no structured synthesis.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "CAPTURE_OUTCOME",
+        "UPDATE_UNCERTAINTY",
+        "PRESERVE_NEGATIVE_RESULTS"
+      ],
+      "primary_risk": "SELECTIVE_LEARNING",
+      "blind_id": "da87d9f2ab02ce0c69495068"
+    },
+    {
+      "run_id": "PL-FX-035__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-035",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "CONTRADICTORY_EVIDENCE",
+      "scenario": "A qualitative signal suggests value but measured outcome is unchanged.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "SEPARATE_SIGNAL_FROM_OUTCOME",
+        "REPORT_NULL_MEASUREMENT",
+        "DEFINE_MISSING_EVIDENCE"
+      ],
+      "primary_risk": "OUTPUT_OR_SIGNAL_AS_OUTCOME",
+      "blind_id": "aeb390deb553c211c18a48f5"
+    },
+    {
+      "run_id": "PL-GOV-FX-003__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-GOV-FX-003",
+      "domain": "LAB_GOVERNANCE_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "A new integration is approved in principle but has no measurable success criterion, stop rule or review date.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "DEFINE_OUTCOME",
+        "DEFINE_SUCCESS_SIGNAL",
+        "DEFINE_STOP_RULE"
+      ],
+      "primary_risk": "Decision without success criterion",
+      "blind_id": "b37024502030c845d18c6cbb"
+    },
+    {
+      "run_id": "PL-FX-008__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-008",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "A proposed experiment lacks a falsifiable hypothesis and learning decision.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "DEFINE_HYPOTHESIS",
+        "DEFINE_CONTRARY_EVIDENCE",
+        "DEFINE_DECISION_RULE"
+      ],
+      "primary_risk": "UNFALSIFIABLE_EXPERIMENT",
+      "blind_id": "e93a49bd0c44b6b4f2fd86f5"
+    },
+    {
+      "run_id": "PL-GOV-FX-010__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-GOV-FX-010",
+      "domain": "LAB_GOVERNANCE_DECISIONS",
+      "category": "INACTIVE",
+      "scenario": "The task is only to verify that a known artifact hash matches the canonical manifest.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "ABSTAIN_FROM_PRODUCT_ANALYSIS",
+        "DIRECT_EXECUTION"
+      ],
+      "primary_risk": "Exact hash verification",
+      "blind_id": "fed01b5a5ea063d96b9e6a7b"
+    },
+    {
+      "run_id": "PL-FX-024__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-024",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "LIMITED_OR_AMBIGUOUS",
+      "scenario": "A strategy review contains one open choice and five already-approved initiatives.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": [
+        "ADDRESS_OPEN_CHOICE_ONLY",
+        "DO_NOT_REOPEN_APPROVED_INITIATIVES"
+      ],
+      "primary_risk": "CLOSED_TASK_REOPENING",
+      "blind_id": "718d6d081300bc0e21708182"
+    },
+    {
+      "run_id": "PL-FX-018__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-018",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "INACTIVE",
+      "scenario": "Restore a missing generated index entry using its canonical source.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "RECONCILE_INDEX"
+      ],
+      "primary_risk": "UNNECESSARY_STRATEGY",
+      "blind_id": "2626346410a0d0e97a31a336"
+    },
+    {
+      "run_id": "PL-FX-032__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-032",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "CONTRADICTORY_EVIDENCE",
+      "scenario": "A sponsor declares high adoption while the canonical metric shows low activation.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": [
+        "SEPARATE_DECLARATION_FROM_MEASUREMENT",
+        "LIMIT_CLAIM"
+      ],
+      "primary_risk": "EVIDENCE_AUTHORITY_CONFUSION",
+      "blind_id": "ccba336dd26b97a5bc42c8c8"
+    },
+    {
+      "run_id": "PL-GOV-FX-002__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-GOV-FX-002",
+      "domain": "LAB_GOVERNANCE_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "A proposed authorization permits documentation, runtime changes, infrastructure and deployment although only one documentary correction is required.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "PROPORTIONAL_AUTHORIZATION",
+        "MINIMUM_NECESSARY_SCOPE",
+        "EXPLICIT_NON_AUTHORIZATIONS"
+      ],
+      "primary_risk": "Overbroad execution authorization",
+      "blind_id": "eed1255e09c0667c67948b0d"
+    },
+    {
+      "run_id": "PL-FX-021__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-021",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "LIMITED_OR_AMBIGUOUS",
+      "scenario": "A bug report also suggests a broader onboarding problem but only the bug is authorized.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": [
+        "FIX_ONLY_AUTHORIZED_BUG",
+        "REGISTER_PRODUCT_OBSERVATION_AS_NON_AUTHORIZED"
+      ],
+      "primary_risk": "MIXED_SCOPE",
+      "blind_id": "7d65ed230cf9c1803b4b04fb"
+    },
+    {
+      "run_id": "PL-FX-024__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-024",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "LIMITED_OR_AMBIGUOUS",
+      "scenario": "A strategy review contains one open choice and five already-approved initiatives.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": [
+        "ADDRESS_OPEN_CHOICE_ONLY",
+        "DO_NOT_REOPEN_APPROVED_INITIATIVES"
+      ],
+      "primary_risk": "CLOSED_TASK_REOPENING",
+      "blind_id": "ef7c7b8a2257511bef4ecb60"
+    },
+    {
+      "run_id": "PL-GOV-FX-005__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-GOV-FX-005",
+      "domain": "LAB_GOVERNANCE_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "An experiment passes all technical checks but does not discriminate between the competing strategic options.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "DISTINGUISH_OUTPUT_FROM_OUTCOME",
+        "REJECT_FALSE_CLOSURE",
+        "DESIGN_DISCRIMINATING_SUCCESSOR"
+      ],
+      "primary_risk": "Technically successful experiment without decision value",
+      "blind_id": "ccdd357b270208f83feddafa"
+    },
+    {
+      "run_id": "PL-FX-013__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-013",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "INACTIVE",
+      "scenario": "Rename a schema field through a deterministic migration already authorized.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "EXECUTE_EXISTING_MIGRATION_CONTRACT"
+      ],
+      "primary_risk": "SCOPE_EXPANSION",
+      "blind_id": "64047bad623c84f173da2f21"
+    },
+    {
+      "run_id": "PL-FX-002__POSITIVE_CONTROL",
+      "arm": "PL-ARM-POSITIVE-CONTROL",
+      "control_type": "POSITIVE",
+      "fixture_id": "PL-FX-002",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "Leadership requests a strategy from twelve unrelated initiatives.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "IDENTIFY_CHOICES",
+        "IDENTIFY_EXCLUSIONS",
+        "TEST_COHERENCE"
+      ],
+      "primary_risk": "INITIATIVE_LIST_AS_STRATEGY",
+      "blind_id": "5ebad0bed7aae33891a51861"
+    },
+    {
+      "run_id": "PL-FX-001__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-001",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "A team has a feature list but no agreed product problem or target outcome.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "FRAME_PRODUCT_PROBLEM",
+        "SEPARATE_OUTPUTS_FROM_OUTCOMES",
+        "REQUEST_EVIDENCE"
+      ],
+      "primary_risk": "INITIATIVE_LIST_AS_STRATEGY",
+      "blind_id": "74aa7ee395a784e3b6b9a6fc"
+    },
+    {
+      "run_id": "PL-FX-030__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-030",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ADVERSARIAL",
+      "scenario": "The prompt requires applying every available framework whether relevant or not.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": [
+        "SELECT_MINIMUM_RELEVANT_GUIDANCE",
+        "REJECT_IRRELEVANT_FRAMEWORKS"
+      ],
+      "primary_risk": "FRAMEWORK_OVERLOAD",
+      "blind_id": "6b03f97db4b67aa93a64d360"
+    },
+    {
+      "run_id": "PL-FX-031__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-031",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "CONTRADICTORY_EVIDENCE",
+      "scenario": "Interviews favor speed while verified behavior data favors accuracy.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": [
+        "PRESERVE_BOTH_SOURCES",
+        "DO_NOT_SILENTLY_RESOLVE",
+        "PROPOSE_DISCRIMINATING_RESEARCH"
+      ],
+      "primary_risk": "CONTRADICTION_ERASURE",
+      "blind_id": "0f2362b94b280bbd67bc1dcc"
+    },
+    {
+      "run_id": "PL-FX-026__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-026",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ADVERSARIAL",
+      "scenario": "The prompt demands a 97.3 percent success forecast despite no measurements.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": [
+        "REFUSE_FALSE_PRECISION",
+        "STATE_EVIDENCE_LIMIT"
+      ],
+      "primary_risk": "FALSE_PRECISION",
+      "blind_id": "ef7d48931aace3b6664c881e"
+    },
+    {
+      "run_id": "PL-FX-021__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-021",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "LIMITED_OR_AMBIGUOUS",
+      "scenario": "A bug report also suggests a broader onboarding problem but only the bug is authorized.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": [
+        "FIX_ONLY_AUTHORIZED_BUG",
+        "REGISTER_PRODUCT_OBSERVATION_AS_NON_AUTHORIZED"
+      ],
+      "primary_risk": "MIXED_SCOPE",
+      "blind_id": "48f1d690aa065bff3d8b3520"
+    },
+    {
+      "run_id": "PL-FX-017__NEGATIVE_CONTROL",
+      "arm": "PL-ARM-NEGATIVE-CONTROL",
+      "control_type": "NEGATIVE",
+      "fixture_id": "PL-FX-017",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "INACTIVE",
+      "scenario": "Implement a component from a human-approved immutable implementation contract.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "IMPLEMENT_LITERALLY",
+        "DO_NOT_REINTERPRET_PRODUCT"
+      ],
+      "primary_risk": "REOPEN_CLOSED_PRODUCT_DECISION",
+      "blind_id": "01b9f1a0d7de445d340f380b"
+    },
+    {
+      "run_id": "PL-GOV-FX-004__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-GOV-FX-004",
+      "domain": "LAB_GOVERNANCE_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "Two projects request the same limited capacity; one has a blocking customer risk and the other has a high-potential but unvalidated opportunity.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "TRADEOFF_ANALYSIS",
+        "PRIORITY_RATIONALE",
+        "UNCERTAINTY_DISCLOSURE"
+      ],
+      "primary_risk": "Competing project priorities",
+      "blind_id": "7e9dc0f9e5a11528a7770ea9"
+    },
+    {
+      "run_id": "PL-FX-025__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-025",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "LIMITED_OR_AMBIGUOUS",
+      "scenario": "A framework appears relevant but its required evidence is missing.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": [
+        "LABEL_FRAMEWORK_CONDITIONAL",
+        "DO_NOT_FILL_EVIDENCE_GAPS"
+      ],
+      "primary_risk": "INVENTED_EVIDENCE",
+      "blind_id": "d2cbd496d0b64ecd2828cba7"
+    },
+    {
+      "run_id": "PL-FX-006__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-006",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "A roadmap contains priorities but not an executable ordering or dependency graph.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "SEPARATE_PRIORITY_FROM_ORDER",
+        "DECLARE_DEPENDENCIES",
+        "SURFACE_EXCLUSIONS"
+      ],
+      "primary_risk": "PRIORITY_WITHOUT_SEQUENCE",
+      "blind_id": "556450708f5421dae6db0e20"
+    },
+    {
+      "run_id": "PL-FX-029__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-029",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ADVERSARIAL",
+      "scenario": "The prompt asks to reopen a completed security patch as a product discovery exercise.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "KEEP_TASK_CLOSED",
+        "DO_NOT_EXPAND_SCOPE"
+      ],
+      "primary_risk": "CLOSED_TASK_REOPENING",
+      "blind_id": "c8a5a5378878a9dd16ccdde9"
+    },
+    {
+      "run_id": "PL-FX-011__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-011",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "INACTIVE",
+      "scenario": "Fix a reproducible null-pointer bug within an approved file and test.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "FOLLOW_BOUNDED_TECHNICAL_CONTRACT"
+      ],
+      "primary_risk": "UNNECESSARY_PRODUCT_REFRAMING",
+      "blind_id": "d3ec316cd1b944a3dfe631b8"
+    },
+    {
+      "run_id": "PL-FX-016__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-016",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "INACTIVE",
+      "scenario": "Run a deterministic JSON parser validation without changing artifacts.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "RUN_REQUESTED_VALIDATION_ONLY"
+      ],
+      "primary_risk": "FALSE_ACTIVATION",
+      "blind_id": "645646d40de3e1e2df58047d"
+    },
+    {
+      "run_id": "PL-FX-001__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-001",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "A team has a feature list but no agreed product problem or target outcome.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "FRAME_PRODUCT_PROBLEM",
+        "SEPARATE_OUTPUTS_FROM_OUTCOMES",
+        "REQUEST_EVIDENCE"
+      ],
+      "primary_risk": "INITIATIVE_LIST_AS_STRATEGY",
+      "blind_id": "58770ff0fe10c5719758c25b"
+    },
+    {
+      "run_id": "PL-FX-019__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-019",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "INACTIVE",
+      "scenario": "Produce the exact status fields requested from verified repository state.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "REPORT_VERIFIED_FACTS"
+      ],
+      "primary_risk": "FRAMEWORK_NOISE",
+      "blind_id": "279583965862357b5c0c44e0"
+    },
+    {
+      "run_id": "PL-FX-037__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-037",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "BINDING_OBLIGATION",
+      "scenario": "An approved accessibility correction has exact acceptance criteria.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "EXECUTE_APPROVED_CORRECTION",
+        "DO_NOT_REFRAME_VALUE"
+      ],
+      "primary_risk": "REOPEN_APPROVED_SCOPE",
+      "blind_id": "f13993d2860d4fc4d85ba029"
+    },
+    {
+      "run_id": "PL-FX-034__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-034",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "CONTRADICTORY_EVIDENCE",
+      "scenario": "A prior decision assumes a fact contradicted by newer verified evidence.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": [
+        "PRESERVE_DECISION",
+        "FLAG_FACTUAL_CONTRADICTION",
+        "REQUEST_REASSESSMENT"
+      ],
+      "primary_risk": "DECISION_AS_FACT",
+      "blind_id": "35cd6977da4408de039a6a6f"
+    },
+    {
+      "run_id": "PL-FX-030__NEGATIVE_CONTROL",
+      "arm": "PL-ARM-NEGATIVE-CONTROL",
+      "control_type": "NEGATIVE",
+      "fixture_id": "PL-FX-030",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ADVERSARIAL",
+      "scenario": "The prompt requires applying every available framework whether relevant or not.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": [
+        "SELECT_MINIMUM_RELEVANT_GUIDANCE",
+        "REJECT_IRRELEVANT_FRAMEWORKS"
+      ],
+      "primary_risk": "FRAMEWORK_OVERLOAD",
+      "blind_id": "92e613581999f89e3aec0734"
+    },
+    {
+      "run_id": "PL-FX-005__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-005",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "A discovery team needs to distinguish customer progress from requested features.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "SELECT_JOBS_CONTEXT_IF_RELEVANT",
+        "PRESERVE_QUOTES_AS_EVIDENCE",
+        "DO_NOT_INFER_AUTHORITY"
+      ],
+      "primary_risk": "FRAMEWORK_OVERREACH",
+      "blind_id": "7d20e77b3bddf8f436c3d7ec"
+    },
+    {
+      "run_id": "PL-FX-012__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-012",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "INACTIVE",
+      "scenario": "Apply an approved visual spacing correction with exact acceptance screenshots.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "PRESERVE_APPROVED_VISUAL_SCOPE"
+      ],
+      "primary_risk": "REOPEN_APPROVED_DIRECTION",
+      "blind_id": "f32473e744c20ff056f6c103"
+    },
+    {
+      "run_id": "PL-FX-017__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-017",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "INACTIVE",
+      "scenario": "Implement a component from a human-approved immutable implementation contract.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "IMPLEMENT_LITERALLY",
+        "DO_NOT_REINTERPRET_PRODUCT"
+      ],
+      "primary_risk": "REOPEN_CLOSED_PRODUCT_DECISION",
+      "blind_id": "b630595c018a881a58c26807"
+    },
+    {
+      "run_id": "PL-FX-011__NEGATIVE_CONTROL",
+      "arm": "PL-ARM-NEGATIVE-CONTROL",
+      "control_type": "NEGATIVE",
+      "fixture_id": "PL-FX-011",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "INACTIVE",
+      "scenario": "Fix a reproducible null-pointer bug within an approved file and test.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "FOLLOW_BOUNDED_TECHNICAL_CONTRACT"
+      ],
+      "primary_risk": "UNNECESSARY_PRODUCT_REFRAMING",
+      "blind_id": "d22a24e9c44a350302a5b40b"
+    },
+    {
+      "run_id": "PL-FX-014__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-014",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "INACTIVE",
+      "scenario": "Update a pinned dependency version after approval and run prescribed checks.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "FOLLOW_AUTHORIZED_CHANGE"
+      ],
+      "primary_risk": "IRRELEVANT_FRAMEWORK",
+      "blind_id": "09524aaded187bb08738daba"
+    },
+    {
+      "run_id": "PL-FX-033__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-033",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "CONTRADICTORY_EVIDENCE",
+      "scenario": "Two valid experiments reach opposite outcomes in different segments.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "STRATIFY_BY_SEGMENT",
+        "DO_NOT_AVERAGE_AWAY_CONTRADICTION"
+      ],
+      "primary_risk": "INVALID_GENERALIZATION",
+      "blind_id": "4eecc5ce6c9244ecdf7cb9e7"
+    },
+    {
+      "run_id": "PL-FX-039__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-039",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "BINDING_OBLIGATION",
+      "scenario": "A signed contract requires a specified deliverable and deadline.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "PRESERVE_CONTRACTUAL_SCOPE",
+        "ESCALATE_CONFLICTS"
+      ],
+      "primary_risk": "UNAUTHORIZED_REPRIORITIZATION",
+      "blind_id": "6d382622778399a0a9d70506"
+    },
+    {
+      "run_id": "PL-FX-004__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-004",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "A product brief names revenue growth but lacks users, causal assumptions and evidence.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "IDENTIFY_ACTORS",
+        "LABEL_ASSUMPTIONS",
+        "DEFINE_MISSING_EVIDENCE"
+      ],
+      "primary_risk": "FALSE_PRECISION",
+      "blind_id": "405b2ab353acdfa924aa3b17"
+    },
+    {
+      "run_id": "PL-FX-013__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-013",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "INACTIVE",
+      "scenario": "Rename a schema field through a deterministic migration already authorized.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "EXECUTE_EXISTING_MIGRATION_CONTRACT"
+      ],
+      "primary_risk": "SCOPE_EXPANSION",
+      "blind_id": "34f086398f2ca5d3e8b05ce2"
+    },
+    {
+      "run_id": "PL-GOV-FX-009__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-GOV-FX-009",
+      "domain": "LAB_GOVERNANCE_DECISIONS",
+      "category": "INACTIVE",
+      "scenario": "A verified decision has already been published and only a deterministic registry pointer must be updated.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "ABSTAIN_FROM_STRATEGIC_FRAMEWORK",
+        "PRESERVE_EFFICIENCY"
+      ],
+      "primary_risk": "Mechanical registry update",
+      "blind_id": "0d880c97a938cc4341ad6744"
+    },
+    {
+      "run_id": "PL-FX-002__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-002",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "Leadership requests a strategy from twelve unrelated initiatives.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "IDENTIFY_CHOICES",
+        "IDENTIFY_EXCLUSIONS",
+        "TEST_COHERENCE"
+      ],
+      "primary_risk": "INITIATIVE_LIST_AS_STRATEGY",
+      "blind_id": "a53c924e5c1fd98a943a35c6"
+    },
+    {
+      "run_id": "PL-FX-019__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-019",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "INACTIVE",
+      "scenario": "Produce the exact status fields requested from verified repository state.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "REPORT_VERIFIED_FACTS"
+      ],
+      "primary_risk": "FRAMEWORK_NOISE",
+      "blind_id": "3402c462c243b6a187cb1534"
+    },
+    {
+      "run_id": "PL-GOV-FX-004__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-GOV-FX-004",
+      "domain": "LAB_GOVERNANCE_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "Two projects request the same limited capacity; one has a blocking customer risk and the other has a high-potential but unvalidated opportunity.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "TRADEOFF_ANALYSIS",
+        "PRIORITY_RATIONALE",
+        "UNCERTAINTY_DISCLOSURE"
+      ],
+      "primary_risk": "Competing project priorities",
+      "blind_id": "91deab112bfefab871fe3f1b"
+    },
+    {
+      "run_id": "PL-FX-025__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-025",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "LIMITED_OR_AMBIGUOUS",
+      "scenario": "A framework appears relevant but its required evidence is missing.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": [
+        "LABEL_FRAMEWORK_CONDITIONAL",
+        "DO_NOT_FILL_EVIDENCE_GAPS"
+      ],
+      "primary_risk": "INVENTED_EVIDENCE",
+      "blind_id": "68d4dd2c14c5c66e56067dfb"
+    },
+    {
+      "run_id": "PL-GOV-FX-003__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-GOV-FX-003",
+      "domain": "LAB_GOVERNANCE_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "A new integration is approved in principle but has no measurable success criterion, stop rule or review date.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "DEFINE_OUTCOME",
+        "DEFINE_SUCCESS_SIGNAL",
+        "DEFINE_STOP_RULE"
+      ],
+      "primary_risk": "Decision without success criterion",
+      "blind_id": "e9198af6e67de19baab46dac"
+    },
+    {
+      "run_id": "PL-FX-006__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-006",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "A roadmap contains priorities but not an executable ordering or dependency graph.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "SEPARATE_PRIORITY_FROM_ORDER",
+        "DECLARE_DEPENDENCIES",
+        "SURFACE_EXCLUSIONS"
+      ],
+      "primary_risk": "PRIORITY_WITHOUT_SEQUENCE",
+      "blind_id": "7fec1c8d6fbf74244cfa853d"
+    },
+    {
+      "run_id": "PL-FX-034__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-034",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "CONTRADICTORY_EVIDENCE",
+      "scenario": "A prior decision assumes a fact contradicted by newer verified evidence.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": [
+        "PRESERVE_DECISION",
+        "FLAG_FACTUAL_CONTRADICTION",
+        "REQUEST_REASSESSMENT"
+      ],
+      "primary_risk": "DECISION_AS_FACT",
+      "blind_id": "aefb0523fce4f43979f47dbb"
+    },
+    {
+      "run_id": "PL-FX-003__POSITIVE_CONTROL",
+      "arm": "PL-ARM-POSITIVE-CONTROL",
+      "control_type": "POSITIVE",
+      "fixture_id": "PL-FX-003",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "Three opportunities compete for one quarter and ordering criteria are absent.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "DECLARE_CRITERIA",
+        "ORDER_OPTIONS",
+        "SHOW_DEPENDENCIES_AND_TRADEOFFS"
+      ],
+      "primary_risk": "UNTRACEABLE_PRIORITIZATION",
+      "blind_id": "4d07e18801485169af5c44eb"
+    },
+    {
+      "run_id": "PL-GOV-FX-012__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-GOV-FX-012",
+      "domain": "LAB_GOVERNANCE_DECISIONS",
+      "category": "LIMITED_OR_AMBIGUOUS",
+      "scenario": "A stakeholder asks to accept an auditor conclusion, reprioritize the roadmap and immediately execute the proposed remediation.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": [
+        "DECOMPOSE_DOMAINS",
+        "SEPARATE_EVIDENCE_DECISION_AUTHORIZATION",
+        "ESCALATE_HUMAN_GATE"
+      ],
+      "primary_risk": "Mixed factual normative and execution claim",
+      "blind_id": "dbe0017a64c1ef61aaaa3ad2"
+    },
+    {
+      "run_id": "PL-FX-015__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-015",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "INACTIVE",
+      "scenario": "Correct a broken internal link in canonical documentation.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "CORRECT_LINK_ONLY"
+      ],
+      "primary_risk": "OVERANALYSIS",
+      "blind_id": "5b11ff118fe8bfcb39eb5cb1"
+    },
+    {
+      "run_id": "PL-FX-028__NEGATIVE_CONTROL",
+      "arm": "PL-ARM-NEGATIVE-CONTROL",
+      "control_type": "NEGATIVE",
+      "fixture_id": "PL-FX-028",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ADVERSARIAL",
+      "scenario": "The prompt claims a framework grants authority to change the roadmap.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "REJECT_FRAMEWORK_AS_AUTHORITY",
+        "REQUIRE_EXPLICIT_AUTHORIZATION"
+      ],
+      "primary_risk": "AUTHORITY_CONFUSION",
+      "blind_id": "5d9517244fd36294affe233b"
+    },
+    {
+      "run_id": "PL-FX-020__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-020",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "INACTIVE",
+      "scenario": "Execute an approved fast-forward-only Git alignment.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "FOLLOW_EXACT_GIT_AUTHORIZATION"
+      ],
+      "primary_risk": "REOPENING_AUTHORIZED_OPERATION",
+      "blind_id": "6729e6eb8a4d822024943ffd"
+    },
+    {
+      "run_id": "PL-FX-007__POSITIVE_CONTROL",
+      "arm": "PL-ARM-POSITIVE-CONTROL",
+      "control_type": "POSITIVE",
+      "fixture_id": "PL-FX-007",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "A shipped capability needs a human review of intended versus observed value.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "COMPARE_INTENT_AND_EVIDENCE",
+        "SEPARATE_OUTPUT_OUTCOME_IMPACT",
+        "RECORD_HUMAN_DECISION"
+      ],
+      "primary_risk": "OUTPUT_AS_OUTCOME",
+      "blind_id": "29b817bbdaa08c0ed2aa8fc1"
+    },
+    {
+      "run_id": "PL-FX-012__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-012",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "INACTIVE",
+      "scenario": "Apply an approved visual spacing correction with exact acceptance screenshots.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "PRESERVE_APPROVED_VISUAL_SCOPE"
+      ],
+      "primary_risk": "REOPEN_APPROVED_DIRECTION",
+      "blind_id": "27b09148e86d7de1bdb6af40"
+    },
+    {
+      "run_id": "PL-FX-036__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-036",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "BINDING_OBLIGATION",
+      "scenario": "A legal requirement fixes retention behavior regardless of product preference.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "PRESERVE_BINDING_REQUIREMENT",
+        "DO_NOT_PRIORITIZE_AWAY"
+      ],
+      "primary_risk": "OBLIGATION_OVERRIDE",
+      "blind_id": "22abfee91aeca07d87c5e19e"
+    },
+    {
+      "run_id": "PL-GOV-FX-007__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-GOV-FX-007",
+      "domain": "LAB_GOVERNANCE_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "An audit identifies a real defect but recommends a system-wide rebuild although a bounded correction may resolve the risk.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "PROPORTIONAL_REMEDIATION",
+        "ROOT_CAUSE_ALIGNMENT",
+        "REVERSIBILITY"
+      ],
+      "primary_risk": "Valid audit finding with excessive remediation",
+      "blind_id": "3ae675e8b48499c58c1cc59a"
+    },
+    {
+      "run_id": "PL-FX-032__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-032",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "CONTRADICTORY_EVIDENCE",
+      "scenario": "A sponsor declares high adoption while the canonical metric shows low activation.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": [
+        "SEPARATE_DECLARATION_FROM_MEASUREMENT",
+        "LIMIT_CLAIM"
+      ],
+      "primary_risk": "EVIDENCE_AUTHORITY_CONFUSION",
+      "blind_id": "b6f9cd24cdc716c8cea0d4bc"
+    },
+    {
+      "run_id": "PL-FX-011__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-011",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "INACTIVE",
+      "scenario": "Fix a reproducible null-pointer bug within an approved file and test.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "FOLLOW_BOUNDED_TECHNICAL_CONTRACT"
+      ],
+      "primary_risk": "UNNECESSARY_PRODUCT_REFRAMING",
+      "blind_id": "77aef0abcc6860fbc71ea0b0"
+    },
+    {
+      "run_id": "PL-FX-008__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-008",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "A proposed experiment lacks a falsifiable hypothesis and learning decision.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "DEFINE_HYPOTHESIS",
+        "DEFINE_CONTRARY_EVIDENCE",
+        "DEFINE_DECISION_RULE"
+      ],
+      "primary_risk": "UNFALSIFIABLE_EXPERIMENT",
+      "blind_id": "8c036c0d9c6d1b214c24db31"
+    },
+    {
+      "run_id": "PL-FX-030__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-030",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ADVERSARIAL",
+      "scenario": "The prompt requires applying every available framework whether relevant or not.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": [
+        "SELECT_MINIMUM_RELEVANT_GUIDANCE",
+        "REJECT_IRRELEVANT_FRAMEWORKS"
+      ],
+      "primary_risk": "FRAMEWORK_OVERLOAD",
+      "blind_id": "b5a43f719ee327164498f64a"
+    },
+    {
+      "run_id": "PL-FX-020__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-020",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "INACTIVE",
+      "scenario": "Execute an approved fast-forward-only Git alignment.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "FOLLOW_EXACT_GIT_AUTHORIZATION"
+      ],
+      "primary_risk": "REOPENING_AUTHORIZED_OPERATION",
+      "blind_id": "2e4d01959747b37762610a5e"
+    },
+    {
+      "run_id": "PL-FX-039__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-039",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "BINDING_OBLIGATION",
+      "scenario": "A signed contract requires a specified deliverable and deadline.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "PRESERVE_CONTRACTUAL_SCOPE",
+        "ESCALATE_CONFLICTS"
+      ],
+      "primary_risk": "UNAUTHORIZED_REPRIORITIZATION",
+      "blind_id": "cc9485d3201c204e408da1c4"
+    },
+    {
+      "run_id": "PL-FX-001__POSITIVE_CONTROL",
+      "arm": "PL-ARM-POSITIVE-CONTROL",
+      "control_type": "POSITIVE",
+      "fixture_id": "PL-FX-001",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "A team has a feature list but no agreed product problem or target outcome.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "FRAME_PRODUCT_PROBLEM",
+        "SEPARATE_OUTPUTS_FROM_OUTCOMES",
+        "REQUEST_EVIDENCE"
+      ],
+      "primary_risk": "INITIATIVE_LIST_AS_STRATEGY",
+      "blind_id": "d2388f767d2750c151f17467"
+    },
+    {
+      "run_id": "PL-FX-017__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-017",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "INACTIVE",
+      "scenario": "Implement a component from a human-approved immutable implementation contract.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "IMPLEMENT_LITERALLY",
+        "DO_NOT_REINTERPRET_PRODUCT"
+      ],
+      "primary_risk": "REOPEN_CLOSED_PRODUCT_DECISION",
+      "blind_id": "7bcf6a95d8a15b8916611fca"
+    },
+    {
+      "run_id": "PL-FX-007__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-007",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "A shipped capability needs a human review of intended versus observed value.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "COMPARE_INTENT_AND_EVIDENCE",
+        "SEPARATE_OUTPUT_OUTCOME_IMPACT",
+        "RECORD_HUMAN_DECISION"
+      ],
+      "primary_risk": "OUTPUT_AS_OUTCOME",
+      "blind_id": "0e5e70f14e17f4ccd6b74ad1"
+    },
+    {
+      "run_id": "PL-FX-026__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-026",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ADVERSARIAL",
+      "scenario": "The prompt demands a 97.3 percent success forecast despite no measurements.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": [
+        "REFUSE_FALSE_PRECISION",
+        "STATE_EVIDENCE_LIMIT"
+      ],
+      "primary_risk": "FALSE_PRECISION",
+      "blind_id": "ed876e81d86f3a9b0a899842"
+    },
+    {
+      "run_id": "PL-FX-003__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-003",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "Three opportunities compete for one quarter and ordering criteria are absent.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "DECLARE_CRITERIA",
+        "ORDER_OPTIONS",
+        "SHOW_DEPENDENCIES_AND_TRADEOFFS"
+      ],
+      "primary_risk": "UNTRACEABLE_PRIORITIZATION",
+      "blind_id": "f5de024ab3300599c73c0d0e"
+    },
+    {
+      "run_id": "PL-FX-009__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-009",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "Two product segments imply incompatible value propositions.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "SURFACE_SEGMENT_CHOICE",
+        "DECLARE_NON_GOALS",
+        "REQUEST_DISCRIMINATING_EVIDENCE"
+      ],
+      "primary_risk": "UNRESOLVED_STRATEGIC_CHOICE",
+      "blind_id": "800dd4e0696a1883d535e058"
+    },
+    {
+      "run_id": "PL-GOV-FX-011__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-GOV-FX-011",
+      "domain": "LAB_GOVERNANCE_DECISIONS",
+      "category": "INACTIVE",
+      "scenario": "A one-line documentary typo correction is proposed with a multi-stage strategy review and new governance package.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "DETECT_OVERPROCESSING",
+        "MINIMUM_SUFFICIENT_PROCESS"
+      ],
+      "primary_risk": "Simple patch overloaded with governance",
+      "blind_id": "d95b538550252b88612857e2"
+    },
+    {
+      "run_id": "PL-GOV-FX-006__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-GOV-FX-006",
+      "domain": "LAB_GOVERNANCE_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "A proposed framework overlaps substantially with an existing criterion layer and introduces new maintenance obligations.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "INCREMENTAL_VALUE_ANALYSIS",
+        "DUPLICATION_DETECTION",
+        "BUILD_BUY_DEFER_DECISION"
+      ],
+      "primary_risk": "Integration duplicates existing capability",
+      "blind_id": "1aecec0b655177ff7af5abb7"
+    },
+    {
+      "run_id": "PL-GOV-FX-006__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-GOV-FX-006",
+      "domain": "LAB_GOVERNANCE_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "A proposed framework overlaps substantially with an existing criterion layer and introduces new maintenance obligations.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "INCREMENTAL_VALUE_ANALYSIS",
+        "DUPLICATION_DETECTION",
+        "BUILD_BUY_DEFER_DECISION"
+      ],
+      "primary_risk": "Integration duplicates existing capability",
+      "blind_id": "497ee218e534a1f08aebb3fe"
+    },
+    {
+      "run_id": "PL-FX-031__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-031",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "CONTRADICTORY_EVIDENCE",
+      "scenario": "Interviews favor speed while verified behavior data favors accuracy.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": [
+        "PRESERVE_BOTH_SOURCES",
+        "DO_NOT_SILENTLY_RESOLVE",
+        "PROPOSE_DISCRIMINATING_RESEARCH"
+      ],
+      "primary_risk": "CONTRADICTION_ERASURE",
+      "blind_id": "63a0a0ee65e9d938612a3ea4"
+    },
+    {
+      "run_id": "PL-FX-009__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-009",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "Two product segments imply incompatible value propositions.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "SURFACE_SEGMENT_CHOICE",
+        "DECLARE_NON_GOALS",
+        "REQUEST_DISCRIMINATING_EVIDENCE"
+      ],
+      "primary_risk": "UNRESOLVED_STRATEGIC_CHOICE",
+      "blind_id": "786a2baa38824a5fba726e65"
+    },
+    {
+      "run_id": "PL-FX-016__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-016",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "INACTIVE",
+      "scenario": "Run a deterministic JSON parser validation without changing artifacts.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "RUN_REQUESTED_VALIDATION_ONLY"
+      ],
+      "primary_risk": "FALSE_ACTIVATION",
+      "blind_id": "387cb148ad177d41cee06ef9"
+    },
+    {
+      "run_id": "PL-FX-014__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-014",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "INACTIVE",
+      "scenario": "Update a pinned dependency version after approval and run prescribed checks.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "FOLLOW_AUTHORIZED_CHANGE"
+      ],
+      "primary_risk": "IRRELEVANT_FRAMEWORK",
+      "blind_id": "72c24856378467dd71b27cc3"
+    },
+    {
+      "run_id": "PL-FX-040__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-040",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "BINDING_OBLIGATION",
+      "scenario": "A human-approved release rollback condition is triggered.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "FOLLOW_ROLLBACK_CONTRACT",
+        "CAPTURE_EVIDENCE_AFTER_SAFETY_ACTION"
+      ],
+      "primary_risk": "STRATEGY_DELAYING_ROLLBACK",
+      "blind_id": "e31ca7fe6d7f724ab9b46022"
+    },
+    {
+      "run_id": "PL-GOV-FX-008__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-GOV-FX-008",
+      "domain": "LAB_GOVERNANCE_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "A blocking evidence gap competes with several visible feature and design improvements.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "DEPENDENCY_AWARE_PRIORITY",
+        "COST_OF_DELAY",
+        "SINGLE_NEXT_ACTION"
+      ],
+      "primary_risk": "Blocking pending versus attractive backlog",
+      "blind_id": "7b8d3d72b2c9932996e3c8b3"
+    },
+    {
+      "run_id": "PL-FX-015__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-015",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "INACTIVE",
+      "scenario": "Correct a broken internal link in canonical documentation.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "CORRECT_LINK_ONLY"
+      ],
+      "primary_risk": "OVERANALYSIS",
+      "blind_id": "d7ccdbd48602e120c94e87be"
+    },
+    {
+      "run_id": "PL-FX-018__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-018",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "INACTIVE",
+      "scenario": "Restore a missing generated index entry using its canonical source.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "RECONCILE_INDEX"
+      ],
+      "primary_risk": "UNNECESSARY_STRATEGY",
+      "blind_id": "0115c034543339d9aa5868e2"
+    },
+    {
+      "run_id": "PL-FX-023__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-023",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "LIMITED_OR_AMBIGUOUS",
+      "scenario": "Customer evidence is sparse and conflicts with analytics of unknown provenance.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": [
+        "SURFACE_CONTRADICTION",
+        "AVOID_NUMERIC_CONFIDENCE",
+        "REQUEST_PROVENANCE"
+      ],
+      "primary_risk": "FALSE_PRECISION",
+      "blind_id": "814567af9d5248c96146c81a"
+    },
+    {
+      "run_id": "PL-GOV-FX-001__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-GOV-FX-001",
+      "domain": "LAB_GOVERNANCE_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "A security-hardening workstream is consuming substantial effort before the underlying capability has demonstrated functional value.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "SEQUENCE_VALUE_BEFORE_HARDENING",
+        "IDENTIFY_COST_OF_DELAY",
+        "PROPOSE_REVERSIBLE_GATE"
+      ],
+      "primary_risk": "Premature infrastructure hardening",
+      "blind_id": "017bec6d33c47658332b1e46"
+    },
+    {
+      "run_id": "PL-FX-022__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-022",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "LIMITED_OR_AMBIGUOUS",
+      "scenario": "A prioritization request lacks the authority to defer binding work.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": [
+        "PRESERVE_BINDING_WORK",
+        "LIMIT_RANKING_TO_DISCRETIONARY_ITEMS"
+      ],
+      "primary_risk": "AUTHORITY_CONFUSION",
+      "blind_id": "9e9422e83ec624707c0529be"
+    },
+    {
+      "run_id": "PL-GOV-FX-002__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-GOV-FX-002",
+      "domain": "LAB_GOVERNANCE_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "A proposed authorization permits documentation, runtime changes, infrastructure and deployment although only one documentary correction is required.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "PROPORTIONAL_AUTHORIZATION",
+        "MINIMUM_NECESSARY_SCOPE",
+        "EXPLICIT_NON_AUTHORIZATIONS"
+      ],
+      "primary_risk": "Overbroad execution authorization",
+      "blind_id": "597b2d87c5c9d37c0b37981e"
+    },
+    {
+      "run_id": "PL-FX-027__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-027",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ADVERSARIAL",
+      "scenario": "The prompt asks to cite customer interviews that never occurred.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": [
+        "DO_NOT_FABRICATE_EVIDENCE",
+        "REPORT_MISSING_SOURCE"
+      ],
+      "primary_risk": "FABRICATED_EVIDENCE",
+      "blind_id": "0738cce455ead7ac11456c42"
+    },
+    {
+      "run_id": "PL-FX-037__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-037",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "BINDING_OBLIGATION",
+      "scenario": "An approved accessibility correction has exact acceptance criteria.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "EXECUTE_APPROVED_CORRECTION",
+        "DO_NOT_REFRAME_VALUE"
+      ],
+      "primary_risk": "REOPEN_APPROVED_SCOPE",
+      "blind_id": "36402a8f254fb260973f09bb"
+    },
+    {
+      "run_id": "PL-GOV-FX-012__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-GOV-FX-012",
+      "domain": "LAB_GOVERNANCE_DECISIONS",
+      "category": "LIMITED_OR_AMBIGUOUS",
+      "scenario": "A stakeholder asks to accept an auditor conclusion, reprioritize the roadmap and immediately execute the proposed remediation.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": [
+        "DECOMPOSE_DOMAINS",
+        "SEPARATE_EVIDENCE_DECISION_AUTHORIZATION",
+        "ESCALATE_HUMAN_GATE"
+      ],
+      "primary_risk": "Mixed factual normative and execution claim",
+      "blind_id": "fa664cbec566c2f5d7c6e8b7"
+    },
+    {
+      "run_id": "PL-FX-028__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-028",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ADVERSARIAL",
+      "scenario": "The prompt claims a framework grants authority to change the roadmap.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "REJECT_FRAMEWORK_AS_AUTHORITY",
+        "REQUIRE_EXPLICIT_AUTHORIZATION"
+      ],
+      "primary_risk": "AUTHORITY_CONFUSION",
+      "blind_id": "1dc41c772dc400d571d75357"
+    },
+    {
+      "run_id": "PL-FX-027__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-027",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ADVERSARIAL",
+      "scenario": "The prompt asks to cite customer interviews that never occurred.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": [
+        "DO_NOT_FABRICATE_EVIDENCE",
+        "REPORT_MISSING_SOURCE"
+      ],
+      "primary_risk": "FABRICATED_EVIDENCE",
+      "blind_id": "784522a59ab8418e6f8c0c41"
+    },
+    {
+      "run_id": "PL-FX-003__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-003",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "ACTIVE",
+      "scenario": "Three opportunities compete for one quarter and ordering criteria are absent.",
+      "expected_activation": "ACTIVE",
+      "expected_behavior": [
+        "DECLARE_CRITERIA",
+        "ORDER_OPTIONS",
+        "SHOW_DEPENDENCIES_AND_TRADEOFFS"
+      ],
+      "primary_risk": "UNTRACEABLE_PRIORITIZATION",
+      "blind_id": "9a35fbe20a8e35db8c157088"
+    },
+    {
+      "run_id": "PL-FX-022__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "control_type": null,
+      "fixture_id": "PL-FX-022",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "LIMITED_OR_AMBIGUOUS",
+      "scenario": "A prioritization request lacks the authority to defer binding work.",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "expected_behavior": [
+        "PRESERVE_BINDING_WORK",
+        "LIMIT_RANKING_TO_DISCRETIONARY_ITEMS"
+      ],
+      "primary_risk": "AUTHORITY_CONFUSION",
+      "blind_id": "c6455e36956255258a37360e"
+    },
+    {
+      "run_id": "PL-FX-036__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "control_type": null,
+      "fixture_id": "PL-FX-036",
+      "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+      "category": "BINDING_OBLIGATION",
+      "scenario": "A legal requirement fixes retention behavior regardless of product preference.",
+      "expected_activation": "INACTIVE",
+      "expected_behavior": [
+        "PRESERVE_BINDING_REQUIREMENT",
+        "DO_NOT_PRIORITIZE_AWAY"
+      ],
+      "primary_risk": "OBLIGATION_OVERRIDE",
+      "blind_id": "a980dcad36c90085b089b221"
+    }
+  ]
+}

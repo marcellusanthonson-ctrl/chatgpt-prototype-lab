@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "7bcf6a95d8a15b8916611fca",
+  "run_id": "PL-FX-017__BASELINE",
+  "fixture_id": "PL-FX-017",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "INACTIVE",
+  "scenario": "Implement a component from a human-approved immutable implementation contract.",
+  "category": "INACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-017__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:51:23.052Z",
+    "ended_at": "2026-08-05T01:51:34.947Z",
+    "latency_ms": 11895,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13967,
+      "cached_input_tokens": 12032,
+      "output_tokens": 189
+    },
+    "response_sha256": "16c0b9d685c4aa016e09ca9df26f8f41f7b7391cc325c9b7219ce506b1cefe87",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "Implement the component exactly as specified by the human-approved immutable contract. Product-leadership analysis is not active; preserve the contract and closed scope, and escalate any ambiguity or required deviation to the authorized human rather than making new product or technical decisions.",
+      "selected_principles": [
+        "Preserve binding work",
+        "Respect closed scope",
+        "Do not invent evidence or authority"
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "Product-leadership analysis",
+        "Architecture or stack selection",
+        "Provider, activation, or integration selection"
+      ],
+      "evidence_and_uncertainty": [
+        "The scenario provides only that the implementation contract is human-approved and immutable; its contents and target environment are not provided."
+      ],
+      "authority_boundary": "Authority is limited to implementing the approved contract as written. Any ambiguity, omission, conflict, or deviation requires authorized human direction.",
+      "technical_handoff_readiness": "LIMITED"
+    }
+  }
+}

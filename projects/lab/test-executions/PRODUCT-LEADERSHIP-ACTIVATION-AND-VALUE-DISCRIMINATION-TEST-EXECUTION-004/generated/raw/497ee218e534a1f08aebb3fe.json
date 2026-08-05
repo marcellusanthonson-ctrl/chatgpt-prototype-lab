@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "497ee218e534a1f08aebb3fe",
+  "run_id": "PL-GOV-FX-006__PACKAGE",
+  "fixture_id": "PL-GOV-FX-006",
+  "domain": "LAB_GOVERNANCE_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "A proposed framework overlaps substantially with an existing criterion layer and introduces new maintenance obligations.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-GOV-FX-006__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:51:56.260Z",
+    "ended_at": "2026-08-05T01:52:19.981Z",
+    "latency_ms": 23721,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19536,
+      "cached_input_tokens": 13056,
+      "output_tokens": 655
+    },
+    "response_sha256": "1a78029b479e16d254629cbcc28dcfbe051afd86476cd0dc1b0a21995c17ed35",
+    "response": {
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "answer": "Recommendation: do not add the proposed framework on the current evidence. Preserve the existing criterion layer and closed scope unless comparative evidence demonstrates distinct incremental value sufficient to justify the additional maintenance burden. This is a conditional recommendation, not an adoption, implementation, activation, or integration decision.",
+      "selected_principles": [
+        "PL-P07 — Use only context-relevant frameworks and record rejected alternatives.",
+        "PL-P10 — Establish candidate value through comparative evidence rather than assertion.",
+        "PL-P05 — Do not infer authority from this recommendation or package output."
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — No value-definition or outcome-review task is established.",
+        "PL-FW-STRATEGIC-CHOICES — Framework adoption strategy is not authorized; applying it would add unnecessary framework overlay.",
+        "PL-FW-OPPORTUNITY-MAPPING — No discovery evidence or opportunity-prioritization scope is supplied.",
+        "PL-FW-JOBS-CONTEXT — No user-motivation question or evidence is supplied.",
+        "PL-FW-PRIORITIZATION-ORDER — No portfolio-ordering task or authorized roadmap trade-off is supplied.",
+        "PL-FW-LEARNING-LOOP — No executed test or post-release evidence exists."
+      ],
+      "evidence_and_uncertainty": [
+        "Provided scenario evidence: the proposal substantially overlaps an existing criterion layer and creates new maintenance obligations.",
+        "No comparative evidence establishes incremental value, reduced risk, or benefits exceeding maintenance cost.",
+        "The degree of overlap and maintenance burden is unmeasured.",
+        "Product decision scope, authority state, binding obligations, and evidence provenance are not explicit; the minimum-context rule therefore requires LIMITED_OR_AMBIGUOUS.",
+        "Candidate value, activation precision, integration safety, and real-product generalization remain unestablished."
+      ],
+      "authority_boundary": "The candidate package has authority effect NONE, is disabled, and grants no implementation permission. This output cannot approve adoption, reopen closed scope, or select architecture, stack, provider, implementation, activation, or integration. Any such decision requires separate explicit human authority and evidence.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

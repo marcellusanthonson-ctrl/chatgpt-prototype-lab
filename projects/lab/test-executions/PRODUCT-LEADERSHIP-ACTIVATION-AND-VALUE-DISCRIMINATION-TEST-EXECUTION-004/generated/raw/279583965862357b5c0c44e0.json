@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "279583965862357b5c0c44e0",
+  "run_id": "PL-FX-019__PACKAGE",
+  "fixture_id": "PL-FX-019",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "INACTIVE",
+  "scenario": "Produce the exact status fields requested from verified repository state.",
+  "category": "INACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-019__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:48:26.536Z",
+    "ended_at": "2026-08-05T01:48:47.437Z",
+    "latency_ms": 20901,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19531,
+      "cached_input_tokens": 0,
+      "output_tokens": 432
+    },
+    "response_sha256": "79a7c124c3ea25d7243b6300b2969fbcc67fbefcf85e85ae391351af8d86a9cb",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "Exact repository status fields cannot be produced because no verified repository-state evidence or requested field list was supplied. Abstain without reopening scope or inferring values.",
+      "selected_principles": [
+        "PL-P05 — Do not infer authority from evidence, recommendations, or framework output.",
+        "PL-P09 — Preserve the closed deterministic task and its binding scope."
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — irrelevant to deterministic status reporting.",
+        "PL-FW-STRATEGIC-CHOICES — no strategy decision requested.",
+        "PL-FW-OPPORTUNITY-MAPPING — no discovery scope.",
+        "PL-FW-JOBS-CONTEXT — no user-motivation question.",
+        "PL-FW-PRIORITIZATION-ORDER — no prioritization requested.",
+        "PL-FW-LEARNING-LOOP — no executed test or learning review."
+      ],
+      "evidence_and_uncertainty": [
+        "Evidence: only the embedded scenario and disabled candidate package were provided; neither contains verified repository state.",
+        "Unknown: the exact requested status-field names and their repository-derived values.",
+        "No repository status, test result, value increment, authority, or implementation permission is inferred."
+      ],
+      "authority_boundary": "Candidate package authority effect is NONE. This response does not authorize product decisions, implementation, activation, integration, architecture, stack, or provider selection.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

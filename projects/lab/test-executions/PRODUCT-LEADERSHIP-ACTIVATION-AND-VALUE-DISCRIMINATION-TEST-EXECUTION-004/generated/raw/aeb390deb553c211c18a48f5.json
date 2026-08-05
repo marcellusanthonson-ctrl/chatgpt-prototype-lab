@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "aeb390deb553c211c18a48f5",
+  "run_id": "PL-FX-035__PACKAGE",
+  "fixture_id": "PL-FX-035",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "A qualitative signal suggests value but measured outcome is unchanged.",
+  "category": "CONTRADICTORY_EVIDENCE",
+  "provenance": {
+    "request_id": "PL-FX-035__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:45:55.802Z",
+    "ended_at": "2026-08-05T01:46:33.427Z",
+    "latency_ms": 37625,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19531,
+      "cached_input_tokens": 0,
+      "output_tokens": 895
+    },
+    "response_sha256": "fee65aa002b2bcf87edcd99a5baf4fd9d5fad6f3ce7cf06da7f0e264f93699ca",
+    "response": {
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "answer": "The qualitative signal is insufficient to establish value because the measured outcome is unchanged. Treat the result as inconclusive, not positive or negative proof. Product problem and desired outcome are not specified. Conditional recommendation: preserve the unchanged measured outcome as the current result, investigate whether the qualitative signal measures a different outcome or reflects a measurement limitation, and make no value, priority, implementation, activation, or integration decision until evidence provenance, success criteria, scope, obligations, and authority are explicit. Exclusions: no architecture, stack, provider, technical solution, implementation, activation, or integration selection.",
+      "selected_principles": [
+        "PL-P02 — Separate the qualitative output/signal from measured outcome and any claimed impact.",
+        "PL-P04 — Preserve provenance and label the apparent evidence tension and missing context.",
+        "PL-P05 — Do not infer decision or implementation authority from either signal.",
+        "PL-P08 — Avoid numeric confidence or forecasts unsupported by the evidence."
+      ],
+      "selected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — Relevant for distinguishing a qualitative signal from the unchanged measured outcome and any unestablished impact.",
+        "PL-FW-LEARNING-LOOP — Conditionally relevant for recording the signal, measured result, unresolved interpretation, and next learning need; applicability remains uncertain because test context is unspecified."
+      ],
+      "rejected_frameworks": [
+        "PL-FW-STRATEGIC-CHOICES — No strategy formulation or conflicting initiatives are presented.",
+        "PL-FW-OPPORTUNITY-MAPPING — Evidence and product scope are too weak to construct an opportunity map.",
+        "PL-FW-JOBS-CONTEXT — No user motivation or alternative-behavior evidence is supplied.",
+        "PL-FW-PRIORITIZATION-ORDER — No portfolio, roadmap, dependencies, or authorized ordering decision is presented."
+      ],
+      "evidence_and_uncertainty": [
+        "Given evidence: a qualitative signal suggests value; provenance, method, sample, and meaning are unknown.",
+        "Given evidence: the measured outcome is unchanged; metric definition, baseline, duration, sensitivity, and provenance are unknown.",
+        "The qualitative signal and unchanged measurement create an unresolved evidentiary tension; neither overrides the other.",
+        "Value increment, impact, causality, generalizability, product scope, binding obligations, and decision authority are not established.",
+        "Learning need: determine whether the two observations concern the same intended outcome and whether the measurement could detect a meaningful change."
+      ],
+      "authority_boundary": "The candidate package has authority effect NONE and is disabled. This output is evidence-bounded guidance only; it creates no product decision, implementation permission, activation, integration, or technical authority. Missing authority state and binding obligations require fail-closed abstention from decisions.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

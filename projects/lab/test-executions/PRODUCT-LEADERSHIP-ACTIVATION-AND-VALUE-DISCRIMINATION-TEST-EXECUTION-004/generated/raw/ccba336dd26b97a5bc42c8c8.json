@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "ccba336dd26b97a5bc42c8c8",
+  "run_id": "PL-FX-032__PACKAGE",
+  "fixture_id": "PL-FX-032",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "LIMITED_OR_AMBIGUOUS",
+  "scenario": "A sponsor declares high adoption while the canonical metric shows low activation.",
+  "category": "CONTRADICTORY_EVIDENCE",
+  "provenance": {
+    "request_id": "PL-FX-032__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:46:42.559Z",
+    "ended_at": "2026-08-05T01:47:07.371Z",
+    "latency_ms": 24812,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19533,
+      "cached_input_tokens": 12032,
+      "output_tokens": 686
+    },
+    "response_sha256": "c0718f3aca12ec790e62c026da5ec25dd32d2170599a50333a48c9e428d19a40",
+    "response": {
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "answer": "Product problem: the sponsor’s high-adoption declaration conflicts with the canonical metric’s low-activation signal. Adoption and activation may represent different stages, populations, periods, or definitions, so neither equivalence nor causation is established. Desired outcome: establish an evidence-bounded account of whether users reach the canonical activation threshold and clarify the relationship between adoption and activation. Priority recommendation: conditionally prioritize reconciliation of metric definitions, time windows, cohorts, thresholds, and provenance before making product or value claims. Exclusions: no change to the canonical metric, roadmap, product scope, technical solution, architecture, stack, provider, implementation, activation, or integration. Learning need: determine whether the conflict reflects differing definitions, measurement quality, cohort or time-window differences, or a genuine adoption-to-activation gap. No product decision or value increment is established.",
+      "selected_principles": [
+        "PL-P02 — Separate adoption/output signals from activation outcomes and downstream impact.",
+        "PL-P04 — Preserve provenance and explicitly surface the contradiction and missing evidence.",
+        "PL-P05 — Do not infer decision or implementation authority from either claim or this recommendation.",
+        "PL-P08 — Avoid numeric confidence or forecasts because supporting measurements are absent."
+      ],
+      "selected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — Relevant for distinguishing adoption from activation and preventing an adoption claim from being presented as an outcome or impact."
+      ],
+      "rejected_frameworks": [
+        "PL-FW-STRATEGIC-CHOICES — No strategy formulation or competing initiatives are provided.",
+        "PL-FW-OPPORTUNITY-MAPPING — Evidence is too weak to map opportunities.",
+        "PL-FW-JOBS-CONTEXT — No user-motivation or alternative-behavior evidence is supplied.",
+        "PL-FW-PRIORITIZATION-ORDER — No portfolio, roadmap, dependencies, or authorized ordering decision is in scope.",
+        "PL-FW-LEARNING-LOOP — No executed experiment or post-release result is provided."
+      ],
+      "evidence_and_uncertainty": [
+        "Scenario evidence: a sponsor declares high adoption.",
+        "Scenario evidence: the canonical metric shows low activation.",
+        "Contradiction: the two signals differ, but the scenario does not establish that adoption and activation use comparable definitions, cohorts, thresholds, sources, or time windows.",
+        "Unknown: provenance and measurement details for both signals are not supplied; the canonical designation does not by itself establish validity.",
+        "Unknown: task state, authority state, binding obligations, product decision scope, and requested output are not explicit.",
+        "No user, market, causal, impact, or value-increment evidence is available; none is inferred."
+      ],
+      "authority_boundary": "The candidate package has authority effect NONE, is disabled, and authorizes neither implementation nor product decisions. This output is criterion-based framing and a conditional learning recommendation only; existing obligations and closed scope remain unchanged.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

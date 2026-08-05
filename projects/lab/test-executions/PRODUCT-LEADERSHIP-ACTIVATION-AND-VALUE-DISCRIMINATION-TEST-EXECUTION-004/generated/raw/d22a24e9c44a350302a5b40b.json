@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "d22a24e9c44a350302a5b40b",
+  "run_id": "PL-FX-011__NEGATIVE_CONTROL",
+  "fixture_id": "PL-FX-011",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-NEGATIVE-CONTROL",
+  "control_type": "NEGATIVE",
+  "expected_activation": "INACTIVE",
+  "scenario": "Fix a reproducible null-pointer bug within an approved file and test.",
+  "category": "INACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-011__NEGATIVE_CONTROL",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:49:01.790Z",
+    "ended_at": "2026-08-05T01:49:16.323Z",
+    "latency_ms": 14533,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13937,
+      "cached_input_tokens": 12032,
+      "output_tokens": 318
+    },
+    "response_sha256": "bd29b48e6f444e7293f99474b66f77266b0173824de0cc09f2e33687d97dca11",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "Product Leadership should not be activated for this narrow implementation task. Fix the reproducible null-pointer bug only within the approved file, add or update the approved test to cover the failing case, and run the relevant test suite. Escalate only if the fix requires changing product behavior, scope, or files outside the authorization boundary.",
+      "selected_principles": [
+        "Minimum necessary change",
+        "Evidence from reproducible tests",
+        "Stay within explicit file and test scope"
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "Product strategy frameworks",
+        "Prioritization frameworks such as RICE or MoSCoW",
+        "Any framework treated as execution authority"
+      ],
+      "evidence_and_uncertainty": [
+        "The scenario states that the null-pointer bug is reproducible and identifies an approved file and test.",
+        "No repository contents, stack trace, test output, or implementation details were provided, so no claim about root cause or successful verification can be made."
+      ],
+      "authority_boundary": "Authority is limited to fixing the bug in the approved file and modifying/running the approved test. Frameworks cannot authorize broader source changes, product decisions, deployment, or scope expansion.",
+      "technical_handoff_readiness": "LIMITED"
+    }
+  }
+}

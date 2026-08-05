@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "fa664cbec566c2f5d7c6e8b7",
+  "run_id": "PL-GOV-FX-012__PACKAGE",
+  "fixture_id": "PL-GOV-FX-012",
+  "domain": "LAB_GOVERNANCE_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "LIMITED_OR_AMBIGUOUS",
+  "scenario": "A stakeholder asks to accept an auditor conclusion, reprioritize the roadmap and immediately execute the proposed remediation.",
+  "category": "LIMITED_OR_AMBIGUOUS",
+  "provenance": {
+    "request_id": "PL-GOV-FX-012__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:52:58.802Z",
+    "ended_at": "2026-08-05T01:53:29.146Z",
+    "latency_ms": 30344,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19541,
+      "cached_input_tokens": 13056,
+      "output_tokens": 758
+    },
+    "response_sha256": "44eaead0185fd30c23491d8955392eb993905692d0a112720c4e2badc00ec300",
+    "response": {
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "answer": "The auditor conclusion may be recorded as a recommendation, but it cannot yet be accepted as binding, used to reprioritize the roadmap, or executed. Product decision scope, auditor evidence and provenance, authority state, binding obligations, dependencies, trade-offs, and existing roadmap commitments are unspecified. Fail closed on immediate remediation. A conditional next step is an authorized human review that validates the conclusion, identifies binding obligations, and compares the remediation against current roadmap priorities using explicit criteria and exclusions. No outcome, impact, safety, or value improvement can be claimed.",
+      "selected_principles": [
+        "PL-P04 — Preserve evidence provenance and label assumptions and unknowns.",
+        "PL-P05 — Do not infer authority from an auditor conclusion or recommendation.",
+        "PL-P06 — Any roadmap reprioritization must expose criteria, ordering, trade-offs, dependencies, and excluded work.",
+        "PL-P09 — Preserve closed scope and binding obligations unless explicit authority reopens them."
+      ],
+      "selected_frameworks": [
+        "PL-FW-PRIORITIZATION-ORDER — Limited to structuring a future authorized roadmap review; it does not authorize or determine reprioritization."
+      ],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — No value-definition, success-criteria, or outcome-review evidence was supplied.",
+        "PL-FW-STRATEGIC-CHOICES — Unnecessary for the narrower roadmap-ordering request and cannot override binding obligations.",
+        "PL-FW-OPPORTUNITY-MAPPING — No discovery evidence or opportunity set was supplied.",
+        "PL-FW-JOBS-CONTEXT — No user-motivation question or evidence was supplied.",
+        "PL-FW-LEARNING-LOOP — No experiment or post-release result exists."
+      ],
+      "evidence_and_uncertainty": [
+        "Fact: A stakeholder requested acceptance, reprioritization, and immediate execution.",
+        "Unknown: The auditor’s conclusion, supporting evidence, provenance, scope, and remediation details were not provided.",
+        "Unknown: Decision and implementation authority are unresolved; stakeholder status alone does not establish authority.",
+        "Unknown: Binding legal, safety, contractual, regulatory, or existing roadmap obligations were not supplied.",
+        "Unknown: Priority criteria, dependencies, trade-offs, exclusions, and affected commitments are absent.",
+        "No remediation benefit, outcome, impact, or value increment has been measured or established."
+      ],
+      "authority_boundary": "The candidate package has authority effect NONE and implementation_authorized=false. It cannot accept the audit conclusion, alter the roadmap, authorize remediation, or create implementation permission. Those actions require separately established human authority and preservation of all binding obligations.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

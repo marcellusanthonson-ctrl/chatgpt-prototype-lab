@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "7e9dc0f9e5a11528a7770ea9",
+  "run_id": "PL-GOV-FX-004__BASELINE",
+  "fixture_id": "PL-GOV-FX-004",
+  "domain": "LAB_GOVERNANCE_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "Two projects request the same limited capacity; one has a blocking customer risk and the other has a high-potential but unvalidated opportunity.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-GOV-FX-004__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:47:56.762Z",
+    "ended_at": "2026-08-05T01:48:16.928Z",
+    "latency_ms": 20166,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13983,
+      "cached_input_tokens": 0,
+      "output_tokens": 341
+    },
+    "response_sha256": "ad4554b87fc35d3f148373973bf149961924b649bd01354f205774c9a9dfb159",
+    "response": {
+      "activation_classification": "ACTIVE",
+      "answer": "This is a product prioritization conflict. Protect the blocking customer obligation first, while preserving a small, time-boxed validation path for the opportunity if capacity permits. Do not fully fund the opportunity until evidence improves.",
+      "selected_principles": [
+        "Honor binding customer work",
+        "Prioritize validated risk over unvalidated upside",
+        "Use bounded discovery to preserve option value"
+      ],
+      "selected_frameworks": [
+        "Risk-and-evidence-based capacity allocation"
+      ],
+      "rejected_frameworks": [
+        "Architecture or stack selection",
+        "Provider or integration selection",
+        "Automatic activation or implementation"
+      ],
+      "evidence_and_uncertainty": [
+        "The customer risk is described as blocking, but its impact and deadline are unknown.",
+        "The opportunity is high-potential but explicitly unvalidated.",
+        "Available capacity and existing commitments are unspecified."
+      ],
+      "authority_boundary": "Product leadership may recommend allocation criteria; the authorized owner must approve any capacity change within existing commitments and scope.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}
