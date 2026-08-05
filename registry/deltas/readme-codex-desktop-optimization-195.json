@@ -1,1 +1,46 @@
-{"schema_version":"1.0.0","delta_id":"readme-codex-desktop-optimization-195","authorization_id":"AUTHORIZATION_LAB_README_CODEX_DESKTOP_OPTIMIZATION_DOCUMENTATION_195","status":"PUBLICATION_PENDING","changes":[{"path":"README.md","operation":"INSERT_SECTION","section":"Ejecución optimizada con Codex Desktop"},{"path":"projects/lab/evidence/CONTEXT_BUDGET_REPORT_195.json","operation":"CREATE"},{"path":"projects/lab/evidence/EVD-LAB-README-CODEX-DESKTOP-OPTIMIZATION-195.json","operation":"CREATE"},{"path":"projects/lab/authorization-lifecycle/README_CODEX_DESKTOP_OPTIMIZATION_AUTHORIZATION_LIFECYCLE_195.json","operation":"UPDATE"}],"non_effects":["NO_MODEL_REQUESTS","NO_LOGIN","NO_SKILLS","NO_SDK","NO_RUNTIME","NO_PRODUCT","NO_EXTERNAL_REPOSITORY","NO_PRODUCT_LEADERSHIP_ACTION"],"updated_at":"2026-08-05T14:19:00-04:00"}
+{
+  "schema_version": "1.0.0",
+  "delta_id": "readme-codex-desktop-optimization-195",
+  "authorization_id": "AUTHORIZATION_LAB_README_CODEX_DESKTOP_OPTIMIZATION_DOCUMENTATION_195",
+  "status": "VERIFIED_REMOTE_PUBLICATION_AUTHORIZATION_CONSUMED",
+  "changes": [
+    {
+      "path": "README.md",
+      "operation": "INSERT_SECTION",
+      "section": "Ejecución optimizada con Codex Desktop"
+    },
+    {
+      "path": "projects/lab/evidence/CONTEXT_BUDGET_REPORT_195.json",
+      "operation": "CREATE"
+    },
+    {
+      "path": "projects/lab/evidence/EVD-LAB-README-CODEX-DESKTOP-OPTIMIZATION-195.json",
+      "operation": "CREATE_AND_RECONCILE_VERIFIED_PUBLICATION"
+    },
+    {
+      "path": "projects/lab/authorization-lifecycle/README_CODEX_DESKTOP_OPTIMIZATION_AUTHORIZATION_LIFECYCLE_195.json",
+      "operation": "UPDATE_TO_CONSUMED"
+    }
+  ],
+  "publication": {
+    "pull_request": 52,
+    "merge_commit": "ad3b5ff55eb811662410bfc888b65ff73d8bc24c",
+    "closure_pull_request": 53,
+    "closure_head": "9e095a25c367e980cd4a69d224c26b3c73b7d0f4",
+    "verified": true
+  },
+  "authorization_state": "CONSUMED_VERIFIED_REMOTE_PUBLICATION",
+  "residual_authority": "NONE",
+  "non_effects": [
+    "NO_MODEL_REQUESTS",
+    "NO_LOGIN",
+    "NO_SKILLS",
+    "NO_SDK",
+    "NO_RUNTIME",
+    "NO_PRODUCT",
+    "NO_EXTERNAL_REPOSITORY",
+    "NO_PRODUCT_LEADERSHIP_ACTION"
+  ],
+  "updated_at": "2026-08-05T14:31:00-04:00",
+  "reconciled_by_authorization": "AUTHORIZATION_LAB_POST_195_CONTINUITY_RECONCILIATION_AND_PRODUCT_LEADERSHIP_ZERO_MODEL_READINESS_PROBE_PREPARATION_196"
+}

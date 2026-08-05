@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-PRODUCT-LEADERSHIP-ZERO-MODEL-READINESS-PROBE-196",
+  "project_id": "lab",
+  "kind": "PRODUCT_LEADERSHIP_ZERO_MODEL_LOCAL_READINESS_PROBE_TERMINAL_RESULT",
+  "status": "INSUFFICIENT_EVIDENCE_EXECUTED_AWAITING_VERIFIED_REMOTE_PUBLICATION",
+  "recorded_at": "2026-08-05T14:31:00-04:00",
+  "authorization": "AUTHORIZATION_LAB_POST_195_CONTINUITY_RECONCILIATION_AND_PRODUCT_LEADERSHIP_ZERO_MODEL_READINESS_PROBE_PREPARATION_196",
+  "verified_remote_main_at_start": "9e095a25c367e980cd4a69d224c26b3c73b7d0f4",
+  "integration_id": "INT-LAB-004",
+  "candidate_state": "CANDIDATE_NOT_ACTIVE_NOT_INTEGRATED",
+  "readiness_before_probe": "NOT_READY_FOR_FRESH_RETEST_REISSUE",
+  "terminal_result": "INSUFFICIENT_EVIDENCE",
+  "terminal_reason": "THE_AVAILABLE_EXECUTION_SURFACE_IS_LINUX_WITHOUT_CODEX_CLI_AND_CANNOT OBSERVE THE REQUIRED FRESH WINDOWS WORKTREE OR PREEXISTING CODEX CHATGPT SESSION WITHOUT EXPANDING SCOPE OR PERFORMING FORBIDDEN ACTIONS",
+  "checks": {
+    "live_remote_main": {
+      "status": "PASS",
+      "head": "9e095a25c367e980cd4a69d224c26b3c73b7d0f4"
+    },
+    "authorization_195_consumption": {
+      "status": "PASS_SPECIFIC_LIFECYCLE_SOURCE",
+      "lifecycle_status": "CONSUMED_VERIFIED_REMOTE_PUBLICATION",
+      "publication_merge_commit": "ad3b5ff55eb811662410bfc888b65ff73d8bc24c",
+      "final_closure_head": "9e095a25c367e980cd4a69d224c26b3c73b7d0f4"
+    },
+    "targeted_gitattributes_lf_rule": {
+      "status": "PASS_PRESENT",
+      "rule": "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/** text eol=lf",
+      "source": ".gitattributes"
+    },
+    "fresh_windows_worktree": {
+      "status": "NOT_OBSERVABLE",
+      "required": true,
+      "observed_environment": "Linux 6.18.35 x86_64",
+      "is_windows": false,
+      "worktree_created": false
+    },
+    "raw_byte_13_of_13_fresh_worktree": {
+      "status": "NOT_RUN",
+      "required": true,
+      "historical_manifest_file_count": 13,
+      "historical_failure": "13_OF_13_MISMATCH_DUE_TO_LF_CRLF_CHECKOUT",
+      "fresh_proof": null
+    },
+    "codex_cli": {
+      "status": "NOT_INSTALLED_IN_AVAILABLE_EXECUTION_SURFACE",
+      "required_version": "0.146.0",
+      "required_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+      "command_path": null,
+      "version_check": "NOT_RUN_CODEX_NOT_INSTALLED",
+      "sha256_check": "NOT_RUN_CODEX_NOT_INSTALLED"
+    },
+    "preexisting_chatgpt_authentication": {
+      "status": "NOT_OBSERVABLE",
+      "codex_login_status_executed": false,
+      "reason": "CODEX_CLI_NOT_INSTALLED",
+      "login_attempted": false,
+      "credentials_accessed": false
+    },
+    "requested_surface": {
+      "model": "gpt-5.6-sol",
+      "reasoning_effort": "medium",
+      "sandbox": "read-only",
+      "status": "NOT_OBSERVABLE_WITHOUT_CODEX_LOCAL_METADATA_OR_A_FORBIDDEN_MODEL_REQUEST"
+    },
+    "deterministic_validators": {
+      "status": "NOT_RUN_AFTER_TERMINAL_ENVIRONMENT_STOP",
+      "reason": "NO_LOCAL_REPOSITORY_WORKTREE_AND_REQUIRED_WINDOWS_CODEX_SURFACE_UNAVAILABLE"
+    }
+  },
+  "environment_probe": {
+    "os_system": "Linux",
+    "os_release": "6.18.35",
+    "machine": "x86_64",
+    "git_path": "/usr/bin/git",
+    "codex_path": null,
+    "gh_path": null,
+    "probe_elapsed_ms": 0.156
+  },
+  "stop_conditions_triggered": [
+    "FRESH_WINDOWS_EXECUTION_ENVIRONMENT_UNAVAILABLE",
+    "CODEX_CLI_OR_PREEXISTING_SESSION_UNAVAILABLE",
+    "EXACT_SURFACE_CANNOT_BE_PROVEN_WITHOUT_GENERATION"
+  ],
+  "non_effects": {
+    "model_requests": 0,
+    "login_actions": 0,
+    "retest_replay_regeneration_or_rescoring": 0,
+    "external_audit_or_adjudication": 0,
+    "product_leadership_governed_artifact_mutations": 0,
+    "int_lab_004_state_change": false,
+    "promotion_activation_integration_runtime_or_product_effect": "NONE",
+    "skill_sdk_or_external_repository_action": "NONE"
+  },
+  "claim_boundary": "THIS RESULT DESCRIBES ONLY THE AVAILABLE CHATGPT EXECUTION SURFACE AND DOES NOT DETERMINE WHETHER JONATHAN MARTINEZ'S WINDOWS CODEX DESKTOP ENVIRONMENT IS READY OR NOT READY",
+  "fresh_retest_authorization_effect": "NONE",
+  "next_action": "RUN_A_NEW_SEPARATELY_AUTHORIZED_ZERO_MODEL_READINESS_PROBE_FROM_THE_ACTUAL_WINDOWS_CODEX_DESKTOP_ENVIRONMENT_OR_PROVIDE ITS MACHINE_GENERATED EVIDENCE FOR CANONICAL RECONCILIATION",
+  "source_refs": [
+    "projects/lab/continuity/PRODUCT_LEADERSHIP_ZERO_MODEL_READINESS_PROBE_NEXT_INSTRUCTIONS.json",
+    "projects/lab/evidence/EVD-LAB-PL003-FRESH-RETEST-192.json",
+    "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005/CHAIN_OF_CUSTODY_MANIFEST.json",
+    "projects/lab/pending/PEND-LAB-048.json",
+    "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/product-leadership/INCIDENT_LEDGER.json",
+    "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/product-leadership/INTEGRATION_READINESS.json",
+    ".gitattributes"
+  ]
+}
