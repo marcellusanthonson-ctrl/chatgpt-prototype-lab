@@ -2,12 +2,12 @@
   "schema_version": "1.0.0",
   "evidence_id": "CODEX-BOUNDED-RECOVERY-RESOLVER-001-RESULT-AUTHORIZATION-188",
   "project_id": "lab",
-  "status": "COMPLETE_RESULT_READY_FOR_VERIFIED_PUBLICATION",
+  "status": "COMPLETE_RESULT_PUBLISHED",
   "exact_result": "FAIL_REVISE_OR_REJECT_EVIDENCE_READY_FOR_SEPARATE_EXTERNAL_AUDIT_DECISION",
   "authorization_id": "AUTHORIZATION_LAB_CODEX_BOUNDED_RECOVERY_RESOLVER_CREATION_AND_PRODUCT_LEADERSHIP_TEST003_EXECUTION_188",
   "verified_remote_main_head_at_resume": "ef3d1bd023c030b531b99daf5105850f4a296a99",
   "working_branch": "codex/auth-188-resume",
-  "agent_state": "COMPLETE_RESULT_READY_FOR_VERIFIED_PUBLICATION",
+  "agent_state": "COMPLETE",
   "recovery": {
     "cycles_used": 4,
     "cycles_remaining_unused": 1,
@@ -119,10 +119,15 @@
     "canonical_path": "projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004/MANIFEST.json"
   },
   "publication": {
-    "state": "PENDING_VERIFIED_SQUASH_MERGE",
-    "authorization_consumes_on_verified_publication": true
+    "state": "VERIFIED_REMOTE_PUBLICATION",
+    "pull_request": 36,
+    "url": "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/pull/36",
+    "head": "6f42812973cbc99a0c509b3344cea3dcc531bb9c",
+    "verified_remote_main": true,
+    "published_at": "2026-08-05T02:19:57Z",
+    "authorization_consumed_on_verified_publication": true
   },
-  "authority_state": "ACTIVE_ONLY_FOR_RESULT_PUBLICATION_AND_VERIFICATION",
+  "authority_state": "CONSUMED_COMPLETE_RESULT_PUBLISHED_NO_RESIDUAL_AUTHORITY",
   "non_effects": [
     "NO_SECRET_INSPECTION_OR_DISCLOSURE",
     "NO_CALIBRATION_V2_CONTENT_OR_EXPECTED_DIGEST_MUTATION",

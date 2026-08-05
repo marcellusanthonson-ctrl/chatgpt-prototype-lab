@@ -11,7 +11,8 @@
   "requests": {"smoke":1,"calibration_scorers":2,"generation":112,"blinded_scoring":14,"total":129,"retries":0},
   "outputs": {"fixtures":52,"arms":4,"generated":112,"frozen":112,"scored":112},
   "calibration_v2": "PASS_TWO_INDEPENDENT_SCORERS_24_OF_24_GOLD_AGREEMENT",
-  "authority_state": "ACTIVE_ONLY_FOR_RESULT_PUBLICATION_AND_VERIFICATION",
+  "authority_state": "CONSUMED_COMPLETE_RESULT_PUBLISHED_NO_RESIDUAL_AUTHORITY",
+  "publication": {"pr":36,"url":"https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/pull/36","head":"6f42812973cbc99a0c509b3344cea3dcc531bb9c","verified_remote_main":true,"published_at":"2026-08-05T02:19:57Z"},
   "claim_boundary": "SYNTHETIC_RESULT_ONLY_NO_AUDIT_PROMOTION_ACTIVATION_OR_INTEGRATION_EFFECT",
   "single_next_action": "JONATHAN_SEPARATELY_DECIDES_WHETHER_TO_AUTHORIZE_AN_INDEPENDENT_PHASE_3_AUDIT_OF_THE_EXECUTION_004_FAIL_RESULT"
 }
