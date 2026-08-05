@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005",
+  "attempt": "ATTEMPT-004",
+  "status": "FAIL_EXACT_AUTHENTICATION_UNAVAILABLE",
+  "runner": {
+    "product": "OpenAI Codex CLI",
+    "version_required": "0.146.0",
+    "version_observed": "0.146.0",
+    "version_result": "PASS",
+    "release_channel": "stable",
+    "binary_path": "NPM_GLOBAL/@openai/codex/node_modules/@openai/codex-win32-x64/vendor/x86_64-pc-windows-msvc/bin/codex.exe",
+    "sha256_required": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "sha256_observed": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "sha256_result": "PASS",
+    "binary_bytes": 358650672,
+    "historical_runner_reused": false
+  },
+  "requested_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "medium",
+  "requested_sandbox": "read-only",
+  "requested_tool_access": "NONE",
+  "authentication": {
+    "required": "PREEXISTING_CHATGPT_CODEX_SESSION_ONLY",
+    "probe_command": "codex login status",
+    "result": "FAIL_NOT_LOGGED_IN",
+    "login_attempted": false,
+    "api_key_used": false,
+    "model_request_attempted": false
+  },
+  "eligibility_result": "BLOCKED_BEFORE_MODEL_REQUESTS",
+  "machine_reason": "STOP_EXACT_AUTHENTICATION_UNAVAILABLE"
+}

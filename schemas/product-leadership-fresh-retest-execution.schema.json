@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lab.local/schemas/product-leadership-fresh-retest-execution.schema.json",
+  "title": "Product Leadership Test 003 fresh retest execution artifact",
+  "type": "object",
+  "required": ["schema_version", "execution_id", "status"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "execution_id": {"const": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005"},
+    "attempt": {"enum": ["ATTEMPT-004"]},
+    "status": {"type": "string", "minLength": 1},
+    "request_counts": {
+      "type": "object",
+      "properties": {
+        "total": {"type": "integer", "minimum": 0, "maximum": 41}
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

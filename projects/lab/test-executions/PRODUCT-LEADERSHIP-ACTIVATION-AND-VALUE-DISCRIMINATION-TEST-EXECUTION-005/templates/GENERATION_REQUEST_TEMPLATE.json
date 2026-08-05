@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "template_id": "PL003-R192-GENERATION-1.0.0",
+  "system_instruction": "Return only JSON matching the supplied response schema. Use only supplied context. Do not call tools, inspect files, infer hidden state, or claim authority not present in the context.",
+  "common_task_instruction": "Analyze only the supplied context, preserve authority and binding obligations, distinguish evidence from assumptions, and return the smallest sufficient response.",
+  "task_context_placeholder": "${SEVEN_FIELD_TASK_CONTEXT}",
+  "treatment_placeholder": "${FROZEN_PACKAGE_MATERIALS_OR_EXPLICIT_ABSENCE}",
+  "response_contract": {
+    "type": "object",
+    "required": ["activation_classification", "analysis", "recommendation", "uncertainty"],
+    "additionalProperties": false,
+    "activation_labels": ["ACTIVE", "INACTIVE", "LIMITED_OR_AMBIGUOUS"],
+    "maximum_words": 420
+  },
+  "arm_difference_policy": "ONLY_TREATMENT_PACKAGE_MATERIALS_MAY_DIFFER"
+}

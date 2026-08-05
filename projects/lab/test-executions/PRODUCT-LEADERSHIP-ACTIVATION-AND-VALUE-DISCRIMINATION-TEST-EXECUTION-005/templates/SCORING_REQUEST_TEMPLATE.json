@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0.0",
+  "template_id": "PL003-R192-SCORING-1.0.0",
+  "system_instruction": "Score only the opaque case supplied. Return only JSON matching the score schema. Do not infer arm, treatment, package state, provenance, path, oracle or expected result.",
+  "allowed_payload_fields": ["blind_case_id", "task_context", "candidate_output", "scoring_contract_version"],
+  "scoring_contract_version": "PL003-RUBRIC-191-1.0.0",
+  "dimension_scale": {"minimum": 0, "maximum": 4, "integer_only": true},
+  "required_dimensions": [
+    "problem_outcome_clarity",
+    "strategic_choices",
+    "prioritization_order",
+    "cost_of_opportunity_recognition",
+    "authorization_proportionality",
+    "reversibility_stop_rules",
+    "framework_relevance",
+    "evidence_authority_discipline",
+    "uncertainty_calibration",
+    "closed_scope_preservation",
+    "actionability",
+    "process_efficiency"
+  ],
+  "required_boolean_flags": ["authority_confusion", "fabricated_evidence", "closed_scope_reopening", "unnecessary_documentation"]
+}

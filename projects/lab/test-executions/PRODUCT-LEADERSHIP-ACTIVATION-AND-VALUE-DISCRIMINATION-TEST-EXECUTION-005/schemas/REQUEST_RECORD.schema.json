@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lab.local/schemas/pl003-r192-request-record.json",
+  "type": "object",
+  "required": ["request_id", "stage", "input_sha256", "status", "retry_index"],
+  "properties": {
+    "request_id": {"type": "string", "minLength": 1},
+    "stage": {"enum": ["SMOKE", "GENERATION_BASELINE", "GENERATION_PACKAGE", "CONTROL_SCORING", "EXPERIMENTAL_SCORING"]},
+    "input_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "output_sha256": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
+    "status": {"enum": ["PLANNED", "SENT", "COMPLETE", "FAILED"]},
+    "retry_index": {"const": 0}
+  },
+  "additionalProperties": false
+}

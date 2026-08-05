@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "freeze_id": "PL003-R192-INPUT-FREEZE-001",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005",
+  "attempt": "ATTEMPT-004",
+  "status": "FAIL_NOT_FROZEN_CHAIN_OF_CUSTODY_BROKEN",
+  "created_at": "2026-08-05T07:36:03-04:00",
+  "hash_algorithm": "SHA-256_RAW_BYTES_NO_LINE_ENDING_NORMALIZATION",
+  "authorized_parent_head": "0ef5f7428cf07652b567cc28321e85bb3b3c7e62",
+  "immutable_baselines": {
+    "execution_004_git_tree": "7bd45ce057ae8362207cc24e7d4cbdad4305d531",
+    "execution_004_sorted_path_sha256_manifest": "e8830433d6a9fdba11c9227669a9155c16a7f58ad8c9ff49a0b93df79d85681c",
+    "instrument_redesign_191_git_tree": "cd3a2b8a7d7f62af65bb8cd90b21bfbc99d3f3ab",
+    "candidate_package_git_tree": "56aa90d60df30c9ff25efccfd9552b24cc4ae88d",
+    "int_lab_004_git_blob": "1643a11e7d627b345be427190472f396987b1885"
+  },
+  "materialized_components": [
+    "EXECUTION_CONFIG.json",
+    "RUN_PLAN.json",
+    "RUN_TEST003_REDESIGNED.mjs",
+    "ENVIRONMENT_DECLARATION.json",
+    "MODEL_RUNNER_ATTESTATION.json",
+    "FIXTURE_SET.json",
+    "CONTROL_SET.json",
+    "templates/GENERATION_REQUEST_TEMPLATE.json",
+    "templates/SCORING_REQUEST_TEMPLATE.json",
+    "schemas/GENERATION_OUTPUT.schema.json",
+    "schemas/SCORING_OUTPUT.schema.json",
+    "schemas/REQUEST_RECORD.schema.json"
+  ],
+  "freeze_completed": false,
+  "failure": {
+    "machine_reason": "STOP_CHAIN_OF_CUSTODY_BROKEN",
+    "category": "IMMUTABLE_REDESIGN_GIT_BLOB_TO_WORKTREE_RAW_BYTE_MISMATCH",
+    "mismatch_count": 13,
+    "normalization_permitted": false,
+    "requests_allowed": false
+  }
+}
