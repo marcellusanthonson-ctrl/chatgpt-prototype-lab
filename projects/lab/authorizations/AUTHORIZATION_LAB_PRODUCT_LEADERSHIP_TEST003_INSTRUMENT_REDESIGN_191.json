@@ -1,0 +1,266 @@
+{
+"schema_version": "1.0.0",
+"authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191",
+"project_id": "lab",
+"status": "GRANTED",
+"authorization_class": "BOUNDED_DOCUMENTARY_AND_TECHNICAL_INSTRUMENT_REDESIGN",
+"approved_by": "Jonathan Martínez",
+"approved_at": "2026-08-05T00:51:47-04:00",
+"grant_inferred": false,
+"repository": {
+"name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+"branch": "main",
+"expected_parent_head": "2e2f97449c9734512ddd0dfe3a3f308c037a8e8c",
+"working_branch": "agent/product-leadership-test003-instrument-redesign-191",
+"head_policy": "VERIFY_LIVE_AT_USE",
+"entrypoint": "project-sources/chatgpt/START_HERE.md"
+},
+"purpose": "Redesign the documentary and technical instrument for Product Leadership Test 003 to resolve every material defect recorded by PEND-LAB-048, while preserving Execution 004 and ATTEMPT-003 unchanged and without running a retest, invoking any model, modifying the Product Leadership candidate package, or adjudicating activation value.",
+"governing_pending": "PEND-LAB-048",
+"governing_integration": "INT-LAB-004",
+"predecessor_authorization": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_EXECUTION004_EXTERNAL_AUDIT_RECONCILIATION_190",
+"predecessor_authorization_state": "CONSUMED_NO_RESIDUAL_AUTHORITY",
+"executor": {
+"agent": "Codex",
+"role": "BOUNDED_TECHNICAL_EXECUTOR",
+"autonomous_authority": false,
+"operating_mode": "RESOLUTIVE_WITHIN_AUTHORIZED_SCOPE",
+"continuation_rule": "Continue without repeated confirmations while the work remains inside scope. Resolve minor implementation, formatting, reference, schema, fixture, validator, and documentation defects directly.",
+"material_stop_rule": "Stop only for missing authority, live HEAD mismatch that cannot be safely rebased, canonical contradiction, required deletion or mutation of historical evidence, new model execution, irreversible external effect, or material scope expansion."
+},
+"authorized_actions": [
+"VERIFY_LIVE_HEAD_AND_RECONSTRUCT_CANONICAL_STATE",
+"CREATE_AUTHORIZATION_191_RECORD_AFTER_EXPLICIT_APPROVAL",
+"PRESERVE_EXECUTION_004_AND_ATTEMPT_003_BYTE_FOR_BYTE",
+"PRESERVE_HISTORICAL_RUNNER_FAIL_AND_RECONCILED_INSUFFICIENT_EVIDENCE",
+"DESIGN_SYMMETRIC_BASELINE_AND_PACKAGE_PROMPT_CONTRACTS",
+"DESIGN_VALID_SCORER_CONTEXT_AND_STATE_REDACTION_CONTRACT",
+"REPLACE_MODEL_GENERATED_NEGATIVE_CONTROL_DESIGN_WITH_FIXED_DETERMINISTIC_OR_STRUCTURALLY_NON_REFUSABLE_CONTROL_SPECIFICATION",
+"ALIGN_FIXTURES_ORACLES_AND_EXPECTATIONS_WITH_PRODUCT_LEADERSHIP_INPUT_CONTRACT",
+"IMPLEMENT_INSUFFICIENT_EVIDENCE_AS_A_FIRST_CLASS_INSTRUMENT_OUTCOME",
+"IMPLEMENT_PRE_EXECUTION_AND_IN_EXECUTION_STOP_CONDITION_SPECIFICATIONS",
+"CALIBRATE_THE_MAIN_SCORING_RUBRIC_USING_STATIC_SYNTHETIC_CALIBRATION_CASES_ONLY",
+"RESOLVE_RUNNER_SOURCE_PROVENANCE",
+"DEFINE_IMMUTABLE_CHAIN_OF_CUSTODY_AND_HASH_MANIFEST_REQUIREMENTS",
+"DEFINE_FRESH_RETEST_GATES_CLAIM_LIMITS_AND_ADJUDICATION_BOUNDARIES_WITHOUT_EXECUTING_THEM",
+"REFACTOR_OR_CREATE_INSTRUMENT_SCHEMAS_TEMPLATES_FIXTURES_ORACLES_AND_VALIDATORS_REQUIRED_BY_THE_REDESIGN",
+"CREATE_DETERMINISTIC_STATIC_TESTS_FOR_THE_REDESIGNED_INSTRUMENT",
+"EXECUTE_ONLY_LOCAL_DETERMINISTIC_NON_MODEL_VALIDATIONS",
+"CREATE_REDESIGN_VALIDATION_RESULTS",
+"CREATE_EVIDENCE_AND_REGISTRY_DELTA_FOR_AUTHORIZATION_191",
+"UPDATE_PEND_LAB_048_ONLY_TO_RECORD_REDESIGN_COMPLETION_OR_REMAINING_MATERIAL_DEFECTS",
+"UPDATE_APPLICABLE_INDEXES_AND_CANONICAL_AGGREGATES",
+"CREATE_OR_UPDATE_CURRENT_CONTINUITY_WITH_NO_RETEST_AUTHORITY",
+"COMMIT_PUSH_OPEN_PULL_REQUEST_AND_SQUASH_MERGE_IF_ALL_GATES_PASS",
+"VERIFY_REMOTE_MAIN_AFTER_PUBLICATION",
+"MARK_AUTHORIZATION_191_CONSUMED_ONLY_AFTER_VERIFIED_REMOTE_PUBLICATION"
+],
+"required_redesign_domains": [
+{
+"domain": "ARM_SYMMETRY",
+"requirement": "All four arms must receive structurally equivalent task context, evidence availability, formatting constraints, token or length constraints, and adjudication opportunities except for the single intentionally varied treatment."
+},
+{
+"domain": "SCORER_CONTEXT_ISOLATION",
+"requirement": "The scorer must not receive package-state, arm identity, expected treatment, provenance, filenames, directory names, metadata, or other leakage capable of revealing the experimental condition or intended result."
+},
+{
+"domain": "NEGATIVE_CONTROLS",
+"requirement": "Negative controls must be fixed deterministic artifacts or structurally constrained controls whose successful operation does not depend on a model accepting an instruction to behave incorrectly."
+},
+{
+"domain": "FIXTURE_AND_ORACLE_ALIGNMENT",
+"requirement": "Every fixture and oracle must map explicitly to the Product Leadership input contract, permitted outputs, prohibited outputs, tested capability claim, and discriminating purpose."
+},
+{
+"domain": "INSUFFICIENT_EVIDENCE",
+"requirement": "INSUFFICIENT_EVIDENCE must be a reachable, validated, non-failure outcome with explicit triggers, propagation rules, reporting semantics, and prohibition against conversion into PASS or FAIL."
+},
+{
+"domain": "STOP_CONDITIONS",
+"requirement": "Define fail-closed checks before requests, before scoring, before aggregation, before adjudication, and before publication. Any compromised symmetry, provenance, custody, fixture validity, scorer isolation, missing output, or non-comparable arm must stop the affected execution."
+},
+{
+"domain": "SCORING_CALIBRATION",
+"requirement": "Calibrate the exact production scoring rubric and aggregation logic using fixed synthetic examples that cover clear pass, clear fail, ambiguous, contradictory, missing, malformed, refusal, and insufficient-evidence cases."
+},
+{
+"domain": "CHAIN_OF_CUSTODY",
+"requirement": "Freeze the runner, prompt templates, scorer instructions, fixtures, oracles, schemas, configuration, dependency lock state, environment declaration, and generated request manifests by exact path and SHA-256 before any future retest."
+}
+],
+"required_instrument_properties": [
+"DETERMINISTIC_STRUCTURE",
+"FOUR_ARM_SYMMETRY",
+"SINGLE_TREATMENT_DIFFERENCE_PER_COMPARISON",
+"BLINDED_SCORING",
+"NO_EXPECTED_ANSWER_LEAKAGE",
+"FIXED_NEGATIVE_CONTROLS",
+"TRACEABLE_FIXTURE_TO_CLAIM_MAPPING",
+"FIRST_CLASS_INSUFFICIENT_EVIDENCE",
+"FAIL_CLOSED_STOP_CONDITIONS",
+"EXACT_RUBRIC_CALIBRATION",
+"IMMUTABLE_CHAIN_OF_CUSTODY",
+"REPRODUCIBLE_STATIC_VALIDATION",
+"NO_AUTOMATIC_PACKAGE_ADJUDICATION"
+],
+"permitted_modification_scope": {
+"allowed_roots": [
+"projects/lab/authorizations/",
+"projects/lab/briefs/",
+"projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/",
+"projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004/successor-instrument-design/",
+"projects/lab/pending/PEND-LAB-048.json",
+"projects/lab/evidence/",
+"projects/lab/continuity/",
+"registry/",
+"tests/",
+"schemas/"
+],
+"historical_read_only_roots": [
+"projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004/",
+"projects/lab/external-audits/AUDIT-CLAUDE-PRODUCT-LEADERSHIP-EXECUTION-004-PHASE3-001/",
+"projects/lab/reassessments/REA-LAB-010.json",
+"projects/lab/reconciliations/REC-LAB-PL003-EXEC004-AUDIT190-001.json",
+"projects/lab/evidence/EVD-LAB-AUD-008.json",
+"foundation-library/product-leadership/PRODUCT-LEADERSHIP-CANDIDATE-PACKAGE-001/"
+],
+"exception": "A file outside the allowed roots may be modified only when an existing deterministic aggregate or index contract requires exact synchronization and the modification introduces no new state or scope."
+},
+"prohibitions": [
+"NO_MODEL_REQUESTS",
+"NO_OPENAI_ANTHROPIC_OR_OTHER_MODEL_API_CALLS",
+"NO_RETEST_REPLAY_REGENERATION_OR_RESCORING",
+"NO_EXECUTION_OF_ANY_PROMPT_ARM",
+"NO_MUTATION_OF_EXECUTION_004_HISTORICAL_OUTPUTS",
+"NO_MUTATION_OF_EXECUTION_004_HISTORICAL_SCORES",
+"NO_MUTATION_OF_EXECUTION_004_HISTORICAL_ANALYSIS",
+"NO_MUTATION_OF_EXECUTION_004_HISTORICAL_GATES",
+"NO_MUTATION_OF_EXECUTION_004_HISTORICAL_HASHES",
+"NO_MUTATION_OF_THE_HISTORICAL_RUNNER",
+"NO_RECLASSIFICATION_OF_THE_HISTORICAL_RUNNER_RESULT",
+"NO_PACKAGE_PASS_OR_FAIL_ADJUDICATION",
+"NO_PRODUCT_LEADERSHIP_PACKAGE_MODIFICATION",
+"NO_PROMOTION_ACTIVATION_OR_INTEGRATION",
+"NO_CHANGE_TO_INT_LAB_004_CANDIDATE_STATUS",
+"NO_POINTER_SELECTOR_SHADOW_REGISTRY_OR_FACTORY_ACTIVATION",
+"NO_RUNTIME_PRODUCT_SSE_AWS_TERRAFORM_SYMPHONIE_OR_EXTERNAL_REPOSITORY_CHANGE",
+"NO_NETWORK_CALLS_EXCEPT_GITHUB_OPERATIONS_NECESSARY_FOR_AUTHORIZED_PUBLICATION",
+"NO_SECRETS_CREDENTIALS_PERSONAL_DATA_OR_REAL_USER_DATA",
+"NO_AUTOMATIC_AUTHORIZATION_OF_A_FUTURE_RETEST"
+],
+"required_outputs": [
+"projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191.json",
+"projects/lab/briefs/CODEX_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191_001.json",
+"projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/MANIFEST.json",
+"projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/ARM_SYMMETRY_CONTRACT.json",
+"projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/SCORER_ISOLATION_CONTRACT.json",
+"projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/NEGATIVE_CONTROL_CONTRACT.json",
+"projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/FIXTURE_ORACLE_TRACEABILITY.json",
+"projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/INSUFFICIENT_EVIDENCE_CONTRACT.json",
+"projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/STOP_CONDITIONS.json",
+"projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/SCORING_CALIBRATION.json",
+"projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/CHAIN_OF_CUSTODY_CONTRACT.json",
+"projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/FRESH_RETEST_GATES_AND_CLAIM_LIMITS.json",
+"projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/STATIC_CALIBRATION_FIXTURES.json",
+"projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/VALIDATION_RESULTS.json",
+"projects/lab/evidence/EVD-LAB-PL003-INSTRUMENT-REDESIGN-191.json",
+"registry/deltas/product-leadership-test003-instrument-redesign-191.json"
+],
+"acceptance_gates": [
+{
+"gate": "GATE_01_CANONICAL_PREFLIGHT",
+"pass_condition": "Live main HEAD matches expected_parent_head or Codex performs a safe evidence-preserving rebase and re-runs the complete preflight before modification."
+},
+{
+"gate": "GATE_02_HISTORICAL_IMMUTABILITY",
+"pass_condition": "All pre-existing Execution 004 and ATTEMPT-003 governed files retain their original hashes."
+},
+{
+"gate": "GATE_03_EIGHT_DEFECT_DOMAINS",
+"pass_condition": "Every required scope item from PEND-LAB-048 has a dedicated enforceable contract, traceability entry, validator, and static fixture."
+},
+{
+"gate": "GATE_04_ARM_SYMMETRY",
+"pass_condition": "A deterministic validator proves that the four arms differ only in explicitly declared treatment fields."
+},
+{
+"gate": "GATE_05_SCORER_BLINDING",
+"pass_condition": "A deterministic leakage scan and schema validation show that scorer inputs exclude arm identity, treatment identity, package state, intended result, and provenance leakage."
+},
+{
+"gate": "GATE_06_NEGATIVE_CONTROL_VALIDITY",
+"pass_condition": "Negative controls are fixed or structurally non-refusable and require no model cooperation to remain negative."
+},
+{
+"gate": "GATE_07_TRACEABILITY",
+"pass_condition": "Every fixture maps one-to-one or explicitly many-to-one to an input-contract clause, capability claim, oracle, scoring dimension, stop condition, and permitted adjudication."
+},
+{
+"gate": "GATE_08_INSUFFICIENT_EVIDENCE",
+"pass_condition": "Static cases demonstrate that incomplete, compromised, non-comparable, contradictory, or missing evidence produces INSUFFICIENT_EVIDENCE and cannot be aggregated into PASS or FAIL."
+},
+{
+"gate": "GATE_09_STOP_CONDITIONS",
+"pass_condition": "Every material integrity defect stops before adjudication and emits an exact machine-readable reason."
+},
+{
+"gate": "GATE_10_RUBRIC_CALIBRATION",
+"pass_condition": "The exact main rubric passes all fixed calibration cases, including boundary, malformed, refusal, ambiguity, contradiction, and missing-output cases."
+},
+{
+"gate": "GATE_11_CHAIN_OF_CUSTODY",
+"pass_condition": "The future retest contract requires a complete pre-run hash manifest and rejects execution when any frozen component differs."
+},
+{
+"gate": "GATE_12_NO_MODEL_ACTIVITY",
+"pass_condition": "Logs, changed-file inventory, commands, and artifacts show zero model requests, zero generated test outputs, zero rescoring, and zero retest activity."
+},
+{
+"gate": "GATE_13_REPOSITORY_VALIDATION",
+"pass_condition": "JSON parsing, schemas, duplicate-key detection, references, indexes, repository-state expectations, continuity, and dedicated redesign validators all pass."
+},
+{
+"gate": "GATE_14_CLAIM_BOUNDARY",
+"pass_condition": "The redesign is classified only as INSTRUMENT_REDESIGN_COMPLETE_AWAITING_SEPARATE_FRESH_RETEST_AUTHORIZATION and makes no Product Leadership value, activation, integration, PASS, or FAIL claim."
+}
+],
+"stop_conditions": [
+"LIVE_MAIN_HEAD_CHANGED_AND_SAFE_REBASE_CANNOT_PRESERVE_SCOPE",
+"AUTHORIZATION_NOT_EXPLICITLY_GRANTED",
+"HISTORICAL_EXECUTION_FILE_WOULD_BE_MUTATED",
+"MODEL_REQUEST_OR_RETEST_REQUIRED",
+"MATERIAL_CANONICAL_CONTRADICTION",
+"SCORER_BLINDING_CANNOT_BE_ENFORCED",
+"ARM_SYMMETRY_CANNOT_BE_DETERMINISTICALLY_PROVEN",
+"NEGATIVE_CONTROL_REQUIRES_MODEL_COOPERATION",
+"FIXTURE_CANNOT_BE_MAPPED_TO_THE_INPUT_CONTRACT",
+"CHAIN_OF_CUSTODY_CANNOT_BE_FROZEN",
+"STATIC_CALIBRATION_REVEALS_UNRESOLVED_RUBRIC_AMBIGUITY",
+"REQUIRED_CHANGE_EXPANDS_TO_PRODUCT_LEADERSHIP_PACKAGE_OR_RUNTIME",
+"SECRETS_OR_REAL_DATA_ARE_REQUIRED",
+"ANY_ACCEPTANCE_GATE_FAILS_BEFORE_PUBLICATION"
+],
+"publication_permissions": {
+"commit_authorized": true,
+"push_authorized": true,
+"pull_request_authorized": true,
+"squash_merge_authorized": true,
+"direct_push_to_main_authorized": false
+},
+"execution_permissions": {
+"local_deterministic_validation_authorized": true,
+"model_requests_authorized": false,
+"retest_authorized": false,
+"regeneration_authorized": false,
+"rescoring_authorized": false,
+"package_change_authorized": false,
+"integration_authorized": false,
+"runtime_authorized": false,
+"product_changes_authorized": false
+},
+"consumption_rule": "CONSUMED_ON_VERIFIED_REMOTE_SQUASH_MERGE_OF_THE_EXACT_INSTRUMENT_REDESIGN_PACKAGE_AFTER_ALL_ACCEPTANCE_GATES_PASS",
+"residual_authority_after_consumption": "NONE",
+"maximum_result": "PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_COMPLETE_STATICALLY_VALIDATED_AWAITING_SEPARATE_FRESH_RETEST_AUTHORIZATION",
+"next_authorized_action_after_consumption": "NONE_UNTIL_SEPARATE_EXPLICIT_FRESH_RETEST_AUTHORIZATION"
+}

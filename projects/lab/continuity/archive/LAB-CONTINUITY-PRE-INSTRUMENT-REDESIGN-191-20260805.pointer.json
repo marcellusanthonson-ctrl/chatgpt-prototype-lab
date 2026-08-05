@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "archive_id": "LAB-CONTINUITY-PRE-INSTRUMENT-REDESIGN-191-20260805",
+  "project_id": "lab",
+  "archived_at": "2026-08-05T01:12:35-04:00",
+  "source_head": "2e2f97449c9734512ddd0dfe3a3f308c037a8e8c",
+  "archive_method": "EXACT_GIT_BLOB_POINTERS_WITH_SHA256",
+  "files": [
+    {
+      "path": "projects/lab/continuity/CURRENT_CONTINUITY.json",
+      "git_blob_sha1": "0e25e990c85fd3856053987293add1223880b444",
+      "sha256": "ad2bfc5ab1ce265aed9da0fc6662f0455f9fd014370c5de49a615cbd9572858e",
+      "bytes": 10091
+    },
+    {
+      "path": "projects/lab/continuity/CURRENT_CONTINUITY.md",
+      "git_blob_sha1": "5ad4201edca066196a9d0fa6ec3adebe55de47da",
+      "sha256": "d2bdc23a5a149ebe7f8c12089ee18d079e1a6869284f2c870dad6efbcf12742c",
+      "bytes": 5515
+    },
+    {
+      "path": "projects/lab/continuity/ATTACHMENT_MANIFEST.json",
+      "git_blob_sha1": "033454f402f501d638af61c4afbe5c05437a23ef",
+      "sha256": "9105e0d4e9b2b960319882a064db227a9c1c7d42248877996607257c1d00d016",
+      "bytes": 3297
+    },
+    {
+      "path": "projects/lab/continuity/START_PROMPT.md",
+      "git_blob_sha1": "69fd82d6e86fd8fed185d536a7fc3aeaf90c496a",
+      "sha256": "bdb9227ebdb999354c0e34ec76fa312affaa7edda8b50ded14c0fdc200bb33cb",
+      "bytes": 1670
+    }
+  ],
+  "restore_rule": "READ_EXACT_BLOBS_FROM_SOURCE_HEAD; DO_NOT_RECONSTRUCT_FROM_CURRENT_FILES"
+}

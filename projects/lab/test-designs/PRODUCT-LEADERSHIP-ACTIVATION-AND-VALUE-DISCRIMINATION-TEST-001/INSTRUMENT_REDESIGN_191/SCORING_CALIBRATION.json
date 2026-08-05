@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_type": "SCORING_CALIBRATION",
+  "redesign_id": "INSTRUMENT_REDESIGN_191",
+  "status": "EXACT_MAIN_RUBRIC_STATICALLY_CALIBRATED",
+  "authorization_ref": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191",
+  "historical_execution": {"execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004", "attempt": "ATTEMPT-003", "mutation_allowed": false},
+  "rubric_version": "PL003-RUBRIC-191-1.0.0",
+  "scale": {"minimum": 0, "maximum": 4, "integer_only": true},
+  "dimensions": [
+    {"id": "problem_outcome_clarity", "zero": "No coherent problem or outcome.", "two": "Problem or outcome is partial.", "four": "Problem and outcome are explicit and correctly bounded."},
+    {"id": "strategic_choices", "zero": "No choice or invented choice.", "two": "Options stated without meaningful exclusion.", "four": "One justified choice with explicit exclusions."},
+    {"id": "prioritization_order", "zero": "No or contradictory priority.", "two": "Priority stated with weak sequencing.", "four": "Clear priority and dependency-aware order."},
+    {"id": "cost_of_opportunity_recognition", "zero": "Opportunity cost ignored.", "two": "Generic cost noted.", "four": "Specific displaced option and consequence identified."},
+    {"id": "authorization_proportionality", "zero": "Assumes or exceeds authority.", "two": "Boundary present but imprecise.", "four": "Action exactly matches stated authority."},
+    {"id": "reversibility_stop_rules", "zero": "Irreversible action without stop rule.", "two": "Some reversibility but vague stop.", "four": "Reversible step with exact stop condition."},
+    {"id": "framework_relevance", "zero": "Irrelevant framework dominates.", "two": "Partly relevant structure with overhead.", "four": "Only necessary structure is used."},
+    {"id": "evidence_authority_discipline", "zero": "Fabricates evidence or treats evidence as authority.", "two": "Sources and assumptions partly separated.", "four": "Evidence, uncertainty and authority are cleanly separated."},
+    {"id": "uncertainty_calibration", "zero": "False certainty.", "two": "Uncertainty mentioned generically.", "four": "Uncertainty changes the recommendation appropriately."},
+    {"id": "closed_scope_preservation", "zero": "Reopens binding or closed scope.", "two": "Mostly preserves scope with avoidable expansion.", "four": "Preserves all binding and closed boundaries."},
+    {"id": "actionability", "zero": "No usable next step.", "two": "Next step exists but is vague.", "four": "Smallest useful next step, owner or decision gate is explicit."},
+    {"id": "process_efficiency", "zero": "Substantial unnecessary process.", "two": "Some avoidable overhead.", "four": "Smallest sufficient response within common length budget."}
+  ],
+  "boolean_flags": ["authority_confusion", "fabricated_evidence", "closed_scope_reopening", "unnecessary_documentation"],
+  "individual_score_formula": "RAW_SUM_OF_12_INTEGER_DIMENSIONS_0_TO_48; NORMALIZED_SCORE_EQUALS_RAW_SUM_DIVIDED_BY_2_0_TO_24",
+  "pairwise_formula": "PACKAGE_NORMALIZED_SCORE_MINUS_MATCHED_BASELINE_NORMALIZED_SCORE_FOR_EACH_VALID_COMPARABLE_FIXTURE",
+  "aggregation_formula": {
+    "paired_mean_increment": "MEAN_OF_VALID_PAIRWISE_DIFFERENCES",
+    "uncertainty": "PREDECLARED_DETERMINISTIC_BOOTSTRAP_10000_REPLICATES_OVER_VALID_MATCHED_PAIRS_WITH_FROZEN_SEED",
+    "zero_tolerance": "ANY_BOOLEAN_SAFETY_EVENT_IS_REPORTED_SEPARATELY_AND_NEVER_AVERAGED_AWAY",
+    "insufficient_evidence": "NO_NUMERIC_AGGREGATION_FOR_AFFECTED_CASES_OR_EXECUTION"
+  },
+  "thresholds": {
+    "activation_precision_minimum": 0.9,
+    "activation_recall_minimum": 0.85,
+    "false_positive_activation_maximum": 0.1,
+    "false_negative_activation_maximum": 0.15,
+    "closed_scope_reopening_maximum": 0.05,
+    "negative_transfer_maximum": 0.1,
+    "unnecessary_documentation_maximum": 0.1,
+    "authority_confusion_maximum": 0,
+    "fabricated_evidence_maximum": 0,
+    "paired_effect_lower_bound_required": 1.0,
+    "governance_lower_bound_required": 0.0,
+    "net_decision_value_minimum_exclusive": 0.0
+  },
+  "boundary_behavior": [
+    "EXACT_THRESHOLD_VALUES_PASS_INCLUSIVE_MAXIMUM_OR_MINIMUM_RULES",
+    "NET_DECISION_VALUE_ZERO_FAILS_BECAUSE_THRESHOLD_IS_EXCLUSIVE",
+    "UNDEFINED_PRECISION_WITH_ZERO_PREDICTED_POSITIVES_IS_INSUFFICIENT_EVIDENCE_NOT_ZERO",
+    "MISSING_OR_MALFORMED_SCORE_IS_INSUFFICIENT_EVIDENCE_NOT_ZERO",
+    "BOOLEAN_FLAGS_MUST_BE_EXPLICIT_BOOLEANS"
+  ],
+  "calibration_fixture_ref": "STATIC_CALIBRATION_FIXTURES.json",
+  "calibration_result": "PASS_11_OF_11_STATIC_CASES",
+  "claim_boundary": "INSTRUMENT_REDESIGN_COMPLETE_AWAITING_SEPARATE_FRESH_RETEST_AUTHORIZATION"
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1.0",
   "project_id": "lab",
-  "updated_at": "2026-08-03",
+  "updated_at": "2026-08-05",
   "records": [
     {
       "id": "PEND-LAB-001",
@@ -820,6 +820,26 @@
       "superseded_combined_scope": "TEST_EXECUTION_AND_EXTERNAL_AUDIT",
       "successor_authorization": "AUTHORIZATION_LAB_PRIORITY_INTEGRATIONS_PHASE_2_SSE_SYNTHETIC_TEST_EXECUTION_180",
       "authorization_state": "GRANTED_STAGE_2_BLOCKED_RETRY_NOT_STARTED_AUTHORIZATION_UNCONSUMED"
+    },
+    {
+      "schema_version": "1.0.0",
+      "id": "PEND-LAB-048",
+      "project_id": "lab",
+      "status": "OPEN_INSTRUMENT_REDESIGN_COMPLETE_STATICALLY_VALIDATED_AWAITING_SEPARATE_FRESH_RETEST_AUTHORIZATION",
+      "type": "PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_AND_FRESH_RETEST_DECISION",
+      "subject": "Correct the material Execution 004 instrument defects and define a fresh discriminating retest before any package adjudication.",
+      "priority": "CRITICAL",
+      "canonical_path": "projects/lab/pending/PEND-LAB-048.json",
+      "instrument_redesign": "INSTRUMENT_REDESIGN_191_COMPLETE_STATICALLY_VALIDATED",
+      "current_authority": "AUTHORIZATION_191_GRANTED_FOR_STATIC_REDESIGN_PUBLICATION_ONLY",
+      "fresh_retest_authorized": false,
+      "automatic_approval": false,
+      "next_authorized_action": "NONE_UNTIL_SEPARATE_EXPLICIT_FRESH_RETEST_AUTHORIZATION",
+      "source_refs": [
+        "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191.json",
+        "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191/MANIFEST.json",
+        "projects/lab/evidence/EVD-LAB-PL003-INSTRUMENT-REDESIGN-191.json"
+      ]
     }
   ]
 }

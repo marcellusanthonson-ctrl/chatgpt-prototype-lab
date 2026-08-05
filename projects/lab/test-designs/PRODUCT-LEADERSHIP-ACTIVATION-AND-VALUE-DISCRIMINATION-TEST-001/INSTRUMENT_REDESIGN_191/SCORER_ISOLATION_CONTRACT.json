@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_type": "SCORER_ISOLATION_CONTRACT",
+  "redesign_id": "INSTRUMENT_REDESIGN_191",
+  "status": "ENFORCEABLE",
+  "authorization_ref": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191",
+  "historical_execution": {"execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004", "attempt": "ATTEMPT-003", "mutation_allowed": false},
+  "allowed_top_level_fields": ["blind_case_id", "task_context", "candidate_output", "scoring_contract_version"],
+  "task_context_allowed_fields": ["TASK_OBJECTIVE", "TASK_STATE", "AUTHORITY_STATE", "BINDING_OBLIGATIONS", "AVAILABLE_EVIDENCE", "PRODUCT_DECISION_SCOPE", "REQUESTED_OUTPUT"],
+  "forbidden_fields_recursive": ["arm", "arm_id", "arm_name", "treatment", "treatment_id", "package_state", "package_available", "expected_activation", "expected_result", "oracle", "provenance", "source_path", "file_path", "directory", "filename", "prior_score", "aggregate_state", "hidden_label"],
+  "forbidden_value_patterns_case_insensitive": ["PL-ARM-", "EXPECTED[_ -]?RESULT", "PACKAGE[_ -]?ARM", "BASELINE[_ -]?ARM", "foundation-library/", "projects/lab/test-executions/", "INSTRUMENT_REDESIGN_191"],
+  "redaction_rules": [
+    {"id": "R191-RED-01", "target": "candidate_output", "condition": "SELF_REFERENCE_REVEALS_TREATMENT_OR_PACKAGE_STATE", "replacement": "[TREATMENT_CONTEXT_REDACTED]", "preserve_semantic_slot": true},
+    {"id": "R191-RED-02", "target": "all_values", "condition": "PATH_OR_PROVENANCE_TOKEN", "replacement": "[PROVENANCE_REDACTED]", "preserve_semantic_slot": false},
+    {"id": "R191-RED-03", "target": "metadata", "condition": "FIELD_NOT_EXPLICITLY_ALLOWED", "action": "REMOVE_FIELD"}
+  ],
+  "minimum_scorer_input_contract": {
+    "blind_case_id": "OPAQUE_RANDOM_IDENTIFIER_WITH_NO_ARM_DERIVATION",
+    "task_context": "NORMALIZED_COMPLETE_SEVEN_FIELD_INPUT",
+    "candidate_output": "REDACTED_OUTPUT_ONLY",
+    "scoring_contract_version": "PL003-RUBRIC-191-1.0.0"
+  },
+  "leakage_detection": {"scan_field_names": true, "scan_string_values": true, "scan_nested_objects": true, "scan_before_request": true, "machine_reason": "STOP_SCORER_CONTEXT_LEAKAGE"},
+  "failure_semantics": {"outcome": "INSUFFICIENT_EVIDENCE", "scoring_allowed": false, "aggregation_allowed": false, "publication_allowed": false},
+  "claim_boundary": "INSTRUMENT_REDESIGN_COMPLETE_AWAITING_SEPARATE_FRESH_RETEST_AUTHORIZATION"
+}

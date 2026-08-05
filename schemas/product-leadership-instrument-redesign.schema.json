@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lab.local/schemas/product-leadership-instrument-redesign.schema.json",
+  "title": "Product Leadership Test 003 instrument redesign artifact",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "artifact_type",
+    "redesign_id",
+    "status",
+    "authorization_ref",
+    "historical_execution",
+    "claim_boundary"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "artifact_type": {"type": "string", "minLength": 1},
+    "redesign_id": {"const": "INSTRUMENT_REDESIGN_191"},
+    "status": {"type": "string", "minLength": 1},
+    "authorization_ref": {"const": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191"},
+    "historical_execution": {
+      "type": "object",
+      "required": ["execution_id", "attempt", "mutation_allowed"],
+      "properties": {
+        "execution_id": {"const": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004"},
+        "attempt": {"const": "ATTEMPT-003"},
+        "mutation_allowed": {"const": false}
+      },
+      "additionalProperties": true
+    },
+    "claim_boundary": {
+      "const": "INSTRUMENT_REDESIGN_COMPLETE_AWAITING_SEPARATE_FRESH_RETEST_AUTHORIZATION"
+    }
+  },
+  "additionalProperties": true
+}
