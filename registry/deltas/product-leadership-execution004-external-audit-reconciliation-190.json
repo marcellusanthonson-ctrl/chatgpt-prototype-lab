@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "product-leadership-execution004-external-audit-reconciliation-190",
+  "project_id": "lab",
+  "created_at": "2026-08-04",
+  "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_EXECUTION004_EXTERNAL_AUDIT_RECONCILIATION_190",
+  "expected_parent_head": "4cd8158637abd645b23e97a694a15756680c2760",
+  "adds": {
+    "authorizations": [
+      "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_EXECUTION004_EXTERNAL_AUDIT_RECONCILIATION_190.json"
+    ],
+    "authorization_lifecycle": [
+      "projects/lab/authorization-lifecycle/PL003_AUTHORIZATION_LIFECYCLE_190.json"
+    ],
+    "external_audits": [
+      "projects/lab/external-audits/AUDIT-CLAUDE-PRODUCT-LEADERSHIP-EXECUTION-004-PHASE3-001/AUDIT_MANIFEST.json"
+    ],
+    "evidence": [
+      "projects/lab/evidence/EVD-LAB-AUD-008.json"
+    ],
+    "reassessments": [
+      "projects/lab/reassessments/REA-LAB-010.json"
+    ],
+    "reconciliations": [
+      "projects/lab/reconciliations/REC-LAB-PL003-EXEC004-AUDIT190-001.json"
+    ],
+    "pending": [
+      "projects/lab/pending/PEND-LAB-048.json"
+    ]
+  },
+  "interpretation_delta": {
+    "historical_runner_result": "PRESERVED_FAIL",
+    "reconciled_execution_result": "INSUFFICIENT_EVIDENCE",
+    "package_adjudication": "NONE",
+    "candidate_state": "INACTIVE_NOT_INTEGRATED"
+  },
+  "non_effects": [
+    "NO_MODEL_REQUEST",
+    "NO_RETEST",
+    "NO_EXECUTION_ARTIFACT_CHANGE",
+    "NO_PACKAGE_CHANGE",
+    "NO_PROMOTION_ACTIVATION_INTEGRATION_RUNTIME_OR_PRODUCT_EFFECT"
+  ]
+}
