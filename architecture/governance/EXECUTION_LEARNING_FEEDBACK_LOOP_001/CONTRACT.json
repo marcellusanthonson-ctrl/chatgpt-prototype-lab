@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0.0",
+  "contract_id": "EXECUTION-LEARNING-FEEDBACK-LOOP-001",
+  "project_id": "lab",
+  "status": "ACTIVE_TRANSVERSAL_DOCUMENTARY_AND_DETERMINISTIC_GOVERNANCE",
+  "effective_for": "FUTURE_STATE_CHANGING_OR_TEST_EXECUTING_BRIEFS_CREATED_AFTER_AUTHORIZATION_193",
+  "applies_to_agents": [
+    "ChatGPT",
+    "Codex",
+    "Claude"
+  ],
+  "purpose": "Turn confirmed errors and incident evidence into mandatory, bounded plan adaptation and preventive controls without granting autonomous authority.",
+  "principles": [
+    "RETRIEVE_RELEVANT_ERRORS_BEFORE_EXECUTION",
+    "DISTINGUISH_CANONICAL_ERROR_HISTORY_FROM_CURRENT_RECURRENCE",
+    "CONFIRM_CURRENT_RECURRENCE_ONLY_WITH_EVIDENCE",
+    "APPLY_PREVENTIVE_CONTROLS_BEFORE_RISKY_ACTIONS",
+    "CORRECT_MINOR_IN_SCOPE_RECURRENCE_WITHOUT_REPEATED_CONFIRMATION",
+    "STOP_ON_MATERIAL_UNRESOLVED_OR_OUT_OF_SCOPE_RECURRENCE",
+    "RECORD_WHAT_WAS_APPLIED_WITHOUT_REVEALING_PRIVATE_CHAIN_OF_THOUGHT"
+  ],
+  "required_brief_field": "learning_context",
+  "mandatory_sources": [
+    "registry/errors.json",
+    "applicable project incident ledgers",
+    "docs/ERRORS_TO_AVOID.md",
+    "brief.source_refs"
+  ],
+  "recurrence_determinations": [
+    "CONFIRMED_CURRENT_OCCURRENCE",
+    "NOT_REPRODUCED",
+    "NOT_APPLICABLE",
+    "INSUFFICIENT_EVIDENCE"
+  ],
+  "decision_effects": [
+    "PREVENT_KNOWN_FAILURE",
+    "CORRECT_WITHIN_SCOPE",
+    "CONTINUE_WITH_GUARDRAIL",
+    "STOP_MATERIAL_RECURRENCE",
+    "REGISTER_CANDIDATE_INCIDENT_IF_AUTHORIZED"
+  ],
+  "default_codex_authority": {
+    "read_confirmed_errors": true,
+    "determine_current_recurrence": true,
+    "adapt_plan_within_existing_scope": true,
+    "apply_preventive_controls": true,
+    "correct_minor_reversible_in_scope_defects": true,
+    "register_candidate_incident_in_execution_output": true,
+    "modify_canonical_error_status": false,
+    "expand_scope": false,
+    "create_authority": false
+  },
+  "required_output": {
+    "artifact_name": "LEARNING_APPLICATION_REPORT.json",
+    "minimum_fields": [
+      "sources_consulted",
+      "applicable_incidents",
+      "current_recurrence_determinations",
+      "preventive_controls_applied",
+      "plan_changes_within_scope",
+      "stops_or_escalations",
+      "new_candidate_incidents",
+      "claim_boundary"
+    ],
+    "schema_ref": "schemas/learning-application-report.schema.json"
+  },
+  "failure_semantics": {
+    "missing_learning_context": "BLOCK_BEFORE_EXECUTION",
+    "material_incident_without_evidence_or_control": "STOP_MATERIAL_RECURRENCE",
+    "canonical_error_status_change_without_authority": "REJECT_CHANGE",
+    "unknown_material_condition": "INSUFFICIENT_EVIDENCE"
+  },
+  "transversal_boundary": {
+    "not_a_skill": true,
+    "not_runtime": true,
+    "not_model_weight_change": true,
+    "not_autonomous_authority": true,
+    "repository_allowlist_and_skill_routing_remain_separate": true
+  },
+  "source_refs": [
+    "LAB_CONTRACT.md",
+    "METHODOLOGY.md",
+    "docs/MODEL_OPERATING_RULES.md",
+    "docs/ERRORS_TO_AVOID.md",
+    "errors/ERR-LAB-013.json"
+  ]
+}
