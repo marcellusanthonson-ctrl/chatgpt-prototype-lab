@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0.0",
+  "id": "IDEA-LAB-003",
+  "project_id": "lab",
+  "title": "Puente de supervisión en vivo ChatGPT–Codex para ejecuciones gobernadas del LAB",
+  "status": "CAPTURED",
+  "classification": "IDEA_NOT_DECISION_NOT_AUTHORIZATION",
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05",
+  "proposed_by": "Jonathan Martínez",
+  "problem_statement": "Las sesiones independientes de ChatGPT y Codex requieren traspasos manuales y pueden permitir que una desviación de alcance, autoridad, repositorio, skill o implementación sea detectada después de que Codex ya ejecutó acciones materiales.",
+  "desired_outcome": "Permitir que un supervisor gobernado observe eventos materiales de una sesión Codex mientras ocurre, aplique controles determinísticos, emita correcciones o detenga la ejecución antes de que una desviación produzca cambios no deseados.",
+  "concept": {
+    "working_name": "LAB_CODEX_LIVE_SUPERVISION_BRIDGE",
+    "execution_model": "SUPERVISED_CODEX_SESSION_STARTED_AND_CONTROLLED_BY_A_GOVERNED_BRIDGE",
+    "candidate_authentication_mode": "CODEX_SDK_WITH_CHATGPT_PLUS_SESSION",
+    "authentication_status": "UNVERIFIED_REQUIRES_READ_ONLY_ENVIRONMENT_FEASIBILITY_TEST",
+    "canonical_truth_source": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "human_approver": "Jonathan Martínez",
+    "chatgpt_role": "COORDINATE_VALIDATE_SUPERVISE_AND_RECONCILE",
+    "codex_role": "BOUNDED_TECHNICAL_EXECUTOR_ONLY"
+  },
+  "candidate_components": [
+    {
+      "id": "CODEX_SESSION_CONTROLLER",
+      "purpose": "Iniciar, reanudar, pausar y cerrar una sesión Codex bajo un alcance explícito."
+    },
+    {
+      "id": "EVENT_AND_EVIDENCE_RELAY",
+      "purpose": "Transmitir comandos propuestos, accesos a archivos, diffs, resultados de pruebas, solicitudes de aprobación y estados del hilo."
+    },
+    {
+      "id": "DETERMINISTIC_POLICY_ENGINE",
+      "purpose": "Aplicar allowlists de repositorios, paths, skills, herramientas y acciones antes de permitir eventos materiales."
+    },
+    {
+      "id": "SEMANTIC_SUPERVISOR",
+      "purpose": "Evaluar intención, correspondencia con el brief, contradicciones canónicas, expansión de alcance y riesgos no capturados por reglas rígidas."
+    },
+    {
+      "id": "INTERVENTION_CHANNEL",
+      "purpose": "Responder ALLOW, CORRECT, STOP o HUMAN_DECISION_REQUIRED a la sesión supervisada."
+    },
+    {
+      "id": "CANONICAL_RECORDER",
+      "purpose": "Registrar evidencia, decisiones de supervisión, divergencias y resultados sin convertirlos automáticamente en autoridad."
+    }
+  ],
+  "supervision_targets": [
+    "SESSION_START_AND_RESUME",
+    "COMMAND_PROPOSED",
+    "FILE_OR_REPOSITORY_ACCESS_REQUESTED",
+    "SKILL_SELECTION_OR_LOADING",
+    "FILE_CHANGE_PROPOSED",
+    "DIFF_AVAILABLE",
+    "VALIDATION_OR_TEST_RESULT",
+    "COMMIT_PROPOSED",
+    "PUSH_OR_PULL_REQUEST_PROPOSED",
+    "SCOPE_OR_ARCHITECTURE_CHANGE",
+    "THREAD_COMPLETION"
+  ],
+  "intervention_states": [
+    "ALLOW",
+    "CORRECT",
+    "STOP",
+    "HUMAN_DECISION_REQUIRED"
+  ],
+  "mandatory_guardrails": [
+    "FAIL_CLOSED_WHEN_SUPERVISOR_OR_POLICY_ENGINE_IS_UNAVAILABLE",
+    "EXACT_REPOSITORY_ALLOWLIST",
+    "EXPLICIT_SKILL_SELECTION_ONLY",
+    "NO_SEMANTIC_SKILL_INFERENCE",
+    "NO_CROSS_REPOSITORY_ACCESS_WITHOUT_EXPLICIT_AUTHORIZATION",
+    "NO_AUTHORITY_EXPANSION_BY_SDK_HOOK_EVENT_COMMIT_OR_MODEL_OUTPUT",
+    "NO_COMMIT_PUSH_MERGE_DEPLOY_OR_RUNTIME_ACTION_WITHOUT_EXPLICIT_AUTHORIZATION",
+    "PRESERVE_GITHUB_AS_DOCUMENTARY_SOURCE_OF_TRUTH",
+    "JONATHAN_MARTINEZ_REMAINS_SOLE_HUMAN_APPROVER",
+    "SUPERVISION_EVENTS_ARE_EVIDENCE_NOT_DECISIONS_OR_AUTHORIZATIONS"
+  ],
+  "candidate_phases": [
+    {
+      "phase": "PHASE_0_DOCUMENTARY_DESIGN",
+      "objective": "Definir contrato, modelo de amenazas, modelo de eventos, checkpoints de autoridad, modos de falla y matriz de pruebas.",
+      "planning_estimate": "LESS_THAN_ONE_TECHNICAL_DAY",
+      "estimate_classification": "NON_BINDING_IDEA_STAGE_ESTIMATE"
+    },
+    {
+      "phase": "PHASE_1_READ_ONLY_FEASIBILITY",
+      "objective": "Verificar en un entorno aislado si Codex SDK puede reutilizar una sesión autenticada con ChatGPT Plus, iniciar un hilo y exponer eventos suficientes sin modificar repositorios.",
+      "planning_estimate": "2_TO_4_HOURS",
+      "estimate_classification": "NON_BINDING_SUBJECT_TO_ENVIRONMENT_AND_PRODUCT_CAPABILITY"
+    },
+    {
+      "phase": "PHASE_2_MINIMUM_SUPERVISED_PROTOTYPE",
+      "objective": "Agregar allowlists, bloqueos determinísticos, registro de eventos, pausa y corrección del hilo sin commit ni push.",
+      "planning_estimate": "1_TO_2_TECHNICAL_DAYS",
+      "estimate_classification": "NON_BINDING_AFTER_PHASE_1_PASS"
+    },
+    {
+      "phase": "PHASE_3_GOVERNED_LAB_PILOT",
+      "objective": "Integrar briefs, autoridad, checkpoints, recuperación, pruebas negativas y publicación gobernada en una tarea sintética del LAB.",
+      "planning_estimate": "3_TO_5_TECHNICAL_DAYS",
+      "estimate_classification": "NON_BINDING_AFTER_PHASE_2_PASS"
+    },
+    {
+      "phase": "PHASE_4_MATURE_OPERATION",
+      "objective": "Añadir panel, múltiples sesiones, métricas, auditoría completa y pruebas de amenazas.",
+      "planning_estimate": "1_TO_2_WEEKS",
+      "estimate_classification": "NON_BINDING_OPTIONAL_FUTURE_SCOPE"
+    }
+  ],
+  "open_questions": [
+    "CAN_CODEX_SDK_REUSE_CHATGPT_PLUS_AUTHENTICATION_ON_THE_TARGET_WINDOWS_ENVIRONMENT_WITHOUT_AN_API_KEY",
+    "WHAT_EVENT_GRANULARITY_IS_AVAILABLE_BEFORE_COMMAND_OR_FILE_ACTION_EXECUTION",
+    "CAN_THE_BRIDGE_RELIABLY_PAUSE_REDIRECT_AND_RESUME_THE_SAME_CODEX_THREAD",
+    "HOW_SHOULD_A_PROGRAMMATIC_SUPERVISOR_SHARE_FINDINGS_WITH_THIS_CHATGPT_PROJECT_CONVERSATION",
+    "WHAT_CODEX_CREDIT_CONSUMPTION_MODEL_APPLIES_TO_EXECUTOR_AND_SEMANTIC_SUPERVISOR",
+    "WHICH_CONTROLS_CAN_BE_LOCAL_AND_DETERMINISTIC_TO_MINIMIZE_MODEL_USAGE"
+  ],
+  "evaluation_principles": [
+    "START_WITH_READ_ONLY_FEASIBILITY",
+    "PREFER_LOCAL_DETERMINISTIC_CONTROLS_OVER_CONTINUOUS_MODEL_REVIEW",
+    "USE_SEMANTIC_SUPERVISION_ONLY_AT_MATERIAL_CHECKPOINTS",
+    "TEST_NEGATIVE_PATHS_BEFORE_ANY_REAL_LAB_EXECUTION",
+    "DO_NOT_ATTACH_RETROACTIVELY_TO_AN_UNCONTROLLED_EXISTING_CODEX_SESSION",
+    "DO_NOT_CLAIM_REAL_TIME_INTERVENTION_UNTIL_STOP_AND_CORRECT_BEHAVIOR_IS_REPRODUCED"
+  ],
+  "next_gate": "SEPARATE_EXPLICIT_READ_ONLY_FEASIBILITY_AUTHORIZATION",
+  "non_effects": [
+    "NO_SDK_INSTALLATION",
+    "NO_CODEX_SESSION_STARTED",
+    "NO_MODEL_OR_API_REQUESTS",
+    "NO_API_KEY_CREATION_OR_USE",
+    "NO_CHATGPT_PLUS_AUTHENTICATION_TEST",
+    "NO_HOOK_OR_SUPERVISOR_IMPLEMENTATION",
+    "NO_RUNTIME_OR_PRODUCT_CHANGE",
+    "NO_INTEGRATION_PROMOTION_OR_ACTIVATION",
+    "NO_ROADMAP_COMMITMENT",
+    "NO_EXECUTION_AUTHORITY_CREATED"
+  ],
+  "source_refs": [
+    "LAB_CONTRACT.md",
+    "METHODOLOGY.md",
+    "docs/MODEL_OPERATING_RULES.md",
+    "project-sources/chatgpt/04_EXECUTION_EFFICIENCY_AND_BRIEFS.md",
+    "projects/lab/ideas/index.json",
+    "registry/ideas.json"
+  ]
+}
