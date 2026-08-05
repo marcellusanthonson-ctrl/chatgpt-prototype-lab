@@ -33,6 +33,10 @@ Con autorización suficiente:
 
 Priorizar JSON para Claude y Codex. Incluir `task_id`, objetivo, repositorios, ramas, HEAD, autoridad, `authorization_ref`, scope, `forbidden_actions`, `source_refs`, `required_outputs`, `acceptance_checks`, `stop_conditions` y `response_contract`.
 
+Los briefs complejos deben incluir `learning_context` conforme a `schemas/brief-learning-context.schema.json`. Deben identificar el contrato transversal, las fuentes de incidentes aplicables, los controles preventivos obligatorios, la capacidad resolutiva y `LEARNING_APPLICATION_REPORT.json`.
+
+Codex puede confirmar una recurrencia actual solo mediante evidencia observable. Puede adaptar el plan y corregir defectos menores únicamente dentro de la autoridad del brief. Un error histórico no prueba recurrencia; una recurrencia material no resoluble dentro de alcance obliga a detenerse.
+
 Transmitir el contexto mínimo suficiente para ejecutar, sin borrar el contexto material acumulado. Un resumen de ejecución no reemplaza al briefing completo que lo origina.
 
 ## Preservación y versionado obligatorios

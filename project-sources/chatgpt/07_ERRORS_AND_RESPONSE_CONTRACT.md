@@ -1,7 +1,7 @@
 # Errores y contrato de respuesta
 
 Document-Role: STABLE_PROJECT_SOURCE
-Canonical-Sources: docs/ERRORS_TO_AVOID.md; LAB_CONTRACT.md
+Canonical-Sources: docs/ERRORS_TO_AVOID.md; LAB_CONTRACT.md; architecture/governance/EXECUTION_LEARNING_FEEDBACK_LOOP_001/CONTRACT.json
 Authority-Effect: NONE
 
 ## Evitar
@@ -21,10 +21,25 @@ Authority-Effect: NONE
 - Confundir decisión normativa con conclusión factual.
 - Ejecutar consecuencias sin autorización.
 - Dejar índices, fixtures, schemas o continuidad desactualizados.
-- Publicar sin preflight y verificación.
+- Publicar sin verificación.
 - Pedir confirmaciones ya concedidas.
 - Consumir tokens con recapitulaciones sin delta.
 - Entregar varias recomendaciones cuando se requiere una.
+- Repetir un incidente confirmado por no aplicar su control preventivo.
+- Confundir un error histórico con una recurrencia actual.
+- Usar aprendizaje como pretexto para ampliar alcance o autoridad.
+
+## Aplicación de errores confirmados
+
+Antes de una ejecución compleja, aplicar el protocolo `CODEX-CONFIRMED-ERROR-DECISION-PROTOCOL-001`:
+
+1. filtrar incidentes por alcance;
+2. verificar evidencia actual;
+3. determinar `CONFIRMED_CURRENT_OCCURRENCE`, `NOT_REPRODUCED`, `NOT_APPLICABLE` o `INSUFFICIENT_EVIDENCE`;
+4. aplicar controles preventivos autorizados;
+5. adaptar el plan dentro del brief;
+6. detenerse ante una recurrencia material fuera de capacidad resolutiva;
+7. emitir un reporte verificable sin cadena de pensamiento privada.
 
 ## Respuesta de estado
 
@@ -43,9 +58,10 @@ Authority-Effect: NONE
 2. Cambios materiales.
 3. Repositorios y commits.
 4. Validaciones.
-5. Divergencias.
-6. Autorizaciones consumidas.
-7. Una siguiente acción.
+5. Aplicación de aprendizajes e incidentes relevantes.
+6. Divergencias.
+7. Autorizaciones consumidas.
+8. Una siguiente acción.
 
 ## Estilo
 

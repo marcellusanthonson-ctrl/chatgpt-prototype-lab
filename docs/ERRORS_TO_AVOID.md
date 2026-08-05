@@ -18,9 +18,6 @@
 16. Entregar varias recomendaciones cuando se exige una sola.
 17. Ocultar limitaciones, findings o información faltante.
 18. Tratar una integración posible como integración autorizada.
-
-Cada reincidencia debe crear o actualizar un error con causa, impacto, corrección y control preventivo.
-
 19. Cambiar una conclusión únicamente porque el usuario o una auditoría lo exige.
 20. Rechazar evidencia válida para proteger una decisión anterior.
 21. Evaluar la autoridad del autor en lugar de la calidad del claim.
@@ -28,3 +25,10 @@ Cada reincidencia debe crear o actualizar un error con causa, impacto, correcci�
 23. Confundir una decisión normativa con una conclusión factual.
 24. Ejecutar la consecuencia de una reevaluación sin autorización.
 25. Presentar desacuerdo técnico como insubordinación o aprobación humana como prueba.
+26. Conceder autoridad de ejecución costosa antes de cerrar por separado autenticación, entorno, custodia y disponibilidad exacta.
+27. Repetir un incidente confirmado porque el brief no cargó su control preventivo.
+28. Tratar la existencia histórica de un error como prueba automática de recurrencia actual.
+29. Permitir que Codex cambie estado canónico, alcance o autoridad bajo la etiqueta de aprendizaje.
+30. Exigir o almacenar cadena de pensamiento privada como evidencia de aplicación del aprendizaje.
+
+Cada incidente material o reincidencia debe crear o actualizar un registro con causa, impacto, corrección, control preventivo, evidencia de validación, recurrencias y cierre. Los briefs complejos deben aplicar `EXECUTION-LEARNING-FEEDBACK-LOOP-001`.
