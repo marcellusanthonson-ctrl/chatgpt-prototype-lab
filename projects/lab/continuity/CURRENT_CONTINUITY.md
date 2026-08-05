@@ -1,4 +1,4 @@
-# LAB continuity — autorización 196 consumida y probe zero-model
+# LAB continuity — autorización 197 ejecutada, publicación pendiente
 
 Canonical repository: `marcellusanthonson-ctrl/chatgpt-prototype-lab`  
 Branch: `main`  
@@ -7,61 +7,35 @@ HEAD policy: `VERIFY_LIVE_AT_USE`
 
 ## Estado alcanzado
 
-La autorización 195 publicó en `README.md` la sección **“Ejecución optimizada con Codex Desktop”** y quedó `CONSUMED_VERIFIED_REMOTE_PUBLICATION`, sin autoridad residual.
+Jonathan Martínez aprobó la autorización 197 a las `2026-08-05T17:03:00-04:00`. El prototipo local `CONTEXTUAL_BOOTSTRAP_RESOLVER_001` fue implementado y validado desde el parent `e7365614453afa276af5db6d7770b5985efcf239`.
 
-La autorización 196 fue aprobada, ejecutada, publicada y consumida. La publicación principal corresponde al PR 54 y al merge:
+Resultado terminal: `PROTOTYPE_VALIDATION_PASS_NO_INTEGRATION`.
 
-`ea069609bbac26ccb20d025f79758d96ff42df3f`
+La autorización permanece `GRANTED_IN_PROGRESS` únicamente para publicar, verificar el remoto y registrar su consumo. No existe autoridad para ampliar el prototipo, integrarlo o utilizarlo operacionalmente.
 
-Estado:
+## Resultado experimental
 
-`CONSUMED_VERIFIED_REMOTE_PUBLICATION`
+- 24 fixtures sintéticos y 72 ejecuciones determinísticas;
+- macro F1 `1.0`;
+- recall de restricciones críticas `1.0`;
+- precisión de paths prohibidos `1.0`;
+- reducción mediana de bytes `88.292%`;
+- cero bypasses de autoridad, autorizaciones consumidas activadas, contaminación entre proyectos, paths inventados o conflictos auto-resueltos.
 
-Autoridad residual:
+El PASS está limitado al corpus sintético. No prueba generalización al LAB completo, ahorro operacional real de tokens, integración con ChatGPT o Codex, ni preparación para producción.
 
-`NONE`
+## Clasificación arquitectónica
 
-## Resultado del probe 196
+El prototipo implementa experimentalmente las etapas determinísticas 1–4 y 7–8 de `RAG-FEDERATION-CONTRACT-001`. Las etapas semánticas 5 y 6 permanecen desactivadas. No se creó una arquitectura paralela.
 
-Resultado terminal:
+## Efectos nulos
 
-`INSUFFICIENT_EVIDENCE`
+No hubo instalación de dependencias, solicitudes a modelos, embeddings, base vectorial, credenciales, acceso a repositorios externos, runtime, producto, promoción o integración.
 
-El entorno observable fue Linux `6.18.35` `x86_64`, no Windows. `codex` no estaba instalado en esta superficie. Por ello no fue posible:
+## Estado previo preservado
 
-- crear el fresh Windows worktree exigido;
-- demostrar 13/13 coincidencias raw-byte;
-- ejecutar `codex login status` sobre una sesión ChatGPT preexistente;
-- verificar Codex CLI `0.146.0` y su SHA-256;
-- verificar localmente `gpt-5.6-sol`, reasoning `medium` y sandbox read-only;
-- ejecutar los validadores desde el worktree requerido.
-
-La regla `.gitattributes` para fijar LF en `INSTRUMENT_REDESIGN_191/**` sí está presente.
-
-Este resultado no determina que el equipo Windows de Jonathan Martínez esté listo o no listo. Solo establece que esta superficie no aportó evidencia suficiente. Hubo cero solicitudes a modelos, cero acciones de login y ningún retest, auditoría, adjudicación, promoción, activación o integración.
-
-## Product Leadership
-
-`INT-LAB-004` permanece:
-
-`CANDIDATE_NOT_ACTIVE_NOT_INTEGRATED`
-
-Readiness permanece:
-
-`NOT_READY_FOR_FRESH_RETEST_REISSUE`
-
-Execution 005 / ATTEMPT-004 continúa como `BLOCKED_BEFORE_MODEL_REQUESTS`, con cero solicitudes y cero retries. No existe autorización de fresh retest ni autoridad ejecutiva activa.
-
-## Divergencias preservadas
-
-`CURRENT_STATE.json`, `projects/lab/PROJECT_STATE.json` y `registry/index.json` siguen siendo proyecciones agregadas desactualizadas.
-
-`PEND-LAB-048.json` e `INTEGRATION_READINESS.json` todavía describen el probe como no autorizado. La autorización 196 no incluyó esos paths, por lo que quedaron identificados como divergencia y no fueron modificados.
-
-## Prohibiciones vigentes
-
-No hay autoridad para solicitudes a modelos, login, probe adicional, fresh retest, replay, regeneración, rescoring, auditoría, adjudicación, cambio de `INT-LAB-004`, promoción, activación, integración, runtime, producto, Skills, SDK, credenciales o repositorios externos.
+La autorización 196 continúa consumida con resultado `INSUFFICIENT_EVIDENCE`. Product Leadership permanece `CANDIDATE_NOT_ACTIVE_NOT_INTEGRATED` y sin autorización de fresh retest. Las proyecciones agregadas previamente identificadas permanecen fuera del alcance y pueden seguir desactualizadas.
 
 ## Siguiente acción única
 
-Preparar una autorización separada para ejecutar el probe zero-model desde el entorno Windows real de Codex Desktop o para reconciliar evidencia generada por esa máquina.
+Publicar la rama `agent/contextual-bootstrap-resolver-197`, verificar el remoto y consumir formalmente la autorización 197 sin autoridad residual.

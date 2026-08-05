@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0.0",
+  "report_id": "CONTEXT-BUDGET-REPORT-197",
+  "project_id": "lab",
+  "authorization_id": "AUTHORIZATION_LAB_CONTEXTUAL_BOOTSTRAP_RESOLVER_READ_ONLY_PROTOTYPE_AND_DISCRIMINATING_VALIDATION_197",
+  "status": "VALIDATED_SYNTHETIC_BOUNDED",
+  "recorded_at": "2026-08-05T18:08:00-04:00",
+  "baseline": "FULL_SYNTHETIC_FIXTURE_CATALOG_PER_TASK",
+  "selection": "CONTEXTUAL_BOOTSTRAP_RESOLVER_001_OUTPUT",
+  "overall": {"fixture_count":24,"resolver_runs":72,"median_context_byte_reduction_percent":88.292,"macro_f1":1,"critical_constraint_recall":1,"forbidden_path_precision":1,"median_latency_ms":0.0728},
+  "by_route": {
+    "AUDIT_OR_REASSESSMENT": {"count":3,"mean_reduction_percent":83.649,"mean_latency_ms":0.0842,"mean_selected_sources":9.333},
+    "CODE_CHANGE": {"count":5,"mean_reduction_percent":88.813,"mean_latency_ms":0.0783,"mean_selected_sources":6.0},
+    "CONTINUITY_RESUME": {"count":4,"mean_reduction_percent":94.898,"mean_latency_ms":0.6412,"mean_selected_sources":2.75},
+    "NEW_DESIGN": {"count":4,"mean_reduction_percent":91.366,"mean_latency_ms":0.0647,"mean_selected_sources":5.5},
+    "PROJECT_CONTINUATION": {"count":1,"mean_reduction_percent":94.683,"mean_latency_ms":0.1628,"mean_selected_sources":3.0},
+    "STATUS_OR_AUTHORITY": {"count":5,"mean_reduction_percent":62.328,"mean_latency_ms":0.072,"mean_selected_sources":9.0},
+    "UNKNOWN_ESCALATION": {"count":2,"mean_reduction_percent":93.069,"mean_latency_ms":0.0635,"mean_selected_sources":5.0}
+  },
+  "token_accounting": {"method":"selected_bytes_divided_by_4_estimate","real_tokenizer_executed":false,"claim":"ESTIMATE_ONLY"},
+  "limitations": ["SYNTHETIC_CATALOGS","DUPLICATED_FIXTURE_CATALOGS_IN_TEST_ARTIFACT","NO_LLM_CONTEXT_API_MEASUREMENT","NO_TRUE_TIME_TO_FIRST_CODE_MEASUREMENT","NO_OPERATIONAL_WARM_CACHE_COMPARISON"],
+  "source_refs": ["projects/lab/experiments/CONTEXTUAL-BOOTSTRAP-RESOLVER-001/results/VALIDATION_RESULTS.json"]
+}

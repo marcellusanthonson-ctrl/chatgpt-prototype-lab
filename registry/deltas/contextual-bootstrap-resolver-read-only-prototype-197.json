@@ -1,0 +1,13 @@
+{
+  "schema_version":"1.0.0",
+  "delta_id":"contextual-bootstrap-resolver-read-only-prototype-197",
+  "project_id":"lab",
+  "authorization_id":"AUTHORIZATION_LAB_CONTEXTUAL_BOOTSTRAP_RESOLVER_READ_ONLY_PROTOTYPE_AND_DISCRIMINATING_VALIDATION_197",
+  "status":"IMPLEMENTATION_COMPLETE_PUBLICATION_PENDING",
+  "created_at":"2026-08-05T18:08:00-04:00",
+  "expected_parent_head":"e7365614453afa276af5db6d7770b5985efcf239",
+  "changes":{"prototype":"CREATED_EXPERIMENTAL_NOT_INTEGRATED","fixtures":24,"runs":72,"terminal_result":"PROTOTYPE_VALIDATION_PASS_NO_INTEGRATION","evidence":"CREATED","context_budget_report":"CREATED","continuity":"UPDATED_FOR_ACTIVE_PUBLICATION_CLOSURE","validation_metrics":{"macroF1":1,"microF1":1,"criticalConstraintRecall":1,"forbiddenPathPrecision":1,"falsePositives":0,"falseNegatives":0,"medianContextByteReductionPercent":88.292,"medianLatencyMs":0.0728,"authorityBypasses":0,"consumedAuthorizationActivations":0,"crossProjectContaminations":0,"inventedPaths":0,"unpinnedSources":0,"missingReasonTraces":0,"autoResolvedConflicts":0}},
+  "non_changes":["NO_START_HERE_CHANGE","NO_CONTRACT_CHANGE","NO_METHODOLOGY_CHANGE","NO_RAG_CONTRACT_CHANGE","NO_RUNTIME","NO_PRODUCT","NO_INTEGRATION","NO_EXTERNAL_REPOSITORY"],
+  "publication":{"branch":"agent/contextual-bootstrap-resolver-197","pull_request":null,"merge_commit":null,"verified_remote":false},
+  "source_refs":["projects/lab/experiments/CONTEXTUAL-BOOTSTRAP-RESOLVER-001/MANIFEST.json","projects/lab/evidence/EVD-LAB-CONTEXTUAL-BOOTSTRAP-RESOLVER-197.json"]
+}
