@@ -8,6 +8,12 @@ El HEAD remoto de `main` verificado al crear este paquete fue:
 
 No debe asumirse vigente en la próxima conversación. Se aplica `VERIFY_LIVE_AT_USE`.
 
+El paquete de continuidad fue publicado mediante PR #40 en:
+
+`57579e007c537db5875fa57c262a721300608e0f`
+
+La autorización 191 quedó consumida después de verificar esa publicación y no deja autoridad residual.
+
 Product Leadership (`INT-LAB-004`) continúa como:
 
 `CANDIDATE_NOT_ACTIVE_NOT_INTEGRATED`
@@ -88,12 +94,12 @@ Para el estado actual de Product Leadership prevalecen los registros específico
 - `PEND-LAB-048`;
 - lifecycle y autorización 190.
 
-No se autoriza corregir las vistas agregadas dentro de este paquete de continuidad.
+No se autorizó corregir las vistas agregadas dentro de este paquete de continuidad.
 
 ## Autoridad
 
 - Autorización 190: consumida, sin autoridad residual.
-- Autorización 191: únicamente publicación y verificación de este paquete de continuidad.
+- Autorización 191: consumida después de la publicación verificada, sin autoridad residual.
 - Rediseño del instrumento: no autorizado.
 - Retest o nuevas llamadas al modelo: no autorizados.
 - Modificación del paquete Product Leadership: no autorizada.
