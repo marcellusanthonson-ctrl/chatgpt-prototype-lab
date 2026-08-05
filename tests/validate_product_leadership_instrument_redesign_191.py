@@ -108,7 +108,9 @@ def git(*args: str, binary: bool = False) -> bytes | str:
 
 
 def changed_paths() -> set[str]:
-    tracked = set(filter(None, str(git("diff", "--name-only", EXPECTED_PARENT, "--")).splitlines()))
+    authorization = load_json(AUTH_REL)
+    comparison_base = "HEAD" if authorization.get("status") == "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION" else EXPECTED_PARENT
+    tracked = set(filter(None, str(git("diff", "--name-only", comparison_base, "--")).splitlines()))
     untracked = set(filter(None, str(git("ls-files", "--others", "--exclude-standard")).splitlines()))
     return {path.replace("\\", "/") for path in tracked | untracked}
 
@@ -184,6 +186,10 @@ def validate_authority_and_scope(paths: set[str]) -> None:
     brief = load_json(BRIEF_REL)
     if auth.get("authorization_id") != AUTH_ID or auth.get("status") not in {"GRANTED", "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION"}:
         fail("authorization 191 is not the exact granted/consumed record")
+    if auth.get("status") == "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION":
+        publication = auth.get("publication", {})
+        if publication.get("verified_remote_main") is not True or publication.get("pull_request") != 42:
+            fail("consumed authorization lacks exact verified publication evidence")
     if auth.get("approved_by") != "Jonathan Martínez" or auth.get("grant_inferred") is not False:
         fail("authorization 191 approval identity or inference boundary invalid")
     permissions = auth.get("execution_permissions", {})

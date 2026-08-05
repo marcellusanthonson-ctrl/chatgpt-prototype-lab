@@ -44,11 +44,16 @@
     "verified_parent_head": "2e2f97449c9734512ddd0dfe3a3f308c037a8e8c",
     "working_branch": "agent/product-leadership-test003-instrument-redesign-191",
     "publication_method": "COMMIT_PUSH_PULL_REQUEST_SQUASH_MERGE_VERIFY_REMOTE",
-    "publication_status": "PENDING_ALL_DETERMINISTIC_GATES_PASS"
+    "publication_status": "VERIFIED_REMOTE_PUBLICATION",
+    "pull_request": 42,
+    "source_commit": "43758caf568290ffe5458ec5075da59fe22e1525",
+    "squash_commit": "bba52b2a0b3d1ce053f11ee3e1b0abf0866697f5",
+    "verified_remote_main_head": "1fc6f36c4ac90f9d1770d52ffd435af023bc86ce",
+    "verified_at": "2026-08-05T01:24:17-04:00"
   },
   "authorization": {
     "id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191",
-    "status": "GRANTED_UNTIL_VERIFIED_REMOTE_PUBLICATION",
+    "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
     "consumption_rule": "CONSUMED_ON_VERIFIED_REMOTE_SQUASH_MERGE_OF_THE_EXACT_INSTRUMENT_REDESIGN_PACKAGE_AFTER_ALL_ACCEPTANCE_GATES_PASS",
     "residual_authority_after_consumption": "NONE"
   },
