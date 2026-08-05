@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "idea-lab-003-codex-live-supervision",
+  "project_id": "lab",
+  "updated_at": "2026-08-05",
+  "change_class": "IDEA_CAPTURE_ONLY",
+  "idea": {
+    "id": "IDEA-LAB-003",
+    "status": "CAPTURED",
+    "canonical_path": "projects/lab/ideas/IDEA-LAB-003.json"
+  },
+  "registry_updates": {
+    "projects/lab/ideas/index.json": "ADD_IDEA_LAB_003",
+    "registry/ideas.json": "ADD_IDEA_LAB_003"
+  },
+  "aggregate_registry_index": {
+    "path": "registry/index.json",
+    "mutated": false,
+    "reason": "CURRENT_CONTINUITY_FORBIDS_BROAD_AGGREGATE_VIEW_RECONCILIATION; DISCOVERABILITY_IS_PRESERVED_THROUGH_REGISTRY_IDEAS_POINTER",
+    "expected_effective_idea_count": 6
+  },
+  "authority_effect": "NONE_IDEA_CAPTURE_ONLY",
+  "non_effects": [
+    "NO_DECISION",
+    "NO_AUTHORIZATION",
+    "NO_ROADMAP_CHANGE",
+    "NO_INTEGRATION",
+    "NO_SDK_INSTALLATION",
+    "NO_MODEL_REQUEST",
+    "NO_RUNTIME_OR_PRODUCT_EFFECT"
+  ]
+}
