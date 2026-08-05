@@ -3,7 +3,7 @@
   "evidence_id": "EVD-LAB-PL003-INSTRUMENT-REDESIGN-191",
   "project_id": "lab",
   "kind": "PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_STATIC_VALIDATION_EVIDENCE",
-  "status": "PASS_STATIC_VALIDATION_PUBLICATION_PENDING",
+  "status": "PASS_STATIC_VALIDATION_VERIFIED_REMOTE_PUBLICATION_AUTHORIZATION_CONSUMED",
   "recorded_at": "2026-08-05T01:12:35-04:00",
   "authorization": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191",
   "brief": "CODEX_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191_001",
@@ -66,10 +66,14 @@
     "integration_modifications": 0
   },
   "publication": {
-    "status": "PENDING_AUTHORIZED_GITHUB_WORKFLOW",
+    "status": "VERIFIED_REMOTE_PUBLICATION",
     "method": "COMMIT_PUSH_PULL_REQUEST_SQUASH_MERGE_VERIFY_REMOTE",
-    "pull_request": null,
-    "verified_remote_main_head": null
+    "pull_request": 42,
+    "source_commit": "43758caf568290ffe5458ec5075da59fe22e1525",
+    "squash_commit": "bba52b2a0b3d1ce053f11ee3e1b0abf0866697f5",
+    "verified_remote_main_head": "1fc6f36c4ac90f9d1770d52ffd435af023bc86ce",
+    "verified_remote_main": true,
+    "verified_at": "2026-08-05T01:24:17-04:00"
   },
   "claim_limits": [
     "STATIC_VALIDATION_ONLY",

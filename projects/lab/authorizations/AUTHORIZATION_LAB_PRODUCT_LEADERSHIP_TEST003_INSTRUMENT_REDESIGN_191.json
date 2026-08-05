@@ -2,7 +2,7 @@
 "schema_version": "1.0.0",
 "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191",
 "project_id": "lab",
-"status": "GRANTED",
+"status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
 "authorization_class": "BOUNDED_DOCUMENTARY_AND_TECHNICAL_INSTRUMENT_REDESIGN",
 "approved_by": "Jonathan Martínez",
 "approved_at": "2026-08-05T00:51:47-04:00",
@@ -260,6 +260,16 @@
 "product_changes_authorized": false
 },
 "consumption_rule": "CONSUMED_ON_VERIFIED_REMOTE_SQUASH_MERGE_OF_THE_EXACT_INSTRUMENT_REDESIGN_PACKAGE_AFTER_ALL_ACCEPTANCE_GATES_PASS",
+"consumed_at": "2026-08-05T01:24:17-04:00",
+"consumption_trigger": "SATISFIED_VERIFIED_REMOTE_SQUASH_MERGE_OF_THE_EXACT_INSTRUMENT_REDESIGN_PACKAGE_AFTER_ALL_ACCEPTANCE_GATES_PASSED",
+"publication": {
+"pull_request": 42,
+"source_commit": "43758caf568290ffe5458ec5075da59fe22e1525",
+"squash_commit": "bba52b2a0b3d1ce053f11ee3e1b0abf0866697f5",
+"verified_remote_main_head": "1fc6f36c4ac90f9d1770d52ffd435af023bc86ce",
+"verified_remote_main": true,
+"verified_at": "2026-08-05T01:24:17-04:00"
+},
 "residual_authority_after_consumption": "NONE",
 "maximum_result": "PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_COMPLETE_STATICALLY_VALIDATED_AWAITING_SEPARATE_FRESH_RETEST_AUTHORIZATION",
 "next_authorized_action_after_consumption": "NONE_UNTIL_SEPARATE_EXPLICIT_FRESH_RETEST_AUTHORIZATION"

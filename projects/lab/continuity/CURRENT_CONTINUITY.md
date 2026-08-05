@@ -4,6 +4,8 @@ Estado máximo permitido: `PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_COMPLE
 
 El instrumento técnico y documental de Product Leadership Test 003 fue rediseñado bajo `AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_INSTRUMENT_REDESIGN_191`. La validación estática dedicada cubre los ocho dominios de `PEND-LAB-048`: simetría de cuatro brazos, aislamiento del scorer, controles negativos fijos, trazabilidad fixture-oráculo, `INSUFFICIENT_EVIDENCE`, condiciones de detención, calibración de la rúbrica principal y cadena de custodia con gates de retest futuro.
 
+El PR 42 fue publicado mediante squash merge y verificado en `origin/main`; la autorización 191 quedó consumida sin autoridad residual.
+
 No hubo llamadas a modelos, ejecución de brazos, retest, replay, regeneración ni rescoring. Los 150 archivos históricos de Execution 004 / ATTEMPT-003 permanecen byte por byte intactos; se conserva tanto el FAIL histórico emitido por el runner como la interpretación reconciliada `INSUFFICIENT_EVIDENCE`.
 
 `INT-LAB-004` permanece `CANDIDATE_NOT_ACTIVE_NOT_INTEGRATED`. El paquete candidato de Product Leadership no fue modificado ni adjudicado. `PEND-LAB-048` permanece abierto únicamente a la espera de una autorización separada y explícita para un fresh retest.
