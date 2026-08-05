@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "profile_id": "LAB_IMPLEMENTATION",
+  "status": "ACTIVE_PROFILE",
+  "surface": "CODEX_DESKTOP",
+  "mode": "WRITE_BOUNDED",
+  "purpose": "Implement the authorized change in the smallest safe scope and run deterministic tests.",
+  "authority_effect": "NONE_ROLE_PROFILE_DOES_NOT_AUTHORIZE_EXECUTION",
+  "write_access": {
+    "allowed": true,
+    "only_paths_from_envelope": true
+  },
+  "required_inputs": [
+    "execution_envelope",
+    "context_manifest",
+    "authorization_ref",
+    "discovery_report_if_required"
+  ],
+  "required_outputs": [
+    "changed_artifacts",
+    "validation_evidence",
+    "LEARNING_APPLICATION_REPORT.json",
+    "IMPLEMENTATION_REPORT.json"
+  ],
+  "required_behavior": [
+    "MODIFY_ONLY_ALLOWED_PATHS",
+    "APPLY_APPLICABLE_PREVENTIVE_CONTROLS",
+    "PREFER_EXISTING_PATTERNS",
+    "RUN_DECLARED_COMMANDS",
+    "CORRECT_MINOR_REVERSIBLE_IN_SCOPE_DEFECTS",
+    "FREEZE_OUTPUT_BEFORE_HANDOFF",
+    "DO_NOT_SELF_ADJUDICATE_MATERIAL_CLAIMS"
+  ],
+  "stop_conditions": [
+    "AUTHORITY_OR_HEAD_MISMATCH",
+    "OUT_OF_SCOPE_CHANGE_REQUIRED",
+    "MATERIAL_RECURRENCE_UNRESOLVED",
+    "IRREVERSIBLE_RISK",
+    "VALIDATION_CANNOT_RUN"
+  ],
+  "handoff": {
+    "to": "LAB_VALIDATION_OR_RELEASE_CONTROLLER",
+    "frozen_output": true
+  },
+  "learning_contract": "architecture/governance/EXECUTION_LEARNING_FEEDBACK_LOOP_001/CONTRACT.json",
+  "private_chain_of_thought": "NOT_REQUIRED_NOT_RECORDED"
+}

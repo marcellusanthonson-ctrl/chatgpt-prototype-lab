@@ -30,5 +30,11 @@
 28. Tratar la existencia histórica de un error como prueba automática de recurrencia actual.
 29. Permitir que Codex cambie estado canónico, alcance o autoridad bajo la etiqueta de aprendizaje.
 30. Exigir o almacenar cadena de pensamiento privada como evidencia de aplicación del aprendizaje.
+31. Pegar gobernanza, historial y continuidad completos en cada hilo de Codex Desktop.
+32. Optimizar únicamente cantidad de líneas e ignorar bytes, tokens, redundancia y fuentes cargadas.
+33. Entregar el mismo contexto a discovery, implementación, validación y auditoría.
+34. Crear múltiples agentes para una tarea pequeña sin independencia real.
+35. Paralelizar escritores sobre los mismos paths, estados o publicación.
+36. Presentar un execution envelope como reemplazo del brief canónico o declarar reducción de latencia sin benchmark.
 
 Cada incidente material o reincidencia debe crear o actualizar un registro con causa, impacto, corrección, control preventivo, evidencia de validación, recurrencias y cierre. Los briefs complejos deben aplicar `EXECUTION-LEARNING-FEEDBACK-LOOP-001`.

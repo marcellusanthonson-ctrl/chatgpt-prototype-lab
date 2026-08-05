@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "profile_id": "LAB_VALIDATION",
+  "status": "ACTIVE_PROFILE",
+  "surface": "CODEX_DESKTOP",
+  "mode": "READ_ONLY_BY_DEFAULT",
+  "purpose": "Independently verify scope, contracts, schemas, tests, diffs and claims against frozen implementation outputs.",
+  "authority_effect": "NONE_ROLE_PROFILE_DOES_NOT_AUTHORIZE_EXECUTION",
+  "write_access": {
+    "allowed": false,
+    "repair_requires_separate_envelope": true
+  },
+  "required_inputs": [
+    "execution_envelope",
+    "frozen_diff_or_commit",
+    "acceptance_checks",
+    "implementation_report"
+  ],
+  "required_outputs": [
+    "VALIDATION_REPORT.json"
+  ],
+  "required_behavior": [
+    "REPRODUCE_DETERMINISTIC_CHECKS",
+    "CHECK_FORBIDDEN_PATHS",
+    "VERIFY_REQUIRED_OUTPUTS",
+    "TEST_NEGATIVE_CASES",
+    "VERIFY_LEARNING_APPLICATION",
+    "DO_NOT_ASSUME_IMPLEMENTER_CONCLUSION",
+    "NO_SILENT_REPAIR"
+  ],
+  "stop_conditions": [
+    "INPUTS_NOT_FROZEN",
+    "VALIDATION_SURFACE_UNAVAILABLE",
+    "MATERIAL_SCOPE_MISMATCH",
+    "INSUFFICIENT_EVIDENCE"
+  ],
+  "handoff": {
+    "to": "LAB_AUDIT_OR_RELEASE_CONTROLLER_OR_CHATGPT",
+    "frozen_output": true
+  },
+  "learning_contract": "architecture/governance/EXECUTION_LEARNING_FEEDBACK_LOOP_001/CONTRACT.json",
+  "private_chain_of_thought": "NOT_REQUIRED_NOT_RECORDED"
+}

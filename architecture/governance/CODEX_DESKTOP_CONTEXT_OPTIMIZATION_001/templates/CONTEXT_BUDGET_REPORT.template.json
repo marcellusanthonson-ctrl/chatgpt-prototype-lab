@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "report_id": "<TASK>-CONTEXT-BUDGET-REPORT",
+  "execution_id": "<id>",
+  "profile": "<profile>",
+  "complexity_class": "<class>",
+  "measurements": {
+    "initial_message_non_empty_lines": null,
+    "initial_message_utf8_bytes": null,
+    "initial_message_estimated_tokens": null,
+    "always_required_source_count": null,
+    "sources_actually_read": null,
+    "time_to_first_useful_command_seconds": null,
+    "time_to_first_material_change_seconds": null,
+    "total_elapsed_seconds": null,
+    "agent_thread_count": null,
+    "correction_cycles": null,
+    "validation_failures": null,
+    "unexpected_stop_conditions": null
+  },
+  "quality": {
+    "final_contract_pass": null,
+    "omitted_material_constraints": []
+  },
+  "comparison": {
+    "baseline_ref": null,
+    "result": "NOT_EVALUATED"
+  },
+  "claim_boundary": "ONE_EXECUTION_ONLY"
+}

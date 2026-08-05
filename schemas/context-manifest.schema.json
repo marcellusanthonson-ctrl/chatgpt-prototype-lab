@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lab.local/schemas/context-manifest.schema.json",
+  "title": "Codex Desktop context manifest",
+  "type": "object",
+  "required": ["schema_version", "manifest_id", "execution_envelope_ref", "sources", "forbidden_sources", "budget", "validation"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "manifest_id": {"type": "string", "minLength": 1},
+    "execution_envelope_ref": {"type": "string", "minLength": 1},
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "policy", "reason"],
+        "properties": {
+          "path": {"type": "string", "minLength": 1},
+          "policy": {"enum": ["ALWAYS", "REQUIRED", "FILTERED", "ON_TRIGGER", "AUDIT_ONLY", "HISTORICAL_REFERENCE", "FORBIDDEN"]},
+          "reason": {"type": "string", "minLength": 1},
+          "selector": {"type": "object"},
+          "trigger": {"type": "string"}
+        },
+        "allOf": [
+          {"if": {"properties": {"policy": {"const": "FILTERED"}}}, "then": {"required": ["selector"]}},
+          {"if": {"properties": {"policy": {"const": "ON_TRIGGER"}}}, "then": {"required": ["trigger"]}}
+        ],
+        "additionalProperties": false
+      }
+    },
+    "forbidden_sources": {"type": "array", "items": {"type": "string"}},
+    "budget": {"type": "object", "required": ["max_always_plus_required_sources", "max_filtered_incidents"]},
+    "validation": {"type": "object", "required": ["status", "canonical_parent_complete"]}
+  },
+  "additionalProperties": false
+}

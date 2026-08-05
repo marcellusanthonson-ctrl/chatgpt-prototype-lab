@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "standard_id": "CODEX-DESKTOP-CONTEXT-OPTIMIZATION-001",
+  "project_id": "lab",
+  "status": "ACTIVE_TRANSVERSAL_DOCUMENTARY_STANDARD_AWAITING_OPERATIONAL_BENCHMARK",
+  "effective_for": "FUTURE_CODEX_DESKTOP_EXECUTIONS_CREATED_AFTER_AUTHORIZATION_194",
+  "purpose": "Reduce initial context, repeated instructions, role ambiguity and unnecessary serial work while preserving canonical completeness, authority and auditability.",
+  "root_agents": "AGENTS.md",
+  "components": {
+    "loading_policy": "architecture/governance/CODEX_DESKTOP_CONTEXT_OPTIMIZATION_001/CONTEXT_LOADING_POLICY.json",
+    "budgets": "architecture/governance/CODEX_DESKTOP_CONTEXT_OPTIMIZATION_001/CONTEXT_BUDGETS.json",
+    "routing": "architecture/governance/CODEX_DESKTOP_CONTEXT_OPTIMIZATION_001/ROUTING_POLICY.json",
+    "parallelism": "architecture/governance/CODEX_DESKTOP_CONTEXT_OPTIMIZATION_001/PARALLELISM_POLICY.json",
+    "measurement": "architecture/governance/CODEX_DESKTOP_CONTEXT_OPTIMIZATION_001/MEASUREMENT_PROTOCOL.json",
+    "start_prompt": "architecture/governance/CODEX_DESKTOP_CONTEXT_OPTIMIZATION_001/CODEX_DESKTOP_START_PROMPT.md",
+    "profiles_root": "architecture/governance/CODEX_DESKTOP_CONTEXT_OPTIMIZATION_001/profiles",
+    "templates_root": "architecture/governance/CODEX_DESKTOP_CONTEXT_OPTIMIZATION_001/templates"
+  },
+  "profiles": [
+    "LAB_DISCOVERY",
+    "LAB_IMPLEMENTATION",
+    "LAB_VALIDATION",
+    "LAB_AUDIT"
+  ],
+  "principles": [
+    "FULL_CANONICAL_BRIEF_REMAINS_PRESERVED",
+    "COMPACT_EXECUTION_ENVELOPE_IS_A_VALIDATED_PROJECTION_NOT_A_REPLACEMENT",
+    "PROGRESSIVE_CONTEXT_DISCLOSURE",
+    "ONE_ROLE_ONE_PRIMARY_OBJECTIVE",
+    "SELECTIVE_INCIDENT_RETRIEVAL",
+    "DETERMINISTIC_VALIDATION_FIRST",
+    "RISK_BASED_AGENT_ROUTING",
+    "PARALLELIZE_ONLY_INDEPENDENT_WORK",
+    "MEASURE_BEFORE_CLAIMING_SPEED_IMPROVEMENT"
+  ],
+  "authority_effect": "NONE",
+  "runtime_effect": "NONE",
+  "skill_effect": "NO_SKILL_CREATED_INSTALLED_OR_SELECTED",
+  "source_refs": [
+    "projects/lab/sources/USER_SOURCE_CODEX_DESKTOP_CONTEXT_AND_AGENT_OPTIMIZATION_20260805.md",
+    "LAB_CONTRACT.md",
+    "METHODOLOGY.md",
+    "docs/BRIEF_PRESERVATION_AND_VERSIONING_POLICY.md",
+    "architecture/governance/EXECUTION_LEARNING_FEEDBACK_LOOP_001/CONTRACT.json",
+    "patterns/multi-agent/PAT-MA-001-codex-executor-only.md"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "profile_id": "LAB_DISCOVERY",
+  "status": "ACTIVE_PROFILE",
+  "surface": "CODEX_DESKTOP",
+  "mode": "READ_ONLY",
+  "purpose": "Map the exact task surface, evidence, dependencies, risks and unresolved questions before any write.",
+  "authority_effect": "NONE_ROLE_PROFILE_DOES_NOT_AUTHORIZE_EXECUTION",
+  "write_access": {
+    "allowed": false,
+    "exception": "NONE"
+  },
+  "required_inputs": [
+    "execution_envelope",
+    "context_manifest",
+    "explicit_discovery_questions"
+  ],
+  "required_outputs": [
+    "DISCOVERY_REPORT.json"
+  ],
+  "required_behavior": [
+    "READ_ONLY",
+    "CITE_PATHS_AND_EVIDENCE",
+    "SEPARATE_FACT_HYPOTHESIS_AND_UNKNOWN",
+    "IDENTIFY_APPLICABLE_INCIDENTS",
+    "PROPOSE_MINIMUM_SAFE_WRITE_SCOPE",
+    "DO_NOT_IMPLEMENT"
+  ],
+  "stop_conditions": [
+    "WRITE_REQUIRED",
+    "AUTHORITY_MISSING",
+    "REPOSITORY_OR_SCOPE_AMBIGUOUS",
+    "MATERIAL_EVIDENCE_CONTRADICTION"
+  ],
+  "handoff": {
+    "to": "LAB_IMPLEMENTATION_OR_CHATGPT",
+    "frozen_output": true
+  },
+  "learning_contract": "architecture/governance/EXECUTION_LEARNING_FEEDBACK_LOOP_001/CONTRACT.json",
+  "private_chain_of_thought": "NOT_REQUIRED_NOT_RECORDED"
+}

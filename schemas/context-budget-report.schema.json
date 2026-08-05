@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lab.local/schemas/context-budget-report.schema.json",
+  "title": "Codex Desktop context and latency report",
+  "type": "object",
+  "required": ["schema_version", "report_id", "execution_id", "profile", "complexity_class", "measurements", "quality", "comparison", "claim_boundary"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "report_id": {"type": "string"},
+    "execution_id": {"type": "string"},
+    "profile": {"enum": ["LAB_DISCOVERY", "LAB_IMPLEMENTATION", "LAB_VALIDATION", "LAB_AUDIT"]},
+    "complexity_class": {"enum": ["SMALL_CLEAR", "MEDIUM", "UNCERTAIN", "CRITICAL"]},
+    "measurements": {"type": "object"},
+    "quality": {"type": "object", "required": ["final_contract_pass", "omitted_material_constraints"]},
+    "comparison": {"type": "object", "required": ["baseline_ref", "result"]},
+    "claim_boundary": {"type": "string"}
+  },
+  "additionalProperties": false
+}
