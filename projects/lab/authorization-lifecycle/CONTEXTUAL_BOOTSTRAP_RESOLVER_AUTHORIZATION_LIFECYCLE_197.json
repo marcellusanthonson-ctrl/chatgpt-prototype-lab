@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "CONTEXTUAL-BOOTSTRAP-RESOLVER-AUTHORIZATION-LIFECYCLE-197",
+  "project_id": "lab",
+  "authorization": "AUTHORIZATION_LAB_CONTEXTUAL_BOOTSTRAP_RESOLVER_READ_ONLY_PROTOTYPE_AND_DISCRIMINATING_VALIDATION_197",
+  "status": "EXECUTION_COMPLETE_AWAITING_VERIFIED_REMOTE_PUBLICATION",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-08-05T17:03:00-04:00",
+  "execution_started_at": "2026-08-05T17:03:00-04:00",
+  "execution_completed_at": "2026-08-05T17:18:01-04:00",
+  "verified_execution_parent_head": "e7365614453afa276af5db6d7770b5985efcf239",
+  "terminal_result": "PROTOTYPE_VALIDATION_PASS_NO_INTEGRATION",
+  "resolver_runs": 72,
+  "model_requests": 0,
+  "dependencies_installed": 0,
+  "external_repository_accesses": 0,
+  "publication": {
+    "branch": "agent/contextual-bootstrap-resolver-197",
+    "pull_request": null,
+    "merge_commit": null,
+    "remote_main_verified": null,
+    "status": "PENDING"
+  },
+  "residual_authority": "ACTIVE_ONLY_FOR_AUTHORIZED_PUBLICATION_AND_CLOSURE",
+  "consumption_rule": "CONSUMED_AFTER_VERIFIED_REMOTE_PUBLICATION_AND_DOCUMENTARY_CLOSURE"
+}

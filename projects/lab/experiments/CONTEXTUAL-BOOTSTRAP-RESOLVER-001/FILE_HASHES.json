@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "files": {
+    "package.json": {
+      "sha256": "5a3885a136ec7a0463611b6c696b49aad6b6a75b7fce85de2f14e41fd2495ff5",
+      "bytes": 256
+    },
+    "tsconfig.json": {
+      "sha256": "6d4a1bd8f9674cc07a26b26cc1e994748311096bc65f2809919ca6f54a7800d0",
+      "bytes": 363
+    },
+    "README.md": {
+      "sha256": "dd3ec7b0e7953ea463594e9901bd9eef8b63ea3bd7ac97f1fc232c026f9f6628",
+      "bytes": 2242
+    },
+    "MANIFEST.json": {
+      "sha256": "f258041eac38f036a7cd6bc9c8484992852fda1df70ad3899ef4e94125fb6090",
+      "bytes": 2258
+    },
+    "src/types.ts": {
+      "sha256": "2d556ea97b1bf20f96a73bde8dd19e18fced21c288db1caf6c0682e6b8b03b96",
+      "bytes": 3646
+    },
+    "src/node-shims.d.ts": {
+      "sha256": "b920995e63798a25994ca715195db5fd7a7d0e0f8d54aaac699fddce6ac50f1f",
+      "bytes": 999
+    },
+    "src/resolver.ts": {
+      "sha256": "66ca3a373230330892754ae34b45850f18b638725cdfcad44d83dd075eaf83fb",
+      "bytes": 18100
+    },
+    "src/cli.ts": {
+      "sha256": "459350873a468ab4046d2149fdbc5244374ebe36e1f0eb505545d50a7c6f9cf4",
+      "bytes": 867
+    },
+    "src/validate.ts": {
+      "sha256": "56932f864c1ca60b1d42ac0d6dbbce15859969717c865d1ccc7c42d2c6d80906",
+      "bytes": 15623
+    },
+    "schema/context-manifest.schema.json": {
+      "sha256": "866914bf4922af911ae42d7eda23e67395f03dea95d6bc58a1f7cf7c37537300",
+      "bytes": 2091
+    },
+    "fixtures/public-fixtures.json.gz.b64": {
+      "sha256": "73cb3f5f8500685c0c6935621bf05ccc5c27b4084762724519b608d7237ffdae",
+      "bytes": 12277
+    },
+    "oracle/private-oracle.json.gz.b64": {
+      "sha256": "99360f211ddd55b9521c9cf96afab2b9e5310c488932171de0f3f653c915f07b",
+      "bytes": 1909
+    },
+    "results/CONTEXT_MANIFESTS.json.gz.b64": {
+      "sha256": "a0fd148c4401a6891082836f41509f7e7f5feec067079d8125429d76e8957b5e",
+      "bytes": 11561
+    },
+    "results/VALIDATION_RESULTS.json": {
+      "sha256": "4867691bc47f61f0b629c2f022e9e70052331a8bd9bf1ed76ffe6c03b624307d",
+      "bytes": 9360
+    }
+  },
+  "self_hash_excluded": true
+}

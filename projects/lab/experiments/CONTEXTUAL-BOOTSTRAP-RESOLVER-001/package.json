@@ -1,0 +1,11 @@
+{
+  "name": "contextual-bootstrap-resolver-001",
+  "version": "0.1.0-experimental",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "validate": "node dist/validate.js",
+    "resolve": "node dist/cli.js"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "CONTEXTUAL_BOOTSTRAP_RESOLVER_001/context-manifest.schema.json",
+  "title": "Experimental Context Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "resolverVersion",
+    "route",
+    "riskClass",
+    "target",
+    "authority",
+    "sources",
+    "exclusions",
+    "conflicts",
+    "budget",
+    "escalationTriggers",
+    "trace",
+    "terminalState"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "resolverVersion": { "type": "string", "minLength": 1 },
+    "route": {
+      "enum": [
+        "CONTINUITY_RESUME",
+        "PROJECT_CONTINUATION",
+        "NEW_DESIGN",
+        "CODE_CHANGE",
+        "STATUS_OR_AUTHORITY",
+        "AUDIT_OR_REASSESSMENT",
+        "UNKNOWN_ESCALATION"
+      ]
+    },
+    "riskClass": { "enum": ["SMALL_CLEAR", "MEDIUM", "UNCERTAIN", "CRITICAL"] },
+    "target": { "type": "object" },
+    "authority": {
+      "type": "object",
+      "required": ["effect", "allowedActions", "allowedPaths", "forbiddenActions"]
+    },
+    "sources": {
+      "type": "object",
+      "required": ["always", "required", "filtered", "onTrigger", "auditOnly", "historicalReference"]
+    },
+    "exclusions": {
+      "type": "object",
+      "required": ["namespaces", "repositories", "paths", "reasons"]
+    },
+    "conflicts": { "type": "object", "required": ["state", "items"] },
+    "budget": {
+      "type": "object",
+      "required": ["selectedSources", "selectedBytes", "fullCorpusBytes", "reductionPercent", "estimatedTokens"]
+    },
+    "escalationTriggers": { "type": "array" },
+    "trace": {
+      "type": "object",
+      "required": ["selectionReasonByPath", "omittedCandidatePaths", "canonicalParentDigests"]
+    },
+    "terminalState": {
+      "enum": [
+        "READY",
+        "READ_ONLY_READY",
+        "AWAITING_AUTHORIZATION",
+        "RESOLUTION_REQUIRED",
+        "INSUFFICIENT_CONTEXT",
+        "BLOCKED_HEAD_MISMATCH",
+        "BLOCKED_UNKNOWN_OWNER",
+        "BLOCKED_INVALID_MANIFEST"
+      ]
+    }
+  }
+}
