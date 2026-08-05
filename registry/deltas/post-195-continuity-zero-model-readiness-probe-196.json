@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "delta_id": "post-195-continuity-zero-model-readiness-probe-196",
   "authorization_id": "AUTHORIZATION_LAB_POST_195_CONTINUITY_RECONCILIATION_AND_PRODUCT_LEADERSHIP_ZERO_MODEL_READINESS_PROBE_PREPARATION_196",
-  "status": "EXECUTED_AWAITING_VERIFIED_REMOTE_PUBLICATION",
+  "status": "VERIFIED_REMOTE_PUBLICATION_AUTHORIZATION_CONSUMED",
   "terminal_result": "INSUFFICIENT_EVIDENCE",
   "changes": [
     {
@@ -15,11 +15,11 @@
     },
     {
       "path": "projects/lab/authorization-lifecycle/PRODUCT_LEADERSHIP_ZERO_MODEL_READINESS_PROBE_AUTHORIZATION_LIFECYCLE_196.json",
-      "operation": "CREATE"
+      "operation": "CREATE_AND_UPDATE_TO_CONSUMED"
     },
     {
       "path": "projects/lab/evidence/EVD-LAB-PRODUCT-LEADERSHIP-ZERO-MODEL-READINESS-PROBE-196.json",
-      "operation": "CREATE"
+      "operation": "CREATE_AND_VERIFY_REMOTE_PUBLICATION"
     },
     {
       "path": "projects/lab/evidence/CONTEXT_BUDGET_REPORT_196.json",
@@ -35,21 +35,29 @@
     },
     {
       "path": "projects/lab/continuity/CURRENT_CONTINUITY.json",
-      "operation": "REPLACE_CURRENT"
+      "operation": "REPLACE_CURRENT_AND_CLOSE_AUTHORIZATION"
     },
     {
       "path": "projects/lab/continuity/CURRENT_CONTINUITY.md",
-      "operation": "REPLACE_CURRENT"
+      "operation": "REPLACE_CURRENT_AND_CLOSE_AUTHORIZATION"
     },
     {
       "path": "projects/lab/continuity/ATTACHMENT_MANIFEST.json",
-      "operation": "REPLACE_CURRENT"
+      "operation": "REPLACE_CURRENT_AND_CLOSE_AUTHORIZATION"
     },
     {
       "path": "projects/lab/continuity/START_PROMPT.md",
-      "operation": "REPLACE_CURRENT"
+      "operation": "REPLACE_CURRENT_AND_CLOSE_AUTHORIZATION"
     }
   ],
+  "publication": {
+    "pull_request": 54,
+    "merge_commit": "ea069609bbac26ccb20d025f79758d96ff42df3f",
+    "verified_remote_main": "ea069609bbac26ccb20d025f79758d96ff42df3f",
+    "verified": true
+  },
+  "authorization_state": "CONSUMED_VERIFIED_REMOTE_PUBLICATION",
+  "residual_authority": "NONE",
   "non_effects": [
     "NO_MODEL_REQUESTS",
     "NO_LOGIN",
@@ -60,9 +68,9 @@
     "NO_PROMOTION_ACTIVATION_INTEGRATION_RUNTIME_OR_PRODUCT_EFFECT",
     "NO_SKILL_SDK_OR_EXTERNAL_REPOSITORY_ACTION"
   ],
-  "remaining_divergences_outside_authorIZED_PATHS": [
+  "remaining_divergences_outside_authorized_paths": [
     "PEND-LAB-048_AND_INTEGRATION_READINESS_STILL_DESCRIBE_THE_PROBE_AS_NOT_AUTHORIZED",
     "CURRENT_STATE_PROJECT_STATE_AND_REGISTRY_INDEX_REMAIN_STALE_AGGREGATE_PROJECTIONS"
   ],
-  "updated_at": "2026-08-05T14:31:00-04:00"
+  "updated_at": "2026-08-05T14:38:00-04:00"
 }
