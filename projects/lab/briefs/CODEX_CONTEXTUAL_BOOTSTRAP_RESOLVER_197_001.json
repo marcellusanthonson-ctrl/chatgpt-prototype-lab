@@ -1,41 +1,21 @@
 {
-  "schema_version": "1.0.0",
-  "task_id": "CODEX_CONTEXTUAL_BOOTSTRAP_RESOLVER_197_001",
-  "project_id": "lab",
-  "title": "Implement and validate the read-only contextual bootstrap resolver prototype",
-  "status": "EXECUTED_AWAITING_VERIFIED_REMOTE_PUBLICATION",
-  "agent": "ChatGPT bounded executor",
-  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
-  "branch": "agent/contextual-bootstrap-resolver-197",
-  "expected_parent_head": "e7365614453afa276af5db6d7770b5985efcf239",
-  "authorization_ref": "AUTHORIZATION_LAB_CONTEXTUAL_BOOTSTRAP_RESOLVER_READ_ONLY_PROTOTYPE_AND_DISCRIMINATING_VALIDATION_197",
-  "objective": "Create a deterministic TypeScript CLI that emits a cited ContextManifest with authority, route, risk, exclusions, conflicts and terminal state, then validate it on 24 blinded synthetic fixtures.",
-  "scope": {
-    "included": ["Node.js and TypeScript prototype","ContextManifest schema","24 synthetic public fixtures","physically separate private oracle","three deterministic repetitions per fixture","precision, recall, F1, bytes and latency metrics","evidence and continuity publication"],
-    "excluded": ["semantic RAG stages 5 and 6","LLM classification","real prompts","external repositories","integration","runtime","product changes","dependency installation"]
-  },
-  "required_outputs": [
-    "projects/lab/experiments/CONTEXTUAL-BOOTSTRAP-RESOLVER-001/MANIFEST.json",
-    "projects/lab/experiments/CONTEXTUAL-BOOTSTRAP-RESOLVER-001/results/VALIDATION_RESULTS.json",
-    "projects/lab/evidence/EVD-LAB-CONTEXTUAL-BOOTSTRAP-RESOLVER-197.json",
-    "projects/lab/evidence/CONTEXT_BUDGET_REPORT_197.json"
-  ],
-  "acceptance_checks": ["LIVE_MAIN_VERIFIED_AT_USE","NO_DEPENDENCY_INSTALLATION","NO_MODEL_REQUESTS","SELECTOR_ORACLE_SEPARATION","IDENTICAL_OUTPUTS_3_OF_3","CRITICAL_CONSTRAINT_RECALL_1_0","FORBIDDEN_PATH_PRECISION_1_0","MACRO_F1_AT_LEAST_0_90","MEDIAN_CONTEXT_BYTE_REDUCTION_AT_LEAST_60_PERCENT","ZERO_AUTHORITY_BYPASSES","ZERO_CONSUMED_AUTHORIZATION_ACTIVATIONS","ZERO_CROSS_PROJECT_CONTAMINATION","ZERO_INVENTED_PATHS","ZERO_AUTO_RESOLVED_CONFLICTS","REMOTE_PUBLICATION_VERIFIED_BEFORE_CONSUMPTION"],
-  "stop_conditions": ["HEAD_MISMATCH","TOOLING_REQUIRES_INSTALLATION","CANONICAL_CONTRACT_CHANGE_REQUIRED","SELECTOR_ORACLE_SEPARATION_UNAVAILABLE","EXTERNAL_REPOSITORY_REQUIRED","MATERIAL_SCOPE_EXPANSION"],
-  "response_contract": ["terminal result","metrics","validation gates","publication commit and PR","authorization lifecycle","single next action"],
-  "learning_context": {
-    "transversal_contract": "architecture/rag/FEDERATION_CONTRACT.json",
-    "incident_sources": ["projects/lab/experiments/EXP-LAB-001.json","projects/lab/reconciliations/REC-LAB-EXP065-RCA002-001.json"],
-    "mandatory_preventive_controls": ["CONFLICT_FIRST_CLASS_OBJECT","RESOLUTION_REQUIRED","BINDING_NEGATIVE_PROHIBITIONS","PUBLIC_METADATA_USAGE","AUTHORITY_BEFORE_RELEVANCE"],
-    "resolution_capacity": "LOCAL_EXPERIMENT_PATHS_ONLY"
-  },
-  "execution_result": {
-    "completed_at": "2026-08-05T17:18:01-04:00",
-    "validation_executed_at": "2026-08-05T21:18:01.209Z",
-    "terminal_result": "PROTOTYPE_VALIDATION_PASS_NO_INTEGRATION",
-    "fixture_count": 24,
-    "resolver_runs": 72,
-    "issue_count": 0,
-    "metrics": {"macroF1":1,"microF1":1,"criticalConstraintRecall":1,"forbiddenPathPrecision":1,"falsePositives":0,"falseNegatives":0,"medianContextByteReductionPercent":88.292,"medianLatencyMs":0.0728,"authorityBypasses":0,"consumedAuthorizationActivations":0,"crossProjectContaminations":0,"inventedPaths":0,"unpinnedSources":0,"missingReasonTraces":0,"autoResolvedConflicts":0}
-  }
+  "schema_version":"1.0.0",
+  "task_id":"CODEX_CONTEXTUAL_BOOTSTRAP_RESOLVER_197_001",
+  "project_id":"lab",
+  "title":"Implement and validate the read-only contextual bootstrap resolver prototype",
+  "status":"COMPLETED_VERIFIED_REMOTE_PUBLICATION",
+  "agent":"ChatGPT bounded executor",
+  "repository":"marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch":"agent/contextual-bootstrap-resolver-197",
+  "expected_parent_head":"e7365614453afa276af5db6d7770b5985efcf239",
+  "authorization_ref":"AUTHORIZATION_LAB_CONTEXTUAL_BOOTSTRAP_RESOLVER_READ_ONLY_PROTOTYPE_AND_DISCRIMINATING_VALIDATION_197",
+  "objective":"Create a deterministic TypeScript CLI that emits a cited ContextManifest with authority, route, risk, exclusions, conflicts and terminal state, then validate it on 24 blinded synthetic fixtures.",
+  "scope":{"included":["Node.js and TypeScript prototype","ContextManifest schema","24 synthetic public fixtures","physically separate private oracle","three deterministic repetitions per fixture","precision, recall, F1, bytes and latency metrics","evidence and continuity publication"],"excluded":["semantic RAG stages 5 and 6","LLM classification","real prompts","external repositories","integration","runtime","product changes","dependency installation"]},
+  "required_outputs":["projects/lab/experiments/CONTEXTUAL-BOOTSTRAP-RESOLVER-001/MANIFEST.json","projects/lab/experiments/CONTEXTUAL-BOOTSTRAP-RESOLVER-001/results/VALIDATION_RESULTS.json","projects/lab/evidence/EVD-LAB-CONTEXTUAL-BOOTSTRAP-RESOLVER-197.json","projects/lab/evidence/CONTEXT_BUDGET_REPORT_197.json"],
+  "acceptance_checks":["LIVE_MAIN_VERIFIED_AT_USE","NO_DEPENDENCY_INSTALLATION","NO_MODEL_REQUESTS","SELECTOR_ORACLE_SEPARATION","IDENTICAL_OUTPUTS_3_OF_3","CRITICAL_CONSTRAINT_RECALL_1_0","FORBIDDEN_PATH_PRECISION_1_0","MACRO_F1_AT_LEAST_0_90","MEDIAN_CONTEXT_BYTE_REDUCTION_AT_LEAST_60_PERCENT","ZERO_AUTHORITY_BYPASSES","ZERO_CONSUMED_AUTHORIZATION_ACTIVATIONS","ZERO_CROSS_PROJECT_CONTAMINATION","ZERO_INVENTED_PATHS","ZERO_AUTO_RESOLVED_CONFLICTS","REMOTE_PUBLICATION_VERIFIED_BEFORE_CONSUMPTION"],
+  "stop_conditions":["HEAD_MISMATCH","TOOLING_REQUIRES_INSTALLATION","CANONICAL_CONTRACT_CHANGE_REQUIRED","SELECTOR_ORACLE_SEPARATION_UNAVAILABLE","EXTERNAL_REPOSITORY_REQUIRED","MATERIAL_SCOPE_EXPANSION"],
+  "response_contract":["terminal result","metrics","validation gates","publication commit and PR","authorization lifecycle","single next action"],
+  "learning_context":{"transversal_contract":"architecture/rag/FEDERATION_CONTRACT.json","incident_sources":["projects/lab/experiments/EXP-LAB-001.json","projects/lab/reconciliations/REC-LAB-EXP065-RCA002-001.json"],"mandatory_preventive_controls":["CONFLICT_FIRST_CLASS_OBJECT","RESOLUTION_REQUIRED","BINDING_NEGATIVE_PROHIBITIONS","PUBLIC_METADATA_USAGE","AUTHORITY_BEFORE_RELEVANCE"],"resolution_capacity":"LOCAL_EXPERIMENT_PATHS_ONLY"},
+  "execution_result":{"completed_at":"2026-08-05T17:18:01-04:00","validation_executed_at":"2026-08-05T21:18:01.209Z","terminal_result":"PROTOTYPE_VALIDATION_PASS_NO_INTEGRATION","fixture_count":24,"resolver_runs":72,"issue_count":0,"metrics":{"macroF1":1,"microF1":1,"criticalConstraintRecall":1,"forbiddenPathPrecision":1,"falsePositives":0,"falseNegatives":0,"medianContextByteReductionPercent":88.292,"medianLatencyMs":0.0728,"authorityBypasses":0,"consumedAuthorizationActivations":0,"crossProjectContaminations":0,"inventedPaths":0,"unpinnedSources":0,"missingReasonTraces":0,"autoResolvedConflicts":0}},
+  "publication":{"pull_request":56,"merge_commit":"91f8a963b4978a84a45b4f6d7677805fcb1a2580","remote_main_verified":"91f8a963b4978a84a45b4f6d7677805fcb1a2580"}
 }

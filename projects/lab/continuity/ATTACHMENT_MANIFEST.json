@@ -1,51 +1,13 @@
 {
-  "schema_version": "2.2.0",
-  "manifest_id": "LAB-CONTINUITY-ATTACHMENTS-AUTHORIZATION-196-CONSUMED-ZERO-MODEL-PROBE-20260805",
-  "status": "CURRENT",
-  "project_id": "lab",
-  "created_at": "2026-08-05T14:38:00-04:00",
-  "required_read_order": [
-    "CURRENT_CONTINUITY.json",
-    "CURRENT_CONTINUITY.md",
-    "ATTACHMENT_MANIFEST.json",
-    "START_PROMPT.md"
-  ],
-  "attachments": [
-    {
-      "path": "projects/lab/continuity/CURRENT_CONTINUITY.json",
-      "role": "CANONICAL_STRUCTURED_CONTINUITY",
-      "required": true
-    },
-    {
-      "path": "projects/lab/continuity/CURRENT_CONTINUITY.md",
-      "role": "HUMAN_READABLE_CONTINUITY",
-      "required": true
-    },
-    {
-      "path": "projects/lab/continuity/ATTACHMENT_MANIFEST.json",
-      "role": "READ_ORDER_AND_REFERENCE_MANIFEST",
-      "required": true
-    },
-    {
-      "path": "projects/lab/continuity/START_PROMPT.md",
-      "role": "FIRST_MESSAGE_FOR_NEW_CONVERSATION",
-      "required": true
-    }
-  ],
-  "repository_sources_not_duplicated_as_attachments": [
-    "projects/lab/sources/USER_SOURCE_AUTHORIZATION_196_20260805.md",
-    "projects/lab/authorizations/AUTHORIZATION_LAB_POST_195_CONTINUITY_RECONCILIATION_AND_PRODUCT_LEADERSHIP_ZERO_MODEL_READINESS_PROBE_PREPARATION_196.json",
-    "projects/lab/authorization-lifecycle/PRODUCT_LEADERSHIP_ZERO_MODEL_READINESS_PROBE_AUTHORIZATION_LIFECYCLE_196.json",
-    "projects/lab/evidence/EVD-LAB-PRODUCT-LEADERSHIP-ZERO-MODEL-READINESS-PROBE-196.json",
-    "projects/lab/evidence/CONTEXT_BUDGET_REPORT_196.json",
-    "projects/lab/continuity/PRODUCT_LEADERSHIP_ZERO_MODEL_READINESS_PROBE_NEXT_INSTRUCTIONS.json",
-    "projects/lab/evidence/EVD-LAB-PL003-FRESH-RETEST-192.json",
-    "projects/lab/pending/PEND-LAB-048.json",
-    "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/product-leadership/INCIDENT_LEDGER.json",
-    "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/product-leadership/INTEGRATION_READINESS.json",
-    ".gitattributes"
-  ],
-  "missing_attachments": [],
-  "authority_effect": "AUTHORIZATION_196_CONSUMED_INSUFFICIENT_EVIDENCE_NO_RESIDUAL_AUTHORITY",
-  "claim_boundary": "NO_CLAIM_ABOUT_THE_ACTUAL_WINDOWS_CODEX_DESKTOP_ENVIRONMENT_READINESS"
+  "schema_version":"2.4.0",
+  "manifest_id":"LAB-CONTINUITY-ATTACHMENTS-AUTHORIZATION-197-CONSUMED-PROTOTYPE-PASS-20260805",
+  "status":"CURRENT",
+  "project_id":"lab",
+  "created_at":"2026-08-05T18:32:00-04:00",
+  "required_read_order":["CURRENT_CONTINUITY.json","CURRENT_CONTINUITY.md","ATTACHMENT_MANIFEST.json","START_PROMPT.md"],
+  "attachments":[{"path":"projects/lab/continuity/CURRENT_CONTINUITY.json","role":"CANONICAL_STRUCTURED_CONTINUITY","required":true},{"path":"projects/lab/continuity/CURRENT_CONTINUITY.md","role":"HUMAN_READABLE_CONTINUITY","required":true},{"path":"projects/lab/continuity/ATTACHMENT_MANIFEST.json","role":"READ_ORDER_AND_REFERENCE_MANIFEST","required":true},{"path":"projects/lab/continuity/START_PROMPT.md","role":"FIRST_MESSAGE_FOR_NEW_CONVERSATION","required":true}],
+  "repository_sources_not_duplicated_as_attachments":["projects/lab/sources/USER_SOURCE_AUTHORIZATION_197_20260805.md","projects/lab/authorizations/AUTHORIZATION_LAB_CONTEXTUAL_BOOTSTRAP_RESOLVER_READ_ONLY_PROTOTYPE_AND_DISCRIMINATING_VALIDATION_197.json","projects/lab/authorization-lifecycle/CONTEXTUAL_BOOTSTRAP_RESOLVER_AUTHORIZATION_LIFECYCLE_197.json","projects/lab/briefs/CODEX_CONTEXTUAL_BOOTSTRAP_RESOLVER_197_001.json","projects/lab/evidence/EVD-LAB-CONTEXTUAL-BOOTSTRAP-RESOLVER-197.json","projects/lab/evidence/CONTEXT_BUDGET_REPORT_197.json","projects/lab/experiments/CONTEXTUAL-BOOTSTRAP-RESOLVER-001/MANIFEST.json","projects/lab/experiments/CONTEXTUAL-BOOTSTRAP-RESOLVER-001/results/VALIDATION_RESULTS.json","projects/lab/evidence/EVD-LAB-PRODUCT-LEADERSHIP-ZERO-MODEL-READINESS-PROBE-196.json"],
+  "missing_attachments":[],
+  "authority_effect":"AUTHORIZATION_197_CONSUMED_NO_RESIDUAL_AUTHORITY",
+  "claim_boundary":"SYNTHETIC_PROTOTYPE_PASS_NO_INTEGRATION_OR_OPERATIONAL_GENERALIZATION"
 }
