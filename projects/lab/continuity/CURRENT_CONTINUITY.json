@@ -2,7 +2,7 @@
   "schema_version": "2.9.0",
   "continuity_id": "LAB-CONTINUITY-PRODUCT-LEADERSHIP-FRESH-RETEST-192-20260805",
   "project_id": "lab",
-  "status": "PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_BLOCKED_BEFORE_MODEL_REQUESTS_RESULT_PUBLICATION_PENDING",
+  "status": "PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_BLOCKED_BEFORE_MODEL_REQUESTS_RESULT_PUBLISHED_AWAITING_SEPARATE_RECOVERY_OR_REISSUE_AUTHORIZATION",
   "created_at": "2026-08-05T07:48:29-04:00",
   "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
   "canonical_branch": "main",
@@ -37,16 +37,18 @@
     "prepared_branch_head": "c1d397c0a37e7c810753a466fd1296202ca6050e",
     "working_branch": "agent/product-leadership-test003-fresh-retest-192",
     "publication_method": "COMMIT_PUSH_SINGLE_PULL_REQUEST_SQUASH_MERGE_VERIFY_REMOTE",
-    "publication_status": "PULL_REQUEST_45_OPEN_AWAITING_SQUASH",
+    "publication_status": "VERIFIED_REMOTE_PUBLICATION",
     "pull_request": 45,
-    "squash_commit": "PENDING_REMOTE_MERGE",
-    "verified_remote_main": false
+    "squash_commit": "4dc5a5c96440fb99c99930cbc76bd2508ac5fc0c",
+    "verified_remote_main_head_at_consumption": "4dc5a5c96440fb99c99930cbc76bd2508ac5fc0c",
+    "verified_remote_main": true,
+    "verified_at": "2026-08-05T08:05:43-04:00"
   },
   "authorization": {
     "id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_192",
-    "status": "GRANTED_RESULT_PUBLICATION_IN_PROGRESS",
+    "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_OF_TERMINAL_BLOCKED_RESULT",
     "consumption_rule": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_OF_TERMINAL_PASS_FAIL_INSUFFICIENT_EVIDENCE_OR_BLOCKED_RESULT",
-    "residual_authority": "PENDING_CONSUMPTION_ON_VERIFIED_REMOTE_PUBLICATION"
+    "residual_authority": "NONE"
   },
   "product_leadership": {
     "integration_id": "INT-LAB-004",

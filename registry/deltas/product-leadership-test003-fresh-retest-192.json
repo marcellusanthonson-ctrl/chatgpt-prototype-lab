@@ -3,10 +3,10 @@
   "delta_id": "product-leadership-test003-fresh-retest-192",
   "project_id": "lab",
   "created_at": "2026-08-05T07:48:29-04:00",
-  "status": "TERMINAL_BLOCKED_RESULT_VALIDATED_PUBLICATION_PENDING",
+  "status": "TERMINAL_BLOCKED_RESULT_VERIFIED_REMOTE_PUBLICATION_AUTHORIZATION_CONSUMED",
   "authorization": {
     "id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_192",
-    "status": "GRANTED_RESULT_PUBLICATION_IN_PROGRESS",
+    "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_OF_TERMINAL_BLOCKED_RESULT",
     "path": "projects/lab/authorizations/AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_192.json"
   },
   "brief": "projects/lab/briefs/CODEX_PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_192_001.json",
@@ -22,8 +22,10 @@
   },
   "publication": {
     "pull_request": 45,
-    "squash_commit": "PENDING_REMOTE_MERGE",
-    "verified_remote_main": false
+    "squash_commit": "4dc5a5c96440fb99c99930cbc76bd2508ac5fc0c",
+    "verified_remote_main_head_at_consumption": "4dc5a5c96440fb99c99930cbc76bd2508ac5fc0c",
+    "verified_remote_main": true,
+    "verified_at": "2026-08-05T08:05:43-04:00"
   },
   "adds": {
     "authorization_lifecycle": ["projects/lab/authorization-lifecycle/PL003_AUTHORIZATION_LIFECYCLE_192.json"],
@@ -36,7 +38,7 @@
     "instrument_redesign_191": "PRESERVED_IMMUTABLE",
     "candidate_package": "NOT_MODIFIED_NOT_ADJUDICATED",
     "integration": "INT_LAB_004_CANDIDATE_NOT_ACTIVE_NOT_INTEGRATED_UNCHANGED",
-    "authorization_192": "CONSUMPTION_PENDING_VERIFIED_REMOTE_PUBLICATION"
+    "authorization_192": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_NO_RESIDUAL_AUTHORITY"
   },
   "registry_counts_before": {"authorizations": 106, "evidence": 88, "test_executions": 5},
   "registry_counts_after": {"authorizations": 107, "evidence": 89, "test_executions": 6},

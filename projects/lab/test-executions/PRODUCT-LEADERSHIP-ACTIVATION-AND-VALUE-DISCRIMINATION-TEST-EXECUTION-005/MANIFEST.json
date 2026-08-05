@@ -25,7 +25,7 @@
     "stage_3": "NOT_STARTED",
     "stage_4": "NOT_STARTED",
     "stage_5": "TERMINAL_BLOCKED_OUTCOME_RECORDED_WITHOUT_NUMERIC_AGGREGATION",
-    "stage_6": "TERMINAL_RESULT_VALIDATED_PUBLICATION_PENDING_SINGLE_PULL_REQUEST"
+    "stage_6": "TERMINAL_RESULT_VERIFIED_REMOTE_PUBLICATION_AUTHORIZATION_CONSUMED"
   },
   "stop_conditions": [
     "CHAIN_OF_CUSTODY_INCOMPLETE_OR_BROKEN",
@@ -51,8 +51,10 @@
   "publication": {
     "method": "COMMIT_PUSH_SINGLE_PULL_REQUEST_SQUASH_MERGE_VERIFY_REMOTE",
     "pull_request": 45,
-    "squash_commit": "PENDING_REMOTE_MERGE",
-    "verified_remote_main": false
+    "squash_commit": "4dc5a5c96440fb99c99930cbc76bd2508ac5fc0c",
+    "verified_remote_main_head_at_consumption": "4dc5a5c96440fb99c99930cbc76bd2508ac5fc0c",
+    "verified_remote_main": true,
+    "verified_at": "2026-08-05T08:05:43-04:00"
   },
   "next_action": "SEPARATELY_AUTHORIZE_RECOVERY_OR_REISSUE_AFTER_EXACT_AUTHENTICATION_AND_RAW_BYTE_CUSTODY_ROOT_CAUSES_ARE_RESOLVED"
 }

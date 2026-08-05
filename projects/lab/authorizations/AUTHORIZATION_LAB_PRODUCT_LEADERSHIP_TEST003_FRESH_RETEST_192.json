@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_192",
   "project_id": "lab",
-  "status": "GRANTED",
+  "status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_OF_TERMINAL_BLOCKED_RESULT",
   "authorization_class": "BOUNDED_STAGED_FRESH_RETEST_EXECUTION_AND_RESULT_PUBLICATION",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-08-05T07:15:00-04:00",
@@ -174,7 +174,13 @@
     "first_model_request_makes_attempt_single_use": true,
     "terminal_result_must_be_published": true,
     "rule": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_OF_TERMINAL_PASS_FAIL_INSUFFICIENT_EVIDENCE_OR_BLOCKED_RESULT",
-    "residual_authority_after_consumption": "NONE"
+    "residual_authority_after_consumption": "NONE",
+    "consumed_at": "2026-08-05T08:05:43-04:00",
+    "terminal_outcome": "BLOCKED_BEFORE_MODEL_REQUESTS",
+    "pull_request": 45,
+    "verified_result_squash_commit": "4dc5a5c96440fb99c99930cbc76bd2508ac5fc0c",
+    "verified_remote_main_at_consumption": "4dc5a5c96440fb99c99930cbc76bd2508ac5fc0c",
+    "verified_remote_main": true
   },
   "source_refs": [
     "project-sources/chatgpt/START_HERE.md",

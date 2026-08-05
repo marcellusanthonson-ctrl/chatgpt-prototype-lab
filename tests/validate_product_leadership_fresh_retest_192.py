@@ -12,6 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PARENT = "0ef5f7428cf07652b567cc28321e85bb3b3c7e62"
 PREPARED_HEAD = "c1d397c0a37e7c810753a466fd1296202ca6050e"
 BRANCH = "agent/product-leadership-test003-fresh-retest-192"
+FINAL_RESULT_SQUASH = "4dc5a5c96440fb99c99930cbc76bd2508ac5fc0c"
 EXECUTION_ROOT = Path("projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005")
 EXECUTION_ID = "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005"
 REDESIGN_ROOT = "projects/lab/test-designs/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-001/INSTRUMENT_REDESIGN_191"
@@ -81,12 +82,16 @@ def historical_manifest() -> dict[str, Any]:
 
 
 def verify_git_state(paths: set[str]) -> None:
-    if git("branch", "--show-current") != BRANCH:
+    current_branch = git("branch", "--show-current")
+    if current_branch not in {BRANCH, ""}:
         fail("wrong working branch")
     if git("merge-base", "HEAD", PARENT) != PARENT:
         fail("branch does not descend from the exact authorized parent")
-    if subprocess.run(["git", "merge-base", "--is-ancestor", PREPARED_HEAD, "HEAD"], cwd=ROOT).returncode != 0:
-        fail("prepared two-commit branch head is not preserved")
+    if current_branch == BRANCH:
+        if subprocess.run(["git", "merge-base", "--is-ancestor", PREPARED_HEAD, "HEAD"], cwd=ROOT).returncode != 0:
+            fail("prepared two-commit branch head is not preserved")
+    elif subprocess.run(["git", "merge-base", "--is-ancestor", FINAL_RESULT_SQUASH, "HEAD"], cwd=ROOT).returncode != 0:
+        fail("detached post-publication finalization does not descend from the verified result squash")
     immutable_prefixes = [HISTORICAL_ROOT + "/", REDESIGN_ROOT + "/", PACKAGE_ROOT + "/"]
     prohibited = [path for path in paths if path == INT_PATH or any(path.startswith(prefix) for prefix in immutable_prefixes)]
     if prohibited:
@@ -224,8 +229,12 @@ def verify_stage_6_records() -> None:
     archive = load_json("projects/lab/continuity/archive/LAB-CONTINUITY-PRE-FRESH-RETEST-192-20260805.pointer.json")
     if lifecycle.get("execution_outcome") != "BLOCKED_BEFORE_MODEL_REQUESTS" or lifecycle.get("request_counts", {}).get("total") != 0:
         fail("authorization lifecycle does not preserve the terminal blocked result")
+    if lifecycle.get("residual_authority") != "NONE" or lifecycle.get("publication", {}).get("squash_commit") != FINAL_RESULT_SQUASH:
+        fail("authorization lifecycle is not consumed against the verified result squash")
     if evidence.get("execution", {}).get("outcome") != "BLOCKED_BEFORE_MODEL_REQUESTS" or evidence.get("execution", {}).get("model_requests") != 0:
         fail("evidence does not preserve the terminal blocked result")
+    if evidence.get("publication", {}).get("verified_remote_main") is not True:
+        fail("evidence does not record verified remote result publication")
     if delta.get("registry_counts_before") != {"authorizations": 106, "evidence": 88, "test_executions": 5}:
         fail("registry delta before-counts mismatch")
     if delta.get("registry_counts_after") != {"authorizations": 107, "evidence": 89, "test_executions": 6}:

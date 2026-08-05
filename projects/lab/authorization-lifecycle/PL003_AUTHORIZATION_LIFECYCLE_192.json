@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "record_id": "PL003-AUTHORIZATION-LIFECYCLE-192",
   "project_id": "lab",
-  "status": "TERMINAL_BLOCKED_RESULT_RECORDED_PUBLICATION_PENDING",
+  "status": "AUTHORIZATION_192_CONSUMED_VERIFIED_REMOTE_TERMINAL_BLOCKED_RESULT_PUBLICATION",
   "authorization": "AUTHORIZATION_LAB_PRODUCT_LEADERSHIP_TEST003_FRESH_RETEST_192",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-08-05T07:15:00-04:00",
@@ -12,7 +12,8 @@
   "attempt": "ATTEMPT-004",
   "execution_outcome": "BLOCKED_BEFORE_MODEL_REQUESTS",
   "consumption_rule": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION_OF_TERMINAL_PASS_FAIL_INSUFFICIENT_EVIDENCE_OR_BLOCKED_RESULT",
-  "consumption_trigger": "PENDING_VERIFIED_SQUASH_MERGE_OF_THE_SINGLE_RESULT_PULL_REQUEST",
+  "consumption_trigger": "SATISFIED_VERIFIED_SQUASH_MERGE_OF_THE_SINGLE_RESULT_PULL_REQUEST",
+  "consumed_at": "2026-08-05T08:05:43-04:00",
   "first_model_request_made": false,
   "single_use_triggered_by_model_request": false,
   "terminal_result_publication_required": true,
@@ -33,10 +34,11 @@
   "publication": {
     "method": "COMMIT_PUSH_SINGLE_PULL_REQUEST_SQUASH_MERGE_VERIFY_REMOTE",
     "pull_request": 45,
-    "squash_commit": "PENDING_REMOTE_MERGE",
-    "verified_remote_main": false,
-    "verified_at": null
+    "squash_commit": "4dc5a5c96440fb99c99930cbc76bd2508ac5fc0c",
+    "verified_remote_main_head_at_consumption": "4dc5a5c96440fb99c99930cbc76bd2508ac5fc0c",
+    "verified_remote_main": true,
+    "verified_at": "2026-08-05T08:05:43-04:00"
   },
-  "residual_authority": "PENDING_CONSUMPTION_ON_VERIFIED_REMOTE_PUBLICATION",
+  "residual_authority": "NONE",
   "next_action_after_consumption": "SEPARATELY_AUTHORIZE_RECOVERY_OR_REISSUE_ONLY"
 }

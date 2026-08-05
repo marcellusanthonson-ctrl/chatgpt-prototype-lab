@@ -29,7 +29,7 @@ Execution 004 / ATTEMPT-003 remains byte-for-byte preserved: 150 files, 1,023,92
 
 ## Publication and authority
 
-The single result pull request and squash verification are pending. Authorization 192 is limited to publishing this terminal result and is consumed with no residual authority only when the squash appears on verified remote `main`.
+The single result pull request was PR #45. Its squash `4dc5a5c96440fb99c99930cbc76bd2508ac5fc0c` was verified on remote `main` before authorization 192 was consumed. No residual authority remains.
 
 ## Single next action
 
