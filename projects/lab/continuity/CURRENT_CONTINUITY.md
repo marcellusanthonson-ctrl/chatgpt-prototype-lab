@@ -1,4 +1,4 @@
-# LAB continuity — autorización 196 consumida y probe zero-model
+# LAB continuity — autorización 197 consumida, prototipo validado sin integración
 
 Canonical repository: `marcellusanthonson-ctrl/chatgpt-prototype-lab`  
 Branch: `main`  
@@ -7,11 +7,9 @@ HEAD policy: `VERIFY_LIVE_AT_USE`
 
 ## Estado alcanzado
 
-La autorización 195 publicó en `README.md` la sección **“Ejecución optimizada con Codex Desktop”** y quedó `CONSUMED_VERIFIED_REMOTE_PUBLICATION`, sin autoridad residual.
+La autorización 197 fue aprobada, ejecutada y publicada mediante el PR 56. La publicación del prototipo quedó verificada en `main` en:
 
-La autorización 196 fue aprobada, ejecutada, publicada y consumida. La publicación principal corresponde al PR 54 y al merge:
-
-`ea069609bbac26ccb20d025f79758d96ff42df3f`
+`91f8a963b4978a84a45b4f6d7677805fcb1a2580`
 
 Estado:
 
@@ -21,47 +19,34 @@ Autoridad residual:
 
 `NONE`
 
-## Resultado del probe 196
+## Resultado del prototipo
 
-Resultado terminal:
+`CONTEXTUAL_BOOTSTRAP_RESOLVER_001` terminó con:
 
-`INSUFFICIENT_EVIDENCE`
+`PROTOTYPE_VALIDATION_PASS_NO_INTEGRATION`
 
-El entorno observable fue Linux `6.18.35` `x86_64`, no Windows. `codex` no estaba instalado en esta superficie. Por ello no fue posible:
+El corpus fue sintético y acotado:
 
-- crear el fresh Windows worktree exigido;
-- demostrar 13/13 coincidencias raw-byte;
-- ejecutar `codex login status` sobre una sesión ChatGPT preexistente;
-- verificar Codex CLI `0.146.0` y su SHA-256;
-- verificar localmente `gpt-5.6-sol`, reasoning `medium` y sandbox read-only;
-- ejecutar los validadores desde el worktree requerido.
+- 24 fixtures;
+- 72 ejecuciones determinísticas;
+- macro y micro F1 `1.0`;
+- recall crítico `1.0`;
+- precisión de prohibiciones `1.0`;
+- reducción mediana de bytes `88.292%`;
+- cero bypasses de autoridad, activaciones de permisos consumidos, contaminación entre proyectos, paths inventados, fuentes sin commit, trazas ausentes o conflictos auto-resueltos.
 
-La regla `.gitattributes` para fijar LF en `INSTRUMENT_REDESIGN_191/**` sí está presente.
+El PASS no acredita generalización al LAB real, ahorro operacional verdadero, preparación para producción ni integración.
 
-Este resultado no determina que el equipo Windows de Jonathan Martínez esté listo o no listo. Solo establece que esta superficie no aportó evidencia suficiente. Hubo cero solicitudes a modelos, cero acciones de login y ningún retest, auditoría, adjudicación, promoción, activación o integración.
+## Clasificación y límites
 
-## Product Leadership
+El prototipo implementa experimentalmente las etapas determinísticas 1–4 y 7–8 de `RAG-FEDERATION-CONTRACT-001`. Las etapas semánticas 5 y 6 permanecen desactivadas.
 
-`INT-LAB-004` permanece:
+No se seleccionó arquitectura ni se produjo integración, runtime, producto, modelo, embedding, base vectorial, dependencia, credencial o acceso a repositorios externos.
 
-`CANDIDATE_NOT_ACTIVE_NOT_INTEGRATED`
+## Estado previo preservado
 
-Readiness permanece:
-
-`NOT_READY_FOR_FRESH_RETEST_REISSUE`
-
-Execution 005 / ATTEMPT-004 continúa como `BLOCKED_BEFORE_MODEL_REQUESTS`, con cero solicitudes y cero retries. No existe autorización de fresh retest ni autoridad ejecutiva activa.
-
-## Divergencias preservadas
-
-`CURRENT_STATE.json`, `projects/lab/PROJECT_STATE.json` y `registry/index.json` siguen siendo proyecciones agregadas desactualizadas.
-
-`PEND-LAB-048.json` e `INTEGRATION_READINESS.json` todavía describen el probe como no autorizado. La autorización 196 no incluyó esos paths, por lo que quedaron identificados como divergencia y no fueron modificados.
-
-## Prohibiciones vigentes
-
-No hay autoridad para solicitudes a modelos, login, probe adicional, fresh retest, replay, regeneración, rescoring, auditoría, adjudicación, cambio de `INT-LAB-004`, promoción, activación, integración, runtime, producto, Skills, SDK, credenciales o repositorios externos.
+La autorización 196 permanece consumida con `INSUFFICIENT_EVIDENCE`. Product Leadership permanece `CANDIDATE_NOT_ACTIVE_NOT_INTEGRATED` y `NOT_READY_FOR_FRESH_RETEST_REISSUE`. Las divergencias agregadas conocidas continúan preservadas fuera del alcance.
 
 ## Siguiente acción única
 
-Preparar una autorización separada para ejecutar el probe zero-model desde el entorno Windows real de Codex Desktop o para reconciliar evidencia generada por esa máquina.
+Diseñar, mediante una autorización separada, un benchmark operacional real antes de considerar cualquier integración o promoción del resolver.
