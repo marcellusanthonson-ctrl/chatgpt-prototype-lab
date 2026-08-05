@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "CODEX-CONFIRMED-ERROR-DECISION-PROTOCOL-001",
+  "contract_ref": "EXECUTION-LEARNING-FEEDBACK-LOOP-001",
+  "status": "ACTIVE_FOR_FUTURE_CODEX_BRIEFS",
+  "objective": "Allow Codex to use confirmed errors as decision constraints and to confirm a current recurrence with evidence inside bounded resolutive authority.",
+  "sequence": [
+    {"order": 1, "action": "LOAD_LEARNING_CONTEXT_AND_REFERENCED_ERROR_SOURCES"},
+    {"order": 2, "action": "MATCH_TASK_PLAN_COMMANDS_PATHS_AND_ENVIRONMENT_AGAINST_INCIDENT_FINGERPRINTS"},
+    {"order": 3, "action": "DETERMINE_APPLICABILITY_AND_CURRENT_RECURRENCE"},
+    {"order": 4, "action": "APPLY_MANDATORY_PREVENTIVE_CONTROLS"},
+    {"order": 5, "action": "ADAPT_PLAN_WITHIN_AUTHORIZED_SCOPE"},
+    {"order": 6, "action": "EXECUTE_AND_MONITOR_FOR_RECURRENCE"},
+    {"order": 7, "action": "CORRECT_MINOR_REVERSIBLE_IN_SCOPE_RECURRENCE_OR_STOP_MATERIAL_RECURRENCE"},
+    {"order": 8, "action": "EMIT_LEARNING_APPLICATION_REPORT"}
+  ],
+  "evidence_standard": {
+    "confirmed_current_occurrence_requires": [
+      "CURRENT_COMMAND_OUTPUT_OR_FILE_DIFF_OR_VALIDATOR_RESULT_OR_REPRODUCIBLE_OBSERVATION",
+      "MATCH_TO_DECLARED_FINGERPRINT",
+      "SOURCE_REFERENCE"
+    ],
+    "historical_error_record_alone": "SUFFICIENT_FOR_PREVENTIVE_CONTROL_NOT_SUFFICIENT_TO_CLAIM_CURRENT_RECURRENCE",
+    "ambiguous_case": "INSUFFICIENT_EVIDENCE"
+  },
+  "resolutive_behavior": {
+    "may_without_reconfirmation": [
+      "REORDER_SAFE_STEPS",
+      "RUN_AUTHORIZED_DETERMINISTIC_CHECKS",
+      "USE_SAFER_AUTHORIZED_COMMAND_OR_PATH",
+      "CORRECT_MINOR_SCHEMA_REFERENCE_FORMATTING_OR_CHECKOUT_CONFIGURATION_DEFECT",
+      "REGENERATE_NON_FROZEN_DERIVED_ARTIFACT",
+      "RERUN_DETERMINISTIC_VALIDATION_WITHIN_AUTHORIZED_LIMITS"
+    ],
+    "must_stop": [
+      "MATERIAL_SCOPE_CHANGE",
+      "FROZEN_OR_HISTORICAL_ARTIFACT_MUTATION",
+      "CREDENTIAL_SECRET_OR_IDENTITY_ACTION_NOT_EXPLICITLY_AUTHORIZED",
+      "MODEL_RUNNER_OR_ENVIRONMENT_SUBSTITUTION",
+      "CROSS_REPOSITORY_ACCESS",
+      "IRREVERSIBLE_ACTION_OUTSIDE_EXPLICIT_AUTHORITY",
+      "KNOWN_ERROR_RECURS_WITHOUT_AN_AUTHORIZED_PREVENTIVE_OR_CORRECTIVE_PATH"
+    ]
+  },
+  "canonical_status_boundary": "Codex may report a candidate incident or current recurrence. It may create or update canonical error records only when the brief explicitly grants that write scope.",
+  "private_reasoning_boundary": "Record evidence, determination and action; do not record private chain-of-thought.",
+  "output_schema_ref": "schemas/learning-application-report.schema.json"
+}
