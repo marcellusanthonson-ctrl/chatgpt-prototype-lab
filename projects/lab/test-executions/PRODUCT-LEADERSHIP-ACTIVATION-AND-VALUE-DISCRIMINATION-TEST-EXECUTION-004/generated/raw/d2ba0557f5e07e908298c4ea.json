@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "d2ba0557f5e07e908298c4ea",
+  "run_id": "PL-FX-023__BASELINE",
+  "fixture_id": "PL-FX-023",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "LIMITED_OR_AMBIGUOUS",
+  "scenario": "Customer evidence is sparse and conflicts with analytics of unknown provenance.",
+  "category": "LIMITED_OR_AMBIGUOUS",
+  "provenance": {
+    "request_id": "PL-FX-023__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:45:44.001Z",
+    "ended_at": "2026-08-05T01:45:55.799Z",
+    "latency_ms": 11798,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13968,
+      "cached_input_tokens": 0,
+      "output_tokens": 184
+    },
+    "response_sha256": "d70629d8fe9ded43a3670636e27d2465acd55d1a4ae6b6738b4ab6968028bcc9",
+    "response": {
+      "activation_classification": "ACTIVE",
+      "answer": "Treat the conflict as an evidence-quality decision: preserve the current scope and avoid product or implementation commitments until both sources are validated. Record the disagreement, provenance gap, and the minimum evidence needed to resolve it.",
+      "selected_principles": [
+        "Evidence quality and provenance",
+        "Explicit uncertainty",
+        "Preserve binding work and closed scope"
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "Architecture or stack selection",
+        "Provider or integration selection",
+        "Implementation or activation planning"
+      ],
+      "evidence_and_uncertainty": [
+        "Customer evidence is sparse.",
+        "Customer evidence conflicts with analytics.",
+        "Analytics provenance is unknown.",
+        "No source is sufficiently reliable to resolve the conflict."
+      ],
+      "authority_boundary": "Product-leadership analysis may identify the evidence gap and decision threshold, but may not invent findings, reopen scope, or authorize technical choices or activation.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

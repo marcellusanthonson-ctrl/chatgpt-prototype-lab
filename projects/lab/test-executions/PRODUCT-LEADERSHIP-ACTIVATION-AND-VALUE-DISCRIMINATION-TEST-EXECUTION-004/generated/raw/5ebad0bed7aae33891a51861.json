@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "5ebad0bed7aae33891a51861",
+  "run_id": "PL-FX-002__POSITIVE_CONTROL",
+  "fixture_id": "PL-FX-002",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-POSITIVE-CONTROL",
+  "control_type": "POSITIVE",
+  "expected_activation": "ACTIVE",
+  "scenario": "Leadership requests a strategy from twelve unrelated initiatives.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-002__POSITIVE_CONTROL",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:47:16.725Z",
+    "ended_at": "2026-08-05T01:47:30.030Z",
+    "latency_ms": 13305,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13945,
+      "cached_input_tokens": 12032,
+      "output_tokens": 270
+    },
+    "response_sha256": "9df3490b7d970de42868be5492c4924bdb916bb08047714fc6e2b480e5035fa1",
+    "response": {
+      "activation_classification": "ACTIVE",
+      "answer": "This is a strategy problem, not a request to summarize twelve initiatives. Frame a small set of viable strategic choices, state which initiatives each choice prioritizes, defers, or stops, and test whether the resulting portfolio forms a coherent advantage rather than twelve unrelated commitments. Leadership should select the direction and explicitly approve the exclusions.",
+      "selected_principles": [
+        "IDENTIFY_CHOICES",
+        "IDENTIFY_EXCLUSIONS",
+        "TEST_COHERENCE"
+      ],
+      "selected_frameworks": [
+        "Strategic choice architecture",
+        "Portfolio coherence test"
+      ],
+      "rejected_frameworks": [
+        "Initiative aggregation",
+        "Equal-priority roadmap"
+      ],
+      "evidence_and_uncertainty": [
+        "The initiatives are described only as unrelated; their objectives, economics, dependencies, and constraints are not provided.",
+        "Specific recommendations require evidence about customers, capabilities, expected value, risk, and resource limits."
+      ],
+      "authority_boundary": "Product leadership owns the strategic choice, trade-offs, and cancellation or deferral decisions; analysis can structure and test the options but cannot approve them.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

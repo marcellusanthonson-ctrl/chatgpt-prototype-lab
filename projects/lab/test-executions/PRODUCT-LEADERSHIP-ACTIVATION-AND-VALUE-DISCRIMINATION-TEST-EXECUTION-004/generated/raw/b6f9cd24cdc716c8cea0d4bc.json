@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "b6f9cd24cdc716c8cea0d4bc",
+  "run_id": "PL-FX-032__BASELINE",
+  "fixture_id": "PL-FX-032",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "LIMITED_OR_AMBIGUOUS",
+  "scenario": "A sponsor declares high adoption while the canonical metric shows low activation.",
+  "category": "CONTRADICTORY_EVIDENCE",
+  "provenance": {
+    "request_id": "PL-FX-032__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:50:55.307Z",
+    "ended_at": "2026-08-05T01:51:13.602Z",
+    "latency_ms": 18295,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13969,
+      "cached_input_tokens": 13056,
+      "output_tokens": 225
+    },
+    "response_sha256": "8b400000b092d3e7ee1911308429e0401b8c495ee0b5e92a22cb9d19e24e19fc",
+    "response": {
+      "activation_classification": "ACTIVE",
+      "answer": "Treat the adoption claim as unverified against the canonical low-activation metric. Reconcile metric definitions, cohorts, and time windows before drawing a product conclusion; do not change scope or implementation.",
+      "selected_principles": [
+        "Canonical evidence over unsupported claims",
+        "Resolve material metric conflicts before acting"
+      ],
+      "selected_frameworks": [
+        "Metric-definition and cohort reconciliation"
+      ],
+      "rejected_frameworks": [
+        "Architecture or stack selection",
+        "Provider or integration selection",
+        "Implementation or activation planning"
+      ],
+      "evidence_and_uncertainty": [
+        "Evidence: the canonical metric shows low activation.",
+        "Uncertainty: the sponsor’s definition and evidence for high adoption are not provided."
+      ],
+      "authority_boundary": "Analysis may identify and request resolution of the evidence conflict; it may not override the canonical metric, redefine scope, or authorize changes.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

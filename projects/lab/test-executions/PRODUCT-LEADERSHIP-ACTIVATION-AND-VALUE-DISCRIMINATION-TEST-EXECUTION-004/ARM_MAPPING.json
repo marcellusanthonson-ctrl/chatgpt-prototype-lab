@@ -1,0 +1,902 @@
+{
+  "schema_version": "1.0.0",
+  "status": "SEALED_UNTIL_SCORING_FREEZE",
+  "mapping": [
+    {
+      "blind_id": "32f15d98a427347b6000259c",
+      "run_id": "PL-FX-033__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-033",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "1375aaf37340b2a422d683fc",
+      "run_id": "PL-GOV-FX-009__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-GOV-FX-009",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "21ff1dea0345478d6e2453ed",
+      "run_id": "PL-GOV-FX-011__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-GOV-FX-011",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "53ae459493a023a26ea6f8d4",
+      "run_id": "PL-FX-035__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-035",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "1283cc39c1feed283e176edb",
+      "run_id": "PL-FX-007__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-007",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "86713530e9d3f48acaa6f0eb",
+      "run_id": "PL-FX-002__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-002",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "a9ddd0962218af07cdd2923e",
+      "run_id": "PL-GOV-FX-005__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-GOV-FX-005",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "f9b06e8c702f61021a8480c3",
+      "run_id": "PL-FX-005__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-005",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "709522fbe7eaaabfb9a5f9ed",
+      "run_id": "PL-FX-029__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-029",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "3cd08efaa43ec06824543c7e",
+      "run_id": "PL-GOV-FX-010__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-GOV-FX-010",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "5c0ab78657f60a71f54d7abe",
+      "run_id": "PL-FX-004__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-004",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "5c837a8f0a109be52193b366",
+      "run_id": "PL-FX-040__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-040",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "d21333f2ba478ba552e583cd",
+      "run_id": "PL-GOV-FX-007__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-GOV-FX-007",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "3824640ddd551e5f28dc866d",
+      "run_id": "PL-FX-010__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-010",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "b889c33ea2c5b3b0ba7d6ce9",
+      "run_id": "PL-GOV-FX-008__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-GOV-FX-008",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "7891936fe6c759b9b0f2ce48",
+      "run_id": "PL-GOV-FX-001__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-GOV-FX-001",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "d758095ca1bae347d262be76",
+      "run_id": "PL-FX-038__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-038",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "c870a998049dacd76e74368d",
+      "run_id": "PL-FX-028__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-028",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "113898e206f2e45eebc7763e",
+      "run_id": "PL-FX-038__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-038",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "d2ba0557f5e07e908298c4ea",
+      "run_id": "PL-FX-023__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-023",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "control_type": null
+    },
+    {
+      "blind_id": "da87d9f2ab02ce0c69495068",
+      "run_id": "PL-FX-010__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-010",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "aeb390deb553c211c18a48f5",
+      "run_id": "PL-FX-035__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-035",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "b37024502030c845d18c6cbb",
+      "run_id": "PL-GOV-FX-003__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-GOV-FX-003",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "e93a49bd0c44b6b4f2fd86f5",
+      "run_id": "PL-FX-008__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-008",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "fed01b5a5ea063d96b9e6a7b",
+      "run_id": "PL-GOV-FX-010__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-GOV-FX-010",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "718d6d081300bc0e21708182",
+      "run_id": "PL-FX-024__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-024",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "control_type": null
+    },
+    {
+      "blind_id": "2626346410a0d0e97a31a336",
+      "run_id": "PL-FX-018__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-018",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "ccba336dd26b97a5bc42c8c8",
+      "run_id": "PL-FX-032__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-032",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "control_type": null
+    },
+    {
+      "blind_id": "eed1255e09c0667c67948b0d",
+      "run_id": "PL-GOV-FX-002__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-GOV-FX-002",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "7d65ed230cf9c1803b4b04fb",
+      "run_id": "PL-FX-021__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-021",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "control_type": null
+    },
+    {
+      "blind_id": "ef7c7b8a2257511bef4ecb60",
+      "run_id": "PL-FX-024__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-024",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "control_type": null
+    },
+    {
+      "blind_id": "ccdd357b270208f83feddafa",
+      "run_id": "PL-GOV-FX-005__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-GOV-FX-005",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "64047bad623c84f173da2f21",
+      "run_id": "PL-FX-013__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-013",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "5ebad0bed7aae33891a51861",
+      "run_id": "PL-FX-002__POSITIVE_CONTROL",
+      "arm": "PL-ARM-POSITIVE-CONTROL",
+      "fixture_id": "PL-FX-002",
+      "expected_activation": "ACTIVE",
+      "control_type": "POSITIVE"
+    },
+    {
+      "blind_id": "74aa7ee395a784e3b6b9a6fc",
+      "run_id": "PL-FX-001__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-001",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "6b03f97db4b67aa93a64d360",
+      "run_id": "PL-FX-030__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-030",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "control_type": null
+    },
+    {
+      "blind_id": "0f2362b94b280bbd67bc1dcc",
+      "run_id": "PL-FX-031__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-031",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "control_type": null
+    },
+    {
+      "blind_id": "ef7d48931aace3b6664c881e",
+      "run_id": "PL-FX-026__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-026",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "control_type": null
+    },
+    {
+      "blind_id": "48f1d690aa065bff3d8b3520",
+      "run_id": "PL-FX-021__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-021",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "control_type": null
+    },
+    {
+      "blind_id": "01b9f1a0d7de445d340f380b",
+      "run_id": "PL-FX-017__NEGATIVE_CONTROL",
+      "arm": "PL-ARM-NEGATIVE-CONTROL",
+      "fixture_id": "PL-FX-017",
+      "expected_activation": "INACTIVE",
+      "control_type": "NEGATIVE"
+    },
+    {
+      "blind_id": "7e9dc0f9e5a11528a7770ea9",
+      "run_id": "PL-GOV-FX-004__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-GOV-FX-004",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "d2cbd496d0b64ecd2828cba7",
+      "run_id": "PL-FX-025__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-025",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "control_type": null
+    },
+    {
+      "blind_id": "556450708f5421dae6db0e20",
+      "run_id": "PL-FX-006__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-006",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "c8a5a5378878a9dd16ccdde9",
+      "run_id": "PL-FX-029__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-029",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "d3ec316cd1b944a3dfe631b8",
+      "run_id": "PL-FX-011__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-011",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "645646d40de3e1e2df58047d",
+      "run_id": "PL-FX-016__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-016",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "58770ff0fe10c5719758c25b",
+      "run_id": "PL-FX-001__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-001",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "279583965862357b5c0c44e0",
+      "run_id": "PL-FX-019__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-019",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "f13993d2860d4fc4d85ba029",
+      "run_id": "PL-FX-037__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-037",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "35cd6977da4408de039a6a6f",
+      "run_id": "PL-FX-034__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-034",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "control_type": null
+    },
+    {
+      "blind_id": "92e613581999f89e3aec0734",
+      "run_id": "PL-FX-030__NEGATIVE_CONTROL",
+      "arm": "PL-ARM-NEGATIVE-CONTROL",
+      "fixture_id": "PL-FX-030",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "control_type": "NEGATIVE"
+    },
+    {
+      "blind_id": "7d20e77b3bddf8f436c3d7ec",
+      "run_id": "PL-FX-005__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-005",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "f32473e744c20ff056f6c103",
+      "run_id": "PL-FX-012__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-012",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "b630595c018a881a58c26807",
+      "run_id": "PL-FX-017__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-017",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "d22a24e9c44a350302a5b40b",
+      "run_id": "PL-FX-011__NEGATIVE_CONTROL",
+      "arm": "PL-ARM-NEGATIVE-CONTROL",
+      "fixture_id": "PL-FX-011",
+      "expected_activation": "INACTIVE",
+      "control_type": "NEGATIVE"
+    },
+    {
+      "blind_id": "09524aaded187bb08738daba",
+      "run_id": "PL-FX-014__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-014",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "4eecc5ce6c9244ecdf7cb9e7",
+      "run_id": "PL-FX-033__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-033",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "6d382622778399a0a9d70506",
+      "run_id": "PL-FX-039__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-039",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "405b2ab353acdfa924aa3b17",
+      "run_id": "PL-FX-004__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-004",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "34f086398f2ca5d3e8b05ce2",
+      "run_id": "PL-FX-013__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-013",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "0d880c97a938cc4341ad6744",
+      "run_id": "PL-GOV-FX-009__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-GOV-FX-009",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "a53c924e5c1fd98a943a35c6",
+      "run_id": "PL-FX-002__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-002",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "3402c462c243b6a187cb1534",
+      "run_id": "PL-FX-019__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-019",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "91deab112bfefab871fe3f1b",
+      "run_id": "PL-GOV-FX-004__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-GOV-FX-004",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "68d4dd2c14c5c66e56067dfb",
+      "run_id": "PL-FX-025__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-025",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "control_type": null
+    },
+    {
+      "blind_id": "e9198af6e67de19baab46dac",
+      "run_id": "PL-GOV-FX-003__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-GOV-FX-003",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "7fec1c8d6fbf74244cfa853d",
+      "run_id": "PL-FX-006__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-006",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "aefb0523fce4f43979f47dbb",
+      "run_id": "PL-FX-034__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-034",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "control_type": null
+    },
+    {
+      "blind_id": "4d07e18801485169af5c44eb",
+      "run_id": "PL-FX-003__POSITIVE_CONTROL",
+      "arm": "PL-ARM-POSITIVE-CONTROL",
+      "fixture_id": "PL-FX-003",
+      "expected_activation": "ACTIVE",
+      "control_type": "POSITIVE"
+    },
+    {
+      "blind_id": "dbe0017a64c1ef61aaaa3ad2",
+      "run_id": "PL-GOV-FX-012__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-GOV-FX-012",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "control_type": null
+    },
+    {
+      "blind_id": "5b11ff118fe8bfcb39eb5cb1",
+      "run_id": "PL-FX-015__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-015",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "5d9517244fd36294affe233b",
+      "run_id": "PL-FX-028__NEGATIVE_CONTROL",
+      "arm": "PL-ARM-NEGATIVE-CONTROL",
+      "fixture_id": "PL-FX-028",
+      "expected_activation": "INACTIVE",
+      "control_type": "NEGATIVE"
+    },
+    {
+      "blind_id": "6729e6eb8a4d822024943ffd",
+      "run_id": "PL-FX-020__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-020",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "29b817bbdaa08c0ed2aa8fc1",
+      "run_id": "PL-FX-007__POSITIVE_CONTROL",
+      "arm": "PL-ARM-POSITIVE-CONTROL",
+      "fixture_id": "PL-FX-007",
+      "expected_activation": "ACTIVE",
+      "control_type": "POSITIVE"
+    },
+    {
+      "blind_id": "27b09148e86d7de1bdb6af40",
+      "run_id": "PL-FX-012__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-012",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "22abfee91aeca07d87c5e19e",
+      "run_id": "PL-FX-036__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-036",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "3ae675e8b48499c58c1cc59a",
+      "run_id": "PL-GOV-FX-007__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-GOV-FX-007",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "b6f9cd24cdc716c8cea0d4bc",
+      "run_id": "PL-FX-032__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-032",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "control_type": null
+    },
+    {
+      "blind_id": "77aef0abcc6860fbc71ea0b0",
+      "run_id": "PL-FX-011__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-011",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "8c036c0d9c6d1b214c24db31",
+      "run_id": "PL-FX-008__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-008",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "b5a43f719ee327164498f64a",
+      "run_id": "PL-FX-030__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-030",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "control_type": null
+    },
+    {
+      "blind_id": "2e4d01959747b37762610a5e",
+      "run_id": "PL-FX-020__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-020",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "cc9485d3201c204e408da1c4",
+      "run_id": "PL-FX-039__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-039",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "d2388f767d2750c151f17467",
+      "run_id": "PL-FX-001__POSITIVE_CONTROL",
+      "arm": "PL-ARM-POSITIVE-CONTROL",
+      "fixture_id": "PL-FX-001",
+      "expected_activation": "ACTIVE",
+      "control_type": "POSITIVE"
+    },
+    {
+      "blind_id": "7bcf6a95d8a15b8916611fca",
+      "run_id": "PL-FX-017__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-017",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "0e5e70f14e17f4ccd6b74ad1",
+      "run_id": "PL-FX-007__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-007",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "ed876e81d86f3a9b0a899842",
+      "run_id": "PL-FX-026__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-026",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "control_type": null
+    },
+    {
+      "blind_id": "f5de024ab3300599c73c0d0e",
+      "run_id": "PL-FX-003__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-003",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "800dd4e0696a1883d535e058",
+      "run_id": "PL-FX-009__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-009",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "d95b538550252b88612857e2",
+      "run_id": "PL-GOV-FX-011__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-GOV-FX-011",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "1aecec0b655177ff7af5abb7",
+      "run_id": "PL-GOV-FX-006__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-GOV-FX-006",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "497ee218e534a1f08aebb3fe",
+      "run_id": "PL-GOV-FX-006__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-GOV-FX-006",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "63a0a0ee65e9d938612a3ea4",
+      "run_id": "PL-FX-031__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-031",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "control_type": null
+    },
+    {
+      "blind_id": "786a2baa38824a5fba726e65",
+      "run_id": "PL-FX-009__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-009",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "387cb148ad177d41cee06ef9",
+      "run_id": "PL-FX-016__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-016",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "72c24856378467dd71b27cc3",
+      "run_id": "PL-FX-014__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-014",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "e31ca7fe6d7f724ab9b46022",
+      "run_id": "PL-FX-040__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-040",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "7b8d3d72b2c9932996e3c8b3",
+      "run_id": "PL-GOV-FX-008__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-GOV-FX-008",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "d7ccdbd48602e120c94e87be",
+      "run_id": "PL-FX-015__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-015",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "0115c034543339d9aa5868e2",
+      "run_id": "PL-FX-018__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-018",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "814567af9d5248c96146c81a",
+      "run_id": "PL-FX-023__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-023",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "control_type": null
+    },
+    {
+      "blind_id": "017bec6d33c47658332b1e46",
+      "run_id": "PL-GOV-FX-001__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-GOV-FX-001",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "9e9422e83ec624707c0529be",
+      "run_id": "PL-FX-022__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-022",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "control_type": null
+    },
+    {
+      "blind_id": "597b2d87c5c9d37c0b37981e",
+      "run_id": "PL-GOV-FX-002__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-GOV-FX-002",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "0738cce455ead7ac11456c42",
+      "run_id": "PL-FX-027__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-027",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "control_type": null
+    },
+    {
+      "blind_id": "36402a8f254fb260973f09bb",
+      "run_id": "PL-FX-037__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-037",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "fa664cbec566c2f5d7c6e8b7",
+      "run_id": "PL-GOV-FX-012__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-GOV-FX-012",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "control_type": null
+    },
+    {
+      "blind_id": "1dc41c772dc400d571d75357",
+      "run_id": "PL-FX-028__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-028",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "784522a59ab8418e6f8c0c41",
+      "run_id": "PL-FX-027__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-027",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "control_type": null
+    },
+    {
+      "blind_id": "9a35fbe20a8e35db8c157088",
+      "run_id": "PL-FX-003__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-003",
+      "expected_activation": "ACTIVE",
+      "control_type": null
+    },
+    {
+      "blind_id": "c6455e36956255258a37360e",
+      "run_id": "PL-FX-022__PACKAGE",
+      "arm": "PL-ARM-PACKAGE",
+      "fixture_id": "PL-FX-022",
+      "expected_activation": "LIMITED_OR_AMBIGUOUS",
+      "control_type": null
+    },
+    {
+      "blind_id": "a980dcad36c90085b089b221",
+      "run_id": "PL-FX-036__BASELINE",
+      "arm": "PL-ARM-BASELINE",
+      "fixture_id": "PL-FX-036",
+      "expected_activation": "INACTIVE",
+      "control_type": null
+    }
+  ]
+}

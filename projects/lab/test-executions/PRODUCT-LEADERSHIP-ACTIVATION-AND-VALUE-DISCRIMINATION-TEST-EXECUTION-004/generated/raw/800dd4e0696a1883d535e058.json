@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "800dd4e0696a1883d535e058",
+  "run_id": "PL-FX-009__PACKAGE",
+  "fixture_id": "PL-FX-009",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "Two product segments imply incompatible value propositions.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-009__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:51:39.513Z",
+    "ended_at": "2026-08-05T01:52:08.908Z",
+    "latency_ms": 29395,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19528,
+      "cached_input_tokens": 0,
+      "output_tokens": 816
+    },
+    "response_sha256": "b381aeadff3caeef94b3f7597d0dde8a21a38e7c5187f9fc0e6ead243a6a5985",
+    "response": {
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "answer": "Product problem: Two segments appear to require incompatible value propositions, but the specific segments, needs, evidence, and source of the incompatibility are unknown.\n\nDesired outcome: Establish an evidence-bounded choice between a primary segment, explicitly differentiated propositions, or another permitted product boundary—without deciding among them yet.\n\nPriority: First resolve the missing product evidence and authority. Compare each segment using the same criteria: problem severity, desired outcome, contextual constraints, observed alternatives, and evidence provenance. Then present the trade-offs and exclusions to the authorized human decision-maker.\n\nExclusions: No segment selection, value-proposition approval, roadmap commitment, technical solution, architecture, stack, provider, implementation, activation, or integration.\n\nLearning need: Validate whether the propositions are genuinely incompatible and identify which segment outcomes are supported by observed evidence. Any value claim requires measurement; none is established here.\n\nRecommendation: Treat this as an unresolved strategic choice. Prepare an evidence comparison and conditional options, each stating the intended outcome, supporting evidence, assumptions, trade-offs, and excluded segment or proposition. Do not collapse the conflict into a blended proposition without evidence that it serves either segment.",
+      "selected_principles": [
+        "PL-P01 — Start from the product problem and intended outcome.",
+        "PL-P03 — Express strategy through choices and exclusions.",
+        "PL-P04 — Preserve evidence provenance and label unknowns.",
+        "PL-P05 — Do not infer authority from recommendations or framework output."
+      ],
+      "selected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — Separate each segment’s problem, intended outcome, and unmeasured impact.",
+        "PL-FW-STRATEGIC-CHOICES — Frame the incompatible propositions as explicit conditional choices, trade-offs, and exclusions."
+      ],
+      "rejected_frameworks": [
+        "PL-FW-OPPORTUNITY-MAPPING — Evidence is too weak to construct a defensible opportunity map.",
+        "PL-FW-JOBS-CONTEXT — Potentially relevant, but no user-motivation or alternative-behavior evidence is supplied.",
+        "PL-FW-PRIORITIZATION-ORDER — No portfolio, roadmap, dependencies, or authorized ordering scope is supplied.",
+        "PL-FW-LEARNING-LOOP — No experiment or release result exists to review."
+      ],
+      "evidence_and_uncertainty": [
+        "Evidence supplied: only the scenario statement that two segments imply incompatible value propositions; provenance and supporting observations are absent.",
+        "Unknown: segment definitions, needs, behaviors, proposition details, success measures, and whether the incompatibility is validated or assumed.",
+        "Authority state, binding obligations, product decision scope, and known exclusions are not provided.",
+        "No value increment, outcome, impact, numeric confidence, or test result can be claimed.",
+        "Framework applicability remains conditional because the available evidence is minimal."
+      ],
+      "authority_boundary": "The candidate package has authority effect NONE and supplies criterion only. This output is a conditional recommendation, not a product decision or permission to implement. An authorized human must resolve the segment and proposition choice while preserving any undisclosed binding obligations.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

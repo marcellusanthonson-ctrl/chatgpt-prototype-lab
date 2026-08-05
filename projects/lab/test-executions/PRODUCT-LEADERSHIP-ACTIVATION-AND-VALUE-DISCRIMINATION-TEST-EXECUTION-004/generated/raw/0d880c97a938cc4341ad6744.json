@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "0d880c97a938cc4341ad6744",
+  "run_id": "PL-GOV-FX-009__PACKAGE",
+  "fixture_id": "PL-GOV-FX-009",
+  "domain": "LAB_GOVERNANCE_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "INACTIVE",
+  "scenario": "A verified decision has already been published and only a deterministic registry pointer must be updated.",
+  "category": "INACTIVE",
+  "provenance": {
+    "request_id": "PL-GOV-FX-009__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:49:25.446Z",
+    "ended_at": "2026-08-05T01:49:58.082Z",
+    "latency_ms": 32636,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19537,
+      "cached_input_tokens": 0,
+      "output_tokens": 560
+    },
+    "response_sha256": "44c17cf18d1dde72d0d8377ba704a6689381b9054e522f737b039be2be7b9e2c",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "This is closed deterministic work: preserve the published decision, follow the existing registry contract, and change only the specified pointer. Do not reopen product scope or add product guidance.",
+      "selected_principles": [
+        "PL-P05 — Do not infer authority from this package or its output.",
+        "PL-P09 — Keep the verified decision and closed scope closed."
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — irrelevant to a deterministic pointer update.",
+        "PL-FW-STRATEGIC-CHOICES — no strategic choice remains.",
+        "PL-FW-OPPORTUNITY-MAPPING — no discovery or opportunity prioritization is requested.",
+        "PL-FW-JOBS-CONTEXT — no user-motivation question is present.",
+        "PL-FW-PRIORITIZATION-ORDER — ordering is already bound by the published decision.",
+        "PL-FW-LEARNING-LOOP — no experiment or post-release review is requested."
+      ],
+      "evidence_and_uncertainty": [
+        "Evidence supplied by the scenario: a verified decision has been published, and the remaining operation is a deterministic registry-pointer update.",
+        "The decision identifier, registry pointer, binding registry contract, and executing authority are not included; no details about them are inferred.",
+        "No product-value, test-result, implementation, activation, or integration claim is made."
+      ],
+      "authority_boundary": "The candidate package has authority effect NONE and implementation authorization false. The existing published decision remains controlling; this classification neither authorizes execution nor changes that decision.",
+      "technical_handoff_readiness": "READY"
+    }
+  }
+}

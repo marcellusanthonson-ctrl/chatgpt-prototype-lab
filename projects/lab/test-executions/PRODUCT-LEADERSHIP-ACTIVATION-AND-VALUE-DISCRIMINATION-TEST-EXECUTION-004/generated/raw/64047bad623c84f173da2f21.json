@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "64047bad623c84f173da2f21",
+  "run_id": "PL-FX-013__PACKAGE",
+  "fixture_id": "PL-FX-013",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "INACTIVE",
+  "scenario": "Rename a schema field through a deterministic migration already authorized.",
+  "category": "INACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-013__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:47:09.107Z",
+    "ended_at": "2026-08-05T01:47:30.247Z",
+    "latency_ms": 21140,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19531,
+      "cached_input_tokens": 12032,
+      "output_tokens": 410
+    },
+    "response_sha256": "b035f63ee4e1b6ea62bea515a880b54f4c907a2991b8c65083f5487cb72866f7",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "This is a closed, deterministic technical operation: rename the schema field through the already-authorized migration. Preserve the existing migration contract and scope; do not add product framing or reopen technical decisions.",
+      "selected_principles": [
+        "PL-P09 — Closed tasks and binding obligations stay closed unless explicitly reopened.",
+        "PL-P05 — Package guidance does not create or extend authority."
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — explicitly unsuitable for deterministic implementation.",
+        "PL-FW-STRATEGIC-CHOICES — execution is fixed; no strategic choice is requested.",
+        "PL-FW-OPPORTUNITY-MAPPING — no discovery or opportunity prioritization is involved.",
+        "PL-FW-JOBS-CONTEXT — no user-motivation question is involved.",
+        "PL-FW-PRIORITIZATION-ORDER — ordering is not open for decision.",
+        "PL-FW-LEARNING-LOOP — no executed experiment or post-release review is presented."
+      ],
+      "evidence_and_uncertainty": [
+        "Scenario evidence: the field rename uses a deterministic migration that is already authorized.",
+        "No migration specification, binding obligations, validation results, or completion evidence were supplied; none are inferred.",
+        "No claim is made that the migration has been implemented or succeeded."
+      ],
+      "authority_boundary": "The scenario supplies authority only for the stated deterministic migration. The disabled candidate package has authority effect NONE and grants no implementation, scope-expansion, architecture, stack, provider, activation, or integration authority.",
+      "technical_handoff_readiness": "READY"
+    }
+  }
+}

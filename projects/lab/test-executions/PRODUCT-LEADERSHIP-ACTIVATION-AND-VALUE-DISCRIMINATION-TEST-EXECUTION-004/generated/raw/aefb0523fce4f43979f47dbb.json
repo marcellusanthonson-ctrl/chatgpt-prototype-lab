@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "aefb0523fce4f43979f47dbb",
+  "run_id": "PL-FX-034__BASELINE",
+  "fixture_id": "PL-FX-034",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "LIMITED_OR_AMBIGUOUS",
+  "scenario": "A prior decision assumes a fact contradicted by newer verified evidence.",
+  "category": "CONTRADICTORY_EVIDENCE",
+  "provenance": {
+    "request_id": "PL-FX-034__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:49:59.552Z",
+    "ended_at": "2026-08-05T01:50:10.620Z",
+    "latency_ms": 11068,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13969,
+      "cached_input_tokens": 0,
+      "output_tokens": 208
+    },
+    "response_sha256": "5701273086f61df93fa56142efc5c81c1942c73f6889f8aa91a134a3ba334f35",
+    "response": {
+      "activation_classification": "ACTIVE",
+      "answer": "Reopen only the affected decision. Document the verified contradiction, identify its impact on the prior rationale, and route the decision to the authorized owner without expanding scope.",
+      "selected_principles": [
+        "Evidence supersedes contradicted assumptions",
+        "Preserve unaffected binding decisions and closed scope"
+      ],
+      "selected_frameworks": [
+        "Targeted decision reassessment"
+      ],
+      "rejected_frameworks": [
+        "Architecture or implementation selection",
+        "Scope reopening beyond the affected decision"
+      ],
+      "evidence_and_uncertainty": [
+        "Newer evidence is stated to be verified, but its content and impact are unspecified."
+      ],
+      "authority_boundary": "Product leadership may frame the contradiction and impact; only the authorized decision owner may revise the prior decision.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

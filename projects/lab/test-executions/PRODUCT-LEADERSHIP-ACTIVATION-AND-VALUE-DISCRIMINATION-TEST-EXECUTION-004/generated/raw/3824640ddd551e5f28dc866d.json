@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "3824640ddd551e5f28dc866d",
+  "run_id": "PL-FX-010__BASELINE",
+  "fixture_id": "PL-FX-010",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "Phase 7 learning capture has real outcome evidence but no structured synthesis.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-010__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:45:24.949Z",
+    "ended_at": "2026-08-05T01:45:36.175Z",
+    "latency_ms": 11226,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13970,
+      "cached_input_tokens": 0,
+      "output_tokens": 192
+    },
+    "response_sha256": "82854476e7c28ac2bab892054ec33198abdb3353684a26549df320275158d3ca",
+    "response": {
+      "activation_classification": "ACTIVE",
+      "answer": "Structure the existing Phase 7 outcome evidence into a learning synthesis: observed outcomes, supporting evidence, confidence/limitations, implications, and unresolved questions. Preserve the evidence unchanged and keep any recommendations explicitly non-binding.",
+      "selected_principles": [
+        "Evidence-grounded learning capture",
+        "Separate observations from implications",
+        "Preserve binding work and closed scope"
+      ],
+      "selected_frameworks": [
+        "Outcome evidence synthesis"
+      ],
+      "rejected_frameworks": [
+        "Architecture or stack selection",
+        "Provider or integration selection",
+        "Implementation planning",
+        "Activation decisions"
+      ],
+      "evidence_and_uncertainty": [
+        "Real outcome evidence exists, but its contents and quality are not provided.",
+        "No structured synthesis currently exists."
+      ],
+      "authority_boundary": "Authorized only to structure and interpret supplied Phase 7 evidence; no authority to alter binding work, expand scope, or make implementation, activation, architecture, provider, or integration decisions.",
+      "technical_handoff_readiness": "LIMITED"
+    }
+  }
+}

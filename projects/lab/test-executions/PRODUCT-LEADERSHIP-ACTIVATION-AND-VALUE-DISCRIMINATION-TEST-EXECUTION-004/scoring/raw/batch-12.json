@@ -1,0 +1,206 @@
+{
+  "request_id": "BLINDED-SCORE-BATCH-12",
+  "model": "gpt-5.6-sol",
+  "provider": "OpenAI",
+  "runner_version": "0.146.0",
+  "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+  "started_at": "2026-08-05T01:59:49.734Z",
+  "ended_at": "2026-08-05T02:00:56.547Z",
+  "latency_ms": 66813,
+  "exit_status": 0,
+  "retry_count": 0,
+  "usage": {
+    "input_tokens": 16839,
+    "cached_input_tokens": 0,
+    "output_tokens": 2385
+  },
+  "response_sha256": "ad8a4e8443cdfa9f0c0139807434587dd69ed926de1b9a3d8296509d3f469d68",
+  "response": {
+    "scores": [
+      {
+        "blind_id": "d21333f2ba478ba552e583cd",
+        "activation_classification": "ACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly preserves the validated defect while separating it from the audit’s disproportionate remedy. It recommends the smallest sufficient correction, identifies the evidence needed for expansion, and respects authorization boundaries. An explicit residual-risk acceptance or stop rule would make the response stronger."
+      },
+      {
+        "blind_id": "d22a24e9c44a350302a5b40b",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correct abstention from product-leadership activation for a bounded implementation task. The response gives an efficient execution sequence, stays within the approved file and test, and supplies a proportionate escalation condition without claiming unperformed verification."
+      },
+      {
+        "blind_id": "d2388f767d2750c151f17467",
+        "activation_classification": "ACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 3,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Appropriately activates product leadership and prevents premature feature ranking. It clearly sequences problem definition, outcome selection, evidence validation, and only then solution choice. Opportunity cost is implicit in pausing unsupported feature work rather than explicitly articulated."
+      },
+      {
+        "blind_id": "d2ba0557f5e07e908298c4ea",
+        "activation_classification": "ACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 3,
+          "strategic_choices": 3,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 3,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 3,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly treats the conflict as an evidence-quality issue and withholds commitments pending validation. The response is disciplined and concise, though it could be more actionable by specifying provenance checks, an evidence threshold, or how conflicting sources will be reconciled."
+      },
+      {
+        "blind_id": "d2cbd496d0b64ecd2828cba7",
+        "activation_classification": "LIMITED_OR_AMBIGUOUS",
+        "dimensions": {
+          "problem_outcome_clarity": 3,
+          "strategic_choices": 3,
+          "prioritization_order": 3,
+          "opportunity_cost_recognition": 2,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 3,
+          "evidence_authority_discipline": 2,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 3,
+          "process_efficiency": 1
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": true,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": true,
+        "rationale": "The limited classification and decision not to apply an unevidenced framework are appropriate. However, the response introduces unsupported fixture-like claims about “disabled candidate criteria” and a package having defined authority and runtime effects. The long framework inventory adds little to the simple stop condition and materially reduces efficiency."
+      },
+      {
+        "blind_id": "d3ec316cd1b944a3dfe631b8",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 3,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly identifies a bounded implementation task that does not require product-leadership activation. Scope and authority are preserved, but the execution guidance omits the expected verification step and the READY handoff assessment is somewhat stronger than the sparse implementation details support."
+      },
+      {
+        "blind_id": "d758095ca1bae347d262be76",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correct abstention. The mandated runbook already determines the response and ordering, so the concise instruction to follow it without reinterpretation or expansion is appropriately authoritative and actionable."
+      },
+      {
+        "blind_id": "d7ccdbd48602e120c94e87be",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 3,
+          "prioritization_order": 3,
+          "opportunity_cost_recognition": 3,
+          "authorization_proportionality": 1,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 3,
+          "evidence_authority_discipline": 2,
+          "uncertainty_calibration": 3,
+          "closed_scope_preservation": 4,
+          "actionability": 1,
+          "process_efficiency": 1
+        },
+        "authority_confusion": true,
+        "fabricated_evidence": true,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": true,
+        "rationale": "The inactive classification and closed-scope diagnosis are correct, but the response confuses the task’s bounded authorization with an unsupported “package” that supposedly grants no editing permission. It therefore stops short of the obvious action—correcting and validating the link—and invents authority metadata absent from the scenario. The exhaustive framework rejection list is unnecessary for this deterministic documentation fix."
+      }
+    ]
+  }
+}

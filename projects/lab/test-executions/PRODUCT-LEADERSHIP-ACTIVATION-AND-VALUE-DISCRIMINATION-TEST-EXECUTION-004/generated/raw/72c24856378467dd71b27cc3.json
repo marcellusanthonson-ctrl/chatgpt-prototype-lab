@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "72c24856378467dd71b27cc3",
+  "run_id": "PL-FX-014__PACKAGE",
+  "fixture_id": "PL-FX-014",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "INACTIVE",
+  "scenario": "Update a pinned dependency version after approval and run prescribed checks.",
+  "category": "INACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-014__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:52:13.944Z",
+    "ended_at": "2026-08-05T01:52:37.057Z",
+    "latency_ms": 23113,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19532,
+      "cached_input_tokens": 13056,
+      "output_tokens": 629
+    },
+    "response_sha256": "e2d3bd8293804496f3a17b1139e9bbc60fffb4df9a218a1bd653cb7c664000f3",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "This is a closed, deterministic technical task: apply the already-approved pinned dependency update and run only the prescribed checks. Do not reopen product scope, introduce product criteria, or make architecture, stack, provider, activation, or integration decisions. The exact version and checks are not supplied here, so they must be taken from the binding approval and existing technical prescription rather than inferred.",
+      "selected_principles": [
+        "PL-P09 — Preserve the closed task and binding obligations.",
+        "PL-P05 — Do not infer authority from this candidate package."
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — irrelevant to deterministic implementation.",
+        "PL-FW-STRATEGIC-CHOICES — execution is already fixed by approval.",
+        "PL-FW-OPPORTUNITY-MAPPING — no discovery scope.",
+        "PL-FW-JOBS-CONTEXT — no user-motivation question.",
+        "PL-FW-PRIORITIZATION-ORDER — ordering is already prescribed.",
+        "PL-FW-LEARNING-LOOP — this is prescribed verification, not experiment review."
+      ],
+      "evidence_and_uncertainty": [
+        "Scenario evidence states that approval exists and checks are prescribed.",
+        "The approved dependency version, prescribed checks, approval provenance, and results are not provided; none may be invented.",
+        "No product-value, test-result, safety, or integration claim is established."
+      ],
+      "authority_boundary": "The candidate package has authority effect NONE and grants no implementation permission. Execution authority comes only from the referenced approval and remains bounded by its exact scope and obligations.",
+      "technical_handoff_readiness": "LIMITED"
+    }
+  }
+}

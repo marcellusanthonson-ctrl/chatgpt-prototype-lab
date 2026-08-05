@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "35cd6977da4408de039a6a6f",
+  "run_id": "PL-FX-034__PACKAGE",
+  "fixture_id": "PL-FX-034",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "LIMITED_OR_AMBIGUOUS",
+  "scenario": "A prior decision assumes a fact contradicted by newer verified evidence.",
+  "category": "CONTRADICTORY_EVIDENCE",
+  "provenance": {
+    "request_id": "PL-FX-034__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:48:33.568Z",
+    "ended_at": "2026-08-05T01:48:59.491Z",
+    "latency_ms": 25923,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19533,
+      "cached_input_tokens": 12032,
+      "output_tokens": 543
+    },
+    "response_sha256": "aae01b4321331a2b07171251ad4b6f7cba11208c66a5a14c0c448c8cd25a2318",
+    "response": {
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "answer": "The prior decision’s factual premise is now disputed by newer verified evidence. Preserve the decision and all binding obligations unless authorized authority reopens it; meanwhile, flag the contradiction for authorized reconsideration and avoid further decisions that depend on the disputed premise where existing obligations permit. No product, technical, implementation, activation, or integration decision is made.",
+      "selected_principles": [
+        "PL-P04 — Preserve evidence provenance and label contradictions and unknowns.",
+        "PL-P05 — Evidence does not create authority.",
+        "PL-P09 — A closed or binding decision remains closed unless explicitly reopened by new authority."
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — No value-definition or outcome-review need is stated.",
+        "PL-FW-STRATEGIC-CHOICES — No strategy formulation or initiative conflict is stated.",
+        "PL-FW-OPPORTUNITY-MAPPING — No discovery or opportunity-prioritization task is stated.",
+        "PL-FW-JOBS-CONTEXT — No user-motivation question is stated.",
+        "PL-FW-PRIORITIZATION-ORDER — No portfolio or roadmap ordering is requested.",
+        "PL-FW-LEARNING-LOOP — No executed experiment or post-release review is provided."
+      ],
+      "evidence_and_uncertainty": [
+        "Fact supplied by the scenario: newer evidence is verified and contradicts a fact assumed by the prior decision.",
+        "Unknown: the contradictory fact, evidence provenance details, and material effect on the decision are not supplied.",
+        "Unknown: whether the prior decision is binding or closed, who holds reopening authority, and what obligations constrain reconsideration.",
+        "No claim is made that the newer evidence automatically invalidates the decision or proves a better alternative."
+      ],
+      "authority_boundary": "The candidate package has authority effect NONE. Evidence may justify escalation or a recommendation to reconsider, but cannot reopen, reverse, or replace the prior decision. Only the authorized decision holder may do so.",
+      "technical_handoff_readiness": "LIMITED"
+    }
+  }
+}

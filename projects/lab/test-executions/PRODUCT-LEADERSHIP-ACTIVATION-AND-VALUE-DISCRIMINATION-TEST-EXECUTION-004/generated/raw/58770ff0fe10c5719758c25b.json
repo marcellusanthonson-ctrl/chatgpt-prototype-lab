@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "58770ff0fe10c5719758c25b",
+  "run_id": "PL-FX-001__PACKAGE",
+  "fixture_id": "PL-FX-001",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "A team has a feature list but no agreed product problem or target outcome.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-001__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:48:20.383Z",
+    "ended_at": "2026-08-05T01:48:47.237Z",
+    "latency_ms": 26854,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19535,
+      "cached_input_tokens": 0,
+      "output_tokens": 731
+    },
+    "response_sha256": "92b3558b6e9083ed9ff1fa86252e46aab3cc693e14eeba4f4886a2f5448a6347",
+    "response": {
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "answer": "Product problem: Unresolved; the only evidence is that a feature list exists without an agreed problem.\n\nDesired outcome: Establish an agreed, measurable target outcome before evaluating features. The outcome itself, affected users, success measure, and baseline remain unknown.\n\nPriority: First frame and validate the product problem and intended outcome. Defer feature ordering until that framing and its decision authority are explicit.\n\nExclusions: No feature selection, roadmap commitment, technical handoff, architecture, stack, provider, implementation, activation, or integration decision.\n\nLearning need: Identify whose problem is being addressed, the evidence that it exists, the current baseline, the intended behavioral or business change, and how that change would be measured.\n\nRecommendation: Have the authorized human decision-maker agree on a problem statement, target population, measurable outcome, constraints, and non-goals. Then reassess whether and how the existing features contribute. This is advisory guidance, not a product decision.",
+      "selected_principles": [
+        "PL-P01 — Start from the product problem and intended outcome before proposing initiatives.",
+        "PL-P04 — Preserve evidence provenance and label assumptions and unknowns.",
+        "PL-P05 — Do not infer authority from recommendations or framework output."
+      ],
+      "selected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — Relevant because the immediate need is to distinguish the feature-list output from the unresolved problem and desired outcome."
+      ],
+      "rejected_frameworks": [
+        "PL-FW-STRATEGIC-CHOICES — Premature until the product problem and outcome are framed.",
+        "PL-FW-OPPORTUNITY-MAPPING — Evidence is too weak to construct a defensible opportunity map.",
+        "PL-FW-JOBS-CONTEXT — No user-motivation or alternative-behavior evidence was supplied.",
+        "PL-FW-PRIORITIZATION-ORDER — Feature ordering would be premature without an agreed outcome and criteria.",
+        "PL-FW-LEARNING-LOOP — No experiment or release result exists to review."
+      ],
+      "evidence_and_uncertainty": [
+        "Evidence: The scenario states only that the team has a feature list and lacks an agreed product problem or target outcome.",
+        "Unknown: Product decision scope, authority state, binding obligations, user evidence, product metrics, constraints, and known exclusions were not supplied.",
+        "Assumption: The feature list is not itself a binding commitment; this must be verified before reframing affects any existing obligation.",
+        "No claim is made that the candidate package improves value, precision, safety, or real-product outcomes; those properties remain unestablished."
+      ],
+      "authority_boundary": "The candidate package is disabled, has authority effect NONE, and is used only as criterion. This output neither activates it nor authorizes a product or implementation decision. Any framing, priority, exclusion, or scope decision requires the appropriate human authority, and binding obligations must remain closed unless explicitly reopened.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

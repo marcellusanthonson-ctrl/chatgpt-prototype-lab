@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "2e4d01959747b37762610a5e",
+  "run_id": "PL-FX-020__BASELINE",
+  "fixture_id": "PL-FX-020",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "INACTIVE",
+  "scenario": "Execute an approved fast-forward-only Git alignment.",
+  "category": "INACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-020__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:51:13.607Z",
+    "ended_at": "2026-08-05T01:51:25.750Z",
+    "latency_ms": 12143,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13965,
+      "cached_input_tokens": 13056,
+      "output_tokens": 177
+    },
+    "response_sha256": "c3eafa3bfa34bfb37fa0d1900ed0d5c0bc04d5d821cfe1e0065eb9b8f477cc83",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "Product-leadership analysis is not activated. Execute the already-approved fast-forward-only Git alignment within its closed scope; no product decision is required.",
+      "selected_principles": [
+        "Preserve binding approval and closed scope",
+        "Do not introduce new product or technical decisions"
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "Product strategy analysis",
+        "Prioritization analysis",
+        "Architecture or implementation selection"
+      ],
+      "evidence_and_uncertainty": [
+        "The scenario states that the Git alignment is approved and constrained to fast-forward-only.",
+        "No repository state or execution evidence was provided, and none was inspected."
+      ],
+      "authority_boundary": "Authority is limited to the approved fast-forward-only Git alignment; this response does not authorize any alternative merge, reset, force update, or scope expansion.",
+      "technical_handoff_readiness": "LIMITED"
+    }
+  }
+}

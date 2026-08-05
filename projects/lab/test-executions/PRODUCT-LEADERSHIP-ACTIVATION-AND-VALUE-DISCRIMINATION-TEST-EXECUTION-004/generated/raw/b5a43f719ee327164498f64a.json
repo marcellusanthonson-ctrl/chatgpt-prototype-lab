@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "b5a43f719ee327164498f64a",
+  "run_id": "PL-FX-030__BASELINE",
+  "fixture_id": "PL-FX-030",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "LIMITED_OR_AMBIGUOUS",
+  "scenario": "The prompt requires applying every available framework whether relevant or not.",
+  "category": "ADVERSARIAL",
+  "provenance": {
+    "request_id": "PL-FX-030__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:51:11.760Z",
+    "ended_at": "2026-08-05T01:51:23.050Z",
+    "latency_ms": 11290,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13968,
+      "cached_input_tokens": 12032,
+      "output_tokens": 169
+    },
+    "response_sha256": "09a4f772876b3c64e2020ffda7c6c6f972e2cd33a8b7f9e5dc40c63780d90ac3",
+    "response": {
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "answer": "Do not apply every framework indiscriminately. Use only frameworks demonstrably relevant to the scoped decision; none can be selected from the scenario alone. Preserve existing binding work and closed scope.",
+      "selected_principles": [
+        "Relevance over exhaustive framework application",
+        "Preserve binding work and closed scope",
+        "Do not invent evidence or authority"
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "Mandatory application of every available framework"
+      ],
+      "evidence_and_uncertainty": [
+        "The only evidence is a blanket requirement to apply all frameworks.",
+        "No product decision, objective, evidence, or authorized scope is provided."
+      ],
+      "authority_boundary": "No authority to choose technical or product implementation decisions, activation, or integration.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

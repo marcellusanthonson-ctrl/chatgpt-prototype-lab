@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "556450708f5421dae6db0e20",
+  "run_id": "PL-FX-006__BASELINE",
+  "fixture_id": "PL-FX-006",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "A roadmap contains priorities but not an executable ordering or dependency graph.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-006__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:48:05.660Z",
+    "ended_at": "2026-08-05T01:48:20.381Z",
+    "latency_ms": 14721,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13969,
+      "cached_input_tokens": 13056,
+      "output_tokens": 204
+    },
+    "response_sha256": "e44e6a4596d51cb225e10903bbd5b7654be5037f696a76749c171455fb73dcf0",
+    "response": {
+      "activation_classification": "ACTIVE",
+      "answer": "Product-leadership analysis is active: preserve the approved priorities, then clarify sequencing criteria and dependencies to produce an executable ordering. No architecture, implementation, activation, or integration decisions are authorized.",
+      "selected_principles": [
+        "Preserve binding priorities and closed scope",
+        "Separate priority from executable sequence",
+        "Surface dependencies and sequencing criteria without inventing them"
+      ],
+      "selected_frameworks": [
+        "Roadmap sequencing and dependency analysis"
+      ],
+      "rejected_frameworks": [
+        "Architecture selection",
+        "Stack or provider selection",
+        "Implementation planning",
+        "Activation or integration"
+      ],
+      "evidence_and_uncertainty": [
+        "Given: the roadmap contains priorities",
+        "Given: executable ordering and a dependency graph are absent",
+        "Unknown: actual dependencies, sequencing constraints, and decision authority"
+      ],
+      "authority_boundary": "May identify the product-leadership gap and request or structure missing sequencing inputs; may not invent dependencies, reorder priorities, or make technical or delivery decisions without authorized evidence.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "d21333f2ba478ba552e583cd",
+  "run_id": "PL-GOV-FX-007__BASELINE",
+  "fixture_id": "PL-GOV-FX-007",
+  "domain": "LAB_GOVERNANCE_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "An audit identifies a real defect but recommends a system-wide rebuild although a bounded correction may resolve the risk.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-GOV-FX-007__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:45:19.445Z",
+    "ended_at": "2026-08-05T01:45:34.262Z",
+    "latency_ms": 14817,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13977,
+      "cached_input_tokens": 0,
+      "output_tokens": 220
+    },
+    "response_sha256": "700a3849011c4fe54b47e55e881c166be1aa37e6f8fda507094fdf1a6e39f9f0",
+    "response": {
+      "activation_classification": "ACTIVE",
+      "answer": "Preserve the audit’s validated defect finding, but do not adopt the system-wide rebuild without evidence that a bounded correction is insufficient. Keep scope closed to evaluating the smallest correction that resolves the documented risk; any broader rebuild requires separate evidence and authorization.",
+      "selected_principles": [
+        "Proportionality to validated risk",
+        "Preserve binding audit findings",
+        "Smallest sufficient scope",
+        "Evidence before scope expansion"
+      ],
+      "selected_frameworks": [
+        "Bounded correction versus system-wide rebuild assessment"
+      ],
+      "rejected_frameworks": [
+        "Assuming the audit’s proposed rebuild is necessary",
+        "Architecture, stack, provider, implementation, activation, or integration selection"
+      ],
+      "evidence_and_uncertainty": [
+        "Evidence confirms a real defect.",
+        "The scenario provides no evidence that a bounded correction cannot resolve the risk.",
+        "The comparative cost, impact, and residual risk of either option are unknown."
+      ],
+      "authority_boundary": "Product leadership may frame and compare the bounded decision, but may not authorize a rebuild or implementation from the supplied evidence.",
+      "technical_handoff_readiness": "LIMITED"
+    }
+  }
+}

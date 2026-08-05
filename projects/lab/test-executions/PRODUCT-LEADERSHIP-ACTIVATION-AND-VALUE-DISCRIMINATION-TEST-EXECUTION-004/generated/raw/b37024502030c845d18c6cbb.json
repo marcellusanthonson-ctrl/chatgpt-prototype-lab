@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "b37024502030c845d18c6cbb",
+  "run_id": "PL-GOV-FX-003__PACKAGE",
+  "fixture_id": "PL-GOV-FX-003",
+  "domain": "LAB_GOVERNANCE_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "A new integration is approved in principle but has no measurable success criterion, stop rule or review date.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-GOV-FX-003__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:45:56.502Z",
+    "ended_at": "2026-08-05T01:46:31.972Z",
+    "latency_ms": 35470,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19540,
+      "cached_input_tokens": 12032,
+      "output_tokens": 774
+    },
+    "response_sha256": "92e0df72bf148677dfe1bbfb28fb12024a3bfe03a8d0335cb15cf5c9565c446c",
+    "response": {
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "answer": "Product problem: the integration is approved in principle, but its value and continuation conditions are unresolved.\n\nDesired outcome: a human-approved decision record defining (1) a measurable outcome criterion, including baseline, metric, target, population, and measurement window; (2) a stop rule tied to specified evidence or risk conditions; and (3) a review date and accountable human reviewer.\n\nPriority: resolve these omissions before technical handoff or implementation authorization. This does not reopen the in-principle approval.\n\nExclusions: no architecture, stack, provider, implementation, activation, integration, or automatic promotion decision; no invented metric threshold, baseline, stop condition, date, evidence, or authority.\n\nRecommendation: the authorized decision owner should supply and approve the missing criterion, stop rule, and review date. Until then, treat value as unmeasured and the initiative as not ready for technical handoff.",
+      "selected_principles": [
+        "PL-P02 — Separate the approved integration output from measurable outcomes and impacts.",
+        "PL-P04 — Label the absent measurement evidence and decision details as unknowns.",
+        "PL-P05 — Do not infer implementation or decision authority from the in-principle approval.",
+        "PL-P08 — Avoid fabricating numeric targets, confidence, or forecasts."
+      ],
+      "selected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — Applicable narrowly because success criteria and outcome definition are missing."
+      ],
+      "rejected_frameworks": [
+        "PL-FW-STRATEGIC-CHOICES — No strategy formulation or conflicting initiatives are presented.",
+        "PL-FW-OPPORTUNITY-MAPPING — No discovery evidence or opportunity-prioritization scope is supplied.",
+        "PL-FW-JOBS-CONTEXT — No user-motivation or alternative-behavior evidence is supplied.",
+        "PL-FW-PRIORITIZATION-ORDER — No portfolio or roadmap ordering decision is requested.",
+        "PL-FW-LEARNING-LOOP — Explicitly inapplicable because no test or post-release result exists."
+      ],
+      "evidence_and_uncertainty": [
+        "Scenario evidence: an integration is approved in principle.",
+        "Scenario evidence: no measurable success criterion, stop rule, or review date exists.",
+        "Unknown: product decision scope, authority state, binding obligations, baseline, metric, target, measurement window, risks, reviewer, and available product or user evidence were not supplied.",
+        "The meaning and limits of “approved in principle” are unclear; it is not evidence of implementation authorization or product value.",
+        "No value, impact, safety, or package-effectiveness claim can be made from the supplied material."
+      ],
+      "authority_boundary": "The candidate package has authority effect NONE and is disabled. This output is criterion-only guidance. Only the relevant human authority may define or approve the missing success criterion, stop rule, review date, implementation, activation, or integration. The existing in-principle approval remains preserved within its unspecified bounds.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

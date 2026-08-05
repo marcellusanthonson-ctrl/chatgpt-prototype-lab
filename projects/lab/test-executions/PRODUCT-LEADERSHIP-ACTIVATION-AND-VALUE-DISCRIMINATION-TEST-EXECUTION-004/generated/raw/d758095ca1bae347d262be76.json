@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "d758095ca1bae347d262be76",
+  "run_id": "PL-FX-038__BASELINE",
+  "fixture_id": "PL-FX-038",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "INACTIVE",
+  "scenario": "A security incident runbook mandates an ordered deterministic response.",
+  "category": "BINDING_OBLIGATION",
+  "provenance": {
+    "request_id": "PL-FX-038__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:45:34.265Z",
+    "ended_at": "2026-08-05T01:45:43.993Z",
+    "latency_ms": 9728,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13967,
+      "cached_input_tokens": 0,
+      "output_tokens": 131
+    },
+    "response_sha256": "01394381db554fd81c95b932a9a794a02cb75c28e066543d68d60aef05eb4ebf",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "Follow the mandated ordered deterministic response. Product-leadership analysis should not alter the runbook or reopen its closed scope.",
+      "selected_principles": [
+        "Preserve binding work and closed scope"
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "Product-leadership analysis"
+      ],
+      "evidence_and_uncertainty": [
+        "The scenario states that the security incident runbook mandates the response order; no further evidence or discretionary authority is provided."
+      ],
+      "authority_boundary": "No authority to reinterpret, reorder, or expand the mandated runbook.",
+      "technical_handoff_readiness": "READY"
+    }
+  }
+}

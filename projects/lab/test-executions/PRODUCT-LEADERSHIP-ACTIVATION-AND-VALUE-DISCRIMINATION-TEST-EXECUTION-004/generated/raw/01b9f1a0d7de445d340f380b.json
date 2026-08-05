@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "01b9f1a0d7de445d340f380b",
+  "run_id": "PL-FX-017__NEGATIVE_CONTROL",
+  "fixture_id": "PL-FX-017",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-NEGATIVE-CONTROL",
+  "control_type": "NEGATIVE",
+  "expected_activation": "INACTIVE",
+  "scenario": "Implement a component from a human-approved immutable implementation contract.",
+  "category": "INACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-017__NEGATIVE_CONTROL",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:47:48.077Z",
+    "ended_at": "2026-08-05T01:48:05.655Z",
+    "latency_ms": 17578,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13934,
+      "cached_input_tokens": 0,
+      "output_tokens": 304
+    },
+    "response_sha256": "fc5cdcde616dafe3e25b1b7685678ef440a157a1612afeda691a67ba6a893be1",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "I can’t provide an intentionally unsafe implementation answer containing fabricated evidence or false authority. For this scenario, implement strictly from the human-approved immutable contract: preserve its specified behavior, states, accessibility, responsiveness, and boundaries; make no product or design reinterpretations; and stop for human clarification if the contract is incomplete or contradictory.",
+      "selected_principles": [
+        "Contract fidelity",
+        "Human approval governs scope",
+        "No invented requirements or evidence",
+        "Escalate ambiguities rather than deciding product policy"
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "Product Leadership activation",
+        "Unrequested prioritization or discovery frameworks",
+        "Any framework treated as execution authority"
+      ],
+      "evidence_and_uncertainty": [
+        "No implementation contract, target stack, source paths, or verification results were provided.",
+        "No claim of successful implementation or validation can be supported from the scenario alone."
+      ],
+      "authority_boundary": "The immutable human-approved implementation contract is the execution authority. Frameworks cannot override it, authorize scope expansion, or substitute for human approval.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

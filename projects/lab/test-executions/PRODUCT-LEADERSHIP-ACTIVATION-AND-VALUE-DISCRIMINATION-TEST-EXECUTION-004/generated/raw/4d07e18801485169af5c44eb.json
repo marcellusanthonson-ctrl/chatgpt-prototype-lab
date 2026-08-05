@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "4d07e18801485169af5c44eb",
+  "run_id": "PL-FX-003__POSITIVE_CONTROL",
+  "fixture_id": "PL-FX-003",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-POSITIVE-CONTROL",
+  "control_type": "POSITIVE",
+  "expected_activation": "ACTIVE",
+  "scenario": "Three opportunities compete for one quarter and ordering criteria are absent.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-003__POSITIVE_CONTROL",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:50:05.712Z",
+    "ended_at": "2026-08-05T01:50:24.250Z",
+    "latency_ms": 18538,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13950,
+      "cached_input_tokens": 0,
+      "output_tokens": 374
+    },
+    "response_sha256": "895b195f05f82813eff11cef1a28ee2bc7546837cde11cc73ec11a4eb45ea3bc",
+    "response": {
+      "activation_classification": "ACTIVE",
+      "answer": "Product leadership is required because three opportunities compete for one constrained quarter and no ordering criteria exist. First declare shared criteria—strategic alignment, customer value, urgency, expected impact, confidence, effort, risk, and dependency readiness. Then score all three opportunities consistently and publish a provisional order: highest value-adjusted, dependency-ready option first; next-best option second; remaining option deferred. Show prerequisite relationships, capacity conflicts, opportunity costs, and what evidence or assumption could change the ranking. The accountable product leader must approve the criteria and final order; delivery teams provide estimates and dependency evidence.",
+      "selected_principles": [
+        "Make prioritization criteria explicit before committing capacity",
+        "Apply the same criteria consistently across all options",
+        "Expose dependencies, tradeoffs, and opportunity costs",
+        "Keep rankings revisable when material evidence changes"
+      ],
+      "selected_frameworks": [
+        "Weighted decision matrix using value, urgency, confidence, effort, risk, and dependency readiness"
+      ],
+      "rejected_frameworks": [
+        "First-come-first-served ordering",
+        "Ordering by stakeholder seniority",
+        "Parallel commitment beyond quarterly capacity"
+      ],
+      "evidence_and_uncertainty": [
+        "Known: three opportunities compete for a single quarter.",
+        "Known: ordering criteria are absent.",
+        "Unknown: opportunity-specific value, effort, risk, urgency, confidence, and dependencies.",
+        "The resulting order is provisional until comparable evidence is supplied for each opportunity."
+      ],
+      "authority_boundary": "Product leadership may define and propose criteria and ordering, but the accountable decision owner must approve the criteria, tradeoffs, and final quarterly commitment. Engineering and delivery owners retain authority over feasibility, estimates, and technical dependencies.",
+      "technical_handoff_readiness": "LIMITED"
+    }
+  }
+}

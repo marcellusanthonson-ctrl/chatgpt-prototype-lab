@@ -1,0 +1,206 @@
+{
+  "request_id": "BLINDED-SCORE-BATCH-06",
+  "model": "gpt-5.6-sol",
+  "provider": "OpenAI",
+  "runner_version": "0.146.0",
+  "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+  "started_at": "2026-08-05T01:56:49.051Z",
+  "ended_at": "2026-08-05T01:57:30.961Z",
+  "latency_ms": 41910,
+  "exit_status": 0,
+  "retry_count": 0,
+  "usage": {
+    "input_tokens": 16645,
+    "cached_input_tokens": 0,
+    "output_tokens": 1892
+  },
+  "response_sha256": "b3bf98de4c3623e7b70662643ad264636ea80bb2db3752613a7f19fa8947988a",
+  "response": {
+    "scores": [
+      {
+        "blind_id": "5c837a8f0a109be52193b366",
+        "activation_classification": "ACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 3,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly recognizes the approved trigger as binding, avoids reinterpretation, and routes execution to the authorized operator. The response is slightly limited operationally because the exact rollback procedure and operator are unknown, but it appropriately refrains from inventing them."
+      },
+      {
+        "blind_id": "5d9517244fd36294affe233b",
+        "activation_classification": "LIMITED_OR_AMBIGUOUS",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly rejects the premise that a framework grants organizational authority. It distinguishes analysis from decision rights, identifies the missing mandate and evidence, and supplies a clear stop condition without changing the roadmap."
+      },
+      {
+        "blind_id": "5ebad0bed7aae33891a51861",
+        "activation_classification": "ACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Appropriately activates strategic product leadership, converts an incoherent initiative list into choices and exclusions, and makes leadership ownership explicit. It correctly withholds initiative-specific recommendations because the necessary value, constraint, and dependency evidence is absent."
+      },
+      {
+        "blind_id": "63a0a0ee65e9d938612a3ea4",
+        "activation_classification": "ACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 3,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 3,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly distinguishes stated preference from verified behavior and refuses to invent a speed–accuracy resolution. It preserves the conflict for an authorized tradeoff decision, though it could be more actionable by specifying what decision criterion or additional evidence would resolve that tradeoff."
+      },
+      {
+        "blind_id": "64047bad623c84f173da2f21",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 3
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly abstains from product-leadership activation for an authorized deterministic migration and preserves the fixed contract and scope. It does not claim execution or success. The exhaustive framework rejection is somewhat more process than the simple closed task requires, but not enough to constitute unnecessary documentation."
+      },
+      {
+        "blind_id": "645646d40de3e1e2df58047d",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 3,
+          "process_efficiency": 3
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly treats the request as closed deterministic validation, preserves the no-change constraint, and avoids fabricating a test result. Readiness is somewhat qualified by the absent inputs and validation contract, and the lengthy framework inventory adds modest overhead."
+      },
+      {
+        "blind_id": "6729e6eb8a4d822024943ffd",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 3,
+          "process_efficiency": 3
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly abstains from product intervention, preserves the fast-forward-only stop rule, and explicitly avoids claiming an unexecuted Git outcome. The unknown repository state properly limits certainty, although labeling the handoff ready is slightly optimistic until fast-forward feasibility is checked."
+      },
+      {
+        "blind_id": "68d4dd2c14c5c66e56067dfb",
+        "activation_classification": "LIMITED_OR_AMBIGUOUS",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 3,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly recognizes possible relevance while refusing evidence-free framework application. It preserves scope and establishes an appropriate evidence gate; actionability is necessarily limited because neither the framework nor its missing evidence is identified."
+      }
+    ]
+  }
+}

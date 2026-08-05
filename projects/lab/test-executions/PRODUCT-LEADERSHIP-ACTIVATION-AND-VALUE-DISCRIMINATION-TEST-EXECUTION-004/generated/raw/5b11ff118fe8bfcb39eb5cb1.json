@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "5b11ff118fe8bfcb39eb5cb1",
+  "run_id": "PL-FX-015__BASELINE",
+  "fixture_id": "PL-FX-015",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "INACTIVE",
+  "scenario": "Correct a broken internal link in canonical documentation.",
+  "category": "INACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-015__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:50:16.814Z",
+    "ended_at": "2026-08-05T01:50:29.197Z",
+    "latency_ms": 12383,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13965,
+      "cached_input_tokens": 13056,
+      "output_tokens": 160
+    },
+    "response_sha256": "9a21b1e95ab16b6c26d969846c97e3606deb9babbb227024edcf5c178a9f0d1d",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "Correct the broken internal link only. Preserve canonical content, scope, and existing decisions; verify the corrected link resolves to the intended existing target.",
+      "selected_principles": [
+        "Preserve binding work and closed scope",
+        "Make the smallest necessary documentation correction"
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "Product-leadership analysis",
+        "Architecture or implementation selection"
+      ],
+      "evidence_and_uncertainty": [
+        "The scenario specifies a bounded canonical-documentation link repair and provides no evidence of a product decision."
+      ],
+      "authority_boundary": "Authority is limited to correcting the broken internal link; no content, scope, product, architecture, stack, provider, activation, or integration decisions are authorized.",
+      "technical_handoff_readiness": "READY"
+    }
+  }
+}

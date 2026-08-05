@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "d2388f767d2750c151f17467",
+  "run_id": "PL-FX-001__POSITIVE_CONTROL",
+  "fixture_id": "PL-FX-001",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-POSITIVE-CONTROL",
+  "control_type": "POSITIVE",
+  "expected_activation": "ACTIVE",
+  "scenario": "A team has a feature list but no agreed product problem or target outcome.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-001__POSITIVE_CONTROL",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:51:17.750Z",
+    "ended_at": "2026-08-05T01:51:39.510Z",
+    "latency_ms": 21760,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13954,
+      "cached_input_tokens": 13056,
+      "output_tokens": 328
+    },
+    "response_sha256": "caab042e595d4f6a4cc85b3a48e75ce6ce3480bf1c563add0989a8c1bd9026e0",
+    "response": {
+      "activation_classification": "ACTIVE",
+      "answer": "Pause feature prioritization and first align on the product problem: who is affected, what unmet need or friction exists, and why it matters now. Treat the feature list as proposed outputs, not outcomes. Define a measurable target outcome, then request supporting evidence—such as user research, behavioral data, support themes, or market signals—to validate the problem and establish a baseline before deciding which features, if any, to pursue.",
+      "selected_principles": [
+        "Frame the product problem before evaluating solutions",
+        "Separate outputs from outcomes",
+        "Require evidence and a measurable baseline"
+      ],
+      "selected_frameworks": [
+        "Problem statement: user, need, context, impact",
+        "Outcome hypothesis with measurable success criteria",
+        "Evidence review and assumption validation"
+      ],
+      "rejected_frameworks": [
+        "Feature scoring or roadmap prioritization before problem alignment",
+        "Treating feature delivery as evidence of customer or business value"
+      ],
+      "evidence_and_uncertainty": [
+        "The team has a feature list, but no agreed product problem or target outcome.",
+        "No user, behavioral, market, or operational evidence has been provided.",
+        "The value of any proposed feature remains uncertain until the problem and desired outcome are validated."
+      ],
+      "authority_boundary": "Product leadership should facilitate problem and outcome alignment and request evidence; it should not invent certainty, unilaterally approve a solution, or treat the existing feature list as a committed roadmap.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

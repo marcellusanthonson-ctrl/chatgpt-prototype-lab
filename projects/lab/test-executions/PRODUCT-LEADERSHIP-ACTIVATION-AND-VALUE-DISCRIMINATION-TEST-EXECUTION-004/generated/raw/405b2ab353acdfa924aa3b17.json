@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "405b2ab353acdfa924aa3b17",
+  "run_id": "PL-FX-004__PACKAGE",
+  "fixture_id": "PL-FX-004",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "A product brief names revenue growth but lacks users, causal assumptions and evidence.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-004__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:49:17.457Z",
+    "ended_at": "2026-08-05T01:49:49.326Z",
+    "latency_ms": 31869,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19535,
+      "cached_input_tokens": 13056,
+      "output_tokens": 838
+    },
+    "response_sha256": "fb11a796eff8220939618581e59341895fafb8f1581d9ef419143227c74dfd23",
+    "response": {
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "answer": "Product problem: Undefined. The brief states a business ambition—revenue growth—but identifies neither affected users nor the user problem that could causally influence revenue.\n\nDesired outcome: Not yet supportable. Revenue growth is an intended business impact, not evidence of a user or product outcome.\n\nConditional priority: First clarify the target users, their unmet need or behavior, the hypothesized causal path to revenue, and measurable product and business outcomes. Then obtain evidence capable of testing those assumptions.\n\nExclusions: No initiative prioritization, roadmap commitment, product decision, technical handoff, architecture, stack, provider, implementation, activation, or integration.\n\nLearning need: Determine whether the proposed user problem exists, for whom, under what conditions, and whether changing the relevant user outcome plausibly contributes to revenue.\n\nRecommendation: Revise the brief into an evidence-bounded problem/outcome statement and seek the authorized human decision-maker’s review. Preserve any existing obligations or closed scope; none were supplied here, so guidance must fail closed rather than assume them.",
+      "selected_principles": [
+        "PL-P01 — Start from the product problem and intended outcome before proposing initiatives.",
+        "PL-P02 — Separate outputs, outcomes, and impacts explicitly.",
+        "PL-P04 — Preserve evidence provenance and label assumptions and unknowns.",
+        "PL-P05 — Do not infer authority from guidance or framework output.",
+        "PL-P08 — Avoid unsupported numeric confidence or forecasts."
+      ],
+      "selected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — Relevant only for distinguishing the missing product problem and outcome from the stated revenue impact."
+      ],
+      "rejected_frameworks": [
+        "PL-FW-STRATEGIC-CHOICES — No competing initiatives or strategy-formulation request is supplied.",
+        "PL-FW-OPPORTUNITY-MAPPING — Evidence is too weak to construct a defensible opportunity map.",
+        "PL-FW-JOBS-CONTEXT — No user-motivation or alternative-behavior evidence is supplied.",
+        "PL-FW-PRIORITIZATION-ORDER — No portfolio, roadmap alternatives, dependencies, or ordering authority is supplied.",
+        "PL-FW-LEARNING-LOOP — No experiment or release result exists to review."
+      ],
+      "evidence_and_uncertainty": [
+        "Available evidence: only that the brief names revenue growth and omits users, causal assumptions, and evidence.",
+        "Missing evidence: identified users, validated needs or behaviors, baseline metrics, causal support, market or product evidence, and provenance.",
+        "Assumption requiring validation: improving an unspecified user outcome would cause revenue growth.",
+        "Authority state, product-decision scope, binding obligations, and closed-scope status were not supplied.",
+        "No value increment, impact, forecast, test result, or package effectiveness is established."
+      ],
+      "authority_boundary": "Criterion-only guidance with authority effect NONE. It does not authorize product decisions, implementation, test execution, activation, integration, or reopening of binding or closed scope. An authorized human must decide whether and how to revise the brief.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

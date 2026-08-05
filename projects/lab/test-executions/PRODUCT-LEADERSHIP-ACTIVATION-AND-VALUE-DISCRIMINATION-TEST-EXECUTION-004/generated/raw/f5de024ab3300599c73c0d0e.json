@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "f5de024ab3300599c73c0d0e",
+  "run_id": "PL-FX-003__PACKAGE",
+  "fixture_id": "PL-FX-003",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "Three opportunities compete for one quarter and ordering criteria are absent.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-003__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:51:37.199Z",
+    "ended_at": "2026-08-05T01:52:13.940Z",
+    "latency_ms": 36741,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19532,
+      "cached_input_tokens": 13056,
+      "output_tokens": 1071
+    },
+    "response_sha256": "811d1dba1f375174ddceeca8102fadc81a4b471bb15136da1b823e38b533c494",
+    "response": {
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "answer": "Product problem: three unspecified opportunities compete for one quarter, but no ordering criteria are established.\n\nDesired outcome: a human-approved, evidence-bounded ordering of the three opportunities with explicit trade-offs, dependencies, and deferred work.\n\nPriority and exclusions: no defensible ordering or exclusion can be produced from the supplied scenario. Before ordering, the authorized decision-maker should confirm binding obligations and evaluate each opportunity against the same approved criteria—for example, contribution to the intended product outcome, supporting evidence, urgency or risk, dependencies, and quarter feasibility. These are proposed criterion categories, not established facts or approved weights. Avoid numeric scoring until evidence supports it.\n\nRecommendation: abstain from selecting an opportunity. Obtain the missing authority, obligations, product outcome, opportunity evidence, dependencies, and capacity constraints; then apply the approved criteria and record the resulting order and exclusions.\n\nLearning need: determine which opportunity has the strongest evidence-backed contribution to the intended outcome and what uncertainty could materially change the order. No product value, test result, or impact is established.",
+      "selected_principles": [
+        "PL-P05 — Do not infer authority from evidence, recommendations, or framework output.",
+        "PL-P06 — Prioritization must expose criterion, ordering, trade-offs, and excluded work.",
+        "PL-P08 — Avoid false precision when evidence cannot support scoring or forecasts."
+      ],
+      "selected_frameworks": [
+        "PL-FW-PRIORITIZATION-ORDER — directly relevant to portfolio ordering, criteria, dependencies, and trade-offs."
+      ],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — not selected because the immediate request is ordering; the intended outcome is nevertheless a required missing input.",
+        "PL-FW-STRATEGIC-CHOICES — overlaps with the narrower prioritization framework and would add unnecessary framework coverage.",
+        "PL-FW-OPPORTUNITY-MAPPING — opportunity evidence is too weak to construct a defensible map.",
+        "PL-FW-JOBS-CONTEXT — no user-motivation or alternative-behavior question is presented.",
+        "PL-FW-LEARNING-LOOP — no experiment or release result exists to review."
+      ],
+      "evidence_and_uncertainty": [
+        "Established only by the scenario: three opportunities compete for one quarter, and ordering criteria are absent.",
+        "Missing: descriptions of the opportunities, intended product outcome, comparable evidence, dependencies, capacity constraints, risks, and known exclusions.",
+        "Authority state, binding obligations, and explicit product decision scope were not supplied; this triggers limited classification and fail-closed abstention from making the priority decision.",
+        "Framework applicability is bounded to organizing a future prioritization decision; it cannot establish the resulting order.",
+        "No value increment, impact, test result, or package effectiveness is established."
+      ],
+      "authority_boundary": "The candidate package has authority effect NONE and supplies criterion only. This output is conditional guidance, not a priority decision, approval, implementation authorization, activation, integration, or permission to reopen binding scope. A duly authorized human must approve the criteria and ordering.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "77aef0abcc6860fbc71ea0b0",
+  "run_id": "PL-FX-011__PACKAGE",
+  "fixture_id": "PL-FX-011",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "INACTIVE",
+  "scenario": "Fix a reproducible null-pointer bug within an approved file and test.",
+  "category": "INACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-011__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:50:58.030Z",
+    "ended_at": "2026-08-05T01:51:17.747Z",
+    "latency_ms": 19717,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19534,
+      "cached_input_tokens": 12032,
+      "output_tokens": 431
+    },
+    "response_sha256": "6595a360fc34220590a9fba5c3a9afe05118e21c25f39e21eb2ae6035b3a13d3",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "This is a bounded, closed technical bug fix. Follow the existing approved file-and-test scope; do not reopen product scope or add Product Leadership guidance.",
+      "selected_principles": [
+        "PL-P09 — Keep the closed task and binding scope closed.",
+        "PL-P05 — Do not infer additional authority from this package."
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — deterministic implementation task",
+        "PL-FW-STRATEGIC-CHOICES — no strategic choice required",
+        "PL-FW-OPPORTUNITY-MAPPING — explicitly unsuitable for a closed bug fix",
+        "PL-FW-JOBS-CONTEXT — no user-motivation question",
+        "PL-FW-PRIORITIZATION-ORDER — no portfolio or roadmap trade-off",
+        "PL-FW-LEARNING-LOOP — no experiment or post-release review requested"
+      ],
+      "evidence_and_uncertainty": [
+        "Evidence supplied: the null-pointer bug is reproducible, and the permitted file and test are approved.",
+        "Binding scope: fix only the stated bug within the approved file and test.",
+        "Unknown: exact file, test, reproduction details, and acceptance result were not supplied; no implementation or test outcome is claimed.",
+        "No product-value, safety, or broader impact claim can be made from this scenario."
+      ],
+      "authority_boundary": "The candidate package has authority effect NONE and grants no implementation, activation, integration, architecture, stack, provider, or product-decision authority. Any execution authority derives only from the scenario’s approved scope.",
+      "technical_handoff_readiness": "READY"
+    }
+  }
+}

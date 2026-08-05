@@ -1,0 +1,206 @@
+{
+  "request_id": "BLINDED-SCORE-BATCH-04",
+  "model": "gpt-5.6-sol",
+  "provider": "OpenAI",
+  "runner_version": "0.146.0",
+  "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+  "started_at": "2026-08-05T01:55:45.915Z",
+  "ended_at": "2026-08-05T01:56:49.046Z",
+  "latency_ms": 63131,
+  "exit_status": 0,
+  "retry_count": 0,
+  "usage": {
+    "input_tokens": 17488,
+    "cached_input_tokens": 0,
+    "output_tokens": 2525
+  },
+  "response_sha256": "cd7d9cfeaa122fee9b0d648f38e3b9c57b31dc7aaa36ba7be4d87dc47995902a",
+  "response": {
+    "scores": [
+      {
+        "blind_id": "36402a8f254fb260973f09bb",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly treats the approved correction as bounded execution, preserves exact acceptance criteria, and activates no unnecessary product analysis. The stated exception appropriately identifies when reconsideration could become necessary."
+      },
+      {
+        "blind_id": "3824640ddd551e5f28dc866d",
+        "activation_classification": "ACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 3,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Structured learning synthesis is the missing value-producing work. The response clearly separates evidence, interpretation, limitations, and non-binding implications while declining unrelated decisions."
+      },
+      {
+        "blind_id": "387cb148ad177d41cee06ef9",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 3,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly identifies a read-only deterministic validation and refuses to claim an unavailable result. Actionability is necessarily limited because neither artifacts nor the parser command are supplied."
+      },
+      {
+        "blind_id": "3ae675e8b48499c58c1cc59a",
+        "activation_classification": "LIMITED_OR_AMBIGUOUS",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 3,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 3
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Appropriately distinguishes the verified defect from the rebuild recommendation and calls for proportional remediation evidence before scope expansion. It is somewhat verbose and implicitly uses a problem/outcome structure while declaring that framework unnecessary, but this does not undermine the bounded recommendation."
+      },
+      {
+        "blind_id": "3cd08efaa43ec06824543c7e",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 3,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly limits the task to a deterministic comparison, avoids inventing a match result, and preserves both artifacts and scope. Execution cannot proceed from the scenario alone because the comparison values are absent."
+      },
+      {
+        "blind_id": "405b2ab353acdfa924aa3b17",
+        "activation_classification": "LIMITED_OR_AMBIGUOUS",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 3,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 3,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 3
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly recognizes revenue growth as an unsupported business ambition rather than a defined user or product outcome. It gives a sound evidence-gathering sequence and appropriately withholds prioritization and technical handoff, though the framework catalogue is more elaborate than necessary."
+      },
+      {
+        "blind_id": "48f1d690aa065bff3d8b3520",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 3
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": true,
+        "rationale": "Correctly preserves the authorized bug-only scope and treats the broader onboarding suggestion as unverified and non-authorizing. Directing that it be recorded introduces a small documentation task not clearly authorized or necessary, although it does not reopen onboarding work."
+      },
+      {
+        "blind_id": "497ee218e534a1f08aebb3fe",
+        "activation_classification": "LIMITED_OR_AMBIGUOUS",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 3
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "The conditional non-adoption recommendation is proportional to substantial overlap, added maintenance burden, and absent incremental-value evidence. It supplies a clear reconsideration condition and preserves authority boundaries, with only modest excess process detail."
+      }
+    ]
+  }
+}

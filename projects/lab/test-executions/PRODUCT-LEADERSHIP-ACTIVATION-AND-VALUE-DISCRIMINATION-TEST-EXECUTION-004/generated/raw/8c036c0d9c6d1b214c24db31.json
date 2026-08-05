@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "8c036c0d9c6d1b214c24db31",
+  "run_id": "PL-FX-008__BASELINE",
+  "fixture_id": "PL-FX-008",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "A proposed experiment lacks a falsifiable hypothesis and learning decision.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-008__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:51:05.826Z",
+    "ended_at": "2026-08-05T01:51:15.878Z",
+    "latency_ms": 10052,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13968,
+      "cached_input_tokens": 0,
+      "output_tokens": 138
+    },
+    "response_sha256": "da637ddee2bdd95f79370f1cd3263eff44eaebb1160122e3dbeb53a5bd7df553",
+    "response": {
+      "activation_classification": "ACTIVE",
+      "answer": "Block experiment approval until it states a falsifiable hypothesis and the decision the result will inform. Preserve all otherwise-approved scope.",
+      "selected_principles": [
+        "Experiments require a falsifiable hypothesis and an explicit learning decision."
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [],
+      "evidence_and_uncertainty": [
+        "Only the stated proposal deficiency is known; no evidence supports redefining scope or choosing implementation details."
+      ],
+      "authority_boundary": "Product leadership may require decision-quality experiment framing, but may not select architecture, stack, provider, implementation, activation, or integration.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

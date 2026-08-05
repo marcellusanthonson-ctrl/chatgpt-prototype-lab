@@ -1,50 +1,38 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "attestation_id": "CODEX-BOUNDED-RECOVERY-RESOLVER-001-ELIGIBILITY-AUTHORIZATION-188",
   "project_id": "lab",
   "authorization_ref": "AUTHORIZATION_LAB_CODEX_BOUNDED_RECOVERY_RESOLVER_CREATION_AND_PRODUCT_LEADERSHIP_TEST003_EXECUTION_188",
-  "verified_remote_main_head": "826b9cffcd39364c18d34603ed3c38fc0ea94731",
-  "evaluated_at": "2026-08-04T22:16:02Z",
-  "overall": "WAITING_FOR_USER_ACTION_RESUMABLE",
+  "verified_remote_main_head": "ef3d1bd023c030b531b99daf5105850f4a296a99",
+  "evaluated_at": "2026-08-05T01:31:00Z",
+  "overall": "ELIGIBLE_SURFACE_PASS",
   "gates": {
-    "correct_codex_native_surface": {"status": "PASS", "evidence": "ACTIVE_CODEX_DESKTOP_LOCAL_WINDOWS_PROCESS"},
-    "authentication_boolean_true": {"status": "WAITING_FOR_USER_ACTION", "value": false, "secrets_inspected": false},
+    "correct_codex_native_surface": {"status":"PASS","evidence":"USER_OPENED_CODEX_DESKTOP_PLUS_OFFICIAL_STABLE_CODEX_CLI"},
+    "authentication_boolean_true": {"status":"PASS","value":true,"account_type":"chatgpt","secrets_inspected":false},
     "stable_runner_provenance": {
-      "status": "PASS",
-      "package": "@openai/codex",
-      "version": "0.139.0",
-      "prerelease": false,
-      "repository": "git+https://github.com/openai/codex.git",
-      "native_sha256": "77a84f8078400467ade4301d827b8bcea2d29b6838c9cd162bf3573b7ef97e10"
+      "status":"PASS","package":"@openai/codex","version":"0.146.0","release_channel":"stable","prerelease":false,
+      "repository":"git+https://github.com/openai/codex.git","native_sha256":"bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb"
     },
-    "exact_gpt_5_6_sol_available": {"status": "NOT_EVALUATED_PENDING_AUTHENTICATION", "required_model": "gpt-5.6-sol", "substitution_allowed": false},
+    "exact_gpt_5_6_sol_available": {"status":"PASS","required_model":"gpt-5.6-sol","catalog_exact_match":true,"visible":true,"default":true,"substitution_allowed":false},
     "canonical_git_blob_digests": {
-      "status": "PASS_5_OF_5",
-      "method": "SHA256_OF_GIT_BLOB_BYTES_AT_VERIFIED_HEAD",
+      "status":"PASS_5_OF_5","method":"SHA256_OF_GIT_BLOB_BYTES_AT_VERIFIED_HEAD",
       "files": {
-        "LABEL_TAXONOMY.json": "ad2b2eb7aba2c5f85166160e2c78e7441e2026388703a468aa73a8e6b501b907",
-        "CALIBRATION_CASES.json": "647723bbb86da3f590119b268cec5dadd19b0d46494fd09c652542b55e03b623",
-        "ACCEPTANCE_CONTRACT.json": "2480c47b595c659d44ef637778303243175e26cb2c455b86b92ee6f7c10d6697",
-        "CALIBRATION_OUTPUT_SCHEMA.json": "325949a7e0034596f6d14ac9b263866659b7044d931650fddfee6be77c8168d2",
-        "CALIBRATION_PROMPT.md": "9809edc38b97f51554c988b1956781f3a0789f0af222f435d761998169164022"
-      }
+        "LABEL_TAXONOMY.json":"ad2b2eb7aba2c5f85166160e2c78e7441e2026388703a468aa73a8e6b501b907",
+        "CALIBRATION_CASES.json":"647723bbb86da3f590119b268cec5dadd19b0d46494fd09c652542b55e03b623",
+        "ACCEPTANCE_CONTRACT.json":"2480c47b595c659d44ef637778303243175e26cb2c455b86b92ee6f7c10d6697",
+        "CALIBRATION_OUTPUT_SCHEMA.json":"325949a7e0034596f6d14ac9b263866659b7044d931650fddfee6be77c8168d2",
+        "CALIBRATION_PROMPT.md":"9809edc38b97f51554c988b1956781f3a0789f0af222f435d761998169164022"
+      },
+      "working_tree_matches":"0_OF_5_LOCAL_CRLF_REPRESENTATION_HASHED_SEPARATELY",
+      "canonical_corruption":false
     },
-    "working_tree_clean_or_isolated": {
-      "status": "PASS",
-      "branch": "codex/auth-188-recovery",
-      "isolated_worktree": true,
-      "clean": true,
-      "local_representation_note": "CRLF working-tree bytes are recorded separately; canonical blob bytes are the frozen execution inputs."
-    },
-    "authorization_188_active": {
-      "status": "PASS",
-      "consumed": false,
-      "residual_authority": "ONE_BOUNDED_RECOVERY_MISSION_THROUGH_HARD_STOP_OR_COMPLETE_RESULT"
-    }
+    "working_tree_clean_or_isolated": {"status":"PASS","branch":"codex/auth-188-resume","isolated_worktree":true,"clean_before_execution":true},
+    "authorization_188_active": {"status":"PASS","consumed_at_dispatch":false,"recovery_cycles_used":4,"recovery_cycles_remaining":1,"residual_authority":"RESULT_PUBLICATION_AND_VERIFICATION_ONLY"}
   },
-  "eligible_for_smoke": false,
-  "smoke_requests": 0,
-  "calibration_scorer_invocations": 0,
-  "execution_004_created": false,
-  "outputs_generated": 0
+  "eligible_for_smoke": true,
+  "smoke_requests": 1,
+  "calibration_scorer_invocations": 2,
+  "execution_004_created": true,
+  "outputs_generated": 112,
+  "final_result": "FAIL_REVISE_OR_REJECT_EVIDENCE_READY_FOR_SEPARATE_EXTERNAL_AUDIT_DECISION"
 }

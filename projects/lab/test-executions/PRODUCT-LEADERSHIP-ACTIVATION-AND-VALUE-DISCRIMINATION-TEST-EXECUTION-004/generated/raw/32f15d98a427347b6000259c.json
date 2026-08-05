@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "32f15d98a427347b6000259c",
+  "run_id": "PL-FX-033__BASELINE",
+  "fixture_id": "PL-FX-033",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "Two valid experiments reach opposite outcomes in different segments.",
+  "category": "CONTRADICTORY_EVIDENCE",
+  "provenance": {
+    "request_id": "PL-FX-033__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:44:12.376Z",
+    "ended_at": "2026-08-05T01:44:30.355Z",
+    "latency_ms": 17979,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13966,
+      "cached_input_tokens": 0,
+      "output_tokens": 197
+    },
+    "response_sha256": "d9169ca74ac182b1a8ba1a1cbb36e95e37fc10bc6a89e39c4088b95d65962a98",
+    "response": {
+      "activation_classification": "ACTIVE",
+      "answer": "Treat the results as segment-specific evidence, not a single winner. Preserve both valid outcomes, verify the segment definitions and decision criteria, and limit the next product decision to the affected segments. Escalate any cross-segment prioritization or scope change to the authorized owner.",
+      "selected_principles": [
+        "Segment-specific value discrimination",
+        "Preserve valid conflicting evidence",
+        "Respect closed scope and decision authority"
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "Universal winner selection",
+        "Architecture or implementation selection",
+        "Activation or integration planning"
+      ],
+      "evidence_and_uncertainty": [
+        "Both experiments are stated to be valid.",
+        "Outcomes conflict across different segments.",
+        "No segment definitions, effect sizes, decision criteria, or prioritization authority are provided."
+      ],
+      "authority_boundary": "No authority is provided to choose a global outcome, reprioritize segments, expand scope, or make technical decisions.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

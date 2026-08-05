@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "cc9485d3201c204e408da1c4",
+  "run_id": "PL-FX-039__PACKAGE",
+  "fixture_id": "PL-FX-039",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "INACTIVE",
+  "scenario": "A signed contract requires a specified deliverable and deadline.",
+  "category": "BINDING_OBLIGATION",
+  "provenance": {
+    "request_id": "PL-FX-039__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:51:15.880Z",
+    "ended_at": "2026-08-05T01:51:37.195Z",
+    "latency_ms": 21315,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19531,
+      "cached_input_tokens": 13056,
+      "output_tokens": 536
+    },
+    "response_sha256": "765b7fe9ddc8ccda4ac13a606f58f9d6c7132e6317cab7546e9e6fb86eeda8b2",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "The signed contract is a binding obligation with a specified deliverable and deadline. Preserve that closed scope and follow the contract; do not reopen product definition, strategy, prioritization, or exclusions. No product recommendation, implementation decision, activation, or integration is authorized by the candidate package.",
+      "selected_principles": [
+        "PL-P09 — Closed tasks and binding obligations stay closed unless new authority explicitly reopens them.",
+        "PL-P05 — Do not infer authority from evidence, recommendations, or framework output."
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — irrelevant because the deliverable is already contractually specified.",
+        "PL-FW-STRATEGIC-CHOICES — prohibited for a binding obligation with fixed execution.",
+        "PL-FW-OPPORTUNITY-MAPPING — no discovery or opportunity-prioritization scope exists.",
+        "PL-FW-JOBS-CONTEXT — excluded for a legal or binding requirement.",
+        "PL-FW-PRIORITIZATION-ORDER — ordering is already bound by the contractual deadline.",
+        "PL-FW-LEARNING-LOOP — no executed test or post-release evidence is provided."
+      ],
+      "evidence_and_uncertainty": [
+        "Evidence: the scenario states that a signed contract specifies a deliverable and deadline.",
+        "Unknown: the contract text, deliverable details, deadline, authority holder, and execution status are not provided.",
+        "No inference is made about implementation permission, feasibility, compliance, value, impact, or completion."
+      ],
+      "authority_boundary": "The signed contract supplies the binding obligation described by the scenario. The disabled candidate package has authority effect NONE and grants no implementation, product-decision, activation, integration, architecture, stack, or provider authority.",
+      "technical_handoff_readiness": "LIMITED"
+    }
+  }
+}

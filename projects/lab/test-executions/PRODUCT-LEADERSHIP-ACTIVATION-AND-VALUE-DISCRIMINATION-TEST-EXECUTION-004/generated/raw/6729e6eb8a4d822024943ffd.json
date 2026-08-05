@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "6729e6eb8a4d822024943ffd",
+  "run_id": "PL-FX-020__PACKAGE",
+  "fixture_id": "PL-FX-020",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "INACTIVE",
+  "scenario": "Execute an approved fast-forward-only Git alignment.",
+  "category": "INACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-020__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:50:24.825Z",
+    "ended_at": "2026-08-05T01:50:55.301Z",
+    "latency_ms": 30476,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19529,
+      "cached_input_tokens": 12032,
+      "output_tokens": 694
+    },
+    "response_sha256": "06489c23f6637e1344772be267ed0380c111f3a778502bb953cf2cce820561f9",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "Product Leadership abstains. This is an approved, closed deterministic technical operation. Preserve the binding fast-forward-only constraint and do not reopen scope. No Git execution or outcome is claimed in this synthetic response.",
+      "selected_principles": [
+        "PL-P05 — The candidate package creates no authority.",
+        "PL-P09 — Keep the approved task and fast-forward-only obligation closed."
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — No unresolved value or outcome question.",
+        "PL-FW-STRATEGIC-CHOICES — Execution is already fixed by approval.",
+        "PL-FW-OPPORTUNITY-MAPPING — No discovery or opportunity decision.",
+        "PL-FW-JOBS-CONTEXT — No user-motivation question.",
+        "PL-FW-PRIORITIZATION-ORDER — Ordering is not open for prioritization.",
+        "PL-FW-LEARNING-LOOP — No experiment or post-release review."
+      ],
+      "evidence_and_uncertainty": [
+        "Evidence: The scenario states that the Git alignment is approved and fast-forward-only.",
+        "Unknown: Repository state, refs, remote freshness, and fast-forward feasibility were not provided or inspected.",
+        "Unknown: No execution result is available; success must not be inferred."
+      ],
+      "authority_boundary": "Authority comes only from the scenario’s stated approval. The disabled candidate package has authority effect NONE and supplies no implementation, activation, integration, architecture, stack, or provider authority.",
+      "technical_handoff_readiness": "READY"
+    }
+  }
+}

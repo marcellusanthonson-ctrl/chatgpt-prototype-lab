@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "1aecec0b655177ff7af5abb7",
+  "run_id": "PL-GOV-FX-006__BASELINE",
+  "fixture_id": "PL-GOV-FX-006",
+  "domain": "LAB_GOVERNANCE_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "A proposed framework overlaps substantially with an existing criterion layer and introduces new maintenance obligations.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-GOV-FX-006__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:51:48.180Z",
+    "ended_at": "2026-08-05T01:52:00.161Z",
+    "latency_ms": 11981,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13972,
+      "cached_input_tokens": 13056,
+      "output_tokens": 207
+    },
+    "response_sha256": "aa7b4da94c751f66683558a05fea960c5f4aa087655671a6b77b31fe3abc417a",
+    "response": {
+      "activation_classification": "ACTIVE",
+      "answer": "Preserve the existing criterion layer and closed scope. Do not adopt the proposed framework unless evidence shows distinct product value sufficient to justify its overlap and maintenance burden.",
+      "selected_principles": [
+        "Minimize duplication",
+        "Account for lifecycle maintenance cost",
+        "Require evidence of incremental value"
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "Proposed overlapping framework"
+      ],
+      "evidence_and_uncertainty": [
+        "Substantial overlap and new maintenance obligations are stated.",
+        "No evidence of distinct value or authority to adopt is provided."
+      ],
+      "authority_boundary": "This analysis does not authorize framework adoption, implementation, activation, or integration.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

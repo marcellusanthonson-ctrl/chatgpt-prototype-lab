@@ -1,1 +1,22 @@
-{"schema_version":"1.2.0","context_id":"CODEX-BOUNDED-RECOVERY-RESOLVER-001-EXECUTION-CONTEXT","project_id":"lab","status":"WAITING_FOR_USER_ACTION_RESUMABLE","verified_parent_head":"147fbeee1bd8a9555dc6fdd055a3e1cdb4832a40","verified_live_head_at_recovery_start":"826b9cffcd39364c18d34603ed3c38fc0ea94731","publication_head":"35670497f1849acf10b52a5d5f21353104e9207b","published_at":"2026-08-04T21:55:08Z","head_policy":"VERIFY_LIVE_AT_USE","authorization_187":{"status":"CONSUMED_STAGE_1_BLOCKED_NO_CALIBRATION_ATTEMPT_NO_RETRY_AUTHORITY","evidence":"projects/lab/evidence/EVD-LAB-PL003-STAGED-UNIQUE-REPLAY-187.json","model_requests":0,"calibration_started":false,"outputs_generated":0},"authorization_188":{"id":"AUTHORIZATION_LAB_CODEX_BOUNDED_RECOVERY_RESOLVER_CREATION_AND_PRODUCT_LEADERSHIP_TEST003_EXECUTION_188","status":"GRANTED_STAGE_0_CONSUMED_WAITING_FOR_USER_ACTION_RESUMABLE","execution_allowed":true,"recoverable_failures_consume":false,"human_action_pause_resumable":true,"maximum_recovery_cycles":5,"recovery_cycles_used":2,"residual_authority":"ONE_BOUNDED_RECOVERY_MISSION_THROUGH_HARD_STOP_OR_COMPLETE_RESULT"},"recovery":{"canonical_digest_status":"PASS_5_OF_5","working_tree_transformation":"GLOBAL_CORE_AUTOCRLF_TRUE","frozen_input_source":"CANONICAL_GIT_BLOBS_AT_VERIFIED_HEAD","stable_runner":"OPENAI_CODEX_CLI_0_139_0","authentication_boolean":false,"human_action":"projects/lab/agents/CODEX-BOUNDED-RECOVERY-RESOLVER-001/IF_WAITING_USER_ACTION.json","smoke_requests":0,"calibration_scorer_invocations":0,"model_requests":0},"candidate":{"integration_id":"INT-LAB-004","status":"CANDIDATE_NOT_ACTIVE_NOT_INTEGRATED","execution_004_created":false,"outputs_generated":0},"resolved_causes":["GIT_BLOB_VS_WORKTREE_DIGEST_CAUSE_RESOLVED_AS_CRLF_CHECKOUT_TRANSFORMATION","CODEX_STABLE_RUNNER_PROVENANCE_PASS"],"known_unresolved_causes":["INTERACTIVE_CODEX_AUTHENTICATION_REQUIRED","EXACT_GPT_5_6_SOL_AVAILABILITY_NOT_EVALUATED_UNTIL_AUTHENTICATION_TRUE"],"precedence_note":"This additive context does not replace CURRENT_CONTINUITY.json. The explicit authorization 188 and its immutable grant govern this bounded mission.","aggregate_view_updates_authorized":false,"runtime_effect":"NONE","product_effect":"NONE","integration_effect":"NONE","updated_at":"2026-08-04T22:16:02Z"}
+{
+  "schema_version":"1.3.0",
+  "context_id":"CODEX-BOUNDED-RECOVERY-RESOLVER-001-EXECUTION-CONTEXT",
+  "project_id":"lab",
+  "status":"COMPLETE_RESULT_READY_FOR_VERIFIED_PUBLICATION",
+  "verified_live_head_at_resume":"ef3d1bd023c030b531b99daf5105850f4a296a99",
+  "head_policy":"VERIFY_LIVE_AT_USE",
+  "working_branch":"codex/auth-188-resume",
+  "authorization_187":{"status":"CONSUMED_STAGE_1_BLOCKED_NO_CALIBRATION_ATTEMPT_NO_RETRY_AUTHORITY","evidence":"projects/lab/evidence/EVD-LAB-PL003-STAGED-UNIQUE-REPLAY-187.json"},
+  "authorization_188":{"id":"AUTHORIZATION_LAB_CODEX_BOUNDED_RECOVERY_RESOLVER_CREATION_AND_PRODUCT_LEADERSHIP_TEST003_EXECUTION_188","status":"ACTIVE_ONLY_FOR_RESULT_PUBLICATION_AND_VERIFICATION","maximum_recovery_cycles":5,"recovery_cycles_used":4,"recovery_cycles_remaining":1,"consumes_on_verified_result_publication":true},
+  "eligibility":{"status":"ELIGIBLE_SURFACE_PASS","canonical_digest_status":"PASS_5_OF_5","authentication_boolean":true,"stable_runner":"OPENAI_CODEX_CLI_0_146_0_STABLE","exact_model":"gpt-5.6-sol"},
+  "requests":{"smoke":1,"calibration_scorers":2,"generation":112,"blinded_scoring":14,"total":129,"retries":0},
+  "execution_004":{"attempt":"ATTEMPT-003","status":"COMPLETE_FAIL_EVIDENCE_READY_FOR_SEPARATE_EXTERNAL_AUDIT_DECISION","fixtures":52,"arms":4,"outputs":112,"scores":112,"manifest":"projects/lab/test-executions/PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004/MANIFEST.json"},
+  "result":"FAIL_REVISE_OR_REJECT_EVIDENCE_READY_FOR_SEPARATE_EXTERNAL_AUDIT_DECISION",
+  "result_evidence":"projects/lab/agents/CODEX-BOUNDED-RECOVERY-RESOLVER-001/RESULT_EVIDENCE.json",
+  "known_unresolved_causes":[],
+  "aggregate_view_updates_authorized":false,
+  "runtime_effect":"NONE",
+  "product_effect":"NONE",
+  "integration_effect":"NONE",
+  "updated_at":"2026-08-05T02:03:03.437Z"
+}

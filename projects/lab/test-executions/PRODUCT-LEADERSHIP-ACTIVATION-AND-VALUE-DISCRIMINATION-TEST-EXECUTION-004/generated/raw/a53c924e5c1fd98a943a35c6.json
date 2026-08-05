@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "a53c924e5c1fd98a943a35c6",
+  "run_id": "PL-FX-002__BASELINE",
+  "fixture_id": "PL-FX-002",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "Leadership requests a strategy from twelve unrelated initiatives.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-002__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:49:26.982Z",
+    "ended_at": "2026-08-05T01:49:43.382Z",
+    "latency_ms": 16400,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13965,
+      "cached_input_tokens": 13056,
+      "output_tokens": 244
+    },
+    "response_sha256": "75d4f07bcaba0bc489e86b24a3942cc4846de3707e37e679dd4310120180e2d4",
+    "response": {
+      "activation_classification": "ACTIVE",
+      "answer": "Product-leadership analysis is active: leadership is asking for portfolio-level strategy across twelve initiatives. First establish shared outcomes, constraints, dependencies, and decision criteria; then recommend priorities without changing initiative scope.",
+      "selected_principles": [
+        "Strategic alignment",
+        "Portfolio prioritization",
+        "Evidence-based tradeoffs"
+      ],
+      "selected_frameworks": [
+        "Outcome-based portfolio assessment"
+      ],
+      "rejected_frameworks": [
+        "Architecture selection",
+        "Technology or provider selection",
+        "Implementation planning",
+        "Activation or integration planning"
+      ],
+      "evidence_and_uncertainty": [
+        "No initiative details, evidence, constraints, or decision criteria were provided.",
+        "The initiatives are described as unrelated, so strategic coherence cannot yet be assumed."
+      ],
+      "authority_boundary": "May structure the strategy analysis and surface tradeoffs; may not invent evidence, reprioritize binding work, expand closed scope, or make technical and activation decisions.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

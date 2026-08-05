@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "4eecc5ce6c9244ecdf7cb9e7",
+  "run_id": "PL-FX-033__PACKAGE",
+  "fixture_id": "PL-FX-033",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "Two valid experiments reach opposite outcomes in different segments.",
+  "category": "CONTRADICTORY_EVIDENCE",
+  "provenance": {
+    "request_id": "PL-FX-033__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:49:04.595Z",
+    "ended_at": "2026-08-05T01:49:25.442Z",
+    "latency_ms": 20847,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19530,
+      "cached_input_tokens": 13056,
+      "output_tokens": 536
+    },
+    "response_sha256": "c3dbd64d55e9e24a4de04d42004fcefef976057e3d8c22e041b5f590e15b43e3",
+    "response": {
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "answer": "The experiments provide contradictory, segment-specific evidence, so no universal product conclusion or aggregate winner is supported. Preserve both results and their segment conditions. The bounded recommendation is to treat the effect as heterogeneous and define the next learning need: determine which segment characteristics explain the divergence and whether the intended outcome should be segment-specific. Product decision scope, authority state, binding obligations, metrics, provenance, and experiment details were not supplied; therefore no priority, product decision, or implementation handoff can be finalized.",
+      "selected_principles": [
+        "PL-P04 — Preserve provenance and label the contradiction and missing evidence.",
+        "PL-P05 — Do not infer decision authority from experiment evidence or this recommendation."
+      ],
+      "selected_frameworks": [
+        "PL-FW-LEARNING-LOOP — Applicable because two executed experiments require evidence, outcome, uncertainty, and next-learning capture."
+      ],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — No output/outcome confusion or success-criteria question is established.",
+        "PL-FW-STRATEGIC-CHOICES — No strategy formulation or conflicting initiatives are presented.",
+        "PL-FW-OPPORTUNITY-MAPPING — No discovery opportunity set is provided, and the evidence is insufficient for mapping.",
+        "PL-FW-JOBS-CONTEXT — No evidence about user motivation or alternative behavior is provided.",
+        "PL-FW-PRIORITIZATION-ORDER — No portfolio, roadmap, dependencies, or authorized ordering decision is presented."
+      ],
+      "evidence_and_uncertainty": [
+        "Evidence supplied: two valid experiments produced opposite outcomes in different segments.",
+        "Unknown: experiment provenance, measures, effect sizes, sample characteristics, uncertainty intervals, and segment definitions.",
+        "Unknown: whether either outcome satisfies the intended product objective.",
+        "Unknown: product decision scope, authority state, and binding obligations.",
+        "No claim of overall impact, value increment, generalization, or causal explanation is supported."
+      ],
+      "authority_boundary": "Criterion only. The disabled package has authority effect NONE and supplies no activation, product-decision, implementation, integration, or promotion authority. Any binding obligations or closed scope remain unchanged.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

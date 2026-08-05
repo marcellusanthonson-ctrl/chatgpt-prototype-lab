@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "48f1d690aa065bff3d8b3520",
+  "run_id": "PL-FX-021__PACKAGE",
+  "fixture_id": "PL-FX-021",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "LIMITED_OR_AMBIGUOUS",
+  "scenario": "A bug report also suggests a broader onboarding problem but only the bug is authorized.",
+  "category": "LIMITED_OR_AMBIGUOUS",
+  "provenance": {
+    "request_id": "PL-FX-021__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:47:39.056Z",
+    "ended_at": "2026-08-05T01:48:04.929Z",
+    "latency_ms": 25873,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19536,
+      "cached_input_tokens": 13056,
+      "output_tokens": 540
+    },
+    "response_sha256": "9ed224014461fe18144b957f08d449ccbd4c5b765794f9cbf5b48f9082fba0d1",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "The authorized task is the bounded bug fix. The suggested broader onboarding problem is unverified and outside the closed scope; record it only as an unconfirmed observation, without discovery, prioritization, or implementation action. Priority: address the authorized bug under its existing contract. Exclusion: broader onboarding work.",
+      "selected_principles": [
+        "PL-P05 — Do not infer authority from evidence or recommendations.",
+        "PL-P09 — Keep the bounded task closed unless explicit authority reopens it."
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — no authorized product or outcome-definition scope.",
+        "PL-FW-STRATEGIC-CHOICES — no strategy decision is authorized.",
+        "PL-FW-OPPORTUNITY-MAPPING — explicitly unsuitable for a closed bug fix.",
+        "PL-FW-JOBS-CONTEXT — no authorized user-motivation inquiry.",
+        "PL-FW-PRIORITIZATION-ORDER — no portfolio or roadmap trade-off is requested.",
+        "PL-FW-LEARNING-LOOP — no executed experiment or post-release evidence exists."
+      ],
+      "evidence_and_uncertainty": [
+        "Evidence: the bug report contains a suggestion of a broader onboarding problem.",
+        "Unknown: whether a broader onboarding problem actually exists; no supporting research or metrics are supplied.",
+        "Authority: only the bug is authorized; the suggestion creates neither product-decision authority nor implementation permission.",
+        "No outcome, impact, or value increment can be claimed."
+      ],
+      "authority_boundary": "Candidate package authority effect is NONE. Preserve the authorized bug-only scope; do not reopen onboarding, choose a solution, or authorize implementation beyond the existing bug-fix authority.",
+      "technical_handoff_readiness": "READY"
+    }
+  }
+}

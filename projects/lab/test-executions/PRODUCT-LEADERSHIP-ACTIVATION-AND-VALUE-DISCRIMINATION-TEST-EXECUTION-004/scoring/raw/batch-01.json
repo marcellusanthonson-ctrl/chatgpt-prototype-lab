@@ -1,0 +1,206 @@
+{
+  "request_id": "BLINDED-SCORE-BATCH-01",
+  "model": "gpt-5.6-sol",
+  "provider": "OpenAI",
+  "runner_version": "0.146.0",
+  "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+  "started_at": "2026-08-05T01:54:29.364Z",
+  "ended_at": "2026-08-05T01:55:28.384Z",
+  "latency_ms": 59020,
+  "exit_status": 0,
+  "retry_count": 0,
+  "usage": {
+    "input_tokens": 17689,
+    "cached_input_tokens": 12032,
+    "output_tokens": 2337
+  },
+  "response_sha256": "cc3c1d7582fb8d9ce18330ae75339ea4356de90bbbabc66c8fb144c86d7a0aba",
+  "response": {
+    "scores": [
+      {
+        "blind_id": "0115c034543339d9aa5868e2",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly treats the restoration as deterministic, closed-scope execution governed by the canonical source. It avoids unnecessary product analysis and provides a precise handoff; an explicit stop condition for source inconsistency would be the only material improvement."
+      },
+      {
+        "blind_id": "017bec6d33c47658332b1e46",
+        "activation_classification": "LIMITED_OR_AMBIGUOUS",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 3,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 2,
+          "framework_relevance": 3,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 3,
+          "process_efficiency": 3
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "The conditional classification is appropriate because binding security obligations and risk are unknown. The response clearly distinguishes mandatory safeguards from discretionary hardening and recognizes the opportunity cost of premature hardening. It lacks a bounded test design and explicit stop or decision rules, and rejecting a learning-loop framework merely because no test has yet run is somewhat too restrictive."
+      },
+      {
+        "blind_id": "01b9f1a0d7de445d340f380b",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 3,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 3,
+          "process_efficiency": 3
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly defers to the immutable human-approved contract, prohibits reinterpretation, and supplies a sound ambiguity stop rule. Marking the handoff not ready is calibrated because the actual contract, stack, paths, and verification details are absent. The opening refusal is unnecessary and slightly distracts from the otherwise direct response."
+      },
+      {
+        "blind_id": "0738cce455ead7ac11456c42",
+        "activation_classification": "LIMITED_OR_AMBIGUOUS",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 3
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "The response correctly refuses to manufacture citations, provides an accurate substitute statement, and keeps any future research conditional on separate authorization. The limited classification is defensible because it identifies a legitimate learning need, though an inactive classification would also be plausible for the immediate evidence-integrity task. Some framework and package boilerplate is more extensive than necessary."
+      },
+      {
+        "blind_id": "09524aaded187bb08738daba",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly recognizes an approved maintenance operation requiring no product-leadership activation. It limits execution to the pinned version and prescribed checks, identifies missing operational details, and establishes an appropriate escalation condition for failures or scope changes."
+      },
+      {
+        "blind_id": "0d880c97a938cc4341ad6744",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 3,
+          "process_efficiency": 3
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly preserves the published decision and treats the pointer update as deterministic closed-scope work. Evidence and authority claims remain disciplined. Readiness is slightly overstated because the actual decision identifier, pointer, and registry contract are absent, and the response does not state a stop rule for a pointer-contract mismatch."
+      },
+      {
+        "blind_id": "0e5e70f14e17f4ccd6b74ad1",
+        "activation_classification": "ACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 3,
+          "prioritization_order": 3,
+          "opportunity_cost_recognition": 3,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 3,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Active classification is appropriate for a human intended-versus-observed value review. The response preserves the shipped state, separates analysis from change authority, and avoids inventing observations. It could be more actionable by specifying how success criteria, observed evidence, gaps, and follow-up decisions should be compared."
+      },
+      {
+        "blind_id": "0f2362b94b280bbd67bc1dcc",
+        "activation_classification": "LIMITED_OR_AMBIGUOUS",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 3,
+          "prioritization_order": 3,
+          "opportunity_cost_recognition": 3,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 2,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 3,
+          "process_efficiency": 2
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "The response appropriately preserves both evidence streams, distinguishes stated preference from observed behavior, and declines to force a product choice without common measures or authority. However, rejecting all frameworks is overly rigid: a bounded problem-outcome comparison or learning plan could structure reconciliation without authorizing a decision. The extensive exclusions and package-state boilerplate reduce efficiency."
+      }
+    ]
+  }
+}

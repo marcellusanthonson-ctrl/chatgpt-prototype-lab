@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "29b817bbdaa08c0ed2aa8fc1",
+  "run_id": "PL-FX-007__POSITIVE_CONTROL",
+  "fixture_id": "PL-FX-007",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-POSITIVE-CONTROL",
+  "control_type": "POSITIVE",
+  "expected_activation": "ACTIVE",
+  "scenario": "A shipped capability needs a human review of intended versus observed value.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-007__POSITIVE_CONTROL",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:50:29.200Z",
+    "ended_at": "2026-08-05T01:50:46.648Z",
+    "latency_ms": 17448,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13957,
+      "cached_input_tokens": 12032,
+      "output_tokens": 233
+    },
+    "response_sha256": "f8eaebce885eea1af100e6cd68d588bacf0759ec3eec218f6d32b27eb7a30477",
+    "response": {
+      "activation_classification": "ACTIVE",
+      "answer": "Conduct a human value review: compare the capability’s intended value with observed evidence, distinguish shipped output from user outcome and broader impact, and record the reviewer’s decision, rationale, evidence gaps, and any follow-up action.",
+      "selected_principles": [
+        "Compare intended value against observed evidence",
+        "Separate output, outcome, and impact",
+        "Preserve human accountability for the final value judgment"
+      ],
+      "selected_frameworks": [
+        "Intent-versus-evidence review",
+        "Output–outcome–impact assessment",
+        "Human decision record"
+      ],
+      "rejected_frameworks": [],
+      "evidence_and_uncertainty": [
+        "Observed usage or delivery confirms output but does not by itself establish outcomes or impact.",
+        "Any missing, weak, or conflicting evidence should be documented rather than inferred away."
+      ],
+      "authority_boundary": "The system may organize evidence and surface discrepancies, but an authorized human reviewer must make and record the final value decision.",
+      "technical_handoff_readiness": "READY"
+    }
+  }
+}

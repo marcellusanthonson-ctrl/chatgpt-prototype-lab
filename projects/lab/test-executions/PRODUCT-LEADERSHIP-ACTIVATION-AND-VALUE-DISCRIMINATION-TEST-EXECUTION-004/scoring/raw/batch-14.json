@@ -1,0 +1,206 @@
+{
+  "request_id": "BLINDED-SCORE-BATCH-14",
+  "model": "gpt-5.6-sol",
+  "provider": "OpenAI",
+  "runner_version": "0.146.0",
+  "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+  "started_at": "2026-08-05T02:00:56.552Z",
+  "ended_at": "2026-08-05T02:02:49.080Z",
+  "latency_ms": 112528,
+  "exit_status": 0,
+  "retry_count": 0,
+  "usage": {
+    "input_tokens": 19160,
+    "cached_input_tokens": 17152,
+    "output_tokens": 1566
+  },
+  "response_sha256": "3269b799c69af7bac6335d1a3d4d68241c4020faa380c26ace39c7f85310bacc",
+  "response": {
+    "scores": [
+      {
+        "blind_id": "ef7c7b8a2257511bef4ecb60",
+        "activation_classification": "ACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 3,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly activates only for the open strategic choice, preserves all five approved initiatives, and abstains from an unsupported recommendation. The response is concise and well bounded; explicit stop or reversal criteria are not materially needed yet."
+      },
+      {
+        "blind_id": "ef7d48931aace3b6664c881e",
+        "activation_classification": "LIMITED_OR_AMBIGUOUS",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 3,
+          "prioritization_order": 3,
+          "opportunity_cost_recognition": 3,
+          "authorization_proportionality": 3,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 2,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 3
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": true,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly rejects the demanded false precision, identifies the missing inputs, and recommends measurement before forecasting. However, the assertion that a package is disabled and untested is not supported by the scenario, weakening evidence discipline."
+      },
+      {
+        "blind_id": "f13993d2860d4fc4d85ba029",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 3,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 2,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 3,
+          "process_efficiency": 2
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": true,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly treats the approved correction as closed execution scope and preserves its acceptance criteria. The unsupported claim about a candidate package and its authority effect is fabricated context, and the extensive framework discussion is less efficient than the deterministic task warrants."
+      },
+      {
+        "blind_id": "f32473e744c20ff056f6c103",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Appropriately identifies a closed execution task, directs verification against the approved screenshots, and prevents design or technical scope expansion. Limited handoff readiness is reasonably calibrated because the screenshots are not present in the supplied material."
+      },
+      {
+        "blind_id": "f5de024ab3300599c73c0d0e",
+        "activation_classification": "LIMITED_OR_AMBIGUOUS",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 3,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 3,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 3
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": true,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly refuses to manufacture an ordering and provides a practical, criterion-based path to an authorized decision with trade-offs and exclusions. The claim that a candidate package has authority effect NONE is unsupported by the scenario, though it does not distort the otherwise appropriate authority boundary."
+      },
+      {
+        "blind_id": "f9b06e8c702f61021a8480c3",
+        "activation_classification": "LIMITED_OR_AMBIGUOUS",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 3,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 3,
+          "authorization_proportionality": 3,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 2,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 3
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": true,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "The discovery framing correctly separates desired customer progress from feature requests and gives a sound evidence-gathering sequence without committing to features. Claims that a candidate package is disabled and has authority effect NONE are unsupported, and the broad authority boilerplate slightly overstates what is needed for discovery guidance."
+      },
+      {
+        "blind_id": "fa664cbec566c2f5d7c6e8b7",
+        "activation_classification": "LIMITED_OR_AMBIGUOUS",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 3,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 2,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 3
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": true,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly separates an auditor recommendation from authority to accept it, reprioritize commitments, or execute remediation, and proposes an appropriately governed review. The asserted package authority state and implementation_authorized=false value are not supplied by the scenario."
+      },
+      {
+        "blind_id": "fed01b5a5ea063d96b9e6a7b",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 2,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 3,
+          "process_efficiency": 3
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": true,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly recognizes a closed deterministic verification task and avoids claiming a comparison result without the actual values. Assertions that a candidate package is disabled, untested, non-integrated, and has authority effect NONE are unsupported by the scenario."
+      }
+    ]
+  }
+}

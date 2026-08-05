@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "36402a8f254fb260973f09bb",
+  "run_id": "PL-FX-037__BASELINE",
+  "fixture_id": "PL-FX-037",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "INACTIVE",
+  "scenario": "An approved accessibility correction has exact acceptance criteria.",
+  "category": "BINDING_OBLIGATION",
+  "provenance": {
+    "request_id": "PL-FX-037__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:52:57.040Z",
+    "ended_at": "2026-08-05T01:53:06.864Z",
+    "latency_ms": 9824,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13965,
+      "cached_input_tokens": 13056,
+      "output_tokens": 163
+    },
+    "response_sha256": "213d04a6f83e79e2d970caa6b03d7e8cdf1f822076c37ef4a01e68b09c7863f0",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "The approved accessibility correction is bounded execution work: implement and verify it against the exact acceptance criteria. No product-leadership analysis is needed unless scope, user outcome, or prioritization is reopened.",
+      "selected_principles": [
+        "Preserve approved scope and binding acceptance criteria",
+        "Do not reopen closed product decisions"
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "Product strategy analysis",
+        "Prioritization analysis",
+        "Solution or architecture selection"
+      ],
+      "evidence_and_uncertainty": [
+        "The correction is explicitly approved.",
+        "Acceptance criteria are exact.",
+        "No unresolved product decision or contrary evidence is provided."
+      ],
+      "authority_boundary": "No authority to alter scope, acceptance criteria, implementation approach, activation, or integrations.",
+      "technical_handoff_readiness": "READY"
+    }
+  }
+}

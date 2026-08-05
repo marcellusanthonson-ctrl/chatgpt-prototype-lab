@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "113898e206f2e45eebc7763e",
+  "run_id": "PL-FX-038__PACKAGE",
+  "fixture_id": "PL-FX-038",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "INACTIVE",
+  "scenario": "A security incident runbook mandates an ordered deterministic response.",
+  "category": "BINDING_OBLIGATION",
+  "provenance": {
+    "request_id": "PL-FX-038__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:45:42.987Z",
+    "ended_at": "2026-08-05T01:45:56.500Z",
+    "latency_ms": 13513,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19531,
+      "cached_input_tokens": 0,
+      "output_tokens": 416
+    },
+    "response_sha256": "51deda377311a5cecd2d0ca24ef75607ffc47e800a9c07c178e549aaa8ed870d",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "The mandated security incident runbook is a binding, ordered deterministic operation. Follow the existing contract exactly; do not reopen scope or add Product Leadership analysis.",
+      "selected_principles": [
+        "PL-P05 — Do not infer authority from package guidance.",
+        "PL-P09 — Preserve the binding obligation and closed scope."
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — deterministic task",
+        "PL-FW-STRATEGIC-CHOICES — execution is fixed by a binding obligation",
+        "PL-FW-OPPORTUNITY-MAPPING — no discovery scope",
+        "PL-FW-JOBS-CONTEXT — no user-motivation question",
+        "PL-FW-PRIORITIZATION-ORDER — order is already mandated",
+        "PL-FW-LEARNING-LOOP — no experiment or post-release review"
+      ],
+      "evidence_and_uncertainty": [
+        "Evidence: the scenario explicitly states that the runbook mandates an ordered deterministic response.",
+        "Unknown: the runbook’s contents, incident facts, and execution status were not supplied; no claims about them are made.",
+        "Candidate effectiveness, safety, and value increment remain unestablished."
+      ],
+      "authority_boundary": "The candidate package has authority effect NONE and grants no implementation, activation, integration, or decision authority. The existing runbook remains controlling.",
+      "technical_handoff_readiness": "READY"
+    }
+  }
+}

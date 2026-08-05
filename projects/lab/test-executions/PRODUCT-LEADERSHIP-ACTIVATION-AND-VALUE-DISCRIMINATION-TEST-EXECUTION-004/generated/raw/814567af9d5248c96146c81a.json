@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "814567af9d5248c96146c81a",
+  "run_id": "PL-FX-023__PACKAGE",
+  "fixture_id": "PL-FX-023",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "LIMITED_OR_AMBIGUOUS",
+  "scenario": "Customer evidence is sparse and conflicts with analytics of unknown provenance.",
+  "category": "LIMITED_OR_AMBIGUOUS",
+  "provenance": {
+    "request_id": "PL-FX-023__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:52:37.061Z",
+    "ended_at": "2026-08-05T01:52:58.797Z",
+    "latency_ms": 21736,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19532,
+      "cached_input_tokens": 12032,
+      "output_tokens": 629
+    },
+    "response_sha256": "9272f9e9db188b37a1f39a7098455aa4789a6bf9718730f9cf86f37d8c75ac4c",
+    "response": {
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "answer": "Product problem: customer evidence conflicts with analytics whose provenance is unknown, so neither source can support a reliable product conclusion. Desired outcome: establish traceable, comparable evidence and resolve the contradiction. Priority: first verify the analytics’ provenance, definitions, collection method, population, and time window; then assess whether the customer evidence and analytics measure the same outcome. Exclusions: no product decision, prioritization score, value claim, technical solution, implementation, activation, or integration. Learning need: determine whether the conflict reflects sampling differences, measurement mismatch, data-quality failure, or genuinely divergent customer behavior. Recommendation: fail closed on substantive conclusions until provenance and missing decision context are supplied. Preserve any binding obligations and closed scope, neither of which is identified here.",
+      "selected_principles": [
+        "PL-P04 — Preserve evidence provenance and label assumptions, unknowns, and contradictions.",
+        "PL-P05 — Do not infer authority from evidence or recommendations.",
+        "PL-P08 — Avoid unsupported numeric confidence or forecasts."
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — no value definition or outcome review is specified.",
+        "PL-FW-STRATEGIC-CHOICES — no strategy formulation or competing initiatives are presented.",
+        "PL-FW-OPPORTUNITY-MAPPING — evidence is too weak and contradictory to map responsibly.",
+        "PL-FW-JOBS-CONTEXT — no user-motivation or alternative-behavior question is supplied.",
+        "PL-FW-PRIORITIZATION-ORDER — no portfolio or roadmap ordering is requested.",
+        "PL-FW-LEARNING-LOOP — no executed experiment or post-release result exists."
+      ],
+      "evidence_and_uncertainty": [
+        "Evidence: customer evidence exists but is described only as sparse; its provenance and content are not provided.",
+        "Evidence: analytics conflict with the customer evidence; analytics provenance is explicitly unknown.",
+        "Unknown: product decision scope, authority state, binding obligations, task state, metric definitions, populations, time windows, and collection methods are absent.",
+        "No source is treated as more reliable, and no value, impact, causality, or confidence claim is supported."
+      ],
+      "authority_boundary": "The candidate package has authority effect NONE, is disabled, and authorizes neither implementation nor product decisions. This classification is advisory criterion application only and causes no activation or integration effect.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

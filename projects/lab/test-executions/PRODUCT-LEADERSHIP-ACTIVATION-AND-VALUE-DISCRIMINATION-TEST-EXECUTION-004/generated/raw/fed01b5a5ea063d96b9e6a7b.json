@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "fed01b5a5ea063d96b9e6a7b",
+  "run_id": "PL-GOV-FX-010__PACKAGE",
+  "fixture_id": "PL-GOV-FX-010",
+  "domain": "LAB_GOVERNANCE_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "INACTIVE",
+  "scenario": "The task is only to verify that a known artifact hash matches the canonical manifest.",
+  "category": "INACTIVE",
+  "provenance": {
+    "request_id": "PL-GOV-FX-010__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:46:26.540Z",
+    "ended_at": "2026-08-05T01:46:52.151Z",
+    "latency_ms": 25611,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19536,
+      "cached_input_tokens": 13056,
+      "output_tokens": 527
+    },
+    "response_sha256": "d0abf06766753691b8c99b160a33e9823892e98bd98979d83f1a91fe8e0c4fb2",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "This is a closed deterministic verification task. Follow the existing hash/manifest contract without reopening scope or adding product guidance. No match or mismatch result can be claimed because the actual hash values and comparison evidence were not supplied.",
+      "selected_principles": [
+        "PL-P05 — Do not infer authority from guidance.",
+        "PL-P09 — Keep closed tasks and binding obligations closed."
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — no value definition or outcome review.",
+        "PL-FW-STRATEGIC-CHOICES — no strategic choice is required.",
+        "PL-FW-OPPORTUNITY-MAPPING — no discovery or opportunity prioritization.",
+        "PL-FW-JOBS-CONTEXT — no user-motivation question.",
+        "PL-FW-PRIORITIZATION-ORDER — no portfolio ordering or trade-off.",
+        "PL-FW-LEARNING-LOOP — no experiment or post-release review."
+      ],
+      "evidence_and_uncertainty": [
+        "Scenario evidence establishes only that the requested operation is a hash comparison against a canonical manifest.",
+        "The artifact hash, canonical manifest entry, and comparison result are not included; match status is therefore unknown.",
+        "The candidate package is disabled, untested, non-integrated, and has authority effect NONE."
+      ],
+      "authority_boundary": "Criterion only. No product decision, implementation permission, activation, integration, architecture, stack, or provider selection is authorized.",
+      "technical_handoff_readiness": "READY"
+    }
+  }
+}

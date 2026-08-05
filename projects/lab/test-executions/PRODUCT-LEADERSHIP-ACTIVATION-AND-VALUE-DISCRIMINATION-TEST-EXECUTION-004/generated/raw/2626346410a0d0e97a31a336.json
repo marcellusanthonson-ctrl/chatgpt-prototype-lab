@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "2626346410a0d0e97a31a336",
+  "run_id": "PL-FX-018__PACKAGE",
+  "fixture_id": "PL-FX-018",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "INACTIVE",
+  "scenario": "Restore a missing generated index entry using its canonical source.",
+  "category": "INACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-018__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:46:33.432Z",
+    "ended_at": "2026-08-05T01:46:58.727Z",
+    "latency_ms": 25295,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19531,
+      "cached_input_tokens": 13056,
+      "output_tokens": 473
+    },
+    "response_sha256": "b9b9cc228cddce9d77e0c37d07ad3413035e7e419cf48972fb5db1a19f32f3a6",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "Treat this as closed, deterministic maintenance: restore only the missing generated index entry from its canonical source, without reopening scope or making product or technical design decisions.",
+      "selected_principles": [
+        "PL-P09 — Closed tasks and binding obligations remain closed unless explicitly reopened.",
+        "PL-P05 — Guidance does not create authority."
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — irrelevant to deterministic implementation.",
+        "PL-FW-STRATEGIC-CHOICES — no strategic choice is requested.",
+        "PL-FW-OPPORTUNITY-MAPPING — not discovery or prioritization.",
+        "PL-FW-JOBS-CONTEXT — no user-motivation question exists.",
+        "PL-FW-PRIORITIZATION-ORDER — no ordering trade-off is requested.",
+        "PL-FW-LEARNING-LOOP — no executed experiment or outcome review exists."
+      ],
+      "evidence_and_uncertainty": [
+        "Evidence supplied: the scenario states that one generated index entry is missing and identifies its canonical source as authoritative.",
+        "Unknown: the canonical source, generated index, exact entry, binding obligations, and execution authority are not provided.",
+        "No restoration result, value increment, or safety claim can be asserted before execution and verification."
+      ],
+      "authority_boundary": "The candidate package has authority effect NONE and grants neither implementation nor activation permission. It only supports classification and scope-preservation guidance.",
+      "technical_handoff_readiness": "LIMITED"
+    }
+  }
+}

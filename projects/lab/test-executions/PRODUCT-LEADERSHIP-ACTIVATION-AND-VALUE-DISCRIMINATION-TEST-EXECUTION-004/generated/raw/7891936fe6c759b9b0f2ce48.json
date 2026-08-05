@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "7891936fe6c759b9b0f2ce48",
+  "run_id": "PL-GOV-FX-001__BASELINE",
+  "fixture_id": "PL-GOV-FX-001",
+  "domain": "LAB_GOVERNANCE_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "A security-hardening workstream is consuming substantial effort before the underlying capability has demonstrated functional value.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-GOV-FX-001__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:45:26.002Z",
+    "ended_at": "2026-08-05T01:45:42.984Z",
+    "latency_ms": 16982,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13975,
+      "cached_input_tokens": 0,
+      "output_tokens": 274
+    },
+    "response_sha256": "570b057e9a6097bb891a485f04db994594dacc75641f41e9ce93de6b4341243e",
+    "response": {
+      "activation_classification": "ACTIVE",
+      "answer": "Product-leadership analysis is warranted: reassess sequencing so functional value is evidenced before further discretionary hardening effort, while preserving all binding security requirements and the closed scope.",
+      "selected_principles": [
+        "Evidence before disproportionate investment",
+        "Preserve binding security obligations",
+        "Separate mandatory hardening from deferrable work"
+      ],
+      "selected_frameworks": [
+        "Value-risk sequencing review"
+      ],
+      "rejected_frameworks": [
+        "Architecture selection",
+        "Provider or stack selection",
+        "Implementation planning",
+        "Activation or integration planning"
+      ],
+      "evidence_and_uncertainty": [
+        "The scenario states that hardening consumes substantial effort before functional value is demonstrated.",
+        "No evidence identifies which security work is mandatory, discretionary, complete, or safely deferrable."
+      ],
+      "authority_boundary": "Product leadership may request evidence and clarify sequencing; it cannot waive security requirements or authorize technical changes from the supplied information.",
+      "technical_handoff_readiness": "LIMITED"
+    }
+  }
+}

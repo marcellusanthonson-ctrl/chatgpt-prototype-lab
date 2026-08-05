@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "e31ca7fe6d7f724ab9b46022",
+  "run_id": "PL-FX-040__PACKAGE",
+  "fixture_id": "PL-FX-040",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "INACTIVE",
+  "scenario": "A human-approved release rollback condition is triggered.",
+  "category": "BINDING_OBLIGATION",
+  "provenance": {
+    "request_id": "PL-FX-040__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:52:19.984Z",
+    "ended_at": "2026-08-05T01:52:41.926Z",
+    "latency_ms": 21942,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19529,
+      "cached_input_tokens": 13056,
+      "output_tokens": 531
+    },
+    "response_sha256": "37ff36140b476f69ffbc1e23342b1de1dc7ced1f93580170c1210282e236d16e",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "The triggered, human-approved rollback condition is a binding, deterministic condition. Preserve it and follow the existing rollback contract without reopening product scope or adding Product Leadership analysis. No architecture, stack, provider, implementation, activation, or integration decision is made here.",
+      "selected_principles": [
+        "PL-P09 — Closed tasks and binding obligations remain closed unless explicitly reopened by new authority.",
+        "PL-P05 — Guidance and framework output cannot create authority."
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — no value-definition or outcome-review decision is requested.",
+        "PL-FW-STRATEGIC-CHOICES — the rollback is already bound, not a strategy choice.",
+        "PL-FW-OPPORTUNITY-MAPPING — no discovery or opportunity-prioritization scope exists.",
+        "PL-FW-JOBS-CONTEXT — no user-motivation inquiry exists.",
+        "PL-FW-PRIORITIZATION-ORDER — the order is already determined by the approved rollback condition.",
+        "PL-FW-LEARNING-LOOP — no post-release learning review or executed-test evidence is provided."
+      ],
+      "evidence_and_uncertainty": [
+        "Evidence supplied: a human-approved release rollback condition has been triggered.",
+        "Unknown: the rollback procedure, its provenance, execution status, and the identity or scope of the approving authority are not supplied.",
+        "No claim is made that rollback execution is technically authorized, completed, safe, or effective.",
+        "The candidate package is disabled, untested, and has authority effect NONE; it supplies criterion only."
+      ],
+      "authority_boundary": "Preserve the human-approved rollback condition as binding. The candidate package creates no authority, implementation permission, runtime effect, activation, or integration effect.",
+      "technical_handoff_readiness": "LIMITED"
+    }
+  }
+}

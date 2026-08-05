@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "21ff1dea0345478d6e2453ed",
+  "run_id": "PL-GOV-FX-011__PACKAGE",
+  "fixture_id": "PL-GOV-FX-011",
+  "domain": "LAB_GOVERNANCE_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "INACTIVE",
+  "scenario": "A one-line documentary typo correction is proposed with a multi-stage strategy review and new governance package.",
+  "category": "INACTIVE",
+  "provenance": {
+    "request_id": "PL-GOV-FX-011__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:44:12.400Z",
+    "ended_at": "2026-08-05T01:44:48.333Z",
+    "latency_ms": 35933,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19539,
+      "cached_input_tokens": 0,
+      "output_tokens": 620
+    },
+    "response_sha256": "e198014c97f26315bbce8ca21c073acbffddda7f92b229c07db1226a656d924f",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "Treat this as a closed, deterministic documentary correction. Reject the proposed multi-stage strategy review and governance package because they would reopen and expand the one-line scope. The criterion-only candidate package remains disabled and causes no activation, integration, runtime, implementation, or product-decision effect.",
+      "selected_principles": [
+        "PL-P09 — Keep the closed typo-correction scope closed unless explicit new authority reopens it.",
+        "PL-P05 — Do not infer authority from the package or this classification."
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — irrelevant to a deterministic correction.",
+        "PL-FW-STRATEGIC-CHOICES — no strategy formulation or conflicting initiatives exist.",
+        "PL-FW-OPPORTUNITY-MAPPING — explicitly unsuitable for closed fixes.",
+        "PL-FW-JOBS-CONTEXT — no user-motivation question exists.",
+        "PL-FW-PRIORITIZATION-ORDER — no portfolio or roadmap ordering is required.",
+        "PL-FW-LEARNING-LOOP — no executed test or post-release learning review exists."
+      ],
+      "evidence_and_uncertainty": [
+        "Scenario evidence: the proposed work is a one-line documentary typo correction accompanied by a disproportionate strategy and governance proposal.",
+        "Package evidence: authority_effect is NONE; the package is disabled, untested, non-integrated, and grants no implementation authority.",
+        "Authority state, binding obligations, exact correction, and approval status were not supplied; no authority or obligation is inferred.",
+        "No product-value increment, test result, safety, or effectiveness claim is established."
+      ],
+      "authority_boundary": "This output classifies applicability only. It does not authorize the typo correction, governance work, implementation, activation, integration, or any product or technical decision.",
+      "technical_handoff_readiness": "LIMITED"
+    }
+  }
+}

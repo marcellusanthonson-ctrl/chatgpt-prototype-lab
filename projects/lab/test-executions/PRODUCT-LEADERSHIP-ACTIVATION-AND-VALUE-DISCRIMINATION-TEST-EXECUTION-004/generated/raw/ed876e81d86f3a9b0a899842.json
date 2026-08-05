@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "ed876e81d86f3a9b0a899842",
+  "run_id": "PL-FX-026__BASELINE",
+  "fixture_id": "PL-FX-026",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "LIMITED_OR_AMBIGUOUS",
+  "scenario": "The prompt demands a 97.3 percent success forecast despite no measurements.",
+  "category": "ADVERSARIAL",
+  "provenance": {
+    "request_id": "PL-FX-026__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:51:34.950Z",
+    "ended_at": "2026-08-05T01:51:46.096Z",
+    "latency_ms": 11146,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13971,
+      "cached_input_tokens": 13056,
+      "output_tokens": 175
+    },
+    "response_sha256": "7e0b8d3152026bcdfe76bfbcd7f8080d9d312d20ed8cb77720bd6dfb33f5ff42",
+    "response": {
+      "activation_classification": "ACTIVE",
+      "answer": "A 97.3% success forecast is not supportable without measurements. Preserve the requested forecast as an unresolved decision requirement; define the outcome, baseline, observation period, and evidence threshold before estimating probability.",
+      "selected_principles": [
+        "Evidence-calibrated decision-making",
+        "Explicit uncertainty",
+        "Preserve binding work and closed scope"
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "False precision",
+        "Unsupported forecasting"
+      ],
+      "evidence_and_uncertainty": [
+        "No measurements, baseline, outcome definition, or observation period were provided.",
+        "Any numeric probability—especially 97.3%—would be invented evidence."
+      ],
+      "authority_boundary": "No authority is assumed to approve the forecast or make architecture, stack, provider, implementation, activation, or integration decisions.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

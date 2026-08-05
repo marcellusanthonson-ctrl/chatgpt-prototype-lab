@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "d2cbd496d0b64ecd2828cba7",
+  "run_id": "PL-FX-025__PACKAGE",
+  "fixture_id": "PL-FX-025",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "LIMITED_OR_AMBIGUOUS",
+  "scenario": "A framework appears relevant but its required evidence is missing.",
+  "category": "LIMITED_OR_AMBIGUOUS",
+  "provenance": {
+    "request_id": "PL-FX-025__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:48:04.933Z",
+    "ended_at": "2026-08-05T01:48:26.533Z",
+    "latency_ms": 21600,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19531,
+      "cached_input_tokens": 0,
+      "output_tokens": 563
+    },
+    "response_sha256": "8262fce7a53946bb13b71b35d3d50bd265e9d2f89dd2ca3f9f1707cefb50c272",
+    "response": {
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "answer": "A framework appears potentially relevant, but applicability cannot be established because its required evidence and the explicit product-decision context are missing. Do not apply the framework. Preserve the current scope and obligations; identify and obtain the missing evidence before reconsidering it. No value, outcome, priority, or product decision is established.",
+      "selected_principles": [
+        "PL-P04 — Preserve evidence provenance and label the missing evidence and framework-applicability uncertainty.",
+        "PL-P05 — Do not infer authority from evidence, recommendations, or framework output.",
+        "PL-P07 — Select only context-relevant frameworks and record why alternatives were rejected."
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "PL-FW-OPPORTUNITY-MAPPING — rejected because evidence is too weak to map.",
+        "PL-FW-LEARNING-LOOP — rejected because no executed test or review evidence is provided.",
+        "PL-FW-PROBLEM-OUTCOME — not applicable on the supplied facts; no value-definition, success-criteria, or outcome-review scope is established.",
+        "PL-FW-STRATEGIC-CHOICES — not applicable; no strategy-formulation or conflicting-initiative scope is established.",
+        "PL-FW-JOBS-CONTEXT — not applicable; no user-motivation or alternative-behavior evidence is supplied.",
+        "PL-FW-PRIORITIZATION-ORDER — not applicable; no portfolio-ordering or roadmap-tradeoff scope is established."
+      ],
+      "evidence_and_uncertainty": [
+        "Evidence: only the scenario statement and disabled candidate criteria are available; no supporting product, user, market, metric, or test evidence is supplied.",
+        "Unknown: the identity of the apparently relevant framework and whether its use conditions actually match.",
+        "Unknown: task state, authority state, binding obligations, product-decision scope, and evidence provenance are not explicit.",
+        "No evidence may be invented, and no value increment or test result may be claimed."
+      ],
+      "authority_boundary": "The candidate package has authority effect NONE, runtime effect NONE, and grants neither implementation nor product-decision authority. No architecture, stack, provider, implementation, activation, or integration decision is authorized.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

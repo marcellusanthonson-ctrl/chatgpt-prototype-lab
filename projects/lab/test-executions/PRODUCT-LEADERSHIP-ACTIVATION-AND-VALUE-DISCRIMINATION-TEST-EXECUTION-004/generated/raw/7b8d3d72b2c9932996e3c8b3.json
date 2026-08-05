@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "7b8d3d72b2c9932996e3c8b3",
+  "run_id": "PL-GOV-FX-008__BASELINE",
+  "fixture_id": "PL-GOV-FX-008",
+  "domain": "LAB_GOVERNANCE_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "A blocking evidence gap competes with several visible feature and design improvements.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-GOV-FX-008__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:52:20.754Z",
+    "ended_at": "2026-08-05T01:52:31.792Z",
+    "latency_ms": 11038,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13970,
+      "cached_input_tokens": 13056,
+      "output_tokens": 191
+    },
+    "response_sha256": "51a0f6c313eeb24c265633c82d092cf39c4def7ba41122e74020c8788b439ade",
+    "response": {
+      "activation_classification": "ACTIVE",
+      "answer": "Prioritize resolving the blocking evidence gap. Preserve the visible feature and design improvements as deferred, closed-scope work until the missing evidence supports a product decision.",
+      "selected_principles": [
+        "Evidence before expansion",
+        "Preserve binding work and closed scope",
+        "Do not infer missing authority"
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "Architecture or implementation selection",
+        "Provider or integration selection",
+        "Feature prioritization without evidence"
+      ],
+      "evidence_and_uncertainty": [
+        "The scenario identifies a blocking evidence gap but does not specify the missing evidence, affected decision, or authority to resolve it.",
+        "The value of the visible improvements cannot be discriminated from the supplied evidence."
+      ],
+      "authority_boundary": "Product leadership may identify the evidence gap as the immediate decision blocker and defer competing improvements; it may not choose technical solutions, activate work, or expand scope.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

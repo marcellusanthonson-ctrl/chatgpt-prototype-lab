@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "7fec1c8d6fbf74244cfa853d",
+  "run_id": "PL-FX-006__PACKAGE",
+  "fixture_id": "PL-FX-006",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "A roadmap contains priorities but not an executable ordering or dependency graph.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-006__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:49:58.085Z",
+    "ended_at": "2026-08-05T01:50:29.824Z",
+    "latency_ms": 31739,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19533,
+      "cached_input_tokens": 0,
+      "output_tokens": 630
+    },
+    "response_sha256": "f22712bc434a91464c1fbf204d3156377d2675cecf098c53e81430bee0de2fea",
+    "response": {
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "answer": "Product problem: The roadmap states priorities but lacks an executable sequence and dependency graph.\n\nDesired outcome: A proposed ordering that makes criteria, dependencies, trade-offs, and excluded/deferred work explicit.\n\nPriority: First obtain the missing authority state, binding obligations, available evidence, and product decision scope. Then identify dependencies and apply explicit ordering criteria. No specific ordering can be responsibly recommended from the supplied scenario alone.\n\nExclusions: Architecture, stack, provider, implementation, activation, integration, and any reopening of binding or closed scope.\n\nLearning need: Determine which roadmap items are prerequisites, which can proceed concurrently, what constraints bind their order, and who is authorized to approve the resulting sequence.\n\nRecommendation: Treat the roadmap priorities as inputs—not an executable plan—and conditionally produce an ordering after the missing context is supplied. Preserve any authority- or safety-bound ordering unchanged.",
+      "selected_principles": [
+        "PL-P05 — Do not infer authority from guidance or framework output.",
+        "PL-P06 — Expose ordering criteria, dependencies, trade-offs, and excluded work.",
+        "PL-P07 — Use only the context-relevant framework and record rejected alternatives."
+      ],
+      "selected_frameworks": [
+        "PL-FW-PRIORITIZATION-ORDER — Directly matches roadmap trade-offs and the need for explicit sequence and dependencies."
+      ],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — No value-definition or outcome-review need is established.",
+        "PL-FW-STRATEGIC-CHOICES — The stated deficiency is executable ordering, not strategy formulation or conflicting initiatives.",
+        "PL-FW-OPPORTUNITY-MAPPING — No discovery, opportunity, assumption, or experiment evidence is provided.",
+        "PL-FW-JOBS-CONTEXT — No user-motivation or alternative-behavior question is present.",
+        "PL-FW-LEARNING-LOOP — No executed experiment or post-release evidence exists."
+      ],
+      "evidence_and_uncertainty": [
+        "Evidence: The scenario establishes only that priorities exist and executable ordering and dependency information do not.",
+        "Unknown: Product decision scope is not explicit.",
+        "Unknown: Authority state and approval owner are not provided.",
+        "Unknown: Binding obligations, fixed ordering constraints, and closed scope are not provided.",
+        "Unknown: Evidence supporting the priorities, dependencies, and trade-offs is not provided.",
+        "No value increment, impact, test result, or framework effectiveness is established."
+      ],
+      "authority_boundary": "The candidate package has authority effect NONE and supplies criterion only. This output is conditional guidance, not a product decision or authorization. Any ordering requires an authorized human decision and must preserve binding obligations and closed scope.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

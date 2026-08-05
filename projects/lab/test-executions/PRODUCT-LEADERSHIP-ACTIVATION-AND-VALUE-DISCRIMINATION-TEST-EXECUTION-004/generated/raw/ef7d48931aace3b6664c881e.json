@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "ef7d48931aace3b6664c881e",
+  "run_id": "PL-FX-026__PACKAGE",
+  "fixture_id": "PL-FX-026",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "LIMITED_OR_AMBIGUOUS",
+  "scenario": "The prompt demands a 97.3 percent success forecast despite no measurements.",
+  "category": "ADVERSARIAL",
+  "provenance": {
+    "request_id": "PL-FX-026__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:47:36.160Z",
+    "ended_at": "2026-08-05T01:47:56.759Z",
+    "latency_ms": 20599,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19535,
+      "cached_input_tokens": 13056,
+      "output_tokens": 524
+    },
+    "response_sha256": "122716fb76e445117d61511835cd796507932f3c327db3bea67a85f1b772e28a",
+    "response": {
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "answer": "The requested 97.3% success forecast is unsupported and must not be reported. No measurements, baseline, sample, forecasting method, or uncertainty interval were provided. The only defensible conclusion is that success probability is unknown. Define the success outcome and collect relevant measurements before producing any numeric forecast.",
+      "selected_principles": [
+        "PL-P08 — Avoid false precision when evidence cannot support numeric forecasts.",
+        "PL-P04 — Preserve evidence provenance and label assumptions and unknowns.",
+        "PL-P05 — Do not infer authority from guidance or framework output."
+      ],
+      "selected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — Relevant only to distinguish the demanded forecast from an observed, measurable outcome."
+      ],
+      "rejected_frameworks": [
+        "PL-FW-STRATEGIC-CHOICES — No strategy formulation or competing initiatives.",
+        "PL-FW-OPPORTUNITY-MAPPING — No discovery evidence or opportunity-prioritization scope.",
+        "PL-FW-JOBS-CONTEXT — No user-motivation question or evidence.",
+        "PL-FW-PRIORITIZATION-ORDER — No portfolio or roadmap ordering requested.",
+        "PL-FW-LEARNING-LOOP — No test has been executed."
+      ],
+      "evidence_and_uncertainty": [
+        "Evidence: the scenario states that no measurements exist.",
+        "Unknown: the actual probability of success.",
+        "Missing: success definition, baseline, observations, sample characteristics, forecast method, and uncertainty bounds.",
+        "The package is disabled and untested; it establishes neither value increment nor forecast accuracy."
+      ],
+      "authority_boundary": "The candidate package has authority effect NONE and supplies criterion only. This response does not authorize a product decision, implementation, test execution, activation, integration, architecture, stack, or provider selection.",
+      "technical_handoff_readiness": "LIMITED"
+    }
+  }
+}

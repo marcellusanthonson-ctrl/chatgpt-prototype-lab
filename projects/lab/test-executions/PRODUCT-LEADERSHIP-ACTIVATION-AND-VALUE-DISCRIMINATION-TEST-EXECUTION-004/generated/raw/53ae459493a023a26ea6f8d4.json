@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "53ae459493a023a26ea6f8d4",
+  "run_id": "PL-FX-035__BASELINE",
+  "fixture_id": "PL-FX-035",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "A qualitative signal suggests value but measured outcome is unchanged.",
+  "category": "CONTRADICTORY_EVIDENCE",
+  "provenance": {
+    "request_id": "PL-FX-035__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:44:12.390Z",
+    "ended_at": "2026-08-05T01:44:35.204Z",
+    "latency_ms": 22814,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13967,
+      "cached_input_tokens": 0,
+      "output_tokens": 219
+    },
+    "response_sha256": "025ee90a4eb829975ad0276ecb3b2ab8e55c19534581c9e00e10e8ea946c7a22",
+    "response": {
+      "activation_classification": "ACTIVE",
+      "answer": "Treat this as a value-evidence discrepancy: preserve the qualitative signal, but do not claim validated impact because the measured outcome is unchanged. Check whether the qualitative signal and metric assess the same user, behavior, timeframe, and outcome; then define the smallest evidence-gathering step to resolve the discrepancy without changing the closed scope.",
+      "selected_principles": [
+        "Separate qualitative value signals from measured outcome evidence",
+        "Preserve contradictory evidence without overstating value",
+        "Use the smallest scoped validation step"
+      ],
+      "selected_frameworks": [
+        "Evidence triangulation"
+      ],
+      "rejected_frameworks": [
+        "Architecture or stack selection",
+        "Provider or integration selection",
+        "Implementation or activation planning"
+      ],
+      "evidence_and_uncertainty": [
+        "Available evidence: a qualitative signal suggests value",
+        "Available evidence: the measured outcome is unchanged",
+        "Unknown: signal quality, metric validity, sample, timeframe, and causal relationship"
+      ],
+      "authority_boundary": "Analysis only; no authority to change scope, activate, implement, integrate, or select technical solutions.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

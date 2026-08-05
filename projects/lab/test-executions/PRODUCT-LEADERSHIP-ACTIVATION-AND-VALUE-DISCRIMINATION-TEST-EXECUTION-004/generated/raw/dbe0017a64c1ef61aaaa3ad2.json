@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "dbe0017a64c1ef61aaaa3ad2",
+  "run_id": "PL-GOV-FX-012__BASELINE",
+  "fixture_id": "PL-GOV-FX-012",
+  "domain": "LAB_GOVERNANCE_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "LIMITED_OR_AMBIGUOUS",
+  "scenario": "A stakeholder asks to accept an auditor conclusion, reprioritize the roadmap and immediately execute the proposed remediation.",
+  "category": "LIMITED_OR_AMBIGUOUS",
+  "provenance": {
+    "request_id": "PL-GOV-FX-012__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:50:10.629Z",
+    "ended_at": "2026-08-05T01:50:24.823Z",
+    "latency_ms": 14194,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13977,
+      "cached_input_tokens": 13056,
+      "output_tokens": 285
+    },
+    "response_sha256": "947e0179ee429a5fee76478a341363bcc1cfaec1e2398c8628207facfa4dacc4",
+    "response": {
+      "activation_classification": "ACTIVE",
+      "answer": "Product leadership is active for deciding whether the auditor conclusion should change roadmap priorities. Preserve the audit conclusion and proposed remediation as inputs, but do not accept, reprioritize, or execute them without evidence of decision authority and approval. Confirm the accountable decision-maker, binding commitments, closed scope, urgency, impact, and remediation acceptance criteria; then present a constrained reprioritization recommendation. Execution requires a separately authorized technical handoff.",
+      "selected_principles": [
+        "Preserve binding work and closed scope",
+        "Separate recommendation from authorization",
+        "Require evidence before reprioritization",
+        "Do not infer execution authority"
+      ],
+      "selected_frameworks": [
+        "Evidence-based roadmap prioritization",
+        "Decision-rights and approval gating"
+      ],
+      "rejected_frameworks": [
+        "Immediate execution on stakeholder request",
+        "Automatic acceptance of auditor conclusion",
+        "Architecture, stack, provider, activation, or integration selection"
+      ],
+      "evidence_and_uncertainty": [
+        "The auditor conclusion and proposed remediation are referenced but not provided.",
+        "The stakeholder's authority to accept conclusions, reprioritize the roadmap, or authorize execution is unknown.",
+        "Existing binding commitments, scope constraints, impact, urgency, and acceptance criteria are unknown."
+      ],
+      "authority_boundary": "May analyze and recommend a constrained roadmap decision; may not accept the audit conclusion, reprioritize committed work, or authorize/execute remediation without accountable approval.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "request_id": "BLINDED-SCORE-BATCH-02",
+  "model": "gpt-5.6-sol",
+  "provider": "OpenAI",
+  "runner_version": "0.146.0",
+  "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+  "started_at": "2026-08-05T01:54:29.378Z",
+  "ended_at": "2026-08-05T01:55:45.912Z",
+  "latency_ms": 76534,
+  "exit_status": 0,
+  "retry_count": 0,
+  "usage": {
+    "input_tokens": 17178,
+    "cached_input_tokens": 0,
+    "output_tokens": 3034
+  },
+  "response_sha256": "457973d77eec2762a0d4e0e3ea4e3d08b4c5b818e1c046c413f5476682791132",
+  "response": {
+    "scores": [
+      {
+        "blind_id": "113898e206f2e45eebc7763e",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 3,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": true,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly abstains from product analysis and preserves the mandated sequence. The unsupported assertion about a candidate package’s authority effect is the only material evidence-discipline defect."
+      },
+      {
+        "blind_id": "1283cc39c1feed283e176edb",
+        "activation_classification": "ACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 3,
+          "prioritization_order": 3,
+          "opportunity_cost_recognition": 3,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 2,
+          "evidence_authority_discipline": 3,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 3,
+          "process_efficiency": 3
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": true,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "The scenario explicitly calls for a post-release value review, so Product Leadership is active even though evidence is incomplete. The proposed comparison is well scoped, but classifying it as ambiguous and rejecting the learning-loop framework understates the clear review need; the package-authority assertion is also unsupported."
+      },
+      {
+        "blind_id": "1375aaf37340b2a422d683fc",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly treats the remaining pointer update as deterministic execution and prevents reconsideration of the verified decision. A verification or stop condition could marginally strengthen the handoff."
+      },
+      {
+        "blind_id": "1aecec0b655177ff7af5abb7",
+        "activation_classification": "ACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 3,
+          "strategic_choices": 3,
+          "prioritization_order": 3,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 3,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 3,
+          "closed_scope_preservation": 3,
+          "actionability": 3,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Appropriately activates for an adoption tradeoff and recognizes duplication and lifecycle cost. The recommendation is proportionate but lacks a concrete evidence threshold, comparison method, or explicit decision sequence."
+      },
+      {
+        "blind_id": "1dc41c772dc400d571d75357",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 3,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 3,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 3,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly rejects the premise that a framework can grant roadmap authority and provides a clear stop condition. INACTIVE is more precise than ambiguous because no authorized roadmap decision is presently established."
+      },
+      {
+        "blind_id": "21ff1dea0345478d6e2453ed",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 1,
+          "uncertainty_calibration": 3,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 2
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": true,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly rejects disproportionate governance work and preserves the one-line correction scope. However, the claims that a candidate package is disabled, untested, non-integrated, and has authority effect NONE are not supplied by the scenario, and the response is more elaborate than needed."
+      },
+      {
+        "blind_id": "22abfee91aeca07d87c5e19e",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 2,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 3
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": true,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly preserves the legally fixed behavior and refuses to let product preference override it. It appropriately identifies missing legal details, but the separate assertion about a candidate package’s authority effect is unsupported by the scenario."
+      },
+      {
+        "blind_id": "2626346410a0d0e97a31a336",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 2,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 3
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": true,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Correctly treats restoration from the canonical source as closed deterministic maintenance. The candidate-package authority assertion is not grounded in the scenario, and an explicit verification condition would improve the execution guidance."
+      }
+    ]
+  }
+}

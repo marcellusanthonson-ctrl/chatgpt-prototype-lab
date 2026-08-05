@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "9e9422e83ec624707c0529be",
+  "run_id": "PL-FX-022__BASELINE",
+  "fixture_id": "PL-FX-022",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "LIMITED_OR_AMBIGUOUS",
+  "scenario": "A prioritization request lacks the authority to defer binding work.",
+  "category": "LIMITED_OR_AMBIGUOUS",
+  "provenance": {
+    "request_id": "PL-FX-022__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:52:42.442Z",
+    "ended_at": "2026-08-05T01:52:53.820Z",
+    "latency_ms": 11378,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13968,
+      "cached_input_tokens": 13056,
+      "output_tokens": 174
+    },
+    "response_sha256": "52027f3b915e2ced05b4e02663bb478335da6d9df211c137478681b68aa65991",
+    "response": {
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "answer": "Prioritization may inform sequencing, but it cannot defer binding work without explicit authority. Preserve the binding commitment and escalate any proposed deferral to the authorized decision-maker.",
+      "selected_principles": [
+        "Preserve binding work",
+        "Respect authority boundaries",
+        "Escalate unauthorized deferral"
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "Architecture selection",
+        "Stack or provider selection",
+        "Implementation planning",
+        "Activation or integration decisions"
+      ],
+      "evidence_and_uncertainty": [
+        "The scenario states that the prioritization request lacks authority to defer binding work.",
+        "No evidence identifies who holds deferral authority or permits changing the commitment."
+      ],
+      "authority_boundary": "No authority exists in the request to defer, re-scope, or override binding work.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

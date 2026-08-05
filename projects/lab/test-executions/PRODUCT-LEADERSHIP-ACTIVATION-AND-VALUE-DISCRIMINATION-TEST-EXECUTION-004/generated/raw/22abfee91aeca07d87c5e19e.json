@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "22abfee91aeca07d87c5e19e",
+  "run_id": "PL-FX-036__PACKAGE",
+  "fixture_id": "PL-FX-036",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "INACTIVE",
+  "scenario": "A legal requirement fixes retention behavior regardless of product preference.",
+  "category": "BINDING_OBLIGATION",
+  "provenance": {
+    "request_id": "PL-FX-036__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:50:46.650Z",
+    "ended_at": "2026-08-05T01:51:05.821Z",
+    "latency_ms": 19171,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19531,
+      "cached_input_tokens": 13056,
+      "output_tokens": 485
+    },
+    "response_sha256": "085db00a2a1d1d81cfddab21e9a35b5eeee5c3b6937aedd31c06d17835e5d359",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "The retention behavior is a binding legal obligation, so product leadership must abstain and preserve the closed scope. Product preference, prioritization, discovery, and value frameworks cannot alter it. Exclusion: any product-led change to the legally fixed retention behavior. No implementation, activation, integration, architecture, stack, or provider decision is authorized.",
+      "selected_principles": [
+        "PL-P09 — Binding obligations stay closed unless new authority explicitly reopens them.",
+        "PL-P05 — Framework guidance does not create authority."
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — No unresolved value or success decision.",
+        "PL-FW-STRATEGIC-CHOICES — Explicitly unsuitable for a binding obligation with fixed execution.",
+        "PL-FW-OPPORTUNITY-MAPPING — No discovery or opportunity-prioritization scope.",
+        "PL-FW-JOBS-CONTEXT — Explicitly unsuitable for a legal requirement.",
+        "PL-FW-PRIORITIZATION-ORDER — Product ordering cannot override authority-bound behavior.",
+        "PL-FW-LEARNING-LOOP — No executed test or post-release learning evidence."
+      ],
+      "evidence_and_uncertainty": [
+        "Given fact: a legal requirement fixes retention behavior regardless of product preference.",
+        "Unknown: the legal source, jurisdiction, exact retention behavior, applicability, and provenance were not supplied.",
+        "No claim is made about implementation, compliance verification, product value, test results, or package effectiveness."
+      ],
+      "authority_boundary": "The legal requirement is binding. The candidate package has authority effect NONE and cannot interpret, modify, reopen, authorize, activate, or implement the retention behavior.",
+      "technical_handoff_readiness": "LIMITED"
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0.0",
+  "method": "CAPTURE_CODEX_REPORTED_INPUT_CACHED_INPUT_AND_OUTPUT_TOKENS_PER_REQUEST_PLUS_WALL_CLOCK_MILLISECONDS; MONETARY_COST_NOT_INFERRED_WHEN_CHATGPT_AUTH_SURFACE_DOES_NOT_EXPOSE_A_BILLED_RATE",
+  "baseline": {
+    "input_tokens": 726408,
+    "cached_input_tokens": 381440,
+    "output_tokens": 10303,
+    "latency_ms": 682594
+  },
+  "package": {
+    "input_tokens": 1015541,
+    "cached_input_tokens": 393472,
+    "output_tokens": 33012,
+    "latency_ms": 1411700
+  },
+  "positive_controls": {
+    "input_tokens": 55806,
+    "cached_input_tokens": 37120,
+    "output_tokens": 1205,
+    "latency_ms": 71051
+  },
+  "negative_controls": {
+    "input_tokens": 55741,
+    "cached_input_tokens": 25088,
+    "output_tokens": 1257,
+    "latency_ms": 70460
+  },
+  "median_output_tokens": {
+    "baseline": 191,
+    "package": 626.5,
+    "ratio": 3.2801047120418847
+  },
+  "median_latency_ms": {
+    "baseline": 11938,
+    "package": 25898,
+    "ratio": 2.1693751047076564
+  },
+  "monetary_cost": {
+    "value": null,
+    "currency": null,
+    "reason": "CHATGPT_AUTHENTICATED_CODEX_SURFACE_DID_NOT_EXPOSE_A_REPRODUCIBLE_BILLED_RATE"
+  },
+  "negative_transfer": {
+    "count": 38,
+    "rate": 0.7307692307692307,
+    "fixture_ids": [
+      "PL-GOV-FX-011",
+      "PL-FX-007",
+      "PL-FX-005",
+      "PL-FX-029",
+      "PL-GOV-FX-008",
+      "PL-FX-028",
+      "PL-FX-038",
+      "PL-FX-035",
+      "PL-GOV-FX-003",
+      "PL-GOV-FX-010",
+      "PL-FX-024",
+      "PL-FX-018",
+      "PL-FX-032",
+      "PL-GOV-FX-005",
+      "PL-FX-030",
+      "PL-FX-031",
+      "PL-FX-026",
+      "PL-FX-025",
+      "PL-FX-001",
+      "PL-FX-037",
+      "PL-FX-034",
+      "PL-FX-017",
+      "PL-FX-033",
+      "PL-GOV-FX-009",
+      "PL-GOV-FX-004",
+      "PL-FX-006",
+      "PL-FX-020",
+      "PL-FX-036",
+      "PL-GOV-FX-007",
+      "PL-FX-011",
+      "PL-FX-039",
+      "PL-FX-003",
+      "PL-FX-014",
+      "PL-FX-015",
+      "PL-FX-023",
+      "PL-GOV-FX-001",
+      "PL-GOV-FX-012",
+      "PL-FX-022"
+    ]
+  },
+  "unnecessary_documentation_rate": 0.2,
+  "net_decision_value": -8.01897067760554,
+  "formula_components": {
+    "value_gain": -1.4326923076923077,
+    "token_penalty": 1.1400523560209423,
+    "latency_penalty": 0.5846875523538282,
+    "activation_error_rate": 0.38461538461538464,
+    "negative_transfer_rate": 0.7307692307692307,
+    "unnecessary_documentation_rate": 0.2
+  }
+}

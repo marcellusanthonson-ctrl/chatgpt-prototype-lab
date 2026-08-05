@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "1283cc39c1feed283e176edb",
+  "run_id": "PL-FX-007__PACKAGE",
+  "fixture_id": "PL-FX-007",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "A shipped capability needs a human review of intended versus observed value.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-007__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:44:24.070Z",
+    "ended_at": "2026-08-05T01:45:09.160Z",
+    "latency_ms": 45090,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19533,
+      "cached_input_tokens": 0,
+      "output_tokens": 808
+    },
+    "response_sha256": "a149494800f23d6e940dae1a858d491c82907c0c97d9eddec286d76312d95779",
+    "response": {
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "answer": "Product problem: determine whether the shipped capability’s observed value matches its intended value. Desired outcome: a human, evidence-bounded comparison that separates the shipped output from observed outcomes and impact. Priority: conduct the value review before making any follow-on recommendation. Exclusions: do not reopen the shipped scope, change implementation, select technical solutions, or claim value increment. Learning need: obtain the intended-value criteria, observed evidence with provenance, relevant conditions, and the accountable human’s decision. Recommendation: once those inputs exist, compare intent with observations, record discrepancies and conditions, and leave any resulting product decision to the authorized human.",
+      "selected_principles": [
+        "PL-P02 — Separate outputs, outcomes and impacts explicitly.",
+        "PL-P04 — Preserve evidence provenance and label assumptions, unknowns and contradictions.",
+        "PL-P05 — Do not infer authority from evidence, recommendations or framework output.",
+        "PL-P09 — Keep closed tasks and binding obligations closed unless explicitly reopened."
+      ],
+      "selected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — Relevant to outcome review and distinguishing the shipped output from outcome and impact."
+      ],
+      "rejected_frameworks": [
+        "PL-FW-STRATEGIC-CHOICES — No strategy formulation or conflicting initiatives are presented.",
+        "PL-FW-OPPORTUNITY-MAPPING — No discovery or opportunity-prioritization scope is presented.",
+        "PL-FW-JOBS-CONTEXT — No user-motivation or alternative-behavior question is presented.",
+        "PL-FW-PRIORITIZATION-ORDER — No portfolio ordering or roadmap trade-off is requested.",
+        "PL-FW-LEARNING-LOOP — Post-release context is present, but evidence and an explicit experiment or learning-review record are absent; applying it now would exceed the minimum guidance needed."
+      ],
+      "evidence_and_uncertainty": [
+        "Fact supplied by the scenario: the capability has shipped and requires human review of intended versus observed value.",
+        "Missing evidence: intended-value criteria, observed results, provenance, measurement conditions, and contradictions were not supplied.",
+        "Authority state, binding obligations, product decision scope, and requested result detail are not explicit; therefore the minimum-context rule requires LIMITED_OR_AMBIGUOUS.",
+        "No conclusion about realized value, impact, safety, or value increment can be drawn.",
+        "Assumption: the review itself does not reopen the shipped implementation. If that assumption conflicts with a binding obligation, guidance must fail closed."
+      ],
+      "authority_boundary": "The candidate package has authority effect NONE and grants no implementation or product-decision authority. The human reviewer retains the decision. Existing shipped scope and binding obligations remain closed unless separately reopened by explicit authority.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

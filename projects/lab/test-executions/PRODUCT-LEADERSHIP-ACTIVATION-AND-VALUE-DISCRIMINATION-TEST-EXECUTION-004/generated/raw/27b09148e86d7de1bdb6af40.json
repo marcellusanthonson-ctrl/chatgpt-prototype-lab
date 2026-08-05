@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "27b09148e86d7de1bdb6af40",
+  "run_id": "PL-FX-012__PACKAGE",
+  "fixture_id": "PL-FX-012",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "INACTIVE",
+  "scenario": "Apply an approved visual spacing correction with exact acceptance screenshots.",
+  "category": "INACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-012__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:50:29.828Z",
+    "ended_at": "2026-08-05T01:50:58.027Z",
+    "latency_ms": 28199,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19336,
+      "cached_input_tokens": 9984,
+      "output_tokens": 624
+    },
+    "response_sha256": "b27529929430872832de9d7b33540fa2c059e3bc93aa85a6a036dd64e9432d2e",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "This is an approved, closed visual correction. Preserve the approved spacing specification and exact screenshot acceptance criteria without reopening product scope or adding product-leadership analysis. No implementation action is authorized by this candidate package.",
+      "selected_principles": [
+        "PL-P05 — Do not infer authority from package guidance.",
+        "PL-P07 — Use no frameworks because none match this closed correction.",
+        "PL-P09 — Keep the approved task and binding obligations closed."
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — deterministic implementation task",
+        "PL-FW-STRATEGIC-CHOICES — execution is already fixed",
+        "PL-FW-OPPORTUNITY-MAPPING — not discovery or prioritization",
+        "PL-FW-JOBS-CONTEXT — no user-motivation question",
+        "PL-FW-PRIORITIZATION-ORDER — no roadmap or portfolio trade-off",
+        "PL-FW-LEARNING-LOOP — no executed experiment or post-release review"
+      ],
+      "evidence_and_uncertainty": [
+        "Evidence: the scenario identifies an approved visual spacing correction with exact screenshot acceptance criteria.",
+        "Unknown: the actual spacing specification, target surfaces, and acceptance screenshots are not included here.",
+        "No product outcome, impact, or value increment is established or claimed."
+      ],
+      "authority_boundary": "The candidate package has authority effect NONE and grants no implementation, activation, integration, architecture, stack, or provider authority. Any existing approval remains the sole governing authority and must not be expanded.",
+      "technical_handoff_readiness": "LIMITED"
+    }
+  }
+}

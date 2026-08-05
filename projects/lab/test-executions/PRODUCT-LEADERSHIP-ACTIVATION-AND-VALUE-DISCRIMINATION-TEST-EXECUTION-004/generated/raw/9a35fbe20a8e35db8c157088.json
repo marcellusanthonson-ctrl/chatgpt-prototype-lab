@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "9a35fbe20a8e35db8c157088",
+  "run_id": "PL-FX-003__BASELINE",
+  "fixture_id": "PL-FX-003",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "ACTIVE",
+  "scenario": "Three opportunities compete for one quarter and ordering criteria are absent.",
+  "category": "ACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-003__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:53:16.145Z",
+    "ended_at": "2026-08-05T01:53:25.486Z",
+    "latency_ms": 9341,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13968,
+      "cached_input_tokens": 13056,
+      "output_tokens": 182
+    },
+    "response_sha256": "d06670765d20e11829a42962a63832f98bfcd2f40cbb8ad0bb05134884652280",
+    "response": {
+      "activation_classification": "ACTIVE",
+      "answer": "Product-leadership analysis is active because three opportunities compete for one quarter without ordering criteria. Preserve all three as candidates; define and obtain approval for decision criteria, then rank them. No priority choice can be justified from the available evidence.",
+      "selected_principles": [
+        "Explicit prioritization criteria",
+        "Evidence-bounded decision-making",
+        "Preserve closed scope"
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "Architecture selection",
+        "Stack or provider selection",
+        "Implementation planning",
+        "Activation or integration planning"
+      ],
+      "evidence_and_uncertainty": [
+        "Known: three opportunities compete for one quarter.",
+        "Unknown: ordering criteria, evidence, constraints, and decision authority."
+      ],
+      "authority_boundary": "May identify the prioritization gap and propose a decision process; may not choose, rank, approve, or implement an opportunity.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

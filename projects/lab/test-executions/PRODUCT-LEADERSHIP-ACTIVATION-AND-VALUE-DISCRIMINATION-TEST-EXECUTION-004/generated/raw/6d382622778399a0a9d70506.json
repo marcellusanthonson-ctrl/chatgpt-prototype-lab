@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "6d382622778399a0a9d70506",
+  "run_id": "PL-FX-039__BASELINE",
+  "fixture_id": "PL-FX-039",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "INACTIVE",
+  "scenario": "A signed contract requires a specified deliverable and deadline.",
+  "category": "BINDING_OBLIGATION",
+  "provenance": {
+    "request_id": "PL-FX-039__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:49:16.325Z",
+    "ended_at": "2026-08-05T01:49:26.980Z",
+    "latency_ms": 10655,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13967,
+      "cached_input_tokens": 0,
+      "output_tokens": 228
+    },
+    "response_sha256": "b25ea2236ede83132559337d6f93de4e942148724940a1ab7de8908254a876ec",
+    "response": {
+      "activation_classification": "LIMITED_OR_AMBIGUOUS",
+      "answer": "Treat the specified deliverable and deadline as binding. No further product decision is supported without the contract’s actual terms and authorized scope.",
+      "selected_principles": [
+        "Preserve binding contractual commitments",
+        "Do not expand closed scope"
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "Architecture or implementation selection",
+        "Activation or integration planning"
+      ],
+      "evidence_and_uncertainty": [
+        "Evidence is limited to the existence of a signed contract requiring an unspecified deliverable by an unspecified deadline."
+      ],
+      "authority_boundary": "No authority is established to reinterpret the contract, change scope, alter the deadline, or select implementation details.",
+      "technical_handoff_readiness": "NOT_READY"
+    }
+  }
+}

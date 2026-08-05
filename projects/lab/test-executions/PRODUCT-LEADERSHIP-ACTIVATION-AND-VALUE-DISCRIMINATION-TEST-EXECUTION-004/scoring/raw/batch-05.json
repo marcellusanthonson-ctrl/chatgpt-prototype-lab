@@ -1,0 +1,206 @@
+{
+  "request_id": "BLINDED-SCORE-BATCH-05",
+  "model": "gpt-5.6-sol",
+  "provider": "OpenAI",
+  "runner_version": "0.146.0",
+  "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+  "started_at": "2026-08-05T01:56:12.121Z",
+  "ended_at": "2026-08-05T01:57:00.149Z",
+  "latency_ms": 48028,
+  "exit_status": 0,
+  "retry_count": 0,
+  "usage": {
+    "input_tokens": 17132,
+    "cached_input_tokens": 0,
+    "output_tokens": 2059
+  },
+  "response_sha256": "20bb878b402fe678b252e46a34284a1ae5539bc16711363de8732cf3dddb36e5",
+  "response": {
+    "scores": [
+      {
+        "blind_id": "4d07e18801485169af5c44eb",
+        "activation_classification": "ACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 3
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Activation is appropriate because constrained capacity lacks ordering criteria. The response supplies consistent criteria, exposes tradeoffs and dependencies, keeps the ranking provisional, and reserves final commitment for the accountable owner. It is actionable, though somewhat more elaborate than necessary and lacks a precise review or stop rule."
+      },
+      {
+        "blind_id": "4eecc5ce6c9244ecdf7cb9e7",
+        "activation_classification": "LIMITED_OR_AMBIGUOUS",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 2,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 2,
+          "authorization_proportionality": 3,
+          "reversibility_stop_rules": 2,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 2,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 3,
+          "process_efficiency": 1
+        },
+        "authority_confusion": true,
+        "fabricated_evidence": true,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": true,
+        "rationale": "The bounded interpretation is sound: the evidence supports heterogeneous effects, not a universal winner, and further segment-focused learning is appropriate. However, the scenario itself supports active product-learning analysis, so LIMITED is overly cautious. References to a disabled package and its authority effect are unsupported, confuse artifact status with decision authority, and the exhaustive framework rejection adds unnecessary process."
+      },
+      {
+        "blind_id": "53ae459493a023a26ea6f8d4",
+        "activation_classification": "ACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 3,
+          "prioritization_order": 3,
+          "opportunity_cost_recognition": 2,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Activation is appropriate for resolving conflicting value evidence. The answer correctly preserves the qualitative signal without claiming measured impact, identifies comparability checks, and proposes a small scoped validation step. It could define a clearer decision threshold or stopping condition, but otherwise is disciplined and efficient."
+      },
+      {
+        "blind_id": "556450708f5421dae6db0e20",
+        "activation_classification": "ACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 3,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 3,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 3,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "The response correctly distinguishes stated priority from executable sequence and preserves the existing roadmap while requesting dependencies and sequencing criteria. It avoids inventing missing facts or claiming technical authority. Actionability would improve with a concrete dependency-mapping and sequencing procedure."
+      },
+      {
+        "blind_id": "58770ff0fe10c5719758c25b",
+        "activation_classification": "LIMITED_OR_AMBIGUOUS",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 3,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 3,
+          "authorization_proportionality": 3,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 2,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 1
+        },
+        "authority_confusion": true,
+        "fabricated_evidence": true,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": true,
+        "rationale": "The substantive recommendation is strong: frame the problem, users, measurable outcome, constraints, and non-goals before ordering features. This is a direct product-leadership need, making ACTIVE more appropriate than LIMITED. Unsupported claims about a disabled candidate package and its authority effect confuse package status with human decision authority, while the long framework inventory is unnecessary."
+      },
+      {
+        "blind_id": "597b2d87c5c9d37c0b37981e",
+        "activation_classification": "ACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 4,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "The proposed authorization is materially overbroad, so governance activation is appropriate. The response applies minimum necessary authority, authorizes exactly the documentary correction, and expressly excludes unsupported runtime, infrastructure, deployment, activation, and integration changes."
+      },
+      {
+        "blind_id": "5b11ff118fe8bfcb39eb5cb1",
+        "activation_classification": "INACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 3,
+          "authorization_proportionality": 4,
+          "reversibility_stop_rules": 4,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 4,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 4,
+          "actionability": 4,
+          "process_efficiency": 4
+        },
+        "authority_confusion": false,
+        "fabricated_evidence": false,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Inactivation is correct because this is a bounded documentary repair, not a product decision. The response authorizes only the link correction, preserves canonical content and decisions, and includes the proportionate verification that the link resolves to the intended existing target."
+      },
+      {
+        "blind_id": "5c0ab78657f60a71f54d7abe",
+        "activation_classification": "ACTIVE",
+        "dimensions": {
+          "problem_outcome_clarity": 4,
+          "strategic_choices": 4,
+          "prioritization_order": 4,
+          "opportunity_cost_recognition": 3,
+          "authorization_proportionality": 3,
+          "reversibility_stop_rules": 3,
+          "framework_relevance": 4,
+          "evidence_authority_discipline": 2,
+          "uncertainty_calibration": 4,
+          "closed_scope_preservation": 3,
+          "actionability": 4,
+          "process_efficiency": 4
+        },
+        "authority_confusion": true,
+        "fabricated_evidence": true,
+        "closed_scope_reopening": false,
+        "unnecessary_documentation": false,
+        "rationale": "Activation is appropriate, and pausing solution selection while identifying users, causal assumptions, and test evidence is well targeted. However, the scenario says only that the brief names revenue growth; calling it a binding outcome elevates an unsupported statement into an authority-bearing commitment. The response should preserve it as a stated outcome pending confirmation, not declare it binding."
+      }
+    ]
+  }
+}

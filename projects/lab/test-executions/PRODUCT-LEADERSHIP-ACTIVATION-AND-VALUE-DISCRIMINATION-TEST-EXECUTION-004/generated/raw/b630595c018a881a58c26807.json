@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "b630595c018a881a58c26807",
+  "run_id": "PL-FX-017__PACKAGE",
+  "fixture_id": "PL-FX-017",
+  "domain": "PRODUCT_AND_PROJECT_DECISIONS",
+  "arm": "PL-ARM-PACKAGE",
+  "control_type": null,
+  "expected_activation": "INACTIVE",
+  "scenario": "Implement a component from a human-approved immutable implementation contract.",
+  "category": "INACTIVE",
+  "provenance": {
+    "request_id": "PL-FX-017__PACKAGE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:48:59.500Z",
+    "ended_at": "2026-08-05T01:49:22.682Z",
+    "latency_ms": 23182,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 19531,
+      "cached_input_tokens": 13056,
+      "output_tokens": 510
+    },
+    "response_sha256": "e846aa8b822c7cfc2b68718755abe6e43dff943d53a14a22680adc629410ab26",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "This is closed, authorized technical work governed by a human-approved immutable implementation contract. Follow that contract exactly; do not reopen product scope, add product analysis, or make architecture, stack, provider, activation, or integration decisions. The candidate package contributes no implementation authority.",
+      "selected_principles": [
+        "PL-P09 — Closed tasks and binding obligations remain closed unless explicitly reopened.",
+        "PL-P05 — Do not infer authority from package guidance or framework output."
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "PL-FW-PROBLEM-OUTCOME — deterministic implementation is an explicit non-use case.",
+        "PL-FW-STRATEGIC-CHOICES — execution is fixed by a binding contract.",
+        "PL-FW-OPPORTUNITY-MAPPING — no discovery or opportunity prioritization is requested.",
+        "PL-FW-JOBS-CONTEXT — no user-motivation analysis is requested.",
+        "PL-FW-PRIORITIZATION-ORDER — ordering is not presented as an unresolved product decision.",
+        "PL-FW-LEARNING-LOOP — no executed experiment or post-release review is presented."
+      ],
+      "evidence_and_uncertainty": [
+        "Evidence: the scenario states that the implementation contract is human-approved and immutable.",
+        "Unknown: the contract contents, authorized source paths, target stack, acceptance criteria, and verification evidence were not supplied.",
+        "No claim is made about implementation completion, product value, safety, or test results."
+      ],
+      "authority_boundary": "Authority comes only from the human-approved implementation contract. The disabled candidate package has authority effect NONE and cannot authorize implementation, alter the contract, reopen scope, or create product or technical decisions.",
+      "technical_handoff_readiness": "LIMITED"
+    }
+  }
+}

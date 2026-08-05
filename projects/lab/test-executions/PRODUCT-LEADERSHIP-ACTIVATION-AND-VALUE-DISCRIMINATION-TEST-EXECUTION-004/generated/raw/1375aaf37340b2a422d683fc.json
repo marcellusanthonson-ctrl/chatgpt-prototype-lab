@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-004",
+  "attempt": "ATTEMPT-003",
+  "blind_id": "1375aaf37340b2a422d683fc",
+  "run_id": "PL-GOV-FX-009__BASELINE",
+  "fixture_id": "PL-GOV-FX-009",
+  "domain": "LAB_GOVERNANCE_DECISIONS",
+  "arm": "PL-ARM-BASELINE",
+  "control_type": null,
+  "expected_activation": "INACTIVE",
+  "scenario": "A verified decision has already been published and only a deterministic registry pointer must be updated.",
+  "category": "INACTIVE",
+  "provenance": {
+    "request_id": "PL-GOV-FX-009__BASELINE",
+    "model": "gpt-5.6-sol",
+    "provider": "OpenAI",
+    "runner_version": "0.146.0",
+    "runner_sha256": "bc343ba420dc2e2e9f59e6fc5e5bf0aae1cd8c771fc319665241fc9c0271fddb",
+    "started_at": "2026-08-05T01:44:12.394Z",
+    "ended_at": "2026-08-05T01:44:24.066Z",
+    "latency_ms": 11672,
+    "exit_status": 0,
+    "retry_count": 0,
+    "usage": {
+      "input_tokens": 13973,
+      "cached_input_tokens": 0,
+      "output_tokens": 159
+    },
+    "response_sha256": "0b42116710d5b85090a817d9386b88531a70dd638c0823cfd1e71825cddfb9be",
+    "response": {
+      "activation_classification": "INACTIVE",
+      "answer": "Product-leadership analysis is not needed. Preserve the verified decision and closed scope; update only the deterministic registry pointer through the authorized execution path.",
+      "selected_principles": [
+        "Preserve binding work",
+        "Respect closed scope",
+        "Do not invent authority"
+      ],
+      "selected_frameworks": [],
+      "rejected_frameworks": [
+        "Product strategy analysis",
+        "Architecture or implementation selection",
+        "Activation or integration planning"
+      ],
+      "evidence_and_uncertainty": [
+        "The scenario states that the decision is verified and already published.",
+        "The sole remaining task is a deterministic registry-pointer update."
+      ],
+      "authority_boundary": "No authority is provided to revisit the decision or select architecture, stack, provider, implementation, activation, or integration.",
+      "technical_handoff_readiness": "READY"
+    }
+  }
+}
