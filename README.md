@@ -92,6 +92,14 @@ El flujo operativo es:
 
 Esta secuencia describe un proceso: no autoriza ninguno de sus pasos, no selecciona un piloto y no habilita cambios en proyectos.
 
+## Ejecución optimizada con Codex Desktop
+
+Las ejecuciones delimitadas en Codex Desktop parten de [`AGENTS.md`](AGENTS.md) y del estándar [`CODEX-DESKTOP-CONTEXT-OPTIMIZATION-001`](architecture/governance/CODEX_DESKTOP_CONTEXT_OPTIMIZATION_001/MANIFEST.json). Cada tarea debe cargar primero un execution envelope, el perfil de rol aplicable y un context manifest; las fuentes adicionales se incorporan solo por selector o trigger.
+
+La carga de contexto sigue la [`CONTEXT_LOADING_POLICY`](architecture/governance/CODEX_DESKTOP_CONTEXT_OPTIMIZATION_001/CONTEXT_LOADING_POLICY.json), el enrutamiento por riesgo sigue la [`ROUTING_POLICY`](architecture/governance/CODEX_DESKTOP_CONTEXT_OPTIMIZATION_001/ROUTING_POLICY.json) y el paralelismo se limita a lecturas o validaciones independientes sobre superficies disjuntas. Los cambios de estado, las ediciones del mismo archivo, la publicación y el consumo de autorizaciones permanecen secuenciales.
+
+Las mejoras de velocidad no se presumen: deben medirse conforme al [`MEASUREMENT_PROTOCOL`](architecture/governance/CODEX_DESKTOP_CONTEXT_OPTIMIZATION_001/MEASUREMENT_PROTOCOL.json). Este mecanismo optimiza la preparación y el control de contexto; no crea autoridad, no reemplaza los briefs canónicos y no habilita runtime, producto, integraciones, credenciales, Skills ni SDK.
+
 ## Orden canónico de lectura
 
 1. Verificar el HEAD remoto vivo de `main`; no usar un SHA almacenado en este README.
