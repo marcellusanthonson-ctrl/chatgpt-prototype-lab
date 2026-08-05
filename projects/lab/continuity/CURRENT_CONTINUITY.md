@@ -1,4 +1,4 @@
-# LAB continuity — autorización 196 y probe zero-model
+# LAB continuity — autorización 196 consumida y probe zero-model
 
 Canonical repository: `marcellusanthonson-ctrl/chatgpt-prototype-lab`  
 Branch: `main`  
@@ -7,9 +7,19 @@ HEAD policy: `VERIFY_LIVE_AT_USE`
 
 ## Estado alcanzado
 
-La autorización 195 publicó en `README.md` la sección **“Ejecución optimizada con Codex Desktop”**. Su lifecycle registra `CONSUMED_VERIFIED_REMOTE_PUBLICATION`, con PR de publicación 52, merge `ad3b5ff55eb811662410bfc888b65ff73d8bc24c`, PR de cierre 53 y HEAD de cierre `9e095a25c367e980cd4a69d224c26b3c73b7d0f4`. No conserva autoridad residual.
+La autorización 195 publicó en `README.md` la sección **“Ejecución optimizada con Codex Desktop”** y quedó `CONSUMED_VERIFIED_REMOTE_PUBLICATION`, sin autoridad residual.
 
-La autorización 196 fue aprobada por Jonathan Martínez para reconciliar esta continuidad y ejecutar un probe local zero-model bajo límites fail-closed.
+La autorización 196 fue aprobada, ejecutada, publicada y consumida. La publicación principal corresponde al PR 54 y al merge:
+
+`ea069609bbac26ccb20d025f79758d96ff42df3f`
+
+Estado:
+
+`CONSUMED_VERIFIED_REMOTE_PUBLICATION`
+
+Autoridad residual:
+
+`NONE`
 
 ## Resultado del probe 196
 
@@ -17,7 +27,7 @@ Resultado terminal:
 
 `INSUFFICIENT_EVIDENCE`
 
-El entorno observable fue Linux `6.18.35` `x86_64`, no Windows. `codex` no está instalado en esta superficie, por lo que no fue posible:
+El entorno observable fue Linux `6.18.35` `x86_64`, no Windows. `codex` no estaba instalado en esta superficie. Por ello no fue posible:
 
 - crear el fresh Windows worktree exigido;
 - demostrar 13/13 coincidencias raw-byte;
@@ -28,7 +38,7 @@ El entorno observable fue Linux `6.18.35` `x86_64`, no Windows. `codex` no está
 
 La regla `.gitattributes` para fijar LF en `INSTRUMENT_REDESIGN_191/**` sí está presente.
 
-Este resultado **no** determina que el equipo Windows de Jonathan esté listo o no listo. Solo determina que esta superficie no ofrece evidencia suficiente. No se realizó ninguna solicitud a modelos, login, retest, auditoría, adjudicación, promoción, activación o integración.
+Este resultado no determina que el equipo Windows de Jonathan Martínez esté listo o no listo. Solo establece que esta superficie no aportó evidencia suficiente. Hubo cero solicitudes a modelos, cero acciones de login y ningún retest, auditoría, adjudicación, promoción, activación o integración.
 
 ## Product Leadership
 
@@ -40,32 +50,18 @@ Readiness permanece:
 
 `NOT_READY_FOR_FRESH_RETEST_REISSUE`
 
-Execution 005 / ATTEMPT-004 continúa como `BLOCKED_BEFORE_MODEL_REQUESTS`, con cero solicitudes y cero retries. No existe autorización de fresh retest.
-
-## Autorización 196
-
-Estado durante esta publicación:
-
-`EXECUTED_AWAITING_VERIFIED_REMOTE_PUBLICATION`
-
-Resultado:
-
-`INSUFFICIENT_EVIDENCE`
-
-Después de verificar la publicación remota debe quedar `CONSUMED` y sin autoridad residual.
+Execution 005 / ATTEMPT-004 continúa como `BLOCKED_BEFORE_MODEL_REQUESTS`, con cero solicitudes y cero retries. No existe autorización de fresh retest ni autoridad ejecutiva activa.
 
 ## Divergencias preservadas
 
 `CURRENT_STATE.json`, `projects/lab/PROJECT_STATE.json` y `registry/index.json` siguen siendo proyecciones agregadas desactualizadas.
 
-`PEND-LAB-048.json` e `INTEGRATION_READINESS.json` todavía describen el probe como no autorizado. La autorización 196 no incluyó esos paths, por lo que esta ejecución los identifica como divergencia pero no los modifica.
+`PEND-LAB-048.json` e `INTEGRATION_READINESS.json` todavía describen el probe como no autorizado. La autorización 196 no incluyó esos paths, por lo que quedaron identificados como divergencia y no fueron modificados.
 
 ## Prohibiciones vigentes
 
-No hay autoridad para solicitudes a modelos, login, fresh retest, replay, regeneración, rescoring, auditoría, adjudicación, cambio de `INT-LAB-004`, promoción, activación, integración, runtime, producto, Skills, SDK, credenciales o repositorios externos.
+No hay autoridad para solicitudes a modelos, login, probe adicional, fresh retest, replay, regeneración, rescoring, auditoría, adjudicación, cambio de `INT-LAB-004`, promoción, activación, integración, runtime, producto, Skills, SDK, credenciales o repositorios externos.
 
 ## Siguiente acción única
 
-Publicar y verificar remotamente el resultado documental de la autorización 196 y consumirla sin autoridad residual.
-
-Después del consumo, cualquier nueva comprobación deberá ejecutarse mediante una autorización separada desde el entorno Windows real de Codex Desktop o reconciliar evidencia generada por esa máquina.
+Preparar una autorización separada para ejecutar el probe zero-model desde el entorno Windows real de Codex Desktop o para reconciliar evidencia generada por esa máquina.
