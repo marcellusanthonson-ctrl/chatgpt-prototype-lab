@@ -10,10 +10,12 @@
   "canonical_files": [
     {
       "path": "projects/lab/external-audits/AUDIT-CLAUDE-PRODUCT-LEADERSHIP-EXECUTION-004-PHASE3-001/AUDIT_REPORT.md",
-      "bytes": 36553,
-      "sha256": "76031e82190fc5964fee72991805a62f8a22ab163ee531a7a2a6e511b5ab20c0"
+      "bytes": 36554,
+      "sha256": "c68d4163ee09b173e1278db5a5d3a38b37e02e57c2059392fea7a4a3e2c8f181",
+      "git_blob_sha1": "e5bdb90e79f34837f5b7691a001505d7bf9921dd"
     }
   ],
-  "normalization": "SOURCE_ATTACHMENT_LINE_ENDINGS_NORMALIZED_TO_LF_ONLY; CONTENT_OTHERWISE_PRESERVED",
+  "normalization": "SOURCE_ATTACHMENT_LINE_ENDINGS_NORMALIZED_TO_LF_AND_ONE_TERMINAL_LF_ADDED; CONTENT OTHERWISE PRESERVED",
+  "verification": "CANONICAL_GIT_BLOB_SHA1_MATCHED_REMOTE_BRANCH_BLOB",
   "self_exclusion": "HASHES.json is not included in its own digest set."
 }
