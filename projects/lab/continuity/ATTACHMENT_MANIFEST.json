@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.0.0",
-  "continuity_id": "LAB-CONTINUITY-AUTHORIZATION-200-CONSUMED-PARTIAL-ARTIFACT-RECOVERY-INSUFFICIENT-FOR-RETEST-20260805",
+  "schema_version": "1.1.0",
+  "continuity_id": "LAB-CONTINUITY-AUTHORIZATION-201-CONSUMED-CONTINUITY-AND-POST-TEST-REPORTING-PROTOCOL-20260805",
   "required": [
     {
       "path": "projects/lab/continuity/CURRENT_CONTINUITY.json",
@@ -11,11 +11,35 @@
       "status": "PRESENT"
     },
     {
+      "path": "projects/lab/continuity/ATTACHMENT_MANIFEST.json",
+      "status": "PRESENT"
+    },
+    {
       "path": "projects/lab/continuity/START_PROMPT.md",
       "status": "PRESENT"
     },
     {
-      "path": "projects/lab/authorizations/AUTHORIZATION_LAB_BENCHMARK_198_ARTIFACT_FORENSIC_RECOVERY_AND_CONDITIONAL_VERIFIABLE_REISSUANCE_200.json",
+      "path": "docs/CONTINUITY_PROTOCOL.md",
+      "status": "PRESENT"
+    },
+    {
+      "path": "project-sources/chatgpt/06_CONTINUITY_PROTOCOL.md",
+      "status": "PRESENT"
+    },
+    {
+      "path": "project-sources/chatgpt/07_ERRORS_AND_RESPONSE_CONTRACT.md",
+      "status": "PRESENT"
+    },
+    {
+      "path": "projects/lab/authorizations/AUTHORIZATION_LAB_CONTINUITY_AND_POST_TEST_REPORTING_PROTOCOL_201.json",
+      "status": "PRESENT"
+    },
+    {
+      "path": "projects/lab/authorization-lifecycle/CONTINUITY_AND_POST_TEST_REPORTING_PROTOCOL_LIFECYCLE_201.json",
+      "status": "PRESENT"
+    },
+    {
+      "path": "projects/lab/evidence/EVD-LAB-CONTINUITY-POST-TEST-REPORTING-201.json",
       "status": "PRESENT"
     },
     {
@@ -25,9 +49,23 @@
     {
       "path": "projects/lab/forensics/CONTEXTUAL-BOOTSTRAP-BENCHMARK-198-ARTIFACT-RECOVERY-001/MANIFEST.json",
       "status": "PRESENT"
+    }
+  ],
+  "archive": [
+    {
+      "path": "projects/lab/continuity/archive/2026-08-05-authorization-200/CURRENT_CONTINUITY.json",
+      "status": "PRESENT"
     },
     {
-      "path": "projects/lab/forensics/CONTEXTUAL-BOOTSTRAP-BENCHMARK-198-ARTIFACT-RECOVERY-001/INDEPENDENT_REPLAY_VALIDATION.json",
+      "path": "projects/lab/continuity/archive/2026-08-05-authorization-200/CURRENT_CONTINUITY.md",
+      "status": "PRESENT"
+    },
+    {
+      "path": "projects/lab/continuity/archive/2026-08-05-authorization-200/ATTACHMENT_MANIFEST.json",
+      "status": "PRESENT"
+    },
+    {
+      "path": "projects/lab/continuity/archive/2026-08-05-authorization-200/START_PROMPT.md",
       "status": "PRESENT"
     }
   ],
