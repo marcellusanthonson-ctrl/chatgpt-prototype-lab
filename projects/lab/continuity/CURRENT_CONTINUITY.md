@@ -1,58 +1,44 @@
 # Continuidad vigente del LAB
 
-Estado: `AUTHORIZATION_203_GRANTED_INDEPENDENT_BENCHMARK_VALIDATION_AWAITING_CODEX_A_EXECUTION`
+Estado: `AUTHORIZATION_203_CODEX_A_ATTEMPT_BLOCKED_TERMINAL_RECONCILIATION_PREPARED_AWAITING_REMOTE_PUBLICATION`
 
-## Autoridad activa
+## Resultado
 
-La autorización `AUTHORIZATION_LAB_INDEPENDENT_REPRODUCIBLE_BENCHMARK_INSTRUMENT_VALIDATION_203` está concedida y limitada exclusivamente a validar el instrumento `CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001`.
+Codex Desktop A terminó `BLOCKED` antes de `VAL-001`, en el gate `PRE_VALIDATION_CUSTODY_AND_EXECUTION_CONTEXT_GATE`.
 
-- Codex Desktop A: ejecutor técnico primario.
-- Claude: auditor independiente read-only después del cierre de Codex A.
-- Codex Desktop B: replay independiente en una sesión y worktree nuevos.
-- ChatGPT: coordinación, reportes posteriores a cada intento terminal y reconciliación canónica.
+No se ejecutó ninguna prueba `VAL-*`, el runner no fue ejecutado, el oracle no fue abierto y Codex A no modificó el benchmark.
 
-## Estado del instrumento
+## Bloqueos confirmados
 
-El paquete continúa `CREATED_NOT_VALIDATED_NOT_EXECUTED`. La autorización 203 no presupone PASS y no permite modificar el benchmark.
+1. El paquete no es byte-identical entre el commit fijado `48eb518a5fd2ec4ee5cf073e94c0142469dc2c4a` y el HEAD verificado `01e284a61d0198156f8e1adad28d5d168b11d984`.
+   - `CHAIN_OF_CUSTODY.json` cambió.
+   - `REPRODUCIBILITY_MANIFEST.json` cambió.
+2. No existen el execution envelope ni el context manifest requeridos por `AGENTS.md` y `CODEX-DESKTOP-PROGRESSIVE-CONTEXT-LOADING-001` para el brief de Codex A.
 
-Todas las pruebas `VAL-001` a `VAL-009` permanecen `NOT_RUN`.
+Ambos findings críticos fueron verificados independientemente por ChatGPT y se clasifican `CONFIRMED`.
 
-## Límites
+## Evidencia local
 
-No se autoriza:
+Codex reportó diez outputs locales sintácticamente válidos. Solo `TERMINAL_REPORT.json` fue entregado byte por byte en la conversación y quedó preservado remotamente. Los otros nueve outputs permanecen como claims del operador y no como evidencia remota independiente.
 
-- ejecutar o modificar resolver 001 o 002;
-- usar Codex o cualquier modelo como sujeto del benchmark operacional;
-- corregir findings durante la validación;
-- mutar el paquete del benchmark;
-- integrar, desplegar o cambiar producto/runtime;
-- declarar equivalencia con 198;
-- aprobar operacionalmente un resolver;
-- reconciliar vistas agregadas fuera de los registros 203.
+## Estado de las pruebas
 
-El acceso al oracle convierte a Codex A, Claude y Codex B en inelegibles para operar un futuro blind run del resolver sobre el split held-out.
+`VAL-001` a `VAL-009`: `NOT_RUN`.
 
-## Secuencia obligatoria
+Claude y Codex B: `NOT_RUN`; no deben iniciarse.
 
-1. Codex Desktop A ejecuta sus controles en un worktree limpio.
-2. ChatGPT entrega el reporte obligatorio del intento.
-3. Claude audita read-only.
-4. ChatGPT entrega el reporte obligatorio de la auditoría.
-5. Codex Desktop B ejecuta el replay independiente sin reutilizar estado de A.
-6. ChatGPT reconcilia y publica el resultado terminal.
+## Aprobación
 
-No se inicia el siguiente operador antes del reporte del anterior.
+- Instrumento validado: no.
+- Aprobación operacional: `NOT_APPROVED`.
+- Resolver 001: experimental, no operacionalmente válido y no integrado.
+- Resolver 002: no creado.
+- Integración: ninguna.
 
-## Estado de aprobación
+## Autoridad
 
-`NOT_APPROVED`
+La autorización 203 alcanzó un resultado terminal `BLOCKED`. Solo queda autoridad delimitada para publicar, verificar y consumir este cierre. No existe autoridad para remediar los defectos, repetir Codex A, iniciar Claude o ejecutar Codex B.
 
-Un eventual PASS de 203 validaría únicamente el instrumento. No validaría ni autorizaría un resolver o integración.
+## Siguiente acción
 
-## Divergencias preservadas
-
-`CURRENT_STATE.json`, `projects/lab/PROJECT_STATE.json`, `registry/index.json`, `PEND-LAB-048` y Product Leadership readiness continúan desactualizados y fuera del alcance.
-
-## Única siguiente acción
-
-Ejecutar el brief de Codex Desktop A en un worktree limpio y devolver su `TERMINAL_REPORT.json` antes de iniciar Claude.
+Publicar y verificar el cierre bloqueado de la autorización 203 y consumirla sin autoridad residual. Después deberá diseñarse una autorización separada de remediación que reconcilie el baseline inmutable y la cadena de custodia, y cree el execution envelope y context manifest antes de cualquier retest.
