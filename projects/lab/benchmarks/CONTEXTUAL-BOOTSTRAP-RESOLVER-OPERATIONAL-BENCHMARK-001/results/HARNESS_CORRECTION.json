@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "OPERATIONAL-BENCHMARK-HARNESS-CORRECTION-198-001",
+  "status": "APPLIED_AND_REVALIDATED",
+  "attempt_001_terminal_result": "REAL_REPOSITORY_BENCHMARK_FAIL_CRITICAL",
+  "detected_after_attempt_001": [
+    {
+      "id": "HARNESS-FP-001",
+      "issue": "The public metadata key oracleSeparated was incorrectly matched by the generic oracle leakage regex.",
+      "classification": "HARNESS_FALSE_POSITIVE",
+      "correction": "Allow the exact non-answer metadata key oracleSeparated while retaining expected/gold/correctAnswer and all other oracle key detection."
+    },
+    {
+      "id": "HARNESS-FP-002",
+      "issue": "JSON null expected project/namespace values were compared strictly against JavaScript undefined.",
+      "classification": "HARNESS_FALSE_POSITIVE",
+      "correction": "Normalize null to undefined before project and namespace comparison."
+    }
+  ],
+  "preserved_unchanged_sha256": {
+    "fixtures/OPERATIONAL_TASKS.json": "c3133bbf26ad2b61bae491ae2499802b73bac39faeef8f541cca029c1aefc3a3",
+    "oracle/PRIVATE_ORACLE.json": "6e34371be497509a4cc2b400611520f42e1796f9038b94d1ba31128476dd5864",
+    "src/types.ts": "2d556ea97b1bf20f96a73bde8dd19e18fced21c288db1caf6c0682e6b8b03b96",
+    "src/resolver.ts": "66ca3a373230330892754ae34b45850f18b638725cdfcad44d83dd075eaf83fb",
+    "tasks_and_oracle_only": true
+  },
+  "expectations_changed": false,
+  "resolver_changed": false,
+  "final_attempt": "ATTEMPT_002",
+  "final_terminal_result": "REAL_REPOSITORY_BENCHMARK_FAIL_CRITICAL",
+  "prepublication_metadata_correction": {
+    "id": "HARNESS-META-003",
+    "issue": "SNAPSHOT_MANIFEST gitTreeSha referenced 7ac448acfe353f97635556905e7a50485db83ead instead of the verified tree for snapshot HEAD 87b0ca32a8789f2a69ebfc2b3de67ff396b1bcb3.",
+    "classification": "PASSIVE_SNAPSHOT_METADATA_CORRECTION",
+    "correction": "Updated gitTreeSha to cf96df3a6c235ff0663ce191b7e4337abf18638e before publication.",
+    "used_by_resolver_or_scorer": false,
+    "benchmark_metrics_changed": false,
+    "snapshot_json_sha256_before": "2b550535d07b41cc1180066d5d0cd270cd7a6f1f5376fd7450ea63c69d1ef7c8",
+    "snapshot_json_sha256_after": "8f8b4556e6fee45d954d8a5ddaf39ff84a13b5ec389ae73f25e3e1b6986d936d"
+  }
+}

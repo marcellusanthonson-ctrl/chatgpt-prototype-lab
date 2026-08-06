@@ -1,0 +1,229 @@
+{
+  "schema_version": "1.0.0",
+  "benchmark_id": "CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-BENCHMARK-001",
+  "authorization_id": "AUTHORIZATION_LAB_CONTEXTUAL_BOOTSTRAP_RESOLVER_REAL_REPOSITORY_SHADOW_BENCHMARK_198",
+  "terminal_result": "REAL_REPOSITORY_BENCHMARK_FAIL_CRITICAL",
+  "snapshot": {
+    "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "headSha": "87b0ca32a8789f2a69ebfc2b3de67ff396b1bcb3",
+    "mode": "GITHUB_METADATA_AND_CANONICAL_CONTENT_READS_NO_LOCAL_PRIVATE_WORKTREE",
+    "fullPrivateWorktreeAvailable": false
+  },
+  "corpus": {
+    "tasks": 21,
+    "repetitionsPerArm": 3,
+    "baselineLoads": 63,
+    "resolverSelections": 63,
+    "totalBenchmarkIterations": 126,
+    "operationalRealPaths": true,
+    "simulatedAuthorizationFixtures": 2
+  },
+  "metrics": {
+    "macroPathF1": 0.925243,
+    "microPathF1": 0.892308,
+    "criticalConstraintRecall": 0.935484,
+    "forbiddenPathPrecision": 1,
+    "routeAccuracy": 0.952381,
+    "riskAccuracy": 0.952381,
+    "terminalStateAccuracy": 0.857143,
+    "authorityAccuracy": 0.952381,
+    "headAccuracy": 1,
+    "conflictAccuracy": 0.904762,
+    "projectNamespaceAccuracy": 1,
+    "falsePositives": 20,
+    "falseNegatives": 8,
+    "medianByteReductionPercent": 70.045,
+    "medianSourceCountReductionPercent": 75,
+    "perRoute": {
+      "CONTINUITY_RESUME": {
+        "count": 3,
+        "medianByteReductionPercent": 92.561
+      },
+      "PROJECT_CONTINUATION": {
+        "count": 3,
+        "medianByteReductionPercent": 94.411
+      },
+      "NEW_DESIGN": {
+        "count": 3,
+        "medianByteReductionPercent": 90.191
+      },
+      "STATUS_OR_AUTHORITY": {
+        "count": 4,
+        "medianByteReductionPercent": 14.104
+      },
+      "CODE_CHANGE": {
+        "count": 2,
+        "medianByteReductionPercent": 68.585
+      },
+      "AUDIT_OR_REASSESSMENT": {
+        "count": 3,
+        "medianByteReductionPercent": 48.185
+      },
+      "UNKNOWN_ESCALATION": {
+        "count": 3,
+        "medianByteReductionPercent": 91.08
+      }
+    },
+    "authorityBypasses": 0,
+    "consumedAuthorizationActivations": 0,
+    "crossProjectContaminations": 0,
+    "inventedPaths": 0,
+    "unpinnedSources": 0,
+    "missingReasonTraces": 0,
+    "autoResolvedConflicts": 2,
+    "criticalIssueCount": 16,
+    "noncriticalIssueCount": 2
+  },
+  "failed_gates": [
+    "criticalConstraintRecall1",
+    "authorityAccuracy1",
+    "conflictAccuracy1",
+    "macroPathF1AtLeast0_95",
+    "zeroAutoResolvedConflicts",
+    "perRouteMedianByteReductionAtLeast30"
+  ],
+  "critical_issues": [
+    {
+      "taskId": "D10",
+      "category": "TERMINAL",
+      "detail": "READ_ONLY_READY != AWAITING_AUTHORIZATION",
+      "critical": true
+    },
+    {
+      "taskId": "D10",
+      "category": "AUTHORITY_EFFECT",
+      "detail": "READ_ONLY != NONE",
+      "critical": true
+    },
+    {
+      "taskId": "S13",
+      "category": "TERMINAL",
+      "detail": "READ_ONLY_READY != RESOLUTION_REQUIRED",
+      "critical": true
+    },
+    {
+      "taskId": "S13",
+      "category": "CONFLICT",
+      "detail": "NONE != RESOLUTION_REQUIRED",
+      "critical": true
+    },
+    {
+      "taskId": "S13",
+      "category": "CRITICAL_OMISSION",
+      "detail": "projects/lab/authorization-lifecycle/CONTEXTUAL_BOOTSTRAP_RESOLVER_AUTHORIZATION_LIFECYCLE_197.json",
+      "critical": true
+    },
+    {
+      "taskId": "S13",
+      "category": "CRITICAL_OMISSION",
+      "detail": "projects/lab/continuity/CURRENT_CONTINUITY.json",
+      "critical": true
+    },
+    {
+      "taskId": "S13",
+      "category": "AUTO_RESOLVED_CONFLICT",
+      "detail": "READ_ONLY_READY",
+      "critical": true
+    },
+    {
+      "taskId": "S14",
+      "category": "CRITICAL_OMISSION",
+      "detail": "projects/lab/authorization-lifecycle/CONTEXTUAL_BOOTSTRAP_RESOLVER_AUTHORIZATION_LIFECYCLE_197.json",
+      "critical": true
+    },
+    {
+      "taskId": "S14",
+      "category": "CRITICAL_OMISSION",
+      "detail": "projects/lab/continuity/CURRENT_CONTINUITY.json",
+      "critical": true
+    },
+    {
+      "taskId": "S15",
+      "category": "TERMINAL",
+      "detail": "READ_ONLY_READY != RESOLUTION_REQUIRED",
+      "critical": true
+    },
+    {
+      "taskId": "S15",
+      "category": "CONFLICT",
+      "detail": "NONE != RESOLUTION_REQUIRED",
+      "critical": true
+    },
+    {
+      "taskId": "S15",
+      "category": "CRITICAL_OMISSION",
+      "detail": "projects/lab/continuity/CURRENT_CONTINUITY.json",
+      "critical": true
+    },
+    {
+      "taskId": "S15",
+      "category": "AUTO_RESOLVED_CONFLICT",
+      "detail": "READ_ONLY_READY",
+      "critical": true
+    },
+    {
+      "taskId": "A16",
+      "category": "CRITICAL_OMISSION",
+      "detail": "projects/lab/authorization-lifecycle/CONTEXTUAL_BOOTSTRAP_RESOLVER_AUTHORIZATION_LIFECYCLE_197.json",
+      "critical": true
+    },
+    {
+      "taskId": "A18",
+      "category": "CRITICAL_OMISSION",
+      "detail": "CURRENT_STATE.json",
+      "critical": true
+    },
+    {
+      "taskId": "A18",
+      "category": "CRITICAL_OMISSION",
+      "detail": "registry/index.json",
+      "critical": true
+    }
+  ],
+  "noncritical_issues": [
+    {
+      "taskId": "D10",
+      "category": "ROUTE",
+      "detail": "STATUS_OR_AUTHORITY != CODE_CHANGE",
+      "critical": false
+    },
+    {
+      "taskId": "D10",
+      "category": "RISK",
+      "detail": "MEDIUM != SMALL_CLEAR",
+      "critical": false
+    }
+  ],
+  "measurement_boundaries": {
+    "byteMetric": "GITHUB_RECORDED_SOURCE_BYTES_REPRESENTED_BY_SELECTED_PATHS_NOT_LOCAL_FILE_IO",
+    "nonemptyLines": "NOT_RUN_NO_FULL_PRIVATE_WORKTREE",
+    "tokens": "NOT_RUN_NO_AUTHORIZED_LOCAL_TOKENIZER",
+    "timeToFirstUsefulCode": "NOT_RUN_NO_MODEL",
+    "responseQuality": "NOT_RUN_NO_MODEL"
+  },
+  "resolver_integrity": {
+    "src/types.ts": "2d556ea97b1bf20f96a73bde8dd19e18fced21c288db1caf6c0682e6b8b03b96",
+    "src/resolver.ts": "66ca3a373230330892754ae34b45850f18b638725cdfcad44d83dd075eaf83fb",
+    "mutation": "NONE"
+  },
+  "effects": {
+    "model_requests": 0,
+    "integration": "NONE",
+    "runtime": "NONE",
+    "product": "NONE",
+    "architecture_selection": "NONE"
+  },
+  "publication_package": {
+    "format": "DIRECT_GZIP_BASE64_ARTIFACT_SET",
+    "files": [
+      "fixtures/OPERATIONAL_TASKS.json.gz.b64",
+      "oracle/PRIVATE_ORACLE.json.gz.b64",
+      "results/BENCHMARK_RESULTS.json.gz.b64",
+      "results/CONTEXT_MANIFESTS.json.gz.b64",
+      "results/HARNESS_CORRECTION.json",
+      "snapshot/SNAPSHOT_MANIFEST.json.gz.b64",
+      "scripts/BENCHMARK_RUNNER.ts.gz.b64"
+    ],
+    "decode": "BASE64_DECODE_THEN_GZIP_DECOMPRESS_FOR_GZ_B64_FILES"
+  }
+}
