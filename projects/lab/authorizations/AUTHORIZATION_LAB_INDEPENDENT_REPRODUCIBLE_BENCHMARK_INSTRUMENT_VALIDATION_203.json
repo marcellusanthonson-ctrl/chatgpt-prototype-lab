@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "authorization_id": "AUTHORIZATION_LAB_INDEPENDENT_REPRODUCIBLE_BENCHMARK_INSTRUMENT_VALIDATION_203",
   "project_id": "lab",
-  "status": "GRANTED_AWAITING_CODEX_A_EXECUTION",
+  "status": "TERMINAL_BLOCKED_RECONCILIATION_PREPARED_AWAITING_REMOTE_PUBLICATION",
   "authorization_class": "INDEPENDENT_BENCHMARK_INSTRUMENT_VALIDATION",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-08-06T07:19:00-04:00",
@@ -12,7 +12,9 @@
     "branch": "main",
     "head_policy": "VERIFY_LIVE_AT_USE",
     "verified_authorization_parent_head": "38b0d6fc2d76daaf24ddd87876f0ca089763a359",
-    "authorization_publication_branch": "agent/independent-benchmark-validation-203"
+    "authorization_publication_branch": "agent/independent-benchmark-validation-203",
+    "authorization_publication_merge": "01e284a61d0198156f8e1adad28d5d168b11d984",
+    "blocked_closure_branch": "agent/independent-benchmark-validation-203-blocked-closure"
   },
   "subject": {
     "benchmark_id": "CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001",
@@ -24,21 +26,19 @@
     "CODEX_A": {
       "role": "PRIMARY_TECHNICAL_VALIDATOR",
       "authorized_tests": ["VAL-001", "VAL-002", "VAL-003", "VAL-005", "VAL-006", "VAL-007", "VAL-009-A"],
-      "oracle_access": "AUTHORIZED_ONLY_FOR_INSTRUMENT_VALIDATION",
-      "future_held_out_resolver_operator_eligibility": "INELIGIBLE_AFTER_ORACLE_ACCESS",
+      "oracle_access": "NOT_USED",
+      "future_held_out_resolver_operator_eligibility": "REMAINS_ELIGIBLE_BECAUSE_ORACLE_WAS_NOT_OPENED",
       "mutation_scope": "VALIDATION_OUTPUTS_ONLY_BENCHMARK_PACKAGE_IMMUTABLE"
     },
     "CLAUDE": {
       "role": "INDEPENDENT_READ_ONLY_AUDITOR",
-      "authorized_tests": ["VAL-004", "VAL-008", "AUDIT-ALL-EVIDENCE"],
+      "execution": "NOT_STARTED_AND_CANCELLED_BY_TERMINAL_BLOCK",
       "repository_mutation": "FORBIDDEN",
       "authority_effect": "NONE"
     },
     "CODEX_B": {
       "role": "FRESH_INDEPENDENT_REPLAY_OPERATOR",
-      "authorized_tests": ["VAL-009-B"],
-      "session_separation": "MUST_NOT_REUSE_CODEX_A_SESSION_STATE_OR_OUTPUT_DIRECTORY",
-      "future_held_out_resolver_operator_eligibility": "INELIGIBLE_AFTER_ORACLE_ACCESS"
+      "execution": "NOT_STARTED_AND_CANCELLED_BY_TERMINAL_BLOCK"
     },
     "CHATGPT": {
       "role": "COORDINATOR_AND_CANONICAL_RECONCILER",
@@ -69,17 +69,46 @@
     "NO_OPERATIONAL_APPROVAL_OF_ANY_RESOLVER",
     "NO_AGGREGATE_STATE_RECONCILIATION_OUTSIDE_203_RECORDS"
   ],
+  "execution": {
+    "attempt_id": "INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203-CODEX-A-ATTEMPT-001",
+    "operator": "CODEX_DESKTOP_A",
+    "terminal_at": "2026-08-06T11:48:03.0497102-04:00",
+    "terminal_result": "BLOCKED",
+    "terminal_stage": "PRE_VALIDATION_CUSTODY_AND_EXECUTION_CONTEXT_GATE",
+    "verified_live_head": "01e284a61d0198156f8e1adad28d5d168b11d984",
+    "tests_executed": 0,
+    "runner_executions": 0,
+    "resolver_runs": 0,
+    "model_subject_runs": 0,
+    "oracle_opened": false,
+    "benchmark_mutated_by_codex_a": false,
+    "critical_findings": ["CODA-203-BLOCK-001", "CODA-203-BLOCK-002"],
+    "terminal_report": "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/codex-a/TERMINAL_REPORT.json",
+    "post_test_report": "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/adjudication/CHATGPT_POST_TEST_REPORT_CODEX_A_001.json",
+    "terminal_reconciliation": "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/adjudication/TERMINAL_RECONCILIATION.json"
+  },
   "test_sequence": [
-    {"order": 1, "operator": "CODEX_A", "status": "NOT_RUN"},
-    {"order": 2, "operator": "CHATGPT_POST_TEST_REPORT", "status": "NOT_RUN"},
-    {"order": 3, "operator": "CLAUDE", "status": "NOT_RUN"},
-    {"order": 4, "operator": "CHATGPT_POST_TEST_REPORT", "status": "NOT_RUN"},
-    {"order": 5, "operator": "CODEX_B", "status": "NOT_RUN"},
-    {"order": 6, "operator": "CHATGPT_RECONCILIATION", "status": "NOT_RUN"}
+    {"order": 1, "operator": "CODEX_A", "status": "BLOCKED_TERMINAL"},
+    {"order": 2, "operator": "CHATGPT_POST_TEST_REPORT", "status": "COMPLETE_PREPARED_FOR_PUBLICATION"},
+    {"order": 3, "operator": "CLAUDE", "status": "NOT_RUN_CANCELLED_BY_TERMINAL_BLOCK"},
+    {"order": 4, "operator": "CHATGPT_POST_TEST_REPORT", "status": "NOT_APPLICABLE"},
+    {"order": 5, "operator": "CODEX_B", "status": "NOT_RUN_CANCELLED_BY_TERMINAL_BLOCK"},
+    {"order": 6, "operator": "CHATGPT_RECONCILIATION", "status": "COMPLETE_PREPARED_FOR_PUBLICATION"}
   ],
-  "pass_condition": "VAL_001_THROUGH_VAL_009_PASS_ZERO_CRITICAL_FINDINGS_CODEX_A_AND_CODEX_B_REPLAY_OUTPUTS_BYTE_IDENTICAL_AND_CLAUDE_AUDIT_CONFIRMS_EVIDENCE",
-  "terminal_outcomes": ["PASS", "FAIL", "BLOCKED", "INSUFFICIENT_EVIDENCE", "CANCELLED_OR_STOPPED"],
-  "post_test_reporting": "MANDATORY_AFTER_EACH_OPERATOR_TERMINAL_ATTEMPT_BEFORE_NEXT_OPERATOR",
+  "tests": {
+    "VAL-001": "NOT_RUN",
+    "VAL-002": "NOT_RUN",
+    "VAL-003": "NOT_RUN",
+    "VAL-004": "NOT_RUN",
+    "VAL-005": "NOT_RUN",
+    "VAL-006": "NOT_RUN",
+    "VAL-007": "NOT_RUN",
+    "VAL-008": "NOT_RUN",
+    "VAL-009": "NOT_RUN"
+  },
+  "instrument_validation": "NOT_ESTABLISHED",
+  "operational_approval": "NOT_APPROVED",
   "consumption_rule": "CONSUMED_AFTER_TERMINAL_RECONCILIATION_AND_VERIFIED_REMOTE_PUBLICATION_REGARDLESS_OF_OUTCOME",
-  "residual_authority_after_consumption": "NONE"
+  "residual_authority": "PUBLICATION_AND_VERIFIED_CLOSURE_ONLY_NO_FURTHER_OPERATOR_EXECUTION",
+  "single_next_action_after_consumption": "DESIGN_AND_APPROVE_A_SEPARATE_REMEDIATION_AUTHORIZATION_THAT_RECONCILES_THE_FROZEN_BENCHMARK_BASELINE_AND_CHAIN_OF_CUSTODY_AND_CREATES_THE_REQUIRED_EXECUTION_ENVELOPE_AND_CONTEXT_MANIFEST_BEFORE_ANY_RETEST"
 }
