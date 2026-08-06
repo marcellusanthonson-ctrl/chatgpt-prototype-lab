@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-CONTEXTUAL-BOOTSTRAP-RESOLVER-002-REMEDIATION-RETEST-199",
+  "authorization_id": "AUTHORIZATION_LAB_CONTEXTUAL_BOOTSTRAP_RESOLVER_002_TARGETED_REMEDIATION_AND_FROZEN_CORPUS_RETEST_199",
+  "project_id": "lab",
+  "observed_at": "2026-08-05T20:42:00-04:00",
+  "verified_parent_head": "42115c5155bbd98e18ee2a354747c807d99a387b",
+  "result": "BLOCKED_FROZEN_CORPUS_HASH_MISMATCH",
+  "finding": {
+    "classification": "CONFIRMED",
+    "statement": "The frozen authorization 198 package cannot support the exact byte-identical retest required by authorization 199.",
+    "decisive_evidence": [
+      {
+        "source": "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-BENCHMARK-001/FILE_HASHES.json",
+        "claim": "runner expected bytes = 7093"
+      },
+      {
+        "source": "GitHub contents metadata at verified parent",
+        "claim": "runner blob e41c759d4c206e4d153177cb3ce7c9467ea107ad size = 7092"
+      },
+      {
+        "source": "GitHub blob read",
+        "claim": "task corpus blob 64fa187cc4eae1ea7deb064ac2da1652f57439e1 raises UnicodeDecodeError"
+      },
+      {
+        "source": "GitHub blob read",
+        "claim": "runner blob e41c759d4c206e4d153177cb3ce7c9467ea107ad raises UnicodeDecodeError"
+      },
+      {
+        "source": "PR 58 file patch",
+        "claim": "task corpus content contains a base64 prefix followed by invalid/replacement/control characters before EOF"
+      },
+      {
+        "source": "GitHub blob read",
+        "claim": "oracle blob f4ceb0d1a321240e98a1bdfed9a8cea43e942690 is readable base64 text"
+      }
+    ],
+    "alternative_explanations_considered": [
+      "LOCAL_NETWORK_LIMITATION_ONLY",
+      "CONNECTOR_TEXT_DECODING_LIMITATION_ONLY",
+      "EXPECTED_SINGLE_TRAILING_NEWLINE_DIFFERENCE"
+    ],
+    "alternative_assessment": "The direct one-byte mismatch between the canonical inventory and GitHub blob metadata remains even without local cloning, so exact runner identity is not established."
+  },
+  "execution": {
+    "resolver_002_created": false,
+    "resolver_001_mutated": false,
+    "retest_started": false,
+    "tasks_executed": 0,
+    "iterations": 0,
+    "model_requests": 0,
+    "codex_executions": 0
+  },
+  "non_claims": [
+    "NO_CONCLUSION_ABOUT_WHETHER_THE_FOUR_CODE_REMEDIATIONS_WOULD_PASS",
+    "NO_RETEST_PASS_OR_FAIL",
+    "NO_GENERALIZATION_CLAIM",
+    "NO_INTEGRATION_READINESS"
+  ],
+  "source_refs": [
+    "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-BENCHMARK-001/FILE_HASHES.json",
+    "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-BENCHMARK-001/README.md",
+    "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-RETEST-002/ARTIFACT_REPLAYABILITY_PREFLIGHT.json"
+  ]
+}
