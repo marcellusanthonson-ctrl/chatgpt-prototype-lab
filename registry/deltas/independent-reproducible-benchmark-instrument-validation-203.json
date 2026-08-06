@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "INDEPENDENT_REPRODUCIBLE_BENCHMARK_INSTRUMENT_VALIDATION_203",
+  "project_id": "lab",
+  "authorization_id": "AUTHORIZATION_LAB_INDEPENDENT_REPRODUCIBLE_BENCHMARK_INSTRUMENT_VALIDATION_203",
+  "status": "GRANTED_AWAITING_CODEX_A_EXECUTION",
+  "adds": {
+    "source": "projects/lab/sources/USER_SOURCE_INDEPENDENT_BENCHMARK_VALIDATION_203_20260806.md",
+    "authorization": "projects/lab/authorizations/AUTHORIZATION_LAB_INDEPENDENT_REPRODUCIBLE_BENCHMARK_INSTRUMENT_VALIDATION_203.json",
+    "lifecycle": "projects/lab/authorization-lifecycle/INDEPENDENT_REPRODUCIBLE_BENCHMARK_INSTRUMENT_VALIDATION_LIFECYCLE_203.json",
+    "codex_a_brief": "projects/lab/briefs/CODEX_INDEPENDENT_BENCHMARK_INSTRUMENT_VALIDATION_203_A_001.json",
+    "claude_brief": "projects/lab/briefs/CLAUDE_INDEPENDENT_BENCHMARK_INSTRUMENT_AUDIT_203_001.json",
+    "codex_b_brief": "projects/lab/briefs/CODEX_INDEPENDENT_BENCHMARK_REPLAY_203_B_001.json",
+    "validation_execution": "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/MANIFEST.json",
+    "evidence": "projects/lab/evidence/EVD-LAB-INDEPENDENT-REPRODUCIBLE-BENCHMARK-INSTRUMENT-VALIDATION-203.json"
+  },
+  "aggregate_updates": "NONE_NOT_AUTHORIZED",
+  "tests_executed": 0
+}
