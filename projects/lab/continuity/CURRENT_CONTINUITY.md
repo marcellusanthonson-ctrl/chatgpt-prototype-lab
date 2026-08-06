@@ -1,54 +1,38 @@
 # Continuidad vigente del LAB
 
-Estado: `AUTHORIZATION_203_CONSUMED_BLOCKED_INDEPENDENT_BENCHMARK_VALIDATION_NO_RESIDUAL_AUTHORITY`
+Estado: `DECISION_032_APPROVED_AUTHORIZATION_204_GRANTED_A0_AWAITING_VERIFIED_REMOTE_PUBLICATION`
 
-## Resultado terminal
+## Foco temporal aprobado
 
-La autorización 203 terminó `BLOCKED` durante Codex Desktop A antes de ejecutar `VAL-001`.
+Jonathan Martínez aprobó `DEC-LAB-032`. El LAB adopta `ENFORCEMENT_FIRST` como foco temporal no destructivo. Todas las líneas no terminales permanecen preservadas; no existe cancelación, suspensión, promoción ni cambio de estado de integración.
 
-El intento se detuvo en `PRE_VALIDATION_CUSTODY_AND_EXECUTION_CONTEXT_GATE`. No se ejecutó ninguna prueba, el runner no fue ejecutado, el oracle no fue abierto y Codex A no modificó el benchmark.
+## Autorización activa condicionada
 
-## Bloqueos confirmados
+`AUTHORIZATION_LAB_GITHUB_GOVERNANCE_READ_ONLY_PREFLIGHT_204` está concedida y solo se vuelve ejecutable cuando `DEC-LAB-032` y la propia autorización estén presentes en un HEAD remoto verificado de `main`.
 
-1. `CHAIN_OF_CUSTODY.json` y `REPRODUCIBILITY_MANIFEST.json` no son byte-identical entre el commit fijado de publicación `48eb518a5fd2ec4ee5cf073e94c0142469dc2c4a` y el HEAD usado por Codex A.
-2. Faltan el execution envelope y el context manifest requeridos por `AGENTS.md` y `CODEX-DESKTOP-PROGRESSIVE-CONTEXT-LOADING-001`.
+A0 es estrictamente de solo lectura. Su máximo resultado es establecer viabilidad para diseñar una autorización A1 separada. No autoriza ninguna mutación del repositorio ni del control plane de GitHub.
 
-Ambos findings críticos fueron clasificados `CONFIRMED` mediante verificación remota independiente.
+## Portafolio preservado
 
-## Publicación
+- Contextual Bootstrap: autorización 203 consumida y bloqueada; benchmark creado, no validado y no ejecutado.
+- Product Leadership (`INT-LAB-004`): candidato no activo y no integrado; 187, 192 y 196 consumidas; no existe autorización de retest.
+- Software Solution Engineering (`INT-LAB-005`): candidato no activo; autorización 180 preservada sin consumir pero bloqueada y no ejecutable bajo el foco temporal.
+- Codex Desktop operating model: estándar documental publicado; benchmark operacional pendiente.
+- Todas las demás líneas no terminales: preservadas por `DEC-LAB-032`.
 
-- Autorización 203: PR 68, merge `01e284a61d0198156f8e1adad28d5d168b11d984`.
-- Resultado bloqueado y reporte post-test: PR 69, merge `ecd36a4555ebca606350ff700a7403ec60d54101`.
-- Consumo y continuidad final: PR 70.
+## Divergencias preservadas
 
-## Pruebas
-
-`VAL-001` a `VAL-009`: `NOT_RUN`.
-
-Claude y Codex B no comenzaron y quedaron cancelados por el bloqueo terminal.
-
-## Evidencia local
-
-Codex reportó diez outputs locales. Solo `TERMINAL_REPORT.json` fue recibido byte por byte y publicado remotamente. Los otros nueve outputs permanecen como claims del operador no verificados remotamente.
-
-## Estado de aprobación
-
-- Instrumento: `CREATED_NOT_VALIDATED_NOT_EXECUTED`.
-- Validación: `BLOCKED_BEFORE_VAL_001_NO_RESULT`.
-- Aprobación operacional: `NOT_APPROVED`.
-- Resolver 001: experimental, no operacionalmente válido y no integrado.
-- Resolver 002: no creado.
-- Integración: ninguna.
+`CURRENT_STATE.json`, `PROJECT_STATE.json`, registros agregados y vistas de readiness continúan divergentes. No fueron reconciliados porque `DEC-LAB-032` reserva esa fase hasta después de un A1 operacionalmente aprobado y exitoso.
 
 ## Autoridad
 
-- Autorización 203: `CONSUMED_BLOCKED_VERIFIED_REMOTE_PUBLICATION`.
-- Autorización activa: ninguna.
-- Autoridad de ejecución: `NONE`.
-- Autoridad residual: `NONE`.
+- Decisión normativa: `DEC-LAB-032`, aprobada.
+- Autorización: 204, concedida para A0 read-only.
+- A0 iniciado: no.
+- A1: no autorizado.
+- Cambios de settings, rulesets, branch protection, workflows, Actions, CODEOWNERS, colaboradores, aplicaciones y credenciales: no autorizados.
+- Modelos, integraciones, runtime, producto y repositorios externos: no autorizados.
 
-No está autorizado reintentar 203, iniciar Claude o Codex B, modificar el benchmark, crear los artefactos faltantes ni ejecutar un resolver.
+## Próxima acción única
 
-## Única siguiente acción
-
-Diseñar y aprobar una autorización separada de remediación que reconcilie el baseline inmutable y la cadena de custodia, y cree el execution envelope y context manifest requeridos antes de cualquier retest.
+Verificar la publicación remota y ejecutar A0 desde ese nuevo HEAD aplicando `VERIFY_LIVE_AT_USE`.
