@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "gate_id": "AUTH203-BLOCKED-CLOSURE-PUBLICATION-GATE",
+  "status": "READY_FOR_REMOTE_PUBLICATION",
+  "required": {
+    "terminal_report_preserved": true,
+    "post_test_report_prepared": true,
+    "terminal_reconciliation_prepared": true,
+    "findings_independently_confirmed": true,
+    "benchmark_package_unchanged_by_closure": true,
+    "claude_not_started": true,
+    "codex_b_not_started": true
+  },
+  "next": "MERGE_AND_VERIFY_REMOTE_THEN_CONSUME_AUTHORIZATION_203"
+}
