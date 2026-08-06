@@ -1,0 +1,155 @@
+{
+  "schema_version": "4.1.0",
+  "continuity_id": "LAB-CONTINUITY-AUTHORIZATION-203-CODEX-A-BLOCKED-AWAITING-VERIFIED-CLOSURE-20260806",
+  "project_id": "lab",
+  "status": "AUTHORIZATION_203_CODEX_A_ATTEMPT_BLOCKED_TERMINAL_RECONCILIATION_PREPARED_AWAITING_REMOTE_PUBLICATION",
+  "created_at": "2026-08-06T11:52:00-04:00",
+  "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "canonical_branch": "main",
+  "head_policy": "VERIFY_LIVE_AT_USE",
+  "current_head": "VERIFY_LIVE_AT_USE",
+  "entrypoint": "project-sources/chatgpt/START_HERE.md",
+  "required_reading_order": [
+    "VERIFY_LIVE_HEAD_OF_MAIN",
+    "project-sources/chatgpt/START_HERE.md",
+    "LAB_CONTRACT.md",
+    "METHODOLOGY.md",
+    "CURRENT_STATE.json",
+    "registry/index.json",
+    "registry/projects.json",
+    "projects/lab/PROJECT_STATE.json",
+    "AGENTS.md",
+    "architecture/governance/CODEX_DESKTOP_CONTEXT_OPTIMIZATION_001/CONTEXT_LOADING_POLICY.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_INDEPENDENT_REPRODUCIBLE_BENCHMARK_INSTRUMENT_VALIDATION_203.json",
+    "projects/lab/authorization-lifecycle/INDEPENDENT_REPRODUCIBLE_BENCHMARK_INSTRUMENT_VALIDATION_LIFECYCLE_203.json",
+    "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/MANIFEST.json",
+    "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/codex-a/TERMINAL_REPORT.json",
+    "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/adjudication/CHATGPT_POST_TEST_REPORT_CODEX_A_001.json",
+    "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/adjudication/TERMINAL_RECONCILIATION.json",
+    "projects/lab/evidence/EVD-LAB-INDEPENDENT-REPRODUCIBLE-BENCHMARK-INSTRUMENT-VALIDATION-203.json",
+    "projects/lab/continuity/archive/2026-08-06-authorization-203/CURRENT_CONTINUITY.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.md",
+    "projects/lab/continuity/ATTACHMENT_MANIFEST.json",
+    "projects/lab/continuity/START_PROMPT.md"
+  ],
+  "preservation": {
+    "status": "PRESERVED_BY_EXACT_BLOB_ARCHIVE_REFERENCE",
+    "predecessor_continuity_id": "LAB-CONTINUITY-AUTHORIZATION-203-GRANTED-INDEPENDENT-BENCHMARK-VALIDATION-AWAITING-CODEX-A-20260806",
+    "archive_root": "projects/lab/continuity/archive/2026-08-06-authorization-203",
+    "exact_archived_files": [
+      "CURRENT_CONTINUITY.json",
+      "CURRENT_CONTINUITY.md",
+      "ATTACHMENT_MANIFEST.json",
+      "START_PROMPT.md"
+    ]
+  },
+  "active_authorization": "AUTHORIZATION_LAB_INDEPENDENT_REPRODUCIBLE_BENCHMARK_INSTRUMENT_VALIDATION_203",
+  "active_execution_authority": "PUBLICATION_AND_VERIFIED_CLOSURE_ONLY_NO_FURTHER_OPERATOR_EXECUTION",
+  "current_stage": "CODEX_A_BLOCKED_TERMINAL_RECONCILIATION_PREPARED_AWAITING_REMOTE_PUBLICATION",
+  "codex_a_attempt": {
+    "attempt_id": "INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203-CODEX-A-ATTEMPT-001",
+    "terminal_at": "2026-08-06T11:48:03.0497102-04:00",
+    "result": "BLOCKED",
+    "stage": "PRE_VALIDATION_CUSTODY_AND_EXECUTION_CONTEXT_GATE",
+    "remote_main_head_verified_live": "01e284a61d0198156f8e1adad28d5d168b11d984",
+    "oracle_opened": false,
+    "runner_executions": 0,
+    "resolver_runs": 0,
+    "model_subject_runs": 0,
+    "benchmark_mutated_by_codex_a": false,
+    "remote_terminal_report": "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/codex-a/TERMINAL_REPORT.json"
+  },
+  "finding_determinations": [
+    {
+      "finding_id": "CODA-203-BLOCK-001",
+      "determination": "CONFIRMED",
+      "severity": "CRITICAL",
+      "summary": "The benchmark package differs from its pinned publication commit in CHAIN_OF_CUSTODY.json and REPRODUCIBILITY_MANIFEST.json."
+    },
+    {
+      "finding_id": "CODA-203-BLOCK-002",
+      "determination": "CONFIRMED",
+      "severity": "CRITICAL",
+      "summary": "The execution envelope and context manifest required by AGENTS.md and the progressive context policy were not created for the Codex A brief."
+    }
+  ],
+  "role_sequence": [
+    {"operator": "CODEX_DESKTOP_A", "status": "BLOCKED_TERMINAL"},
+    {"operator": "CHATGPT_POST_TEST_REPORT", "status": "COMPLETE_PREPARED_FOR_PUBLICATION"},
+    {"operator": "CLAUDE_READ_ONLY", "status": "NOT_RUN_CANCELLED_BY_TERMINAL_BLOCK"},
+    {"operator": "CODEX_DESKTOP_B", "status": "NOT_RUN_CANCELLED_BY_TERMINAL_BLOCK"},
+    {"operator": "CHATGPT_RECONCILIATION", "status": "COMPLETE_PREPARED_FOR_PUBLICATION"}
+  ],
+  "benchmark_state": {
+    "benchmark_id": "CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001",
+    "package": "CREATED_NOT_VALIDATED_NOT_EXECUTED",
+    "validation": "BLOCKED_BEFORE_VAL_001_NO_RESULT",
+    "resolver_001": "EXPERIMENTAL_VALIDATED_SYNTHETIC_NOT_OPERATIONALLY_VALID_NOT_INTEGRATED",
+    "resolver_002": "NOT_CREATED",
+    "operational_approval": "NOT_APPROVED",
+    "integration": "NONE"
+  },
+  "tests": {
+    "VAL-001": "NOT_RUN",
+    "VAL-002": "NOT_RUN",
+    "VAL-003": "NOT_RUN",
+    "VAL-004": "NOT_RUN",
+    "VAL-005": "NOT_RUN",
+    "VAL-006": "NOT_RUN",
+    "VAL-007": "NOT_RUN",
+    "VAL-008": "NOT_RUN",
+    "VAL-009": "NOT_RUN"
+  },
+  "approval_gates": {
+    "current": "NOT_APPROVED",
+    "missing": [
+      "RECONCILED_IMMUTABLE_BENCHMARK_BASELINE_AND_CHAIN_OF_CUSTODY",
+      "VALID_EXECUTION_ENVELOPE",
+      "VALID_CONTEXT_MANIFEST",
+      "VAL_001_THROUGH_VAL_009_PASS",
+      "ZERO_CRITICAL_FINDINGS",
+      "CLAUDE_READ_ONLY_AUDIT",
+      "FRESH_CODEX_B_REPLAY",
+      "INDEPENDENT_REPRODUCIBLE_BENCHMARK_INSTRUMENT_PASS"
+    ]
+  },
+  "local_evidence_boundary": {
+    "reported_local_outputs": 10,
+    "remote_outputs_received_byte_for_byte": ["TERMINAL_REPORT.json"],
+    "remaining_local_outputs": "OPERATOR_REPORTED_NOT_REMOTELY_VERIFIED"
+  },
+  "non_authorizations": [
+    "NO_FURTHER_CODEX_A_EXECUTION",
+    "NO_CLAUDE_EXECUTION",
+    "NO_CODEX_B_EXECUTION",
+    "NO_BENCHMARK_PACKAGE_MUTATION_OR_REPAIR",
+    "NO_EXECUTION_ENVELOPE_OR_CONTEXT_MANIFEST_REMEDIATION_UNDER_203",
+    "NO_RESOLVER_001_OR_002_EXECUTION_OR_MUTATION",
+    "NO_CODEX_OR_MODEL_OPERATIONAL_BENCHMARK",
+    "NO_INTEGRATION_RUNTIME_PRODUCT_DEPLOYMENT_OR_EXTERNAL_REPOSITORY_CHANGE",
+    "NO_OPERATIONAL_APPROVAL",
+    "NO_AGGREGATE_STATE_RECONCILIATION_OUTSIDE_203_RECORDS"
+  ],
+  "aggregate_divergences": {
+    "status": "PRESERVED_AND_EXPLICIT",
+    "affected_views": [
+      "CURRENT_STATE.json",
+      "projects/lab/PROJECT_STATE.json",
+      "registry/index.json",
+      "projects/lab/pending/PEND-LAB-048.json",
+      "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/product-leadership/INTEGRATION_READINESS.json"
+    ]
+  },
+  "next_action": {
+    "single": "PUBLISH_VERIFY_AND_CONSUME_AUTHORIZATION_203_BLOCKED_CLOSURE_WITH_NO_RESIDUAL_AUTHORITY",
+    "execution_authorized": true
+  },
+  "source_refs": [
+    "projects/lab/sources/USER_SOURCE_CODEX_A_BLOCKED_TERMINAL_REPORT_203_20260806.md",
+    "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/codex-a/TERMINAL_REPORT.json",
+    "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/adjudication/CHATGPT_POST_TEST_REPORT_CODEX_A_001.json",
+    "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/adjudication/TERMINAL_RECONCILIATION.json",
+    "projects/lab/evidence/EVD-LAB-INDEPENDENT-REPRODUCIBLE-BENCHMARK-INSTRUMENT-VALIDATION-203.json"
+  ]
+}

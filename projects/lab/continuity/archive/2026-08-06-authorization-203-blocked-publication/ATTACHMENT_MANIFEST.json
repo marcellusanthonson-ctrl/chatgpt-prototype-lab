@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.4.0",
+  "continuity_id": "LAB-CONTINUITY-AUTHORIZATION-203-CODEX-A-BLOCKED-AWAITING-VERIFIED-CLOSURE-20260806",
+  "required": [
+    {"path": "projects/lab/continuity/CURRENT_CONTINUITY.json", "status": "PRESENT"},
+    {"path": "projects/lab/continuity/CURRENT_CONTINUITY.md", "status": "PRESENT"},
+    {"path": "projects/lab/continuity/ATTACHMENT_MANIFEST.json", "status": "PRESENT"},
+    {"path": "projects/lab/continuity/START_PROMPT.md", "status": "PRESENT"},
+    {"path": "projects/lab/authorizations/AUTHORIZATION_LAB_INDEPENDENT_REPRODUCIBLE_BENCHMARK_INSTRUMENT_VALIDATION_203.json", "status": "PRESENT"},
+    {"path": "projects/lab/authorization-lifecycle/INDEPENDENT_REPRODUCIBLE_BENCHMARK_INSTRUMENT_VALIDATION_LIFECYCLE_203.json", "status": "PRESENT"},
+    {"path": "projects/lab/sources/USER_SOURCE_CODEX_A_BLOCKED_TERMINAL_REPORT_203_20260806.md", "status": "PRESENT"},
+    {"path": "projects/lab/evidence/EVD-LAB-INDEPENDENT-REPRODUCIBLE-BENCHMARK-INSTRUMENT-VALIDATION-203.json", "status": "PRESENT"},
+    {"path": "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/MANIFEST.json", "status": "PRESENT"},
+    {"path": "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/codex-a/TERMINAL_REPORT.json", "status": "PRESENT"},
+    {"path": "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/adjudication/CHATGPT_POST_TEST_REPORT_CODEX_A_001.json", "status": "PRESENT"},
+    {"path": "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/adjudication/TERMINAL_RECONCILIATION.json", "status": "PRESENT"},
+    {"path": "AGENTS.md", "status": "PRESENT"},
+    {"path": "architecture/governance/CODEX_DESKTOP_CONTEXT_OPTIMIZATION_001/CONTEXT_LOADING_POLICY.json", "status": "PRESENT"}
+  ],
+  "archive": [
+    {"path": "projects/lab/continuity/archive/2026-08-06-authorization-203/CURRENT_CONTINUITY.json", "status": "PRESENT_EXACT_BLOB_COPY"},
+    {"path": "projects/lab/continuity/archive/2026-08-06-authorization-203/CURRENT_CONTINUITY.md", "status": "PRESENT_EXACT_BLOB_COPY"},
+    {"path": "projects/lab/continuity/archive/2026-08-06-authorization-203/ATTACHMENT_MANIFEST.json", "status": "PRESENT_EXACT_BLOB_COPY"},
+    {"path": "projects/lab/continuity/archive/2026-08-06-authorization-203/START_PROMPT.md", "status": "PRESENT_EXACT_BLOB_COPY"}
+  ],
+  "operator_reported_local_only": [
+    "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/codex-a/ENVIRONMENT.json",
+    "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/codex-a/COMMAND_LOG.jsonl",
+    "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/codex-a/ARTIFACT_HASHES.json",
+    "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/codex-a/SCHEMA_RESULTS.json",
+    "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/codex-a/COVERAGE_RESULTS.json",
+    "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/codex-a/SOURCE_PATH_RESULTS.json",
+    "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/codex-a/RUNNER_STATIC_REVIEW.md",
+    "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/codex-a/DETERMINISM_RESULTS.json",
+    "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/codex-a/REPLAY_A_RESULTS.json"
+  ],
+  "missing": [],
+  "head_policy": "VERIFY_LIVE_AT_USE"
+}
