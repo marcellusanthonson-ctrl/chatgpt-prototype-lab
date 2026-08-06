@@ -1,12 +1,23 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "validation_execution_id": "INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203",
   "authorization_id": "AUTHORIZATION_LAB_INDEPENDENT_REPRODUCIBLE_BENCHMARK_INSTRUMENT_VALIDATION_203",
   "benchmark_id": "CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001",
-  "status": "AUTHORIZED_NOT_RUN_AWAITING_CODEX_A",
+  "status": "TERMINAL_BLOCKED_BEFORE_VAL_001_RECONCILIATION_PREPARED_AWAITING_PUBLICATION",
   "pinned_benchmark_publication_commit": "48eb518a5fd2ec4ee5cf073e94c0142469dc2c4a",
   "authorization_parent_head": "38b0d6fc2d76daaf24ddd87876f0ca089763a359",
+  "authorization_publication_head": "01e284a61d0198156f8e1adad28d5d168b11d984",
   "operators": ["CODEX_DESKTOP_A", "CLAUDE_READ_ONLY", "CODEX_DESKTOP_B", "CHATGPT_RECONCILER"],
+  "attempts": [
+    {
+      "attempt_id": "INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203-CODEX-A-ATTEMPT-001",
+      "operator": "CODEX_DESKTOP_A",
+      "result": "BLOCKED",
+      "stage": "PRE_VALIDATION_CUSTODY_AND_EXECUTION_CONTEXT_GATE",
+      "terminal_report": "codex-a/TERMINAL_REPORT.json",
+      "critical_findings": ["CODA-203-BLOCK-001", "CODA-203-BLOCK-002"]
+    }
+  ],
   "tests": [
     {"id": "VAL-001", "status": "NOT_RUN"},
     {"id": "VAL-002", "status": "NOT_RUN"},
@@ -24,9 +35,29 @@
     "codex_b": "codex-b",
     "adjudication": "adjudication"
   },
-  "pass_condition": "ALL_NINE_TESTS_PASS_ZERO_CRITICAL_FINDINGS_BYTE_IDENTICAL_REPLAY_AND_CLAUDE_CONFIRMATION",
-  "current_operator": "CODEX_DESKTOP_A",
-  "post_test_reporting_protocol": "ACTIVE",
+  "remote_outputs_present": [
+    "codex-a/TERMINAL_REPORT.json",
+    "adjudication/CHATGPT_POST_TEST_REPORT_CODEX_A_001.json",
+    "adjudication/TERMINAL_RECONCILIATION.json"
+  ],
+  "local_outputs_reported_not_remotely_available": [
+    "codex-a/ENVIRONMENT.json",
+    "codex-a/COMMAND_LOG.jsonl",
+    "codex-a/ARTIFACT_HASHES.json",
+    "codex-a/SCHEMA_RESULTS.json",
+    "codex-a/COVERAGE_RESULTS.json",
+    "codex-a/SOURCE_PATH_RESULTS.json",
+    "codex-a/RUNNER_STATIC_REVIEW.md",
+    "codex-a/DETERMINISM_RESULTS.json",
+    "codex-a/REPLAY_A_RESULTS.json"
+  ],
+  "pass_condition": "NOT_EVALUATED",
+  "current_operator": "NONE_TERMINAL_BLOCK",
+  "claude_state": "NOT_STARTED",
+  "codex_b_state": "NOT_STARTED",
+  "post_test_reporting_protocol": "COMPLETE_PREPARED_FOR_PUBLICATION",
   "resolver_effect": "NONE",
-  "integration_effect": "NONE"
+  "integration_effect": "NONE",
+  "instrument_validation": "NOT_ESTABLISHED",
+  "approval_state": "NOT_APPROVED"
 }
