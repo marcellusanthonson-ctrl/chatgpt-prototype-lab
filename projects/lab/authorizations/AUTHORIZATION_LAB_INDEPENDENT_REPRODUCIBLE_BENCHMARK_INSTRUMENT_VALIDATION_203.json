@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_INDEPENDENT_REPRODUCIBLE_BENCHMARK_INSTRUMENT_VALIDATION_203",
+  "project_id": "lab",
+  "status": "GRANTED_AWAITING_CODEX_A_EXECUTION",
+  "authorization_class": "INDEPENDENT_BENCHMARK_INSTRUMENT_VALIDATION",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-08-06T07:19:00-04:00",
+  "approval_source_ref": "projects/lab/sources/USER_SOURCE_INDEPENDENT_BENCHMARK_VALIDATION_203_20260806.md",
+  "repository": {
+    "name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "branch": "main",
+    "head_policy": "VERIFY_LIVE_AT_USE",
+    "verified_authorization_parent_head": "38b0d6fc2d76daaf24ddd87876f0ca089763a359",
+    "authorization_publication_branch": "agent/independent-benchmark-validation-203"
+  },
+  "subject": {
+    "benchmark_id": "CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001",
+    "package_status_at_grant": "CREATED_NOT_VALIDATED_NOT_EXECUTED",
+    "instrumental_continuity_with_198": false
+  },
+  "objective": "Independently validate the benchmark instrument only through separated Codex technical execution, Claude read-only audit, fresh Codex replay and ChatGPT canonical reconciliation.",
+  "role_separation": {
+    "CODEX_A": {
+      "role": "PRIMARY_TECHNICAL_VALIDATOR",
+      "authorized_tests": ["VAL-001", "VAL-002", "VAL-003", "VAL-005", "VAL-006", "VAL-007", "VAL-009-A"],
+      "oracle_access": "AUTHORIZED_ONLY_FOR_INSTRUMENT_VALIDATION",
+      "future_held_out_resolver_operator_eligibility": "INELIGIBLE_AFTER_ORACLE_ACCESS",
+      "mutation_scope": "VALIDATION_OUTPUTS_ONLY_BENCHMARK_PACKAGE_IMMUTABLE"
+    },
+    "CLAUDE": {
+      "role": "INDEPENDENT_READ_ONLY_AUDITOR",
+      "authorized_tests": ["VAL-004", "VAL-008", "AUDIT-ALL-EVIDENCE"],
+      "repository_mutation": "FORBIDDEN",
+      "authority_effect": "NONE"
+    },
+    "CODEX_B": {
+      "role": "FRESH_INDEPENDENT_REPLAY_OPERATOR",
+      "authorized_tests": ["VAL-009-B"],
+      "session_separation": "MUST_NOT_REUSE_CODEX_A_SESSION_STATE_OR_OUTPUT_DIRECTORY",
+      "future_held_out_resolver_operator_eligibility": "INELIGIBLE_AFTER_ORACLE_ACCESS"
+    },
+    "CHATGPT": {
+      "role": "COORDINATOR_AND_CANONICAL_RECONCILER",
+      "sole_validator": false
+    }
+  },
+  "authorized_actions": [
+    "READ_PINNED_BENCHMARK_AND_CANONICAL_SOURCES",
+    "CREATE_CLEAN_WORKTREES_OR_EQUIVALENT_REPRODUCIBLE_ENVIRONMENTS",
+    "CREATE_VALIDATION_ONLY_FIXTURES_OUTSIDE_BENCHMARK_PACKAGE",
+    "EXECUTE_VAL_001_THROUGH_VAL_009_AS_ASSIGNED",
+    "EXECUTE_RUNNER_ONLY_AGAINST_VALIDATION_FIXTURES_NOT_RESOLVER_OUTPUTS",
+    "CAPTURE_COMMANDS_ENVIRONMENT_BYTES_SHA256_GIT_BLOBS_STDOUT_STDERR_AND_EXIT_CODES",
+    "CREATE_VALIDATION_RESULTS_LOGS_AND_REPORTS",
+    "CLAUDE_READ_ONLY_AUDIT",
+    "PUBLISH_RESULTS_CLOSURE_AND_CONTINUITY_RECORDS"
+  ],
+  "forbidden_actions": [
+    "NO_BENCHMARK_PACKAGE_MUTATION",
+    "NO_CORRECTION_OF_FINDINGS_DURING_VALIDATION",
+    "NO_RESOLVER_001_OR_002_EXECUTION_OR_MUTATION",
+    "NO_CODEX_OR_MODEL_OPERATIONAL_BENCHMARK",
+    "NO_REAL_PROMPT_INTERCEPTION",
+    "NO_INTEGRATION_RUNTIME_PRODUCT_DEPLOYMENT_OR_EXTERNAL_REPOSITORY_CHANGE",
+    "NO_CLAUDE_REPOSITORY_MUTATION",
+    "NO_ORACLE_DISCLOSURE_TO_FUTURE_HELD_OUT_RESOLVER_OPERATORS",
+    "NO_BENCHMARK_198_EQUIVALENCE_OR_COMPARABILITY_CLAIM",
+    "NO_OPERATIONAL_APPROVAL_OF_ANY_RESOLVER",
+    "NO_AGGREGATE_STATE_RECONCILIATION_OUTSIDE_203_RECORDS"
+  ],
+  "test_sequence": [
+    {"order": 1, "operator": "CODEX_A", "status": "NOT_RUN"},
+    {"order": 2, "operator": "CHATGPT_POST_TEST_REPORT", "status": "NOT_RUN"},
+    {"order": 3, "operator": "CLAUDE", "status": "NOT_RUN"},
+    {"order": 4, "operator": "CHATGPT_POST_TEST_REPORT", "status": "NOT_RUN"},
+    {"order": 5, "operator": "CODEX_B", "status": "NOT_RUN"},
+    {"order": 6, "operator": "CHATGPT_RECONCILIATION", "status": "NOT_RUN"}
+  ],
+  "pass_condition": "VAL_001_THROUGH_VAL_009_PASS_ZERO_CRITICAL_FINDINGS_CODEX_A_AND_CODEX_B_REPLAY_OUTPUTS_BYTE_IDENTICAL_AND_CLAUDE_AUDIT_CONFIRMS_EVIDENCE",
+  "terminal_outcomes": ["PASS", "FAIL", "BLOCKED", "INSUFFICIENT_EVIDENCE", "CANCELLED_OR_STOPPED"],
+  "post_test_reporting": "MANDATORY_AFTER_EACH_OPERATOR_TERMINAL_ATTEMPT_BEFORE_NEXT_OPERATOR",
+  "consumption_rule": "CONSUMED_AFTER_TERMINAL_RECONCILIATION_AND_VERIFIED_REMOTE_PUBLICATION_REGARDLESS_OF_OUTCOME",
+  "residual_authority_after_consumption": "NONE"
+}
