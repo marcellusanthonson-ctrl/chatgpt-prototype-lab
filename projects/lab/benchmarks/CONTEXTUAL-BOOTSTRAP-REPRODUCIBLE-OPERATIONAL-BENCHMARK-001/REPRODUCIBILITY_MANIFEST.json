@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "benchmark_id": "CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001",
-  "status": "ARTIFACT_INVENTORY_CREATED_HASH_VERIFICATION_NOT_RUN",
+  "status": "ARTIFACT_INVENTORY_PUBLISHED_HASH_AND_REPRODUCIBILITY_VERIFICATION_NOT_RUN",
   "hash_algorithm": "SHA-256",
   "artifacts": [
     "README.md",
@@ -24,6 +24,11 @@
     "VALIDATION_PLAN.json",
     "FUTURE_EXECUTION_PLAN.json"
   ],
+  "published_tree": {
+    "pull_request": 66,
+    "merge_commit": "48eb518a5fd2ec4ee5cf073e94c0142469dc2c4a",
+    "remote_main_verified": true
+  },
   "required_fields_per_artifact_for_validation": [
     "path",
     "byte_count",
@@ -38,10 +43,10 @@
   "verification": {
     "byte_counts": "NOT_RUN",
     "sha256": "NOT_RUN",
-    "git_blob_shas": "NOT_RUN_AWAITING_REMOTE_PUBLICATION",
+    "git_blob_shas": "AVAILABLE_IN_PUBLISHED_TREE_INDEPENDENT_CAPTURE_NOT_RUN",
     "schema_validation": "NOT_RUN",
     "independent_replay": "NOT_RUN"
   },
   "integrity_rule": "Any missing field or mismatch blocks validation and execution.",
-  "claim_boundary": "This manifest inventories artifacts; it does not claim hash verification or reproducibility PASS."
+  "claim_boundary": "This manifest inventories published artifacts; it does not claim hash verification, schema validation or reproducibility PASS."
 }
