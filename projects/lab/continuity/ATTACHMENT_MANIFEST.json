@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "continuity_id": "LAB-CONTINUITY-AUTHORIZATION-199-CONSUMED-FROZEN-CORPUS-HASH-MISMATCH-20260805",
+  "continuity_id": "LAB-CONTINUITY-AUTHORIZATION-200-CONSUMED-PARTIAL-ARTIFACT-RECOVERY-INSUFFICIENT-FOR-RETEST-20260805",
   "required": [
     {
       "path": "projects/lab/continuity/CURRENT_CONTINUITY.json",
@@ -15,15 +15,19 @@
       "status": "PRESENT"
     },
     {
-      "path": "projects/lab/authorizations/AUTHORIZATION_LAB_CONTEXTUAL_BOOTSTRAP_RESOLVER_002_TARGETED_REMEDIATION_AND_FROZEN_CORPUS_RETEST_199.json",
+      "path": "projects/lab/authorizations/AUTHORIZATION_LAB_BENCHMARK_198_ARTIFACT_FORENSIC_RECOVERY_AND_CONDITIONAL_VERIFIABLE_REISSUANCE_200.json",
       "status": "PRESENT"
     },
     {
-      "path": "projects/lab/evidence/EVD-LAB-CONTEXTUAL-BOOTSTRAP-RESOLVER-002-REMEDIATION-RETEST-199.json",
+      "path": "projects/lab/evidence/EVD-LAB-BENCHMARK-198-ARTIFACT-RECOVERY-REISSUANCE-200.json",
       "status": "PRESENT"
     },
     {
-      "path": "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-RETEST-002/ARTIFACT_REPLAYABILITY_PREFLIGHT.json",
+      "path": "projects/lab/forensics/CONTEXTUAL-BOOTSTRAP-BENCHMARK-198-ARTIFACT-RECOVERY-001/MANIFEST.json",
+      "status": "PRESENT"
+    },
+    {
+      "path": "projects/lab/forensics/CONTEXTUAL-BOOTSTRAP-BENCHMARK-198-ARTIFACT-RECOVERY-001/INDEPENDENT_REPLAY_VALIDATION.json",
       "status": "PRESENT"
     }
   ],
