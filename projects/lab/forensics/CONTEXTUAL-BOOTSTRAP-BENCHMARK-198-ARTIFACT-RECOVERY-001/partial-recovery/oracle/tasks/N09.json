@@ -1,0 +1,29 @@
+{
+  "id": "N09",
+  "expectedRoute": "NEW_DESIGN",
+  "expectedRisk": "MEDIUM",
+  "expectedTerminal": "INSUFFICIENT_CONTEXT",
+  "expectedSelectedPaths": [
+    "AGENTS.md",
+    "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json",
+    "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MANIFEST.json",
+    "projects/symphonie/PROJECT_STATE.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/MANIFEST.json"
+  ],
+  "criticalPaths": [
+    "AGENTS.md",
+    "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json",
+    "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MANIFEST.json",
+    "projects/symphonie/PROJECT_STATE.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/MANIFEST.json"
+  ],
+  "forbiddenSelectedPaths": [
+    "projects/lab/PROJECT_STATE.json",
+    "projects/carolina-klinik/PROJECT_STATE.json"
+  ],
+  "expectedConflictState": "NONE",
+  "expectedProjectId": "symphonie",
+  "expectedNamespace": "project:symphonie",
+  "expectedAuthorityEffect": "READ_ONLY",
+  "expectedHeadState": "MATCH"
+}

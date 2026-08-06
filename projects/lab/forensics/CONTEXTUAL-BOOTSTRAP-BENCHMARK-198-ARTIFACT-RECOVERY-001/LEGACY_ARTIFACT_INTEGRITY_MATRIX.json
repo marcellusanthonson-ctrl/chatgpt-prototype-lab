@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "matrix_id": "CONTEXTUAL-BOOTSTRAP-BENCHMARK-198-ARTIFACT-RECOVERY-001-LEGACY-ARTIFACT-INTEGRITY-MATRIX",
+  "authorization_id": "AUTHORIZATION_LAB_BENCHMARK_198_ARTIFACT_FORENSIC_RECOVERY_AND_CONDITIONAL_VERIFIABLE_REISSUANCE_200",
+  "result": "PARTIAL_ARTIFACT_RECOVERY_INSUFFICIENT_FOR_RETEST",
+  "required_input_artifacts": {
+    "corpus": {
+      "status": "PARTIAL_PREFIX_RECOVERABLE_IRREVERSIBLE_LOSS_PRESENT",
+      "exact_recovery": false,
+      "semantic_reissue_source_coverage": "INSUFFICIENT_PROMPT_PROVENANCE"
+    },
+    "runner": {
+      "status": "PARTIAL_PREFIX_RECOVERABLE_IRREVERSIBLE_LOSS_AND_BYTE_MISMATCH",
+      "exact_recovery": false,
+      "semantic_reissue_source_coverage": "INSUFFICIENT_SCORER_AND_RUNNER_RULE_PROVENANCE"
+    },
+    "oracle": {
+      "status": "EXACT_RECOVERY_PASS",
+      "exact_recovery": true,
+      "expectations": 21
+    }
+  },
+  "derived_artifacts": {
+    "benchmark_results": "READABLE_BASE64_DERIVED_OUTPUT",
+    "context_manifests": "READABLE_BASE64_DERIVED_OUTPUT",
+    "snapshot_manifest": "READABLE_BASE64_DERIVED_INPUT_METADATA",
+    "harness_correction": "READABLE_JSON"
+  },
+  "historical_source_search": {
+    "path_history_commits": 1,
+    "creation_commit": "84d8ceb62ffd9c0f3398f606505d1eb3e9305404",
+    "prior_path_version_found": false,
+    "alternative_hash_copy_found": false,
+    "pr_58_comments_or_attachments": 0,
+    "source_material_outside_derived_package_found": false
+  },
+  "gates": {
+    "exact_recovery_gate": "FAIL",
+    "semantic_reissue_gate": "FAIL",
+    "retest_ready": "NO"
+  }
+}

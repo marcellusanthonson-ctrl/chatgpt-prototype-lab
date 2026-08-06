@@ -1,0 +1,27 @@
+{
+  "id": "D11",
+  "expectedRoute": "CODE_CHANGE",
+  "expectedRisk": "SMALL_CLEAR",
+  "expectedTerminal": "READY",
+  "expectedSelectedPaths": [
+    "AGENTS.md",
+    "projects/lab/PROJECT_STATE.json",
+    "projects/lab/continuity/START_PROMPT.md",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_CONTEXTUAL_BOOTSTRAP_RESOLVER_READ_ONLY_PROTOTYPE_AND_DISCRIMINATING_VALIDATION_197.json"
+  ],
+  "criticalPaths": [
+    "AGENTS.md",
+    "projects/lab/PROJECT_STATE.json",
+    "projects/lab/continuity/START_PROMPT.md",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_CONTEXTUAL_BOOTSTRAP_RESOLVER_READ_ONLY_PROTOTYPE_AND_DISCRIMINATING_VALIDATION_197.json"
+  ],
+  "forbiddenSelectedPaths": [
+    "projects/carolina-klinik/PROJECT_STATE.json",
+    "projects/symphonie/PROJECT_STATE.json"
+  ],
+  "expectedConflictState": "NONE",
+  "expectedProjectId": "lab",
+  "expectedNamespace": "project:lab",
+  "expectedAuthorityEffect": "BOUNDED_EXECUTION",
+  "expectedHeadState": "MATCH"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "S15",
+  "expectedRoute": "STATUS_OR_AUTHORITY",
+  "expectedRisk": "MEDIUM",
+  "expectedTerminal": "RESOLUTION_REQUIRED",
+  "expectedSelectedPaths": [
+    "AGENTS.md",
+    "project-sources/chatgpt/START_HERE.md",
+    "LAB_CONTRACT.md",
+    "METHODOLOGY.md",
+    "CURRENT_STATE.json",
+    "registry/index.json",
+    "registry/projects.json",
+    "projects/lab/PROJECT_STATE.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json"
+  ],
+  "criticalPaths": [
+    "AGENTS.md",
+    "project-sources/chatgpt/START_HERE.md",
+    "LAB_CONTRACT.md",
+    "METHODOLOGY.md",
+    "CURRENT_STATE.json",
+    "registry/index.json",
+    "registry/projects.json",
+    "projects/lab/PROJECT_STATE.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json"
+  ],
+  "forbiddenSelectedPaths": [
+    "projects/carolina-klinik/PROJECT_STATE.json",
+    "projects/symphonie/PROJECT_STATE.json"
+  ],
+  "expectedConflictState": "RESOLUTION_REQUIRED",
+  "expectedProjectId": "lab",
+  "expectedNamespace": "project:lab",
+  "expectedAuthorityEffect": "READ_ONLY",
+  "expectedHeadState": "MATCH"
+}

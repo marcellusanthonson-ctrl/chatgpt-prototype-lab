@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "forensic_package_id": "CONTEXTUAL-BOOTSTRAP-BENCHMARK-198-ARTIFACT-RECOVERY-001",
+  "authorization_id": "AUTHORIZATION_LAB_BENCHMARK_198_ARTIFACT_FORENSIC_RECOVERY_AND_CONDITIONAL_VERIFIABLE_REISSUANCE_200",
+  "status": "PARTIAL_ARTIFACT_RECOVERY_INSUFFICIENT_FOR_RETEST",
+  "created_at": "2026-08-05T21:32:43-04:00",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "verified_parent_head": "8a0826a619f71d7893150e45f4edbbcffceaafe6",
+  "historical_benchmark": {
+    "id": "CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-BENCHMARK-001",
+    "creation_commit": "84d8ceb62ffd9c0f3398f606505d1eb3e9305404",
+    "creation_parent": "87b0ca32a8789f2a69ebfc2b3de67ff396b1bcb3",
+    "creation_tree": "6bd6a4b3643059b60ddadd5a5ca0cf7102fd5ff3",
+    "publication_merge_commit": "ab957cfa4f33fce41aca34bd5adc957ea32a409b"
+  },
+  "recovery": {
+    "exact_recovered": [
+      "oracle/PRIVATE_ORACLE.json.gz.b64"
+    ],
+    "partial_prefix_only": [
+      {
+        "artifact": "fixtures/OPERATIONAL_TASKS.json.gz.b64",
+        "recoverable_ascii_bytes_before_first_loss": 3454
+      },
+      {
+        "artifact": "scripts/BENCHMARK_RUNNER.ts.gz.b64",
+        "recoverable_ascii_bytes_before_first_loss": 526
+      }
+    ],
+    "semantic_reissue_created": false,
+    "instrument_002_created": false
+  },
+  "claims": {
+    "byte_identical_complete_recovery": false,
+    "retest_ready": false,
+    "comparability_reestablished": false
+  },
+  "effects": {
+    "resolver_001": "NONE",
+    "resolver_002": "NONE",
+    "remediation": "NONE",
+    "retest": "NONE",
+    "model_scoring_calls": 0,
+    "integration": "NONE",
+    "runtime": "NONE",
+    "product": "NONE"
+  }
+}

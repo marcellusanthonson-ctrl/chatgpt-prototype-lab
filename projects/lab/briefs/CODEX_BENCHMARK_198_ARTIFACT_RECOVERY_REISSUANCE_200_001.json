@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "CODEX_BENCHMARK_198_ARTIFACT_RECOVERY_REISSUANCE_200_001",
+  "title": "Forensic recovery and conditional verifiable reissuance of benchmark 198 artifacts",
+  "project_id": "lab",
+  "executor": "CODEX_DESKTOP_WITH_LOCAL_GIT_FORENSICS",
+  "actual_execution_surface": "GITHUB_API_PINNED_RAW_OBJECT_ACCESS_PLUS_LOCAL_PYTHON_STANDARD_LIBRARY_AFTER_LOCAL_CLONE_DNS_BLOCK",
+  "authorization_ref": "AUTHORIZATION_LAB_BENCHMARK_198_ARTIFACT_FORENSIC_RECOVERY_AND_CONDITIONAL_VERIFIABLE_REISSUANCE_200",
+  "repository": {
+    "name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "branch": "main",
+    "expected_parent_head": "8a0826a619f71d7893150e45f4edbbcffceaafe6",
+    "head_policy": "VERIFY_LIVE_AT_USE"
+  },
+  "objective": "Recover exact historical artifacts where possible and create a new instrument only with complete direct provenance.",
+  "result": {
+    "terminal": "PARTIAL_ARTIFACT_RECOVERY_INSUFFICIENT_FOR_RETEST",
+    "exact_oracle_recovery": "PASS",
+    "corpus_exact_recovery": "FAIL",
+    "runner_exact_recovery": "FAIL",
+    "semantic_reissue": "NOT_CREATED_INSUFFICIENT_SOURCE_PROVENANCE",
+    "retest": "NOT_RUN"
+  },
+  "required_outputs": [
+    "projects/lab/forensics/CONTEXTUAL-BOOTSTRAP-BENCHMARK-198-ARTIFACT-RECOVERY-001/MANIFEST.json",
+    "projects/lab/forensics/CONTEXTUAL-BOOTSTRAP-BENCHMARK-198-ARTIFACT-RECOVERY-001/RAW_OBJECT_LEDGER.json",
+    "projects/lab/forensics/CONTEXTUAL-BOOTSTRAP-BENCHMARK-198-ARTIFACT-RECOVERY-001/LEGACY_ARTIFACT_INTEGRITY_MATRIX.json",
+    "projects/lab/forensics/CONTEXTUAL-BOOTSTRAP-BENCHMARK-198-ARTIFACT-RECOVERY-001/TRANSFORMATION_LEDGER.json",
+    "projects/lab/forensics/CONTEXTUAL-BOOTSTRAP-BENCHMARK-198-ARTIFACT-RECOVERY-001/SOURCE_PROVENANCE_MATRIX.json",
+    "projects/lab/forensics/CONTEXTUAL-BOOTSTRAP-BENCHMARK-198-ARTIFACT-RECOVERY-001/INDEPENDENT_REPLAY_VALIDATION.json"
+  ],
+  "forbidden_actions": [
+    "MODIFY_BENCHMARK_198",
+    "MODIFY_RESOLVER_001",
+    "CREATE_OR_MODIFY_RESOLVER_002",
+    "RUN_RETEST",
+    "INVENT_MISSING_BYTES",
+    "MODEL_COMPLETION_OF_MISSING_FIELDS",
+    "INSTALL_DEPENDENCIES",
+    "EXTERNAL_REPOSITORIES",
+    "INTEGRATION_OR_RUNTIME_CHANGE"
+  ]
+}

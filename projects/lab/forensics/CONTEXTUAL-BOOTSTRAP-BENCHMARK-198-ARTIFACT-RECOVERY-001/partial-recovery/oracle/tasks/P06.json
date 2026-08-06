@@ -1,0 +1,23 @@
+{
+  "id": "P06",
+  "expectedRoute": "PROJECT_CONTINUATION",
+  "expectedRisk": "MEDIUM",
+  "expectedTerminal": "READ_ONLY_READY",
+  "expectedSelectedPaths": [
+    "AGENTS.md",
+    "projects/carolina-klinik/PROJECT_STATE.json"
+  ],
+  "criticalPaths": [
+    "AGENTS.md",
+    "projects/carolina-klinik/PROJECT_STATE.json"
+  ],
+  "forbiddenSelectedPaths": [
+    "projects/lab/PROJECT_STATE.json",
+    "projects/symphonie/PROJECT_STATE.json"
+  ],
+  "expectedConflictState": "NONE",
+  "expectedProjectId": "carolina-klinik",
+  "expectedNamespace": "project:carolina-klinik",
+  "expectedAuthorityEffect": "READ_ONLY",
+  "expectedHeadState": "MATCH"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "C03",
+  "expectedRoute": "CONTINUITY_RESUME",
+  "expectedRisk": "MEDIUM",
+  "expectedTerminal": "READ_ONLY_READY",
+  "expectedSelectedPaths": [
+    "AGENTS.md",
+    "projects/symphonie/PROJECT_STATE.json",
+    "projects/symphonie/CONTINUITY_PROTOCOL.md"
+  ],
+  "criticalPaths": [
+    "AGENTS.md",
+    "projects/symphonie/PROJECT_STATE.json",
+    "projects/symphonie/CONTINUITY_PROTOCOL.md"
+  ],
+  "forbiddenSelectedPaths": [
+    "projects/lab/PROJECT_STATE.json",
+    "projects/carolina-klinik/PROJECT_STATE.json"
+  ],
+  "expectedConflictState": "NONE",
+  "expectedProjectId": "symphonie",
+  "expectedNamespace": "project:symphonie",
+  "expectedAuthorityEffect": "READ_ONLY",
+  "expectedHeadState": "MATCH"
+}

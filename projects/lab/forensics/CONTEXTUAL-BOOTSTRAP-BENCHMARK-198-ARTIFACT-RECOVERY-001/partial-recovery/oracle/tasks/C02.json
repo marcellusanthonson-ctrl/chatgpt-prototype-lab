@@ -1,0 +1,25 @@
+{
+  "id": "C02",
+  "expectedRoute": "CONTINUITY_RESUME",
+  "expectedRisk": "MEDIUM",
+  "expectedTerminal": "INSUFFICIENT_CONTEXT",
+  "expectedSelectedPaths": [
+    "AGENTS.md",
+    "projects/carolina-klinik/PROJECT_STATE.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/MANIFEST.json"
+  ],
+  "criticalPaths": [
+    "AGENTS.md",
+    "projects/carolina-klinik/PROJECT_STATE.json",
+    "foundation-library/motion-system/MOTION-SYSTEM-001/MANIFEST.json"
+  ],
+  "forbiddenSelectedPaths": [
+    "projects/lab/PROJECT_STATE.json",
+    "projects/symphonie/PROJECT_STATE.json"
+  ],
+  "expectedConflictState": "NONE",
+  "expectedProjectId": "carolina-klinik",
+  "expectedNamespace": "project:carolina-klinik",
+  "expectedAuthorityEffect": "READ_ONLY",
+  "expectedHeadState": "MATCH"
+}

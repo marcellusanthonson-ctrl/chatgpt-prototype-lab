@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_BENCHMARK_198_ARTIFACT_FORENSIC_RECOVERY_AND_CONDITIONAL_VERIFIABLE_REISSUANCE_200",
+  "project_id": "lab",
+  "status": "GRANTED_EXECUTION_COMPLETE_AWAITING_PUBLICATION",
+  "authorization_class": "BENCHMARK_ARTIFACT_FORENSIC_RECOVERY_AND_CONDITIONAL_REISSUANCE",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-08-05T21:22:00-04:00",
+  "approval_source_ref": "projects/lab/sources/USER_SOURCE_AUTHORIZATION_200_20260805.md",
+  "repository": {
+    "name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "branch": "main",
+    "head_policy": "VERIFY_LIVE_AT_USE",
+    "verified_execution_parent_head": "8a0826a619f71d7893150e45f4edbbcffceaafe6",
+    "working_branch": "agent/benchmark-198-artifact-recovery-reissue-200"
+  },
+  "objective": "Recover benchmark 198 artifacts exactly when evidence permits, otherwise permit a new fully traced semantic instrument; do not remediate or retest the resolver.",
+  "execution": {
+    "status": "COMPLETE_AWAITING_PUBLICATION",
+    "completed_at": "2026-08-05T21:32:43-04:00",
+    "terminal_result": "PARTIAL_ARTIFACT_RECOVERY_INSUFFICIENT_FOR_RETEST",
+    "exact_recovered_artifacts": [
+      "oracle/PRIVATE_ORACLE.json.gz.b64"
+    ],
+    "semantic_reissue_created": false,
+    "resolver_002_created": false,
+    "retest_started": false,
+    "model_scoring_calls": 0,
+    "publication": {
+      "pull_request": null,
+      "merge_commit": null,
+      "remote_main_verified": null
+    }
+  },
+  "residual_authority": "ACTIVE_ONLY_FOR_PUBLICATION_AND_DOCUMENTARY_CLOSURE"
+}

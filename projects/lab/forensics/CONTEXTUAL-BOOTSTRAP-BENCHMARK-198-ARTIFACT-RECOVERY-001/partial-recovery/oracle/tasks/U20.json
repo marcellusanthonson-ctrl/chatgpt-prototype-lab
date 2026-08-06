@@ -1,0 +1,30 @@
+{
+  "id": "U20",
+  "expectedRoute": "UNKNOWN_ESCALATION",
+  "expectedRisk": "UNCERTAIN",
+  "expectedTerminal": "INSUFFICIENT_CONTEXT",
+  "expectedSelectedPaths": [
+    "AGENTS.md",
+    "project-sources/chatgpt/START_HERE.md",
+    "LAB_CONTRACT.md",
+    "METHODOLOGY.md",
+    "registry/projects.json"
+  ],
+  "criticalPaths": [
+    "AGENTS.md",
+    "project-sources/chatgpt/START_HERE.md",
+    "LAB_CONTRACT.md",
+    "METHODOLOGY.md",
+    "registry/projects.json"
+  ],
+  "forbiddenSelectedPaths": [
+    "projects/lab/PROJECT_STATE.json",
+    "projects/carolina-klinik/PROJECT_STATE.json",
+    "projects/symphonie/PROJECT_STATE.json"
+  ],
+  "expectedConflictState": "NONE",
+  "expectedProjectId": null,
+  "expectedNamespace": null,
+  "expectedAuthorityEffect": "READ_ONLY",
+  "expectedHeadState": "MATCH"
+}

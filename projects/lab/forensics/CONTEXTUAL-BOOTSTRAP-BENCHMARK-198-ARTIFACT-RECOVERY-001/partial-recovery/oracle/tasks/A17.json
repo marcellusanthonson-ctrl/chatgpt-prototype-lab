@@ -1,0 +1,39 @@
+{
+  "id": "A17",
+  "expectedRoute": "AUDIT_OR_REASSESSMENT",
+  "expectedRisk": "CRITICAL",
+  "expectedTerminal": "RESOLUTION_REQUIRED",
+  "expectedSelectedPaths": [
+    "AGENTS.md",
+    "project-sources/chatgpt/START_HERE.md",
+    "LAB_CONTRACT.md",
+    "METHODOLOGY.md",
+    "projects/lab/PROJECT_STATE.json",
+    "projects/lab/pending/PEND-LAB-048.json",
+    "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/product-leadership/INCIDENT_LEDGER.json",
+    "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/product-leadership/INTEGRATION_READINESS.json",
+    "projects/lab/evidence/EVD-LAB-PRODUCT-LEADERSHIP-ZERO-MODEL-READINESS-PROBE-196.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json"
+  ],
+  "criticalPaths": [
+    "AGENTS.md",
+    "project-sources/chatgpt/START_HERE.md",
+    "LAB_CONTRACT.md",
+    "METHODOLOGY.md",
+    "projects/lab/PROJECT_STATE.json",
+    "projects/lab/pending/PEND-LAB-048.json",
+    "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/product-leadership/INCIDENT_LEDGER.json",
+    "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/product-leadership/INTEGRATION_READINESS.json",
+    "projects/lab/evidence/EVD-LAB-PRODUCT-LEADERSHIP-ZERO-MODEL-READINESS-PROBE-196.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json"
+  ],
+  "forbiddenSelectedPaths": [
+    "projects/carolina-klinik/PROJECT_STATE.json",
+    "projects/symphonie/PROJECT_STATE.json"
+  ],
+  "expectedConflictState": "RESOLUTION_REQUIRED",
+  "expectedProjectId": "lab",
+  "expectedNamespace": "project:lab",
+  "expectedAuthorityEffect": "READ_ONLY",
+  "expectedHeadState": "MATCH"
+}

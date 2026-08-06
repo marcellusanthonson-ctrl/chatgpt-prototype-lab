@@ -1,0 +1,23 @@
+{
+  "id": "D12",
+  "expectedRoute": "CODE_CHANGE",
+  "expectedRisk": "MEDIUM",
+  "expectedTerminal": "BLOCKED_HEAD_MISMATCH",
+  "expectedSelectedPaths": [
+    "AGENTS.md",
+    "projects/lab/PROJECT_STATE.json"
+  ],
+  "criticalPaths": [
+    "AGENTS.md",
+    "projects/lab/PROJECT_STATE.json"
+  ],
+  "forbiddenSelectedPaths": [
+    "projects/carolina-klinik/PROJECT_STATE.json",
+    "projects/symphonie/PROJECT_STATE.json"
+  ],
+  "expectedConflictState": "NONE",
+  "expectedProjectId": "lab",
+  "expectedNamespace": "project:lab",
+  "expectedAuthorityEffect": "NONE",
+  "expectedHeadState": "MISMATCH"
+}

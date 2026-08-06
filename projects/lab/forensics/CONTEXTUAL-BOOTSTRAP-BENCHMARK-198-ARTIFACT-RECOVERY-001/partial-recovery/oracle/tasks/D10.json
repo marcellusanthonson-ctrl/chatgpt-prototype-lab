@@ -1,0 +1,23 @@
+{
+  "id": "D10",
+  "expectedRoute": "CODE_CHANGE",
+  "expectedRisk": "SMALL_CLEAR",
+  "expectedTerminal": "AWAITING_AUTHORIZATION",
+  "expectedSelectedPaths": [
+    "AGENTS.md",
+    "projects/carolina-klinik/PROJECT_STATE.json"
+  ],
+  "criticalPaths": [
+    "AGENTS.md",
+    "projects/carolina-klinik/PROJECT_STATE.json"
+  ],
+  "forbiddenSelectedPaths": [
+    "projects/lab/PROJECT_STATE.json",
+    "projects/symphonie/PROJECT_STATE.json"
+  ],
+  "expectedConflictState": "NONE",
+  "expectedProjectId": "carolina-klinik",
+  "expectedNamespace": "project:carolina-klinik",
+  "expectedAuthorityEffect": "NONE",
+  "expectedHeadState": "MATCH"
+}
