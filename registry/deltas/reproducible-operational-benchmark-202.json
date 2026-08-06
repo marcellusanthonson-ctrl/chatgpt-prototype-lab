@@ -3,15 +3,26 @@
   "delta_id": "REPRODUCIBLE_OPERATIONAL_BENCHMARK_202",
   "project_id": "lab",
   "authorization_id": "AUTHORIZATION_LAB_REPRODUCIBLE_OPERATIONAL_BENCHMARK_FROM_SCRATCH_DESIGN_AND_BUILD_202",
-  "status": "EXECUTION_IN_PROGRESS",
+  "status": "CONSUMED_VERIFIED_REMOTE_PUBLICATION",
+  "terminal_result": "BENCHMARK_PACKAGE_CREATED_AWAITING_SEPARATE_INDEPENDENT_VALIDATION",
   "adds": {
     "authorization": "projects/lab/authorizations/AUTHORIZATION_LAB_REPRODUCIBLE_OPERATIONAL_BENCHMARK_FROM_SCRATCH_DESIGN_AND_BUILD_202.json",
     "lifecycle": "projects/lab/authorization-lifecycle/REPRODUCIBLE_OPERATIONAL_BENCHMARK_FROM_SCRATCH_LIFECYCLE_202.json",
     "evidence": "projects/lab/evidence/EVD-LAB-REPRODUCIBLE-OPERATIONAL-BENCHMARK-FROM-SCRATCH-202.json",
     "benchmark": "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001/MANIFEST.json",
     "brief": "projects/lab/briefs/CHATGPT_REPRODUCIBLE_OPERATIONAL_BENCHMARK_202_001.json",
-    "source": "projects/lab/sources/USER_SOURCE_REPRODUCIBLE_OPERATIONAL_BENCHMARK_202_20260805.md"
+    "source": "projects/lab/sources/USER_SOURCE_REPRODUCIBLE_OPERATIONAL_BENCHMARK_202_20260805.md",
+    "continuity_archive": "projects/lab/continuity/archive/2026-08-05-authorization-201",
+    "successor_continuity": "projects/lab/continuity/CURRENT_CONTINUITY.json"
+  },
+  "publication": {
+    "package_pull_request": 66,
+    "package_merge_commit": "48eb518a5fd2ec4ee5cf073e94c0142469dc2c4a",
+    "closure_pull_request": "PENDING_CREATION"
   },
   "aggregate_updates": "NONE_NOT_AUTHORIZED",
-  "tests_executed": 0
+  "tests_executed": 0,
+  "resolver_mutations": 0,
+  "model_requests": 0,
+  "residual_authority": "NONE"
 }
