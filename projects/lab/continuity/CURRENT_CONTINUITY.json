@@ -98,8 +98,8 @@
       "terminal_result": "PARTIAL_ARTIFACT_RECOVERY_INSUFFICIENT_FOR_RETEST",
       "publication_pull_request": 62,
       "publication_merge_commit": "4354e0ec774238b0744e78a7fd136bdf19e40918",
-      "closure_pull_request": null,
-      "closure_status": "PENDING_PR_CREATION",
+      "closure_pull_request": 63,
+      "closure_status": "PENDING_VERIFIED_REMOTE_MERGE",
       "exact_recovered_artifacts": [
         "oracle/PRIVATE_ORACLE.json.gz.b64"
       ],
@@ -111,7 +111,8 @@
       "resolver_002_created": false,
       "retest_started": false,
       "model_scoring_calls": 0,
-      "residual_authority": "NONE"
+      "residual_authority": "NONE",
+      "closure_effect": "CONSUMPTION_AND_NO_RESIDUAL_AUTHORITY_EFFECTIVE_ON_VERIFIED_REMOTE_MERGE"
     }
   },
   "active_authorization": null,
