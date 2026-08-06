@@ -3,7 +3,7 @@
   "record_id": "CONTEXTUAL-BOOTSTRAP-RESOLVER-002-REMEDIATION-RETEST-LIFECYCLE-199",
   "authorization": "AUTHORIZATION_LAB_CONTEXTUAL_BOOTSTRAP_RESOLVER_002_TARGETED_REMEDIATION_AND_FROZEN_CORPUS_RETEST_199",
   "project_id": "lab",
-  "status": "EXECUTION_BLOCKED_AWAITING_VERIFIED_REMOTE_PUBLICATION",
+  "status": "CONSUMED_VERIFIED_REMOTE_PUBLICATION",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-08-05T20:28:00-04:00",
   "execution_started_at": "2026-08-05T20:28:00-04:00",
@@ -28,10 +28,13 @@
   },
   "publication": {
     "branch": "agent/contextual-bootstrap-resolver-002-remediation-retest-199",
-    "pull_request": null,
-    "merge_commit": null,
-    "remote_main_verified": null,
-    "closure_pull_request": null
+    "pull_request": 60,
+    "merge_commit": "ccc314d6f125906dff20fc336fc9d0df2f489e11",
+    "remote_main_verified": "ccc314d6f125906dff20fc336fc9d0df2f489e11",
+    "closure_pull_request": null,
+    "closure_branch": "agent/contextual-bootstrap-resolver-002-remediation-retest-199-closure",
+    "closure_status": "PENDING_PR_CREATION"
   },
-  "residual_authority": "BOUNDED_TO_PUBLICATION_AND_CLOSURE_OF_BLOCKED_RESULT"
+  "residual_authority": "NONE",
+  "consumed_at": "2026-08-05T20:52:00-04:00"
 }

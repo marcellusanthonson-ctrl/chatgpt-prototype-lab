@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_CONTEXTUAL_BOOTSTRAP_RESOLVER_002_TARGETED_REMEDIATION_AND_FROZEN_CORPUS_RETEST_199",
   "project_id": "lab",
-  "status": "GRANTED_EXECUTION_BLOCKED_AWAITING_PUBLICATION",
+  "status": "CONSUMED_VERIFIED_REMOTE_PUBLICATION",
   "authorization_class": "TARGETED_RESOLVER_REMEDIATION_AND_FROZEN_CORPUS_RETEST_NO_MODEL",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-08-05T20:28:00-04:00",
@@ -62,7 +62,7 @@
     "SCOPE_EXPANSION_REQUIRED"
   ],
   "execution": {
-    "status": "BLOCKED_BEFORE_REMEDIATION",
+    "status": "BLOCKED_PUBLISHED_VERIFIED_REMOTE",
     "started_at": "2026-08-05T20:28:00-04:00",
     "blocked_at": "2026-08-05T20:42:00-04:00",
     "terminal_result": "BLOCKED_FROZEN_CORPUS_HASH_MISMATCH",
@@ -72,12 +72,18 @@
     "model_requests": 0,
     "codex_executions": 0,
     "dependencies_installed": 0,
-    "blocking_evidence_ref": "projects/lab/evidence/EVD-LAB-CONTEXTUAL-BOOTSTRAP-RESOLVER-002-REMEDIATION-RETEST-199.json"
+    "blocking_evidence_ref": "projects/lab/evidence/EVD-LAB-CONTEXTUAL-BOOTSTRAP-RESOLVER-002-REMEDIATION-RETEST-199.json",
+    "publication": {
+      "pull_request": 60,
+      "merge_commit": "ccc314d6f125906dff20fc336fc9d0df2f489e11",
+      "remote_main_verified": "ccc314d6f125906dff20fc336fc9d0df2f489e11"
+    }
   },
   "consumption": {
     "rule": "CONSUMED_AFTER_VERIFIED_REMOTE_PUBLICATION_AND_DOCUMENTARY_CLOSURE",
     "residual_authority_after_consumption": "NONE"
   },
-  "next_authorized_action": "NONE_UNTIL_SEPARATE_ARTIFACT_RECONSTRUCTION_AUTHORIZATION",
-  "residual_authority": "BOUNDED_TO_PUBLICATION_AND_CLOSURE_OF_BLOCKED_RESULT"
+  "next_authorized_action": "NONE_AFTER_CONSUMPTION",
+  "residual_authority": "NONE",
+  "consumed_at": "2026-08-05T20:52:00-04:00"
 }
