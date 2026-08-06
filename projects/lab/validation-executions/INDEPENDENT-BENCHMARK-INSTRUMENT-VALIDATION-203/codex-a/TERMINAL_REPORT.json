@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0.0",
+  "report_id": "INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203-CODEX-A-TERMINAL-001",
+  "authorization_id": "AUTHORIZATION_LAB_INDEPENDENT_REPRODUCIBLE_BENCHMARK_INSTRUMENT_VALIDATION_203",
+  "brief_id": "CODEX_INDEPENDENT_BENCHMARK_INSTRUMENT_VALIDATION_203_A_001",
+  "operator": "CODEX_DESKTOP_A",
+  "role": "PRIMARY_TECHNICAL_VALIDATOR",
+  "terminal_at": "2026-08-06T11:48:03.0497102-04:00",
+  "result": "BLOCKED",
+  "stage": "PRE_VALIDATION_CUSTODY_AND_EXECUTION_CONTEXT_GATE",
+  "remote_main_head_verified_live": "01e284a61d0198156f8e1adad28d5d168b11d984",
+  "worktree_head": "01e284a61d0198156f8e1adad28d5d168b11d984",
+  "pinned_benchmark_publication_commit": "48eb518a5fd2ec4ee5cf073e94c0142469dc2c4a",
+  "benchmark_package_mutated_by_codex_a": false,
+  "oracle_opened": false,
+  "resolver_runs": 0,
+  "model_operational_benchmark_runs": 0,
+  "runner_executions": 0,
+  "validation_fixtures_created": 0,
+  "findings": [
+    {
+      "finding_id": "CODA-203-BLOCK-001",
+      "severity": "CRITICAL",
+      "classification": "CHAIN_OF_CUSTODY_STOP_CONDITION",
+      "summary": "The benchmark package at the verified live main HEAD is not byte-identical to the pinned benchmark publication commit.",
+      "evidence": {
+        "comparison": "git diff --name-status 48eb518a5fd2ec4ee5cf073e94c0142469dc2c4a HEAD -- <benchmark-package>",
+        "changed_paths": [
+          "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001/CHAIN_OF_CUSTODY.json",
+          "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001/REPRODUCIBILITY_MANIFEST.json"
+        ]
+      },
+      "effect": "MANDATORY_STOP_BEFORE_VAL_001"
+    },
+    {
+      "finding_id": "CODA-203-BLOCK-002",
+      "severity": "CRITICAL",
+      "classification": "MISSING_REQUIRED_EXECUTION_CONTEXT",
+      "summary": "No assigned execution envelope or context manifest exists for brief 203, while AGENTS.md and CODEX-DESKTOP-PROGRESSIVE-CONTEXT-LOADING-001 require both and define missing artifacts as BLOCK_BEFORE_EXECUTION.",
+      "evidence": {
+        "required_by": [
+          "AGENTS.md",
+          "architecture/governance/CODEX_DESKTOP_CONTEXT_OPTIMIZATION_001/CONTEXT_LOADING_POLICY.json"
+        ],
+        "execution_envelope": "NOT_FOUND",
+        "context_manifest": "NOT_FOUND",
+        "role_profile_available": "architecture/governance/CODEX_DESKTOP_CONTEXT_OPTIMIZATION_001/profiles/LAB_VALIDATION.json"
+      },
+      "effect": "BLOCK_BEFORE_EXECUTION"
+    }
+  ],
+  "tests": {
+    "VAL-001": "NOT_RUN",
+    "VAL-002": "NOT_RUN",
+    "VAL-003": "NOT_RUN",
+    "VAL-004": "NOT_RUN_NOT_ASSIGNED_TO_CODEX_A",
+    "VAL-005": "NOT_RUN",
+    "VAL-006": "NOT_RUN",
+    "VAL-007": "NOT_RUN",
+    "VAL-008": "NOT_RUN_NOT_ASSIGNED_TO_CODEX_A",
+    "VAL-009-A": "NOT_RUN",
+    "VAL-009-B": "NOT_RUN_FUTURE_CODEX_B_STAGE"
+  },
+  "outputs_created": [
+    "ENVIRONMENT.json",
+    "COMMAND_LOG.jsonl",
+    "ARTIFACT_HASHES.json",
+    "SCHEMA_RESULTS.json",
+    "COVERAGE_RESULTS.json",
+    "SOURCE_PATH_RESULTS.json",
+    "RUNNER_STATIC_REVIEW.md",
+    "DETERMINISM_RESULTS.json",
+    "REPLAY_A_RESULTS.json",
+    "TERMINAL_REPORT.json"
+  ],
+  "outputs_not_created": [],
+  "commands_summary": [
+    "Verified origin/main live with git ls-remote.",
+    "Fetched origin and created a detached clean worktree at the verified HEAD.",
+    "Read canonical bootstrap, authorization, brief, validation governance, benchmark top-level contracts and continuity sources.",
+    "Checked for the required execution envelope and context manifest; neither was found.",
+    "Compared the benchmark package at HEAD against its pinned publication commit and detected two changed artifacts."
+  ],
+  "claim_boundary": [
+    "NO_INSTRUMENT_VALIDATION_RESULT",
+    "NO_SCHEMA_COVERAGE_SOURCE_PATH_RUNNER_DETERMINISM_HASH_OR_REPLAY_RESULT",
+    "NO_ORACLE_CONTENT_ACCESSED_OR_DISCLOSED",
+    "NO_RESOLVER_OR_OPERATIONAL_APPROVAL",
+    "NO_FIXES_APPLIED"
+  ],
+  "authorization_state": "GRANTED_BUT_CODEX_A_ATTEMPT_BLOCKED_NOT_CONSUMED_BY_THIS_REPORT",
+  "residual_authority_claim": "NONE_INFERRED",
+  "next_operator": "NOT_STARTED",
+  "single_next_action": "CHATGPT_POST_TEST_REPORT_AND_HUMAN_DECISION_ON_CUSTODY_AND_MISSING_EXECUTION_CONTEXT; DO_NOT_START_CLAUDE_OR_CODEX_B"
+}
