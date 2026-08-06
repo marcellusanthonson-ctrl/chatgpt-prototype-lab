@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "benchmark_id": "CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001",
+  "status": "CREATED_NOT_VALIDATED_NOT_EXECUTED",
+  "authorization_id": "AUTHORIZATION_LAB_REPRODUCIBLE_OPERATIONAL_BENCHMARK_FROM_SCRATCH_DESIGN_AND_BUILD_202",
+  "created_at": "2026-08-05T23:18:00-04:00",
+  "repository": {
+    "name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "branch": "agent/reproducible-operational-benchmark-202",
+    "design_parent_head": "ef870782222376b953c30123a679fee4dd41b576",
+    "head_policy": "VERIFY_LIVE_AT_USE"
+  },
+  "identity": {
+    "new_from_scratch": true,
+    "benchmark_198_equivalence": false,
+    "benchmark_198_oracle_reuse": false
+  },
+  "components": [
+    "README.md",
+    "BENCHMARK_SPEC.json",
+    "THREAT_MODEL.json",
+    "corpus/TASKS.jsonl",
+    "corpus/COVERAGE_MATRIX.json",
+    "oracle/PRIVATE_ORACLE.json",
+    "runner/run_benchmark.py",
+    "runner/SCORING_CONTRACT.json",
+    "schemas/TASK.schema.json",
+    "schemas/ORACLE.schema.json",
+    "schemas/RESULT.schema.json",
+    "schemas/SUMMARY.schema.json",
+    "METRIC_CATALOG.json",
+    "STOP_CONDITIONS.json",
+    "REPRODUCIBILITY_MANIFEST.json",
+    "SOURCE_PROVENANCE_MATRIX.json",
+    "CHAIN_OF_CUSTODY.json",
+    "VALIDATION_PLAN.json",
+    "FUTURE_EXECUTION_PLAN.json"
+  ],
+  "counts": {
+    "tasks": 20,
+    "task_classes": 10,
+    "development_tasks": 10,
+    "held_out_tasks": 10,
+    "tests_executed": 0,
+    "resolver_mutations": 0,
+    "model_requests": 0
+  },
+  "tests": {
+    "instrument_validation": "NOT_RUN",
+    "runner_determinism": "NOT_RUN",
+    "independent_replay": "NOT_RUN",
+    "resolver_benchmark": "NOT_RUN",
+    "model_benchmark": "NOT_RUN",
+    "integration_observation": "NOT_RUN"
+  },
+  "claim_boundary": "PACKAGE_CREATED_AWAITING_SEPARATE_INDEPENDENT_VALIDATION"
+}
