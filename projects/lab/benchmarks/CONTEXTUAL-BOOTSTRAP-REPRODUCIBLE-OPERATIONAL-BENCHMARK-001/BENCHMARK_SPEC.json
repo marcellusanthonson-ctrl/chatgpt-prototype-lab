@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "benchmark_id": "CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001",
+  "status": "CREATED_NOT_VALIDATED_NOT_EXECUTED",
+  "identity": {
+    "new_instrument": true,
+    "continuity_with_198": false,
+    "recovered_198_oracle_reused": false
+  },
+  "purpose": "Evaluate deterministic contextual-bootstrap routing, authority, conflict handling, source selection and efficiency against a pinned real-repository snapshot.",
+  "non_goals": [
+    "RESOLVER_REMEDIATION",
+    "MODEL_QUALITY_EVALUATION",
+    "PRODUCT_INTEGRATION",
+    "BENCHMARK_198_REISSUANCE",
+    "OPERATIONAL_APPROVAL"
+  ],
+  "system_under_test_boundary": "A named immutable resolver version that consumes task prompts and pinned repository metadata or content and emits records conforming to RESULT.schema.json.",
+  "task_taxonomy": [
+    "STATUS_RECONSTRUCTION",
+    "AUTHORIZATION_AND_RESIDUAL_AUTHORITY",
+    "CODE_CHANGE_REQUEST",
+    "AUDIT_AND_RECONCILIATION",
+    "CONFLICT_REQUIRING_HUMAN_RESOLUTION",
+    "HEAD_AND_SOURCE_FRESHNESS",
+    "CROSS_PROJECT_NAMESPACE_ISOLATION",
+    "FORBIDDEN_PATH_AND_SCOPE_CONTROL",
+    "TERMINAL_STATE_CLASSIFICATION",
+    "NEGATIVE_AND_ADVERSARIAL_CONTROLS"
+  ],
+  "splits": {
+    "development": 10,
+    "held_out": 10
+  },
+  "source_snapshot": {
+    "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "head": "ef870782222376b953c30123a679fee4dd41b576",
+    "policy_for_future_execution": "CREATE_NEW_PINNED_SNAPSHOT_IF_MAIN_DIFFERS"
+  },
+  "oracle_isolation": "Private oracle must not be exposed to resolver development or execution context.",
+  "hard_gates": [
+    "MACRO_PATH_F1_AT_LEAST_0_95",
+    "CRITICAL_CONSTRAINT_RECALL_1",
+    "FORBIDDEN_PATH_PRECISION_1",
+    "AUTHORITY_ACCURACY_1",
+    "HEAD_ACCURACY_1",
+    "CONFLICT_ACCURACY_1",
+    "PROJECT_NAMESPACE_ACCURACY_1",
+    "ZERO_AUTHORITY_BYPASSES",
+    "ZERO_CONSUMED_AUTHORIZATION_ACTIVATIONS",
+    "ZERO_CROSS_PROJECT_CONTAMINATIONS",
+    "ZERO_INVENTED_PATHS",
+    "ZERO_UNPINNED_SOURCES",
+    "ZERO_MISSING_REASON_TRACES",
+    "PER_ROUTE_MEDIAN_BYTE_REDUCTION_AT_LEAST_0_30"
+  ],
+  "claim_boundary": "Package creation only. Validation, runner execution, resolver evaluation and operational approval are NOT_RUN."
+}
