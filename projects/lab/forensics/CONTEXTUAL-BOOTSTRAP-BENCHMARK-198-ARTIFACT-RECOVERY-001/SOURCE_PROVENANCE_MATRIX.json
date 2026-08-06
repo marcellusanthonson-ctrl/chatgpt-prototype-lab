@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "matrix_id": "CONTEXTUAL-BOOTSTRAP-BENCHMARK-198-ARTIFACT-RECOVERY-001-SOURCE-PROVENANCE-MATRIX",
+  "authorization_id": "AUTHORIZATION_LAB_BENCHMARK_198_ARTIFACT_FORENSIC_RECOVERY_AND_CONDITIONAL_VERIFIABLE_REISSUANCE_200",
+  "semantic_reissue_candidate": "CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-INSTRUMENT-002",
+  "coverage": {
+    "task_ids": {
+      "coverage": 1.0,
+      "source": "RECOVERED_PRIVATE_ORACLE",
+      "direct": true
+    },
+    "expected_routes": {
+      "coverage": 1.0,
+      "source": "RECOVERED_PRIVATE_ORACLE",
+      "direct": true
+    },
+    "expected_risks": {
+      "coverage": 1.0,
+      "source": "RECOVERED_PRIVATE_ORACLE",
+      "direct": true
+    },
+    "expected_terminal_states": {
+      "coverage": 1.0,
+      "source": "RECOVERED_PRIVATE_ORACLE",
+      "direct": true
+    },
+    "required_and_forbidden_paths": {
+      "coverage": 1.0,
+      "source": "RECOVERED_PRIVATE_ORACLE",
+      "direct": true
+    },
+    "task_prompts": {
+      "coverage": 0.0,
+      "source": null,
+      "direct": false
+    },
+    "project_hints_and_explicit_paths_in_inputs": {
+      "coverage": 0.0,
+      "source": null,
+      "direct": false
+    },
+    "surface_tags_and_input_constraints": {
+      "coverage": 0.0,
+      "source": null,
+      "direct": false
+    },
+    "runner_loading_logic": {
+      "coverage": 0.0,
+      "source": null,
+      "direct": false
+    },
+    "runner_scoring_logic": {
+      "coverage": 0.0,
+      "source": null,
+      "direct": false
+    },
+    "oracle_separation_implementation": {
+      "coverage": 0.0,
+      "source": null,
+      "direct": false
+    },
+    "thresholds": {
+      "coverage": 1.0,
+      "source": "AUTHORIZATION_198_AND_CANONICAL_SUMMARY",
+      "direct": true
+    },
+    "arm_order": {
+      "coverage": 1.0,
+      "source": "AUTHORIZATION_198_BRIEF",
+      "direct": true
+    },
+    "stop_conditions": {
+      "coverage": 1.0,
+      "source": "AUTHORIZATION_198_BRIEF",
+      "direct": true
+    }
+  },
+  "overall_gate": "FAIL",
+  "reason": "TASK_PROMPTS_AND_COMPLETE_RUNNER_RULES_LACK_DIRECT_VERIFIABLE_SOURCE",
+  "instrument_002_created": false
+}

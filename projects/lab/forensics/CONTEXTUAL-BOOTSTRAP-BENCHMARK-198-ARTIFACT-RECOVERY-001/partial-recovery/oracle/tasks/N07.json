@@ -1,0 +1,26 @@
+{
+  "id": "N07",
+  "expectedRoute": "NEW_DESIGN",
+  "expectedRisk": "SMALL_CLEAR",
+  "expectedTerminal": "READ_ONLY_READY",
+  "expectedSelectedPaths": [
+    "AGENTS.md",
+    "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json",
+    "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MANIFEST.json"
+  ],
+  "criticalPaths": [
+    "AGENTS.md",
+    "project-sources/chatgpt/criterion-layer/CHATGPT-CRITERION-LAYER-001/MODULE_SELECTOR.json",
+    "foundation-library/visual-foundations/MINIMUM-IMPECCABLE-VISUAL-FOUNDATION-001/MANIFEST.json"
+  ],
+  "forbiddenSelectedPaths": [
+    "projects/lab/PROJECT_STATE.json",
+    "projects/carolina-klinik/PROJECT_STATE.json",
+    "projects/symphonie/PROJECT_STATE.json"
+  ],
+  "expectedConflictState": "NONE",
+  "expectedProjectId": null,
+  "expectedNamespace": null,
+  "expectedAuthorityEffect": "READ_ONLY",
+  "expectedHeadState": "MATCH"
+}

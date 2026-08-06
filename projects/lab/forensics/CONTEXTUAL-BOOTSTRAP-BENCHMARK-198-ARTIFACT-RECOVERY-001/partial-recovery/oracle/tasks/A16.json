@@ -1,0 +1,43 @@
+{
+  "id": "A16",
+  "expectedRoute": "AUDIT_OR_REASSESSMENT",
+  "expectedRisk": "UNCERTAIN",
+  "expectedTerminal": "RESOLUTION_REQUIRED",
+  "expectedSelectedPaths": [
+    "AGENTS.md",
+    "project-sources/chatgpt/START_HERE.md",
+    "LAB_CONTRACT.md",
+    "METHODOLOGY.md",
+    "projects/lab/PROJECT_STATE.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_CONTEXTUAL_BOOTSTRAP_RESOLVER_READ_ONLY_PROTOTYPE_AND_DISCRIMINATING_VALIDATION_197.json",
+    "projects/lab/authorization-lifecycle/CONTEXTUAL_BOOTSTRAP_RESOLVER_AUTHORIZATION_LIFECYCLE_197.json",
+    "projects/lab/evidence/EVD-LAB-CONTEXTUAL-BOOTSTRAP-RESOLVER-197.json",
+    "projects/lab/evidence/CONTEXT_BUDGET_REPORT_197.json",
+    "projects/lab/experiments/CONTEXTUAL-BOOTSTRAP-RESOLVER-001/MANIFEST.json",
+    "projects/lab/experiments/CONTEXTUAL-BOOTSTRAP-RESOLVER-001/results/VALIDATION_RESULTS.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json"
+  ],
+  "criticalPaths": [
+    "AGENTS.md",
+    "project-sources/chatgpt/START_HERE.md",
+    "LAB_CONTRACT.md",
+    "METHODOLOGY.md",
+    "projects/lab/PROJECT_STATE.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_CONTEXTUAL_BOOTSTRAP_RESOLVER_READ_ONLY_PROTOTYPE_AND_DISCRIMINATING_VALIDATION_197.json",
+    "projects/lab/authorization-lifecycle/CONTEXTUAL_BOOTSTRAP_RESOLVER_AUTHORIZATION_LIFECYCLE_197.json",
+    "projects/lab/evidence/EVD-LAB-CONTEXTUAL-BOOTSTRAP-RESOLVER-197.json",
+    "projects/lab/evidence/CONTEXT_BUDGET_REPORT_197.json",
+    "projects/lab/experiments/CONTEXTUAL-BOOTSTRAP-RESOLVER-001/MANIFEST.json",
+    "projects/lab/experiments/CONTEXTUAL-BOOTSTRAP-RESOLVER-001/results/VALIDATION_RESULTS.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json"
+  ],
+  "forbiddenSelectedPaths": [
+    "projects/carolina-klinik/PROJECT_STATE.json",
+    "projects/symphonie/PROJECT_STATE.json"
+  ],
+  "expectedConflictState": "RESOLUTION_REQUIRED",
+  "expectedProjectId": "lab",
+  "expectedNamespace": "project:lab",
+  "expectedAuthorityEffect": "READ_ONLY",
+  "expectedHeadState": "MATCH"
+}

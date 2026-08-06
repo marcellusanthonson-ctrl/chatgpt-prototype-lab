@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "ledger_id": "CONTEXTUAL-BOOTSTRAP-BENCHMARK-198-ARTIFACT-RECOVERY-001-TRANSFORMATION-LEDGER",
+  "authorization_id": "AUTHORIZATION_LAB_BENCHMARK_198_ARTIFACT_FORENSIC_RECOVERY_AND_CONDITIONAL_VERIFIABLE_REISSUANCE_200",
+  "attempts": [
+    {
+      "id": "T-001",
+      "artifact": "oracle/PRIVATE_ORACLE.json.gz.b64",
+      "input_git_blob_sha": "f4ceb0d1a321240e98a1bdfed9a8cea43e942690",
+      "transformation": "ASCII_BASE64_DECODE_THEN_GZIP_DECOMPRESS",
+      "reversible": true,
+      "lossy": false,
+      "output": "JSON_OBJECT_WITH_21_TASK_EXPECTATIONS",
+      "result": "PASS",
+      "round_trip": "PASS"
+    },
+    {
+      "id": "T-002",
+      "artifact": "fixtures/OPERATIONAL_TASKS.json.gz.b64",
+      "transformation": "OUTER_BASE64_DECODE_TO_RAW_BLOB_THEN_UTF8_DECODE_THEN_UNPACK_EACH_16BIT_CODEPOINT_TO_TWO_BYTES",
+      "reversible": true,
+      "lossy": false,
+      "scope": "PREFIX_BEFORE_FIRST_U_FFFD",
+      "output_ascii_bytes": 3454,
+      "result": "PARTIAL_PASS",
+      "stop_reason": "U_FFFD_REPLACEMENT_CHARACTER_ERASES_ORIGINAL_16BIT_PAIR"
+    },
+    {
+      "id": "T-003",
+      "artifact": "scripts/BENCHMARK_RUNNER.ts.gz.b64",
+      "transformation": "OUTER_BASE64_DECODE_TO_RAW_BLOB_THEN_UTF8_DECODE_THEN_UNPACK_EACH_16BIT_CODEPOINT_TO_TWO_BYTES",
+      "reversible": true,
+      "lossy": false,
+      "scope": "PREFIX_BEFORE_FIRST_U_FFFD",
+      "output_ascii_bytes": 526,
+      "result": "PARTIAL_PASS",
+      "stop_reason": "U_FFFD_REPLACEMENT_CHARACTER_ERASES_ORIGINAL_16BIT_PAIR"
+    },
+    {
+      "id": "T-004",
+      "artifact": "scripts/BENCHMARK_RUNNER.ts.gz.b64",
+      "transformation": "ADD_OR_REMOVE_SINGLE_TRAILING_NEWLINE",
+      "reversible": true,
+      "lossy": false,
+      "result": "NOT_APPLICABLE",
+      "reason": "ONE_BYTE_SIZE_MISMATCH_DOES_NOT_REPAIR_INTERNAL_REPLACEMENT_CHARACTERS"
+    }
+  ],
+  "prohibited_attempts_not_run": [
+    "BRUTE_FORCE_PREIMAGE_SEARCH",
+    "INVENT_MISSING_BYTES",
+    "USE_HISTORICAL_METRICS_TO_TUNE_INPUTS",
+    "GENERATE_PROMPTS_FROM_EXPECTED_RESULTS"
+  ]
+}

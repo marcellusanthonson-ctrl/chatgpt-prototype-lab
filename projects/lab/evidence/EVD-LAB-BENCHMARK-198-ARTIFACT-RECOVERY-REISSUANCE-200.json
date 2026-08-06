@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-BENCHMARK-198-ARTIFACT-RECOVERY-REISSUANCE-200",
+  "authorization_id": "AUTHORIZATION_LAB_BENCHMARK_198_ARTIFACT_FORENSIC_RECOVERY_AND_CONDITIONAL_VERIFIABLE_REISSUANCE_200",
+  "project_id": "lab",
+  "observed_at": "2026-08-05T21:32:43-04:00",
+  "verified_parent_head": "8a0826a619f71d7893150e45f4edbbcffceaafe6",
+  "result": "PARTIAL_ARTIFACT_RECOVERY_INSUFFICIENT_FOR_RETEST",
+  "finding": {
+    "classification": "CONFIRMED",
+    "statement": "Benchmark 198 supports exact recovery of the private oracle but not exact recovery of the task corpus or runner; direct source coverage is insufficient to issue a new semantically complete instrument.",
+    "decisive_evidence": [
+      "ORACLE_2033_BYTES_SHA256_AND_GIT_BLOB_ROUND_TRIP_PASS",
+      "CORPUS_FIRST_U_FFFD_AFTER_3454_RECOVERABLE_ASCII_BYTES",
+      "RUNNER_FIRST_U_FFFD_AFTER_526_RECOVERABLE_ASCII_BYTES",
+      "RUNNER_DECLARED_7093_BYTES_GITHUB_7092_BYTES",
+      "ONE_CREATION_COMMIT_PER_CRITICAL_PATH_NO_PRIOR_VERSION",
+      "NO_PR_58_COMMENTS_OR_ATTACHMENTS",
+      "NO_ALTERNATIVE_HASH_COPY_FOUND",
+      "TASK_PROMPT_PROVENANCE_0",
+      "COMPLETE_RUNNER_RULE_PROVENANCE_0"
+    ],
+    "alternative_explanations_considered": [
+      "CONNECTOR_UTF8_LIMITATION_ONLY",
+      "SINGLE_TRAILING_NEWLINE_ONLY",
+      "ALTERNATE_HISTORICAL_REF_CONTAINS_GOOD_COPY",
+      "DERIVED_RESULTS_SUFFICIENT_FOR_SEMANTIC_REISSUE"
+    ],
+    "assessment": "Outer-base64 access bypassed the connector UTF-8 reader and exposed literal U+FFFD characters inside both critical blobs. Those replacements are lossy and cannot be reversed. Derived outputs do not establish original prompts or complete runner logic."
+  },
+  "execution": {
+    "exact_recovered_artifacts": 1,
+    "partial_only_artifacts": 2,
+    "semantic_instrument_created": 0,
+    "resolver_mutations": 0,
+    "retest_iterations": 0,
+    "model_scoring_calls": 0
+  },
+  "source_refs": [
+    "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-BENCHMARK-001/FILE_HASHES.json",
+    "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-BENCHMARK-001/SUMMARY.json",
+    "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-RETEST-002/ARTIFACT_REPLAYABILITY_PREFLIGHT.json",
+    "projects/lab/forensics/CONTEXTUAL-BOOTSTRAP-BENCHMARK-198-ARTIFACT-RECOVERY-001/RAW_OBJECT_LEDGER.json",
+    "projects/lab/forensics/CONTEXTUAL-BOOTSTRAP-BENCHMARK-198-ARTIFACT-RECOVERY-001/SOURCE_PROVENANCE_MATRIX.json"
+  ]
+}

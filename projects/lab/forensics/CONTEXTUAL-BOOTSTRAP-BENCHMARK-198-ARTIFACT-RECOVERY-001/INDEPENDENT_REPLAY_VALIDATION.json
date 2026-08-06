@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0.0",
+  "validation_id": "CONTEXTUAL-BOOTSTRAP-BENCHMARK-198-ARTIFACT-RECOVERY-001-INDEPENDENT-REPLAY-VALIDATION",
+  "authorization_id": "AUTHORIZATION_LAB_BENCHMARK_198_ARTIFACT_FORENSIC_RECOVERY_AND_CONDITIONAL_VERIFIABLE_REISSUANCE_200",
+  "constructor_surface": "GITHUB_API_FORENSIC_ANALYSIS_PLUS_LOCAL_PYTHON_STANDARD_LIBRARY",
+  "verifier_surface": "FRESH_LOCAL_PROCESS_OVER_PUBLISHED_PARTIAL_RECOVERY_FILES",
+  "checks": [
+    {
+      "id": "ORACLE_BYTES",
+      "expected": 2033,
+      "result": "PASS"
+    },
+    {
+      "id": "ORACLE_SHA256",
+      "expected": "8fb3cebaf83a27c13852cf64879d4e791a809ab94b4a062e7d38acfed8cc3ad9",
+      "result": "PASS"
+    },
+    {
+      "id": "ORACLE_GIT_BLOB_SHA",
+      "expected": "f4ceb0d1a321240e98a1bdfed9a8cea43e942690",
+      "result": "PASS"
+    },
+    {
+      "id": "ORACLE_BASE64",
+      "result": "PASS"
+    },
+    {
+      "id": "ORACLE_GZIP",
+      "result": "PASS"
+    },
+    {
+      "id": "ORACLE_JSON",
+      "result": "PASS"
+    },
+    {
+      "id": "ORACLE_TASK_COUNT",
+      "expected": 21,
+      "result": "PASS"
+    },
+    {
+      "id": "CORPUS_EXACT_RECOVERY",
+      "result": "FAIL_IRREVERSIBLE_REPLACEMENT_CHARACTERS"
+    },
+    {
+      "id": "RUNNER_EXACT_RECOVERY",
+      "result": "FAIL_IRREVERSIBLE_REPLACEMENT_CHARACTERS_AND_SIZE_MISMATCH"
+    },
+    {
+      "id": "SEMANTIC_REISSUE_PROVENANCE",
+      "expected": 1.0,
+      "observed": "LESS_THAN_1_TASK_PROMPTS_AND_RUNNER_LOGIC",
+      "result": "FAIL"
+    },
+    {
+      "id": "HISTORICAL_PACKAGE_MUTATION",
+      "expected": 0,
+      "observed": 0,
+      "result": "PASS"
+    },
+    {
+      "id": "RESOLVER_EXECUTION",
+      "expected": 0,
+      "observed": 0,
+      "result": "PASS"
+    }
+  ],
+  "terminal_result": "PARTIAL_ARTIFACT_RECOVERY_INSUFFICIENT_FOR_RETEST"
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "delta_id": "benchmark-198-artifact-recovery-reissuance-200",
+  "project_id": "lab",
+  "authorization_id": "AUTHORIZATION_LAB_BENCHMARK_198_ARTIFACT_FORENSIC_RECOVERY_AND_CONDITIONAL_VERIFIABLE_REISSUANCE_200",
+  "result": "PARTIAL_ARTIFACT_RECOVERY_INSUFFICIENT_FOR_RETEST",
+  "adds": [
+    "projects/lab/forensics/CONTEXTUAL-BOOTSTRAP-BENCHMARK-198-ARTIFACT-RECOVERY-001",
+    "projects/lab/sources/USER_SOURCE_AUTHORIZATION_200_20260805.md",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_BENCHMARK_198_ARTIFACT_FORENSIC_RECOVERY_AND_CONDITIONAL_VERIFIABLE_REISSUANCE_200.json",
+    "projects/lab/authorization-lifecycle/BENCHMARK_198_ARTIFACT_RECOVERY_REISSUANCE_LIFECYCLE_200.json",
+    "projects/lab/briefs/CODEX_BENCHMARK_198_ARTIFACT_RECOVERY_REISSUANCE_200_001.json",
+    "projects/lab/evidence/EVD-LAB-BENCHMARK-198-ARTIFACT-RECOVERY-REISSUANCE-200.json"
+  ],
+  "modifies": [],
+  "historical_package_modified": false,
+  "resolver_effect": "NONE",
+  "retest_effect": "NONE",
+  "next_action": "DESIGN_A_NEW_FROM_SCRATCH_OPERATIONAL_BENCHMARK_OR_OBTAIN_EXTERNAL_VERIFIABLE_SOURCE_BYTES_BEFORE_REMEDIATION"
+}
