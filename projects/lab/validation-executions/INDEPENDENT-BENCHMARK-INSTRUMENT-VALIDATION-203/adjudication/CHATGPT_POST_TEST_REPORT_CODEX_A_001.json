@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0.0",
+  "report_id": "CHATGPT-POST-TEST-REPORT-AUTH203-CODEX-A-001",
+  "authorization_id": "AUTHORIZATION_LAB_INDEPENDENT_REPRODUCIBLE_BENCHMARK_INSTRUMENT_VALIDATION_203",
+  "attempt_id": "INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203-CODEX-A-ATTEMPT-001",
+  "reported_at": "2026-08-06T11:52:00-04:00",
+  "executor": "CODEX_DESKTOP_A",
+  "environment": {
+    "type": "LOCAL_CLEAN_DETACHED_WORKTREE",
+    "remote_main_head_verified_live": "01e284a61d0198156f8e1adad28d5d168b11d984",
+    "pinned_benchmark_publication_commit": "48eb518a5fd2ec4ee5cf073e94c0142469dc2c4a"
+  },
+  "objective": "Execute the primary independent technical validation of the benchmark instrument without modifying it and without running a resolver or model operational benchmark.",
+  "authorized_scope": ["VAL-001", "VAL-002", "VAL-003", "VAL-005", "VAL-006", "VAL-007", "VAL-009-A"],
+  "result": "BLOCKED",
+  "stage": "PRE_VALIDATION_CUSTODY_AND_EXECUTION_CONTEXT_GATE",
+  "claim_limit": [
+    "NO_INSTRUMENT_VALIDATION_RESULT",
+    "NO_ASSIGNED_VAL_TEST_RESULT",
+    "NO_ORACLE_CONTENT_ACCESSED",
+    "NO_RUNNER_EXECUTION",
+    "NO_RESOLVER_OR_OPERATIONAL_APPROVAL"
+  ],
+  "state_before": "AUTHORIZATION_203_GRANTED_AWAITING_CODEX_A_EXECUTION",
+  "state_after": "CODEX_A_ATTEMPT_001_BLOCKED_BEFORE_VAL_001_TERMINAL_RECONCILIATION_REQUIRED",
+  "achieved": [
+    "LIVE_REMOTE_MAIN_HEAD_VERIFIED",
+    "CLEAN_DETACHED_WORKTREE_CREATED_BY_OPERATOR",
+    "BENCHMARK_NOT_MUTATED_BY_CODEX_A",
+    "ORACLE_NOT_OPENED",
+    "TWO_PRE_VALIDATION_STOP_CONDITIONS_ISOLATED",
+    "TERMINAL_REPORT_RECEIVED"
+  ],
+  "not_achieved": [
+    "VAL_001_THROUGH_VAL_009_NOT_EXECUTED",
+    "NO_INSTRUMENT_PASS_OR_FAIL_ADJUDICATION",
+    "NO_CLAUDE_AUDIT",
+    "NO_CODEX_B_REPLAY",
+    "NO_DETERMINISM_OR_HASH_VALIDATION_RESULT"
+  ],
+  "findings": [
+    {
+      "finding_id": "CODA-203-BLOCK-001",
+      "classification": "CONFIRMED",
+      "severity": "CRITICAL",
+      "summary": "The benchmark package is not byte-identical between the pinned publication commit and the verified live HEAD because CHAIN_OF_CUSTODY.json and REPRODUCIBILITY_MANIFEST.json were changed during authorization 202 closure.",
+      "evidence": [
+        "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001/CHAIN_OF_CUSTODY.json@48eb518a5fd2ec4ee5cf073e94c0142469dc2c4a",
+        "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001/CHAIN_OF_CUSTODY.json@01e284a61d0198156f8e1adad28d5d168b11d984",
+        "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001/REPRODUCIBILITY_MANIFEST.json@48eb518a5fd2ec4ee5cf073e94c0142469dc2c4a",
+        "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001/REPRODUCIBILITY_MANIFEST.json@01e284a61d0198156f8e1adad28d5d168b11d984"
+      ]
+    },
+    {
+      "finding_id": "CODA-203-BLOCK-002",
+      "classification": "CONFIRMED",
+      "severity": "CRITICAL",
+      "summary": "The assigned execution envelope and context manifest are absent even though AGENTS.md and CODEX-DESKTOP-PROGRESSIVE-CONTEXT-LOADING-001 require them and define their absence as BLOCK_BEFORE_EXECUTION.",
+      "evidence": [
+        "AGENTS.md",
+        "architecture/governance/CODEX_DESKTOP_CONTEXT_OPTIMIZATION_001/CONTEXT_LOADING_POLICY.json",
+        "repository search for CODEX_INDEPENDENT_BENCHMARK_INSTRUMENT_VALIDATION_203_A_001"
+      ]
+    },
+    {
+      "finding_id": "CODA-203-OUTPUTS-001",
+      "classification": "USER_REPORTED_NOT_INDEPENDENTLY_VERIFIED",
+      "severity": "OBSERVATION",
+      "summary": "Ten required outputs were reported as locally created and syntactically validated, but only TERMINAL_REPORT.json was supplied byte for byte in the conversation. The remaining local files are not available through the canonical remote repository."
+    }
+  ],
+  "tests": {
+    "VAL-001": "NOT_RUN",
+    "VAL-002": "NOT_RUN",
+    "VAL-003": "NOT_RUN",
+    "VAL-004": "NOT_RUN",
+    "VAL-005": "NOT_RUN",
+    "VAL-006": "NOT_RUN",
+    "VAL-007": "NOT_RUN",
+    "VAL-008": "NOT_RUN",
+    "VAL-009": "NOT_RUN"
+  },
+  "pending_gates": [
+    "RECONCILED_IMMUTABLE_BENCHMARK_BASELINE_AND_CHAIN_OF_CUSTODY",
+    "VALID_EXECUTION_ENVELOPE",
+    "VALID_CONTEXT_MANIFEST",
+    "VAL_001_THROUGH_VAL_009_PASS",
+    "ZERO_CRITICAL_FINDINGS",
+    "CLAUDE_READ_ONLY_AUDIT",
+    "FRESH_CODEX_B_REPLAY"
+  ],
+  "approval_state": "NOT_APPROVED",
+  "authorization_state": "TERMINAL_BLOCKED_AWAITING_RECONCILIATION_AND_PUBLICATION",
+  "claude_state": "NOT_STARTED_FORBIDDEN_TO_START_AFTER_TERMINAL_BLOCK",
+  "codex_b_state": "NOT_STARTED_FORBIDDEN_TO_START_AFTER_TERMINAL_BLOCK",
+  "single_next_action": "DESIGN_AND_APPROVE_A_SEPARATE_REMEDIATION_AUTHORIZATION_THAT_RECONCILES_THE_FROZEN_BENCHMARK_BASELINE_AND_CHAIN_OF_CUSTODY_AND_CREATES_THE_REQUIRED_EXECUTION_ENVELOPE_AND_CONTEXT_MANIFEST_BEFORE_ANY_RETEST"
+}
