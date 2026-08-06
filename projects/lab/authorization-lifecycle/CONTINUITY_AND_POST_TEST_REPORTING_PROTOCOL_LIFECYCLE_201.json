@@ -3,12 +3,22 @@
   "record_id": "CONTINUITY-AND-POST-TEST-REPORTING-PROTOCOL-LIFECYCLE-201",
   "authorization": "AUTHORIZATION_LAB_CONTINUITY_AND_POST_TEST_REPORTING_PROTOCOL_201",
   "project_id": "lab",
-  "status": "GRANTED_EXECUTION_COMPLETE_AWAITING_VERIFIED_REMOTE_PUBLICATION",
+  "status": "CONSUMED_VERIFIED_REMOTE_PUBLICATION",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-08-05T22:36:00-04:00",
   "execution_started_at": "2026-08-05T22:36:00-04:00",
   "execution_completed_at": "2026-08-05T22:36:00-04:00",
   "verified_execution_parent_head": "720926633e8274d4c8e1c5a3793743c38aa69ed3",
   "terminal_result": "CONTINUITY_AND_POST_TEST_REPORTING_PROTOCOL_ESTABLISHED",
-  "residual_authority": "NONE_AFTER_CONSUMPTION"
+  "residual_authority": "NONE",
+  "publication": {
+    "protocol_branch": "agent/continuity-post-test-reporting-protocol-201",
+    "protocol_pull_request": 64,
+    "protocol_merge_commit": "8f4c93b6cc4fa8b000c3463245e7970d7f49ca64",
+    "remote_main_verified": "8f4c93b6cc4fa8b000c3463245e7970d7f49ca64",
+    "closure_branch": "agent/continuity-post-test-reporting-protocol-201-closure",
+    "closure_pull_request": "TO_BE_RECORDED",
+    "closure_effect": "CONSUMPTION_SUCCESSOR_CONTINUITY_AND_NO_RESIDUAL_AUTHORITY_EFFECTIVE_ON_VERIFIED_REMOTE_MERGE"
+  },
+  "consumed_at": "2026-08-05T22:52:00-04:00"
 }
