@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-CONTINUITY-POST-TEST-REPORTING-201",
+  "authorization_id": "AUTHORIZATION_LAB_CONTINUITY_AND_POST_TEST_REPORTING_PROTOCOL_201",
+  "project_id": "lab",
+  "observed_at": "2026-08-05T22:36:00-04:00",
+  "verified_parent_head": "720926633e8274d4c8e1c5a3793743c38aa69ed3",
+  "result": "CONTINUITY_AND_POST_TEST_REPORTING_PROTOCOL_ESTABLISHED_AWAITING_PUBLICATION",
+  "changes": {
+    "continuity_protocol_updated": true,
+    "chatgpt_continuity_source_updated": true,
+    "chatgpt_response_contract_updated": true,
+    "successor_current_package_prepared": true,
+    "predecessor_archive_prepared": true,
+    "mandatory_post_test_report": true
+  },
+  "reporting_scope": [
+    "CHATGPT_DIRECT_TESTS",
+    "CODEX_TESTS"
+  ],
+  "mandatory_outcomes": [
+    "PASS",
+    "FAIL",
+    "BLOCKED",
+    "INSUFFICIENT_EVIDENCE",
+    "CANCELLED_OR_STOPPED"
+  ],
+  "effects": {
+    "benchmark": "NONE",
+    "resolver": "NONE",
+    "model_requests": 0,
+    "integration": "NONE",
+    "runtime": "NONE",
+    "product": "NONE"
+  }
+}

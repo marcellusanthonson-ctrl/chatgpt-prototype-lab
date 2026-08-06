@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "CHATGPT-CONTINUITY-POST-TEST-REPORTING-PROTOCOL-201-001",
+  "project_id": "lab",
+  "authorization_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_CONTINUITY_AND_POST_TEST_REPORTING_PROTOCOL_201.json",
+  "objective": "Publish a successor continuity package and durable report-after-every-test rule.",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "main",
+  "expected_parent_head": "720926633e8274d4c8e1c5a3793743c38aa69ed3",
+  "scope": {
+    "protocols": [
+      "docs/CONTINUITY_PROTOCOL.md",
+      "project-sources/chatgpt/06_CONTINUITY_PROTOCOL.md",
+      "project-sources/chatgpt/07_ERRORS_AND_RESPONSE_CONTRACT.md"
+    ],
+    "continuity": [
+      "projects/lab/continuity/CURRENT_CONTINUITY.json",
+      "projects/lab/continuity/CURRENT_CONTINUITY.md",
+      "projects/lab/continuity/ATTACHMENT_MANIFEST.json",
+      "projects/lab/continuity/START_PROMPT.md",
+      "projects/lab/continuity/archive/**"
+    ]
+  },
+  "required_reporting_fields": [
+    "TEST_ID_ATTEMPT_DATE_EXECUTOR_ENVIRONMENT",
+    "OBJECTIVE_SCOPE_AND_APPROVAL_CRITERIA",
+    "EXACT_RESULT_AND_CLAIM_LIMITS",
+    "STATE_BEFORE_AND_AFTER",
+    "ACHIEVEMENTS",
+    "UNACHIEVED_DEFECTS_BLOCKERS_RISKS_DIVERGENCES",
+    "EVIDENCE",
+    "EXECUTED_AND_PENDING_TESTS",
+    "MISSING_APPROVAL_GATES_AND_APPROVAL_STATUS",
+    "AUTHORIZATION_CONSUMPTION_AND_RESIDUAL_AUTHORITY",
+    "SINGLE_NEXT_ACTION"
+  ],
+  "stop_conditions": [
+    "HEAD_MISMATCH",
+    "UNRELATED_PATH_CHANGE",
+    "BENCHMARK_OR_RESOLVER_SCOPE_EXPANSION",
+    "LOSS_OF_PREDECESSOR_CONTINUITY_CONTENT"
+  ],
+  "response_contract": "REPORT_PUBLICATION_COMMITS_VALIDATION_AUTHORITY_AND_SINGLE_NEXT_ACTION"
+}
