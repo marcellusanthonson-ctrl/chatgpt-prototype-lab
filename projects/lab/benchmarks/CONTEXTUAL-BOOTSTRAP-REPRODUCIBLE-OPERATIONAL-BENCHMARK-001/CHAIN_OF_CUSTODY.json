@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "benchmark_id": "CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001",
-  "status": "OPEN_UNTIL_VERIFIED_REMOTE_PUBLICATION",
+  "status": "PACKAGE_PUBLICATION_VERIFIED_VALIDATION_CUSTODY_NOT_STARTED",
   "events": [
     {
       "sequence": 1,
@@ -23,13 +23,29 @@
       "at": "2026-08-05T23:18:00-04:00",
       "actor": "ChatGPT",
       "event": "RUNNER_CREATED_WITHOUT_EXECUTION"
+    },
+    {
+      "sequence": 4,
+      "at": "2026-08-05T23:38:12-04:00",
+      "actor": "GitHub",
+      "event": "PACKAGE_PUBLISHED_TO_REMOTE_MAIN",
+      "pull_request": 66,
+      "merge_commit": "48eb518a5fd2ec4ee5cf073e94c0142469dc2c4a"
+    },
+    {
+      "sequence": 5,
+      "at": "2026-08-05T23:40:00-04:00",
+      "actor": "ChatGPT",
+      "event": "AUTHORIZATION_CLOSURE_AND_SUCCESSOR_CONTINUITY_PREPARED",
+      "validation_tests": "NOT_RUN"
     }
   ],
   "prohibited_events_observed": {
     "benchmark_execution": false,
+    "runner_execution": false,
     "resolver_mutation": false,
     "model_request": false,
     "integration": false
   },
-  "next_required_event": "VERIFIED_REMOTE_PUBLICATION"
+  "next_required_event": "SEPARATELY_AUTHORIZED_INDEPENDENT_VALIDATION_CUSTODY_OPENING"
 }
