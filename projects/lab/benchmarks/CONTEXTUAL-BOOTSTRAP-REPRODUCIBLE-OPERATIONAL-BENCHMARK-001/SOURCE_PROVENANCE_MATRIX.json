@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0.0",
+  "benchmark_id": "CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001",
+  "snapshot_head": "ef870782222376b953c30123a679fee4dd41b576",
+  "status": "PINNED_FOR_DESIGN_NOT_YET_INDEPENDENTLY_VALIDATED",
+  "sources": [
+    {"path": "project-sources/chatgpt/START_HERE.md", "ref": "ef870782222376b953c30123a679fee4dd41b576", "role": "canonical_entrypoint"},
+    {"path": "LAB_CONTRACT.md", "ref": "ef870782222376b953c30123a679fee4dd41b576", "role": "authority_contract"},
+    {"path": "METHODOLOGY.md", "ref": "ef870782222376b953c30123a679fee4dd41b576", "role": "methodology"},
+    {"path": "projects/lab/continuity/CURRENT_CONTINUITY.json", "ref": "ef870782222376b953c30123a679fee4dd41b576", "role": "current_structured_state"},
+    {"path": "projects/lab/authorizations/AUTHORIZATION_LAB_CONTINUITY_AND_POST_TEST_REPORTING_PROTOCOL_201.json", "ref": "ef870782222376b953c30123a679fee4dd41b576", "role": "consumed_authorization_and_reporting_rule"},
+    {"path": "projects/lab/continuity/archive/2026-08-05-authorization-200/CURRENT_CONTINUITY.json", "ref": "ef870782222376b953c30123a679fee4dd41b576", "role": "historical_200_and_198_boundaries"},
+    {"path": "docs/CONTINUITY_PROTOCOL.md", "ref": "ef870782222376b953c30123a679fee4dd41b576", "role": "post_test_reporting"},
+    {"path": "project-sources/chatgpt/07_ERRORS_AND_RESPONSE_CONTRACT.md", "ref": "ef870782222376b953c30123a679fee4dd41b576", "role": "response_contract"},
+    {"path": "registry/projects.json", "ref": "ef870782222376b953c30123a679fee4dd41b576", "role": "project_namespace_registry"},
+    {"path": "projects/lab/evidence/EVD-LAB-CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-BENCHMARK-198.json", "ref": "ef870782222376b953c30123a679fee4dd41b576", "role": "historical_failure_modes_only"}
+  ],
+  "provenance_rules": [
+    "Historical 198 evidence informs risk coverage but no corpus, runner or oracle bytes are copied.",
+    "Every task cites at least one source path pinned to the design snapshot.",
+    "Future execution must pin a fresh immutable snapshot and record any task regeneration."
+  ]
+}

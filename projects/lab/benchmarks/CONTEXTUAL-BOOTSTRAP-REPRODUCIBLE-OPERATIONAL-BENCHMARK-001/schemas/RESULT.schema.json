@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "RESULT.schema.json",
+  "title": "Candidate resolver result",
+  "type": "object",
+  "required": ["task_id", "route", "risk", "terminal_state", "authority", "head_behavior", "conflict_behavior", "project_namespace", "selected_paths", "critical_constraints", "reason_trace"],
+  "properties": {
+    "task_id": {"type": "string", "pattern": "^T[0-9]{3}$"},
+    "route": {"type": "string"},
+    "risk": {"enum": ["LOW", "MEDIUM", "HIGH", "CRITICAL"]},
+    "terminal_state": {"type": "string"},
+    "authority": {"type": "string"},
+    "head_behavior": {"type": "string"},
+    "conflict_behavior": {"type": "string"},
+    "project_namespace": {"type": "string"},
+    "selected_paths": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "critical_constraints": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "reason_trace": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "baseline_source_bytes": {"type": "integer", "minimum": 0},
+    "selected_source_bytes": {"type": "integer", "minimum": 0},
+    "baseline_source_count": {"type": "integer", "minimum": 0},
+    "selected_source_count": {"type": "integer", "minimum": 0}
+  },
+  "additionalProperties": false
+}

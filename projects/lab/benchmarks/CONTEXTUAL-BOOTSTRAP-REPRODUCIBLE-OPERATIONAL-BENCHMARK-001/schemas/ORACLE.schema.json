@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ORACLE.schema.json",
+  "title": "Private benchmark oracle",
+  "type": "object",
+  "required": ["schema_version", "benchmark_id", "visibility", "construction", "field_order", "records"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "benchmark_id": {"const": "CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001"},
+    "visibility": {"const": "PRIVATE_ORACLE"},
+    "construction": {"const": "NEW_FROM_SCRATCH_NO_198_ORACLE_REUSE"},
+    "field_order": {
+      "const": ["task_id", "route", "risk", "terminal_state", "authority", "head_behavior", "conflict_behavior", "project_namespace", "required_paths", "forbidden_paths", "optional_paths", "critical_constraints"]
+    },
+    "records": {
+      "type": "array",
+      "minItems": 20,
+      "maxItems": 20,
+      "items": {
+        "type": "array",
+        "minItems": 12,
+        "maxItems": 12
+      }
+    }
+  },
+  "additionalProperties": false
+}

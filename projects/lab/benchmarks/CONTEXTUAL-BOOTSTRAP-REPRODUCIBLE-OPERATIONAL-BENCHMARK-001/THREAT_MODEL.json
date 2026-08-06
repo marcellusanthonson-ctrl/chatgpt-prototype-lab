@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0.0",
+  "benchmark_id": "CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001",
+  "status": "DESIGNED_NOT_VALIDATED",
+  "assets": [
+    "TASK_CORPUS_INTEGRITY",
+    "ORACLE_SECRECY",
+    "RUNNER_DETERMINISM",
+    "SOURCE_SNAPSHOT_IDENTITY",
+    "CHAIN_OF_CUSTODY",
+    "AUTHORITY_BOUNDARIES"
+  ],
+  "threats": [
+    {
+      "id": "TM-001",
+      "threat": "Oracle leakage into resolver context",
+      "control": "Physical path separation, visibility labels and future blind execution operator",
+      "severity": "CRITICAL"
+    },
+    {
+      "id": "TM-002",
+      "threat": "Reconstruction of missing benchmark 198 bytes by inference",
+      "control": "No reuse; new corpus, runner and oracle identities",
+      "severity": "CRITICAL"
+    },
+    {
+      "id": "TM-003",
+      "threat": "Automatic resolution of material source conflicts",
+      "control": "RESOLUTION_REQUIRED terminal state and stop condition",
+      "severity": "CRITICAL"
+    },
+    {
+      "id": "TM-004",
+      "threat": "Stale HEAD accepted as current",
+      "control": "VERIFY_LIVE_AT_USE followed by immutable execution snapshot",
+      "severity": "HIGH"
+    },
+    {
+      "id": "TM-005",
+      "threat": "Cross-project contamination",
+      "control": "Namespace field, forbidden paths and zero-contamination gate",
+      "severity": "CRITICAL"
+    },
+    {
+      "id": "TM-006",
+      "threat": "Metric gaming through task imbalance",
+      "control": "One development and one held-out task per class",
+      "severity": "HIGH"
+    },
+    {
+      "id": "TM-007",
+      "threat": "Silent defaults in runner",
+      "control": "Fail closed on missing fields and duplicate IDs",
+      "severity": "HIGH"
+    },
+    {
+      "id": "TM-008",
+      "threat": "Execution authority inferred from package existence",
+      "control": "Authorization and continuity state NOT_RUN and no residual authority",
+      "severity": "CRITICAL"
+    }
+  ]
+}

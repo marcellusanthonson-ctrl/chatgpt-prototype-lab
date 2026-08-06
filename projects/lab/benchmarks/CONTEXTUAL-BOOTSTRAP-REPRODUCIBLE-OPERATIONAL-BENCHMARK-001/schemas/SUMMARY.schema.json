@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "SUMMARY.schema.json",
+  "title": "Benchmark summary",
+  "type": "object",
+  "required": ["benchmark_id", "status", "task_count", "metrics", "gates", "violations"],
+  "properties": {
+    "benchmark_id": {"const": "CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001"},
+    "status": {"enum": ["PASS", "FAIL", "BLOCKED", "INSUFFICIENT_EVIDENCE"]},
+    "task_count": {"type": "integer", "minimum": 1},
+    "metrics": {"type": "object"},
+    "gates": {"type": "object"},
+    "violations": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}

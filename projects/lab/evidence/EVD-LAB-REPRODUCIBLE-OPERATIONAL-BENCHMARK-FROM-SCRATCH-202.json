@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-REPRODUCIBLE-OPERATIONAL-BENCHMARK-FROM-SCRATCH-202",
+  "authorization_id": "AUTHORIZATION_LAB_REPRODUCIBLE_OPERATIONAL_BENCHMARK_FROM_SCRATCH_DESIGN_AND_BUILD_202",
+  "project_id": "lab",
+  "status": "DRAFT_PACKAGE_CREATED_AWAITING_REMOTE_PUBLICATION",
+  "observed_at": "2026-08-05T23:18:00-04:00",
+  "verified_parent_head": "ef870782222376b953c30123a679fee4dd41b576",
+  "benchmark_id": "CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001",
+  "result": "BENCHMARK_PACKAGE_CREATED_AWAITING_REMOTE_PUBLICATION_AND_SEPARATE_INDEPENDENT_VALIDATION",
+  "counts": {
+    "tasks": 20,
+    "task_classes": 10,
+    "development_tasks": 10,
+    "held_out_tasks": 10,
+    "benchmark_tests": 0,
+    "resolver_runs": 0,
+    "model_requests": 0
+  },
+  "tests": {
+    "instrument_validation": "NOT_RUN",
+    "runner_determinism": "NOT_RUN",
+    "independent_replay": "NOT_RUN",
+    "resolver_benchmark": "NOT_RUN",
+    "model_benchmark": "NOT_RUN",
+    "integration_observation": "NOT_RUN"
+  },
+  "reproducibility_verification": {
+    "artifact_inventory": "CREATED",
+    "byte_counts": "NOT_RUN",
+    "sha256": "NOT_RUN",
+    "git_blob_shas": "NOT_RUN_AWAITING_REMOTE_PUBLICATION",
+    "schema_validation": "NOT_RUN"
+  },
+  "effects": {
+    "resolver_001": "UNCHANGED",
+    "resolver_002": "NOT_CREATED",
+    "integration": "NONE",
+    "runtime": "NONE",
+    "product": "NONE",
+    "external_repositories": 0
+  },
+  "claim_boundary": [
+    "PACKAGE_CREATED_NOT_VALIDATED",
+    "RUNNER_CREATED_NOT_EXECUTED",
+    "NO_EQUIVALENCE_WITH_198",
+    "NO_OPERATIONAL_APPROVAL"
+  ]
+}

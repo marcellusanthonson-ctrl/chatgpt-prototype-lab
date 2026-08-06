@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "benchmark_id": "CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001",
+  "status": "NOT_AUTHORIZED_NOT_RUN",
+  "required_preconditions": [
+    "SEPARATE_INSTRUMENT_VALIDATION_AUTHORIZATION_CONSUMED_WITH_PASS",
+    "NAMED_IMMUTABLE_RESOLVER_VERSION",
+    "PINNED_EXECUTION_HEAD",
+    "ORACLE_CUSTODIAN_SEPARATE_FROM_RESOLVER_OPERATOR",
+    "CLEAN_WORKTREE_OR_EQUIVALENT_REPRODUCIBLE_ENVIRONMENT",
+    "POST_TEST_REPORTING_PROTOCOL_ACTIVE"
+  ],
+  "execution_phases": [
+    {"phase": "PREFLIGHT", "status": "NOT_RUN"},
+    {"phase": "DEVELOPMENT_SPLIT_SMOKE", "status": "NOT_RUN"},
+    {"phase": "HELD_OUT_BLIND_RUN", "status": "NOT_RUN"},
+    {"phase": "DETERMINISTIC_REPLAY", "status": "NOT_RUN"},
+    {"phase": "INDEPENDENT_ADJUDICATION", "status": "NOT_RUN"},
+    {"phase": "POST_TEST_REPORT", "status": "NOT_RUN"}
+  ],
+  "forbidden_without_later_authority": [
+    "RESOLVER_MUTATION",
+    "MODEL_REQUEST",
+    "INTEGRATION",
+    "PRODUCT_CHANGE",
+    "EXTERNAL_REPOSITORY_CHANGE"
+  ]
+}

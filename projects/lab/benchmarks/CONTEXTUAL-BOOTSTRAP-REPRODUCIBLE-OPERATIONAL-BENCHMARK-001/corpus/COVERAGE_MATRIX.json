@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0.0",
+  "benchmark_id": "CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001",
+  "task_count": 20,
+  "splits": {
+    "development": 10,
+    "held_out": 10
+  },
+  "classes": {
+    "STATUS_RECONSTRUCTION": {"total": 2, "development": 1, "held_out": 1},
+    "AUTHORIZATION_AND_RESIDUAL_AUTHORITY": {"total": 2, "development": 1, "held_out": 1},
+    "CODE_CHANGE_REQUEST": {"total": 2, "development": 1, "held_out": 1},
+    "AUDIT_AND_RECONCILIATION": {"total": 2, "development": 1, "held_out": 1},
+    "CONFLICT_REQUIRING_HUMAN_RESOLUTION": {"total": 2, "development": 1, "held_out": 1},
+    "HEAD_AND_SOURCE_FRESHNESS": {"total": 2, "development": 1, "held_out": 1},
+    "CROSS_PROJECT_NAMESPACE_ISOLATION": {"total": 2, "development": 1, "held_out": 1},
+    "FORBIDDEN_PATH_AND_SCOPE_CONTROL": {"total": 2, "development": 1, "held_out": 1},
+    "TERMINAL_STATE_CLASSIFICATION": {"total": 2, "development": 1, "held_out": 1},
+    "NEGATIVE_AND_ADVERSARIAL_CONTROLS": {"total": 2, "development": 1, "held_out": 1}
+  },
+  "balance_gate": "EXACTLY_ONE_DEVELOPMENT_AND_ONE_HELD_OUT_TASK_PER_CLASS",
+  "status": "DESIGNED_NOT_VALIDATED"
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "benchmark_id": "CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001",
+  "status": "ARTIFACT_INVENTORY_CREATED_HASH_VERIFICATION_NOT_RUN",
+  "hash_algorithm": "SHA-256",
+  "artifacts": [
+    "README.md",
+    "MANIFEST.json",
+    "BENCHMARK_SPEC.json",
+    "THREAT_MODEL.json",
+    "corpus/TASKS.jsonl",
+    "corpus/COVERAGE_MATRIX.json",
+    "oracle/PRIVATE_ORACLE.json",
+    "runner/run_benchmark.py",
+    "runner/SCORING_CONTRACT.json",
+    "schemas/TASK.schema.json",
+    "schemas/ORACLE.schema.json",
+    "schemas/RESULT.schema.json",
+    "schemas/SUMMARY.schema.json",
+    "METRIC_CATALOG.json",
+    "STOP_CONDITIONS.json",
+    "SOURCE_PROVENANCE_MATRIX.json",
+    "CHAIN_OF_CUSTODY.json",
+    "VALIDATION_PLAN.json",
+    "FUTURE_EXECUTION_PLAN.json"
+  ],
+  "required_fields_per_artifact_for_validation": [
+    "path",
+    "byte_count",
+    "sha256",
+    "git_blob_sha",
+    "schema_version",
+    "source_provenance",
+    "generation_method",
+    "visibility",
+    "expected_output_contract"
+  ],
+  "verification": {
+    "byte_counts": "NOT_RUN",
+    "sha256": "NOT_RUN",
+    "git_blob_shas": "NOT_RUN_AWAITING_REMOTE_PUBLICATION",
+    "schema_validation": "NOT_RUN",
+    "independent_replay": "NOT_RUN"
+  },
+  "integrity_rule": "Any missing field or mismatch blocks validation and execution.",
+  "claim_boundary": "This manifest inventories artifacts; it does not claim hash verification or reproducibility PASS."
+}

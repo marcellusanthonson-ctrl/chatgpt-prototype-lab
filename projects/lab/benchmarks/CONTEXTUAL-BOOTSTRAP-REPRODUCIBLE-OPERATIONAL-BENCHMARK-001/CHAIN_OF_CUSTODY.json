@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "benchmark_id": "CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001",
+  "status": "OPEN_UNTIL_VERIFIED_REMOTE_PUBLICATION",
+  "events": [
+    {
+      "sequence": 1,
+      "at": "2026-08-05T23:18:00-04:00",
+      "actor": "Jonathan Martínez",
+      "event": "AUTHORIZATION_202_GRANTED_BY_CONTEXTUAL_CONTINUATION",
+      "evidence": "projects/lab/sources/USER_SOURCE_REPRODUCIBLE_OPERATIONAL_BENCHMARK_202_20260805.md"
+    },
+    {
+      "sequence": 2,
+      "at": "2026-08-05T23:18:00-04:00",
+      "actor": "ChatGPT",
+      "event": "NEW_BENCHMARK_PACKAGE_CONSTRUCTED",
+      "parent_head": "ef870782222376b953c30123a679fee4dd41b576",
+      "branch": "agent/reproducible-operational-benchmark-202"
+    },
+    {
+      "sequence": 3,
+      "at": "2026-08-05T23:18:00-04:00",
+      "actor": "ChatGPT",
+      "event": "RUNNER_CREATED_WITHOUT_EXECUTION"
+    }
+  ],
+  "prohibited_events_observed": {
+    "benchmark_execution": false,
+    "resolver_mutation": false,
+    "model_request": false,
+    "integration": false
+  },
+  "next_required_event": "VERIFIED_REMOTE_PUBLICATION"
+}

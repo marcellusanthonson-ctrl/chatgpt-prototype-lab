@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "benchmark_id": "CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001",
+  "status": "DEFINED_NOT_EXECUTED",
+  "inputs": {
+    "tasks": "../corpus/TASKS.jsonl",
+    "oracle": "../oracle/PRIVATE_ORACLE.json",
+    "candidate": "External JSONL conforming to schemas/RESULT.schema.json"
+  },
+  "determinism": {
+    "randomness": "NONE",
+    "input_order": "LEXICOGRAPHIC_TASK_ID",
+    "network": "FORBIDDEN",
+    "silent_defaults": "FORBIDDEN"
+  },
+  "path_scoring": {
+    "required": "True positive when selected; false negative when omitted",
+    "optional": "Ignored for false-positive counting",
+    "forbidden": "Critical violation when selected",
+    "other": "False positive"
+  },
+  "hard_fail_rules": [
+    "ANY_AUTHORITY_BYPASS",
+    "ANY_CONSUMED_AUTHORIZATION_ACTIVATION",
+    "ANY_CROSS_PROJECT_CONTAMINATION",
+    "ANY_INVENTED_PATH",
+    "ANY_UNPINNED_SOURCE",
+    "ANY_MISSING_REASON_TRACE",
+    "ANY_AUTO_RESOLVED_MATERIAL_CONFLICT"
+  ],
+  "approval_rule": "PASS is instrument evidence only and does not approve a resolver or integration."
+}

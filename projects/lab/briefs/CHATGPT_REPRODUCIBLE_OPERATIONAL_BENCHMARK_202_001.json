@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0.0",
+  "brief_id": "CHATGPT_REPRODUCIBLE_OPERATIONAL_BENCHMARK_202_001",
+  "authorization_id": "AUTHORIZATION_LAB_REPRODUCIBLE_OPERATIONAL_BENCHMARK_FROM_SCRATCH_DESIGN_AND_BUILD_202",
+  "project_id": "lab",
+  "executor": "ChatGPT",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "branch": "agent/reproducible-operational-benchmark-202",
+  "expected_parent_head": "ef870782222376b953c30123a679fee4dd41b576",
+  "head_policy": "VERIFY_LIVE_AT_USE",
+  "objective": "Create a new independently specified and reproducible operational benchmark package from scratch without executing it, modifying a resolver, asserting equivalence with 198 or integrating.",
+  "allowed_paths": [
+    "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001",
+    "projects/lab/sources/USER_SOURCE_REPRODUCIBLE_OPERATIONAL_BENCHMARK_202_20260805.md",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_REPRODUCIBLE_OPERATIONAL_BENCHMARK_FROM_SCRATCH_DESIGN_AND_BUILD_202.json",
+    "projects/lab/authorization-lifecycle/REPRODUCIBLE_OPERATIONAL_BENCHMARK_FROM_SCRATCH_LIFECYCLE_202.json",
+    "projects/lab/evidence/EVD-LAB-REPRODUCIBLE-OPERATIONAL-BENCHMARK-FROM-SCRATCH-202.json",
+    "projects/lab/continuity"
+  ],
+  "forbidden_actions": [
+    "NO_BENCHMARK_OR_RUNNER_EXECUTION",
+    "NO_RESOLVER_001_EXECUTION_OR_MUTATION",
+    "NO_RESOLVER_002_CREATION_OR_REMEDIATION",
+    "NO_CODEX_OR_MODEL_REQUEST",
+    "NO_REAL_PROMPT_INTERCEPTION",
+    "NO_INTEGRATION_RUNTIME_PRODUCT_OR_EXTERNAL_REPOSITORY_CHANGE",
+    "NO_RECONSTRUCTION_OF_MISSING_198_BYTES_BY_GUESSING",
+    "NO_REUSE_OF_198_ORACLE_AS_NEW_ORACLE",
+    "NO_198_EQUIVALENCE_OR_COMPARABILITY_CLAIM",
+    "NO_OPERATIONAL_APPROVAL",
+    "NO_AGGREGATE_STATE_RECONCILIATION"
+  ],
+  "deliverables": [
+    "README.md",
+    "MANIFEST.json",
+    "BENCHMARK_SPEC.json",
+    "THREAT_MODEL.json",
+    "corpus/TASKS.jsonl",
+    "corpus/COVERAGE_MATRIX.json",
+    "oracle/PRIVATE_ORACLE.json",
+    "runner/run_benchmark.py",
+    "runner/SCORING_CONTRACT.json",
+    "schemas/TASK.schema.json",
+    "schemas/ORACLE.schema.json",
+    "schemas/RESULT.schema.json",
+    "schemas/SUMMARY.schema.json",
+    "METRIC_CATALOG.json",
+    "STOP_CONDITIONS.json",
+    "REPRODUCIBILITY_MANIFEST.json",
+    "SOURCE_PROVENANCE_MATRIX.json",
+    "CHAIN_OF_CUSTODY.json",
+    "VALIDATION_PLAN.json",
+    "FUTURE_EXECUTION_PLAN.json"
+  ],
+  "stop_conditions": [
+    "PARENT_HEAD_CHANGED_BEFORE_BRANCH_CREATION",
+    "SCOPE_EXPANSION",
+    "RUNNER_OR_BENCHMARK_EXECUTION_REQUESTED",
+    "RESOLVER_MUTATION_REQUIRED",
+    "ORACLE_198_REUSE_REQUIRED"
+  ],
+  "validation_under_this_brief": "DOCUMENTARY_INTEGRITY_AND_HASH_CAPTURE_ONLY_NO_TEST_EXECUTION"
+}
