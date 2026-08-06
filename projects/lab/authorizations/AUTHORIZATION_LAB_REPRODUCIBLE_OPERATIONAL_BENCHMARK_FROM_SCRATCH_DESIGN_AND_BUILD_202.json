@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_REPRODUCIBLE_OPERATIONAL_BENCHMARK_FROM_SCRATCH_DESIGN_AND_BUILD_202",
   "project_id": "lab",
-  "status": "GRANTED_EXECUTION_IN_PROGRESS",
+  "status": "CONSUMED_VERIFIED_REMOTE_PUBLICATION",
   "authorization_class": "BOUNDED_BENCHMARK_INSTRUMENT_CREATION",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-08-05T23:18:00-04:00",
@@ -39,6 +39,25 @@
     "NO_OPERATIONAL_APPROVAL",
     "NO_AGGREGATE_STATE_RECONCILIATION"
   ],
+  "execution": {
+    "status": "COMPLETE_VERIFIED_REMOTE_PACKAGE_PUBLICATION",
+    "terminal_result": "BENCHMARK_PACKAGE_CREATED_AWAITING_SEPARATE_INDEPENDENT_VALIDATION",
+    "benchmark_id": "CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001",
+    "tasks": 20,
+    "task_classes": 10,
+    "test_executions": 0,
+    "resolver_runs": 0,
+    "resolver_mutations": 0,
+    "model_requests": 0,
+    "publication": {
+      "package_pull_request": 66,
+      "package_merge_commit": "48eb518a5fd2ec4ee5cf073e94c0142469dc2c4a",
+      "remote_main_verified": "48eb518a5fd2ec4ee5cf073e94c0142469dc2c4a",
+      "closure_branch": "agent/reproducible-operational-benchmark-202-closure",
+      "closure_pull_request": "PENDING_CREATION",
+      "closure_effect": "CONSUMPTION_SUCCESSOR_CONTINUITY_AND_NO_RESIDUAL_AUTHORITY_EFFECTIVE_ON_VERIFIED_REMOTE_MERGE"
+    }
+  },
   "tests_under_authorization_202": {
     "NEW_BENCHMARK_INSTRUMENT_VALIDATION": "NOT_RUN",
     "RUNNER_DETERMINISM_TEST": "NOT_RUN",
@@ -49,5 +68,7 @@
     "LIMITED_INTEGRATION_OBSERVATION_AND_ROLLBACK": "NOT_RUN"
   },
   "consumption_rule": "CONSUMED_ONLY_AFTER_PACKAGE_AND_CLOSURE_RECORDS_ARE_PUBLISHED_TO_REMOTE_MAIN_AND_VERIFIED",
-  "residual_authority_after_consumption": "NONE"
+  "consumed_at": "2026-08-05T23:40:00-04:00",
+  "residual_authority": "NONE",
+  "next_authorized_action": "NONE_AFTER_CONSUMPTION"
 }
