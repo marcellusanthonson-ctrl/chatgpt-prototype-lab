@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "benchmark_id": "CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001",
+  "status": "DEFINED_NOT_EXECUTED",
+  "pre_execution": [
+    "MISSING_REQUIRED_ARTIFACT",
+    "HASH_MISMATCH",
+    "SCHEMA_VALIDATION_FAILURE",
+    "ORACLE_VISIBLE_TO_SYSTEM_UNDER_TEST",
+    "SOURCE_HEAD_UNAVAILABLE_OR_CHANGED_WITHOUT_NEW_SNAPSHOT",
+    "UNAUTHORIZED_RESOLVER_MUTATION",
+    "UNAUTHORIZED_MODEL_OR_NETWORK_REQUEST"
+  ],
+  "during_execution": [
+    "CANDIDATE_OUTPUT_MISSING_OR_DUPLICATE_TASK_ID",
+    "MALFORMED_RESULT",
+    "UNDECLARED_TASK_OR_ORACLE_CHANGE",
+    "MATERIAL_SOURCE_CONFLICT_REQUIRING_HUMAN_RESOLUTION",
+    "CHAIN_OF_CUSTODY_BREAK"
+  ],
+  "terminal_mapping": {
+    "integrity_or_authority_violation": "BLOCKED",
+    "unavailable_required_evidence": "INSUFFICIENT_EVIDENCE",
+    "all_hard_gates_satisfied": "PASS",
+    "one_or_more_hard_gates_failed": "FAIL"
+  },
+  "human_adjudication_required_for": [
+    "MATERIAL_CANONICAL_CONFLICT",
+    "ORACLE_AMBIGUITY",
+    "TASK_PROVENANCE_DISPUTE"
+  ]
+}
