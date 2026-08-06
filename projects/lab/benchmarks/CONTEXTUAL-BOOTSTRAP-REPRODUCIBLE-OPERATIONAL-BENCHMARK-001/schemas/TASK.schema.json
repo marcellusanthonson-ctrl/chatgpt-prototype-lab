@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "TASK.schema.json",
+  "title": "Reproducible operational benchmark task",
+  "type": "object",
+  "required": ["task_id", "split", "task_class", "prompt", "source_snapshot", "source_refs", "visibility", "oracle_reference", "critical_constraint_tags"],
+  "properties": {
+    "task_id": {"type": "string", "pattern": "^T[0-9]{3}$"},
+    "split": {"enum": ["development", "held_out"]},
+    "task_class": {"enum": ["STATUS_RECONSTRUCTION", "AUTHORIZATION_AND_RESIDUAL_AUTHORITY", "CODE_CHANGE_REQUEST", "AUDIT_AND_RECONCILIATION", "CONFLICT_REQUIRING_HUMAN_RESOLUTION", "HEAD_AND_SOURCE_FRESHNESS", "CROSS_PROJECT_NAMESPACE_ISOLATION", "FORBIDDEN_PATH_AND_SCOPE_CONTROL", "TERMINAL_STATE_CLASSIFICATION", "NEGATIVE_AND_ADVERSARIAL_CONTROLS"]},
+    "prompt": {"type": "string", "minLength": 10},
+    "source_snapshot": {
+      "type": "object",
+      "required": ["repository", "head"],
+      "properties": {
+        "repository": {"type": "string"},
+        "head": {"type": "string", "pattern": "^[0-9a-f]{40}$"}
+      },
+      "additionalProperties": false
+    },
+    "source_refs": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true},
+    "visibility": {"const": "PUBLIC_CORPUS"},
+    "oracle_reference": {"const": "PRIVATE_BY_TASK_ID"},
+    "critical_constraint_tags": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true}
+  },
+  "additionalProperties": false
+}
