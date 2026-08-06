@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "reconciliation_id": "INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203-TERMINAL-RECONCILIATION-001",
+  "authorization_id": "AUTHORIZATION_LAB_INDEPENDENT_REPRODUCIBLE_BENCHMARK_INSTRUMENT_VALIDATION_203",
+  "reconciled_at": "2026-08-06T11:52:00-04:00",
+  "terminal_outcome": "BLOCKED",
+  "terminal_stage": "PRE_VALIDATION_CUSTODY_AND_EXECUTION_CONTEXT_GATE",
+  "operator_attempt": "CODEX_DESKTOP_A_ATTEMPT_001",
+  "finding_determinations": [
+    {"finding_id": "CODA-203-BLOCK-001", "determination": "CONFIRMED", "severity": "CRITICAL"},
+    {"finding_id": "CODA-203-BLOCK-002", "determination": "CONFIRMED", "severity": "CRITICAL"}
+  ],
+  "tests_executed": 0,
+  "tests_not_run": ["VAL-001", "VAL-002", "VAL-003", "VAL-004", "VAL-005", "VAL-006", "VAL-007", "VAL-008", "VAL-009"],
+  "oracle_opened": false,
+  "benchmark_mutated_by_codex_a": false,
+  "runner_executions": 0,
+  "resolver_runs": 0,
+  "model_subject_runs": 0,
+  "claude_audit": "NOT_STARTED",
+  "codex_b_replay": "NOT_STARTED",
+  "instrument_validation": "NOT_ESTABLISHED",
+  "operational_approval": "NOT_APPROVED",
+  "sequence_effect": "STOP_AUTHORIZATION_203_NO_FURTHER_OPERATOR_EXECUTION",
+  "claim_boundary": "This reconciliation confirms a pre-validation BLOCKED outcome only. It does not validate or invalidate the instrument's substantive quality and does not approve a resolver or integration.",
+  "single_next_action": "DESIGN_AND_APPROVE_A_SEPARATE_REMEDIATION_AUTHORIZATION_THAT_RECONCILES_THE_FROZEN_BENCHMARK_BASELINE_AND_CHAIN_OF_CUSTODY_AND_CREATES_THE_REQUIRED_EXECUTION_ENVELOPE_AND_CONTEXT_MANIFEST_BEFORE_ANY_RETEST"
+}
