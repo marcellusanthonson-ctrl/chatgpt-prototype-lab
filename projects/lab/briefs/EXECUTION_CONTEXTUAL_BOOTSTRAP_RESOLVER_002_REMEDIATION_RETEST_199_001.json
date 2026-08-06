@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "task_id": "CONTEXTUAL_BOOTSTRAP_RESOLVER_002_REMEDIATION_RETEST_199_001",
   "authorization_ref": "AUTHORIZATION_LAB_CONTEXTUAL_BOOTSTRAP_RESOLVER_002_TARGETED_REMEDIATION_AND_FROZEN_CORPUS_RETEST_199",
-  "status": "EXECUTION_BLOCKED_AT_FROZEN_ARTIFACT_PREFLIGHT",
+  "status": "BLOCKED_RESULT_PUBLISHED_VERIFIED_REMOTE",
   "objective": "Apply exactly four resolver remediations and replay the exact frozen authorization 198 corpus.",
   "repository": {
     "name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
@@ -56,5 +56,10 @@
     "result_first": true,
     "single_next_action": true,
     "no_pass_claim_without_exact_retest": true
+  },
+  "publication": {
+    "pull_request": 60,
+    "merge_commit": "ccc314d6f125906dff20fc336fc9d0df2f489e11",
+    "remote_main_verified": "ccc314d6f125906dff20fc336fc9d0df2f489e11"
   }
 }
