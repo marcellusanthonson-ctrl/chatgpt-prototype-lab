@@ -1,24 +1,218 @@
 {
-  "schema_version":"3.4.0",
-  "continuity_id":"LAB-CONTINUITY-AUTHORIZATION-197-CONSUMED-PROTOTYPE-PASS-NO-INTEGRATION-20260805",
-  "project_id":"lab",
-  "status":"AUTHORIZATION_197_CONSUMED_PROTOTYPE_VALIDATION_PASS_NO_INTEGRATION_NO_RESIDUAL_AUTHORITY",
-  "created_at":"2026-08-05T18:32:00-04:00",
-  "canonical_repository":"marcellusanthonson-ctrl/chatgpt-prototype-lab",
-  "canonical_branch":"main",
-  "head_policy":"VERIFY_LIVE_AT_USE",
-  "verified_source_head":"91f8a963b4978a84a45b4f6d7677805fcb1a2580",
-  "current_head":"VERIFY_LIVE_AT_USE",
-  "entrypoint":"project-sources/chatgpt/START_HERE.md",
-  "required_reading_order":["VERIFY_LIVE_HEAD_OF_MAIN","project-sources/chatgpt/START_HERE.md","LAB_CONTRACT.md","METHODOLOGY.md","CURRENT_STATE.json","registry/index.json","registry/projects.json","projects/lab/PROJECT_STATE.json","projects/lab/authorizations/AUTHORIZATION_LAB_CONTEXTUAL_BOOTSTRAP_RESOLVER_READ_ONLY_PROTOTYPE_AND_DISCRIMINATING_VALIDATION_197.json","projects/lab/authorization-lifecycle/CONTEXTUAL_BOOTSTRAP_RESOLVER_AUTHORIZATION_LIFECYCLE_197.json","projects/lab/evidence/EVD-LAB-CONTEXTUAL-BOOTSTRAP-RESOLVER-197.json","projects/lab/evidence/CONTEXT_BUDGET_REPORT_197.json","projects/lab/experiments/CONTEXTUAL-BOOTSTRAP-RESOLVER-001/MANIFEST.json","projects/lab/experiments/CONTEXTUAL-BOOTSTRAP-RESOLVER-001/results/VALIDATION_RESULTS.json","projects/lab/evidence/EVD-LAB-PRODUCT-LEADERSHIP-ZERO-MODEL-READINESS-PROBE-196.json","projects/lab/pending/PEND-LAB-048.json","projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/product-leadership/INCIDENT_LEDGER.json","projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/product-leadership/INTEGRATION_READINESS.json","projects/lab/continuity/CURRENT_CONTINUITY.json","projects/lab/continuity/CURRENT_CONTINUITY.md","projects/lab/continuity/ATTACHMENT_MANIFEST.json","projects/lab/continuity/START_PROMPT.md"],
-  "completed":{"authorization_194":"CONSUMED_VERIFIED_REMOTE_PUBLICATION","codex_desktop_standard":"ACTIVE_AWAITING_FIRST_TRUE_CODEX_DESKTOP_OPERATIONAL_BENCHMARK","authorization_195":{"status":"CONSUMED_VERIFIED_REMOTE_PUBLICATION","readme_section":"PUBLISHED","readme_blob_before":"9968ae258b2bdf3cb6c3c800434914f06052e7cd","readme_blob_after":"34e10bbaf13471b5829c4cf0efeaff861df69fff","publication_pull_request":52,"publication_merge_commit":"ad3b5ff55eb811662410bfc888b65ff73d8bc24c","closure_pull_request":53,"closure_head":"9e095a25c367e980cd4a69d224c26b3c73b7d0f4","residual_authority":"NONE"},"authorization_196":{"status":"CONSUMED_VERIFIED_REMOTE_PUBLICATION","terminal_result":"INSUFFICIENT_EVIDENCE","publication_pull_request":54,"publication_merge_commit":"ea069609bbac26ccb20d025f79758d96ff42df3f","model_requests":0,"login_actions":0,"residual_authority":"NONE"},"authorization_197":{"status":"CONSUMED_VERIFIED_REMOTE_PUBLICATION","terminal_result":"PROTOTYPE_VALIDATION_PASS_NO_INTEGRATION","publication_pull_request":56,"publication_merge_commit":"91f8a963b4978a84a45b4f6d7677805fcb1a2580","fixtures":24,"resolver_runs":72,"model_requests":0,"dependencies_installed":0,"integration_effect":"NONE","runtime_effect":"NONE","product_effect":"NONE","residual_authority":"NONE"}},
-  "active_authorization":null,
-  "active_execution_authority":"NONE",
-  "contextual_bootstrap_resolver_001":{"status":"EXPERIMENTAL_VALIDATED_NOT_INTEGRATED","architecture_classification":"PARTIAL_IMPLEMENTATION_OF_RAG_FEDERATION_CONTRACT_001_DETERMINISTIC_STAGES_1_2_3_4_7_8","semantic_stages_enabled":false,"terminal_result":"PROTOTYPE_VALIDATION_PASS_NO_INTEGRATION","claim_boundary":"PASS_ONLY_FOR_24_SYNTHETIC_FIXTURES_NO_OPERATIONAL_GENERALIZATION","metrics":{"macroF1":1,"microF1":1,"criticalConstraintRecall":1,"forbiddenPathPrecision":1,"falsePositives":0,"falseNegatives":0,"medianContextByteReductionPercent":88.292,"medianLatencyMs":0.0728,"authorityBypasses":0,"consumedAuthorizationActivations":0,"crossProjectContaminations":0,"inventedPaths":0,"unpinnedSources":0,"missingReasonTraces":0,"autoResolvedConflicts":0},"effects":{"integration":"NONE","runtime":"NONE","product":"NONE","architecture_selection":"NONE"},"source_refs":["projects/lab/experiments/CONTEXTUAL-BOOTSTRAP-RESOLVER-001/MANIFEST.json","projects/lab/experiments/CONTEXTUAL-BOOTSTRAP-RESOLVER-001/results/VALIDATION_RESULTS.json","projects/lab/evidence/EVD-LAB-CONTEXTUAL-BOOTSTRAP-RESOLVER-197.json","projects/lab/evidence/CONTEXT_BUDGET_REPORT_197.json"]},
-  "zero_model_probe_196":{"result":"INSUFFICIENT_EVIDENCE","observed_environment":"Linux 6.18.35 x86_64","fresh_windows_worktree":"NOT_OBSERVABLE","targeted_gitattributes_lf_rule":"PASS_PRESENT","raw_byte_13_of_13_fresh_worktree":"NOT_RUN","codex_cli_0_146_0":"NOT_INSTALLED_IN_AVAILABLE_EXECUTION_SURFACE","preexisting_chatgpt_session":"NOT_OBSERVABLE","requested_model_reasoning_sandbox":"NOT_OBSERVABLE_WITHOUT_CODEX_METADATA_OR_FORBIDDEN_MODEL_REQUEST","deterministic_validators":"NOT_RUN_AFTER_TERMINAL_ENVIRONMENT_STOP","model_requests":0,"login_actions":0,"claim_boundary":"DOES_NOT_DETERMINE_THE_READINESS_OF_JONATHAN_MARTINEZ_WINDOWS_CODEX_DESKTOP_ENVIRONMENT","evidence":"projects/lab/evidence/EVD-LAB-PRODUCT-LEADERSHIP-ZERO-MODEL-READINESS-PROBE-196.json"},
-  "product_leadership":{"integration_id":"INT-LAB-004","status":"CANDIDATE_NOT_ACTIVE_NOT_INTEGRATED","readiness":"NOT_READY_FOR_FRESH_RETEST_REISSUE","last_model_execution":{"id":"PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005","attempt":"ATTEMPT-004","outcome":"BLOCKED_BEFORE_MODEL_REQUESTS","model_requests":0,"retries":0},"fresh_retest_authorization":"NONE","package_adjudication":"NONE","activation_or_integration":"NONE"},
-  "non_authorizations":["NO_CONTEXT_RESOLVER_INTEGRATION_PROMOTION_OR_REAL_PROMPT_INTERCEPTION","NO_RAG_SEMANTIC_STAGES_MODEL_REQUESTS_EMBEDDINGS_OR_VECTOR_STORE","NO_RUNTIME_PRODUCT_EXTERNAL_REPOSITORY_DEPENDENCY_OR_CREDENTIAL_ACTION","NO_FRESH_RETEST_REPLAY_REGENERATION_RESCORING_OR_AUDIT","NO_PACKAGE_ADJUDICATION_OR_INT_LAB_004_CHANGE","NO_PROMOTION_ACTIVATION_INTEGRATION_RUNTIME_OR_PRODUCT_EFFECT"],
-  "aggregate_divergences":{"status":"PRESERVED_AND_EXPLICIT","affected_views":["CURRENT_STATE.json","projects/lab/PROJECT_STATE.json","registry/index.json","projects/lab/pending/PEND-LAB-048.json","projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/product-leadership/INTEGRATION_READINESS.json"],"description":"The first three remain stale aggregate projections. PEND-LAB-048 and INTEGRATION_READINESS retain earlier Product Leadership readiness wording. Authorization 197 did not authorize changing those paths.","correction_authorized_here":false},
-  "next_action":{"single":"DESIGN_A_SEPARATELY_AUTHORIZED_REAL_OPERATIONAL_BENCHMARK_BEFORE_ANY_RESOLVER_INTEGRATION_OR_PROMOTION","execution_authorized":false},
-  "source_refs":["projects/lab/sources/USER_SOURCE_AUTHORIZATION_197_20260805.md","projects/lab/authorizations/AUTHORIZATION_LAB_CONTEXTUAL_BOOTSTRAP_RESOLVER_READ_ONLY_PROTOTYPE_AND_DISCRIMINATING_VALIDATION_197.json","projects/lab/authorization-lifecycle/CONTEXTUAL_BOOTSTRAP_RESOLVER_AUTHORIZATION_LIFECYCLE_197.json","projects/lab/evidence/EVD-LAB-CONTEXTUAL-BOOTSTRAP-RESOLVER-197.json","projects/lab/evidence/CONTEXT_BUDGET_REPORT_197.json","projects/lab/experiments/CONTEXTUAL-BOOTSTRAP-RESOLVER-001/MANIFEST.json","projects/lab/evidence/EVD-LAB-PRODUCT-LEADERSHIP-ZERO-MODEL-READINESS-PROBE-196.json","projects/lab/pending/PEND-LAB-048.json","projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/product-leadership/INTEGRATION_READINESS.json"]
+  "schema_version": "3.5.0",
+  "continuity_id": "LAB-CONTINUITY-AUTHORIZATION-198-CONSUMED-REAL-REPOSITORY-BENCHMARK-FAIL-CRITICAL-20260805",
+  "project_id": "lab",
+  "status": "AUTHORIZATION_198_CONSUMED_REAL_REPOSITORY_BENCHMARK_FAIL_CRITICAL_NO_RESIDUAL_AUTHORITY",
+  "created_at": "2026-08-05T20:01:00-04:00",
+  "canonical_repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "canonical_branch": "main",
+  "head_policy": "VERIFY_LIVE_AT_USE",
+  "verified_source_head": "ab957cfa4f33fce41aca34bd5adc957ea32a409b",
+  "current_head": "VERIFY_LIVE_AT_USE",
+  "entrypoint": "project-sources/chatgpt/START_HERE.md",
+  "required_reading_order": [
+    "VERIFY_LIVE_HEAD_OF_MAIN",
+    "project-sources/chatgpt/START_HERE.md",
+    "LAB_CONTRACT.md",
+    "METHODOLOGY.md",
+    "CURRENT_STATE.json",
+    "registry/index.json",
+    "registry/projects.json",
+    "projects/lab/PROJECT_STATE.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_CONTEXTUAL_BOOTSTRAP_RESOLVER_REAL_REPOSITORY_SHADOW_BENCHMARK_198.json",
+    "projects/lab/authorization-lifecycle/CONTEXTUAL_BOOTSTRAP_RESOLVER_OPERATIONAL_BENCHMARK_LIFECYCLE_198.json",
+    "projects/lab/evidence/EVD-LAB-CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-BENCHMARK-198.json",
+    "projects/lab/evidence/CONTEXT_BUDGET_REPORT_198.json",
+    "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-BENCHMARK-001/MANIFEST.json",
+    "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-BENCHMARK-001/SUMMARY.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_CONTEXTUAL_BOOTSTRAP_RESOLVER_READ_ONLY_PROTOTYPE_AND_DISCRIMINATING_VALIDATION_197.json",
+    "projects/lab/evidence/EVD-LAB-CONTEXTUAL-BOOTSTRAP-RESOLVER-197.json",
+    "projects/lab/evidence/EVD-LAB-PRODUCT-LEADERSHIP-ZERO-MODEL-READINESS-PROBE-196.json",
+    "projects/lab/pending/PEND-LAB-048.json",
+    "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/product-leadership/INCIDENT_LEDGER.json",
+    "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/product-leadership/INTEGRATION_READINESS.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.md",
+    "projects/lab/continuity/ATTACHMENT_MANIFEST.json",
+    "projects/lab/continuity/START_PROMPT.md"
+  ],
+  "completed": {
+    "authorization_194": "CONSUMED_VERIFIED_REMOTE_PUBLICATION",
+    "codex_desktop_standard": "ACTIVE_AWAITING_FIRST_TRUE_CODEX_DESKTOP_OPERATIONAL_BENCHMARK",
+    "authorization_195": {
+      "status": "CONSUMED_VERIFIED_REMOTE_PUBLICATION",
+      "publication_pull_request": 52,
+      "publication_merge_commit": "ad3b5ff55eb811662410bfc888b65ff73d8bc24c",
+      "closure_pull_request": 53,
+      "closure_head": "9e095a25c367e980cd4a69d224c26b3c73b7d0f4",
+      "residual_authority": "NONE"
+    },
+    "authorization_196": {
+      "status": "CONSUMED_VERIFIED_REMOTE_PUBLICATION",
+      "terminal_result": "INSUFFICIENT_EVIDENCE",
+      "publication_pull_request": 54,
+      "publication_merge_commit": "ea069609bbac26ccb20d025f79758d96ff42df3f",
+      "model_requests": 0,
+      "login_actions": 0,
+      "residual_authority": "NONE"
+    },
+    "authorization_197": {
+      "status": "CONSUMED_VERIFIED_REMOTE_PUBLICATION",
+      "terminal_result": "PROTOTYPE_VALIDATION_PASS_NO_INTEGRATION",
+      "publication_pull_request": 56,
+      "publication_merge_commit": "91f8a963b4978a84a45b4f6d7677805fcb1a2580",
+      "fixtures": 24,
+      "resolver_runs": 72,
+      "model_requests": 0,
+      "dependencies_installed": 0,
+      "integration_effect": "NONE",
+      "runtime_effect": "NONE",
+      "product_effect": "NONE",
+      "residual_authority": "NONE"
+    },
+    "authorization_198": {
+      "status": "CONSUMED_VERIFIED_REMOTE_PUBLICATION",
+      "terminal_result": "REAL_REPOSITORY_BENCHMARK_FAIL_CRITICAL",
+      "publication_pull_request": 58,
+      "publication_merge_commit": "ab957cfa4f33fce41aca34bd5adc957ea32a409b",
+      "tasks": 21,
+      "benchmark_iterations": 126,
+      "model_requests": 0,
+      "resolver_mutations": 0,
+      "integration_effect": "NONE",
+      "runtime_effect": "NONE",
+      "product_effect": "NONE",
+      "residual_authority": "NONE",
+      "closure_pull_request": 59,
+      "closure_status": "PENDING_VERIFIED_REMOTE_MERGE"
+    }
+  },
+  "active_authorization": null,
+  "active_execution_authority": "NONE",
+  "contextual_bootstrap_resolver_001": {
+    "status": "EXPERIMENTAL_VALIDATED_SYNTHETIC_NOT_OPERATIONALLY_VALID_NOT_INTEGRATED",
+    "architecture_classification": "PARTIAL_IMPLEMENTATION_OF_RAG_FEDERATION_CONTRACT_001_DETERMINISTIC_STAGES_1_2_3_4_7_8",
+    "semantic_stages_enabled": false,
+    "synthetic_result_197": {
+      "terminal_result": "PROTOTYPE_VALIDATION_PASS_NO_INTEGRATION",
+      "claim_boundary": "PASS_ONLY_FOR_24_SYNTHETIC_FIXTURES_NO_OPERATIONAL_GENERALIZATION",
+      "macroF1": 1,
+      "criticalConstraintRecall": 1,
+      "medianContextByteReductionPercent": 88.292
+    },
+    "operational_shadow_result_198": {
+      "terminal_result": "REAL_REPOSITORY_BENCHMARK_FAIL_CRITICAL",
+      "tasks": 21,
+      "iterations": 126,
+      "macroPathF1": 0.925243,
+      "criticalConstraintRecall": 0.935484,
+      "authorityAccuracy": 0.952381,
+      "conflictAccuracy": 0.904762,
+      "medianByteReductionPercent": 70.045,
+      "medianSourceCountReductionPercent": 75,
+      "autoResolvedConflicts": 2,
+      "criticalIssueCount": 16
+    },
+    "critical_defects": [
+      "CODE_CHANGE_PROMPT_CONTAINING_ESTADO_MISROUTED_TO_STATUS_OR_AUTHORITY",
+      "STATUS_ROUTE_OMITS_CURRENT_CONTINUITY_AND_AUTHORIZATION_LIFECYCLE",
+      "TWO_MATERIAL_CONFLICTS_AUTO_RESOLVED_INSTEAD_OF_RESOLUTION_REQUIRED",
+      "AUDIT_ROUTE_OMITS_REQUIRED_LIFECYCLE_OR_AGGREGATE_STATE_SOURCES_IN_TARGETED_CASES",
+      "AUDIT_ROUTE_OVER_SELECTS_UNRELATED_EVIDENCE",
+      "STATUS_ROUTE_MEDIAN_BYTE_REDUCTION_ONLY_14_104_PERCENT"
+    ],
+    "positive_controls": [
+      "ZERO_AUTHORITY_BYPASSES",
+      "ZERO_CONSUMED_AUTHORIZATION_ACTIVATIONS",
+      "ZERO_CROSS_PROJECT_CONTAMINATION",
+      "ZERO_INVENTED_PATHS",
+      "ZERO_UNPINNED_SOURCES",
+      "ZERO_MISSING_REASON_TRACES",
+      "HEAD_ACCURACY_1",
+      "PROJECT_NAMESPACE_ACCURACY_1"
+    ],
+    "effects": {
+      "integration": "NONE",
+      "runtime": "NONE",
+      "product": "NONE",
+      "architecture_selection": "NONE",
+      "model_requests": 0,
+      "resolver_mutation": "NONE"
+    },
+    "source_refs": [
+      "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-BENCHMARK-001/MANIFEST.json",
+      "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-BENCHMARK-001/SUMMARY.json",
+      "projects/lab/evidence/EVD-LAB-CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-BENCHMARK-198.json",
+      "projects/lab/evidence/CONTEXT_BUDGET_REPORT_198.json"
+    ]
+  },
+  "benchmark_198_measurement_boundaries": {
+    "snapshot_mode": "GITHUB_METADATA_AND_CANONICAL_CONTENT_READS_NO_LOCAL_PRIVATE_WORKTREE",
+    "nonempty_lines": "NOT_RUN",
+    "tokens": "NOT_RUN",
+    "model_response_quality": "NOT_RUN",
+    "time_to_first_useful_code": "NOT_RUN"
+  },
+  "zero_model_probe_196": {
+    "result": "INSUFFICIENT_EVIDENCE",
+    "observed_environment": "Linux 6.18.35 x86_64",
+    "fresh_windows_worktree": "NOT_OBSERVABLE",
+    "codex_cli_0_146_0": "NOT_INSTALLED_IN_AVAILABLE_EXECUTION_SURFACE",
+    "model_requests": 0,
+    "login_actions": 0,
+    "claim_boundary": "DOES_NOT_DETERMINE_THE_READINESS_OF_JONATHAN_MARTINEZ_WINDOWS_CODEX_DESKTOP_ENVIRONMENT",
+    "evidence": "projects/lab/evidence/EVD-LAB-PRODUCT-LEADERSHIP-ZERO-MODEL-READINESS-PROBE-196.json"
+  },
+  "product_leadership": {
+    "integration_id": "INT-LAB-004",
+    "status": "CANDIDATE_NOT_ACTIVE_NOT_INTEGRATED",
+    "readiness": "NOT_READY_FOR_FRESH_RETEST_REISSUE",
+    "last_model_execution": {
+      "id": "PRODUCT-LEADERSHIP-ACTIVATION-AND-VALUE-DISCRIMINATION-TEST-EXECUTION-005",
+      "attempt": "ATTEMPT-004",
+      "outcome": "BLOCKED_BEFORE_MODEL_REQUESTS",
+      "model_requests": 0,
+      "retries": 0
+    },
+    "fresh_retest_authorization": "NONE",
+    "package_adjudication": "NONE",
+    "activation_or_integration": "NONE"
+  },
+  "non_authorizations": [
+    "NO_RESOLVER_REMEDIATION_OR_RETEST",
+    "NO_CONTEXT_RESOLVER_INTEGRATION_PROMOTION_OR_REAL_PROMPT_INTERCEPTION",
+    "NO_CODEX_OR_MODEL_OPERATIONAL_BENCHMARK",
+    "NO_RAG_SEMANTIC_STAGES_EMBEDDINGS_OR_VECTOR_STORE",
+    "NO_RUNTIME_PRODUCT_EXTERNAL_REPOSITORY_DEPENDENCY_OR_CREDENTIAL_ACTION",
+    "NO_FRESH_PRODUCT_LEADERSHIP_RETEST_REPLAY_REGENERATION_RESCORING_OR_AUDIT",
+    "NO_PACKAGE_ADJUDICATION_OR_INT_LAB_004_CHANGE"
+  ],
+  "aggregate_divergences": {
+    "status": "PRESERVED_AND_EXPLICIT",
+    "affected_views": [
+      "CURRENT_STATE.json",
+      "projects/lab/PROJECT_STATE.json",
+      "registry/index.json",
+      "projects/lab/pending/PEND-LAB-048.json",
+      "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/product-leadership/INTEGRATION_READINESS.json"
+    ],
+    "description": "The first three remain stale aggregate projections. PEND-LAB-048 and INTEGRATION_READINESS retain earlier Product Leadership readiness wording. Authorization 198 did not authorize changing those paths.",
+    "correction_authorized_here": false
+  },
+  "next_action": {
+    "single": "DESIGN_A_SEPARATELY_AUTHORIZED_RESOLVER_REMEDIATION_AND_FROZEN_CORPUS_RETEST_BEFORE_ANY_CODEX_OR_MODEL_BENCHMARK",
+    "execution_authorized": false
+  },
+  "source_refs": [
+    "projects/lab/sources/USER_SOURCE_AUTHORIZATION_198_20260805.md",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_CONTEXTUAL_BOOTSTRAP_RESOLVER_REAL_REPOSITORY_SHADOW_BENCHMARK_198.json",
+    "projects/lab/authorization-lifecycle/CONTEXTUAL_BOOTSTRAP_RESOLVER_OPERATIONAL_BENCHMARK_LIFECYCLE_198.json",
+    "projects/lab/evidence/EVD-LAB-CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-BENCHMARK-198.json",
+    "projects/lab/evidence/CONTEXT_BUDGET_REPORT_198.json",
+    "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-BENCHMARK-001/MANIFEST.json",
+    "projects/lab/evidence/EVD-LAB-CONTEXTUAL-BOOTSTRAP-RESOLVER-197.json",
+    "projects/lab/evidence/EVD-LAB-PRODUCT-LEADERSHIP-ZERO-MODEL-READINESS-PROBE-196.json",
+    "projects/lab/pending/PEND-LAB-048.json",
+    "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/product-leadership/INTEGRATION_READINESS.json"
+  ]
 }

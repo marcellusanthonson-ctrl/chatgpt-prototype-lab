@@ -3,7 +3,7 @@
   "delta_id": "contextual-bootstrap-resolver-operational-benchmark-198",
   "project_id": "lab",
   "authorization_id": "AUTHORIZATION_LAB_CONTEXTUAL_BOOTSTRAP_RESOLVER_REAL_REPOSITORY_SHADOW_BENCHMARK_198",
-  "status": "EXECUTED_FAIL_CRITICAL_AWAITING_PUBLICATION",
+  "status": "PUBLISHED_FAIL_CRITICAL_AUTHORIZATION_CONSUMED_NO_RESIDUAL_AUTHORITY",
   "adds": [
     "CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-BENCHMARK-001",
     "EVD-LAB-CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-BENCHMARK-198",
@@ -20,5 +20,11 @@
     "RUNTIME_OR_PRODUCT"
   ],
   "terminal_result": "REAL_REPOSITORY_BENCHMARK_FAIL_CRITICAL",
-  "next_action_after_consumption": "SEPARATELY_DESIGN_RESOLVER_REMEDIATION_AND_RETEST_AUTHORIZATION"
+  "next_action_after_consumption": "SEPARATELY_DESIGN_RESOLVER_REMEDIATION_AND_RETEST_AUTHORIZATION",
+  "publication": {
+    "pull_request": 58,
+    "merge_commit": "ab957cfa4f33fce41aca34bd5adc957ea32a409b",
+    "remote_main_verified": "ab957cfa4f33fce41aca34bd5adc957ea32a409b"
+  },
+  "residual_authority": "NONE"
 }

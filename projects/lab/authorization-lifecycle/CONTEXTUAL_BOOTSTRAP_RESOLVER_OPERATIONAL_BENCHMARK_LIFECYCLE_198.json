@@ -3,7 +3,7 @@
   "record_id": "CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-BENCHMARK-LIFECYCLE-198",
   "authorization": "AUTHORIZATION_LAB_CONTEXTUAL_BOOTSTRAP_RESOLVER_REAL_REPOSITORY_SHADOW_BENCHMARK_198",
   "project_id": "lab",
-  "status": "EXECUTION_COMPLETE_AWAITING_VERIFIED_PUBLICATION",
+  "status": "CONSUMED_VERIFIED_REMOTE_PUBLICATION",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-08-05T18:48:00-04:00",
   "execution_started_at": "2026-08-05T18:48:00-04:00",
@@ -15,9 +15,16 @@
   "resolver_mutations": 0,
   "publication": {
     "branch": "agent/contextual-bootstrap-resolver-operational-benchmark-198",
-    "pull_request": null,
-    "merge_commit": null,
-    "status": "PENDING"
+    "pull_request": 58,
+    "merge_commit": "ab957cfa4f33fce41aca34bd5adc957ea32a409b",
+    "remote_main_verified": "ab957cfa4f33fce41aca34bd5adc957ea32a409b",
+    "closure_branch": "agent/contextual-bootstrap-resolver-operational-benchmark-198-closure",
+    "closure_pull_request": 59,
+    "closure_status": "PENDING_VERIFIED_REMOTE_MERGE",
+    "status": "IMPLEMENTATION_PUBLICATION_VERIFIED",
+    "closure_effect": "CONSUMPTION_AND_NO_RESIDUAL_AUTHORITY_EFFECTIVE_ON_VERIFIED_REMOTE_MERGE"
   },
-  "residual_authority": "BOUNDED_TO_PUBLICATION_AND_CLOSURE_OF_AUTHORIZATION_198"
+  "residual_authority": "NONE",
+  "consumption_rule": "CONSUMED_AFTER_VERIFIED_REMOTE_PUBLICATION_AND_DOCUMENTARY_CLOSURE",
+  "consumed_at": "2026-08-05T20:01:00-04:00"
 }

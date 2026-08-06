@@ -1,13 +1,50 @@
 {
-  "schema_version":"2.4.0",
-  "manifest_id":"LAB-CONTINUITY-ATTACHMENTS-AUTHORIZATION-197-CONSUMED-PROTOTYPE-PASS-20260805",
-  "status":"CURRENT",
-  "project_id":"lab",
-  "created_at":"2026-08-05T18:32:00-04:00",
-  "required_read_order":["CURRENT_CONTINUITY.json","CURRENT_CONTINUITY.md","ATTACHMENT_MANIFEST.json","START_PROMPT.md"],
-  "attachments":[{"path":"projects/lab/continuity/CURRENT_CONTINUITY.json","role":"CANONICAL_STRUCTURED_CONTINUITY","required":true},{"path":"projects/lab/continuity/CURRENT_CONTINUITY.md","role":"HUMAN_READABLE_CONTINUITY","required":true},{"path":"projects/lab/continuity/ATTACHMENT_MANIFEST.json","role":"READ_ORDER_AND_REFERENCE_MANIFEST","required":true},{"path":"projects/lab/continuity/START_PROMPT.md","role":"FIRST_MESSAGE_FOR_NEW_CONVERSATION","required":true}],
-  "repository_sources_not_duplicated_as_attachments":["projects/lab/sources/USER_SOURCE_AUTHORIZATION_197_20260805.md","projects/lab/authorizations/AUTHORIZATION_LAB_CONTEXTUAL_BOOTSTRAP_RESOLVER_READ_ONLY_PROTOTYPE_AND_DISCRIMINATING_VALIDATION_197.json","projects/lab/authorization-lifecycle/CONTEXTUAL_BOOTSTRAP_RESOLVER_AUTHORIZATION_LIFECYCLE_197.json","projects/lab/briefs/CODEX_CONTEXTUAL_BOOTSTRAP_RESOLVER_197_001.json","projects/lab/evidence/EVD-LAB-CONTEXTUAL-BOOTSTRAP-RESOLVER-197.json","projects/lab/evidence/CONTEXT_BUDGET_REPORT_197.json","projects/lab/experiments/CONTEXTUAL-BOOTSTRAP-RESOLVER-001/MANIFEST.json","projects/lab/experiments/CONTEXTUAL-BOOTSTRAP-RESOLVER-001/results/VALIDATION_RESULTS.json","projects/lab/evidence/EVD-LAB-PRODUCT-LEADERSHIP-ZERO-MODEL-READINESS-PROBE-196.json"],
-  "missing_attachments":[],
-  "authority_effect":"AUTHORIZATION_197_CONSUMED_NO_RESIDUAL_AUTHORITY",
-  "claim_boundary":"SYNTHETIC_PROTOTYPE_PASS_NO_INTEGRATION_OR_OPERATIONAL_GENERALIZATION"
+  "schema_version": "2.5.0",
+  "manifest_id": "LAB-CONTINUITY-ATTACHMENTS-AUTHORIZATION-198-CONSUMED-FAIL-CRITICAL-20260805",
+  "status": "CURRENT",
+  "project_id": "lab",
+  "created_at": "2026-08-05T20:01:00-04:00",
+  "required_read_order": [
+    "CURRENT_CONTINUITY.json",
+    "CURRENT_CONTINUITY.md",
+    "ATTACHMENT_MANIFEST.json",
+    "START_PROMPT.md"
+  ],
+  "attachments": [
+    {
+      "path": "projects/lab/continuity/CURRENT_CONTINUITY.json",
+      "role": "CANONICAL_STRUCTURED_CONTINUITY",
+      "required": true
+    },
+    {
+      "path": "projects/lab/continuity/CURRENT_CONTINUITY.md",
+      "role": "HUMAN_READABLE_CONTINUITY",
+      "required": true
+    },
+    {
+      "path": "projects/lab/continuity/ATTACHMENT_MANIFEST.json",
+      "role": "READ_ORDER_AND_REFERENCE_MANIFEST",
+      "required": true
+    },
+    {
+      "path": "projects/lab/continuity/START_PROMPT.md",
+      "role": "FIRST_MESSAGE_FOR_NEW_CONVERSATION",
+      "required": true
+    }
+  ],
+  "repository_sources_not_duplicated_as_attachments": [
+    "projects/lab/sources/USER_SOURCE_AUTHORIZATION_198_20260805.md",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_CONTEXTUAL_BOOTSTRAP_RESOLVER_REAL_REPOSITORY_SHADOW_BENCHMARK_198.json",
+    "projects/lab/authorization-lifecycle/CONTEXTUAL_BOOTSTRAP_RESOLVER_OPERATIONAL_BENCHMARK_LIFECYCLE_198.json",
+    "projects/lab/briefs/CODEX_CONTEXTUAL_BOOTSTRAP_RESOLVER_OPERATIONAL_BENCHMARK_198_001.json",
+    "projects/lab/evidence/EVD-LAB-CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-BENCHMARK-198.json",
+    "projects/lab/evidence/CONTEXT_BUDGET_REPORT_198.json",
+    "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-BENCHMARK-001/MANIFEST.json",
+    "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-BENCHMARK-001/SUMMARY.json",
+    "projects/lab/evidence/EVD-LAB-CONTEXTUAL-BOOTSTRAP-RESOLVER-197.json",
+    "projects/lab/evidence/EVD-LAB-PRODUCT-LEADERSHIP-ZERO-MODEL-READINESS-PROBE-196.json"
+  ],
+  "missing_attachments": [],
+  "authority_effect": "AUTHORIZATION_198_CONSUMED_NO_RESIDUAL_AUTHORITY",
+  "claim_boundary": "REAL_PATH_GITHUB_METADATA_SHADOW_FAIL_CRITICAL_NO_INTEGRATION_OR_MODEL_GENERALIZATION"
 }
