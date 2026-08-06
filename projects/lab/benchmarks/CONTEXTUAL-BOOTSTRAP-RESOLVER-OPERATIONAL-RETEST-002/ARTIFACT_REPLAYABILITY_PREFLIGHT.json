@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "preflight_id": "CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-RETEST-002-ARTIFACT-REPLAYABILITY-PREFLIGHT",
+  "authorization_id": "AUTHORIZATION_LAB_CONTEXTUAL_BOOTSTRAP_RESOLVER_002_TARGETED_REMEDIATION_AND_FROZEN_CORPUS_RETEST_199",
+  "executed_at": "2026-08-05T20:42:00-04:00",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "verified_parent_head": "42115c5155bbd98e18ee2a354747c807d99a387b",
+  "terminal_result": "BLOCKED_FROZEN_CORPUS_HASH_MISMATCH",
+  "checks": [
+    {
+      "id": "HEAD_MATCH",
+      "expected": "42115c5155bbd98e18ee2a354747c807d99a387b",
+      "observed": "42115c5155bbd98e18ee2a354747c807d99a387b",
+      "result": "PASS"
+    },
+    {
+      "id": "RESOLVER_001_MUTATION",
+      "expected": "NONE",
+      "observed": "NONE",
+      "result": "PASS"
+    },
+    {
+      "id": "TASK_CORPUS_GIT_OBJECT",
+      "path": "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-BENCHMARK-001/fixtures/OPERATIONAL_TASKS.json.gz.b64",
+      "git_blob_sha": "64fa187cc4eae1ea7deb064ac2da1652f57439e1",
+      "expected_bytes": 9129,
+      "observed_bytes": 9129,
+      "text_replayability": "FAIL_UNICODE_DECODE",
+      "result": "FAIL"
+    },
+    {
+      "id": "PRIVATE_ORACLE_GIT_OBJECT",
+      "path": "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-BENCHMARK-001/oracle/PRIVATE_ORACLE.json.gz.b64",
+      "git_blob_sha": "f4ceb0d1a321240e98a1bdfed9a8cea43e942690",
+      "expected_bytes": 2033,
+      "observed_bytes": 2033,
+      "text_replayability": "PASS_BASE64_TEXT",
+      "result": "PASS"
+    },
+    {
+      "id": "RUNNER_GIT_OBJECT",
+      "path": "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-BENCHMARK-001/scripts/BENCHMARK_RUNNER.ts.gz.b64",
+      "git_blob_sha": "e41c759d4c206e4d153177cb3ce7c9467ea107ad",
+      "expected_bytes": 7093,
+      "observed_bytes": 7092,
+      "text_replayability": "FAIL_UNICODE_DECODE",
+      "result": "FAIL"
+    },
+    {
+      "id": "EXACT_RUNNER_IDENTITY",
+      "expected": "BYTE_IDENTICAL_TO_198",
+      "observed": "NOT_ESTABLISHABLE",
+      "result": "FAIL"
+    },
+    {
+      "id": "EXACT_CORPUS_REPLAY",
+      "expected": "DECODABLE_BASE64_THEN_GZIP",
+      "observed": "NOT_REPLAYABLE_FROM_CANONICAL_PUBLISHED_BLOB",
+      "result": "FAIL"
+    }
+  ],
+  "observations": [
+    "The benchmark README describes retained artifacts as gzip/base64 text.",
+    "The task corpus Git blob cannot be decoded as UTF-8 by the GitHub blob reader.",
+    "The PR 58 patch exposes a valid base64 prefix followed by replacement and control characters before end-of-file.",
+    "The runner Git blob cannot be decoded as UTF-8.",
+    "The runner canonical byte inventory and GitHub blob size differ by one byte.",
+    "The private oracle is readable as base64 text, but an oracle alone cannot reproduce the benchmark."
+  ],
+  "effects": {
+    "resolver_002_created": false,
+    "resolver_001_modified": false,
+    "retest_started": false,
+    "model_requests": 0,
+    "codex_executions": 0,
+    "dependencies_installed": 0,
+    "integration": "NONE",
+    "runtime": "NONE",
+    "product": "NONE"
+  },
+  "stop_rule_applied": "STOP_BEFORE_MODIFY_WHEN_BENCHMARK_198_HASH_OR_BYTE_IDENTITY_CANNOT_BE_ESTABLISHED"
+}

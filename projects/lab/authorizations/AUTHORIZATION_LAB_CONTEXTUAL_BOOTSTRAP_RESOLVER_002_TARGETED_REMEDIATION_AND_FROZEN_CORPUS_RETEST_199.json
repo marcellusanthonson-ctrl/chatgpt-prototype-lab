@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_CONTEXTUAL_BOOTSTRAP_RESOLVER_002_TARGETED_REMEDIATION_AND_FROZEN_CORPUS_RETEST_199",
+  "project_id": "lab",
+  "status": "GRANTED_EXECUTION_BLOCKED_AWAITING_PUBLICATION",
+  "authorization_class": "TARGETED_RESOLVER_REMEDIATION_AND_FROZEN_CORPUS_RETEST_NO_MODEL",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-08-05T20:28:00-04:00",
+  "approval_source_ref": "projects/lab/sources/USER_SOURCE_AUTHORIZATION_199_20260805.md",
+  "grant_inferred": false,
+  "repository": {
+    "name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "branch": "main",
+    "head_policy": "VERIFY_LIVE_AT_USE",
+    "verified_execution_parent_head": "42115c5155bbd98e18ee2a354747c807d99a387b",
+    "working_branch": "agent/contextual-bootstrap-resolver-002-remediation-retest-199"
+  },
+  "objective": "Create resolver successor 002 with only four authorized remediations and replay exactly the frozen authorization 198 corpus.",
+  "authorized_defects": [
+    "ROUTING_PRECEDENCE",
+    "STATUS_AUTHORITY_MANDATORY_CONTINUITY_AND_LIFECYCLE",
+    "CONFLICT_DETECTION_AND_RESOLUTION_REQUIRED",
+    "PRECISE_AUDIT_SOURCE_SELECTION"
+  ],
+  "allowed_paths": [
+    "projects/lab/experiments/CONTEXTUAL-BOOTSTRAP-RESOLVER-002/**",
+    "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-RETEST-002/**",
+    "projects/lab/sources/USER_SOURCE_AUTHORIZATION_199_20260805.md",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_CONTEXTUAL_BOOTSTRAP_RESOLVER_002_TARGETED_REMEDIATION_AND_FROZEN_CORPUS_RETEST_199.json",
+    "projects/lab/authorization-lifecycle/CONTEXTUAL_BOOTSTRAP_RESOLVER_002_REMEDIATION_RETEST_LIFECYCLE_199.json",
+    "projects/lab/briefs/EXECUTION_CONTEXTUAL_BOOTSTRAP_RESOLVER_002_REMEDIATION_RETEST_199_001.json",
+    "projects/lab/evidence/EVD-LAB-CONTEXTUAL-BOOTSTRAP-RESOLVER-002-REMEDIATION-RETEST-199.json",
+    "projects/lab/evidence/CONTEXT_BUDGET_REPORT_199.json",
+    "registry/deltas/contextual-bootstrap-resolver-002-remediation-retest-199.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.json",
+    "projects/lab/continuity/CURRENT_CONTINUITY.md",
+    "projects/lab/continuity/ATTACHMENT_MANIFEST.json",
+    "projects/lab/continuity/START_PROMPT.md"
+  ],
+  "prohibitions": [
+    "MODIFY_RESOLVER_001",
+    "MODIFY_BENCHMARK_198",
+    "CHANGE_CORPUS_ORACLE_SNAPSHOT_SCORER_OR_THRESHOLDS",
+    "MODEL_REQUESTS",
+    "CODEX_EXECUTION",
+    "DEPENDENCY_INSTALLATION",
+    "EXTERNAL_REPOSITORY_ACCESS",
+    "REAL_PROMPT_INTERCEPTION",
+    "RESOLVER_INTEGRATION_OR_PROMOTION",
+    "RUNTIME_OR_PRODUCT_CHANGE",
+    "RAG_SEMANTIC_STAGES",
+    "ARCHITECTURE_SELECTION",
+    "RETAIN_RESIDUAL_AUTHORITY"
+  ],
+  "stop_conditions": [
+    "HEAD_MISMATCH",
+    "INCOMPATIBLE_ACTIVE_AUTHORIZATION",
+    "RESOLVER_001_HASH_MISMATCH",
+    "BENCHMARK_198_HASH_OR_BYTE_MISMATCH",
+    "ORACLE_ISOLATION_FAILURE",
+    "RUNNER_OR_SCORER_LOGIC_DRIFT",
+    "SCOPE_EXPANSION_REQUIRED"
+  ],
+  "execution": {
+    "status": "BLOCKED_BEFORE_REMEDIATION",
+    "started_at": "2026-08-05T20:28:00-04:00",
+    "blocked_at": "2026-08-05T20:42:00-04:00",
+    "terminal_result": "BLOCKED_FROZEN_CORPUS_HASH_MISMATCH",
+    "resolver_002_created": false,
+    "resolver_001_mutated": false,
+    "retest_started": false,
+    "model_requests": 0,
+    "codex_executions": 0,
+    "dependencies_installed": 0,
+    "blocking_evidence_ref": "projects/lab/evidence/EVD-LAB-CONTEXTUAL-BOOTSTRAP-RESOLVER-002-REMEDIATION-RETEST-199.json"
+  },
+  "consumption": {
+    "rule": "CONSUMED_AFTER_VERIFIED_REMOTE_PUBLICATION_AND_DOCUMENTARY_CLOSURE",
+    "residual_authority_after_consumption": "NONE"
+  },
+  "next_authorized_action": "NONE_UNTIL_SEPARATE_ARTIFACT_RECONSTRUCTION_AUTHORIZATION",
+  "residual_authority": "BOUNDED_TO_PUBLICATION_AND_CLOSURE_OF_BLOCKED_RESULT"
+}

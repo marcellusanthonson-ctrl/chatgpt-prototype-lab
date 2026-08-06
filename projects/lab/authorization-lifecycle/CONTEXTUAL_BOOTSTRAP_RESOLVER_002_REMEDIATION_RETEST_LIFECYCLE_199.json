@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "CONTEXTUAL-BOOTSTRAP-RESOLVER-002-REMEDIATION-RETEST-LIFECYCLE-199",
+  "authorization": "AUTHORIZATION_LAB_CONTEXTUAL_BOOTSTRAP_RESOLVER_002_TARGETED_REMEDIATION_AND_FROZEN_CORPUS_RETEST_199",
+  "project_id": "lab",
+  "status": "EXECUTION_BLOCKED_AWAITING_VERIFIED_REMOTE_PUBLICATION",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-08-05T20:28:00-04:00",
+  "execution_started_at": "2026-08-05T20:28:00-04:00",
+  "execution_blocked_at": "2026-08-05T20:42:00-04:00",
+  "verified_execution_parent_head": "42115c5155bbd98e18ee2a354747c807d99a387b",
+  "terminal_result": "BLOCKED_FROZEN_CORPUS_HASH_MISMATCH",
+  "preflight": {
+    "resolver_001_integrity": "NOT_MUTATED",
+    "corpus_expected_path": "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-BENCHMARK-001/fixtures/OPERATIONAL_TASKS.json.gz.b64",
+    "corpus_git_blob_sha": "64fa187cc4eae1ea7deb064ac2da1652f57439e1",
+    "corpus_git_size_bytes": 9129,
+    "corpus_fetch_blob": "FAILED_UNICODE_DECODE",
+    "oracle_git_blob_sha": "f4ceb0d1a321240e98a1bdfed9a8cea43e942690",
+    "oracle_git_size_bytes": 2033,
+    "oracle_fetch_blob": "READABLE_BASE64_TEXT",
+    "runner_expected_size_bytes": 7093,
+    "runner_git_blob_sha": "e41c759d4c206e4d153177cb3ce7c9467ea107ad",
+    "runner_git_size_bytes": 7092,
+    "runner_fetch_blob": "FAILED_UNICODE_DECODE",
+    "runner_size_match": false,
+    "exact_replay_possible": false
+  },
+  "publication": {
+    "branch": "agent/contextual-bootstrap-resolver-002-remediation-retest-199",
+    "pull_request": null,
+    "merge_commit": null,
+    "remote_main_verified": null,
+    "closure_pull_request": null
+  },
+  "residual_authority": "BOUNDED_TO_PUBLICATION_AND_CLOSURE_OF_BLOCKED_RESULT"
+}

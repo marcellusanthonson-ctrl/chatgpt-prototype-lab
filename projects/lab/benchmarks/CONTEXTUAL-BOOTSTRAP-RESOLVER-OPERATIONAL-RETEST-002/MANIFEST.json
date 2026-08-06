@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "benchmark_id": "CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-RETEST-002",
+  "authorization_id": "AUTHORIZATION_LAB_CONTEXTUAL_BOOTSTRAP_RESOLVER_002_TARGETED_REMEDIATION_AND_FROZEN_CORPUS_RETEST_199",
+  "status": "BLOCKED_BEFORE_REMEDIATION",
+  "terminal_result": "BLOCKED_FROZEN_CORPUS_HASH_MISMATCH",
+  "parent_benchmark": "CONTEXTUAL-BOOTSTRAP-RESOLVER-OPERATIONAL-BENCHMARK-001",
+  "candidate_resolver": "CONTEXTUAL-BOOTSTRAP-RESOLVER-002_NOT_CREATED",
+  "frozen_inputs": {
+    "tasks": "NOT_LOADED_CANONICAL_BLOB_NOT_REPLAYABLE",
+    "oracle": "PREFLIGHT_READABLE_NOT_LOADED_INTO_RESOLVER",
+    "runner": "NOT_LOADED_CANONICAL_BYTE_IDENTITY_FAILED",
+    "snapshot": "NOT_LOADED_EXECUTION_STOPPED_EARLY"
+  },
+  "iterations": {
+    "planned": 126,
+    "executed": 0
+  },
+  "metrics": "NOT_RUN",
+  "artifacts": [
+    "ARTIFACT_REPLAYABILITY_PREFLIGHT.json"
+  ],
+  "claim_boundary": "NO_REMEDIATION_OR_RETEST_RESULT_EXISTS",
+  "effects": {
+    "model_requests": 0,
+    "codex": 0,
+    "integration": "NONE",
+    "runtime": "NONE",
+    "product": "NONE"
+  }
+}
