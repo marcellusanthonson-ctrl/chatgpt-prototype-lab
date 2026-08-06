@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.4.0",
-  "continuity_id": "LAB-CONTINUITY-AUTHORIZATION-203-CODEX-A-BLOCKED-AWAITING-VERIFIED-CLOSURE-20260806",
+  "schema_version": "1.5.0",
+  "continuity_id": "LAB-CONTINUITY-AUTHORIZATION-203-CONSUMED-BLOCKED-INDEPENDENT-BENCHMARK-VALIDATION-20260806",
   "required": [
     {"path": "projects/lab/continuity/CURRENT_CONTINUITY.json", "status": "PRESENT"},
     {"path": "projects/lab/continuity/CURRENT_CONTINUITY.md", "status": "PRESENT"},
@@ -14,6 +14,7 @@
     {"path": "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/codex-a/TERMINAL_REPORT.json", "status": "PRESENT"},
     {"path": "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/adjudication/CHATGPT_POST_TEST_REPORT_CODEX_A_001.json", "status": "PRESENT"},
     {"path": "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/adjudication/TERMINAL_RECONCILIATION.json", "status": "PRESENT"},
+    {"path": "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/adjudication/CLOSURE.json", "status": "PRESENT"},
     {"path": "AGENTS.md", "status": "PRESENT"},
     {"path": "architecture/governance/CODEX_DESKTOP_CONTEXT_OPTIMIZATION_001/CONTEXT_LOADING_POLICY.json", "status": "PRESENT"}
   ],
@@ -21,7 +22,11 @@
     {"path": "projects/lab/continuity/archive/2026-08-06-authorization-203/CURRENT_CONTINUITY.json", "status": "PRESENT_EXACT_BLOB_COPY"},
     {"path": "projects/lab/continuity/archive/2026-08-06-authorization-203/CURRENT_CONTINUITY.md", "status": "PRESENT_EXACT_BLOB_COPY"},
     {"path": "projects/lab/continuity/archive/2026-08-06-authorization-203/ATTACHMENT_MANIFEST.json", "status": "PRESENT_EXACT_BLOB_COPY"},
-    {"path": "projects/lab/continuity/archive/2026-08-06-authorization-203/START_PROMPT.md", "status": "PRESENT_EXACT_BLOB_COPY"}
+    {"path": "projects/lab/continuity/archive/2026-08-06-authorization-203/START_PROMPT.md", "status": "PRESENT_EXACT_BLOB_COPY"},
+    {"path": "projects/lab/continuity/archive/2026-08-06-authorization-203-blocked-publication/CURRENT_CONTINUITY.json", "status": "PRESENT_EXACT_BLOB_COPY"},
+    {"path": "projects/lab/continuity/archive/2026-08-06-authorization-203-blocked-publication/CURRENT_CONTINUITY.md", "status": "PRESENT_EXACT_BLOB_COPY"},
+    {"path": "projects/lab/continuity/archive/2026-08-06-authorization-203-blocked-publication/ATTACHMENT_MANIFEST.json", "status": "PRESENT_EXACT_BLOB_COPY"},
+    {"path": "projects/lab/continuity/archive/2026-08-06-authorization-203-blocked-publication/START_PROMPT.md", "status": "PRESENT_EXACT_BLOB_COPY"}
   ],
   "operator_reported_local_only": [
     "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/codex-a/ENVIRONMENT.json",
