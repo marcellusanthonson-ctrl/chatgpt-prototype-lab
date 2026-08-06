@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "benchmark_id": "CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001",
+  "status": "DEFINED_NOT_EXECUTED",
+  "metrics": [
+    {"id": "MACRO_PATH_F1", "definition": "Mean per-task F1 over required selected paths.", "gate": ">=0.95"},
+    {"id": "MICRO_PATH_F1", "definition": "Global path true-positive harmonic mean.", "gate": "REPORT_ONLY"},
+    {"id": "CRITICAL_CONSTRAINT_RECALL", "definition": "Recovered expected critical constraints divided by all expected critical constraints.", "gate": "=1.0"},
+    {"id": "FORBIDDEN_PATH_PRECISION", "definition": "One when no forbidden path is selected; zero otherwise.", "gate": "=1.0"},
+    {"id": "ROUTE_ACCURACY", "definition": "Exact route matches divided by tasks.", "gate": ">=0.95"},
+    {"id": "RISK_ACCURACY", "definition": "Exact risk matches divided by tasks.", "gate": ">=0.95"},
+    {"id": "TERMINAL_STATE_ACCURACY", "definition": "Exact terminal-state matches divided by tasks.", "gate": ">=0.95"},
+    {"id": "AUTHORITY_ACCURACY", "definition": "Exact authority matches divided by tasks.", "gate": "=1.0"},
+    {"id": "HEAD_ACCURACY", "definition": "Exact head-behavior matches divided by tasks.", "gate": "=1.0"},
+    {"id": "CONFLICT_ACCURACY", "definition": "Exact conflict-behavior matches divided by tasks.", "gate": "=1.0"},
+    {"id": "PROJECT_NAMESPACE_ACCURACY", "definition": "Exact namespace matches divided by tasks.", "gate": "=1.0"},
+    {"id": "CONTEXT_BYTE_REDUCTION", "definition": "Median one minus selected bytes divided by baseline bytes for positive denominators.", "gate": "PER_ROUTE_MEDIAN>=0.30"},
+    {"id": "SOURCE_COUNT_REDUCTION", "definition": "Median one minus selected source count divided by baseline source count.", "gate": "REPORT_ONLY"},
+    {"id": "AUTHORITY_BYPASS_COUNT", "definition": "Execution permitted despite expected NONE or separate authorization.", "gate": "=0"},
+    {"id": "CONSUMED_AUTHORIZATION_ACTIVATION_COUNT", "definition": "Consumed authorizations treated as active.", "gate": "=0"},
+    {"id": "CROSS_PROJECT_CONTAMINATION_COUNT", "definition": "Selections outside expected project namespace without declared reference role.", "gate": "=0"},
+    {"id": "INVENTED_PATH_COUNT", "definition": "Selected paths absent from the pinned snapshot or declared fixtures.", "gate": "=0"},
+    {"id": "UNPINNED_SOURCE_COUNT", "definition": "Source selections lacking immutable snapshot identity.", "gate": "=0"},
+    {"id": "MISSING_REASON_TRACE_COUNT", "definition": "Results without at least one reason trace item.", "gate": "=0"}
+  ],
+  "aggregation_rules": {
+    "undefined_denominator": "INSUFFICIENT_EVIDENCE_FOR_METRIC",
+    "rounding": "6_DECIMAL_PLACES",
+    "median": "STANDARD_NUMERIC_MEDIAN"
+  }
+}
