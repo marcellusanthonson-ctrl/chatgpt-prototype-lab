@@ -1,9 +1,9 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.2.0",
   "delta_id": "INDEPENDENT_REPRODUCIBLE_BENCHMARK_INSTRUMENT_VALIDATION_203",
   "project_id": "lab",
   "authorization_id": "AUTHORIZATION_LAB_INDEPENDENT_REPRODUCIBLE_BENCHMARK_INSTRUMENT_VALIDATION_203",
-  "status": "TERMINAL_BLOCKED_RECONCILIATION_PREPARED_AWAITING_REMOTE_PUBLICATION",
+  "status": "CONSUMED_BLOCKED_VERIFIED_REMOTE_PUBLICATION",
   "adds": {
     "source": "projects/lab/sources/USER_SOURCE_INDEPENDENT_BENCHMARK_VALIDATION_203_20260806.md",
     "authorization": "projects/lab/authorizations/AUTHORIZATION_LAB_INDEPENDENT_REPRODUCIBLE_BENCHMARK_INSTRUMENT_VALIDATION_203.json",
@@ -17,6 +17,13 @@
     "chatgpt_post_test_report": "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/adjudication/CHATGPT_POST_TEST_REPORT_CODEX_A_001.json",
     "terminal_reconciliation": "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/adjudication/TERMINAL_RECONCILIATION.json",
     "user_terminal_source": "projects/lab/sources/USER_SOURCE_CODEX_A_BLOCKED_TERMINAL_REPORT_203_20260806.md"
+  },
+  "publication": {
+    "authorization_pull_request": 68,
+    "authorization_merge": "01e284a61d0198156f8e1adad28d5d168b11d984",
+    "blocked_result_pull_request": 69,
+    "blocked_result_merge": "ecd36a4555ebca606350ff700a7403ec60d54101",
+    "consumption_closure_pull_request": 70
   },
   "result": {
     "operator": "CODEX_DESKTOP_A",
@@ -32,5 +39,6 @@
   },
   "aggregate_updates": "NONE_NOT_AUTHORIZED",
   "instrument_validation": "NOT_ESTABLISHED",
-  "operational_approval": "NOT_APPROVED"
+  "operational_approval": "NOT_APPROVED",
+  "residual_authority": "NONE"
 }
