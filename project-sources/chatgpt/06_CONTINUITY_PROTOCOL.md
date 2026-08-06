@@ -36,3 +36,11 @@ Todo elemento material conserva `source_refs`. No copiar transcripciones complet
 Solo puede existir un paquete `CURRENT`. Si cambia un HEAD externo, marcarlo `STALE` o exigir verificación en vivo. Para el HEAD propio del LAB se usa siempre `VERIFY_LIVE_AT_USE`.
 
 El nuevo modelo entrega HEAD, estado, decisiones, autorizaciones, pendientes, divergencias y una siguiente acción antes de ejecutar.
+
+## Reporte posterior a cada prueba
+
+Después de cada prueba o intento terminal ejecutado directamente por ChatGPT o por Codex, entregar a Jonathan un reporte antes de iniciar otra prueba.
+
+El reporte identifica resultado, estado actual, logros, evidencia, defectos o bloqueos, pruebas pendientes, gates faltantes para completar la aprobación, estado de autorización y una sola siguiente acción. Las pruebas no ejecutadas se marcan `NOT_RUN`.
+
+El formato y los límites completos están en `docs/CONTINUITY_PROTOCOL.md`. El reporte no crea aprobación ni autorización.

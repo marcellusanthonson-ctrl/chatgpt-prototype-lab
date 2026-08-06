@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_CONTINUITY_AND_POST_TEST_REPORTING_PROTOCOL_201",
+  "project_id": "lab",
+  "status": "GRANTED_EXECUTION_COMPLETE_AWAITING_VERIFIED_REMOTE_PUBLICATION",
+  "authorization_class": "DOCUMENTARY_CONTINUITY_AND_RESPONSE_PROTOCOL",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-08-05T22:36:00-04:00",
+  "approval_source_ref": "projects/lab/sources/USER_SOURCE_CONTINUITY_POST_TEST_REPORTING_PROTOCOL_201_20260805.md",
+  "repository": {
+    "name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "branch": "main",
+    "head_policy": "VERIFY_LIVE_AT_USE",
+    "verified_execution_parent_head": "720926633e8274d4c8e1c5a3793743c38aa69ed3",
+    "working_branch": "agent/continuity-post-test-reporting-protocol-201"
+  },
+  "objective": "Create a successor continuity package and establish mandatory post-test status reporting after every ChatGPT-direct or Codex test.",
+  "authorized_actions": [
+    "UPDATE_CONTINUITY_PROTOCOL",
+    "UPDATE_CHATGPT_CONTINUITY_SOURCE",
+    "UPDATE_CHATGPT_RESPONSE_CONTRACT",
+    "ARCHIVE_PREDECESSOR_CURRENT_PACKAGE",
+    "PUBLISH_SUCCESSOR_CURRENT_PACKAGE",
+    "CREATE_AUTHORIZATION_BRIEF_EVIDENCE_AND_DELTA",
+    "COMMIT_PUSH_OPEN_PR_MERGE_AND_VERIFY_REMOTE"
+  ],
+  "forbidden_actions": [
+    "NO_NEW_OPERATIONAL_BENCHMARK_DESIGN_OR_EXECUTION",
+    "NO_RESOLVER_001_OR_002_CHANGE",
+    "NO_RETEST",
+    "NO_MODEL_OR_CODEX_TEST_EXECUTION",
+    "NO_INTEGRATION_RUNTIME_OR_PRODUCT_CHANGE",
+    "NO_AGGREGATE_STATE_RECONCILIATION"
+  ],
+  "execution": {
+    "status": "COMPLETE_AWAITING_VERIFIED_REMOTE_PUBLICATION",
+    "terminal_result": "CONTINUITY_AND_POST_TEST_REPORTING_PROTOCOL_ESTABLISHED",
+    "test_executions": 0,
+    "resolver_mutations": 0,
+    "model_requests": 0
+  },
+  "residual_authority": "NONE_AFTER_CONSUMPTION",
+  "consumption_rule": "CONSUMED_AFTER_VERIFIED_REMOTE_PUBLICATION_AND_SUCCESSOR_CONTINUITY_PUBLICATION"
+}

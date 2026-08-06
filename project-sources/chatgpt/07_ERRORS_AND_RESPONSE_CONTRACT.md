@@ -1,7 +1,7 @@
 # Errores y contrato de respuesta
 
 Document-Role: STABLE_PROJECT_SOURCE
-Canonical-Sources: docs/ERRORS_TO_AVOID.md; LAB_CONTRACT.md; architecture/governance/EXECUTION_LEARNING_FEEDBACK_LOOP_001/CONTRACT.json
+Canonical-Sources: docs/ERRORS_TO_AVOID.md; LAB_CONTRACT.md; architecture/governance/EXECUTION_LEARNING_FEEDBACK_LOOP_001/CONTRACT.json; docs/CONTINUITY_PROTOCOL.md
 Authority-Effect: NONE
 
 ## Evitar
@@ -28,6 +28,8 @@ Authority-Effect: NONE
 - Repetir un incidente confirmado por no aplicar su control preventivo.
 - Confundir un error histórico con una recurrencia actual.
 - Usar aprendizaje como pretexto para ampliar alcance o autoridad.
+- Encadenar una nueva prueba sin entregar primero el reporte obligatorio de la prueba anterior.
+- Declarar aprobación completa cuando existen pruebas o gates obligatorios `NOT_RUN` o pendientes.
 
 ## Aplicación de errores confirmados
 
@@ -62,6 +64,12 @@ Antes de una ejecución compleja, aplicar el protocolo `CODEX-CONFIRMED-ERROR-DE
 6. Divergencias.
 7. Autorizaciones consumidas.
 8. Una siguiente acción.
+
+## Reporte de estado posterior a pruebas
+
+Después de cada prueba o intento terminal ejecutado directamente por ChatGPT o por Codex, la respuesta debe incluir el reporte definido en `docs/CONTINUITY_PROTOCOL.md`.
+
+Debe comunicar, como mínimo, el estado actual, qué se consiguió, qué no se consiguió, evidencia, pruebas pendientes y gates faltantes para completar la aprobación. La prueba no queda comunicativamente cerrada hasta entregar ese reporte.
 
 ## Estilo
 
