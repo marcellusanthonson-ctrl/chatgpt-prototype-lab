@@ -1,13 +1,17 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.2.0",
   "validation_execution_id": "INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203",
   "authorization_id": "AUTHORIZATION_LAB_INDEPENDENT_REPRODUCIBLE_BENCHMARK_INSTRUMENT_VALIDATION_203",
   "benchmark_id": "CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001",
-  "status": "TERMINAL_BLOCKED_BEFORE_VAL_001_RECONCILIATION_PREPARED_AWAITING_PUBLICATION",
+  "status": "TERMINAL_BLOCKED_CLOSED_AUTHORIZATION_CONSUMED",
   "pinned_benchmark_publication_commit": "48eb518a5fd2ec4ee5cf073e94c0142469dc2c4a",
-  "authorization_parent_head": "38b0d6fc2d76daaf24ddd87876f0ca089763a359",
   "authorization_publication_head": "01e284a61d0198156f8e1adad28d5d168b11d984",
-  "operators": ["CODEX_DESKTOP_A", "CLAUDE_READ_ONLY", "CODEX_DESKTOP_B", "CHATGPT_RECONCILER"],
+  "blocked_result_publication": {
+    "pull_request": 69,
+    "merge_commit": "ecd36a4555ebca606350ff700a7403ec60d54101",
+    "remote_verified": true
+  },
+  "consumption_closure_pull_request": 70,
   "attempts": [
     {
       "attempt_id": "INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203-CODEX-A-ATTEMPT-001",
@@ -29,16 +33,13 @@
     {"id": "VAL-008", "status": "NOT_RUN"},
     {"id": "VAL-009", "status": "NOT_RUN"}
   ],
-  "output_roots": {
-    "codex_a": "codex-a",
-    "claude": "claude",
-    "codex_b": "codex-b",
-    "adjudication": "adjudication"
-  },
   "remote_outputs_present": [
     "codex-a/TERMINAL_REPORT.json",
     "adjudication/CHATGPT_POST_TEST_REPORT_CODEX_A_001.json",
-    "adjudication/TERMINAL_RECONCILIATION.json"
+    "adjudication/TERMINAL_RECONCILIATION.json",
+    "adjudication/PUBLICATION_NOTE.md",
+    "adjudication/PUBLICATION_SCOPE.json",
+    "adjudication/CLOSURE_GATE.json"
   ],
   "local_outputs_reported_not_remotely_available": [
     "codex-a/ENVIRONMENT.json",
@@ -51,13 +52,14 @@
     "codex-a/DETERMINISM_RESULTS.json",
     "codex-a/REPLAY_A_RESULTS.json"
   ],
-  "pass_condition": "NOT_EVALUATED",
-  "current_operator": "NONE_TERMINAL_BLOCK",
-  "claude_state": "NOT_STARTED",
-  "codex_b_state": "NOT_STARTED",
-  "post_test_reporting_protocol": "COMPLETE_PREPARED_FOR_PUBLICATION",
-  "resolver_effect": "NONE",
-  "integration_effect": "NONE",
+  "current_operator": "NONE",
+  "claude_state": "NOT_STARTED_CANCELLED_BY_TERMINAL_BLOCK",
+  "codex_b_state": "NOT_STARTED_CANCELLED_BY_TERMINAL_BLOCK",
+  "post_test_reporting_protocol": "COMPLETE_PUBLISHED_VERIFIED",
+  "terminal_reconciliation": "COMPLETE_PUBLISHED_VERIFIED",
   "instrument_validation": "NOT_ESTABLISHED",
-  "approval_state": "NOT_APPROVED"
+  "approval_state": "NOT_APPROVED",
+  "authorization_state": "CONSUMED_NO_RESIDUAL_AUTHORITY",
+  "resolver_effect": "NONE",
+  "integration_effect": "NONE"
 }
