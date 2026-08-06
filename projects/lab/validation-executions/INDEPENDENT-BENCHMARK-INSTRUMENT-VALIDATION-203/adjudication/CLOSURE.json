@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0.0",
+  "closure_id": "INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203-CLOSURE-001",
+  "authorization_id": "AUTHORIZATION_LAB_INDEPENDENT_REPRODUCIBLE_BENCHMARK_INSTRUMENT_VALIDATION_203",
+  "terminal_outcome": "BLOCKED",
+  "result_publication": {
+    "pull_request": 69,
+    "merge_commit": "ecd36a4555ebca606350ff700a7403ec60d54101",
+    "remote_verified": true
+  },
+  "consumption_closure": {
+    "pull_request": 70,
+    "effect": "AUTHORIZATION_CONSUMED_NO_RESIDUAL_AUTHORITY_ON_VERIFIED_REMOTE_MERGE"
+  },
+  "tests_executed": 0,
+  "tests_not_run": ["VAL-001", "VAL-002", "VAL-003", "VAL-004", "VAL-005", "VAL-006", "VAL-007", "VAL-008", "VAL-009"],
+  "instrument_validation": "NOT_ESTABLISHED",
+  "operational_approval": "NOT_APPROVED",
+  "resolver_effect": "NONE",
+  "integration_effect": "NONE",
+  "next_authorized_action": "NONE_AFTER_CONSUMPTION",
+  "single_recommended_next_action": "DESIGN_AND_APPROVE_A_SEPARATE_REMEDIATION_AUTHORIZATION_THAT_RECONCILES_THE_FROZEN_BENCHMARK_BASELINE_AND_CHAIN_OF_CUSTODY_AND_CREATES_THE_REQUIRED_EXECUTION_ENVELOPE_AND_CONTEXT_MANIFEST_BEFORE_ANY_RETEST"
+}

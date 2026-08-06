@@ -1,22 +1,19 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.2.0",
   "evidence_id": "EVD-LAB-INDEPENDENT-REPRODUCIBLE-BENCHMARK-INSTRUMENT-VALIDATION-203",
   "authorization_id": "AUTHORIZATION_LAB_INDEPENDENT_REPRODUCIBLE_BENCHMARK_INSTRUMENT_VALIDATION_203",
   "project_id": "lab",
-  "status": "CODEX_A_PRE_VALIDATION_ATTEMPT_BLOCKED_FINDINGS_CONFIRMED_CLOSURE_AWAITING_PUBLICATION",
+  "status": "REGISTERED_VERIFIED_REMOTE_BLOCKED_TERMINAL_OUTCOME_AUTHORIZATION_CONSUMED",
   "recorded_at": "2026-08-06T11:52:00-04:00",
   "verified_authorization_parent_head": "38b0d6fc2d76daaf24ddd87876f0ca089763a359",
   "authorization_publication_head": "01e284a61d0198156f8e1adad28d5d168b11d984",
-  "benchmark_id": "CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001",
-  "prepared": {
-    "authorization": true,
-    "codex_a_brief": true,
-    "claude_brief": true,
-    "codex_b_brief": true,
-    "validation_execution_manifest": true,
-    "oracle_custody_protocol": true,
-    "adjudication_contract": true
+  "blocked_result_publication": {
+    "pull_request": 69,
+    "merge_commit": "ecd36a4555ebca606350ff700a7403ec60d54101",
+    "remote_verified": true
   },
+  "consumption_closure_pull_request": 70,
+  "benchmark_id": "CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001",
   "codex_a_attempt": {
     "attempt_id": "INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203-CODEX-A-ATTEMPT-001",
     "terminal_at": "2026-08-06T11:48:03.0497102-04:00",
@@ -28,31 +25,30 @@
     "validation_fixtures_created": 0,
     "terminal_report": "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/codex-a/TERMINAL_REPORT.json"
   },
-  "independent_verification": {
-    "remote_main_head": "01e284a61d0198156f8e1adad28d5d168b11d984",
-    "finding_determinations": [
-      {
-        "finding_id": "CODA-203-BLOCK-001",
-        "determination": "CONFIRMED",
-        "evidence": {
-          "chain_of_custody_blob_at_publication": "70613e57b17944cf7580323d15e3d464a41cbf84",
-          "chain_of_custody_blob_at_live_head": "01e518c8d0642255a40367fbef4ac1954521e552",
-          "reproducibility_manifest_blob_at_publication": "33b365f78c829560682b69c1084a2a60519fbc02",
-          "reproducibility_manifest_blob_at_live_head": "d4bd63571a0406bb01ce756376b6543cb93dec56"
-        }
-      },
-      {
-        "finding_id": "CODA-203-BLOCK-002",
-        "determination": "CONFIRMED",
-        "evidence": {
-          "agents_file": "AGENTS.md",
-          "context_policy": "architecture/governance/CODEX_DESKTOP_CONTEXT_OPTIMIZATION_001/CONTEXT_LOADING_POLICY.json",
-          "execution_envelope": "NOT_FOUND_FOR_BRIEF_203_A",
-          "context_manifest": "NOT_FOUND_FOR_BRIEF_203_A"
-        }
+  "finding_determinations": [
+    {
+      "finding_id": "CODA-203-BLOCK-001",
+      "determination": "CONFIRMED",
+      "severity": "CRITICAL",
+      "evidence": {
+        "chain_of_custody_blob_at_publication": "70613e57b17944cf7580323d15e3d464a41cbf84",
+        "chain_of_custody_blob_at_live_head": "01e518c8d0642255a40367fbef4ac1954521e552",
+        "reproducibility_manifest_blob_at_publication": "33b365f78c829560682b69c1084a2a60519fbc02",
+        "reproducibility_manifest_blob_at_live_head": "d4bd63571a0406bb01ce756376b6543cb93dec56"
       }
-    ]
-  },
+    },
+    {
+      "finding_id": "CODA-203-BLOCK-002",
+      "determination": "CONFIRMED",
+      "severity": "CRITICAL",
+      "evidence": {
+        "agents_file": "AGENTS.md",
+        "context_policy": "architecture/governance/CODEX_DESKTOP_CONTEXT_OPTIMIZATION_001/CONTEXT_LOADING_POLICY.json",
+        "execution_envelope": "NOT_FOUND_FOR_BRIEF_203_A",
+        "context_manifest": "NOT_FOUND_FOR_BRIEF_203_A"
+      }
+    }
+  ],
   "tests": {
     "VAL-001": "NOT_RUN",
     "VAL-002": "NOT_RUN",
@@ -77,6 +73,9 @@
     "product": "NONE",
     "external_repositories": 0
   },
+  "authorization_state": "CONSUMED_NO_RESIDUAL_AUTHORITY",
+  "instrument_validation": "NOT_ESTABLISHED",
+  "operational_approval": "NOT_APPROVED",
   "source_refs": [
     "projects/lab/sources/USER_SOURCE_CODEX_A_BLOCKED_TERMINAL_REPORT_203_20260806.md",
     "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/codex-a/TERMINAL_REPORT.json",

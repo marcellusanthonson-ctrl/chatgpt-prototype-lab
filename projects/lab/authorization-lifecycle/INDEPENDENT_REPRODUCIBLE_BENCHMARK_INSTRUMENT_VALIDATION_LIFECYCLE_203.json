@@ -1,24 +1,32 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.2.0",
   "record_id": "INDEPENDENT-REPRODUCIBLE-BENCHMARK-INSTRUMENT-VALIDATION-LIFECYCLE-203",
   "authorization": "AUTHORIZATION_LAB_INDEPENDENT_REPRODUCIBLE_BENCHMARK_INSTRUMENT_VALIDATION_203",
   "project_id": "lab",
-  "status": "TERMINAL_BLOCKED_RECONCILIATION_PREPARED_AWAITING_REMOTE_PUBLICATION",
+  "status": "CONSUMED_BLOCKED_VERIFIED_REMOTE_PUBLICATION",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-08-06T07:19:00-04:00",
   "verified_authorization_parent_head": "38b0d6fc2d76daaf24ddd87876f0ca089763a359",
-  "authorization_publication_branch": "agent/independent-benchmark-validation-203",
   "authorization_publication_merge": "01e284a61d0198156f8e1adad28d5d168b11d984",
-  "blocked_closure_branch": "agent/independent-benchmark-validation-203-blocked-closure",
+  "blocked_result_publication": {
+    "pull_request": 69,
+    "merge_commit": "ecd36a4555ebca606350ff700a7403ec60d54101",
+    "remote_verified": true
+  },
+  "consumption_closure": {
+    "branch": "agent/independent-benchmark-validation-203-consumed-closure",
+    "pull_request": 70,
+    "effect": "CONSUMPTION_AND_NO_RESIDUAL_AUTHORITY_EFFECTIVE_ON_VERIFIED_REMOTE_MERGE"
+  },
   "benchmark_id": "CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001",
-  "current_stage": "TERMINAL_BLOCKED_CLOSURE_PUBLICATION",
+  "terminal_result": "BLOCKED",
+  "terminal_stage": "PRE_VALIDATION_CUSTODY_AND_EXECUTION_CONTEXT_GATE",
   "attempts": [
     {
       "attempt_id": "INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203-CODEX-A-ATTEMPT-001",
       "operator": "CODEX_DESKTOP_A",
       "terminal_at": "2026-08-06T11:48:03.0497102-04:00",
       "result": "BLOCKED",
-      "stage": "PRE_VALIDATION_CUSTODY_AND_EXECUTION_CONTEXT_GATE",
       "critical_findings": ["CODA-203-BLOCK-001", "CODA-203-BLOCK-002"]
     }
   ],
@@ -29,6 +37,7 @@
   "claude_audits": 0,
   "codex_b_replays": 0,
   "oracle_opened": false,
-  "terminal_reconciliation": "PREPARED_AWAITING_REMOTE_PUBLICATION",
-  "residual_authority": "PUBLICATION_AND_VERIFIED_CLOSURE_ONLY_NO_FURTHER_OPERATOR_EXECUTION"
+  "terminal_reconciliation": "PUBLISHED_VERIFIED",
+  "consumption_prepared_at": "2026-08-06T12:06:15-04:00",
+  "residual_authority": "NONE"
 }

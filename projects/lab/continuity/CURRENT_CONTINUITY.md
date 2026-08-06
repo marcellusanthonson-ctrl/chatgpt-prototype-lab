@@ -1,35 +1,40 @@
 # Continuidad vigente del LAB
 
-Estado: `AUTHORIZATION_203_CODEX_A_ATTEMPT_BLOCKED_TERMINAL_RECONCILIATION_PREPARED_AWAITING_REMOTE_PUBLICATION`
+Estado: `AUTHORIZATION_203_CONSUMED_BLOCKED_INDEPENDENT_BENCHMARK_VALIDATION_NO_RESIDUAL_AUTHORITY`
 
-## Resultado
+## Resultado terminal
 
-Codex Desktop A terminó `BLOCKED` antes de `VAL-001`, en el gate `PRE_VALIDATION_CUSTODY_AND_EXECUTION_CONTEXT_GATE`.
+La autorización 203 terminó `BLOCKED` durante Codex Desktop A antes de ejecutar `VAL-001`.
 
-No se ejecutó ninguna prueba `VAL-*`, el runner no fue ejecutado, el oracle no fue abierto y Codex A no modificó el benchmark.
+El intento se detuvo en `PRE_VALIDATION_CUSTODY_AND_EXECUTION_CONTEXT_GATE`. No se ejecutó ninguna prueba, el runner no fue ejecutado, el oracle no fue abierto y Codex A no modificó el benchmark.
 
 ## Bloqueos confirmados
 
-1. El paquete no es byte-identical entre el commit fijado `48eb518a5fd2ec4ee5cf073e94c0142469dc2c4a` y el HEAD verificado `01e284a61d0198156f8e1adad28d5d168b11d984`.
-   - `CHAIN_OF_CUSTODY.json` cambió.
-   - `REPRODUCIBILITY_MANIFEST.json` cambió.
-2. No existen el execution envelope ni el context manifest requeridos por `AGENTS.md` y `CODEX-DESKTOP-PROGRESSIVE-CONTEXT-LOADING-001` para el brief de Codex A.
+1. `CHAIN_OF_CUSTODY.json` y `REPRODUCIBILITY_MANIFEST.json` no son byte-identical entre el commit fijado de publicación `48eb518a5fd2ec4ee5cf073e94c0142469dc2c4a` y el HEAD usado por Codex A.
+2. Faltan el execution envelope y el context manifest requeridos por `AGENTS.md` y `CODEX-DESKTOP-PROGRESSIVE-CONTEXT-LOADING-001`.
 
-Ambos findings críticos fueron verificados independientemente por ChatGPT y se clasifican `CONFIRMED`.
+Ambos findings críticos fueron clasificados `CONFIRMED` mediante verificación remota independiente.
 
-## Evidencia local
+## Publicación
 
-Codex reportó diez outputs locales sintácticamente válidos. Solo `TERMINAL_REPORT.json` fue entregado byte por byte en la conversación y quedó preservado remotamente. Los otros nueve outputs permanecen como claims del operador y no como evidencia remota independiente.
+- Autorización 203: PR 68, merge `01e284a61d0198156f8e1adad28d5d168b11d984`.
+- Resultado bloqueado y reporte post-test: PR 69, merge `ecd36a4555ebca606350ff700a7403ec60d54101`.
+- Consumo y continuidad final: PR 70.
 
-## Estado de las pruebas
+## Pruebas
 
 `VAL-001` a `VAL-009`: `NOT_RUN`.
 
-Claude y Codex B: `NOT_RUN`; no deben iniciarse.
+Claude y Codex B no comenzaron y quedaron cancelados por el bloqueo terminal.
 
-## Aprobación
+## Evidencia local
 
-- Instrumento validado: no.
+Codex reportó diez outputs locales. Solo `TERMINAL_REPORT.json` fue recibido byte por byte y publicado remotamente. Los otros nueve outputs permanecen como claims del operador no verificados remotamente.
+
+## Estado de aprobación
+
+- Instrumento: `CREATED_NOT_VALIDATED_NOT_EXECUTED`.
+- Validación: `BLOCKED_BEFORE_VAL_001_NO_RESULT`.
 - Aprobación operacional: `NOT_APPROVED`.
 - Resolver 001: experimental, no operacionalmente válido y no integrado.
 - Resolver 002: no creado.
@@ -37,8 +42,13 @@ Claude y Codex B: `NOT_RUN`; no deben iniciarse.
 
 ## Autoridad
 
-La autorización 203 alcanzó un resultado terminal `BLOCKED`. Solo queda autoridad delimitada para publicar, verificar y consumir este cierre. No existe autoridad para remediar los defectos, repetir Codex A, iniciar Claude o ejecutar Codex B.
+- Autorización 203: `CONSUMED_BLOCKED_VERIFIED_REMOTE_PUBLICATION`.
+- Autorización activa: ninguna.
+- Autoridad de ejecución: `NONE`.
+- Autoridad residual: `NONE`.
 
-## Siguiente acción
+No está autorizado reintentar 203, iniciar Claude o Codex B, modificar el benchmark, crear los artefactos faltantes ni ejecutar un resolver.
 
-Publicar y verificar el cierre bloqueado de la autorización 203 y consumirla sin autoridad residual. Después deberá diseñarse una autorización separada de remediación que reconcilie el baseline inmutable y la cadena de custodia, y cree el execution envelope y context manifest antes de cualquier retest.
+## Única siguiente acción
+
+Diseñar y aprobar una autorización separada de remediación que reconcilie el baseline inmutable y la cadena de custodia, y cree el execution envelope y context manifest requeridos antes de cualquier retest.
