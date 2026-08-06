@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-INDEPENDENT-REPRODUCIBLE-BENCHMARK-INSTRUMENT-VALIDATION-203",
+  "authorization_id": "AUTHORIZATION_LAB_INDEPENDENT_REPRODUCIBLE_BENCHMARK_INSTRUMENT_VALIDATION_203",
+  "project_id": "lab",
+  "status": "AUTHORIZATION_AND_BRIEFS_PREPARED_VALIDATION_NOT_RUN",
+  "recorded_at": "2026-08-06T07:19:00-04:00",
+  "verified_authorization_parent_head": "38b0d6fc2d76daaf24ddd87876f0ca089763a359",
+  "benchmark_id": "CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001",
+  "prepared": {
+    "authorization": true,
+    "codex_a_brief": true,
+    "claude_brief": true,
+    "codex_b_brief": true,
+    "validation_execution_manifest": true,
+    "oracle_custody_protocol": true,
+    "adjudication_contract": true
+  },
+  "tests": {
+    "VAL-001": "NOT_RUN",
+    "VAL-002": "NOT_RUN",
+    "VAL-003": "NOT_RUN",
+    "VAL-004": "NOT_RUN",
+    "VAL-005": "NOT_RUN",
+    "VAL-006": "NOT_RUN",
+    "VAL-007": "NOT_RUN",
+    "VAL-008": "NOT_RUN",
+    "VAL-009": "NOT_RUN"
+  },
+  "effects": {
+    "test_executions": 0,
+    "runner_executions": 0,
+    "resolver_runs": 0,
+    "model_subject_runs": 0,
+    "claude_audits": 0,
+    "integration": "NONE",
+    "runtime": "NONE",
+    "product": "NONE",
+    "external_repositories": 0
+  },
+  "claim_boundary": [
+    "AUTHORIZATION_AND_EXECUTION_PACKAGE_PREPARED",
+    "NO_CODEX_OR_CLAUDE_EXECUTION_OBSERVED",
+    "NO_INSTRUMENT_VALIDATION_RESULT",
+    "NO_RESOLVER_OR_OPERATIONAL_APPROVAL"
+  ]
+}

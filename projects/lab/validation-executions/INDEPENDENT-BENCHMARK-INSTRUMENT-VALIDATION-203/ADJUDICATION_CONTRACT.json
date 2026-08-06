@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_INDEPENDENT_REPRODUCIBLE_BENCHMARK_INSTRUMENT_VALIDATION_203",
+  "validation_execution_id": "INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203",
+  "status": "NOT_RUN",
+  "precedence": [
+    "VERIFIABLE_COMMAND_HASH_AND_FILE_EVIDENCE",
+    "CLAUDE_INDEPENDENT_READ_ONLY_FINDINGS",
+    "CODEX_A_AND_CODEX_B_REPLAY_COMPARISON",
+    "CHATGPT_CANONICAL_RECONCILIATION",
+    "HUMAN_NORMATIVE_DECISION_WHEN_REQUIRED"
+  ],
+  "rules": [
+    "Any critical finding prevents PASS.",
+    "Any missing required output prevents PASS.",
+    "Any non-identical deterministic scorer output is FAIL unless evidence establishes an environmental blocker, in which case BLOCKED or INSUFFICIENT_EVIDENCE applies.",
+    "Disagreement is resolved by decomposing claims and evaluating evidence, not authority or majority.",
+    "PASS validates the instrument only and creates no resolver or integration authorization."
+  ],
+  "terminal_outcomes": ["PASS", "FAIL", "BLOCKED", "INSUFFICIENT_EVIDENCE", "CANCELLED_OR_STOPPED"],
+  "result": "NOT_RUN"
+}

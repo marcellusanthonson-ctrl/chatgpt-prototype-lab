@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "brief_id": "CODEX_INDEPENDENT_BENCHMARK_INSTRUMENT_VALIDATION_203_A_001",
+  "authorization_id": "AUTHORIZATION_LAB_INDEPENDENT_REPRODUCIBLE_BENCHMARK_INSTRUMENT_VALIDATION_203",
+  "operator": "CODEX_DESKTOP_A",
+  "role": "PRIMARY_TECHNICAL_VALIDATOR",
+  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+  "required_start": {
+    "verify_live_main_head": true,
+    "entrypoint": "project-sources/chatgpt/START_HERE.md",
+    "clean_worktree_required": true,
+    "stop_if_benchmark_bytes_changed": true
+  },
+  "read_order": [
+    "project-sources/chatgpt/START_HERE.md",
+    "LAB_CONTRACT.md",
+    "METHODOLOGY.md",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_INDEPENDENT_REPRODUCIBLE_BENCHMARK_INSTRUMENT_VALIDATION_203.json",
+    "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001/MANIFEST.json",
+    "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001/BENCHMARK_SPEC.json",
+    "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001/VALIDATION_PLAN.json"
+  ],
+  "authorized_tests": {
+    "VAL-001": "Validate all JSON and JSONL artifacts against applicable schemas and record every command and error.",
+    "VAL-002": "Verify exactly 20 unique task IDs, 10 classes, balanced development and held-out splits, and corpus-oracle ID correspondence.",
+    "VAL-003": "Verify required, optional and forbidden source paths at the pinned commit.",
+    "VAL-005": "Static-review the runner for deterministic ordering, input validation, metric correctness, output contract and fail-closed behavior.",
+    "VAL-006": "Create validation-only fixtures outside the benchmark package, execute the runner twice in isolated directories and require byte-identical summaries.",
+    "VAL-007": "Capture byte counts, SHA-256 and Git blob SHAs for every benchmark artifact and verify chain of custody.",
+    "VAL-009-A": "Repeat the technical validation from a second clean directory inside the primary environment and capture reproducibility evidence."
+  },
+  "oracle_rule": "Oracle access is allowed only for instrument validation. This operator and session become ineligible for future held-out resolver execution.",
+  "output_root": "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/codex-a",
+  "required_outputs": [
+    "ENVIRONMENT.json",
+    "COMMAND_LOG.jsonl",
+    "ARTIFACT_HASHES.json",
+    "SCHEMA_RESULTS.json",
+    "COVERAGE_RESULTS.json",
+    "SOURCE_PATH_RESULTS.json",
+    "RUNNER_STATIC_REVIEW.md",
+    "DETERMINISM_RESULTS.json",
+    "REPLAY_A_RESULTS.json",
+    "TERMINAL_REPORT.json"
+  ],
+  "forbidden": [
+    "NO_BENCHMARK_PACKAGE_MUTATION",
+    "NO_FIXES",
+    "NO_RESOLVER_EXECUTION_OR_MUTATION",
+    "NO_MODEL_OPERATIONAL_BENCHMARK",
+    "NO_INTEGRATION_RUNTIME_PRODUCT_OR_EXTERNAL_REPOSITORY_CHANGE"
+  ],
+  "terminal_report_required": true,
+  "claim_limit": "May determine only Codex-A assigned validation results; cannot approve the instrument or any resolver."
+}

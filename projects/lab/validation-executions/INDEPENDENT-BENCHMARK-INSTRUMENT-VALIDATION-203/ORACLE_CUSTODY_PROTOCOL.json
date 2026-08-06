@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_INDEPENDENT_REPRODUCIBLE_BENCHMARK_INSTRUMENT_VALIDATION_203",
+  "benchmark_id": "CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001",
+  "status": "CUSTODY_DESIGNED_NOT_OPENED",
+  "oracle_path": "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001/oracle/PRIVATE_ORACLE.json",
+  "rules": [
+    "Oracle access is limited to Codex-A, Claude read-only and Codex-B for instrument validation.",
+    "Every oracle access must record operator, session, timestamp, pinned commit and purpose.",
+    "Validators with oracle access are permanently ineligible to operate a future blind held-out resolver run.",
+    "Oracle content must not be copied into prompts, logs or reports beyond hashes and aggregate structural facts.",
+    "No future resolver operator may receive oracle-derived validation fixture details.",
+    "Custody closes on authorization consumption regardless of outcome."
+  ],
+  "access_log": [],
+  "leakage_detection_result": "NOT_RUN",
+  "claim_limit": "Protocol design is not evidence that custody has been correctly executed."
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "brief_id": "CODEX_INDEPENDENT_BENCHMARK_REPLAY_203_B_001",
+  "authorization_id": "AUTHORIZATION_LAB_INDEPENDENT_REPRODUCIBLE_BENCHMARK_INSTRUMENT_VALIDATION_203",
+  "operator": "CODEX_DESKTOP_B",
+  "role": "FRESH_INDEPENDENT_REPLAY_OPERATOR",
+  "start_preconditions": [
+    "CLAUDE_TERMINAL_AUDIT_PUBLISHED",
+    "CHATGPT_POST_TEST_REPORT_DELIVERED",
+    "FRESH_SESSION_WITHOUT_CODEX_A_STATE",
+    "NEW_CLEAN_WORKTREE_AT_PINNED_COMMIT"
+  ],
+  "authorized_test": "VAL-009-B",
+  "procedure": [
+    "Rebuild the validation environment using only canonical instructions and frozen inputs.",
+    "Re-run schema, coverage, source-path, hash and deterministic runner checks.",
+    "Write outputs to a new directory without reading Codex-A outputs before completion.",
+    "After completion compare result hashes and normalized reports against Codex-A.",
+    "Require byte-identical deterministic scorer outputs and semantically identical validation findings."
+  ],
+  "output_root": "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/codex-b",
+  "required_outputs": [
+    "ENVIRONMENT.json",
+    "COMMAND_LOG.jsonl",
+    "REPLAY_B_RESULTS.json",
+    "COMPARISON_WITH_A.json",
+    "TERMINAL_REPORT.json"
+  ],
+  "oracle_rule": "Oracle access is allowed only after environment freeze; this operator becomes ineligible for future held-out resolver execution.",
+  "forbidden": [
+    "NO_BENCHMARK_PACKAGE_MUTATION",
+    "NO_FIXES",
+    "NO_RESOLVER_EXECUTION_OR_MUTATION",
+    "NO_MODEL_OPERATIONAL_BENCHMARK",
+    "NO_INTEGRATION_RUNTIME_PRODUCT_OR_EXTERNAL_REPOSITORY_CHANGE"
+  ],
+  "terminal_report_required": true
+}

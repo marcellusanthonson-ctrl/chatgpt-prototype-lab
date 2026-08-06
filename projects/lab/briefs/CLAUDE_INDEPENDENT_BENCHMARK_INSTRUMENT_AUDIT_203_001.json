@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "brief_id": "CLAUDE_INDEPENDENT_BENCHMARK_INSTRUMENT_AUDIT_203_001",
+  "authorization_id": "AUTHORIZATION_LAB_INDEPENDENT_REPRODUCIBLE_BENCHMARK_INSTRUMENT_VALIDATION_203",
+  "operator": "CLAUDE",
+  "role": "INDEPENDENT_READ_ONLY_AUDITOR",
+  "start_precondition": "CODEX_A_TERMINAL_REPORT_PUBLISHED_AND_CHATGPT_POST_TEST_REPORT_DELIVERED",
+  "read_only": true,
+  "repository_mutation": "FORBIDDEN",
+  "required_inputs": [
+    "PINNED_COMMIT_CONTAINING_CODEX_A_RESULTS",
+    "projects/lab/benchmarks/CONTEXTUAL-BOOTSTRAP-REPRODUCIBLE-OPERATIONAL-BENCHMARK-001",
+    "projects/lab/validation-executions/INDEPENDENT-BENCHMARK-INSTRUMENT-VALIDATION-203/codex-a",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_INDEPENDENT_REPRODUCIBLE_BENCHMARK_INSTRUMENT_VALIDATION_203.json"
+  ],
+  "authorized_tests": {
+    "VAL-004": "Assess oracle isolation, leakage boundaries, visibility labels, custody separation and future operator ineligibility.",
+    "VAL-008": "Assess negative and adversarial controls, insufficient-evidence branches, material conflicts and stop conditions.",
+    "AUDIT-ALL-EVIDENCE": "Review schemas, source-path evidence, runner logic, deterministic outputs, hashes, logs and claim boundaries independently."
+  },
+  "required_output": "AUDIT-CLAUDE-INDEPENDENT-BENCHMARK-VALIDATION-203-001.md",
+  "allowed_determinations": ["PASS", "FAIL", "BLOCKED", "INSUFFICIENT_EVIDENCE"],
+  "finding_severity": ["CRITICAL", "MATERIAL", "NONCRITICAL", "OBSERVATION"],
+  "claim_limit": "Audit determines instrument-validation evidence only; it cannot approve a resolver, integration or remediation.",
+  "forbidden": [
+    "NO_REPOSITORY_MUTATION",
+    "NO_FIXES",
+    "NO_RESOLVER_EXECUTION",
+    "NO_MODEL_OPERATIONAL_BENCHMARK",
+    "NO_INTEGRATION",
+    "NO_ACCEPTANCE_BY_OBEDIENCE"
+  ]
+}
