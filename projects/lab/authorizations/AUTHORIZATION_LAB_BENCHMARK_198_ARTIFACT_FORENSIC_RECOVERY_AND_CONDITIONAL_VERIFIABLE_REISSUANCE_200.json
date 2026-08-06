@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "authorization_id": "AUTHORIZATION_LAB_BENCHMARK_198_ARTIFACT_FORENSIC_RECOVERY_AND_CONDITIONAL_VERIFIABLE_REISSUANCE_200",
   "project_id": "lab",
-  "status": "GRANTED_EXECUTION_COMPLETE_AWAITING_PUBLICATION",
+  "status": "CONSUMED_VERIFIED_REMOTE_PUBLICATION",
   "authorization_class": "BENCHMARK_ARTIFACT_FORENSIC_RECOVERY_AND_CONDITIONAL_REISSUANCE",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-08-05T21:22:00-04:00",
@@ -16,7 +16,7 @@
   },
   "objective": "Recover benchmark 198 artifacts exactly when evidence permits, otherwise permit a new fully traced semantic instrument; do not remediate or retest the resolver.",
   "execution": {
-    "status": "COMPLETE_AWAITING_PUBLICATION",
+    "status": "COMPLETE_VERIFIED_REMOTE_PUBLICATION",
     "completed_at": "2026-08-05T21:32:43-04:00",
     "terminal_result": "PARTIAL_ARTIFACT_RECOVERY_INSUFFICIENT_FOR_RETEST",
     "exact_recovered_artifacts": [
@@ -27,10 +27,19 @@
     "retest_started": false,
     "model_scoring_calls": 0,
     "publication": {
-      "pull_request": null,
-      "merge_commit": null,
-      "remote_main_verified": null
+      "pull_request": 62,
+      "merge_commit": "4354e0ec774238b0744e78a7fd136bdf19e40918",
+      "remote_main_verified": "4354e0ec774238b0744e78a7fd136bdf19e40918",
+      "closure_pull_request": null,
+      "closure_status": "PENDING_PR_CREATION",
+      "closure_effect": "CONSUMPTION_AND_NO_RESIDUAL_AUTHORITY_EFFECTIVE_ON_VERIFIED_REMOTE_MERGE"
     }
   },
-  "residual_authority": "ACTIVE_ONLY_FOR_PUBLICATION_AND_DOCUMENTARY_CLOSURE"
+  "residual_authority": "NONE",
+  "consumption": {
+    "rule": "CONSUMED_AFTER_VERIFIED_REMOTE_PUBLICATION_AND_DOCUMENTARY_CLOSURE",
+    "residual_authority_after_consumption": "NONE"
+  },
+  "next_authorized_action": "NONE_AFTER_CONSUMPTION",
+  "consumed_at": "2026-08-05T22:06:00-04:00"
 }
