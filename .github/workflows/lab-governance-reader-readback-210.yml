@@ -1,0 +1,104 @@
+name: LAB governance reader readback 210
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: read
+
+jobs:
+  readback:
+    if: >-
+      github.event.issue.pull_request &&
+      github.event.issue.number == 79 &&
+      github.event.comment.body == '/lab-governance-readback-210' &&
+      github.actor == 'marcellusanthonson-ctrl'
+    runs-on: ubuntu-24.04
+    environment: lab-governance-bootstrap
+    steps:
+      - name: Mint repo-scoped governance reader token
+        id: app-token
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1
+        with:
+          client-id: ${{ vars.LAB_GOVERNANCE_READER_CLIENT_ID }}
+          private-key: ${{ secrets.LAB_GOVERNANCE_READER_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+          repositories: chatgpt-prototype-lab
+          permission-administration: read
+
+      - name: Read back canary ruleset with LAB Governance Reader
+        env:
+          APP_TOKEN: ${{ steps.app-token.outputs.token }}
+          REPOSITORY: ${{ github.repository }}
+          RULESET_ID: '20573868'
+          CANARY_BRANCH: lab-governance-canary-210
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          import os
+          import urllib.request
+
+          token = os.environ['APP_TOKEN']
+          repo = os.environ['REPOSITORY']
+          ruleset_id = os.environ['RULESET_ID']
+          branch = os.environ['CANARY_BRANCH']
+          api = 'https://api.github.com'
+
+          def get_json(path):
+              request = urllib.request.Request(
+                  api + path,
+                  headers={
+                      'Accept': 'application/vnd.github+json',
+                      'Authorization': f'Bearer {token}',
+                      'X-GitHub-Api-Version': '2022-11-28',
+                      'User-Agent': 'lab-governance-reader-readback-210',
+                  },
+              )
+              with urllib.request.urlopen(request, timeout=20) as response:
+                  return response.status, json.loads(response.read().decode('utf-8'))
+
+          installation_status, installation = get_json('/installation/repositories?per_page=100')
+          ruleset_status, ruleset = get_json(f'/repos/{repo}/rulesets/{ruleset_id}')
+          effective_status, effective = get_json(f'/repos/{repo}/rules/branches/{branch}')
+
+          simplified_rules = []
+          for rule in ruleset.get('rules', []):
+              entry = {'type': rule.get('type')}
+              params = rule.get('parameters') or {}
+              if rule.get('type') == 'pull_request':
+                  entry['required_approving_review_count'] = params.get('required_approving_review_count')
+                  entry['allowed_merge_methods'] = params.get('allowed_merge_methods')
+              elif rule.get('type') == 'required_status_checks':
+                  entry['strict_required_status_checks_policy'] = params.get('strict_required_status_checks_policy')
+                  entry['do_not_enforce_on_create'] = params.get('do_not_enforce_on_create')
+                  entry['required_status_checks'] = params.get('required_status_checks')
+              simplified_rules.append(entry)
+
+          result = {
+              'principal': 'LAB Governance Reader',
+              'installation_http': installation_status,
+              'installation_repository_count': installation.get('total_count'),
+              'installation_repository_names': sorted(
+                  item.get('full_name') for item in installation.get('repositories', []) if item.get('full_name')
+              ),
+              'ruleset_http': ruleset_status,
+              'ruleset': {
+                  'id': ruleset.get('id'),
+                  'name': ruleset.get('name'),
+                  'target': ruleset.get('target'),
+                  'enforcement': ruleset.get('enforcement'),
+                  'conditions': ruleset.get('conditions'),
+                  'bypass_actors': ruleset.get('bypass_actors'),
+                  'current_user_can_bypass': ruleset.get('current_user_can_bypass'),
+                  'rules': simplified_rules,
+              },
+              'effective_branch_rules_http': effective_status,
+              'effective_branch_rule_types': sorted(
+                  rule.get('type') for rule in effective if isinstance(rule, dict) and rule.get('type')
+              ),
+          }
+          print('LAB_GOVERNANCE_READER_READBACK_210=' + json.dumps(result, sort_keys=True))
+          PY
