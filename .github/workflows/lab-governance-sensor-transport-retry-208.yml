@@ -1,0 +1,54 @@
+name: LAB Governance Sensor Transport Retry 208
+run-name: LAB transport retry 208 comment ${{ github.event.comment.id }}
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lab-governance-transport-retry-208
+  cancel-in-progress: false
+
+jobs:
+  transport:
+    if: github.event.issue.pull_request != null && github.event.comment.body == '/lab-governance-transport-retry-208'
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    env:
+      REPOSITORY: ${{ github.repository }}
+      EVENT_NAME: ${{ github.event_name }}
+      PR_NUMBER: ${{ github.event.issue.number }}
+      COMMENT_ID: ${{ github.event.comment.id }}
+      COMMENT_ACTOR: ${{ github.event.comment.user.login }}
+      RUN_ID: ${{ github.run_id }}
+      RUN_ATTEMPT: ${{ github.run_attempt }}
+      DEFAULT_BRANCH_SHA: ${{ github.sha }}
+      WORKFLOW_REF: ${{ github.workflow_ref }}
+    steps:
+      - name: EMIT_FIXED_SYNTHETIC_TRANSPORT_RESULT
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+
+          result = {
+              "schema_version": "1.0.0",
+              "authorization_id": "AUTHORIZATION_LAB_PLUS_COMPATIBLE_GITHUB_GOVERNANCE_SENSOR_TRANSPORT_RETRY_208",
+              "test_id": "PLUS_GITHUB_GOVERNANCE_SENSOR_TRANSPORT_208_ATTEMPT_001",
+              "synthetic_value": "PLUS_TRANSPORT_OK",
+              "repository": os.environ["REPOSITORY"],
+              "event_name": os.environ["EVENT_NAME"],
+              "pr_number": int(os.environ["PR_NUMBER"]),
+              "comment_id": int(os.environ["COMMENT_ID"]),
+              "comment_actor": os.environ["COMMENT_ACTOR"],
+              "run_id": int(os.environ["RUN_ID"]),
+              "run_attempt": int(os.environ["RUN_ATTEMPT"]),
+              "default_branch_sha": os.environ["DEFAULT_BRANCH_SHA"],
+              "workflow_ref": os.environ["WORKFLOW_REF"],
+          }
+          print("LAB_TRANSPORT_RESULT_JSON=" + json.dumps(result, sort_keys=True, separators=(",", ":")))
+          PY
