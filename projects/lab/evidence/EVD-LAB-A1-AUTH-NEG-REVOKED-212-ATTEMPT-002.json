@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-A1-AUTH-NEG-REVOKED-212-ATTEMPT-002",
+  "project_id": "lab",
+  "authorization_id": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+  "decision_ref": "DEC-LAB-032",
+  "test_id": "A1_AUTH_NEG_CONSUMED_REVOKED_OR_EXPIRED",
+  "attempt_id": "ATTEMPT-002",
+  "tested_variant": "REVOKED",
+  "status": "BLOCKED_VALIDATOR_CRASH_LEGACY_REPOSITORY_SCHEMA_NOT_SEMANTIC_REVOKED_PASS",
+  "executed_at": "2026-08-08T00:24:00-04:00",
+  "canonical_main_head_before_test": "e7da459b40f34c7f4eecc248b3dad414926c36ad",
+  "subject": {
+    "authorization_id": "AUTHORIZATION_LAB_PL003_HUMAN_ADMIN_IDENTITY_CENTER_BOOTSTRAP_139",
+    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_HUMAN_ADMIN_IDENTITY_CENTER_BOOTSTRAP_139.json",
+    "authorization_status": "REVOKED",
+    "revoked_at": "2026-07-30",
+    "post_revocation_authority": "NONE",
+    "repository_field_shape": "STRING_LEGACY_SCHEMA"
+  },
+  "canary": {
+    "base_branch": "lab-governance-canary-210",
+    "base_sha": "8db33a0f61d45055134b9efc1f82597ac07b4c7b",
+    "test_branch": "test/a1-auth-neg-revoked-139-212",
+    "fixture_head_sha": "97d8dca4d2845ed5cd8479b6579ed8af5bf726e6",
+    "pull_request": 94,
+    "pull_request_merged": false,
+    "fixture_path": "projects/lab/governance-tests/authorization-212/A1_AUTH_NEG_CONSUMED_REVOKED_OR_EXPIRED.json"
+  },
+  "observed_runs": [
+    {
+      "workflow": "LAB Canonical Authority Gate v2",
+      "run_id": 31239361775,
+      "job_id": 93057578257,
+      "status": "completed",
+      "conclusion": "failure",
+      "interpretation": "VALIDATOR_CRASH_NOT_CONTROLLED_SEMANTIC_REJECTION"
+    },
+    {
+      "workflow": "LAB Publication Gate",
+      "run_id": 31239361785,
+      "status": "completed",
+      "conclusion": "success",
+      "interpretation": "LEGACY_GATE_ACCEPTED_SYNTACTIC_AUTHORIZATION_LABEL"
+    }
+  ],
+  "defect": {
+    "exception": "AttributeError: 'str' object has no attribute 'get'",
+    "observable_location": "Gate v2 repository scope normalization path",
+    "root_cause": "GATE_V2_ASSUMED_AUTHORIZATION_REPOSITORY_FIELD_IS_ALWAYS_AN_OBJECT_BUT_CANONICAL_HISTORICAL_AUTHORIZATION_139_USES_A_STRING",
+    "fail_closed_job_behavior": true,
+    "semantic_revoked_rejection_established": false,
+    "required_remediation": "NORMALIZE_LEGACY_STRING_AND_MODERN_OBJECT_REPOSITORY_SHAPES_WITHOUT_EXPANDING_AUTHORITY"
+  },
+  "determination": "BLOCKED_GATE_V2_COMPATIBILITY_REMEDIATION_REQUIRED_BEFORE_REVOKED_RETRY",
+  "terminal_state_variants": {
+    "CONSUMED": "PASS_ATTEMPT_001_REPORT_DELIVERED",
+    "REVOKED": "BLOCKED_ATTEMPT_002_REPORT_DELIVERED_RETRY_REQUIRED",
+    "EXPIRED": "NOT_RUN"
+  },
+  "operational_binding": {
+    "status": "NOT_ESTABLISHED",
+    "effect": "THIS_ATTEMPT_DOES_NOT_ESTABLISH_CANARY_PUBLICATION_ENFORCEMENT"
+  },
+  "claim_boundary": "This attempt proves a Gate v2 compatibility defect against a genuine canonical REVOKED historical authorization. It does not prove controlled semantic rejection of REVOKED, EXPIRED handling, lifecycle-only rejection, ruleset binding, approval separation, control-plane tamper resistance, recovery readiness, main enforcement, or A1 completion.",
+  "post_test_report": {
+    "report_id": "A1-212-POST-TEST-REPORT-004",
+    "delivered_to": "Jonathan Martínez",
+    "delivered_at": "2026-08-08T00:24:00-04:00",
+    "delivery_surface": "CHATGPT_CONVERSATION",
+    "next_action": "REMEDIATE_GATE_V2_LEGACY_REPOSITORY_SCHEMA_THEN_RETRY_REVOKED_ONLY",
+    "authority_effect": "NONE"
+  },
+  "source_refs": [
+    ".github/workflows/lab-canonical-authority-gate-v2-212.yml",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_HUMAN_ADMIN_IDENTITY_CENTER_BOOTSTRAP_139.json",
+    "projects/lab/authorization-lifecycle/PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_A1_LIFECYCLE_212.json",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/pull/94",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/actions/runs/31239361775",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/actions/runs/31239361785"
+  ]
+}
