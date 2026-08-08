@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-A1-AUTH-NEG-EXPIRED-212-ATTEMPT-004",
+  "project_id": "lab",
+  "authorization_id": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+  "decision_ref": "DEC-LAB-032",
+  "test_id": "A1_AUTH_NEG_CONSUMED_REVOKED_OR_EXPIRED",
+  "attempt_id": "ATTEMPT-004",
+  "tested_variant": "EXPIRED",
+  "status": "PASS_EXPIRED_LIFECYCLE_VALIDATOR_REJECTION_BINDING_NOT_ESTABLISHED",
+  "subject": {
+    "authorization_id": "AUTHORIZATION_LAB_A1_CANARY_EXPIRED_AUTHORITY_SUBJECT_213",
+    "authorization_artifact_status": "GRANTED",
+    "lifecycle_status": "EXPIRED",
+    "residual_authority": "NONE",
+    "lifecycle_ref": "projects/lab/authorization-lifecycle/A1_CANARY_EXPIRED_AUTHORITY_SUBJECT_LIFECYCLE_213.json",
+    "grant_source_ref": "projects/lab/sources/USER_SOURCE_AUTHORIZATION_213_20260808.md",
+    "purpose_built_non_historical": true,
+    "test_execution_authority": false
+  },
+  "execution": {
+    "execution_authorization": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+    "pull_request": 100,
+    "pull_request_merged": false,
+    "pull_request_mergeable_after_checks": true,
+    "fixture_head_sha": "cd51d4553a9bc65952298f040915ec7acb36a514",
+    "gate_v2_run_id": 31241058079,
+    "gate_v2_conclusion": "failure",
+    "legacy_gate_run_id": 31241058086,
+    "legacy_gate_conclusion": "success"
+  },
+  "gate_v2_result": {
+    "structured_result_emitted": true,
+    "authorization_artifact_found": true,
+    "authorization_not_effectively_granted_failure_present": false,
+    "lifecycle_ref_resolved": true,
+    "lifecycle_failures": [
+      "AUTHORIZATION_LIFECYCLE_NOT_ACTIVE",
+      "AUTHORIZATION_LIFECYCLE_TERMINAL_OR_INACTIVE",
+      "AUTHORIZATION_RESIDUAL_AUTHORITY_NONE_OR_UNKNOWN"
+    ],
+    "additional_scope_failures_present": true,
+    "additional_scope_failures_reason": "AUTHORIZATION_213_WAS_DELIBERATELY_NOT_GRANTED_A1_EXECUTION_OR_PUBLICATION_ENFORCEMENT_SCOPE",
+    "validator_crash": false,
+    "fail_closed": true
+  },
+  "determination": "Gate v2 traversed the modern lifecycle of a genuinely approved authorization whose grant artifact remained GRANTED, observed lifecycle EXPIRED and residual authority NONE, and rejected fail-closed. Additional scope failures prevent claiming single-cause isolation, but do not negate the explicit lifecycle rejection.",
+  "binding": {
+    "status": "NOT_ESTABLISHED",
+    "evidence": "PR_100_REMAINS_MERGEABLE_TRUE_DESPITE_GATE_V2_FAILURE"
+  },
+  "post_test_report": {
+    "report_id": "A1-212-POST-TEST-REPORT-006",
+    "delivered_to": "Jonathan Martínez",
+    "delivered_at": "2026-08-08T01:10:00-04:00",
+    "delivery_surface": "CHATGPT_CONVERSATION",
+    "next_action_reported": "CANONICALLY_RECORD_EXPIRED_RESULT_THEN_A1_AUTH_NEG_WRONG_REPOSITORY_BRANCH_PATH_OR_ACTION_SCOPE",
+    "authority_effect": "NONE"
+  },
+  "not_run_after_this_attempt": [
+    "A1_AUTH_NEG_WRONG_REPOSITORY_BRANCH_PATH_OR_ACTION_SCOPE",
+    "A1_ENF_NEG_MISSING_AUTHORIZATION_TRAILER",
+    "A1_ENF_NEG_INVALID_JSON_OR_CONFLICT_MARKERS",
+    "A1_APPROVAL_SEPARATION",
+    "A1_CONTROL_PLANE_TAMPERING",
+    "A1_RECOVERY_BREAK_GLASS_DESIGN_VALIDATION"
+  ],
+  "claim_boundary": "This evidence establishes validator-level rejection of the EXPIRED subject and explicit lifecycle traversal. It does not establish required-status binding, approval separation, control-plane tamper resistance, recovery design validation, main enforcement, or A1 operational PASS.",
+  "source_refs": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_A1_CANARY_EXPIRED_AUTHORITY_SUBJECT_213.json",
+    "projects/lab/authorization-lifecycle/A1_CANARY_EXPIRED_AUTHORITY_SUBJECT_LIFECYCLE_213.json",
+    "projects/lab/evidence/EVD-LAB-A1-EXPIRED-AUTHORITY-SUBJECT-213.json",
+    "projects/lab/governance-tests/authorization-212/A1_AUTH_NEG_CONSUMED_REVOKED_OR_EXPIRED.json",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/pull/100",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/actions/runs/31241058079",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/actions/runs/31241058086"
+  ]
+}
