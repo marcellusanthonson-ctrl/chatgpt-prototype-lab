@@ -1,18 +1,19 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "evidence_id": "EVD-LAB-A1-RECOVERY-BREAK-GLASS-DESIGN-214",
   "project_id": "lab",
   "authorization_id": "AUTHORIZATION_LAB_A1_RECOVERY_BREAK_GLASS_DESIGN_MATERIALIZATION_214",
   "decision_ref": "DEC-LAB-032",
   "design_artifact_id": "A1_CANARY_RECOVERY_BREAK_GLASS_DESIGN_001",
-  "status": "STATIC_DESIGN_VALIDATION_PASS_AWAITING_CANONICAL_PUBLICATION",
+  "status": "PASS_CANONICAL_PUBLICATION_VERIFIED_AUTHORIZATION_214_CONSUMED_NO_RESIDUAL_AUTHORITY",
   "baseline_parent_head": "c8e116e39694b446d909e3865514f1733564a316",
   "head_policy": "VERIFY_LIVE_AT_USE",
   "human_authority": {
     "approved_by": "Jonathan Martínez",
     "approval_source_ref": "projects/lab/sources/USER_SOURCE_AUTHORIZATION_214_20260808.md",
     "grant_inferred": false,
-    "authorization_status": "GRANTED"
+    "authorization_grant_artifact_status": "GRANTED_HISTORICAL_PROVENANCE",
+    "effective_lifecycle_status": "CONSUMED_VERIFIED_REMOTE_PUBLICATION_NO_RESIDUAL_AUTHORITY"
   },
   "read_only_canary_baseline_verification": {
     "status": "PASS",
@@ -90,11 +91,24 @@
     "product_effect": "NONE"
   },
   "publication": {
-    "status": "AWAITING_PULL_REQUEST_AND_REMOTE_MAIN_VERIFICATION",
-    "pull_request": null,
-    "verified_main_head": null
+    "status": "PASS_REMOTE_MAIN_VERIFIED",
+    "pull_request": 116,
+    "branch": "agent/governance-214-break-glass-design",
+    "verified_main_head": "fb997723a8717981d72d302f38e0d95c02dab2d5",
+    "verified_publication_time": "2026-08-08T08:28:54-04:00"
   },
-  "claim_boundary": "This evidence establishes documentary completeness and static consistency of the non-activating recovery/break-glass design plus the read-only canary baseline observed before publication. It does not prove an operational recovery, does not activate or simulate break-glass, does not establish A1 operational PASS, and does not grant future emergency authority.",
+  "authorization_214_terminal_state": {
+    "status": "CONSUMED_VERIFIED_REMOTE_PUBLICATION_NO_RESIDUAL_AUTHORITY",
+    "consumed_at": "2026-08-08T08:28:54-04:00",
+    "residual_authority": "NONE"
+  },
+  "a1_effect": {
+    "design_now_canonical": true,
+    "a1_retry_executed_under_214": false,
+    "a1_pass_established": false,
+    "retry_authority": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212_ONLY"
+  },
+  "claim_boundary": "This evidence establishes canonical publication and static completeness of the non-activating recovery/break-glass design and consumption of authorization 214 with no residual authority. It does not prove an operational recovery, does not activate or simulate break-glass, does not establish A1 operational PASS, and does not grant future emergency authority. A1_RECOVERY_BREAK_GLASS_DESIGN_VALIDATION must be retried separately under authorization 212.",
   "source_refs": [
     "projects/lab/sources/USER_SOURCE_AUTHORIZATION_214_20260808.md",
     "projects/lab/authorizations/AUTHORIZATION_LAB_A1_RECOVERY_BREAK_GLASS_DESIGN_MATERIALIZATION_214.json",
@@ -103,6 +117,8 @@
     "architecture/governance/A1_CANARY_RECOVERY_BREAK_GLASS_DESIGN_001/RUNBOOK.md",
     "projects/lab/evidence/EVD-LAB-A1-RECOVERY-BREAK-GLASS-DESIGN-212-ATTEMPT-001.json",
     "projects/lab/authorization-lifecycle/PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_A1_LIFECYCLE_212.json",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/pull/116",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/commit/fb997723a8717981d72d302f38e0d95c02dab2d5",
     "https://api.github.com/repos/marcellusanthonson-ctrl/chatgpt-prototype-lab/rulesets/20573868"
   ]
 }
