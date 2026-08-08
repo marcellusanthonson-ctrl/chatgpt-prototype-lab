@@ -1,4 +1,4 @@
-# Metodología del LAB — v2.1
+# Metodología del LAB — v2.2
 
 ## 1. Objetivo
 
@@ -44,6 +44,8 @@ Estados: PROPOSED, GRANTED, CONSUMED, EXPIRED, REVOKED o REJECTED.
 
 Una autorización contiene alcance, repositorio, rama, acciones permitidas, prohibiciones y criterio de consumo. Al publicar y verificar el resultado se marca CONSUMED. No quedan permisos implícitos.
 
+Toda solicitud de autorización de ejecución aplica `docs/AUTHORIZATION_APPROVAL_RESPONSE_PROTOCOL.md`: verificar ID y HEAD, construir el alcance positivo y negativo, terminar la respuesta al usuario con el script textual copiable y tratar cualquier ausencia, ambigüedad, respuesta parcial o baseline obsoleto como `NOT_GRANTED`. La aprobación textual se preserva como fuente humana; no se infiere. Si el HEAD cambia entre solicitud y aprobación, el script se regenera antes de ejecutar.
+
 ## 6. Ideas e integraciones
 
 Las ideas se registran sin convertirlas en roadmap. Las integraciones usan estados separados: IDEA, CANDIDATE, EVALUATED, PROPOSED, AUTHORIZED, INTEGRATED, REMOVED o REJECTED.
@@ -81,6 +83,8 @@ El protocolo estándar está en docs/CONTINUITY_PROTOCOL.md. CURRENT_CONTINUITY.
 ## 11. Fail closed
 
 Detenerse ante autoridad ausente, repositorio ambiguo, datos sensibles no autorizados, destino irreversible, contradicción canónica o expansión material del alcance. Una pregunta no bloqueante no detiene la ejecución.
+
+La solicitud de autorización también falla cerrada cuando el script de aprobación obligatorio falta, es ambiguo, no identifica el ID exacto y el scope, o referencia un parent/baseline que dejó de estar vigente antes de la aprobación.
 
 ## 12. Reevaluación objetiva
 
