@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-A1-APPROVAL-SEPARATION-212-ATTEMPT-002",
+  "project_id": "lab",
+  "authorization_id": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+  "decision_ref": "DEC-LAB-032",
+  "test_id": "A1_APPROVAL_SEPARATION",
+  "attempt_id": "ATTEMPT-002",
+  "status": "PASS_APPROVAL_SEPARATION_OPERATIONALLY_ENFORCED_AND_GATE_V2_RULESET_BINDING_ESTABLISHED",
+  "execution": {
+    "execution_authorization": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+    "pull_request": 110,
+    "pull_request_merged": false,
+    "fixture_head_sha": "96ff5899731147583f3545523f07c385d38d6267",
+    "fixture_reused_from_attempt_001": true,
+    "authenticated_actor": "marcellusanthonson-ctrl",
+    "gate_v2_run_id": 31241894647,
+    "gate_v2_conclusion": "success",
+    "legacy_gate_run_id": 31241894645,
+    "legacy_gate_conclusion": "success"
+  },
+  "verified_ruleset": {
+    "ruleset_id": 20573868,
+    "name": "LAB A1 Canary 210",
+    "enforcement": "active",
+    "target_ref": "refs/heads/lab-governance-canary-210",
+    "verified_updated_at": "2026-08-08T02:04:19.475-04:00",
+    "required_approving_review_count": 1,
+    "required_status_checks": [
+      {
+        "context": "LAB Publication Gate",
+        "integration_id": 15368
+      },
+      {
+        "context": "LAB Canonical Authority Gate v2",
+        "integration_id": 15368
+      }
+    ],
+    "bypass_actors": [],
+    "current_user_can_bypass": "never",
+    "gate_v2_required_status_binding": "ESTABLISHED"
+  },
+  "approval_separation_validation": {
+    "self_approval_attempted": true,
+    "self_approval_result": "REJECTED",
+    "self_approval_http_status": 422,
+    "self_approval_error": "Review Can not approve your own pull request",
+    "reviews_after_attempt": 0,
+    "pull_request_mergeable_boolean": true,
+    "pull_request_mergeable_state": "blocked",
+    "independent_approval_required_by_ruleset": true,
+    "both_required_content_checks_successful": true,
+    "determination": "OPERATIONAL_APPROVAL_SEPARATION_CONFIRMED"
+  },
+  "claim_boundary": "The retry proves that the canary ruleset requires one independent approval, that the PR author cannot satisfy that requirement through self-approval, and that the PR remains blocked while both required content checks are successful. No second human approval was executed, no merge was attempted, and no claim is made about main-branch enforcement.",
+  "post_test_report": {
+    "report_id": "A1-212-POST-TEST-REPORT-012",
+    "delivered_to": "Jonathan Martínez",
+    "delivered_at": "2026-08-08T02:05:00-04:00",
+    "delivery_surface": "CHATGPT_CONVERSATION",
+    "next_action_reported": "CANONICALLY_RECORD_APPROVAL_SEPARATION_PASS_THEN_A1_CONTROL_PLANE_TAMPERING",
+    "authority_effect": "NONE"
+  },
+  "not_run_after_this_attempt": [
+    "A1_CONTROL_PLANE_TAMPERING",
+    "A1_RECOVERY_BREAK_GLASS_DESIGN_VALIDATION"
+  ],
+  "a1_effect": {
+    "approval_separation": "PASS",
+    "gate_v2_required_status_binding": "ESTABLISHED",
+    "a1_operational_pass": "NOT_APPROVED"
+  },
+  "source_refs": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212.json",
+    "projects/lab/evidence/EVD-LAB-A1-APPROVAL-SEPARATION-212-ATTEMPT-001.json",
+    "projects/lab/governance-tests/authorization-212/A1_APPROVAL_SEPARATION.json",
+    "https://api.github.com/repos/marcellusanthonson-ctrl/chatgpt-prototype-lab/rulesets/20573868",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/pull/110",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/actions/runs/31241894647",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/actions/runs/31241894645"
+  ]
+}
