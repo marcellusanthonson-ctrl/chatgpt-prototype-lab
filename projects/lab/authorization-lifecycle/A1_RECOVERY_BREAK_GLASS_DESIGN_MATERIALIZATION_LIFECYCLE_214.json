@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "A1-RECOVERY-BREAK-GLASS-DESIGN-MATERIALIZATION-LIFECYCLE-214",
+  "project_id": "lab",
+  "authorization": "AUTHORIZATION_LAB_A1_RECOVERY_BREAK_GLASS_DESIGN_MATERIALIZATION_214",
+  "decision_ref": "DEC-LAB-032",
+  "status": "GRANTED_DOCUMENTARY_MATERIALIZATION_ACTIVE_AWAITING_CANONICAL_PUBLICATION",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-08-08T08:18:00-04:00",
+  "approval_source_ref": "projects/lab/sources/USER_SOURCE_AUTHORIZATION_214_20260808.md",
+  "authorized_parent_head": "c8e116e39694b446d909e3865514f1733564a316",
+  "head_policy": "VERIFY_LIVE_AT_USE",
+  "design_artifact_id": "A1_CANARY_RECOVERY_BREAK_GLASS_DESIGN_001",
+  "stage": {
+    "name": "DOCUMENTARY_NON_ACTIVATING_DESIGN_MATERIALIZATION",
+    "status": "ACTIVE",
+    "break_glass_activation": "NOT_AUTHORIZED",
+    "break_glass_simulation": "NOT_AUTHORIZED",
+    "canary_ruleset_mutation": "NOT_AUTHORIZED",
+    "workflow_mutation": "NOT_AUTHORIZED",
+    "authorization_212_mutation": "NOT_AUTHORIZED"
+  },
+  "baseline_verification": {
+    "status": "PASS_READ_ONLY",
+    "verified_at": "2026-08-08T08:18:00-04:00",
+    "ruleset_id": 20573868,
+    "enforcement": "active",
+    "required_approving_review_count": 1,
+    "required_status_checks": [
+      "LAB Publication Gate",
+      "LAB Canonical Authority Gate v2"
+    ],
+    "bypass_actors": [],
+    "current_user_can_bypass": "never"
+  },
+  "publication": {
+    "branch": "agent/governance-214-break-glass-design",
+    "pull_request": null,
+    "remote_main_verified": false,
+    "verified_main_head": null
+  },
+  "consumption_criterion": "CONSUMED_AFTER_DESIGN_AUTHORIZATION_LIFECYCLE_CONTRACT_RUNBOOK_AND_EVIDENCE_ARE_CANONICALLY_PUBLISHED_AND_REMOTE_MAIN_IS_VERIFIED",
+  "residual_authority": "DOCUMENTARY_MATERIALIZATION_SCOPE_ONLY_UNTIL_VERIFIED_REMOTE_PUBLICATION",
+  "residual_authority_after_consumption": "NONE",
+  "relationship_to_authorization_212": {
+    "authorization_212": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+    "replacement": false,
+    "expansion": false,
+    "retry_authority_from_214": false,
+    "post_214_retry_authority": "AUTHORIZATION_212_ONLY"
+  },
+  "a1_effect": "NONE_UNTIL_SEPARATE_A1_RECOVERY_BREAK_GLASS_DESIGN_VALIDATION_RETRY_UNDER_212",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE",
+  "product_effect": "NONE"
+}
