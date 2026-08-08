@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "id": "DEC-LAB-037",
+  "project_id": "lab",
+  "title": "Select Codex Desktop operational benchmark as the next technical focus and adopt the ordered focus sequence",
+  "status": "APPROVED",
+  "approval_state": "APPROVED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-08-08T11:37:00-04:00",
+  "approval_source_ref": "projects/lab/sources/USER_SOURCE_DECISION_037_AND_AUTHORIZATION_216_20260808.md",
+  "governing_decisions": ["DEC-LAB-030", "DEC-LAB-033"],
+  "decision": {
+    "selected_next_focus": "CODEX_DESKTOP_OPERATIONAL_BENCHMARK",
+    "ordered_focus_sequence": ["CODEX_DESKTOP_OPERATIONAL_BENCHMARK", "PRODUCT_LEADERSHIP", "SOFTWARE_SOLUTION_ENGINEERING", "CONTEXTUAL_BOOTSTRAP"],
+    "sequence_is_focus_order_not_execution_authority": true,
+    "sequence_is_not_automatic_integration": true,
+    "preserve_all_other_nonterminal_objectives": true,
+    "focus_change_does_not_change_integration_state": true,
+    "benchmark_representative_workload": "PRODUCT_LEADERSHIP_OWNER_ARTIFACT_READINESS_RECONCILIATION"
+  },
+  "consequences": ["MOVE_MAIN_WORK_POSITION_FROM_HUMAN_SELECTION_GATE_TO_CODEX_DESKTOP_OPERATIONAL_BENCHMARK", "USE_AUTHORIZATION_216_ONLY_FOR_BOUNDED_BENCHMARK_EXECUTION_AND_DOCUMENTARY_RECONCILIATION", "ON_BENCHMARK_PASS_NEXT_FOCUS_IS_PRODUCT_LEADERSHIP_ZERO_MODEL_WINDOWS_READINESS_REQUIRING_SEPARATE_AUTHORIZATION"],
+  "non_authorizations": ["NO_AUTOMATIC_PRODUCT_LEADERSHIP_EXECUTION", "NO_SSE_EXECUTION", "NO_CONTEXTUAL_BOOTSTRAP_EXECUTION", "NO_INTEGRATION_PROMOTION_ACTIVATION_RUNTIME_OR_PRODUCT_EFFECT"],
+  "authority_effect": "NORMATIVE_FOCUS_DECISION_ONLY",
+  "runtime_effect": "NONE",
+  "product_effect": "NONE",
+  "integration_effect": "NONE"
+}

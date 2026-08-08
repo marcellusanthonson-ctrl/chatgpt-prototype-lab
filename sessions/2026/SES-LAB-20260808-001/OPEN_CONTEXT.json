@@ -1,16 +1,1 @@
-{
-  "schema_version": "1.0.0",
-  "session_id": "SES-LAB-20260808-001",
-  "authority_effect": "NONE",
-  "open_items": [],
-  "reconciled_items": [
-    {
-      "subject": "PROGRESSIVE_SESSION_CONTEXT_AND_CONTINUITY_LAYER",
-      "prior_classification": "MATERIAL_CONVERSATION_CONTEXT_NOT_YET_INCORPORATED",
-      "disposition": "INCORPORATED_BY_DEC_LAB_033_INTO_PROG_CONTINUITY_001_AND_SESSION_MODEL",
-      "canonical_targets": ["decisions/DEC-LAB-033.json","architecture/governance/PROGRESSIVE_CONVERSATION_CONTINUITY_001/CONTRACT.json","docs/CONTINUITY_PROTOCOL.md","sessions/2026/SES-LAB-20260808-001/SESSION.json"],
-      "authority_effect": "NONE"
-    }
-  ],
-  "rule": "NEW_MATERIAL_CONTEXT_MUST_BE_CLASSIFIED_AND_GIVEN_AN_OWNER_OR_EXPLICIT_PENDING_DISPOSITION_BEFORE_SESSION_CLOSE"
-}
+{"schema_version":"1.1.0","session_id":"SES-LAB-20260808-001","authority_effect":"NONE","open_items":[],"reconciled_items":[{"subject":"PROGRESSIVE_SESSION_CONTEXT_AND_CONTINUITY_LAYER","prior_classification":"MATERIAL_CONVERSATION_CONTEXT_NOT_YET_INCORPORATED","disposition":"INCORPORATED_BY_DEC_LAB_033_INTO_PROG_CONTINUITY_001_AND_SESSION_MODEL","canonical_targets":["decisions/DEC-LAB-033.json","architecture/governance/PROGRESSIVE_CONVERSATION_CONTINUITY_001/CONTRACT.json","docs/CONTINUITY_PROTOCOL.md","sessions/2026/SES-LAB-20260808-001/SESSION.json"],"authority_effect":"NONE"},{"subject":"NEXT_TECHNICAL_FOCUS_SELECTION","prior_classification":"AWAITING_HUMAN_DECISION","disposition":"RESOLVED_BY_DEC_LAB_037_ORDERED_SEQUENCE","canonical_targets":["decisions/DEC-LAB-037.json","projects/lab/ROADMAP.json","sessions/2026/SES-LAB-20260808-001/WORK_POSITION_GRAPH.json"],"authority_effect":"NONE"}],"rule":"NEW_MATERIAL_CONTEXT_MUST_BE_CLASSIFIED_AND_GIVEN_AN_OWNER_OR_EXPLICIT_PENDING_DISPOSITION_BEFORE_SESSION_CLOSE"}
