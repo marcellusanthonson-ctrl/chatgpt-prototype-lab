@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0.0",
+  "test_id": "A1_AUTH_NEG_CONSUMED_REVOKED_OR_EXPIRED",
+  "attempt_id": "ATTEMPT-001",
+  "subject_authorization_id": "AUTHORIZATION_LAB_AUTHORIZATION_APPROVAL_PROTOCOL_AND_GITHUB_GOVERNANCE_204_210_RECONCILIATION_211",
+  "expected_subject_state": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+  "expected_gate_v2_behavior": "REJECT_FAIL_CLOSED",
+  "execution_authorization": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+  "claim_boundary": "Fixture only; no authority is derived from the consumed subject authorization."
+}
