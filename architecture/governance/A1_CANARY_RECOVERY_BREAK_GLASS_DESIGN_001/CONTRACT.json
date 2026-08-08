@@ -1,0 +1,228 @@
+{
+  "schema_version": "1.0.0",
+  "contract_id": "A1_CANARY_RECOVERY_BREAK_GLASS_DESIGN_001",
+  "project_id": "lab",
+  "status": "DOCUMENTARY_NON_ACTIVATING_DESIGN",
+  "authorization_ref": "AUTHORIZATION_LAB_A1_RECOVERY_BREAK_GLASS_DESIGN_MATERIALIZATION_214",
+  "governing_decision": "DEC-LAB-032",
+  "purpose": "Define a fail-closed, canary-only, single-use recovery/break-glass design that may be activated only by a separate future explicit authorization. This contract creates no emergency authority and does not activate or simulate recovery.",
+  "target": {
+    "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "canary_branch": "lab-governance-canary-210",
+    "canary_ruleset_id": 20573868,
+    "main_branch_effect": "PROHIBITED"
+  },
+  "normal_state": {
+    "state": "DISABLED_NO_STANDING_BYPASS_NO_RESIDUAL_AUTHORITY",
+    "ruleset_enforcement": "active",
+    "required_approving_review_count": 1,
+    "required_status_checks": [
+      "LAB Publication Gate",
+      "LAB Canonical Authority Gate v2"
+    ],
+    "bypass_actors": [],
+    "current_user_can_bypass": "never",
+    "standing_recovery_principal": "NONE",
+    "automatic_activation": false
+  },
+  "activation_trigger": {
+    "policy": "ALL_REQUIRED_CONDITIONS_MUST_BE_TRUE",
+    "required_conditions": [
+      "A_CANARY_CONTROL_PLANE_STATE_DIFFERS_FROM_THE_KNOWN_GOOD_BASELINE_OR_PREVENTS_ORDINARY_PROTECTED_RECOVERY",
+      "THE_DIVERGENCE_OR_LOCKOUT_IS_OBSERVED_FROM_GITHUB_REMOTE_STATE_USING_VERIFY_LIVE_AT_USE",
+      "ORDINARY_PR_BASED_RECOVERY_IS_PROVEN_UNAVAILABLE_OR_INSUFFICIENT_FOR_THE_SPECIFIC_INCIDENT",
+      "A_SEPARATE_FUTURE_EXPLICIT_TEXTUAL_AUTHORIZATION_FROM_JONATHAN_MARTINEZ_NAMES_THE_INCIDENT_THE_OPERATOR_THE_ALLOWED_RECOVERY_MODE_THE_EXACT_ACTIONS_AND_THE_EXPIRATION",
+      "THE_FUTURE_AUTHORIZATION_BASELINE_IS_STILL_CURRENT_AT_ACTIVATION_TIME",
+      "THE_RECOVERY_REMAINS_CANARY_ONLY"
+    ],
+    "insufficient_triggers": [
+      "CONVENIENCE",
+      "FASTER_MERGE",
+      "FAILED_OR_MISSING_REVIEW",
+      "FAILED_REQUIRED_STATUS_CHECK",
+      "DESIRE_TO_SKIP_A1_GATES",
+      "MAIN_BRANCH_RECOVERY",
+      "UNVERIFIED_OR_AMBIGUOUS_INCIDENT"
+    ],
+    "activation_on_ambiguity": "DENIED_FAIL_CLOSED"
+  },
+  "human_approval_model": {
+    "sole_normative_and_executive_approver": "Jonathan Martínez",
+    "future_activation_requires_new_authorization": true,
+    "approval_must_be_textual_explicit_and_preserved": true,
+    "approval_must_name": [
+      "INCIDENT_ID",
+      "VERIFIED_REMOTE_BASELINE",
+      "RECOVERY_MODE",
+      "OPERATOR_PRINCIPAL",
+      "ALLOWED_ACTIONS",
+      "FORBIDDEN_ACTIONS",
+      "EXPIRATION_TIME",
+      "RESTORATION_TARGET",
+      "READBACK_METHOD"
+    ],
+    "implicit_or_standing_approval": false
+  },
+  "execution_approval_separation": {
+    "rule": "APPROVAL_DOES_NOT_SELF_SATISFY_PROTECTED_PUBLICATION_REVIEW",
+    "affected_pull_request_author_cannot_approve_own_pull_request": true,
+    "existing_required_approving_review_count_must_return_to": 1,
+    "future_recovery_operator_must_be_explicitly_named": true,
+    "if_no_distinct_valid_reviewer_or_required_separation_is_available": "STOP_FAIL_CLOSED",
+    "independent_post_restoration_readback_required": true,
+    "preferred_independent_sensor": "LAB Governance Reader",
+    "sensor_authority": "READ_ONLY_ONLY"
+  },
+  "time_bounded_scope": {
+    "single_use": true,
+    "maximum_activation_window_minutes": 15,
+    "future_authorization_may_choose_shorter_window": true,
+    "automatic_expiration_required": true,
+    "reuse_after_expiration": false,
+    "extension_requires_new_explicit_authorization": true
+  },
+  "action_bounded_scope": {
+    "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "branch": "lab-governance-canary-210",
+    "ruleset_id": 20573868,
+    "control_plane_only": true,
+    "main_branch": "FORBIDDEN",
+    "external_repositories": "FORBIDDEN"
+  },
+  "recovery_modes": [
+    {
+      "id": "R1_EXACT_CONTROL_PLANE_RESTORE_NO_BYPASS",
+      "priority": 1,
+      "description": "Preferred mode. Apply only the minimal administrative mutation required to restore ruleset 20573868 to the known-good baseline without creating any bypass actor.",
+      "bypass_actor_allowed": false,
+      "allowed_effect": "RESTORE_EXACT_KNOWN_GOOD_CANARY_RULESET_BASELINE_ONLY"
+    },
+    {
+      "id": "R2_TEMPORARY_SINGLE_PRINCIPAL_BYPASS_LAST_RESORT",
+      "priority": 2,
+      "description": "Last-resort mode only if R1 is proven technically unavailable. A future authorization may permit one explicitly named recovery principal to receive temporary canary-only bypass solely to restore the known-good baseline, followed by mandatory immediate removal.",
+      "requires_future_authorization_to_explicitly_allow_mode": true,
+      "requires_r1_unavailable_evidence": true,
+      "maximum_bypass_principals": 1,
+      "standing_bypass": false,
+      "bypass_must_be_removed_before_closeout": true
+    }
+  ],
+  "allowed_emergency_actions": [
+    "READ_CURRENT_CANARY_RULESET_AND_BRANCH_STATE",
+    "COMPARE_CURRENT_CANARY_STATE_TO_THE_VERIFIED_KNOWN_GOOD_BASELINE",
+    "RESTORE_ONLY_RULESET_20573868_FIELDS_NECESSARY_TO_MATCH_THE_KNOWN_GOOD_BASELINE",
+    "IF_AND_ONLY_IF_SEPARATELY_AUTHORIZED_UNDER_R2_ADD_ONE_NAMED_TEMPORARY_CANARY_BYPASS_PRINCIPAL",
+    "REMOVE_ANY_TEMPORARY_RECOVERY_BYPASS_BEFORE_CLOSEOUT",
+    "PERFORM_READ_ONLY_POST_RESTORATION_VERIFICATION"
+  ],
+  "forbidden_emergency_actions": [
+    "MODIFY_MAIN_BRANCH_PROTECTION_OR_MAIN_RULESETS",
+    "MODIFY_MAIN_PUBLICATION_WORKFLOWS",
+    "DISABLE_OR_REMOVE_GOVERNANCE_CHECKS_AS_A_TERMINAL_STATE",
+    "REDUCE_REQUIRED_APPROVALS_AS_A_TERMINAL_STATE",
+    "CREATE_STANDING_BYPASS_AUTHORITY",
+    "CREATE_OR_ROTATE_CREDENTIALS_UNLESS_A_SEPARATE_FUTURE_AUTHORIZATION_EXPLICITLY_GOVERNS_THAT_DISTINCT_ACTION",
+    "CHANGE_PRODUCT_RUNTIME_INTEGRATION_OR_EXTERNAL_REPOSITORIES",
+    "USE_BREAK_GLASS_TO_MERGE_A_FAILED_TEST_OR_FAILED_GOVERNANCE_PR",
+    "USE_BREAK_GLASS_TO_DECLARE_A1_PASS",
+    "REUSE_AN_EXPIRED_OR_CONSUMED_RECOVERY_AUTHORIZATION"
+  ],
+  "known_good_restoration_target": {
+    "ruleset_id": 20573868,
+    "enforcement": "active",
+    "required_approving_review_count": 1,
+    "required_status_checks": [
+      "LAB Publication Gate",
+      "LAB Canonical Authority Gate v2"
+    ],
+    "strict_required_status_checks_policy": true,
+    "bypass_actors": [],
+    "current_user_can_bypass": "never",
+    "non_fast_forward_rule_present": true,
+    "deletion_rule_present": true
+  },
+  "audit_and_evidence_requirements": {
+    "pre_activation": [
+      "LIVE_MAIN_HEAD",
+      "LIVE_CANARY_RULESET_READBACK",
+      "INCIDENT_DESCRIPTION",
+      "ORDINARY_RECOVERY_UNAVAILABLE_EVIDENCE",
+      "EXPLICIT_FUTURE_AUTHORIZATION_SOURCE"
+    ],
+    "during_activation": [
+      "TIMESTAMPED_ACTION_LOG",
+      "EXACT_FIELDS_CHANGED",
+      "OPERATOR_PRINCIPAL",
+      "RECOVERY_MODE",
+      "NO_SECRET_VALUES"
+    ],
+    "post_restoration": [
+      "DIRECT_RULESET_READBACK",
+      "INDEPENDENT_READ_ONLY_READBACK",
+      "BYPASS_ACTORS_EMPTY",
+      "REQUIRED_APPROVAL_COUNT_ONE",
+      "BOTH_REQUIRED_STATUS_CHECKS_PRESENT",
+      "ENFORCEMENT_ACTIVE",
+      "AUTHORITY_TERMINAL_STATE"
+    ],
+    "evidence_must_be_canonical_before_success_claim": true
+  },
+  "mandatory_restoration_procedure": [
+    "STOP_ALL_NON_RECOVERY_MUTATIONS",
+    "RESOLVE_THE_KNOWN_GOOD_BASELINE_FROM_CANONICAL_EVIDENCE_AND_LIVE_READBACK",
+    "APPLY_ONLY_THE_MINIMUM_AUTHORIZED_CANARY_CONTROL_PLANE_MUTATION",
+    "IF_R2_WAS_USED_REMOVE_THE_TEMPORARY_BYPASS_PRINCIPAL",
+    "RESTORE_ENFORCEMENT_ACTIVE",
+    "RESTORE_REQUIRED_APPROVING_REVIEW_COUNT_TO_ONE",
+    "RESTORE_LAB_PUBLICATION_GATE_AS_REQUIRED",
+    "RESTORE_LAB_CANONICAL_AUTHORITY_GATE_V2_AS_REQUIRED",
+    "CONFIRM_BYPASS_ACTORS_IS_EMPTY",
+    "PERFORM_DIRECT_READBACK",
+    "PERFORM_INDEPENDENT_READ_ONLY_READBACK",
+    "STOP_IF_EITHER_READBACK_DIFFERS_FROM_BASELINE"
+  ],
+  "post_recovery_readback": {
+    "direct_remote_readback_required": true,
+    "independent_read_only_readback_required": true,
+    "pass_requires_both": true,
+    "mismatch_result": "BLOCKED_RECOVERY_NOT_CLOSED",
+    "main_branch_readback_required_to_confirm_no_effect": true
+  },
+  "closeout": {
+    "success_conditions": [
+      "KNOWN_GOOD_CANARY_BASELINE_RESTORED",
+      "NO_BYPASS_ACTORS_REMAIN",
+      "INDEPENDENT_READBACK_MATCHES_DIRECT_READBACK",
+      "MAIN_UNCHANGED_BY_RECOVERY",
+      "FUTURE_RECOVERY_AUTHORIZATION_CONSUMED_OR_EXPIRED",
+      "RESIDUAL_AUTHORITY_NONE"
+    ],
+    "failure_state": "BLOCKED_RECOVERY_INCOMPLETE_REQUIRES_HUMAN_REVIEW",
+    "a1_pass_effect": "NONE_BY_RECOVERY_CLOSEOUT_ALONE"
+  },
+  "authority_lifecycle": {
+    "future_activation_authority_class": "SEPARATE_SINGLE_USE_INCIDENT_BOUND_AUTHORIZATION",
+    "must_be_granted_after_incident_is_observed": true,
+    "consumed_on_successful_closeout": true,
+    "expires_at_authorized_window_end_if_not_consumed": true,
+    "residual_authority_after_consumption_or_expiration": "NONE"
+  },
+  "fail_closed_conditions": [
+    "LIVE_BASELINE_CANNOT_BE_VERIFIED",
+    "INCIDENT_SCOPE_IS_AMBIGUOUS",
+    "ORDINARY_RECOVERY_UNAVAILABILITY_IS_NOT_ESTABLISHED",
+    "NO_SEPARATE_FUTURE_EXPLICIT_AUTHORIZATION",
+    "FUTURE_AUTHORIZATION_IS_STALE_REVOKED_CONSUMED_EXPIRED_OR_SCOPE_MISMATCHED",
+    "RECOVERY_WOULD_TOUCH_MAIN",
+    "RECOVERY_WOULD_TOUCH_AN_EXTERNAL_REPOSITORY",
+    "R2_REQUESTED_WITHOUT_R1_UNAVAILABILITY_EVIDENCE",
+    "REQUIRED_INDEPENDENT_READBACK_IS_UNAVAILABLE",
+    "POST_RESTORATION_STATE_DOES_NOT_MATCH_BASELINE"
+  ],
+  "authority_effect": "NONE_BY_ITSELF",
+  "break_glass_activation": "NOT_AUTHORIZED_BY_THIS_CONTRACT",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE",
+  "product_effect": "NONE"
+}
