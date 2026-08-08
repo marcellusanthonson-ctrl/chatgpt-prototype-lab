@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.2.0",
   "authorization_id": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
   "project_id": "lab",
   "status": "GRANTED",
@@ -10,6 +10,7 @@
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-08-07T21:59:00-04:00",
   "approval_source_ref": "projects/lab/sources/USER_SOURCE_AUTHORIZATION_212_20260807.md",
+  "lifecycle_ref": "projects/lab/authorization-lifecycle/PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_A1_LIFECYCLE_212.json",
   "grant_inferred": false,
   "approval_transport_normalization": {
     "applied": true,
@@ -28,21 +29,38 @@
     "err_lab_015_open": true,
     "live_main_head_reverified": true,
     "approval_response_script_regenerated_with_exact_live_head": true,
-    "explicit_textual_grant_by_jonathan_martinez": true
+    "explicit_textual_grant_by_jonathan_martinez": true,
+    "stage_0_remote_main_verified": true,
+    "stage_0_verified_main_head": "f91cc4e69d230bc3bf71b8a496dda99fecf6faac"
   },
   "objective": "Replace authorization-label syntax checking with fail-closed canonical authority validation on the A1 canary path, then execute the remaining bounded canary tests one at a time with mandatory post-test reporting.",
+  "scope_clarification_no_authority_expansion": {
+    "status": "ACTIVE",
+    "basis": "MACHINE_READABLE_NARROWING_OF_EXPLICITLY_GRANTED_CANARY_PR_AND_TEST_SCOPE",
+    "adds_authority": false,
+    "publication_enforcement_scope": {
+      "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+      "allowed_base_branches": ["lab-governance-canary-210"],
+      "allowed_actions": ["PULL_REQUEST_PUBLICATION_TO_CANARY"],
+      "allowed_path_prefixes": ["projects/lab/governance-tests/authorization-212/"],
+      "same_repository_head_required": true,
+      "canonical_authority_source_ref": "main",
+      "baseline_rule": "EXPECTED_PARENT_HEAD_MUST_BE_ANCESTOR_OF_OR_EQUAL_TO_CURRENT_MAIN",
+      "unknown_scope_behavior": "FAIL_CLOSED"
+    }
+  },
   "stages": [
     {
       "stage_id": "STAGE_0_CANONICAL_GRANT_PUBLICATION",
-      "status": "GRANTED_IN_PROGRESS_AWAITING_REMOTE_MAIN_VERIFICATION",
+      "status": "COMPLETE_REMOTE_MAIN_VERIFIED",
       "publication_authorized": true,
       "execution_authority_consumed_by_publication": false,
-      "completion_gate": "GRANT_SOURCE_AUTHORIZATION_AND_LIFECYCLE_PUBLISHED_TO_MAIN_AND_REMOTE_HEAD_VERIFIED"
+      "verified_main_head": "f91cc4e69d230bc3bf71b8a496dda99fecf6faac"
     },
     {
       "stage_id": "STAGE_1_A1_CANARY_AUTHORITY_GATE_V2_AND_VALIDATION",
-      "status": "GRANTED_NOT_ACTIVE_UNTIL_STAGE_0_REMOTE_VERIFICATION",
-      "activation_gate": "STAGE_0_REMOTE_MAIN_VERIFIED",
+      "status": "ACTIVE_GATE_V2_PREPARATION_TESTS_NOT_STARTED",
+      "activation_gate": "SATISFIED_STAGE_0_REMOTE_MAIN_VERIFIED",
       "sequential_tests_required": true,
       "mandatory_post_test_report_before_next_test": true
     }
@@ -116,8 +134,6 @@
     "NO_ROADMAP_AGGREGATE_RECONCILIATION"
   ],
   "stop_conditions": [
-    "LIVE_HEAD_MISMATCH_BEFORE_STAGE_0_PUBLICATION",
-    "STAGE_0_REMOTE_MAIN_NOT_VERIFIED",
     "CANONICAL_AUTHORITY_CANNOT_BE_DETERMINED_FAIL_CLOSED",
     "TEST_REPORT_NOT_DELIVERED_BEFORE_NEXT_TEST",
     "UNAUTHORIZED_SCOPE_EXPANSION",
