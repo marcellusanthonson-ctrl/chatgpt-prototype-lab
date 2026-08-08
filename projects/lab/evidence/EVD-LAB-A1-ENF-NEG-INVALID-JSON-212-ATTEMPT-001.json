@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-A1-ENF-NEG-INVALID-JSON-212-ATTEMPT-001",
+  "project_id": "lab",
+  "authorization_id": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+  "decision_ref": "DEC-LAB-032",
+  "test_id": "A1_ENF_NEG_INVALID_JSON_OR_CONFLICT_MARKERS",
+  "attempt_id": "ATTEMPT-001",
+  "tested_variant": "INVALID_JSON",
+  "status": "PASS_INVALID_JSON_REJECTED_BY_BOTH_GATES_BINDING_NOT_ESTABLISHED",
+  "execution": {
+    "execution_authorization": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+    "pull_request": 106,
+    "pull_request_merged": false,
+    "pull_request_mergeable_after_checks": true,
+    "fixture_head_sha": "04bc9e4c4b38c227bd756fd244d707717082ad23",
+    "fixture_path": "projects/lab/governance-tests/authorization-212/A1_ENF_NEG_INVALID_JSON_OR_CONFLICT_MARKERS.json",
+    "gate_v2_run_id": 31241561222,
+    "gate_v2_conclusion": "failure",
+    "legacy_gate_run_id": 31241561229,
+    "legacy_gate_conclusion": "failure"
+  },
+  "gate_v2_result": {
+    "structured_result_emitted": true,
+    "authorization": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+    "authorization_path_resolved": true,
+    "lifecycle_path_resolved": true,
+    "same_repository_pr": true,
+    "json_files_checked": 1,
+    "primary_and_only_failure": "INVALID_JSON:projects/lab/governance-tests/authorization-212/A1_ENF_NEG_INVALID_JSON_OR_CONFLICT_MARKERS.json:line=9:column=1",
+    "authority_scope_or_provenance_failures_present": false,
+    "validator_crash": false,
+    "fail_closed": true
+  },
+  "legacy_gate_result": {
+    "conclusion": "failure",
+    "primary_and_only_failure": "INVALID_JSON:projects/lab/governance-tests/authorization-212/A1_ENF_NEG_INVALID_JSON_OR_CONFLICT_MARKERS.json:line=9:column=1",
+    "authorization_trailer_resolved": true
+  },
+  "determination": "Both validators rejected the deliberately malformed JSON fixture with the same isolated INVALID_JSON failure while canonical authorization 212 and its lifecycle resolved successfully. This is a discriminating syntax-validation PASS for the INVALID_JSON variant.",
+  "variant_status": {
+    "INVALID_JSON": "PASS_ATTEMPT_001_REPORT_DELIVERED",
+    "CONFLICT_MARKERS": "NOT_RUN"
+  },
+  "binding": {
+    "status": "NOT_ESTABLISHED",
+    "evidence": "PR_106_REMAINS_MERGEABLE_TRUE_DESPITE_BOTH_GATES_FAILURE"
+  },
+  "post_test_report": {
+    "report_id": "A1-212-POST-TEST-REPORT-009",
+    "delivered_to": "Jonathan Martínez",
+    "delivered_at": "2026-08-08T01:23:00-04:00",
+    "delivery_surface": "CHATGPT_CONVERSATION",
+    "next_action_reported": "CANONICALLY_RECORD_INVALID_JSON_RESULT_THEN_RUN_CONFLICT_MARKERS_VARIANT",
+    "authority_effect": "NONE"
+  },
+  "not_run_after_this_attempt": [
+    "A1_ENF_NEG_INVALID_JSON_OR_CONFLICT_MARKERS:CONFLICT_MARKERS",
+    "A1_APPROVAL_SEPARATION",
+    "A1_CONTROL_PLANE_TAMPERING",
+    "A1_RECOVERY_BREAK_GLASS_DESIGN_VALIDATION"
+  ],
+  "claim_boundary": "This evidence establishes isolated invalid-JSON rejection by both current publication validators. It does not establish conflict-marker rejection, required-status binding, approval separation, control-plane tamper resistance, recovery readiness, main enforcement, or A1 operational PASS.",
+  "source_refs": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212.json",
+    "projects/lab/authorization-lifecycle/PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_A1_LIFECYCLE_212.json",
+    "projects/lab/governance-tests/authorization-212/A1_ENF_NEG_INVALID_JSON_OR_CONFLICT_MARKERS.json",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/pull/106",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/actions/runs/31241561222",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/actions/runs/31241561229"
+  ]
+}
