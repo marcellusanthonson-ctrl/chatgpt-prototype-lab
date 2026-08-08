@@ -1,10 +1,10 @@
 {
-  "schema_version": "1.8.0",
+  "schema_version": "1.9.0",
   "record_id": "PUBLICATION-ENFORCEMENT-CANONICAL-AUTHORITY-VALIDATION-A1-LIFECYCLE-212",
   "project_id": "lab",
   "authorization": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
   "decision_ref": "DEC-LAB-032",
-  "status": "GRANTED_STAGE_1_ACTIVE_APPROVAL_SEPARATION_PASS_REPORT_012_DELIVERED_READY_FOR_CONTROL_PLANE_TAMPERING",
+  "status": "GRANTED_STAGE_1_ACTIVE_CONTROL_PLANE_TAMPERING_PASS_REPORT_013_DELIVERED_READY_FOR_RECOVERY_BREAK_GLASS_DESIGN_VALIDATION",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-08-07T21:59:00-04:00",
   "approval_source_ref": "projects/lab/sources/USER_SOURCE_AUTHORIZATION_212_20260807.md",
@@ -20,31 +20,36 @@
   },
   "stage_1": {
     "name": "A1_CANARY_CANONICAL_AUTHORITY_GATE_V2_AND_VALIDATION",
-    "status": "ACTIVE_APPROVAL_SEPARATION_PASS_REPORT_012_DELIVERED_READY_FOR_CONTROL_PLANE_TAMPERING",
+    "status": "ACTIVE_CONTROL_PLANE_TAMPERING_PASS_REPORT_013_DELIVERED_READY_FOR_RECOVERY_BREAK_GLASS_DESIGN_VALIDATION",
     "activation_gate": "SATISFIED_STAGE_0_REMOTE_MAIN_VERIFIED",
     "tests_started": true,
     "last_test": {
-      "test_id": "A1_APPROVAL_SEPARATION",
-      "attempt_id": "ATTEMPT-002",
-      "result": "PASS_APPROVAL_SEPARATION_OPERATIONALLY_ENFORCED_AND_GATE_V2_RULESET_BINDING_ESTABLISHED",
-      "pull_request": 110,
-      "pull_request_merged": false,
-      "pull_request_mergeable_boolean": true,
-      "pull_request_mergeable_state": "blocked",
-      "fixture_head_sha": "96ff5899731147583f3545523f07c385d38d6267",
-      "fixture_reused_from_attempt_001": true,
-      "authenticated_actor": "marcellusanthonson-ctrl",
-      "self_approval_http_status": 422,
-      "self_approval_error": "Review Can not approve your own pull request",
-      "reviews_after_attempt": 0,
-      "gate_v2_run_id": 31241894647,
-      "gate_v2_conclusion": "success",
-      "legacy_gate_run_id": 31241894645,
-      "legacy_gate_conclusion": "success",
+      "test_id": "A1_CONTROL_PLANE_TAMPERING",
+      "attempt_id": "ATTEMPT-001",
+      "result": "PASS_CONTROL_PLANE_TAMPERING_DETECTED_BY_INDEPENDENT_READER_AND_BASELINE_RESTORED_CANARY_ONLY",
       "canary_ruleset_id": 20573868,
-      "required_approving_review_count": 1,
-      "gate_v2_required_status_binding": "ESTABLISHED",
-      "evidence_ref": "projects/lab/evidence/EVD-LAB-A1-APPROVAL-SEPARATION-212-ATTEMPT-002.json"
+      "tampering_mutation": "REMOVE_ONLY_LAB_CANONICAL_AUTHORITY_GATE_V2_FROM_REQUIRED_STATUS_CHECKS",
+      "tampered_direct_readback": "PASS_EXPECTED_DIVERGENCE_PRESENT",
+      "tampered_reader_run_id": 31226582922,
+      "tampered_reader_run_attempt": 3,
+      "tampered_reader_job_id": 93071581682,
+      "tampered_reader_conclusion": "success",
+      "tampered_reader_gate_v2_observed_required": false,
+      "restoration_mutation": "RESTORE_LAB_CANONICAL_AUTHORITY_GATE_V2_AS_REQUIRED_STATUS_CHECK",
+      "restored_direct_readback": "PASS_BASELINE_PRESENT",
+      "restored_reader_run_id": 31226582922,
+      "restored_reader_run_attempt": 4,
+      "restored_reader_job_id": 93073743331,
+      "restored_reader_conclusion": "success",
+      "restored_reader_gate_v2_observed_required": true,
+      "restored_required_approving_review_count": 1,
+      "restored_required_status_checks": [
+        "LAB Publication Gate",
+        "LAB Canonical Authority Gate v2"
+      ],
+      "main_mutated": false,
+      "break_glass_activated": false,
+      "evidence_ref": "projects/lab/evidence/EVD-LAB-A1-CONTROL-PLANE-TAMPERING-212-ATTEMPT-001.json"
     },
     "post_test_report_required_before_next_test": true,
     "post_test_report_delivered": true,
@@ -60,7 +65,8 @@
       {"report_id":"A1-212-POST-TEST-REPORT-009","reported_test":"A1_ENF_NEG_INVALID_JSON_OR_CONFLICT_MARKERS","reported_attempt":"ATTEMPT-001","reported_variant":"INVALID_JSON","reported_result":"PASS_INVALID_JSON_REJECTED_BY_BOTH_GATES_BINDING_NOT_ESTABLISHED","delivered_to":"Jonathan Martínez","delivered_at":"2026-08-08T01:23:00-04:00","delivery_surface":"CHATGPT_CONVERSATION","next_action_reported":"CANONICALLY_RECORD_INVALID_JSON_RESULT_THEN_RUN_CONFLICT_MARKERS_VARIANT","authority_effect":"NONE"},
       {"report_id":"A1-212-POST-TEST-REPORT-010","reported_test":"A1_ENF_NEG_INVALID_JSON_OR_CONFLICT_MARKERS","reported_attempt":"ATTEMPT-002","reported_variant":"CONFLICT_MARKERS","reported_result":"PASS_CONFLICT_MARKERS_REJECTED_BY_BOTH_GATES_BINDING_NOT_ESTABLISHED","delivered_to":"Jonathan Martínez","delivered_at":"2026-08-08T01:26:00-04:00","delivery_surface":"CHATGPT_CONVERSATION","next_action_reported":"CANONICALLY_RECORD_CONFLICT_MARKERS_RESULT_THEN_A1_APPROVAL_SEPARATION","authority_effect":"NONE"},
       {"report_id":"A1-212-POST-TEST-REPORT-011","reported_test":"A1_APPROVAL_SEPARATION","reported_attempt":"ATTEMPT-001","reported_result":"BLOCKED_NATIVE_SELF_APPROVAL_REJECTED_BUT_INDEPENDENT_APPROVAL_NOT_REQUIRED_AND_RULESET_MUTATION_SURFACE_UNAVAILABLE","delivered_to":"Jonathan Martínez","delivered_at":"2026-08-08T01:32:00-04:00","delivery_surface":"CHATGPT_CONVERSATION","next_action_reported":"CANONICALLY_RECORD_BLOCKER_AND_STOP_AT_A1_APPROVAL_SEPARATION_UNTIL_ADMINISTRATION_WRITE_RULESET_MUTATION_SURFACE_IS_AVAILABLE","authority_effect":"NONE"},
-      {"report_id":"A1-212-POST-TEST-REPORT-012","reported_test":"A1_APPROVAL_SEPARATION","reported_attempt":"ATTEMPT-002","reported_result":"PASS_APPROVAL_SEPARATION_OPERATIONALLY_ENFORCED_AND_GATE_V2_RULESET_BINDING_ESTABLISHED","delivered_to":"Jonathan Martínez","delivered_at":"2026-08-08T02:05:00-04:00","delivery_surface":"CHATGPT_CONVERSATION","next_action_reported":"CANONICALLY_RECORD_APPROVAL_SEPARATION_PASS_THEN_A1_CONTROL_PLANE_TAMPERING","authority_effect":"NONE"}
+      {"report_id":"A1-212-POST-TEST-REPORT-012","reported_test":"A1_APPROVAL_SEPARATION","reported_attempt":"ATTEMPT-002","reported_result":"PASS_APPROVAL_SEPARATION_OPERATIONALLY_ENFORCED_AND_GATE_V2_RULESET_BINDING_ESTABLISHED","delivered_to":"Jonathan Martínez","delivered_at":"2026-08-08T02:05:00-04:00","delivery_surface":"CHATGPT_CONVERSATION","next_action_reported":"CANONICALLY_RECORD_APPROVAL_SEPARATION_PASS_THEN_A1_CONTROL_PLANE_TAMPERING","authority_effect":"NONE"},
+      {"report_id":"A1-212-POST-TEST-REPORT-013","reported_test":"A1_CONTROL_PLANE_TAMPERING","reported_attempt":"ATTEMPT-001","reported_result":"PASS_CONTROL_PLANE_TAMPERING_DETECTED_BY_INDEPENDENT_READER_AND_BASELINE_RESTORED_CANARY_ONLY","delivered_to":"Jonathan Martínez","delivered_at":"2026-08-08T03:24:00-04:00","delivery_surface":"CHATGPT_CONVERSATION","next_action_reported":"CANONICALLY_RECORD_CONTROL_PLANE_TAMPERING_PASS_THEN_A1_RECOVERY_BREAK_GLASS_DESIGN_VALIDATION","authority_effect":"NONE"}
     ],
     "gate_v2_workflow": ".github/workflows/lab-canonical-authority-gate-v2-212.yml",
     "gate_v2_publication_status": "LEGACY_SCHEMA_REMEDIATION_PUBLISHED_REMOTE_VERIFIED_AT_MAIN_ee1f49be9d4def988e67f2ed0f81c5779e35d225",
@@ -78,6 +84,17 @@
       "ruleset_mutation_performed_by_human_operator": true,
       "remote_ruleset_verification": "PASS",
       "evidence_ref": "projects/lab/evidence/EVD-LAB-A1-APPROVAL-SEPARATION-212-ATTEMPT-002.json"
+    },
+    "control_plane_tampering": {
+      "status": "PASS_DETECTION_AND_RECOVERY_CANARY_ONLY",
+      "canary_ruleset_id": 20573868,
+      "tampering_detected_by_independent_reader": true,
+      "automatic_prevention_proven": false,
+      "baseline_restored": true,
+      "baseline_restoration_independently_verified": true,
+      "main_scope_claim": "NONE",
+      "break_glass_effect": "NONE",
+      "evidence_ref": "projects/lab/evidence/EVD-LAB-A1-CONTROL-PLANE-TAMPERING-212-ATTEMPT-001.json"
     },
     "terminal_state_variant_status": {
       "CONSUMED": "PASS_ATTEMPT_001_REPORT_DELIVERED",
@@ -102,7 +119,7 @@
   },
   "prior_results_preserved": {
     "A1_ENF_NEG_DIRECT_PUSH": "TECHNICAL_PASS_PRESERVED_NO_RERUN_AUTHORITY",
-    "A1_READER_READBACK": "TECHNICAL_PASS_PRESERVED_REVALIDATE_IF_REQUIRED"
+    "A1_READER_READBACK": "TECHNICAL_PASS_REVALIDATED_DURING_CONTROL_PLANE_TAMPERING_ATTEMPT_001"
   },
   "test_status": {
     "A1_AUTH_POS_VALID_CANONICAL": "PASS_ATTEMPT_001",
@@ -112,11 +129,11 @@
     "A1_ENF_NEG_MISSING_AUTHORIZATION_TRAILER": "PASS_REJECTED_BY_BOTH_GATES_ATTEMPT_001_BINDING_NOT_ESTABLISHED",
     "A1_ENF_NEG_INVALID_JSON_OR_CONFLICT_MARKERS": "PASS_INVALID_JSON_AND_CONFLICT_MARKERS_VARIANTS_BINDING_NOT_ESTABLISHED",
     "A1_APPROVAL_SEPARATION": "PASS_ATTEMPT_002_OPERATIONALLY_ENFORCED_GATE_V2_BINDING_ESTABLISHED",
-    "A1_CONTROL_PLANE_TAMPERING": "NOT_RUN",
+    "A1_CONTROL_PLANE_TAMPERING": "PASS_ATTEMPT_001_DETECTED_BY_INDEPENDENT_READER_BASELINE_RESTORED_CANARY_ONLY",
     "A1_RECOVERY_BREAK_GLASS_DESIGN_VALIDATION": "NOT_RUN"
   },
-  "residual_authority": "STAGE_1_A1_SCOPE_ONLY_READY_FOR_CONTROL_PLANE_TAMPERING",
-  "next_sequential_test": "A1_CONTROL_PLANE_TAMPERING",
+  "residual_authority": "STAGE_1_A1_SCOPE_ONLY_READY_FOR_RECOVERY_BREAK_GLASS_DESIGN_VALIDATION",
+  "next_sequential_test": "A1_RECOVERY_BREAK_GLASS_DESIGN_VALIDATION",
   "final_consumption_rule": "CONSUMED_AFTER_TERMINAL_A1_REPORT_AND_AUTHORIZED_CLEANUP_ARE_PUBLISHED_AND_REMOTE_VERIFIED",
   "non_authorizations": [
     "NO_MAIN_BRANCH_PROTECTION_MUTATION",
