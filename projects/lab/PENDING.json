@@ -1,12 +1,12 @@
 {
-  "schema_version": "2.0.0",
-  "project_id": "lab",
-  "updated_at": "2026-08-08",
-  "projection_class": "CURRENT_NONTERMINAL_PENDING_VIEW",
-  "historical_record_owners": "projects/lab/pending/",
-  "closed_history_policy": "DISCOVER_FROM_OWNER_ARTIFACTS_AND_REGISTRY_NOT_DUPLICATED_HERE",
-  "current_focus": "POST_A1_DOCUMENTARY_RECONCILIATION_B_AWAITING_REMOTE_VERIFICATION",
-  "records": [
+  "schema_version":"2.1.0",
+  "project_id":"lab",
+  "updated_at":"2026-08-08",
+  "projection_class":"CURRENT_NONTERMINAL_PENDING_VIEW",
+  "historical_record_owners":"projects/lab/pending/",
+  "closed_history_policy":"DISCOVER_FROM_OWNER_ARTIFACTS_AND_REGISTRY_NOT_DUPLICATED_HERE",
+  "current_focus":"HUMAN_SELECTION_OF_NEXT_TECHNICAL_FOCUS",
+  "records":[
     {"id":"PEND-LAB-001","status":"OPEN_WATCH","subject":"Digital Omnibus on AI publication and entry into force","canonical_path":"projects/lab/pending/PEND-LAB-001.json"},
     {"id":"PEND-LAB-003","status":"QUEUED_AFTER_PHASE_4","subject":"Susan Kare functional iconography primary-source normalization","canonical_path":"projects/lab/pending/PEND-LAB-003.json"},
     {"id":"PEND-LAB-004","status":"QUEUED_AFTER_PHASE_4","subject":"Jakob Nielsen severity and prioritization primary-source normalization","canonical_path":"projects/lab/pending/PEND-LAB-004.json"},
@@ -25,12 +25,14 @@
     {"id":"PEND-LAB-045","status":"PARTIALLY_BLOCKED_SSE_ATTEMPT_001_RECONCILED_RETRY_NOT_STARTED_PRODUCT_LEADERSHIP_PREFLIGHT_BLOCKED","subject":"Priority Integrations Phase 2 independent evidence closure","canonical_path":"projects/lab/pending/PEND-LAB-045.json"},
     {"id":"PEND-LAB-048","status":"OPEN_FRESH_RETEST_ATTEMPT_004_BLOCKED_BEFORE_MODEL_REQUESTS_AWAITING_SEPARATE_RECOVERY_OR_REISSUE_AUTHORIZATION","subject":"Product Leadership Test003 instrument redesign and fresh retest decision","canonical_path":"projects/lab/pending/PEND-LAB-048.json"}
   ],
-  "preserved_portfolio_lines": [
+  "preserved_portfolio_lines":[
     {"id":"CONTEXTUAL_BOOTSTRAP","status":"PRESERVED_DEFERRED_NOT_CANCELLED","state_change_by_215":"NONE"},
     {"id":"PRODUCT_LEADERSHIP","status":"PRESERVED_BLOCKED_NOT_ADJUDICATED","state_change_by_215":"NONE"},
     {"id":"SOFTWARE_SOLUTION_ENGINEERING","status":"PRESERVED_BLOCKED_REQUIRES_SEPARATE_AUTHORITY_RECONCILIATION","state_change_by_215":"NONE"},
     {"id":"CODEX_DESKTOP_OPERATING_MODEL","status":"PRESERVED_OPERATIONAL_BENCHMARK_PENDING","state_change_by_215":"NONE"}
   ],
-  "next_human_gate_after_215_closeout": "HUMAN_SELECTION_OF_NEXT_TECHNICAL_FOCUS",
-  "authority_effect": "NONE"
+  "documentary_reconciliation_b":"COMPLETE_VERIFIED_REMOTE_PUBLICATION_AUTHORIZATION_215_CONSUMED",
+  "next_human_gate":"HUMAN_SELECTION_OF_NEXT_TECHNICAL_FOCUS",
+  "next_execution_authority":"NONE",
+  "authority_effect":"NONE"
 }

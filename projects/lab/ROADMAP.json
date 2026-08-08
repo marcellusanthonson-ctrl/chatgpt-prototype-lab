@@ -1,27 +1,27 @@
 {
-  "schema_version": "2.0.0",
-  "project_id": "lab",
-  "updated_at": "2026-08-08",
-  "authority_effect": "NONE",
-  "focus_contract": "architecture/governance/FOCUS_AND_ROADMAP_PRESERVATION_001/CONTRACT.json",
-  "current_focus": "POST_A1_DOCUMENTARY_RECONCILIATION_B",
-  "last_completed_focus": "A1_CANARY_CANONICAL_AUTHORITY_ENFORCEMENT_OPERATIONAL_PASS",
-  "next_gate": "VERIFY_REMOTE_PUBLICATION_THEN_CONSUME_AUTHORIZATION_215",
-  "next_human_gate_after_closeout": "HUMAN_SELECTION_OF_NEXT_TECHNICAL_FOCUS",
-  "records": [
+  "schema_version":"2.1.0",
+  "project_id":"lab",
+  "updated_at":"2026-08-08",
+  "authority_effect":"NONE",
+  "focus_contract":"architecture/governance/FOCUS_AND_ROADMAP_PRESERVATION_001/CONTRACT.json",
+  "current_focus":"HUMAN_SELECTION_OF_NEXT_TECHNICAL_FOCUS",
+  "last_completed_focus":"POST_A1_DOCUMENTARY_RECONCILIATION_B",
+  "next_gate":"HUMAN_SELECTION_OF_NEXT_TECHNICAL_FOCUS",
+  "execution_authority":"NONE",
+  "records":[
     {"order":1,"item":"A1 canary canonical-authority publication enforcement","status":"COMPLETED_OPERATIONAL_PASS","owner_ref":"projects/lab/authorization-lifecycle/PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_A1_LIFECYCLE_212.json"},
-    {"order":2,"item":"Documentary Reconciliation B","status":"CURRENT_FOCUS_PUBLICATION_PREPARED_AWAITING_REMOTE_VERIFICATION","owner_ref":"projects/lab/authorization-lifecycle/POST_A1_DOCUMENTARY_RECONCILIATION_AND_CONTINUITY_ARCHITECTURE_LIFECYCLE_215.json"},
-    {"order":3,"item":"Human selection of next technical focus","status":"AWAITING_DOCUMENTARY_RECONCILIATION_B_CLOSEOUT","authority_effect":"HUMAN_DECISION_ONLY_UNTIL_SEPARATE_EXECUTION_AUTHORIZATION"},
+    {"order":2,"item":"Documentary Reconciliation B","status":"COMPLETED_VERIFIED_REMOTE_PUBLICATION_AUTHORIZATION_215_CONSUMED","owner_ref":"projects/lab/authorization-lifecycle/POST_A1_DOCUMENTARY_RECONCILIATION_AND_CONTINUITY_ARCHITECTURE_LIFECYCLE_215.json"},
+    {"order":3,"item":"Human selection of next technical focus","status":"AWAITING_HUMAN_DECISION","authority_effect":"HUMAN_DECISION_ONLY_NO_EXECUTION_AUTHORITY"},
     {"order":4,"item":"Contextual Bootstrap resolver and operational benchmark","status":"PRESERVED_DEFERRED_NOT_CANCELLED","requirements_before_retest":["RECONCILE_FROZEN_BENCHMARK_BASELINE","RECONCILE_POST_PUBLICATION_CHAIN_OF_CUSTODY_MUTATIONS","CREATE_VALID_EXECUTION_ENVELOPE","CREATE_VALID_CONTEXT_MANIFEST"],"execution_authority":"NONE"},
     {"order":5,"item":"Product Leadership","status":"PRESERVED_BLOCKED_NOT_ADJUDICATED","integration":"INT-LAB-004_CANDIDATE_NOT_ACTIVE_NOT_INTEGRATED","pending_ref":"projects/lab/pending/PEND-LAB-048.json","execution_authority":"NONE"},
-    {"order":6,"item":"Software Solution Engineering","status":"PRESERVED_BLOCKED_REQUIRES_SEPARATE_AUTHORITY_RECONCILIATION","integration":"INT-LAB-005_CANDIDATE_NOT_ACTIVE_NOT_INTEGRATED","authorization_180":"UNCONSUMED_BLOCKED_NO_EXECUTION_UNDER_215"},
+    {"order":6,"item":"Software Solution Engineering","status":"PRESERVED_BLOCKED_REQUIRES_SEPARATE_AUTHORITY_RECONCILIATION","integration":"INT-LAB-005_CANDIDATE_NOT_ACTIVE_NOT_INTEGRATED","authorization_180":"UNCONSUMED_BLOCKED_NO_EXECUTION_AUTHORITY"},
     {"order":7,"item":"Codex Desktop operating model","status":"PRESERVED_DOCUMENTARY_STANDARD_AWAITING_OPERATIONAL_BENCHMARK","error_ref":"errors/ERR-LAB-014.json"},
     {"order":8,"item":"Integration Factory static fallback retention or retirement","status":"AWAITING_HUMAN_DECISION","pending_ref":"projects/lab/pending/PEND-LAB-042.json"},
     {"order":9,"item":"Transversal motion-effects library remaining population and promotion gates","status":"PRESERVED_NONTERMINAL","pending_ref":"projects/lab/pending/PEND-LAB-043.json"},
     {"order":10,"item":"Design-knowledge primary-source normalization and candidate reassessment","status":"PRESERVED_NONTERMINAL","pending_refs":["projects/lab/pending/PEND-LAB-003.json","projects/lab/pending/PEND-LAB-004.json","projects/lab/pending/PEND-LAB-005.json"]},
     {"order":11,"item":"LivHavn real human visual calibration","status":"AWAITING_HUMAN_DECISION","pending_ref":"projects/lab/pending/PEND-LAB-025.json"},
     {"order":12,"item":"Intelligent Application Construction candidate evidence line","status":"PRESERVED_REQUIRES_SEPARATE_AUTHORIZATION","pending_ref":"projects/lab/pending/PEND-LAB-026.json"},
-    {"order":13,"item":"All other nonterminal objectives discoverable in PENDING current projection and owner artifacts","status":"PRESERVED_BY_CONTRACT"}
+    {"order":13,"item":"All other nonterminal objectives discoverable in PENDING and owner artifacts","status":"PRESERVED_BY_CONTRACT"}
   ],
-  "focus_change_rule": "NO_RECORD_IS_CANCELLED_SUSPENDED_DOWNGRADED_ACTIVATED_INTEGRATED_OR_ADJUDICATED_BY_FOCUS_CHANGE_ALONE"
+  "focus_change_rule":"NO_RECORD_IS_CANCELLED_SUSPENDED_DOWNGRADED_ACTIVATED_INTEGRATED_OR_ADJUDICATED_BY_FOCUS_CHANGE_ALONE"
 }

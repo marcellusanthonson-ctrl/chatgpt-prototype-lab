@@ -1,10 +1,10 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "record_id": "POST-A1-DOCUMENTARY-RECONCILIATION-AND-CONTINUITY-ARCHITECTURE-LIFECYCLE-215",
   "project_id": "lab",
   "authorization": "AUTHORIZATION_LAB_POST_A1_DOCUMENTARY_RECONCILIATION_AND_CONTINUITY_ARCHITECTURE_215",
   "decision_ref": "DEC-LAB-032",
-  "status": "GRANTED_DOCUMENTARY_RECONCILIATION_B_AWAITING_REMOTE_PUBLICATION_VERIFICATION",
+  "status": "CONSUMED_DOCUMENTARY_RECONCILIATION_B_VERIFIED_REMOTE_PUBLICATION_NO_RESIDUAL_AUTHORITY",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-08-08T09:10:00-04:00",
   "approval_source_ref": "projects/lab/sources/USER_SOURCE_AUTHORIZATION_215_20260808.md",
@@ -16,14 +16,29 @@
   },
   "stage": {
     "name": "DOCUMENTARY_RECONCILIATION_B",
-    "status": "PREPARED_FOR_CANONICAL_PUBLICATION",
+    "status": "COMPLETE_REMOTE_MAIN_VERIFIED",
+    "publication_pull_request": 120,
+    "verified_publication_head": "e5b605a5b96304a707ee1683e7fd5a090ddce4ba",
+    "verified_publication_commit_message": "governance: publish post-A1 documentary reconciliation B",
     "technical_execution_performed": false,
     "model_or_test_execution_performed": false,
     "enforcement_mutation_performed": false
   },
-  "current_authority": "DOCUMENTARY_RECONCILIATION_B_PUBLICATION_AND_TERMINAL_CLOSEOUT_ONLY",
-  "consumption_criterion": "REMOTE_MAIN_VERIFICATION_OF_COMPLETE_DOCUMENTARY_RECONCILIATION_B_PUBLICATION",
-  "authorization_consumed": false,
-  "residual_authority": "DOCUMENTARY_RECONCILIATION_B_CLOSEOUT_ONLY",
-  "residual_authority_after_consumption": "NONE"
+  "consumption_criterion": "SATISFIED_REMOTE_MAIN_VERIFICATION_OF_COMPLETE_DOCUMENTARY_RECONCILIATION_B_PUBLICATION",
+  "authorization_consumed": true,
+  "consumed_on": "2026-08-08",
+  "residual_authority": "NONE",
+  "residual_authority_after_consumption": "NONE",
+  "next_gate": "HUMAN_SELECTION_OF_NEXT_TECHNICAL_FOCUS",
+  "next_gate_execution_authority": "NONE",
+  "execution_deviation": {
+    "id": "ACCIDENTAL_INERT_AUXILIARY_BRANCH_CREATION",
+    "branch": "noop-should-not-use",
+    "branch_head": "41f4e004f7a817c676b286fabf802676d8ba7532",
+    "content_delta_from_authorized_parent": "NONE",
+    "used_for_publication": false,
+    "authority_effect": "NONE",
+    "cleanup": "NOT_PERFORMED_DELETE_REF_SURFACE_UNAVAILABLE",
+    "impact_on_reconciliation_result": "NONE"
+  }
 }
