@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "test_id": "A1_AUTH_NEG_WRONG_REPOSITORY_BRANCH_PATH_OR_ACTION_SCOPE",
+  "attempt_id": "ATTEMPT-001",
+  "tested_variant": "HISTORICAL_GRANTED_SCOPE_INCOMPATIBLE_SUBJECT",
+  "subject_authorization_id": "AUTHORIZATION_LAB_SYMPHONIE_LIVHAVN_HTML_PREDELIVERY_AUTOMATED_GATE_086",
+  "subject_authorization_status": "GRANTED",
+  "subject_declared_scope": "DOCUMENT_IMPLEMENT_AND_EXECUTE_FAIL_CLOSED_AUTOMATED_HTML_PREDELIVERY_GATE_FOR_LIVHAVN_PHASE_3",
+  "actual_test_base": "lab-governance-canary-210",
+  "actual_test_path": "projects/lab/governance-tests/authorization-212/A1_AUTH_NEG_WRONG_REPOSITORY_BRANCH_PATH_OR_ACTION_SCOPE.json",
+  "actual_test_action": "PULL_REQUEST_PUBLICATION_TO_CANARY",
+  "expected_gate_v2_behavior": "REJECT_FAIL_CLOSED_ON_SCOPE_INCOMPATIBILITY_OR_UNSUPPORTED_SCOPE_SHAPE",
+  "execution_authorization": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+  "subject_authorization_executes_test": false,
+  "claim_boundary": "Authorization 086 is only a canonical GRANTED subject whose historical scope is incompatible with this A1 canary publication. Execution remains solely under authorization 212; no Livhavn or Symphonie action is exercised."
+}
