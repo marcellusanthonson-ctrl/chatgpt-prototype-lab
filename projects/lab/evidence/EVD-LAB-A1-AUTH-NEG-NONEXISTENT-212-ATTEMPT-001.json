@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-A1-AUTH-NEG-NONEXISTENT-212-ATTEMPT-001",
+  "project_id": "lab",
+  "authorization_id": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+  "decision_ref": "DEC-LAB-032",
+  "test_id": "A1_AUTH_NEG_NONEXISTENT_AUTHORIZATION",
+  "attempt_id": "ATTEMPT-001",
+  "status": "PASS_VALIDATOR_REJECTION_BINDING_NOT_ESTABLISHED",
+  "executed_at": "2026-08-07T23:01:00-04:00",
+  "canonical_main_head_before_test": "446c65ac29f1e926f9575bce019e925928c7c279",
+  "precondition": {
+    "synthetic_authorization_id": "AUTHORIZATION_LAB_SYNTHETIC_NONEXISTENT_CANARY_TEST_212_X999",
+    "canonical_authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_SYNTHETIC_NONEXISTENT_CANARY_TEST_212_X999.json",
+    "canonical_lookup_ref": "main",
+    "artifact_lookup_result": "NOT_FOUND"
+  },
+  "canary": {
+    "base_branch": "lab-governance-canary-210",
+    "base_sha": "8db33a0f61d45055134b9efc1f82597ac07b4c7b",
+    "test_branch": "test/a1-auth-neg-nonexistent-212",
+    "fixture_head_sha": "d13e9d945a79656364afe60413bb28219e6d3626",
+    "pull_request": 88,
+    "pull_request_merged": false,
+    "pull_request_mergeable_after_checks": true,
+    "changed_files": 1,
+    "fixture_path": "projects/lab/governance-tests/authorization-212/A1_AUTH_NEG_NONEXISTENT_AUTHORIZATION.json"
+  },
+  "observed_runs": [
+    {
+      "workflow": "LAB Canonical Authority Gate v2",
+      "run_id": 31236294551,
+      "job_id": 93049295700,
+      "status": "completed",
+      "conclusion": "failure",
+      "interpretation": "EXPECTED_REJECTION"
+    },
+    {
+      "workflow": "LAB Publication Gate",
+      "run_id": 31236294541,
+      "status": "completed",
+      "conclusion": "success",
+      "interpretation": "LEGACY_GATE_ACCEPTED_SYNTACTIC_AUTHORIZATION_LABEL"
+    }
+  ],
+  "gate_v2_result": {
+    "authorization": "AUTHORIZATION_LAB_SYNTHETIC_NONEXISTENT_CANARY_TEST_212_X999",
+    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_SYNTHETIC_NONEXISTENT_CANARY_TEST_212_X999.json",
+    "base_ref": "lab-governance-canary-210",
+    "canonical_ref": "main",
+    "same_repository_pr": true,
+    "changed_files": 1,
+    "json_files_checked": 1,
+    "text_files_checked": 1,
+    "lifecycle_path": null,
+    "failures": [
+      "AUTHORIZATION_ARTIFACT_NOT_FOUND",
+      "AUTHORIZATION_PATH_SCOPE_MISSING",
+      "AUTHORIZATION_PATH_SCOPE_MISMATCH:projects/lab/governance-tests/authorization-212/A1_AUTH_NEG_NONEXISTENT_AUTHORIZATION.json"
+    ],
+    "primary_discriminating_failure": "AUTHORIZATION_ARTIFACT_NOT_FOUND",
+    "secondary_failures_interpretation": "FAIL_CLOSED_DOWNSTREAM_EFFECTS_BECAUSE_NO_CANONICAL_AUTHORIZATION_OBJECT_EXISTS_TO_SUPPLY_PATH_SCOPE"
+  },
+  "determination": "PASS_CANONICAL_AUTHORITY_VALIDATOR_REJECTS_NONEXISTENT_AUTHORIZATION",
+  "operational_binding": {
+    "status": "NOT_ESTABLISHED",
+    "evidence": "PR_88_REMAINS_MERGEABLE_TRUE_WHILE_GATE_V2_FAILED",
+    "reason": "GATE_V2_IS_NOT_YET_A_REQUIRED_STATUS_CHECK_IN_THE_CANARY_RULESET",
+    "effect": "THIS_TEST_DOES_NOT_ESTABLISH_CANARY_PUBLICATION_ENFORCEMENT"
+  },
+  "claim_boundary": "This PASS proves fail-closed rejection by the Canonical Authority Gate v2 validator for a nonexistent authorization. It does not prove that GitHub prevents merge based on that validator because Gate v2 is not yet bound as a required canary status check. It also does not establish approval separation, control-plane tamper resistance, recovery readiness, main enforcement, or A1 operational completion.",
+  "remaining_tests": {
+    "A1_AUTH_NEG_CONSUMED_REVOKED_OR_EXPIRED": "NOT_RUN",
+    "A1_AUTH_NEG_WRONG_REPOSITORY_BRANCH_PATH_OR_ACTION_SCOPE": "NOT_RUN",
+    "A1_ENF_NEG_MISSING_AUTHORIZATION_TRAILER": "NOT_RUN",
+    "A1_ENF_NEG_INVALID_JSON_OR_CONFLICT_MARKERS": "NOT_RUN",
+    "A1_APPROVAL_SEPARATION": "NOT_RUN",
+    "A1_CONTROL_PLANE_TAMPERING": "NOT_RUN",
+    "A1_RECOVERY_BREAK_GLASS_DESIGN_VALIDATION": "NOT_RUN"
+  },
+  "prior_results_preserved": {
+    "A1_AUTH_POS_VALID_CANONICAL": "PASS_ATTEMPT_001",
+    "A1_ENF_NEG_DIRECT_PUSH": "TECHNICAL_PASS_PRESERVED_NO_RERUN",
+    "A1_READER_READBACK": "TECHNICAL_PASS_PRESERVED_REVALIDATE_IF_REQUIRED"
+  },
+  "source_refs": [
+    ".github/workflows/lab-canonical-authority-gate-v2-212.yml",
+    ".github/workflows/lab-publication-gate.yml",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212.json",
+    "projects/lab/authorization-lifecycle/PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_A1_LIFECYCLE_212.json",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/pull/88",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/actions/runs/31236294551",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/actions/runs/31236294541"
+  ]
+}
