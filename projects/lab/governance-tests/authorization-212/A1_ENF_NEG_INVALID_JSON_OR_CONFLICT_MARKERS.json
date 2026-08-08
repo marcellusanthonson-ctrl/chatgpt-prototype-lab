@@ -1,0 +1,8 @@
+{
+  "schema_version": "1.0.0",
+  "test_id": "A1_ENF_NEG_INVALID_JSON_OR_CONFLICT_MARKERS",
+  "attempt_id": "ATTEMPT-001",
+  "tested_variant": "INVALID_JSON",
+  "expected_gate_v2_behavior": "REJECT_INVALID_JSON",
+  "execution_authorization": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+  "claim_boundary": "This file is deliberately malformed JSON for the authorized negative test and must not be merged."
