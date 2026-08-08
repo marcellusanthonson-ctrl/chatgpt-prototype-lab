@@ -1,33 +1,16 @@
 {
-  "schema_version": "2.0.0",
-  "updated_at": "2026-08-08",
-  "registry_model": "LAYERED_CURRENT_PROJECTION_OVER_BYTE_PRESERVED_HISTORICAL_BASE",
-  "status": "POST_A1_DOCUMENTARY_RECONCILIATION_B_AWAITING_REMOTE_VERIFICATION",
-  "active_project": "lab",
-  "count_policy": "DERIVE_FROM_CHILD_REGISTRIES_OR_OWNER_SCAN_DO_NOT_CACHE_STALE_COUNTS",
-  "known_counts": {
-    "projects": 7,
-    "active_unique_lab_decisions": 36
-  },
-  "registries": {
-    "projects": "registry/projects.json",
-    "decisions": "registry/decisions.json",
-    "authorizations": "registry/authorizations.json",
-    "errors": "registry/errors.json",
-    "evidence": "registry/evidence.json",
-    "pending": "projects/lab/PENDING.json",
-    "integrations": "registry/integrations.json",
-    "patterns": "registry/patterns.json",
-    "sessions": "sessions/"
-  },
-  "current_delta": "registry/deltas/post-a1-documentary-reconciliation-215.json",
-  "historical_bases": {
-    "index": {"path":"registry/archive/pre-215/index.json","blob_sha":"13b5236efa2a223425245502f81903348b85dd8e"},
-    "decisions": {"path":"registry/archive/pre-215/decisions.json","blob_sha":"31669ed05e7e8dd1b0526571348e58f9b0045de5"},
-    "authorizations": {"path":"registry/archive/pre-215/authorizations.json","blob_sha":"087b464497da6d4983557a54bdc0b0a40a8f4be4"},
-    "errors": {"path":"registry/archive/pre-215/errors.json","blob_sha":"32d4e2ead5bffe46a52ba3d7352837d412afaf44"},
-    "evidence": {"path":"registry/archive/pre-215/evidence.json","blob_sha":"d1729701809e00e752c96175626c68202fc61b8b"}
-  },
-  "lookup_rule": "CURRENT_REGISTRY_OVERLAY_THEN_HISTORICAL_BASE_THEN_OWNER_ARTIFACT; OWNER_ARTIFACT_WINS_ON_CONTRADICTION",
-  "authority_effect": "NONE"
+  "schema_version":"2.1.0",
+  "updated_at":"2026-08-08",
+  "registry_model":"LAYERED_CURRENT_PROJECTION_OVER_BYTE_PRESERVED_HISTORICAL_BASE",
+  "status":"POST_A1_DOCUMENTARY_RECONCILIATION_B_COMPLETE_AWAITING_HUMAN_NEXT_FOCUS_SELECTION",
+  "active_project":"lab",
+  "count_policy":"DERIVE_FROM_CHILD_REGISTRIES_OR_OWNER_SCAN_DO_NOT_CACHE_STALE_COUNTS",
+  "known_counts":{"projects":7,"active_unique_lab_decisions":36},
+  "registries":{"projects":"registry/projects.json","decisions":"registry/decisions.json","authorizations":"registry/authorizations.json","errors":"registry/errors.json","evidence":"registry/evidence.json","pending":"projects/lab/PENDING.json","integrations":"registry/integrations.json","patterns":"registry/patterns.json","sessions":"sessions/"},
+  "current_delta":"registry/deltas/post-a1-documentary-reconciliation-215.json",
+  "historical_bases":{"index":{"path":"registry/archive/pre-215/index.json","blob_sha":"13b5236efa2a223425245502f81903348b85dd8e"},"decisions":{"path":"registry/archive/pre-215/decisions.json","blob_sha":"31669ed05e7e8dd1b0526571348e58f9b0045de5"},"authorizations":{"path":"registry/archive/pre-215/authorizations.json","blob_sha":"087b464497da6d4983557a54bdc0b0a40a8f4be4"},"errors":{"path":"registry/archive/pre-215/errors.json","blob_sha":"32d4e2ead5bffe46a52ba3d7352837d412afaf44"},"evidence":{"path":"registry/archive/pre-215/evidence.json","blob_sha":"d1729701809e00e752c96175626c68202fc61b8b"}},
+  "lookup_rule":"CURRENT_REGISTRY_OVERLAY_THEN_HISTORICAL_BASE_THEN_OWNER_ARTIFACT; OWNER_ARTIFACT_WINS_ON_CONTRADICTION",
+  "next_gate":"HUMAN_SELECTION_OF_NEXT_TECHNICAL_FOCUS",
+  "execution_authority":"NONE",
+  "authority_effect":"NONE"
 }

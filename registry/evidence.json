@@ -1,16 +1,16 @@
 {
-  "schema_version": "2.0.0",
-  "updated_at": "2026-08-08",
-  "registry_model": "CURRENT_OVERLAY_PLUS_BYTE_PRESERVED_HISTORICAL_BASE",
-  "historical_base": {"path":"registry/archive/pre-215/evidence.json","blob_sha":"d1729701809e00e752c96175626c68202fc61b8b"},
-  "current_overlay": [
+  "schema_version":"2.1.0",
+  "updated_at":"2026-08-08",
+  "registry_model":"CURRENT_OVERLAY_PLUS_BYTE_PRESERVED_HISTORICAL_BASE",
+  "historical_base":{"path":"registry/archive/pre-215/evidence.json","blob_sha":"d1729701809e00e752c96175626c68202fc61b8b"},
+  "current_overlay":[
     {"id":"EVD-LAB-A1-APPROVAL-SEPARATION-212-ATTEMPT-002","status":"PASS","canonical_path":"projects/lab/evidence/EVD-LAB-A1-APPROVAL-SEPARATION-212-ATTEMPT-002.json"},
     {"id":"EVD-LAB-A1-CONTROL-PLANE-TAMPERING-212-ATTEMPT-001","status":"PASS_CANARY_SCOPE","canonical_path":"projects/lab/evidence/EVD-LAB-A1-CONTROL-PLANE-TAMPERING-212-ATTEMPT-001.json"},
     {"id":"EVD-LAB-A1-RECOVERY-BREAK-GLASS-DESIGN-212-ATTEMPT-002","status":"PASS_STATIC_NON_ACTIVATING","canonical_path":"projects/lab/evidence/EVD-LAB-A1-RECOVERY-BREAK-GLASS-DESIGN-212-ATTEMPT-002.json"},
     {"id":"EVD-LAB-A1-TERMINAL-CLEANUP-212-001","status":"PASS","canonical_path":"projects/lab/evidence/EVD-LAB-A1-TERMINAL-CLEANUP-212-001.json"},
     {"id":"EVD-LAB-A1-RECOVERY-BREAK-GLASS-DESIGN-214","status":"PASS_DOCUMENTARY_PUBLICATION","canonical_path":"projects/lab/evidence/EVD-LAB-A1-RECOVERY-BREAK-GLASS-DESIGN-214.json"},
-    {"id":"EVD-LAB-POST-A1-DOCUMENTARY-RECONCILIATION-215","status":"PREPUBLICATION_PASS_AWAITING_REMOTE_VERIFICATION","canonical_path":"projects/lab/evidence/EVD-LAB-POST-A1-DOCUMENTARY-RECONCILIATION-215.json"}
+    {"id":"EVD-LAB-POST-A1-DOCUMENTARY-RECONCILIATION-215","status":"PASS_VERIFIED_REMOTE_PUBLICATION_AUTHORIZATION_215_CONSUMED","canonical_path":"projects/lab/evidence/EVD-LAB-POST-A1-DOCUMENTARY-RECONCILIATION-215.json"}
   ],
-  "lookup_rule": "CURRENT_OVERLAY_FIRST_THEN_HISTORICAL_BASE_THEN_OWNER_ARTIFACT",
-  "authority_effect": "NONE"
+  "lookup_rule":"CURRENT_OVERLAY_FIRST_THEN_HISTORICAL_BASE_THEN_OWNER_ARTIFACT",
+  "authority_effect":"NONE"
 }

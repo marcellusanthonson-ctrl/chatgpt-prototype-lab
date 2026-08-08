@@ -1,30 +1,21 @@
 {
-  "schema_version": "1.1.0",
-  "delta_id": "post-a1-documentary-reconciliation-215",
-  "project_id": "lab",
-  "authorization": "AUTHORIZATION_LAB_POST_A1_DOCUMENTARY_RECONCILIATION_AND_CONTINUITY_ARCHITECTURE_215",
-  "parent_head": "41f4e004f7a817c676b286fabf802676d8ba7532",
-  "head_policy": "VERIFY_LIVE_AT_USE",
-  "status": "PREPARED_AWAITING_REMOTE_PUBLICATION_VERIFICATION",
-  "prerequisite": {"a1":"A1_CANARY_CANONICAL_AUTHORITY_ENFORCEMENT_OPERATIONAL_PASS","authorization_212":"CONSUMED_NO_RESIDUAL_AUTHORITY"},
-  "decision_namespace": {
-    "active_namespace": "decisions/",
-    "root_ids_023_024_025_preserved": true,
-    "legacy_paths_preserved_as_non_active_redirects": true,
-    "remaps": [
-      {"legacy_path":"projects/lab/decisions/DEC-LAB-023.json","legacy_path_disposition":"NON_ACTIVE_REDIRECT","original_blob":"98ee68c0b4eeb46b4cd13efa84d0ccee590ac708","archive_path":"projects/lab/decisions/archive/pre-215/DEC-LAB-023.json","new_id":"DEC-LAB-034","new_path":"decisions/DEC-LAB-034.json"},
-      {"legacy_path":"projects/lab/decisions/DEC-LAB-024.json","legacy_path_disposition":"NON_ACTIVE_REDIRECT","original_blob":"9823819f8bcdb8fb6ee798e0e4e2ba9c5a7c78a3","archive_path":"projects/lab/decisions/archive/pre-215/DEC-LAB-024.json","new_id":"DEC-LAB-035","new_path":"decisions/DEC-LAB-035.json"},
-      {"legacy_path":"projects/lab/decisions/DEC-LAB-025.json","legacy_path_disposition":"NON_ACTIVE_REDIRECT","original_blob":"47310426fdc101a482d54dc79c6ab6c8650f4b60","archive_path":"projects/lab/decisions/archive/pre-215/DEC-LAB-025.json","new_id":"DEC-LAB-036","new_path":"decisions/DEC-LAB-036.json"}
-    ],
-    "active_collision_count_after": 0
-  },
-  "registry_reconciliation": {
-    "model": "CURRENT_OVERLAY_PLUS_BYTE_PRESERVED_HISTORICAL_BASE",
-    "archived_blobs": {"index":"13b5236efa2a223425245502f81903348b85dd8e","decisions":"31669ed05e7e8dd1b0526571348e58f9b0045de5","authorizations":"087b464497da6d4983557a54bdc0b0a40a8f4be4","errors":"32d4e2ead5bffe46a52ba3d7352837d412afaf44","evidence":"d1729701809e00e752c96175626c68202fc61b8b"}
-  },
-  "continuity_archive": {"path":"projects/lab/continuity/archive/post-a1-pre-215-41f4e004f7a817c676b286fabf802676d8ba7532/","blobs":{"CURRENT_CONTINUITY.json":"812456deaee9b8e4fb0c07a171ea5f16644e6d7b","CURRENT_CONTINUITY.md":"5cd39cb90129ed9288fd8a5755a44e532d065f1c","ATTACHMENT_MANIFEST.json":"8d0138286b7c4913f8a538867a1d63b8ec584c74","START_PROMPT.md":"728f16363d20e71ee15c338f2287aa27f77ac049"}},
-  "materialized_controls": ["DEC-LAB-033","FOCUS_AND_ROADMAP_PRESERVATION_001","PROGRESSIVE_CONVERSATION_CONTINUITY_001","GOV-007_IMPACT_PREVIEW_SCHEMA_AND_TEMPLATE","MANDATORY_MODEL_OPERATING_RULES_READ","SESSION_WORK_POSITION_MODEL"],
-  "aggregate_views_reconciled": ["CURRENT_STATE.json","projects/lab/PROJECT_STATE.json","projects/lab/ROADMAP.json","projects/lab/PENDING.json","registry/index.json","registry/decisions.json","registry/authorizations.json","registry/errors.json","registry/evidence.json"],
-  "preserved_lines": ["CONTEXTUAL_BOOTSTRAP","PRODUCT_LEADERSHIP","SOFTWARE_SOLUTION_ENGINEERING","CODEX_DESKTOP_OPERATING_MODEL","ALL_OTHER_NONTERMINAL_OBJECTIVES"],
-  "non_effects": {"technical_line_execution":false,"authorization_180_state_change":false,"benchmark_203_execution":false,"product_leadership_execution":false,"sse_execution":false,"model_execution":false,"test_execution":false,"main_enforcement_mutation":false,"canary_ruleset_mutation":false,"workflow_mutation":false,"runtime_effect":"NONE","product_effect":"NONE","external_repository_effect":"NONE"}
+  "schema_version":"1.2.0",
+  "delta_id":"post-a1-documentary-reconciliation-215",
+  "project_id":"lab",
+  "authorization":"AUTHORIZATION_LAB_POST_A1_DOCUMENTARY_RECONCILIATION_AND_CONTINUITY_ARCHITECTURE_215",
+  "parent_head":"41f4e004f7a817c676b286fabf802676d8ba7532",
+  "head_policy":"VERIFY_LIVE_AT_USE",
+  "status":"COMPLETE_VERIFIED_REMOTE_PUBLICATION_AUTHORIZATION_215_CONSUMED",
+  "publication":{"pull_request":120,"verified_main_head":"e5b605a5b96304a707ee1683e7fd5a090ddce4ba"},
+  "prerequisite":{"a1":"A1_CANARY_CANONICAL_AUTHORITY_ENFORCEMENT_OPERATIONAL_PASS","authorization_212":"CONSUMED_NO_RESIDUAL_AUTHORITY"},
+  "decision_namespace":{"active_namespace":"decisions/","root_ids_023_024_025_preserved":true,"legacy_paths_preserved_as_non_active_redirects":true,"remaps":[{"legacy_path":"projects/lab/decisions/DEC-LAB-023.json","original_blob":"98ee68c0b4eeb46b4cd13efa84d0ccee590ac708","archive_path":"projects/lab/decisions/archive/pre-215/DEC-LAB-023.json","new_id":"DEC-LAB-034","new_path":"decisions/DEC-LAB-034.json"},{"legacy_path":"projects/lab/decisions/DEC-LAB-024.json","original_blob":"9823819f8bcdb8fb6ee798e0e4e2ba9c5a7c78a3","archive_path":"projects/lab/decisions/archive/pre-215/DEC-LAB-024.json","new_id":"DEC-LAB-035","new_path":"decisions/DEC-LAB-035.json"},{"legacy_path":"projects/lab/decisions/DEC-LAB-025.json","original_blob":"47310426fdc101a482d54dc79c6ab6c8650f4b60","archive_path":"projects/lab/decisions/archive/pre-215/DEC-LAB-025.json","new_id":"DEC-LAB-036","new_path":"decisions/DEC-LAB-036.json"}],"active_collision_count_after":0},
+  "registry_reconciliation":{"model":"CURRENT_OVERLAY_PLUS_BYTE_PRESERVED_HISTORICAL_BASE","archived_blobs":{"index":"13b5236efa2a223425245502f81903348b85dd8e","decisions":"31669ed05e7e8dd1b0526571348e58f9b0045de5","authorizations":"087b464497da6d4983557a54bdc0b0a40a8f4be4","errors":"32d4e2ead5bffe46a52ba3d7352837d412afaf44","evidence":"d1729701809e00e752c96175626c68202fc61b8b"}},
+  "continuity_archive":{"path":"projects/lab/continuity/archive/post-a1-pre-215-41f4e004f7a817c676b286fabf802676d8ba7532/","blobs":{"CURRENT_CONTINUITY.json":"812456deaee9b8e4fb0c07a171ea5f16644e6d7b","CURRENT_CONTINUITY.md":"5cd39cb90129ed9288fd8a5755a44e532d065f1c","ATTACHMENT_MANIFEST.json":"8d0138286b7c4913f8a538867a1d63b8ec584c74","START_PROMPT.md":"728f16363d20e71ee15c338f2287aa27f77ac049"}},
+  "materialized_controls":["DEC-LAB-033","FOCUS_AND_ROADMAP_PRESERVATION_001","PROGRESSIVE_CONVERSATION_CONTINUITY_001","GOV-007_IMPACT_PREVIEW_SCHEMA_AND_TEMPLATE","MANDATORY_MODEL_OPERATING_RULES_READ","SESSION_WORK_POSITION_MODEL"],
+  "aggregate_views_reconciled":["CURRENT_STATE.json","projects/lab/PROJECT_STATE.json","projects/lab/ROADMAP.json","projects/lab/PENDING.json","registry/index.json","registry/decisions.json","registry/authorizations.json","registry/errors.json","registry/evidence.json"],
+  "preserved_lines":["CONTEXTUAL_BOOTSTRAP","PRODUCT_LEADERSHIP","SOFTWARE_SOLUTION_ENGINEERING","CODEX_DESKTOP_OPERATING_MODEL","ALL_OTHER_NONTERMINAL_OBJECTIVES"],
+  "execution_deviation":{"id":"ACCIDENTAL_INERT_AUXILIARY_BRANCH_CREATION","branch":"noop-should-not-use","head":"41f4e004f7a817c676b286fabf802676d8ba7532","content_delta":"NONE","authority_effect":"NONE","cleanup":"DELETE_REF_SURFACE_UNAVAILABLE"},
+  "non_effects":{"technical_line_execution":false,"authorization_180_state_change":false,"benchmark_203_execution":false,"product_leadership_execution":false,"sse_execution":false,"model_execution":false,"test_execution":false,"main_enforcement_mutation":false,"canary_ruleset_mutation":false,"workflow_mutation":false,"runtime_effect":"NONE","product_effect":"NONE","external_repository_effect":"NONE"},
+  "next_gate":"HUMAN_SELECTION_OF_NEXT_TECHNICAL_FOCUS",
+  "next_gate_execution_authority":"NONE"
 }
