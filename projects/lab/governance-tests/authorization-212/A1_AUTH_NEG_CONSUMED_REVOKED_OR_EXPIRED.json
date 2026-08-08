@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0",
+  "test_id": "A1_AUTH_NEG_CONSUMED_REVOKED_OR_EXPIRED",
+  "attempt_id": "ATTEMPT-004",
+  "tested_variant": "EXPIRED",
+  "subject_authorization_id": "AUTHORIZATION_LAB_A1_CANARY_EXPIRED_AUTHORITY_SUBJECT_213",
+  "expected_subject_grant_status": "GRANTED",
+  "expected_subject_lifecycle_status": "EXPIRED",
+  "expected_subject_residual_authority": "NONE",
+  "expected_gate_v2_behavior": "REJECT_FAIL_CLOSED",
+  "execution_authorization": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+  "subject_authorization_executes_test": false,
+  "claim_boundary": "Authorization 213 is only the expired canonical subject. Execution authority for this test is authorization 212. This fixture must not be merged into the canary."
+}
