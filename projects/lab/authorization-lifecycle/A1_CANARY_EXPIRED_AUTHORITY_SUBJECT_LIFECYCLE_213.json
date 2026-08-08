@@ -1,10 +1,10 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "record_id": "A1-CANARY-EXPIRED-AUTHORITY-SUBJECT-LIFECYCLE-213",
   "project_id": "lab",
   "authorization": "AUTHORIZATION_LAB_A1_CANARY_EXPIRED_AUTHORITY_SUBJECT_213",
   "decision_ref": "DEC-LAB-032",
-  "status": "GRANTED_PENDING_VERIFIED_REMOTE_PUBLICATION_THEN_MANDATORY_EXPIRATION",
+  "status": "EXPIRED",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-08-08T01:02:00-04:00",
   "approval_source_ref": "projects/lab/sources/USER_SOURCE_AUTHORIZATION_213_20260808.md",
@@ -13,21 +13,27 @@
   "subject_class": "PURPOSE_BUILT_NON_HISTORICAL_A1_EXPIRATION_TEST_SUBJECT",
   "stage_0": {
     "name": "CANONICAL_GRANT_PUBLICATION",
-    "status": "PREPARED_NOT_YET_REMOTE_VERIFIED",
+    "status": "COMPLETE_REMOTE_MAIN_VERIFIED",
+    "publication_pull_request": 98,
+    "verified_remote_main_head": "825edaa17e4485022604351740753d0e2d5614ca",
+    "verified_remote_publication_at": "2026-08-08T01:07:01-04:00",
     "publication_consumes_subject_before_expiration": false
   },
   "expiration": {
     "trigger": "VERIFIED_REMOTE_CANONICAL_PUBLICATION_OF_AUTHORIZATION_213_GRANT",
-    "mandatory_after_trigger": true,
+    "trigger_satisfied": true,
+    "trigger_evidence": "REMOTE_MAIN_HEAD_825edaa17e4485022604351740753d0e2d5614ca",
+    "transition_executed": true,
+    "expired_at": "2026-08-08T01:07:01-04:00",
     "target_status": "EXPIRED",
     "residual_authority_after_expiration": "NONE",
     "reuse_after_expiration": false,
     "historical_state_reinterpretation": false,
     "retroactive_fabrication": false
   },
-  "current_residual_authority": "ONLY_COMPLETE_AUTHORIZED_213_CANONICAL_GRANT_PUBLICATION_AND_MANDATORY_LIFECYCLE_EXPIRATION",
+  "current_residual_authority": "NONE",
   "a1_test_execution_authority": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
   "authorization_213_test_execution": false,
-  "next_required_transition": "AFTER_REMOTE_GRANT_PUBLICATION_VERIFICATION_SET_LIFECYCLE_EXPIRED_AND_RESIDUAL_AUTHORITY_NONE",
+  "next_required_transition": "NONE_AUTHORIZATION_213_EXPIRED_READY_ONLY_AS_A1_TEST_SUBJECT_UNDER_212",
   "authority_effect_after_expiration": "NONE"
 }

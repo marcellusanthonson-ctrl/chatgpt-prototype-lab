@@ -1,11 +1,11 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "evidence_id": "EVD-LAB-A1-EXPIRED-AUTHORITY-SUBJECT-213",
   "project_id": "lab",
   "authorization_id": "AUTHORIZATION_LAB_A1_CANARY_EXPIRED_AUTHORITY_SUBJECT_213",
   "decision_ref": "DEC-LAB-032",
   "classification": "AUTHORIZATION_GRANT_AND_EXPIRATION_SUBJECT_PROVENANCE",
-  "status": "GRANT_PREPARED_AWAITING_REMOTE_PUBLICATION_VERIFICATION",
+  "status": "GRANT_PUBLISHED_REMOTE_VERIFIED_LIFECYCLE_EXPIRED_READY_AS_212_TEST_SUBJECT",
   "approved_at": "2026-08-08T01:02:00-04:00",
   "verified_parent_head": "e9e130c2d8c8ea2cf23a34e53d48effae5f25678",
   "grant": {
@@ -18,28 +18,41 @@
   },
   "publication": {
     "branch": "agent/governance-213-expired-subject-grant",
-    "pull_request": null,
-    "merged": false,
-    "verified_remote_main_head": null
+    "pull_request": 98,
+    "merged": true,
+    "verified_remote_main_head": "825edaa17e4485022604351740753d0e2d5614ca",
+    "verified_remote_publication_at": "2026-08-08T01:07:01-04:00"
   },
   "expiration": {
     "trigger": "VERIFIED_REMOTE_CANONICAL_PUBLICATION_OF_AUTHORIZATION_213_GRANT",
-    "trigger_satisfied": false,
-    "lifecycle_transition_executed": false,
+    "trigger_satisfied": true,
+    "lifecycle_transition_executed": true,
+    "expired_at": "2026-08-08T01:07:01-04:00",
     "target_status": "EXPIRED",
-    "residual_authority_after_expiration": "NONE"
+    "current_lifecycle_status": "EXPIRED",
+    "residual_authority_after_expiration": "NONE",
+    "reuse_allowed": false
   },
   "a1_test": {
     "execution_authorization": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
     "authorization_213_executes_test": false,
-    "expired_variant_status": "NOT_RUN"
+    "expired_variant_status": "NOT_RUN_READY_FOR_212"
   },
-  "claim_boundary": "This artifact documents a newly and explicitly approved non-historical expiration-test subject. It does not recreate or reinterpret any historical authorization, does not execute the A1 EXPIRED test, and does not extend authorization 212.",
+  "authority_boundary": {
+    "authorization_213_residual_authority": "NONE",
+    "authorization_213_may_execute_a1": false,
+    "authorization_213_may_authorize_later_a1_tests": false,
+    "authorization_212_remains_only_a1_execution_authority": true,
+    "retroactive_or_historical_authorization_fabrication": false
+  },
+  "claim_boundary": "This artifact establishes that authorization 213 was genuinely approved, canonically published, remotely verified, and then expired by its explicit trigger with residual authority NONE. It does not execute the A1 EXPIRED test and does not extend authorization 212.",
   "source_refs": [
     "projects/lab/sources/USER_SOURCE_AUTHORIZATION_213_20260808.md",
     "projects/lab/authorizations/AUTHORIZATION_LAB_A1_CANARY_EXPIRED_AUTHORITY_SUBJECT_213.json",
     "projects/lab/authorization-lifecycle/A1_CANARY_EXPIRED_AUTHORITY_SUBJECT_LIFECYCLE_213.json",
     "projects/lab/authorizations/AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212.json",
-    "projects/lab/evidence/EVD-LAB-A1-AUTH-NEG-EXPIRED-SUBJECT-DISCOVERY-212-001.json"
+    "projects/lab/evidence/EVD-LAB-A1-AUTH-NEG-EXPIRED-SUBJECT-DISCOVERY-212-001.json",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/pull/98",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/commit/825edaa17e4485022604351740753d0e2d5614ca"
   ]
 }
