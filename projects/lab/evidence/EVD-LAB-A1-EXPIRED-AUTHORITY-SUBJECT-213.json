@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-A1-EXPIRED-AUTHORITY-SUBJECT-213",
+  "project_id": "lab",
+  "authorization_id": "AUTHORIZATION_LAB_A1_CANARY_EXPIRED_AUTHORITY_SUBJECT_213",
+  "decision_ref": "DEC-LAB-032",
+  "classification": "AUTHORIZATION_GRANT_AND_EXPIRATION_SUBJECT_PROVENANCE",
+  "status": "GRANT_PREPARED_AWAITING_REMOTE_PUBLICATION_VERIFICATION",
+  "approved_at": "2026-08-08T01:02:00-04:00",
+  "verified_parent_head": "e9e130c2d8c8ea2cf23a34e53d48effae5f25678",
+  "grant": {
+    "human_source_ref": "projects/lab/sources/USER_SOURCE_AUTHORIZATION_213_20260808.md",
+    "grant_inferred": false,
+    "authorization_artifact_ref": "projects/lab/authorizations/AUTHORIZATION_LAB_A1_CANARY_EXPIRED_AUTHORITY_SUBJECT_213.json",
+    "lifecycle_ref": "projects/lab/authorization-lifecycle/A1_CANARY_EXPIRED_AUTHORITY_SUBJECT_LIFECYCLE_213.json",
+    "subject_class": "PURPOSE_BUILT_NON_HISTORICAL_A1_EXPIRATION_TEST_SUBJECT",
+    "subject_initial_status": "GRANTED"
+  },
+  "publication": {
+    "branch": "agent/governance-213-expired-subject-grant",
+    "pull_request": null,
+    "merged": false,
+    "verified_remote_main_head": null
+  },
+  "expiration": {
+    "trigger": "VERIFIED_REMOTE_CANONICAL_PUBLICATION_OF_AUTHORIZATION_213_GRANT",
+    "trigger_satisfied": false,
+    "lifecycle_transition_executed": false,
+    "target_status": "EXPIRED",
+    "residual_authority_after_expiration": "NONE"
+  },
+  "a1_test": {
+    "execution_authorization": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+    "authorization_213_executes_test": false,
+    "expired_variant_status": "NOT_RUN"
+  },
+  "claim_boundary": "This artifact documents a newly and explicitly approved non-historical expiration-test subject. It does not recreate or reinterpret any historical authorization, does not execute the A1 EXPIRED test, and does not extend authorization 212.",
+  "source_refs": [
+    "projects/lab/sources/USER_SOURCE_AUTHORIZATION_213_20260808.md",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_A1_CANARY_EXPIRED_AUTHORITY_SUBJECT_213.json",
+    "projects/lab/authorization-lifecycle/A1_CANARY_EXPIRED_AUTHORITY_SUBJECT_LIFECYCLE_213.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212.json",
+    "projects/lab/evidence/EVD-LAB-A1-AUTH-NEG-EXPIRED-SUBJECT-DISCOVERY-212-001.json"
+  ]
+}
