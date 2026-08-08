@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-A1-APPROVAL-SEPARATION-212-ATTEMPT-001",
+  "project_id": "lab",
+  "authorization_id": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+  "decision_ref": "DEC-LAB-032",
+  "test_id": "A1_APPROVAL_SEPARATION",
+  "attempt_id": "ATTEMPT-001",
+  "status": "BLOCKED_NATIVE_SELF_APPROVAL_REJECTED_BUT_INDEPENDENT_APPROVAL_NOT_REQUIRED_AND_RULESET_MUTATION_SURFACE_UNAVAILABLE",
+  "execution": {
+    "execution_authorization": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+    "pull_request": 110,
+    "pull_request_merged": false,
+    "pull_request_mergeable_after_checks": true,
+    "fixture_head_sha": "96ff5899731147583f3545523f07c385d38d6267",
+    "fixture_path": "projects/lab/governance-tests/authorization-212/A1_APPROVAL_SEPARATION.json",
+    "authenticated_actor": "marcellusanthonson-ctrl",
+    "gate_v2_run_id": 31241894647,
+    "gate_v2_conclusion": "success",
+    "legacy_gate_run_id": 31241894645,
+    "legacy_gate_conclusion": "success"
+  },
+  "native_approval_separation": {
+    "self_approval_attempted": true,
+    "self_approval_result": "REJECTED",
+    "http_status": 422,
+    "error": "Review Can not approve your own pull request",
+    "reviews_after_attempt": 0,
+    "determination": "GITHUB_NATIVE_SELF_APPROVAL_PREVENTION_CONFIRMED"
+  },
+  "canary_ruleset": {
+    "ruleset_id": 20573868,
+    "name": "LAB A1 Canary 210",
+    "enforcement": "active",
+    "target_ref": "refs/heads/lab-governance-canary-210",
+    "required_approving_review_count": 0,
+    "require_last_push_approval": false,
+    "required_reviewers": [],
+    "required_status_checks": [
+      {
+        "context": "LAB Publication Gate",
+        "integration_id": 15368
+      }
+    ],
+    "gate_v2_context": "LAB Canonical Authority Gate v2",
+    "gate_v2_integration_id": 15368,
+    "gate_v2_required": false,
+    "approval_separation_operationally_enforced": false
+  },
+  "capability_blocker": {
+    "authorization_to_mutate_canary_ruleset_exists": true,
+    "available_github_connector_can_read_rulesets": true,
+    "available_github_connector_exposes_ruleset_or_branch_protection_update_action": false,
+    "local_gh_cli_available": false,
+    "required_mutation": "UPDATE_ONLY_RULESET_20573868_TO_REQUIRE_ONE_INDEPENDENT_APPROVAL_AND_BIND_LAB_CANONICAL_AUTHORITY_GATE_V2_WITHOUT_TOUCHING_MAIN",
+    "blocker_class": "EXECUTION_SURFACE_CAPABILITY_MISSING_NOT_AUTHORITY_MISSING"
+  },
+  "determination": "GitHub natively prevents a pull request author from approving their own PR, but the active canary ruleset requires zero approving reviews, so independent approval is not an enforced publication condition. The current connected execution surface does not expose an administration-write ruleset mutation action, preventing completion of the authorized canary-only configuration in this conversation.",
+  "post_test_report": {
+    "report_id": "A1-212-POST-TEST-REPORT-011",
+    "delivered_to": "Jonathan Martínez",
+    "delivered_at": "2026-08-08T01:32:00-04:00",
+    "delivery_surface": "CHATGPT_CONVERSATION",
+    "next_action_reported": "CANONICALLY_RECORD_BLOCKER_AND_STOP_AT_A1_APPROVAL_SEPARATION_UNTIL_ADMINISTRATION_WRITE_RULESET_MUTATION_SURFACE_IS_AVAILABLE",
+    "authority_effect": "NONE"
+  },
+  "not_run_after_this_attempt": [
+    "A1_CONTROL_PLANE_TAMPERING",
+    "A1_RECOVERY_BREAK_GLASS_DESIGN_VALIDATION"
+  ],
+  "a1_effect": {
+    "approval_separation": "BLOCKED",
+    "gate_v2_required_status_binding": "NOT_ESTABLISHED",
+    "a1_operational_pass": "NOT_APPROVED"
+  },
+  "claim_boundary": "This evidence confirms GitHub-native self-approval prevention but not operational approval separation. It does not claim that GitHub cannot support the required ruleset configuration; only that the connected mutation surface available in this conversation cannot perform it. It does not authorize skipping this gate or later A1 tests.",
+  "source_refs": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212.json",
+    "projects/lab/governance-tests/authorization-212/A1_APPROVAL_SEPARATION.json",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/pull/110",
+    "https://api.github.com/repos/marcellusanthonson-ctrl/chatgpt-prototype-lab/rulesets/20573868",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/actions/runs/31241894647",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/actions/runs/31241894645"
+  ]
+}
