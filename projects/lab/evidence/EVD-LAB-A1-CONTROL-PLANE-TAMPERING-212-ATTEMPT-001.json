@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-A1-CONTROL-PLANE-TAMPERING-212-ATTEMPT-001",
+  "project_id": "lab",
+  "authorization_id": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+  "decision_ref": "DEC-LAB-032",
+  "test_id": "A1_CONTROL_PLANE_TAMPERING",
+  "attempt_id": "ATTEMPT-001",
+  "status": "PASS_CONTROL_PLANE_TAMPERING_DETECTED_BY_INDEPENDENT_READER_AND_BASELINE_RESTORED_CANARY_ONLY",
+  "scope": {
+    "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "ruleset_id": 20573868,
+    "ruleset_name": "LAB A1 Canary 210",
+    "target_ref": "refs/heads/lab-governance-canary-210",
+    "main_mutated": false,
+    "break_glass_activated": false
+  },
+  "baseline_before_tampering": {
+    "enforcement": "active",
+    "required_approving_review_count": 1,
+    "required_status_checks": [
+      {"context": "LAB Publication Gate", "integration_id": 15368},
+      {"context": "LAB Canonical Authority Gate v2", "integration_id": 15368}
+    ],
+    "bypass_actors": [],
+    "current_user_can_bypass": "never",
+    "independent_reader_principal": "LAB Governance Reader",
+    "reader_permission": "administration:read"
+  },
+  "controlled_tampering": {
+    "performed_by_human_operator": true,
+    "operator": "Jonathan Martínez / marcellusanthonson-ctrl",
+    "authorized_by": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+    "mutation": "REMOVE_ONLY_LAB_CANONICAL_AUTHORITY_GATE_V2_FROM_REQUIRED_STATUS_CHECKS",
+    "preserved": [
+      "LAB Publication Gate remains required",
+      "required_approving_review_count remains 1",
+      "ruleset enforcement remains active",
+      "target remains refs/heads/lab-governance-canary-210",
+      "bypass actors remain none"
+    ],
+    "direct_readback": {
+      "result": "TAMPERING_PRESENT_AS_EXPECTED",
+      "required_status_checks": [
+        {"context": "LAB Publication Gate", "integration_id": 15368}
+      ]
+    }
+  },
+  "independent_tampering_detection": {
+    "workflow": "LAB governance reader readback 210",
+    "run_id": 31226582922,
+    "run_attempt": 3,
+    "job_id": 93071581682,
+    "job_conclusion": "success",
+    "principal": "LAB Governance Reader",
+    "permission_administration": "read",
+    "ruleset_http": 200,
+    "effective_branch_rules_http": 200,
+    "observed_required_approving_review_count": 1,
+    "observed_required_status_checks": [
+      {"context": "LAB Publication Gate", "integration_id": 15368}
+    ],
+    "gate_v2_observed_required": false,
+    "determination": "CONTROL_PLANE_DIVERGENCE_INDEPENDENTLY_OBSERVED"
+  },
+  "restoration": {
+    "performed_by_human_operator": true,
+    "mutation": "RESTORE_LAB_CANONICAL_AUTHORITY_GATE_V2_AS_REQUIRED_STATUS_CHECK",
+    "direct_readback": {
+      "enforcement": "active",
+      "required_approving_review_count": 1,
+      "required_status_checks": [
+        {"context": "LAB Publication Gate", "integration_id": 15368},
+        {"context": "LAB Canonical Authority Gate v2", "integration_id": 15368}
+      ],
+      "bypass_actors": [],
+      "current_user_can_bypass": "never"
+    },
+    "independent_readback": {
+      "workflow": "LAB governance reader readback 210",
+      "run_id": 31226582922,
+      "run_attempt": 4,
+      "job_id": 93073743331,
+      "job_conclusion": "success",
+      "principal": "LAB Governance Reader",
+      "permission_administration": "read",
+      "ruleset_http": 200,
+      "effective_branch_rules_http": 200,
+      "observed_required_approving_review_count": 1,
+      "observed_required_status_checks": [
+        {"context": "LAB Publication Gate", "integration_id": 15368},
+        {"context": "LAB Canonical Authority Gate v2", "integration_id": 15368}
+      ],
+      "gate_v2_observed_required": true,
+      "determination": "BASELINE_RESTORATION_INDEPENDENTLY_VERIFIED"
+    }
+  },
+  "main_head_unchanged_during_test": "6d8fead5e295c5ed684506fcc2e7b33562dd0375",
+  "claim_boundary": "This attempt proves that an authorized, canary-only administrative removal of Gate v2 from required status checks was independently observable by the read-only LAB Governance Reader and that the original canary baseline was subsequently restored and independently read back. It does not prove automatic prevention of administrative tampering, does not establish enforcement on main, and does not activate or validate break-glass behavior.",
+  "post_test_report": {
+    "report_id": "A1-212-POST-TEST-REPORT-013",
+    "delivered_to": "Jonathan Martínez",
+    "delivered_at": "2026-08-08T03:24:00-04:00",
+    "delivery_surface": "CHATGPT_CONVERSATION",
+    "next_action_reported": "CANONICALLY_RECORD_CONTROL_PLANE_TAMPERING_PASS_THEN_A1_RECOVERY_BREAK_GLASS_DESIGN_VALIDATION",
+    "authority_effect": "NONE"
+  },
+  "not_run_after_this_attempt": [
+    "A1_RECOVERY_BREAK_GLASS_DESIGN_VALIDATION"
+  ],
+  "a1_effect": {
+    "control_plane_tampering": "PASS_DETECTION_AND_RECOVERY_CANARY_ONLY",
+    "a1_operational_pass": "NOT_APPROVED"
+  },
+  "source_refs": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212.json",
+    "projects/lab/authorization-lifecycle/PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_A1_LIFECYCLE_212.json",
+    "projects/lab/evidence/EVD-LAB-A1-APPROVAL-SEPARATION-212-ATTEMPT-002.json",
+    "https://api.github.com/repos/marcellusanthonson-ctrl/chatgpt-prototype-lab/rulesets/20573868",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/actions/runs/31226582922"
+  ]
+}
