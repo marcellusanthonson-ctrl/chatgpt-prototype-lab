@@ -1,38 +1,36 @@
-# Continuidad vigente del LAB
+# LAB — continuidad post-A1 / Documentary Reconciliation B
 
-Estado: `DECISION_032_APPROVED_AUTHORIZATION_204_GRANTED_A0_AWAITING_VERIFIED_REMOTE_PUBLICATION`
+Estado: **Documentary Reconciliation B preparada y pendiente de verificación remota bajo autorización 215**.
 
-## Foco temporal aprobado
+## Posición de trabajo
 
-Jonathan Martínez aprobó `DEC-LAB-032`. El LAB adopta `ENFORCEMENT_FIRST` como foco temporal no destructivo. Todas las líneas no terminales permanecen preservadas; no existe cancelación, suspensión, promoción ni cambio de estado de integración.
+- Main track: secuencia obligatoria de `DEC-LAB-032`.
+- Anchor / último nodo completado: `A1_CANARY_CANONICAL_AUTHORITY_ENFORCEMENT_OPERATIONAL_PASS`.
+- Nodo activo: `DOCUMENTARY_RECONCILIATION_B_REMOTE_PUBLICATION_VERIFICATION`.
+- Siguiente nodo: verificar publicación remota y consumir 215.
+- Return node: `HUMAN_SELECTION_OF_NEXT_TECHNICAL_FOCUS`.
+- Sesión: `sessions/2026/SES-LAB-20260808-001/`.
 
-## Autorización activa condicionada
+Una conversación lateral crea una rama y no mueve este punto principal sin un cambio explícito de foco.
 
-`AUTHORIZATION_LAB_GITHUB_GOVERNANCE_READ_ONLY_PREFLIGHT_204` está concedida y solo se vuelve ejecutable cuando `DEC-LAB-032` y la propia autorización estén presentes en un HEAD remoto verificado de `main`.
+## Gobierno
 
-A0 es estrictamente de solo lectura. Su máximo resultado es establecer viabilidad para diseñar una autorización A1 separada. No autoriza ninguna mutación del repositorio ni del control plane de GitHub.
+`DEC-LAB-033` adopta convergencia documental post-A1, separación entre foco y estado del portafolio y `PROGRESSIVE_CONVERSATION_CONTINUITY_001`. `docs/MODEL_OPERATING_RULES.md` es lectura obligatoria y GOV-007 exige preview de impacto para instrucciones materiales.
+
+Las colisiones históricas `DEC-LAB-023..025` fueron resueltas preservando los blobs originales y reasignando las tres decisiones distintas a `DEC-LAB-034..036`. Los root 023–025 permanecen como titulares de sus IDs.
 
 ## Portafolio preservado
 
-- Contextual Bootstrap: autorización 203 consumida y bloqueada; benchmark creado, no validado y no ejecutado.
-- Product Leadership (`INT-LAB-004`): candidato no activo y no integrado; 187, 192 y 196 consumidas; no existe autorización de retest.
-- Software Solution Engineering (`INT-LAB-005`): candidato no activo; autorización 180 preservada sin consumir pero bloqueada y no ejecutable bajo el foco temporal.
-- Codex Desktop operating model: estándar documental publicado; benchmark operacional pendiente.
-- Todas las demás líneas no terminales: preservadas por `DEC-LAB-032`.
+- Contextual Bootstrap: diferido, no cancelado; benchmark 203 no se repara ni reejecuta bajo 215.
+- Product Leadership: candidato no activo/no integrado; bloqueado, no adjudicado; sin retest bajo 215.
+- Software Solution Engineering: candidato no activo/no integrado; autorización 180 preservada pero bloqueada y sin ejecución bajo 215.
+- Codex Desktop: estándar documental preservado; benchmark operacional pendiente.
+- Todas las demás líneas no terminales permanecen preservadas por `FOCUS_AND_ROADMAP_PRESERVATION_001`.
 
-## Divergencias preservadas
+## Límite
 
-`CURRENT_STATE.json`, `PROJECT_STATE.json`, registros agregados y vistas de readiness continúan divergentes. No fueron reconciliados porque `DEC-LAB-032` reserva esa fase hasta después de un A1 operacionalmente aprobado y exitoso.
+A1 acredita enforcement sólo en el canary. No se establece protección/enforcement de `main`. 215 es exclusivamente documental y no ejecuta modelos, tests, integraciones, runtime, producto ni cambios de control plane.
 
-## Autoridad
+## Siguiente acción
 
-- Decisión normativa: `DEC-LAB-032`, aprobada.
-- Autorización: 204, concedida para A0 read-only.
-- A0 iniciado: no.
-- A1: no autorizado.
-- Cambios de settings, rulesets, branch protection, workflows, Actions, CODEOWNERS, colaboradores, aplicaciones y credenciales: no autorizados.
-- Modelos, integraciones, runtime, producto y repositorios externos: no autorizados.
-
-## Próxima acción única
-
-Verificar la publicación remota y ejecutar A0 desde ese nuevo HEAD aplicando `VERIFY_LIVE_AT_USE`.
+Verificar la publicación remota de B y consumir 215. Después, Jonathan Martínez selecciona el siguiente foco técnico; esa selección no constituye por sí sola autorización de ejecución.

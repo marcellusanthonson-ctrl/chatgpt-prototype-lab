@@ -8,7 +8,9 @@ Authority-Effect: NONE
 
 ## Función
 
-Esta carpeta contiene las reglas operativas versionadas para el proyecto ChatGPT. Reemplaza las copias adjuntas como fuente mantenible. No contiene estado vigente ni crea autoridad.
+Esta carpeta contiene reglas operativas versionadas para el proyecto ChatGPT. Reemplaza copias adjuntas como fuente mantenible. No contiene por sí sola estado vigente ni crea autoridad.
+
+`docs/MODEL_OPERATING_RULES.md` se lee obligatoriamente desde `START_HERE.md` **antes** de estas fuentes y gobierna GOV-007, continuidad de foco, prevención de recurrencia y contrato de respuesta.
 
 ## Precedencia
 
@@ -16,7 +18,7 @@ Esta carpeta contiene las reglas operativas versionadas para el proyecto ChatGPT
 2. Decisión aprobada aplicable.
 3. `LAB_CONTRACT.md`.
 4. `METHODOLOGY.md`.
-5. `CURRENT_STATE.json` y registros canónicos.
+5. Owner-artifacts canónicos y sus proyecciones estructuradas.
 6. Estas fuentes operativas.
 
 Si existe contradicción, se informa y prevalece la fuente canónica de mayor precedencia. La autoridad ejecutiva no convierte una afirmación factual en verdadera.
@@ -33,6 +35,6 @@ Si existe contradicción, se informa y prevalece la fuente canónica de mayor pr
 
 ## Exclusiones
 
-No fijar aquí el HEAD actual, proyecto activo, decisiones vigentes, autorizaciones, errores abiertos, pendientes, roadmap ni madurez. Esos datos se verifican en vivo desde sus propietarios canónicos.
+No fijar aquí el HEAD actual, proyecto activo, decisión vigente, autorización, error, pendiente, roadmap, madurez ni posición de trabajo concreta. Esos datos se verifican en vivo desde sus propietarios y continuidad/sesión activas.
 
 Los archivos adjuntos pueden actuar únicamente como punteros de bootstrap; no deben duplicar estas reglas.

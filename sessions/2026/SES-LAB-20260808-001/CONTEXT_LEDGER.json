@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "session_id": "SES-LAB-20260808-001",
+  "authority_effect": "NONE",
+  "entries": [
+    {"class":"RESULT","subject":"A1_CANARY_CANONICAL_AUTHORITY_ENFORCEMENT_OPERATIONAL_PASS","disposition":"CANONICAL_OWNER_CONFIRMED","source_refs":["projects/lab/authorization-lifecycle/PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_A1_LIFECYCLE_212.json"]},
+    {"class":"DECISION","subject":"DEC-LAB-032","disposition":"APPROVED_SEQUENCE_OWNER","source_refs":["decisions/DEC-LAB-032.json"]},
+    {"class":"AUTHORIZATION","subject":"AUTHORIZATION_215","disposition":"GRANTED_DOCUMENTARY_SCOPE_AWAITING_REMOTE_VERIFICATION","source_refs":["projects/lab/authorizations/AUTHORIZATION_LAB_POST_A1_DOCUMENTARY_RECONCILIATION_AND_CONTINUITY_ARCHITECTURE_215.json"]},
+    {"class":"DECISION","subject":"DEC-LAB-033","disposition":"APPROVED_DOCUMENTARY_AND_CONTINUITY_MODEL","source_refs":["decisions/DEC-LAB-033.json"]},
+    {"class":"PRESERVED_PORTFOLIO","subject":"CONTEXTUAL_BOOTSTRAP_PRODUCT_LEADERSHIP_SSE_CODEX_DESKTOP_AND_OTHER_NONTERMINAL_LINES","disposition":"NO_STATE_CHANGE_BY_215","source_refs":["CURRENT_STATE.json","projects/lab/ROADMAP.json","projects/lab/PENDING.json"]}
+  ]
+}

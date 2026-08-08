@@ -1,14 +1,14 @@
 # Continuidad entre conversaciones
 
 Document-Role: STABLE_PROJECT_SOURCE
-Canonical-Source: docs/CONTINUITY_PROTOCOL.md
+Canonical-Sources: docs/CONTINUITY_PROTOCOL.md; architecture/governance/PROGRESSIVE_CONVERSATION_CONTINUITY_001/CONTRACT.json; architecture/governance/FOCUS_AND_ROADMAP_PRESERVATION_001/CONTRACT.json
 Authority-Effect: NONE
 
-## Activación
+## Función
 
-Aplicar cuando Jonathan solicite continuar un proyecto en otra conversación.
+La continuidad preserva memoria **y posición de trabajo**. Se usa al cambiar de conversación y progresivamente cuando un trabajo material abre ramas laterales o acumula contexto que todavía no pertenece a un owner-artifact.
 
-## Paquete
+## Paquete CURRENT
 
 - `CURRENT_CONTINUITY.json`: fuente estructurada.
 - `CURRENT_CONTINUITY.md`: vista humana.
@@ -16,31 +16,29 @@ Aplicar cuando Jonathan solicite continuar un proyecto en otra conversación.
 - `START_PROMPT.md`: primer mensaje.
 - `archive/`: paquetes reemplazados.
 
-## Contenido
+## Sesión progresiva
 
-Proyecto, fecha, repositorios, ramas, política de HEAD, orden de lectura, hechos, propuestas, ideas, decisiones, autorizaciones, resultados, pendientes, errores, riesgos, experimentos, skills, integraciones posibles, roadmap, referencias, prohibiciones, una siguiente acción y la primera frase.
+La sesión activa indicada por CURRENT contiene `SESSION.json`, `CONTEXT_LEDGER.json`, `OPEN_CONTEXT.json`, `WORK_POSITION_GRAPH.json`, `PROMOTION_MAP.json` y `SESSION_SUMMARY.md`.
 
-Todo elemento material conserva `source_refs`. No copiar transcripciones completas salvo que sean evidencia indispensable.
+Campos de posición obligatorios: main track, main objective, anchor node, last completed node, active node, next required node, return node, current branch, branch effect e integration target.
+
+## Regla de ramas
+
+Una discusión lateral crea una rama; no mueve silenciosamente la posición principal. Toda rama abierta conserva un punto de retorno. Cambiar main objective requiere cambio explícito de foco por Jonathan Martínez.
 
 ## Generación
 
 1. Verificar HEAD.
-2. Leer estado y registros.
-3. Detectar información material no incorporada.
-4. Clasificarla.
-5. Construir el manifiesto.
-6. Generar `START_PROMPT.md`.
+2. Leer estado, registros, owner-artifacts y reglas operativas.
+3. Leer la sesión activa y su grafo de posición.
+4. Detectar información material no incorporada y clasificarla.
+5. Preservar main track, ramas y return nodes.
+6. Construir manifiesto y START_PROMPT.
 7. Validar referencias.
-8. Archivar el paquete anterior.
+8. Archivar el CURRENT anterior cuando corresponda.
 
-Solo puede existir un paquete `CURRENT`. Si cambia un HEAD externo, marcarlo `STALE` o exigir verificación en vivo. Para el HEAD propio del LAB se usa siempre `VERIFY_LIVE_AT_USE`.
-
-El nuevo modelo entrega HEAD, estado, decisiones, autorizaciones, pendientes, divergencias y una siguiente acción antes de ejecutar.
+El nuevo modelo entrega HEAD, estado, decisiones, autorizaciones, pendientes, divergencias, posición de trabajo y una siguiente acción antes de ejecutar.
 
 ## Reporte posterior a cada prueba
 
-Después de cada prueba o intento terminal ejecutado directamente por ChatGPT o por Codex, entregar a Jonathan un reporte antes de iniciar otra prueba.
-
-El reporte identifica resultado, estado actual, logros, evidencia, defectos o bloqueos, pruebas pendientes, gates faltantes para completar la aprobación, estado de autorización y una sola siguiente acción. Las pruebas no ejecutadas se marcan `NOT_RUN`.
-
-El formato y los límites completos están en `docs/CONTINUITY_PROTOCOL.md`. El reporte no crea aprobación ni autorización.
+Después de cada prueba o intento terminal ejecutado directamente por ChatGPT o Codex, entregar a Jonathan un reporte antes de iniciar otra prueba. Debe identificar resultado, estado, logros, evidencia, defectos/bloqueos, pruebas pendientes y `NOT_RUN`, gates, autorización y una sola siguiente acción. El reporte no crea autoridad.
