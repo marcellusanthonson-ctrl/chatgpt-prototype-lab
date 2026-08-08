@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-A1-TERMINAL-CLEANUP-212-001",
+  "project_id": "lab",
+  "authorization_id": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+  "decision_ref": "DEC-LAB-032",
+  "status": "PASS_ACTIVE_SYNTHETIC_PR_SURFACES_CLOSED_CANARY_ENFORCEMENT_PRESERVED",
+  "cleanup_class": "AUTHORIZED_A1_CANARY_TEST_SURFACE_CLEANUP",
+  "main_head_during_cleanup": "d38eedeb647b3021ede674551d0c15184d71db28",
+  "closed_unmerged_pull_requests": [85, 88, 91, 94, 100, 102, 104, 106, 108, 110],
+  "closed_pull_request_count": 10,
+  "open_a1_pull_requests_after_cleanup": 0,
+  "all_closed_without_merge": true,
+  "branch_ref_cleanup": {
+    "performed": false,
+    "reason": "AVAILABLE_GITHUB_CONNECTOR_SURFACE_DOES_NOT_EXPOSE_DELETE_REF",
+    "claim_boundary": "Historical test branch refs may remain, but all associated A1 pull requests are closed and they confer no authorization, bypass, required-check exception, or merge authority. No destructive substitute such as repointing refs was used."
+  },
+  "persistent_controls_intentionally_preserved": [
+    ".github/workflows/lab-publication-gate.yml",
+    ".github/workflows/lab-canonical-authority-gate-v2-212.yml",
+    "ruleset:20573868"
+  ],
+  "post_cleanup_ruleset_readback": {
+    "status": "PASS_BASELINE_PRESERVED",
+    "ruleset_id": 20573868,
+    "enforcement": "active",
+    "required_approving_review_count": 1,
+    "required_status_checks": [
+      "LAB Publication Gate",
+      "LAB Canonical Authority Gate v2"
+    ],
+    "strict_required_status_checks_policy": true,
+    "bypass_actors": [],
+    "current_user_can_bypass": "never"
+  },
+  "non_effects": {
+    "test_fixture_pr_merged": false,
+    "gate_v2_removed": false,
+    "publication_gate_removed": false,
+    "canary_ruleset_mutated": false,
+    "main_mutated_by_cleanup": false,
+    "break_glass_activated": false,
+    "bypass_created": false
+  },
+  "claim_boundary": "Cleanup closes every active synthetic A1 pull-request surface while preserving the operational canary enforcement controls and historical evidence. It does not claim deletion of branch refs because no delete-ref action is exposed in the available connector surface; those inert historical refs do not constitute active test surfaces or residual execution authority.",
+  "source_refs": [
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/pull/85",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/pull/88",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/pull/91",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/pull/94",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/pull/100",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/pull/102",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/pull/104",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/pull/106",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/pull/108",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/pull/110",
+    "https://api.github.com/repos/marcellusanthonson-ctrl/chatgpt-prototype-lab/rulesets/20573868"
+  ]
+}
