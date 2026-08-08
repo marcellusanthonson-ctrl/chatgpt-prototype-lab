@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0.0",
+  "test_id": "A1_AUTH_NEG_NONEXISTENT_AUTHORIZATION",
+  "attempt_id": "ATTEMPT-001",
+  "authorization_under_test": "AUTHORIZATION_LAB_SYNTHETIC_NONEXISTENT_CANARY_TEST_212_X999",
+  "expected_result": "REJECT_FAIL_CLOSED_AUTHORIZATION_ARTIFACT_NOT_FOUND",
+  "canonical_lookup_ref": "main",
+  "fixture_effect": "NONE",
+  "runtime_effect": "NONE"
+}
