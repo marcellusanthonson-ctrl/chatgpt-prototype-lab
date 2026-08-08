@@ -1,10 +1,10 @@
 {
-  "schema_version": "1.11.0",
+  "schema_version": "1.12.0",
   "record_id": "PUBLICATION-ENFORCEMENT-CANONICAL-AUTHORITY-VALIDATION-A1-LIFECYCLE-212",
   "project_id": "lab",
   "authorization": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
   "decision_ref": "DEC-LAB-032",
-  "status": "GRANTED_STAGE_1_A1_OPERATIONAL_PASS_TERMINAL_REPORT_015_DELIVERED_CLEANUP_COMPLETE_AWAITING_REMOTE_CLOSEOUT_VERIFICATION",
+  "status": "CONSUMED_A1_CANARY_OPERATIONAL_PASS_VERIFIED_REMOTE_PUBLICATION_NO_RESIDUAL_AUTHORITY",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-08-07T21:59:00-04:00",
   "approval_source_ref": "projects/lab/sources/USER_SOURCE_AUTHORIZATION_212_20260807.md",
@@ -20,7 +20,7 @@
   },
   "stage_1": {
     "name": "A1_CANARY_CANONICAL_AUTHORITY_GATE_V2_AND_VALIDATION",
-    "status": "A1_CANARY_OPERATIONAL_PASS_AWAITING_TERMINAL_REMOTE_CLOSEOUT_VERIFICATION",
+    "status": "COMPLETE_A1_CANARY_OPERATIONAL_PASS_REMOTE_VERIFIED",
     "activation_gate": "SATISFIED_STAGE_0_REMOTE_MAIN_VERIFIED",
     "tests_started": true,
     "last_test": {
@@ -145,20 +145,23 @@
     "A1_RECOVERY_BREAK_GLASS_DESIGN_VALIDATION": "PASS_ATTEMPT_002_STATIC_CANONICAL_NON_ACTIVATING_NO_STANDING_BYPASS"
   },
   "mandatory_tests_not_run": [],
-  "a1_operational_status": "A1_CANARY_CANONICAL_AUTHORITY_ENFORCEMENT_OPERATIONAL_PASS_AWAITING_TERMINAL_REMOTE_CLOSEOUT_VERIFICATION",
+  "a1_operational_status": "A1_CANARY_CANONICAL_AUTHORITY_ENFORCEMENT_OPERATIONAL_PASS",
   "claim_boundary": "A1 PASS applies to the bounded canary publication-enforcement system governed by authorization 212. It does not establish main branch protection, main ruleset enforcement, main publication-gate promotion, operational break-glass execution, or reconstruction of missing historical 207-210 authorization provenance.",
-  "residual_authority": "STAGE_1_TERMINAL_CLOSEOUT_ONLY_NO_NEW_TEST_AUTHORITY",
+  "residual_authority": "NONE",
   "next_sequential_test": "NONE_ALL_MANDATORY_A1_TESTS_COMPLETE",
   "terminal_closeout": {
     "terminal_report": "A1-212-POST-TEST-REPORT-015",
     "terminal_report_delivered": true,
     "authorized_cleanup_complete": true,
     "closeout_artifacts_prepared": true,
-    "remote_closeout_publication_verified": false,
-    "authorization_consumed": false,
+    "remote_closeout_publication_verified": true,
+    "verified_main_head": "245dc36f29578f82b1866b0afe7f19db2a81ff96",
+    "verified_closeout_commit_message": "governance: stage A1 canary operational pass and terminal closeout 212",
+    "authorization_consumed": true,
+    "consumed_at": "2026-08-08T08:44:02-04:00",
     "residual_authority_after_consumption": "NONE"
   },
-  "final_consumption_rule": "CONSUMED_AFTER_TERMINAL_A1_REPORT_AND_AUTHORIZED_CLEANUP_ARE_PUBLISHED_AND_REMOTE_VERIFIED",
+  "final_consumption_rule": "SATISFIED_CONSUMED_AFTER_TERMINAL_A1_REPORT_AND_AUTHORIZED_CLEANUP_PUBLISHED_AND_REMOTE_VERIFIED",
   "non_authorizations": [
     "NO_MAIN_BRANCH_PROTECTION_MUTATION",
     "NO_MAIN_RULESET_MUTATION",
