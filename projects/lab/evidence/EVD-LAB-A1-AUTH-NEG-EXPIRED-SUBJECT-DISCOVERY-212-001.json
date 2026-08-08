@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-A1-AUTH-NEG-EXPIRED-SUBJECT-DISCOVERY-212-001",
+  "project_id": "lab",
+  "authorization_id": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+  "decision_ref": "DEC-LAB-032",
+  "test_id": "A1_AUTH_NEG_CONSUMED_REVOKED_OR_EXPIRED",
+  "candidate_variant": "EXPIRED",
+  "classification": "READ_ONLY_SUBJECT_DISCOVERY_NOT_A_TEST_ATTEMPT",
+  "status": "NO_GENUINE_CANONICAL_EXPIRED_AUTHORIZATION_FOUND_TEST_NOT_RUN",
+  "observed_at": "2026-08-08T00:34:00-04:00",
+  "verified_main_head": "ab7f56ca6a03d04b0252da3f7e1c22c222114757",
+  "discovery": {
+    "canonical_registry_checked": "registry/authorizations.json",
+    "searches": [
+      "status EXPIRED",
+      "status:EXPIRED",
+      "expired_at",
+      "expires authorization",
+      "expiration authorization",
+      "valid_until authorization",
+      "EXPIRED lifecycle authorization residual_authority"
+    ],
+    "genuine_authorization_with_status_expired_found": false,
+    "genuine_authorization_with_expired_at_found": false,
+    "genuine_lifecycle_subject_suitable_for_operational_expired_variant_found": false,
+    "near_matches": [
+      "AUTHORIZATION_LAB_PL003_PROPAGATION_AWARE_ATOMIC_SIMULATION_RETRY_127 is CONSUMED and contains session-expiration concepts, not authorization expiration",
+      "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212 authorizes expiration validation but is active GRANTED"
+    ]
+  },
+  "determination": "EXPIRED_VARIANT_NOT_RUN_NO_CANONICAL_SUBJECT_AND_NO_RETROACTIVE_OR_SYNTHETIC_AUTHORITY_FABRICATED",
+  "test_effect": {
+    "test_executed": false,
+    "attempt_id": null,
+    "result": "NOT_RUN",
+    "a1_pass_effect": "BLOCKS_A1_OPERATIONAL_PASS_UNTIL_EXPIRATION_VALIDATION_IS_SATISFIED_OR_EXPLICITLY_RESCOPED_BY_VALID_HUMAN_AUTHORITY"
+  },
+  "authority_boundary": {
+    "authorization_212_allows_expiration_validation": true,
+    "authorization_212_does_not_create_a_preexisting_expired_authorization_subject": true,
+    "retroactive_authorization_fabrication_permitted": false,
+    "historical_state_inference_permitted": false,
+    "next_test_may_be_chained_past_unsatisfied_expiration_gate": false
+  },
+  "required_resolution": "SEPARATE_EXPLICIT_HUMAN_AUTHORITY_OR_DECISION_FOR_A_PURPOSE_BUILT_NON_HISTORICAL_EXPIRATION_TEST_SUBJECT_OR_OTHER_EXPLICITLY_APPROVED_EXPIRATION_VALIDATION_METHOD",
+  "claim_boundary": "This evidence establishes only that no genuine canonical EXPIRED authorization suitable for the operational variant was found in the canonical repository under the performed discovery. It does not prove that no expired authorization ever existed outside the repository, does not execute the EXPIRED test, and does not authorize fabrication, rescoping, skipping, or A1 PASS.",
+  "source_refs": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212.json",
+    "projects/lab/sources/USER_SOURCE_AUTHORIZATION_212_20260807.md",
+    "projects/lab/authorization-lifecycle/PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_A1_LIFECYCLE_212.json",
+    "registry/authorizations.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_PROPAGATION_AWARE_ATOMIC_SIMULATION_RETRY_127.json"
+  ]
+}
