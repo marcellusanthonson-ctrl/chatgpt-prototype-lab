@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0.0",
+  "test_id": "A1_AUTH_NEG_CONSUMED_REVOKED_OR_EXPIRED",
+  "attempt_id": "ATTEMPT-002",
+  "tested_variant": "REVOKED",
+  "subject_authorization_id": "AUTHORIZATION_LAB_PL003_HUMAN_ADMIN_IDENTITY_CENTER_BOOTSTRAP_139",
+  "expected_subject_state": "REVOKED",
+  "expected_gate_v2_behavior": "REJECT_FAIL_CLOSED",
+  "execution_authorization": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+  "claim_boundary": "Fixture only; no authority is derived from the revoked subject authorization."
+}
