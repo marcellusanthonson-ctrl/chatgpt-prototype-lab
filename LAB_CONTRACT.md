@@ -1,4 +1,4 @@
-# Contrato del LAB — v2.1
+# Contrato del LAB — v2.2
 
 ## 1. Propósito
 
@@ -9,6 +9,8 @@ El LAB es la fuente canónica de gobierno, autoridad, decisiones transversales, 
 Jonathan Martínez es el único aprobador. ChatGPT coordina, analiza, valida y emite órdenes delimitadas. Claude participa en descubrimiento o definición cuando se le asigna. Codex ejecuta tareas técnicas delimitadas sin autoridad autónoma.
 
 Una conversación, propuesta, plan, commit, prueba o resultado técnico no crea autorización. Toda autorización debe registrar alcance, aprobador, estado y evidencia. Las autorizaciones consumidas, expiradas o revocadas no pueden reutilizarse.
+
+Desde `AUTHORIZATION_LAB_AUTHORIZATION_APPROVAL_PROTOCOL_AND_GITHUB_GOVERNANCE_204_210_RECONCILIATION_211`, toda solicitud de autorización de ejecución debe terminar con un script textual completo, autocontenido y copiable conforme a `docs/AUTHORIZATION_APPROVAL_RESPONSE_PROTOCOL.md`. Un script ausente, ambiguo, parcial, con ID incorrecto o baseline obsoleto no puede tratarse como `GRANTED`. La aprobación no se infiere de una expresión genérica; se preserva como fuente humana y la autorización registra `grant_inferred: false`.
 
 ## 3. Clases de información
 
@@ -83,7 +85,7 @@ Un validador que no ejecuta sus contratos no puede declarar PASS. Las divergenci
 5. Estado estructurado canónico.
 6. Vistas Markdown y reportes históricos.
 
-Este contrato reemplaza la versión 1.0 mediante DEC-LAB-013 y queda ampliado por DEC-LAB-014.
+Este contrato reemplaza la versión 1.0 mediante DEC-LAB-013, queda ampliado por DEC-LAB-014 y por la regla explícita de solicitud de autorización aprobada bajo la autorización 211.
 
 ## 11. Independencia analítica
 
