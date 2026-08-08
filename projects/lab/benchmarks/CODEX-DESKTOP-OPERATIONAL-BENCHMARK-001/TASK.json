@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "CODEX-DESKTOP-216-REPRESENTATIVE-WORKLOAD-001",
+  "benchmark_id": "CODEX-DESKTOP-OPERATIONAL-BENCHMARK-001",
+  "objective": "Produce a candidate documentary reconciliation of Product Leadership owner-artifact readiness state using only canonical evidence, without changing integration state or executing readiness/retest actions.",
+  "required_determinations": ["AUTHORIZATION_196_EXECUTED_AND_CONSUMED", "AUTHORIZATION_196_RESULT_INSUFFICIENT_EVIDENCE", "ACTUAL_WINDOWS_ZERO_MODEL_READINESS_STILL_NOT_ESTABLISHED", "INT_LAB_004_REMAINS_CANDIDATE_NOT_ACTIVE_NOT_INTEGRATED", "PRODUCT_LEADERSHIP_FRESH_RETEST_REMAINS_NOT_AUTHORIZED", "PRODUCT_LEADERSHIP_PACKAGE_ADJUDICATION_REMAINS_NONE"],
+  "candidate_output_contract": {
+    "status": "DOCUMENTARY_RECONCILIATION_CANDIDATE_ONLY",
+    "must_identify_stale_fields": ["INT-LAB-004 lifecycle/current_state/next_action", "PEND-LAB-048 status/current_authority/next_action", "INTEGRATION_READINESS authority/source_refs/gate disposition where 196 is missing"],
+    "must_preserve": ["INT-LAB-004 status CANDIDATE", "integrated false", "active false", "package not adjudicated", "fresh retest unauthorized", "zero-model Windows readiness not established"]
+  },
+  "forbidden_effects": ["NO_OWNER_ARTIFACT_WRITE_IN_ARM_BRANCH", "NO_INTEGRATION_STATE_CHANGE", "NO_ZERO_MODEL_PROBE", "NO_FRESH_RETEST", "NO_AUDIT", "NO_PROMOTION_ACTIVATION_INTEGRATION"]
+}

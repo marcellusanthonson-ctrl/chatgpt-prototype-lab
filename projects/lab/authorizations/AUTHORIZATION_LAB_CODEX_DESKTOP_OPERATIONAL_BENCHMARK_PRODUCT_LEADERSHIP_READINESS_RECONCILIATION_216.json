@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "AUTHORIZATION_LAB_CODEX_DESKTOP_OPERATIONAL_BENCHMARK_PRODUCT_LEADERSHIP_READINESS_RECONCILIATION_216",
+  "project_id": "lab",
+  "status": "GRANTED",
+  "authorization_class": "PAIRED_CODEX_DESKTOP_OPERATIONAL_BENCHMARK_AND_DOCUMENTARY_RECONCILIATION",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-08-08T11:37:00-04:00",
+  "approval_source_ref": "projects/lab/sources/USER_SOURCE_DECISION_037_AND_AUTHORIZATION_216_20260808.md",
+  "grant_inferred": false,
+  "repository": {
+    "name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "branch": "main",
+    "expected_parent_head": "766617fad3a30b5b8f0289e31c729c2b64d98d89",
+    "head_policy": "VERIFY_LIVE_AT_USE",
+    "setup_branch": "agent/codex-desktop-operational-benchmark-216",
+    "arm_a_branch": "benchmark/codex-desktop-216-arm-a",
+    "arm_b_branch": "benchmark/codex-desktop-216-arm-b"
+  },
+  "governing_decisions": ["DEC-LAB-030", "DEC-LAB-033", "DEC-LAB-037"],
+  "purpose": "Execute the first representative paired operational benchmark of CODEX-DESKTOP-CONTEXT-OPTIMIZATION-001 using Product Leadership owner-artifact readiness reconciliation as the real workload, while preserving Product Leadership as candidate/not active/not integrated.",
+  "benchmark": {
+    "id": "CODEX-DESKTOP-OPERATIONAL-BENCHMARK-001",
+    "class": "PAIRED_REPRESENTATIVE_CODEX_DESKTOP_CONTEXT_AND_LATENCY_BENCHMARK",
+    "execution_surface": "ACTUAL_WINDOWS_CODEX_DESKTOP",
+    "arm_a": {"id": "CODEX_DESKTOP_216_ARM_A_EAGER_FULL_CONTEXT_CONTROL", "context_mode": "LEGACY_EAGER_FULL_CONTEXT_CONTROL", "authorized": true},
+    "arm_b": {"id": "CODEX_DESKTOP_216_ARM_B_PROGRESSIVE_CONTEXT_OPTIMIZED", "context_mode": "AGENTS_EXECUTION_ENVELOPE_CONTEXT_MANIFEST_PROGRESSIVE_DISCLOSURE", "authorized": true},
+    "same_task_required": true,
+    "same_repository_baseline_required": true,
+    "same_model_required": true,
+    "same_reasoning_required": true,
+    "same_sandbox_required": true,
+    "independent_fresh_threads_required": true,
+    "cross_arm_context_carryover": false,
+    "arm_a_report_required_before_arm_b": true,
+    "no_pass_with_required_arm_not_run": true
+  },
+  "representative_workload": {
+    "name": "PRODUCT_LEADERSHIP_OWNER_ARTIFACT_READINESS_RECONCILIATION",
+    "owner_artifacts": ["projects/lab/integrations/INT-LAB-004.json", "projects/lab/pending/PEND-LAB-048.json", "projects/lab/programs/PRIORITY-INTEGRATIONS-PROGRAM-001/product-leadership/INTEGRATION_READINESS.json"],
+    "primary_evidence": "projects/lab/evidence/EVD-LAB-PRODUCT-LEADERSHIP-ZERO-MODEL-READINESS-PROBE-196.json",
+    "required_determinations": ["AUTHORIZATION_196_EXECUTED_AND_CONSUMED", "AUTHORIZATION_196_RESULT_INSUFFICIENT_EVIDENCE", "ACTUAL_WINDOWS_ZERO_MODEL_READINESS_STILL_NOT_ESTABLISHED", "INT_LAB_004_REMAINS_CANDIDATE_NOT_ACTIVE_NOT_INTEGRATED", "PRODUCT_LEADERSHIP_FRESH_RETEST_REMAINS_NOT_AUTHORIZED", "PRODUCT_LEADERSHIP_PACKAGE_ADJUDICATION_REMAINS_NONE"]
+  },
+  "allowed_actions": ["BENCHMARK_SETUP_PUBLICATION", "BENCHMARK_SPEC_TASK_ORACLE_AND_PROMPT_CREATION", "CANONICAL_BRIEF_EXECUTION_ENVELOPE_CONTEXT_MANIFEST_CREATION", "EXECUTE_ARM_A_ON_ACTUAL_WINDOWS_CODEX_DESKTOP", "EXECUTE_ARM_B_ON_ACTUAL_WINDOWS_CODEX_DESKTOP_AFTER_ARM_A_POST_TEST_REPORT", "CODEX_MODEL_REQUESTS_INSIDE_BENCHMARK_ARMS_ONLY", "READ_ONLY_CODEX_VERSION_AND_PREEXISTING_LOGIN_STATUS_OBSERVATION", "CONTEXT_LATENCY_SOURCE_LOAD_CORRECTION_VALIDATION_AND_OMISSION_MEASUREMENT", "CODEX_ARM_BRANCH_COMMIT_AND_PUSH", "CHATGPT_TERMINAL_CANONICAL_RECONCILIATION", "PRODUCT_LEADERSHIP_DOCUMENTARY_OWNER_RECONCILIATION_WITHOUT_INTEGRATION_STATE_CHANGE", "ERR_LAB_014_RECONCILIATION_IF_CLOSURE_GATE_SATISFIED", "CHATGPT_COMMIT_PUSH_PR_MERGE_CANONICAL_PUBLICATION"],
+  "forbidden_actions": ["PRODUCT_LEADERSHIP_ZERO_MODEL_READINESS_PROBE_EXECUTION", "PRODUCT_LEADERSHIP_FRESH_RETEST_EXECUTION", "PRODUCT_LEADERSHIP_PACKAGE_ADJUDICATION", "PRODUCT_LEADERSHIP_PROMOTION_ACTIVATION_OR_INTEGRATION", "SSE_STATE_CHANGE_OR_TEST_EXECUTION", "AUTHORIZATION_180_EXECUTION_OR_STATE_CHANGE", "CONTEXTUAL_BOOTSTRAP_STATE_CHANGE_REMEDIATION_OR_RETEST", "MAIN_OR_CANARY_RULESET_OR_BRANCH_PROTECTION_MUTATION", "GITHUB_GENERAL_SETTINGS_MUTATION", "WORKFLOW_CREATION_MODIFICATION_OR_DELETION", "BREAK_GLASS_ACTIVATION", "CREDENTIAL_SECRET_LOGIN_OR_LOGOUT_MUTATION", "RUNTIME_PRODUCT_OR_EXTERNAL_REPOSITORY_CHANGE", "CODEX_DIRECT_PUSH_TO_MAIN", "CODEX_ARM_PR_MERGE"],
+  "success_rule": "ARM_B_FASTER_OR_LOWER_CONTEXT_THAN_ARM_A_WITH_NO_DEGRADATION_IN_COMPLETENESS_AUTHORITY_COMPLIANCE_VALIDATION_OR_ERROR_RATE",
+  "claim_limits": {"general_speedup_from_one_benchmark": false, "representative_task_scoped_improvement_if_supported": true, "benchmark_result_automatic_integration_effect": "NONE"},
+  "consumption": {"criterion": "TERMINAL_BENCHMARK_RECONCILIATION_PRODUCT_LEADERSHIP_DOCUMENTARY_OWNER_RECONCILIATION_AND_VERIFIED_REMOTE_PUBLICATION", "residual_authority_after_consumption": "NONE"}
+}

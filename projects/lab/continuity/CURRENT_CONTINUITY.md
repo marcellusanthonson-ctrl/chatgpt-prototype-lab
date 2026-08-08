@@ -1,33 +1,11 @@
-# LAB — continuidad post-A1 / Documentary Reconciliation B cerrada
+# LAB continuity — Codex Desktop operational benchmark 216
 
-Estado: **Documentary Reconciliation B completa y verificada; autorización 215 consumida sin autoridad residual**.
+A1 continúa en operational PASS y Documentary Reconciliation B continúa completa. `DEC-LAB-037` resolvió el gate humano y seleccionó la secuencia **Codex Desktop operational benchmark → Product Leadership → Software Solution Engineering → Contextual Bootstrap**. El cambio de foco no cancela ni activa ninguna línea por inferencia.
 
-## Posición de trabajo
+`AUTHORIZATION_LAB_CODEX_DESKTOP_OPERATIONAL_BENCHMARK_PRODUCT_LEADERSHIP_READINESS_RECONCILIATION_216` gobierna exclusivamente el benchmark pareado y la posterior reconciliación documental delimitada. Arm A y Arm B permanecen `NOT_RUN` hasta que exista evidencia real de Windows Codex Desktop.
 
-- Main track: secuencia de `DEC-LAB-032`.
-- Último nodo completado: `DOCUMENTARY_RECONCILIATION_B`.
-- Nodo activo: `HUMAN_SELECTION_OF_NEXT_TECHNICAL_FOCUS`.
-- No existe autoridad de ejecución vigente para una línea técnica.
-- Seleccionar un foco no autoriza su ejecución; cualquier acción mutable posterior requiere la autoridad correspondiente.
+El nodo activo es `CODEX_DESKTOP_216_ARM_A_EAGER_FULL_CONTEXT_CONTROL`. Tras verificar la publicación del setup, ChatGPT crea ambas ramas de brazos desde un único SHA común; Arm A se ejecuta primero y Arm B no puede comenzar hasta el reporte posterior obligatorio de Arm A.
 
-## Resultado documental
+Product Leadership permanece `CANDIDATE_NOT_ACTIVE_NOT_INTEGRATED`; la readiness Windows zero-model sigue no establecida y 216 no autoriza zero-model probe, fresh retest, scoring, auditoría, adjudicación, promoción, activación o integración. SSE y Contextual Bootstrap permanecen preservados. También permanecen visibles todos los demás objetivos no terminales del roadmap.
 
-`DEC-LAB-033` adopta convergencia documental post-A1, separación entre foco y estado del portafolio y `PROGRESSIVE_CONVERSATION_CONTINUITY_001`. `docs/MODEL_OPERATING_RULES.md` es lectura obligatoria y GOV-007 exige preview de impacto para instrucciones materiales.
-
-Las colisiones históricas `DEC-LAB-023..025` quedaron resueltas: los titulares root conservan sus IDs; los blobs distintos históricos están preservados byte por byte y sus decisiones se reasignaron a `DEC-LAB-034..036`; los paths legacy son redirects no activos.
-
-## Portafolio preservado
-
-Contextual Bootstrap, Product Leadership, Software Solution Engineering, Codex Desktop y todas las demás líneas no terminales permanecen preservadas sin cambio de estado por 215.
-
-## Desviación transparente
-
-Durante la ejecución se creó accidentalmente la rama inerte `noop-should-not-use`, apuntando exactamente al parent histórico `41f4e004…`, sin commit ni delta de contenido y sin uso en la publicación. La superficie disponible no expone borrado de refs; la rama no concede autoridad ni altera el resultado.
-
-## Límite
-
-A1 acredita enforcement sólo en el canary; `main` no queda declarado protegido. B fue exclusivamente documental y no ejecutó modelos, tests, integraciones, runtime, producto ni líneas técnicas preservadas.
-
-## Siguiente acción
-
-Jonathan Martínez selecciona el siguiente foco técnico. Esa selección, por sí sola, no constituye autorización de ejecución.
+La desviación histórica `noop-should-not-use` continúa registrada como ref inerte sin delta de contenido ni efecto de autoridad; 216 no autoriza modificarla.
