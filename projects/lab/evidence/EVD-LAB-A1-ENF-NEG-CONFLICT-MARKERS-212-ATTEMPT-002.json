@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-A1-ENF-NEG-CONFLICT-MARKERS-212-ATTEMPT-002",
+  "project_id": "lab",
+  "authorization_id": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+  "decision_ref": "DEC-LAB-032",
+  "test_id": "A1_ENF_NEG_INVALID_JSON_OR_CONFLICT_MARKERS",
+  "attempt_id": "ATTEMPT-002",
+  "tested_variant": "CONFLICT_MARKERS",
+  "status": "PASS_CONFLICT_MARKERS_REJECTED_BY_BOTH_GATES_BINDING_NOT_ESTABLISHED",
+  "execution": {
+    "execution_authorization": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+    "pull_request": 108,
+    "pull_request_merged": false,
+    "pull_request_mergeable_after_checks": true,
+    "fixture_head_sha": "b96819bb52be82c6a92c83037290e041dae9847e",
+    "fixture_path": "projects/lab/governance-tests/authorization-212/A1_ENF_NEG_INVALID_JSON_OR_CONFLICT_MARKERS_CONFLICT.txt",
+    "gate_v2_run_id": 31241684234,
+    "gate_v2_conclusion": "failure",
+    "legacy_gate_run_id": 31241684195,
+    "legacy_gate_conclusion": "failure"
+  },
+  "gate_v2_result": {
+    "structured_result_emitted": true,
+    "authorization": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+    "authorization_path_resolved": true,
+    "lifecycle_path_resolved": true,
+    "same_repository_pr": true,
+    "json_files_checked": 0,
+    "text_files_checked": 1,
+    "primary_and_only_failure": "MERGE_CONFLICT_MARKERS:projects/lab/governance-tests/authorization-212/A1_ENF_NEG_INVALID_JSON_OR_CONFLICT_MARKERS_CONFLICT.txt",
+    "invalid_json_failure_present": false,
+    "authority_scope_or_provenance_failures_present": false,
+    "validator_crash": false,
+    "fail_closed": true
+  },
+  "legacy_gate_result": {
+    "conclusion": "failure",
+    "json_files_checked": 0,
+    "text_files_checked": 1,
+    "primary_and_only_failure": "MERGE_CONFLICT_MARKERS:projects/lab/governance-tests/authorization-212/A1_ENF_NEG_INVALID_JSON_OR_CONFLICT_MARKERS_CONFLICT.txt",
+    "invalid_json_failure_present": false
+  },
+  "determination": "Both validators rejected a plain-text fixture containing Git merge conflict markers. Because the fixture was not JSON and both validators reported json_files_checked=0, the rejection is isolated to conflict-marker detection rather than JSON parsing.",
+  "variant_status": {
+    "INVALID_JSON": "PASS_ATTEMPT_001_REPORT_DELIVERED",
+    "CONFLICT_MARKERS": "PASS_ATTEMPT_002_REPORT_DELIVERED"
+  },
+  "binding": {
+    "status": "NOT_ESTABLISHED",
+    "evidence": "PR_108_REMAINS_MERGEABLE_TRUE_DESPITE_BOTH_GATES_FAILURE"
+  },
+  "post_test_report": {
+    "report_id": "A1-212-POST-TEST-REPORT-010",
+    "delivered_to": "Jonathan Martínez",
+    "delivered_at": "2026-08-08T01:26:00-04:00",
+    "delivery_surface": "CHATGPT_CONVERSATION",
+    "next_action_reported": "CANONICALLY_RECORD_CONFLICT_MARKERS_RESULT_THEN_A1_APPROVAL_SEPARATION",
+    "authority_effect": "NONE"
+  },
+  "not_run_after_this_attempt": [
+    "A1_APPROVAL_SEPARATION",
+    "A1_CONTROL_PLANE_TAMPERING",
+    "A1_RECOVERY_BREAK_GLASS_DESIGN_VALIDATION"
+  ],
+  "claim_boundary": "This evidence establishes isolated conflict-marker rejection by both current publication validators. It does not establish required-status binding, approval separation, control-plane tamper resistance, recovery readiness, main enforcement, or A1 operational PASS.",
+  "source_refs": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212.json",
+    "projects/lab/authorization-lifecycle/PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_A1_LIFECYCLE_212.json",
+    "projects/lab/evidence/EVD-LAB-A1-ENF-NEG-INVALID-JSON-212-ATTEMPT-001.json",
+    "projects/lab/governance-tests/authorization-212/A1_ENF_NEG_INVALID_JSON_OR_CONFLICT_MARKERS_CONFLICT.txt",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/pull/108",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/actions/runs/31241684234",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/actions/runs/31241684195"
+  ]
+}
