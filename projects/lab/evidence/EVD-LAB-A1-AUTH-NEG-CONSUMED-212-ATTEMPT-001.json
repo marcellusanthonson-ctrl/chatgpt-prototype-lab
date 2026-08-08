@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-A1-AUTH-NEG-CONSUMED-212-ATTEMPT-001",
+  "project_id": "lab",
+  "authorization_id": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+  "decision_ref": "DEC-LAB-032",
+  "test_id": "A1_AUTH_NEG_CONSUMED_REVOKED_OR_EXPIRED",
+  "attempt_id": "ATTEMPT-001",
+  "tested_variant": "CONSUMED",
+  "status": "PASS_CONSUMED_AUTHORIZATION_VALIDATOR_REJECTION_BINDING_NOT_ESTABLISHED",
+  "executed_at": "2026-08-07T23:12:00-04:00",
+  "canonical_main_head_before_test": "aa758547419cb84458082acf76df96d3f8fe0a7a",
+  "subject": {
+    "authorization_id": "AUTHORIZATION_LAB_AUTHORIZATION_APPROVAL_PROTOCOL_AND_GITHUB_GOVERNANCE_204_210_RECONCILIATION_211",
+    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_AUTHORIZATION_APPROVAL_PROTOCOL_AND_GITHUB_GOVERNANCE_204_210_RECONCILIATION_211.json",
+    "authorization_status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "lifecycle_path": "projects/lab/authorization-lifecycle/AUTHORIZATION_APPROVAL_PROTOCOL_AND_GITHUB_GOVERNANCE_RECONCILIATION_LIFECYCLE_211.json",
+    "lifecycle_status": "CONSUMED_ON_VERIFIED_REMOTE_PUBLICATION",
+    "residual_authority": "NONE",
+    "execution_authority_for_test": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212"
+  },
+  "canary": {
+    "base_branch": "lab-governance-canary-210",
+    "base_sha": "8db33a0f61d45055134b9efc1f82597ac07b4c7b",
+    "test_branch": "test/a1-auth-neg-consumed-211-212",
+    "fixture_head_sha": "94306f8952587139b6eae7b535ab13525e9d9f5d",
+    "pull_request": 91,
+    "pull_request_merged": false,
+    "pull_request_mergeable_after_checks": true,
+    "changed_files": 1,
+    "fixture_path": "projects/lab/governance-tests/authorization-212/A1_AUTH_NEG_CONSUMED_REVOKED_OR_EXPIRED.json"
+  },
+  "observed_runs": [
+    {
+      "workflow": "LAB Canonical Authority Gate v2",
+      "run_id": 31236695994,
+      "job_id": 93050374941,
+      "status": "completed",
+      "conclusion": "failure",
+      "interpretation": "EXPECTED_REJECTION"
+    },
+    {
+      "workflow": "LAB Publication Gate",
+      "run_id": 31236696008,
+      "status": "completed",
+      "conclusion": "success",
+      "interpretation": "LEGACY_GATE_ACCEPTED_SYNTACTIC_AUTHORIZATION_LABEL"
+    }
+  ],
+  "gate_v2_result": {
+    "authorization": "AUTHORIZATION_LAB_AUTHORIZATION_APPROVAL_PROTOCOL_AND_GITHUB_GOVERNANCE_204_210_RECONCILIATION_211",
+    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_AUTHORIZATION_APPROVAL_PROTOCOL_AND_GITHUB_GOVERNANCE_204_210_RECONCILIATION_211.json",
+    "base_ref": "lab-governance-canary-210",
+    "canonical_ref": "main",
+    "same_repository_pr": true,
+    "changed_files": 1,
+    "json_files_checked": 1,
+    "text_files_checked": 1,
+    "primary_discriminating_failure": "AUTHORIZATION_NOT_EFFECTIVELY_GRANTED",
+    "failures": [
+      "AUTHORIZATION_ACTION_SCOPE_DENIED:canary_pull_request_creation_update_and_merge",
+      "AUTHORIZATION_ACTION_SCOPE_DENIED:canary_test_authorized",
+      "AUTHORIZATION_ACTION_SCOPE_DENIED:canonical_authority_gate_v2_canary_implementation",
+      "AUTHORIZATION_ACTION_SCOPE_MISMATCH",
+      "AUTHORIZATION_BRANCH_SCOPE_MISMATCH",
+      "AUTHORIZATION_LIFECYCLE_REF_MISSING",
+      "AUTHORIZATION_NOT_EFFECTIVELY_GRANTED",
+      "AUTHORIZATION_PATH_SCOPE_MISMATCH:projects/lab/governance-tests/authorization-212/A1_AUTH_NEG_CONSUMED_REVOKED_OR_EXPIRED.json",
+      "AUTHORIZATION_PATH_SCOPE_MISSING",
+      "AUTHORIZATION_PUBLICATION_REPOSITORY_SCOPE_MISMATCH",
+      "AUTHORIZATION_SAME_REPOSITORY_REQUIREMENT_MISSING",
+      "AUTHORIZATION_SCOPE_CLARIFICATION_INVALID"
+    ],
+    "secondary_failures_interpretation": "The consumed authorization 211 predates the A1-specific lifecycle_ref and publication-scope structure required by Gate v2 and also lacks A1 canary authority. These failures are compatible with fail-closed behavior but are not the primary discriminant for the consumed-state claim.",
+    "lifecycle_validation_boundary": "Authorization 211 has a canonical consumed lifecycle with residual authority NONE, but its authorization artifact does not carry lifecycle_ref. Gate v2 therefore rejected the consumed state directly through authorization.status and did not traverse the separate lifecycle record in this attempt."
+  },
+  "determination": "PASS_GATE_V2_REJECTS_CANONICAL_CONSUMED_AUTHORIZATION",
+  "terminal_state_variants": {
+    "CONSUMED": "PASS_ATTEMPT_001",
+    "REVOKED": "NOT_RUN",
+    "EXPIRED": "NOT_RUN"
+  },
+  "operational_binding": {
+    "status": "NOT_ESTABLISHED",
+    "evidence": "PR_91_REMAINS_MERGEABLE_TRUE_WHILE_GATE_V2_FAILED",
+    "reason": "GATE_V2_IS_NOT_YET_A_REQUIRED_STATUS_CHECK_IN_THE_CANARY_RULESET",
+    "effect": "THIS_TEST_DOES_NOT_ESTABLISH_CANARY_PUBLICATION_ENFORCEMENT"
+  },
+  "claim_boundary": "This PASS proves fail-closed validator rejection of one real canonical CONSUMED authorization. It does not independently prove REVOKED or EXPIRED handling, lifecycle-only terminal-state rejection, ruleset binding, approval separation, control-plane tamper resistance, recovery readiness, main enforcement, or A1 operational completion.",
+  "remaining_tests": {
+    "A1_AUTH_NEG_WRONG_REPOSITORY_BRANCH_PATH_OR_ACTION_SCOPE": "NOT_RUN",
+    "A1_ENF_NEG_MISSING_AUTHORIZATION_TRAILER": "NOT_RUN",
+    "A1_ENF_NEG_INVALID_JSON_OR_CONFLICT_MARKERS": "NOT_RUN",
+    "A1_APPROVAL_SEPARATION": "NOT_RUN",
+    "A1_CONTROL_PLANE_TAMPERING": "NOT_RUN",
+    "A1_RECOVERY_BREAK_GLASS_DESIGN_VALIDATION": "NOT_RUN"
+  },
+  "prior_results_preserved": {
+    "A1_AUTH_POS_VALID_CANONICAL": "PASS_ATTEMPT_001",
+    "A1_AUTH_NEG_NONEXISTENT_AUTHORIZATION": "PASS_VALIDATOR_REJECTION_ATTEMPT_001_BINDING_NOT_ESTABLISHED",
+    "A1_ENF_NEG_DIRECT_PUSH": "TECHNICAL_PASS_PRESERVED_NO_RERUN",
+    "A1_READER_READBACK": "TECHNICAL_PASS_PRESERVED_REVALIDATE_IF_REQUIRED"
+  },
+  "source_refs": [
+    ".github/workflows/lab-canonical-authority-gate-v2-212.yml",
+    ".github/workflows/lab-publication-gate.yml",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_AUTHORIZATION_APPROVAL_PROTOCOL_AND_GITHUB_GOVERNANCE_204_210_RECONCILIATION_211.json",
+    "projects/lab/authorization-lifecycle/AUTHORIZATION_APPROVAL_PROTOCOL_AND_GITHUB_GOVERNANCE_RECONCILIATION_LIFECYCLE_211.json",
+    "projects/lab/authorization-lifecycle/PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_A1_LIFECYCLE_212.json",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/pull/91",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/actions/runs/31236695994",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/actions/runs/31236696008"
+  ]
+}
