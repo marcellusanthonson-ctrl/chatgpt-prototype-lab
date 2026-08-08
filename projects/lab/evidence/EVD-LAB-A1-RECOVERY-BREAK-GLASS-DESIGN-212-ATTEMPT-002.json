@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-A1-RECOVERY-BREAK-GLASS-DESIGN-212-ATTEMPT-002",
+  "project_id": "lab",
+  "authorization_id": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+  "decision_ref": "DEC-LAB-032",
+  "test_id": "A1_RECOVERY_BREAK_GLASS_DESIGN_VALIDATION",
+  "attempt_id": "ATTEMPT-002",
+  "status": "PASS_RECOVERY_BREAK_GLASS_DESIGN_STATIC_VALIDATION_CANONICAL_NON_ACTIVATING_NO_STANDING_BYPASS",
+  "execution_class": "READ_ONLY_STATIC_DESIGN_VALIDATION",
+  "main_head_at_execution": "d38eedeb647b3021ede674551d0c15184d71db28",
+  "design": {
+    "contract_id": "A1_CANARY_RECOVERY_BREAK_GLASS_DESIGN_001",
+    "contract_ref": "architecture/governance/A1_CANARY_RECOVERY_BREAK_GLASS_DESIGN_001/CONTRACT.json",
+    "runbook_ref": "architecture/governance/A1_CANARY_RECOVERY_BREAK_GLASS_DESIGN_001/RUNBOOK.md",
+    "materialization_authorization": "AUTHORIZATION_LAB_A1_RECOVERY_BREAK_GLASS_DESIGN_MATERIALIZATION_214",
+    "materialization_authorization_lifecycle": "CONSUMED_VERIFIED_REMOTE_PUBLICATION_NO_RESIDUAL_AUTHORITY",
+    "authority_effect": "NONE_BY_ITSELF",
+    "default_state": "DISABLED_NO_STANDING_BYPASS_NO_RESIDUAL_AUTHORITY"
+  },
+  "live_canary_readback": {
+    "ruleset_id": 20573868,
+    "ruleset_name": "LAB A1 Canary 210",
+    "enforcement": "active",
+    "required_approving_review_count": 1,
+    "required_status_checks": [
+      "LAB Publication Gate",
+      "LAB Canonical Authority Gate v2"
+    ],
+    "strict_required_status_checks_policy": true,
+    "bypass_actors": [],
+    "current_user_can_bypass": "never",
+    "non_fast_forward_rule_present": true,
+    "deletion_rule_present": true,
+    "source": "https://api.github.com/repos/marcellusanthonson-ctrl/chatgpt-prototype-lab/rulesets/20573868"
+  },
+  "validation": {
+    "canonical_design_exists": "PASS",
+    "activation_trigger_fail_closed_defined": "PASS",
+    "future_explicit_human_authorization_required": "PASS",
+    "execution_and_approval_separation_defined": "PASS",
+    "single_use_time_bounded_authority_defined": "PASS_MAXIMUM_15_MINUTES",
+    "canary_only_action_scope_defined": "PASS",
+    "allowed_emergency_actions_defined": "PASS",
+    "forbidden_emergency_actions_defined": "PASS",
+    "preferred_recovery_mode_r1_no_bypass_defined": "PASS",
+    "last_resort_r2_requires_separate_future_authorization_and_r1_unavailability_evidence": "PASS",
+    "audit_and_evidence_requirements_defined": "PASS",
+    "known_good_restoration_target_defined": "PASS",
+    "mandatory_restoration_sequence_defined": "PASS",
+    "direct_post_restoration_readback_required": "PASS",
+    "independent_post_restoration_readback_required": "PASS",
+    "future_authority_consumption_or_expiration_defined": "PASS",
+    "residual_authority_none_defined": "PASS",
+    "default_no_standing_bypass": "PASS",
+    "automatic_activation_prohibited": "PASS",
+    "main_effect_prohibited": "PASS",
+    "a1_pass_by_recovery_alone_prohibited": "PASS"
+  },
+  "non_effects": {
+    "break_glass_activated": false,
+    "break_glass_simulated": false,
+    "recovery_mode_r1_executed": false,
+    "recovery_mode_r2_executed": false,
+    "bypass_actor_mutated": false,
+    "canary_ruleset_mutated": false,
+    "workflow_mutated": false,
+    "main_mutated": false,
+    "operational_recovery_effectiveness_proven": false,
+    "future_emergency_authority_created": false
+  },
+  "determination": "PASS_RECOVERY_BREAK_GLASS_DESIGN_STATIC_VALIDATION_CANONICAL_NON_ACTIVATING_NO_STANDING_BYPASS",
+  "claim_boundary": "This PASS establishes that the mandatory A1 recovery/break-glass design gate is now satisfied by a canonical, fail-closed, non-activating design whose live baseline still has no bypass actors. It does not prove that a future operational recovery will succeed, does not activate or simulate break-glass, does not establish R1 or R2 operational feasibility, does not create emergency authority, and does not establish or promote enforcement on main.",
+  "post_test_report": {
+    "report_id": "A1-212-POST-TEST-REPORT-015",
+    "delivered_to": "Jonathan Martínez",
+    "delivered_at": "2026-08-08T08:36:00-04:00",
+    "delivery_surface": "CHATGPT_CONVERSATION",
+    "reported_result": "PASS_RECOVERY_BREAK_GLASS_DESIGN_STATIC_VALIDATION_CANONICAL_NON_ACTIVATING_NO_STANDING_BYPASS",
+    "next_action_reported": "CANONICALLY_RECORD_ATTEMPT_002_AND_CLOSE_A1_212_IF_THE_COMPLETE_OWNER_ARTIFACT_SET_CONFIRMS_THE_TERMINAL_CONSUMPTION_CRITERION",
+    "authority_effect": "NONE"
+  },
+  "a1_effect": {
+    "mandatory_test_status": "PASS_ATTEMPT_002_REPORT_DELIVERED",
+    "mandatory_tests_not_run": [],
+    "eligible_for_terminal_closeout_subject_to_authorized_cleanup_and_remote_publication": true
+  },
+  "source_refs": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212.json",
+    "projects/lab/authorization-lifecycle/PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_A1_LIFECYCLE_212.json",
+    "projects/lab/evidence/EVD-LAB-A1-RECOVERY-BREAK-GLASS-DESIGN-212-ATTEMPT-001.json",
+    "projects/lab/evidence/EVD-LAB-A1-RECOVERY-BREAK-GLASS-DESIGN-214.json",
+    "projects/lab/authorization-lifecycle/A1_RECOVERY_BREAK_GLASS_DESIGN_MATERIALIZATION_LIFECYCLE_214.json",
+    "architecture/governance/A1_CANARY_RECOVERY_BREAK_GLASS_DESIGN_001/CONTRACT.json",
+    "architecture/governance/A1_CANARY_RECOVERY_BREAK_GLASS_DESIGN_001/RUNBOOK.md",
+    "https://api.github.com/repos/marcellusanthonson-ctrl/chatgpt-prototype-lab/rulesets/20573868"
+  ]
+}
