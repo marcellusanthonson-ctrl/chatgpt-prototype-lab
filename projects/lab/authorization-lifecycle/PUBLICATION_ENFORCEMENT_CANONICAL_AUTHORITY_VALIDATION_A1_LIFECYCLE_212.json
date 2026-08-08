@@ -1,10 +1,10 @@
 {
-  "schema_version": "1.3.0",
+  "schema_version": "1.4.0",
   "record_id": "PUBLICATION-ENFORCEMENT-CANONICAL-AUTHORITY-VALIDATION-A1-LIFECYCLE-212",
   "project_id": "lab",
   "authorization": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
   "decision_ref": "DEC-LAB-032",
-  "status": "GRANTED_STAGE_1_ACTIVE_READY_FOR_NEXT_SEQUENTIAL_TEST",
+  "status": "GRANTED_STAGE_1_ACTIVE_NONEXISTENT_AUTHORIZATION_VALIDATOR_PASS_REPORT_REQUIRED_BEFORE_NEXT_TEST",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-08-07T21:59:00-04:00",
   "approval_source_ref": "projects/lab/sources/USER_SOURCE_AUTHORIZATION_212_20260807.md",
@@ -20,22 +20,25 @@
   },
   "stage_1": {
     "name": "A1_CANARY_CANONICAL_AUTHORITY_GATE_V2_AND_VALIDATION",
-    "status": "ACTIVE_READY_FOR_NEXT_SEQUENTIAL_TEST",
+    "status": "ACTIVE_NONEXISTENT_AUTHORIZATION_VALIDATOR_PASS_REPORT_REQUIRED_BEFORE_NEXT_TEST",
     "activation_gate": "SATISFIED_STAGE_0_REMOTE_MAIN_VERIFIED",
     "tests_started": true,
     "last_test": {
-      "test_id": "A1_AUTH_POS_VALID_CANONICAL",
+      "test_id": "A1_AUTH_NEG_NONEXISTENT_AUTHORIZATION",
       "attempt_id": "ATTEMPT-001",
-      "result": "PASS",
-      "pull_request": 85,
-      "fixture_head_sha": "d190de602a6751235398063c6124b2d74e473669",
-      "gate_v2_run_id": 31234393820,
-      "legacy_gate_run_id": 31234393825,
-      "evidence_ref": "projects/lab/evidence/EVD-LAB-A1-AUTH-POS-VALID-CANONICAL-212-ATTEMPT-001.json"
+      "result": "PASS_VALIDATOR_REJECTION_BINDING_NOT_ESTABLISHED",
+      "pull_request": 88,
+      "pull_request_merged": false,
+      "pull_request_mergeable_after_checks": true,
+      "fixture_head_sha": "d13e9d945a79656364afe60413bb28219e6d3626",
+      "gate_v2_run_id": 31236294551,
+      "legacy_gate_run_id": 31236294541,
+      "primary_failure": "AUTHORIZATION_ARTIFACT_NOT_FOUND",
+      "evidence_ref": "projects/lab/evidence/EVD-LAB-A1-AUTH-NEG-NONEXISTENT-212-ATTEMPT-001.json"
     },
     "post_test_report_required_before_next_test": true,
-    "post_test_report_delivered": true,
-    "post_test_report": {
+    "post_test_report_delivered": false,
+    "previous_post_test_report": {
       "report_id": "A1-212-POST-TEST-REPORT-001",
       "reported_test": "A1_AUTH_POS_VALID_CANONICAL",
       "reported_attempt": "ATTEMPT-001",
@@ -46,7 +49,9 @@
       "authority_effect": "NONE"
     },
     "gate_v2_workflow": ".github/workflows/lab-canonical-authority-gate-v2-212.yml",
-    "gate_v2_publication_status": "PUBLISHED_REMOTE_VERIFIED_AT_MAIN_6bc9d8a2b1669dbda0990f1e70b14b2fa161ebd1"
+    "gate_v2_publication_status": "PUBLISHED_REMOTE_VERIFIED_AT_MAIN_6bc9d8a2b1669dbda0990f1e70b14b2fa161ebd1",
+    "gate_v2_ruleset_binding": "NOT_ESTABLISHED",
+    "binding_evidence": "PR_88_MERGEABLE_TRUE_DESPITE_GATE_V2_FAILURE"
   },
   "prior_results_preserved": {
     "A1_ENF_NEG_DIRECT_PUSH": "TECHNICAL_PASS_PRESERVED_NO_RERUN_AUTHORITY",
@@ -54,7 +59,7 @@
   },
   "test_status": {
     "A1_AUTH_POS_VALID_CANONICAL": "PASS_ATTEMPT_001",
-    "A1_AUTH_NEG_NONEXISTENT_AUTHORIZATION": "NOT_RUN",
+    "A1_AUTH_NEG_NONEXISTENT_AUTHORIZATION": "PASS_VALIDATOR_REJECTION_ATTEMPT_001_BINDING_NOT_ESTABLISHED",
     "A1_AUTH_NEG_CONSUMED_REVOKED_OR_EXPIRED": "NOT_RUN",
     "A1_AUTH_NEG_WRONG_REPOSITORY_BRANCH_PATH_OR_ACTION_SCOPE": "NOT_RUN",
     "A1_ENF_NEG_MISSING_AUTHORIZATION_TRAILER": "NOT_RUN",
@@ -63,7 +68,7 @@
     "A1_CONTROL_PLANE_TAMPERING": "NOT_RUN",
     "A1_RECOVERY_BREAK_GLASS_DESIGN_VALIDATION": "NOT_RUN"
   },
-  "residual_authority": "STAGE_1_A1_SCOPE_ONLY",
+  "residual_authority": "STAGE_1_A1_SCOPE_ONLY_SUBJECT_TO_MANDATORY_POST_TEST_REPORT_BEFORE_NEXT_TEST",
   "final_consumption_rule": "CONSUMED_AFTER_TERMINAL_A1_REPORT_AND_AUTHORIZED_CLEANUP_ARE_PUBLISHED_AND_REMOTE_VERIFIED",
   "non_authorizations": [
     "NO_MAIN_BRANCH_PROTECTION_MUTATION",
