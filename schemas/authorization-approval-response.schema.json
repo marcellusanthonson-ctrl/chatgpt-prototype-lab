@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lab.local/schemas/authorization-approval-response.schema.json",
+  "title": "authorization approval response package",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "authorization_id",
+    "approved_by",
+    "expected_parent_head",
+    "head_policy",
+    "authorization_status",
+    "positive_scope",
+    "negative_scope",
+    "expected_result",
+    "final_authorization_statement",
+    "copyable_text_required",
+    "fail_closed_on_ambiguity"
+  ],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "authorization_id": {"type": "string", "pattern": "^AUTHORIZATION_[A-Z0-9][A-Z0-9_.-]+$"},
+    "approved_by": {"const": "Jonathan Martínez"},
+    "expected_parent_head": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "head_policy": {"const": "VERIFY_LIVE_AT_USE"},
+    "authorization_status": {"const": "GRANTED"},
+    "positive_scope": {"type": "object", "minProperties": 1, "additionalProperties": {"type": "boolean", "const": true}},
+    "negative_scope": {"type": "object", "minProperties": 1, "additionalProperties": {"type": "boolean", "const": false}},
+    "expected_result": {"type": "string", "minLength": 1},
+    "final_authorization_statement": {"type": "string", "pattern": "^AUTORIZO AUTHORIZATION_[A-Z0-9][A-Z0-9_.-]+ EN LOS TÉRMINOS EXACTOS INDICADOS ARRIBA\\.$"},
+    "copyable_text_required": {"const": true},
+    "fail_closed_on_ambiguity": {"const": true}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ERR-LAB-015",
+  "project_id": "lab",
+  "title": "GitHub governance execution chain lost canonical authorization provenance and the publication gate validated an authorization label instead of canonical authority",
+  "status": "OPEN_REMEDIATION_PROPOSED",
+  "lifecycle_state": "OPEN",
+  "severity": "CRITICAL",
+  "project_scope": ["lab"],
+  "canonical_path": "errors/ERR-LAB-015.json",
+  "updated_at": "2026-08-07",
+  "classification": "AUTHORIZATION_PROVENANCE_AND_ENFORCEMENT_SEMANTICS_GAP",
+  "symptoms": [
+    "Canonical authorization artifacts for 207, 208, 209 and 210 are absent at the reconciled baseline.",
+    "Technical activity and successful runs exist for portions of 208-210 despite incomplete canonical authority provenance.",
+    "The current publication gate accepts the syntactic presence of an Authorization: AUTHORIZATION_... label but does not validate the referenced canonical authorization artifact or its scope/lifecycle.",
+    "Approval separation is not established and main remains without publication enforcement.",
+    "Authorization requests historically used copyable scripts inconsistently rather than through a mandatory protocol."
+  ],
+  "root_cause": {
+    "primary": "NO_FAIL_CLOSED_CANONICAL_AUTHORITY_VALIDATION_AT_PUBLICATION_BOUNDARY",
+    "secondary": [
+      "NO_MANDATORY_COPYABLE_TEXT_APPROVAL_RESPONSE_PROTOCOL",
+      "AUTHORIZATION_PROPOSAL_GRANT_AND_EXECUTION_PROVENANCE_NOT_SYSTEMATICALLY_LINKED",
+      "PUBLICATION_GATE_REGEX_VALIDATED_LABEL_SYNTAX_NOT_AUTHORITY_SEMANTICS"
+    ]
+  },
+  "impact": {
+    "authority_integrity": "MATERIAL",
+    "publication_enforcement": "NOT_ESTABLISHED",
+    "historical_technical_results_invalidated": false,
+    "runtime_or_product_effect": "NONE"
+  },
+  "corrective_action": [
+    "Authorization 211 establishes a mandatory textual approval-response protocol, schema and template.",
+    "Reconcile 204-210 without fabricating missing historical authorization artifacts.",
+    "Use successor A1 authorization 212, only after explicit textual grant, to implement fail-closed canonical authority validation and continue bounded canary validation."
+  ],
+  "preventive_control": [
+    "LAB-AUTHORIZATION-APPROVAL-RESPONSE-PROTOCOL-001",
+    "AUTHORIZATION_APPROVAL_RESPONSE_SCHEMA",
+    "AUTHORIZATION_APPROVAL_RESPONSE_TEMPLATE",
+    "CANONICAL_AUTHORITY_LOOKUP_AND_SCOPE_VALIDATION_PROPOSED_FOR_212"
+  ],
+  "validation_of_fix": {
+    "approval_protocol_publication": "AUTHORIZED_BY_211",
+    "canonical_authority_gate_v2": "NOT_RUN",
+    "fake_or_nonexistent_authorization_negative_test": "NOT_RUN",
+    "consumed_or_revoked_authorization_negative_test": "NOT_RUN",
+    "wrong_scope_negative_test": "NOT_RUN",
+    "approval_separation": "NOT_ESTABLISHED",
+    "main_enforcement": "NOT_ESTABLISHED"
+  },
+  "blocks": ["PUBLICATION_ENFORCEMENT_A1_OPERATIONAL_PASS"],
+  "closure_gate": "SUCCESSOR_A1_CANONICAL_AUTHORITY_VALIDATION_AND_BOUNDED_CANARY_TESTS_PASS_WITH_PROVEN_AUTHORITY_PROVENANCE",
+  "source_refs": [
+    "projects/lab/reconciliations/REC-LAB-GITHUB-GOVERNANCE-204-210-001.json",
+    "projects/lab/evidence/EVD-LAB-GITHUB-GOVERNANCE-204-210-211.json",
+    "projects/lab/sources/USER_SOURCE_AUTHORIZATION_211_20260807.md",
+    "docs/AUTHORIZATION_APPROVAL_RESPONSE_PROTOCOL.md"
+  ]
+}

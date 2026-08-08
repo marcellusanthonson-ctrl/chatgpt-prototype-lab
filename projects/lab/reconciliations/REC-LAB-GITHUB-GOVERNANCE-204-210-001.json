@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "reconciliation_id": "REC-LAB-GITHUB-GOVERNANCE-204-210-001",
+  "project_id": "lab",
+  "status": "RECONCILED_UNDER_AUTHORIZATION_211",
+  "authorized_by": "AUTHORIZATION_LAB_AUTHORIZATION_APPROVAL_PROTOCOL_AND_GITHUB_GOVERNANCE_204_210_RECONCILIATION_211",
+  "governing_decision": "DEC-LAB-032",
+  "baseline_head": "acc356e93eaef2439653c32cdf9883f701da0265",
+  "head_policy": "VERIFY_LIVE_AT_USE",
+  "determinations": {
+    "authorization_204": {
+      "operational_state": "CONSUMED",
+      "terminal_result": "INSUFFICIENT_EVIDENCE_CRITICAL_SETTINGS_NOT_OBSERVABLE",
+      "canonical_pre_211_lifecycle_state": "GRANTED_A0_NOT_STARTED",
+      "reconciled_lifecycle_state": "CONSUMED_OPERATIONALLY_RECONCILED_BY_211",
+      "human_review_gate": "NOT_ESTABLISHED",
+      "residual_authority": "NONE",
+      "note": "A0 was intentionally RETURN_TO_JONATHAN_ONLY and not canonically published by 204; 211 reconciles the operational terminal report without pretending it was previously canonical."
+    },
+    "authorization_205": {"remote_record": "NO_RELEVANT_REMOTE_RECORD_FOUND", "claim_boundary": "DOES_NOT_PROVE_NEVER_EXISTED"},
+    "authorization_206": {"remote_record": "NO_RELEVANT_REMOTE_RECORD_FOUND", "claim_boundary": "DOES_NOT_PROVE_NEVER_EXISTED"},
+    "authorization_207": {
+      "canonical_authorization_artifact": "MISSING",
+      "authority_provenance": "INSUFFICIENT_EVIDENCE",
+      "mutation_history": "PR_72_INSTALL_AND_PR_73_CLEANUP_CONFIRMED",
+      "test_result": "NOT_RUN",
+      "reason": "No observable workflow run for the installed transport preflight."
+    },
+    "authorization_208": {
+      "canonical_authorization_artifact": "MISSING",
+      "authority_provenance": "INSUFFICIENT_EVIDENCE",
+      "technical_result": "PASS",
+      "workflow_run_id": 31208170230,
+      "event": "issue_comment"
+    },
+    "authorization_209": {
+      "canonical_authorization_artifact": "MISSING",
+      "authority_provenance": "INSUFFICIENT_EVIDENCE",
+      "technical_result": "PASS",
+      "workflow_run_id": 31216938420,
+      "observed_capability": "LAB_GOVERNANCE_READER_REPO_SCOPED_ADMINISTRATION_READ"
+    },
+    "authorization_210": {
+      "canonical_authorization_artifact": "MISSING",
+      "prior_grant_evidence": "HUMAN_ATTESTED_IN_CONVERSATION_BUT_FULL_CANONICAL_SCOPE_NOT_PRESERVED",
+      "authority_provenance": "INSUFFICIENT_FOR_FULL_HISTORICAL_SCOPE",
+      "positive_canary_result": "TECHNICALLY_CONFIRMED",
+      "positive_workflow_run_id": 31221349700,
+      "reader_readback_result": "TECHNICALLY_CONFIRMED",
+      "reader_readback_workflow_run_id": 31226582922,
+      "direct_push_negative_test": "TECHNICALLY_CONFIRMED_PASS",
+      "direct_push_rejection_http": 422,
+      "direct_push_fixture_commit": "76fdcb0bfb08b201aa92dd07b67d8a4b0b93c6d2",
+      "remaining_a1_tests": "NOT_RUN"
+    }
+  },
+  "current_governance_findings": {
+    "publication_gate_authority_semantics": "FAILS_TO_VALIDATE_CANONICAL_AUTHORITY",
+    "publication_gate_current_behavior": "VALIDATES_AUTHORIZATION_LABEL_SYNTAX_ONLY",
+    "approval_separation": "NOT_ESTABLISHED",
+    "main_publication_enforcement": "NOT_ESTABLISHED",
+    "a1_operational_pass": "NOT_ESTABLISHED",
+    "dec_lab_032_termination_condition": "NOT_MET"
+  },
+  "anti_retroactivity_rule": "NO_MISSING_207_210_AUTHORIZATION_ARTIFACT_MAY_BE_FABRICATED_RETROACTIVELY",
+  "aggregate_updates": {
+    "CURRENT_STATE": "NOT_UPDATED_BY_211",
+    "PROJECT_STATE": "NOT_UPDATED_BY_211",
+    "ROADMAP": "NOT_UPDATED_BY_211",
+    "PENDING": "NOT_UPDATED_BY_211",
+    "registry_counts": "NOT_UPDATED_BY_211",
+    "reason": "DEC-LAB-032 aggregate-reconciliation restriction remains preserved until the relevant A1 gate is satisfied or separately superseded."
+  },
+  "next_action": "OBTAIN_EXPLICIT_TEXTUAL_APPROVAL_FOR_SUCCESSOR_A1_AUTHORIZATION_AFTER_211_PUBLICATION"
+}
