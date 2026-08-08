@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-A1-AUTH-NEG-WRONG-SCOPE-212-ATTEMPT-001",
+  "project_id": "lab",
+  "authorization_id": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+  "decision_ref": "DEC-LAB-032",
+  "test_id": "A1_AUTH_NEG_WRONG_REPOSITORY_BRANCH_PATH_OR_ACTION_SCOPE",
+  "attempt_id": "ATTEMPT-001",
+  "status": "PASS_SCOPE_INCOMPATIBLE_AUTHORIZATION_REJECTED_BINDING_NOT_ESTABLISHED",
+  "subject": {
+    "authorization_id": "AUTHORIZATION_LAB_SYMPHONIE_LIVHAVN_HTML_PREDELIVERY_AUTOMATED_GATE_086",
+    "authorization_artifact_status": "GRANTED",
+    "historical_scope": "DOCUMENT_IMPLEMENT_AND_EXECUTE_FAIL_CLOSED_AUTOMATED_HTML_PREDELIVERY_GATE_FOR_LIVHAVN_PHASE_3",
+    "test_execution_authority": false,
+    "historical_authority_shape": true
+  },
+  "execution": {
+    "execution_authorization": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+    "pull_request": 102,
+    "pull_request_merged": false,
+    "pull_request_mergeable_after_checks": true,
+    "fixture_head_sha": "b264940d361fa413c70f222ce797bb9d7ecaaeb9",
+    "fixture_path": "projects/lab/governance-tests/authorization-212/A1_AUTH_NEG_WRONG_REPOSITORY_BRANCH_PATH_OR_ACTION_SCOPE.json",
+    "gate_v2_run_id": 31241290061,
+    "gate_v2_conclusion": "failure",
+    "legacy_gate_run_id": 31241290059,
+    "legacy_gate_conclusion": "success"
+  },
+  "gate_v2_result": {
+    "structured_result_emitted": true,
+    "authorization_artifact_found": true,
+    "authorization_status_granted": true,
+    "same_repository_pr": true,
+    "scope_failures": [
+      "AUTHORIZATION_REPOSITORY_SCOPE_MISMATCH",
+      "AUTHORIZATION_PUBLICATION_REPOSITORY_SCOPE_MISMATCH",
+      "AUTHORIZATION_BRANCH_SCOPE_MISMATCH",
+      "AUTHORIZATION_PATH_SCOPE_MISMATCH:projects/lab/governance-tests/authorization-212/A1_AUTH_NEG_WRONG_REPOSITORY_BRANCH_PATH_OR_ACTION_SCOPE.json",
+      "AUTHORIZATION_ACTION_SCOPE_MISMATCH",
+      "AUTHORIZATION_ACTION_SCOPE_DENIED:canonical_authority_gate_v2_canary_implementation",
+      "AUTHORIZATION_ACTION_SCOPE_DENIED:canary_pull_request_creation_update_and_merge",
+      "AUTHORIZATION_ACTION_SCOPE_DENIED:canary_test_authorized"
+    ],
+    "additional_historical_shape_failures": [
+      "AUTHORIZATION_APPROVAL_SOURCE_MISSING",
+      "AUTHORIZATION_BASELINE_MISSING_OR_INVALID",
+      "AUTHORIZATION_GRANT_INFERRED_OR_UNKNOWN",
+      "AUTHORIZATION_LIFECYCLE_REF_MISSING",
+      "AUTHORIZATION_PATH_SCOPE_MISSING",
+      "AUTHORIZATION_SAME_REPOSITORY_REQUIREMENT_MISSING",
+      "AUTHORIZATION_SCOPE_CLARIFICATION_INVALID"
+    ],
+    "validator_crash": false,
+    "fail_closed": true
+  },
+  "determination": "Gate v2 rejected an existing canonical authorization artifact whose file status is GRANTED but whose historical Livhavn/main-oriented authority is not compatible with A1 canary publication. Explicit repository, branch, path and action scope failures were emitted. Because the subject predates the modern A1 authority shape, this is a composite scope-incompatibility and unsupported-shape negative test rather than isolated proof of each individual scope dimension.",
+  "binding": {
+    "status": "NOT_ESTABLISHED",
+    "evidence": "PR_102_REMAINS_MERGEABLE_TRUE_DESPITE_GATE_V2_FAILURE"
+  },
+  "post_test_report": {
+    "report_id": "A1-212-POST-TEST-REPORT-007",
+    "delivered_to": "Jonathan Martínez",
+    "delivered_at": "2026-08-08T01:16:00-04:00",
+    "delivery_surface": "CHATGPT_CONVERSATION",
+    "next_action_reported": "CANONICALLY_RECORD_WRONG_SCOPE_RESULT_THEN_A1_ENF_NEG_MISSING_AUTHORIZATION_TRAILER",
+    "authority_effect": "NONE"
+  },
+  "not_run_after_this_attempt": [
+    "A1_ENF_NEG_MISSING_AUTHORIZATION_TRAILER",
+    "A1_ENF_NEG_INVALID_JSON_OR_CONFLICT_MARKERS",
+    "A1_APPROVAL_SEPARATION",
+    "A1_CONTROL_PLANE_TAMPERING",
+    "A1_RECOVERY_BREAK_GLASS_DESIGN_VALIDATION"
+  ],
+  "claim_boundary": "This evidence establishes fail-closed rejection of a GRANTED but scope-incompatible historical authorization subject. It does not isolate each scope field independently, establish required-status binding, approval separation, control-plane tamper resistance, recovery readiness, main enforcement, or A1 operational PASS.",
+  "source_refs": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212.json",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_SYMPHONIE_LIVHAVN_HTML_PREDELIVERY_AUTOMATED_GATE_086.json",
+    "projects/lab/governance-tests/authorization-212/A1_AUTH_NEG_WRONG_REPOSITORY_BRANCH_PATH_OR_ACTION_SCOPE.json",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/pull/102",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/actions/runs/31241290061",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/actions/runs/31241290059"
+  ]
+}
