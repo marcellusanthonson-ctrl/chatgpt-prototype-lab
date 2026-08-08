@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chatgpt-prototype-lab.local/schemas/impact-preview.schema.json",
+  "title": "GOV-007 Material Instruction Impact Preview",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["preview_id","classification","objective","source_refs","affected_owner_artifacts","preserved_lines","authority","proposed_changes","side_effects","stop_conditions","work_position_effect","authority_effect"],
+  "properties": {
+    "preview_id": {"type":"string","minLength":1},
+    "classification": {"const":"GOV-007_MATERIAL_INSTRUCTION_IMPACT_PREVIEW"},
+    "objective": {"type":"string","minLength":1},
+    "source_refs": {"type":"array","items":{"type":"string","minLength":1},"minItems":1,"uniqueItems":true},
+    "affected_owner_artifacts": {"type":"array","items":{"type":"string","minLength":1},"uniqueItems":true},
+    "preserved_lines": {"type":"array","items":{"type":"string","minLength":1},"uniqueItems":true},
+    "authority": {
+      "type":"object","additionalProperties":false,
+      "required":["authorization_ref","scope_effect","authority_additions","non_authorizations"],
+      "properties": {
+        "authorization_ref":{"type":["string","null"]},
+        "scope_effect":{"type":"string","minLength":1},
+        "authority_additions":{"type":"array","items":{"type":"string"},"uniqueItems":true},
+        "non_authorizations":{"type":"array","items":{"type":"string"},"uniqueItems":true}
+      }
+    },
+    "proposed_changes": {"type":"array","items":{"type":"string","minLength":1}},
+    "side_effects": {"type":"array","items":{"type":"string","minLength":1}},
+    "stop_conditions": {"type":"array","items":{"type":"string","minLength":1},"minItems":1},
+    "work_position_effect": {
+      "type":"object","additionalProperties":false,
+      "required":["main_position_moves","branch_created","return_node","next_required_node"],
+      "properties": {
+        "main_position_moves":{"type":"boolean"},
+        "branch_created":{"type":"boolean"},
+        "return_node":{"type":["string","null"]},
+        "next_required_node":{"type":["string","null"]}
+      }
+    },
+    "decision_required":{"type":"boolean","default":false},
+    "authority_effect":{"const":"NONE_BY_ITSELF"}
+  }
+}

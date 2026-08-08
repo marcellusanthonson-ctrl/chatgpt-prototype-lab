@@ -1,60 +1,12 @@
 {
   "schema_version": "1.0.0",
-  "decision_id": "DEC-LAB-024",
-  "project_id": "lab",
-  "title": "Adopt hybrid constraint-first and Codex multi-agent implementation strategy for Product Leadership Test 003",
-  "status": "APPROVED",
-  "approved_by": "Jonathan Martínez",
-  "approved_at": "2026-07-27",
-  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
-  "branch": "main",
-  "expected_parent_head": "575e37026fe638ffbb7f2c6c9f8130df03cb172e",
-  "subject": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003",
-  "decision": "USE_HYBRID_CONSTRAINT_FIRST_CODEX_MULTI_AGENT_WITH_EXTERNAL_BOUNDARIES",
-  "architecture": {
-    "inside_codex": [
-      "PACKAGE_GENERATOR",
-      "BASELINE_GENERATOR",
-      "NORMALIZATION_OPERATOR",
-      "EVALUATOR_1",
-      "EVALUATOR_2",
-      "EVALUATOR_3"
-    ],
-    "outside_codex": {
-      "RANDOMIZATION_CUSTODIAN": "EXTERNAL_HUMAN_OR_SERVICE_IDENTITY_WITH_EXCLUSIVE_SECRET_STORE",
-      "INDEPENDENT_AUDITOR": "CLAUDE_READ_ONLY_EXTERNAL_ROLE"
-    },
-    "control_plane": [
-      "ROLE_SCOPED_CREDENTIALS",
-      "SEGREGATED_EXTERNAL_STORAGE",
-      "APPEND_ONLY_LOGS",
-      "SHA256_MANIFESTS",
-      "IMMUTABLE_CHECKPOINTS",
-      "DENY_TEST_EVIDENCE"
-    ]
-  },
-  "mandatory_constraints": [
-    "CODEX_SANDBOX_OR_WORKTREE_ALONE_IS_NOT_SUFFICIENT",
-    "NO_SHARED_CREDENTIALS_ACROSS_INCOMPATIBLE_ROLES",
-    "NO_SHARED_WRITEABLE_STORAGE_ACROSS_INCOMPATIBLE_ROLES",
-    "CUSTODIAN_MAPPING_ACCESS_MUST_BE_EXCLUSIVE",
-    "CLAUDE_AUDITOR_MUST_REMAIN_READ_ONLY_AND_EXTERNAL",
-    "TEST_003_MUST_FAIL_CLOSED_IF_ANY_BOUNDARY_IS_UNPROVEN"
-  ],
-  "consequences": [
-    "ROLE_PROVIDER_ASSIGNMENT_MATRIX_BECOMES_REQUIRED_BEFORE_INFRASTRUCTURE_PREFLIGHT",
-    "PROVIDER_AND_CREDENTIAL_BOUNDARIES_MUST_BE_VERIFIED_BEFORE_TEST_CONTENT_GENERATION"
-  ],
-  "not_authorized": [
-    "EXECUTE_TEST_003",
-    "PROVISION_INFRASTRUCTURE",
-    "GENERATE_FIXTURES_OUTPUTS_SCORES_OR_ORACLES",
-    "CREATE_RANDOMIZATION_MAPPING",
-    "ACTIVATE_OR_INTEGRATE_PRODUCT_LEADERSHIP",
-    "MODIFY_SYMPHONIE_OR_PRODUCTS"
-  ],
-  "test_003_execution_authorized": false,
-  "product_leadership_active": false,
-  "product_leadership_integrated": false,
-  "authority_effect": "NORMATIVE_STRATEGY_SELECTION_ONLY"
+  "record_type": "HISTORICAL_DECISION_REDIRECT",
+  "active_decision": false,
+  "historical_original_id": "DEC-LAB-024",
+  "canonical_reassigned_id": "DEC-LAB-035",
+  "canonical_reassigned_path": "decisions/DEC-LAB-035.json",
+  "archived_original_path": "projects/lab/decisions/archive/pre-215/DEC-LAB-024.json",
+  "archived_original_blob_sha": "9823819f8bcdb8fb6ee798e0e4e2ba9c5a7c78a3",
+  "reconciliation_authorization": "AUTHORIZATION_LAB_POST_A1_DOCUMENTARY_RECONCILIATION_AND_CONTINUITY_ARCHITECTURE_215",
+  "authority_effect": "NONE"
 }

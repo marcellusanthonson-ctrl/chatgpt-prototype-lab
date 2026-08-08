@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "POST-A1-DOCUMENTARY-RECONCILIATION-AND-CONTINUITY-ARCHITECTURE-LIFECYCLE-215",
+  "project_id": "lab",
+  "authorization": "AUTHORIZATION_LAB_POST_A1_DOCUMENTARY_RECONCILIATION_AND_CONTINUITY_ARCHITECTURE_215",
+  "decision_ref": "DEC-LAB-032",
+  "status": "GRANTED_DOCUMENTARY_RECONCILIATION_B_AWAITING_REMOTE_PUBLICATION_VERIFICATION",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-08-08T09:10:00-04:00",
+  "approval_source_ref": "projects/lab/sources/USER_SOURCE_AUTHORIZATION_215_20260808.md",
+  "authorized_parent_head": "41f4e004f7a817c676b286fabf802676d8ba7532",
+  "head_policy": "VERIFY_LIVE_AT_USE",
+  "prerequisites": {
+    "a1_operational_pass": "SATISFIED",
+    "authorization_212": "CONSUMED_NO_RESIDUAL_AUTHORITY"
+  },
+  "stage": {
+    "name": "DOCUMENTARY_RECONCILIATION_B",
+    "status": "PREPARED_FOR_CANONICAL_PUBLICATION",
+    "technical_execution_performed": false,
+    "model_or_test_execution_performed": false,
+    "enforcement_mutation_performed": false
+  },
+  "current_authority": "DOCUMENTARY_RECONCILIATION_B_PUBLICATION_AND_TERMINAL_CLOSEOUT_ONLY",
+  "consumption_criterion": "REMOTE_MAIN_VERIFICATION_OF_COMPLETE_DOCUMENTARY_RECONCILIATION_B_PUBLICATION",
+  "authorization_consumed": false,
+  "residual_authority": "DOCUMENTARY_RECONCILIATION_B_CLOSEOUT_ONLY",
+  "residual_authority_after_consumption": "NONE"
+}

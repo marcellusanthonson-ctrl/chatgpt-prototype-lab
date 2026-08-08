@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "contract_id": "FOCUS_AND_ROADMAP_PRESERVATION_001",
+  "class": "DOCUMENTARY_GOVERNANCE_CONTRACT",
+  "status": "ACTIVE",
+  "decision_ref": "DEC-LAB-033",
+  "authority_effect": "NONE",
+  "purpose": "Keep current focus separate from portfolio state so reprioritization cannot silently cancel, suspend, downgrade, activate, integrate or adjudicate a nonterminal objective.",
+  "invariants": [
+    "CURRENT_FOCUS_IS_A_VIEW_NOT_A_PORTFOLIO_STATE_MUTATION",
+    "NONTERMINAL_OBJECTIVES_REMAIN_PRESERVED_UNTIL_AN_EXPLICIT_DECISION_CHANGES_THEM",
+    "FOCUS_CHANGE_DOES_NOT_IMPLY_CANCELLATION",
+    "FOCUS_CHANGE_DOES_NOT_IMPLY_SUSPENSION",
+    "FOCUS_CHANGE_DOES_NOT_IMPLY_INTEGRATION_STATE_CHANGE",
+    "FOCUS_CHANGE_DOES_NOT_CREATE_EXECUTION_AUTHORITY",
+    "A_SIDE_DISCUSSION_OR_SIDE_TASK_DOES_NOT_MOVE_THE_MAIN_WORK_POSITION",
+    "MAIN_OBJECTIVE_CHANGE_REQUIRES_EXPLICIT_HUMAN_FOCUS_CHANGE"
+  ],
+  "roadmap_requirements": {
+    "must_expose_current_focus": true,
+    "must_expose_last_completed_focus": true,
+    "must_expose_next_human_or_execution_gate": true,
+    "must_preserve_nonterminal_lanes": true,
+    "must_reference_owner_artifacts": true,
+    "must_not_duplicate_complete_histories": true,
+    "must_identify_authority_effect": true
+  },
+  "allowed_portfolio_dispositions": [
+    "FOCUSED",
+    "PRESERVED_DEFERRED",
+    "PRESERVED_BLOCKED",
+    "AWAITING_HUMAN_DECISION",
+    "COMPLETED",
+    "SUPERSEDED_BY_EXPLICIT_DECISION",
+    "CANCELLED_BY_EXPLICIT_DECISION"
+  ],
+  "forbidden_inferences": [
+    "NOT_FOCUSED_MEANS_CANCELLED",
+    "FOCUS_CHANGE_MEANS_AUTHORIZED",
+    "DOCUMENTARY_PASS_MEANS_INTEGRATED",
+    "DEFERRED_MEANS_REJECTED",
+    "HISTORICAL_HEAD_MEANS_CURRENT_HEAD"
+  ],
+  "validation_rule": "FAIL_CLOSED_IF_A_CURRENT_ROADMAP_REMOVES_OR_CHANGES_A_NONTERMINAL_LANE_WITHOUT_AN_EXPLICIT_OWNER_ARTIFACT_AND_SOURCE_REF",
+  "source_refs": [
+    "decisions/DEC-LAB-032.json",
+    "decisions/DEC-LAB-033.json",
+    "projects/lab/sources/USER_SOURCE_AUTHORIZATION_215_20260808.md"
+  ]
+}

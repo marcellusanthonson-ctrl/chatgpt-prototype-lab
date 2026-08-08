@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.1.0",
+  "evidence_id": "EVD-LAB-POST-A1-DOCUMENTARY-RECONCILIATION-215",
+  "project_id": "lab",
+  "authorization_id": "AUTHORIZATION_LAB_POST_A1_DOCUMENTARY_RECONCILIATION_AND_CONTINUITY_ARCHITECTURE_215",
+  "decision_refs": ["DEC-LAB-032","DEC-LAB-033"],
+  "status": "PASS_PREPUBLICATION_DOCUMENTARY_RECONCILIATION_PREPARED_AWAITING_REMOTE_VERIFICATION",
+  "verified_parent_head": "41f4e004f7a817c676b286fabf802676d8ba7532",
+  "a1_prerequisite": {"status":"PASS","authorization_212":"CONSUMED_A1_CANARY_OPERATIONAL_PASS_VERIFIED_REMOTE_PUBLICATION_NO_RESIDUAL_AUTHORITY"},
+  "findings_reconciled": {
+    "decision_collisions_023_024_025": "RESOLVED_IN_PREPARED_TREE_WITH_BYTE_IDENTICAL_ARCHIVES_NON_ACTIVE_LEGACY_REDIRECTS_AND_NEW_IDS_034_035_036",
+    "stale_aggregate_views": "REPLACED_WITH_OWNER_REFERENCED_CURRENT_PROJECTIONS",
+    "stale_registry_views": "REPLACED_WITH_LAYERED_CURRENT_OVERLAYS_AND_BYTE_PRESERVED_BASELINES",
+    "roadmap_portfolio_visibility": "RESTORED_WITH_FOCUS_SEPARATE_FROM_PORTFOLIO_STATE",
+    "model_operating_rules_missing_from_mandatory_startup": "REMEDIATED_IN_PREPARED_TREE",
+    "continuity_memory_without_work_position": "REMEDIATED_BY_PROG_CONTINUITY_001_AND_ACTIVE_SESSION",
+    "gov_007_impact_preview": "MATERIALIZED_SCHEMA_TEMPLATE_AND_MODEL_RULE"
+  },
+  "historical_preservation": {
+    "decision_blobs_preserved_exactly": ["98ee68c0b4eeb46b4cd13efa84d0ccee590ac708","9823819f8bcdb8fb6ee798e0e4e2ba9c5a7c78a3","47310426fdc101a482d54dc79c6ab6c8650f4b60"],
+    "legacy_paths_remain_resolvable_as_non_active_redirects": true,
+    "registry_blobs_preserved_exactly": ["13b5236efa2a223425245502f81903348b85dd8e","31669ed05e7e8dd1b0526571348e58f9b0045de5","087b464497da6d4983557a54bdc0b0a40a8f4be4","32d4e2ead5bffe46a52ba3d7352837d412afaf44","d1729701809e00e752c96175626c68202fc61b8b"],
+    "continuity_blobs_preserved_exactly": ["812456deaee9b8e4fb0c07a171ea5f16644e6d7b","5cd39cb90129ed9288fd8a5755a44e532d065f1c","8d0138286b7c4913f8a538867a1d63b8ec584c74","728f16363d20e71ee15c338f2287aa27f77ac049"]
+  },
+  "portfolio_preservation": {"contextual_bootstrap":"NO_STATE_CHANGE","product_leadership":"NO_STATE_CHANGE","software_solution_engineering":"NO_STATE_CHANGE","codex_desktop":"NO_STATE_CHANGE","all_other_nonterminal_objectives":"PRESERVED"},
+  "non_effects": {"models_executed":false,"tests_executed":false,"integrations_activated":false,"authorization_180_mutated":false,"benchmark_203_mutated_or_retested":false,"main_ruleset_or_protection_mutated":false,"canary_ruleset_mutated":false,"workflow_mutated":false,"break_glass_activated":false,"credentials_mutated":false,"runtime_effect":"NONE","product_effect":"NONE","external_repository_effect":"NONE"},
+  "remote_publication_verified": false,
+  "authorization_215_consumed": false,
+  "next_action": "PUBLISH_PREPARED_RECONCILIATION_VERIFY_REMOTE_THEN_CONSUME_215",
+  "source_refs": ["projects/lab/sources/USER_SOURCE_AUTHORIZATION_215_20260808.md","registry/deltas/post-a1-documentary-reconciliation-215.json","projects/lab/continuity/CURRENT_CONTINUITY.json","sessions/2026/SES-LAB-20260808-001/WORK_POSITION_GRAPH.json"]
+}

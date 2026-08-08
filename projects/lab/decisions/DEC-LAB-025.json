@@ -1,51 +1,12 @@
 {
   "schema_version": "1.0.0",
-  "decision_id": "DEC-LAB-025",
-  "project_id": "lab",
-  "title": "Adopt AWS as the provider for Product Leadership Test 003 disposable security preflight design",
-  "status": "APPROVED",
-  "approved_by": "Jonathan Martínez",
-  "approved_at": "2026-07-27",
-  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
-  "branch": "main",
-  "expected_parent_head": "40e101f0f1254a3150a67a795734092b0b60bbba",
-  "subject": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003",
-  "decision": "ADOPT_AWS_FOR_DISPOSABLE_SECURITY_PREFLIGHT_DESIGN_ONLY",
-  "selected_components": [
-    "IAM_ROLE_SCOPED_TEMPORARY_CREDENTIALS_AND_EXPLICIT_DENY_BOUNDARIES",
-    "S3_VERSIONING_AND_OBJECT_LOCK_FOR_ARTIFACTS_LOGS_AND_CHECKPOINTS",
-    "SECRETS_MANAGER_AND_KMS_FOR_CUSTODIAN_ONLY_SYNTHETIC_MAPPING_CUSTODY",
-    "CLOUDTRAIL_FOR_ACCESS_AND_CONTROL_PLANE_EVIDENCE"
-  ],
-  "implementation_direction": {
-    "codex": "BOUNDED_DOCUMENTATION_AND_STATIC_IAC_AUTHORING_EXECUTOR",
-    "randomization_custodian": "EXTERNAL_PRINCIPAL_WITH_EXCLUSIVE_SECRET_ACCESS",
-    "independent_auditor": "CLAUDE_EXTERNAL_READ_ONLY",
-    "infrastructure_state": "NOT_PROVISIONED"
-  },
-  "mandatory_constraints": [
-    "SIX_CODEX_TASKS_REQUIRE_DISTINCT_ROLE_SCOPED_TEMPORARY_CREDENTIALS",
-    "NO_SHARED_CREDENTIALS_OR_WRITEABLE_STORAGE_ACROSS_INCOMPATIBLE_ROLES",
-    "CUSTODIAN_MAPPING_ACCESS_REMAINS_EXCLUSIVE",
-    "CLAUDE_REMAINS_EXTERNAL_AND_READ_ONLY",
-    "OBJECT_LOCK_FIRST_PREFLIGHT_USES_DISPOSABLE_BUCKET_AND_GOVERNANCE_MODE",
-    "ANY_UNPROVEN_BOUNDARY_FAILS_CLOSED"
-  ],
-  "not_authorized": [
-    "AWS_ACCOUNT_ACCESS",
-    "AWS_RESOURCE_PROVISIONING",
-    "TERRAFORM_PLAN_AGAINST_AWS",
-    "TERRAFORM_APPLY_OR_DESTROY",
-    "CLOUDFORMATION_DEPLOYMENT",
-    "TEST_003_EXECUTION",
-    "TEST_CONTENT_OR_MAPPING_GENERATION",
-    "PRODUCT_LEADERSHIP_ACTIVATION_OR_INTEGRATION",
-    "SYMPHONIE_OR_PRODUCT_CHANGES"
-  ],
-  "product_leadership_active": false,
-  "product_leadership_integrated": false,
-  "test_003_execution_authorized": false,
-  "runtime_effect": "NONE",
-  "product_effect": "NONE",
-  "authority_effect": "NORMATIVE_PROVIDER_SELECTION_ONLY"
+  "record_type": "HISTORICAL_DECISION_REDIRECT",
+  "active_decision": false,
+  "historical_original_id": "DEC-LAB-025",
+  "canonical_reassigned_id": "DEC-LAB-036",
+  "canonical_reassigned_path": "decisions/DEC-LAB-036.json",
+  "archived_original_path": "projects/lab/decisions/archive/pre-215/DEC-LAB-025.json",
+  "archived_original_blob_sha": "47310426fdc101a482d54dc79c6ab6c8650f4b60",
+  "reconciliation_authorization": "AUTHORIZATION_LAB_POST_A1_DOCUMENTARY_RECONCILIATION_AND_CONTINUITY_ARCHITECTURE_215",
+  "authority_effect": "NONE"
 }

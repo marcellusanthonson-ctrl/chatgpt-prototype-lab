@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "contract_id": "PROGRESSIVE_CONVERSATION_CONTINUITY_001",
+  "class": "DOCUMENTARY_CONVERSATION_CONTINUITY_ARCHITECTURE",
+  "status": "ACTIVE",
+  "decision_ref": "DEC-LAB-033",
+  "authority_effect": "NONE",
+  "purpose": "Preserve not only conversational memory but the exact governed work position, destination, side branches and return point across long or interrupted conversations.",
+  "core_rule": "A_SIDE_DISCUSSION_CREATES_A_BRANCH_AND_DOES_NOT_SILENTLY_MOVE_THE_MAIN_EXECUTION_POSITION",
+  "focus_change_rule": "THE_MAIN_OBJECTIVE_OR_MAIN_TRACK_CHANGES_ONLY_AFTER_AN_EXPLICIT_FOCUS_CHANGE_BY_THE_HUMAN_DECISION_OWNER",
+  "required_work_position_fields": [
+    "main_track",
+    "main_objective",
+    "anchor_node",
+    "last_completed_node",
+    "active_node",
+    "next_required_node",
+    "return_node",
+    "current_branch",
+    "branch_effect",
+    "integration_target"
+  ],
+  "session_bundle": {
+    "path_pattern": "sessions/YYYY/SES-LAB-YYYYMMDD-NNN/",
+    "required_files": [
+      "SESSION.json",
+      "CONTEXT_LEDGER.json",
+      "OPEN_CONTEXT.json",
+      "WORK_POSITION_GRAPH.json",
+      "PROMOTION_MAP.json",
+      "SESSION_SUMMARY.md"
+    ],
+    "session_is_authority_source": false,
+    "session_is_state_owner": false,
+    "owner_artifacts_remain_authoritative": true
+  },
+  "branch_semantics": {
+    "MAIN": "The currently selected governed objective and its next required node.",
+    "SIDE": "A bounded discussion, analysis or documentary subtask that returns to a declared return_node.",
+    "PROMOTED": "A side branch explicitly incorporated into the main objective by decision or authorized reconciliation.",
+    "CLOSED": "A branch whose effect was integrated, rejected, archived or determined to have no main-track effect."
+  },
+  "context_classes": [
+    "CANONICAL_OWNER_STATE",
+    "MATERIAL_CONVERSATION_CONTEXT_NOT_YET_INCORPORATED",
+    "SIDE_BRANCH_CONTEXT",
+    "HUMAN_DECISION",
+    "AUTHORIZATION",
+    "RESULT",
+    "PENDING_RETURN_CONTEXT"
+  ],
+  "promotion_rules": [
+    "MATERIAL_CONTEXT_MUST_IDENTIFY_AN_OWNER_OR_EXPLICITLY_REMAIN_UNINCORPORATED",
+    "PROMOTION_TO_CANONICAL_STATE_REQUIRES_THE_NORMAL_AUTHORITY_FOR_THE_TARGET_OWNER_ARTIFACT",
+    "A_SESSION_SUMMARY_CANNOT_CREATE_OR_REPLACE_A_DECISION_AUTHORIZATION_RESULT_OR_PENDING_RECORD",
+    "A_BRANCH_CANNOT_CHANGE_MAIN_OBJECTIVE_BY_INFERENCE"
+  ],
+  "continuity_generation": [
+    "VERIFY_LIVE_HEAD",
+    "READ_CANONICAL_STATE_AND_OWNER_ARTIFACTS",
+    "READ_ACTIVE_SESSION_WORK_POSITION",
+    "RECONCILE_MATERIAL_OPEN_CONTEXT",
+    "PRESERVE_MAIN_AND_SIDE_BRANCHES",
+    "SET_EXPLICIT_RETURN_AND_NEXT_REQUIRED_NODES",
+    "BUILD_CURRENT_CONTINUITY_PACKAGE",
+    "VALIDATE_REFERENCES_AND_ARCHIVE_PREVIOUS_CURRENT_PACKAGE"
+  ],
+  "fail_closed_conditions": [
+    "MAIN_POSITION_CANNOT_BE_DETERMINED",
+    "RETURN_NODE_IS_MISSING_FOR_AN_OPEN_SIDE_BRANCH",
+    "MATERIAL_CONTEXT_HAS_NO_CLASSIFICATION_OR_OWNER_DISPOSITION",
+    "A_PROPOSED_FOCUS_CHANGE_LACKS_HUMAN_DECISION",
+    "A_CONTINUITY_PACKAGE_IMPLIES_EXECUTION_AUTHORITY"
+  ],
+  "source_refs": [
+    "decisions/DEC-LAB-033.json",
+    "docs/CONTINUITY_PROTOCOL.md",
+    "architecture/governance/FOCUS_AND_ROADMAP_PRESERVATION_001/CONTRACT.json"
+  ]
+}

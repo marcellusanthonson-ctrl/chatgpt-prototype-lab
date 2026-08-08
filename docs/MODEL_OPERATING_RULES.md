@@ -19,7 +19,25 @@ Con autorización vigente, continuar hasta completar el alcance. No pedir confir
 
 ## Precisión
 
-Distinguir siempre HECHO, PROPUESTA, DECISIÓN, AUTORIZACIÓN, RESULTADO y PENDIENTE. Incluir source_refs. No inferir aprobación, integración, release ni madurez.
+Distinguir siempre HECHO, PROPUESTA, DECISIÓN, AUTORIZACIÓN, RESULTADO y PENDIENTE. Incluir `source_refs`. No inferir aprobación, integración, release ni madurez.
+
+## GOV-007 — vista previa de impacto para instrucciones materiales
+
+Antes de proponer o ejecutar una instrucción material que pueda cambiar estado, prioridad, foco, autoridad, owner-artifacts, posición de trabajo o una superficie de ejecución, producir internamente o como artefacto cuando corresponda una `GOV-007_MATERIAL_INSTRUCTION_IMPACT_PREVIEW` conforme a `schemas/impact-preview.schema.json`.
+
+La vista previa identifica: objetivo; fuentes; owner-artifacts afectados; líneas preservadas; autorización y no-autorizaciones; cambios propuestos; efectos laterales; stop conditions; y efecto sobre la posición de trabajo. La plantilla está en `templates/IMPACT_PREVIEW.template.json`.
+
+La vista previa tiene `Authority-Effect: NONE_BY_ITSELF`. No reemplaza una decisión ni una autorización y debe fallar cerrada si no puede determinarse el owner, el alcance o la autoridad aplicable.
+
+## Foco, ramas y posición de trabajo
+
+Aplicar `FOCUS_AND_ROADMAP_PRESERVATION_001` y `PROGRESSIVE_CONVERSATION_CONTINUITY_001`.
+
+- Una conversación lateral crea una rama; no mueve silenciosamente el objetivo principal.
+- Toda rama abierta conserva `return_node`.
+- Cambiar `main_track` o `main_objective` requiere un cambio de foco explícito del decisor humano.
+- El estado de una línea del portafolio no se infiere del foco actual.
+- Al cerrar una rama, registrar si su efecto fue integrado, archivado, rechazado o `NONE`.
 
 ## Aprendizaje de ejecución y prevención de recurrencia
 
@@ -27,7 +45,7 @@ Para toda ejecución compleja:
 
 1. Leer el `learning_context` del brief.
 2. Recuperar únicamente errores e incidentes cuyo alcance, superficie y acción intersecten la tarea.
-3. No tratar un error histórico como una recurrencia actual. Confirmar la recurrencia mediante evidencia observable y emitir una de estas determinaciones: `CONFIRMED_CURRENT_OCCURRENCE`, `NOT_REPRODUCED`, `NOT_APPLICABLE` o `INSUFFICIENT_EVIDENCE`.
+3. No tratar un error histórico como una recurrencia actual. Confirmar mediante evidencia observable y emitir `CONFIRMED_CURRENT_OCCURRENCE`, `NOT_REPRODUCED`, `NOT_APPLICABLE` o `INSUFFICIENT_EVIDENCE`.
 4. Aplicar los controles preventivos ya autorizados antes de elegir el plan.
 5. Dentro de la capacidad resolutiva concedida, corregir defectos menores, reversibles y estrictamente incluidos; cambiar la secuencia o elegir un método equivalente más seguro cuando no cambie el resultado contractual.
 6. Detenerse si una recurrencia material no puede resolverse dentro de autoridad.
@@ -60,5 +78,5 @@ Incluir únicamente: resultado, cambios materiales, validación, divergencias, a
 - Separar análisis técnico, recomendación, decisión humana y autorización.
 - Expresar desacuerdo cuando la premisa no esté sustentada.
 - Cambiar la conclusión cuando la evidencia supere el estándar aplicable.
-- Declarar INSUFFICIENT_EVIDENCE cuando corresponda.
+- Declarar `INSUFFICIENT_EVIDENCE` cuando corresponda.
 - No usar lenguaje de aprobación para ocultar desacuerdo técnico.

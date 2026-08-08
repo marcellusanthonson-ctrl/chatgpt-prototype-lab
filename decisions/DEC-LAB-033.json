@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "id": "DEC-LAB-033",
+  "project_id": "lab",
+  "title": "Adopt post-A1 documentary convergence, portfolio-preserving focus semantics, and progressive conversation continuity",
+  "status": "APPROVED",
+  "approval_state": "APPROVED",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-08-08T09:10:00-04:00",
+  "approval_source_ref": "projects/lab/sources/USER_SOURCE_AUTHORIZATION_215_20260808.md",
+  "governing_decision": "DEC-LAB-032",
+  "subject": "POST_A1_DOCUMENTARY_CONVERGENCE_PORTFOLIO_PRESERVATION_AND_PROGRESSIVE_CONVERSATION_CONTINUITY",
+  "decision": {
+    "documentary_reconciliation_b": "ADOPT_AND_COMPLETE_AFTER_A1_OPERATIONAL_PASS",
+    "canonical_decision_namespace": "decisions/DEC-LAB-NNN.json",
+    "legacy_parallel_project_decision_namespace": "ARCHIVE_ONLY_NOT_ACTIVE_AFTER_RECONCILIATION_215",
+    "focus_and_portfolio_state_are_separate": true,
+    "focus_change_does_not_cancel_nonterminal_objectives": true,
+    "focus_change_does_not_change_integration_state": true,
+    "side_discussion_creates_branch_without_moving_main_work_position": true,
+    "main_objective_change_requires_explicit_focus_change": true,
+    "progressive_continuity_contract": "PROGRESSIVE_CONVERSATION_CONTINUITY_001",
+    "focus_preservation_contract": "FOCUS_AND_ROADMAP_PRESERVATION_001",
+    "material_instruction_impact_preview": "GOV-007_REQUIRED"
+  },
+  "decision_namespace_reconciliation": {
+    "DEC-LAB-023": {"canonical_holder":"decisions/DEC-LAB-023.json","historical_colliding_decision_reassigned_to":"DEC-LAB-034"},
+    "DEC-LAB-024": {"canonical_holder":"decisions/DEC-LAB-024.json","historical_colliding_decision_reassigned_to":"DEC-LAB-035"},
+    "DEC-LAB-025": {"canonical_holder":"decisions/DEC-LAB-025.json","historical_colliding_decision_reassigned_to":"DEC-LAB-036"},
+    "historical_originals_preserved_byte_for_byte_under":"projects/lab/decisions/archive/pre-215/"
+  },
+  "portfolio_preservation": {
+    "contextual_bootstrap": "PRESERVED_DEFERRED_NOT_CANCELLED",
+    "product_leadership": "PRESERVED_BLOCKED_NOT_ADJUDICATED",
+    "software_solution_engineering": "PRESERVED_BLOCKED_REQUIRES_SEPARATE_AUTHORITY_RECONCILIATION",
+    "codex_desktop_operating_model": "PRESERVED_DOCUMENTARY_STANDARD_OPERATIONAL_BENCHMARK_PENDING",
+    "all_other_nonterminal_objectives": "PRESERVED_UNLESS_EXPLICITLY_CHANGED_BY_A_SEPARATE_DECISION"
+  },
+  "consequences": [
+    "AGGREGATE_VIEWS_BECOME_CURRENT_PROJECTIONS_OVER_OWNER_ARTIFACTS",
+    "DECISION_IDS_BECOME_UNIQUE_IN_THE_ACTIVE_NAMESPACE",
+    "MODEL_OPERATING_RULES_BECOME_MANDATORY_STARTUP_READING",
+    "CONTINUITY_PRESERVES_WORK_POSITION_AND_BRANCHES_IN_ADDITION_TO_MEMORY",
+    "ROADMAP_EXPOSES_CURRENT_FOCUS_WITHOUT_ERASING_DEFERRED_OR_BLOCKED_LINES",
+    "AFTER_RECONCILIATION_B_THE_NEXT_GATE_IS_HUMAN_SELECTION_OF_THE_NEXT_TECHNICAL_FOCUS"
+  ],
+  "non_authorizations": [
+    "NO_TECHNICAL_LINE_EXECUTION",
+    "NO_PRODUCT_LEADERSHIP_STATE_CHANGE",
+    "NO_SSE_STATE_CHANGE",
+    "NO_CONTEXTUAL_BOOTSTRAP_STATE_CHANGE",
+    "NO_INTEGRATION_PROMOTION_OR_ACTIVATION",
+    "NO_MODEL_CODEX_CLAUDE_BENCHMARK_OR_TEST_EXECUTION",
+    "NO_MAIN_OR_CANARY_ENFORCEMENT_MUTATION",
+    "NO_BREAK_GLASS_ACTIVATION",
+    "NO_RUNTIME_PRODUCT_OR_EXTERNAL_REPOSITORY_CHANGE"
+  ],
+  "authority_effect": "NORMATIVE_DOCUMENTARY_DECISION_ONLY",
+  "runtime_effect": "NONE",
+  "integration_effect": "NONE",
+  "product_effect": "NONE"
+}

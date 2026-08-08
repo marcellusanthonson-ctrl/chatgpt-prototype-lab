@@ -1,0 +1,25 @@
+{
+  "preview_id": "IMPACT-PREVIEW-REPLACE-ME",
+  "classification": "GOV-007_MATERIAL_INSTRUCTION_IMPACT_PREVIEW",
+  "objective": "REPLACE_WITH_MATERIAL_INSTRUCTION_OBJECTIVE",
+  "source_refs": ["REPLACE_WITH_CANONICAL_SOURCE_REF"],
+  "affected_owner_artifacts": [],
+  "preserved_lines": [],
+  "authority": {
+    "authorization_ref": null,
+    "scope_effect": "NO_EXECUTION_AUTHORITY_FROM_PREVIEW",
+    "authority_additions": [],
+    "non_authorizations": []
+  },
+  "proposed_changes": [],
+  "side_effects": [],
+  "stop_conditions": ["STOP_IF_AUTHORITY_OR_OWNER_STATE_CANNOT_BE_DETERMINED"],
+  "work_position_effect": {
+    "main_position_moves": false,
+    "branch_created": false,
+    "return_node": null,
+    "next_required_node": null
+  },
+  "decision_required": false,
+  "authority_effect": "NONE_BY_ITSELF"
+}

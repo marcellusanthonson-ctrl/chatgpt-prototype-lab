@@ -1,52 +1,12 @@
 {
   "schema_version": "1.0.0",
-  "decision_id": "DEC-LAB-023",
-  "project_id": "lab",
-  "title": "Assign Claude as independent auditor for Product Leadership Test 003",
-  "status": "APPROVED",
-  "approved_by": "Jonathan Martínez",
-  "approved_at": "2026-07-27",
-  "repository": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
-  "branch": "main",
-  "expected_parent_head": "bbc74430105277ad1bd1219e07ba506e2a2bc70c",
-  "subject": "PRODUCT-LEADERSHIP-PROSPECTIVE-VALUE-TEST-003",
-  "assignment": {
-    "assignee": "CLAUDE",
-    "role": "INDEPENDENT_AUDITOR",
-    "access_mode": "READ_ONLY",
-    "may_read": [
-      "HASH_MANIFESTS",
-      "ROLE_AND_ACCESS_LOGS",
-      "CHECKPOINT_ATTESTATIONS",
-      "FINAL_EXECUTION_PACKAGE_AFTER_ALLOWED_RELEASE"
-    ],
-    "may_write": [
-      "AUDIT_REPORT",
-      "AUDIT_FINDINGS"
-    ],
-    "forbidden": [
-      "MODIFY_TEST_ARTIFACTS",
-      "GENERATE_FIXTURES_OR_OUTPUTS",
-      "SCORE_OUTPUTS",
-      "ACCESS_UNRELEASED_RANDOMIZATION_MAPPING",
-      "EXECUTE_GENERATORS",
-      "ACT_AS_ANY_OTHER_TEST_ROLE"
-    ]
-  },
-  "independence_conditions": [
-    "DISTINCT_ACCOUNT_OR_PRINCIPAL",
-    "NO_SHARED_WRITEABLE_WORKSPACE_WITH_SUBJECT_ROLES",
-    "NO_SHARED_CREDENTIALS",
-    "READ_ONLY_ACCESS_TO_SUBJECT_ARTIFACTS",
-    "SEPARATE_SESSION_AND_ACCESS_LOGS",
-    "AUDIT_STARTS_ONLY_AFTER_REQUIRED_CHECKPOINTS"
-  ],
-  "effect": {
-    "test_003_execution_authorized": false,
-    "product_leadership_active": false,
-    "product_leadership_integrated": false,
-    "runtime_effect": "NONE",
-    "product_effect": "NONE"
-  },
-  "authority_effect": "NORMATIVE_ROLE_ASSIGNMENT_ONLY"
+  "record_type": "HISTORICAL_DECISION_REDIRECT",
+  "active_decision": false,
+  "historical_original_id": "DEC-LAB-023",
+  "canonical_reassigned_id": "DEC-LAB-034",
+  "canonical_reassigned_path": "decisions/DEC-LAB-034.json",
+  "archived_original_path": "projects/lab/decisions/archive/pre-215/DEC-LAB-023.json",
+  "archived_original_blob_sha": "98ee68c0b4eeb46b4cd13efa84d0ccee590ac708",
+  "reconciliation_authorization": "AUTHORIZATION_LAB_POST_A1_DOCUMENTARY_RECONCILIATION_AND_CONTINUITY_ARCHITECTURE_215",
+  "authority_effect": "NONE"
 }
