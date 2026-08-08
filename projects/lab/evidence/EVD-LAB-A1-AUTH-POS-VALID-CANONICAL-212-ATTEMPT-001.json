@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-A1-AUTH-POS-VALID-CANONICAL-212-ATTEMPT-001",
+  "project_id": "lab",
+  "authorization_id": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+  "decision_ref": "DEC-LAB-032",
+  "test_id": "A1_AUTH_POS_VALID_CANONICAL",
+  "attempt_id": "ATTEMPT-001",
+  "status": "PASS",
+  "executed_at": "2026-08-07T22:11:00-04:00",
+  "canonical_main_head_before_test": "6bc9d8a2b1669dbda0990f1e70b14b2fa161ebd1",
+  "canary": {
+    "base_branch": "lab-governance-canary-210",
+    "base_sha": "8db33a0f61d45055134b9efc1f82597ac07b4c7b",
+    "test_branch": "test/a1-auth-pos-valid-canonical-212",
+    "fixture_head_sha": "d190de602a6751235398063c6124b2d74e473669",
+    "pull_request": 85,
+    "pull_request_merged": false,
+    "changed_files": 1,
+    "fixture_path": "projects/lab/governance-tests/authorization-212/A1_AUTH_POS_VALID_CANONICAL.json"
+  },
+  "observed_runs": [
+    {
+      "workflow": "LAB Canonical Authority Gate v2",
+      "run_id": 31234393820,
+      "job_id": 93044170021,
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "workflow": "LAB Publication Gate",
+      "run_id": 31234393825,
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "gate_v2_result": {
+    "authorization": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212.json",
+    "lifecycle_path": "projects/lab/authorization-lifecycle/PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_A1_LIFECYCLE_212.json",
+    "base_ref": "lab-governance-canary-210",
+    "canonical_ref": "main",
+    "same_repository_pr": true,
+    "changed_files": 1,
+    "json_files_checked": 1,
+    "text_files_checked": 1,
+    "failures": []
+  },
+  "determination": "PASS_VALID_CANONICAL_AUTHORITY_ACCEPTED_ON_CANARY",
+  "claim_boundary": "This PASS establishes the positive canonical-authority path only. It does not establish rejection of invalid authority, approval separation, ruleset binding of Gate v2, control-plane tamper resistance, recovery readiness, main enforcement, or A1 operational completion.",
+  "remaining_tests": {
+    "A1_AUTH_NEG_NONEXISTENT_AUTHORIZATION": "NOT_RUN",
+    "A1_AUTH_NEG_CONSUMED_REVOKED_OR_EXPIRED": "NOT_RUN",
+    "A1_AUTH_NEG_WRONG_REPOSITORY_BRANCH_PATH_OR_ACTION_SCOPE": "NOT_RUN",
+    "A1_ENF_NEG_MISSING_AUTHORIZATION_TRAILER": "NOT_RUN",
+    "A1_ENF_NEG_INVALID_JSON_OR_CONFLICT_MARKERS": "NOT_RUN",
+    "A1_APPROVAL_SEPARATION": "NOT_RUN",
+    "A1_CONTROL_PLANE_TAMPERING": "NOT_RUN",
+    "A1_RECOVERY_BREAK_GLASS_DESIGN_VALIDATION": "NOT_RUN"
+  },
+  "prior_results_preserved": {
+    "A1_ENF_NEG_DIRECT_PUSH": "TECHNICAL_PASS_PRESERVED_NO_RERUN",
+    "A1_READER_READBACK": "TECHNICAL_PASS_PRESERVED_REVALIDATE_IF_REQUIRED"
+  },
+  "source_refs": [
+    ".github/workflows/lab-canonical-authority-gate-v2-212.yml",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212.json",
+    "projects/lab/authorization-lifecycle/PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_A1_LIFECYCLE_212.json"
+  ]
+}
