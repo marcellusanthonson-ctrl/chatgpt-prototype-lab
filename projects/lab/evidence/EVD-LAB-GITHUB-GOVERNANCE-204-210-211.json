@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-GITHUB-GOVERNANCE-204-210-211",
+  "project_id": "lab",
+  "status": "CANONICAL_RECONCILIATION_EVIDENCE",
+  "created_at": "2026-08-07T21:38:00-04:00",
+  "authorization_ref": "AUTHORIZATION_LAB_AUTHORIZATION_APPROVAL_PROTOCOL_AND_GITHUB_GOVERNANCE_204_210_RECONCILIATION_211",
+  "baseline_head": "acc356e93eaef2439653c32cdf9883f701da0265",
+  "evidence": [
+    {"subject": "204", "type": "CANONICAL_FILE", "ref": "projects/lab/authorizations/AUTHORIZATION_LAB_GITHUB_GOVERNANCE_READ_ONLY_PREFLIGHT_204.json"},
+    {"subject": "204_lifecycle_pre_211", "type": "CANONICAL_FILE", "ref": "projects/lab/authorization-lifecycle/GITHUB_GOVERNANCE_READ_ONLY_PREFLIGHT_AUTHORIZATION_LIFECYCLE_204.json"},
+    {"subject": "207_install", "type": "GITHUB_PR", "ref": "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/pull/72"},
+    {"subject": "207_cleanup", "type": "GITHUB_PR", "ref": "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/pull/73"},
+    {"subject": "208_install", "type": "GITHUB_PR", "ref": "https://github.com/marcellusanthon-ctrl/chatgpt-prototype-lab/pull/74"},
+    {"subject": "208_cleanup_trigger", "type": "GITHUB_PR", "ref": "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/pull/75"},
+    {"subject": "208_run", "type": "GITHUB_ACTIONS_RUN", "ref": "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/actions/runs/31208170230", "result": "success"},
+    {"subject": "209_install", "type": "GITHUB_PR", "ref": "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/pull/76"},
+    {"subject": "209_cleanup_trigger", "type": "GITHUB_PR", "ref": "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/pull/77"},
+    {"subject": "209_run", "type": "GITHUB_ACTIONS_RUN", "ref": "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/actions/runs/31216938420", "result": "success"},
+    {"subject": "210_positive", "type": "GITHUB_ACTIONS_RUN", "ref": "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/actions/runs/31221349700", "result": "success"},
+    {"subject": "210_readback", "type": "GITHUB_ACTIONS_RUN", "ref": "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/actions/runs/31226582922", "result": "success"},
+    {"subject": "210_current_cleanup_head", "type": "GITHUB_COMMIT", "ref": "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/commit/acc356e93eaef2439653c32cdf9883f701da0265"},
+    {"subject": "211_human_approval", "type": "HUMAN_AUTHORITY_SOURCE", "ref": "projects/lab/sources/USER_SOURCE_AUTHORIZATION_211_20260807.md"}
+  ],
+  "claim_boundaries": [
+    "Technical success does not establish missing authorization provenance.",
+    "No remote record found for 205 or 206 does not prove they never existed.",
+    "The 207 transport test is NOT_RUN because no workflow run is observable.",
+    "The 210 direct-push rejection is preserved as a prior API observation; 211 does not re-execute it.",
+    "No A1 test is executed by authorization 211."
+  ]
+}
