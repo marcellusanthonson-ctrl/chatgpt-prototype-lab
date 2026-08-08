@@ -1,10 +1,10 @@
 {
-  "schema_version": "1.4.0",
+  "schema_version": "1.5.0",
   "record_id": "PUBLICATION-ENFORCEMENT-CANONICAL-AUTHORITY-VALIDATION-A1-LIFECYCLE-212",
   "project_id": "lab",
   "authorization": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
   "decision_ref": "DEC-LAB-032",
-  "status": "GRANTED_STAGE_1_ACTIVE_NONEXISTENT_AUTHORIZATION_VALIDATOR_PASS_REPORT_REQUIRED_BEFORE_NEXT_TEST",
+  "status": "GRANTED_STAGE_1_ACTIVE_READY_FOR_NEXT_SEQUENTIAL_TEST",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-08-07T21:59:00-04:00",
   "approval_source_ref": "projects/lab/sources/USER_SOURCE_AUTHORIZATION_212_20260807.md",
@@ -20,7 +20,7 @@
   },
   "stage_1": {
     "name": "A1_CANARY_CANONICAL_AUTHORITY_GATE_V2_AND_VALIDATION",
-    "status": "ACTIVE_NONEXISTENT_AUTHORIZATION_VALIDATOR_PASS_REPORT_REQUIRED_BEFORE_NEXT_TEST",
+    "status": "ACTIVE_READY_FOR_NEXT_SEQUENTIAL_TEST",
     "activation_gate": "SATISFIED_STAGE_0_REMOTE_MAIN_VERIFIED",
     "tests_started": true,
     "last_test": {
@@ -37,7 +37,17 @@
       "evidence_ref": "projects/lab/evidence/EVD-LAB-A1-AUTH-NEG-NONEXISTENT-212-ATTEMPT-001.json"
     },
     "post_test_report_required_before_next_test": true,
-    "post_test_report_delivered": false,
+    "post_test_report_delivered": true,
+    "post_test_report": {
+      "report_id": "A1-212-POST-TEST-REPORT-002",
+      "reported_test": "A1_AUTH_NEG_NONEXISTENT_AUTHORIZATION",
+      "reported_attempt": "ATTEMPT-001",
+      "delivered_to": "Jonathan Martínez",
+      "delivered_at": "2026-08-07T23:08:00-04:00",
+      "delivery_surface": "CHATGPT_CONVERSATION",
+      "next_action_reported": "A1_AUTH_NEG_CONSUMED_REVOKED_OR_EXPIRED",
+      "authority_effect": "NONE"
+    },
     "previous_post_test_report": {
       "report_id": "A1-212-POST-TEST-REPORT-001",
       "reported_test": "A1_AUTH_POS_VALID_CANONICAL",
@@ -68,7 +78,7 @@
     "A1_CONTROL_PLANE_TAMPERING": "NOT_RUN",
     "A1_RECOVERY_BREAK_GLASS_DESIGN_VALIDATION": "NOT_RUN"
   },
-  "residual_authority": "STAGE_1_A1_SCOPE_ONLY_SUBJECT_TO_MANDATORY_POST_TEST_REPORT_BEFORE_NEXT_TEST",
+  "residual_authority": "STAGE_1_A1_SCOPE_ONLY",
   "final_consumption_rule": "CONSUMED_AFTER_TERMINAL_A1_REPORT_AND_AUTHORIZED_CLEANUP_ARE_PUBLISHED_AND_REMOTE_VERIFIED",
   "non_authorizations": [
     "NO_MAIN_BRANCH_PROTECTION_MUTATION",
