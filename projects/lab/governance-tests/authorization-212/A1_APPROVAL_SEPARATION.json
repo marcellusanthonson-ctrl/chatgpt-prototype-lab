@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "test_id": "A1_APPROVAL_SEPARATION",
+  "attempt_id": "ATTEMPT-001",
+  "actor_login": "marcellusanthonson-ctrl",
+  "expected_content_gates": "PASS_VALID_CANONICAL_AUTHORITY",
+  "expected_self_approval_behavior": "GITHUB_REJECTS_AUTHOR_APPROVING_OWN_PULL_REQUEST",
+  "required_ruleset_target": "lab-governance-canary-210",
+  "required_approval_configuration_target": 1,
+  "observed_pre_test_required_approving_review_count": 0,
+  "execution_authorization": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+  "claim_boundary": "This fixture validates approval separation only. A PASS requires both native self-approval rejection and effective canary enforcement requiring an independent approval; native self-approval rejection alone is insufficient."
+}
