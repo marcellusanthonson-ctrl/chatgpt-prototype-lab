@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-A1-ENF-NEG-MISSING-TRAILER-212-ATTEMPT-001",
+  "project_id": "lab",
+  "authorization_id": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+  "decision_ref": "DEC-LAB-032",
+  "test_id": "A1_ENF_NEG_MISSING_AUTHORIZATION_TRAILER",
+  "attempt_id": "ATTEMPT-001",
+  "status": "PASS_MISSING_AUTHORIZATION_TRAILER_REJECTED_BY_BOTH_GATES_BINDING_NOT_ESTABLISHED",
+  "execution": {
+    "execution_authorization": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+    "pull_request": 104,
+    "pull_request_merged": false,
+    "pull_request_mergeable_after_checks": true,
+    "fixture_head_sha": "088fbd8f17241464eab761a919314104cd4eeed0",
+    "fixture_path": "projects/lab/governance-tests/authorization-212/A1_ENF_NEG_MISSING_AUTHORIZATION_TRAILER.json",
+    "authorization_trailer_present": false,
+    "gate_v2_run_id": 31241410269,
+    "gate_v2_conclusion": "failure",
+    "legacy_gate_run_id": 31241410295,
+    "legacy_gate_conclusion": "failure"
+  },
+  "gate_v2_result": {
+    "structured_result_emitted": true,
+    "authorization": null,
+    "authorization_path": null,
+    "same_repository_pr": true,
+    "primary_failure": "AUTHORIZATION_TRAILER_MISSING_OR_INVALID",
+    "additional_failures": [
+      "AUTHORIZATION_PATH_SCOPE_MISSING",
+      "AUTHORIZATION_PATH_SCOPE_MISMATCH:projects/lab/governance-tests/authorization-212/A1_ENF_NEG_MISSING_AUTHORIZATION_TRAILER.json"
+    ],
+    "validator_crash": false,
+    "fail_closed": true
+  },
+  "legacy_gate_result": {
+    "conclusion": "failure",
+    "missing_authorization_trailer_rejected": true
+  },
+  "determination": "Both the legacy publication gate and Gate v2 rejected a canary pull request whose publication body deliberately omitted the required Authorization trailer. Gate v2 explicitly emitted AUTHORIZATION_TRAILER_MISSING_OR_INVALID. Required-status binding remains unestablished because the PR stayed mergeable after both checks failed.",
+  "binding": {
+    "status": "NOT_ESTABLISHED",
+    "evidence": "PR_104_REMAINS_MERGEABLE_TRUE_DESPITE_BOTH_GATES_FAILURE"
+  },
+  "post_test_report": {
+    "report_id": "A1-212-POST-TEST-REPORT-008",
+    "delivered_to": "Jonathan Martínez",
+    "delivered_at": "2026-08-08T01:19:00-04:00",
+    "delivery_surface": "CHATGPT_CONVERSATION",
+    "next_action_reported": "CANONICALLY_RECORD_MISSING_TRAILER_RESULT_THEN_A1_ENF_NEG_INVALID_JSON_OR_CONFLICT_MARKERS",
+    "authority_effect": "NONE"
+  },
+  "not_run_after_this_attempt": [
+    "A1_ENF_NEG_INVALID_JSON_OR_CONFLICT_MARKERS",
+    "A1_APPROVAL_SEPARATION",
+    "A1_CONTROL_PLANE_TAMPERING",
+    "A1_RECOVERY_BREAK_GLASS_DESIGN_VALIDATION"
+  ],
+  "claim_boundary": "This evidence establishes rejection of a missing Authorization trailer by both current publication validators. It does not establish required-status binding, invalid JSON or conflict-marker rejection, approval separation, control-plane tamper resistance, recovery readiness, main enforcement, or A1 operational PASS.",
+  "source_refs": [
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212.json",
+    "projects/lab/governance-tests/authorization-212/A1_ENF_NEG_MISSING_AUTHORIZATION_TRAILER.json",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/pull/104",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/actions/runs/31241410269",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/actions/runs/31241410295"
+  ]
+}
