@@ -1,10 +1,10 @@
 {
-  "schema_version": "1.6.2",
+  "schema_version": "1.6.3",
   "record_id": "PUBLICATION-ENFORCEMENT-CANONICAL-AUTHORITY-VALIDATION-A1-LIFECYCLE-212",
   "project_id": "lab",
   "authorization": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
   "decision_ref": "DEC-LAB-032",
-  "status": "GRANTED_STAGE_1_ACTIVE_REVOKED_VARIANT_BLOCKED_REPORT_DELIVERED_REMEDIATION_IN_PROGRESS",
+  "status": "GRANTED_STAGE_1_ACTIVE_REVOKED_VARIANT_PASS_REPORT_DELIVERED_READY_FOR_EXPIRED_SUBJECT_DISCOVERY",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-08-07T21:59:00-04:00",
   "approval_source_ref": "projects/lab/sources/USER_SOURCE_AUTHORIZATION_212_20260807.md",
@@ -20,24 +20,26 @@
   },
   "stage_1": {
     "name": "A1_CANARY_CANONICAL_AUTHORITY_GATE_V2_AND_VALIDATION",
-    "status": "ACTIVE_REVOKED_VARIANT_BLOCKED_REPORT_DELIVERED_REMEDIATION_IN_PROGRESS",
+    "status": "ACTIVE_REVOKED_VARIANT_PASS_REPORT_DELIVERED_READY_FOR_EXPIRED_SUBJECT_DISCOVERY",
     "activation_gate": "SATISFIED_STAGE_0_REMOTE_MAIN_VERIFIED",
     "tests_started": true,
     "last_test": {
       "test_id": "A1_AUTH_NEG_CONSUMED_REVOKED_OR_EXPIRED",
-      "attempt_id": "ATTEMPT-002",
+      "attempt_id": "ATTEMPT-003",
       "tested_variant": "REVOKED",
-      "result": "BLOCKED_VALIDATOR_CRASH_LEGACY_REPOSITORY_SCHEMA_NOT_SEMANTIC_REVOKED_PASS",
+      "result": "PASS_REVOKED_AUTHORIZATION_VALIDATOR_REJECTION_BINDING_NOT_ESTABLISHED",
       "subject_authorization": "AUTHORIZATION_LAB_PL003_HUMAN_ADMIN_IDENTITY_CENTER_BOOTSTRAP_139",
       "subject_authorization_status": "REVOKED",
       "subject_residual_authority": "NONE",
+      "subject_lifecycle_ref_present": false,
       "pull_request": 94,
       "pull_request_merged": false,
-      "fixture_head_sha": "97d8dca4d2845ed5cd8479b6579ed8af5bf726e6",
-      "gate_v2_run_id": 31239361775,
-      "legacy_gate_run_id": 31239361785,
-      "primary_failure": "VALIDATOR_CRASH_LEGACY_REPOSITORY_SCHEMA",
-      "evidence_ref": "projects/lab/evidence/EVD-LAB-A1-AUTH-NEG-REVOKED-212-ATTEMPT-002.json"
+      "pull_request_mergeable_after_checks": true,
+      "fixture_head_sha": "73851e6e671318976ff761435c59c9c9b40352b7",
+      "gate_v2_run_id": 31239507846,
+      "legacy_gate_run_id": 31239513823,
+      "primary_failure": "AUTHORIZATION_NOT_EFFECTIVELY_GRANTED",
+      "evidence_ref": "projects/lab/evidence/EVD-LAB-A1-AUTH-NEG-REVOKED-212-ATTEMPT-003.json"
     },
     "post_test_report_required_before_next_test": true,
     "post_test_report_delivered": true,
@@ -85,21 +87,35 @@
         "delivery_surface": "CHATGPT_CONVERSATION",
         "next_action_reported": "REMEDIATE_GATE_V2_LEGACY_REPOSITORY_SCHEMA_THEN_RETRY_REVOKED_ONLY",
         "authority_effect": "NONE"
+      },
+      {
+        "report_id": "A1-212-POST-TEST-REPORT-005",
+        "reported_test": "A1_AUTH_NEG_CONSUMED_REVOKED_OR_EXPIRED",
+        "reported_attempt": "ATTEMPT-003",
+        "reported_variant": "REVOKED",
+        "reported_result": "PASS_REVOKED_AUTHORIZATION_VALIDATOR_REJECTION_BINDING_NOT_ESTABLISHED",
+        "delivered_to": "Jonathan Martínez",
+        "delivered_at": "2026-08-08T00:29:00-04:00",
+        "delivery_surface": "CHATGPT_CONVERSATION",
+        "next_action_reported": "CANONICALLY_PUBLISH_THIS_RESULT_THEN_LOCATE_GENUINE_EXPIRED_AUTHORIZATION",
+        "authority_effect": "NONE"
       }
     ],
     "gate_v2_workflow": ".github/workflows/lab-canonical-authority-gate-v2-212.yml",
-    "gate_v2_publication_status": "PATCH_PREPARED_AWAITING_REMOTE_MAIN_PUBLICATION",
+    "gate_v2_publication_status": "LEGACY_SCHEMA_REMEDIATION_PUBLISHED_REMOTE_VERIFIED_AT_MAIN_ee1f49be9d4def988e67f2ed0f81c5779e35d225",
     "gate_v2_ruleset_binding": "NOT_ESTABLISHED",
-    "binding_evidence": "PR_91_MERGEABLE_TRUE_DESPITE_GATE_V2_FAILURE",
+    "binding_evidence": "PR_94_MERGEABLE_TRUE_DESPITE_GATE_V2_FAILURE",
     "remediation": {
       "trigger": "REVOKED_ATTEMPT_002_VALIDATOR_CRASH",
       "defect": "LEGACY_AUTHORIZATION_REPOSITORY_FIELD_STRING_NOT_OBJECT",
       "required_behavior": "NORMALIZE_STRING_AND_OBJECT_REPOSITORY_SHAPES_WITHOUT_AUTHORITY_EXPANSION",
-      "retry_scope": "REVOKED_VARIANT_ONLY_AFTER_PATCH_REMOTE_VERIFICATION"
+      "publication_status": "PASS_REMOTE_VERIFIED",
+      "publication_commit": "ee1f49be9d4def988e67f2ed0f81c5779e35d225",
+      "retry_result": "PASS_REVOKED_AUTHORIZATION_VALIDATOR_REJECTION_BINDING_NOT_ESTABLISHED"
     },
     "terminal_state_variant_status": {
       "CONSUMED": "PASS_ATTEMPT_001_REPORT_DELIVERED",
-      "REVOKED": "BLOCKED_ATTEMPT_002_REPORT_DELIVERED_RETRY_REQUIRED",
+      "REVOKED": "PASS_ATTEMPT_003_REPORT_DELIVERED",
       "EXPIRED": "NOT_RUN"
     }
   },
@@ -110,7 +126,7 @@
   "test_status": {
     "A1_AUTH_POS_VALID_CANONICAL": "PASS_ATTEMPT_001",
     "A1_AUTH_NEG_NONEXISTENT_AUTHORIZATION": "PASS_VALIDATOR_REJECTION_ATTEMPT_001_BINDING_NOT_ESTABLISHED",
-    "A1_AUTH_NEG_CONSUMED_REVOKED_OR_EXPIRED": "CONSUMED_PASS_REVOKED_BLOCKED_RETRY_REQUIRED_EXPIRED_NOT_RUN_BINDING_NOT_ESTABLISHED",
+    "A1_AUTH_NEG_CONSUMED_REVOKED_OR_EXPIRED": "CONSUMED_PASS_REVOKED_PASS_EXPIRED_NOT_RUN_BINDING_NOT_ESTABLISHED",
     "A1_AUTH_NEG_WRONG_REPOSITORY_BRANCH_PATH_OR_ACTION_SCOPE": "NOT_RUN",
     "A1_ENF_NEG_MISSING_AUTHORIZATION_TRAILER": "NOT_RUN",
     "A1_ENF_NEG_INVALID_JSON_OR_CONFLICT_MARKERS": "NOT_RUN",
@@ -118,7 +134,7 @@
     "A1_CONTROL_PLANE_TAMPERING": "NOT_RUN",
     "A1_RECOVERY_BREAK_GLASS_DESIGN_VALIDATION": "NOT_RUN"
   },
-  "residual_authority": "STAGE_1_A1_SCOPE_ONLY_GATE_V2_REMEDIATION_AND_REVOKED_RETRY",
+  "residual_authority": "STAGE_1_A1_SCOPE_ONLY_READY_FOR_GENUINE_EXPIRED_SUBJECT_DISCOVERY_AND_NEXT_SEQUENTIAL_VARIANT",
   "final_consumption_rule": "CONSUMED_AFTER_TERMINAL_A1_REPORT_AND_AUTHORIZED_CLEANUP_ARE_PUBLISHED_AND_REMOTE_VERIFIED",
   "non_authorizations": [
     "NO_MAIN_BRANCH_PROTECTION_MUTATION",
