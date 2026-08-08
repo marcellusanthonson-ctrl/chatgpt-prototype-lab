@@ -1,10 +1,10 @@
 {
-  "schema_version": "1.6.8",
+  "schema_version": "1.6.9",
   "record_id": "PUBLICATION-ENFORCEMENT-CANONICAL-AUTHORITY-VALIDATION-A1-LIFECYCLE-212",
   "project_id": "lab",
   "authorization": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
   "decision_ref": "DEC-LAB-032",
-  "status": "GRANTED_STAGE_1_ACTIVE_INVALID_JSON_PASS_REPORT_009_DELIVERED_CONFLICT_MARKERS_NOT_RUN",
+  "status": "GRANTED_STAGE_1_ACTIVE_INVALID_JSON_AND_CONFLICT_MARKERS_PASS_REPORT_010_DELIVERED_READY_FOR_APPROVAL_SEPARATION",
   "approved_by": "Jonathan Martínez",
   "approved_at": "2026-08-07T21:59:00-04:00",
   "approval_source_ref": "projects/lab/sources/USER_SOURCE_AUTHORIZATION_212_20260807.md",
@@ -20,23 +20,25 @@
   },
   "stage_1": {
     "name": "A1_CANARY_CANONICAL_AUTHORITY_GATE_V2_AND_VALIDATION",
-    "status": "ACTIVE_INVALID_JSON_PASS_REPORT_009_DELIVERED_CONFLICT_MARKERS_NOT_RUN",
+    "status": "ACTIVE_INVALID_JSON_AND_CONFLICT_MARKERS_PASS_REPORT_010_DELIVERED_READY_FOR_APPROVAL_SEPARATION",
     "activation_gate": "SATISFIED_STAGE_0_REMOTE_MAIN_VERIFIED",
     "tests_started": true,
     "last_test": {
       "test_id": "A1_ENF_NEG_INVALID_JSON_OR_CONFLICT_MARKERS",
-      "attempt_id": "ATTEMPT-001",
-      "tested_variant": "INVALID_JSON",
-      "result": "PASS_INVALID_JSON_REJECTED_BY_BOTH_GATES_BINDING_NOT_ESTABLISHED",
-      "pull_request": 106,
+      "attempt_id": "ATTEMPT-002",
+      "tested_variant": "CONFLICT_MARKERS",
+      "result": "PASS_CONFLICT_MARKERS_REJECTED_BY_BOTH_GATES_BINDING_NOT_ESTABLISHED",
+      "pull_request": 108,
       "pull_request_merged": false,
       "pull_request_mergeable_after_checks": true,
-      "fixture_head_sha": "04bc9e4c4b38c227bd756fd244d707717082ad23",
-      "gate_v2_run_id": 31241561222,
-      "legacy_gate_run_id": 31241561229,
-      "primary_and_only_failure": "INVALID_JSON:projects/lab/governance-tests/authorization-212/A1_ENF_NEG_INVALID_JSON_OR_CONFLICT_MARKERS.json:line=9:column=1",
+      "fixture_head_sha": "b96819bb52be82c6a92c83037290e041dae9847e",
+      "gate_v2_run_id": 31241684234,
+      "legacy_gate_run_id": 31241684195,
+      "primary_and_only_failure": "MERGE_CONFLICT_MARKERS:projects/lab/governance-tests/authorization-212/A1_ENF_NEG_INVALID_JSON_OR_CONFLICT_MARKERS_CONFLICT.txt",
+      "json_files_checked": 0,
+      "invalid_json_failure_present": false,
       "authority_scope_or_provenance_failures_present": false,
-      "evidence_ref": "projects/lab/evidence/EVD-LAB-A1-ENF-NEG-INVALID-JSON-212-ATTEMPT-001.json"
+      "evidence_ref": "projects/lab/evidence/EVD-LAB-A1-ENF-NEG-CONFLICT-MARKERS-212-ATTEMPT-002.json"
     },
     "post_test_report_required_before_next_test": true,
     "post_test_report_delivered": true,
@@ -143,12 +145,24 @@
         "delivery_surface": "CHATGPT_CONVERSATION",
         "next_action_reported": "CANONICALLY_RECORD_INVALID_JSON_RESULT_THEN_RUN_CONFLICT_MARKERS_VARIANT",
         "authority_effect": "NONE"
+      },
+      {
+        "report_id": "A1-212-POST-TEST-REPORT-010",
+        "reported_test": "A1_ENF_NEG_INVALID_JSON_OR_CONFLICT_MARKERS",
+        "reported_attempt": "ATTEMPT-002",
+        "reported_variant": "CONFLICT_MARKERS",
+        "reported_result": "PASS_CONFLICT_MARKERS_REJECTED_BY_BOTH_GATES_BINDING_NOT_ESTABLISHED",
+        "delivered_to": "Jonathan Martínez",
+        "delivered_at": "2026-08-08T01:26:00-04:00",
+        "delivery_surface": "CHATGPT_CONVERSATION",
+        "next_action_reported": "CANONICALLY_RECORD_CONFLICT_MARKERS_RESULT_THEN_A1_APPROVAL_SEPARATION",
+        "authority_effect": "NONE"
       }
     ],
     "gate_v2_workflow": ".github/workflows/lab-canonical-authority-gate-v2-212.yml",
     "gate_v2_publication_status": "LEGACY_SCHEMA_REMEDIATION_PUBLISHED_REMOTE_VERIFIED_AT_MAIN_ee1f49be9d4def988e67f2ed0f81c5779e35d225",
     "gate_v2_ruleset_binding": "NOT_ESTABLISHED",
-    "binding_evidence": "PR_106_MERGEABLE_TRUE_DESPITE_BOTH_GATES_FAILURE",
+    "binding_evidence": "PR_108_MERGEABLE_TRUE_DESPITE_BOTH_GATES_FAILURE",
     "terminal_state_variant_status": {
       "CONSUMED": "PASS_ATTEMPT_001_REPORT_DELIVERED",
       "REVOKED": "PASS_ATTEMPT_003_REPORT_DELIVERED",
@@ -156,7 +170,7 @@
     },
     "invalid_json_or_conflict_markers_variant_status": {
       "INVALID_JSON": "PASS_ATTEMPT_001_REPORT_DELIVERED",
-      "CONFLICT_MARKERS": "NOT_RUN"
+      "CONFLICT_MARKERS": "PASS_ATTEMPT_002_REPORT_DELIVERED"
     },
     "expired_variant_blocker": {
       "prior_status": "BLOCKED_NO_CANONICAL_SUBJECT",
@@ -180,13 +194,13 @@
     "A1_AUTH_NEG_CONSUMED_REVOKED_OR_EXPIRED": "CONSUMED_PASS_REVOKED_PASS_EXPIRED_PASS_BINDING_NOT_ESTABLISHED",
     "A1_AUTH_NEG_WRONG_REPOSITORY_BRANCH_PATH_OR_ACTION_SCOPE": "PASS_SCOPE_INCOMPATIBLE_AUTHORIZATION_REJECTED_ATTEMPT_001_BINDING_NOT_ESTABLISHED",
     "A1_ENF_NEG_MISSING_AUTHORIZATION_TRAILER": "PASS_REJECTED_BY_BOTH_GATES_ATTEMPT_001_BINDING_NOT_ESTABLISHED",
-    "A1_ENF_NEG_INVALID_JSON_OR_CONFLICT_MARKERS": "INVALID_JSON_PASS_ATTEMPT_001_CONFLICT_MARKERS_NOT_RUN_BINDING_NOT_ESTABLISHED",
+    "A1_ENF_NEG_INVALID_JSON_OR_CONFLICT_MARKERS": "PASS_INVALID_JSON_AND_CONFLICT_MARKERS_VARIANTS_BINDING_NOT_ESTABLISHED",
     "A1_APPROVAL_SEPARATION": "NOT_RUN",
     "A1_CONTROL_PLANE_TAMPERING": "NOT_RUN",
     "A1_RECOVERY_BREAK_GLASS_DESIGN_VALIDATION": "NOT_RUN"
   },
-  "residual_authority": "STAGE_1_A1_SCOPE_ONLY_READY_FOR_CONFLICT_MARKERS_VARIANT",
-  "next_sequential_test": "A1_ENF_NEG_INVALID_JSON_OR_CONFLICT_MARKERS:CONFLICT_MARKERS",
+  "residual_authority": "STAGE_1_A1_SCOPE_ONLY_READY_FOR_APPROVAL_SEPARATION",
+  "next_sequential_test": "A1_APPROVAL_SEPARATION",
   "final_consumption_rule": "CONSUMED_AFTER_TERMINAL_A1_REPORT_AND_AUTHORIZED_CLEANUP_ARE_PUBLISHED_AND_REMOTE_VERIFIED",
   "non_authorizations": [
     "NO_MAIN_BRANCH_PROTECTION_MUTATION",
