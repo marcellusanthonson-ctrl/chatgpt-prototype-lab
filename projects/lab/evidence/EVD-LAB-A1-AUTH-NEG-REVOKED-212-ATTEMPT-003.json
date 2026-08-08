@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "EVD-LAB-A1-AUTH-NEG-REVOKED-212-ATTEMPT-003",
+  "project_id": "lab",
+  "authorization_id": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+  "decision_ref": "DEC-LAB-032",
+  "test_id": "A1_AUTH_NEG_CONSUMED_REVOKED_OR_EXPIRED",
+  "attempt_id": "ATTEMPT-003",
+  "tested_variant": "REVOKED",
+  "status": "PASS_REVOKED_AUTHORIZATION_VALIDATOR_REJECTION_BINDING_NOT_ESTABLISHED",
+  "executed_at": "2026-08-08T00:28:00-04:00",
+  "canonical_main_head_before_test": "ee1f49be9d4def988e67f2ed0f81c5779e35d225",
+  "subject": {
+    "authorization_id": "AUTHORIZATION_LAB_PL003_HUMAN_ADMIN_IDENTITY_CENTER_BOOTSTRAP_139",
+    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_HUMAN_ADMIN_IDENTITY_CENTER_BOOTSTRAP_139.json",
+    "authorization_status": "REVOKED",
+    "revoked_at": "2026-07-30",
+    "post_revocation_authority": "NONE",
+    "repository_field_shape": "STRING_LEGACY_SCHEMA",
+    "lifecycle_ref_present": false
+  },
+  "precondition_remediation": {
+    "prior_attempt": "ATTEMPT-002",
+    "prior_result": "BLOCKED_VALIDATOR_CRASH_LEGACY_REPOSITORY_SCHEMA_NOT_SEMANTIC_REVOKED_PASS",
+    "remediation_commit": "ee1f49be9d4def988e67f2ed0f81c5779e35d225",
+    "remediation": "GATE_V2_NORMALIZES_LEGACY_STRING_AND_MODERN_OBJECT_REPOSITORY_SHAPES_WITHOUT_AUTHORITY_EXPANSION",
+    "crash_reproduced_in_attempt_003": false
+  },
+  "canary": {
+    "base_branch": "lab-governance-canary-210",
+    "base_sha": "8db33a0f61d45055134b9efc1f82597ac07b4c7b",
+    "test_branch": "test/a1-auth-neg-revoked-139-212",
+    "fixture_head_sha": "73851e6e671318976ff761435c59c9c9b40352b7",
+    "pull_request": 94,
+    "pull_request_open": true,
+    "pull_request_merged": false,
+    "pull_request_mergeable_after_checks": true,
+    "fixture_path": "projects/lab/governance-tests/authorization-212/A1_AUTH_NEG_CONSUMED_REVOKED_OR_EXPIRED.json"
+  },
+  "observed_runs": [
+    {
+      "workflow": "LAB Canonical Authority Gate v2",
+      "run_id": 31239507846,
+      "job_id": 93057984210,
+      "status": "completed",
+      "conclusion": "failure",
+      "structured_result_emitted": true,
+      "primary_discriminating_failure": "AUTHORIZATION_NOT_EFFECTIVELY_GRANTED",
+      "interpretation": "EXPECTED_FAIL_CLOSED_REJECTION_OF_CANONICAL_REVOKED_AUTHORIZATION"
+    },
+    {
+      "workflow": "LAB Publication Gate",
+      "run_id": 31239513823,
+      "status": "completed",
+      "conclusion": "success",
+      "interpretation": "LEGACY_GATE_ACCEPTED_SYNTACTIC_AUTHORIZATION_LABEL"
+    }
+  ],
+  "gate_v2_structured_result": {
+    "authorization": "AUTHORIZATION_LAB_PL003_HUMAN_ADMIN_IDENTITY_CENTER_BOOTSTRAP_139",
+    "authorization_path": "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_HUMAN_ADMIN_IDENTITY_CENTER_BOOTSTRAP_139.json",
+    "base_ref": "lab-governance-canary-210",
+    "canonical_ref": "main",
+    "changed_files": 1,
+    "normalized_repository_name": "marcellusanthonson-ctrl/chatgpt-prototype-lab",
+    "same_repository_pr": true,
+    "json_files_checked": 1,
+    "text_files_checked": 1,
+    "lifecycle_path": null,
+    "failures_include": [
+      "AUTHORIZATION_NOT_EFFECTIVELY_GRANTED",
+      "AUTHORIZATION_GRANT_INFERRED_OR_UNKNOWN",
+      "AUTHORIZATION_APPROVAL_SOURCE_MISSING",
+      "AUTHORIZATION_LIFECYCLE_REF_MISSING",
+      "AUTHORIZATION_ACTION_SCOPE_DENIED:canary_pull_request_creation_update_and_merge",
+      "AUTHORIZATION_ACTION_SCOPE_DENIED:canary_test_authorized",
+      "AUTHORIZATION_ACTION_SCOPE_DENIED:canonical_authority_gate_v2_canary_implementation",
+      "AUTHORIZATION_ACTION_SCOPE_MISMATCH",
+      "AUTHORIZATION_BRANCH_SCOPE_MISMATCH",
+      "AUTHORIZATION_PATH_SCOPE_MISSING",
+      "AUTHORIZATION_PUBLICATION_REPOSITORY_SCOPE_MISMATCH",
+      "AUTHORIZATION_SAME_REPOSITORY_REQUIREMENT_MISSING",
+      "AUTHORIZATION_SCOPE_CLARIFICATION_INVALID"
+    ]
+  },
+  "determination": "PASS_VALIDATOR_LEVEL_REVOKED_SUBJECT_REJECTION_BINDING_NOT_ESTABLISHED",
+  "terminal_state_variants": {
+    "CONSUMED": "PASS_ATTEMPT_001_REPORT_DELIVERED",
+    "REVOKED": "PASS_ATTEMPT_003_REPORT_DELIVERED",
+    "EXPIRED": "NOT_RUN"
+  },
+  "operational_binding": {
+    "status": "NOT_ESTABLISHED",
+    "evidence": "PR_94_REMAINS_MERGEABLE_TRUE_DESPITE_GATE_V2_FAILURE",
+    "effect": "THIS_ATTEMPT_DOES_NOT_ESTABLISH_CANARY_PUBLICATION_ENFORCEMENT"
+  },
+  "claim_boundary": "This attempt proves deterministic fail-closed validator rejection of one genuine canonical REVOKED historical authorization after legacy repository-shape compatibility remediation. It does not prove lifecycle-only revoked rejection because authorization 139 has no lifecycle_ref, does not isolate REVOKED as the only failing condition because the historical artifact lacks multiple modern provenance and scope fields, and does not prove EXPIRED handling, required-status binding, approval separation, control-plane tamper resistance, recovery readiness, main enforcement, or A1 completion.",
+  "post_test_report": {
+    "report_id": "A1-212-POST-TEST-REPORT-005",
+    "delivered_to": "Jonathan Martínez",
+    "delivered_at": "2026-08-08T00:29:00-04:00",
+    "delivery_surface": "CHATGPT_CONVERSATION",
+    "next_action": "CANONICALLY_PUBLISH_THIS_RESULT_THEN_LOCATE_GENUINE_EXPIRED_AUTHORIZATION",
+    "authority_effect": "NONE"
+  },
+  "source_refs": [
+    ".github/workflows/lab-canonical-authority-gate-v2-212.yml",
+    "projects/lab/authorizations/AUTHORIZATION_LAB_PL003_HUMAN_ADMIN_IDENTITY_CENTER_BOOTSTRAP_139.json",
+    "projects/lab/authorization-lifecycle/PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_A1_LIFECYCLE_212.json",
+    "projects/lab/evidence/EVD-LAB-A1-AUTH-NEG-REVOKED-212-ATTEMPT-002.json",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/pull/94",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/actions/runs/31239507846",
+    "https://github.com/marcellusanthonson-ctrl/chatgpt-prototype-lab/actions/runs/31239513823"
+  ]
+}
