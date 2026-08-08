@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "PUBLICATION-ENFORCEMENT-CANONICAL-AUTHORITY-VALIDATION-A1-LIFECYCLE-212",
+  "project_id": "lab",
+  "authorization": "AUTHORIZATION_LAB_PUBLICATION_ENFORCEMENT_CANONICAL_AUTHORITY_VALIDATION_AND_A1_COMPLETION_212",
+  "decision_ref": "DEC-LAB-032",
+  "status": "GRANTED_STAGE_0_PUBLICATION_IN_PROGRESS_A1_NOT_ACTIVE",
+  "approved_by": "Jonathan Martínez",
+  "approved_at": "2026-08-07T21:59:00-04:00",
+  "approval_source_ref": "projects/lab/sources/USER_SOURCE_AUTHORIZATION_212_20260807.md",
+  "authorized_parent_head": "b9b7f537e9f8487800491ff50030a3be4638c248",
+  "head_policy": "VERIFY_LIVE_AT_USE",
+  "stage_0": {
+    "name": "CANONICAL_GRANT_PUBLICATION",
+    "status": "IN_PROGRESS_AWAITING_REMOTE_MAIN_VERIFICATION",
+    "consumes_execution_authority": false,
+    "publication_branch": "agent/governance-212-stage0-grant",
+    "pull_request": null,
+    "verified_main_head": null
+  },
+  "stage_1": {
+    "name": "A1_CANARY_CANONICAL_AUTHORITY_GATE_V2_AND_VALIDATION",
+    "status": "NOT_ACTIVE",
+    "activation_gate": "STAGE_0_REMOTE_MAIN_VERIFIED",
+    "tests_started": false,
+    "last_test": null,
+    "post_test_report_required_before_next_test": true
+  },
+  "prior_results_preserved": {
+    "A1_ENF_NEG_DIRECT_PUSH": "TECHNICAL_PASS_PRESERVED_NO_RERUN_AUTHORITY",
+    "A1_READER_READBACK": "TECHNICAL_PASS_PRESERVED_REVALIDATE_IF_REQUIRED"
+  },
+  "remaining_tests": {
+    "A1_AUTH_POS_VALID_CANONICAL": "NOT_RUN",
+    "A1_AUTH_NEG_NONEXISTENT_AUTHORIZATION": "NOT_RUN",
+    "A1_AUTH_NEG_CONSUMED_REVOKED_OR_EXPIRED": "NOT_RUN",
+    "A1_AUTH_NEG_WRONG_REPOSITORY_BRANCH_PATH_OR_ACTION_SCOPE": "NOT_RUN",
+    "A1_ENF_NEG_MISSING_AUTHORIZATION_TRAILER": "NOT_RUN",
+    "A1_ENF_NEG_INVALID_JSON_OR_CONFLICT_MARKERS": "NOT_RUN",
+    "A1_APPROVAL_SEPARATION": "NOT_RUN",
+    "A1_CONTROL_PLANE_TAMPERING": "NOT_RUN",
+    "A1_RECOVERY_BREAK_GLASS_DESIGN_VALIDATION": "NOT_RUN"
+  },
+  "residual_authority": "NONE_UNTIL_STAGE_0_REMOTE_VERIFICATION_THEN_STAGE_1_A1_SCOPE_ONLY",
+  "final_consumption_rule": "CONSUMED_AFTER_TERMINAL_A1_REPORT_AND_AUTHORIZED_CLEANUP_ARE_PUBLISHED_AND_REMOTE_VERIFIED",
+  "non_authorizations": [
+    "NO_MAIN_BRANCH_PROTECTION_MUTATION",
+    "NO_MAIN_RULESET_MUTATION",
+    "NO_MAIN_PUBLICATION_GATE_WORKFLOW_MUTATION",
+    "NO_MAIN_ENFORCEMENT_PROMOTION",
+    "NO_EXISTING_CANARY_DIRECT_PUSH_RERUN",
+    "NO_BREAK_GLASS_ACTIVATION",
+    "NO_CREDENTIAL_MUTATION_OR_DISCLOSURE",
+    "NO_AGGREGATE_STATE_OR_ROADMAP_RECONCILIATION"
+  ]
+}
